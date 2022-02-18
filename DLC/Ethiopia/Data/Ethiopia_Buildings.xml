@@ -4,6 +4,22 @@
 		<Row Type="BUILDING_CHANCERY" Kind="KIND_BUILDING"/>
 		<Row Type="BUILDING_CONSULATE" Kind="KIND_BUILDING"/>
 	</Types>
+	<Governments>
+		<Update>
+			<Where GovernmentType="GOVERNMENT_AUTOCRACY"/>
+			<Set>
+				<InherentBonusDesc>LOC_GOVT_INHERENT_BONUS_AUTOCRACY_ETHIOPIA</InherentBonusDesc>
+			</Set>
+		</Update>
+	</Governments>
+	<Policies>
+		<Update>
+			<Where PolicyType="POLICY_GOV_AUTOCRACY"/>
+			<Set>
+				<Description>LOC_GOVT_INHERENT_BONUS_AUTOCRACY_ETHIOPIA</Description>
+			</Set>
+		</Update>
+	</Policies>
 	<Buildings>
 		<Row BuildingType="BUILDING_CONSULATE" Name="LOC_BUILDING_CONSULATE_NAME" Description="LOC_BUILDING_CONSULATE_DESCRIPTION" PrereqTech="TECH_MATHEMATICS" PrereqDistrict="DISTRICT_DIPLOMATIC_QUARTER" PurchaseYield="YIELD_GOLD" Cost="150" AdvisorType="ADVISOR_GENERIC" Maintenance="1"/>
 		<Row BuildingType="BUILDING_CHANCERY" Name="LOC_BUILDING_CHANCERY_NAME" Description="LOC_BUILDING_CHANCERY_DESCRIPTION" PrereqCivic="CIVIC_DIPLOMATIC_SERVICE" PrereqDistrict="DISTRICT_DIPLOMATIC_QUARTER" PurchaseYield="YIELD_GOLD" Cost="290" AdvisorType="ADVISOR_GENERIC" Maintenance="2"/>

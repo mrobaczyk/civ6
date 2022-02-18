@@ -222,7 +222,7 @@ function OnInterfaceModeChange_ShorePartyEmbark(eNewMode :number)
 	end
 
 	local pUnitAdjPlots :table = Map.GetAdjacentPlots(pSelectedUnit:GetX(), pSelectedUnit:GetY());
-	for i, pAdjPlot in ipairs(pUnitAdjPlots) do
+	for i, pAdjPlot in pairs(pUnitAdjPlots) do
 		local embarkResult :table = GetShorePartyEmbarkStatusForPlot(pSelectedUnit:GetOwner(), pAdjPlot);
 		if(embarkResult.Result == m_GetShorePartyEmbarkResults.VALID) then
 			table.insert(g_targetPlots, pAdjPlot:GetIndex());

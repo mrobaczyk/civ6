@@ -47,13 +47,16 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DIPLO_WARNING_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_DIFFERENT_SECRET_SOCIETY]On you, I see the mark of evil. Those who know will see your Society for what it is.</Text>
     </Replace>
     <Replace Tag="LOC_DISCOVERED_SOCIETY" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY]Discovered a Society!</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY]{1_SocietyName} Discovered</Text>
     </Replace>
-    <Replace Tag="LOC_DISCOVERED_SOCIETY_DESC" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY_DESC]You have discovered a mysterious society called the {1_SocietyName}, and earned 1 [Icon_Governor] Governor Title.</Text>
+    <Replace Tag="LOC_DISCOVERED_SOCIETY_FIRST_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY_FIRST_DESC]You have discovered a mysterious society called the {2_SocietyIconString} {1_SocietyName}, and earned 1 [Icon_Governor] Governor Title.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISCOVERED_SOCIETY_SUBSEQUENT_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY_SUBSEQUENT_DESC]You have discovered a mysterious society called the {2_SocietyIconString} {1_SocietyName}.</Text>
     </Replace>
     <Replace Tag="LOC_DISCOVERED_SOCIETY_WHILE_MEMBER_OF_ANOTHER" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY_WHILE_MEMBER_OF_ANOTHER]The man in the shadows beckons to you, offering to show you the wonders of the {1_SocietyName}. Too late, he sees your knowing grin, and recognizes you as a member of the {2_MemberSocietyName}. In his folly, he had let slip the secret signs by which his group knows its members, and you can recognize them on sight.[NEWLINE][NEWLINE]The {2_MemberSocietyName} rewards your loyalty, and you can use the [Icon_Governor] Governor Title as you see fit.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY_WHILE_MEMBER_OF_ANOTHER]The man in the shadows beckons to you, offering to show you the wonders of the {1_SocietyName}. Too late, he sees your knowing grin, and recognizes you as a member of the {2_MemberSocietyName}. In his folly, he had let slip the secret signs by which his group knows its members, and you can recognize them on sight.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_LEY_LINE_CULTURE" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISTRICT_LEY_LINE_CULTURE]+{1_num} [ICON_Culture] Culture from the adjacent Ley Line resources.</Text>
@@ -74,28 +77,28 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GO_TO_GOVERNORS]Go To Governors Screen</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_DESCRIPTION" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_DESCRIPTION]Unlocked by discovering a Natural Wonder. Reveals the Ley Line resource on the map. Ley Lines give a standard adjacency bonus to all specialty districts.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_DESCRIPTION]Unlocked by discovering a Natural Wonder. Reveals the Ley Line resource on the map. Ley Lines give a major adjacency bonus to all specialty districts.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_NAME]Initiation</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_NAME]Neophyte</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_DESCRIPTION]Unlocked in Medieval Era. Allows you to construct the Alchemical Society building, a powerful replacement of the University.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_NAME]Ritual</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_NAME]Adept</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_DESCRIPTION]Unlocked in Industrial Era. For every [ICON_GreatPerson] Great Person earned Ley Lines receive +1 yield equal to that [ICON_GreatPerson] Great Person's district type. [ICON_GreatAdmiral] Great Admirals and [ICON_GreatGeneral] Great Generals earn +1 [ICON_Science] Science.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_NAME]Indoctrination</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_NAME]Magus</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_DESCRIPTION]Unlocked in Atomic Era. Unlocks Occult Research, a city project that provides [ICON_GOLD] Gold while active. When completed, it grants [ICON_GreatPerson] Great People points, and [ICON_SCIENCE] Science for every Ley Line in the city.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_NAME]Master Plan</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_NAME]Aiwass</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_DESCRIPTION]Unlocked by sending an [ICON_Envoy] Envoy to a City-State. +1 Economic policy slot. Each [ICON_TradeRoute] Trade Route sent to a City-State awards 1 [ICON_Envoy] Envoy there.</Text>
@@ -125,25 +128,25 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_DESCRIPTION]Unlocked by destroying a Barbarian Camp. Grants a Vampire unit in your [ICON_Capital] Capital.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_NAME]Initiation</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_NAME]Taste</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_DESCRIPTION]Unlocked in Medieval Era. Grants a Vampire unit in your [ICON_Capital] Capital, and allows your Vampires to construct Vampire Castles (maximum two per empire).</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_NAME]Ritual</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_NAME]Rising Hunger</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_DESCRIPTION]Unlocked in Industrial Era. Grants a Vampire unit in your [ICON_Capital] Capital. Increases maximum Vampire Castle builds to three. Your Vampires now Intimidate adjacent enemy units, reducing their [ICON_Strength] Combat Strength by 5. Pillaging now costs Vampires 1 [ICON_Movement] Movement.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_NAME]Indoctrination</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_NAME]Voivode</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_DESCRIPTION]Unlocked in Atomic Era. Grants a Vampire unit in your [ICON_Capital] Capital. Increases maximum Vampire Castle builds to four. Units within one tile of your Vampire Castles may now Airlift to any other tile near one of your Vampire Castles.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_NAME]Master Plan</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_NAME]Endless Night</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_UNKNOWN_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_UNKNOWN_DESCRIPTION]The deeper mysteries have not yet been revealed. We must first demonstrate our commitment.</Text>
@@ -155,25 +158,25 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_DESCRIPTION]Unlocked by discovering a Tribal Village. Allows you to construct the Old God Obelisk building, a powerful replacement of the Monument.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_NAME]Initiation</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_NAME]Melody</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_DESCRIPTION]Unlocked in Medieval Era. Cities earn [ICON_Gold] Gold, [ICON_Science] Science, and [ICON_Culture] Culture per turn equal to 20% of their [ICON_Faith] Faith per turn rate.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_NAME]Ritual</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_NAME]Chorus</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_DESCRIPTION]Unlocked in Industrial Era. Unlocks the Cultist unit. This unit is purchased with [ICON_Faith] Faith, and uses charges to reduce Loyalty in foreign cities and generate [ICON_GreatWork_Relic] Relics of the Void.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_NAME]Indoctrination</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_NAME]Canticle</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_DESCRIPTION]Unlocked in Atomic Era. Unlocks Dark Summoning, a city project that provides lots of [ICON_Faith] Faith while active, and upon completion raises the amount of Loyalty damage done by Cultists.</Text>
     </Replace>
     <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_NAME" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_NAME]Master Plan</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_NAME]Symphony</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_1_NAME" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_1_NAME]Relic of the Devouring Angel</Text>
@@ -257,10 +260,10 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_IMPROVEMENT_VAMPIRE_CASTLE_NAME]Vampire Castle</Text>
     </Replace>
     <Replace Tag="LOC_JOINED_SOCIETY" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_JOINED_SOCIETY]Joined a Society!</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_JOINED_SOCIETY]{1_SocietyName} Joined</Text>
     </Replace>
     <Replace Tag="LOC_JOINED_SOCIETY_DESC" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_JOINED_SOCIETY_DESC]You have joined a society called the {1_SocietyName}.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_JOINED_SOCIETY_DESC]You have joined a society called the {2_SocietyIconString} {1_SocietyName}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_RELIC_CREATED_SUMMARY" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_RELIC_CREATED_SUMMARY]The [ICON_GreatWork_Relic] Relic {1_RelicName} has been placed in the {2_BuildingName} in {3_CityName}.</Text>
@@ -363,6 +366,54 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_TAB_NAME" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_TAB_NAME]Owls of Minerva Titles</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_CHAPTER_HISTORY_PARA_1]You can see the writing on the land, but cannot read it. Light, invisible to the uninitiated, leaks through holes in the world, but you do not yet know what it means. It glitters with truth, the truth that the world is a veil over deeper mysteries.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_CHAPTER_HISTORY_PARA_1]Scholars from around the known world flock to your cities, seeking to understand the nature of things. Cabalistic signs are scrawled over buildings and under bridges. The birds have started to wheel clockwise in the air on Sundays. </Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_CHAPTER_HISTORY_PARA_1]You have harnessed and saddled the land like an ox, and it works for you. Lead becomes gold, age becomes youth, moonlight becomes pearl-dust. The fires of alchemical machinery in your laboratories belch green and blue smoke. Your palace radiates an otherwordly glow even in the sunlight.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_CHAPTER_HISTORY_PARA_1]The light flows through us now. In the streets, as people stand and talk, great wisps of light stream from their mouths Sometimes, in a burst of excitement, one of your alchemists will dissipate into a slow-moving cloud of floating motes. Others report a sudden awareness of the hollowness of fomerly-solid objects - a vacuum created in a boulder, an expanse under the street, new continents under the Earth's crust. </Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_CHAPTER_HISTORY_PARA_1]Your commerce advisor wears a purple band about his wrist. Your high priest bears the tattoo of an eagle on his tongue. Your underlings all seem to be Owls. They ARE your underlings, and not the other way around… right?</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_2_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_2_CHAPTER_HISTORY_PARA_1]You have studied and passed the Trial of the Seven Scourges. So much more is clear to you now - when your rival's economy collapses, that is the work of the Owls. When a peace meeting dissolves in scandal and recrimination, that is the work of the Owls. You feel like you see only a fraction of what is done, but that fraction is immense.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_3_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_3_CHAPTER_HISTORY_PARA_1]In the sub-cellar of a Gilded Vault, you catch a glimpse of an iron door. Before it slams shut, you see a long hallway extending deep underground, and a glimmer of golden light somewhere at its end. Your contact, Athena (certainly not her real name, who can say who she is under her hawk's mask?), smiles cryptically. "For another time," she says. </Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_4_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_4_CHAPTER_HISTORY_PARA_1]In a chamber underground, its ceiling set with gilded stars, you sit across from figures in masks - owl masks, mantis masks, fox masks, others of creatures from distant shores. The glimmer of screens on the wall reveals multiple vantage points into the sleeping chamber of the lord of a distant city-state. The servant shown on the screen (you know that she wears a beetle mask when she is among the Owls) takes a small vial from her sleeve, awaiting your order.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_1_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_1_CHAPTER_HISTORY_PARA_1]Others may aspire to drown themselves in books or prayer, art and poetry, but the first love of any being is to eat. Your new allies in the Pact have taught you the joy of consumption (and being consumed). Your feasts last all night, with wild game; rare, rare meats; and dark red wine. The next day you sometimes sleep until sunset.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_2_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_2_CHAPTER_HISTORY_PARA_1]At sunset, the doors of your palace open, and a laughing throng spills into the streets. The Pact move around you, their shapes casting no shadows and making no sound as they go. A listlessness descends upon the city, at least during the day. At night, the citizens close their shutters and - above all - do not look out.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_3_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_3_CHAPTER_HISTORY_PARA_1]The blood is the life. The blood is the land. And you are its master. Who was here before your citizens lived and grew on the land? You were. Others live and die, you do not. Your citizens dare questions of you - you, who led armies centuries before they were born! You are the soul and heart of your land. And you will have your blood.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_4_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_SANGUINE_PACT_4_CHAPTER_HISTORY_PARA_1]The Pact gathers and whispers that the land itself is has taken up the Pact. The rivers are its veins; the mountains its bones. It drinks us as we drink it. By day you have taken to sleeping deep underground, by nights you brood over the battlements, your thoughts consumed by endless hunger in endless night. Your people move to your commands, almost unwittingly - spreading your nation, growing their families, and, when the time comes, giving themselves as sacrifices to the Pact.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_1_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_1_CHAPTER_HISTORY_PARA_1]The music pipes in from somewhere - everywhere, it seems. From the corners of empty rooms, from the wind over the night sea, even from the spaces underneath your fingernails. At least it seems like music. It is a shrill piping and a burst of chanting in something that almost sounds like a language. Then, it is gone.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_2_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_2_CHAPTER_HISTORY_PARA_1]The song of the Void is everywhere - the tune a noblewoman hums as she walks, the song of a street-sweeper. Sometimes, out of the corner of your eye, the singers flicker in and out of existence. Your dreams have become intense - gatherings of cloaked figures on the shores of a dark sea, watching a gelatinous mass rise and fall below the waves, as the song emerges from its mouths </Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_3_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_3_CHAPTER_HISTORY_PARA_1]The Voidsingers have arrived in the open, now, and they bring with them forgotten relics of unmentionable things. A fragment of a gargantuan sea beast. A book that hints at the true nature of the world - that we are just light and noise atop a deeper void. The longer you stare into this abyss within, the more clear the song becomes. It drives others to madness. You will hear it and stay yourself... as long as you can.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_4_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_PROMOTION_VOIDSINGERS_4_CHAPTER_HISTORY_PARA_1]The song runs through everything. It is a symphony, played not by instruments but sung by innumerable tiny mouths hidden in the spaces between things - cracks in the floorboards, cracks in the ground, cracks in the spaces between atoms. It sings of those who sleep and those who will wake. It sings of those who lie dead, dreaming. </Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_CHAPTER_HISTORY_PARA_1]It is difficult to imagine horror fiction without invoking Dracula. Bram Stoker, on writing his tale of the lonely bloodsucking Count trapped in his Transylvanian castle, drew upon Irish fairy legend, Romanian folktales, and a host of Northern European anxiety surrounding the Continent. In writing about vampires, he also drew upon a body of literature and folklore from closer to home, following Gothic authors such as Le Fanu, Lord Byron, and James Rymer, whose vampires were cautionary tales about unhealthy friendships and obsessions. In these, vampires are a kind of pinnacle of Gothic literature, bringing together moral decay, dark castles, and a decadent and corrupted elite. Here, the Sanguine Pact seeks to represent the kind of dark brother- and sister-hood inspired by Stoker.</Text>

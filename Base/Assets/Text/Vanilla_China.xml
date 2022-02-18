@@ -34751,7 +34751,7 @@
       <Text>与骑兵单位战斗时+5 [ICON_Strength] 战斗力。</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_THRUST_DESCRIPTION" Language="zh_Hans">
-      <Text>与近战单位战斗时+10 [ICON_Strength] 战斗力。</Text>
+      <Text>[COLOR_RED]MISMATCHED TRANSLATION[ENDCOLOR][LOC_PROMOTION_THRUST_DESCRIPTION]+10 [ICON_Strength] Combat Strength vs. melee units.</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_SQUARE_DESCRIPTION" Language="zh_Hans">
       <Text>双倍支援加成。</Text>
@@ -39578,7 +39578,7 @@
       <Text>[COLOR_RED]MISMATCHED TRANSLATION[ENDCOLOR][LOC_ABILITY_ANTI_CAVALRY_DESCRIPTION]+14 [ICON_Strength] Combat Strength against light cavalry and heavy cavalry units.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_ANTI_SPEAR_DESCRIPTION" Language="zh_Hans">
-      <Text>迎战反骑兵单位+10 [ICON_Strength] 战斗力。</Text>
+      <Text>[COLOR_RED]MISMATCHED TRANSLATION[ENDCOLOR][LOC_ABILITY_ANTI_SPEAR_DESCRIPTION]+10 [ICON_Strength] Combat Strength against anti-cavalry units.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_HEAVY_CHARIOT_DESCRIPTION" Language="zh_Hans">
       <Text>如在沙漠、平原、草原或冻土上开始，+1 [ICON_Movement] 移动力。</Text>
@@ -45715,6 +45715,21 @@
     <Replace Tag="LOC_BUILDING_CONSTRUCT_TURNS_UNTIL_CAN_BE_REPAIRED" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_BUILDING_CONSTRUCT_TURNS_UNTIL_CAN_BE_REPAIRED]{1_Building} are repairable in {2_Turns} [ICON_Turn] {2_Turns : plural 1?turn; other?turns;}.</Text>
     </Replace>
+    <Replace Tag="LOC_CITY_STATE_PICKER_COUNT_WARNING" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CITY_STATE_PICKER_COUNT_WARNING][COLOR_RED]A minimum of {1_Min} City-States must be selected to continue. Select {2_Remaining} more.[ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_STATE_PICKER_SORT_BY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CITY_STATE_PICKER_SORT_BY]Sort By:</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_STATE_PICKER_SORT_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CITY_STATE_PICKER_SORT_NAME]Name</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_STATE_PICKER_SORT_TYPE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CITY_STATE_PICKER_SORT_TYPE]Type</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_STATE_PICKER_TOO_FEW_WARNING" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CITY_STATE_PICKER_TOO_FEW_WARNING]You have not selected enough City-States to fill the available City-State slots. Starting the game will result in only the selected City-States being created. Is this okay?</Text>
+    </Replace>
     <Replace Tag="LOC_CITY_YIELD_FROM_FAITH" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CITY_YIELD_FROM_FAITH]{Value : number +#.#;-#.#} from Faith</Text>
     </Replace>
@@ -45738,6 +45753,279 @@
     </Replace>
     <Replace Tag="LOC_CIVICS_TREE_NOT_REVEALED_TOOLTIP" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVICS_TREE_NOT_REVEALED_TOOLTIP]Research prior civics to reveal this civic and its unlocks.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_AKKAD_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_AKKAD_BONUS]Melee and anti-cavalry unit's attacks do full damage to the city's Walls.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_AKKAD_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_AKKAD_FRONTEND_NAME]Akkad</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_AMSTERDAM_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_AMSTERDAM_BONUS]Your [ICON_TradeRoute] Trade Routes to foreign cities earn +1 [ICON_Gold] Gold for each Luxury resource at the destination.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ANTANANARIVO_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ANTANANARIVO_BONUS]Your Civilization gains +2% [ICON_Culture] Culture for each Great Person it has ever earned, up to a total of +30%.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ANTANANARIVO_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ANTANANARIVO_FRONTEND_NAME]Antananarivo</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ANTIOCH_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ANTIOCH_BONUS]Your [ICON_TradeRoute] Trade Routes to foreign cities earn +1 [ICON_Gold] Gold for each Luxury resource at the destination.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ANTIOCH_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ANTIOCH_FRONTEND_NAME]Venice</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ARMAGH_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ARMAGH_BONUS]Your Builders can now make Monastery improvements.[NEWLINE][NEWLINE]Monasteries provide +2 [ICON_Faith] Faith. +15 HP healing for friendly religious unit on this tile that has not attacked this turn. Cannot be built next to another Monastery</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ARMAGH_BONUS_XP2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ARMAGH_BONUS_XP2]Your Builders can now make Monastery improvements.[NEWLINE][NEWLINE]Monasteries provide +2 [ICON_Faith] Faith. +15 HP healing for friendly religious unit on this tile that has not attacked this turn. +1 [ICON_FAITH] Faith for every 2 adjacent Districts. Provides +1 [ICON_HOUSING] Housing. Receive an additional [ICON_HOUSING] Housing once Colonialism is discovered. Cannot be built next to another Monastery.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ARMAGH_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ARMAGH_FRONTEND_NAME]Armagh</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_AUCKLAND_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_AUCKLAND_BONUS]Shallow water tiles you own provide +1 [ICON_Production] Production. Additional +1 when you reach the Industrial era.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_AUCKLAND_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_AUCKLAND_FRONTEND_NAME]Auckland</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_AYUTTHAYA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_AYUTTHAYA_BONUS]Gain [ICON_CULTURE] Culture equal to 10% of the construction cost when finishing buildings.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_AYUTTHAYA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_AYUTTHAYA_FRONTEND_NAME]Ayutthaya</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_BABYLON_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_BABYLON_BONUS]+2 [ICON_SCIENCE] Science from each [ICON_GreatWork_WRITING] Great Work of Writing. +1 [ICON_SCIENCE] Science from each [ICON_GreatWork_RELIC] Relic and [ICON_GreatWork_Artifact] Artifact.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_BABYLON_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_BABYLON_FRONTEND_NAME]Anshan</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_BOLOGNA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_BOLOGNA_BONUS]Your districts with a building provide +1 [ICON_GreatPerson] Great Person point of their type ([ICON_GreatWriter] Great Writer, [ICON_GreatArtist] Great Artist, and [ICON_GreatMusician] Great Musician for Theater Square districts with a building).</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_BOLOGNA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_BOLOGNA_FRONTEND_NAME]Bologna</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_BRUSSELS_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_BRUSSELS_BONUS]Your cities get +15% [ICON_Production] Production towards wonders.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_BUENOS_AIRES_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_BUENOS_AIRES_BONUS]Your Bonus resources behave like Luxury resources, providing 1 [ICON_Amenities] Amenity per type.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CAGUANA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CAGUANA_BONUS]Your Builders can now make Batey improvements.[NEWLINE][NEWLINE]+1 [ICON_Culture] Culture. +1 [ICON_Culture] Culture for every adjacent Bonus resource and Entertainment Complex (increased to +2 [Icon_Culture] Culture when Exploration is discovered). Provides [Icon_Tourism] Tourism after researching Flight. Cannot be built adjacent to another Batey.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME]Caguana</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CAHOKIA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CAHOKIA_BONUS]Your Builders can now make Cahokia Mounds improvements.[NEWLINE][NEWLINE]Cahokia Mounds provide +3 [ICON_GOLD] Gold. Cities receive +1 [ICON_AMENITIES] Amenity from their first Cahokia Mound improvement. Upon discovering Natural History, cities receive +1 [ICON_AMENITIES] Amenity from their second Cahokia Mound improvement. +1 [ICON_FOOD] Food for every 2 adjacent Districts once Feudalism is discovered or for every adjacent District once Replaceable Parts is researched. Provides +1 [ICON_HOUSING] Housing. Receive an additional [ICON_HOUSING] Housing once Cultural Heritage is discovered. Cannot be built adjacent to other Cahokia Mounds.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CAHOKIA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CAHOKIA_FRONTEND_NAME]Cahokia</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CARDIFF_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CARDIFF_BONUS]Cities receive +2 [ICON_Power] Power for every Harbor building.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CARDIFF_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CARDIFF_FRONTEND_NAME]Cardiff</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CARTHAGE_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CARTHAGE_BONUS]Your Encampment districts provide +1 [ICON_TradeRoute] Trade Route capacity each.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CARTHAGE_BONUS_XP1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CARTHAGE_BONUS_XP1]Land combat units are 20% cheaper to purchase with [ICON_GOLD] Gold for each Encampment district building in that city.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CHINGUETTI_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CHINGUETTI_BONUS]International and domestic [ICON_TradeRoute] Trade Routes receive +1 [ICON_FAITH] Faith for every follower in this city, of your founded or majority religion.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_CHINGUETTI_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_CHINGUETTI_FRONTEND_NAME]Chinguetti</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_FEZ_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_FEZ_BONUS]When you use a religious unit to convert a city for the first time earn 20 [ICON_SCIENCE] Science per [ICON_Citizen] Population of that city (on Standard Speed).</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_FEZ_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_FEZ_FRONTEND_NAME]Fez</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_GENEVA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_GENEVA_BONUS]Your cities earn +15% [ICON_Science] Science whenever you are not at war with any civilization.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_GRANADA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_GRANADA_BONUS]Your Builders can now make Alcázar improvements.[NEWLINE][NEWLINE]Alcázars provide +2 [ICON_Culture] Culture. Occupying unit receives +4 [ICON_Strength] Defense Strength, and automatically gains 2 turns of fortification. Cannot be built next to another Alcázar.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_GRANADA_BONUS_XP2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_GRANADA_BONUS_XP2]Your Builders can now make Alcázar improvements.[NEWLINE][NEWLINE]Alcázars provide +2 [ICON_Culture] Culture. Provides [ICON_SCIENCE] Science equal to 50% of the tile's Appeal. Occupying unit receives +4 [ICON_Strength] Defense Strength, and automatically gains 2 turns of fortification. Provides [ICON_TOURISM] Tourism after researching Flight. Cannot be built next to another Alcázar.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_GRANADA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_GRANADA_FRONTEND_NAME]Granada</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_HATTUSA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_HATTUSA_BONUS]Provides you with 1 of each Strategic resource you have revealed but do not own.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_HATTUSA_BONUS_XP2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_HATTUSA_BONUS_XP2]Provides you with 2 of each Strategic resource per turn that you have revealed but have not improved.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_HONG_KONG_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_HONG_KONG_BONUS]Your cities get +20% [ICON_Production] Production towards city projects.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_HUNZA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_HUNZA_BONUS]Your [ICON_TradeRoute] Trade Routes generate +1 [ICON_Gold] Gold for every 5 tiles they travel.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_HUNZA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_HUNZA_FRONTEND_NAME]Hunza</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_JAKARTA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_JAKARTA_BONUS]Your [ICON_TradingPost] Trading Posts in foreign cities provide +1 [ICON_Gold] Gold to your [ICON_TradeRoute] Trade Routes passing through or going to the city.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_JERUSALEM_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_JERUSALEM_BONUS]Automatically converts to the Religion you founded, and exerts pressure for that Religion as if it were a Holy City.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_JERUSALEM_BONUS_XP1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_JERUSALEM_BONUS_XP1]Your cities with Holy Sites exert pressure as if they were Holy Cities (4x Religion pressure on all cities within 10 tiles).</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_JOHANNESBURG_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_JOHANNESBURG_BONUS]Cities receive +1 [ICON_Production] Production for every improved resource type. After researching Industrialization it becomes +2 [ICON_PRODUCTION] Production.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_JOHANNESBURG_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_JOHANNESBURG_FRONTEND_NAME]Johannesburg</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_KABUL_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_KABUL_BONUS]Your units receive double experience from battles they initiate.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_KANDY_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_KANDY_BONUS]Receive a [ICON_GreatWork_Relic] Relic every time you discover a new natural wonder, and earn +50% [ICON_Faith] Faith from all [ICON_GreatWork_Relic] Relics.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_KUMASI_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_KUMASI_BONUS]Your [ICON_TradeRoute] Trade Routes to any city-state provide +2 [ICON_Culture] Culture and +1 [ICON_Gold] Gold for every specialty district in the origin city.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_LA_VENTA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_LA_VENTA_BONUS]Your Builders can now make Colossal Head improvements.[NEWLINE][NEWLINE]Colossal Heads provide +2 [ICON_Faith] Faith. +1 [ICON_Faith] Faith for every 2 adjacent Rainforest. +1 [ICON_Faith] Faith for every 2 adjacent Woods. Cannot be built on Snow or Snow Hills.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_LA_VENTA_BONUS_XP2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_LA_VENTA_BONUS_XP2]Your Builders can now make Colossal Head improvements.[NEWLINE][NEWLINE]Colossal Heads provide +2 [ICON_Faith] Faith. +1 [ICON_Faith] Faith for every 2 adjacent Rainforest or for every adjacent Rainforest once Humanism is discovered. +1 [ICON_Faith] Faith for every 2 adjacent Woods or for every adjacent Woods once Humanism is discovered. [ICON_TOURISM] Tourism from [ICON_FAITH] Faith once Flight is discovered. Cannot be built on Snow or Snow Hills.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_LAHORE_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_LAHORE_BONUS]Your cities can now train Nihang units.[NEWLINE][NEWLINE]A unit with a unique Promotion tree that can be purchased with [ICON_Faith] Faith. [ICON_Strength] Combat Strength is increased when Barracks, Armory, and Military Academy buildings are first constructed.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_LAHORE_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_LAHORE_FRONTEND_NAME]Lahore</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_LISBON_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_LISBON_BONUS]Your Trader units are immune to being plundered on water tiles.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_MEXICO_CITY_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_MEXICO_CITY_BONUS]Regional effects from your Industrial Zone and Entertainment Complex districts reach 3 tiles farther.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_MEXICO_CITY_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_MEXICO_CITY_FRONTEND_NAME]Mexico City</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_MOHENJO_DARO_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_MOHENJO_DARO_BONUS]Your cities have full [ICON_Housing] Housing from water, as if they were all next to a River.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_MUSCAT_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_MUSCAT_BONUS]+1 [ICON_Amenities] Amenity in cities with a Commercial Hub district.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_MUSCAT_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_MUSCAT_FRONTEND_NAME]Muscat</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_NALANDA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_NALANDA_BONUS]Your Builders can now make Mahavihara improvements.[NEWLINE][NEWLINE]+2 [ICON_SCIENCE] Science and +1 [Icon_Housing] Housing. +1 [ICON_Faith] Faith for every adjacent Holy Site district and +1 [ICON_Science] Science for every adjacent Campus district. After researching Scientific Theory receive an additional +1 [Icon_Science] Science for every adjacent Campus. When a player constructs their first Mahavihara receive a random technology. Must be built on flat terrain not adjacent to another Mahavihara.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_NALANDA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_NALANDA_FRONTEND_NAME]Nalanda</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_NAN_MADOL_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_NAN_MADOL_BONUS]Your districts on or next to Coast or Lake tiles provide +2 [ICON_Culture] Culture.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_NAZCA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_NAZCA_BONUS]Your Builders can now make Nazca Line improvements.[NEWLINE][NEWLINE]Nazca Lines provide +1 [ICON_Faith] Faith to adjacent tiles. +1 [ICON_Faith] Faith to adjacent tiles with a resource. +1 [ICON_FOOD] Food to adjacent Desert and Desert Hill tiles after discovering Civil Service. +1 [ICON_PRODUCTION] Production to adjacent flat tiles after researching Mass Production. +1 Appeal. Can only be built on flat Desert. This tile cannot be worked.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_NAZCA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_NAZCA_FRONTEND_NAME]Nazca</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_NGAZARGAMU_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_NGAZARGAMU_BONUS]Land combat or Support units are 20% cheaper to purchase with [ICON_GOLD] Gold for each Encampment district building in that city.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_NGAZARGAMU_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_NGAZARGAMU_FRONTEND_NAME]Ngazargamu</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_PALENQUE_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_PALENQUE_BONUS]City growth rate is 15% higher in cities with a Campus district.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_PALENQUE_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_PALENQUE_FRONTEND_NAME]Mitla</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_PRESLAV_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_PRESLAV_BONUS]Your light and heavy cavalry units have +5 [ICON_Strength] Strength when fighting on hill tiles.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_PRESLAV_BONUS_XP1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_PRESLAV_BONUS_XP1]You receive +2 Loyalty per turn in cities for each Encampment district building.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_RAPA_NUI_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_RAPA_NUI_BONUS]Your Builders can now make Moai improvements.[NEWLINE][NEWLINE]Moai provide +1 [ICON_Culture] Culture. +1 [ICON_Culture] Culture for every 2 adjacent Moai. +2 [ICON_Culture] Culture if on or adjacent to a Volcanic Soil tile. +1 [ICON_Culture] Culture if adjacent to a Coast or Lake tile . Additional [ICON_Culture] Culture and [ICON_Tourism] Tourism as you advance through the Civics and Technology Tree. Can be built on Plains, Plains Hills, Grassland, Grassland Hills, or Volcanic Soil. Cannot be placed adjacent to a Woods or Rainforest tile.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_RAPA_NUI_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_RAPA_NUI_FRONTEND_NAME]Rapa Nui</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_SAMARKAND_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_SAMARKAND_BONUS]Your Builders can now make Trading Dome improvements.[NEWLINE][NEWLINE]+2 [ICON_GOLD] Gold. +1 [ICON_Gold] Gold for every adjacent Luxury resource. Your outgoing international [ICON_TradeRoute] Trade Routes grant +1 [ICON_GOLD] Gold per Trading Dome at the origin. Cannot be built next to another Trading Dome.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_SAMARKAND_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_SAMARKAND_FRONTEND_NAME]Samarkand</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_SEOUL_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_SEOUL_BONUS]When you enter a new era, earn 1 random [ICON_TechBoosted] Eureka from that era.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_SINGAPORE_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_SINGAPORE_BONUS]Your cities receive +2 [ICON_Production] Production for each foreign civilization they have a [ICON_TradeRoute] Trade Route to.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME]Singapore</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_STOCKHOLM_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_STOCKHOLM_BONUS]Your districts provide +1 [ICON_GreatPerson] Great Person point of their type ([ICON_GreatWriter] Great Writer, [ICON_GreatArtist] Great Artist, and [ICON_GreatMusician] Great Musician for Theater Square districts).</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_STOCKHOLM_BONUS_XP1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_STOCKHOLM_BONUS_XP1]Your districts with a building provide +1 [ICON_GreatPerson] Great Person point of their type ([ICON_GreatWriter] Great Writer, [ICON_GreatArtist] Great Artist, and [ICON_GreatMusician] Great Musician for Theater Square districts with a building).</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_TARUGA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_TARUGA_BONUS]+5% [ICON_SCIENCE] Science in all cities for each different improved Strategic resource they have.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_TARUGA_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_TARUGA_FRONTEND_NAME]Taruga</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_TORONTO_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_TORONTO_BONUS]Regional effects from your Industrial Zone and Entertainment Complex districts reach 3 tiles farther.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_VALLETTA_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_VALLETTA_BONUS]City Center buildings and Encampment district buildings can be bought with [ICON_Faith] Faith. Cost of purchasing Ancient, Medieval, and Renaissance Walls is reduced, but they can only be bought with [ICON_Faith] Faith.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_VATICAN_CITY_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_VATICAN_CITY_BONUS]When you activate a [ICON_GreatPerson] Great Person they spread 400 Religious pressure of your founded (or majority) religion to cities within 10 tiles.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME]Vatican City</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_VILNIUS_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_VILNIUS_BONUS]When you enter a new era, earn 1 random [ICON_CivicBoosted] Inspiration from that era.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_VILNIUS_BONUS_XP1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_VILNIUS_BONUS_XP1]For the highest active Alliance Level, all your Theater Square districts receive +50% adjacency bonus.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_WOLIN_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_WOLIN_BONUS]Receive [ICON_GreatGeneral] Great General points when a land unit defeats a major or minor civilization's unit and receive [ICON_GreatAdmiral] Great Admiral points when a naval unit defeats a major or minor civilization's unit equal to 25% of the opposing unit's strength (Standard Speed).</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_WOLIN_FRONTEND_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_WOLIN_FRONTEND_NAME]Wolin</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_YEREVAN_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_YEREVAN_BONUS]Your Apostle units can choose from any possible promotion instead of receiving a random promotion.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVILIZATION_ZANZIBAR_BONUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVILIZATION_ZANZIBAR_BONUS]Receive the [ICON_RESOURCE_CINNAMON] Cinnamon and [ICON_RESOURCE_CLOVES] Cloves Luxury resources. These cannot be earned any other way in the game, and provide 6 [ICON_Amenities] Amenities each.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_INTRO_NEXT" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_CIVROYALE_INTRO_NEXT]Next</Text>
@@ -45899,6 +46187,12 @@
     </Replace>
     <Replace Tag="LOC_ESPIONAGEPOPUP_RENEW_MISSION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_ESPIONAGEPOPUP_RENEW_MISSION]RENEW MISSION</Text>
+    </Replace>
+    <Replace Tag="LOC_EXCLUDE_CITY_STATES_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_EXCLUDE_CITY_STATES_DESC]Choose which City-States may appear in the game.</Text>
+    </Replace>
+    <Replace Tag="LOC_EXCLUDE_CITY_STATES_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_EXCLUDE_CITY_STATES_NAME]Select City-States</Text>
     </Replace>
     <Replace Tag="LOC_EXCLUDE_NATURAL_WONDER_DESC" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_EXCLUDE_NATURAL_WONDER_DESC]Choose which Natural Wonders may appear on the map.</Text>
@@ -48344,6 +48638,9 @@
     <Replace Tag="LOC_GAMESUMMARY_CATEGORY_DISCOVERY" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GAMESUMMARY_CATEGORY_DISCOVERY]Discovery</Text>
     </Replace>
+    <Replace Tag="LOC_GAMESUMMARY_CATEGORY_ENABLED_GAMEMODES" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GAMESUMMARY_CATEGORY_ENABLED_GAMEMODES]Enabled Game Modes</Text>
+    </Replace>
     <Replace Tag="LOC_GAMESUMMARY_CATEGORY_EXTRA" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GAMESUMMARY_CATEGORY_EXTRA]Extra</Text>
     </Replace>
@@ -48505,6 +48802,9 @@
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ACTION_USAGE_SUZERAIN_TERRITORY" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATPERSON_ACTION_USAGE_SUZERAIN_TERRITORY]Activate in the territory of a city state of which you are suzerain.</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATPERSON_RESEARCHLABS_BIG_SCIENCE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATPERSON_RESEARCHLABS_BIG_SCIENCE]Research Labs provide +{Amount} [ICON_Science] Science.</Text>
     </Replace>
     <Replace Tag="LOC_HOF_GRAPH_CITY_BUILDINGS" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_HOF_GRAPH_CITY_BUILDINGS]City Buildings</Text>
@@ -49320,7 +49620,7 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_UNIT_LOST_LIFESPAN_EXPIRED_MESSAGE]Unit Expired</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_LIFESPAN_EXPIRED_SUMMARY" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_UNIT_LOST_LIFESPAN_EXPIRED_SUMMARY]{1_UnitName} has reached the end of its Lifespan.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_UNIT_LOST_LIFESPAN_EXPIRED_SUMMARY]{1_UnitName} has reached the end of their [ICON_Lifespan] Lifespan.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_TO_RADIATION_POISONING" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_UNIT_LOST_TO_RADIATION_POISONING]You have lost a {1_UnitName} due to radiation poisoning.</Text>
@@ -50946,6 +51246,18 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_WONDER_REMOVED" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_WORLDBUILDER_WONDER_REMOVED]Wonder removed successfully</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDTRACKER_NO_ROOM" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_WORLDTRACKER_NO_ROOM]Not Enough Room</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDTRACKER_NO_UNITS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_WORLDTRACKER_NO_UNITS]No Units</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDTRACKER_UNIT_LIST" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_WORLDTRACKER_UNIT_LIST]Unit List</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDTRACKER_UNITS_SEARCH_TT" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_WORLDTRACKER_UNITS_SEARCH_TT]Search Units</Text>
     </Replace>
     <Replace Tag="TXT_KEY_CROSSPLAY_AUTHORIZATION_ERROR_MESSAGE" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][TXT_KEY_CROSSPLAY_AUTHORIZATION_ERROR_MESSAGE]There was an issue validating your Steam account.</Text>

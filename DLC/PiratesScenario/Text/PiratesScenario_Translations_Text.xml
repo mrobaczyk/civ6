@@ -546,6 +546,9 @@
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="pt_BR">
       <Text>[COLOR:Red]Só se pode enterrar tesouro em terreno vazio.[ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="pt_BR">
+      <Text>[COLOR:Red]O Tesouro só pode ser enterrado em um terreno sem dono.[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="pt_BR">
       <Text>Nau Capitânia</Text>
     </Replace>
@@ -1539,6 +1542,9 @@
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="fr_FR">
       <Text>[COLOR:Red]Ne peut enterrer de trésor que sur une case vide.[ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="fr_FR">
+      <Text>[COLOR:Red]Ne peut enterrer de trésor que sur un territoire non possédé.[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="fr_FR">
       <Text>Vaisseau amiral</Text>
     </Replace>
@@ -2448,6 +2454,9 @@
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="de_DE">
       <Text>[COLOR:Red]Schätze können nur auf einem leeren Geländefeld vergraben werden.[ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="de_DE">
+      <Text>[COLOR:Red]Kann den Schatz nur auf herrenlosen Gebieten vergraben.[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="de_DE">
       <Text>Flaggschiff</Text>
     </Replace>
@@ -2551,10 +2560,10 @@
       <Text>Reduziert die Kosten für den Einheitenunterhalt um 3 pro Einheit.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_CURSED_PIECES_OF_EIGHT_DESCRIPTION" Language="de_DE">
-      <Text>Man sagt, ein gewisser Captain Cleveland habe sie von einer spanischen Galeone erlangt, aber in einem Duell verloren. Der Sieger war eine Zeitlang reich, wurde jedoch von einer verschmähten Liebhaberin vergiftet. Die wiederum hatte eine Taverne in Tortuga, bis sie die Pocken bekam, und so weiter. Diese Goldstücke haben Glück wie auch Unglück gebracht, und jetzt gehören sie Euch.</Text>
+      <Text>Man sagt, ein Captain Cleveland habe sie von einer spanischen Galeone erlangt, aber in einem Duell verloren. Der Sieger war reich, wurde jedoch von einer verschmähten Liebhaberin vergiftet. Die wiederum hatte eine Taverne in Tortuga, bis sie die Pocken bekam, und so weiter. Diese Goldstücke haben Glück und Unglück gebracht, und nun gehören sie Euch.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_CURSED_PIECES_OF_EIGHT_DESCRIPTION" Language="de_DE">
-      <Text>+3 Gold für Einheitenunterhalt (höhere Wahrscheinlichkeit für Meuterei); in jeder Runde 3 % Zinsen auf Goldreserven.</Text>
+      <Text>+3 Gold für Einheitenunterhalt (höhere Chance auf Meuterei); Jede Runde 3 % Zinsen auf Goldreserven.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_CRATES_OF_RUM_DESCRIPTION" Language="de_DE">
       <Text>Ein Fass besten Rums! Das können wir für jede Menge Münzen in den Häfen verkaufen, in denen wir anlanden.</Text>
@@ -2584,13 +2593,13 @@
       <Text>Die schwarze Flagge des Schreckens. Die meisten zeigten einen Totenkopf oder ein blutendes Herz, das von einem Pfeil durchbohrt wird. Der Name leitet sich womöglich vom französischen Wort "rouge", das sich auf eine rote Flagge bezieht, oder von einem Beinamen des Teufels ab.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_JOLLY_ROGERS_DESCRIPTION" Language="de_DE">
-      <Text>Ihr erhaltet zusätzlich 50 Gold beim Plündern eines Handelsschiffs. Lässt die Flaggen Eurer Schiffe zerfledderter aussehen.</Text>
+      <Text>Ihr erhaltet zusätzlich 50 Gold beim Plündern eines Handelsschiffs. Lässt eure Schiffsflaggen zerfledderter aussehen.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_BLACKBEARD_FUSE_DESCRIPTION" Language="de_DE">
       <Text>Der gefürchtete Pirat pflegte sich ein paar hiervon in den Bart zu binden und anzuzünden, um seinen Feinden Angst zu machen. Vielleicht war das aber gar nicht nötig.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_BLACKBEARD_FUSE_DESCRIPTION" Language="de_DE">
-      <Text>Angriffe von Marineeinheiten fügen feindlichen Schiffen für die nächste Runde -2 [ICON_Movement] Fortbewegung zu.</Text>
+      <Text>Marineeinheit-Angriffe fügen feindlichen Schiffen für die nächste Runde -2 [ICON_Movement] Fortbewegung zu.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_BONNY_PISTOLS_DESCRIPTION" Language="de_DE">
       <Text>Anne Bonny, geborene Fulford, war die Geliebte des Piraten Calico Jack. Als sie sich mit Mary Read zusammenschloss, kehrten sie Jack den Rücken, um gemeinsam zu segeln. Dies sind ihre Pistolen.</Text>
@@ -2599,13 +2608,13 @@
       <Text>+1 zusätzlicher Angriff für alle Einheiten. Alle Einheiten können sich nach dem Angriff bewegen.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_SKULL_FIRESHOT_DESCRIPTION" Language="de_DE">
-      <Text>Es handelt sich um keinen echten Schädel, sondern um eine kunstvoll gefertigte Kanonenkugel aus Eisen. Aber wenn überaus abergläubische seefahrende Feinde sie mit einem kreischenden Pfeifen durch die Luft auf sich zu fliegen sehen, während Flammen aus ihren Augäpfeln und dem Mund schießen ... sind sie nur schwer vom Gegenteil zu überzeugen.</Text>
+      <Text>Es handelt sich um keinen echten Schädel, sondern um eine kunstvolle Kanonenkugel aus Eisen. Aber wenn abergläubische seefahrende Feinde sie mit einem kreischenden Pfeifen durch die Luft auf sich zu fliegen sehen, während Flammen aus ihren Augäpfeln und dem Mund schießen ... probiere sie dann vom Gegenteil zu überzeugen.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_SKULL_FIRESHOT_DESCRIPTION" Language="de_DE">
       <Text>+3 [ICON_Strength] Kampfstärke für Marineschiffe.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_FISHING_FLOATS_DESCRIPTION" Language="de_DE">
-      <Text>Eine Kette aus bunten Glasschwimmern, die über ein Netz miteinander verbunden sind. Diese "Hexenkugeln" waren auf den Nordsee-Handelswegen so lange in Gebrauch, dass sie von den namensgebenden Winden, die darin gefangen sind, verzaubert wurden. Sie leuchten, wenn sie an den Rahnocken von Schiffen aufgehangen werden, und füllen die Segel selbst an windstillen Tagen.</Text>
+      <Text>Eine Kette aus bunten Glasschwimmern, die über ein Netz verbunden sind. Diese "Hexenkugeln" waren in der Nordsee so lange in Gebrauch, dass sie von den namensgebenden Winden, die darin gefangen sind, verzaubert wurden. Sie leuchten, wenn sie an den Rahnocken von Schiffen aufgehangen werden, und füllen die Segel selbst an windstillen Tagen.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_FISHING_FLOATS_DESCRIPTION" Language="de_DE">
       <Text>+2 [ICON_Movement] Fortbewegung für Marineschiffe.</Text>
@@ -3122,10 +3131,10 @@
       <Text>Gabbieri canterini</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_CURSED_PIECES_OF_EIGHT_NAME" Language="it_IT">
-      <Text>Pezzi da otto fortunati maledetti</Text>
+      <Text>Pezzi da otto maledetti</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_CURSED_PIECES_OF_EIGHT_NAME" Language="it_IT">
-      <Text>Pezzi da otto fortunati maledetti</Text>
+      <Text>Pezzi da otto maledetti</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_CRATES_OF_RUM_NAME" Language="it_IT">
       <Text>Casse di rum</Text>
@@ -3188,10 +3197,10 @@
       <Text>Testa di pointer inglese</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_BLACK_SPOT_NAME" Language="it_IT">
-      <Text>Ferro per marchiare col malocchio</Text>
+      <Text>Ferro rovente col malocchio</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_BLACK_SPOT_NAME" Language="it_IT">
-      <Text>Ferro per marchiare col malocchio</Text>
+      <Text>Ferro rovente col malocchio</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_DOWSING_ROD_NAME" Language="it_IT">
       <Text>Bacchetta da rabdomante</Text>
@@ -3378,6 +3387,9 @@
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="it_IT">
       <Text>[COLOR:Red]È possibile seppellire un tesoro solo in una casella vuota.[ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="it_IT">
+      <Text>[COLOR:Red]Puoi sotterrare un tesoro solo in una casella che non appartiene a nessun giocatore.[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="it_IT">
       <Text>Nave ammiraglia</Text>
@@ -4224,6 +4236,9 @@
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="ja_JP">
       <Text>[COLOR:Red]宝は何もない土地にしか埋められません。[ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="ja_JP">
+      <Text>[COLOR:Red]所有者のいないプロットにしか宝を埋められません。[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="ja_JP">
       <Text>旗艦</Text>
     </Replace>
@@ -4324,7 +4339,7 @@
       <Text>甲板のはるか上、高い見張り台で働く檣楼員は、独特の船歌で知られて、君も何人かのど自慢を雇っている。うっとうしい霧を払い、嵐の海に対する不安をなだめてくれることだろう。何事もない日も一段と穏やかになること請け合いだ。</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_SINGING_TOPMEN_DESCRIPTION" Language="ja_JP">
-      <Text>ユニット毎の維持コストが3減る。</Text>
+      <Text>ユニット毎の維持コストが3ゴールド減少。</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_CURSED_PIECES_OF_EIGHT_DESCRIPTION" Language="ja_JP">
       <Text>かつてクリーブランド船長なる人物がいた。彼はスペインのガレオン船を襲い、積まれていた金貨を手に入れたが、決闘に敗れてすべてを失ってしまった。だが、決闘に勝った男も大金持ちでいられたのはほんのわずかな間だけで。捨てた女に毒を盛られて死んでしまう。女は男の金を元手にしてトルトゥーガで酒場を開いたが、やがてその体は梅毒に蝕まれ… 幸運と同じ数だけ不幸を招いたいわくつきのコイン。今、それがあなたの手の中にある。</Text>
@@ -4396,7 +4411,7 @@
       <Text>この焼印を使うと、敵に呪いをかけることができる。呪いは海を越えてつきまとう。消しさる手段はなく、効果が消えるのを待つしかない。</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_BLACK_SPOT_DESCRIPTION" Language="ja_JP">
-      <Text>土着の海賊や悪名高き海賊相手の [ICON_Strength] 戦闘力+10。</Text>
+      <Text>土着の海賊や悪名高き海賊と対戦する場合、 [ICON_Strength] 戦闘力+10。</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_DOWSING_ROD_DESCRIPTION" Language="ja_JP">
       <Text>農民のダウジングロッド。迷信深い者たちが地下水を探すために使っていた。ひと工夫すれば、黄金の在処を指し示してくれるかもしれない。 </Text>
@@ -4606,7 +4621,7 @@
       <Text>ターンごとに: {1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="ja_JP">
-      <Text>船員の反乱勃発まで{1_Turns}ターン！</Text>
+      <Text>船員の反乱まで{1_Turns}ターン！</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="ja_JP">
       <Text>全面的反乱まであと{1_Turns}ターン！</Text>
@@ -5054,6 +5069,9 @@
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="ko_KR">
       <Text>[COLOR:Red]공지에만 보물을 묻을 수 있습니다.[ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="ko_KR">
+      <Text>[COLOR:Red]주인이 없는 타일에만 보물을 묻을 수 있습니다.[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="ko_KR">
       <Text>기함</Text>
@@ -6031,6 +6049,9 @@
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="pl_PL">
       <Text>[COLOR:Red]Skarb można zakopać wyłącznie na pustym polu.[ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="pl_PL">
+      <Text>[COLOR:Red]Skarb można zakopać wyłącznie na niczyim polu.[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="pl_PL">
       <Text>Okręt flagowy</Text>
@@ -7035,6 +7056,9 @@
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="ru_RU">
       <Text>[COLOR:Red]Закопать клад можно только на пустом участке земли.[ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="ru_RU">
+      <Text>[COLOR:Red]Можно закопать клад только на неподконтрольном участке земли.[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="ru_RU">
       <Text>флагманы|флагманов|флагманам|флагманов|флагманами|флагманах</Text>
     </Replace>
@@ -7891,6 +7915,9 @@
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="zh_Hans_CN">
       <Text>[COLOR:Red]只能在空格位上埋藏宝藏。[ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="zh_Hans_CN">
+      <Text>[COLOR:Red]只能在无主的格位上埋藏宝藏。[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="zh_Hans_CN">
       <Text>旗舰</Text>
@@ -8869,6 +8896,9 @@
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="es_ES">
       <Text>[COLOR:Red]Solo se pueden enterrar tesoros en una casilla vacía.[ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="es_ES">
+      <Text>[COLOR:Red]Solo se puede enterrar un tesoro en una parcela sin dueño.[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="es_ES">
       <Text>Buque insignia</Text>
     </Replace>
@@ -9725,6 +9755,9 @@
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT" Language="zh_Hant_HK">
       <Text>[COLOR:Red]僅能在空的格位上埋藏寶藏。[ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT" Language="zh_Hant_HK">
+      <Text>[COLOR:Red]只能在無主的格位埋藏寶藏。[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_FLAGSHIP_NAME" Language="zh_Hant_HK">
       <Text>旗艦</Text>

@@ -11,4 +11,16 @@
 		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_HIPPODROME" Texture="MomentSTK_Hippodrome.dds"/>
 		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_OPPIDUM" Texture="MomentSTK_Oppidum.dds"/>
 	</MomentIllustrations>
+	<MutuallyExclusiveDistricts>
+		<Row District="DISTRICT_HIPPODROME" MutuallyExclusiveDistrict="DISTRICT_WATER_ENTERTAINMENT_COMPLEX"/>
+		<Row District="DISTRICT_WATER_ENTERTAINMENT_COMPLEX" MutuallyExclusiveDistrict="DISTRICT_HIPPODROME"/>
+	</MutuallyExclusiveDistricts>
+	<Districts>
+		<Update>
+			<Where DistrictType="DISTRICT_HIPPODROME"/>
+			<Set>
+				<Description>LOC_DISTRICT_HIPPODROME_EXPANSION1_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Districts>
 </GameInfo>

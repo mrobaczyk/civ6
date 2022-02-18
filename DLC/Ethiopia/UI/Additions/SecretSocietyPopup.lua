@@ -4,11 +4,11 @@
 --	CONSTANTS
 -- ===========================================================================
 
-local kJoinedImages:table = {};
-kJoinedImages["SECRETSOCIETY_OWLS_OF_MINERVA"]	= "GovernorSelectedSTK_OwlsOfMinerva";
-kJoinedImages["SECRETSOCIETY_HERMETIC_ORDER"]	= "GovernorSelectedSTK_HermeticOrder";
-kJoinedImages["SECRETSOCIETY_VOIDSINGERS"]		= "GovernorSelectedSTK_VoidSingers";
-kJoinedImages["SECRETSOCIETY_SANGUINE_PACT"]	= "GovernorSelectedSTK_SanguinePact";
+local kDiscoveredImages:table = {};
+kDiscoveredImages["SECRETSOCIETY_OWLS_OF_MINERVA"]	= "GovernorSelectedSTK_OwlsOfMinerva";
+kDiscoveredImages["SECRETSOCIETY_HERMETIC_ORDER"]	= "GovernorSelectedSTK_HermeticOrder";
+kDiscoveredImages["SECRETSOCIETY_VOIDSINGERS"]		= "GovernorSelectedSTK_VoidSingers";
+kDiscoveredImages["SECRETSOCIETY_SANGUINE_PACT"]	= "GovernorSelectedSTK_SanguinePact";
 
 -- ===========================================================================
 function OnContinueButton()
@@ -59,6 +59,13 @@ function OnSecretSocietyDiscovered( pNotification:table )
 
 	local ePlayer:number = pNotification:GetValue( "PARAM_DATA0" );
 	local eSociety:number = pNotification:GetValue( "PARAM_DATA1" );
+	local bIsFirstDiscovery:boolean = pNotification:GetValue( "PARAM_DATA2" );
+
+	ShowDiscovery(ePlayer, eSociety, bIsFirstDiscovery);
+end
+
+-- ===========================================================================
+function ShowDiscovery(ePlayer:number, eSociety:number, bIsFirstDiscovery:boolean)
 
 	if ePlayer ~= Game.GetLocalPlayer() then
 		return;
@@ -76,10 +83,15 @@ function OnSecretSocietyDiscovered( pNotification:table )
 		return;
 	end
 
-	Controls.EventTitle:SetText(Locale.ToUpper("LOC_DISCOVERED_SOCIETY"));
-	Controls.EventDescription:SetText(Locale.Lookup("LOC_DISCOVERED_SOCIETY_DESC", kSocietyDef.Name));
+	Controls.EventTitle:SetText(Locale.ToUpper(Locale.Lookup("LOC_DISCOVERED_SOCIETY", kSocietyDef.Name)));
+
+	if bIsFirstDiscovery then
+		Controls.EventDescription:SetText(Locale.Lookup("LOC_DISCOVERED_SOCIETY_FIRST_DESC", kSocietyDef.Name, kSocietyDef.IconString));
+	else
+		Controls.EventDescription:SetText(Locale.Lookup("LOC_DISCOVERED_SOCIETY_SUBSEQUENT_DESC", kSocietyDef.Name, kSocietyDef.IconString));
+	end
 	
-	Controls.SocietyImage:SetTexture("SecretSocieties_EventsFG_Discover");
+	Controls.SocietyImage:SetTexture(kDiscoveredImages[kSocietyDef.SecretSocietyType]);
 	local memberSocietyHash = kPlayerGovernors:GetSecretSociety();
 	local kMemberSocietyDef:table = GameInfo.SecretSocieties[memberSocietyHash];
 	if (kMemberSocietyDef ~= nil) then
@@ -105,6 +117,12 @@ function OnSecretSocietyJoined( pNotification:table )
 	local ePlayer:number = pNotification:GetValue( "PARAM_DATA0" );
 	local eSociety:number = pNotification:GetValue( "PARAM_DATA1" );
 
+	ShowJoined(ePlayer, eSociety);
+end
+
+-- ===========================================================================
+function ShowJoined(ePlayer:number, eSociety:number)
+
 	if ePlayer ~= Game.GetLocalPlayer() then
 		return;
 	end
@@ -114,10 +132,10 @@ function OnSecretSocietyJoined( pNotification:table )
 		return;
 	end
 
-	Controls.EventTitle:SetText(Locale.ToUpper("LOC_JOINED_SOCIETY"));
-	Controls.EventDescription:SetText(Locale.Lookup("LOC_JOINED_SOCIETY_DESC", kSocietyDef.Name));
+	Controls.EventTitle:SetText(Locale.ToUpper(Locale.Lookup("LOC_JOINED_SOCIETY", kSocietyDef.Name)));
+	Controls.EventDescription:SetText(Locale.Lookup("LOC_JOINED_SOCIETY_DESC", kSocietyDef.Name, kSocietyDef.IconString));
 	
-	Controls.SocietyImage:SetTexture(kJoinedImages[kSocietyDef.SecretSocietyType]);
+	Controls.SocietyImage:SetTexture("SecretSocieties_EventsFG_Discover");
 	Controls.SocietyDescription:SetText(Locale.Lookup(kSocietyDef.MembershipText));
 
 	Open();

@@ -255,6 +255,37 @@ CREATE TABLE "BarbarianTribes" (
 		PRIMARY KEY(TribeType),
 		FOREIGN KEY (RequiredResource) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "BarbarianTribe_MapConditions" (
+		"MapConditionSetType" TEXT NOT NULL,
+		"TerrainType" TEXT,
+		"FeatureType" TEXT,
+		"ResourceType" TEXT,
+		"Range" INTEGER NOT NULL DEFAULT 0,
+		"Invert" BOOLEAN NOT NULL CHECK (Invert IN (0,1)) DEFAULT 0,
+		PRIMARY KEY(MapConditionSetType, TerrainType, FeatureType, ResourceType),
+		FOREIGN KEY (FeatureType) REFERENCES Features(FeatureType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (TerrainType) REFERENCES Terrains(TerrainType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (MapConditionSetType) REFERENCES BarbarianTribe_MapConditionSets(MapConditionSetType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "BarbarianTribe_MapConditionSets" (
+		"MapConditionSetType" TEXT NOT NULL,
+		"TribeType" TEXT NOT NULL,
+		"Test" TEXT NOT NULL,
+		"Priority" INTEGER NOT NULL DEFAULT 1,
+		PRIMARY KEY(MapConditionSetType),
+		FOREIGN KEY (TribeType) REFERENCES BarbarianTribes(TribeType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "BarbarianTribe_UnitConditions" (
+		"TribeType" TEXT NOT NULL,
+		"UnitType" TEXT NOT NULL,
+		"ReplacesUnitType" TEXT,
+		"MaxPerTribe" INTEGER NOT NULL DEFAULT 1,
+		PRIMARY KEY(TribeType, UnitType),
+		FOREIGN KEY (TribeType) REFERENCES BarbarianTribes(TribeType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (UnitType) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (ReplacesUnitType) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "BarbarianTribeForces" (
 		"AttackForceType" TEXT NOT NULL,
 		"TribeType" TEXT,
@@ -2156,9 +2187,11 @@ CREATE TABLE "Project_GreatPersonPoints" (
 CREATE TABLE "Projects_MODE" (
 		"ProjectType" TEXT NOT NULL,
 		"PrereqImprovement" TEXT,
+		"ResourceType" TEXT,
 		PRIMARY KEY(ProjectType),
 		FOREIGN KEY (ProjectType) REFERENCES Projects(ProjectType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (PrereqImprovement) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (PrereqImprovement) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Project_YieldConversions" (
 		"ProjectType" TEXT NOT NULL,
@@ -2351,6 +2384,13 @@ CREATE TABLE "Resource_YieldChanges" (
 		PRIMARY KEY(ResourceType, YieldType),
 		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "ResourceIndustries" (
+		"ResourceType" TEXT NOT NULL,
+		"ResourceEffect" TEXT,
+		"ResourceEffectTExt" TEXT,
+		PRIMARY KEY(ResourceType),
+		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Routes" (
 		"RouteType" TEXT NOT NULL,
@@ -3084,6 +3124,8 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribes", "AttackCollection", "BarbarianAttackForces", 1,"SELECT T1.rowid from BarbarianAttackForces as T1 inner join BarbarianTribeForces as T2 on T2.AttackForceType = T1.AttackForceType inner join BarbarianTribes as T3 on T3.TribeType = T2.TribeType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribes", "RequiredResourceReference", "Resources", 0,"SELECT T1.rowid from Resources as T1 inner join BarbarianTribes as T2 on T2.RequiredResource = T1.ResourceType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribes", "TribeNames", "BarbarianTribeNames", 1,"SELECT T1.rowid from BarbarianTribeNames as T1 inner join BarbarianTribes as T2 on T2.TribeType = T1.TribeType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribe_MapConditions", "MapConditionSetTypeReference", "BarbarianTribe_MapConditionSets", 0,"SELECT T1.rowid from BarbarianTribe_MapConditionSets as T1 inner join BarbarianTribe_MapConditions as T2 on T2.MapConditionSetType = T1.MapConditionSetType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribe_MapConditionSets", "TribeTypeReference", "BarbarianTribes", 0,"SELECT T1.rowid from BarbarianTribes as T1 inner join BarbarianTribe_MapConditionSets as T2 on T2.TribeType = T1.TribeType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribeNames", "AttackCollection", "BarbarianAttackForces", 1,"SELECT T1.rowid from BarbarianAttackForces as T1 inner join BarbarianTribeForces as T2 on T2.AttackForceType = T1.AttackForceType inner join BarbarianTribeNames as T3 on T3.TribeNameType = T2.SpecificTribeType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribeNames", "TribeTypeReference", "BarbarianTribes", 0,"SELECT T1.rowid from BarbarianTribes as T1 inner join BarbarianTribeNames as T2 on T2.TribeType = T1.TribeType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BehaviorTrees", "TriggerCollection", "TriggeredBehaviorTrees", 1,"SELECT T1.rowid from TriggeredBehaviorTrees as T1 inner join BehaviorTrees as T2 on T2.TreeName = T1.TreeName where T2.rowid = ? ORDER BY T1.rowid ASC");

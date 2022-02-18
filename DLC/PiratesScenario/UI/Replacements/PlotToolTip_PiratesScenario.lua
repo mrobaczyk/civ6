@@ -28,7 +28,7 @@ function FetchData(pPlot : object)
 	local pPlotIndex : number = pPlot:GetIndex();
 	if(treasureMaps ~= nil) then
 		for loop, curTreasureMap in ipairs(treasureMaps) do
-			if(pPlotIndex == curTreasureMap.SearchCenterIndex or Map.GetPlotDistance(pPlotIndex, curTreasureMap.SearchCenterIndex) <= curTreasureMap.ZoneSize)then
+			if(pPlotIndex == curTreasureMap.SearchCenterIndex or Map.GetPlotDistance(pPlotIndex, curTreasureMap.SearchCenterIndex) <= PIRATE_TREASURE_SEARCH_ZONE_SIZE)then
 				kData.TreasureSearchTooltip = Locale.Lookup("LOC_PIRATES_PLOT_TOOLTIP_TREASURE_MAP");
 				return kData;
 			end

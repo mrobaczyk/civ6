@@ -193,9 +193,6 @@ end
 function RegisterHandlers()
 	BASE_RegisterHandlers();
 
-	g_notificationHandlers[g_NotificationsData.BuriedTreasureLocated.Type].AddSound		= "ALERT_POSITIVE";	
-	g_notificationHandlers[g_NotificationsData.NewBuriedTreasure.Type].AddSound			= "ALERT_POSITIVE";	
-
 	g_notificationHandlers[g_NotificationsData.BuriedTreasureLocated.Type].OnPhaseBegin	= OnPhaseBegin_TreasureLocated;
 	g_notificationHandlers[g_NotificationsData.BuriedTreasureLocated.Type].TryDismiss	= TryDismiss_TreasureLocated;
 

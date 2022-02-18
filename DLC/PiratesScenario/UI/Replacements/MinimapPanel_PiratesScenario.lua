@@ -209,6 +209,7 @@ function ReadCustomData( key:string )
 	return unpack(kReturn);
 end
 
+-- Only naval ships have unit waves.
 function ResetUnitWaves(overlayName :string, policyIndex :number, waveColor :number, findTargetPlotFunc)
 	local pWavesOverlay:object = UILens.GetOverlay(overlayName);
 	if(pWavesOverlay == nil) then
@@ -231,7 +232,10 @@ function ResetUnitWaves(overlayName :string, policyIndex :number, waveColor :num
 	local waves:table = {};
 	local pLocalUnits = pLocalPlayer:GetUnits();
 	for i, pUnit in pLocalUnits:Members() do
-		waves = AddUnitWaves(waves, pUnit, waveColor, findTargetPlotFunc);
+		-- Only naval ships have unit waves.
+		if(GameInfo.Units[pUnit:GetType()].Domain == "DOMAIN_SEA") then
+			waves = AddUnitWaves(waves, pUnit, waveColor, findTargetPlotFunc);
+		end
 	end
 
 	pWavesOverlay:CreateLinearWaves(waves);

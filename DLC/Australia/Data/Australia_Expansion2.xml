@@ -70,6 +70,7 @@
 		</Update>
 	</Traits>
 	<Modifiers>
+		<Delete ModifierId="TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION"/>
 		<Row>
 			<ModifierId>TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADD_DIPLOMATIC_YIELD_MODIFIER</ModifierType>
@@ -86,11 +87,22 @@
 			<Name>TurnsActive</Name>
 			<Value>10</Value>
 		</Row>
+		<Row>
+			<ModifierId>TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
 	</ModifierArguments>
 	<TraitModifiers>
-		<Update>
-			<Where ModifierId="TRAIT_LEADER_CITADEL_CIVILIZATION"/>
-			<Set ModifierId="TRAIT_LEADER_CITADEL_CIVILIZATION_XP2"/>
-		</Update>
+		<Delete ModifierId="TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION"/>
+		<Row>
+			<TraitType>TRAIT_LEADER_CITADEL_CIVILIZATION</TraitType>
+			<ModifierId>TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2</ModifierId>
+		</Row>
 	</TraitModifiers>
 </GameInfo>

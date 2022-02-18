@@ -26,6 +26,9 @@
 
 		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="NaturalWonders" Name="LOC_EXCLUDE_NATURAL_WONDER_NAME" Description="LOC_EXCLUDE_NATURAL_WONDER_DESC" Domain="StandardNaturalWonders" Hash="0" Array="1" ConfigurationGroup="Game" ConfigurationId="EXCLUDE_NATURAL_WONDERS" GroupId="MapOptions" UxHint="InvertSelection"  SortIndex="230"/>
 
+		<!-- City-State Picker -->
+		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="CityStates" Name="LOC_EXCLUDE_CITY_STATES_NAME" Description="LOC_EXCLUDE_CITY_STATES_DESC" Domain="StandardCityStates" Hash="0" Array="1" ConfigurationGroup="Game" ConfigurationId="EXCLUDE_CITY_STATES" GroupId="MapOptions" UxHint="InvertSelection"  SortIndex="230"/>
+
 		<!-- Two mutually exclusive map start position parameters.  The MP version defaults to "balanced", while the SP version defaults to "standard". -->	
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="240"/>
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsSinglePlayer="0" SortIndex="240"/>
@@ -88,6 +91,7 @@
 		<Row QueryId="MapWorldWrapDependencies" />
 		<Row QueryId="MapResourcesDependencies" />
 		<Row QueryId="MapNaturalWondersDependencies"/>
+    <Row QueryId="MapCityStatesDependencies"/>
 
 	</ParameterDependencyQueries>
 
@@ -165,6 +169,7 @@
 		<Row QueryId="Maps"/>
 		<Row QueryId="MapSizes"/>
 		<Row QueryId="NaturalWonders"/>
+		<Row QueryId="CityStates"/>
 		<Row QueryId="TurnTimers"/>
 		<Row QueryId="TurnPhases"/>
 		<Row QueryId="Players"/>
@@ -262,7 +267,10 @@
 
 		<!-- Disable 'Natural Wonders' selector if map is fixed map, e.g pre-populated with natural wonders. -->
 		<Row QueryId="MapNaturalWondersDependencies" SQL="SELECT 'NaturalWonders' AS ParameterId, 'Map' AS ConfigurationGroup, 'MAP_SCRIPT' AS ConfigurationId, 'NotEquals' AS Operator, File AS ConfigurationValue FROM Maps WHERE StaticMap = 1" />
-		
+
+    <!-- Disable 'City-States' selector if map is fixed map, e.g pre-populated with natural wonders. -->
+    <Row QueryId="MapCityStatesDependencies" SQL="SELECT 'CityStates' AS ParameterId, 'Map' AS ConfigurationGroup, 'MAP_SCRIPT' AS ConfigurationId, 'NotEquals' AS Operator, File AS ConfigurationValue FROM Maps WHERE StaticMap = 1" />
+    
 		<!-- Value Queries -->
 		<Row QueryId="DomainValues" SQL="SELECT * FROM DomainValues WHERE Key1 IS NULL AND Key2 IS NULL"/>
 		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' AS Domain, Name, Description, RulesetType AS Value, SortIndex FROM Rulesets WHERE ((?1 = -379035929 and SupportsSinglePlayer = 1) or ((?1 = 1161765858 or ?1 = 20463770 or ?1 = -413661464) and SupportsMultiplayer = 1) or (?1 = 208129763 and SupportsHotSeat = 1) or (?1 = 285185446 and SupportsPlayByCloud = 1))"/>
@@ -272,6 +280,7 @@
 		<Row QueryId="Maps" SQL="SELECT Domain, Name, Description, File AS Value, SortIndex FROM Maps WHERE (not WorldBuilderOnly or ?)"/>
 		<Row QueryId="MapSizes" SQL="SELECT Domain, Name, Description, MapSizeType AS Value, SortIndex FROM MapSizes"/>
 		<Row QueryId="NaturalWonders" SQL="SELECT Domain, Name, Description, Icon, FeatureType AS Value, SortIndex FROM NaturalWonders"/>
+		<Row QueryId="CityStates" SQL="SELECT Domain, CivilizationType AS Value, Name, Icon, SortIndex FROM CityStates"/>
 		<Row QueryId="TurnTimers" SQL="SELECT Domain, Name, Description, TurnTimerType AS Value, SortIndex FROM TurnTimers"/>
 		<Row QueryId="TurnPhases" SQL="SELECT Domain, Name, Description, TurnPhaseType AS Value, SortIndex FROM TurnPhases"/>
 		<Row QueryId="Players" SQL="SELECT Domain, LeaderName AS Name, LeaderAbilityDescription AS Description, LeaderType AS Value, coalesce(SortIndex,100) AS SortIndex FROM Players"/>

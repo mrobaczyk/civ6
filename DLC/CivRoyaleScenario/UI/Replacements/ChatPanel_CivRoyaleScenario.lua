@@ -445,6 +445,12 @@ end
 
 -------------------------------------------------
 -------------------------------------------------
+function OnFinishResizing()
+	LuaEvents.WorldTracker_ChatResizeFinished(Controls.ChatPanel:GetSizeY());
+end
+
+-------------------------------------------------
+-------------------------------------------------
 function OnSetNumberOfEmergencies( numEmergencies:number )
 	m_numEmergencies = numEmergencies;
 	--Disabling drag resize when emergencies are present
@@ -493,6 +499,7 @@ function OnResetChatButton()
 	Controls.ChatEntryStack:CalculateSize();
 	m_StartingMouseX, m_StartingMouseY = Controls.DragButton:GetScreenOffset();
 	m_StartingMouseY = m_StartingMouseY + 24;
+	LuaEvents.WorldTracker_ChatResizeFinished(m_ChatStartSizeY);
 end
 
 -------------------------------------------------
@@ -1112,6 +1119,7 @@ function Initialize()
 		end);
 	Controls.DragSizer:RegisterCallback( Drag.eDrag, OnDragResizer);
 	Controls.ResetChatButton:RegisterCallback( Mouse.eLClick, OnResetChatButton );
+	Controls.DragSizer:RegisterCallback( Drag.eDrop, OnFinishResizing);
 
 	ContextPtr:SetInputHandler(InputHandler, true);
 	ContextPtr:SetShutdown( OnShutdown );

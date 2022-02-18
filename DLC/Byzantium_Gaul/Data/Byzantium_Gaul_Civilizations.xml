@@ -246,6 +246,10 @@
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>GAUL_MINE_TOURISM</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
 			<ModifierId>GAUL_MINE_CULTURE_BOMB</ModifierId>
 		</Row>
 		<Row>
@@ -315,6 +319,11 @@
 			<ModifierId>GAUL_MINE_CULTURE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
 			<SubjectRequirementSetId>PLOT_HAS_MINE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>GAUL_MINE_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_FLIGHT</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
@@ -392,6 +401,16 @@
 			<ModifierId>GAUL_MINE_CULTURE_BOMB</ModifierId>
 			<Name>CaptureOwnedTerritory</Name>
 			<Value>False</Value>
+		</Row>
+		<Row>
+			<ModifierId>GAUL_MINE_TOURISM</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GAUL_MINE_TOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>200</Value>
 		</Row>
 		<Row>
 			<ModifierId>GAUL_MINE_CULTURE</ModifierId>
@@ -606,4 +625,19 @@
 			<ModifierId>BYZANTIUM_RELIGIOUS_COMBAT_HOLY_CITIES</ModifierId>
 		</Row>
 	</UnitAbilityModifiers>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_FLIGHT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_FLIGHT</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Improvement_Tourism>
+		<Row ImprovementType="IMPROVEMENT_MINE" TourismSource="TOURISMSOURCE_CULTURE" PrereqTech="TECH_FLIGHT" ScalingFactor="0"/>
+	</Improvement_Tourism>
 </GameInfo>

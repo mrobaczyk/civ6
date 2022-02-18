@@ -829,7 +829,7 @@ function AddLeyLines()
 	--print ("Total frequency: " .. tostring(self.iFrequencyTotal));
 
 	-- Compute how many of each resource to place
-	local iFrequency = 0.175 * iValidPlots;
+	local iFrequency = 0.076 * iValidPlots;
 
 	for i, row in ipairs(aResourcePlacementOrder) do
 

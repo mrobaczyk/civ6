@@ -170,7 +170,11 @@ CREATE TABLE 'CityStates' (
 	'Domain' TEXT NOT NULL DEFAULT 'StandardCityStates',
 	'CivilizationType' TEXT NOT NULL,
 	'Name' TEXT NOT NULL,
-	'Description' TEXT,
+	'Icon' TEXT NOT NULL,
+	'CityStateCategory' TEXT NOT NULL,
+	'Bonus' TEXT NOT NULL,
+	'Bonus_XP1' TEXT,
+	'Bonus_XP2' TEXT,
 	'SortIndex' INTEGER NOT NULL DEFAULT 0,
 	PRIMARY KEY ('Domain','CivilizationType')
 );

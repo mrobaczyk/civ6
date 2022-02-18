@@ -681,6 +681,10 @@ function m_ScenarioUnitCommands.BURY_TREASURE.IsDisabled(pUnit : object)
 		return true;
 	end
 
+	if(pUnitPlot:GetOwner() ~= NO_PLAYER)then
+		return true;
+	end
+
 	if(pUnit:GetOwner() == NO_PLAYER) then
 		return true;
 	end
@@ -719,6 +723,10 @@ function m_ScenarioUnitCommands.BURY_TREASURE.GetDisabledTTString(pUnit :object)
 
 	if(IsPlotAlreadyImproved(pUnitPlot))then
 		return Locale.Lookup("LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT");
+	end
+
+	if(pUnitPlot:GetOwner() ~= NO_PLAYER)then
+		return Locale.Lookup("LOC_UNITOPERATION_BURY_TREASURE_OWNED_PLOT_TT");
 	end
 
 	local pPlayerTreasury :object = pPlayer:GetTreasury();

@@ -98,6 +98,7 @@ function CheckUnitAbilityDepleted(pUnit :object, turn :number, unitStateKey :str
 				PlotX = pUnit:GetX();
 				PlotY = pUnit:GetY();
 				Visibility = RevealedState.VISIBLE;
+				TargetID = pUnit:GetOwner();
 			}
 			Game.AddWorldViewText(messageData);
 		end
@@ -196,15 +197,7 @@ function CheckSwashbucklerExplorerPoints(iPlayerID :number, pUnit :object)
 end
 
 function SpawnInfamousPirate( )
-	local pirateSpawnPlots = {};
-	for iPlotIndex = 0, Map.GetPlotCount()-1, 1 do
-		local curPlot = Map.GetPlotByIndex(iPlotIndex);
-		if(curPlot ~= nil and curPlot:IsWater()) then
-			table.insert(pirateSpawnPlots, curPlot);
-		end
-	end
-
-	local infamousPlayer = Players[INFAMOUS_PIRATES_PLAYERID];
+	local infamousPlayer :object = Players[INFAMOUS_PIRATES_PLAYERID];
 	if(infamousPlayer == nil) then
 		print("Infamous pirate player missing!");
 		return;
@@ -212,10 +205,49 @@ function SpawnInfamousPirate( )
 
 	local infamousPlayerUnits :object = infamousPlayer:GetUnits();
 
-	-- Remove plots near pirate players
-	pirateSpawnPlots = FilterAllAdjPlots(pirateSpawnPlots, INFAMOUS_PIRATES_MIN_PLAYER_UNIT_DISTANCE, PlotHasNoPirateUnits, true);
+	-- IMPORTANT:  The following filtering uses a non-sequential table and is only network safe because all filtering are deterministic and non-order dependant!
+	local unsortedPlots :table = {};
+	local curPlotCount :number = 0;
 
-	local pirateRand :number = RandRange(1, #g_InfamousPirates + 1, "Picking Infamous Pirate Pick");
+	for iPlotIndex = 0, Map.GetPlotCount()-1, 1 do
+		local curPlot :object = Map.GetPlotByIndex(iPlotIndex);
+		if(curPlot ~= nil and curPlot:IsWater()) then
+			unsortedPlots[curPlot:GetIndex()] = curPlot;
+			curPlotCount = curPlotCount + 1;
+		end
+	end
+
+	print("Initial Infamous Pirate Spawn Plots: " .. tostring(curPlotCount));
+
+	-- Remove all plots too close to pirate player units.
+	local scanRange :number = INFAMOUS_PIRATES_MIN_PLAYER_UNIT_DISTANCE;
+	local kPiratePlayers :object = GetAlivePiratePlayers();
+	for _, pPlayer in ipairs(kPiratePlayers) do
+		local pPlayerUnits :object = pPlayer:GetUnits();
+		for i, pUnit in pPlayerUnits:Members() do
+			for dx = -scanRange, scanRange - 1, 1 do
+				for dy = -scanRange, scanRange - 1, 1 do
+					local curPlot :object = Map.GetPlotXYWithRangeCheck(pUnit:GetX(), pUnit:GetY(), dx, dy, scanRange);
+					if (curPlot ~= nil and unsortedPlots[curPlot:GetIndex()] ~= nil) then
+						curPlotCount = curPlotCount - 1;
+						unsortedPlots[curPlot:GetIndex()] = nil;
+					end
+				end
+			end
+		end
+	end
+
+	print("Removed Infamous Pirate Spawn Plots too close to pirate player units. Plots Remaining: " .. tostring(curPlotCount));
+
+	-- Convert unsortedPlots into pirateSpawnPlots, which is deterministic and ipair safe 
+	local pirateSpawnPlots :table = {};
+	for iPlotIndex = 0, Map.GetPlotCount()-1, 1 do
+		if(unsortedPlots[iPlotIndex] ~= nil) then
+			table.insert(pirateSpawnPlots, unsortedPlots[iPlotIndex]);
+		end
+	end
+
+	local pirateRand :number = RandRange(1, #g_InfamousPirates, "Picking Infamous Pirate Pick");
 	local curPirate = g_InfamousPirates[pirateRand];
 	local spawnPlotIndex: number = RandRange(1, #pirateSpawnPlots, "Selecting spawn plot for infamous pirate");
 	local spawnPlot :object = pirateSpawnPlots[spawnPlotIndex];
@@ -1213,6 +1245,7 @@ function CheckDreadPiratePassiveAbility(pPlayer :object, pUnit :object)
 		PlotX = pUnit:GetX();
 		PlotY = pUnit:GetY();
 		Visibility = RevealedState.VISIBLE;
+		TargetID = pUnit:GetOwner();
 		}
 		Game.AddWorldViewText(worldViewData);
 		pPlayer:GetTreasury():ChangeGoldBalance(DREAD_PIRATE_PASSIVE_COMBAT_GOLD);
@@ -1262,6 +1295,7 @@ function CheckCitySacked(pDefendingDistrict :object, pAttackingUnit :object)
 			PlotX = pAttackingUnit:GetX();
 			PlotY = pAttackingUnit:GetY();
 			Visibility = RevealedState.VISIBLE;
+			TargetID = pAttackingUnit:GetOwner();
 		}
 		Game.AddWorldViewText(messageData);
 		

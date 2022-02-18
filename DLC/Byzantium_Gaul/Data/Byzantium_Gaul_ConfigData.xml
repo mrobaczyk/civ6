@@ -19,7 +19,7 @@
 		<!-- Expansion 1 Support -->
 		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_BASIL" Type="UNIT_BYZANTINE_DROMON" Icon="ICON_UNIT_BYZANTINE_DROMON" Name="LOC_UNIT_BYZANTINE_DROMON_NAME" Description="LOC_UNIT_BYZANTINE_DROMON_DESCRIPTION" SortIndex="10"/>
 		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_BASIL" Type="UNIT_BYZANTINE_TAGMA" Icon="ICON_UNIT_BYZANTINE_TAGMA" Name="LOC_UNIT_BYZANTINE_TAGMA_NAME" Description="LOC_UNIT_BYZANTINE_TAGMA_DESCRIPTION" SortIndex="20"/>
-		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_BASIL" Type="DISTRICT_HIPPODROME" Icon="ICON_DISTRICT_HIPPODROME" Name="LOC_DISTRICT_HIPPODROME_NAME" Description="LOC_DISTRICT_HIPPODROME_DESCRIPTION" SortIndex="30"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_BASIL" Type="DISTRICT_HIPPODROME" Icon="ICON_DISTRICT_HIPPODROME" Name="LOC_DISTRICT_HIPPODROME_NAME" Description="LOC_DISTRICT_HIPPODROME_EXPANSION1_DESCRIPTION" SortIndex="30"/>
 		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_GAUL" LeaderType="LEADER_AMBIORIX" Type="UNIT_GAUL_GAESATAE" Icon="ICON_UNIT_GAUL_GAESATAE" Name="LOC_UNIT_GAUL_GAESATAE_NAME" Description="LOC_UNIT_GAUL_GAESATAE_DESCRIPTION" SortIndex="10"/>
 		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_GAUL" LeaderType="LEADER_AMBIORIX" Type="DISTRICT_OPPIDUM" Icon="ICON_DISTRICT_OPPIDUM" Name="LOC_DISTRICT_OPPIDUM_NAME" Description="LOC_DISTRICT_OPPIDUM_DESCRIPTION" SortIndex="20"/>
 		<!-- Expansion 2 Support -->
@@ -29,7 +29,6 @@
 		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_GAUL" LeaderType="LEADER_AMBIORIX" Type="UNIT_GAUL_GAESATAE" Icon="ICON_UNIT_GAUL_GAESATAE" Name="LOC_UNIT_GAUL_GAESATAE_NAME" Description="LOC_UNIT_GAUL_GAESATAE_DESCRIPTION" SortIndex="20"/>
 		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_GAUL" LeaderType="LEADER_AMBIORIX" Type="DISTRICT_OPPIDUM" Icon="ICON_DISTRICT_OPPIDUM" Name="LOC_DISTRICT_OPPIDUM_NAME" Description="LOC_DISTRICT_OPPIDUM_DESCRIPTION" SortIndex="20"/>
 	</PlayerItems>
-
 	<Parameters>
 		<Row Key1="Ruleset" Key2="RULESET_EXPANSION_1" ParameterId="GameMode_DramaticAges" Name="LOC_GAMEMODE_DRAMATICAGES_NAME" Description="LOC_GAMEMODE_DRAMATICAGES_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_DRAMATICAGES" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
 		<Row Key1="Ruleset" Key2="RULESET_EXPANSION_2" ParameterId="GameMode_DramaticAges" Name="LOC_GAMEMODE_DRAMATICAGES_NAME" Description="LOC_GAMEMODE_DRAMATICAGES_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_DRAMATICAGES" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
@@ -43,22 +42,19 @@
 	<GameModeItems>
 		<Row GameModeType="GAMEMODE_DRAMATICAGES" Name="LOC_GAMEMODE_DRAMATICAGES_NAME" Description="LOC_GAMEMODE_DRAMATICAGES_DESCRIPTION" Portrait="GAMEMODE_DRAMATICAGES_NEUTRAL" Background="GAMEMODE_DRAMATICAGES_BACKGROUND" Icon="ICON_GAMEMODE_DRAMATICAGES" SortIndex="10"/>
 	</GameModeItems>
-
 	<GameModePlayerInfoOverrides>
-		<Row GameModeType="GAMEMODE_DRAMATICAGES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_GEORGIA" LeaderType="LEADER_TAMAR" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_DRAMATIC_AGE_QUESTS_DESCRIPTION" />
-		<Row GameModeType="GAMEMODE_DRAMATICAGES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_GEORGIA" LeaderType="LEADER_TAMAR" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_DRAMATIC_AGE_QUESTS_DESCRIPTION" />
+		<Row GameModeType="GAMEMODE_DRAMATICAGES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_GEORGIA" LeaderType="LEADER_TAMAR" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_DRAMATIC_AGE_QUESTS_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_DRAMATICAGES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_GEORGIA" LeaderType="LEADER_TAMAR" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_DRAMATIC_AGE_QUESTS_DESCRIPTION"/>
 	</GameModePlayerInfoOverrides>
-
 	<PlayerInfoOverrideQueries>
-		<Row QueryId="DramaticAgesPlayerInfoOverrides" />
+		<Row QueryId="DramaticAgesPlayerInfoOverrides"/>
 	</PlayerInfoOverrideQueries>
 	<Queries>
-		<Row QueryId="DramaticAgesPlayerInfoOverrides" SQL="SELECT * FROM GameModePlayerInfoOverrides WHERE GameModeType = 'GAMEMODE_DRAMATICAGES'" />
+		<Row QueryId="DramaticAgesPlayerInfoOverrides" SQL="SELECT * FROM GameModePlayerInfoOverrides WHERE GameModeType = 'GAMEMODE_DRAMATICAGES'"/>
 	</Queries>
 	<QueryCriteria>
 		<Row QueryId="DramaticAgesPlayerInfoOverrides" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_DRAMATICAGES" Operator="Equals" ConfigurationValue="1"/>
 	</QueryCriteria>
-
 	<MapLeaders>
 		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_AMBIORIX"/>
 		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" LeaderType="LEADER_AMBIORIX"/>

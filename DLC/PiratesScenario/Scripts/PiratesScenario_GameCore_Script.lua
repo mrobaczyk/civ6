@@ -31,6 +31,7 @@ function GrantGoldPlot(iPlayerID :number, plotX :number, plotY :number, amount :
 		PlotX = plotX;
 		PlotY = plotY;
 		Visibility = RevealedState.VISIBLE;
+		TargetID = iPlayerID;
 	}
 	Game.AddWorldViewText(worldViewData);
 	pPlayer:GetTreasury():ChangeGoldBalance(amount);

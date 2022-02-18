@@ -15,6 +15,7 @@ include "PlotFiltering"
 local NO_PLAYER :number = -1;
 local NO_DISTRICT :number = -1;
 local INVALID_PLOT :number = -1;
+local NO_IMPROVEMENT :number = -1;
 
 local CustomNotificationParameters = {
 	CivicDiscovered_CivicIndex = 0xE4D94F18; -- Matches 
@@ -210,6 +211,7 @@ function ChangeScore(playerID :number, scoreData :table, scoreDelta :number, plo
 			PlotX = plotX;
 			PlotY = plotY;
 			Visibility = RevealedState.VISIBLE;
+			TargetID = playerID;
 		}
 		Game.AddWorldViewText(messageData);
 	end
@@ -593,13 +595,15 @@ function CreateNewTreasure(iPlayerID :number)
 	local curPlotCount = 0;
 	local scanRange :number = PIRATE_TREASURE_MAX_DIST_UNITS;
 
-	-- Initial Filter, Must be Passable, Correct Terrain for Treasure
+	-- Initial Filter, Must be Passable, Correct Terrain for Treasure, No Improvement, Not in Someone's Territory.
 	for i, pUnit in pPlayerUnits:Members() do
 		for dx = -scanRange, scanRange - 1, 1 do
 			for dy = -scanRange, scanRange - 1, 1 do
 				local curPlot :object = Map.GetPlotXYWithRangeCheck(pUnit:GetX(), pUnit:GetY(), dx, dy, scanRange);
 				if (curPlot ~= nil
-					and not curPlot:IsImpassable()					-- Passable plot
+					and not curPlot:IsImpassable()																		-- Passable plot
+					and curPlot:GetImprovementType() == NO_IMPROVEMENT													-- Not improved
+					and curPlot:IsOwned() == false																	-- Not owned
 					and ( (isFloating and curPlot:IsWater()) or (not isFloating and not curPlot:IsWater()) ) ) then		-- water check
 					unsortedPlots[curPlot:GetIndex()] = curPlot;
 					curPlotCount = curPlotCount + 1;
@@ -641,7 +645,7 @@ function CreateNewTreasure(iPlayerID :number)
 		local treasurePlot = treasurePlots[treasureRand];
 
 		-- Use an infamous pirate's name as the owner of randomly generated treasure.
-		local infamousPirateRand :number = RandRange(1, #g_InfamousPirates + 1, "Infamous Pirate Owner for Treasure Plot Roll");
+		local infamousPirateRand :number = RandRange(1, #g_InfamousPirates, "Infamous Pirate Owner for Treasure Plot Roll");
 		local infamousPirateName :string = g_InfamousPirates[infamousPirateRand].Name;
 
 		treasurePlot:SetProperty(g_plotPropertyKeys.TreasureOwnerName, infamousPirateName);
@@ -948,7 +952,7 @@ function GrantRelic(iPlayerID :number)
 		return;
 	end
 
-	local relicRand :number = RandRange(1, #lockedRelics + 1, "Picking Pirate Relic");
+	local relicRand :number = RandRange(1, #lockedRelics, "Picking Pirate Relic");
 	pPlayerCulture:SetCivic(lockedRelics[relicRand].Index, true);
 	pPlayerCulture:SetCivicCompletedThisTurn(true); -- allow free relic selection this turn.
 	NotificationManager.SendNotification(iPlayerID, NotificationTypes.FILL_CIVIC_SLOT); -- this adds the fill civic slot end turn blocker which isn't triggered by script civic unlocks.
@@ -1028,6 +1032,16 @@ function GetTargetChainShotUnitForPlot(pChainUnit :object, pTargetPlot :object)
 	local pOwnerDiplo :object = pOwner:GetDiplomacy();
 	if(pOwnerDiplo == nil) then
 		print("pOwnerDiplo missing!")
+		return nil;
+	end
+	local pPlayerVis :object = PlayersVisibility[pChainUnit:GetOwner()];
+	if(pPlayerVis == nil) then
+		print("pPlayerVis missing!")
+		return nil;
+	end
+
+	-- Players can only target visible hexes.
+	if(pPlayerVis:IsVisible(pTargetPlot:GetX(), pTargetPlot:GetY()) == false) then
 		return nil;
 	end
 

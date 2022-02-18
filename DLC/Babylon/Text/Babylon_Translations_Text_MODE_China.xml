@@ -191,7 +191,7 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_HERO_SYMBOL_WUKONG_NAME]Staff of Sun Wukong</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORKOBJECT_HERO]Heroic Relic</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORKOBJECT_HERO][ICON_GreatWork_HeroRelic] Heroic Relic</Text>
     </Replace>
     <Replace Tag="LOC_HERO_ABILITY_COMBAT_STRENGTH_AOE" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_HERO_ABILITY_COMBAT_STRENGTH_AOE]+10 [ICON_Strength] Combat Strength to all units within 2 tiles.</Text>
@@ -816,25 +816,25 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION]Oya's Storm</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP]Damage all adjacent enemies and heal all adjacent owned units by {1_DamageAmount}. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP]Damage all adjacent enemies and heal all adjacent owned units by {1_DamageAmount}. Costs 1 Charge and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_COMPLETE_DISTRICT_DESCRIPTION]Hercules' Labor</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP]Use when located on a friendly District under construction. Hercules immediately completes construction of the District. Costs 2 Charges.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP]Use when located on a friendly District under construction. Hercules immediately completes construction of the District. Costs 2 Charges and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_DESCRIPTION]Maui's Inventions</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP]Use when located on an unowned, empty plot. Maui creates a random Bonus or Luxury Resource on the plot. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP]Use when located on an unowned, empty plot. Maui creates a random Bonus or Luxury Resource on the plot. Costs 1 Charge and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION]Hercules' Rage</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP]Use when located on an enemy District. Hercules destroys all buildings present and pillages the District. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP]Use when located on an enemy District. Hercules destroys all buildings present and pillages the District. Costs 1 Charge and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_CITY_AT_WAR" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_CITY_AT_WAR]Cannot target a city at war with us.</Text>
@@ -842,11 +842,14 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_AT_WAR" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_AT_WAR]Cannot target a district in a city at war with us.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED]This district is already pillaged.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_LEVY_ACTIVE" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_LEVY_ACTIVE]This City State's military is already levied.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_LEVY_ACTIVE]This City-State's military is already levied.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_LEVY_AVAILABLE" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NO_LEVY_AVAILABLE]This City State has no units available to levy.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NO_LEVY_AVAILABLE]This City-State has no units available to levy.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS]No targets available</Text>
@@ -855,10 +858,13 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES]No Resources valid at this location.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_IN_SUZERAIN_TERRITORY" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NOT_IN_SUZERAIN_TERRITORY]Must be inside the territory of a City State you are Suzerain of.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NOT_IN_SUZERAIN_TERRITORY]Must be inside the territory of a City-State you are Suzerain of.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT]Must be used on a district or improvement.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT]Must be used on a district.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT]Must be used on a district under construction.</Text>
@@ -868,6 +874,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_SUZERAIN_OF_CITY" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_NOT_SUZERAIN_OF_CITY]You are not Suzerain of {1_CityName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT]Cannot be used on a plot owned by an allied civilization.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER]Cannot be used on a City Center.</Text>
@@ -894,13 +903,13 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_DESCRIPTION]Himiko's Rule</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP]Use when within the territory of a City State you are Suzerain of. Himiko immediately levies its military at no cost. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP]Use when within the territory of a City-State you are Suzerain of. Himiko immediately levies its military at no cost. Costs 1 Charge and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION]Himiko's Charm</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_GRANT_ENVOY_HELP]Target any adjacent City State. Himiko immediately places 1 free [ICON_Envoy] Envoy in the City State. If you are already the Suzerain there, Himiko also earns {1_FaithChange} [ICON_FAITH] Faith. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_GRANT_ENVOY_HELP]Target any adjacent City-State. Himiko immediately places 1 free [ICON_Envoy] Envoy in the City-State. If you are already the Suzerain there, Himiko also earns {1_FaithChange} [ICON_FAITH] Faith. Costs 1 Charge and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_HERO_FAILURE_NO_MOVES" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_HERO_FAILURE_NO_MOVES]No moves remaining</Text>
@@ -915,31 +924,31 @@
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_KILL_WEAKER_UNIT_DESCRIPTION]Beowulf's Challenge</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP]Target an adjacent enemy unit with [ICON_Strength] Combat Strength less than Beowulf's. Beowulf immediately destroys the target. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP]Target an adjacent enemy unit with [ICON_Strength] Combat Strength less than Beowulf's. Beowulf immediately destroys the target. Costs 1 Charge, 1 [ICON_MOVEMENT] Movement.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION]Sinbad's Fortunes</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP]Target any adjacent enemy naval unit or Barbarian Camp. The target is either cleared or damaged by 50%, and Sinbad immediately earns {1_GoldReward} [ICON_GOLD] Gold. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP]Target any adjacent enemy naval unit or Barbarian Camp. The target is either cleared or damaged by 50%, and Sinbad immediately earns {1_GoldReward} [ICON_GOLD] Gold. Costs 1 Charge and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_RESOURCE_INSPIRE_DESCRIPTION]Anansi's Tricks</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP]Use when located on a Bonus or Luxury Resource. Anansi consumes the resource and generates {1_ScienceReward} [ICON_SCIENCE] Science and {2_CultureReward} [ICON_CULTURE] Culture. Any improvement present is destroyed. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP]Use when located on a Bonus or Luxury Resource. Anansi consumes the resource and generates {1_ScienceReward} [ICON_SCIENCE] Science and {2_CultureReward} [ICON_CULTURE] Culture. Any improvement present is destroyed. Costs 1 Charge and ends turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION]Hippolyta's Command</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP]Target any adjacent friendly unit that has moved or attacked this turn. Hippolyta immediately restores the unit's moves and attacks.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP]Target any adjacent friendly unit that has moved or attacked this turn. Hippolyta immediately restores the unit's moves and attacks. Usable once per turn.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="zh_Hans">
       <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION]Arthur's Accolade</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="zh_Hans">
-      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP]Target an adjacent land military unit you control. Arthur transforms the unit into a Questing Knight: a unique Heavy Cavalry unit with increased [ICON_Strength] Combat Strength and {1_LifespanVal} [ICON_Lifespan] Lifespan. Costs 1 Charge.</Text>
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP]Target an adjacent land military unit you control. Arthur transforms the unit into a Questing Knight: a unique Heavy Cavalry unit with increased [ICON_Strength] Combat Strength and {1_LifespanVal} [ICON_Lifespan] Lifespan. Costs 1 Charge, 1 [ICON_MOVEMENT] Movement.</Text>
     </Replace>
   </LocalizedText>
 </GameData>

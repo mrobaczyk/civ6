@@ -33,29 +33,38 @@ function OnActivateSecretSocietyJoined( notificationEntry )
 end
 
 -- ===========================================================================
---	HELPER: Get seceret society name from notification.
-function GetSocietyName(  pNotification:table )
-	local eSociety:number = pNotification:GetValue( "PARAM_DATA1" );
-	local kSocietyDef:table = GameInfo.SecretSocieties[eSociety];
-	if kSocietyDef == nil then
-		UI.DataError("Unknown secret society name (for notification) using enum: ",eSociety);
-		return;
-	end
-	return kSocietyDef.Name;
-end
-
--- ===========================================================================
 --	Overrides to apply specific strings for secret society notifications.
 -- ===========================================================================
 function ApplyNotificationTextOverrides( notificationEntry:NotificationType, pNotification:table, messageName:string, summary:string )	
 	if notificationEntry.m_TypeName == "NOTIFICATION_SECRETSOCIETY_DISCOVERED" then
-		local societyName :string = GetSocietyName(pNotification);
-		summary =  Locale.Lookup( "LOC_DISCOVERED_SOCIETY_DESC", societyName );
+		local eSociety:number = pNotification:GetValue( "PARAM_DATA1" );
+		local bIsFirstDiscovery:boolean = pNotification:GetValue( "PARAM_DATA2" );
+
+		local kSocietyDef:table = GameInfo.SecretSocieties[eSociety];
+		if kSocietyDef == nil then
+			UI.DataError("Unknown secret society name (for notification) using enum: ",eSociety);
+			return;
+		end
+
+		messageName = Locale.Lookup( "LOC_DISCOVERED_SOCIETY", kSocietyDef.Name );
+		if bIsFirstDiscovery then
+			summary =  Locale.Lookup( "LOC_DISCOVERED_SOCIETY_FIRST_DESC", kSocietyDef.Name, kSocietyDef.IconString );
+		else
+			summary =  Locale.Lookup( "LOC_DISCOVERED_SOCIETY_SUBSEQUENT_DESC", kSocietyDef.Name, kSocietyDef.IconString );
+		end
 	end
 
 	if notificationEntry.m_TypeName == "NOTIFICATION_SECRETSOCIETY_JOINED" then
-		local societyName :string = GetSocietyName(pNotification);
-		summary =  Locale.Lookup( "LOC_JOINED_SOCIETY_DESC", societyName );
+		local eSociety:number = pNotification:GetValue( "PARAM_DATA1" );
+
+		local kSocietyDef:table = GameInfo.SecretSocieties[eSociety];
+		if kSocietyDef == nil then
+			UI.DataError("Unknown secret society name (for notification) using enum: ",eSociety);
+			return;
+		end
+
+		messageName = Locale.Lookup( "LOC_JOINED_SOCIETY", kSocietyDef.Name );
+		summary =  Locale.Lookup( "LOC_JOINED_SOCIETY_DESC", kSocietyDef.Name, kSocietyDef.IconString );
 	end
 	
 	return messageName, summary;

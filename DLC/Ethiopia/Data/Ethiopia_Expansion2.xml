@@ -63,7 +63,7 @@
 	</Improvements_XP2>
 	<Improvement_ValidFeatures>
 		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" FeatureType="FEATURE_VOLCANIC_SOIL"/>
-	</Improvement_ValidFeatures>		
+	</Improvement_ValidFeatures>
 	<NamedRivers>
 		<Row NamedRiverType="NAMED_RIVER_BLUE_NILE_RIVER" Name="LOC_NAMED_RIVER_BLUE_NILE_RIVER_NAME"/>
 		<Row NamedRiverType="NAMED_RIVER_BARO_RIVER" Name="LOC_NAMED_RIVER_BARO_RIVER_NAME"/>
@@ -166,6 +166,22 @@
 			<ModifierId>DIPLOMATIC_QUARTER_EMBASSY_FAVOR</ModifierId>
 		</Row>
 	</DistrictModifiers>
+	<GovernmentModifiers>
+		<Row GovernmentType="GOVERNMENT_AUTOCRACY">
+			<ModifierId>CONSULATE_TIER1</ModifierId>
+		</Row>
+		<Row GovernmentType="GOVERNMENT_AUTOCRACY">
+			<ModifierId>CHANCERY_TIER2</ModifierId>
+		</Row>
+	</GovernmentModifiers>
+	<PolicyModifiers>
+		<Row PolicyType="POLICY_GOV_AUTOCRACY">
+			<ModifierId>CONSULATE_TIER1</ModifierId>
+		</Row>
+		<Row PolicyType="POLICY_GOV_AUTOCRACY">
+			<ModifierId>CHANCERY_TIER2</ModifierId>
+		</Row>
+	</PolicyModifiers>
 	<Modifiers>
 		<Row>
 			<ModifierId>DIPLOMATIC_QUARTER_DELEGATION_FAVOR</ModifierId>
@@ -174,6 +190,16 @@
 		<Row>
 			<ModifierId>DIPLOMATIC_QUARTER_EMBASSY_FAVOR</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_FAVOR_FROM_EMBASSIES</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>CONSULATE_TIER1</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_ALL_YIELDS_CHANGE</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_CONSULATE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CHANCERY_TIER2</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_ALL_YIELDS_CHANGE</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_CHANCERY</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -184,6 +210,16 @@
 		</Row>
 		<Row>
 			<ModifierId>DIPLOMATIC_QUARTER_EMBASSY_FAVOR</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>CONSULATE_TIER1</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHANCERY_TIER2</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
 		</Row>

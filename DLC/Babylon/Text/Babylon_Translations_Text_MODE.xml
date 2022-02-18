@@ -606,7 +606,7 @@
       <Text>Desafio de Beowulf</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="pt_BR">
-      <Text>Defina como alvo uma unidade inimiga adjacente com [ICON_Strength] força de combate menor que a de Beowulf. Beowulf destrói o alvo imediatamente. Custa 1 carga.</Text>
+      <Text>Defina como alvo uma unidade inimiga adjacente com [ICON_Strength] força de combate menor que a de Beowulf. Beowulf destrói o alvo imediatamente. Custa 1 carga e 1 de [ICON_MOVEMENT] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="pt_BR">
       <Text>Honra de Artur</Text>
@@ -618,13 +618,13 @@
       <Text>Trabalho de Hércules</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="pt_BR">
-      <Text>Use quando localizado em um distrito amistoso em construção. Hércules conclui imediatamente a construção do distrito. Custa 2 cargas.</Text>
+      <Text>Use quando localizado em um distrito amistoso em construção. Hércules conclui imediatamente a construção do distrito. Custa 2 cargas e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="pt_BR">
       <Text>Fúria de Hércules</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="pt_BR">
-      <Text>Use quando localizado em um distrito do inimigo. Hércules destrói todas as edificações presentes e pilha o distrito. Custa 1 carga.</Text>
+      <Text>Use quando localizado em um distrito do inimigo. Hércules destrói todas as edificações presentes e pilha o distrito. Custa 1 carga e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="pt_BR">
       <Text>Encanto de Himiko</Text>
@@ -633,13 +633,13 @@
       <Text>Governo de Himiko</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="pt_BR">
-      <Text>Use quando estiver dentro do território de uma Cidade-estado da qual você é suserano. Himiko imediatamente recruta seu exército sem custo. Custa 1 carga.</Text>
+      <Text>Use quando estiver dentro do território de uma cidade-estado da qual você é suserano. Himiko imediatamente recruta seu exército sem custo. Custa 1 carga e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="pt_BR">
       <Text>Comando de Hipólita</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="pt_BR">
-      <Text>Defina como alvo qualquer unidade aliada adjacente que se moveu ou realizou ataques neste turno. Hipólita restaura imediatamente os movimentos e os ataques da unidade.</Text>
+      <Text>Defina como alvo qualquer unidade aliada adjacente que se moveu ou realizou ataques neste turno. Hipólita restaura imediatamente os movimentos e os ataques da unidade. Disponível uma vez por turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="pt_BR">
       <Text>Venturas de Simbá</Text>
@@ -648,7 +648,7 @@
       <Text>Invenções de Maui</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="pt_BR">
-      <Text>Use quando localizado em um terreno vazio e sem dono. Maui cria um recurso bônus ou de luxo aleatório no terreno. Custa 1 carga.</Text>
+      <Text>Use quando localizado em um terreno vazio e sem dono. Maui cria um recurso bônus ou de luxo aleatório no terreno. Custa 1 carga e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="pt_BR">
       <Text>Tempestade de Iansã</Text>
@@ -693,7 +693,7 @@
       <Text>Dedica esta cidade ao Herói Sun Wukong. Quando concluído, Sun Wukong aparecerá no Centro da Cidade.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="pt_BR">
-      <Text>Relíquia Heroica</Text>
+      <Text>[ICON_GreatWork_HeroRelic] Relíquia Heroica</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="pt_BR">
       <Text>Nenhum alvo disponível</Text>
@@ -720,22 +720,28 @@
       <Text>Impossível ter como alvo uma cidade em guerra contra nós.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_LEVY_AVAILABLE" Language="pt_BR">
-      <Text>Esta Cidade-estado não possui unidades disponíveis para recrutar.</Text>
+      <Text>Esta cidade-estado não tem unidades disponíveis para recrutar.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_IN_SUZERAIN_TERRITORY" Language="pt_BR">
-      <Text>Deve estar dentro do território de uma Cidade-estado da qual você é suserano.</Text>
+      <Text>Deve estar dentro do território de uma cidade-estado da qual você é suserano.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_LEVY_ACTIVE" Language="pt_BR">
-      <Text>O exército desta Cidade-estado já está recrutado.</Text>
+      <Text>O exército desta cidade-estado já está recrutado.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="pt_BR">
       <Text>Deve ser usado em um distrito em construção.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="pt_BR">
+      <Text>Deve ser usado em um distrito.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="pt_BR">
       <Text>Deve ser usado em um distrito ou uma melhoria.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="pt_BR">
       <Text>Deve ser usado em um recurso de luxo ou recurso bônus.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="pt_BR">
+      <Text>Este distrito já foi pilhado.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="pt_BR">
       <Text>Não pode ser usado em um Centro da Cidade.</Text>
@@ -748,6 +754,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="pt_BR">
       <Text>Nenhum recurso válido neste local.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="pt_BR">
+      <Text>Não pode ser usado em terreno de civilização aliada.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="pt_BR">
       <Text>Os Heróis só podem aparecer uma vez a cada Era.</Text>
@@ -873,19 +882,19 @@
       <Text>{1_Amount} [ICON_Faith] de fé para reconvocar Heróis.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="pt_BR">
-      <Text>Defina como alvo uma unidade militar terrestre adjacente que você controla. Artur transforma a unidade em um Cavaleiro em Missão: uma unidade de Cavalaria Pesada exclusiva com maior [ICON_Strength] força de combate e {1_LifespanVal} de [ICON_Lifespan] expectativa de vida. Custa 1 carga.</Text>
+      <Text>Defina como alvo uma unidade militar terrestre adjacente que você controla. Artur transforma a unidade em um Cavaleiro em Missão: uma unidade de cavalaria pesada exclusiva com maior [ICON_Strength] força de combate e {1_LifespanVal} de [ICON_Lifespan] expectativa de vida. Custa 1 carga e 1 de [ICON_MOVEMENT] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="pt_BR">
-      <Text>Use quando localizado em um recurso bônus ou de luxo. Ananse consome o recurso e gera {1_ScienceReward} de [ICON_SCIENCE] ciência e {2_CultureReward} de [ICON_CULTURE] cultura. Qualquer melhoria presente é destruída. Custa 1 carga.</Text>
+      <Text>Use quando localizado em um recurso bônus ou de luxo. Ananse consome o recurso e gera {1_ScienceReward} de [ICON_SCIENCE] ciência e {2_CultureReward} de [ICON_CULTURE] cultura. Qualquer melhoria presente é destruída. Custa 1 carga e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="pt_BR">
-      <Text>Defina como alvo qualquer cidade-estado adjacente. Himiko posiciona imediatamente 1 [ICON_Envoy] Emissário gratuito na cidade-estado. Se você já é suserano lá, Himiko também ganha {1_FaithChange} de [ICON_FAITH] fé. Custa 1 carga.</Text>
+      <Text>Defina como alvo qualquer cidade-estado adjacente. Himiko posiciona imediatamente 1 [ICON_Envoy] Emissário gratuito na cidade-estado. Se você já é suserano lá, Himiko também ganha {1_FaithChange} de [ICON_FAITH] fé. Custa 1 carga e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="pt_BR">
-      <Text>Defina como alvo qualquer unidade naval ou Acampamento Bárbaro inimigo adjacente. O alvo é eliminado ou sofre 50% de dano, e Simbá ganha imediatamente {1_GoldReward} de [ICON_GOLD] ouro. Custa 1 carga.</Text>
+      <Text>Defina como alvo qualquer unidade naval ou Acampamento Bárbaro inimigo adjacente. O alvo é eliminado ou sofre 50% de dano, e Simbá ganha imediatamente {1_GoldReward} de [ICON_GOLD] ouro. Custa 1 carga e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="pt_BR">
-      <Text>Causa dano a todos os inimigos adjacentes e cura todas as unidades adjacentes em {1_DamageAmount}. Custa 1 carga.</Text>
+      <Text>Causa dano a todos os inimigos adjacentes e cura todas as unidades adjacentes em {1_DamageAmount}. Custa 1 carga e termina o turno.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="pt_BR">
       <Text>{1_BuildingName} de {2_HeroName}</Text>
@@ -949,16 +958,16 @@
       <Text>Você descobriu {1_HeroName: plural 2?{1_HeroName: gender m?os Heróis; f?as Heroínas;}; 1?{1_HeroName: gender m?o Herói; f?a Heroína;};} {1_HeroName}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_LOW_LIFESPAN_SUMMARY" Language="pt_BR">
-      <Text>{1_HeroClassName: plural 1?Nosso Herói; other?Nossos Heróis;}{1_HeroClassName}{1_HeroClassName: plural 1?tem; other?têm;} menos de {2_NumTurns} turnos restantes em sua [ICON_Lifespan] expectativa de vida.</Text>
+      <Text>Menos de {2_NumTurns} turnos restantes em [ICON_Lifespan] expectativa de vida para {HeroClassName}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_LOST_LIFESPAN_EXPIRED_SUMMARY" Language="pt_BR">
       <Text>{1_HeroClassName: plural 2?{1_HeroClassName: gender m?Nossos Heróis; f?Nossas Heroínas;}; 1?{1_HeroClassName: gender m?Nosso Herói; f?Nossa Heroína;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?atingiu; other?atingiram;} o fim da [ICON_Lifespan] expectativa de vida. {1_HeroClassName: plural 1?Pertence; other?Pertencem;} às páginas da história até conseguirmos reunir [ICON_Faith] fé suficiente para reconvocá-{1_HeroClassName: plural 1?lo; other?los;}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CAN_PURCHASE_WITH_FAITH_SUMMARY" Language="pt_BR">
-      <Text>Você acumulou [ICON_Faith] fé suficiente para reconvocar {1_HeroClassName: plural 1?o Herói; other?os Heróis;}{1_HeroClassName} na cidade de {2_CityName}.</Text>
+      <Text>Você acumulou [ICON_Faith] fé suficiente para reconvocar {1_HeroClassName: plural 2?{1_HeroClassName: gender m?os Heróis; f?as Heroínas;}; 1?{1_HeroClassName: gender m?o Herói; f?a Heroína;};} {1_HeroClassName} na cidade de {2_CityName}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_KILLED_OTHER_SUMMARY" Language="pt_BR">
-      <Text>{1_HeroClassName: plural 1?O Herói; other?Os Heróis;}{1_HeroClassName}{1_HeroClassName: plural 1?foi morto; other?foram mortos;} em batalha.</Text>
+      <Text>{1_HeroClassName: plural 2?{1_HeroClassName: gender m?Os Heróis; f?As Heroínas;}; 1?{1_HeroClassName: gender m?O Herói; f?A Heroína;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?foi morto; other?foram mortos;} em batalha.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_EXPIRED_OTHER_SUMMARY" Language="pt_BR">
       <Text>{1_HeroClassName: plural 2?{1_HeroClassName: gender m?Os Heróis; f?As Heroínas;}; 1?{1_HeroClassName: gender m?O Herói; f?A Heroína;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?atingiu; other?atingiram;}  o fim da [ICON_Lifespan] expectativa de vida.</Text>
@@ -1625,7 +1634,7 @@
       <Text>Défi de Beowulf</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="fr_FR">
-      <Text>Prend pour cible une unité ennemie adjacente dont la [ICON_Strength] puissance de combat est inférieure à celle de Beowulf. Beowulf la détruit immédiatement. Consomme une charge.</Text>
+      <Text>Prend pour cible une unité ennemie adjacente dont la [ICON_Strength] puissance de combat est inférieure à celle de Beowulf. Beowulf la détruit immédiatement. Consomme une charge et un [ICON_MOVEMENT] PM.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="fr_FR">
       <Text>Reconnaissance d'Arthur</Text>
@@ -1637,13 +1646,13 @@
       <Text>Travaux d'Hercule</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="fr_FR">
-      <Text>À utiliser dans un quartier allié en construction. Hercule achève immédiatement sa construction. Consomme deux charges.</Text>
+      <Text>À utiliser dans un quartier allié en construction. Hercule achève immédiatement sa construction. Consomme deux charges et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="fr_FR">
       <Text>Colère d'Hercule</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="fr_FR">
-      <Text>À utiliser dans un quartier ennemi. Hercule le pille et détruit tous les bâtiments présents. Consomme une charge.</Text>
+      <Text>À utiliser dans un quartier ennemi. Hercule le pille et détruit tous les bâtiments présents. Consomme une charge et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="fr_FR">
       <Text>Charme d'Himiko</Text>
@@ -1652,13 +1661,13 @@
       <Text>Règne d'Himiko</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="fr_FR">
-      <Text>À utiliser sur le territoire d'une cité-état dont vous êtes le suzerain. Himiko mobilise son armée immédiatement et gratuitement. Consomme une charge.</Text>
+      <Text>À utiliser sur le territoire d'une cité-état dont vous êtes le suzerain. Himiko mobilise son armée immédiatement et gratuitement. Consomme une charge et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="fr_FR">
       <Text>Ordre d'Hippolyte</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="fr_FR">
-      <Text>Cible une unité alliée adjacente s'étant déplacée ou ayant été attaquée pendant le tour. Hippolyte lui rend immédiatement ses PM et ses points d'attaque.</Text>
+      <Text>Cible une unité alliée adjacente s'étant déplacée ou ayant été attaquée pendant le tour. Hippolyte lui rend immédiatement ses PM et ses points d'attaque. Utilisable une fois par tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="fr_FR">
       <Text>Fortune de Sinbad</Text>
@@ -1667,7 +1676,7 @@
       <Text>Inventions de Maui</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="fr_FR">
-      <Text>À utiliser sur une case vide sans propriétaire. Maui y créera une ressource bonus ou de luxe aléatoire. Consomme une charge.</Text>
+      <Text>À utiliser sur une case vide sans propriétaire. Maui y créera une ressource bonus ou de luxe aléatoire. Consomme une charge et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="fr_FR">
       <Text>Tempête d'Oya</Text>
@@ -1712,7 +1721,7 @@
       <Text>Consacrez cette ville au héros Sun Wukong. Une fois terminé, celui-ci apparaîtra dans le centre-ville.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="fr_FR">
-      <Text>Relique héroïque</Text>
+      <Text>[ICON_GreatWork_HeroRelic] Relique héroïque</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="fr_FR">
       <Text>Aucune cible disponible</Text>
@@ -1739,7 +1748,7 @@
       <Text>Ne peut pas prendre pour cible une ville en guerre avec nous.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_LEVY_AVAILABLE" Language="fr_FR">
-      <Text>Cette cité-état n'a pas d'unités à mobiliser.</Text>
+      <Text>Cette cité-état n'a aucune unité pouvant être mobilisée.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_IN_SUZERAIN_TERRITORY" Language="fr_FR">
       <Text>Doit se trouver sur le territoire d'une cité-état dont vous êtes le suzerain.</Text>
@@ -1750,11 +1759,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="fr_FR">
       <Text>À utiliser dans un quartier en construction.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="fr_FR">
+      <Text>À utiliser dans un quartier.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="fr_FR">
       <Text>À utiliser dans un quartier ou un aménagement.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="fr_FR">
       <Text>À utiliser sur une ressource de luxe ou bonus.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="fr_FR">
+      <Text>Ce quartier est déjà pillé.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="fr_FR">
       <Text>Utilisation impossible dans un centre-ville.</Text>
@@ -1767,6 +1782,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="fr_FR">
       <Text>Aucune ressource valide sur cette case.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="fr_FR">
+      <Text>Utilisation impossible en territoire allié.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="fr_FR">
       <Text>Les héros ne peuvent apparaître qu'une fois par ère.</Text>
@@ -1892,19 +1910,19 @@
       <Text>{1_Amount} unité(s) de [ICON_Faith] foi pour rappeler des héros.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="fr_FR">
-      <Text>Prend pour cible une unité militaire terrestre adjacente sous votre contrôle. Arthur la transforme en chevalier, une unité de cavalerie lourde exclusive. Sa [ICON_Strength] puissance de combat augmente et sa [ICON_Lifespan] durée de vie est de {1_LifespanVal}. Consomme une charge.</Text>
+      <Text>Prend pour cible une unité militaire terrestre adjacente sous votre contrôle. Arthur la transforme en chevalier, une unité de cavalerie lourde exclusive. Sa [ICON_Strength] puissance de combat augmente et sa [ICON_Lifespan] durée de vie est de {1_LifespanVal}. Consomme une charge et un [ICON_MOVEMENT] PM.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="fr_FR">
-      <Text>À utiliser sur une ressource bonus ou de luxe. Ananse consomme la ressource et génère {1_ScienceReward} de [ICON_SCIENCE] science et {2_CultureReward} de [ICON_CULTURE] culture. Tous les aménagements présents sont détruits. Consomme une charge.</Text>
+      <Text>À utiliser sur une ressource bonus ou de luxe. Ananse consomme la ressource et génère {1_ScienceReward} de [ICON_SCIENCE] science et {2_CultureReward} de [ICON_CULTURE] culture. Tous les aménagements présents sont détruits. Consomme une charge et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="fr_FR">
-      <Text>Prend pour cible une cité-état adjacente. Himiko y place immédiatement un [ICON_Envoy] émissaire gratuit. Si vous en êtes déjà le suzerain, Himiko gagne également {1_FaithChange} de [ICON_FAITH] foi. Consomme une charge.</Text>
+      <Text>Prend pour cible une cité-état adjacente. Himiko y place immédiatement un [ICON_Envoy] émissaire gratuit. Si vous en êtes déjà le suzerain, Himiko gagne également {1_FaithChange} de [ICON_FAITH] foi. Consomme une charge et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="fr_FR">
-      <Text>Cible toute unité navale ennemie ou campement barbare adjacent. La cible est soit détruite, soit blessée de 50 %, et Sinbad gagne immédiatement {1_GoldReward} d'[ICON_GOLD] or. Consomme une charge.</Text>
+      <Text>Cible toute unité navale ennemie ou campement barbare adjacent. La cible est soit détruite, soit blessée de 50 %, et Sinbad gagne immédiatement {1_GoldReward} d'[ICON_GOLD] or. Consomme une charge et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="fr_FR">
-      <Text>Fait perdre {1_DamageAmount} PV à tous les ennemis adjacents et soigne de {1_DamageAmount} PV toutes les unités possédées adjacentes. Consomme une charge.</Text>
+      <Text>Fait perdre {1_DamageAmount} PV à tous les ennemis adjacents et soigne de {1_DamageAmount} PV toutes les unités possédées adjacentes. Consomme une charge et met fin au tour.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="fr_FR">
       <Text>{1_BuildingName} {2: gender *:vowel?d'; other?de ;}{2_HeroName}</Text>
@@ -2642,7 +2660,7 @@
       <Text>Beowulfs Herausforderung</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="de_DE">
-      <Text>Zielt auf eine benachbarte feindliche Einheit mit geringerer [ICON_Strength] Kampfstärke als Beowulfs. Beowulf zerstört das Ziel augenblicklich. Kostet 1 Ladung.</Text>
+      <Text>Zielt auf eine benachbarte feindliche Einheit mit geringerer [ICON_Strength] Kampfstärke als Beowulfs. Beowulf zerstört das Ziel augenblicklich. Kostet 1 Ladung, 1 [ICON_MOVEMENT] Fortbewegung.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="de_DE">
       <Text>Artus' Ritterschlag</Text>
@@ -2654,13 +2672,13 @@
       <Text>Herkules' Arbeit</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="de_DE">
-      <Text>Einsatz bei Positionierung in freundlich gesonnenen Bezirken, die sich im Bau befinden. Herkules schließt den Bau umgehend ab. Kostet 2 Ladungen.</Text>
+      <Text>Einsatz bei Positionierung in freundlich gesonnenen Bezirken, die sich im Bau befinden. Herkules schließt den Bau umgehend ab. Kostet 2 Ladungen und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="de_DE">
       <Text>Herkules' Zorn</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="de_DE">
-      <Text>Einsatz bei Positionierung in feindlich gesonnenen Bezirken oder Modernisierungen. Herkules zerstört alle vorhandenen Gebäude und plündert den Bezirk. Kostet 1 Ladung.</Text>
+      <Text>Einsatz bei Positionierung in feindlich gesonnenen Bezirken oder Modernisierungen. Herkules zerstört alle vorhandenen Gebäude und plündert den Bezirk. Kostet 1 Ladung und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="de_DE">
       <Text>Himikos Zauber</Text>
@@ -2669,13 +2687,13 @@
       <Text>Himikos Herrschaft</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="de_DE">
-      <Text>Einsatz innerhalb des Gebiets eines Stadtstaats, dessen Suzerän Ihr seid. Himiko hebt sofort Militär ohne Kosten aus. Kostet 1 Ladung.</Text>
+      <Text>Einsatz innerhalb des Gebiets eines Stadtstaats, dessen Suzerän Ihr seid. Himiko hebt sofort Militär ohne Kosten aus. Kostet 1 Ladung und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="de_DE">
       <Text>Hippolytas Befehl</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="de_DE">
-      <Text>Zielt auf eine beliebige freundlich gesinnte angrenzende Einheit, die sich in dieser Runde bewegt oder angegriffen hat. Hippolyta stellt die Bewegungen und Angriffe dieser Einheit augenblicklich wieder her.</Text>
+      <Text>Zielt auf eine beliebige freundlich gesinnte angrenzende Einheit, die sich in dieser Runde bewegt oder angegriffen hat. Hippolyta stellt die Bewegungen und Angriffe dieser Einheit augenblicklich wieder her. Einmal pro Runde einsetzbar.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="de_DE">
       <Text>Sindbads Geschicke</Text>
@@ -2684,7 +2702,7 @@
       <Text>Mauis Einladungen</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="de_DE">
-      <Text>Setzt dies ein, wenn Ihr Euch an einem leeren Geländefeld befindet, das nicht in Eurem Besitz ist. Maui erzeugt eine zufällige Bonus-Ressource oder ein Luxusgut auf dem Geländefeld. Kostet 1 Ladung.</Text>
+      <Text>Setzt dies ein, wenn Ihr Euch an einem leeren Geländefeld befindet, das nicht in Eurem Besitz ist. Maui erzeugt eine zufällige Bonus-Ressource oder ein Luxusgut auf dem Geländefeld. Kostet 1 Ladung und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="de_DE">
       <Text>Oyás Sturm</Text>
@@ -2729,7 +2747,7 @@
       <Text>Widmet diese Stadt dem Helden Sun Wukong. Bei Abschluss wird Sun Wukong im Stadtzentrum erscheinen.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="de_DE">
-      <Text>Helden-Reliquie</Text>
+      <Text>[ICON_GreatWork_HeroRelic] Helden-Reliquie</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="de_DE">
       <Text>Keine Ziele verfügbar</Text>
@@ -2767,11 +2785,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="de_DE">
       <Text>Muss an einem Bezirk im Bau eingesetzt werden.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="de_DE">
+      <Text>Muss in einem Bezirk eingesetzt werden.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="de_DE">
       <Text>Muss an einem Bezirk oder einer Modernisierung eingesetzt werden.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="de_DE">
       <Text>Muss auf einem Luxusgut oder einer Bonus-Ressource eingesetzt werden.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="de_DE">
+      <Text>Dieser Bezirk wurde bereits geplündert.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="de_DE">
       <Text>Kann nicht bei einem Stadtzentrum eingesetzt werden.</Text>
@@ -2784,6 +2808,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="de_DE">
       <Text>Keine gültige Ressource an dieser Position.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="de_DE">
+      <Text>Kann nicht auf einem Geländefeld eingesetzt werden, das einer verbündeten Zivilisation gehört.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="de_DE">
       <Text>Helden können nur einmal pro Zeitalter auftauchen.</Text>
@@ -2909,19 +2936,19 @@
       <Text>{1_Amount} [ICON_Faith] Glauben, um Helden zurückzurufen.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="de_DE">
-      <Text>Visiert eine angrenzende Land-Militäreinheit ein, die Ihr kontrolliert. Arthur verwandelt die Einheit in einen Questeritter: eine einzigartige Schwere Kavallerieeinheit mit erhöhter [ICON_Strength] Kampfstärke und {1_LifespanVal} [ICON_Lifespan] Lebensdauer. Kostet 1 Ladung.</Text>
+      <Text>Visiert eine angrenzende Land-Militäreinheit ein, die Ihr kontrolliert. Arthur verwandelt die Einheit in einen Questeritter: eine einzigartige Schwere Kavallerieeinheit mit erhöhter [ICON_Strength] Kampfstärke und {1_LifespanVal} [ICON_Lifespan] Lebensdauer. Kostet 1 Ladung, 1 [ICON_MOVEMENT] Fortbewegung.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="de_DE">
-      <Text>Verwendung auf Bonus-Ressource oder Luxusgut. Anansi konsumiert die Ressourcen und generiert {1_ScienceReward} [ICON_SCIENCE] Wissenschaft und {2_CultureReward} [ICON_CULTURE] Kultur. Vorhandene Modernisierungen werden zerstört. Kostet 1 Ladung.</Text>
+      <Text>Verwendung auf Bonus-Ressource oder Luxusgut. Anansi konsumiert die Ressourcen und generiert {1_ScienceReward} [ICON_SCIENCE] Wissenschaft und {2_CultureReward} [ICON_CULTURE] Kultur. Vorhandene Modernisierungen werden zerstört. Kostet 1 Ladung und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="de_DE">
-      <Text>Zielt auf einen beliebigen angrenzenden Stadtstaat. Himiko platziert umgehend 1 kostenlosen [ICON_Envoy] Gesandten in diesem Stadtstaat. Wenn Ihr bereits der dortige Suzerän seid, verdient Himiko zudem {1_FaithChange} [ICON_FAITH] Glauben. Kostet 1 Ladung.</Text>
+      <Text>Zielt auf einen beliebigen angrenzenden Stadtstaat. Himiko platziert umgehend 1 kostenlosen [ICON_Envoy] Gesandten in diesem Stadtstaat. Wenn Ihr bereits der dortige Suzerän seid, verdient Himiko zudem {1_FaithChange} [ICON_FAITH] Glauben. Kostet 1 Ladung und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="de_DE">
-      <Text>Zielt auf beliebige angrenzende Marineeinheiten oder Barbarenlager. Das Ziel wird entweder eliminiert oder erleidet einen Schaden von 50 %. Außerdem erhält Sindbad sofort eine Belohnung von {1_GoldReward} [ICON_GOLD] Gold. Kostet 1 Ladung.</Text>
+      <Text>Zielt auf beliebige angrenzende Marineeinheiten oder Barbarenlager. Das Ziel wird entweder eliminiert oder erleidet einen Schaden von 50 %. Außerdem erhält Sindbad sofort eine Belohnung von {1_GoldReward} [ICON_GOLD] Gold. Kostet 1 Ladung und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="de_DE">
-      <Text>Fügt allen angrenzenden Feinden Schaden zu und heilt alle benachbarten eigenen Einheiten um {1_DamageAmount}. Kostet 1 Ladung.</Text>
+      <Text>Fügt allen angrenzenden Feinden Schaden zu und heilt alle benachbarten eigenen Einheiten um {1_DamageAmount}. Kostet 1 Ladung und beendet die Runde.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="de_DE">
       <Text>{1_BuildingName} von {2_HeroName}</Text>
@@ -3607,7 +3634,7 @@
       <Text>La sfida di Beowulf</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="it_IT">
-      <Text>Seleziona un'unità nemica adiacente con una [ICON_Strength] Forza di combattimento inferiore a quella di Beowulf. Beowulf la distrugge immediatamente. Consuma 1 carica.</Text>
+      <Text>Seleziona un'unità nemica adiacente con una [ICON_Strength] Forza di combattimento inferiore a quella di Beowulf. Beowulf la distrugge immediatamente. Consuma 1 carica e 1 [ICON_MOVEMENT] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="it_IT">
       <Text>L'investitura di Artù</Text>
@@ -3619,13 +3646,13 @@
       <Text>Le fatiche di Ercole</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="it_IT">
-      <Text>Si può usare su un distretto amico in fase di costruzione. Ercole porta immediatamente a termine la costruzione del distretto. Consuma 2 cariche.</Text>
+      <Text>Si può usare su un distretto amico in fase di costruzione. Ercole porta immediatamente a termine la costruzione del distretto. Consuma 2 cariche e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="it_IT">
       <Text>La rabbia di Ercole</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="it_IT">
-      <Text>Si può usare su un distretto nemico. Ercole distrugge tutti gli edifici presenti e saccheggia il distretto. Consuma 1 carica.</Text>
+      <Text>Si può usare su un distretto nemico. Ercole distrugge tutti gli edifici presenti e saccheggia il distretto. Consuma 1 carica e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="it_IT">
       <Text>Il fascino di Himiko</Text>
@@ -3634,13 +3661,13 @@
       <Text>Il governo di Himiko</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="it_IT">
-      <Text>Si può usare all'interno del territorio di una città-stato di cui sei Sovrano. Himiko impone immediatamente la leva militare alle sue unità senza alcun costo. Consuma 1 carica.</Text>
+      <Text>Si può usare all'interno del territorio di una città-stato di cui sei Sovrano. Himiko impone immediatamente la leva militare alle sue unità senza alcun costo. Consuma 1 carica e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="it_IT">
       <Text>Il comando di Hippolyta</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="it_IT">
-      <Text>Seleziona un'unità amica adiacente che ha già mosso o attaccato in questo turno. Hippolyta ripristina immediatamente il movimento e la capacità di attaccare dell'unità.</Text>
+      <Text>Seleziona un'unità amica adiacente che ha già mosso o attaccato in questo turno. Hippolyta ripristina immediatamente il movimento e la capacità di attaccare dell'unità. Si può usare una volta per turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="it_IT">
       <Text>La fortuna di Sinbad</Text>
@@ -3649,7 +3676,7 @@
       <Text>Le invenzioni di Maui</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="it_IT">
-      <Text>Da usare in una casella vuota che non appartiene a nessun giocatore. Maui crea una risorsa bonus o di lusso casuale nella casella. Consuma 1 carica.</Text>
+      <Text>Da usare in una casella vuota che non appartiene a nessun giocatore. Maui crea una risorsa bonus o di lusso casuale nella casella. Consuma 1 carica e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="it_IT">
       <Text>La tempesta di Oya</Text>
@@ -3694,7 +3721,7 @@
       <Text>Dedica questa città all'eroe Sun Wukong. Una volta completato il progetto, Sun Wukong apparirà nel Centro cittadino.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="it_IT">
-      <Text>Reliquia Eroica</Text>
+      <Text>[ICON_GreatWork_HeroRelic] Reliquia Eroica</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="it_IT">
       <Text>Nessun bersaglio disponibile.</Text>
@@ -3732,11 +3759,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="it_IT">
       <Text>Si può usare solo su un distretto in fase di costruzione.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="it_IT">
+      <Text>Si può usare solo su un distretto.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="it_IT">
       <Text>Si può usare solo su un distretto o un miglioramento.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="it_IT">
       <Text>Si può usare solo su una risorsa bonus o di lusso.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="it_IT">
+      <Text>Questo distretto è già saccheggiato.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="it_IT">
       <Text>Impossibile usare l'azione su un Centro cittadino.</Text>
@@ -3749,6 +3782,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="it_IT">
       <Text>Non ci sono risorse valide in questa posizione.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="it_IT">
+      <Text>Impossibile usare l'azione in una casella che appartiene a una civiltà alleata.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="it_IT">
       <Text>Gli Eroi possono comparire in gioco una sola volta per Epoca.</Text>
@@ -3874,19 +3910,19 @@
       <Text>{1_Amount} [ICON_Faith] Fede per richiamare gli Eroi.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="it_IT">
-      <Text>Seleziona un'unità militare terrestre adiacente che controlli. Artù la trasforma in un Cavaliere errante: un'unità di cavalleria pesante esclusiva che ha più [ICON_Strength] Forza di combattimento ma un'[ICON_Lifespan] Aspettativa di vita limitata a {1_LifespanVal}. Consuma 1 carica.</Text>
+      <Text>Seleziona un'unità militare terrestre adiacente che controlli. Artù la trasforma in un Cavaliere errante: un'unità di cavalleria pesante esclusiva che ha più [ICON_Strength] Forza di combattimento ma un'[ICON_Lifespan] Aspettativa di vita limitata a {1_LifespanVal}. Consuma 1 carica e 1 [ICON_MOVEMENT] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="it_IT">
-      <Text>Da utilizzare su una risorsa bonus o di lusso. Anansi consuma la risorsa e genera {1_ScienceReward} [ICON_SCIENCE] Scienza e {2_CultureReward} [ICON_CULTURE] Cultura. Eventuali miglioramenti presenti vengono distrutti. Consuma 1 carica.</Text>
+      <Text>Da utilizzare su una risorsa bonus o di lusso. Anansi consuma la risorsa e genera {1_ScienceReward} [ICON_SCIENCE] Scienza e {2_CultureReward} [ICON_CULTURE] Cultura. Eventuali miglioramenti presenti vengono distrutti. Consuma 1 carica e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="it_IT">
-      <Text>Seleziona una città-stato adiacente. Himiko riceve immediatamente 1 [ICON_Envoy] Emissario gratuito in quella città-stato. Se sei già il Sovrano di quella città, Himiko guadagna anche {1_FaithChange} [ICON_FAITH] Fede. Consuma 1 carica.</Text>
+      <Text>Seleziona una città-stato adiacente. Himiko riceve immediatamente 1 [ICON_Envoy] Emissario gratuito in quella città-stato. Se sei già il Sovrano di quella città, Himiko guadagna anche {1_FaithChange} [ICON_FAITH] Fede. Consuma 1 carica e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="it_IT">
-      <Text>Seleziona qualsiasi Avamposto barbarico o unità navale nemica adiacente. Il bersaglio è immediatamente eliminato o danneggiato del 50% a seconda dei casi e Sinbad guadagna {1_GoldReward} [ICON_GOLD] Oro. Consuma 1 carica.</Text>
+      <Text>Seleziona qualsiasi Avamposto barbarico o unità navale nemica adiacente. Il bersaglio è immediatamente eliminato o danneggiato del 50% a seconda dei casi e Sinbad guadagna {1_GoldReward} [ICON_GOLD] Oro. Consuma 1 carica e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="it_IT">
-      <Text>Danneggia tutti i nemici adiacenti e cura tutte le tue unità adiacenti di {1_DamageAmount} PF. Consuma 1 carica.</Text>
+      <Text>Danneggia tutti i nemici adiacenti e cura tutte le tue unità adiacenti di {1_DamageAmount} PF. Consuma 1 carica e fa finire il turno.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="it_IT">
       <Text>{1_BuildingName} di {2_HeroName}</Text>
@@ -4572,7 +4608,7 @@
       <Text>ベーオウルフの挑戦</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="ja_JP">
-      <Text>ベーオウルフより [ICON_Strength] 戦闘力が低い、隣接する敵ユニットが対象。ベーオウルフが即座に対象を倒す。チャージ1を消費する。</Text>
+      <Text>ベーオウルフより [ICON_Strength] 戦闘力が低い、隣接する敵ユニットが対象。ベーオウルフが即座に対象を倒す。チャージ1と [ICON_MOVEMENT] 移動力1を消費する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="ja_JP">
       <Text>アーサーの叙勲</Text>
@@ -4584,13 +4620,13 @@
       <Text>ヘラクレスの功業</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="ja_JP">
-      <Text>建設中の味方区域で使用する。ヘラクレスが区域をただちに完成させる。チャージ2を消費する。</Text>
+      <Text>建設中の味方区域で使用する。ヘラクレスが区域をただちに完成させる。チャージ2を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="ja_JP">
       <Text>ヘラクレスの憤怒</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="ja_JP">
-      <Text>敵の区域で使用する。ヘラクレスがそこにあるすべての建造物を破壊し、区域を略奪する。チャージ1を消費する。</Text>
+      <Text>敵の区域で使用する。ヘラクレスがそこにあるすべての建造物を破壊し、区域を略奪する。チャージ1を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="ja_JP">
       <Text>卑弥呼の魅了</Text>
@@ -4599,13 +4635,13 @@
       <Text>卑弥呼の宣命</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="ja_JP">
-      <Text>宗主国になっている都市国家の領土で使用する。その都市国家の軍事ユニットをただちに無償で徴用できる。チャージ1を消費する。</Text>
+      <Text>宗主国になっている都市国家の領土で使用する。その都市国家の軍事ユニットをただちに無償で徴用できる。チャージ1を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="ja_JP">
       <Text>ヒッポリュテの指揮</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="ja_JP">
-      <Text>このターンに移動や攻撃した隣接する味方ユニットが対象。ユニットがただちに回復し、移動や攻撃を再びおこなえる。</Text>
+      <Text>このターンに移動や攻撃をおこなった隣接する味方ユニットが対象。ユニットがただちに回復し、移動や攻撃を再びおこなえる。1ターンに一度だけ使用可能。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="ja_JP">
       <Text>シンドバッドの富</Text>
@@ -4614,7 +4650,7 @@
       <Text>マウイの発明</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="ja_JP">
-      <Text>所有者がいない、何もない土地が対象。マウイがランダムにボーナス資源か高級資源をタイル上に生み出す。チャージ1を消費する。</Text>
+      <Text>所有者がいない、何もない土地が対象。マウイがランダムにボーナス資源か高級資源をタイル上に生み出す。チャージ1を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="ja_JP">
       <Text>オヤの嵐</Text>
@@ -4659,7 +4695,7 @@
       <Text>この都市に英雄「孫悟空」を祀る。完了すると都心に孫悟空が現れる。</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="ja_JP">
-      <Text>英雄の遺物</Text>
+      <Text>[ICON_GreatWork_HeroRelic] 英雄の遺物</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="ja_JP">
       <Text>対象なし</Text>
@@ -4697,11 +4733,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="ja_JP">
       <Text>建設中の区域で使う必要がある。</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="ja_JP">
+      <Text>区域で使う必要がある。</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="ja_JP">
       <Text>区域や施設で使う必要がある。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="ja_JP">
       <Text>高級資源かボーナス資源で使う必要がある。</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="ja_JP">
+      <Text>この区域はすでに略奪されています。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="ja_JP">
       <Text>都心では使用できない。</Text>
@@ -4714,6 +4756,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="ja_JP">
       <Text>この場所に適した資源が存在しない。</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="ja_JP">
+      <Text>味方文明の領土では使用できない。</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="ja_JP">
       <Text>英雄は各時代ごとに一度しか出現しません。</Text>
@@ -4839,19 +4884,19 @@
       <Text>英雄の召喚に必要な [ICON_Faith] 信仰力+{1_Amount}。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="ja_JP">
-      <Text>自分の支配下にある、隣接する陸上軍事ユニットが対象。アーサーがそのユニットを固有の重騎兵ユニット「遍歴の騎士」に変化させる。遍歴の騎士になると [ICON_Strength] 戦闘力が向上し、 [ICON_Lifespan] 寿命+{1_LifespanVal}。チャージ1を消費する。</Text>
+      <Text>自分の支配下にある、隣接する陸上軍事ユニットが対象。アーサーがそのユニットを固有の重騎兵ユニット「遍歴の騎士」に変化させる。遍歴の騎士になると [ICON_Strength] 戦闘力が向上し、 [ICON_Lifespan] 寿命+{1_LifespanVal}。チャージ1と [ICON_MOVEMENT] 移動力1を消費する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="ja_JP">
-      <Text>ボーナス資源か高級資源で使用する。アナンシが資源を消費し、 [ICON_SCIENCE] 科学力{1_ScienceReward}、 [ICON_CULTURE] 文化力{2_CultureReward}を生み出す。そこに存在する施設は破壊される。チャージ1を消費する。</Text>
+      <Text>ボーナス資源か高級資源で使用する。アナンシが資源を消費し、 [ICON_SCIENCE] 科学力{1_ScienceReward}、 [ICON_CULTURE] 文化力{2_CultureReward}を生み出す。そこに存在する施設は破壊される。チャージ1を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="ja_JP">
-      <Text>隣接する都市国家が対象。卑弥呼がその都市国家に [ICON_Envoy] 代表団1つを無償で派遣する。すでに宗主国となっている都市国家の場合、[ICON_FAITH] 信仰力{1_FaithChange}も得られる。チャージ1を消費する。</Text>
+      <Text>隣接する都市国家が対象。卑弥呼がその都市国家に [ICON_Envoy] 代表団1つを無償で派遣する。すでに宗主国となっている都市国家の場合、[ICON_FAITH] 信仰力{1_FaithChange}も得られる。チャージ1を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="ja_JP">
-      <Text>隣接する敵の海洋ユニットや蛮族の野営地が対象。対象は50%のダメージを受けるか除去され、シンドバッドがただちに{1_GoldReward} [ICON_GOLD] ゴールドを得る。チャージ1を消費する。</Text>
+      <Text>隣接する敵の海洋ユニットや蛮族の野営地が対象。対象は50%のダメージを受けるか除去され、シンドバッドがただちに{1_GoldReward} [ICON_GOLD] ゴールドを得る。チャージ1を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="ja_JP">
-      <Text>隣接するすべての敵ユニットに{1_DamageAmount}ポイントのダメージを与え、味方については同じだけヒットポイントを回復させる。チャージ1を消費する。</Text>
+      <Text>隣接するすべての敵ユニットに{1_DamageAmount}ポイントのダメージを与え、味方については同じだけヒットポイントを回復させる。チャージ1を消費してターンを終了する。</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="ja_JP">
       <Text>{2_HeroName}の{1_BuildingName}</Text>
@@ -4899,10 +4944,10 @@
       <Text>この英雄は{1_PlayerName}がすでに獲得しています。</Text>
     </Replace>
     <Replace Tag="LOC_HERO_EXPIRED_DESC" Language="ja_JP">
-      <Text>{1_UnitName: Hero}[COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR]{1__UnitName: Hero}の [ICON_Lifespan] 寿命が尽き、文明から去りました。</Text>
+      <Text>英雄[COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR]の [ICON_Lifespan] 寿命が尽き、文明から去りました。</Text>
     </Replace>
     <Replace Tag="LOC_HERO_KILLED_DESC" Language="ja_JP">
-      <Text>{1_UnitName: Hero}[COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR]{1_UnitName: Hero}が戦闘に敗れました。</Text>
+      <Text>英雄[COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR]が戦闘に敗れました。</Text>
     </Replace>
     <Replace Tag="LOC_HEROES_HELP_RECALL_DESC" Language="ja_JP">
       <Text>寿命を迎えるか倒された英雄は、自身を祀る[COLOR:Civ6Yellow]{1_OriginBuilding}[ENDCOLOR]のある都市で [ICON_Faith] 信仰力を消費することによって召喚できます。[NEWLINE][NEWLINE]召喚された英雄は、 [ICON_Lifespan] 寿命と行動力のチャージが回復した状態で復活しますが、召喚に必要な [ICON_Faith] 信仰力は召喚のたびに増えていきます。英雄は各時代ごとに一度だけ召喚することができます。</Text>
@@ -4962,7 +5007,7 @@
       <Text>{HeroClassName}が{ActingPlayerCivName}の民と共に歩んだ日々は終わった。</Text>
     </Replace>
     <Replace Tag="LOC_MOMENT_HERO_RECALLED_INSTANCE_DESCRIPTION" Language="ja_JP">
-      <Text>人々の呼びかけに応え、英雄{HeroClassName}{HeroClassName: plural 1?has; other?have;}が{ActingPlayerCivName}に戻ってきた。</Text>
+      <Text>人々の呼びかけに応え、英雄{HeroClassName}が{ActingPlayerCivName}に戻ってきた。</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_GRIEVANCE_LOG_HERO_ACTION_TERRITORY" Language="ja_JP">
       <Text>領土に対して{1_HeroName}を使った</Text>
@@ -5148,7 +5193,7 @@
       <Text>영웅 소환</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_RECALLING_PARA_1" Language="ko_KR">
-      <Text>영웅이 게임을 떠난 후, 본래 획득했던 도시에서 [ICON_Faith] 신앙으로 구입하면 한 시대에 한 번 소환할 수 있습니다. 영웅은 시대에 걸쳐 여러 번 소환할 수 있지만, 한 영웅의 소환 비용은 소환할 때마다 증가합니다.</Text>
+      <Text>영웅이 게임을 떠난 후, 본래 획득했던 도시에서 [ICON_Faith] 신앙을 소모하여, 한 시대에 한 번씩 소환할 수 있습니다. 영웅은 여러 시대에 걸쳐 다시 소환할 수 있지만, 같은 영웅을 다시 소환할 때마다 비용이  증가합니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_RECALLING_PARA_2" Language="ko_KR">
       <Text>처음에 획득한 플레이어만이 기념비가 위치한 도시에서만 영웅을 소환할 수 있습니다. 영웅을 획득한 도시의 지배권을 잃는다면, 도시 지배권을 다시 얻기 전까지 그 영웅을 소환할 수 없습니다. 도시가 약탈당하면, 영웅을 절대 소환할 수 없습니다.</Text>
@@ -5511,7 +5556,7 @@
       <Text>베오울프의 도전</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="ko_KR">
-      <Text>베오울프보다 [ICON_Strength] 전투력이 낮은 인접 적 유닛을 대상으로 지정합니다. 베오울프가 대상을 즉시 파괴합니다. 횟수 1을 소모합니다.</Text>
+      <Text>베오울프보다 [ICON_Strength] 전투력이 낮은 인접 적 유닛을 대상으로 지정합니다. 베오울프가 대상을 즉시 파괴합니다. 횟수 1과 [ICON_MOVEMENT] 이동력 1을 소모합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="ko_KR">
       <Text>아서의 작위 수여</Text>
@@ -5523,13 +5568,13 @@
       <Text>헤라클레스의 수고</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="ko_KR">
-      <Text>건설 중인 아군 특수지구에 있을 때 사용하십시오. 헤라클레스가 해당 특수지구의 건설을 즉시 완료합니다. 횟수 2를 소모합니다.</Text>
+      <Text>건설 중인 아군 특수지구에 있을 때 사용하십시오. 헤라클레스가 해당 특수지구의 건설을 즉시 완료합니다. 횟수 2를 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="ko_KR">
       <Text>헤라클레스의 분노</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="ko_KR">
-      <Text>적 특수지구에 위치할 때 사용하십시오. 헤라클레스가 현존하는 모든 건물을 파괴하고 특수지구를 약탈합니다. 횟수 1을 소모합니다.</Text>
+      <Text>적 특수지구에 위치할 때 사용하십시오. 헤라클레스가 현존하는 모든 건물을 파괴하고 특수지구를 약탈합니다. 횟수 1을 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="ko_KR">
       <Text>히미코의 매력</Text>
@@ -5538,13 +5583,13 @@
       <Text>히미코의 통치</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="ko_KR">
-      <Text>플레이어가 종주국인 도시 국가의 영토 내에서 사용하십시오. 히미코가 비용 없이 해당 지역의 군대를 소집합니다. 횟수 1을 소모합니다.</Text>
+      <Text>플레이어가 종주국인 도시 국가의 영토 내에서 사용하십시오. 히미코가 비용 없이 해당 지역의 군대를 소집합니다. 횟수 1을 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="ko_KR">
       <Text>히폴리타의 명령</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="ko_KR">
-      <Text>이 턴에 이동하거나 공격한 인접 아군 유닛을 대상으로 지정합니다. 히폴리타가 해당 유닛의 이동력과 공격력을 즉시 회복합니다.</Text>
+      <Text>이 턴에 이동하거나 공격한 인접 아군 유닛을 대상으로 지정합니다. 히폴리타가 해당 유닛의 이동력과 공격력을 즉시 회복합니다. 턴당 1회 사용할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="ko_KR">
       <Text>신밧드의 재물</Text>
@@ -5553,7 +5598,7 @@
       <Text>마우이의 발명품</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="ko_KR">
-      <Text>주인이 없는 공지를 발견하면 사용하십시오. 마우이가 타일에 무작위 보너스 또는 사치 자원을 생성합니다. 횟수 1을 소모합니다.</Text>
+      <Text>주인이 없는 공지를 발견하면 사용하십시오. 마우이가 타일에 무작위 보너스 또는 사치 자원을 생성합니다. 횟수 1을 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="ko_KR">
       <Text>오야의 폭풍</Text>
@@ -5598,7 +5643,7 @@
       <Text>이 도시를 영웅 손오공에게 헌신하십시오. 완료하면 손오공이 도심부에 나타납니다.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="ko_KR">
-      <Text>영웅 성유물</Text>
+      <Text>[ICON_GreatWork_HeroRelic] 영웅 성유물</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="ko_KR">
       <Text>지정할 수 있는 대상 없음</Text>
@@ -5636,11 +5681,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="ko_KR">
       <Text>건설 중인 특수지구에 사용해야 합니다.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="ko_KR">
+      <Text>특수지구에서 사용해야 합니다.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="ko_KR">
       <Text>특수지구 또는 시설에 사용해야 합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="ko_KR">
       <Text>사치 또는 보너스 자원에 사용해야 합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="ko_KR">
+      <Text>이 특수지구는 이미 약탈당했습니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="ko_KR">
       <Text>도심부에서 사용할 수 없습니다.</Text>
@@ -5653,6 +5704,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="ko_KR">
       <Text>이 위치에 자원이 없습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="ko_KR">
+      <Text>동맹 문명이 소유한 타일에서 사용할 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="ko_KR">
       <Text>영웅은 한 시대에 한 번만 등장할 수 있습니다.</Text>
@@ -5778,19 +5832,19 @@
       <Text>영웅 소환에는 {1_Amount} [ICON_Faith] 신념이 필요합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="ko_KR">
-      <Text>플레이어가 조종하는 인접 지상 군사 유닛을 대상으로 지정합니다. 아서가 유닛을 퀘스팅 나이트로 변신시킵니다. 퀘스팅 나이트는 [ICON_Strength] 전투력이 높아졌으며 {1_LifespanVal}의 [ICON_Lifespan] 수명을 가지는 특유 중기병 유닛입니다. 횟수 1을 소모합니다.</Text>
+      <Text>플레이어가 조종하는 인접 지상 군사 유닛을 대상으로 지정합니다. 아서가 유닛을 퀘스팅 나이트로 변신시킵니다. 퀘스팅 나이트는 [ICON_Strength] 전투력이 높아졌으며 {1_LifespanVal}의 [ICON_Lifespan] 수명을 가지는 특유 중기병 유닛입니다. 횟수 1과 [ICON_MOVEMENT] 이동력 1을 소모합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="ko_KR">
-      <Text>인근에 있는 보너스 또는 사치 자원에서 사용하십시오. 아난시가 해당 자원을 소모하고 {1_ScienceReward} [ICON_SCIENCE] 과학과 {2_CultureReward} [ICON_CULTURE] 문화를 생성합니다. 존재하는 모든 시설이 파괴됩니다. 횟수 1을 소모합니다.</Text>
+      <Text>보너스 또는 사치 자원에서 사용하십시오. 아난시가 해당 자원을 소모하고 {1_ScienceReward} [ICON_SCIENCE] 과학과 {2_CultureReward} [ICON_CULTURE] 문화를 생성합니다. 존재하는 모든 시설이 파괴됩니다. 횟수 1을 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="ko_KR">
-      <Text>인접 도시 국가를 대상으로 지정합니다. 히미코가 즉시 해당 도시 국가에 무료 [ICON_Envoy] 사절 1명을 파견합니다. 이미 해당 도시의 종주국인 경우 히미코는 [ICON_FAITH] 신앙 +{1_FaithChange}도 획득합니다. 횟수 1을 소모합니다.</Text>
+      <Text>인접 도시 국가를 대상으로 지정합니다. 히미코가 즉시 해당 도시 국가에 무료 [ICON_Envoy] 사절 1명을 파견합니다. 이미 해당 도시의 종주국인 경우 히미코는 [ICON_FAITH] 신앙 +{1_FaithChange}도 획득합니다. 횟수 1을 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="ko_KR">
-      <Text>인근에 있는 적 해상 유닛 또는 야만인 주둔지를 대상으로 지정하십시오. 대상은 소탕되거나 50%의 피해를 입고, 신밧드가 {1_GoldReward} [ICON_GOLD] 금을 즉시 획득합니다. 횟수 1을 소모합니다.</Text>
+      <Text>인근에 있는 적 해상 유닛 또는 야만인 주둔지를 대상으로 지정하십시오. 대상은 소탕되거나 50%의 피해를 입고, 신밧드가 {1_GoldReward} [ICON_GOLD] 금을 즉시 획득합니다. 횟수 1을 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="ko_KR">
-      <Text>{1_DamageAmount}만큼 인근의 모든 적에게 피해를 입히고 인근의 모든 소유 유닛을 치유합니다. 횟수 1을 소모합니다.</Text>
+      <Text>{1_DamageAmount}만큼 인근의 모든 적에게 피해를 입히고 인근의 모든 소유 유닛을 치유합니다. 횟수 1을 소모하고 턴을 종료합니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="ko_KR">
       <Text>{2_HeroName}의 {1_BuildingName}</Text>
@@ -5844,7 +5898,7 @@
       <Text>우리 영웅 [COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR]이(가) 전투에서 사망했습니다.</Text>
     </Replace>
     <Replace Tag="LOC_HEROES_HELP_RECALL_DESC" Language="ko_KR">
-      <Text>영웅은 수명이 끝나거나 사망한 후, [COLOR:Civ6Yellow]{1_OriginBuilding}[ENDCOLOR] 건물이 있는 도시에서 [ICON_Faith] 신앙으로 구입해 소환할 수 있습니다.[NEWLINE][NEWLINE]소환된 영웅은 [ICON_Lifespan] 수명과 행동 횟수가 충전된 상태로 돌아오지만, 소환에 필요한 [ICON_Faith] 신앙 비용은 등장할 때마다 증가합니다. 영웅은 한 시대에 한 번만 소환할 수 있습니다.</Text>
+      <Text>영웅의 수명이 끝나거나 사망하면, [COLOR:Civ6Yellow]{1_OriginBuilding}[ENDCOLOR] 건물이 있는 도시에서 [ICON_Faith] 신앙으로 구입해 재소환할 수 있습니다.[NEWLINE][NEWLINE]소환된 영웅은 [ICON_Lifespan] 수명과 행동 횟수가 충전된 상태로 돌아오지만, 소환에 필요한 [ICON_Faith] 신앙 비용은 재소환할 때마다 증가합니다. 영웅은 한 시대에 한 번만 소환할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_DISCOVERED_SUMMARY" Language="ko_KR">
       <Text>영웅 {1_UnitName}을(를) 발견했습니다.</Text>
@@ -6550,7 +6604,7 @@
       <Text>Wyzwanie Beowulfa</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="pl_PL">
-      <Text>Wskaż sąsiednią wrogą jednostkę ustępującą Beowulfowi [ICON_Strength] siłą bojową, a Beowulf natychmiast ją zniszczy. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Wskaż sąsiednią wrogą jednostkę ustępującą Beowulfowi [ICON_Strength] siłą bojową, a Beowulf natychmiast ją zniszczy. Powoduje utratę 1 punktu potencjału i 1 punktu [ICON_MOVEMENT] ruchu.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="pl_PL">
       <Text>Uznanie Artura</Text>
@@ -6562,13 +6616,13 @@
       <Text>Praca Herkulesa</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="pl_PL">
-      <Text>Użyj na polu z przyjazną dzielnicą, nad którą wciąż trwają prace. Herkules natychmiast ukończy wznoszenie dzielnicy. Powoduje utratę 2 punktów potencjału.</Text>
+      <Text>Użyj na polu z przyjazną dzielnicą, nad którą wciąż trwają prace. Herkules natychmiast ukończy wznoszenie dzielnicy. Powoduje utratę 2 punktów potencjału i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="pl_PL">
       <Text>Gniew Herkulesa</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="pl_PL">
-      <Text>Użyj na polu z wrogą dzielnicą. Herkules wszystkie znajdujące się w niej budowle i splądruje dzielnicę. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Użyj na polu z wrogą dzielnicą. Herkules wszystkie znajdujące się w niej budowle i splądruje dzielnicę. Powoduje utratę 1 punktu potencjału i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="pl_PL">
       <Text>Urok Himiko</Text>
@@ -6577,13 +6631,13 @@
       <Text>Rządy Himiko</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="pl_PL">
-      <Text>Użyj na terytorium miasta-państwa, którego jesteś suzerenem. Himiko dokonuje natychmiastowego i bezpłatnego poboru jednostek wojskowych tego miasta-państwa. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Użyj na terytorium miasta-państwa, którego jesteś suzerenem. Himiko dokonuje natychmiastowego i bezpłatnego poboru jednostek wojskowych tego miasta-państwa. Powoduje utratę 1 punktu potencjału i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="pl_PL">
       <Text>Dowództwo Hippolity</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="pl_PL">
-      <Text>Wskaż dowolną sąsiadującą przyjazną jednostkę, która w tej turze wykonała ruch lub przeprowadziła atak. Hippolita natychmiast przywróci jej punkty ruchu i możliwość ataku.</Text>
+      <Text>Wskaż dowolną sąsiadującą przyjazną jednostkę, która w tej turze wykonała ruch lub przeprowadziła atak. Hippolita natychmiast przywróci jej punkty ruchu i możliwość ataku. Można użyć raz na turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="pl_PL">
       <Text>Fortuna Sindbada</Text>
@@ -6592,7 +6646,7 @@
       <Text>Wynalazki Maui</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="pl_PL">
-      <Text>Użyj na nienależącym do nikogo, pustym polu. Maui tworzy na polu losowy zasób dodatkowy lub luksusowy. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Użyj na nienależącym do nikogo, pustym polu. Maui tworzy na polu losowy zasób dodatkowy lub luksusowy. Powoduje utratę 1 punktu potencjału i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="pl_PL">
       <Text>Burza Oi</Text>
@@ -6637,7 +6691,7 @@
       <Text>Poświęć to miasto Sun Wukongowi. Po ukończeniu projektu Sun Wukong pojawi się w centrum miasta.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="pl_PL">
-      <Text>Relikwia bohatera</Text>
+      <Text>[ICON_GreatWork_HeroRelic] Relikwia bohatera</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="pl_PL">
       <Text>Brak dostępnych celów</Text>
@@ -6675,11 +6729,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="pl_PL">
       <Text>Można użyć tylko na dzielnicy, nad którą wciąż trwają prace.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="pl_PL">
+      <Text>Można użyć tylko na dzielnicy.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="pl_PL">
       <Text>Można użyć tylko na dzielnicy lub ulepszeniu.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="pl_PL">
       <Text>Można użyć tylko na zasobie luksusowym lub dodatkowym.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="pl_PL">
+      <Text>Ta dzielnica jest już splądrowana.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="pl_PL">
       <Text>Nie można użyć na centrum miasta.</Text>
@@ -6692,6 +6752,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="pl_PL">
       <Text>We wskazanej lokalizacji brak odpowiednich zasobów.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="pl_PL">
+      <Text>Nie można użyć na polu należącym do cywilizacji sojusznika.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="pl_PL">
       <Text>Bohaterowie mogą pojawić się tylko raz w każdej epoce.</Text>
@@ -6817,19 +6880,19 @@
       <Text>{1_Amount} [ICON_Faith] wiary, aby ponownie przywołać bohaterów.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="pl_PL">
-      <Text>Wskaż sąsiednią lądową jednostkę wojskową, którą kontrolujesz. Artur przekształci ją w wędrownego rycerza – unikalną jednostkę ciężkiej kawalerii o zwiększonej [ICON_Strength] sile bojowej oraz [ICON_Lifespan] długości życia równej {1_LifespanVal}. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Wskaż sąsiednią lądową jednostkę wojskową, którą kontrolujesz. Artur przekształci ją w wędrownego rycerza – unikalną jednostkę ciężkiej kawalerii o zwiększonej [ICON_Strength] sile bojowej oraz [ICON_Lifespan] długości życia równej {1_LifespanVal}. Powoduje utratę 1 punktu potencjału i 1 punktu [ICON_MOVEMENT] ruchu.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="pl_PL">
-      <Text>Użyj na polu z zasobem dodatkowym lub luksusowym. Anansi usuwa zasób i generuje {1_ScienceReward} [ICON_SCIENCE] nauki oraz {2_CultureReward} [ICON_CULTURE] kultury. Powoduje utratę 1 punktu potencjału i usuwa ulepszenie pola.</Text>
+      <Text>Użyj na polu z zasobem dodatkowym lub luksusowym. Anansi usuwa zasób i generuje {1_ScienceReward} [ICON_SCIENCE] nauki oraz {2_CultureReward} [ICON_CULTURE] kultury. Powoduje utratę 1 punktu potencjału, usuwa ulepszenie pola i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="pl_PL">
-      <Text>Wskaż dowolne sąsiednie miasto-państwo, w którym Himiko natychmiast umieści 1 darmowego [ICON_Envoy] emisariusza. Jeśli jesteś suzerenem wskazanego miasta-państwa, to Himiko zdobędzie również {1_FaithChange} [ICON_FAITH] wiary. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Wskaż dowolne sąsiednie miasto-państwo, w którym Himiko natychmiast umieści 1 darmowego [ICON_Envoy] emisariusza. Jeśli jesteś suzerenem wskazanego miasta-państwa, to Himiko zdobędzie również {1_FaithChange} [ICON_FAITH] wiary. Powoduje utratę 1 punktu potencjału i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="pl_PL">
-      <Text>Wskaż dowolną wrogą jednostkę morską lub obóz barbarzyńców na sąsiednim polu. Cel zostanie zlikwidowany lub utraci 50% PŻ, a Sindbad natychmiast zyska {1_GoldReward} [ICON_GOLD] złota. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Wskaż dowolną wrogą jednostkę morską lub obóz barbarzyńców na sąsiednim polu. Cel zostanie zlikwidowany lub utraci 50% PŻ, a Sindbad natychmiast zyska {1_GoldReward} [ICON_GOLD] złota. Powoduje utratę 1 punktu potencjału i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="pl_PL">
-      <Text>Zadaj wszystkim sąsiadującym wrogim jednostkom {1_DamageAmount} pkt. obrażeń i przywróć taką samą liczbę PŻ wszystkim sąsiadującym jednostkom, które należą do ciebie. Powoduje utratę 1 punktu potencjału.</Text>
+      <Text>Zadaj wszystkim sąsiadującym wrogim jednostkom {1_DamageAmount} pkt. obrażeń i przywróć taką samą liczbę PŻ wszystkim sąsiadującym jednostkom, które należą do ciebie. Powoduje utratę 1 punktu potencjału i kończy turę.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="pl_PL">
       <Text>{1_BuildingName} {2_HeroName[2]}</Text>
@@ -6901,16 +6964,16 @@
       <Text>{1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?Bohater; feminine?Bohaterka; other?Bohater;}; 2?{1_HeroClassName: gender masculine?Bohaterowie; other?Bohaterki;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?poległ; feminine?poległa; other?poległ;}; 2?{1_HeroClassName: gender masculine?polegli; other?poległy;};} w walce.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_EXPIRED_OTHER_SUMMARY" Language="pl_PL">
-      <Text>{1_HeroClassName: plural 1?{HeroClassName: gender masculine?Bohater; feminine?Bohaterka; other?Bohater;}; 2?{1_HeroClassName: gender masculine?Bohaterowie; other?Bohaterki;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?osiągnął; feminine?osiągnęła; other?osiągnął;}; 2?{1_HeroClassName: gender masculine?osiągnęli; other?osiągnęły;};} [ICON_Lifespan] kres swego życia.</Text>
+      <Text>{1_HeroClassName: plural 1?{HeroClassName: gender masculine?Bohater; feminine?Bohaterka; other?Bohater;}; 2?{1_HeroClassName: gender masculine?Bohaterowie; other?Bohaterki;};} {1_HeroClassName} {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?osiągnął; feminine?osiągnęła; other?osiągnął;}; 2?{1_HeroClassName: gender masculine?osiągnęli; other?osiągnęły;};} [ICON_Lifespan] kres swego życia.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CLAIMED_OTHER_SUMMARY" Language="pl_PL">
-      <Text>Miasto {1_CivName} pozyskało {2_HeroName[4]}!</Text>
+      <Text>Cywilizacja {1_CivName[2]} pozyskała {2_HeroName[4]}!</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CLAIMED_OTHER_UNMET_SUMMARY" Language="pl_PL">
       <Text>Nieznany gracz pozyskał {1_HeroName[4]}!</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_RECALLED_OTHER_SUMMARY" Language="pl_PL">
-      <Text>Miasto {1_CivName} ponownie przyzwało {2_HeroName[4]}!</Text>
+      <Text>Cywilizacja {1_CivName[2]} ponownie przyzwała {2_HeroName[4]}!</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CLAIM_FAILED_SUMMARY" Language="pl_PL">
       <Text>Nie udało ci się pozyskać na czas {1_HeroName[2]}. Na szczęście odzyskano {2_Production} [ICON_Production] produkcji wykorzystanej podczas tej próby i przekazano ją do {3_CityName[2]}.</Text>
@@ -7546,7 +7609,7 @@
       <Text>Герой</Text>
     </Replace>
     <Replace Tag="LOC_HERO_ABILITY_COMBAT_STRENGTH_AOE_NAME" Language="ru_RU">
-      <Text>Вдохновление</Text>
+      <Text>Вдохновение</Text>
     </Replace>
     <Replace Tag="LOC_HERO_ABILITY_COMBAT_STRENGTH_AOE" Language="ru_RU">
       <Text>+10 к [ICON_Strength] боевой мощи всех юнитов в пределах 2 клеток.</Text>
@@ -7573,7 +7636,7 @@
       <Text>Личина Сунь Укуна</Text>
     </Replace>
     <Replace Tag="LOC_MODIFIER_WUKONG_STEALTH" Language="ru_RU">
-      <Text>Враг не видит Сунь Укуна, пока они не окажутся на соседних клетках.</Text>
+      <Text>Враги не видят Сунь Укуна, пока не окажутся на соседних клетках.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_WUKONG_LIFESPAN_NAME" Language="ru_RU">
       <Text>Бессмертие Сунь Укуна</Text>
@@ -7615,7 +7678,7 @@
       <Text>Испытание Беовульфа</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="ru_RU">
-      <Text>Целью становится соседний вражеский юнит, [ICON_Strength] боевая мощь которого меньше, чем у Беовульфа. Беовульф немедленно уничтожает цель. Стоимость — 1 заряд.</Text>
+      <Text>Цель — соседний вражеский юнит с меньшей [ICON_Strength] боевой мощью, чем у Беовульфа. Беовульф мгновенно уничтожает цель. Расходует 1 заряд, 1 [ICON_MOVEMENT] ОП.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="ru_RU">
       <Text>Акколада Артура</Text>
@@ -7627,13 +7690,13 @@
       <Text>Подвиг Геракла</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="ru_RU">
-      <Text>Можно использовать при нахождении в дружественном строящемся районе. Геракл мгновенно завершает создание района. Расходует 2 заряда.</Text>
+      <Text>Можно использовать, находясь в дружественном строящемся районе. Геракл мгновенно завершает создание района. Расходует 2 заряда и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="ru_RU">
       <Text>Гнев Геракла</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="ru_RU">
-      <Text>Можно использовать при нахождении на территории вражеского района. Геракл уничтожает все имеющиеся здания и разоряет район. Расходует 1 заряд.</Text>
+      <Text>Можно использовать, находясь во вражеском районе. Геракл уничтожает все имеющиеся здания и разоряет район. Расходует 1 заряд и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="ru_RU">
       <Text>Очарование Химико</Text>
@@ -7642,13 +7705,13 @@
       <Text>Власть Химико</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="ru_RU">
-      <Text>Можно использовать на территории города-государства, сюзереном которого вы являетесь. Химико мгновенно и бесплатно мобилизует армию этого города. Расходует 1 заряд.</Text>
+      <Text>Можно использовать на территории города-государства, сюзереном которого вы являетесь. Химико мгновенно и бесплатно мобилизует армию этого города. Расходует 1 заряд и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="ru_RU">
       <Text>Командование Ипполиты</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="ru_RU">
-      <Text>Цель — любой дружественный юнит поблизости, который уже перемещался или атаковал на этом ходу. Ипполита мгновенно восстанавливает все очки действий юнита.</Text>
+      <Text>Цель — соседний дружественный юнит, который уже перемещался или атаковал на этом ходу. Ипполита мгновенно восстанавливает все очки действий юнита. Может использоваться один раз за ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="ru_RU">
       <Text>Удача Синдбада</Text>
@@ -7657,7 +7720,7 @@
       <Text>Изобретения Мауи</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="ru_RU">
-      <Text>Для использования разместите на бесхозном и пустом участке земли. На нем Мауи создает случайный бонусный или редкий ресурс. Расходует 1 заряд.</Text>
+      <Text>Для использования разместите на бесхозном и пустом участке земли. На нем Мауи создает случайный бонусный или редкий ресурс. Расходует 1 заряд и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="ru_RU">
       <Text>Шторм Ойи</Text>
@@ -7702,7 +7765,7 @@
       <Text>Сделать героя Сунь Укуна покровителем этого города. По завершении Сунь Укун появится в центре города.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="ru_RU">
-      <Text>Героическая реликвия</Text>
+      <Text>[ICON_GreatWork_HeroRelic] Героическая реликвия</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="ru_RU">
       <Text>Нет доступных целей</Text>
@@ -7729,7 +7792,7 @@
       <Text>Целью не может быть город, с которым мы воюем.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_LEVY_AVAILABLE" Language="ru_RU">
-      <Text>В этом городе-государстве нет юнитов, которые можно мобилизовать.</Text>
+      <Text>В этом городе-государстве нет юнитов для мобилизации.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_IN_SUZERAIN_TERRITORY" Language="ru_RU">
       <Text>Нужно находиться на территории города-государства, сюзереном которого вы являетесь.</Text>
@@ -7740,11 +7803,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="ru_RU">
       <Text>Можно использовать только на территории строящегося района.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="ru_RU">
+      <Text>Можно использовать только в районах.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="ru_RU">
       <Text>Можно использовать только на территории районов или улучшений.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="ru_RU">
       <Text>Можно использовать только на клетках с редким или бонусным ресурсом.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="ru_RU">
+      <Text>Этот район уже разграблен.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="ru_RU">
       <Text>Нельзя использовать в центре города.</Text>
@@ -7757,6 +7826,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="ru_RU">
       <Text>В этой местности нет подходящих ресурсов.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="ru_RU">
+      <Text>Нельзя использовать на территории союзной цивилизации.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="ru_RU">
       <Text>Герои появляются лишь один раз за эпоху.</Text>
@@ -7882,19 +7954,19 @@
       <Text>{1_Amount} [ICON_Faith] веры для повторного призыва героев.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="ru_RU">
-      <Text>Целью становится соседний наземный военный юнит под вашим управлением. Артур превращает его в странствующего рыцаря — уникальный тяжёлый кавалерийский юнит с повышенной [ICON_Strength] боевой мощью и {1_LifespanVal}[ICON_Lifespan] сроком жизни. Стоимость — 1 заряд.</Text>
+      <Text>Цель — соседний наземный военный юнит под вашим управлением. Артур превращает его в странствующего рыцаря — уникальный тяжелый кавалерийский юнит с повышенной [ICON_Strength] боевой мощью и {1_LifespanVal} [ICON_Lifespan] сроком жизни. Расходует 1 заряд и 1 [ICON_MOVEMENT] ОП.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="ru_RU">
-      <Text>Использование при нахождении на бонусном или редком ресурсе. Ананси поглощает ресурс и производит {1_ScienceReward} ед. [ICON_SCIENCE] науки и {2_CultureReward} ед. [ICON_CULTURE] культуры. Все имеющиеся улучшения пропадают. Расходует 1 заряд.</Text>
+      <Text>Можно использовать, находясь на бонусном или редком ресурсе. Ананси поглощает ресурс и производит {1_ScienceReward} ед. [ICON_SCIENCE] науки и {2_CultureReward} ед. [ICON_CULTURE] культуры. Все имеющиеся улучшения пропадают. Расходует 1 заряд и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="ru_RU">
-      <Text>Целью становится любой соседний город-государство. Химико мгновенно помещает 1 бесплатного [ICON_Envoy] посла в этот город. Если вы уже сюзерен выбранного города-государства, Химико дополнительно получает {1_FaithChange} [ICON_FAITH] веру. Стоимость — 1 заряд.</Text>
+      <Text>Цель — соседний город-государство. Химико мгновенно помещает 1 бесплатного [ICON_Envoy] посла в этот город. Если вы уже сюзерен выбранного города-государства, Химико дополнительно получает {1_FaithChange} [ICON_FAITH] веры. Расходует 1 заряд и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="ru_RU">
-      <Text>Цель — вражеский морской юнит или лагерь варваров. Цель уничтожается или теряет 50% ОЗ, а Синдбад мгновенно получает {1_GoldReward} [ICON_GOLD] золота. Расходует 1 заряд.</Text>
+      <Text>Цель — соседний вражеский морской юнит или лагерь варваров. Цель уничтожается или теряет 50% ОЗ, а Синдбад мгновенно получает {1_GoldReward} [ICON_GOLD] золота. Расходует 1 заряд и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="ru_RU">
-      <Text>Наносит урон всем соседним врагам и лечит все свои соседние юниты на {1_DamageAmount}. Расходует 1 заряд.</Text>
+      <Text>Наносит урон всем соседним врагам и лечит все свои соседние юниты на {1_DamageAmount}. Расходует 1 заряд и завершает ход.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="ru_RU">
       <Text>{1_BuildingName} им. {2_HeroName}</Text>
@@ -7993,7 +8065,7 @@
       <Text>Среди нас {HeroClassName: plural 1?A живет герой; other?живут герои;}! Благодаря преданности народа {LOC_GRAMMAR_CIVNAME &lt;&lt; {ActingPlayerCivName}} {HeroClassName}, {HeroClassName: plural 1?первый герой присоединяется; other?первые герои присоединяются;} к ним.</Text>
     </Replace>
     <Replace Tag="LOC_MOMENT_HERO_EXPIRED_FIRST_INSTANCE_DESCRIPTION" Language="ru_RU">
-      <Text>Время службы {HeroClassName} делу {LOC_GRAMMAR_CIVNAME &lt;&lt; {ActingPlayerCivName}} подошло к концу. Если наша вера будет крепка, когда-нибудь этот герой вернется.</Text>
+      <Text>Время службы {HeroClassName} цивилизации {LOC_GRAMMAR_CIVNAME &lt;&lt; {ActingPlayerCivName}} подошло к концу. Если наша вера будет крепка, когда-нибудь этот герой вернется.</Text>
     </Replace>
     <Replace Tag="LOC_MOMENT_HERO_RECALLED_FIRST_INSTANCE_DESCRIPTION" Language="ru_RU">
       <Text>Зов народа {LOC_GRAMMAR_CIVNAME &lt;&lt; {ActingPlayerCivName}} донесся сквозь время и пространство, и {HeroClassName}, {HeroClassName: plural 1?легендарный герой снова возвращаются; other?легендарные герои снова возвращаются;} к ним.</Text>
@@ -8253,16 +8325,16 @@
       <Text>据当地传说，亚瑟死后长眠于阿瓦隆，如果不列颠再次受到威胁，他便会重回人间力挽狂澜。流传的种种民间故事，让亚瑟王的形象丰满而富有戏剧性。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_BEOWULF_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
-      <Text>贝奥武夫的故事在公元1000年左右以古英语著成，它也是最早流传下来的古英语作品之一。贝奥武夫是耶阿特人的英雄，这个人群聚居在现代瑞典的国土中。贝奥武夫来到古丹麦国王赫罗斯加的宫廷效力，此时国王的土地正遭到一个名叫格伦戴尔的怪物不断侵袭。格伦戴尔是一种食人怪物，在主题上可能与斯堪的纳维亚神话中的巨魔有关，但史诗中将他描述为该隐（源自圣经）遭到诅咒的后裔。</Text>
+      <Text>贝奥武夫的故事在公元一千年左右以古英语著成，它也是最早流传下来的古英语作品之一。贝奥武夫是耶阿特人的英雄，这个人群聚居在现代瑞典的国土中。贝奥武夫来到古丹麦国王赫罗斯加的宫廷效力，此时国王的土地正遭到一个名叫格伦戴尔的怪物不断侵袭。格伦戴尔是一种食人怪物，在主题上可能与斯堪的纳维亚神话中的巨魔有关，但史诗中将他描述为该隐（源自圣经）遭到诅咒的后裔。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_BEOWULF_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
-      <Text>贝奥武夫为格伦戴尔设下了陷阱。他在大厅里装睡，假扮受害者。夜里，刺骨的雾蹿了进来，一同进来的还有怪物。贝奥武夫没有使用武器，而是想和野兽公平地进行力量较量。二者手臂纠缠、激烈搏斗。而贝奥武夫赤手空拳扯掉了格伦戴尔的一只胳膊。这只巨魔受到致命伤害，一瘸一拐地逃回了家。格伦戴尔的女巫母亲发现儿子奄奄一息之后勃然大怒，贝奥武夫也只能再次面对苦战。</Text>
+      <Text>贝奥武夫为格伦戴尔设下了陷阱。他在大厅里装睡，假扮受害者。夜里，刺骨的雾蹿了进来，一同进来的还有怪物。贝奥武夫没有使用武器，而是想和野兽公平地进行力量较量。二者手臂纠缠、激烈搏斗。贝奥武夫赤手空拳扯掉了格伦戴尔的一只胳膊。这只巨魔受到致命伤害，一瘸一拐地逃回了家。格伦戴尔的女巫母亲发现儿子奄奄一息之后勃然大怒，贝奥武夫也只能再次面对苦战。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_BEOWULF_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
       <Text>贝奥武夫凯旋而归，回到了耶阿特人的土地。在那里，他贤明地统治着国家。但一个更凶残的新恶魔苏醒了。一条恶龙飞出巢穴，喷出火焰将乡村焚毁殆尽。贝奥武夫一如既往地维持着自己的骄傲，坚持要独自一人与巨兽作战，但年轻的战士维格拉夫眼见老国王一心赴死，便坚持要陪伴在他左右。在战斗中，恶龙被杀死，但贝奥武夫也被毒牙咬中，就此绝命。之后，维格拉夫把老国王葬在了海边的一个高高的石墓中。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_BEOWULF_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
-      <Text>在过去，《贝奥武夫》在经典文学中的地位并不如今日。只有J. R. R.托尔金认为它是一部严肃的史诗，而不仅仅是一个民间传说。它既描绘了勇士的无穷力量，也表达了对骄傲的警惕——既有赫罗斯加对自己财富的骄傲，也有贝奥武夫对自己力量的骄傲。从历史上看，贝奥武夫是一个时代的产物，它讲述了一个名义上信仰基督教，但实际上无法摆脱自己原有宗教的人种，这也是英格兰斯堪的纳维亚遗风的象征。</Text>
+      <Text>《贝奥武夫》并非始终如今日般被视为文学经典。只有J. R. R.托尔金认为它是一部严肃的史诗，而不仅仅是一个民间传说。它既描绘了勇士的无穷力量，也表达了对骄傲的警惕——既有赫罗斯加对自己财富的骄傲，也有贝奥武夫对自己力量的骄傲。从历史上看，贝奥武夫是一个时代的产物，它讲述了一个名义上信仰基督教，但实际上无法摆脱自己原有宗教的人种，这也是英格兰斯堪的纳维亚遗风的象征。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HERCULES_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
       <Text>海克力斯，他的英语罗马名字赫丘利更加为人熟知。他是宙斯之子，是象征力量的英雄，但缺乏较好的判断力。由于赫丘利是宙斯众多私生子中的一个，因此宙斯的妻子赫拉十分憎恨他，并千方百计想毁灭他。赫丘利尚年幼时，赫拉派蛇前去杀死这个男孩。但即使这样，赫丘利依然战胜了巨蛇，而且力量也进一步增长。然而，他的智力却无法与力量相提并论：赫丘利用竖琴杀死了他的音乐导师；把一位好友（此人的父亲和兄弟也为他所杀）扔到了墙上；把先驱者利卡斯扔到了海里；而最悲剧的是，他还杀死了自己的孩子。</Text>
@@ -8298,7 +8370,7 @@
       <Text>许多美洲土著神话都有一对神奇双胞胎的故事。在玛雅基切人的圣书《波波尔·乌》中，这对双子英雄便是乌纳普 和他的兄弟斯巴兰克。他们的故事讲述了冥界诸神如何失去了自己的力量。故事从另一对兄弟说起：双子的父亲和叔父被冥界诸神所背叛，他们被邀请去冥界参加中美洲球赛，但是比赛被幕后操纵，失败者也遭到献祭。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HUNAHPU_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
-      <Text>多年以后，乌纳普和斯巴兰克发现了父亲留下的球赛装备，并知道了父亲遇害的真相，于是便开始苦练球技。见此情形，冥界之主便邀请这对双胞胎进行球赛。双子英雄明知是个陷阱，但依然慷慨赴约。这是一场噩梦般的比赛——比赛用球里隐藏着刀刃，球员的房间里也遍布着飞行刀片，最后他们在恐怖蝙蝠神卡马佐兹的巢穴里度过了一夜，这也让乌纳普失去了自己的头（但只是暂时而已）。</Text>
+      <Text>多年以后，乌纳普和斯巴兰克发现了父亲留下的球赛装备，在知道了父亲遇害的真相后，便开始苦练球技。见此情形，冥界之主便邀请这对双胞胎进行球赛。双子英雄明知是个陷阱，但依然慷慨赴约。这是一场噩梦般的比赛——比赛用球里隐藏着刀刃，球员的房间里也遍布着飞行刀片，最后他们在恐怖蝙蝠神卡马佐兹的巢穴里度过了一夜，这也让乌纳普失去了自己的头（但只是暂时而已）。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HUNAHPU_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
       <Text>虽然双子赢下了每一场比赛，但迈向胜利的那一刻，他们似乎将要变成最后一个陷阱的牺牲品，走入了一个能把他们烧成灰的烤炉。但冥界诸神并不知道，双子英雄已经掌握了复活之术。尽管他们被烧成灰烬，却依旧在冥界重生，并大隐隐于朝地居住在这里。他们假扮为能够召回亡者的法师，并向诸神展示这个能力，可以把他们杀死，然后再度召回。很明显，这是双子英雄的计谋。他们杀死冥界最高的神之后，便公开了自己的身份，拒绝复活杀害他们父亲的凶手，满心愉悦地享受着复仇的快乐。</Text>
@@ -8310,7 +8382,7 @@
       <Text>“波利尼西亚”一词含义较广，包括从毛利奥特亚罗瓦（新西兰）到夏威夷以及它们之间的地区。仅用“波利尼西亚”一词来指代这一地区是巨大的简化，一些神话和传说也在大范围之内流传，这些概念使它成为其他语言中类似于禁忌和魔力的东西。其中流传的便有毛伊的神话。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_MAUI_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
-      <Text>在毛利神话中，毛伊的早期生活颇为艰辛。他被自己的生母扔进海里，在天父朗伊的哺育下才侥幸存活下来。回家之后，面对着四个满心狐疑兄弟的刁难，他展示出自己学习到的魔法，一一轻松化解。然后他便着手创造我们熟知的世界。他的兄弟拒绝提供任何鱼饵，他便制作了一个魔法颚骨、并以自己的血为诱饵捕捉到巨大的鱼，使之成为新西兰的北岛。当他离开，去寻找祭司（毛利纹面师）进行必要的仪式时，他的兄弟们便开始动手切鱼。这便是为何奥特亚罗瓦拥有山脉和山谷，而不像鱼的侧腹一样平整。他继续改变着世界：为人类寻找火种、创造第一只狗，等等。</Text>
+      <Text>在毛利神话中，毛伊的早期生活颇为艰辛。他被自己的生母扔进海里，在天父朗伊的哺育下才侥幸存活。回家之后，面对着四个满心狐疑兄弟的刁难，他展示出自己学习到的魔法，一一轻松化解。然后他便着手创造我们熟知的世界。他的兄弟拒绝提供任何鱼饵，他便制作了一个魔法颚骨、并以自己的血为诱饵捕捉到巨大的鱼，使之成为新西兰的北岛。当他离开，去寻找祭司（毛利纹面师）进行必要的仪式时，他的兄弟们便开始动手切鱼。这便是为何奥特亚罗瓦拥有山脉和山谷，而不像鱼的侧腹一样平整。他继续改变着世界：为人类寻找火种、创造第一只狗，等等。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_MAUI_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
       <Text>他的最后一个任务是为人类赢得永生，而要做到这点，他必须爬过一个斜躺女神的身体。故事说，他必须这样做，并且不能有人嘲笑他。如果他顺利通过，女神将死去，人类将获得永生。他的朋友，也就是各种各样的鸟群，虽然竭尽最大努力，但仍忍不住哈哈大笑。于是毛伊死了，人类也无法得到永生。</Text>
@@ -8343,10 +8415,10 @@
       <Text>水手辛巴达的故事来自《一千零一夜》的较新版本，发生在阿拉伯的黄金时代，哈伦·拉希德统治时期。辛巴达的勇敢、智慧和魅力帮助他在一系列越趋危险的航行中幸存下来。辛巴达传说的故事结构十分简单：他扬帆离开，遇到并战胜（或是智取）一系列奇幻危险野兽或其他敌人，然后带着财宝满载而归。这个套路可谓屡试不爽。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_SINBAD_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
-      <Text>在一次航行中，辛巴达发现自己被抛弃在一座岛上，而这座岛居然是一只鲸鱼。之后，他被一只巨鹰带走，这只巨鹰生活在一个布满钻石的山谷里，猎取巨蟒作为食物。在其他航行中，辛巴达还有以下故事：与国王斗智、与独眼巨人斗勇，并尝试在村民对有毒植物上瘾的岛上保持清醒头脑。</Text>
+      <Text>在一次航行中，辛巴达发现自己被抛弃在一座岛上，而这座岛居然是一只鲸鱼。之后，他被一只巨鹰带走，这只巨鹰生活在一个布满钻石的山谷里，以巨蟒为食。在其他航行中，辛巴达还有以下故事：与国王斗智、与独眼巨人斗勇，并尝试在村民对有毒植物上瘾的岛上保持清醒头脑。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_SINBAD_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
-      <Text>这些故事听起来似乎有些耳熟，这的确没错。辛巴达的一些故事取材于奥德修斯的航行（例如独眼巨人和食莲者的故事）。在西欧陷入黑暗时代的混乱时，中东成为了智慧库，以及向希腊和罗马学习的宝库，并与丝绸之路的辉煌联系在一起。而丝绸之路也是故事的来源之一：巨鹰和巨蛇的传说与印度神鸟迦楼罗和蛇神那伽的传说非常相似。辛巴达的航行反映出了世界核心帝国的无尽财富与想象力。</Text>
+      <Text>这些故事听起来似乎有些耳熟，的确如此。辛巴达的一些故事取材于奥德修斯的航行（例如独眼巨人和食莲者的故事）。在西欧陷入黑暗时代的混乱时，中东成为了智慧库，以及向希腊和罗马学习的宝库，并与丝绸之路的辉煌联系在一起。而丝绸之路也是故事的来源之一：巨鹰和巨蛇的传说与印度神鸟迦楼罗和蛇神那伽的传说非常相似。辛巴达的航行反映出了世界核心帝国的无尽财富与想象力。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_WUKONG_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
       <Text>孙悟空是中国传说中最为著名、最受喜爱的人物之一。围绕他有着无数的故事和传说。这个形象的创作灵感拥有各种来源。公元150年左右，中国汉朝从印度引进了佛教，同时也带回了大量印度传说，其中便有史诗《罗摩衍那》。而这当中最好的配角是猴王哈奴曼，他是英雄罗摩的忠实助手。在之前的中国历朝历代中，猴子便已经被视为吉祥的动物，所以“神奇猴王”的概念非常流行，进而获得了自己的艺术生命。</Text>
@@ -8580,7 +8652,7 @@
       <Text>贝奥武夫的挑战</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="zh_Hans_CN">
-      <Text>以 [ICON_Strength] 战斗力低于贝奥武夫的相邻敌方单位为目标。贝奥武夫将秒杀目标。消耗1点次数。</Text>
+      <Text>以 [ICON_Strength] 战斗力低于贝奥武夫的相邻敌方单位为目标。贝奥武夫将秒杀目标。消耗1点次数、1点 [ICON_MOVEMENT] 移动力。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="zh_Hans_CN">
       <Text>亚瑟的授勋</Text>
@@ -8592,13 +8664,13 @@
       <Text>赫丘利的辛劳</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="zh_Hans_CN">
-      <Text>处于建设中的友方区域时使用。赫丘利将即刻完成此区域的建设。消耗2点次数。</Text>
+      <Text>处于建设中的友方区域时使用。赫丘利将即刻完成此区域的建设。消耗2点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="zh_Hans_CN">
       <Text>赫丘利的怒火</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="zh_Hans_CN">
-      <Text>处于敌方区域上时使用。赫丘利将掠夺此区域并摧毁其中的所有建筑。消耗1点次数。</Text>
+      <Text>处于敌方区域上时使用。赫丘利将掠夺此区域并摧毁其中的所有建筑。消耗1点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="zh_Hans_CN">
       <Text>卑弥呼的魅力</Text>
@@ -8607,13 +8679,13 @@
       <Text>卑弥呼的统治</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="zh_Hans_CN">
-      <Text>在您作为宗主国之城邦的领土内使用。卑弥呼将立即征集此城邦的军队，无任何花费。消耗1点次数。</Text>
+      <Text>在您作为宗主国之城邦的领土内使用。卑弥呼将立即征集此城邦的军队，无任何花费。消耗1点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="zh_Hans_CN">
       <Text>希波吕忒的命令</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="zh_Hans_CN">
-      <Text>以本回合已移动或攻击的相邻本方单位为目标。希波吕忒将立即恢复此单位的移动力和攻击力。</Text>
+      <Text>以本回合已移动或攻击的相邻本方单位为目标。希波吕忒将立即恢复此单位的移动力和攻击力。每回合仅限使用一次。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="zh_Hans_CN">
       <Text>辛巴达的财富</Text>
@@ -8622,7 +8694,7 @@
       <Text>毛伊的发明</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="zh_Hans_CN">
-      <Text>处于无主的空白格位上时使用。毛伊将在此格位上随机创建一种加成或奢侈品资源。消耗1点次数。</Text>
+      <Text>处于无主的空白格位上时使用。毛伊将在此格位上随机创建一种加成或奢侈品资源。消耗1点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="zh_Hans_CN">
       <Text>奥亚的风暴</Text>
@@ -8667,7 +8739,7 @@
       <Text>将此城献给英雄孙悟空。完成后，孙悟空将出现在市中心。</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="zh_Hans_CN">
-      <Text>英雄遗物</Text>
+      <Text>[ICON_GreatWork_HeroRelic] 英雄遗物</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="zh_Hans_CN">
       <Text>无可用目标</Text>
@@ -8705,11 +8777,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="zh_Hans_CN">
       <Text>必须用于建设中的区域。</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="zh_Hans_CN">
+      <Text>必须用于区域。</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="zh_Hans_CN">
       <Text>必须用于区域或改良设施。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="zh_Hans_CN">
       <Text>必须用于奢侈品或加成资源。</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="zh_Hans_CN">
+      <Text>此区域已遭掠夺。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="zh_Hans_CN">
       <Text>无法在市中心使用。</Text>
@@ -8722,6 +8800,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="zh_Hans_CN">
       <Text>此位置无有效资源。</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="zh_Hans_CN">
+      <Text>无法用于结盟文明所拥有的单元格。</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="zh_Hans_CN">
       <Text>英雄在每个时代中只能出现一次。</Text>
@@ -8847,19 +8928,19 @@
       <Text>消耗{1_Amount}点 [ICON_Faith] 信仰值来召回英雄。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="zh_Hans_CN">
-      <Text>以相邻的本方陆地军事单位为目标。亚瑟会将此单位转职为探险骑士。这种特殊重骑兵拥有更高的 [ICON_Strength] 战斗力和{1_LifespanVal}回合的 [ICON_Lifespan] 寿命。消耗1点次数。</Text>
+      <Text>以相邻的本方陆地军事单位为目标。亚瑟会将此单位转职为探险骑士。这种特殊重骑兵拥有更高的 [ICON_Strength] 战斗力和{1_LifespanVal}回合的 [ICON_Lifespan] 寿命。消耗1点次数、1点 [ICON_MOVEMENT] 移动力。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="zh_Hans_CN">
-      <Text>位于加成或奢侈品资源上时使用。阿南西将消耗资源并生成{1_ScienceReward}点 [ICON_SCIENCE] 科技值和{2_CultureReward}点 [ICON_CULTURE] 文化值。现有改良设施将被摧毁。消耗1点次数。</Text>
+      <Text>位于加成或奢侈品资源上时使用。阿南西将消耗资源并生成{1_ScienceReward}点 [ICON_SCIENCE] 科技值和{2_CultureReward}点 [ICON_CULTURE] 文化值。现有改良设施将被摧毁。消耗1点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="zh_Hans_CN">
-      <Text>以相邻的城邦为目标。卑弥呼将立即在此城邦中免费安置1名 [ICON_Envoy] 使者。如您已是此城邦的宗主国，卑弥呼还将获得{1_FaithChange}点 [ICON_FAITH] 信仰值。消耗1点次数。</Text>
+      <Text>以相邻的城邦为目标。卑弥呼将立即在此城邦中免费安置1名 [ICON_Envoy] 使者。如您已是此城邦的宗主国，卑弥呼还将获得{1_FaithChange}点 [ICON_FAITH] 信仰值。消耗1点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="zh_Hans_CN">
-      <Text>以任何相邻的敌方海军单位或蛮族营地为目标。目标-50%生命值，如生命值低于一半则被消灭。辛巴达立即获得{1_GoldReward}枚 [ICON_GOLD] 金币。消耗1点次数。</Text>
+      <Text>以任何相邻的敌方海军单位或蛮族营地为目标。目标-50%生命值，如生命值低于一半则被消灭。辛巴达立即获得{1_GoldReward}枚 [ICON_GOLD] 金币。消耗1点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="zh_Hans_CN">
-      <Text>对相邻的所有敌人造成{1_DamageAmount}点伤害，同时恢复所有相邻己方单位的体力值（恢复量等于伤害量）。消耗1点次数。</Text>
+      <Text>对相邻的所有敌人造成{1_DamageAmount}点伤害，同时恢复所有相邻己方单位的体力值（恢复量等于伤害量）。消耗1点次数并结束当前回合。</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="zh_Hans_CN">
       <Text>{2_HeroName}的{1_BuildingName}</Text>
@@ -9619,7 +9700,7 @@
       <Text>Reto de Beowulf</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="es_ES">
-      <Text>El objetivo de esta acción es cualquier unidad militar con una Fuerza de combate [ICON_Strength] inferior a la de Beowulf. Este héroe destruye de inmediato el objetivo. Cuesta 1 carga.</Text>
+      <Text>El objetivo de esta acción es cualquier unidad militar con una Fuerza de combate [ICON_Strength] inferior a la de Beowulf. Este héroe destruye de inmediato el objetivo. Cuesta 1 carga y 1 de Movimiento [ICON_MOVEMENT].</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="es_ES">
       <Text>Honores de Arturo</Text>
@@ -9631,13 +9712,13 @@
       <Text>Trabajo de Hércules</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="es_ES">
-      <Text>Utilízala cuando estés en un distrito amigo en construcción. Hércules completa la construcción de este. Cuesta 2 cargas.</Text>
+      <Text>Utilízala cuando estés en un distrito amigo en construcción. Hércules completa la construcción de este. Cuesta 2 cargas y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="es_ES">
       <Text>Ira de Hércules</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="es_ES">
-      <Text>Utilízala cuando estés en un distrito enemigo. Hércules destruye todos los edificios que haya y saquea el Distrito. Cuesta 1 carga.</Text>
+      <Text>Utilízala cuando estés en un distrito enemigo. Hércules destruye todos los edificios que haya y saquea el Distrito. Cuesta 1 carga y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="es_ES">
       <Text>Encanto de Himiko</Text>
@@ -9646,13 +9727,13 @@
       <Text>Gobierno de Himiko</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="es_ES">
-      <Text>Úsala cuando estés en el territorio de una ciudad-estado de la que seas suzerano. Himiko recluta de inmediato a su ejército sin coste alguno. Cuesta 1 carga.</Text>
+      <Text>Úsala cuando estés en el territorio de una ciudad-estado de la que seas suzerano. Himiko recluta de inmediato a su ejército sin coste alguno. Cuesta 1 carga y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="es_ES">
       <Text>Mando de Hipólita</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="es_ES">
-      <Text>El objetivo de esta acción es cualquier unidad aliada adyacente que se haya movido o haya atacado este turno. Hipólita repone de inmediato los movimientos y ataques de dicha unidad.</Text>
+      <Text>El objetivo de esta acción es cualquier unidad aliada adyacente que se haya movido o haya atacado este turno. Hipólita repone de inmediato los movimientos y ataques de dicha unidad. Solo se puede usar una vez por turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="es_ES">
       <Text>Fortuna de Simbad</Text>
@@ -9661,7 +9742,7 @@
       <Text>Inventos de Maui</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="es_ES">
-      <Text>Se utiliza cuando esté en una casilla vacía que no sea propia. Maui genera una bonificación o un recurso de lujo al azar en la casilla. Cuesta 1 carga.</Text>
+      <Text>Se utiliza cuando esté en una casilla vacía que no sea propia. Maui genera una bonificación o un recurso de lujo al azar en la casilla. Cuesta 1 carga y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="es_ES">
       <Text>Tormenta de Oyá</Text>
@@ -9706,7 +9787,7 @@
       <Text>Consagra esta ciudad al héroe Sun Wukong. Cuando se complete, Sun Wukong aparecerá en el centro de la ciudad.</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="es_ES">
-      <Text>Reliquia heroica</Text>
+      <Text>Reliquia heroica [ICON_GreatWork_HeroRelic]</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="es_ES">
       <Text>No hay objetivos disponibles.</Text>
@@ -9744,11 +9825,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="es_ES">
       <Text>Debe usarse en un distrito en construcción.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="es_ES">
+      <Text>Debe usarse en un distrito.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="es_ES">
       <Text>Debe usarse en un distrito o una casilla.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="es_ES">
       <Text>Debe usarse en un recurso adicional o de lujo.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="es_ES">
+      <Text>Ya han saqueado este distrito.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="es_ES">
       <Text>No se puede usar en un Centro urbano.</Text>
@@ -9761,6 +9848,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="es_ES">
       <Text>No hay recursos válidos en esta ubicación.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="es_ES">
+      <Text>No se puede usar en una casilla que pertenezca a una civilización aliada.</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="es_ES">
       <Text>Los Héroes solo pueden aparecer una vez por época.</Text>
@@ -9886,19 +9976,19 @@
       <Text>{1_Amount} de Fe [ICON_Faith] para volver a llamar a los Héroes.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="es_ES">
-      <Text>El objetivo de esta acción es cualquier unidad militar terrestre adyacente que controles. Arturo convierte la unidad en un Caballero en una misión, una unidad exclusiva de Caballería pesada con una Fuerza de combate [ICON_Strength] aumentada y una Esperanza de vida [ICON_Lifespan] de {1_LifespanVal}. Cuesta 1 carga.</Text>
+      <Text>El objetivo de esta acción es cualquier unidad militar terrestre adyacente que controles. Arturo convierte la unidad en un Caballero en una misión, una unidad exclusiva de Caballería pesada con una Fuerza de combate [ICON_Strength] aumentada y una Esperanza de vida [ICON_Lifespan] de {1_LifespanVal}. Cuesta 1 carga y 1 de Movimiento [ICON_MOVEMENT].</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="es_ES">
-      <Text>Se utiliza cuando está sobre un recurso adicional o de lujo. Anansi consume el recurso y genera {1_ScienceReward} de Ciencia [ICON_SCIENCE] y {2_CultureReward} de Cultura [ICON_CULTURE]. Todas las mejoras que haya quedan destruidas. Cuesta 1 carga.</Text>
+      <Text>Se utiliza cuando está sobre un recurso adicional o de lujo. Anansi consume el recurso y genera {1_ScienceReward} de Ciencia [ICON_SCIENCE] y {2_CultureReward} de Cultura [ICON_CULTURE]. Todas las mejoras que haya quedan destruidas. Cuesta 1 carga y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="es_ES">
-      <Text>El objetivo de esta acción es cualquier ciudad-estado. Himiko coloca de inmediato 1 Enviado [ICON_Envoy] gratis en la ciudad-estado. Si ya eres suzerano ahí, Himiko gana además {1_FaithChange} de Fe [ICON_FAITH]. Cuesta 1 carga.</Text>
+      <Text>El objetivo de esta acción es cualquier ciudad-estado. Himiko coloca de inmediato 1 Enviado [ICON_Envoy] gratis en la ciudad-estado. Si ya eres suzerano ahí, Himiko gana además {1_FaithChange} de Fe [ICON_FAITH]. Cuesta 1 carga y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="es_ES">
-      <Text>El objetivo de esta acción es cualquier unidad naval enemiga o Campamento bárbaro. El objetivo queda destruido o sufre un 50% de daño, y Simbad gana de inmediato {1_GoldReward} de Oro [ICON_GOLD]. Cuesta 1 carga.</Text>
+      <Text>El objetivo de esta acción es cualquier unidad naval enemiga o Campamento bárbaro. El objetivo queda destruido o sufre un 50% de daño, y Simbad gana de inmediato {1_GoldReward} de Oro [ICON_GOLD]. Cuesta 1 carga y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="es_ES">
-      <Text>Inflige un daño de {1_DamageAmount} a todos los enemigos adyacentes y cura la misma cantidad a todas las unidades propias adyacentes. Cuesta 1 carga.</Text>
+      <Text>Inflige un daño de {1_DamageAmount} a todos los enemigos adyacentes y cura la misma cantidad a todas las unidades propias adyacentes. Cuesta 1 carga y finaliza el turno.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="es_ES">
       <Text>{1_BuildingName} de {2_HeroName}</Text>
@@ -10584,7 +10674,7 @@
       <Text>貝奧武夫的挑戰</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_KILL_WEAKER_UNIT_HELP" Language="zh_Hant_HK">
-      <Text>以 [ICON_Strength] 戰鬥力低於貝奧武夫的相鄰敵方單位為目標。貝奧武夫立即摧毀該目標。消耗1次使用次數。</Text>
+      <Text>以 [ICON_Strength] 戰鬥力低於貝奧武夫的相鄰敵方單位為目標。貝奧武夫立即摧毀該目標。消耗1次使用次數、1點 [ICON_MOVEMENT] 移動力。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_DESCRIPTION" Language="zh_Hant_HK">
       <Text>亞瑟的授勳</Text>
@@ -10596,13 +10686,13 @@
       <Text>海克力斯的偉業</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_COMPLETE_DISTRICT_HELP" Language="zh_Hant_HK">
-      <Text>位於正在建造的友軍區域時使用。海克力斯會立即完成該區域之建造。消耗2次使用次數。</Text>
+      <Text>位於正在建造的友軍區域時使用。海克力斯會立即完成該區域之建造。消耗2次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_DESCRIPTION" Language="zh_Hant_HK">
       <Text>海克力斯的怒火</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_DESTROY_DEVELOPMENT_HELP" Language="zh_Hant_HK">
-      <Text>位於敵方區域上時使用。海克力斯會摧毀該區域所有建築並掠奪該區域。消耗1次使用次數。</Text>
+      <Text>位於敵方區域上時使用。海克力斯會摧毀該區域所有建築並掠奪該區域。消耗1次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_DESCRIPTION" Language="zh_Hant_HK">
       <Text>卑彌呼的魅力</Text>
@@ -10611,13 +10701,13 @@
       <Text>卑彌呼的統治</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FORCE_LEVY_MILITARY_HELP" Language="zh_Hant_HK">
-      <Text>可在其位於你擔任宗主國的城邦領土內使用。卑彌呼無須任何花費即可立即徵集此城邦之軍隊。消耗1次使用次數。</Text>
+      <Text>可在其位於你擔任宗主國的城邦領土內使用。卑彌呼無須任何花費即可立即徵集此城邦之軍隊。消耗1次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_DESCRIPTION" Language="zh_Hant_HK">
       <Text>希波利塔的號令</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESTORE_UNIT_MOVES_HELP" Language="zh_Hant_HK">
-      <Text>能以任何本回合已經移動或攻擊過的相鄰友軍單位為目標。希波利塔能立即恢復該單位之移動力及攻擊力。</Text>
+      <Text>能以任何本回合已經移動或攻擊過的相鄰友軍單位為目標。希波利塔能立即恢復該單位之移動及攻擊。每回合僅能使用一次。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_DESCRIPTION" Language="zh_Hant_HK">
       <Text>辛巴達的好運</Text>
@@ -10626,7 +10716,7 @@
       <Text>毛伊的發明</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_CREATE_RANDOM_RESOURCE_HELP" Language="zh_Hant_HK">
-      <Text>位於無主的空格位時使用。毛伊會在該格位隨機創造加成或奢侈品資源。消耗1次使用次數。</Text>
+      <Text>位於無主的空格位時使用。毛伊會在該格位創造隨機的加成或奢侈品資源。消耗1次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_DESCRIPTION" Language="zh_Hant_HK">
       <Text>歐雅的暴風</Text>
@@ -10671,7 +10761,7 @@
       <Text>將此城市奉獻給英雄孫悟空。完成後，孫悟空將會出現在市中心。</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_HERO" Language="zh_Hant_HK">
-      <Text>英雄遺物</Text>
+      <Text>[ICON_GreatWork_HeroRelic] 英雄遺物</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_TARGETS" Language="zh_Hant_HK">
       <Text>無可用的目標</Text>
@@ -10709,11 +10799,17 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_INCOMPLETE_DISTRICT" Language="zh_Hant_HK">
       <Text>必須在建造中的區域上使用。</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DISTRICT" Language="zh_Hant_HK">
+      <Text>必須在區域上使用。</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_DEVELOPMENT" Language="zh_Hant_HK">
       <Text>必須在區域或改良設施上使用。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NOT_ON_LUXURY_OR_BONUS_RESOURCE" Language="zh_Hant_HK">
       <Text>必須在奢侈品或加成資源上使用。</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_DISTRICT_PILLAGED" Language="zh_Hant_HK">
+      <Text>此區域已遭掠奪。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_CITY_CENTER" Language="zh_Hant_HK">
       <Text>不能使用於市中心。</Text>
@@ -10726,6 +10822,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="zh_Hant_HK">
       <Text>沒有資源在此地點上有效。</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_ALLIED_PLOT" Language="zh_Hant_HK">
+      <Text>無法在盟友文明所擁有之格位上使用。</Text>
     </Replace>
     <Replace Tag="LOC_CAN_TRAIN_FAILURE_SAME_ERA" Language="zh_Hant_HK">
       <Text>英雄在每個時代僅能出現1次。</Text>
@@ -10851,19 +10950,19 @@
       <Text>花費{1_Amount}點 [ICON_Faith] 信仰值來召回英雄。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_TRANSFORM_UNIT_HELP" Language="zh_Hant_HK">
-      <Text>以相鄰的己方陸地軍事單位為目標。亞瑟能將該單位轉變為遊俠騎士，一種 [ICON_Strength] 戰鬥力增強但只有{1_LifespanVal}回合 [ICON_Lifespan] 壽命的特色重騎兵單位。消耗1次使用次數。</Text>
+      <Text>以己方控制的相鄰陸地軍事單位為目標。亞瑟能將該單位轉變為遊俠騎士，一種 [ICON_Strength] 戰鬥力增強但只有{1_LifespanVal}回合 [ICON_Lifespan] 壽命的特色重騎兵單位。消耗1次使用次數、1點 [ICON_MOVEMENT] 移動力。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_RESOURCE_INSPIRE_HELP" Language="zh_Hant_HK">
-      <Text>在位於加成或奢侈品資源上時使用。阿南西可吞噬該資源，並且產生{1_ScienceReward}點 [ICON_SCIENCE] 科技值與{2_CultureReward}點 [ICON_CULTURE] 文化值。任何現有的改良設施將被摧毀。消耗1次使用次數。</Text>
+      <Text>在位於加成或奢侈品資源上時使用。阿南西可吞噬該資源，並且產生{1_ScienceReward}點 [ICON_SCIENCE] 科技值與{2_CultureReward}點 [ICON_CULTURE] 文化值。任何現有的改良設施將被摧毀。消耗1次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_GRANT_ENVOY_HELP" Language="zh_Hant_HK">
-      <Text>以任何相鄰的城邦為目標。卑彌呼立即放置1個免費 [ICON_Envoy] 使者至該城邦。若你已經是該城邦的宗主國，則卑彌呼還能獲得{1_FaithChange}點 [ICON_FAITH] 信仰值。消耗1次使用次數。</Text>
+      <Text>以任何相鄰的城邦為目標。卑彌呼立即放置1個免費 [ICON_Envoy] 使者至該城邦。若你已經是該城邦的宗主國，則卑彌呼還能獲得{1_FaithChange}點 [ICON_FAITH] 信仰值。消耗1次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_NAVAL_GOLD_RAID_HELP" Language="zh_Hant_HK">
-      <Text>能以任何相鄰之敵方海軍單位或蠻族營地為目標。目標會遭到清除，或者遭受50%傷害，而辛巴達會立即獲得{1_GoldReward} [ICON_GOLD] 金幣。消耗1次使用次數。</Text>
+      <Text>能以任何相鄰之敵方海軍單位或蠻族營地為目標。目標會遭到清除，或者遭受50%傷害，而辛巴達會立即獲得{1_GoldReward} [ICON_GOLD] 金幣。消耗1次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_AREA_DAMAGE_HEAL_HELP" Language="zh_Hant_HK">
-      <Text>傷害所有相鄰敵人，並治癒所有相鄰己方單位{1_DamageAmount}點生命值。消耗1次使用次數。</Text>
+      <Text>傷害所有相鄰敵人，並治癒所有相鄰己方單位{1_DamageAmount}點生命值。消耗1次使用次數並結束回合。</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_NAME_FOR_HERO" Language="zh_Hant_HK">
       <Text>{2_HeroName}的{1_BuildingName}</Text>
