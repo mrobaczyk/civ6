@@ -368,8 +368,9 @@ function OnPlayerListPull(iPlayerID :number, iPlayerListDataID :number)
 				LuaEvents.SetKickPlayer(iPlayerID, playerName);
 			end
 		elseif(playerListData.playerAction == "PLAYERACTION_FRIENDREQUEST") then
-			if (Steam ~= nil) then
-				Steam.ActivateGameOverlayToFriendRequest(iPlayerID);
+			local pFriends = Network.GetFriends(Network.GetTransportType());
+			if(pFriends ~= nil) then
+				pFriends:ActivateGameOverlayToFriendRequest(iPlayerID);
 			end
 		end
 	end
@@ -442,8 +443,9 @@ end
 -- OnInviteButton
 -------------------------------------------------
 function OnInviteButton()
-	if (Steam ~= nil) then
-		Steam.ActivateInviteOverlay();
+	local pFriends = Network.GetFriends(Network.GetTransportType());
+	if pFriends ~= nil then
+		pFriends:ActivateInviteOverlay();
 	end
 end
 

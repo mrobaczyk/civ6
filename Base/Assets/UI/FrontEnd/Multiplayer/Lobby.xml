@@ -45,7 +45,7 @@
 						</GridButton>
 
 						<GridButton  Anchor="L,T" Size="100,28"  Style="ShellHeaderButton" ID="SortbyModsHosted" ToolTip="LOC_MULTIPLAYER_LOBBY_MODS">
-              <Image Texture="AdditionalContent_Header.dds" Anchor="C,C" />
+			  <Image Texture="AdditionalContent_Header.dds" Anchor="C,C" />
 							<!--<Label Anchor="L,C" Offset="7,1" String="LOC_MULTIPLAYER_MODSHOSTED" Style="FontNormal14" FontStyle="Shadow" ColorSet="ServerColumnHeader" />-->
 						</GridButton>
 
@@ -161,6 +161,13 @@
 				<Label ID="PlayerName" Anchor="C,T" Offset="0,7" Style="WhiteSemiBold14" String="PlayerName" TruncateWidth="200" />
 				<Label ID="PlayerStatus" Anchor="L,B" Offset="10,7" Style="WhiteSemiBold12" String="PlayerStatus"/>
 			</PullDown>
+			<Box ID="FriendBox" Size="218,46" Color="0,0,0,0">
+				<Image Texture="Shell_PlayerCard" Size="218,46"/>
+				<Image Texture="Shell_PlayerCard" TextureOffset="184,24" Size ="16,18" Offset="198,24"/>
+				<Label ID="Simple_OnlineIndicator" Anchor="L,T" Offset="4,7" String="[ICON_OnlinePip]"/>
+				<Label ID="Simple_PlayerName" Anchor="C,T" Offset="0,7" Style="WhiteSemiBold14" String="PlayerName" TruncateWidth="200" />
+				<Label ID="Simple_PlayerStatus" Anchor="L,B" Offset="10,7" Style="WhiteSemiBold12" String="PlayerStatus"/>
+			</Box>
 		</Container>
 
 	</Instance>

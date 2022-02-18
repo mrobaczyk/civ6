@@ -76,19 +76,6 @@ local g_slotTypeData =
 	{ name ="LOC_MP_SWAP_PLAYER",		tooltip = "TXT_KEY_MP_SWAP_BUTTON_TT",	hotseatOnly=false,	slotStatus=-1,						hotseatInProgress = true,		hotseatAllowed=true },		
 };
 
-local g_steamFriendActionsOnline = 
-{
-	{ name ="LOC_FRIEND_ACTION_INVITE",		tooltip = "LOC_FRIEND_ACTION_INVITE_TT",	action = "invite" },
-	{ name ="LOC_FRIEND_ACTION_PROFILE",	tooltip = "LOC_FRIEND_ACTION_PROFILE_TT",	action = "profile" },
-	{ name ="LOC_FRIEND_ACTION_CHAT",		tooltip = "LOC_FRIEND_ACTION_CHAT_TT",		action = "chat" },	
-};
-
-local g_steamFriendActionsNoInvite = 
-{
-	{ name ="LOC_FRIEND_ACTION_PROFILE",	tooltip = "LOC_FRIEND_ACTION_PROFILE_TT",	action = "profile" },
-	{ name ="LOC_FRIEND_ACTION_CHAT",		tooltip = "LOC_FRIEND_ACTION_CHAT_TT",		action = "chat" },	
-};
-
 local MAX_EVER_PLAYERS : number = 12; -- hardwired max possible players in multiplayer, determined by how many players 
 local MIN_EVER_PLAYERS : number = 2;  -- hardwired min possible players in multiplayer, the game does bad things if there aren't at least two players on different teams.
 local MAX_SUPPORTED_PLAYERS : number = 8; -- Max number of officially supported players in multiplayer.  You can play with more than this number, but QA hasn't vetted it.
@@ -415,6 +402,7 @@ function OnMultplayerPlayerConnected( playerID )
 	if( ContextPtr:IsHidden() == false ) then
 		OnChat( playerID, -1, PlayerConnectedChatStr, false );
 		UI.PlaySound("Play_MP_Player_Connect");
+		UpdateFriendsList();
 	end
 end
 
@@ -431,6 +419,7 @@ function OnMultiplayerPrePlayerDisconnected( playerID )
     			OnChat( playerID, -1, PlayerDisconnectedChatStr, false );
 			end
 			UI.PlaySound("Play_MP_Player_Disconnect");
+			UpdateFriendsList();
 		end
 	end
 end
@@ -2054,6 +2043,7 @@ function RealizeInfoTabs()
 			friends.Selected:SetHide(false);
 			gameSummary.Selected:SetHide(true);
 			Controls.ParametersScrollPanel:SetHide(true);
+			UpdateFriendsList();
 		end );
 
 		AutoSizeGridButton(friends.Button,200,32,20,"H");
@@ -2084,19 +2074,23 @@ function UpdateFriendsList()
 	-- /DEBUG
 	for _, friend in pairs(friends) do
 		local instance:table = m_friendsIM:GetInstance();
-		if not bCanInvite or IsFriendInGame(friend) then
-			PopulateFriendsInstance(instance, friend, g_steamFriendActionsNoInvite);
-		else
-			local friendPlayingCiv:boolean = friend.PlayingCiv; -- cache value to ensure it's available in callback function
-			PopulateFriendsInstance(instance, friend, g_steamFriendActionsOnline, 
-				function(friendID, actionType) 
-					if actionType == "invite" then
-						local statusText:string = friendPlayingCiv and "LOC_PRESENCE_INVITED_ONLINE" or "LOC_PRESENCE_INVITED_OFFLINE";
-						instance.PlayerStatus:LocalizeAndSetText(statusText);
-					end
+
+		-- Build the dropdown for the friend list
+		local friendActions:table = {};
+		BuildFriendActionList(friendActions, bCanInvite and not IsFriendInGame(friend));
+
+		-- end build
+		local friendPlayingCiv:boolean = friend.PlayingCiv; -- cache value to ensure it's available in callback function
+
+		PopulateFriendsInstance(instance, friend, friendActions, 
+			function(friendID, actionType) 
+				if actionType == "invite" then
+					local statusText:string = friendPlayingCiv and "LOC_PRESENCE_INVITED_ONLINE" or "LOC_PRESENCE_INVITED_OFFLINE";
+					instance.PlayerStatus:LocalizeAndSetText(statusText);
 				end
-			);
-		end
+			end
+		);
+
 	end
 	-- DEBUG
 	--end

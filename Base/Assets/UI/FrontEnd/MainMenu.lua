@@ -756,7 +756,7 @@ function OnShow()
 
 	local pFriends = Network.GetFriends();
 	if (pFriends ~= nil) then
-		pFriends:SetRichPresence("location", "LOC_PRESENCE_IN_SHELL");
+		pFriends:SetRichPresence("civPresence", "LOC_PRESENCE_IN_SHELL");
 	end
 
 	local gameType = SaveTypes.SINGLE_PLAYER;

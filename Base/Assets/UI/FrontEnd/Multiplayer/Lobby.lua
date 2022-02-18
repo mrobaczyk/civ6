@@ -71,12 +71,6 @@ local GAME_GRID_TABS_SIZE_Y		:number = 684;
 local m_shouldShowFriends		:boolean = true;
 local m_lobbyModeName			:string = MPLobbyTypes.STANDARD_INTERNET;
 
-local m_steamFriendActions = 
-{
-	{ name ="LOC_FRIEND_ACTION_PROFILE",	tooltip = "LOC_FRIEND_ACTION_PROFILE_TT",	action = "profile" },
-	{ name ="LOC_FRIEND_ACTION_CHAT",		tooltip = "LOC_FRIEND_ACTION_CHAT_TT",		action = "chat" },	
-};
-
 local ColorSet_Default			:string = "ServerText";
 local ColorSet_Faded			:string = "ServerTextFaded";
 local ColorSet_VersionMismatch		:string = "ServerTextVersionMismatch";
@@ -547,11 +541,7 @@ function UpdateFriendsList()
 	g_FriendsIM:ResetInstances();
 
 	local friends : table;
-	if (Steam ~= nil) then
-		friends = GetFriendsList(FlippedFriendsSortFunction);
-	else
-		friends = {};
-	end
+	friends = GetFriendsList(FlippedFriendsSortFunction);
 
 	if table.count(friends) == 0 then
 		Controls.Friends:SetHide(true);
@@ -559,12 +549,19 @@ function UpdateFriendsList()
 	end
 	Controls.Friends:SetHide(not m_shouldShowFriends);
 
+	-- Build the dropdown for the friend list.
+	local friendActions:table = {};
+	local allowInvites:boolean = false;
+	BuildFriendActionList(friendActions, allowInvites);
+	-- end Build
+
 	-- DEBUG
 	--for i = 1, 9 do
 	-- /DEBUG
+
 	for _, friend in pairs(friends) do
 		local instance:table = g_FriendsIM:GetInstance();
-		PopulateFriendsInstance(instance, friend, m_steamFriendActions);
+		PopulateFriendsInstance(instance, friend, friendActions);
 	end
 	-- DEBUG
 	--end
