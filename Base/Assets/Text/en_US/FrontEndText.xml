@@ -23,7 +23,7 @@
 		<Row Tag="LOC_GENERIC_CONFIRM_BUTTON">
 			<Text>Confirm</Text>
 		</Row>
-		
+
 		<!-- Front End Popups -->
 		<Row Tag="LOC_FRONTEND_POPUP_UNKNOWN_DEVICE">
 			<Text>Failed to determine graphics device capabilities.[NEWLINE][NEWLINE]Please set your graphics options manually.</Text>
@@ -37,20 +37,20 @@
 		<Row Tag="LOC_FRONTEND_POPUP_OUTDATED_DRIVER_LOUD">
 			<Text>Remind Me Next Time.</Text>
 		</Row>
-    <Row Tag="LOC_FRONTEND_POPUP_GRAPHICS_SETTINGS_CHANGED">
-      <Text>Graphics settings have been adjusted. You may review or change these settings in the Options menu.</Text>
-    </Row>
+		<Row Tag="LOC_FRONTEND_POPUP_GRAPHICS_SETTINGS_CHANGED">
+			<Text>Graphics settings have been adjusted. You may review or change these settings in the Options menu.</Text>
+		</Row>
 
-    <!-- Main Menu-->
+		<!-- Main Menu-->
 		<Row Tag="LOC_MAIN_MENU_RESUME_GAME">
 			<Text>Resume Game</Text>
 		</Row>
 		<Row Tag="LOC_PLAY_CIVILIZATION_6">
 			<Text>Play Now</Text>
 		</Row>
-    <Row Tag="LOC_SINGLE_PLAYER">
-      <Text>Single Player</Text>
-    </Row>
+		<Row Tag="LOC_SINGLE_PLAYER">
+			<Text>Single Player</Text>
+		</Row>
 		<Row Tag="LOC_PLAY_MULTIPLAYER">
 			<Text>Multiplayer</Text>
 		</Row>
@@ -64,7 +64,7 @@
 			<Text>Load Map</Text>
 		</Row>
 		<Row Tag="LOC_OPEN_DIRECTORY">
-		<Text>Open</Text>
+			<Text>Open</Text>
 		</Row>
 		<Row Tag="LOC_NO_FILE_SELECTED">
 			<Text>No file currently selected</Text>
@@ -146,22 +146,22 @@
 		<Row Tag="LOC_CONFIRM_TITLE_TXT">
 			<Text>Confirm Overwrite</Text>
 		</Row>
-    <Row Tag="LOC_CONFIRM_DELETE_TITLE_TXT">
-      <Text>Confirm Delete</Text>
-    </Row>
-    <Row Tag="LOC_CONFIRM_CHOICE">
-      <Text>Are you sure?</Text>
-    </Row>
+		<Row Tag="LOC_CONFIRM_DELETE_TITLE_TXT">
+			<Text>Confirm Delete</Text>
+		</Row>
+		<Row Tag="LOC_CONFIRM_CHOICE">
+			<Text>Are you sure?</Text>
+		</Row>
 		<Row Tag="LOC_CONFIRM_EXIT_TXT">
 			<Text>Are you sure you want to exit the game?</Text>
 		</Row>
-    <Row Tag="LOC_CONFIRM_TXT">
+		<Row Tag="LOC_CONFIRM_TXT">
 			<Text>This will permanently delete your save file. Are you sure you want to do this?</Text>
 		</Row>
 		<Row Tag="LOC_CONFIRM_TITLE_LOAD_TXT">
 			<Text>Confirm Load File</Text>
 		</Row>
-        <Row Tag="LOC_CONFIRM_LOAD_TXT">
+		<Row Tag="LOC_CONFIRM_LOAD_TXT">
 			<Text>This will lose any unsaved progress. Are you sure you want to do this?</Text>
 		</Row>
 		<Row Tag="LOC_OVERWRITE_TXT">
@@ -224,66 +224,90 @@
 		<Row Tag="LOC_LOADSAVE_QUICK_SAVE">
 			<Text>(Quick Save)</Text>
 		</Row>
-    
-    <!-- Advanced Game Setup -->
-		 <Row Tag="LOC_NETWORK_NAME_TT">
+
+		<!-- Advanced Game Setup -->
+		<Row Tag="LOC_NETWORK_NAME_TT">
 			<Text>Network Name[NEWLINE]This is how your name will appear to other players.</Text>
 		</Row>
 		<Row Tag="LOC_NUMBER_OF_CIVILIZATIONS">
 			<Text>Number of Civilizations</Text>
 		</Row>
-    <Row Tag="LOC_PLAYERS">
-      <Text>Players</Text>
-    </Row>
-    <Row Tag="LOC_TEAM">
-      <Text>Team|Teams</Text>
-      <Plurality>1|2</Plurality>
-    </Row>
-    <Row Tag="LOC_TEAM_GENERIC_NAME">
-      <Text>Team {1_Number}</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_UNKNOWN_NAME">
-      <Text>Unknown Team</Text>
-    </Row>
-    <Row Tag="LOC_BACK">
-      <Text>Back</Text>
-    </Row>
-    <Row Tag="LOC_GAME_HANDICAP">
-      <Text>Game Difficulty</Text>
-    </Row>
-    <Row Tag="LOC_MAP_OPTIONS">
-      <Text>Map Options</Text>
-    </Row>
+		<Row Tag="LOC_PLAYERS">
+			<Text>Players</Text>
+		</Row>
+		<Row Tag="LOC_TEAM">
+			<Text>Team|Teams</Text>
+			<Plurality>1|2</Plurality>
+		</Row>
+		<Row Tag="LOC_TEAM_GENERIC_NAME">
+			<Text>Team {1_Number}</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_UNKNOWN_NAME">
+			<Text>Unknown Team</Text>
+		</Row>
+		<Row Tag="LOC_BACK">
+			<Text>Back</Text>
+		</Row>
+		<Row Tag="LOC_GAME_HANDICAP">
+			<Text>Game Difficulty</Text>
+		</Row>
+		<Row Tag="LOC_MAP_OPTIONS">
+			<Text>Map Options</Text>
+		</Row>
 		<!-- Multiplayer Game Abandoned Popup -->
 		<Row Tag="LOC_GAME_ABANDONED_KICKED">
 			<Text>You have been kicked from the game by the host.</Text>
 		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_KICKED_TITLE">
+			<Text>Kicked!</Text>
+		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_HOST_LOSTED">
 			<Text>Network connection to host has been lost.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_HOST_LOSTED_TITLE">
+			<Text>Host Connection Lost</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_ROOM_FULL">
 			<Text>The game has the maximum number of players.</Text>
 		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_ROOM_FULL_TITLE">
+			<Text>Full Game</Text>
+		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH">
 			<Text>Version mismatch with host.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH_TITLE">
+			<Text>Version Mismatch</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_MOD_ERROR">
 			<Text>Unable to apply additional content.</Text>
 		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_MOD_ERROR_TITLE">
+			<Text>Mod Error</Text>
+		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_MOD_MISSING">
 			<Text>Additional content is required but either has not been purchased or is not installed.[NEWLINE]Content:[NEWLINE]</Text>
 		</Row>
-    <Row Tag="LOC_GAME_ABANDONED_MOD_ACCESS_DENIED">
-      <Text>Steam Workshop denied access to required additional content.[NEWLINE]Content:[NEWLINE]</Text>
-    </Row>
+		<Row Tag="LOC_GAME_ABANDONED_MOD_MISSING_TITLE">
+			<Text>Mod Missing</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_MOD_ACCESS_DENIED">
+			<Text>Steam Workshop denied access to required additional content.[NEWLINE]Content:[NEWLINE]</Text>
+		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_MOD_MISSING_DOWNLOADS_DISABLED">
 			<Text>This game requires additional content that is not installed.  The automatic download of additional content is currently disabled.  Automatic downloads can be enabled in Game Options.[NEWLINE]Content:[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_CONNECTION_LOST">
 			<Text>Network connection has been lost.</Text>
 		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_CONNECTION_LOST_TITLE">
+			<Text>Disconnected</Text>
+		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_JOIN_FAILED">
 			<Text>Error joining Multiplayer session.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_JOIN_FAILED_TITLE">
+			<Text>Join Failed</Text>
 		</Row>
 		<!-- Multiplayer Select Screen-->
 		<Row Tag="LOC_MULTIPLAYER_DEFAULT_GAME_NAME">
@@ -298,9 +322,9 @@
 		<Row Tag="LOC_MULTIPLAYER_INTERNET_GAME">
 			<Text>Internet</Text>
 		</Row>
-    <Row Tag="LOC_MULTIPLAYER_INTERNET_GAME_OFFLINE">
-      <Text>[ICON_CheckFail] Internet</Text>
-    </Row>
+		<Row Tag="LOC_MULTIPLAYER_INTERNET_GAME_OFFLINE">
+			<Text>[ICON_CheckFail] Internet</Text>
+		</Row>
 		<Row Tag="LOC_MULTIPLAYER_INTERNET_GAME_TT">
 			<Text>Play a multiplayer game on the internet.</Text>
 		</Row>
@@ -431,16 +455,16 @@
 		</Row>
 		<Row Tag="LOC_STAGING_ROOM_GAME_IN_PROGRESS">
 			<Text>Game in Progress</Text>
-		</Row>	
+		</Row>
 		<Row Tag="LOC_MULTIPLAYER_INTERNET_LOBBY">
 			<Text>INTERNET GAMES</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_LAN_LOBBY">
 			<Text>LOCAL NETWORK GAMES</Text>
 		</Row>
-    <Row Tag="LOC_MULTIPLAYER_LOBBY_MODS">
-      <Text>Additional Content</Text>
-    </Row>
+		<Row Tag="LOC_MULTIPLAYER_LOBBY_MODS">
+			<Text>Additional Content</Text>
+		</Row>
 		<Row Tag="LOC_MULTIPLAYER_LOBBY_MODS_OFFICIAL">
 			<Text>Official Content:</Text>
 		</Row>
@@ -460,129 +484,129 @@
 			<Text>False</Text>
 		</Row>
 		<!-- Options -->
-    <Row Tag="LOC_CONFIRM_KEY_BINDING">
-      <Text>Confirm Key Binding</Text>
-    </Row>
-    <Row Tag="LOC_CONFIRM">
-      <Text>Confirm</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_GAME">
-      <Text>Game</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_GRAPHICS">
-      <Text>Graphics</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_AUDIO">
-      <Text>Audio</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_LANGUAGE">
-      <Text>Language</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_INTERFACE">
-      <Text>Interface</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_KEY_BINDINGS">
-      <Text>Key Bindings</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_APPLICATION">
-      <Text>Application</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_GAME_OPTIONS">
-      <Text>Game Options</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_GRAPHICS_OPTIONS">
-      <Text>Graphics Options</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_AUDIO_OPTIONS">
-      <Text>Audio Options</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_LANGUAGE_OPTIONS">
-      <Text>Language Options</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_INTERFACE_OPTIONS">
-      <Text>Interface Options</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_KEY_BINDINGS_OPTIONS">
-      <Text>Key Bindings</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_QUICK_COMBAT">
-      <Text>Quick Combat:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_QUICK_MOVEMENT">
-      <Text>Quick Movement:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_AUTO_END_TURN">
-      <Text>Auto End Turn:</Text>
-    </Row>
-	<Row Tag="LOC_OPTIONS_CITY_RANGE_ATTACK">
-		<Text>City Ranged Attack Turn Blocking:</Text>
-	</Row>
-	<Row Tag="LOC_OPTIONS_CITY_RANGE_ATTACK_TOOLTIP">
-		<Text>When enabled, city ranged attacks are turn blocking.</Text>
-	</Row>
-    <Row Tag="LOC_OPTIONS_TIME_OF_DAY">
-      <Text>Time of Day:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_TUNER">
-      <Text>Tuner (disables achievements):</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_TUTORIAL">
-      <Text>Advisor:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_TURNS_BETWEEN_AUTOSAVES">
-      <Text>Turns between autosaves:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_AUTOSAVES_TO_KEEP">
-      <Text>Number of autosaves to keep:</Text>
-    </Row>
-	<Row Tag="LOC_OPTIONS_LAN_PLAYER_NAME">
-		<Text>Local Network Player Name:</Text>
-	</Row>
-	<Row Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT">
-		<Text>Auto Download Additional Content:</Text>
-	</Row>
-	<Row Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT_TOOLTIP">
-		<Text>Automatically download community made additional content when it is required to join a multiplayer game.</Text>
-	</Row>
-	<Row Tag="LOC_OPTIONS_STEAM_CONTROLLER_MESSAGE">
-      <Text>Steam Controller configuration happens inside the Steam client and not within this UI.  The escape, left mouse button, and right mouse button are reserved and cannot be bound.</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_BIND_HEADER_PRIMARY">
-      <Text>Primary binding</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_BIND_HEADER_ALT">
-      <Text>Alternative binding</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_APPLICATION_OPTIONS">
-      <Text>Application Options</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_SPOKEN_LANGUAGE">
-      <Text>Spoken Language:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_STRATEGIC_VIEW_START">
-      <Text>Start in Strategic View:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_DISPLAY_LANGUAGE">
-      <Text>Display Language:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_MASTER_VOLUME">
-      <Text>Master Volume:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_MUSIC_VOLUME">
-      <Text>Music Volume:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_EFFECTS_VOLUME">
-      <Text>Sound Effects Volume:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_AMBIENT_VOLUME">
-      <Text>Ambient Sounds Volume:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_SPEECH_VOLUME">
-      <Text>Speech Volume:</Text>
-    </Row>
-    <Row Tag="LOC_OPTIONS_MUTE_FOCUS">
-      <Text>Mute when the game window is inactive:</Text>
-    </Row>
+		<Row Tag="LOC_CONFIRM_KEY_BINDING">
+			<Text>Confirm Key Binding</Text>
+		</Row>
+		<Row Tag="LOC_CONFIRM">
+			<Text>Confirm</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_GAME">
+			<Text>Game</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_GRAPHICS">
+			<Text>Graphics</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_AUDIO">
+			<Text>Audio</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_LANGUAGE">
+			<Text>Language</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_INTERFACE">
+			<Text>Interface</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_KEY_BINDINGS">
+			<Text>Key Bindings</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_APPLICATION">
+			<Text>Application</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_GAME_OPTIONS">
+			<Text>Game Options</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_GRAPHICS_OPTIONS">
+			<Text>Graphics Options</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_AUDIO_OPTIONS">
+			<Text>Audio Options</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_LANGUAGE_OPTIONS">
+			<Text>Language Options</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_INTERFACE_OPTIONS">
+			<Text>Interface Options</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_KEY_BINDINGS_OPTIONS">
+			<Text>Key Bindings</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_QUICK_COMBAT">
+			<Text>Quick Combat:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_QUICK_MOVEMENT">
+			<Text>Quick Movement:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_AUTO_END_TURN">
+			<Text>Auto End Turn:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_CITY_RANGE_ATTACK">
+			<Text>City Ranged Attack Turn Blocking:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_CITY_RANGE_ATTACK_TOOLTIP">
+			<Text>When enabled, city ranged attacks are turn blocking.</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_TIME_OF_DAY">
+			<Text>Time of Day:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_TUNER">
+			<Text>Tuner (disables achievements):</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_TUTORIAL">
+			<Text>Advisor:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_TURNS_BETWEEN_AUTOSAVES">
+			<Text>Turns between autosaves:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_AUTOSAVES_TO_KEEP">
+			<Text>Number of autosaves to keep:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_LAN_PLAYER_NAME">
+			<Text>Local Network Player Name:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT">
+			<Text>Auto Download Additional Content:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT_TOOLTIP">
+			<Text>Automatically download community made additional content when it is required to join a multiplayer game.</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_STEAM_CONTROLLER_MESSAGE">
+			<Text>Steam Controller configuration happens inside the Steam client and not within this UI.  The escape, left mouse button, and right mouse button are reserved and cannot be bound.</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_BIND_HEADER_PRIMARY">
+			<Text>Primary binding</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_BIND_HEADER_ALT">
+			<Text>Alternative binding</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_APPLICATION_OPTIONS">
+			<Text>Application Options</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_SPOKEN_LANGUAGE">
+			<Text>Spoken Language:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_STRATEGIC_VIEW_START">
+			<Text>Start in Strategic View:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_DISPLAY_LANGUAGE">
+			<Text>Display Language:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_MASTER_VOLUME">
+			<Text>Master Volume:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_MUSIC_VOLUME">
+			<Text>Music Volume:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_EFFECTS_VOLUME">
+			<Text>Sound Effects Volume:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_AMBIENT_VOLUME">
+			<Text>Ambient Sounds Volume:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_SPEECH_VOLUME">
+			<Text>Speech Volume:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_MUTE_FOCUS">
+			<Text>Mute when the game window is inactive:</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_CLEAR">
 			<Text>Clear</Text>
 		</Row>
@@ -609,11 +633,20 @@
 		<Row Tag="LOC_MP_ROOM_FULL">
 			<Text>Unable to join game. The game has the maximum number of players.</Text>
 		</Row>
+		<Row Tag="LOC_MP_ROOM_FULL_TITLE">
+			<Text>Full Game</Text>
+		</Row>
 		<Row Tag="LOC_MP_JOIN_FAILED">
 			<Text>Error joining multiplayer session.</Text>
 		</Row>
+		<Row Tag="LOC_MP_JOIN_FAILED_TITLE">
+			<Text>Join Failed</Text>
+		</Row>
 		<Row Tag="LOC_MP_ROOM_GAME_STARTED">
 			<Text>Unable to join game. The game has already been started.</Text>
+		</Row>
+		<Row Tag="LOC_MP_ROOM_GAME_STARTED_TITLE">
+			<Text>Join Failed</Text>
 		</Row>
 		<!-- Multiplayer Staging Room Screen -->
 		<Row Tag="LOC_MP_SWAP_PLAYER">
@@ -648,14 +681,14 @@
 			<Text>Ready!</Text>
 		</Row>
 		<Row Tag="LOC_NOT_READY">
-		  <Text>Not Ready</Text>
+			<Text>Not Ready</Text>
 		</Row>
 		<Row Tag="LOC_INVALID_SLOT_MAP_SIZE">
 			<Text>[COLOR:StagingStatus_Invalid]Invalid for Map Size[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_INVALID_SLOT_MAP_SIZE_TT">
 			<Text>This player slot is unavailable for the current map size.  Have the host increase the map size or swap to an available player slot.</Text>
-		</Row>		
+		</Row>
 		<!-- Multiplayer Status Strings END -->
 		<Row Tag="LOC_JOIN">
 			<Text>Join!</Text>
@@ -711,18 +744,18 @@
 		<Row Tag="LOC_CREATE_NEW_TEAM">
 			<Text>New</Text>
 		</Row>
-    <Row Tag="LOC_MULTIPLAYER_TEAM_HEADER">
-      <Text>Team</Text>
-    </Row>
-    <Row Tag="LOC_MULTIPLAYER_DIFFICULTY_HEADER">
-      <Text>Difficulty</Text>
-    </Row>
-    <Row Tag="LOC_MULTIPLAYER_READY_HEADER">
-      <Text>Ready?</Text>
-    </Row>
-    <Row Tag="LOC_MULTIPLAYER_CIV_LEADER_HEADER">
-      <Text>Civilization and Leader</Text>
-    </Row>
+		<Row Tag="LOC_MULTIPLAYER_TEAM_HEADER">
+			<Text>Team</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_DIFFICULTY_HEADER">
+			<Text>Difficulty</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_READY_HEADER">
+			<Text>Ready?</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_CIV_LEADER_HEADER">
+			<Text>Civilization and Leader</Text>
+		</Row>
 		<Row Tag="LOC_GAMESTART_COUNTDOWN_FORMAT">
 			<Text>Game Starting</Text>
 		</Row>
@@ -944,9 +977,9 @@
 		<Row Tag="LOC_SETUP_CREATE_GAME">
 			<Text>Create Game</Text>
 		</Row>
-    <Row Tag="LOC_SETUP_CHOOSE_RULESET">
-      <Text>Choose Ruleset</Text>
-    </Row>
+		<Row Tag="LOC_SETUP_CHOOSE_RULESET">
+			<Text>Choose Ruleset</Text>
+		</Row>
 		<Row Tag="LOC_SETUP_CHOOSE_SCENARIO">
 			<Text>Choose Scenario</Text>
 		</Row>
@@ -986,12 +1019,12 @@
 		<Row Tag="LOC_EDIT_BUTTON">
 			<Text>Edit</Text>
 		</Row>
-    <Row Tag="LOC_SETUP_ADD_PLAYER">
-      <Text>Add Player</Text>
-    </Row>
-    <Row Tag="LOC_SETUP_ADD_PLAYER_TT">
-      <Text>Add a player to the game.</Text>
-    </Row>
+		<Row Tag="LOC_SETUP_ADD_PLAYER">
+			<Text>Add Player</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_ADD_PLAYER_TT">
+			<Text>Add a player to the game.</Text>
+		</Row>
 		<Row Tag="LOC_SETUP_ADD_AI_PLAYER">
 			<Text>Add AI Player</Text>
 		</Row>
@@ -1037,7 +1070,7 @@
 		<Row Tag="LOC_SETUP_PLAYER_PARAMETER_ERROR">
 			<Text>One or more player options are invalid.</Text>
 		</Row>
-    
+
 		<!-- Configuration Parameters.  Move these to a better location -->
 		<Row Tag="LOC_RULESET">
 			<Text>Ruleset:</Text>
@@ -1071,7 +1104,7 @@
 		</Row>
 		<Row Tag="LOC_GAME_ALLIES_SHARE_VISIBILITY_DESCRIPTION">
 			<Text>Players on the same team will share their visibility of the map.</Text>
-		</Row>		
+		</Row>
 		<Row Tag="LOC_GAME_TURNTIMER_TYPE">
 			<Text>Turn Timer</Text>
 		</Row>
@@ -1186,13 +1219,13 @@
 		<Row Tag="LOC_MAP_START_POSITION_LEGENDARY_NAME">
 			<Text>Legendary</Text>
 		</Row>
-    <Row Tag="LOC_MAP_PREDEFINED_START_LOCATIONS_NAME">
-      <Text>Predefined Start Locations</Text>
-    </Row>
-    <Row Tag="LOC_MAP_PREDEFINED_START_LOCATIONS_DESCRIPTION">
-      <Text>Use starting locations that are predefined in the map.</Text>
-    </Row>
-    
+		<Row Tag="LOC_MAP_PREDEFINED_START_LOCATIONS_NAME">
+			<Text>Predefined Start Locations</Text>
+		</Row>
+		<Row Tag="LOC_MAP_PREDEFINED_START_LOCATIONS_DESCRIPTION">
+			<Text>Use starting locations that are predefined in the map.</Text>
+		</Row>
+
 		<!--Game Speed Descriptions -->
 		<Row Tag="LOC_GAMESPEED_MARATHON_HELP">
 			<Text>Very prolonged game (200% slower).</Text>
@@ -1228,9 +1261,9 @@
 		<Row Tag="LOC_MAP_PANGAEA_DESCRIPTION">
 			<Text>One massive landmass with surrounding islands.</Text>
 		</Row>
-    <Row Tag="LOC_MAP_SHUFFLE_DESCRIPTION">
-      <Text>What secrets will this map reveal?</Text>
-    </Row>
+		<Row Tag="LOC_MAP_SHUFFLE_DESCRIPTION">
+			<Text>What secrets will this map reveal?</Text>
+		</Row>
 		<!-- Map Size Descriptions -->
 		<Row Tag="LOC_MAPSIZE_DUEL_DESCRIPTION">
 			<Text>Very small map for 2 players.</Text>
@@ -1382,7 +1415,7 @@
 		</Row>
 		<Row Tag="LOC_SETUP_TUTORIAL_DESCRIPTION">
 			<Text>It is here that we begin our journey of raising an empire from humble beginnings to greatness, and write your own version of history.[NEWLINE][NEWLINE]Will you conquer the world in great battles or be the first to send your people to the stars? Will you influence the world with the culture of your people, or will your beliefs spread to the ends of the earth?[NEWLINE][NEWLINE]Only time will tell...[NEWLINE][NEWLINE]All great civilizations begin with a great leader. Choose the civilization you would like to play through this tutorial below.</Text>
-		</Row>	
+		</Row>
 		<Row Tag="LOC_SETUP_TUTORIAL_LEADER_1">
 			<Text>Cleopatra of the Egyptian empire rules a civilization of strong allies and great city builders.</Text>
 		</Row>
@@ -1558,13 +1591,13 @@
 		<Row Tag="LOC_TURNLIMIT_CUSTOM_DESCRIPTION">
 			<Text>The game will end at the specified number of turns.</Text>
 		</Row>
-    <Row Tag="LOC_CITYSTATE_COUNT_NAME">
-      <Text>City-States:</Text>
-    </Row>
-    <Row Tag="LOC_CITYSTATE_COUNT_DESCRIPTION">
-      <Text>The number of city-states to include in the game.</Text>
-    </Row>
-    <Row Tag="LOC_MAX_TURNS_NAME">
+		<Row Tag="LOC_CITYSTATE_COUNT_NAME">
+			<Text>City-States:</Text>
+		</Row>
+		<Row Tag="LOC_CITYSTATE_COUNT_DESCRIPTION">
+			<Text>The number of city-states to include in the game.</Text>
+		</Row>
+		<Row Tag="LOC_MAX_TURNS_NAME">
 			<Text>Max Turns:</Text>
 		</Row>
 		<Row Tag="LOC_MAX_TURNS_DESCRIPTION">
@@ -1582,9 +1615,9 @@
 		<Row Tag="LOC_MAINMENU_CREATE_GAME_TT">
 			<Text>Create a new game with your own settings.</Text>
 		</Row>
-    <Row Tag="LOC_MAINMENU_SCENARIOS_TT">
-      <Text>Play a scenario, a unique experience with specific rules, leaders, and goals.</Text>
-    </Row>
+		<Row Tag="LOC_MAINMENU_SCENARIOS_TT">
+			<Text>Play a scenario, a unique experience with specific rules, leaders, and goals.</Text>
+		</Row>
 		<Row Tag="LOC_MAINMENU_SINGLE_PLAYER_TT">
 			<Text>Play now, create a new game, or continue an existing game.</Text>
 		</Row>
@@ -1617,42 +1650,42 @@
 		<Row Tag="LOC_COPYRIGHT_ACCEPT">
 			<Text>Continue</Text>
 		</Row>
-    <Row Tag="LOC_VICTORY_DEFAULT_NAME">
-      <Text>Victory</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_HEADER">
-      <Text>VICTORY!</Text>
-    </Row>
-    <Row Tag="LOC_DEFEATED_SUBHEADER">
-      <Text>DEFEATED</Text>
-    </Row>
-    <Row Tag="LOC_ELIMINATED_SUBHEADER">
-      <Text>ELIMINATED</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_SCORE_SUBHEADER">
-      <Text>SCORE VICTORY</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_SCIENCE_SUBHEADER">
-      <Text>SCIENCE VICTORY</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_CULTURE_SUBHEADER">
-      <Text>CULTURE VICTORY</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_DOMINATION_SUBHEADER">
-      <Text>DOMINATION VICTORY</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_RELIGIOUS_SUBHEADER">
-      <Text>RELIGIOUS VICTORY</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_SCENARIO_SUBHEADER">
-      <Text>VICTORY: {1_ScenarioName}</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_SCENARIO_VICTORY_TYPE_SUBHEADER">
-      <Text>{1_ScenarioVictoryType}</Text>
-    </Row>
-    <Row Tag="LOC_VICTORY_GAME_WINNER_SUBHEADER">
-      <Text>GAME WINNER</Text>
-    </Row>
+		<Row Tag="LOC_VICTORY_DEFAULT_NAME">
+			<Text>Victory</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_HEADER">
+			<Text>VICTORY!</Text>
+		</Row>
+		<Row Tag="LOC_DEFEATED_SUBHEADER">
+			<Text>DEFEATED</Text>
+		</Row>
+		<Row Tag="LOC_ELIMINATED_SUBHEADER">
+			<Text>ELIMINATED</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_SCORE_SUBHEADER">
+			<Text>SCORE VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_SCIENCE_SUBHEADER">
+			<Text>SCIENCE VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_CULTURE_SUBHEADER">
+			<Text>CULTURE VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_DOMINATION_SUBHEADER">
+			<Text>DOMINATION VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_RELIGIOUS_SUBHEADER">
+			<Text>RELIGIOUS VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_SCENARIO_SUBHEADER">
+			<Text>VICTORY: {1_ScenarioName}</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_SCENARIO_VICTORY_TYPE_SUBHEADER">
+			<Text>{1_ScenarioVictoryType}</Text>
+		</Row>
+		<Row Tag="LOC_VICTORY_GAME_WINNER_SUBHEADER">
+			<Text>GAME WINNER</Text>
+		</Row>
 		<Row Tag="LOC_VICTORY_SCORE_NAME">
 			<Text>Score Victory</Text>
 		</Row>
@@ -1707,10 +1740,10 @@
 		<Row Tag="LOC_MAIN_MENU_DEMO_PURCHASE">
 			<Text>Buy It Now</Text>
 		</Row>
-    <Row Tag="LOC_MAIN_MENU_DEMO_PURCHASE_TT">
-      <Text>Open Steam Store to purchase Sid Meier's Civilization VI</Text>
-    </Row>
-    <Row Tag="LOC_DEMO_COMPLETE_CONTENT">
+		<Row Tag="LOC_MAIN_MENU_DEMO_PURCHASE_TT">
+			<Text>Open Steam Store to purchase Sid Meier's Civilization VI</Text>
+		</Row>
+		<Row Tag="LOC_DEMO_COMPLETE_CONTENT">
 			<Text>Congratulations! You have taken the first steps towards building a Civilization to stand the test of time. Will you continue to test yourself against the greatest leaders of history? Can your people’s culture flourish? Your science enlighten? Your faith inspire? Your military dominate?[NEWLINE][NEWLINE]How will you lead in Sid Meier’s Civilization VI? Continue the journey now.[NEWLINE][NEWLINE]Build. Conquer. Inspire.</Text>
 		</Row>
 		<Row Tag="LOC_DEMO_COMPLETE_MAIN_MENU">
@@ -1728,7 +1761,7 @@
 		<Row Tag="LOC_ARX_GOSSIP_LOG">
 			<Text>Gossip Log</Text>
 		</Row>
-		
+
 		<!-- File Errors -->
 		<Row Tag="LOC_SERIALIZATION_ERROR_VERSION_MISMATCH">
 			<Text>Save cannot be loaded in this version of the game.</Text>
@@ -1775,19 +1808,30 @@
 		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_EXPANSION">
 			<Text>One or more required Expansion packages for the save are not installed.</Text>
 		</Row>
-    <Row Tag="LOC_TEAM_NAME_SELECT_TITLE">
-      <Text>Team Name</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_NAME_ENTRY_TITLE">
-      <Text>Enter Team Name</Text>
-    </Row>
-    <Row Tag="LOC_CHOOSE_TEAM_ICON">
-      <Text>Choose Team Icon</Text>
-    </Row>
-    <Row Tag="LOC_MESSAGE_OF_THE_DAY_HEADING">
-      <Text>Message of the Day:</Text>
-    </Row>
+		<Row Tag="LOC_TEAM_NAME_SELECT_TITLE">
+			<Text>Team Name</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_NAME_ENTRY_TITLE">
+			<Text>Enter Team Name</Text>
+		</Row>
+		<Row Tag="LOC_CHOOSE_TEAM_ICON">
+			<Text>Choose Team Icon</Text>
+		</Row>
+		<Row Tag="LOC_MESSAGE_OF_THE_DAY_HEADING">
+			<Text>Message of the Day:</Text>
+		</Row>
 		<!-- -->
-		
+		<Row Tag="LOC_GAME_START_ERROR_DESC">
+			<Text>There was an error starting the game.[NEWLINE][NEWLINE]We recommend disabling any mods and trying again.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_START_ERROR_CODE">
+			<Text>Error - {1_ErrorCode}</Text>
+		</Row>
+		<Row Tag="LOC_GAME_START_VIEW_MODS">
+			<Text>Manage Mods</Text>
+		</Row>
+		<Row Tag="LOC_GAME_START_ERROR_TITLE">
+			<Text>Error Starting Game</Text>
+		</Row>
 	</FrontEndText>
 </GameData>

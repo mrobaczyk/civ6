@@ -6809,7 +6809,7 @@
       <Text>Attacchi aerei</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_4_CHAPTER_CONTENT_PARA_1" Language="it_IT">
-      <Text>I Bombardieri pesanti non possono andare di pattuglia: restano "stazionati" in una base aerea amica, da cui partono per eseguire attacchi. A differenza dei Caccia, i Bombardieri non partecipano a duelli aerei, ma si dirigono direttamente verso il bersaglio.[NEWLINE][NEWLINE]Bombardamento strategico: I Bombardieri possono attaccare direttamente gli edifici nei distretti e i miglioramenti cittadini, se nessuna unità terrestre occupa la casella bersagliata. Se l'attacco ha successo, il risultato è identico a quello del saccheggio da parte di un'unità di terra, con la differenza che il giocatore che attacca non ottiene alcun beneficio (bottino). Affinché il bombardamento abbia successo, l'unità aerea attaccante deve avere almeno il 50% della salute dopo aver applicato i danni subiti dai caccia difensori e dalle unità di supporto anti-aereo.</Text>
+      <Text>I Bombardieri pesanti non possono andare di pattuglia: restano "di stanza" in una base aerea amica, da cui partono per eseguire attacchi. A differenza dei Caccia, i Bombardieri non partecipano a duelli aerei, ma si dirigono direttamente verso il bersaglio.[NEWLINE][NEWLINE]Bombardamento strategico: I Bombardieri possono attaccare direttamente gli edifici nei distretti e i miglioramenti cittadini, se nessuna unità terrestre occupa la casella bersaglio. Se l'attacco ha successo, il risultato è identico a quello del saccheggio da parte di un'unità di terra, con la differenza che il giocatore che attacca non ottiene alcun beneficio (bottino). Affinché il bombardamento abbia successo, l'unità aerea attaccante deve avere almeno il 50% della salute dopo aver applicato i danni subiti dai caccia difensori e dalle unità di supporto antiaereo.[NEWLINE][NEWLINE]Priorità bersaglio: le unità aeree hanno anche l'abilità Priorità bersaglio. Questa permette loro di attaccare direttamente le unità di supporto, senza dover prima eliminare le unità militari presenti nella stessa casella.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_5_CHAPTER_CONTENT_TITLE" Language="it_IT">
       <Text>Intercettazioni</Text>
@@ -14467,6 +14467,10 @@
 [4]John Murphy
 [4]Angel Abdelazim
 
+[3]Additional Production
+[4]Andrew Dutra
+[4]Joe Faulstick
+
 [3]Digital Release Manager
 [4]Tom Drake
 
@@ -15305,7 +15309,7 @@
 [4]Anthony Nahuelhual
 
 [3]Seondeok
-[4]Seungwon Lee
+[4]Yuri Seo
 
 [3]Tamar
 [4]Ana Makharadze
@@ -22832,7 +22836,7 @@
       <Text>+100% [ICON_Science] Scienza da edifici del distretto Campus.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIGIOUS_ORDERS_DESCRIPTION" Language="it_IT">
-      <Text>+5 [ICON_Religion] Forza religiosa a tutte le unità religiose in combattimento teologico.</Text>
+      <Text>Tutte le unità religiose ricevono +5 alla [ICON_Religion] Forza religiosa in combattimento teologico.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RESOURCE_MANAGEMENT_DESCRIPTION" Language="it_IT">
       <Text>1 copia di una risorsa strategica ti permette di produrre o acquistare le unità che la richiedono in qualsiasi città.</Text>
@@ -27664,20 +27668,38 @@
     <Replace Tag="LOC_GAME_ABANDONED_KICKED" Language="it_IT">
       <Text>Sei stato espulso dall'host della partita.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_KICKED_TITLE" Language="it_IT">
+      <Text>Ti hanno espulso dalla partita!</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_HOST_LOSTED" Language="it_IT">
       <Text>Il collegamento di rete con l'host è stato interrotto.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_HOST_LOSTED_TITLE" Language="it_IT">
+      <Text>Connessione con l'host perduta</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_ROOM_FULL" Language="it_IT">
       <Text>La partita ha già il numero massimo di giocatori.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_ROOM_FULL_TITLE" Language="it_IT">
+      <Text>Partita completa</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH" Language="it_IT">
       <Text>La versione non corrisponde a quella dell'host.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH_TITLE" Language="it_IT">
+      <Text>Versione non corrispondente</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_ERROR" Language="it_IT">
       <Text>Impossibile applicare i contenuti aggiuntivi.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_ERROR_TITLE" Language="it_IT">
+      <Text>Errore mod</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING" Language="it_IT">
       <Text>Sono richiesti contenuti aggiuntivi che non sono stati acquistati o installati.[NEWLINE]Contenuti:[NEWLINE]</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING_TITLE" Language="it_IT">
+      <Text>Mod mancante</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_ACCESS_DENIED" Language="it_IT">
       <Text>Steam Workshop ha negato l'accesso ai contenuti aggiuntivi richiesti.[NEWLINE]Contenuti:[NEWLINE]</Text>
@@ -27688,8 +27710,14 @@
     <Replace Tag="LOC_GAME_ABANDONED_CONNECTION_LOST" Language="it_IT">
       <Text>Collegamento alla rete perduto.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_CONNECTION_LOST_TITLE" Language="it_IT">
+      <Text>Disconnesso</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_JOIN_FAILED" Language="it_IT">
       <Text>Errore nel collegamento alla sessione multigiocatore.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_JOIN_FAILED_TITLE" Language="it_IT">
+      <Text>Collegamento fallito</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_STANDARD_GAME" Language="it_IT">
       <Text>Standard</Text>
@@ -28006,11 +28034,20 @@
     <Replace Tag="LOC_MP_ROOM_FULL" Language="it_IT">
       <Text>Impossibile unirsi alla partita. La partita ha già il numero massimo di giocatori.</Text>
     </Replace>
+    <Replace Tag="LOC_MP_ROOM_FULL_TITLE" Language="it_IT">
+      <Text>Partita completa</Text>
+    </Replace>
     <Replace Tag="LOC_MP_JOIN_FAILED" Language="it_IT">
       <Text>Errore nel collegamento alla sessione multigiocatore.</Text>
     </Replace>
+    <Replace Tag="LOC_MP_JOIN_FAILED_TITLE" Language="it_IT">
+      <Text>Collegamento fallito</Text>
+    </Replace>
     <Replace Tag="LOC_MP_ROOM_GAME_STARTED" Language="it_IT">
       <Text>Impossibile unirsi alla partita. La partita è già iniziata.</Text>
+    </Replace>
+    <Replace Tag="LOC_MP_ROOM_GAME_STARTED_TITLE" Language="it_IT">
+      <Text>Collegamento fallito</Text>
     </Replace>
     <Replace Tag="LOC_MP_SWAP_PLAYER" Language="it_IT">
       <Text>Scambio</Text>
@@ -29134,6 +29171,15 @@
     <Replace Tag="LOC_MESSAGE_OF_THE_DAY_HEADING" Language="it_IT">
       <Text>Messaggio del giorno:</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_DESC" Language="it_IT">
+      <Text>C'è stato un errore all'avvio della partita.[NEWLINE][NEWLINE]Ti raccomandiamo di disattivare tutti i mod e provare di nuovo.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_START_VIEW_MODS" Language="it_IT">
+      <Text>Gestione mod</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_TITLE" Language="it_IT">
+      <Text>Errore nell'avvio della partita</Text>
+    </Replace>
     <Replace Tag="LOC_VISIBILITY_NONE_NAME" Language="it_IT">
       <Text>Nessuna</Text>
     </Replace>
@@ -29274,6 +29320,9 @@
     </Replace>
     <Replace Tag="LOC_VIZSOURCE_ACTION_GREAT_PERSON_JOURNALISM" Language="it_IT">
       <Text>Usa l'abilità di Grande Mercante di Mary Katherine Goddard.</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_COMMA_SEPARATOR" Language="it_IT">
+      <Text>, </Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ACTION_NAME_DEFAULT" Language="it_IT">
       <Text>Effetto attivato</Text>
@@ -40678,18 +40727,6 @@
     <Replace Tag="LOC_VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS_PROGRESS" Language="it_IT">
       <Text>Carri armati posseduti {NumPromotionClass} {PromotionStatusIcon}[NEWLINE]Nessun Centro cittadino bombardato{NoNukeWarStatusIcon}</Text>
     </Replace>
-    <Replace Tag="LOC_GRAMMAR_A_AN" Language="it_IT">
-      <Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_A_AN_WITH_ICON" Language="it_IT">
-      <Text>{1: gender *:an?an {2} {1}; *:the?the {2} {1}; *:no_article?{2} {1}; other?a {2} {1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN" Language="it_IT">
-      <Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN_WITH_ICON" Language="it_IT">
-      <Text>{1: gender *:an?An {2} {1}; *:the?The {2} {1}; *:no_article?{2} {1}; other?A {2} {1};}</Text>
-    </Replace>
     <Replace Tag="LOC_COMBAT_YOU_KILLED_ENEMY_UNIT" Language="it_IT">
       <Text>Difendendosi, {2_UnitName[5]} ({5_Num} {5: plural 1?danno; other?danni;}) {2: plural 1?ha; other?hanno;} ucciso {4_EnemyUnitName[2]} {4: gender masculine?{4: plural 1?nemico; other?nemici;}; feminine?{4: plural 1?nemica; other?nemiche;}; feminine?{4: plural 1?{3_EnemyAdjective[2]}; other?{3_EnemyAdjective[4]};};}!</Text>
     </Replace>
@@ -40865,7 +40902,7 @@
       <Text>Radi al suolo la città, rimuovendo tutti i suoi distretti ed edifici dalla mappa. Quest'opzione dev'essere necessariamente scelta nello stesso turno in cui la città è stata conquistata.[NEWLINE][NEWLINE]{1_WarmongerInfo}</Text>
     </Replace>
     <Replace Tag="LOC_RAZE_CITY_RAZE_WARMONGER_EXPLANATION" Language="it_IT">
-      <Text>La penalità alla bellicosità è [COLOR_RED]TRIPLICATA[ENDCOLOR] se decidi di radere al suolo una città.[NEWLINE][NEWLINE]La penalità alla bellicosità attuale, se decidi di distruggere questa città, è: {1_WarmongerLevel}</Text>
+      <Text>[COLOR_RED]Radere al suolo una città potrebbe comportare una grave penalità per la bellicosità![ENDCOLOR] [NEWLINE][NEWLINE]La penalità per la bellicosità attuale, se decidi di distruggere questa città, è: {1_WarmongerLevel}</Text>
     </Replace>
     <Replace Tag="LOC_RAZE_CITY_LIBERATE_FOUNDER_BUTTON_LABEL" Language="it_IT">
       <Text>Libera la città e restituiscila a {1_CivName}</Text>
@@ -41067,6 +41104,12 @@
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_WITHOUT_END" Language="it_IT">
       <Text>Azione impossibile: {1_WarActionType}[NEWLINE]In questa partita le guerre durano per sempre.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_KUDO_AGENDA_EXPLANATION" Language="it_IT">
+      <Text>[NEWLINE](Hai soddisfatto l'agenda {Name[2]}, {Agenda})</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_AGENDA_EXPLANATION" Language="it_IT">
+      <Text>[NEWLINE](Hai agito in contrasto all'agenda {Name[2]}, {Agenda})</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_MVEMBA_ANY" Language="it_IT">
       <Text>{LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_MVEMBA_ANY}</Text>
@@ -41545,6 +41588,9 @@
     <Replace Tag="LOC_ARX_VICTORY_PROGRESS" Language="it_IT">
       <Text>Progresso vittoria {1_CivName[2]}</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_CODE" Language="it_IT">
+      <Text>Errore - {1_ErrorCode}</Text>
+    </Replace>
     <Replace Tag="LOC_GOSSIP_FULL_STRING" Language="it_IT">
       <Text>{1_SourceText} {2GossipText}</Text>
     </Replace>
@@ -41763,6 +41809,42 @@
     </Replace>
     <Replace Tag="LOC_GOSSIP_SOURCE_GREAT_PERSON_JOURNALISM" Language="it_IT">
       <Text>Il tuo intrepido reporter, {1_Name}, ha appurato che</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_A_AN" Language="it_IT">
+      <Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_A_AN_WITH_ICON" Language="it_IT">
+      <Text>{1: gender *:an?an {2} {1}; *:the?the {2} {1}; *:no_article?{2} {1}; other?a {2} {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN" Language="it_IT">
+      <Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN_WITH_ICON" Language="it_IT">
+      <Text>{1: gender *:an?An {2} {1}; *:the?The {2} {1}; *:no_article?{2} {1}; other?A {2} {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_HAS_HAVE" Language="it_IT">
+      <Text>{1: plural 1?has ; other?have ;}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_IS_ARE" Language="it_IT">
+      <Text>{1: plural 1?is ; other?are ;}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVNAME" Language="it_IT">
+      <Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVNAME_UPPER" Language="it_IT">
+      <Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVDESC" Language="it_IT">
+      <Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVDESC_UPPER" Language="it_IT">
+      <Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVADJ" Language="it_IT">
+      <Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVADJ_UPPER" Language="it_IT">
+      <Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ACTION_CHARGES" Language="it_IT">
       <Text>{1_ChargeAmount} {1_ChargeAmount : plural 1?Carica; other?Cariche;}</Text>

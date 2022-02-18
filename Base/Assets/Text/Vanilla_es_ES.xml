@@ -8417,7 +8417,7 @@
       <Text>Ataques aéreos</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_4_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Los Bombarderos pesados no pueden asignarse a patrullas, sino que se consideran estacionados en una base aérea aliada y pueden lanzar ataques desde ella. Al contrario que los Cazas, los Bombarderos no participan en combates aéreos, sino que se dirigen directamente a su objetivo y lo atacan.[NEWLINE][NEWLINE]Bombardeo estratégico: los Bombarderos pueden atacar edificios de distritos y mejoras ciudadanas directamente si el lugar objetivo no lo ocupa ya una unidad terrestre. Si todo sale bien, el resultado de este tipo de ataque es el mismo que el de la acción de saqueo de una unidad terrestre, con una excepción: la unidad aérea atacante no recibe el beneficio resultante de la acción de saqueo. Para que el ataque de bombardeo tenga éxito, la unidad aérea atacante necesita tener al menos un 50% de Salud después de resolver cualquier daño infligido por cazas defensores o unidades de apoyo antiaéreo.</Text>
+      <Text>Los Bombarderos pesados no pueden asignarse a patrullas, sino que se consideran estacionados en una base aérea aliada y pueden lanzar ataques desde ella. Al contrario que los Cazas, los Bombarderos no participan en combates aéreos, sino que se dirigen directamente a su objetivo y lo atacan.[NEWLINE][NEWLINE]Bombardeo estratégico: los Bombarderos pueden atacar edificios de distritos y mejoras ciudadanas directamente si el lugar objetivo no lo ocupa ya una unidad terrestre. Si todo sale bien, el resultado de este tipo de ataque es el mismo que el de la acción de saqueo de una unidad terrestre, con una excepción: la unidad aérea atacante no recibe el beneficio resultante de la acción de saqueo. Para que el ataque de bombardeo tenga éxito, la unidad aérea atacante necesita tener al menos un 50% de Salud después de resolver cualquier daño infligido por cazas defensores o unidades de apoyo antiaéreo.[NEWLINE][NEWLINE]Objetivo prioritario: las unidades aéreas también cuentan con la habilidad Objetivo prioritario, que permite atacar directamente a unidades de apoyo sin tener que eliminar primero a la unidad de combate enemiga situada en el mismo lugar.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_5_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Interceptaciones</Text>
@@ -16075,6 +16075,10 @@
 [4]John Murphy
 [4]Angel Abdelazim
 
+[3]Additional Production
+[4]Andrew Dutra
+[4]Joe Faulstick
+
 [3]Digital Release Manager
 [4]Tom Drake
 
@@ -16913,7 +16917,7 @@
 [4]Anthony Nahuelhual
 
 [3]Seondeok
-[4]Seungwon Lee
+[4]Yuri Seo
 
 [3]Tamar
 [4]Ana Makharadze
@@ -24736,7 +24740,7 @@
       <Text>Abre el selector de Producción de esta ciudad haciendo clic en el botón Cambiar producción de la ciudad.</Text>
     </Replace>
     <Replace Tag="LOC_META_4a_HEAD" Language="es_ES">
-      <Text>SELECTOR DE PRODUCCIÓN</Text>
+      <Text>PRODUCCIÓN</Text>
     </Replace>
     <Replace Tag="LOC_META_4a_BODY" Language="es_ES">
       <Text>Este es el selector de Producción de la ciudad. Desde aquí puedes construir edificios, crear maravillas del mundo y entrenar unidades militares y civiles.</Text>
@@ -25345,7 +25349,7 @@
       <Text>Selecciona Riego en el panel de investigación.</Text>
     </Replace>
     <Replace Tag="LOC_META_6_HEAD" Language="es_ES">
-      <Text>ELEGIR INVESTIGACIÓN</Text>
+      <Text>INVESTIGACIÓN</Text>
     </Replace>
     <Replace Tag="LOC_META_6_BODY" Language="es_ES">
       <Text>Haz clic en Elegir investigación y abrirás el panel de Investigación.</Text>
@@ -31926,20 +31930,38 @@
     <Replace Tag="LOC_GAME_ABANDONED_KICKED" Language="es_ES">
       <Text>El anfitrión te ha expulsado de la partida.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_KICKED_TITLE" Language="es_ES">
+      <Text>¡Expulsado!</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_HOST_LOSTED" Language="es_ES">
       <Text>Se ha perdido la conexión de red con el anfitrión.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_HOST_LOSTED_TITLE" Language="es_ES">
+      <Text>Conexión perdida con el anfitrión</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_ROOM_FULL" Language="es_ES">
       <Text>La partida ya tiene el número máximo de jugadores.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_ROOM_FULL_TITLE" Language="es_ES">
+      <Text>Partida completa</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH" Language="es_ES">
       <Text>La versión no coincide con la del anfitrión.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH_TITLE" Language="es_ES">
+      <Text>Distinta versión</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_ERROR" Language="es_ES">
       <Text>No se ha podido aplicar el contenido adicional.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_ERROR_TITLE" Language="es_ES">
+      <Text>Error de "mod"</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING" Language="es_ES">
       <Text>Es necesario contenido adicional que no se ha comprado o instalado.[NEWLINE]Contenido:[NEWLINE]</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING_TITLE" Language="es_ES">
+      <Text>Falta el "mod"</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_ACCESS_DENIED" Language="es_ES">
       <Text>Steam Workshop ha denegado el acceso al contenido adicional necesario.[NEWLINE]Contenido:[NEWLINE]</Text>
@@ -31950,8 +31972,14 @@
     <Replace Tag="LOC_GAME_ABANDONED_CONNECTION_LOST" Language="es_ES">
       <Text>Se ha perdido la conexión de red.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_CONNECTION_LOST_TITLE" Language="es_ES">
+      <Text>Desconectado</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_JOIN_FAILED" Language="es_ES">
       <Text>Error al unirse a la sesión multijugador.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_JOIN_FAILED_TITLE" Language="es_ES">
+      <Text>Error al unirse</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_STANDARD_GAME" Language="es_ES">
       <Text>Estándar</Text>
@@ -32268,11 +32296,20 @@
     <Replace Tag="LOC_MP_ROOM_FULL" Language="es_ES">
       <Text>No te puedes unir a la partida. La partida ya tiene el número máximo de jugadores.</Text>
     </Replace>
+    <Replace Tag="LOC_MP_ROOM_FULL_TITLE" Language="es_ES">
+      <Text>Partida completa</Text>
+    </Replace>
     <Replace Tag="LOC_MP_JOIN_FAILED" Language="es_ES">
       <Text>Error al unirse a la sesión multijugador.</Text>
     </Replace>
+    <Replace Tag="LOC_MP_JOIN_FAILED_TITLE" Language="es_ES">
+      <Text>Error al unirse</Text>
+    </Replace>
     <Replace Tag="LOC_MP_ROOM_GAME_STARTED" Language="es_ES">
       <Text>No te puedes unir a la partida. La partida ya ha empezado.</Text>
+    </Replace>
+    <Replace Tag="LOC_MP_ROOM_GAME_STARTED_TITLE" Language="es_ES">
+      <Text>Error al unirse</Text>
     </Replace>
     <Replace Tag="LOC_MP_SWAP_PLAYER" Language="es_ES">
       <Text>Trocar</Text>
@@ -33396,6 +33433,15 @@
     <Replace Tag="LOC_MESSAGE_OF_THE_DAY_HEADING" Language="es_ES">
       <Text>Mensaje del día:</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_DESC" Language="es_ES">
+      <Text>Se ha producido un error al iniciar la partida.[NEWLINE][NEWLINE]Si hay algún "mod", te aconsejamos que lo inhabilites y lo intentes de nuevo.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_START_VIEW_MODS" Language="es_ES">
+      <Text>Administrar "mods"</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_TITLE" Language="es_ES">
+      <Text>Error al iniciar la partida</Text>
+    </Replace>
     <Replace Tag="LOC_VISIBILITY_NONE_NAME" Language="es_ES">
       <Text>Ninguno</Text>
     </Replace>
@@ -33536,6 +33582,9 @@
     </Replace>
     <Replace Tag="LOC_VIZSOURCE_ACTION_GREAT_PERSON_JOURNALISM" Language="es_ES">
       <Text>Usa la habilidad de Gran mercader de Mary Katherine Goddard.</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_COMMA_SEPARATOR" Language="es_ES">
+      <Text>, </Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ACTION_NAME_DEFAULT" Language="es_ES">
       <Text>Efecto activado</Text>
@@ -38170,7 +38219,7 @@
       <Text>Construye Parques nacionales, no elimina los accidentes geográficos y planta Bosques. Le gustan las civilizaciones que plantan Bosques o encuentran Parques nacionales. No le gustan las civilizaciones que eliminan accidentes geográficos.</Text>
     </Replace>
     <Replace Tag="LOC_AGENDA_IDEOLOGUE_DESCRIPTION" Language="es_ES">
-      <Text>Haz clic para "despreparar" el turno si quieres realizar más cambios. Solo puedes hacer esto si todos los demás jugadores ya tienen listos sus turnos respectivos.</Text>
+      <Text>Le gustan las civilizaciones con el mismo tipo de gobierno. No le gustan las civilizaciones con otro tipo de gobierno, especialmente si están en la misma época que la suya.</Text>
     </Replace>
     <Replace Tag="LOC_AGENDA_DEVOUT_DESCRIPTION" Language="es_ES">
       <Text>Intenta adquirir Fe [ICON_Faith] y le gustan las civilizaciones que también se centran en la Fe [ICON_Faith].</Text>
@@ -39409,7 +39458,7 @@
       <Text>+1 ataque adicional por turno si lo permite el Movimiento [ICON_Movement].</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_DOGFIGHTING_DESCRIPTION" Language="es_ES">
-      <Text>+7 a la Fuerza de combate [ICON_Strength] contra unidades ce tipo Caza.</Text>
+      <Text>+7 a la Fuerza de combate [ICON_Strength] contra unidades de tipo Caza.</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_COCKPIT_ARMOR_DESCRIPTION" Language="es_ES">
       <Text>+7 a la Fuerza de combate [ICON_Strength] al defenderse contra unidades antiaéreas.</Text>
@@ -43666,7 +43715,7 @@
       <Text>Combate naval</Text>
     </Replace>
     <Replace Tag="LOC_FORMATION_CLASS_SUPPORT_NAME" Language="es_ES">
-      <Text>Servicio técnico</Text>
+      <Text>Apoyo</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_SETTLER_DESCRIPTION" Language="es_ES">
       <Text>Puede crear nuevas ciudades. Reduce la Población [ICON_Citizen] de la ciudad en 1 al completarse.</Text>
@@ -45078,18 +45127,6 @@
     <Replace Tag="LOC_VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS_PROGRESS" Language="es_ES">
       <Text>Tanques {NumPromotionClass} {PromotionStatusIcon}[NEWLINE]No se han atacado Centros urbanos con armas nucleares {NoNukeWarStatusIcon}.</Text>
     </Replace>
-    <Replace Tag="LOC_GRAMMAR_A_AN" Language="es_ES">
-      <Text>{1: gender masculine?un {1}; el {1}; other?una {1}; la{1}; *:no_article?{1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_A_AN_WITH_ICON" Language="es_ES">
-      <Text>{1: gender masculine?un {2} {1}; el {2} {1}; other?una {2} {1}; la{2} {1}; *:no_article?{2} {1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN" Language="es_ES">
-      <Text>{1: gender masculine?Un {1}; El {1}; other?Una {1}; La{1}; *:no_article?{1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN_WITH_ICON" Language="es_ES">
-      <Text>{1: gender masculine?Un {2} {1}; El {2} {1}; other?Una {2} {1}; La{2} {1}; *:no_article?{2} {1};}</Text>
-    </Replace>
     <Replace Tag="LOC_COMBAT_YOU_KILLED_ENEMY_UNIT" Language="es_ES">
       <Text>Mientras se defendía, tu {2_UnitName} ({5_Num} de daño) ha matado a {4: gender masculine?un; feminine?una;} {4_EnemyUnitName} {4_EnemyUnitName: gender masculine?{3_EnemyAdjective}; other?{3_EnemyAdjective[2]};}.</Text>
     </Replace>
@@ -45265,7 +45302,7 @@
       <Text>Arrasa una ciudad devastándola y eliminando todos sus distritos y edificios del mapa. Esta opción debe elegirse durante el turno en el que se conquista la ciudad.[NEWLINE][NEWLINE]{1_WarmongerInfo}</Text>
     </Replace>
     <Replace Tag="LOC_RAZE_CITY_RAZE_WARMONGER_EXPLANATION" Language="es_ES">
-      <Text>La penalización por belicosidad se [COLOR_RED]TRIPLICA[ENDCOLOR] al arrasar una ciudad.[NEWLINE][NEWLINE]La penalización por belicosidad actual por arrasar esta ciudad es: {1_WarmongerLevel}</Text>
+      <Text>[COLOR_RED]¡Al arrasar una ciudad puedes recibir una penalización por belicosidad muy fuerte![ENDCOLOR] [NEWLINE][NEWLINE]La penalización por belicosidad actual por arrasar esta ciudad es: {1_WarmongerLevel}</Text>
     </Replace>
     <Replace Tag="LOC_RAZE_CITY_LIBERATE_FOUNDER_BUTTON_LABEL" Language="es_ES">
       <Text>Devolver a su fundador ({1_CivName})</Text>
@@ -45467,6 +45504,12 @@
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_WITHOUT_END" Language="es_ES">
       <Text>Imposible {1_WarActionType}[NEWLINE]Las guerras duran para siempre en esta partida.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_KUDO_AGENDA_EXPLANATION" Language="es_ES">
+      <Text>[NEWLINE](Has cumplido la agenda de {Name}, {Agenda})</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_AGENDA_EXPLANATION" Language="es_ES">
+      <Text>[NEWLINE](Has infringido la agenda de {Name}, {Agenda})</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_MVEMBA_ANY" Language="es_ES">
       <Text>{LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_MVEMBA_ANY}</Text>
@@ -45817,7 +45860,7 @@
       <Text>Obtener el rendimiento de Oro de {1_CityName} durante la duración de la misión. ({2_GoldString})</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGECHOOSER_COUNTERSPY" Language="es_ES">
-      <Text>Proteger el distrito de {1_District} (y todos los adyacentes) de los espías enemigos.</Text>
+      <Text>Proteger de los espías enemigos el distrito: {1_District} (y todos sus adyacentes).</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGEPOPUP_MISSION_BRIEFING" Language="es_ES">
       <Text>MISIÓN: {1_MissionName}</Text>
@@ -45944,6 +45987,9 @@
     </Replace>
     <Replace Tag="LOC_ARX_VICTORY_PROGRESS" Language="es_ES">
       <Text>Progreso de victoria de {1_CivName}</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_CODE" Language="es_ES">
+      <Text>Error - {1_ErrorCode}</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_FULL_STRING" Language="es_ES">
       <Text>{1_SourceText} {2GossipText}</Text>
@@ -46163,6 +46209,42 @@
     </Replace>
     <Replace Tag="LOC_GOSSIP_SOURCE_GREAT_PERSON_JOURNALISM" Language="es_ES">
       <Text>Tu {1: gender masculine?intrépido reportero; feminine?intrépida reportera;}, {1_Name}, ha descubierto que</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_A_AN" Language="es_ES">
+      <Text>{1: gender masculine?un {1}; el {1}; other?una {1}; la{1}; *:no_article?{1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_A_AN_WITH_ICON" Language="es_ES">
+      <Text>{1: gender masculine?un {2} {1}; el {2} {1}; other?una {2} {1}; la{2} {1}; *:no_article?{2} {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN" Language="es_ES">
+      <Text>{1: gender masculine?Un {1}; El {1}; other?Una {1}; La{1}; *:no_article?{1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN_WITH_ICON" Language="es_ES">
+      <Text>{1: gender masculine?Un {2} {1}; El {2} {1}; other?Una {2} {1}; La{2} {1}; *:no_article?{2} {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_HAS_HAVE" Language="es_ES">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_IS_ARE" Language="es_ES">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVNAME" Language="es_ES">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVNAME_UPPER" Language="es_ES">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVDESC" Language="es_ES">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVDESC_UPPER" Language="es_ES">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVADJ" Language="es_ES">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVADJ_UPPER" Language="es_ES">
+      <Text></Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ACTION_CHARGES" Language="es_ES">
       <Text>{1_ChargeAmount} {1_ChargeAmount: plural 1?carga; other?cargas;}</Text>

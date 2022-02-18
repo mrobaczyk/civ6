@@ -194,6 +194,9 @@
 		<Row Tag="LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_PARANOID">
 			<Text>I am relieved to see that your empire poses no threat to ours.</Text>
 		</Row>
+    <Row Tag="LOC_DIPLO_KUDO_AGENDA_EXPLANATION">
+      <Text>[NEWLINE](You have satisfied {Name}'s agenda, {Agenda})</Text>
+    </Row>
 
 		<!-- AI Warnings-->
 		<Row Tag="LOC_DIPLO_WARNING_EXIT_ANY_ANY">
@@ -384,5 +387,8 @@
 		<Row Tag="LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_HIGH_EXPLORATION">
 			<Text>There is only so much to discover, and I'm afraid I cannot abide anyone who sets out ahead of my own explorers.</Text>
 		</Row>
-	</BaseGameText>
+    <Row Tag="LOC_DIPLO_WARNING_AGENDA_EXPLANATION">
+      <Text>[NEWLINE](You have transgressed {Name}'s agenda, {Agenda})</Text>
+    </Row>
+  </BaseGameText>
 </GameData>

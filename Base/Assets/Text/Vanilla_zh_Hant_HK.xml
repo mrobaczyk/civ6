@@ -5897,7 +5897,7 @@
       <Text>外交能見度和傳聞</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_4_CHAPTER_CONTENT_PARA_1" Language="zh_Hant_HK">
-      <Text>外交能見度讓你獲得傳聞消息，以及關於另一玩家行動的資訊。能見度等級決定你所獲得的傳聞消息詳細程度，有五個級別：無、有限、公開、秘密、機密。比如，你剛遇見了一個文明，你便會獲得關於其宣戰、譴責、友誼、聯盟，以及它們何時創建一座萬神殿或建成一個奇觀的資訊。如果你獲得有限外交能見度，你會弄清它們對你的看法和它們所擁有的政體。達到公開級別時，你能獲得的資訊包括該文明外交議程、同其他文明的關係，以及他們何時發起審訊。</Text>
+      <Text>外交能見度讓你獲得傳聞消息，以及關於另一玩家行動的資訊。能見度等級決定你所獲得的傳聞消息詳細程度，有五個級別：無、有限、公開、秘密、最高機密。比如，你剛遇見了一個文明，你便會獲得關於其宣戰、譴責、友誼、聯盟，以及它們何時創建一座萬神殿或建成一個奇觀的資訊。如果你獲得有限外交能見度，你會弄清它們對你的看法和它們所擁有的政體。達到公開級別時，你能獲得的資訊包括該文明外交議程、同其他文明的關係，以及他們何時發起審訊。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_4_CHAPTER_CONTENT_PARA_2" Language="zh_Hant_HK">
       <Text>玩家將分別累積對每個文明的外交能見度。交戰時若擁有比對手更高的外交能見度等級，則能獲得戰鬥力加成。外交能見度等級可透過累積多種不同的傳聞來源而提升，包括：</Text>
@@ -6167,7 +6167,7 @@
       <Text>空襲</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_4_CHAPTER_CONTENT_PARA_1" Language="zh_Hant_HK">
-      <Text>重型轟炸機無法執行巡邏任務，它們通常「駐紮」在一個友方空軍基地中，並能從該基地發動襲擊。和戰鬥機不同，轟炸機不參與空中纏鬥，它們會直奔目標進行攻擊。[NEWLINE][NEWLINE]戰略轟炸：如果目標地點沒有地面單位駐守，轟炸機能對區域建築和城市的改良設施進行「攻擊」。這類攻擊得手後所產生的效果同一個地面單位掠奪行動的效果一樣，但有一個例外——發動攻擊的空中單位不會從掠奪行動中受益。在經歷防守方戰鬥機與防空支援單位的攻擊後，發動攻擊的空中單位的生命值必須保持在50%以上才能進行有顯著成效的轟炸。</Text>
+      <Text>重型轟炸機無法執行巡邏任務，它們通常「駐紮」在一個友方空軍基地中，並能從該基地發動襲擊。和戰鬥機不同，轟炸機不參與空中纏鬥，它們會直奔目標進行攻擊。[NEWLINE][NEWLINE]戰略轟炸：如果目標地點沒有地面單位駐守，轟炸機能對區域建築和城市的改良設施進行「攻擊」。這類攻擊得手後所產生的效果同一個地面單位掠奪行動的效果一樣，但有一個例外——發動攻擊的空中單位不會從掠奪行動中受益。在經歷防守方戰鬥機與防空支援單位的攻擊後，發動攻擊的空中單位的生命值必須保持在50%以上才能進行有顯著成效的轟炸。[NEWLINE][NEWLINE]優先目標：空中單位擁有設立優先目標的能力，可直接攻擊敵方支援單位，無須事先殲滅同一地點的敵方戰鬥單位。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_5_CHAPTER_CONTENT_TITLE" Language="zh_Hant_HK">
       <Text>攔截</Text>
@@ -13825,6 +13825,10 @@
 [4]John Murphy
 [4]Angel Abdelazim
 
+[3]Additional Production
+[4]Andrew Dutra
+[4]Joe Faulstick
+
 [3]Digital Release Manager
 [4]Tom Drake
 
@@ -14663,7 +14667,7 @@
 [4]Anthony Nahuelhual
 
 [3]Seondeok
-[4]Seungwon Lee
+[4]Yuri Seo
 
 [3]Tamar
 [4]Ana Makharadze
@@ -26876,20 +26880,38 @@
     <Replace Tag="LOC_GAME_ABANDONED_KICKED" Language="zh_Hant_HK">
       <Text>創建者已將您從遊戲中移出。</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_KICKED_TITLE" Language="zh_Hant_HK">
+      <Text>已遭移除！</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_HOST_LOSTED" Language="zh_Hant_HK">
       <Text>連結至房間的網路已斷線。</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_HOST_LOSTED_TITLE" Language="zh_Hant_HK">
+      <Text>失去向主機的連線</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_ROOM_FULL" Language="zh_Hant_HK">
       <Text>此房間已達玩家數量上限。</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_ROOM_FULL_TITLE" Language="zh_Hant_HK">
+      <Text>房間已滿</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH" Language="zh_Hant_HK">
       <Text>版本與創建人不匹配。</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_VERSION_MISMATCH_TITLE" Language="zh_Hant_HK">
+      <Text>版本不相符</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_ERROR" Language="zh_Hant_HK">
       <Text>無法套用額外內容。</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_ERROR_TITLE" Language="zh_Hant_HK">
+      <Text>模組錯誤</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING" Language="zh_Hant_HK">
       <Text>需要的額外內容尚未購買或安裝。[NEWLINE]內容：[NEWLINE]</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING_TITLE" Language="zh_Hant_HK">
+      <Text>缺少模組</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_ACCESS_DENIED" Language="zh_Hant_HK">
       <Text>Steam Workshop 無法對所需額外內容進行存取：[NEWLINE]內容：[NEWLINE]</Text>
@@ -26900,8 +26922,14 @@
     <Replace Tag="LOC_GAME_ABANDONED_CONNECTION_LOST" Language="zh_Hant_HK">
       <Text>網路連線中斷。</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_CONNECTION_LOST_TITLE" Language="zh_Hant_HK">
+      <Text>已斷線</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_JOIN_FAILED" Language="zh_Hant_HK">
       <Text>加入多人模式出錯。</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_JOIN_FAILED_TITLE" Language="zh_Hant_HK">
+      <Text>加入失敗</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_STANDARD_GAME" Language="zh_Hant_HK">
       <Text>標準</Text>
@@ -27218,11 +27246,20 @@
     <Replace Tag="LOC_MP_ROOM_FULL" Language="zh_Hant_HK">
       <Text>此遊戲已達玩家數量上限。</Text>
     </Replace>
+    <Replace Tag="LOC_MP_ROOM_FULL_TITLE" Language="zh_Hant_HK">
+      <Text>房間已滿</Text>
+    </Replace>
     <Replace Tag="LOC_MP_JOIN_FAILED" Language="zh_Hant_HK">
       <Text>加入多人模式出錯。</Text>
     </Replace>
+    <Replace Tag="LOC_MP_JOIN_FAILED_TITLE" Language="zh_Hant_HK">
+      <Text>加入失敗</Text>
+    </Replace>
     <Replace Tag="LOC_MP_ROOM_GAME_STARTED" Language="zh_Hant_HK">
       <Text>無法加入遊戲。此遊戲已開始。</Text>
+    </Replace>
+    <Replace Tag="LOC_MP_ROOM_GAME_STARTED_TITLE" Language="zh_Hant_HK">
+      <Text>加入失敗</Text>
     </Replace>
     <Replace Tag="LOC_MP_SWAP_PLAYER" Language="zh_Hant_HK">
       <Text>切換</Text>
@@ -28346,6 +28383,15 @@
     <Replace Tag="LOC_MESSAGE_OF_THE_DAY_HEADING" Language="zh_Hant_HK">
       <Text>本日訊息：</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_DESC" Language="zh_Hant_HK">
+      <Text>開始遊戲時發生錯誤。.[NEWLINE][NEWLINE]建議停用所有模組後再試一次。</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_START_VIEW_MODS" Language="zh_Hant_HK">
+      <Text>管理模組</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_TITLE" Language="zh_Hant_HK">
+      <Text>開始遊戲時發生錯誤</Text>
+    </Replace>
     <Replace Tag="LOC_VISIBILITY_NONE_NAME" Language="zh_Hant_HK">
       <Text>無</Text>
     </Replace>
@@ -28486,6 +28532,9 @@
     </Replace>
     <Replace Tag="LOC_VIZSOURCE_ACTION_GREAT_PERSON_JOURNALISM" Language="zh_Hant_HK">
       <Text>使用瑪麗•凱瑟琳•戈達德的大商人能力。</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_COMMA_SEPARATOR" Language="zh_Hant_HK">
+      <Text>，</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ACTION_NAME_DEFAULT" Language="zh_Hant_HK">
       <Text>激活效果</Text>
@@ -39890,18 +39939,6 @@
     <Replace Tag="LOC_VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS_PROGRESS" Language="zh_Hant_HK">
       <Text>擁有的坦克{NumPromotionClass} {PromotionStatusIcon}[NEWLINE]沒有市中心遭受核攻擊{NoNukeWarStatusIcon}</Text>
     </Replace>
-    <Replace Tag="LOC_GRAMMAR_A_AN" Language="zh_Hant_HK">
-      <Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_A_AN_WITH_ICON" Language="zh_Hant_HK">
-      <Text>{1: gender *:an?an {2} {1}; *:the?the {2} {1}; *:no_article?{2} {1}; other?a {2} {1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN" Language="zh_Hant_HK">
-      <Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
-    </Replace>
-    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN_WITH_ICON" Language="zh_Hant_HK">
-      <Text>{1: gender *:an?An {2} {1}; *:the?The {2} {1}; *:no_article?{2} {1}; other?A {2} {1};}</Text>
-    </Replace>
     <Replace Tag="LOC_COMBAT_YOU_KILLED_ENEMY_UNIT" Language="zh_Hant_HK">
       <Text>防禦時，您的{2_UnitName} （{5_Num} 傷害）擊殺了{3_EnemyAdjective}{4_EnemyUnitName}！</Text>
     </Replace>
@@ -40077,7 +40114,7 @@
       <Text>將城市夷為平地會清除城市的一切，以及地圖上所有區域和建築。必須在城市被佔領的回合做出選擇。[NEWLINE][NEWLINE]{1_WarmongerInfo}</Text>
     </Replace>
     <Replace Tag="LOC_RAZE_CITY_RAZE_WARMONGER_EXPLANATION" Language="zh_Hant_HK">
-      <Text>將城市夷為平地後好戰程度上升為[COLOR_RED]三倍[ENDCOLOR]。[NEWLINE][NEWLINE]將城市夷為平地後好戰程度為：{1_WarmongerLevel}</Text>
+      <Text>[COLOR_RED]將城市夷為平地將獲得極大的好戰程度！[ENDCOLOR] [NEWLINE][NEWLINE]目前將此城市夷為平地獲得好戰程度為：{1_WarmongerLevel}</Text>
     </Replace>
     <Replace Tag="LOC_RAZE_CITY_LIBERATE_FOUNDER_BUTTON_LABEL" Language="zh_Hant_HK">
       <Text>解放歸還創建者（{1_CivName}）</Text>
@@ -40279,6 +40316,12 @@
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_WITHOUT_END" Language="zh_Hant_HK">
       <Text>無法{1_WarActionType}[NEWLINE]本遊戲的戰爭狀態會持續至結束。</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_KUDO_AGENDA_EXPLANATION" Language="zh_Hant_HK">
+      <Text>[NEWLINE]（您已滿足{Name}的議程，{Agenda}）</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_AGENDA_EXPLANATION" Language="zh_Hant_HK">
+      <Text>[NEWLINE]（您已違反{Name}的議程，{Agenda}）</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_MVEMBA_ANY" Language="zh_Hant_HK">
       <Text>{LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_MVEMBA_ANY}</Text>
@@ -40757,6 +40800,9 @@
     <Replace Tag="LOC_ARX_VICTORY_PROGRESS" Language="zh_Hant_HK">
       <Text>{1_CivName}勝利進展</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_CODE" Language="zh_Hant_HK">
+      <Text>錯誤 - {1_ErrorCode}</Text>
+    </Replace>
     <Replace Tag="LOC_GOSSIP_FULL_STRING" Language="zh_Hant_HK">
       <Text>{1_SourceText} {2GossipText}</Text>
     </Replace>
@@ -40975,6 +41021,42 @@
     </Replace>
     <Replace Tag="LOC_GOSSIP_SOURCE_GREAT_PERSON_JOURNALISM" Language="zh_Hant_HK">
       <Text>你勇敢的記者，{1_Name}，發現了</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_A_AN" Language="zh_Hant_HK">
+      <Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_A_AN_WITH_ICON" Language="zh_Hant_HK">
+      <Text>{1: gender *:an?an {2} {1}; *:the?the {2} {1}; *:no_article?{2} {1}; other?a {2} {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN" Language="zh_Hant_HK">
+      <Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_UPPER_A_AN_WITH_ICON" Language="zh_Hant_HK">
+      <Text>{1: gender *:an?An {2} {1}; *:the?The {2} {1}; *:no_article?{2} {1}; other?A {2} {1};}</Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_HAS_HAVE" Language="zh_Hant_HK">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_IS_ARE" Language="zh_Hant_HK">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVNAME" Language="zh_Hant_HK">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVNAME_UPPER" Language="zh_Hant_HK">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVDESC" Language="zh_Hant_HK">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVDESC_UPPER" Language="zh_Hant_HK">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVADJ" Language="zh_Hant_HK">
+      <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_GRAMMAR_CIVADJ_UPPER" Language="zh_Hant_HK">
+      <Text></Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ACTION_CHARGES" Language="zh_Hant_HK">
       <Text>{1_ChargeAmount} {1_ChargeAmount : plural 1?次; other?次;}</Text>

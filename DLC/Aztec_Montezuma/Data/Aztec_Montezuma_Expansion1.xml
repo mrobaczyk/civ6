@@ -3,6 +3,17 @@
 <GameInfo>
 	<MomentIllustrations>
 		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_AZTEC_EAGLE_WARRIOR" Texture="Moment_UniqueUnit_Aztec.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_TLACHTLI" Texture="Moment_Infrastructure_Aztec.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_TLACHTLI" Texture="Moment_Infrastructure_Aztec.dds"/>
 	</MomentIllustrations>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_TLACHTLI"/>
+			<Set>
+				<Description>LOC_BUILDING_TLACHTLI_EXPANSION1_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Buildings>
+	<Building_YieldChanges>
+		<Row BuildingType="BUILDING_TLACHTLI" YieldType="YIELD_CULTURE" YieldChange="1"/>
+	</Building_YieldChanges>
 </GameInfo>

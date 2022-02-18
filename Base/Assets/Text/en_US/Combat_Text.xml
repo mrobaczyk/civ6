@@ -2,18 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameData>
 	<BaseGameText>
-		<Row Tag="LOC_GRAMMAR_A_AN">
-			<Text>{1: gender *:an?an {1}; *:the?the {1}; *:no_article?{1}; other?a {1};}</Text>
-		</Row>
-		<Row Tag="LOC_GRAMMAR_A_AN_WITH_ICON">
-			<Text>{1: gender *:an?an {2} {1}; *:the?the {2} {1}; *:no_article?{2} {1}; other?a {2} {1};}</Text>
-		</Row>
-		<Row Tag="LOC_GRAMMAR_UPPER_A_AN">
-			<Text>{1: gender *:an?An {1}; *:the?The {1}; *:no_article?{1}; other?A {1};}</Text>
-		</Row>
-		<Row Tag="LOC_GRAMMAR_UPPER_A_AN_WITH_ICON">
-			<Text>{1: gender *:an?An {2} {1}; *:the?The {2} {1}; *:no_article?{2} {1}; other?A {2} {1};}</Text>
-		</Row>
 		<Row Tag="LOC_CITY_MAKE_RANGED_ATTACK">
 			<Text>Attack with your city!</Text>
 		</Row>
@@ -38,24 +26,24 @@
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DESTROYED_ENEMY">
 			<Text>Your {1_UnitName} ({2_Num} damage) destroyed an enemy {3_UnitName}!</Text>
 		</Row>
-    <Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_ANTI_AIR">
-      <Text>Your attacking {1_UnitName} died from enemy {2_EnUName}!</Text>
-    </Row>
-    <Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_INTERCEPTED">
-      <Text>Your attacking {1_UnitName} died from enemy {2_EnUName} ({3_Num} damage) intercept!</Text>
-    </Row>
+		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_ANTI_AIR">
+			<Text>Your attacking {1_UnitName} died from enemy {2_EnUName}!</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_INTERCEPTED">
+			<Text>Your attacking {1_UnitName} died from enemy {2_EnUName} ({3_Num} damage) intercept!</Text>
+		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING">
 			<Text>Your {1_UnitName} died attacking an enemy {2_EnUName} ({3_Num} damage)!</Text>
 		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_CITY">
 			<Text>Your {1_UnitName} died attacking the enemy City of {2_EnUName} ({3_Num} damage)!</Text>
 		</Row>
-    <Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW_ANTI_AIR">
-      <Text>Your attacking {2_UnitName} ({3_Num} damage) was damaged by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName}!</Text>
-    </Row>
-    <Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW_INTERCEPTED">
-      <Text>Your attacking {2_UnitName} ({3_Num} damage) was intercepted by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName} ({6_Num} damage)!</Text>
-    </Row>
+		<Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW_ANTI_AIR">
+			<Text>Your attacking {2_UnitName} ({3_Num} damage) was damaged by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName}!</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW_INTERCEPTED">
+			<Text>Your attacking {2_UnitName} ({3_Num} damage) was intercepted by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName} ({6_Num} damage)!</Text>
+		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW">
 			<Text>Your {1_UnitName} ({2_Num} damage) attacked an enemy {3_EnUName} ({4_Num} damage)!</Text>
 		</Row>
@@ -68,12 +56,12 @@
 		<Row Tag="LOC_COMBAT_ENEMY_UNIT_WITHDREW">
 			<Text>Your {1_UnitName} ({2_Num} damage) was attacked by an enemy {3_EnUName} ({4_Num} damage)!</Text>
 		</Row>
-    <Row Tag="LOC_COMBAT_ENEMY_UNIT_WITHDREW_INTERCEPTING">
-      <Text>Your {1_UnitName} ({2_Num} damage) intercepted an enemy {3_EnUName} ({4_Num} damage)!</Text>
-    </Row>
-    <Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_INTERCEPTING">
-      <Text>While intercepting, your {2_UnitName} was destroyed by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName} ({6_Num} damage)!</Text>
-    </Row>
+		<Row Tag="LOC_COMBAT_ENEMY_UNIT_WITHDREW_INTERCEPTING">
+			<Text>Your {1_UnitName} ({2_Num} damage) intercepted an enemy {3_EnUName} ({4_Num} damage)!</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_INTERCEPTING">
+			<Text>While intercepting, your {2_UnitName} was destroyed by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName} ({6_Num} damage)!</Text>
+		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_DEFENDING">
 			<Text>While defending, your {2_UnitName} was destroyed by {LOC_GRAMMAR_A_AN &lt;&lt; {3_EnemyAdjective}} {4_EnemyUnitName} ({5_Num} damage)!</Text>
 		</Row>
@@ -86,27 +74,27 @@
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_WAS_STRAFED_BY_ENEMY">
 			<Text>Your {1_UnitName} was strafed by an enemy {2_EnUName} taking {3_Num} damage!</Text>
 		</Row>
-    <Row Tag="LOC_COMBAT_YOUR_UNIT_DAMAGED_ENEMY">
-      <Text>Your {1_UnitName} damaged an enemy {2_EnUName}({3_Num} damage)!</Text>
-    </Row>
+		<Row Tag="LOC_COMBAT_YOUR_UNIT_DAMAGED_ENEMY">
+			<Text>Your {1_UnitName} damaged an enemy {2_EnUName}({3_Num} damage)!</Text>
+		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_BOMBARDED_ENEMY">
 			<Text>Your {1_UnitName} bombarded an enemy {2_EnUName} causing {3_Num} damage!</Text>
 		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_WAS_BOMBARDED_BY_ENEMY">
 			<Text>Your {1_UnitName} was bombarded by an enemy {2_EnUName} taking {3_Num} damage!</Text>
 		</Row>
-    <Row Tag="LOC_COMBAT_YOUR_WMD_SUCCEEDED">
-      <Text>Your {1_UnitName} WMD attack succeeded!</Text>
-    </Row>
-    <Row Tag="LOC_COMBAT_YOUR_WMD_FAILED_HIGH_DAMAGE">
-      <Text>Your {1_UnitName} WMD attack failed because of high damage.</Text>
-    </Row>
-    <Row Tag="LOC_COMBAT_ENEMY_WMD_SUCCEEDED">
-      <Text>You failed to stop {LOC_GRAMMAR_A_AN &lt;&lt; {1_EnemyAdjective}} {2_EnemyUnitName} WMD attack!</Text>
-    </Row>
-    <Row Tag="LOC_COMBAT_ENEMY_WMD_FAILED_HIGH_DAMAGE">
-      <Text>You successfully stopped {LOC_GRAMMAR_A_AN &lt;&lt; {1_EnemyAdjective}} {2_EnemyUnitName} WMD attack by causing {3_Num} damage!</Text>
-    </Row>
+		<Row Tag="LOC_COMBAT_YOUR_WMD_SUCCEEDED">
+			<Text>Your {1_UnitName} WMD attack succeeded!</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_YOUR_WMD_FAILED_HIGH_DAMAGE">
+			<Text>Your {1_UnitName} WMD attack failed because of high damage.</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_ENEMY_WMD_SUCCEEDED">
+			<Text>You failed to stop {LOC_GRAMMAR_A_AN &lt;&lt; {1_EnemyAdjective}} {2_EnemyUnitName} WMD attack!</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_ENEMY_WMD_FAILED_HIGH_DAMAGE">
+			<Text>You successfully stopped {LOC_GRAMMAR_A_AN &lt;&lt; {1_EnemyAdjective}} {2_EnemyUnitName} WMD attack by causing {3_Num} damage!</Text>
+		</Row>
 		<Row Tag="LOC_MISC_YOUR_UNIT_DIED_BY_UNKNOWN">
 			<Text>While defending, your {1_UnitName} was destroyed by a disguised {2_EnUName} ({3_Num} damage)!</Text>
 		</Row>
@@ -210,22 +198,22 @@
 		<Row Tag="LOC_RAZE_CITY_KEEP_EXPLANATION_TRADED">
 			<Text>Keep this city in your empire.</Text>
 		</Row>
-    <Row Tag="LOC_RAZE_CITY_KEEP_WARMONGER_EXPLANATION">
-      <Text>Warmonger penalty for keeping this city now is: {1_WarmongerLevel}[NEWLINE][NEWLINE]Penalty will be either refunded or doubled at the end of the war depending on whether or not you keep the city.</Text>
-    </Row>
-    <Row Tag="LOC_RAZE_CITY_KEEP_LAST_CITY_EXPLANATION">
-      <Text>Warmonger penalty for keeping a player's final city is based on the Surprise War penalty for this era. This value is [COLOR_RED]DOUBLED[ENDCOLOR] if capturing this city eliminates a major civilization (not a city state).</Text>
-    </Row>
-    <Row Tag="LOC_RAZE_CITY_RAZE_EXPLANATION">
+		<Row Tag="LOC_RAZE_CITY_KEEP_WARMONGER_EXPLANATION">
+			<Text>Warmonger penalty for keeping this city now is: {1_WarmongerLevel}[NEWLINE][NEWLINE]Penalty will be either refunded or doubled at the end of the war depending on whether or not you keep the city.</Text>
+		</Row>
+		<Row Tag="LOC_RAZE_CITY_KEEP_LAST_CITY_EXPLANATION">
+			<Text>Warmonger penalty for keeping a player's final city is based on the Surprise War penalty for this era. This value is [COLOR_RED]DOUBLED[ENDCOLOR] if capturing this city eliminates a major civilization (not a city state).</Text>
+		</Row>
+		<Row Tag="LOC_RAZE_CITY_RAZE_EXPLANATION">
 			<Text>Raze city clearing it and all its districts and buildings from the map. This option must be chosen the turn the city is conquered.[NEWLINE][NEWLINE]{1_WarmongerInfo}</Text>
 		</Row>
 		<Row Tag="LOC_RAZE_CITY_RAZE_WARMONGER_EXPLANATION">
-			<Text>Warmonger penalty is [COLOR_RED]TRIPLED[ENDCOLOR] for razing a city.[NEWLINE][NEWLINE]Warmonger penalty for razing this city now is: {1_WarmongerLevel}</Text>
+			<Text>[COLOR_RED]Razing a city may give you a serious Warmonger penalty![ENDCOLOR] [NEWLINE][NEWLINE]Warmonger penalty for razing this city now is: {1_WarmongerLevel}</Text>
 		</Row>
-    <Row Tag="LOC_RAZE_CITY_RAZE_LAST_CITY_EXPLANATION">
-      <Text>Warmonger penalty is [COLOR_RED]TRIPLE[ENDCOLOR] the Formal War penalty for this era when you raze a player's final city.</Text>
-    </Row>
-    <Row Tag="LOC_RAZE_CITY_RAZE_DISABLED_EXPLANATION">
+		<Row Tag="LOC_RAZE_CITY_RAZE_LAST_CITY_EXPLANATION">
+			<Text>Warmonger penalty is [COLOR_RED]TRIPLE[ENDCOLOR] the Formal War penalty for this era when you raze a player's final city.</Text>
+		</Row>
+		<Row Tag="LOC_RAZE_CITY_RAZE_DISABLED_EXPLANATION">
 			<Text>You cannot raze a major civilization's original capital or a city that you or an ally founded or owned at the start of this war.</Text>
 		</Row>
 		<Row Tag="LOC_RAZE_CITY_LIBERATE_FOUNDER_BUTTON_LABEL">

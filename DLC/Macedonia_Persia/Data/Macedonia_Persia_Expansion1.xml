@@ -9,9 +9,6 @@
 			</Set>
 		</Update>
 	</Leaders>
-	<AgendaPreferredLeaders>
-		<Row AgendaType="AGENDA_FLIRTATIOUS" LeaderType="LEADER_ALEXANDER" PercentageChance="15"/>
-	</AgendaPreferredLeaders>
 	<MomentIllustrations>
 		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_MACEDONIAN_HETAIROI" Texture="Moment_UniqueUnit_Macedon_Hetairoi.dds"/>
 		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_MACEDONIAN_HYPASPIST" Texture="Moment_UniqueUnit_Macedon_Hypaspist.dds"/>
@@ -20,6 +17,10 @@
 		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_PAIRIDAEZA" Texture="Moment_Infrastructure_Persia.dds"/>
 	</MomentIllustrations>
 	<Traits>
+		<Update>
+			<Where Description="LOC_TRAIT_HELLENISTIC_FUSION_DESCRIPTION"/>
+			<Set Description="LOC_TRAIT_LEADER_HELLENISTIC_FUSION_EXPANSION1_DESCRIPTION"/>
+		</Update>
 		<Update>
 			<Where Description="LOC_TRAIT_LEADER_FALL_BABYLON_DESCRIPTION"/>
 			<Set Description="LOC_TRAIT_LEADER_FALL_BABYLON_EXPANSION1_DESCRIPTION"/>

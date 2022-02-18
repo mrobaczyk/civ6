@@ -33,8 +33,8 @@
     <Row VictoryType="VICTORY_SCORE" Name="LOC_VICTORY_SCORE_NAME" Blurb="LOC_VICTORY_SCORE_TEXT" RequirementSetId="REQUIREMENTS_SCORE_VICTORY" CriticalPercentage="110"/>
     <Row VictoryType="VICTORY_DEFAULT" Name="LOC_VICTORY_DEFAULT_NAME" Blurb="LOC_VICTORY_DEFAULT_TEXT" RequirementSetId="REQUIREMENTS_DEFAULT_VICTORY" CriticalPercentage="110"/>
     <Row VictoryType="VICTORY_CONQUEST" Name="LOC_VICTORY_DOMINATION_NAME" Blurb="LOC_VICTORY_DOMINATION_TEXT" RequirementSetId="REQUIREMENTS_CONQUEST_VICTORY" CriticalPercentage="50"/>
-    <Row VictoryType="VICTORY_CULTURE" Name="LOC_VICTORY_CULTURE_NAME" Blurb="LOC_VICTORY_CULTURE_TEXT" RequirementSetId="REQUIREMENTS_CULTURE_VICTORY" CriticalPercentage="75"/>
-    <Row VictoryType="VICTORY_RELIGIOUS" Name="LOC_VICTORY_RELIGIOUS_NAME" Blurb="LOC_VICTORY_RELIGION_TEXT" RequirementSetId="REQUIREMENTS_RELIGIOUS_VICTORY" CriticalPercentage="80"/>
+    <Row VictoryType="VICTORY_CULTURE" Name="LOC_VICTORY_CULTURE_NAME" Blurb="LOC_VICTORY_CULTURE_TEXT" RequirementSetId="REQUIREMENTS_CULTURE_VICTORY" RequiresMultipleTeams="true" CriticalPercentage="75"/>
+    <Row VictoryType="VICTORY_RELIGIOUS" Name="LOC_VICTORY_RELIGIOUS_NAME" Blurb="LOC_VICTORY_RELIGION_TEXT" RequirementSetId="REQUIREMENTS_RELIGIOUS_VICTORY" RequiresMultipleTeams="true" CriticalPercentage="80"/>
     <Row VictoryType="VICTORY_TECHNOLOGY" Name="LOC_VICTORY_SCIENCE_NAME" Blurb="LOC_VICTORY_SCIENCE_TEXT" RequirementSetId="REQUIREMENTS_TECHNOLOGY_VICTORY" CriticalPercentage="60"/>
   </Victories>
   <!-- AI victory strategies (may move this to its own file in the future if it gets too large) -->
@@ -475,29 +475,6 @@
     </Row>
   </RequirementArguments>
 
-  <!-- Shared Victory Condition -->
-  <!-- Require at least 2 major teams in play. -->
-  <Requirements>
-    <Row>
-      <RequirementId>VICTORY_MIN_MAJOR_TEAMS</RequirementId>
-      <RequirementType>REQUIREMENT_COLLECTION_COUNT_ATLEAST</RequirementType>
-      <ProgressWeight>0</ProgressWeight>
-    </Row>
-  </Requirements>
-  <RequirementArguments>
-    <Row>
-      <RequirementId>VICTORY_MIN_MAJOR_TEAMS</RequirementId>
-      <Name>CollectionType</Name>
-      <Value>COLLECTION_MAJOR_TEAMS</Value>
-    </Row>
-    <Row>
-      <RequirementId>VICTORY_MIN_MAJOR_TEAMS</RequirementId>
-      <Name>Count</Name>
-      <Value>2</Value>
-    </Row>
-  </RequirementArguments>
-
-
   <!-- Default Victory -->
   <!-- Conditions - Player is last major civilization alive. -->
   <RequirementSets>
@@ -614,13 +591,9 @@
     </Row>
   </RequirementSets>
   <RequirementSetRequirements>
-    <Row>
+		<Row>
       <RequirementSetId>REQUIREMENTS_CULTURE_VICTORY</RequirementSetId>
       <RequirementId>CULTURE_VICTORY_REQUIREMENT</RequirementId>
-    </Row>
-    <Row>
-      <RequirementSetId>REQUIREMENTS_CULTURE_VICTORY</RequirementSetId>
-      <RequirementId>VICTORY_MIN_MAJOR_TEAMS</RequirementId>
     </Row>
     <Row>
       <RequirementSetId>CULTURE_VICTORY_PER_MEMBER_REQUIREMENTS</RequirementSetId>
@@ -695,10 +668,6 @@
   <RequirementSetRequirements>
     <Row>
       <RequirementSetId>REQUIREMENTS_RELIGIOUS_VICTORY</RequirementSetId>
-      <RequirementId>VICTORY_MIN_MAJOR_TEAMS</RequirementId>
-    </Row>
-    <Row>
-      <RequirementSetId>REQUIREMENTS_RELIGIOUS_VICTORY</RequirementSetId>
       <RequirementId>RELIGIOUS_VICTORY_PER_MEMBER_REQUIREMENT</RequirementId>
     </Row>
     <Row>
@@ -750,10 +719,6 @@
     </Row>
   </RequirementSets>
   <RequirementSetRequirements>
-    <Row>
-      <RequirementSetId>REQUIREMENTS_TECHNOLOGY_VICTORY</RequirementSetId>
-      <RequirementId>VICTORY_MIN_MAJOR_TEAMS</RequirementId>
-    </Row>
     <Row>
       <RequirementSetId>REQUIREMENTS_TECHNOLOGY_VICTORY</RequirementSetId>
       <RequirementId>TECH_VICTORY_PER_TEAM_REQUIREMENTS_MET</RequirementId>

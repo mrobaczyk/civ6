@@ -779,7 +779,7 @@
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_IMPROVEMENT" StringVal="Build City Improvement"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_WONDER" StringVal="Seek Target Wonder"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_UNDER_THREAT" StringVal="City Defense"/>
-		<Row ListType="MinorCivUnitBuilds" Item="PROMOTION_CLASS_RECON" Value="0"/>
+		<Row ListType="MinorCivUnitBuilds" Item="PROMOTION_CLASS_RECON" Value="-100"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_DEFAULT" StringVal="Simple City Tree"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_UNIT_OR_BUILDING" StringVal="Build City Building"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_IMPROVEMENT" StringVal="Build City Improvement"/>
@@ -1065,6 +1065,7 @@
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_BUILDERS"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_HARBORS"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_MILITARY"/>
+		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_WALLS"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_GOLD_MILITARY_UPGRADE"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_SEND_TRADE_ROUTE_BONUS"/>
@@ -1583,7 +1584,7 @@
 			<ModifierId>TRAIT_FREE_MELEE_UNIT_NON_HOME_CONTINENT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_UNIT_BY_CLASS</ModifierType>
 			<Permanent>true</Permanent>
-			<SubjectRequirementSetId>CITY_NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
+			<SubjectRequirementSetId>CITY_FOUNDED_ON_NON_HOME_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_FAITH_PEACEFUL_FOUNDERS</ModifierId>
@@ -1725,6 +1726,10 @@
 			<ModifierId>MINOR_CIV_PRODUCTION_MILITARY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MILITARY_UNITS_PRODUCTION</ModifierType>
 			<SubjectRequirementSetId>PLAYER_HAS_SMALL_MILITARY</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PRODUCTION_WALLS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
@@ -4094,6 +4099,16 @@
 			<Value>200</Value>
 		</Row>
 		<Row>
+			<ModifierId>MINOR_CIV_PRODUCTION_WALLS</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_WALLS,BUILDING_CASTLE,BUILDING_STAR_FORT</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PRODUCTION_WALLS</ModifierId>
+			<Name>Amount</Name>
+			<Value>200</Value>
+		</Row>
+		<Row>
 			<ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
 			<Name>Amount</Name>
 			<Value>100</Value>
@@ -5643,6 +5658,10 @@
 			<RequirementSetId>ON_ESPIONAGE_DETECTED</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>CITY_FOUNDED_ON_NON_HOME_CONTINENT_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
@@ -6261,6 +6280,14 @@
 			<RequirementSetId>ON_ESPIONAGE_DETECTED</RequirementSetId>
 			<RequirementId>REQUIRES_ESPIONAGE_DETECTED</RequirementId>
 		</Row>
+		<Row>
+			<RequirementSetId>CITY_FOUNDED_ON_NON_HOME_CONTINENT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_IS_NOT_OWNER_CAPITAL_CONTINENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_FOUNDED_ON_NON_HOME_CONTINENT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>CITY_FOUNDED_BY_SETTLER_REQUIREMENT</RequirementId>
+		</Row>
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
@@ -6602,6 +6629,10 @@
 			<RequirementId>REQUIRES_UNIT_IN_SHALLOW_WATER</RequirementId>
 			<RequirementType>REQUIREMENT_UNIT_ON_COAST</RequirementType>
 		</Row>
+		<Row>
+			<RequirementId>CITY_FOUNDED_BY_SETTLER_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_TRANSFER_TYPE_MATCHES</RequirementType>
+		</Row>
 	</Requirements>
 	<RequirementArguments>
 		<Row>
@@ -6808,6 +6839,11 @@
 			<RequirementId>REQUIRES_UNIT_IN_SHALLOW_WATER</RequirementId>
 			<Name>Water</Name>
 			<Value>true</Value>
+		</Row>
+		<Row>
+			<RequirementId>CITY_FOUNDED_BY_SETTLER_REQUIREMENT</RequirementId>
+			<Name>TransferType</Name>
+			<Value>BY_SETTLER</Value>
 		</Row>
 	</RequirementArguments>
 </GameInfo>
