@@ -1303,7 +1303,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>ANTI_SPEAR_OPPONENT_REQUIREMENTS</RequirementSetId>
-			<RequirementId>ANTI_SPEAR_OPPONENT_REQUIREMENT</RequirementId>
+			<RequirementId>OPPONENT_ANTI_CAVALRY_REQUIREMENT</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>RANGE_BONUS_REQUIREMENTS</RequirementSetId>
@@ -1448,10 +1448,6 @@
 			<RequirementType>REQUIREMENT_OPPONENT_UNIT_PROMOTION_CLASS_MATCHES</RequirementType>
 		</Row>
 		<Row>
-			<RequirementId>ANTI_SPEAR_OPPONENT_REQUIREMENT</RequirementId>
-			<RequirementType>REQUIREMENT_OPPONENT_UNIT_PROMOTION_CLASS_MATCHES</RequirementType>
-		</Row>
-		<Row>
 			<RequirementId>SIEGE_UNIT_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_UNIT_PROMOTION_CLASS_MATCHES</RequirementType>
 		</Row>
@@ -1542,10 +1538,6 @@
 			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
 		</Row>
 		<Row>
-			<RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
-			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
 			<RequirementId>PLOT_IS_DESERT_OR_DESERT_HILLS_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
 		</Row>
@@ -1575,11 +1567,6 @@
 			<RequirementId>ANTI_FIGHTER_AIRCRAFT_OPPONENT_REQUIREMENT</RequirementId>
 			<Name>UnitPromotionClass</Name>
 			<Value>PROMOTION_CLASS_AIR_FIGHTER</Value>
-		</Row>
-		<Row>
-			<RequirementId>ANTI_SPEAR_OPPONENT_REQUIREMENT</RequirementId>
-			<Name>UnitPromotionClass</Name>
-			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
 		</Row>
 		<Row>
 			<RequirementId>ADJACENT_FRIENDLY_OBSERVER_UNIT_REQUIREMENT</RequirementId>
@@ -1685,11 +1672,6 @@
 			<RequirementId>PLOT_IS_SNOW_HILLS_TERRAIN_REQUIREMENT</RequirementId>
 			<Name>TerrainType</Name>
 			<Value>TERRAIN_SNOW_HILLS</Value>
-		</Row>
-		<Row>
-			<RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
-			<Name>TerrainType</Name>
-			<Value>TERRAIN_DESERT</Value>
 		</Row>
 	</RequirementArguments>
 	<ModifierStrings>

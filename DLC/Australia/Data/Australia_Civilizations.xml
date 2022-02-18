@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameInfo>
 	<Types>
 		<Row Type="CIVILIZATION_AUSTRALIA" Kind="KIND_CIVILIZATION"/>
@@ -61,7 +60,7 @@
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" CitizenName="LOC_CITIZEN_AUSTRALIA_MODERN_FEMALE_9" Female="true" Modern="true"/>
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" CitizenName="LOC_CITIZEN_AUSTRALIA_MODERN_FEMALE_10" Female="true" Modern="true"/>
 	</CivilizationCitizenNames>
-		<CivilizationInfo>
+	<CivilizationInfo>
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_AUSTRALIA_LOCATION" SortIndex="10"/>
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_AUSTRALIA_SIZE" SortIndex="20"/>
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_AUSTRALIA_POPULATION" SortIndex="30"/>
@@ -110,25 +109,6 @@
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" CityName="LOC_CITY_NAME_PORT_PIRIE"/>
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" CityName="LOC_CITY_NAME_BOOMAHNOOMOONAH"/>
 	</CityNames>
-  <Colors>
-    <Row>
-      <Type>COLOR_PLAYER_AUSTRALIA_PRIMARY</Type>
-      <Color>0,142,3,255</Color>
-    </Row>
-    <Row>
-      <Type>COLOR_PLAYER_AUSTRALIA_SECONDARY</Type>
-      <Color>0,0,0,255</Color>
-    </Row>
-  </Colors>
-  <PlayerColors>
-    <Row>
-      <Type>LEADER_JOHN_CURTIN</Type>
-      <Usage>Unique</Usage>
-      <PrimaryColor>COLOR_PLAYER_AUSTRALIA_PRIMARY</PrimaryColor>
-      <SecondaryColor>COLOR_PLAYER_AUSTRALIA_SECONDARY</SecondaryColor>
-      <TextColor>COLOR_PLAYER_WHITE_TEXT</TextColor>
-    </Row>
-  </PlayerColors>
 	<StartBiasResources>
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" ResourceType="RESOURCE_CATTLE" Tier="5"/>
 		<Row CivilizationType="CIVILIZATION_AUSTRALIA" ResourceType="RESOURCE_HORSES" Tier="5"/>
@@ -278,17 +258,17 @@
 			<Name>YieldChange</Name>
 			<Value>2</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_CAMPUS</ModifierId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_CAMPUS</Value>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_CAMPUS</ModifierId>
-      <Name>Description</Name>
-      <Value>LOC_DISTRICT_APPEAL_SCIENCE</Value>
-    </Row>
-    <Row>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_CAMPUS</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_CAMPUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_CAMPUS</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_APPEAL_SCIENCE</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_CHARMING_COMMERCIAL_HUB</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_GOLD</Value>
@@ -303,17 +283,17 @@
 			<Name>YieldChange</Name>
 			<Value>1</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_CHARMING_COMMERCIAL_HUB</ModifierId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_COMMERCIAL_HUB</Value>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_CHARMING_COMMERCIAL_HUB</ModifierId>
-      <Name>Description</Name>
-      <Value>LOC_DISTRICT_APPEAL_GOLD</Value>
-    </Row>
-    <Row>
+		<Row>
+			<ModifierId>TRAIT_CHARMING_COMMERCIAL_HUB</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_COMMERCIAL_HUB</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CHARMING_COMMERCIAL_HUB</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_APPEAL_GOLD</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_BREATHTAKING_COMMERCIAL_HUB</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_GOLD</Value>
@@ -328,17 +308,17 @@
 			<Name>YieldChange</Name>
 			<Value>2</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_COMMERCIAL_HUB</ModifierId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_COMMERCIAL_HUB</Value>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_COMMERCIAL_HUB</ModifierId>
-      <Name>Description</Name>
-      <Value>LOC_DISTRICT_APPEAL_GOLD</Value>
-    </Row>
-    <Row>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_COMMERCIAL_HUB</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_COMMERCIAL_HUB</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_COMMERCIAL_HUB</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_APPEAL_GOLD</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_CHARMING_HOLY_SITE</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_FAITH</Value>
@@ -353,17 +333,17 @@
 			<Name>YieldChange</Name>
 			<Value>1</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_CHARMING_HOLY_SITE</ModifierId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_HOLY_SITE</Value>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_CHARMING_HOLY_SITE</ModifierId>
-      <Name>Description</Name>
-      <Value>LOC_DISTRICT_APPEAL_FAITH</Value>
-    </Row>
-    <Row>
+		<Row>
+			<ModifierId>TRAIT_CHARMING_HOLY_SITE</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HOLY_SITE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CHARMING_HOLY_SITE</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_APPEAL_FAITH</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_BREATHTAKING_HOLY_SITE</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_FAITH</Value>
@@ -378,17 +358,17 @@
 			<Name>YieldChange</Name>
 			<Value>2</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_HOLY_SITE</ModifierId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_HOLY_SITE</Value>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_HOLY_SITE</ModifierId>
-      <Name>Description</Name>
-      <Value>LOC_DISTRICT_APPEAL_FAITH</Value>
-    </Row>
-    <Row>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_HOLY_SITE</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HOLY_SITE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_HOLY_SITE</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_APPEAL_FAITH</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_CHARMING_THEATER_DISTRICT</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_CULTURE</Value>
@@ -403,17 +383,17 @@
 			<Name>YieldChange</Name>
 			<Value>1</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_CHARMING_THEATER_DISTRICT</ModifierId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_THEATER</Value>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_CHARMING_THEATER_DISTRICT</ModifierId>
-      <Name>Description</Name>
-      <Value>LOC_DISTRICT_APPEAL_CULTURE</Value>
-    </Row>
-    <Row>
+		<Row>
+			<ModifierId>TRAIT_CHARMING_THEATER_DISTRICT</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_THEATER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CHARMING_THEATER_DISTRICT</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_APPEAL_CULTURE</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_BREATHTAKING_THEATER_DISTRICT</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_CULTURE</Value>
@@ -428,17 +408,17 @@
 			<Name>YieldChange</Name>
 			<Value>2</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_THEATER_DISTRICT</ModifierId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_THEATER</Value>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_BREATHTAKING_THEATER_DISTRICT</ModifierId>
-      <Name>Description</Name>
-      <Value>LOC_DISTRICT_APPEAL_CULTURE</Value>
-    </Row>
-  </ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_THEATER_DISTRICT</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_THEATER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BREATHTAKING_THEATER_DISTRICT</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_APPEAL_CULTURE</Value>
+		</Row>
+	</ModifierArguments>
 	<RequirementSets>
 		<Row>
 			<RequirementSetId>PLOT_IS_COASTAL_LAND_REQUIREMENTS</RequirementSetId>

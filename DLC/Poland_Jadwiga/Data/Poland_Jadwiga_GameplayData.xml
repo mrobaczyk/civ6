@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameInfo>
 	<Types>
 		<Row Type="CIVILIZATION_POLAND" Kind="KIND_CIVILIZATION"/>
@@ -113,22 +112,13 @@
 	<Leaders>
 		<Row LeaderType="LEADER_JADWIGA" Name="LOC_LEADER_JADWIGA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 	</Leaders>
-	<Colors>
-		<Row>
-			<Type>COLOR_PLAYER_POLAND_PRIMARY</Type>
-			<Color>217,31,66,255</Color>
-		</Row>
-		<Row>
-			<Type>COLOR_PLAYER_POLAND_SECONDARY</Type>
-			<Color>242,230,240,255</Color>
-		</Row>
-	</Colors>
 	<LeaderQuotes>
 		<Row LeaderType="LEADER_JADWIGA" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_JADWIGA_QUOTE" QuoteAudio="Play_POLA_JA_MISC_PEP_TALK_B_1"/>
 	</LeaderQuotes>
 	<LeaderTraits>
 		<Row LeaderType="LEADER_JADWIGA" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_JADWIGA" TraitType="TRAIT_LEADER_LITHUANIAN_UNION"/>
+		<Row LeaderType="LEADER_JADWIGA" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
 	</LeaderTraits>
 	<AiListTypes>
 		<Row ListType="JadwigaCivics"/>
@@ -156,17 +146,8 @@
 		<Row ListType="JadwigaWonders" Item="BUILDING_STONEHENGE" Favored="true"/>
 		<Row ListType="JadwigaWonders" Item="BUILDING_CRISTO_REDENTOR" Favored="true"/>
 	</AiFavoredItems>
-	<PlayerColors>
-		<Row>
-			<Type>LEADER_JADWIGA</Type>
-			<Usage>Unique</Usage>
-			<PrimaryColor>COLOR_PLAYER_POLAND_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_POLAND_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_WHITE_TEXT</TextColor>
-		</Row>
-	</PlayerColors>
 	<Traits>
-		<Row TraitType="TRAIT_AGENDA_SAINT" Name="LOC_PLACEHOLDER" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_AGENDA_SAINT"/>
 		<Row TraitType="TRAIT_CIVILIZATION_BUILDING_SUKIENNICE" Name="LOC_BUILDING_SUKIENNICE_NAME" Description="LOC_BUILDING_SUKIENNICE_DESCRIPTION"/>
 		<Row TraitType="TRAIT_CIVILIZATION_UNIT_POLISH_HUSSAR" Name="LOC_UNIT_POLISH_HUSSAR_NAME" Description="LOC_UNIT_POLISH_HUSSAR_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_LITHUANIAN_UNION" Name="LOC_TRAIT_LEADER_LITHUANIAN_UNION_NAME" Description="LOC_TRAIT_LEADER_LITHUANIAN_UNION_DESCRIPTION"/>

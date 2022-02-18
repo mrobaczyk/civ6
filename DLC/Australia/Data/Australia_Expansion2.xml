@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<GameInfo>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_DIGGER" Texture="Moment_UniqueUnit_Australia.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_OUTBACK_STATION" Texture="Moment_Infrastructure_Australia.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_ULURU" Texture="Moment_Naturalwonder_Uluru.dds"/>
+	</MomentIllustrations>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_BRISBANE_RIVER" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedRiverType="NAMED_RIVER_COOPER_CREEK" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedRiverType="NAMED_RIVER_DARLING" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedRiverType="NAMED_RIVER_HUTT_RIVER" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedRiverType="NAMED_RIVER_MURRAY" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedRiverType="NAMED_RIVER_MURRUMBIDGEE" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedRiverType="NAMED_RIVER_PAROO_RIVER" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedRiverType="NAMED_RIVER_WARREGO_RIVER" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MAWSON_PEAK" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_TIBROGARGAN" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_HYPIPAMEE" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_UNDARA_VOLCANO" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_BALLS_PYRAMID" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_BUDJ_BIM" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_NAPIER" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_BLUE_MOUNTAINS" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_GREAT_DIVIDING" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_HAMERSLEY_RANGE" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_MACDONNELL_RANGE" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_PELION_RANGE" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SNOWY_MOUNTAINS" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_GIBSON" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedDesertType="NAMED_DESERT_GREAT_SANDY" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedDesertType="NAMED_DESERT_GREAT_VICTORIA" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedDesertType="NAMED_DESERT_SIMPSON" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+		<Row NamedDesertType="NAMED_DESERT_TANAMI" CivilizationType="CIVILIZATION_AUSTRALIA"/>
+	</NamedDesertCivilizations>
+	<RandomEvent_PillagedImprovements>
+		<Row RandomEventType="RANDOM_EVENT_DROUGHT_MAJOR" ImprovementType="IMPROVEMENT_OUTBACK_STATION"/>
+		<Row RandomEventType="RANDOM_EVENT_DROUGHT_EXTREME" ImprovementType="IMPROVEMENT_OUTBACK_STATION"/>
+	</RandomEvent_PillagedImprovements>
+	<Traits>
+		<Update>
+			<Where Description="LOC_TRAIT_LEADER_CITADEL_CIVILIZATION_DESCRIPTION"/>
+			<Set Description="LOC_TRAIT_LEADER_CITADEL_CIVILIZATION_EXPANSION2_DESCRIPTION"/>
+		</Update>
+	</Traits>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADD_DIPLOMATIC_YIELD_MODIFIER</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2</ModifierId>
+			<Name>DiplomaticYieldSource</Name>
+			<Value>LIBERATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2</ModifierId>
+			<Name>TurnsActive</Name>
+			<Value>10</Value>
+		</Row>
+	</ModifierArguments>
+	<TraitModifiers>
+		<Update>
+			<Where ModifierId="TRAIT_LEADER_CITADEL_CIVILIZATION"/>
+			<Set ModifierId="TRAIT_LEADER_CITADEL_CIVILIZATION_XP2"/>
+		</Update>
+	</TraitModifiers>
+</GameInfo>

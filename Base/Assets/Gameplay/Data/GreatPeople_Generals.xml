@@ -609,7 +609,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_CLASSICAL_LAND_REQUIREMENTS</RequirementSetId>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_CLASSICAL_LAND_REQUIREMENTS</RequirementSetId>
@@ -621,7 +621,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_MEDIEVAL_LAND_REQUIREMENTS</RequirementSetId>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_MEDIEVAL_LAND_REQUIREMENTS</RequirementSetId>
@@ -633,7 +633,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_RENAISSANCE_LAND_REQUIREMENTS</RequirementSetId>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_RENAISSANCE_LAND_REQUIREMENTS</RequirementSetId>
@@ -645,7 +645,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_INDUSTRIAL_LAND_REQUIREMENTS</RequirementSetId>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_INDUSTRIAL_LAND_REQUIREMENTS</RequirementSetId>
@@ -657,7 +657,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_MODERN_LAND_REQUIREMENTS</RequirementSetId>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_MODERN_LAND_REQUIREMENTS</RequirementSetId>
@@ -669,7 +669,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_ATOMIC_LAND_REQUIREMENTS</RequirementSetId>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_ATOMIC_LAND_REQUIREMENTS</RequirementSetId>
@@ -681,7 +681,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_INFORMATION_LAND_REQUIREMENTS</RequirementSetId>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>AOE_INFORMATION_LAND_REQUIREMENTS</RequirementSetId>
@@ -714,10 +714,6 @@
 			<RequirementType>REQUIREMENT_UNIT_DOMAIN_MATCHES</RequirementType>
 		</Row>
 		<Row>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
-			<RequirementType>REQUIREMENT_PLOT_ADJACENT_TO_OWNER</RequirementType>
-		</Row>
-		<Row>
 			<RequirementId>REQUIREMENTS_MET_UNIT_IS_CAVALRY_REQUIREMENTS</RequirementId>
 			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
 		</Row>
@@ -747,16 +743,6 @@
 			<RequirementId>AOE_REQUIRES_LAND_DOMAIN</RequirementId>
 			<Name>UnitDomain</Name>
 			<Value>DOMAIN_LAND</Value>
-		</Row>
-		<Row>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
-			<Name>MinDistance</Name>
-			<Value>0</Value>
-		</Row>
-		<Row>
-			<RequirementId>AOE_REQUIRES_LAND_ADJACENCY</RequirementId>
-			<Name>MaxDistance</Name>
-			<Value>2</Value>
 		</Row>
 		<Row>
 			<RequirementId>REQUIREMENTS_MET_UNIT_IS_CAVALRY_REQUIREMENTS</RequirementId>

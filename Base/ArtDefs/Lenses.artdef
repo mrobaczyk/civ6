@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>334</build>
-		<revision>370</revision>
+		<build>388</build>
+		<revision>456</revision>
 	</m_Version>
 	<m_TemplateName text="Lenses"/>
 	<m_RootCollections>
@@ -240,7 +240,7 @@
 				<m_Fields>
 					<m_Values>
 						<Element class="AssetObjects..ArtDefReferenceValue">
-							<m_ElementName text="OwingCiv_ActiveLayers"/>
+							<m_ElementName text="OwningCiv_ActiveLayers"/>
 							<m_RootCollectionName text="LensLayers"/>
 							<m_ArtDefPath text="Lenses.artdef"/>
 							<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -248,7 +248,7 @@
 							<m_ParamName text="ActiveLayers"/>
 						</Element>
 						<Element class="AssetObjects..ArtDefReferenceValue">
-							<m_ElementName text="OwingCiv_PermissionMask"/>
+							<m_ElementName text="OwningCiv_PermissionMask"/>
 							<m_RootCollectionName text="LensLayers"/>
 							<m_ArtDefPath text="Lenses.artdef"/>
 							<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -358,7 +358,7 @@
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
-				<m_Name text="TradeRoute"/>
+				<m_Name text="TradeRoutes"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 			<Element>
@@ -411,18 +411,113 @@
 				<m_Name text="TourismWithUnits"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="CityDetails_ActiveLayers"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="ActiveLayers"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="CityDetails_PermissionMask"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="PermissionMask"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="CityDetails"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="EmpireDetails_ActiveLayers"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="ActiveLayers"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="EmpireDetails_PermissionMask"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="PermissionMask"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="EmpireDetails"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="EnemyCityDetails_ActiveLayers"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="ActiveLayers"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="EnemyCityDetails_PermissionMask"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="PermissionMask"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="EnemyCityDetails"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="Cinematic_ActiveLayers"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="ActiveLayers"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="Cinematic_PermissionMask"/>
+							<m_RootCollectionName text="LensLayers"/>
+							<m_ArtDefPath text="Lenses.artdef"/>
+							<m_CollectionIsLocked>false</m_CollectionIsLocked>
+							<m_TemplateName text="Lenses"/>
+							<m_ParamName text="PermissionMask"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="Cinematic"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
 		</Element>
 		<Element>
 			<m_CollectionName text="LayersList"/>
 			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>0</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Units_Military"/>
@@ -430,12 +525,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>1</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Units_Religious"/>
@@ -443,12 +533,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>2</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Units_Civilian"/>
@@ -456,12 +541,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>3</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Units_Archaeology"/>
@@ -469,12 +549,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>4</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Yield_Icons"/>
@@ -482,12 +557,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>5</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Improvements"/>
@@ -495,12 +565,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>6</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Resources_Bonus"/>
@@ -508,12 +573,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>7</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Resources_Luxury"/>
@@ -521,12 +581,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>8</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Resources_Strategic"/>
@@ -534,12 +589,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>9</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_City_Center"/>
@@ -547,12 +597,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>10</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Encampment_Defense"/>
@@ -560,12 +605,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>11</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Campus"/>
@@ -573,12 +613,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>12</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Nearby_Mountain"/>
@@ -586,12 +621,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>13</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Holy_Site"/>
@@ -599,12 +629,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>14</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Encampment_Military"/>
@@ -612,12 +637,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>15</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Commercial_Hub"/>
@@ -625,12 +645,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>16</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Theater_District"/>
@@ -638,12 +653,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>17</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Harbor"/>
@@ -651,12 +661,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>18</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Aqueduct"/>
@@ -664,12 +669,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>19</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Entertainment_Complex"/>
@@ -677,12 +677,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>20</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Industrial_Zone"/>
@@ -690,12 +685,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>22</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Aerodrome"/>
@@ -703,12 +693,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>23</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Spaceport"/>
@@ -716,12 +701,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>24</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Tourist_Tokens"/>
@@ -729,12 +709,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>25</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Recommendation_Settler"/>
@@ -742,12 +717,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>26</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Recommendation_Builder"/>
@@ -755,12 +725,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>28</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Labels_Empire"/>
@@ -768,12 +733,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>29</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Labels_Continent"/>
@@ -781,12 +741,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>30</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Government"/>
@@ -794,25 +749,15 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>31</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
-				<m_Name text="Hex_Coloring_Owing_Civ"/>
+				<m_Name text="Hex_Coloring_Owning_Civ"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>32</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Continent"/>
@@ -820,12 +765,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>33</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Appeal_Level"/>
@@ -833,12 +773,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>27</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Culture_Borders"/>
@@ -846,12 +781,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>34</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Water_Availablity"/>
@@ -859,12 +789,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>35</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Religion"/>
@@ -872,12 +797,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>36</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Great_People"/>
@@ -885,12 +805,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>37</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Movement_Path"/>
@@ -898,12 +813,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>38</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Movement_Zone_Of_Control"/>
@@ -911,12 +821,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>39</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="TradeRoutes"/>
@@ -924,12 +829,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>40</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Adjacency_Bonus_Units"/>
@@ -937,12 +837,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>41</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Selection"/>
@@ -950,12 +845,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>42</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Map_Hex_Mask"/>
@@ -963,12 +853,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>43</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Purchase_Plot"/>
@@ -976,12 +861,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>44</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Movement_Range"/>
@@ -989,12 +869,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>45</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Citizen_Management"/>
@@ -1002,12 +877,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>46</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Attack_Range"/>
@@ -1015,12 +885,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>48</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts"/>
@@ -1028,12 +893,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>49</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Adjacency_Bonus_Districts"/>
@@ -1041,12 +901,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>50</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Numbers"/>
@@ -1054,12 +909,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>51</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Attack"/>
@@ -1067,12 +917,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>52</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Placement"/>
@@ -1080,12 +925,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>53</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Hex_Coloring_Movement"/>
@@ -1093,12 +933,7 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>21</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Districts_Neighborhood"/>
@@ -1106,15 +941,26 @@
 			</Element>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..IntValue">
-							<m_nValue>47</m_nValue>
-							<m_ParamName text="LayerNumber"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="City_Yields"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="City_Details"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="Empire_Details"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>
@@ -1775,7 +1621,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -3697,7 +3543,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -4879,7 +4725,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -6988,7 +6834,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -7624,40 +7470,6 @@
 							</m_Fields>
 							<m_ChildCollections/>
 							<m_Name text="LayerMask010"/>
-							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
-						</Element>
-						<Element>
-							<m_Fields>
-								<m_Values>
-									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Adjacency_Bonus_Districts"/>
-										<m_RootCollectionName text="LayersList"/>
-										<m_ArtDefPath text="Lenses.artdef"/>
-										<m_CollectionIsLocked>false</m_CollectionIsLocked>
-										<m_TemplateName text="Lenses"/>
-										<m_ParamName text="LayerRef"/>
-									</Element>
-								</m_Values>
-							</m_Fields>
-							<m_ChildCollections/>
-							<m_Name text="LayerMask011"/>
-							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
-						</Element>
-						<Element>
-							<m_Fields>
-								<m_Values>
-									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Adjacency_Bonus_Units"/>
-										<m_RootCollectionName text="LayersList"/>
-										<m_ArtDefPath text="Lenses.artdef"/>
-										<m_CollectionIsLocked>false</m_CollectionIsLocked>
-										<m_TemplateName text="Lenses"/>
-										<m_ParamName text="LayerRef"/>
-									</Element>
-								</m_Values>
-							</m_Fields>
-							<m_ChildCollections/>
-							<m_Name text="LayerMask012"/>
 							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 						</Element>
 						<Element>
@@ -8506,7 +8318,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -9990,7 +9802,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -10564,7 +10376,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -10613,7 +10425,7 @@
 						</Element>
 					</Element>
 				</m_ChildCollections>
-				<m_Name text="OwingCiv_ActiveLayers"/>
+				<m_Name text="OwningCiv_ActiveLayers"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 			<Element>
@@ -11104,7 +10916,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -11544,7 +11356,7 @@
 						</Element>
 					</Element>
 				</m_ChildCollections>
-				<m_Name text="OwingCiv_PermissionMask"/>
+				<m_Name text="OwningCiv_PermissionMask"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 			<Element>
@@ -12252,7 +12064,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -13264,7 +13076,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -14378,7 +14190,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -15492,7 +15304,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="Hex_Coloring_Owing_Civ"/>
+										<m_ElementName text="Hex_Coloring_Owning_Civ"/>
 										<m_RootCollectionName text="LayersList"/>
 										<m_ArtDefPath text="Lenses.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
@@ -16082,6 +15894,2847 @@
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="TourismWithUnits_ActiveLayers"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Luxury"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Strategic"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Attack"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Culture_Borders"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Attack_Range"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask006"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Yields"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask007"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Movement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask008"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Placement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask009"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Bonus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Improvements"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Yield_Icons"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask010"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Details"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask011"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask012"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="CityDetails_ActiveLayers"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Units"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Attack_Range"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Citizen_Management"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Yields"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Culture_Borders"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask006"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Aerodrome"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask007"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Aqueduct"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask008"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Campus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask009"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_City_Center"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask010"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Commercial_Hub"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask011"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Encampment_Defense"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask012"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Encampment_Military"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask013"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Entertainment_Complex"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask014"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Harbor"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask015"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Holy_Site"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask016"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Industrial_Zone"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask017"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Nearby_Mountain"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask018"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Neighborhood"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask019"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Spaceport"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask020"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Theater_District"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask021"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Attack"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask023"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Great_People"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask026"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Movement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask027"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Placement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask029"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Religion"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask030"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Improvements"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask032"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Map_Hex_Mask"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask035"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Purchase_Plot"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask040"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Bonus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask043"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Luxury"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask044"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Strategic"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask045"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Selection"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask046"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Tourist_Tokens"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask047"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="TradeRoutes"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask048"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Yield_Icons"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask053"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Details"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask022"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="CityDetails_PermissionMask"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Improvements"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Bonus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Luxury"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Strategic"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Attack"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Culture_Borders"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Attack_Range"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask006"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Yields"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask007"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Movement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask008"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Placement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask009"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Yield_Icons"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask010"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Empire_Details"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask011"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="EmpireDetails_ActiveLayers"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Units"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Attack_Range"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Citizen_Management"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Yields"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Culture_Borders"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask006"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Aerodrome"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask007"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Aqueduct"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask008"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Campus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask009"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_City_Center"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask010"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Commercial_Hub"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask011"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Encampment_Defense"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask012"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Encampment_Military"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask013"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Entertainment_Complex"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask014"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Harbor"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask015"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Holy_Site"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask016"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Industrial_Zone"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask017"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Nearby_Mountain"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask018"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Neighborhood"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask019"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Spaceport"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask020"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Theater_District"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask021"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Attack"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask023"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Great_People"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask026"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Movement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask027"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Placement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask029"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Religion"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask030"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Improvements"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask032"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Map_Hex_Mask"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask035"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Purchase_Plot"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask040"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Bonus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask043"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Luxury"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask044"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Strategic"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask045"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Selection"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask046"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Tourist_Tokens"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask047"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="TradeRoutes"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask048"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Yield_Icons"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask053"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Empire_Details"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask022"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Empire_Details"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask024"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="EmpireDetails_PermissionMask"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Improvements"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Bonus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Luxury"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Strategic"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Attack"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Culture_Borders"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Attack_Range"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask006"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Yields"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask007"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Movement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask008"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Placement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask009"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Yield_Icons"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask010"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Details"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask011"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask012"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="EnemyCityDetails_ActiveLayers"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Adjacency_Bonus_Units"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Attack_Range"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Citizen_Management"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Yields"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Culture_Borders"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask006"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Aerodrome"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask007"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Aqueduct"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask008"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Campus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask009"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_City_Center"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask010"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Commercial_Hub"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask011"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Encampment_Defense"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask012"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Encampment_Military"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask013"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Entertainment_Complex"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask014"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Harbor"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask015"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Holy_Site"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask016"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Industrial_Zone"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask017"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Nearby_Mountain"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask018"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Neighborhood"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask019"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Spaceport"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask020"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Districts_Theater_District"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask021"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="City_Details"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask022"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Attack"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask023"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Great_People"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask026"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Movement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask027"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Placement"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask029"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Hex_Coloring_Religion"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask030"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Improvements"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask032"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Map_Hex_Mask"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask035"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Purchase_Plot"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask040"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Bonus"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask043"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Luxury"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask044"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Resources_Strategic"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask045"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Selection"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask046"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Tourist_Tokens"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask047"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="TradeRoutes"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask048"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Yield_Icons"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask053"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="EnemyCityDetails_PermissionMask"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Archaeology"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Civilian"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Military"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Religious"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="Cinematic_ActiveLayers"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="LayerMask"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Archaeology"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Civilian"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Military"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Units_Religious"/>
+										<m_RootCollectionName text="LayersList"/>
+										<m_ArtDefPath text="Lenses.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Lenses"/>
+										<m_ParamName text="LayerRef"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LayerMask003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="Cinematic_PermissionMask"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

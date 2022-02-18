@@ -1,6 +1,6 @@
 
-function Initialize()
-	print("Napoleon Scenario Start Script initializing");
+function InitializeNewGame()
+	print("Napoleon Scenario InitializeNewGame");
 	local ballisticsTech = GameInfo.Technologies["TECH_BALLISTICS"];
 	local milScienceTech = GameInfo.Technologies["TECH_MILITARY_SCIENCE"];
 	local gunpowerTech = GameInfo.Technologies["TECH_GUNPOWDER"];
@@ -22,5 +22,11 @@ function Initialize()
 			end
 		end
 	end
+end
+
+
+function Initialize()
+	print("Napoleon Scenario Start Script initializing");
+	LuaEvents.NewGameInitialized.Add(InitializeNewGame);
 end
 Initialize();

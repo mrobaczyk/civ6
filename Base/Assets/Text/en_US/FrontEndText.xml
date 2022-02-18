@@ -63,6 +63,9 @@
 		<Row Tag="LOC_LOAD_MAP">
 			<Text>Load Map</Text>
 		</Row>
+		<Row Tag="LOC_LOAD_TILED">
+			<Text>Import Map</Text>
+		</Row>
 		<Row Tag="LOC_OPEN_DIRECTORY">
 			<Text>Open</Text>
 		</Row>
@@ -102,6 +105,15 @@
 		</Row>
 		<Row Tag="LOC_STEAMCLOUD">
 			<Text>Cloud</Text>
+		</Row>
+		<Row Tag="LOC_2K_CLOUD">
+			<Text>Multiplatform Cloud</Text>
+		</Row>
+		<Row Tag="LOC_STANDARD_CLOUD_SAVES_HELP">
+			<Text>Standard Cloud Saves - compatible with PC, Mac, and Linux versions of Civilization VI</Text>
+		</Row>
+		<Row Tag="LOC_2K_CLOUD_SAVES_HELP">
+			<Text>Multiplatform Cloud Saves - compatible with supported platforms (Requires enabling a 2K account on the Main Menu)</Text>
 		</Row>
 		<Row Tag="LOC_NO_SAVED_GAMES">
 			<Text>No saved games</Text>
@@ -251,6 +263,9 @@
 		<Row Tag="LOC_GAME_HANDICAP">
 			<Text>Game Difficulty</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS">
+			<Text>Options</Text>
+		</Row>
 		<Row Tag="LOC_MAP_OPTIONS">
 			<Text>Map Options</Text>
 		</Row>
@@ -308,6 +323,19 @@
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_JOIN_FAILED_TITLE">
 			<Text>Join Failed</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_MATCH_DELETED">
+			<Text>The host deleted the game.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_MATCH_DELETED_TITLE">
+			<Text>Game Deleted</Text>
+		</Row>		
+		<!-- Multiplayer PlayByCloud End Turn Error Popup -->
+		<Row Tag="LOC_GAME_CLOUD_END_TURN_FAILED">
+			<Text>The game was unable to process your game turn due to an error. Check your internet connection and try again.[NEWLINE]Error Code: {1_ErrorCode}</Text>
+		</Row>
+		<Row Tag="LOC_GAME_CLOUD_END_TURN_FAILED_TITLE">
+			<Text>End Turn Failed</Text>
 		</Row>
 		<!-- Multiplayer Select Screen-->
 		<Row Tag="LOC_MULTIPLAYER_DEFAULT_GAME_NAME">
@@ -372,14 +400,23 @@
 		<Row Tag="LOC_MULTIPLAYER_END_GAME">
 			<Text>DELETE</Text>
 		</Row>
+		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_TITLE">
+			<Text>Delete Game</Text>
+		</Row>
 		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_PROMPT">
 			<Text>Ending Game...</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_FAIL_TITLE">
+			<Text>Delete Error</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_FAIL">
 			<Text>Error while ending game.</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_FAIL_ACCEPT">
 			<Text>Ok</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_GAME_LAUNCH_FAILED_TITLE">
+			<Text>Launch Error</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_GAME_LAUNCH_FAILED">
 			<Text>Game failed to launch.</Text>
@@ -389,6 +426,15 @@
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_JOIN_GAME">
 			<Text>Join Game</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_JOIN_GAME_TT">
+			<Text>Join an existing multiplayer game.</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_JOIN_CODE">
+			<Text>Use Join Code</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_JOIN_CODE_TT">
+			<Text>Join an existing multiplayer game using a Join Code.</Text>
 		</Row>
 		<Row Tag="LOC_MISC_BACK">
 			<Text>Back</Text>
@@ -687,7 +733,13 @@
 			<Text>[COLOR:StagingStatus_Invalid]Invalid for Map Size[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_INVALID_SLOT_MAP_SIZE_TT">
-			<Text>This player slot is unavailable for the current map size.  Have the host increase the map size or swap to an available player slot.</Text>
+			<Text>This player slot is unavailable for the current map size. Have the host increase the map size or swap to an available player slot.</Text>
+		</Row>
+		<Row Tag="LOC_INVALID_SLOT_HUMAN_REQUIRED">
+			<Text>[COLOR:StagingStatus_Invalid]Needs Player[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_INVALID_SLOT_HUMAN_REQUIRED_TT">
+			<Text>This player slot needs occupied by a human player to start the game.</Text>
 		</Row>
 		<!-- Multiplayer Status Strings END -->
 		<Row Tag="LOC_JOIN">
@@ -800,7 +852,7 @@
 			<Text>Not Enough Players</Text>
 		</Row>
 		<Row Tag="LOC_READY_BLOCKED_NOT_ENOUGH_PLAYERS_TT">
-			<Text>Can not start game.  Two players are required to start.</Text>
+			<Text>Cannot start game. Two players are required to start.</Text>
 		</Row>
 		<Row Tag="LOC_READY_BLOCKED_PLAYERS_CONNECTING">
 			<Text>Players Joining Game</Text>
@@ -887,6 +939,15 @@
 		<Row Tag="LOC_MP_PLAYER_NOT_MOD_READY">
 			<Text>Player does not have the mods required to play in this game.</Text>
 		</Row>
+		<Row Tag="LOC_MP_PLAYER_NOT_MOD_READY_SUMMARY">
+			<Text>[COLOR:ConnectionStatus_NotModReady]Mods Missing[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_MP_PLAYER_RESYNCING">
+			<Text>Player is reloading to correct a desync.</Text>
+		</Row>
+		<Row Tag="LOC_MP_PLAYER_RESYNCING_SUMMARY">
+			<Text>[COLOR:ConnectionStatus_Resyncing]Resyncing[ENDCOLOR]</Text>
+		</Row>		
 		<Row Tag="LOC_TIME_MILLISECONDS">
 			<Text>ms</Text>
 		</Row>
@@ -936,6 +997,9 @@
 		</Row>
 		<Row Tag="LOC_PRESENCE_IN_GAME_HOTSEAT">
 			<Text>[COLOR:ConnectionStatus_Connected]Multiplayer (Hot Seat)[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_PRESENCE_IN_GAME_PLAYBYCLOUD">
+			<Text>[COLOR:ConnectionStatus_Connected]Multiplayer (Play By Cloud)[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_PRESENCE_INVITED_ONLINE">
 			<Text>[COLOR:ConnectionStatus_Connected]Invited[ENDCOLOR]</Text>
@@ -1049,6 +1113,9 @@
 		<Row Tag="LOC_WORLD_BUILDER_LOAD">
 			<Text>Load Map</Text>
 		</Row>
+		<Row Tag="LOC_WORLD_BUILDER_IMPORT">
+			<Text>Import Map</Text>
+		</Row>
 		<Row Tag="LOC_RANDOM_LEADER">
 			<Text>Random Leader</Text>
 		</Row>
@@ -1058,8 +1125,14 @@
 		<Row Tag="LOC_SETUP_ERROR_NO_DUPLICATE_LEADERS">
 			<Text>No Duplicate Leaders</Text>
 		</Row>
+		<Row Tag="LOC_SETUP_ERROR_NO_DUPLICATE_CIVILIZATIONS">
+			<Text>No Duplicate Civilizations</Text>
+		</Row>
 		<Row Tag="LOC_SETUP_ERROR_HUMANS_REQUIRED">
 			<Text>Awaiting Additional Players</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_ERROR_HUMANS_REQUIRED_TT">
+			<Text>Cannot start game. All Open player slots must be occuped before the game can begin.</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_INVALID_OPTION">
 			<Text>Invalid Option</Text>
@@ -1070,13 +1143,16 @@
 		<Row Tag="LOC_SETUP_PLAYER_PARAMETER_ERROR">
 			<Text>One or more player options are invalid.</Text>
 		</Row>
+		<Row Tag="LOC_SETUP_PLAYER_COLOR_COLLISION">
+			<Text>This civilization's colors may conflict with those of another civilization.  You may choose an alternate color scheme from the drop-down list if you wish.</Text>
+		</Row>
 
 		<!-- Configuration Parameters.  Move these to a better location -->
 		<Row Tag="LOC_RULESET">
-			<Text>Ruleset:</Text>
+			<Text>Ruleset</Text>
 		</Row>
 		<Row Tag="LOC_GAME_NAME">
-			<Text>Game Name:</Text>
+			<Text>Game Name</Text>
 		</Row>
 		<Row Tag="LOC_GAME_NAME_DESC">
 			<Text>The name displayed for this game in the multiplayer server list.</Text>
@@ -1320,16 +1396,16 @@
 			<Text>Changes the maps elevation (Hills and Mountains).</Text>
 		</Row>
 		<Row Tag="LOC_MAP_WORLD_AGE_NEW_DESCRIPTION">
-			<Text>A map with more hills and mountains.</Text>
+			<Text>A map with more hills, mountains, and volcanoes.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_WORLD_AGE_STANDARD_DESCRIPTION">
-			<Text>A map with standard hills and mountains.</Text>
+			<Text>A map with standard hills, mountains, and volcanoes.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_WORLD_AGE_OLD_DESCRIPTION">
-			<Text>A map with less hills and mountains.</Text>
+			<Text>A map with less hills, mountains, and volcanoes.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_WORLD_AGE_RANDOM_DESCRIPTION">
-			<Text>A map with random hills and mountains.</Text>
+			<Text>A map with random hills, mountains, and volcanoes.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_TEMPERATURE_DESCRIPTION">
 			<Text>Adjusts the terrain of the map.</Text>
@@ -1555,11 +1631,17 @@
 		<Row Tag="LOC_TUTORIAL_NEW_TO_CIV_6">
 			<Text>New to Civilization VI</Text>
 		</Row>
+		<Row Tag="LOC_NO_DUPLICATE_CIVILIZATIONS_NAME">
+			<Text>No Duplicate Civilizations</Text>
+		</Row>
 		<Row Tag="LOC_NO_DUPLICATE_LEADERS_NAME">
 			<Text>No Duplicate Leaders</Text>
 		</Row>
 		<Row Tag="LOC_NO_TEAMS_NAME">
 			<Text>No Teams</Text>
+		</Row>
+		<Row Tag="LOC_NO_DUPLICATE_CIVILIZATIONS_DESCRIPTION">
+			<Text>Enabling this option prevents two or more players from choosing the same civilization.</Text>
 		</Row>
 		<Row Tag="LOC_NO_DUPLICATE_LEADERS_DESCRIPTION">
 			<Text>Enabling this option prevents two or more players from choosing the same leader.</Text>
@@ -1592,7 +1674,7 @@
 			<Text>The game will end at the specified number of turns.</Text>
 		</Row>
 		<Row Tag="LOC_CITYSTATE_COUNT_NAME">
-			<Text>City-States:</Text>
+			<Text>City-States</Text>
 		</Row>
 		<Row Tag="LOC_CITYSTATE_COUNT_DESCRIPTION">
 			<Text>The number of city-states to include in the game.</Text>
@@ -1601,7 +1683,7 @@
 			<Text>Max Turns:</Text>
 		</Row>
 		<Row Tag="LOC_MAX_TURNS_DESCRIPTION">
-			<Text>The maximum number of turns for the game.</Text>
+			<Text>The game will end after the specified number of turns has passed.</Text>
 		</Row>
 		<Row Tag="LOC_MAINMENU_RESUME_GAME_TT">
 			<Text>Resume the last game you were playing.</Text>
@@ -1642,10 +1724,17 @@
 		<Row Tag="LOC_MAINMENU_EXIT_GAME_TT">
 			<Text>Exit the game completely.</Text>
 		</Row>
+		<Row Tag="LOC_MAIN_MENU_HALL_OF_FAME">
+			<Text>Hall of Fame</Text>
+		</Row>
+		<Row Tag="LOC_MAIN_MENU_HALL_OF_FAME_TT">
+			<Text>Does your gameplay stand the test of time?</Text>
+		</Row>
+
 
 		<!-- Copyright screen -->
 		<Row Tag="LOC_COPYRIGHT_TEXT">
-			<Text>© 1991-2018 Take-Two Interactive Software, Inc.  Developed by Firaxis Games. 2K, Firaxis Games, Sid Meier's Civilization VI, Sid Meier's Civilization, Civilization, Civ, and their respective logos are trademarks of Take-Two Interactive Software, Inc.  Uses Bink Video. Copyright © 1997-2018 by RAD Game Tools, Inc. Uses Granny Animation. Copyright © 1999-2018 by RAD Game Tools Inc.  Fork Copyright © 2018 Fork Particle, Inc. Sid Meier's Civilization VI uses Havok®. © Copyright 1999 – 2018 Havok.com, Inc. (and its Licensors). All Rights Reserved. See www.havok.com for details. AMD, the AMD Arrow logo, Radeon, Crossfire, and combinations thereof are either registered trademarks or trademarks of Advanced Micro Devices, Inc. in the United States and/or other countries. Microsoft, DirectX, Visual Studio, and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Lua Copyright © 1994-2018 Lua.org, PUC-Rio. All other marks and trademarks are the property of their respective owners.  All rights reserved.  The content of this videogame is fictional and is not intended to represent or depict an actual record of the events, persons or entities in the game's historical setting.</Text>
+			<Text>© 1991 – 2019 Take-Two Interactive Software, Inc. Developed by Firaxis Games. 2K, Firaxis Games, Sid Meier’s Civilization VI, Sid Meier’s Civilization, Civilization, Civ, and their respective logos are trademarks of Take-Two Interactive Software, Inc. Uses Bink Video. Copyright © 1997 – 2019 by RAD Game Tools, Inc. Uses Granny Animation. Copyright © 1999 – 2019 by RAD Game Tools Inc. Powered by WWise © 2006- 2019 Audiokinetic Inc. All rights reserved. Fork Copyright © 2019 Fork Particle, Inc. Sid Meier’s Civilization VI uses Havok®. © 1999 – 2019 Havok.com, Inc. (and its Licensors). All Rights Reserved. See www.havok.com for details. Microsoft, DirectX, Visual Studio, and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Lua Copyright © 1994 – 2019 Lua.org, PUC-Rio. All other marks and trademarks are property of their respective owners. All rights reserved. The content of this videogame is fictional and is not intended to represent or depict an actual record of the events, persons or entities in the game’s historical setting.</Text>
 		</Row>
 		<Row Tag="LOC_COPYRIGHT_ACCEPT">
 			<Text>Continue</Text>
@@ -1832,6 +1921,51 @@
 		</Row>
 		<Row Tag="LOC_GAME_START_ERROR_TITLE">
 			<Text>Error Starting Game</Text>
+		</Row>
+		<Row Tag="LOC_GAME_START_ERROR_UNKNOWN_VERSION">
+			<Text>Save version is incompatible.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_START_ERROR_MOD_CONTENT">
+			<Text>One or more Mods failed to load content.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_START_ERROR_MOD_CONFIG">
+			<Text>One or more Mods failed to configure content or database entries.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_START_ERROR_MOD_OWNERSHIP">
+			<Text>One or more Mods has not been purchased.</Text>
+		</Row>
+		<Row Tag="LOC_CLOUD_SAVES_REQUIRE_LINKED_ACCOUNT">
+			<Text>Cloud saves require a linked 2K Account.</Text>
+		</Row>
+		<Row Tag="LOC_CLOUD_SAVES_SERVICE_NOT_CONNECTED">
+			<Text>Cloud save services are unavailable.</Text>
+		</Row>
+		<Row Tag="LOC_PAUSEMENU_INFO_OVERVIEW_TOOLTIP">
+			<Text>Technical information about this game:</Text>
+		</Row>
+		<Row Tag="LOC_PAUSEMENU_INFO_VERSION_TOOLTIP">
+			<Text>Version: {1_Version}</Text>
+		</Row>
+		<Row Tag="LOC_PAUSEMENU_INFO_MAP_SEED">
+			<Text>Map Seed: {1_MapSeed}</Text>
+		</Row>
+		<Row Tag="LOC_PAUSEMENU_INFO_GAME_SEED">
+			<Text>Game Seed: {1_GameSeed}</Text>
+		</Row>
+		<Row Tag="LOC_PAUSEMENU_INFO_MOUSE_COPY_TOOLTIP">
+			<Text>Right click to copy information.</Text>
+		</Row>
+		<Row Tag="LOC_PAUSEMENU_INFO_TOUCH_COPY_TOOLTIP">
+			<Text>Hold for 5 seconds to copy information.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_SCOUT_CAT_TITLE">
+			<Text>DLC: Scout Cat</Text>
+		</Row>
+		<Row Tag="LOC_MOD_SCOUT_CAT_TEASER">
+			<Text>Replaces the Scout's dog with a clowder of cats.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_SCOUT_CAT_DESCRIPTION">
+			<Text>Sometimes a player loves "Scout" the dog so much that they cannot stand to see Scout working so hard in the wild. So the obvious solution is to send in a clowder of cats so Scout can relax back at the village. Or, if you're a huge fan of felines, then this DLC is simply righting a wrong.</Text>
 		</Row>
 	</FrontEndText>
 </GameData>

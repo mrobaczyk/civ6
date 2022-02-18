@@ -20,20 +20,20 @@
 
 		<Grid Style="DebugPanelFrame" Anchor="L,T" Offset="90,0" Size="740,30" ID="Console" >
 			<ColorBox Color="0,0,0,90" Anchor="C,C" Size="auto,auto" SizePadding="1,1" >
-				<EditBox Anchor="C,C" Size="730,20" MaxLength="255" ID="ConsoleEdit" FocusStop="1" KeepFocus="true" />
+				<EditBox Anchor="C,C" Size="730,20" MaxLength="250" ID="ConsoleEdit" FocusStop="1" KeepFocus="true" />
 			</ColorBox>
 
 			<Grid Style="DebugPanelFrame" Anchor="R,C" AnchorSide="o,i" Size="30,30" >
-				<Button Anchor="C,C" Style="Select_Down" ToolTip="Toggle Position" ID="RepositionButton" />
+				<Button Anchor="C,C" Texture="select_down" Size="18,18" ToolTip="Toggle Position" ID="RepositionButton" />
 			</Grid>
 			<Grid Style="DebugPanelFrame" Anchor="L,C" AnchorSide="o,i" Size="30,30" >
-				<Button Anchor="C,C" Style="Select_Down" ToolTip="Toggle Log" ID="LogButton" />
+				<Button Anchor="C,C" Texture="select_down" Size="18,18" ToolTip="Toggle Log" ID="LogButton" />
 			</Grid>
 			<Grid Style="DebugPanelFrame" Anchor="L,C" AnchorSide="o,i" Offset="30,0" Size="30,30" >
-				<Button Anchor="C,C" Style="Select_Down" ToolTip="Toggle Panel" ID="DebugPanelButton" />
+				<Button Anchor="C,C" Texture="select_down" Size="18,18" ToolTip="Toggle Panel" ID="DebugPanelButton" />
 			</Grid>
 			<Grid Style="DebugPanelFrame" Anchor="L,C" AnchorSide="o,i" Offset="60,0" Size="30,30" >
-				<Button Anchor="C,C" Style="Select_Down" ToolTip="Toggle Data Errors" ID="DataErrorButton" Color="COLOR_GREEN"/>
+				<Button Anchor="C,C" Texture="select_down" Size="18,18" ToolTip="Toggle Data Errors" ID="DataErrorButton" Color="COLOR_GREEN"/>
 			</Grid>
 		</Grid>
 
@@ -61,7 +61,15 @@
 				</GridButton>
 			</Stack>
 		</Grid>
-    
+
+		<Grid Style="DebugPanelFrame" Anchor="L,T" Size="210,85" ID="ViewerPanel" Hidden="1" >
+			<Stack StackPadding="8" Offset="5,10" >
+				<Label String="Context Viewer" Anchor="C,C" />
+				<CheckBox Style="MainMenuCheck" BoxOnLeft="1" ID="ShowDebugBounds" String="Show Debug Boxes" />
+				<CheckBox Style="MainMenuCheck" BoxOnLeft="1" ID="ShowDebugOutlines" String="Show Debug Outlines" />
+			</Stack>
+		</Grid>
+
 		<Grid Style="DebugPanelFrame" Anchor="L,T"  Size="auto,auto" ID="DebugPanel" Hidden="1" >
 			<Stack StackGrowth="Right" StackPadding="3">
 
@@ -89,6 +97,7 @@
 							<Label ID="FPSText" String="Blank" />
 							<Label ID="GPUWaitText" String="Blank" />
 							<Label ID="TerrainText" String="Blank" />
+              <Label ID="ModelVisText" String="Blank ModelVisText" />
 							<Label ID="ResolutionText" String="Blank" />
 							<Label ID="DeviceText" String="Blank" />
 							<Label ID="VSync" String="Blank" />
@@ -106,6 +115,7 @@
 							<Label ID="DescriptorTableSets" String="Blank" />
 							<Label ID="RootSigSets" String="Blank" />
 							<Label ID="DescriptorsCopied" String="Blank" />
+              <Label ID="DescriptorsAllocated" String="Blank" />
 							<Label ID="FenceCount" String="Blank" />
 							<Label ID="AvgTurnTime" String="Blank" />
 							<Label ID="TotalTurnTime" String="Blank" />
@@ -122,28 +132,27 @@
 						<DownButton Style="ScrollDownButton" Anchor="R,B" />
 						<Stack StackPadding="8" Offset="2,10" Anchor="L,T" ID="VFX_StatsStack">
 							<Label String="VFX Statistics" />
-							<Label ID="VFX_ParticleSimuationPreProcess" String="Blank" ToolTip="The time it took to pre-process fork effects/emitters this frame (in milliseconds)"/>
-							<Label ID="VFX_ParticleSimuationProcess" String="Blank" ToolTip="The time it took to simulate all fork particles (in parallel) this frame (in milliseconds)"/>
-							<Label ID="VFX_ParticleSimuationPostProcess" String="Blank" ToolTip="The time it took to post-process fork effects/emitters this frame (in milliseconds)"/>
-							<Label ID="VFX_ParticleSimuationTotalProcess" String="Blank" ToolTip="The total time it took to perform fork simulation this frame (in milliseconds)"/>
-							<Label ID="VFX_AllocatedVFXs" String="Blank" ToolTip="The number of allocated vfx objects"/>
-							<Label ID="VFX_AllocatedVFXModels" String="Blank" ToolTip="The number of allocated vfx model vis objects"/>
-							<Label ID="VFX_EvaluatedLights" String="Blank" ToolTip="The number of lights evaluated"/>
-							<Label ID="VFX_SubmittedLights" String="Blank" ToolTip="The number of lights submitted"/>
-							<Label ID="VFX_SimulatedEffects" String="Blank" ToolTip="The number of fork effects simulated"/>
-							<Label ID="VFX_SimulatedEmitters" String="Blank" ToolTip="The number of fork emitters simulated"/>
-							<Label ID="VFX_SimulatedParticles" String="Blank" ToolTip="The number of fork particles simulated"/>
-							<Label ID="VFX_SubmittedSprites" String="Blank" ToolTip="The number of fork particles sprites submitted"/>
-							<Label ID="VFX_SubmittedTriangles" String="Blank" ToolTip="The number of triangles submitted"/>
-							<Label ID="VFX_RenderedSurfaces" String="Blank" ToolTip="The number of graphics surfaces rendered"/>
-							<Label ID="VFX_RenderedTriangles" String="Blank" ToolTip="The number of triangles rendered"/>
-							<Label ID="VFX_MaxPSBs" String="Blank" ToolTip="The maximum number fork psbs allowed within a fork particle system"/>
-							<Label ID="VFX_MaxEffects" String="Blank" ToolTip="The maximum number fork effects allowed within a fork particle system"/>
-							<Label ID="VFX_MaxEmitters" String="Blank" ToolTip="The maximum number fork emitters allowed within a fork particle system"/>
-							<Label ID="VFX_MaxParticles" String="Blank" ToolTip="The maximum number fork particles allowed within a fork particle system"/>
-							<Label ID="VFX_ForkHeapSize" String="Blank" ToolTip="The fork particle heap size"/>
-              <Label ID="VFX_GPUMemorySize" String="Blank" ToolTip="The total GPU memory used for VFX buffers"/>
-							<Label ID="VFX_MaxSimulationThreads" String="Blank" ToolTip="The maximum number of threads used by fork to simulate particles"/>
+              <Label ID="VFX_Lights" String="Blank" ToolTip="The number of lights evaluated"/>
+              <Label ID="VFX_AllocatedVFXModels" String="Blank" ToolTip="The number of allocated vfx model vis objects"/>
+              
+							<Label ID="VFX_FireFX_LiveEmitters" String="Blank" ToolTip="Number of live emitter in FireFX."/>
+							<Label ID="VFX_FireFX_LiveParticles" String="Blank" ToolTip="Number of live particles in FireFX"/>
+              <Label ID="VFX_FireFX_DrawCalls" String="Blank" ToolTip="Number of draw calls in FireFX"/>
+              <Label ID="VFX_FireFX_CPUHeapSize" String="Blank" ToolTip="CPU memory used in FireFX"/>
+              <Label ID="VFX_FireFX_GPUHeapSize" String="Blank" ToolTip="GPU memory used in FireFX"/>
+              
+							<Label ID="VFX_Fork_AllocatedVFXs" String="Blank" ToolTip="The number of allocated vfx objects"/>
+							<Label ID="VFX_Fork_SimulatedEffects" String="Blank" ToolTip="The number of fork effects simulated"/>
+							<Label ID="VFX_Fork_SimulatedEmitters" String="Blank" ToolTip="The number of fork emitters simulated"/>
+							<Label ID="VFX_Fork_SimulatedParticles" String="Blank" ToolTip="The number of fork particles simulated"/>
+							<Label ID="VFX_Fork_SubmittedSprites" String="Blank" ToolTip="The number of fork particles sprites submitted"/>
+							<Label ID="VFX_Fork_SubmittedTriangles" String="Blank" ToolTip="The number of triangles submitted"/>
+							<Label ID="VFX_Fork_DrawCalls" String="Blank" ToolTip="The number of graphics surfaces rendered"/>
+							<Label ID="VFX_Fork_RenderedTriangles" String="Blank" ToolTip="The number of triangles rendered"/>
+							<Label ID="VFX_Fork_MaxPSBs" String="Blank" ToolTip="The maximum number fork psbs allowed within a fork particle system"/>
+							<Label ID="VFX_Fork_HeapSize" String="Blank" ToolTip="The fork particle heap size"/>
+              <Label ID="VFX_Fork_GPUMemorySize" String="Blank" ToolTip="The total GPU memory used for VFX buffers"/>
+							<Label ID="VFX_Fork_MaxSimulationThreads" String="Blank" ToolTip="The maximum number of threads used by fork to simulate particles"/>
 						</Stack>
 					</ScrollPanel>
 				</Grid>
@@ -185,8 +194,8 @@
 					</ScrollPanel>
 				</Grid>
 
-				<Grid Style="DebugPanelFrame" Anchor="R,T" Size="560,260" ID="UIStatsPanel" Hidden="1" >
-					<ScrollPanel Size="parent-10,parent-10" Anchor="L,C" Vertical="1" >
+				<Grid Style="DebugPanelFrame" Anchor="R,T" Size="928,400" ID="UIStatsPanel" Hidden="1" >
+					<ScrollPanel Size="550,parent-10" Anchor="R,C" Vertical="1" >
 						<ScrollBar Style="ScrollVerticalBar" Length="234" Offset="4,16" Anchor="R,T" AnchorSide="I,I" />
 						<UpButton Style="ScrollUpButton" Anchor="R,T" />
 						<DownButton Style="ScrollDownButton" Anchor="R,B" />
@@ -194,12 +203,14 @@
 						<Stack StackPadding="8" Offset="2,10" Anchor="L,T" ID="UIStatsStack">
 							<Label String="Draw Counter" ID="UIDrawText" />
 							<Label String="Dynamic Usage" ID="UIDynamicText" />
+							<Label String="Font Cache Usage" ID="FontStatsText" />
 
 							<Label String="MouseOver Controls:" Offset="0,20" />
 							<Stack ID="UIMouseOverStack" StackPadding="4" />
 						</Stack>
 
 					</ScrollPanel>
+					<Image ID="FontCache" Anchor="L,C" Size="368,368" StretchMode="Fill"/>
 				</Grid>
 				
 				<Grid Style="DebugPanelFrame" Anchor="R,T" Size="220,260" ID="LuaPanel" Hidden="1" >

@@ -254,6 +254,18 @@
 		<Row Tag="LOC_GAME_MENU_RETIRE_TOOLTIP">
 			<Text>Retire from the game. This will count as a loss.</Text>
 		</Row>
+		<Row Tag="LOC_GAME_MENU_PBC_DELETE">
+			<Text>Delete Game</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_PBC_DELETE_TOOLTIP">
+			<Text>Delete this Play By Cloud game. This will end this game for all players.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_PBC_QUIT">
+			<Text>Quit Game</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_PBC_QUIT_TOOLTIP">
+			<Text>Quit this Play By Cloud game. You will lose your progress and be removed from this game.</Text>
+		</Row>
 		<Row Tag="LOC_GAME_MENU_EXIT_TO_MAIN">
 			<Text>Exit to Main Menu</Text>
 		</Row>
@@ -278,6 +290,9 @@
 		<Row Tag="LOC_GAME_MENU_EXIT_WARNING">
 			<Text>Are you sure you wish to exit?</Text>
 		</Row>
+		<Row Tag="LOC_GAME_MENU_QUIT_TITLE">
+			<Text>Quit Game</Text>
+		</Row>
 		<Row Tag="LOC_GAME_MENU_QUIT_WARNING">
 			<Text>Are you sure you wish to quit your game?</Text>
 		</Row>
@@ -292,6 +307,36 @@
 		</Row>
 		<Row Tag="LOC_GAME_MENU_RESTART_WARNING">
 			<Text>Are you sure you wish to restart?</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_PBC_DELETE_WARNING">
+			<Text>Are you sure you wish to delete this multiplayer game? This will end this game for all players.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_PBC_QUIT_WARNING">
+			<Text>Are you sure you wish to quit this multiplayer game? You will lose your progress and be removed from this game.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_QUITING_GAME_STARTED">
+			<Text>Quitting Game...</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_QUITING_GAME_FAIL">
+			<Text>Error while quitting game.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_QUITING_GAME_FAIL_ACCEPT">
+			<Text>OK</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_QUITING_GAME_SUCCESS">
+			<Text>You have quit the game. Returning to main menu.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_DELETE_GAME_STARTED">
+			<Text>Deleting Game...</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_DELETE_GAME_FAIL">
+			<Text>Error while deleting game.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_DELETE_GAME_FAIL_ACCEPT">
+			<Text>OK</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_DELETE_GAME_SUCCESS">
+			<Text>Game deleted. Returning to main menu.</Text>
 		</Row>
 		<Row Tag="LOC_COMMON_DIALOG_YES_BUTTON_CAPTION">
 			<Text>YES</Text>
@@ -497,10 +542,10 @@
 		<Row Tag="LOC_HUD_UNIT_PANEL_SPREADS">
 			<Text>Spreads</Text>
 		</Row>
-    <Row Tag="LOC_HUD_UNIT_PANEL_HEALS">
-      <Text>Heals</Text>
-    </Row>
-    <Row Tag="LOC_HUD_UNIT_PANEL_GREAT_PERSON_ACTIONS">
+		<Row Tag="LOC_HUD_UNIT_PANEL_HEALS">
+			<Text>Heals</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_PANEL_GREAT_PERSON_ACTIONS">
 			<Text>Actions</Text>
 		</Row>
 		<Row Tag="LOC_HUD_UNIT_PANEL_XP">
@@ -846,7 +891,7 @@
 		</Row>
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_PASSWORD">
 			<Text>Password</Text>
-		</Row>		
+		</Row>
 		<!-- ==================== Unit Action Info ==================== -->
 		<Row Tag="LOC_HUD_UNIT_ACTION_REQUIRES_TECH">
 			<Text>Requires: {1_Tech} technology</Text>
@@ -915,9 +960,9 @@
 		<Row Tag="LOC_CITY_BANNER_THERMONUCLEAR_STRIKE_CAPABLE">
 			<Text>Thermonuclear Strike Capable</Text>
 		</Row>
-    <Row Tag="LOC_CITY_BANNER_STAGNATE">
-      <Text>"City population stagnate."</Text>
-    </Row>
+		<Row Tag="LOC_CITY_BANNER_STAGNATE">
+			<Text>"City population stagnate."</Text>
+		</Row>
 		<Row Tag="LOC_CITY_BANNER_TURNS_STARVATION">
 			<Text>{1_Turns : plural 1?{1_Turns} turn; other?{1_Turns} turns;} until starvation.</Text>
 		</Row>
@@ -930,12 +975,12 @@
 		<Row Tag="LOC_CITY_BANNER_WEAPON_UNAVAILABLE">
 			<Text>Weapon Unavailable</Text>
 		</Row>
-    <Row Tag="LOC_CITY_BANNER_CONVERTS_IN_X_TURNS">
-      <Text>Converts in {1_Turns}</Text>
-    </Row>
-    <Row Tag="LOC_CITY_BANNER_RELIGIOUS_PRESSURE">
-      <Text>+{1_Pressure}</Text>
-    </Row>
+		<Row Tag="LOC_CITY_BANNER_CONVERTS_IN_X_TURNS">
+			<Text>Converts in {1_Turns}</Text>
+		</Row>
+		<Row Tag="LOC_CITY_BANNER_RELIGIOUS_PRESSURE">
+			<Text>+{1_Pressure}</Text>
+		</Row>
 		<Row Tag="LOC_CITY_BANNER_HOUSING_INSUFFICIENT">
 			<Text>Insufficient Housing</Text>
 		</Row>
@@ -1008,6 +1053,15 @@
 		</Row>
 		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_IMPROVEMENTS">
 			<Text>Amenities from Improvements:</Text>
+		</Row>
+		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_DISTRICTS">
+			<Text>Amenities from Districts:</Text>
+		</Row>
+		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_NATURAL_WONDERS">
+			<Text>Amenities from Natural Wonders:</Text>
+		</Row>
+		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_TRAITS">
+			<Text>Amenities from Traits:</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_AMENITIES_LOST_FROM_WAR_WEARINESS">
 			<Text>Amenities from War Weariness:</Text>
@@ -1372,6 +1426,15 @@
 		<Row Tag="LOC_HUD_MINIMAP_TOOLTIP">
 			<Text>Click to move the camera.</Text>
 		</Row>
+		<Row Tag="LOC_HUD_MINIMAP_OWNER_TOOLTIP">
+			<Text>Owner: {1_PlayerName}</Text>
+		</Row>LOC_MINIMAP_UNCLAIMED_TOOLTIP
+		<Row Tag="LOC_MINIMAP_UNCLAIMED_TOOLTIP">
+			<Text>Unclaimed Territory</Text>
+		</Row>
+		<Row Tag="LOC_MINIMAP_FOG_OF_WAR_TOOLTIP">
+			<Text>Uncharted Territory</Text>
+		</Row>
 		<Row Tag="LOC_ACTION_PANEL_NEEDS_BELIEF_TOOLTIP">
 			<Text>You've unlocked a new Belief for your Religion.</Text>
 		</Row>
@@ -1387,9 +1450,9 @@
 		<Row Tag="LOC_HUD_CHAT_COLLAPSE_TOOLTIP">
 			<Text>Shrink the chat panel.</Text>
 		</Row>
-    <Row Tag="LOC_HUD_CITY_WILL_NOT_COMPLETE">
-      <Text>Production per turn too low to complete.</Text>
-    </Row>
+		<Row Tag="LOC_HUD_CITY_WILL_NOT_COMPLETE">
+			<Text>Production per turn too low to complete.</Text>
+		</Row>
 		<!-- ==================== Production Menu (for cities) ==================== -->
 		<Row Tag="LOC_BUILDING_CONSTRUCT_NO_SUITABLE_LOCATION">
 			<Text>No suitable location to construct this.</Text>
@@ -1400,9 +1463,12 @@
 		<Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_BUILDING">
 			<Text>This building requires {LOC_GRAMMAR_A_AN &lt;&lt; {1_Building}} building.</Text>
 		</Row>
-    <Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_THREE_BUILDINGS">
-      <Text>This building requires {LOC_GRAMMAR_A_AN &lt;&lt; {1_Building}}, {2_BuildingTheSecond}, or {3_BuildingTheThird} building.</Text>
-    </Row>
+		<Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_TWO_BUILDINGS">
+			<Text>This building requires {LOC_GRAMMAR_A_AN &lt;&lt; {1_Building}} or  {LOC_GRAMMAR_A_AN &lt;&lt; {2_BuildingTheSecond}} building.</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_THREE_BUILDINGS">
+			<Text>This building requires {LOC_GRAMMAR_A_AN &lt;&lt; {1_Building}}, {2_BuildingTheSecond}, or {3_BuildingTheThird} building.</Text>
+		</Row>
 		<Row Tag="LOC_BUILDING_CONSTRUCT_IS_OCCUPIED">
 			<Text>The district is occupied by an enemy.</Text>
 		</Row>
@@ -1428,14 +1494,14 @@
 			<Text>No suitable location to zone this district.</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_REPAIR_LOCATION_CONTAMINATED">
-			<Text>Cannot repair, location contaminated.</Text>
+			<Text>Cannot repair, location contaminated: {1_Turns} [ICON_Turn] {1_Turns : plural 1?turn; other?turns;}</Text>
 		</Row>
-    <Row Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_TECH">
-      <Text>Cannot repair, requires Technology: {1_TechName}.</Text>
-    </Row>
-    <Row Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_CIVIC">
-      <Text>Cannot repair, requires Civic: {1_CivicName}.</Text>
-    </Row>
+		<Row Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_TECH">
+			<Text>Cannot repair, requires Technology: {1_TechName}.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_CIVIC">
+			<Text>Cannot repair, requires Civic: {1_CivicName}.</Text>
+		</Row>
 		<Row Tag="LOC_DISTRICT_ZONE_ALREADY_BEING_BUILT">
 			<Text>The partially-constructed {1_District} in {2_CityName} must be completed (or dismantled) before you can start on another {3_District}.</Text>
 		</Row>
@@ -1473,7 +1539,7 @@
 			<Text>Your Civilization needs more [ICON_TradeRoute] Trade Route capacity.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_TRAIN_REQUIRES_RESOURCE_ACCESS">
-			<Text>Your civilization needs {2_AmountNeededWithoutDistrict} {1_ResourceName} to train this type of unit. If this city has a {4_DistrictName}, you only need {3_AmountNeededWithDistrict} {1_ResourceName}.</Text>
+			<Text>Your civilization needs {2_AmountNeededWithoutDistrict} {5_ResourceIcon} {1_ResourceName} to train this type of unit. If this city has a {4_DistrictName}, you only need {3_AmountNeededWithDistrict} {5_ResourceIcon} {1_ResourceName}.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_TRAIN_REQUIRES_RESOURCE_SUPPLY">
 			<Text>Not enough {1_Resource} supply is available. Each unit alive or in production uses 1 supply, and each Owned or Imported resource in any city provides 4 supply.</Text>
@@ -1529,7 +1595,33 @@
 		<Row Tag="LOC_PROJECT_ADVANCE_LOCATION_OCCUPIED_BY_ENEMY">
 			<Text>Required project location occupied by enemy unit.</Text>
 		</Row>
-    
+		<Row Tag="LOC_PROJECT_FAILED_RESOURCE_REQUIREMENT">
+			<Text>This Project requires {1_ResourceName} in order to advance.</Text>
+		</Row>
+    <Row Tag="LOC_PRODUCTION_MANAGER_NO_CURRENT_PRODUCTION">
+      <Text>This city is not currently producing anything.</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_SCROLL_TO_BUILDINGS">
+      <Text>Scroll to Buildings and Districts</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_SCROLL_TO_WONDERS">
+      <Text>Scroll to Wonders</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_SCROLL_TO_UNITS">
+      <Text>Scroll to Units</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_SCROLL_TO_PROJECTS">
+      <Text>Scroll to Projects</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_MULTI_QUEUE">
+      <Text>Multi-Queue</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_QUEUE_WITH_COUNT">
+      <Text>Queue ({1_QueueSize})</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_TRASH_TOOLTIP">
+      <Text>Drop queued items here to remove.</Text>
+    </Row>
 		<!-- ==================== Leader Viewer Debug ==================== -->
 		<Row Tag="LOC_LEADER_VIEWER_BACK">
 			<Text>Back To Game</Text>
@@ -1706,7 +1798,7 @@
 			<Text>{1_NumRouteCapacity} [ICON_TradeRoute] Trade Route capacity</Text>
 		</Row>
 		<Row Tag="LOC_TOP_PANEL_TRADE_ROUTES_TOOLTIP_SOURCES_HELP">
-			<Text>Commercial Hub and Harbor districts are the primary sources of [ICON_TradeRoute] Trade Route capacity.</Text>
+			<Text>Commercial Hub and Harbor district buildings are the primary sources of [ICON_TradeRoute] Trade Route capacity.</Text>
 		</Row>
 		<Row Tag="LOC_TOP_PANEL_INFLUENCE">
 			<Text>Envoys</Text>
@@ -1813,6 +1905,9 @@
 		<Row Tag="LOC_HUD_TOURISM_LENS">
 			<Text>Tourism</Text>
 		</Row>
+    <Row Tag="LOC_HUD_EMPIRE_LENS">
+      <Text>Empire</Text>
+    </Row>
 		<Row Tag="LOC_HUD_RELIGION_LENS_TOOLTIP">
 			<Text>Show majority religion and follower distribution across the map.</Text>
 		</Row>
@@ -1834,6 +1929,9 @@
 		<Row Tag="LOC_HUD_TOURISM_LENS_TOOLTIP">
 			<Text>Show the number of Visiting Tourists in each tile.</Text>
 		</Row>
+    <Row Tag="LOC_HUD_EMPIRE_LENS_TOOLTIP">
+      <Text>Show your city borders, district locations, and adjacencies.</Text>
+    </Row>
 		<Row Tag="LOC_HUD_MAP_OPTIONS">
 			<Text>Map Options</Text>
 		</Row>
@@ -2124,6 +2222,9 @@
 		<Row Tag="LOC_HIDE_CHAT_PANEL_UNREAD_MESSAGES">
 			<Text>Chat Panel ([ICON_New]{1_Number})</Text>
 		</Row>
+		<Row Tag="LOC_PLAY_BY_CLOUD_PANEL">
+			<Text>Play By Cloud Panel</Text>
+		</Row>
 		<Row Tag="LOC_WORLD_TRACKER_CHOOSE_CIVIC">
 			<Text>Choose Civic</Text>
 		</Row>
@@ -2287,10 +2388,10 @@
 		<Row Tag="LOC_GOVT_MY_GOVERNMENT">
 			<Text>My Government</Text>
 		</Row>
-    <Row Tag="LOC_GOVT_NEED_FAITH">
-      <Text>You Need {1_Faith} [ICON_FaithLarge] Faith</Text>
-    </Row>
-    <Row Tag="LOC_GOVT_NEED_GOLD">
+		<Row Tag="LOC_GOVT_NEED_FAITH">
+			<Text>You Need {1_Faith} [ICON_FaithLarge] Faith</Text>
+		</Row>
+		<Row Tag="LOC_GOVT_NEED_GOLD">
 			<Text>You Need {1_Gold} [ICON_GoldLarge] Gold</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_NEW_POLICY">
@@ -2323,10 +2424,10 @@
 		<Row Tag="LOC_GOVT_SET_POLICIES">
 			<Text>Set Policies</Text>
 		</Row>
-    <Row Tag="LOC_GOVT_UNLOCK_FAITH">
-      <Text>Unlock for {1_Faith} [ICON_FaithLarge] Faith</Text>
-    </Row>
-    <Row Tag="LOC_GOVT_UNLOCK_GOLD">
+		<Row Tag="LOC_GOVT_UNLOCK_FAITH">
+			<Text>Unlock for {1_Faith} [ICON_FaithLarge] Faith</Text>
+		</Row>
+		<Row Tag="LOC_GOVT_UNLOCK_GOLD">
 			<Text>Unlock for {1_Gold} [ICON_GoldLarge] Gold</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_VIEW_GOVERNMENTS">
@@ -2487,7 +2588,7 @@
 			<Text>Appealing location provides +{1_Amount} {2_Icon} {3_YieldType}</Text>
 		</Row>
 		<Row Tag="LOC_OPERATION_BUILD_IMPROVEMENT_GRANT_DEFENSE">
-			<Text>+{1_Value} [ICON_Strength] defense strength for occupying unit</Text>
+			<Text>+{1_Value} [ICON_Strength] Defense Strength for occupying unit.</Text>
 		</Row>
 		<Row Tag="LOC_OPERATION_BUILD_IMPROVEMENT_GRANT_FORTIFICATION">
 			<Text>Fortification bonus applied to occupying unit.</Text>
@@ -2498,16 +2599,16 @@
 		<Row Tag="LOC_OPERATION_PLANT_REQUIRES_CIVIC">
 			<Text>Requires Civic: {1_Civic}</Text>
 		</Row>
-    <Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION">
+		<Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION">
 			<Text>[NEWLINE]After this action, the city will have {1_NumFollowers} {1_NumFollowers: plural 1?citizen; other?citizens;} following {2_ReligionName}.[NEWLINE]{3_MajorityReligionString}</Text>
-    </Row>
-    <Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION_MAJORITY">
-      <Text>The majority religion of the city will be: {1_MajorityReligionName}</Text>
-    </Row>
-    <Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION_NO_MAJORITY">
-      <Text>There will not be a majority religion.</Text>
-    </Row>
-    <Row Tag="LOC_UNITOPERATION_MOVE_TO_DESCRIPTION">
+		</Row>
+		<Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION_MAJORITY">
+			<Text>The majority religion of the city will be: {1_MajorityReligionName}</Text>
+		</Row>
+		<Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION_NO_MAJORITY">
+			<Text>There will not be a majority religion.</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_MOVE_TO_DESCRIPTION">
 			<Text>Move To</Text>
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_MOVE_TO_UNIT_DESCRIPTION">
@@ -2534,9 +2635,9 @@
 		<Row Tag="LOC_UNITOPERATION_REBASE_DESCRIPTION">
 			<Text>Re-Base</Text>
 		</Row>
-    <Row Tag="LOC_UNITOPERATION_RELIGIOUS_HEAL_DESCRIPTION">
-      <Text>Heal Religious Units</Text>
-    </Row>
+		<Row Tag="LOC_UNITOPERATION_RELIGIOUS_HEAL_DESCRIPTION">
+			<Text>Heal Religious Units</Text>
+		</Row>
 		<Row Tag="LOC_UNITOPERATION_REMOVE_FEATURE_DESCRIPTION">
 			<Text>Remove Feature</Text>
 		</Row>
@@ -2653,6 +2754,9 @@
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_CANNOT_DESIGNATE_PARK">
 			<Text>Must be on a valid National Park tile.</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_EXECUTE_SCRIPT_DESCRIPTION">
+			<Text>Special Operation</Text>
 		</Row>
 		<Row Tag="LOC_UNITCOMMAND_WAKE_DESCRIPTION">
 			<Text>Wake Up</Text>
@@ -2792,19 +2896,19 @@
 		<Row Tag="LOC_UNITCOMMAND_PLUNDER_TRADE_ROUTE_BLOCKED_BY_IMMUNITY">
 			<Text>A [ICON_TradeRoute] Trade Route in this tile has a special ability preventing it from being plundered.</Text>
 		</Row>
-    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_DESCRIPTION">
-      <Text>Condemn Heretic</Text>
-    </Row>
-    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_REQUIRES_WAR_DECLARATION">
-      <Text>A religious unit in this tile belongs to a player you are not at war with.</Text>
-    </Row>
-    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_STARTED_THIS_RELIGION">
-      <Text>A religious unit in this tile adheres to the religion that you founded.</Text>
-    </Row>
-    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_FOLLOWING_THIS_RELIGION">
-      <Text>A religious unit in this tile adheres to the dominant religion in a majority of your cities.</Text>
-    </Row>
-    <Row Tag="LOC_UNITCOMMAND_NAME_UNIT_DESCRIPTION">
+		<Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_DESCRIPTION">
+			<Text>Condemn Heretic</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_REQUIRES_WAR_DECLARATION">
+			<Text>A Religious unit in this tile belongs to a player you are not at war with.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_STARTED_THIS_RELIGION">
+			<Text>A Religious unit in this tile adheres to the Religion that you founded.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_FOLLOWING_THIS_RELIGION">
+			<Text>A Religious unit in this tile adheres to the dominant Religion in a majority of your cities.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_NAME_UNIT_DESCRIPTION">
 			<Text>Name Unit</Text>
 		</Row>
 		<Row Tag="LOC_UNITCOMMAND_WONDER_PRODUCTION_DESCRIPTION">
@@ -2815,6 +2919,9 @@
 		</Row>
 		<Row Tag="LOC_UNITCOMMAND_HARVEST_WONDER_DETAILS">
 			<Text>This World Wonder has been constructed by another civilization, so we cannot complete it. But we can reclaim its raw materials, providing the city with {1_ProductionAmont} [ICON_Production] Production.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_EXECUTE_SCRIPT_DESCRIPTION">
+			<Text>Special Action</Text>
 		</Row>
 		<!-- ==================== National Park Text ==================== -->
 		<Row Tag="LOC_NATIONAL_PARK_NAME">
@@ -3053,7 +3160,7 @@
 			<Text>Respects strong navies</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_AYYUBID_DYNASTY">
-			<Text>Respects those with his religious building</Text>
+			<Text>Proper respect for his religion</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_BLACK_QUEEN">
 			<Text>Respects strong espionage opponents</Text>
@@ -3167,6 +3274,18 @@
 		<Row Tag="LOC_TYPE_TRAIT_BONUS_YIELD">
 			<Text>{1_Amount: number +#,###;-#,###} {2_YieldIcon} {3_YieldName} (requires {4_TechOrCivicName})</Text>
 		</Row>
+    <Row Tag="LOC_TYPE_TRAIT_TOURISM_BONUS_APPEAL">
+      <Text>{1_Amount: number +#,###;-#,###}% [ICON_TOURISM] Tourism from Appeal (requires {4_TechOrCivicName})</Text>
+    </Row>
+    <Row Tag="LOC_TYPE_TRAIT_TOURISM_BONUS_YIELD">
+      <Text>{1_Amount: number +#,###;-#,###}% [ICON_TOURISM] Tourism from {2_YieldIcon} {3_YieldName} (requires {4_TechOrCivicName})</Text>
+    </Row>
+    <Row Tag="LOC_TYPE_TRAIT_TOURISM_BONUS_APPEAL_NO_REQUIREMENT">
+      <Text>{1_Amount: number +#,###;-#,###}% [ICON_TOURISM] Tourism from Appeal</Text>
+    </Row>
+    <Row Tag="LOC_TYPE_TRAIT_TOURISM_BONUS_YIELD_NO_REQUIREMENT">
+      <Text>{1_Amount: number +#,###;-#,###}% [ICON_TOURISM] Tourism from {2_YieldIcon} {3_YieldName}</Text>
+    </Row>
 		<Row Tag="LOC_TYPE_TRAIT_HAPPINESS">
 			<Text>{1_Num: number +#;-#}[ICON_Amenities] Amenities (1 per city)</Text>
 		</Row>
@@ -3224,6 +3343,9 @@
 		<Row Tag="LOC_TYPE_TRAIT_BUILDING_DISTRICT_COPY">
 			<Text>Bonus {1_ToYieldIcon} {2_ToYieldName} equal to the adjacency {3_FromYieldIcon} {4_FromYieldName} bonus of its district.</Text>
 		</Row>
+    <Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_ONCE">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} for having an adjacent {5_AdjacentObject} tile.</Text>
+    </Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS">
 			<Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} from each adjacent {5_AdjacentObject} tile.</Text>
 		</Row>
@@ -3597,10 +3719,10 @@
 		<Row Tag="LOC_UI_RELIGION_HOW_TO_MAKE_INQUISITOR_TT">
 			<Text>This religion must have spent an Apostle to Launch Inquisition before purchasing Inquisitors. They are then purchased in a city with a Temple.</Text>
 		</Row>
-    <Row Tag="LOC_UI_RELIGION_HOW_TO_MAKE_GURU_TT">
-      <Text>You must have a Temple in a Holy Site district to purchase Gurus.</Text>
-    </Row>
-    <Row Tag="LOC_UI_RELIGION_APOSTLE_TT">
+		<Row Tag="LOC_UI_RELIGION_HOW_TO_MAKE_GURU_TT">
+			<Text>You must have a Temple in a Holy Site district to purchase Gurus.</Text>
+		</Row>
+		<Row Tag="LOC_UI_RELIGION_APOSTLE_TT">
 			<Text>Apostles may convert [ICON_Citizen] Citizens to their Religion and initiate theological combat with units of other Religions. Once per game may Launch Inquisition to allow the purchase of Inquisitors. Once per game may Evangelize Belief to add an additional Belief to their Religion. These uses consume the Apostle.</Text>
 		</Row>
 		<Row Tag="LOC_UI_RELIGION_MISSIONARY_TT">
@@ -3609,10 +3731,10 @@
 		<Row Tag="LOC_UI_RELIGION_INQUISITOR_TT">
 			<Text>Inquisitors may eliminate the presence of other Religions in their territory, and initiate theological combat with units of other Religions.</Text>
 		</Row>
-    <Row Tag="LOC_UI_RELIGION_GURU_TT">
-      <Text>Gurus may use a charge to heal themselves and all adjacent friendly religious units. May not initiate theological combat with units of other Religions (but can defend).</Text>
-    </Row>
-    <Row Tag="LOC_UI_RELIGION_UNKNOWN_CITY">
+		<Row Tag="LOC_UI_RELIGION_GURU_TT">
+			<Text>Gurus may use a charge to heal themselves and all adjacent friendly religious units. May not initiate theological combat with units of other Religions (but can defend).</Text>
+		</Row>
+		<Row Tag="LOC_UI_RELIGION_UNKNOWN_CITY">
 			<Text>Unknown City</Text>
 		</Row>
 		<!-- ==================== Trade Overview ==================== -->
@@ -3980,6 +4102,12 @@
 		<Row Tag="LOC_WORLD_RANKINGS_VICTORY_DISABLED">
 			<Text>Victory Not Completable</Text>
 		</Row>
+    <Row Tag="LOC_WORLD_RANKINGS_CULTURAL_VICTORY_TURNS">
+      <Text>Victory: [ICON_Turn] {1_Turns}</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_CULTURAL_VICTORY_TURNS_TT">
+      <Text>This player will achieve a Cultural Victory in {1_Turns : plural 1?{1_Turns} turn; other?{1_Turns} turns;}.</Text>
+    </Row>
 		<!-- ==================== Scoring Categories ==================== -->
 		<Row Tag="LOC_CATEGORY_CIVICS_NAME">
 			<Text>Civics</Text>
@@ -4042,7 +4170,14 @@
 		<Row Tag="LOC_RESEARCH_COMPLETE_UNLOCKED_BY_TECH">
 			<Text>Unlocked by this Tech ({1_Amount}):</Text>
 		</Row>
-		<!-- ==================== City State Partial SCreen ==================== -->
+    <!-- ==================== Event Popup ==================== -->
+    <Row Tag="LOC_EVENT_POPUP_UNLOCKED">
+      <Text>UNLOCKED:</Text>
+    </Row>
+    <Row Tag="LOC_EVENT_POPUP_CHOICE_UNLOCKS">
+      <Text>{1_Choice} UNLOCKS:</Text>
+    </Row>
+		<!-- ==================== City State Partial Screen ==================== -->
 		<Row Tag="LOC_CITY_STATES_ADD_AN_ENVOY">
 			<Text>Add an [ICON_Envoy] Envoy between your civilization and this city-state.</Text>
 		</Row>
@@ -4316,16 +4451,16 @@
 			<Text>Cannot Recruit</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PEOPLE_CANNOT_EARN_PERSON_ALREADY_EARNED_MAXIMUM">
-			<Text>You have already earned the maximum allowed number of this type of Great Person.</Text>
+			<Text>You have already earned the maximum allowed number of this type of [ICON_GreatPerson] Great Person.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PEOPLE_CANNOT_EARN_PERSON_NO_VALID_SPAWN_SEA">
 			<Text>You must have a coastal city center or a Harbor district in order to spawn a Great Admiral.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PEOPLE_CANNOT_EARN_PERSON_CLAIMED_BY_OTHER">
-			<Text>Another civilization has an active claim on this Great Person.</Text>
+			<Text>Another civilization has an active claim on this [ICON_GreatPerson] Great Person.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PEOPLE_CANNOT_EARN_PERSON_ALREADY_REJECTED">
-			<Text>You have already chosen to Pass on this Great Person.</Text>
+			<Text>You have already chosen to Pass on this [ICON_GreatPerson] Great Person.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PEOPLE_CANNOT_EARN_PERSON_DISALLOWED_BY_CIV_TRAIT">
 			<Text>Your civilization trait ({1_TraitName}) prevents you from earning this [ICON_GreatPerson] Great Person.</Text>
@@ -4399,6 +4534,9 @@
 			<Text>Left click to look at pin.</Text>
 		</Row>
 		<!-- ==================== Pause Panel Text ==================== -->
+		<Row Tag="LOC_GAME_PAUSED_TITLE">
+			<Text>Game Paused!</Text>
+		</Row>
 		<Row Tag="LOC_GAME_PAUSED_BY">
 			<Text>Game Paused by {1_PlayerName}</Text>
 		</Row>
@@ -4662,6 +4800,12 @@
 		<Row Tag="LOC_ROUTECHOOSER_NO_BENEFITS_FROM_ROUTE">
 			<Text>No Benefits from Route.</Text>
 		</Row>
+    <Row Tag="LOC_ROUTECHOOSER_BONUS_ICON_TOOLTIP">
+      <Text>Bonus yield provided by water tiles, Railroads, Canals, Mountain Tunnels, or Trading Posts along this route.</Text>
+    </Row>
+    <Row Tag="LOC_ROUTECHOOSER_TRADING_POST_TOOLTIP">
+      <Text>You have established a Trading Post in this city.</Text>
+    </Row>
 		<Row Tag="LOC_ROUTECHOOSER_YIELD_SOURCE_DISTRICTS">
 			<Text>{1_YieldAmount} {2_YieldIconString} {3_YieldName} from Districts in {4_CityName}.</Text>
 		</Row>
@@ -4674,9 +4818,9 @@
 		<Row Tag="LOC_ROUTECHOOSER_YIELD_SOURCE_TOTAL">
 			<Text>{1_YieldAmount} {2_YieldIconString} {3_YieldName} total</Text>
 		</Row>
-    <Row Tag="LOC_ROUTECHOOSER_RELIGIOUS_PRESSURE_SOURCE_MAJORITY_RELIGION">
-      <Text>{1_PressureAmount} {2_PressureIconString} religious pressure for {3_ReligionName} from majority religion in {4_CityName}.</Text>
-    </Row>
+		<Row Tag="LOC_ROUTECHOOSER_RELIGIOUS_PRESSURE_SOURCE_MAJORITY_RELIGION">
+			<Text>{1_PressureAmount} {2_PressureIconString} religious pressure for {3_ReligionName} from majority religion in {4_CityName}.</Text>
+		</Row>
 		<!-- ==================== DeclareWarPopup ==================== -->
 		<Row Tag="LOC_DECLARE_WAR_HEADER">
 			<Text>DECLARE WAR</Text>
@@ -4735,10 +4879,10 @@
 		<Row Tag="LOC_JOINT_WAR_CANNOT_EDIT_THEIRS_TOOLTIP">
 			<Text>You can only change the target of a Joint War on your offer.</Text>
 		</Row>
-    <!-- ==================== DenouncePopup ==================== -->
-    <Row Tag="LOC_DENOUNCE_POPUP_BODY">
-      <Text>Are you sure you want to denounce {1_PlayerName}?</Text>
-    </Row>
+		<!-- ==================== DenouncePopup ==================== -->
+		<Row Tag="LOC_DENOUNCE_POPUP_BODY">
+			<Text>Are you sure you want to denounce {1_PlayerName}?</Text>
+		</Row>
 		<!-- ==================== Victory Status Text ==================== -->
 		<Row Tag="LOC_VICTORYSTATUS_PANEL_HEADER">
 			<Text>Victory Status</Text>
@@ -4800,7 +4944,7 @@
 		<!-- Multiplayer Last Remaining Player Popup -->
 		<Row Tag="TXT_KEY_MP_LAST_PLAYER">
 			<Text>You are the last remaining human player in the game.</Text>
-		</Row> 
+		</Row>
 		<Row Tag="TXT_KEY_MP_LAST_PLAYER_TITLE">
 			<Text>All Alone</Text>
 		</Row>
@@ -4816,6 +4960,18 @@
 		<Row Tag="LOC_PARTIALSCREEN_ESPIONAGE_TOOLTIP">
 			<Text>Espionage[NEWLINE][NEWLINE]View and manage your spies.</Text>
 		</Row>
+		<Row Tag="LOC_PARTIALSCREEN_REPORTS_TOOLTIP">
+			<Text>List of reports.</Text>
+		</Row>
+		<Row Tag="LOC_PARTIALSCREEN_REPORTS_CITY_STATUS">
+			<Text>City Status</Text>
+		</Row>
+    <Row Tag="LOC_PARTIALSCREEN_REPORTS_YIELDS">
+      <Text>Yields</Text>
+    </Row>
+    <Row Tag="LOC_PARTIALSCREEN_REPORTS_RESOURCES">
+      <Text>Resources</Text>
+    </Row>
 		<Row Tag="LOC_PARTIALSCREEN_TRADEROUTES_TOOLTIP">
 			<Text>Trade Route Overview[NEWLINE][NEWLINE]View and manage your [ICON_TradeRoute] Trade Routes.</Text>
 		</Row>
@@ -4844,6 +5000,21 @@
 			<Text>Great People[NEWLINE][NEWLINE]View available [ICON_GreatPerson] Great People, as well as your progress towards earning a [ICON_GreatPerson] Great Person.</Text>
 		</Row>
 		<!-- ==================== REPORTS =================== -->
+		<Row Tag="LOC_REPORTS_LIST_EMPIRE">
+			<Text>Empire:</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_LIST_GLOBAL">
+			<Text>Global:</Text>
+		</Row>
+		<Row Tag="LOC_GLOBAL_RESOURCES_TITLE">
+			<Text>Global Resource Report</Text>
+		</Row>
+		<Row Tag="LOC_GLOBAL_OVERVIEW_TITLE">
+			<Text>Global Overview Report</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_LIST_OVERVIEW">
+			<Text>Overview</Text>
+		</Row>
 		<Row Tag="LOC_HUD_REPORTS_AMOUNT">
 			<Text>Amount</Text>
 		</Row>
@@ -4949,6 +5120,9 @@
 		<Row Tag="LOC_HUD_REPORTS_HEADER_AMENITIES">
 			<Text>Amenities</Text>
 		</Row>
+		<Row Tag="LOC_HUD_REPORTS_CITY_AMENITIES">
+			<Text>{1_Amount} {1_Amount: plural 1?City; other?Cities;}</Text>
+		</Row>
 		<Row Tag="LOC_HUD_REPORTS_HEADER_CITIZEN_HAPPINESS">
 			<Text>Citizen Happiness</Text>
 		</Row>
@@ -4972,6 +5146,9 @@
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_STATUS_RAZED">
 			<Text>Razed</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_STATUS_ACCELERATED">
+			<Text>Accelerated</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_STATUS_NORMAL">
 			<Text>Normal</Text>
@@ -5114,6 +5291,96 @@
 		<Row Tag="LOC_REPORTS_NUMBER_OF_TURNS">
 			<Text>for {1_Turns} turns</Text>
 		</Row>
+		<Row Tag="LOC_REPORTS_STRATEGIC_RESOURCES">
+			<Text>Strategic Resources</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_LUXURY_RESOURCES">
+			<Text>Luxury Resources</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_POWER_RESOURCES">
+			<Text>Power Resources</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_ARTIFACTS">
+			<Text>Artifacts</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_OTHER_RESOURCES">
+			<Text>Other Resources</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_BONUS_RESOURCES">
+			<Text>Bonus Resources</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SHOW_CITYSTATES">
+			<Text>Show city-states</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_CITIES">
+			<Text>Cities</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_HIDE_CITYSTATES">
+			<Text>Hide city-states</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SHOW_MY_CIV">
+			<Text>Show my Civilization</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_HIDE_MY_CIV">
+			<Text>Hide my Civilization</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SHOW_OWNED_BY_ME">
+			<Text>Show Resources I own</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_HIDE_OWNED_BY_ME">
+			<Text>Show Resources I own</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SHOW_ONLY_NOT_OWNED">
+			<Text>Show only resources I do not own</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SORT_BY">
+			<Text>Sort by</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SORT_NAME">
+			<Text>name</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SORT_TYPE">
+			<Text>type</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SORT_SCARCITY">
+			<Text>scarcity</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SORT_BY_RESOURCE_NAME">
+			<Text>Sort by resource name</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SORT_BY_RESOURCE_TYPE">
+			<Text>Sort by resource type</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SORT_BY_RESOURCE_SCARCITY">
+			<Text>Sort by scarcity</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_ALIGN_LEADERS">
+			<Text>Align Leaders</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_ALIGN_LEADERS_TOOLTIP">
+			<Text>Layout each leader to be in the same location for each row.</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_SELECT_TO_TRADE">
+			<Text>Select to trade with [1_LeaderName]</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_CIVS_NO_RESOURCES">
+			<Text>You are not aware of civilizations who possess resources.</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_CIVS_NO_LUXURY_RESOURCES">
+			<Text>You are not aware of civilizations who possess luxury resources.</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_CIVS_NO_STRATEGIC_RESOURCES">
+			<Text>You are not aware of civilizations who possess strategic resources.</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_CIVS_NO_POWER_RESOURCES">
+			<Text>You are not aware of civilizations who possess power resources.</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_CIVS_NO_OTHER_RESOURCES">
+			<Text>You are not aware of civilizations who possess other resources.</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_CIVS_NO_POSSESS_RESOURCE">
+			<Text>You are not aware of any civilizations who possess this resource.</Text>
+		</Row>
 		<!-- Player Yields ToolTips -->
 		<Row Tag="LOC_PLAYER_YIELD_SCIENCE_FROM_ANARCHY">
 			<Text>No science due to anarchy.</Text>
@@ -5140,7 +5407,7 @@
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_SCIENCE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from recruited Great People</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_CULTURE_FROM_ANARCHY">
 			<Text>No culture due to anarchy.</Text>
@@ -5167,10 +5434,10 @@
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_CULTURE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from recruited Great People</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_ANARCHY">
-			<Text>No gold due to anarchy.</Text>
+			<Text>No [ICON_Gold] Gold due to anarchy.</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_CITIES">
 			<Text>{Value : number +#.#;-#.#} from Cities</Text>
@@ -5209,7 +5476,7 @@
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from recruited Great People</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_MAINTENANCE_FROM_BUILDINGS">
 			<Text>{Value : number -#.#;+#.#} from Buildings</Text>
@@ -5242,7 +5509,7 @@
 			<Text>{Value : number -#.#;+#.#} from {1_WMDName}.</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_FAITH_FROM_ANARCHY">
-			<Text>No faith due to anarchy.</Text>
+			<Text>No [ICON_Faith] Faith due to anarchy.</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_FAITH_FROM_CITIES">
 			<Text>{Value : number +#.#;-#.#} from Cities</Text>
@@ -5269,7 +5536,7 @@
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_FAITH_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from recruited Great People</Text>
 		</Row>
 		<!-- City Yields ToolTips -->
 		<Row Tag="LOC_CITY_YIELD_FROM_BUILDINGS_TOOLTIP">
@@ -5308,9 +5575,9 @@
 		<Row Tag="LOC_CITY_YIELD_FROM_DISTRICT_PRODUCTION_BONUS">
 			<Text>{Value : number +#.#;-#.#} towards districts</Text>
 		</Row>
-    <Row Tag="LOC_CITY_GET_DISTRICT_PRODUCTION_MODIFIER">
-      <Text>{Value : number +#.#;-#.#}% towards districts</Text>
-    </Row>
+		<Row Tag="LOC_CITY_GET_DISTRICT_PRODUCTION_MODIFIER">
+			<Text>{Value : number +#.#;-#.#}% towards districts</Text>
+		</Row>
 		<Row Tag="LOC_CITY_YIELD_FROM_GREATWORKS_TOOLTIP">
 			<Text>{Value : number +#.#;-#.#} from GreatWorks</Text>
 		</Row>
@@ -5408,10 +5675,10 @@
 			<Text>Hide Unavailable Items</Text>
 		</Row>
 		<Row Tag="LOC_PRODUCTION_PURCHASE_GOLD_TEXT">
-			<Text>{1_Turns} [ICON_Gold] Gold</Text>
+			<Text>{1_Amount} [ICON_Gold]</Text>
 		</Row>
 		<Row Tag="LOC_PRODUCTION_PURCHASE_FAITH_TEXT">
-			<Text>{1_Turns} [ICON_Faith] Faith</Text>
+			<Text>{1_Amount} [ICON_Faith]</Text>
 		</Row>
 		<Row Tag="LOC_GOVERNMENT_DRAG_POLICY_TEXT">
 			<Text>Drag and Drop a Policy to Slot it Here.</Text>
@@ -5490,7 +5757,7 @@
 			<Text>Travelers are arriving from afar to see your civilization's unique structures.[NEWLINE]Generating +{1_CurrentTourists} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_TOURISM_LENS_IMPROVEMENT_APPEAL_TOOLTIP">
-			<Text>Vacationers are relaxing along the shore at your Seaside Resort.[NEWLINE]Generating +{1_CurrentTourists} [ICON_Tourism] Tourism[NEWLINE]</Text>
+			<Text>Vacationers are enjoying the recreation opportunities at your {1_Improvement}.[NEWLINE]Generating +{2_CurrentTourists} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_TOURISM_LENS_IMPROVEMENT_OTHER_TOOLTIP">
 			<Text>Tourists are arriving to see your nation's fascinating improvements.[NEWLINE]Generating +{1_CurrentTourists} [ICON_Tourism] Tourism[NEWLINE]</Text>
@@ -5589,6 +5856,79 @@
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_TEXT_TAG">
 			<Text>Text Tag</Text>
+		</Row>
+    <!-- Production Queue -->
+    <Row Tag="LOC_PRODUCITON_PANEL_SHOW_QUEUE">
+      <Text>Show Queue ({1_QueueSize})</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_HIDE_QUEUE">
+      <Text>Hide Queue ({1_QueueSize})</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_REMOVE_ITEM">
+      <Text>Remove</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_MOVE_LEFT_ITEM">
+      <Text>Move Left</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_MOVE_RIGHT_ITEM">
+      <Text>Move Right</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_BUTTON_TEXT">
+      <Text>Manager</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_BUILDINGS_TOOLTIP">
+      <Text>Districts and Buildings</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_WONDERS_TOOLTIP">
+      <Text>Wonders</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_UNITS_TOOLTIP">
+      <Text>Units</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_PANEL_PROJECTS_TOOLTIP">
+      <Text>Projects</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCITON_MANAGER_TITLE">
+      <Text>Production Manager</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_MANAGER_SORT_BY">
+      <Text>Sort By: {1_SortType}</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_MANAGER_FILTER_FOUNDING">
+      <Text>Founding</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_MANAGER_FILTER_NAME">
+      <Text>Name</Text>
+    </Row>
+    <Row Tag="LOC_PRODUCTION_MANAGER_FILTER_POPULATION">
+      <Text>Population</Text>
+    </Row>
+		<Row Tag="LOC_HUD_FULLSCREEN_MAP">
+      <Text>Show Fullscreen Map</Text>
+    </Row>
+		<Row Tag="LOC_HUD_VIEW_PAST_GOSSIP">
+			<Text>View Past Gossip</Text>
+		</Row>
+		<Row Tag="LOC_HUD_VIEW_GOSSIP">
+			<Text>View Gossip</Text>
+		</Row>
+		<Row Tag="LOC_HUD_VIEW_PAST_RUMORS">
+			<Text>View Past Rumors</Text>
+		</Row>
+		<Row Tag="LOC_HUD_VIEW_RUMORS">
+			<Text>View Rumors</Text>
+		</Row>
+		<Row Tag="LOC_HUD_TURN">
+			<Text>Turn</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RUMOR">
+			<Text>Rumor</Text>
+		</Row>
+		<Row Tag="LOC_HUD_GOSSIP">
+			<Text>Gossip</Text>
+		</Row>
+		<Row Tag="LOC_HUD_GOSSIP_CLOSE">
+			<Text>Close</Text>
 		</Row>
 	</BaseGameText>
 </GameData>

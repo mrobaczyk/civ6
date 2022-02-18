@@ -496,20 +496,26 @@ function Continents()
 		InitFractal{continent_grain = grain_dice, rift_grain = rift_dice};
 		iWaterThreshold = g_continentsFrac:GetHeight(water_percent);
 		local iBuffer = math.floor(g_iH/13.0);
-		
+
 		iNumTotalLandTiles = 0;
 		for x = 0, g_iW - 1 do
-			for y = iBuffer, g_iH - iBuffer - 1 do
+			for y = 0, g_iH - 1 do
 				local i = y * g_iW + x;
 				local val = g_continentsFrac:GetHeight(x, y);
 				local pPlot = Map.GetPlotByIndex(i);
-				if(val >= iWaterThreshold) then
-					plotTypes[i] = g_PLOT_TYPE_LAND;
-					TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
-					iNumTotalLandTiles = iNumTotalLandTiles + 1;
-				else
+
+				if(y <= iBuffer or y >= g_iH - iBuffer - 1) then
 					plotTypes[i] = g_PLOT_TYPE_OCEAN;
 					TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_OCEAN);  -- temporary setting so can calculate areas
+				else
+					if(val >= iWaterThreshold) then
+						plotTypes[i] = g_PLOT_TYPE_LAND;
+						TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
+						iNumTotalLandTiles = iNumTotalLandTiles + 1;
+					else
+						plotTypes[i] = g_PLOT_TYPE_OCEAN;
+						TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_OCEAN);  -- temporary setting so can calculate areas
+					end
 				end
 			end
 		end

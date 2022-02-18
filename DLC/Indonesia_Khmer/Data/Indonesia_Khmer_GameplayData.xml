@@ -164,8 +164,8 @@
 		<Row Type="ABILITY_MARTYR" Tag="CLASS_MISSIONARY"/>
 		<Row Type="UNIT_INDONESIAN_JONG" Tag="CLASS_NAVAL_RANGED"/>
 		<Row Type="UNIT_INDONESIAN_JONG" Tag="CLASS_JONG"/>
-    <Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_SIEGE"/>
-    <Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_FORWARD_OBSERVER"/>
+		<Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_SIEGE"/>
+		<Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_FORWARD_OBSERVER"/>
 	</TypeTags>
 	<BuildingReplaces>
 		<Row CivUniqueBuildingType="BUILDING_PRASAT" ReplacesBuildingType="BUILDING_TEMPLE"/>
@@ -296,42 +296,6 @@
 		<Row CivilizationType="CIVILIZATION_KHMER" TraitType="TRAIT_CIVILIZATION_BUILDING_PRASAT"/>
 		<Row CivilizationType="CIVILIZATION_KHMER" TraitType="TRAIT_CIVILIZATION_UNIT_KHMER_DOMREY"/>
 	</CivilizationTraits>
-	<Colors>
-		<Row>
-			<Type>COLOR_PLAYER_INDONESIA_PRIMARY</Type>
-			<Color>0,192,162,255</Color>
-		</Row>
-		<Row>
-			<Type>COLOR_PLAYER_INDONESIA_SECONDARY</Type>
-			<Color>144,11,0,255</Color>
-		</Row>
-		<Row>
-			<Type>COLOR_PLAYER_KHMER_PRIMARY</Type>
-			<Color>37,49,118,255</Color>
-		</Row>
-		<Row>
-			<Type>COLOR_PLAYER_KHMER_SECONDARY</Type>
-			<Color>179,159,45,255</Color>
-		</Row>
-	</Colors>
-	<PlayerColors>
-		<Row>
-			<Type>LEADER_GITARJA</Type>
-			<Usage>Unique</Usage>
-			<!--Primary and secondary colors have been swapped to counteract bug which automatically swapped them in-game. The cause of that swap is unknown.-->
-			<PrimaryColor>COLOR_PLAYER_INDONESIA_SECONDARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_INDONESIA_PRIMARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_RED_TEXT</TextColor>
-		</Row>
-		<Row>
-			<Type>LEADER_JAYAVARMAN</Type>
-			<Usage>Unique</Usage>
-			<!--Primary and secondary colors have been swapped to counteract bug which automatically swapped them in-game. The cause of that swap is unknown.-->
-			<PrimaryColor>COLOR_PLAYER_KHMER_SECONDARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_KHMER_PRIMARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_WHITE_TEXT</TextColor>
-		</Row>
-	</PlayerColors>
 	<Leaders>
 		<Row LeaderType="LEADER_GITARJA" Name="LOC_LEADER_GITARJA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_JAYAVARMAN" Name="LOC_LEADER_JAYAVARMAN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
@@ -342,6 +306,7 @@
 	</LeaderQuotes>
 	<LeaderTraits>
 		<Row LeaderType="LEADER_JAYAVARMAN" TraitType="TRAIT_LEADER_MONASTERIES_KING"/>
+		<Row LeaderType="LEADER_JAYAVARMAN" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
 		<Row LeaderType="LEADER_GITARJA" TraitType="TRAIT_LEADER_EXALTED_GODDESS"/>
 	</LeaderTraits>
 	<CivilizationCitizenNames>
@@ -464,7 +429,7 @@
 		<Row FeatureType="FEATURE_HA_LONG_BAY" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
 	</Feature_YieldChanges>
 	<Improvements>
-		<Row ImprovementType="IMPROVEMENT_KAMPUNG" Name="LOC_IMPROVEMENT_KAMPUNG_NAME" Description="LOC_IMPROVEMENT_KAMPUNG_DESCRIPTION" Icon="ICON_IMPROVEMENT_KAMPUNG" PlunderType="PLUNDER_HEAL" PlunderAmount="100" Buildable="true" PrereqTech="TECH_SHIPBUILDING" Housing="2" TilesRequired="2" Domain="DOMAIN_SEA" AdjacentSeaResource="true" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_KAMPUNG"/>
+		<Row ImprovementType="IMPROVEMENT_KAMPUNG" Name="LOC_IMPROVEMENT_KAMPUNG_NAME" Description="LOC_IMPROVEMENT_KAMPUNG_DESCRIPTION" Icon="ICON_IMPROVEMENT_KAMPUNG" PlunderType="PLUNDER_HEAL" PlunderAmount="50" Buildable="true" PrereqTech="TECH_SHIPBUILDING" Housing="2" TilesRequired="2" Domain="DOMAIN_SEA" AdjacentSeaResource="true" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_KAMPUNG"/>
 	</Improvements>
 	<Improvement_ValidBuildUnits>
 		<Row ImprovementType="IMPROVEMENT_KAMPUNG" UnitType="UNIT_BUILDER"/>

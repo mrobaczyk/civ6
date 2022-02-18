@@ -100,6 +100,7 @@
 				<Event Id="3267959079" Name="Receive_Tech_Boost" GUID="{9E6D6B4E-8C96-40B7-9968-299B1A089367}"/>
 				<Event Id="3106715955" Name="SP_Turn_Start" GUID="{527E65C0-C353-424D-98A0-0D9ECDAF6EE3}"/>
 				<Event Id="3295098398" Name="Start_Trade_Route" GUID="{FF162A1E-D11C-48D5-94B2-74BA097AEAF7}"/>
+				<Event Id="2452130359" Name="Stop_Leader_VO_SFX" GUID="{3AD9841F-F182-4EF8-B5A7-5C2DBD7E5753}"/>
 				<Event Id="2637062949" Name="Tech_Tray_Slide_Closed" GUID="{967AC3E2-B96A-41F2-A713-F42000CD444E}"/>
 				<Event Id="87911933" Name="Tech_Tray_Slide_Open" GUID="{FFF00019-A9B8-4DBA-B74D-68090DF58F6A}"/>
 				<Event Id="338056158" Name="UI_CityPanel_ButtonClick" GUID="{5CE2990F-227E-46B8-AA6F-3D4ECFB85EA5}"/>
@@ -120,6 +121,7 @@
 				<Event Id="3558809238" Name="UI_Lens_On" GUID="{BA7DBA01-B0D8-4E81-976F-F14E335FCB52}"/>
 				<Event Id="1670523777" Name="UI_Lens_Overlay_Off" GUID="{224C55E5-6495-46F3-AAD5-585536119569}"/>
 				<Event Id="2968383701" Name="UI_Lens_Overlay_On" GUID="{70B87C59-75A4-43AD-8D1C-634BA2912A18}"/>
+				<Event Id="3534195654" Name="UI_Levy_Military" GUID="{F84BEEC3-7ABD-4E3D-A357-B03589DA750D}"/>
 				<Event Id="1688194732" Name="UI_Move_Confirm" GUID="{9F5EAFCE-D031-4EE5-A52B-E971B37A4FBB}"/>
 				<Event Id="2199831836" Name="UI_Multi_Turn_Movement_Alert" GUID="{41B18F97-04FE-4C68-99DE-0119BC8AD018}"/>
 				<Event Id="2102508390" Name="UI_Notification_Bar_Latch" GUID="{172DEEEE-47CC-4610-83E4-134D9A1DFC92}"/>
@@ -144,11 +146,11 @@
 			<ReferencedStreamedFiles>
 				<File Id="68069817" Language="SFX">
 					<ShortName>SelectUnitBase-000.wav</ShortName>
-					<Path>SFX\SelectUnitBase-000_E1E65BF4_BF4BB6EC.wem</Path>
+					<Path>SFX\SelectUnitBase-000_10F921B3_BF4BB6EC.wem</Path>
 				</File>
 				<File Id="232943153" Language="SFX">
 					<ShortName>SelectUnitBase-001.wav</ShortName>
-					<Path>SFX\SelectUnitBase-001_E1E65BF4_BF4BB6EC.wem</Path>
+					<Path>SFX\SelectUnitBase-001_10F921B3_BF4BB6EC.wem</Path>
 				</File>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
@@ -386,7 +388,7 @@
 				</File>
 				<File Id="219499291" Language="SFX">
 					<ShortName>UI_GreatWorks_Gallery_Door_Close_1.wav</ShortName>
-					<Path>SFX\UI_GreatWorks_Gallery_Door_Close_1_E1E65BF4.wem</Path>
+					<Path>SFX\UI_GreatWorks_Gallery_Door_Close_1_1F889863.wem</Path>
 				</File>
 				<File Id="221276527" Language="SFX">
 					<ShortName>PurchaseWithGold02.wav</ShortName>
@@ -398,7 +400,7 @@
 				</File>
 				<File Id="230241077" Language="SFX">
 					<ShortName>UI_GreatWorks_Gallery_Door_Close_0.wav</ShortName>
-					<Path>SFX\UI_GreatWorks_Gallery_Door_Close_0_E1E65BF4.wem</Path>
+					<Path>SFX\UI_GreatWorks_Gallery_Door_Close_0_1F889863.wem</Path>
 				</File>
 				<File Id="230642768" Language="SFX">
 					<ShortName>UI_ScrollClick_6.wav</ShortName>
@@ -995,6 +997,10 @@
 				<File Id="792004656" Language="SFX">
 					<ShortName>Civilopedia_Page_Turn_1.wav</ShortName>
 					<Path>SFX\Civilopedia_Page_Turn_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="795851365" Language="SFX">
+					<ShortName>UI_LevyMilitary.wav</ShortName>
+					<Path>SFX\UI_LevyMilitary_E1E65BF4.wem</Path>
 				</File>
 				<File Id="801554404" Language="SFX">
 					<ShortName>Map_Pin_Remove_1.wav</ShortName>

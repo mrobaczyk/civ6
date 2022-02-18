@@ -315,7 +315,7 @@
 			<Text>Increases Healing by +30 in your Holy Site district, or any adjacent tiles.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_GOD_OF_WAR_DESCRIPTION">
-			<Text>Bonus [ICON_Faith] Faith equal to 50% of the strength of each enemy unit killed within 8 tiles of a Holy Site district.</Text>
+			<Text>Bonus [ICON_Faith] Faith equal to 50% of the strength of each combat unit killed within 8 tiles of a Holy Site district.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_INITIATION_RITES_DESCRIPTION">
 			<Text>+50 [ICON_Faith] Faith for each Barbarian Outpost cleared.</Text>
@@ -425,7 +425,7 @@
 			<Text>Culture Bomb adjacent tiles when completing a Holy Site.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_DEFENDER_OF_FAITH_DESCRIPTION">
-			<Text>Combat units gain +10 [ICON_Strength] Combat Strength  when within the borders of friendly cities that follow this Religion.</Text>
+			<Text>Combat units gain +5 [ICON_Strength] Combat Strength when within the borders of friendly cities that follow this Religion.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_HOLY_ORDER_DESCRIPTION">
 			<Text>Missionaries and Apostles are 30% cheaper to purchase.</Text>
@@ -434,7 +434,7 @@
 			<Text>Religion spreads to cities 30% further away.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_JUST_WAR_DESCRIPTION">
-			<Text>Combat units gain +10 [ICON_Strength] Combat Strength near foreign cities that follow this Religion.</Text>
+			<Text>Combat units gain +10 [ICON_Strength] Combat Strength when within the borders of foreign cities that follow this Religion.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_MISSIONARY_ZEAL_DESCRIPTION">
 			<Text>Religious units ignore [ICON_Movement] Movement costs of terrain and features.</Text>
@@ -455,20 +455,20 @@
 		<Row Tag="LOC_PROMOTION_JUST_WAR_DESCRIPTION">
 			<Text>+{1_Value} Crusade Belief</Text>
 		</Row>
-    <Row Tag="LOC_CITY_BANNER_INCOMING_RELIGION_PRESSURE">
-      <Text>Incoming pressure per turn</Text>
-    </Row>
-    <Row Tag="LOC_CITY_BANNER_OUTGOING_RELIGION_PRESSURE">
-      <Text>Outgoing pressure per turn</Text>
-    </Row>
-    <Row Tag="LOC_CITY_BANNER_PREDOMINANT_RELIGION">
-      <Text>{1_ReligionName} (Predominant)</Text>
-    </Row>
-    <Row Tag="LOC_CITY_BANNER_FOLLOWER_PRESSURE_TOOLTIP_HEADER">
-      <Text>Followers / Total Pressure Received:</Text>
-    </Row>
-    <Row Tag="LOC_CITY_BANNER_FOLLOWER_PRESSURE_TOOLTIP">
-      <Text>{1_ReligionName}:[NEWLINE]{2_Followers} Followers, {3_TotalPressure} pressure</Text>
-    </Row>
+		<Row Tag="LOC_CITY_BANNER_INCOMING_RELIGION_PRESSURE">
+			<Text>Incoming pressure per turn</Text>
+		</Row>
+		<Row Tag="LOC_CITY_BANNER_OUTGOING_RELIGION_PRESSURE">
+			<Text>Outgoing pressure per turn</Text>
+		</Row>
+		<Row Tag="LOC_CITY_BANNER_PREDOMINANT_RELIGION">
+			<Text>{1_ReligionName} (Predominant)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_BANNER_FOLLOWER_PRESSURE_TOOLTIP_HEADER">
+			<Text>Followers / Total Pressure Received:</Text>
+		</Row>
+		<Row Tag="LOC_CITY_BANNER_FOLLOWER_PRESSURE_TOOLTIP">
+			<Text>{1_ReligionName}:[NEWLINE]{2_Followers} Followers, {3_TotalPressure} pressure</Text>
+		</Row>
 	</BaseGameText>
 </GameData>

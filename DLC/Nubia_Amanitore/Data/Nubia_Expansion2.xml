@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<GameInfo>
+	<Leaders>
+		<Update>
+			<Where LeaderType="LEADER_AMANITORE"/>
+			<Set>
+				<Sex>Female</Sex>
+			</Set>
+		</Update>
+	</Leaders>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_NUBIAN_PITATI" Texture="Moment_UniqueUnit_Nubia.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_PYRAMID" Texture="Moment_Infrastructure_Nubia.dds"/>
+	</MomentIllustrations>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_ATBARAH_RIVER" CivilizationType="CIVILIZATION_NUBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_MAREB_RIVER" CivilizationType="CIVILIZATION_NUBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_NILE" CivilizationType="CIVILIZATION_NUBIA"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_BAYUDA" CivilizationType="CIVILIZATION_NUBIA"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_GEBEL_AL_AIN" CivilizationType="CIVILIZATION_NUBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_JEBEL_ABYAD_PLATEAU" CivilizationType="CIVILIZATION_NUBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_JEBEL_NAGASHUSH" CivilizationType="CIVILIZATION_NUBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_NUBA" CivilizationType="CIVILIZATION_NUBIA"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_BAYUDA_DESERT" CivilizationType="CIVILIZATION_NUBIA"/>
+		<Row NamedDesertType="NAMED_DESERT_NUBIAN" CivilizationType="CIVILIZATION_NUBIA"/>
+		<Row NamedDesertType="NAMED_DESERT_QOZ_ABU_DULU" CivilizationType="CIVILIZATION_NUBIA"/>
+	</NamedDesertCivilizations>
+	<StartBiasTerrains>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_NUBIA" TerrainType="TERRAIN_DESERT"/>
+			<Set>
+				<Tier>2</Tier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_NUBIA" TerrainType="TERRAIN_DESERT_HILLS"/>
+			<Set>
+				<Tier>2</Tier>
+			</Set>
+		</Update>
+	</StartBiasTerrains>
+	<Modifiers>
+		<Row>
+			<ModifierId>JEBELBARKAL_GRANT_FOUR_IRON_PER_TURN</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_FREE_RESOURCE_EXTRACTION</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>JEBELBARKAL_GRANT_FOUR_IRON_PER_TURN</ModifierId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_IRON</Value>
+		</Row>
+		<Row>
+			<ModifierId>JEBELBARKAL_GRANT_FOUR_IRON_PER_TURN</ModifierId>
+			<Name>Amount</Name>
+			<Value>6</Value>
+		</Row>
+	</ModifierArguments>
+	<BuildingModifiers>
+		<Delete ModifierId="JEBELBARKAL_GRANT_TWO_IRON"/>
+		<Row>
+			<BuildingType>BUILDING_JEBEL_BARKAL</BuildingType>
+			<ModifierId>JEBELBARKAL_GRANT_FOUR_IRON_PER_TURN</ModifierId>
+		</Row>
+	</BuildingModifiers>
+	<Buildings>
+		<Update>
+			<Set Description="LOC_BUILDING_JEBEL_BARKAL_EXPANSION2_DESCRIPTION"/>
+			<Where BuildingType="BUILDING_JEBEL_BARKAL"/>
+		</Update>
+	</Buildings>
+	<AiListTypes>
+		<Row ListType="TaSetiResolutions"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="TaSetiResolutions" LeaderType="TRAIT_CIVILIZATION_TA_SETI" System="Resolutions"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="TaSetiResolutions" Item="WC_RES_MERCENARY_COMPANIES" Favored="false"/>
+	</AiFavoredItems>
+</GameInfo>

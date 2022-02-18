@@ -380,7 +380,6 @@
 		<Row UnitPromotion="PROMOTION_ROUT" PrereqUnitPromotion="PROMOTION_BARDING"/>
 		<Row UnitPromotion="PROMOTION_ROUT" PrereqUnitPromotion="PROMOTION_MARAUDING"/>
 		<Row UnitPromotion="PROMOTION_ARMOR_PIERCING" PrereqUnitPromotion="PROMOTION_MARAUDING"/>
-		<Row UnitPromotion="PROMOTION_ARMOR_PIERCING" PrereqUnitPromotion="PROMOTION_ROUT"/>
 		<Row UnitPromotion="PROMOTION_REACTIVE_ARMOR" PrereqUnitPromotion="PROMOTION_ROUT"/>
 		<Row UnitPromotion="PROMOTION_BREAKTHROUGH" PrereqUnitPromotion="PROMOTION_ARMOR_PIERCING"/>
 		<Row UnitPromotion="PROMOTION_BREAKTHROUGH" PrereqUnitPromotion="PROMOTION_REACTIVE_ARMOR"/>
@@ -2744,7 +2743,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>BATTLECRY_OPPONENT_REQUIREMENTS</RequirementSetId>
-			<RequirementId>OPPONENT_MELEE_REQUIREMENT</RequirementId>
+			<RequirementId>OPPONENT_IS_PROMOTION_CLASS_MELEE</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>BATTLECRY_OPPONENT_REQUIREMENTS</RequirementSetId>
@@ -2813,11 +2812,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>GARRISON_PLOT_REQUIREMENTS</RequirementSetId>
-			<RequirementId>UNIT_IS_OCCUPYING_FORT_REQUIREMENT</RequirementId>
-		</Row>
-		<Row>
-			<RequirementSetId>GARRISON_PLOT_REQUIREMENTS</RequirementSetId>
-			<RequirementId>UNIT_IS_OCCUPYING_ROMAN_FORT_REQUIREMENT</RequirementId>
+			<RequirementId>UNIT_IS_OCCUPYING_DEFENSE_IMPROVEMENT</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>GARRISON_REQUIREMENTS</RequirementSetId>
@@ -3137,10 +3132,6 @@
 			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
 		</Row>
 		<Row>
-			<RequirementId>OPPONENT_MELEE_REQUIREMENT</RequirementId>
-			<RequirementType>REQUIREMENT_OPPONENT_UNIT_PROMOTION_CLASS_MATCHES</RequirementType>
-		</Row>
-		<Row>
 			<RequirementId>OPPONENT_ANTI_CAVALRY_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_OPPONENT_UNIT_PROMOTION_CLASS_MATCHES</RequirementType>
 		</Row>
@@ -3251,7 +3242,7 @@
 		</Row>
 		<Row>
 			<RequirementId>ATTACKER_IS_OCCUPYING_DISTRICT_REQUIREMENT</RequirementId>
-			<RequirementType>REQUIREMENT_ATTACKER_PLOT_HAS_ANY_DISTRICT</RequirementType>
+			<RequirementType>REQUIREMENT_PLOT_UNIT_CITY_HAS_ANY_DISTRICT</RequirementType>
 		</Row>
 		<Row>
 			<RequirementId>DEFENDER_IS_OCCUPYING_DISTRICT_REQUIREMENT</RequirementId>
@@ -3264,6 +3255,10 @@
 		<Row>
 			<RequirementId>UNIT_IS_OCCUPYING_ROMAN_FORT_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_ATTACKER_PLOT_IMPROVEMENT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>UNIT_IS_OCCUPYING_DEFENSE_IMPROVEMENT</RequirementId>
+			<RequirementType>REQUIREMENT_ATTACKER_PLOT_IMPROVEMENT_DEFENSE_STRENGTH</RequirementType>
 		</Row>
 		<Row>
 			<RequirementId>GARRISON_PLOT_REQUIREMENTS_MET</RequirementId>
@@ -3350,11 +3345,6 @@
 			<RequirementId>BATTLECRY_OPPONENT_REQUIREMENTS_MET</RequirementId>
 			<Name>RequirementSetId</Name>
 			<Value>BATTLECRY_OPPONENT_REQUIREMENTS</Value>
-		</Row>
-		<Row>
-			<RequirementId>OPPONENT_MELEE_REQUIREMENT</RequirementId>
-			<Name>UnitPromotionClass</Name>
-			<Value>PROMOTION_CLASS_MELEE</Value>
 		</Row>
 		<Row>
 			<RequirementId>OPPONENT_ANTI_CAVALRY_REQUIREMENT</RequirementId>
@@ -3466,6 +3456,11 @@
 			<RequirementId>UNIT_IS_OCCUPYING_ROMAN_FORT_REQUIREMENT</RequirementId>
 			<Name>ImprovementType</Name>
 			<Value>IMPROVEMENT_ROMAN_FORT</Value>
+		</Row>
+		<Row>
+			<RequirementId>UNIT_IS_OCCUPYING_DEFENSE_IMPROVEMENT</RequirementId>
+			<Name>Amount</Name>
+			<Value>1</Value>
 		</Row>
 		<!--Anti-Cavalry-->
 		<Row>

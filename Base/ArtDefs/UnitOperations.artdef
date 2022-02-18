@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <AssetObjects..ArtDefSet>
 	<m_Version>
-		<major>3</major>
+		<major>4</major>
 		<minor>0</minor>
-		<build>208</build>
-		<revision>622</revision>
+		<build>385</build>
+		<revision>97</revision>
 	</m_Version>
 	<m_TemplateName text="UnitOperations"/>
 	<m_RootCollections>
@@ -366,6 +366,27 @@
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="UNITOPERATION_REMOVE_HERESY"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BUILD"/>
+							<m_ParamName text="Activity"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text=""/>
+							<m_ParamName text="TargetType"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="ACTIVITY_BUILD"/>
+							<m_ParamName text="DefaultTargetActivity"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="UNITOPERATION_BUILD_IMPROVEMENT_ADJACENT"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

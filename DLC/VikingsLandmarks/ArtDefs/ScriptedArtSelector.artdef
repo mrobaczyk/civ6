@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..ArtDefSet>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>377</build>
+		<revision>841</revision>
+	</m_Version>
+	<m_TemplateName text="ScriptedArtSelector"/>
+	<m_RootCollections>
+		<Element>
+			<m_CollectionName text="VisualizationCategories"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="IsGlobal"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Options"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="[FEATURE:FEATURE_EYJAFJALLAJOKULL]"/>
+										<m_ParamName text="SelectionScript"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>1</m_nValue>
+										<m_ParamName text="Priority"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="FEATURE_EYJFJALLAJOKULL"/>
+										<m_RootCollectionName text="Landmarks"/>
+										<m_ArtDefPath text="Landmarks.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text="Landmarks"/>
+										<m_ParamName text="Landmark"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text=""/>
+										<m_RootCollectionName text=""/>
+										<m_ArtDefPath text=""/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text=""/>
+										<m_ParamName text="Fence"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Worked"/>
+										<m_ParamName text="Asset State"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="VolcanoActiveEyjafjallajokull"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="Natural_Wonder_Eyjfjallajokull"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+		<Element>
+			<m_CollectionName text="ClutterVisualizationCategory"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+		</Element>
+	</m_RootCollections>
+</AssetObjects..ArtDefSet>
+

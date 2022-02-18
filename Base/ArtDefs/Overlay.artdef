@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>312</build>
-		<revision>68</revision>
+		<build>394</build>
+		<revision>347</revision>
 	</m_Version>
 	<m_TemplateName text="Overlay"/>
 	<m_RootCollections>
@@ -220,9 +220,9 @@
 										<m_ParamName text="SplineTexture"/>
 									</Element>
 									<Element class="AssetObjects..RGBValue">
-										<m_r>128.000000</m_r>
-										<m_g>128.000000</m_g>
-										<m_b>128.000000</m_b>
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
 										<m_ParamName text="Color"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -267,9 +267,9 @@
 										<m_ParamName text="SplineTexture"/>
 									</Element>
 									<Element class="AssetObjects..RGBValue">
-										<m_r>128.000000</m_r>
-										<m_g>128.000000</m_g>
-										<m_b>128.000000</m_b>
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
 										<m_ParamName text="Color"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -314,9 +314,9 @@
 										<m_ParamName text="SplineTexture"/>
 									</Element>
 									<Element class="AssetObjects..RGBValue">
-										<m_r>128.000000</m_r>
-										<m_g>128.000000</m_g>
-										<m_b>128.000000</m_b>
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
 										<m_ParamName text="Color"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -361,9 +361,9 @@
 										<m_ParamName text="SplineTexture"/>
 									</Element>
 									<Element class="AssetObjects..RGBValue">
-										<m_r>128.000000</m_r>
-										<m_g>128.000000</m_g>
-										<m_b>128.000000</m_b>
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
 										<m_ParamName text="Color"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -3649,19 +3649,19 @@
 						<Element>
 							<m_Fields>
 								<m_Values>
-									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.000000</m_fValue>
-										<m_ParamName text="Width"/>
-									</Element>
-									<Element class="AssetObjects..RGBValue">
-										<m_r>0.000000</m_r>
-										<m_g>0.000000</m_g>
-										<m_b>205.000000</m_b>
-										<m_ParamName text="FillColor_RGB"/>
-									</Element>
 									<Element class="AssetObjects..IntValue">
 										<m_nValue>179</m_nValue>
 										<m_ParamName text="FillColor_Alpha"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>55.000000</m_r>
+										<m_g>232.000000</m_g>
+										<m_b>14.000000</m_b>
+										<m_ParamName text="FillColor_RGB"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Width"/>
 									</Element>
 								</m_Values>
 							</m_Fields>
@@ -3855,6 +3855,47 @@
 					<Element>
 						<m_CollectionName text="Texture"/>
 						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="HexPlace_ValidFill_Overlay"/>
+										<m_XLPClass text="OverlayTexture"/>
+										<m_XLPPath text="overlay.xlp"/>
+										<m_BLPPackage text="Overlay"/>
+										<m_LibraryName text="OverlayTexture"/>
+										<m_ParamName text="StaticTexture"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="RotateToAlign"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>20.000000</m_x>
+										<m_y>20.000000</m_y>
+										<m_ParamName text="RectDims"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="HEX_GEO"/>
+										<m_ParamName text="GeomType"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="NumTiles"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>55.000000</m_r>
+										<m_g>232.000000</m_g>
+										<m_b>14.000000</m_b>
+										<m_ParamName text="TintColor"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Placement_ValidFill_Sprite"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
 					</Element>
 					<Element>
 						<m_CollectionName text="Model"/>
@@ -12258,6 +12299,84 @@
 							<m_Name text="Terrain_Generic_Resource_Box"/>
 							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="AdjacencyArrow_Box"/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="uilensmodels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModel"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Default"/>
+										<m_RootCollectionName text="Coord3D_WS"/>
+										<m_ArtDefPath text="Overlay.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Overlay"/>
+										<m_ParamName text="MoveOffset"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>true</m_bValue>
+										<m_ParamName text="RotateToAlign"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="RGBColor"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="NONE"/>
+										<m_ParamName text="AnimType"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="NumTiles"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="AnimDuration"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="AutoPlay"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Alpha"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>0.000000</m_x>
+										<m_y>0.000000</m_y>
+										<m_ParamName text="UV Offset Start"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="UV_Scale"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="IsBillboard"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text=""/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModelFOW"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="AdjacencyArrow_Box"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
 					</Element>
 					<Element>
 						<m_CollectionName text="SplineBorder"/>
@@ -12470,6 +12589,84 @@
 							</m_Fields>
 							<m_ChildCollections/>
 							<m_Name text="Wonders_Natural_Wonder_Box"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="AdjacencyArrow_Box"/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModel"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="Default"/>
+										<m_RootCollectionName text="Coord3D_WS"/>
+										<m_ArtDefPath text="Overlay.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="Overlay"/>
+										<m_ParamName text="MoveOffset"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>true</m_bValue>
+										<m_ParamName text="RotateToAlign"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="RGBColor"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="NONE"/>
+										<m_ParamName text="AnimType"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="NumTiles"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="AnimDuration"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="AutoPlay"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Alpha"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>0.000000</m_x>
+										<m_y>0.000000</m_y>
+										<m_ParamName text="UV Offset Start"/>
+									</Element>
+									<Element class="AssetObjects..Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="UV_Scale"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="IsBillboard"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text=""/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModelFOW"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="AdjacencyArrow_Box"/>
 							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 						</Element>
 					</Element>
@@ -13461,13 +13658,13 @@
 										<m_ParamName text="SplineTexture"/>
 									</Element>
 									<Element class="AssetObjects..RGBValue">
-										<m_r>128.000000</m_r>
-										<m_g>128.000000</m_g>
-										<m_b>128.000000</m_b>
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
 										<m_ParamName text="Color"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
-										<m_nValue>128</m_nValue>
+										<m_nValue>255</m_nValue>
 										<m_ParamName text="Color_Alpha"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
@@ -14368,7 +14565,7 @@
 										<m_ParamName text="Color"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
-										<m_nValue>128</m_nValue>
+										<m_nValue>255</m_nValue>
 										<m_ParamName text="Color_Alpha"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
@@ -23889,6 +24086,223 @@
 				<m_Name text="ReligionLensArrows"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Filled"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="Texture"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="Model"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="SplineBorder"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="ART_DEF_OVERLAY_CULTURE_MASK"/>
+										<m_XLPClass text="OverlayTexture"/>
+										<m_XLPPath text="overlay.xlp"/>
+										<m_BLPPackage text="Overlay"/>
+										<m_LibraryName text="OverlayTexture"/>
+										<m_ParamName text="SplineTexture"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>128</m_nValue>
+										<m_ParamName text="Color_Alpha"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="MidFOWSaturation"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="MidFOWBrightness"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.000000</m_fValue>
+										<m_ParamName text="SplineWidth"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.000000</m_fValue>
+										<m_ParamName text="SplineSegmentLength"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.010000</m_fValue>
+										<m_ParamName text="SplineScrollSpeed"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CultureBorders"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="OVER_Culture_Border_Open"/>
+										<m_XLPClass text="OverlayTexture"/>
+										<m_XLPPath text="overlay.xlp"/>
+										<m_BLPPackage text="Overlay"/>
+										<m_LibraryName text="OverlayTexture"/>
+										<m_ParamName text="SplineTexture"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>128</m_nValue>
+										<m_ParamName text="Color_Alpha"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="MidFOWSaturation"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="MidFOWBrightness"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.000000</m_fValue>
+										<m_ParamName text="SplineWidth"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.000000</m_fValue>
+										<m_ParamName text="SplineSegmentLength"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.010000</m_fValue>
+										<m_ParamName text="SplineScrollSpeed"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="OpenCultureBorders"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="OVER_Culture_Border_Citystate"/>
+										<m_XLPClass text="OverlayTexture"/>
+										<m_XLPPath text="overlay.xlp"/>
+										<m_BLPPackage text="Overlay"/>
+										<m_LibraryName text="OverlayTexture"/>
+										<m_ParamName text="SplineTexture"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>128</m_nValue>
+										<m_ParamName text="Color_Alpha"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="MidFOWSaturation"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="MidFOWBrightness"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.000000</m_fValue>
+										<m_ParamName text="SplineWidth"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.000000</m_fValue>
+										<m_ParamName text="SplineSegmentLength"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.010000</m_fValue>
+										<m_ParamName text="SplineScrollSpeed"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CityStateCultureBorders"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="OVER_Culture_Border_CityState_Open"/>
+										<m_XLPClass text="OverlayTexture"/>
+										<m_XLPPath text="overlay.xlp"/>
+										<m_BLPPackage text="Overlay"/>
+										<m_LibraryName text="OverlayTexture"/>
+										<m_ParamName text="SplineTexture"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>128</m_nValue>
+										<m_ParamName text="Color_Alpha"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="MidFOWSaturation"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="MidFOWBrightness"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.000000</m_fValue>
+										<m_ParamName text="SplineWidth"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.000000</m_fValue>
+										<m_ParamName text="SplineSegmentLength"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.010000</m_fValue>
+										<m_ParamName text="SplineScrollSpeed"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="OpenCityStateCultureBorders"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="LensModel"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="CityBorderOverlay"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
 		</Element>
 		<Element>
 			<m_CollectionName text="Coord3D_WS"/>
@@ -24086,6 +24500,445 @@
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="DefaultRangeArrows"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+		<Element>
+			<m_CollectionName text="Layers"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="HexGridOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="HexGridTexture"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="HexGridTexture"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="HexHighlightOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text=""/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="HexHighlight"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="SpriteOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>1</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>3.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text=""/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="MovementPath"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="PathOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>6.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="TradeRoute"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="TradeRoutes"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>2.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="OpenCultureBorders"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="CultureBorders"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>1</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>4.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="OneTurnBorder"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="MovementRange"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>9.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="RangedAttackBorder"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="AttackBorder"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>7.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="ReligionBorder"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ContinentOverlay"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>8.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="ReligionBorder"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="GovernmentOverlay"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>10.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NationalParksBorder"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="NationalParks"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>11.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="GreatPeopleBorder"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="GreatPeopleRange"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>1</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>5.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="ReligionBorder"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionBorder"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="PressureOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>1</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>5.500000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="ReligiousPressureWavesIn"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressure"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="BorderOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>2.500000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="OpenCultureBorders"/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="CityBorders"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="SpriteOverlay"/>
+							<m_ParamName text="Type"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Pass"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="Priority"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Visible"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text=""/>
+							<m_ParamName text="Material"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="PlacementValidOverlay"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

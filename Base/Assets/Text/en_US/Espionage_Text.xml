@@ -189,7 +189,7 @@
 		</Row>
 		<!-- ==================== Spy Operation Details ==================== -->
 		<Row Tag="LOC_SPYMISSIONDETAILS_UNITOPERATION_SPY_LISTENING_POST">
-			<Text>Increases [ICON_VisLimited] Diplomatic Visibility by 1 rank.</Text>
+			<Text>Increases [ICON_VisLimited] Diplomatic Visibility by 1 level.</Text>
 		</Row>
 		<Row Tag="LOC_SPYMISSIONDETAILS_UNITOPERATION_SPY_GAIN_SOURCES">
 			<Text>Spies will operate at {1_Levels} {1_Levels : plural 1?level; other?levels;} higher for {2_Turns} {2_Turns : plural 1?turn; other?turns;}.</Text>
@@ -201,7 +201,7 @@
 			<Text>Pillage all buildings in the industrial zone.</Text>
 		</Row>
 		<Row Tag="LOC_SPYMISSIONDETAILS_UNITOPERATION_SPY_SIPHON_FUNDS">
-			<Text>Gain the gold yields of {1_CityName} during the mission's duration. ({2_GoldString})</Text>
+			<Text>Gain the [ICON_Gold] Gold yields of {1_CityName} during the mission's duration. ({2_GoldString})</Text>
 		</Row>
 		<Row Tag="LOC_SPYMISSIONDETAILS_UNITOPERATION_SPY_DISRUPT_ROCKETRY">
 			<Text>Disable the Spaceport in the city.</Text>
@@ -225,6 +225,9 @@
 		<Row Tag="LOC_ESPIONAGEPOPUP_MISSION_OBJECTIVE">
 			<Text>MISSION OBJECTIVE</Text>
 		</Row>
+    <Row Tag="LOC_ESPIONAGEPOPUP_MISSION_DETAILS">
+      <Text>MISSION DETAILS</Text>
+    </Row>
     <Row Tag="LOC_ESPIONAGEPOPUP_MISSION_OUTCOME">
       <Text>MISSION OUTCOME</Text>
     </Row>
@@ -267,6 +270,9 @@
 		<Row Tag="LOC_ESPIONAGEPOPUP_ACCEPT_MISSION">
 			<Text>ACCEPT MISSION</Text>
 		</Row>
+    <Row Tag="LOC_ESPIONAGEPOPUP_RENEW_MISSION">
+      <Text>RENEW MISSION</Text>
+    </Row>
 		<Row Tag="LOC_ESPIONAGEPOPUP_ABORT_MISSION">
 			<Text>ABORT MISSION!</Text>
 		</Row>
@@ -397,6 +403,9 @@
     <Row Tag="LOC_ESPIONAGEOVERVIEW_SPYAPPREHENDED">
       <Text>Spy Apprehended</Text>
     </Row>
+    <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_COUNTERSPY">
+      <Text>Mission to monitor {1_CityName} for enemy activity completed without detecting any spies.</Text>
+    </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_UNDETECTED">
       <Text>Mission was successful in the city of {1_CityName} and spy was undetected.</Text>
     </Row>
@@ -446,10 +455,10 @@
       <Text>Mission to steal {1_Loot} failed in the city of {2_CityName} and the spy was killed after being detected.</Text>
     </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_GOLD">
-      <Text>[ICON_Gold] {1_AmountOfGold} gold</Text>
+      <Text>[ICON_Gold] {1_AmountOfGold} Gold</Text>
     </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_NO_GOLD">
-      <Text>[ICON_Gold] gold</Text>
+      <Text>[ICON_Gold] Gold</Text>
     </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_KILLED">
       <Text>Spy was killed during a mission in the city of {1_CityName}.</Text>
@@ -494,6 +503,15 @@
 		</Row>
     <Row Tag="LOC_ESPIONAGE_SPY_TRADE_DISABLED_AT_WAR">
       <Text>[COLOR_RED]Trading for {1_SpyName} is not currently possible. You are at war with {2_CivName}.</Text>
+    </Row>
+    <Row Tag="LOC_ESPIONAGE_NO_OPERATIVES">
+      <Text>Produce a spy in one of your cities to view it's status here.</Text>
+    </Row>
+    <Row Tag="LOC_ESPIONAGE_NO_CITIES">
+      <Text>Build a city of your own or discover another civilization's city to view it's espionage activity here.</Text>
+    </Row>
+    <Row Tag="LOC_ESPIONAGE_NO_HISTORY">
+      <Text>Run espionage missions to view their your mission history here.</Text>
     </Row>
 	</BaseGameText>
 </GameData>

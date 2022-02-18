@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>237</build>
-		<revision>829</revision>
+		<build>385</build>
+		<revision>613</revision>
 	</m_Version>
 	<m_TemplateName text="TerrainMaterialSet"/>
 	<m_RootCollections>
@@ -99,10 +99,10 @@
 							<m_ParamName text="ForceTerrainType"/>
 						</Element>
 						<Element class="AssetObjects..BLPEntryValue">
-							<m_EntryName text=""/>
+							<m_EntryName text="Water/Lake"/>
 							<m_XLPClass text="Water"/>
-							<m_XLPPath text=""/>
-							<m_BLPPackage text=""/>
+							<m_XLPPath text="Water.xlp"/>
+							<m_BLPPackage text="Water"/>
 							<m_LibraryName text="Water"/>
 							<m_ParamName text="WaterType"/>
 						</Element>
@@ -137,6 +137,14 @@
 						<Element class="AssetObjects..BoolValue">
 							<m_bValue>true</m_bValue>
 							<m_ParamName text="ModelHeightFromLocalHex"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text=""/>
+							<m_RootCollectionName text=""/>
+							<m_ArtDefPath text=""/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text=""/>
+							<m_ParamName text="ScriptedArt"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -235,6 +243,14 @@
 							<m_bValue>true</m_bValue>
 							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="Natural_Wonder_Eyjfjallajokull"/>
+							<m_RootCollectionName text="VisualizationCategories"/>
+							<m_ArtDefPath text="ScriptedArtSelector.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="ScriptedArtSelector"/>
+							<m_ParamName text="ScriptedArt"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -332,6 +348,14 @@
 							<m_bValue>true</m_bValue>
 							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text=""/>
+							<m_RootCollectionName text=""/>
+							<m_ArtDefPath text=""/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text=""/>
+							<m_ParamName text="ScriptedArt"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -342,23 +366,6 @@
 		<Element>
 			<m_CollectionName text="MaterialSet"/>
 			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
-			<Element>
-				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects..BLPEntryValue">
-							<m_EntryName text="ART_DEF_TERRAIN_MATERIAL_MTN_DARK_BASE"/>
-							<m_XLPClass text="TerrainMaterial"/>
-							<m_XLPPath text="TerrainMaterialSet_Base.xlp"/>
-							<m_BLPPackage text="terrain/TerrainMaterialSet_Base"/>
-							<m_LibraryName text="TerrainMaterial"/>
-							<m_ParamName text="Material"/>
-						</Element>
-					</m_Values>
-				</m_Fields>
-				<m_ChildCollections/>
-				<m_Name text="TER_MTN_DARK_BASE"/>
-				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
-			</Element>
 			<Element>
 				<m_Fields>
 					<m_Values>

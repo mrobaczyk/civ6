@@ -1,11 +1,11 @@
-
-function Initialize()
-	print("Global Thermonuclear War Scenario Start Script initializing");
+function InitializeNewGame()
+	print("Global Thermonuclear War Scenario InitializeNewGame");
 	local fissionTech = GameInfo.Technologies["TECH_NUCLEAR_FISSION"];
 	local advFlightTech = GameInfo.Technologies["TECH_ADVANCED_FLIGHT"];
 	local combinedArmsTech = GameInfo.Technologies["TECH_COMBINED_ARMS"];
 
 	local aPlayers = PlayerManager.GetAliveMajors();
+	local pAllPlayerIDs : table = PlayerManager.GetAliveIDs();	
 	for _, pPlayer in ipairs(aPlayers) do
 
 		-- Give all major civs Nuclear Fission and Advanced Flight techs.
@@ -27,6 +27,20 @@ function Initialize()
 		if(pCurPlayerVisibility ~= nil) then
 			pCurPlayerVisibility:RevealAllPlots();
 		end
+
+		-- Set player to have met everyone else
+		local pDiplo :object = pPlayer:GetDiplomacy();
+		for k, iPlayerID in ipairs(pAllPlayerIDs) do
+			if (pPlayer:GetID() ~= iPlayerID) then
+				pDiplo:SetHasMet(iPlayerID);
+			end
+		end
 	end
+end
+
+
+function Initialize()
+	print("Global Thermonuclear War Scenario Start Script initializing");
+	LuaEvents.NewGameInitialized.Add(InitializeNewGame);
 end
 Initialize();

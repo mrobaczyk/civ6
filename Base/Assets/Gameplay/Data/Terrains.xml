@@ -3,8 +3,17 @@
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_TERRAIN"/>
+		<Row Kind="KIND_TERRAIN_CLASS"/>
 	</Kinds>
 	<Types>
+		<Row Type="TERRAIN_CLASS_GRASS" Kind="KIND_TERRAIN_CLASS"/>
+		<Row Type="TERRAIN_CLASS_MOUNTAIN" Kind="KIND_TERRAIN_CLASS"/>
+		<Row Type="TERRAIN_CLASS_PLAINS" Kind="KIND_TERRAIN_CLASS"/>
+		<Row Type="TERRAIN_CLASS_DESERT" Kind="KIND_TERRAIN_CLASS"/>
+		<Row Type="TERRAIN_CLASS_TUNDRA" Kind="KIND_TERRAIN_CLASS"/>
+		<Row Type="TERRAIN_CLASS_SNOW" Kind="KIND_TERRAIN_CLASS"/>
+		<Row Type="TERRAIN_CLASS_WATER" Kind="KIND_TERRAIN_CLASS"/>
+		
 		<Row Type="TERRAIN_GRASS" Kind="KIND_TERRAIN"/>
 		<Row Type="TERRAIN_GRASS_HILLS" Kind="KIND_TERRAIN"/>
 		<Row Type="TERRAIN_GRASS_MOUNTAIN" Kind="KIND_TERRAIN"/>
@@ -59,4 +68,32 @@
 		<Row TerrainType="TERRAIN_SNOW_HILLS" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
 		<Row TerrainType="TERRAIN_DESERT_HILLS" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
 	</Terrain_YieldChanges>
+	<TerrainClasses>
+		<Row TerrainClassType="TERRAIN_CLASS_GRASS" Name="LOC_TERRAIN_CLASS_GRASS_NAME"/>
+		<Row TerrainClassType="TERRAIN_CLASS_MOUNTAIN" Name="LOC_TERRAIN_CLASS_MOUNTAIN_NAME"/>
+		<Row TerrainClassType="TERRAIN_CLASS_PLAINS" Name="LOC_TERRAIN_CLASS_PLAINS_NAME"/>
+		<Row TerrainClassType="TERRAIN_CLASS_DESERT" Name="LOC_TERRAIN_CLASS_DESERT_NAME"/>
+		<Row TerrainClassType="TERRAIN_CLASS_TUNDRA" Name="LOC_TERRAIN_CLASS_TUNDRA_NAME"/>
+		<Row TerrainClassType="TERRAIN_CLASS_SNOW" Name="LOC_TERRAIN_CLASS_SNOW_NAME"/>
+		<Row TerrainClassType="TERRAIN_CLASS_WATER" Name="LOC_TERRAIN_CLASS_WATER_NAME"/>
+	</TerrainClasses>
+	<TerrainClass_Terrains>
+		<Row TerrainClassType="TERRAIN_CLASS_GRASS" TerrainType="TERRAIN_GRASS"/>
+		<Row TerrainClassType="TERRAIN_CLASS_GRASS" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row TerrainClassType="TERRAIN_CLASS_MOUNTAIN" TerrainType="TERRAIN_GRASS_MOUNTAIN"/>
+		<Row TerrainClassType="TERRAIN_CLASS_PLAINS" TerrainType="TERRAIN_PLAINS"/>
+		<Row TerrainClassType="TERRAIN_CLASS_PLAINS" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row TerrainClassType="TERRAIN_CLASS_MOUNTAIN" TerrainType="TERRAIN_PLAINS_MOUNTAIN"/>
+		<Row TerrainClassType="TERRAIN_CLASS_DESERT" TerrainType="TERRAIN_DESERT"/>
+		<Row TerrainClassType="TERRAIN_CLASS_DESERT" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row TerrainClassType="TERRAIN_CLASS_MOUNTAIN" TerrainType="TERRAIN_DESERT_MOUNTAIN"/>
+		<Row TerrainClassType="TERRAIN_CLASS_TUNDRA" TerrainType="TERRAIN_TUNDRA"/>
+		<Row TerrainClassType="TERRAIN_CLASS_TUNDRA" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row TerrainClassType="TERRAIN_CLASS_MOUNTAIN" TerrainType="TERRAIN_TUNDRA_MOUNTAIN"/>
+		<Row TerrainClassType="TERRAIN_CLASS_SNOW" TerrainType="TERRAIN_SNOW"/>
+		<Row TerrainClassType="TERRAIN_CLASS_SNOW" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row TerrainClassType="TERRAIN_CLASS_MOUNTAIN" TerrainType="TERRAIN_SNOW_MOUNTAIN"/>
+		<Row TerrainClassType="TERRAIN_CLASS_WATER" TerrainType="TERRAIN_COAST"/>
+		<Row TerrainClassType="TERRAIN_CLASS_WATER" TerrainType="TERRAIN_OCEAN"/>
+	</TerrainClass_Terrains>
 </GameInfo>

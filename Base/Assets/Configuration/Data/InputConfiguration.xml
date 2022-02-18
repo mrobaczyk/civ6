@@ -27,7 +27,13 @@
 		<Row ContextId="GameOptions" Value="64" />
 		<Row ContextId="EndGame" Value="128" />
 		<Row ContextId="Popup" Value="256" />
-		<Row ContextId="Tutorial" Value="4096" />
+		<Row ContextId="Reveal" Value="512" />
+    <Row ContextId="FullscreenMap" Value="1024" />
+    <Row ContextId="Tutorial" Value="4096" />
+		
+		<!-- Combinations-->
+    <Row ContextId="WorldOrFullScreenMap" Value="1040" />
+    <Row ContextId="WorldOrPopup" Value="272" />
 	</InputContexts>
 	
 	<InputActions>	
@@ -50,8 +56,9 @@
 		<Row ActionId="ToggleEspionage" Name="LOC_OPTIONS_HOTKEY_UI_ESPIONAGE" Description="LOC_OPTIONS_HOTKEY_UI_ESPIONAGE_HELP" CategoryId="UI" ContextId="World" />
 		<Row ActionId="ToggleTradeRoutes" Name="LOC_OPTIONS_HOTKEY_UI_TRADEROUTES" Description="LOC_OPTIONS_HOTKEY_UI_TRADEROUTES_HELP" CategoryId="UI" ContextId="World" />
 		<Row ActionId="OpenCivilopedia" Name="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA" Description="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleFSMap" Name="LOC_OPTIONS_HOTKEY_UI_FSMAP" Description="LOC_OPTIONS_HOTKEY_UI_FSMAP_HELP" CategoryId="UI" ContextId="WorldOrFullScreenMap" />
 
-		<Row ActionId="FoundCity" Name="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY" Description="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" CategoryId="UNIT" ContextId="World" />
+    <Row ActionId="FoundCity" Name="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY" Description="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="MoveTo" Name="LOC_OPTIONS_HOTKEY_UNIT_MOVETO" Description="LOC_OPTIONS_HOTKEY_UNIT_MOVETO_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="Fortify" Name="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY" Description="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="DeleteUnit" Name="LOC_OPTIONS_HOTKEY_UNIT_DELETE" Description="LOC_OPTIONS_HOTKEY_UNIT_DELETE_HELP" CategoryId="UNIT" ContextId="World" />
@@ -76,7 +83,7 @@
 		<Row ActionId="Toggle2DView" Name="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLE2DVIEW" Description="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLE2DVIEW_HELP" CategoryId="GLOBAL" ContextId="World" />
 		<Row ActionId="CapitalCity" Name="LOC_OPTIONS_HOTKEY_GLOBAL_CAPITALCITY" Description="LOC_OPTIONS_HOTKEY_GLOBAL_CAPITALCITY_HELP" CategoryId="GLOBAL" ContextId="World" />
 
-		<Row ActionId="OnlinePause" Name="LOC_OPTIONS_HOTKEY_ONLINE_PAUSE" Description="LOC_OPTIONS_HOTKEY_ONLINE_PAUSE_HELP" CategoryId="ONLINE" ContextId="World" />
+		<Row ActionId="OnlinePause" Name="LOC_OPTIONS_HOTKEY_ONLINE_PAUSE" Description="LOC_OPTIONS_HOTKEY_ONLINE_PAUSE_HELP" CategoryId="ONLINE" ContextId="WorldOrPopup" />
 
 		<Row ActionId="LensReligion" Name="LOC_OPTIONS_HOTKEY_LENSES_RELIGION" Description="LOC_OPTIONS_HOTKEY_LENSES_RELIGION_HELP" CategoryId="LENSES" ContextId="World" />
 		<Row ActionId="LensContinent" Name="LOC_OPTIONS_HOTKEY_LENSES_CONTINENT" Description="LOC_OPTIONS_HOTKEY_LENSES_CONTINENT_HELP" CategoryId="LENSES" ContextId="World" />
@@ -85,6 +92,7 @@
 		<Row ActionId="LensGovernment" Name="LOC_OPTIONS_HOTKEY_LENSES_GOVERNMENT" Description="LOC_OPTIONS_HOTKEY_LENSES_GOVERNMENT_HELP" CategoryId="LENSES" ContextId="World" />
 		<Row ActionId="LensPolitical" Name="LOC_OPTIONS_HOTKEY_LENSES_POLITICAL" Description="LOC_OPTIONS_HOTKEY_LENSES_POLITICAL_HELP" CategoryId="LENSES" ContextId="World" />
 		<Row ActionId="LensTourism" Name="LOC_OPTIONS_HOTKEY_LENSES_TOURISM" Description="LOC_OPTIONS_HOTKEY_LENSES_TOURISM_HELP" CategoryId="LENSES" ContextId="World" />
+		<Row ActionId="LensEmpire" Name="LOC_OPTIONS_HOTKEY_LENSES_EMPIRE" Description="LOC_OPTIONS_HOTKEY_LENSES_EMPIRE_HELP" CategoryId="LENSES" ContextId="World" />
 	
 		<!--
 		<Row ActionId="PopupAccept" CategoryId="POPUP" ContextId="Popup" />
@@ -109,8 +117,10 @@
 		<Row ActionId="ToggleEspionage" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F3"/>
 		<Row ActionId="ToggleTradeRoutes" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F4"/>
 		<Row ActionId="OpenCivilopedia" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F9"/>
-	
-		<Row ActionId="FoundCity" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_B"/>
+		<Row ActionId="ToggleFSMap" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_END"/>
+
+
+    <Row ActionId="FoundCity" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_B"/>
 		<Row ActionId="MoveTo" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_M"/>
 		<Row ActionId="Fortify" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F"/>
 		<Row ActionId="DeleteUnit" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_DELETE"/>
@@ -141,6 +151,7 @@
 		<Row ActionId="LensGovernment" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_5"/>
 		<Row ActionId="LensPolitical" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_6"/>
 		<Row ActionId="LensTourism" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_7"/>
+		<Row ActionId="LensEmpire" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_9"/>
 	
 	</InputActionDefaultGestures>
 </GameInfo>

@@ -92,6 +92,7 @@
 		<!-- NOTE: This trait is used by the AI. It's intent is to go on a civilization, but it can also go on a leader or agenda if desired. -->
 		<!--   But be warned, in that case it can double or even triple up. -->
 		<Row Type="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_DEFAULT_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_SCIENTIFIC_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_RELIGIOUS_TRAIT" Kind="KIND_TRAIT"/>
@@ -125,7 +126,7 @@
 		<Row Type="MINOR_CIV_ZANZIBAR_TRAIT" Kind="KIND_TRAIT"/>
 	</Types>
 	<Leaders>
-		<Row LeaderType="LEADER_DEFAULT" Name="LOC_PLACEHOLDER"/>
+		<Row LeaderType="LEADER_DEFAULT" Name="LOC_EMPTY"/>
 		<Row LeaderType="LEADER_BARBAROSSA" Name="LOC_LEADER_BARBAROSSA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI" Name="LOC_LEADER_CATHERINE_DE_MEDICI_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_CLEOPATRA" Name="LOC_LEADER_CLEOPATRA_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
@@ -145,13 +146,13 @@
 		<Row LeaderType="LEADER_TRAJAN" Name="LOC_LEADER_TRAJAN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" Name="LOC_LEADER_T_ROOSEVELT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_VICTORIA" Name="LOC_LEADER_VICTORIA_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
-		<Row LeaderType="LEADER_MINOR_CIV_DEFAULT" Name="LOC_PLACEHOLDER"/>
-		<Row LeaderType="LEADER_MINOR_CIV_SCIENTIFIC" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
-		<Row LeaderType="LEADER_MINOR_CIV_RELIGIOUS" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
-		<Row LeaderType="LEADER_MINOR_CIV_TRADE" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
-		<Row LeaderType="LEADER_MINOR_CIV_CULTURAL" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
-		<Row LeaderType="LEADER_MINOR_CIV_MILITARISTIC" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
-		<Row LeaderType="LEADER_MINOR_CIV_INDUSTRIAL" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_DEFAULT" Name="LOC_EMPTY"/>
+		<Row LeaderType="LEADER_MINOR_CIV_SCIENTIFIC" Name="LOC_EMPTY" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_RELIGIOUS" Name="LOC_EMPTY" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_TRADE" Name="LOC_EMPTY" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_CULTURAL" Name="LOC_EMPTY" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_MILITARISTIC" Name="LOC_EMPTY" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_INDUSTRIAL" Name="LOC_EMPTY" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
 		<Row LeaderType="LEADER_MINOR_CIV_AMSTERDAM" Name="LOC_CIVILIZATION_AMSTERDAM_NAME" InheritFrom="LEADER_MINOR_CIV_TRADE"/>
 		<Row LeaderType="LEADER_MINOR_CIV_BRUSSELS" Name="LOC_CIVILIZATION_BRUSSELS_NAME" InheritFrom="LEADER_MINOR_CIV_INDUSTRIAL"/>
 		<Row LeaderType="LEADER_MINOR_CIV_BUENOS_AIRES" Name="LOC_CIVILIZATION_BUENOS_AIRES_NAME" InheritFrom="LEADER_MINOR_CIV_INDUSTRIAL"/>
@@ -412,6 +413,7 @@
 		<Row ListType="HoJoWonders"/>
 		<Row ListType="LowReligiousPreferencePseudoYields"/>
 		<Row ListType="LowReligiousPreferenceYields"/>
+		<Row ListType="LowCityStatePreferenceWarDiploActions"/>
 		<Row ListType="MinorCivCityBuilds"/>
 		<Row ListType="MinorCivCultureDistrict"/>
 		<Row ListType="MinorCivDistricts"/>
@@ -535,6 +537,7 @@
 		<Row ListType="CavalryLoverCitySettlement" LeaderType="TRAIT_LEADER_KILLER_OF_CYRUS" System="PlotEvaluations"/>
 		<Row ListType="LowReligiousPreferencePseudoYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="PseudoYields"/>
 		<Row ListType="LowReligiousPreferenceYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="Yields"/>
+		<Row ListType="LowCityStatePreferenceWarDiploActions" LeaderType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" System="DiplomaticActions"/>
 		<!-- Minor Civ Lists -->
 		<Row ListType="DefaultCitySpecialization" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="AiBuildSpecializations"/>
 		<Row ListType="MinorCivTriggeredTrees" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="TriggeredTrees"/>
@@ -591,8 +594,8 @@
 		<Row ListType="MvembaWonders" Item="BUILDING_CRISTO_REDENTOR" Favored="false"/>
 		<Row ListType="PedroWonders" Item="BUILDING_CHICHEN_ITZA" Favored="true"/>
 		<Row ListType="PedroWonders" Item="BUILDING_ORACLE" Favored="true"/>
-		<Row ListType="PericlesWonders" Item="PSEUDOYIELD_INFLUENCE" Favored="true"/>
-		<Row ListType="PericlesEnvoys" Item="BUILDING_POTALA_PALACE" Value="30"/>
+		<Row ListType="PericlesWonders" Item="BUILDING_POTALA_PALACE" Favored="true"/>
+		<Row ListType="PericlesEnvoys"  Item="PSEUDOYIELD_INFLUENCE"  Value="30"/>
 		<Row ListType="PeterWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
@@ -800,6 +803,7 @@
 		<Row ListType="DefaultScoutUse" Item="NAVAL_SCOUTS_FOR_WORLD_EXPLORATION" Value="300"/>
 		<Row ListType="LowReligiousPreferencePseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="-75"/>
 		<Row ListType="LowReligiousPreferenceYields" Item="YIELD_FAITH" Value="-50"/>
+		<Row ListType="LowCityStatePreferenceWarDiploActions" Item="DIPLOACTION_DECLARE_WAR_MINOR_CIV" Favored="false"/>
 		<Row ListType="BarbarianTriggeredTrees" Item="TRIGGER_CAPTURE_BARBARIAN"/>
 	</AiFavoredItems>
 	<LeaderTraits>
@@ -811,8 +815,10 @@
 		<Row LeaderType="LEADER_CLEOPATRA" TraitType="TRAIT_LEADER_MEDITERRANEAN"/>
 		<Row LeaderType="LEADER_GANDHI" TraitType="TRAIT_LEADER_SATYAGRAHA"/>
 		<Row LeaderType="LEADER_GANDHI" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_GANDHI" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
 		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU"/>
 		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="CULTURE_KILLS_TRAIT"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
@@ -841,6 +847,7 @@
 		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
 		<Row LeaderType="LEADER_VICTORIA" TraitType="TRAIT_LEADER_PAX_BRITANNICA"/>
 		<Row LeaderType="LEADER_VICTORIA" TraitType="TRAIT_LEADER_UNIT_ENGLISH_REDCOAT"/>
 		<Row LeaderType="LEADER_VICTORIA" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
@@ -889,13 +896,13 @@
 	</AiBuildSpecializations>
 	<Traits>
 		<!-- Base Leader Traits -->
-		<Row TraitType="TRAIT_LEADER_BARBARIAN" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_BARBARIAN"  InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" InternalOnly="true"/>
 		<!-- Leader preferences that come from civilization traits -->
-		<Row TraitType="TRAIT_LEADER_EXPANSIONIST" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
-		<Row TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
-		<Row TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
-		<Row TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_EXPANSIONIST" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="CULTURE_KILLS_TRAIT" Name="LOC_TRAIT_LEADER_THERMOPYLAE_NAME" Description="LOC_TRAIT_LEADER_THERMOPYLAE_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU" Name="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_NAME" Description="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_MEDITERRANEAN" Name="LOC_TRAIT_LEADER_MEDITERRANEAN_NAME" Description="LOC_TRAIT_LEADER_MEDITERRANEAN_DESCRIPTION"/>
@@ -919,8 +926,9 @@
 		<Row TraitType="TRAIT_LEADER_KILLER_OF_CYRUS" Name="LOC_TRAIT_LEADER_KILLER_OF_CYRUS_NAME" Description="LOC_TRAIT_LEADER_KILLER_OF_CYRUS_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_MAGNANIMOUS" Name="LOC_TRAIT_LEADER_MAGNANIMOUS_NAME" Description="LOC_TRAIT_LEADER_MAGNANIMOUS_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_SURROUNDED_BY_GLORY" Name="LOC_TRAIT_LEADER_SURROUNDED_BY_GLORY_NAME" Description="LOC_TRAIT_LEADER_SURROUNDED_BY_GLORY_DESCRIPTION"/>
-		<Row TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
-		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" InternalOnly="true"/>
+    <Row TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" InternalOnly="true"/>
+		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" InternalOnly="true"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" Name="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_NAME" Description="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_RELIGIOUS_TRAIT" Name="LOC_MINOR_CIV_RELIGIOUS_TRAIT_NAME" Description="LOC_MINOR_CIV_RELIGIOUS_TRAIT_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_TRADE_TRAIT" Name="LOC_MINOR_CIV_TRADE_TRAIT_NAME" Description="LOC_MINOR_CIV_TRADE_TRAIT_DESCRIPTION"/>

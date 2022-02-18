@@ -93,205 +93,208 @@
 			<Text>War Preparations</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_AGENDA_KUDOS">
-			<Text>{1_LeaderName} has thanked {2_Leadername} for cooperating with the agenda: {3_AgendaName}.</Text>
+			<Text>{LOC_GRAMMAR_LEADER &lt;&lt; {1_LeaderName}} {1_CivName : plural 1?has; other?have;} thanked {LOC_GRAMMAR_LEADER &lt;&lt; {2_LeaderName}} for cooperating with the agenda: {3_AgendaName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_AGENDA_WARNING">
-			<Text>{1_LeaderName} has warned {2_Leadername} about interfering with the agenda: {3_AgendaName}.</Text>
+			<Text>{LOC_GRAMMAR_LEADER &lt;&lt; {1_LeaderName}} {1_CivName : plural 1?has; other?have;} warned {LOC_GRAMMAR_LEADER &lt;&lt; {2_LeaderName}} about interfering with the agenda: {3_AgendaName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_ALLIED">
-			<Text>{1_CivName} has just formed an alliance with {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just formed an alliance with {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_ANARCHY_BEGINS">
-			<Text>There has been a coup d'état in {1_CivName} removing the regime of {2_Government}. Anarchy has begun.</Text>
+			<Text>There has been a coup d'état in {LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} removing the regime of {2_Government}. Anarchy has begun.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_ARTIFACT_EXTRACTED">
-			<Text>{1_CivName} has extracted a new archaeological work: {2_GreatWork}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} extracted a new archaeological work: {2_GreatWork}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_BARBARIAN_INVASION_STARTED">
-			<Text>{1_CivName} is facing a barbarian invasion at {2_CityName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} facing a barbarian invasion at {2_CityName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_BARBARIAN_RAID_STARTED">
-			<Text>{1_CivName} is facing a barbarian raid at {2_CityName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} facing a barbarian raid at {2_CityName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_BEACH_RESORT_CREATED">
-			<Text>{1_CivName} has heard that the sunbathing is great at the new seaside resort outside {2_CityName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} heard that the sunbathing is great at the new seaside resort outside {2_CityName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CHANGE_GOVERNMENT">
-			<Text>{1_CivName} has switched governments to {2_Government}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} switched governments to {2_Government}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CITY_BESIEGED">
 			<Text>{1_CityName} is facing a siege.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CITY_LIBERATED">
-			<Text>{1_CivName} has just liberated {2_CityName} giving it back to {3_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}}} {1_CivName : plural 1?has; other?have;} just liberated {2_CityName} giving it back to {LOC_GRAMMAR_CIVNAME &lt;&lt; {3_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CITY_RAZED">
-			<Text>{1_CivName} has just razed a city originally founded by {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just razed a city that they had captured from {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CLEAR_CAMP">
-			<Text>{1_CivName} has used {LOC_GRAMMAR_A_AN &lt;&lt; {2_UnitName}} to clear {LOC_GRAMMAR_A_AN &lt;&lt; {3_ImprovementName}}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} used {LOC_GRAMMAR_A_AN &lt;&lt; {2_UnitName}} to clear {LOC_GRAMMAR_A_AN &lt;&lt; {3_ImprovementName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CITY_STATE_INFLUENCE">
-			<Text>{1_CivName} has sent an Envoy to {2_CityState}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} sent an Envoy to {2_CityState}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CONQUER_CITY">
-			<Text>{1_CivName} has conquered {2_CityName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} conquered {2_CityName}.</Text>
 		</Row>
     <Row Tag="LOC_GOSSIP_CONQUER_CAPITAL_CITY">
-      <Text>{1_CivName} has conquered the original {2_CivAdjective} capital of {3_CityName}.</Text>
+      <Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} conquered the original {2_CivAdjective} capital of {3_CityName}.</Text>
     </Row>
     <Row Tag="LOC_GOSSIP_CONSTRUCT_BUILDING">
-			<Text>{1_CivName} has built {LOC_GRAMMAR_A_AN &lt;&lt; {2_BuildingName}} in {3_CityName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} built {LOC_GRAMMAR_A_AN &lt;&lt; {2_BuildingName}} in {3_CityName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CONSTRUCT_DISTRICT">
-			<Text>{1_CivName} has built {LOC_GRAMMAR_A_AN &lt;&lt; {2_DistrictName}} in {3_CityName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} built {LOC_GRAMMAR_A_AN &lt;&lt; {2_DistrictName}} in {3_CityName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CREATE_PANTHEON">
-			<Text>{1_CivName} is worshipping a Pantheon of the gods focused on the {2_BeliefName} Belief.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} worshipping a Pantheon of the gods focused on the {2_BeliefName} Belief.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CULTURVATE_CIVIC">
-			<Text>{1_CivName} completed development of {2_CivicName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} completed development of {2_CivicName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_DECLARED_FRIENDSHIP">
-			<Text>{1_CivName} has declared their friendship with {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} declared their friendship with {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_DELEGATION">
-			<Text>{1_CivName} has just received a foreign delegation. It appears they came from {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just received a foreign delegation. It appears they came from {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_DENOUNCED">
-			<Text>{1_CivName} has denounced the evil deeds of {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} denounced the evil deeds of {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_EMBASSY">
-			<Text>A new building has appeared in the capital of {1_CivName}: a permanent embassy from {2_CivName}.</Text>
+			<Text>A new building has appeared in the capital of {LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}}: a permanent embassy from {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_ERA_CHANGED">
-			<Text>{1_CivName} has progressed from the {2_OldEra} to the {3_NewEra}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} progressed from the {2_OldEra} to the {3_NewEra}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_FIND_NATURAL_WONDER">
-			<Text>{1_CivName} has just stumbled on the {2_NWName} natural wonder.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just stumbled on the {2_NWName} natural wonder.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_FOUND_CITY">
-			<Text>{1_CivName} is expanding, adding the new settlement: {2_CityName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} expanding, adding the new settlement: {2_CityName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_FOUND_RELIGION">
-			<Text>{1_CivName} has founded a new Religion: {2_ReligionName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} founded a new Religion: {2_ReligionName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_GREATPERSON_CREATED">
-			<Text>{1_CivName} has earned the {2_unit} {3_GreatPerson}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} earned the {2_unit} {3_GreatPerson}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_LAUNCHING_ATTACK">
-			<Text>{1_CivName} is beginning a military assault on {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} beginning a military assault on {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_WAR_PREPARATION">
-			<Text>{1_CivName} is considering a war on {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} considering a war on {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_INQUISITION_LAUNCHED">
-			<Text>{1_CivName} has launched an inquisition rooting out heretics opposed to {2_ReligionName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} launched an inquisition rooting out heretics opposed to {2_ReligionName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_LAND_UNIT_LEVEL">
-			<Text>{1_CivName} has a {2_UnitName} that just earned the {3_PromotionName} promotion.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} a {2_UnitName} that just earned the {3_PromotionName} promotion.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_MAKE_DOW">
-			<Text>{1_CivName} has just declared war on {2_OtherPlayer}!</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just declared war on {2_OtherPlayer}!</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_NATIONAL_PARK_CREATED">
-			<Text>{1_CivName} has just created {2_NationalParkName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just created {2_NationalParkName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_NAVAL_UNIT_LEVEL">
-			<Text>{1_CivName} has a {2_UnitName} that just earned the {3_PromotionName} promotion.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} a {2_UnitName} that just earned the {3_PromotionName} promotion.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_NEW_RELIGIOUS_MAJORITY">
-			<Text>A majority of cities in {1_CivName} are now following the Religion: {2_ReligionName}.</Text>
+			<Text>A majority of cities in {LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} are now following the Religion: {2_ReligionName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_PILLAGE">
-			<Text>{1_CivName} has pillaged an enemy {2_TargetName} with {LOC_GRAMMAR_A_AN &lt;&lt; {3_UnitName}}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} pillaged an enemy {2_TargetName} with {LOC_GRAMMAR_A_AN &lt;&lt; {3_UnitName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_POLICY_ENACTED">
-			<Text>{1_CivName} adopted the {2_SlotName} policy {3_PolicyName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} adopted the {2_SlotName} policy {3_PolicyName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_RECEIVE_DOW">
-			<Text>{1_CivName} has been targeted for a declaration of war by {2_OtherPlayer}!</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} been targeted for a declaration of war by {2_OtherPlayer}!</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_RELIC_RECEIVED">
-			<Text>Pilgrims in {1_CivName} are now flocking to see the holy relic: {2_RelicName}.</Text>
+			<Text>Pilgrims from {LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} are now flocking to see the holy relic: {2_RelicName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_RESEARCH_AGREEMENT">
-			<Text>Scientists from {1_CivName} and {2_CivName} have formed a scientific partnership.</Text>
+			<Text>Scientists from {LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} and {2_CivName} have formed a scientific partnership.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_RESEARCH_TECH">
-			<Text>{1_CivName} completed research on {2_TechName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} completed research on {2_TechName}.</Text>
 		</Row>
+    <Row Tag="LOC_GOSSIP_SPY_CAPTURED">
+      <Text>{3_SpyPlayer} had their spy in {2_CityName} captured by {LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}}.</Text>
+    </Row>
 		<Row Tag="LOC_GOSSIP_SPY_DISRUPT_ROCKETRY_DETECTED">
-			<Text>{1_CivName} had their Spaceport in {2_CityName} sabotaged by a spy from {3_SpyPlayer}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had their Spaceport in {2_CityName} sabotaged by a spy from {3_SpyPlayer}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_DISRUPT_ROCKETRY_UNDETECTED">
-			<Text>{1_CivName} had their Spaceport in {2_CityName} sabotaged by an unknown spy.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had their Spaceport in {2_CityName} sabotaged by an unknown spy.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_GREAT_WORK_HEIST_DETECTED">
-			<Text>{1_CivName} had a Great Work in {2_CityName} stolen by a spy from {3_SpyPlayer}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had a Great Work in {2_CityName} stolen by a spy from {3_SpyPlayer}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_GREAT_WORK_HEIST_UNDETECTED">
-			<Text>{1_CivName} had a Great Work in {2_CityName} stolen by an unknown spy.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had a Great Work in {2_CityName} stolen by an unknown spy.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_RECRUIT_PARTISANS_DETECTED">
-			<Text>{1_CivName} is trying to put down partisans in {2_CityName} that were recruited by {3_SpyPlayer}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} trying to put down partisans in {2_CityName} that were recruited by {3_SpyPlayer}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_RECRUIT_PARTISANS_UNDETECTED">
-			<Text>{1_CivName} is trying to put down partisans in {2_CityName} that were recruited by an unknown spy.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} trying to put down partisans in {2_CityName} that were recruited by an unknown spy.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_SABOTAGE_PRODUCTION_DETECTED">
-			<Text>{1_CivName} had their Industrial Zone in {2_CityName} sabotaged by a spy from {3_SpyPlayer}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had their Industrial Zone in {2_CityName} sabotaged by a spy from {3_SpyPlayer}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_SABOTAGE_PRODUCTION_UNDETECTED">
-			<Text>{1_CivName} had their Industrial Zone in {2_CityName} sabotaged by an unknown spy.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had their Industrial Zone in {2_CityName} sabotaged by an unknown spy.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_SIPHON_FUNDS_DETECTED">
-			<Text>{1_CivName} had funds stolen in {2_CityName} by a spy from {3_SpyPlayer}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had funds stolen in {2_CityName} by a spy from {3_SpyPlayer}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_SIPHON_FUNDS_UNDETECTED">
-			<Text>{1_CivName} had funds stolen in {2_CityName} by an unknown spy.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had funds stolen in {2_CityName} by an unknown spy.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_STEAL_TECH_BOOST_DETECTED">
-			<Text>{1_CivName} had technology plans stolen in {2_CityName} by a spy from {3_SpyPlayer}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had technology plans stolen in {2_CityName} by a spy from {3_SpyPlayer}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SPY_STEAL_TECH_BOOST_UNDETECTED">
-			<Text>{1_CivName} had technology plans stolen in {2_CityName} by an unknown spy.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} had technology plans stolen in {2_CityName} by an unknown spy.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_TRADE_DEAL">
-			<Text>{1_CivName} is trading with {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} trading with {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_TRADE_RENEGE">
-			<Text>{1_CivName} has reneged on a deal with {2_CivName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} reneged on a deal with {LOC_GRAMMAR_CIVNAME &lt;&lt; {2_CivName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_TRAIN_SETTLER">
-			<Text>{1_CivName} is looking to found a city with their newly trained {2_UnitName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} looking to found a city with their newly trained {2_UnitName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_TRAIN_UNIT">
-			<Text>{1_CivName} has just finished training the world's first {2_UnitName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just finished training the world's first {2_UnitName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_TRAIN_UNIQUE_UNIT">
-			<Text>{1_CivName} has trained a unique unit, the {2_UnitName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} trained a unique unit, the {2_UnitName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_PROJECT_STARTED">
-			<Text>{1_CivName} has started {2_ProjectType}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} started {2_ProjectType}.</Text>
 		</Row>
     <Row Tag="LOC_GOSSIP_SPACE_RACE_PROJECT_COMPLETED">
-      <Text>{1_CivName} has completed the Space Race project {2_ProjectType}.</Text>
+      <Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} completed the Space Race project {2_ProjectType}.</Text>
     </Row>
 		<Row Tag="LOC_GOSSIP_START_VICTORY_STRATEGY">
-			<Text>{1_CivName} is seeking {LOC_GRAMMAR_A_AN &lt;&lt; {2_VictoryName}}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} seeking {LOC_GRAMMAR_A_AN &lt;&lt; {2_VictoryName}}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_STOP_VICTORY_STRATEGY">
-			<Text>{1_CivName} is no longer seeking a {2_VictoryType}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?is; other?are;} no longer seeking a {2_VictoryType}.</Text>
 		</Row>
     <Row Tag="LOC_GOSSIP_WMD_BUILT">
-      <Text>{1_CivName} has just built {2_WMDCount} WMDs.</Text>
+      <Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just built {2_WMDCount} WMDs.</Text>
     </Row>
 		<Row Tag="LOC_GOSSIP_WMD_STRIKE">
-			<Text>{1_CivName} has just unleashed a Weapon of Mass Destruction! A {2_UnitName}! Duck and cover!</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} just unleashed a Weapon of Mass Destruction! A {2_UnitName}! Duck and cover!</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_WONDER_STARTED">
-			<Text>{1_CivName} has cleared land in {2_CityName} for the {3_BuildingName}.</Text>
+			<Text>{LOC_GRAMMAR_CIVNAME &lt;&lt; {1_CivName}} {1_CivName : plural 1?has; other?have;} cleared land in {2_CityName} for the {3_BuildingName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_SOURCE_RUMOR">
 			<Text>Rumor has it that</Text>

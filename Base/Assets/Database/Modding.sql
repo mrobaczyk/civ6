@@ -1,6 +1,8 @@
 -- Modding Framework Schema
 -- 
 -- Revision History
+-- Version 21:
+-- * Added 'ModCompatibilityWhitelist' table for checking whether a mod should ignore compatibility warnings.
 -- Version 20:
 -- * Added 'Any' attribute to criteria for whether to match any of the criterion rather than all.
 -- * Moved 'Inverse' from Criteria to individual Criterion.
@@ -340,6 +342,15 @@ CREATE TABLE Migrations(
 	'SortIndex' INTEGER NOT NULL
 );
 
+-- This table contains a list of mods that should ignore compatibility warnings.
+-- @ModRowId is the unique id associated with a mod.
+CREATE TABLE ModCompatibilityWhitelist(
+	'ModRowId' INTEGER NOT NULL,
+	'GameVersion' TEXT NOT NULL,
+	PRIMARY KEY ('ModRowId'),	
+	FOREIGN KEY ('ModRowId') REFERENCES Mods('ModRowId') ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 -- Static Data
 INSERT INTO ModGroups('ModGroupRowId', 'Name', 'CanDelete', 'Selected', 'SortIndex') VALUES (1, 'LOC_MODS_GROUP_DEFAULT_NAME', 0, 1, 0);
 
@@ -437,4 +448,4 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'CopyMo
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'DeleteModGroup', 'DELETE FROM ModGroups where ModGroupRowId = ? and CanDelete = 1');
 
 -- User version is written at the end.
-PRAGMA user_version(20);
+PRAGMA user_version(21);

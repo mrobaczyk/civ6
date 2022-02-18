@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Leaders>
+		<Update>
+			<Where LeaderType="LEADER_JADWIGA"/>
+			<Set>
+				<Sex>Female</Sex>
+			</Set>
+		</Update>
+	</Leaders>
+	<AgendaPreferredLeaders>
+		<Row AgendaType="AGENDA_SYMPATHIZER" LeaderType="LEADER_JADWIGA" PercentageChance="10"/>
+	</AgendaPreferredLeaders>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_SUKIENNICE"/>
+			<Set>
+				<Description>LOC_BUILDING_SUKIENNICE_EXPANSION1_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Buildings>
+	<Building_YieldChanges>
+		<Update>
+			<Where BuildingType="BUILDING_SUKIENNICE" YieldType="YIELD_GOLD"/>
+			<Set>
+				<YieldChange>2</YieldChange>
+			</Set>
+		</Update>
+	</Building_YieldChanges>
+	<BuildingModifiers>
+		<Row BuildingType="BUILDING_SUKIENNICE" ModifierId="MARKET_TRADE_ROUTE_CAPACITY"/>
+	</BuildingModifiers>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_POLISH_HUSSAR" Texture="Moment_UniqueUnit_Poland.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_SUKIENNICE" Texture="Moment_Infrastructure_Poland.dds"/>
+	</MomentIllustrations>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_BUG" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_DUNAJEC_RIVER" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_NAREW_RIVER" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_NOTEC_RIVER" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_ODER" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_SAN_RIVER" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_VISTULA" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_WARTA_RIVER" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedRiverType="NAMED_RIVER_WISLOKA_RIVER" CivilizationType="CIVILIZATION_POLAND"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_OSTRZYCA" CivilizationType="CIVILIZATION_POLAND"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_BESKIDY_MOUNTAINS" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_BIESZCZADY_MOUNTAINS" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CARPATHIANS" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_KARKONOSZE_MOUNTAINS" CivilizationType="CIVILIZATION_POLAND"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_TATRA_MOUNTAINS" CivilizationType="CIVILIZATION_POLAND"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_BLEDOWSKA_DESERT" CivilizationType="CIVILIZATION_POLAND"/>
+	</NamedDesertCivilizations>
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_POLISH_HUSSAR"/>
+			<Set>
+				<StrategicResource>RESOURCE_IRON</StrategicResource>
+				<Maintenance>4</Maintenance>
+			</Set>
+		</Update>
+	</Units>
+	<Units_XP2>
+		<Row UnitType="UNIT_POLISH_HUSSAR" ResourceCost="10"/>
+	</Units_XP2>
+</GameInfo>

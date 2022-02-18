@@ -120,7 +120,7 @@ function DoRiver(startPlot, thisFlowDirection, originalFlowDirection, riverID)
 --		print ("NORTH: " .. tostring(riverPlot:GetX()) .. ", " .. tostring(riverPlot:GetY()));
 		riverPlot = Map.GetAdjacentPlot(riverPlot:GetX(), riverPlot:GetY(), DirectionTypes.DIRECTION_NORTHEAST);
 
-		if (riverPlot == NULL or riverPlot:IsWater() or riverPlot:IsNEOfRiver() or riverPlot:IsNWOfRiver()) then
+		if (riverPlot == nil or riverPlot:IsWater() or riverPlot:IsNEOfRiver() or riverPlot:IsNWOfRiver()) then
 			return;
 		end
 
@@ -133,7 +133,7 @@ function DoRiver(startPlot, thisFlowDirection, originalFlowDirection, riverID)
 		-- riverPlot does not change
 
 		local adjacentPlot = Map.GetAdjacentPlot(riverPlot:GetX(), riverPlot:GetY(), DirectionTypes.DIRECTION_EAST);
-		if (adjacentPlot == NULL or adjacentPlot:IsWater() or riverPlot:IsWOfRiver() or adjacentPlot:IsNEOfRiver()) then
+		if (adjacentPlot == nil or adjacentPlot:IsWater() or riverPlot:IsWOfRiver() or adjacentPlot:IsNEOfRiver()) then
 			return;
 		end
 	
@@ -149,11 +149,11 @@ function DoRiver(startPlot, thisFlowDirection, originalFlowDirection, riverID)
 		-- riverPlot does not change
 
 		local adjacentPlot = Map.GetAdjacentPlot(riverPlot:GetX(), riverPlot:GetY(), DirectionTypes.DIRECTION_SOUTHEAST);
-		if (adjacentPlot == NULL or adjacentPlot:IsWater() or riverPlot:IsNWOfRiver()) then
+		if (adjacentPlot == nil or adjacentPlot:IsWater() or riverPlot:IsNWOfRiver()) then
 			return;
 		end
 		local adjacentPlot2 = Map.GetAdjacentPlot(riverPlot:GetX(), riverPlot:GetY(), DirectionTypes.DIRECTION_SOUTHWEST);
-		if (adjacentPlot2 == NULL or adjacentPlot2:IsWOfRiver()) then
+		if (adjacentPlot2 == nil or adjacentPlot2:IsWOfRiver()) then
 			return;
 		end
 	
@@ -173,7 +173,7 @@ function DoRiver(startPlot, thisFlowDirection, originalFlowDirection, riverID)
 			return;
 		end
 		local adjacentPlot2 = Map.GetAdjacentPlot(riverPlot:GetX(), riverPlot:GetY(), DirectionTypes.DIRECTION_EAST);
-		if (adjacentPlot2 == NULL or adjacentPlot2:IsNEOfRiver()) then
+		if (adjacentPlot2 == nil or adjacentPlot2:IsNEOfRiver()) then
 			return;
 		end
 			

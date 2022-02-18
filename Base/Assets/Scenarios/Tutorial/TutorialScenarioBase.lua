@@ -1209,16 +1209,23 @@ function TutorialItemBank1()
 			return false;
 		end );
 	item_scoutsD:SetShowPortrait(true);
-	--item_scoutsD:SetNextTutorialItemId("SCOUTS_E");
+	item_scoutsD:SetNextTutorialItemId("SCOUTS_D2");
+
+	-- =============================== SCOUTS_D2 =====================================	
+	local item_scoutsD2:TutorialItem = TutorialItem:new("SCOUTS_D2");
+	item_scoutsD2:SetPrereqs("SCOUTS_D");
+	item_scoutsD2:SetUITriggers("ActionPanel", "WorldInput");
+	item_scoutsD2:SetIsDoneEvents("ScoutMoved");
+	item_scoutsD2:SetNextTutorialItemId("SCOUTS_E");
 
 	-- =============================== SCOUTS_E =====================================
-	local item:TutorialItem = TutorialItem:new("SCOUTS_E");
-	item:SetPrereqs("SCOUTS_D");
-	item:SetIsEndOfChain(true);
-	item:SetRaiseEvents("ScoutMoved");
-	item:SetIsDoneEvents("LocalPlayerTurnEnd");
-	item:SetUITriggers("ActionPanel", "TutorialSelectEndTurnE");
-	item:SetEnabledControls(UITutorialManager:GetHash("ActionPanel"));
+	local item_scoutsE:TutorialItem = TutorialItem:new("SCOUTS_E");
+	item_scoutsE:SetPrereqs("SCOUTS_D2");
+	item_scoutsE:SetIsEndOfChain(true);
+	item_scoutsE:SetRaiseEvents("ScoutMoved");
+	item_scoutsE:SetIsDoneEvents("LocalPlayerTurnEnd");
+	item_scoutsE:SetUITriggers("ActionPanel", "TutorialSelectEndTurnE");
+	item_scoutsE:SetEnabledControls(UITutorialManager:GetHash("ActionPanel"));
 
 	-- =============================== BUILDERS_A =====================================
 	local item_buildersA:TutorialItem = TutorialItem:new("BUILDERS_A");
@@ -2809,15 +2816,31 @@ end
 	--item_researchIrrigation:SetIsDoneEvents("ProductionPanelOpen");
 	item_researchIrrigation:SetUITriggers("ActionPanel", "TutorialSelectEndTurnIrrigation");
 	item_researchIrrigation:SetEnabledControls(UITutorialManager:GetHash("ActionPanel"));
-	item_researchIrrigation:SetNextTutorialItemId("RESEARCH_IRRIGATION_B");
 
 	-- =============================== RESEARCH_IRRIGATION_B =====================================
+	-- Once the ResearchChooser is visible, disable everything on the ResearchChooser.
+	-- During each tutorial step, Enable happens first, Disable happens second
+	-- so we need one step for disable, one step for enable.
 	local item_researchIrrigationB:TutorialItem = TutorialItem:new("RESEARCH_IRRIGATION_B");
 	item_researchIrrigationB:SetPrereqs("RESEARCH_IRRIGATION");
-	item_researchIrrigationB:SetIsEndOfChain(true)
+	item_researchIrrigationB:SetRaiseEvents("ResearchChooser_ForceHideWorldTracker");
 	item_researchIrrigationB:SetUITriggers("ResearchChooser", "TutorialSelectResearchIrrigation");
-	item_researchIrrigationB:SetEnabledControls(UITutorialManager:GetHash("TECH_IRRIGATION"));
-	item_researchIrrigationB:SetIsDoneEvents("ResearchChanged");
+	--item_researchIrrigationB:SetDisabledControls(UITutorialManager:GetHash("ResearchStack"));
+	item_researchIrrigationB:SetNextTutorialItemId("RESEARCH_IRRIGATION_C");
+	
+	-- =============================== RESEARCH_IRRIGATION_C =====================================
+	local item_researchIrrigationC:TutorialItem = TutorialItem:new("RESEARCH_IRRIGATION_C");
+	item_researchIrrigationC:SetPrereqs("RESEARCH_IRRIGATION_B");
+	item_researchIrrigationC:SetIsEndOfChain(true);
+	item_researchIrrigationC:SetIsDoneEvents("ResearchChanged");
+	item_researchIrrigationC:SetIsDoneFunction(
+		function()
+			LockResearch();
+			return true;
+		end );
+	item_researchIrrigationC:SetUITriggers("ResearchChooser", "TutorialSelectResearchIrrigation");
+	item_researchIrrigationC:SetEnabledControls(UITutorialManager:GetHash("TECH_IRRIGATION"));
+
 
 	-- ================================ EXPLAIN_TECH_TREE =====================================
 	local item:TutorialItem = TutorialItem:new("EXPLAIN_TECH_TREE");
@@ -3721,6 +3744,16 @@ end
 	item_campusCompleteK:SetOpenFunction(
 		function()
 			LuaEvents.Tutorial_EndTutorialRestrictions(); --Removes (some) control restrictions, because the on-rails portion of the tutorial has ended 
+
+			-- Removing goals during the Open function is currently okay since the open function
+			-- is called before goals are initialized.
+			if( TutorialItemCompleted("CapitalWallsProductionCompleted") ) then
+				item_campusCompleteK:RemoveGoal("GOAL_14");
+			end
+
+			if( TutorialItemCompleted("BarracksProductionCompleted") ) then
+				item_campusCompleteK:RemoveGoal("GOAL_15");
+			end
 		end );
 	item_campusCompleteK:SetAdvisorUITriggers("TopPanel", "TutorialCivilopediaPointer");
 
@@ -4807,12 +4840,14 @@ end
 --	Use the mask lens layer to dim hexes not in the list.
 -- ===========================================================================
 function DimHexes( kHexIndexes:table )
-	UILens.SetLayerHexesArea(LensLayers.MAP_HEX_MASK, Game.GetLocalPlayer(), kHexIndexes );
+	local mapHexMask : number = UILens.CreateLensLayerHash("Map_Hex_Mask");
+	UILens.SetLayerHexesArea( mapHexMask, Game.GetLocalPlayer(), kHexIndexes );
 end
 
 -- ===========================================================================
 function ClearDimHexes()
-	UILens.ClearLayerHexes( LensLayers.MAP_HEX_MASK );
+	local mapHexMask : number = UILens.CreateLensLayerHash("Map_Hex_Mask");
+	UILens.ClearLayerHexes( mapHexMask );
 end
 
 -- ===========================================================================

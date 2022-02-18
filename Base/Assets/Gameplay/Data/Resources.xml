@@ -170,9 +170,9 @@
 		<!-- Bonus -->
 		<Row ResourceType="RESOURCE_BANANAS" Name="LOC_RESOURCE_BANANAS_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="4"/>
 		<Row ResourceType="RESOURCE_CATTLE" Name="LOC_RESOURCE_CATTLE_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="6"/>
-		<Row ResourceType="RESOURCE_COPPER" Name="LOC_RESOURCE_COPPER_NAME" ResourceClassType="RESOURCECLASS_BONUS" NoRiver="true" Frequency="4"/>
+		<Row ResourceType="RESOURCE_COPPER" Name="LOC_RESOURCE_COPPER_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="4"/>
 		<Row ResourceType="RESOURCE_CRABS" Name="LOC_RESOURCE_CRABS_NAME" ResourceClassType="RESOURCECLASS_BONUS" SeaFrequency="17"/>
-		<Row ResourceType="RESOURCE_DEER" Name="LOC_RESOURCE_DEER_NAME" ResourceClassType="RESOURCECLASS_BONUS" NoRiver="true" Frequency="4"/>
+		<Row ResourceType="RESOURCE_DEER" Name="LOC_RESOURCE_DEER_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="4"/>
 		<Row ResourceType="RESOURCE_FISH" Name="LOC_RESOURCE_FISH_NAME" ResourceClassType="RESOURCECLASS_BONUS" SeaFrequency="23"/>
 		<Row ResourceType="RESOURCE_RICE" Name="LOC_RESOURCE_RICE_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="6"/>
 		<Row ResourceType="RESOURCE_SHEEP" Name="LOC_RESOURCE_SHEEP_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="4"/>
@@ -190,7 +190,7 @@
 		<Row ResourceType="RESOURCE_INCENSE" Name="LOC_RESOURCE_INCENSE_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="2"/>
 		<Row ResourceType="RESOURCE_IVORY" Name="LOC_RESOURCE_IVORY_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="2"/>
 		<Row ResourceType="RESOURCE_JADE" Name="LOC_RESOURCE_JADE_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="2"/>
-		<Row ResourceType="RESOURCE_MARBLE" Name="LOC_RESOURCE_MARBLE_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" NoRiver="true" Frequency="2"/>
+		<Row ResourceType="RESOURCE_MARBLE" Name="LOC_RESOURCE_MARBLE_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="2"/>
 		<Row ResourceType="RESOURCE_MERCURY" Name="LOC_RESOURCE_MERCURY_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="2"/>
 		<Row ResourceType="RESOURCE_PEARLS" Name="LOC_RESOURCE_PEARLS_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" SeaFrequency="1"/>
 		<Row ResourceType="RESOURCE_SALT" Name="LOC_RESOURCE_SALT_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="2"/>
@@ -211,13 +211,13 @@
 		<Row ResourceType="RESOURCE_CINNAMON" Name="LOC_RESOURCE_CINNAMON_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="6" Frequency="0"/>
 		<Row ResourceType="RESOURCE_CLOVES" Name="LOC_RESOURCE_CLOVES_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="6" Frequency="0"/>
 		<!-- Strategic -->
-		<Row ResourceType="RESOURCE_ALUMINUM" Name="LOC_RESOURCE_ALUMINUM_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" NoRiver="true" Frequency="10" PrereqTech="TECH_RADIO"/>
-		<Row ResourceType="RESOURCE_COAL" Name="LOC_RESOURCE_COAL_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" NoRiver="true" Frequency="10" PrereqTech="TECH_INDUSTRIALIZATION"/>
-		<Row ResourceType="RESOURCE_HORSES" Name="LOC_RESOURCE_HORSES_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="12"/>
-		<Row ResourceType="RESOURCE_IRON" Name="LOC_RESOURCE_IRON_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" NoRiver="true" Frequency="12" PrereqTech="TECH_BRONZE_WORKING"/>
-		<Row ResourceType="RESOURCE_NITER" Name="LOC_RESOURCE_NITER_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="10" PrereqTech="TECH_MILITARY_ENGINEERING"/>
-		<Row ResourceType="RESOURCE_OIL" Name="LOC_RESOURCE_OIL_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="5" SeaFrequency="8" PrereqTech="TECH_STEEL"/>
-		<Row ResourceType="RESOURCE_URANIUM" Name="LOC_RESOURCE_URANIUM_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="10" PrereqTech="TECH_COMBINED_ARMS"/>
+		<Row ResourceType="RESOURCE_ALUMINUM" Name="LOC_RESOURCE_ALUMINUM_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="10" PrereqTech="TECH_RADIO" RevealedEra="6"/>
+		<Row ResourceType="RESOURCE_COAL" Name="LOC_RESOURCE_COAL_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="10" PrereqTech="TECH_INDUSTRIALIZATION" RevealedEra="5"/>
+		<Row ResourceType="RESOURCE_HORSES" Name="LOC_RESOURCE_HORSES_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="12" RevealedEra="1"/>
+		<Row ResourceType="RESOURCE_IRON" Name="LOC_RESOURCE_IRON_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="12" PrereqTech="TECH_BRONZE_WORKING" RevealedEra="2"/>
+		<Row ResourceType="RESOURCE_NITER" Name="LOC_RESOURCE_NITER_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="10" PrereqTech="TECH_MILITARY_ENGINEERING" RevealedEra="3"/>
+		<Row ResourceType="RESOURCE_OIL" Name="LOC_RESOURCE_OIL_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="5" SeaFrequency="8" PrereqTech="TECH_STEEL" RevealedEra="6"/>
+		<Row ResourceType="RESOURCE_URANIUM" Name="LOC_RESOURCE_URANIUM_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="10" PrereqTech="TECH_COMBINED_ARMS" RevealedEra="7"/>
 		<!-- Artifact-->
 		<Row ResourceType="RESOURCE_ANTIQUITY_SITE" Name="LOC_RESOURCE_ANTIQUITY_SITE_NAME" ResourceClassType="RESOURCECLASS_ARTIFACT" PrereqCivic="CIVIC_NATURAL_HISTORY"/>
 		<Row ResourceType="RESOURCE_SHIPWRECK" Name="LOC_RESOURCE_SHIPWRECK_NAME" ResourceClassType="RESOURCECLASS_ARTIFACT" PrereqCivic="CIVIC_CULTURAL_HERITAGE"/>

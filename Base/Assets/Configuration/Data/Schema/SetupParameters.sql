@@ -47,6 +47,7 @@ CREATE TABLE 'ParameterQueries'(
 	'SupportsHotSeatField' TEXT NOT NULL DEFAULT 'SupportsHotSeat',
 	'SupportsPlayByCloudField' TEXT NOT NULL DEFAULT 'SupportsPlayByCloud',
 	'ChangeableAfterGameStartField' TEXT NOT NULL DEFAULT 'ChangeableAfterGameStart',
+	'ChangeableAfterPlayByCloudMatchCreateField' TEXT NOT NULL DEFAULT 'ChangeableAfterPlayByCloudMatchCreate',
 	'SortIndexField' TEXT NOT NULL DEFAULT 'SortIndex',
 	PRIMARY KEY('ParameterQueryId'),
 	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
@@ -92,6 +93,8 @@ CREATE TABLE 'Parameters'(
 	'SupportsHotSeat' BOOLEAN NOT NULL DEFAULT 1,
 	'SupportsPlayByCloud' BOOLEAN NOT NULL DEFAULT 1,			-- This parameter is supported by the PlayByCloud mode.
 	'ChangeableAfterGameStart' BOOLEAN NOT NULL DEFAULT 0,
+	'ChangeableAfterPlayByCloudMatchCreate' BOOLEAN NOT NULL DEFAULT 1,	-- Is this a parameter that can be changed after a PlayByCloud match is created.
+	
 	'SortIndex' INTEGER NOT NULL DEFAULT 100
 );
 

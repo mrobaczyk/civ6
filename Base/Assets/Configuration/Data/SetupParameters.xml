@@ -5,11 +5,11 @@
 		<Row ParameterId="Ruleset" Name="LOC_RULESET" Description="" Domain="Rulesets" Hash="0" ConfigurationGroup="Game" ConfigurationId="RULESET" ValueNameConfigurationId="RULESET_NAME" GroupId="GameOptions" SortIndex="1"/>
 		<Row ParameterId="GameName" Name="LOC_GAME_NAME" Description="" Domain="text" Hash="0" ConfigurationGroup="Game" ConfigurationId="GAME_NAME" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="2"/>
 		<Row ParameterId="PrivateGame" Name="LOC_PRIVATE_GAME" Description="" Domain="bool" Hash="0" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="PRIVATE_GAME" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="1" SupportsHotSeat="0" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="3"/>
-		<Row ParameterId="GameDifficulty" Name="LOC_GAME_HANDICAP" Description="" Domain="StandardDifficulties" DefaultValue="DIFFICULTY_PRINCE" ConfigurationGroup="Game" ConfigurationId="GAME_HANDICAP" Hash="1" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="50"/>
+		<Row ParameterId="GameDifficulty" Name="LOC_GAME_HANDICAP" Description="" Domain="StandardDifficulties" DefaultValue="DIFFICULTY_PRINCE" ConfigurationGroup="Game" ConfigurationId="GAME_HANDICAP" Hash="1" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SupportsPlayByCloud="0" SortIndex="50"/>
 		<Row ParameterId="GameStartEra" Name="LOC_GAME_START_ERA" Description="" Domain="StandardEras" DefaultValue="ERA_ANCIENT" ConfigurationGroup="Game" ConfigurationId="GAME_START_ERA" ValueNameConfigurationId="GAME_START_ERA_NAME" Hash="1" GroupId="GameOptions" SortIndex="60"/>
-		<Row ParameterId="TurnTimerType" Name="LOC_GAME_TURNTIMER_TYPE" Description="LOC_GAME_TURNTIMER_DESC" Domain="StandardTurnTimers" DefaultValue="TURNTIMER_NONE" Hash="1" ConfigurationGroup="Game" ConfigurationId="TURN_TIMER_TYPE" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="20"/>
-		<Row ParameterId="TurnTimerTime" Name="LOC_GAME_TURN_TIMER_TIME" Description="LOC_GAME_TURN_TIMER_TIME_TOOLTIP" Domain="uint" DefaultValue="180" ConfigurationGroup="Game" ConfigurationId="TURN_TIMER_TIME" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="30"/>
-		<Row ParameterId="TurnPhaseType" Name="LOC_GAME_TURNPHASE_TYPE" Description="LOC_GAME_TURNPHASE_DESC" Domain="StandardTurnPhases" Hash="1" DefaultValue="TURNPHASE_SIMULTANEOUS" ConfigurationGroup="Game" ConfigurationId="TURN_PHASE_TYPE" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsHotSeat="0" ChangeableAfterGameStart="0" SortIndex="40"/>
+		<Row ParameterId="TurnTimerType" Name="LOC_GAME_TURNTIMER_TYPE" Description="LOC_GAME_TURNTIMER_DESC" Domain="StandardTurnTimers" DefaultValue="TURNTIMER_NONE" Hash="1" ConfigurationGroup="Game" ConfigurationId="TURN_TIMER_TYPE" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsPlayByCloud="0" ChangeableAfterGameStart="1" SortIndex="20"/>
+		<Row ParameterId="TurnTimerTime" Name="LOC_GAME_TURN_TIMER_TIME" Description="LOC_GAME_TURN_TIMER_TIME_TOOLTIP" Domain="uint" DefaultValue="180" ConfigurationGroup="Game" ConfigurationId="TURN_TIMER_TIME" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsPlayByCloud="0" ChangeableAfterGameStart="1" SortIndex="30"/>
+		<Row ParameterId="TurnPhaseType" Name="LOC_GAME_TURNPHASE_TYPE" Description="LOC_GAME_TURNPHASE_DESC" Domain="StandardTurnPhases" Hash="1" DefaultValue="TURNPHASE_SIMULTANEOUS" ConfigurationGroup="Game" ConfigurationId="TURN_PHASE_TYPE" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsHotSeat="0" SupportsPlayByCloud="0" ChangeableAfterGameStart="0" SortIndex="40"/>
 		<!-- Two mutually exclusive game speed parameters.  The MP version defaults to GameSpeed Online, while the SP version defaults to GameSpeed Standard. -->
 		<Row ParameterId="GameSpeeds" Name="LOC_GAME_SPEED" Description="" Domain="StandardGameSpeeds" DefaultValue="GAMESPEED_STANDARD" ConfigurationGroup="Game" ConfigurationId="GAME_SPEED_TYPE" ValueNameConfigurationId="GAME_SPEED_NAME" Hash="1" GroupId="GameOptions"  SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0"  SortIndex="70"/>
 		<Row ParameterId="GameSpeeds" Name="LOC_GAME_SPEED" Description="" Domain="StandardGameSpeeds" DefaultValue="GAMESPEED_ONLINE" ConfigurationGroup="Game" ConfigurationId="GAME_SPEED_TYPE" ValueNameConfigurationId="GAME_SPEED_NAME" Hash="1" GroupId="GameOptions" SupportsSinglePlayer="0"  SortIndex="80"/>
@@ -19,9 +19,9 @@
 
 		<!-- Map Options -->
 		<!-- Two mutually mapscript parameters.  The MP version defaults to Pangaea, while the SP version defaults to Continents. -->
-		<Row ParameterId="Map" Name="LOC_MAP_SCRIPT" Description="" Domain="StandardMaps" DefaultValue="Continents.lua" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" ValueNameConfigurationId="MAP_NAME" ValueDomainConfigurationId="MAP_DOMAIN" GroupId="MapOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="210"/>
-		<Row ParameterId="Map" Name="LOC_MAP_SCRIPT" Description="" Domain="StandardMaps" DefaultValue="Pangaea.lua" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" ValueNameConfigurationId="MAP_NAME" ValueDomainConfigurationId="MAP_DOMAIN" GroupId="MapOptions" SupportsSinglePlayer="0" SortIndex="210"/>
-		<Row ParameterId="MapSize" Name="LOC_MAP_SIZE" Description="" Domain="StandardMapSizes" DefaultValue="MAPSIZE_SMALL" ConfigurationGroup="Map" ConfigurationId="MAP_SIZE" Hash="1" GroupId="MapOptions" SortIndex="220"/>
+		<Row ParameterId="Map" Name="LOC_MAP_SCRIPT" Description="" Domain="StandardMaps" DefaultValue="Continents.lua" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" ValueNameConfigurationId="MAP_NAME" ValueDomainConfigurationId="MAP_DOMAIN" GroupId="MapOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" ChangeableAfterPlayByCloudMatchCreate="0" SortIndex="210"/>
+		<Row ParameterId="Map" Name="LOC_MAP_SCRIPT" Description="" Domain="StandardMaps" DefaultValue="Pangaea.lua" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" ValueNameConfigurationId="MAP_NAME" ValueDomainConfigurationId="MAP_DOMAIN" GroupId="MapOptions" SupportsSinglePlayer="0" ChangeableAfterPlayByCloudMatchCreate="0" SortIndex="210"/>
+		<Row ParameterId="MapSize" Name="LOC_MAP_SIZE" Description="" Domain="StandardMapSizes" DefaultValue="MAPSIZE_SMALL" ConfigurationGroup="Map" ConfigurationId="MAP_SIZE" Hash="1" ChangeableAfterPlayByCloudMatchCreate="0" GroupId="MapOptions" SortIndex="220"/>
 		<!-- Two mutually exclusive map start position parameters.  The MP version defaults to "balanced", while the SP version defaults to "standard". -->	
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="240"/>
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsSinglePlayer="0" SortIndex="240"/>
@@ -30,6 +30,7 @@
 		<Row ParameterId="Resources" Name="LOC_MAP_RESOURCES_NAME" Description="LOC_MAP_RESOURCES_DESCRIPTION" Domain="Resources" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="resources" GroupId="MapOptions" Hash="0" SupportsSinglePlayer="0" SortIndex="230"/>
 
 		<!-- Advanced Options -->
+		<Row ParameterId="NoDupeCivilizations" Name="LOC_NO_DUPLICATE_CIVILIZATIONS_NAME" Description="LOC_NO_DUPLICATE_CIVILIZATIONS_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="NO_DUPLICATE_CIVILIZATIONS" GroupId="AdvancedOptions" SortIndex="2000" />
 		<Row ParameterId="NoDupeLeaders" Name="LOC_NO_DUPLICATE_LEADERS_NAME" Description="LOC_NO_DUPLICATE_LEADERS_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="NO_DUPLICATE_LEADERS" GroupId="AdvancedOptions" SortIndex="2000" />
 		<Row ParameterId="TurnLimit" Name="LOC_LIMIT_TURNS_NAME" Description="LOC_LIMIT_TURNS_DESCRIPTION" Domain="StandardTurnLimits" Hash="1" DefaultValue="TURNLIMIT_GAMESPEED" ConfigurationGroup="Game" ConfigurationId="GAME_TURN_LIMIT" GroupId="AdvancedOptions" SortIndex="2000"/>
 		<Row ParameterId="MaxTurns" Name="LOC_MAX_TURNS_NAME" Description="LOC_MAX_TURNS_DESCRIPTION" Domain="uint" Hash="0" DefaultValue="500" ConfigurationGroup="Game" ConfigurationId="GAME_MAX_TURNS" GroupId="AdvancedOptions" SortIndex="2000"/>
@@ -47,6 +48,8 @@
 		<Row ParameterId="PlayerLeader" Name="LOC_LEADER_TYPE" Description="" Domain="Players:StandardPlayers" Hash="0" ConfigurationGroup="Player" ConfigurationId="LEADER_TYPE_ID" DomainConfigurationId="LEADER_DOMAIN" DomainValuesConfigurationId="LEADER_VALUES" ValueDomainConfigurationId="LEADER_VALUE_DOMAIN" GroupId="PlayerOptions"/>
 		<Row ParameterId="PlayerTeam" Name="LOC_PLAYER_TEAM" Description="The player team." Domain="int" Hash="0" ConfigurationGroup="Player" ConfigurationId="TEAM" GroupId="PlayerOptions"/>
 		<Row ParameterId="PlayerDifficulty" Name="LOC_PLAYER_DIFFICULTY" Description="" Domain="StandardDifficulties" DefaultValue="DIFFICULTY_PRINCE" Hash="1" ConfigurationGroup="Player" ConfigurationId="HANDICAP_TYPE_ID" GroupId="PlayerOptions" SortIndex="3020"/>
+		<Row ParameterId="PlayerColorAlternate" Name="LOC_PLAYER_TEAM" Description="The team's alternate colors." Domain="int" Hash="0" ConfigurationGroup="Player" ConfigurationId="PLAYER_COLOR_ALTERNATE" GroupId="PlayerOptions"/>
+		<Row ParameterId="PlayerLocked" Name="Locked" Domain="PlayerLockedAlwaysUnlocked" Hash="0" ConfigurationGroup="Player" ConfigurationId="IS_LOCKED" GroupId="PlayerOptions" Visible="0"/>
 	</Parameters>
 
 	<ParameterCriteriaQueries>
@@ -55,8 +58,8 @@
 		<Row QueryId="RulesetFixedMaxTurnsCriteria" />
 		<Row QueryId="RulesetNoTeamCriteria" />
 		<Row QueryId="RulesetUniqueLeaderCriteria" />
+		<Row QueryId="RulesetUniqueCivilizationsCriteria" />
 		<Row QueryId="MapUniqueLeaderCriteria" />
-
 	</ParameterCriteriaQueries>	
 
 	<ParameterCriteria>	
@@ -149,6 +152,11 @@
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_CUSTOM" Name="LOC_TURNLIMIT_CUSTOM_NAME" Description="LOC_TURNLIMIT_CUSTOM_DESCRIPTION" SortIndex="1"/>
 
 		<Row Domain="StandardCalendars" Value="CALENDAR_STANDARD" Name="Standard Calendar" Description="" SortIndex="1"/>
+		
+		<!-- Bit of a kludge right now.. -->
+		<!-- Need to support locking of player slots for scenarios where the players *must* be AI.. -->
+		<Row Domain="PlayerLockedAlwaysUnlocked" Value="0" Name="Not Locked"/>
+		<Row Domain="PlayerLockedAlwaysLocked" Value="1" Name="Locked"/>
 	</DomainValues>
 
 	<ConfigurationUpdateQueries>
@@ -165,7 +173,6 @@
 
 	<ConfigurationUpdates>
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1" />
-		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_SPEED_TYPE" TargetValue="GAMESPEED_STANDARD" Hash="1" />
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_GAMESPEED" Hash="1" />
 		<Row SourceGroup="Game" SourceId="GAME_TURN_LIMIT" SourceValue="TURNLIMIT_NONE" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
@@ -179,14 +186,15 @@
 		<Row QueryId="Parameters" SQL="SELECT * FROM Parameters P WHERE Key1 IS NULL and Key2 IS NULL"/>
 		<Row QueryId="RulesetParameters" SQL="SELECT * FROM Parameters P WHERE Key1='Ruleset' AND Key2 = ?1"/>
 		<Row QueryId="MapParameters" SQL="SELECT * FROM Parameters P WHERE Key1='Map' AND Key2 = ?1"/>
-		<Row QueryId="Defeats" SQL="SELECT DefeatType AS ParameterId, D.Name AS Name, D.Description AS Description, Visible, ReadOnly, 1 AS SupportsSinglePlayer, 1 AS SupportsLANMultiplayer, 1 AS SupportsInternetMultiplayer, 1 AS SupportsHotSeat, 0 AS ChangeableAfterGameStart, 'bool' AS Domain, 0 AS Hash, 1 AS DefaultValue, 'Game' AS ConfigurationGroup, DefeatType AS ConfigurationId, 'Victories' AS GroupId, 10 AS SortIndex FROM Defeats D, Rulesets WHERE RulesetType = ?1 and D.Domain = Rulesets.DefeatDomain"/>
-		<Row QueryId="Victories" SQL="SELECT VictoryType AS ParameterId, V.Name AS Name, V.Description AS Description, Visible, ReadOnly, 1 AS SupportsSinglePlayer, 1 AS SupportsLANMultiplayer, 1 AS SupportsInternetMultiplayer, 1 AS SupportsHotSeat, 0 AS ChangeableAfterGameStart, 'bool' AS Domain, 0 AS Hash, 1 AS DefaultValue, 'Game' AS ConfigurationGroup, VictoryType AS ConfigurationId, 'Victories' AS GroupId, 20 AS SortIndex FROM Victories V, Rulesets WHERE RulesetType =?1 and V.Domain = Rulesets.VictoryDomain"/>
+		<Row QueryId="Defeats" SQL="SELECT DefeatType AS ParameterId, D.Name AS Name, D.Description AS Description, Visible, ReadOnly, 1 AS SupportsSinglePlayer, 1 AS SupportsLANMultiplayer, 1 AS SupportsInternetMultiplayer, 1 AS SupportsHotSeat, 1 AS SupportsPlayByCloud, 0 AS ChangeableAfterGameStart, 'bool' AS Domain, 0 AS Hash, 1 AS DefaultValue, 'Game' AS ConfigurationGroup, DefeatType AS ConfigurationId, 'Victories' AS GroupId, 10 AS SortIndex FROM Defeats D, Rulesets WHERE RulesetType = ?1 and D.Domain = Rulesets.DefeatDomain"/>
+		<Row QueryId="Victories" SQL="SELECT VictoryType AS ParameterId, V.Name AS Name, V.Description AS Description, Visible, ReadOnly, 1 AS SupportsSinglePlayer, 1 AS SupportsLANMultiplayer, 1 AS SupportsInternetMultiplayer, 1 AS SupportsHotSeat, 1 AS SupportsPlayByCloud, 0 AS ChangeableAfterGameStart, 'bool' AS Domain, 0 AS Hash, 1 AS DefaultValue, 'Game' AS ConfigurationGroup, VictoryType AS ConfigurationId, 'Victories' AS GroupId, 20 AS SortIndex FROM Victories V, Rulesets WHERE RulesetType =?1 and V.Domain = Rulesets.VictoryDomain"/>
 
 		<!-- Parameter Criteria Queries -->
 		<Row QueryId="ParameterCriteria" SQL="SELECT * FROM ParameterCriteria ORDER BY ParameterId" />
 		<Row QueryId="RulesetFixedMaxTurnsCriteria" SQL="SELECT 'MaxTurns' AS ParameterId, 'Game' AS ConfigurationGroup, 'RULESET' AS ConfigurationId, 'NotEquals' AS Operator, RulesetType AS ConfigurationValue FROM Rulesets WHERE FixedMaxTurns = 1" />/>
 		<Row QueryId="RulesetNoTeamCriteria" SQL="SELECT 'NoTeams' AS ParameterId, 'Game' AS ConfigurationGroup, 'RULESET' AS ConfigurationId, 'NotEquals' AS Operator, RulesetType AS ConfigurationValue FROM Rulesets WHERE RequiresNoTeams = 1" />/>
 		<Row QueryId="RulesetUniqueLeaderCriteria" SQL="SELECT 'NoDupeLeaders' AS ParameterId, 'Game' AS ConfigurationGroup, 'RULESET' AS ConfigurationId, 'NotEquals' AS Operator, RulesetType AS ConfigurationValue FROM Rulesets WHERE RequiresUniqueLeaders = 1" />
+		<Row QueryId="RulesetUniqueCivilizationsCriteria" SQL="SELECT 'NoDupeCivilizations' AS ParameterId, 'Game' AS ConfigurationGroup, 'RULESET' AS ConfigurationId, 'NotEquals' AS Operator, RulesetType AS ConfigurationValue FROM Rulesets WHERE RequiresUniqueCivilizations = 1" />
 		<Row QueryId="MapUniqueLeaderCriteria" SQL="SELECT 'NoDupeLeaders' AS ParameterId, 'Map' AS ConfigurationGroup, 'MAP_SCRIPT' AS ConfigurationId, 'NotEquals' AS Operator, File AS ConfigurationValue FROM Maps WHERE RequiresUniqueLeaders = 1" />
 
 		<!-- Parameter Dependency Queries -->
@@ -194,7 +202,7 @@
 
 		<!-- Value Queries -->
 		<Row QueryId="DomainValues" SQL="SELECT * FROM DomainValues WHERE Key1 IS NULL AND Key2 IS NULL"/>
-		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' AS Domain, Name, Description, RulesetType AS Value, SortIndex FROM Rulesets WHERE ((?1 = -379035929 and SupportsSinglePlayer = 1) or (?1 &lt;&gt; -379035929 and SupportsMultiplayer = 1))"/>
+		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' AS Domain, Name, Description, RulesetType AS Value, SortIndex FROM Rulesets WHERE ((?1 = -379035929 and SupportsSinglePlayer = 1) or ((?1 = 1161765858 or ?1 = 20463770) and SupportsMultiplayer = 1) or (?1 = 208129763 and SupportsHotSeat = 1) or (?1 = 285185446 and SupportsPlayByCloud = 1))"/>
 		<Row QueryId="Difficulties" SQL="SELECT Domain, Name, Name AS Description, DifficultyType AS Value, SortIndex FROM Difficulties"/>
 		<Row QueryId="Eras" SQL="SELECT Domain, Name, Description, EraType AS Value, SortIndex FROM Eras"/>
 		<Row QueryId="GameSpeeds" SQL="SELECT Domain, Name, Description, GameSpeedType AS Value, SortIndex FROM GameSpeeds"/>
@@ -202,7 +210,7 @@
 		<Row QueryId="MapSizes" SQL="SELECT Domain, Name, Description, MapSizeType AS Value, SortIndex FROM MapSizes"/>
 		<Row QueryId="TurnTimers" SQL="SELECT Domain, Name, Description, TurnTimerType AS Value, SortIndex FROM TurnTimers"/>
 		<Row QueryId="TurnPhases" SQL="SELECT Domain, Name, Description, TurnPhaseType AS Value, SortIndex FROM TurnPhases"/>
-		<Row QueryId="Players" SQL="SELECT Domain, LeaderName AS Name, LeaderAbilityDescription AS Description, LeaderType AS Value, 100 AS SortIndex FROM Players"/>
+		<Row QueryId="Players" SQL="SELECT Domain, LeaderName AS Name, LeaderAbilityDescription AS Description, LeaderType AS Value, coalesce(SortIndex,100) AS SortIndex FROM Players"/>
 
 		<!-- Value Filter Queries -->
 		<Row QueryId="DomainValueFilters" SQL="SELECT * FROM DomainValueFilters WHERE Key1 IS NULL AND Key2 IS NULL" />

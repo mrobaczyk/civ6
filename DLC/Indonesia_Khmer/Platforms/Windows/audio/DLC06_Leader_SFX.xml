@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="10" SoundbankVersion="113">
 	<RootPaths>
-		<ProjectRoot>E:\Projects\Civ6\Civ6\Wwise\Civ6 Project\</ProjectRoot>
-		<SourceFilesRoot>E:\Projects\Civ6\Civ6\Wwise\Civ6 Project\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\Projects\Civ6\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\</ProjectRoot>
+		<SourceFilesRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\Projects\Civ6\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="3240732546" GUID="{C8DC5616-1231-4050-8CB0-13A5CA3DD3DC}" Language="SFX">
 			<ShortName>DLC06_Leader_SFX</ShortName>
 			<Path>DLC06_Leader_SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2719517014" Name="_delete_me" GUID="{956B9AB2-6F4E-472A-89CC-83A0C2274CD8}"/>
 				<Event Id="3304253534" Name="Dyah_Leader_Foley_01_FirstMeet_Cloth" GUID="{111A62A5-AA55-4455-A1CF-EE40043F44D0}"/>
 				<Event Id="1685934680" Name="Dyah_Leader_Foley_02_DeclareWarHuman" GUID="{F2F070DA-DDCA-4985-9EFE-D1EBF6B71A3D}"/>
 				<Event Id="3335520716" Name="Dyah_Leader_Foley_03_DeclareWarAI" GUID="{46B80AFA-8DDE-4287-80A4-E4951B683B68}"/>
@@ -44,7 +43,7 @@
 				<Event Id="3959924027" Name="Jayavarman_SFX_25_26_UnhappyPositive" GUID="{69D14ABB-54B5-46F5-B9EB-22A2D76BC0F0}"/>
 				<Event Id="3802083138" Name="Jayavarman_SFX_28_UnhappyToNeutral" GUID="{8F30E8A2-E92D-41DC-AE70-B61017D02658}"/>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
+			<ReferencedStreamedFiles>
 				<File Id="69901005" Language="SFX">
 					<ShortName>Dyah_Leader_Foley_08_09_HappyNegative_Cloth.wav</ShortName>
 					<Path>SFX\Dyah_Leader_Foley_08_09_HappyNegative_Cloth_E1E65BF4.wem</Path>
@@ -205,10 +204,6 @@
 					<ShortName>Dyah_Leader_Foley_05_Warning_Cloth.wav</ShortName>
 					<Path>SFX\Dyah_Leader_Foley_05_Warning_Cloth_E1E65BF4.wem</Path>
 				</File>
-				<File Id="844447265" Language="SFX">
-					<ShortName>BattleLose.wav</ShortName>
-					<Path>SFX\BattleLose_E1E65BF4.wem</Path>
-				</File>
 				<File Id="846572306" Language="SFX">
 					<ShortName>05-Warning_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
 					<Path>SFX\05-Warning_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
@@ -260,6 +255,273 @@
 				<File Id="1065063461" Language="SFX">
 					<ShortName>06-Defeat_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
 					<Path>SFX\06-Defeat_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="69901005" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_08_09_HappyNegative_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_08_09_HappyNegative_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="72535999" Language="SFX">
+					<ShortName>01-FirstMeet_JV_Leader_Foley_Hands_20dB.wav</ShortName>
+					<Path>SFX\01-FirstMeet_JV_Leader_Foley_Hands_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="109854950" Language="SFX">
+					<ShortName>03-DeclareWarAI_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\03-DeclareWarAI_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="115152141" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_03_DeclareWarAI_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_03_DeclareWarAI_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="120424056" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_20_NeutralToHappy_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_20_NeutralToHappy_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="173629148" Language="SFX">
+					<ShortName>04-Kudos_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\04-Kudos_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="184048856" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_02_DeclareWarHuman_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_02_DeclareWarHuman_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="193113014" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_21_NeutralToUnhappy_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_21_NeutralToUnhappy_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="194910099" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_04_Kudos_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_04_Kudos_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="216472557" Language="SFX">
+					<ShortName>21-NeutralToUnhappy_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\21-NeutralToUnhappy_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="250508055" Language="SFX">
+					<ShortName>20-NeutralToHappy_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\20-NeutralToHappy_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="275127078" Language="SFX">
+					<ShortName>02-DeclareWarHuman__JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\02-DeclareWarHuman__JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="337170599" Language="SFX">
+					<ShortName>08-09-HappyNegative_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\08-09-HappyNegative_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="341829802" Language="SFX">
+					<ShortName>13-HappyToNeutral_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\13-HappyToNeutral_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="344052607" Language="SFX">
+					<ShortName>01-FirstMeet_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\01-FirstMeet_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="345389208" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_15_16_NeutralNegative_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_15_16_NeutralNegative_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="355287473" Language="SFX">
+					<ShortName>15-16-NeutralNegative_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\15-16-NeutralNegative_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="364878265" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_06_Defeat_Hair.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_06_Defeat_Hair_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="375905246" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_25_26_UnhappyPositive_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_25_26_UnhappyPositive_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="376578184" Language="SFX">
+					<ShortName>15-16-NeutralNegative_JV_Leader_Foley_Hands_20dB.wav</ShortName>
+					<Path>SFX\15-16-NeutralNegative_JV_Leader_Foley_Hands_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="476169532" Language="SFX">
+					<ShortName>28-UnhappyToNeutral_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\28-UnhappyToNeutral_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="493989375" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_01_FirstMeet_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_01_FirstMeet_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="500589757" Language="SFX">
+					<ShortName>02-DeclareWarHuman__JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\02-DeclareWarHuman__JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="520149671" Language="SFX">
+					<ShortName>01-FirstMeet_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\01-FirstMeet_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="532313899" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_25_26_UnhappyPositive_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_25_26_UnhappyPositive_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="537488044" Language="SFX">
+					<ShortName>25-26-UnhappyPositive_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\25-26-UnhappyPositive_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="570461058" Language="SFX">
+					<ShortName>04-Kudos_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\04-Kudos_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="574480475" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_28_UnhappyToNeutral_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_28_UnhappyToNeutral_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="655950971" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_13_HappyToNeutral_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_13_HappyToNeutral_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="665705255" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_03_DeclareWarAI_Hands.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_03_DeclareWarAI_Hands_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="679127249" Language="SFX">
+					<ShortName>28-UnhappyToNeutral_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\28-UnhappyToNeutral_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="684804417" Language="SFX">
+					<ShortName>20-NeutralToHappy_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\20-NeutralToHappy_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="690703933" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_05_Warning_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_05_Warning_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="727507040" Language="SFX">
+					<ShortName>03-DeclareWarAI_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\03-DeclareWarAI_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="747779523" Language="SFX">
+					<ShortName>12-19-27-Enraged_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\12-19-27-Enraged_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="774977004" Language="SFX">
+					<ShortName>13-HappyToNeutral_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\13-HappyToNeutral_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="822690607" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_20_NeutralToHappy_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_20_NeutralToHappy_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="827792244" Language="SFX">
+					<ShortName>21-NeutralToUnhappy_JV_Leader_Foley_Hands_20dB.wav</ShortName>
+					<Path>SFX\21-NeutralToUnhappy_JV_Leader_Foley_Hands_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="842156596" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_04_Kudos_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_04_Kudos_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="842460187" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_05_Warning_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_05_Warning_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="846572306" Language="SFX">
+					<ShortName>05-Warning_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\05-Warning_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="849389464" Language="SFX">
+					<ShortName>05-Warning_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\05-Warning_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="852546425" Language="SFX">
+					<ShortName>06-Defeat_JV_Leader_Foley_Footstep_20dB.wav</ShortName>
+					<Path>SFX\06-Defeat_JV_Leader_Foley_Footstep_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="910708516" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_17_18_NeutralPositive_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_17_18_NeutralPositive_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="917076687" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_23_24_UnhappyNegative_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_23_24_UnhappyNegative_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="929857523" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_13_HappyToNeutral_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_13_HappyToNeutral_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="946675594" Language="SFX">
+					<ShortName>21-NeutralToUnhappy_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\21-NeutralToUnhappy_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="948344275" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_02_DeclareWarHuman_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_02_DeclareWarHuman_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="973052404" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_28_UnhappyToNeutral_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_28_UnhappyToNeutral_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="986738903" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_03_DeclareWarAI_Footsteps.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_03_DeclareWarAI_Footsteps_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="1017902791" Language="SFX">
+					<ShortName>Dyah_Leader_Foley_12_19_27_Enraged_Cloth.wav</ShortName>
+					<Path>SFX\Dyah_Leader_Foley_12_19_27_Enraged_Cloth_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="1031675076" Language="SFX">
+					<ShortName>12-19-27-Enraged_JV_Leader_Foley_Hands_20dB.wav</ShortName>
+					<Path>SFX\12-19-27-Enraged_JV_Leader_Foley_Hands_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
+				</File>
+				<File Id="1065063461" Language="SFX">
+					<ShortName>06-Defeat_JV_Leader_Foley_Cloth_20dB.wav</ShortName>
+					<Path>SFX\06-Defeat_JV_Leader_Foley_Cloth_20dB_E1E65BF4.wem</Path>
+					<PrefetchSize>5464</PrefetchSize>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

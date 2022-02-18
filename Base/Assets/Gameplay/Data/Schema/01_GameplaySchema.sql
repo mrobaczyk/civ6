@@ -329,6 +329,7 @@ CREATE TABLE "Boosts" (
 		"RequirementSetId" TEXT,
 		"GovernmentSlotType" TEXT,
 		"BoostingCivicType" TEXT,
+		"GovernmentTierType" TEXT,
 		PRIMARY KEY(BoostID),
 		FOREIGN KEY (TechnologyType) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (Unit1Type) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -341,7 +342,8 @@ CREATE TABLE "Boosts" (
 		FOREIGN KEY (BoostingTechType) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (CivicType) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (BoostingCivicType) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (GovernmentSlotType) REFERENCES GovernmentSlots(GovernmentSlotType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (GovernmentSlotType) REFERENCES GovernmentSlots(GovernmentSlotType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (GovernmentTierType) REFERENCES GovernmentTiers(TierType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "BoostHandlers" (
 		"HandlerId" TEXT,
@@ -762,6 +764,7 @@ CREATE TABLE "Defeats" (
 		"RequirementSetId" TEXT NOT NULL,
 		"EnabledByDefault" BOOLEAN NOT NULL CHECK (EnabledByDefault IN (0,1)) DEFAULT 1,
 		"OneMoreTurn" BOOLEAN CHECK (OneMoreTurn IN (0,1)) DEFAULT 0,
+		"Global" BOOLEAN NOT NULL CHECK (Global IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(DefeatType),
 		FOREIGN KEY (DefeatType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -769,15 +772,7 @@ CREATE TABLE "Defeats" (
 CREATE TABLE "Difficulties" (
 		"DifficultyType" TEXT NOT NULL,
 		"Name" TEXT NOT NULL,
-		"DefaultDifficulty" BOOLEAN NOT NULL CHECK (DefaultDifficulty IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(DifficultyType));
-
-CREATE TABLE "DifficultyTraits" (
-		"DifficultyType" TEXT NOT NULL,
-		"TraitType" TEXT NOT NULL,
-		PRIMARY KEY(DifficultyType, TraitType),
-		FOREIGN KEY (TraitType) REFERENCES Traits(TraitType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (DifficultyType) REFERENCES Difficulties(DifficultyType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 -- Allows us to change the background and leader images on the diplomacy screen.
 CREATE TABLE "DiplomacyInfo" (
@@ -852,6 +847,7 @@ CREATE TABLE "DiplomaticStateActions" (
 		"Worth" INTEGER NOT NULL DEFAULT 0,
 		"Cost" INTEGER NOT NULL DEFAULT 0,
 		"TransitionToState" TEXT,
+		"TeamOnly" BOOLEAN NOT NULL CHECK (TeamOnly IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(StateType, DiplomaticActionType),
 		FOREIGN KEY (StateType) REFERENCES DiplomaticStates(StateType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (DiplomaticActionType) REFERENCES DiplomaticActions(DiplomaticActionType) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -906,6 +902,7 @@ CREATE TABLE "DiplomaticVisibilitySources" (
 		"TraitType" TEXT,
 		"GreatPersonIndividualType" TEXT,
 		"FromCitizen" BOOLEAN NOT NULL CHECK (FromCitizen IN (0,1)) DEFAULT 0,
+		"LevelRequired" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(VisibilitySourceType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (TraitType) REFERENCES Traits(TraitType) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1027,6 +1024,20 @@ CREATE TABLE "DistrictReplaces" (
 		FOREIGN KEY (CivUniqueDistrictType) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (ReplacesDistrictType) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "DuplicateCivilizations" (
+		"CivilizationType" TEXT NOT NULL,
+		"OtherCivilizationType" TEXT NOT NULL,
+		PRIMARY KEY(CivilizationType, OtherCivilizationType),
+		FOREIGN KEY (CivilizationType) REFERENCES Civilizations(CivilizationType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (OtherCivilizationType) REFERENCES Civilizations(CivilizationType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "DuplicateLeaders" (
+		"LeaderType" TEXT NOT NULL,
+		"OtherLeaderType" TEXT NOT NULL,
+		PRIMARY KEY(LeaderType, OtherLeaderType),
+		FOREIGN KEY (LeaderType) REFERENCES Leaders(LeaderType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (OtherLeaderType) REFERENCES Leaders(LeaderType) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "DynamicModifiers" (
 		"ModifierType" TEXT NOT NULL,
 		"CollectionType" TEXT NOT NULL,
@@ -1049,6 +1060,7 @@ CREATE TABLE "Eras" (
 		"EmbarkedUnitStrength" INTEGER NOT NULL,
 		"EraTechBackgroundTextureOffsetX" INTEGER NOT NULL DEFAULT 0,
 		"EraCivicBackgroundTextureOffsetX" INTEGER NOT NULL DEFAULT 0,
+		"TechTreeLayoutMethod" INTEGER,
 		PRIMARY KEY(EraType),
 		FOREIGN KEY (EraType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1553,6 +1565,7 @@ CREATE TABLE "Improvements" (
 		"AdjacentSeaResource" BOOLEAN NOT NULL CHECK (AdjacentSeaResource IN (0,1)) DEFAULT 0,
 		"RequiresAdjacentBonusOrLuxury" BOOLEAN NOT NULL CHECK (RequiresAdjacentBonusOrLuxury IN (0,1)) DEFAULT 0,
 		"MovementChange" INTEGER NOT NULL DEFAULT 0,
+		"Workable" BOOLEAN NOT NULL CHECK (Workable IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(ImprovementType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -1579,6 +1592,13 @@ CREATE TABLE "Improvement_BonusYieldChanges" (
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (ImprovementType) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "Improvement_InvalidAdjacentFeatures" (
+		"ImprovementType" TEXT NOT NULL,
+		"FeatureType" TEXT NOT NULL,
+		PRIMARY KEY(ImprovementType, FeatureType),
+		FOREIGN KEY (ImprovementType) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (FeatureType) REFERENCES Features(FeatureType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Improvement_Tourism" (
 		"ImprovementType" TEXT NOT NULL,
@@ -1761,6 +1781,52 @@ CREATE TABLE "Map_GreatPersonClasses" (
 		FOREIGN KEY (MapSizeType) REFERENCES Maps(MapSizeType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (GreatPersonClassType) REFERENCES GreatPersonClasses(GreatPersonClassType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "MapRainfalls" (
+		"MapRainfallType" TEXT NOT NULL UNIQUE,
+		"Name" TEXT,
+		"Description" TEXT,
+		"AverageAmountPerYear" INTEGER,
+		"Scale" REAL,
+		PRIMARY KEY(MapRainfallType));
+
+CREATE TABLE "MapResourceDistributions" (
+		"MapResourceDistributionType" TEXT NOT NULL UNIQUE,
+		"Name" TEXT NOT NULL,
+		"Description" TEXT NOT NULL,
+		"Scale" REAL,
+		PRIMARY KEY(MapResourceDistributionType));
+
+CREATE TABLE "MapSeaLevels" (
+		"MapSeaLevelType" TEXT NOT NULL UNIQUE,
+		"Name" TEXT NOT NULL,
+		"Description" TEXT NOT NULL,
+		"Scale" REAL,
+		PRIMARY KEY(MapSeaLevelType));
+
+CREATE TABLE "MapStartPositions" (
+		"MapStartPositionType" TEXT NOT NULL UNIQUE,
+		"Name" TEXT NOT NULL,
+		"Description" TEXT NOT NULL,
+		"Scale" REAL,
+		PRIMARY KEY(MapStartPositionType));
+
+CREATE TABLE "MapTemperatures" (
+		"MapTemperatureType" TEXT NOT NULL UNIQUE,
+		"Name" TEXT NOT NULL,
+		"Description" TEXT NOT NULL,
+		"AverageStartingTemperature" REAL,
+		"Scale" REAL,
+		PRIMARY KEY(MapTemperatureType));
+
+-- World Age for map generation
+CREATE TABLE "MapWorldAges" (
+		"MapWorldAgeType" TEXT NOT NULL UNIQUE,
+		"Name" TEXT NOT NULL,
+		"Description" TEXT NOT NULL,
+		"YearsOld" REAL,
+		"Scale" REAL,
+		PRIMARY KEY(MapWorldAgeType));
+
 CREATE TABLE "Modifiers" (
 		"ModifierId" TEXT NOT NULL,
 		"ModifierType" TEXT NOT NULL,
@@ -1887,6 +1953,7 @@ CREATE TABLE "Policies" (
 		"Name" TEXT NOT NULL,
 		"GovernmentSlotType" TEXT NOT NULL,
 		"RequiresGovernmentUnlock" BOOLEAN CHECK (RequiresGovernmentUnlock IN (0,1)),
+		"ExplicitUnlock" BOOLEAN NOT NULL CHECK (ExplicitUnlock IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(PolicyType),
 		FOREIGN KEY (GovernmentSlotType) REFERENCES GovernmentSlots(GovernmentSlotType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -1918,6 +1985,7 @@ CREATE TABLE "Projects" (
 		"AmenitiesWhileActive" INTEGER,
 		"PrereqResource" TEXT,
 		"AdvisorType" TEXT,
+		"WMD" BOOLEAN NOT NULL CHECK (WMD IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(ProjectType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -2396,11 +2464,24 @@ CREATE TABLE "Terrain_YieldChanges" (
 		"YieldType" TEXT NOT NULL,
 		"YieldChange" INTEGER NOT NULL,
 		PRIMARY KEY(TerrainType, YieldType),
-		FOREIGN KEY (TerrainType) REFERENCES Terrains(TerrainType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (TerrainType) REFERENCES Terrains(TerrainType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "TerrainClasses" (
+		"TerrainClassType" TEXT NOT NULL,
+		"Name" TEXT NOT NULL,
+		PRIMARY KEY(TerrainClassType));
+
+CREATE TABLE "TerrainClass_Terrains" (
+		"TerrainClassType" TEXT NOT NULL,
+		"TerrainType" TEXT NOT NULL,
+		PRIMARY KEY(TerrainClassType, TerrainType),
+		FOREIGN KEY (TerrainType) REFERENCES Terrains(TerrainType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (TerrainClassType) REFERENCES TerrainClasses(TerrainClassType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Traits" (
 		"TraitType" TEXT NOT NULL,
-		"Name" LocalizedText NOT NULL,
+		"Name" LocalizedText,
 		"Description" LocalizedText,
 		"InternalOnly" BOOLEAN NOT NULL CHECK (InternalOnly IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(TraitType),
@@ -2448,13 +2529,14 @@ CREATE TABLE "TurnPhases" (
 
 CREATE TABLE "TurnSegments" (
 		"TurnSegmentType" TEXT NOT NULL,
-		"DisplayName" TEXT,
+		"Name" TEXT,
 		"Sound" TEXT,
 		"AllowStrategicCommands" BOOLEAN NOT NULL CHECK (AllowStrategicCommands IN (0,1)) DEFAULT 0,
 		"AllowTacticalCommands" BOOLEAN NOT NULL CHECK (AllowTacticalCommands IN (0,1)) DEFAULT 0,
 		"TimeLimit_Base" INTEGER NOT NULL DEFAULT 0,
 		"TimeLimit_PerCity" INTEGER NOT NULL DEFAULT 0,
 		"TimeLimit_PerUnit" INTEGER NOT NULL DEFAULT 0,
+		"AllowTurnUnready" BOOLEAN NOT NULL CHECK (AllowTurnUnready IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(TurnSegmentType));
 
 CREATE TABLE "TurnTimers" (
@@ -2584,8 +2666,8 @@ CREATE TABLE "Unit_RebellionTags" (
 
 CREATE TABLE "UnitAbilities" (
 		"UnitAbilityType" TEXT NOT NULL,
-		"Name" TEXT NOT NULL,
-		"Description" TEXT NOT NULL,
+		"Name" LocalizedText,
+		"Description" LocalizedText,
 		"Inactive" BOOLEAN NOT NULL CHECK (Inactive IN (0,1)) DEFAULT 0,
 		"ShowFloatTextWhenEarned" BOOLEAN NOT NULL CHECK (ShowFloatTextWhenEarned IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(UnitAbilityType));
@@ -2687,7 +2769,7 @@ CREATE TABLE "UnitPromotions" (
 
 CREATE TABLE "UnitPromotionClasses" (
 		"PromotionClassType" TEXT NOT NULL,
-		"Name" INTEGER NOT NULL,
+		"Name" LocalizedText NOT NULL,
 		PRIMARY KEY(PromotionClassType),
 		FOREIGN KEY (PromotionClassType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -2784,6 +2866,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Adjacency_YieldChanges", "TerrainReference", "Terrains", 0,"SELECT T1.rowid from Terrains as T1 inner join Adjacency_YieldChanges as T2 on T2.AdjacentTerrain = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Adjacency_YieldChanges", "YieldTypeReference", "Yields", 0,"SELECT T1.rowid from Yields as T1 inner join Adjacency_YieldChanges as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Agendas", "FirstExclusions", "Agendas", 1,"SELECT T1.rowid from Agendas as T1 inner join ExclusiveAgendas as T2 on T2.AgendaTwo = T1.AgendaType inner join Agendas as T3 on T3.AgendaType = T2.AgendaOne where T3.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Agendas", "RandomAgendaCollection", "RandomAgendas", 1,"SELECT T1.rowid from RandomAgendas as T1 inner join Agendas as T2 on T2.AgendaType = T1.AgendaType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Agendas", "SecondExclusions", "Agendas", 1,"SELECT T1.rowid from Agendas as T1 inner join ExclusiveAgendas as T2 on T2.AgendaOne = T1.AgendaType inner join Agendas as T3 on T3.AgendaType = T2.AgendaTwo where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Agendas", "TraitCollection", "Traits", 1,"SELECT T1.rowid from Traits as T1 inner join AgendaTraits as T2 on T2.TraitType = T1.TraitType inner join Agendas as T3 on T3.AgendaType = T2.AgendaType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("AgendaPreferredLeaders", "LeaderReference", "Leaders", 0,"SELECT T1.rowid from Leaders as T1 inner join AgendaPreferredLeaders as T2 on T2.LeaderType = T1.LeaderType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -2811,6 +2894,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "BuildingReference", "Buildings", 0,"SELECT T1.rowid from Buildings as T1 inner join Boosts as T2 on T2.BuildingType = T1.BuildingType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "CivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Boosts as T2 on T2.CivicType = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "DistrictReference", "Districts", 0,"SELECT T1.rowid from Districts as T1 inner join Boosts as T2 on T2.DistrictType = T1.DistrictType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "GovernmentTierReference", "GovernmentTiers", 0,"SELECT T1.rowid from GovernmentTiers as T1 inner join Boosts as T2 on T2.GovernmentTierType = T1.TierType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "ImprovementReference", "Improvements", 0,"SELECT T1.rowid from Improvements as T1 inner join Boosts as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "ResourceReference", "Resources", 0,"SELECT T1.rowid from Resources as T1 inner join Boosts as T2 on T2.ResourceType = T1.ResourceType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "TechnologyReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join Boosts as T2 on T2.TechnologyType = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -2875,7 +2959,6 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Civilizations", "StartBiasTerrainCollection", "StartBiasTerrains", 1,"SELECT T1.rowid from StartBiasTerrains as T1 inner join Civilizations as T2 on T2.CivilizationType = T1.CivilizationType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Civilizations", "TraitCollection", "Traits", 1,"SELECT T1.rowid from Traits as T1 inner join CivilizationTraits as T2 on T2.TraitType = T1.TraitType inner join Civilizations as T3 on T3.CivilizationType = T2.CivilizationType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("CivilizationLevels", "DiplomaticStartCollection", "DiplomaticStartStates", 1,"SELECT T1.rowid from DiplomaticStartStates as T1 inner join CivilizationLevels as T2 on T2.CivilizationLevelType = T1.PlayerCivLevel where T2.rowid = ? ORDER BY T1.rowid ASC");
-INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Difficulties", "TraitCollection", "Traits", 1,"SELECT T1.rowid from Traits as T1 inner join DifficultyTraits as T2 on T2.TraitType = T1.TraitType inner join Difficulties as T3 on T3.DifficultyType = T2.DifficultyType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("DiplomaticActions", "InitiatorObsoleteCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join DiplomaticActions as T2 on T2.InitiatorObsoleteCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("DiplomaticActions", "InitiatorPrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join DiplomaticActions as T2 on T2.InitiatorPrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("DiplomaticActions", "InitiatorPrereqTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join DiplomaticActions as T2 on T2.InitiatorPrereqTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -2996,6 +3079,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("GreatWorkObjectTypes", "PseudoYieldReference", "PseudoYields", 0,"SELECT T1.rowid from PseudoYields as T1 inner join GreatWorkObjectTypes as T2 on T2.PseudoYieldType = T1.PseudoYieldType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvements", "AdjacencyYieldChanges", "Improvement_Adjacencies", 1,"SELECT T1.rowid from Improvement_Adjacencies as T1 inner join Improvements as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvements", "BonusYieldChanges", "Improvement_BonusYieldChanges", 1,"SELECT T1.rowid from Improvement_BonusYieldChanges as T1 inner join Improvements as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvements", "InvalidAdjacentFeature", "Improvement_InvalidAdjacentFeatures", 1,"SELECT T1.rowid from Improvement_InvalidAdjacentFeatures as T1 inner join Improvements as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvements", "PrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Improvements as T2 on T2.PrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvements", "PrereqTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join Improvements as T2 on T2.PrereqTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvements", "TourismCollection", "Improvement_Tourism", 1,"SELECT T1.rowid from Improvement_Tourism as T1 inner join Improvements as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC");
@@ -3013,6 +3097,8 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_BonusYieldChanges", "PrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Improvement_BonusYieldChanges as T2 on T2.PrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_BonusYieldChanges", "PrereqTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join Improvement_BonusYieldChanges as T2 on T2.PrereqTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_BonusYieldChanges", "YieldReference", "Yields", 0,"SELECT T1.rowid from Yields as T1 inner join Improvement_BonusYieldChanges as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_InvalidAdjacentFeatures", "FeatureReference", "Features", 0,"SELECT T1.rowid from Features as T1 inner join Improvement_InvalidAdjacentFeatures as T2 on T2.FeatureType = T1.FeatureType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_InvalidAdjacentFeatures", "ImprovementReference", "Improvements", 0,"SELECT T1.rowid from Improvements as T1 inner join Improvement_InvalidAdjacentFeatures as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_Tourism", "ImprovementReference", "Improvements", 0,"SELECT T1.rowid from Improvements as T1 inner join Improvement_Tourism as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_Tourism", "PrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Improvement_Tourism as T2 on T2.PrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_Tourism", "PrereqTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join Improvement_Tourism as T2 on T2.PrereqTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -3048,6 +3134,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("ObsoletePolicies", "ObsoletePolicyReference", "Policies", 0,"SELECT T1.rowid from Policies as T1 inner join ObsoletePolicies as T2 on T2.ObsoletePolicy = T1.PolicyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("ObsoletePolicies", "PolicyReference", "Policies", 0,"SELECT T1.rowid from Policies as T1 inner join ObsoletePolicies as T2 on T2.PolicyType = T1.PolicyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("ObsoletePolicies", "RequiresAvailableGreatPersonClassReference", "GreatPersonClasses", 0,"SELECT T1.rowid from GreatPersonClasses as T1 inner join ObsoletePolicies as T2 on T2.RequiresAvailableGreatPersonClass = T1.GreatPersonClassType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Policies", "PolicyModifiers", "PolicyModifiers", 1,"SELECT T1.rowid from PolicyModifiers as T1 inner join Policies as T2 on T2.PolicyType = T1.PolicyType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Policies", "PrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Policies as T2 on T2.PrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Policies", "PrereqTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join Policies as T2 on T2.PrereqTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Policies", "SlotReference", "GovernmentSlots", 0,"SELECT T1.rowid from GovernmentSlots as T1 inner join Policies as T2 on T2.GovernmentSlotType = T1.GovernmentSlotType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -3133,7 +3220,10 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "ImprovementAdjacentTerrainCollection", "Improvement_ValidAdjacentTerrains", 1,"SELECT T1.rowid from Improvement_ValidAdjacentTerrains as T1 inner join Terrains as T2 on T2.TerrainType = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "ImprovementCollection", "Improvement_ValidTerrains", 1,"SELECT T1.rowid from Improvement_ValidTerrains as T1 inner join Terrains as T2 on T2.TerrainType = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "StartBiasTerrainCollection", "StartBiasTerrains", 1,"SELECT T1.rowid from StartBiasTerrains as T1 inner join Terrains as T2 on T2.TerrainType = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "TerrainClasses", "TerrainClasses", 1,"SELECT T1.rowid from TerrainClasses as T1 inner join TerrainClass_Terrains as T2 on T2.TerrainClassType = T1.TerrainClassType inner join Terrains as T3 on T3.TerrainType = T2.TerrainType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "ValidResources", "Resources", 1,"SELECT T1.rowid from Resources as T1 inner join Resource_ValidTerrains as T2 on T2.ResourceType = T1.ResourceType inner join Terrains as T3 on T3.TerrainType = T2.TerrainType where T3.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrain_YieldChanges", "YieldReference", "Yields", 0,"SELECT T1.rowid from Yields as T1 inner join Terrain_YieldChanges as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("TerrainClasses", "Terrains", "Terrains", 1,"SELECT T1.rowid from Terrains as T1 inner join TerrainClass_Terrains as T2 on T2.TerrainType = T1.TerrainType inner join TerrainClasses as T3 on T3.TerrainClassType = T2.TerrainClassType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Traits", "ModifierCollection", "TraitModifiers", 1,"SELECT T1.rowid from TraitModifiers as T1 inner join Traits as T2 on T2.TraitType = T1.TraitType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("TriggeredBehaviorTrees", "EventReference", "AiEvents", 0,"SELECT T1.rowid from AiEvents as T1 inner join TriggeredBehaviorTrees as T2 on T2.AIEvent = T1.EventType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("TriggeredBehaviorTrees", "TreeReference", "BehaviorTrees", 0,"SELECT T1.rowid from BehaviorTrees as T1 inner join TriggeredBehaviorTrees as T2 on T2.TreeName = T1.TreeName where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -3180,3 +3270,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("UnitReplaces", "ReplacementUnitReference", "Units", 0,"SELECT T1.rowid from Units as T1 inner join UnitReplaces as T2 on T2.CivUniqueUnitType = T1.UnitType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("UnitUpgrades", "UnitReference", "Units", 0,"SELECT T1.rowid from Units as T1 inner join UnitUpgrades as T2 on T2.Unit = T1.UnitType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("UnitUpgrades", "UpgradeUnitReference", "Units", 0,"SELECT T1.rowid from Units as T1 inner join UnitUpgrades as T2 on T2.UpgradeUnit = T1.UnitType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Yields", "FeatureChange_Refs", "Feature_YieldChanges", 1,"SELECT T1.rowid from Feature_YieldChanges as T1 inner join Yields as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Yields", "ImprovementChange_Refs", "Improvement_BonusYieldChanges", 1,"SELECT T1.rowid from Improvement_BonusYieldChanges as T1 inner join Yields as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Yields", "ResourceChange_Refs", "Resource_YieldChanges", 1,"SELECT T1.rowid from Resource_YieldChanges as T1 inner join Yields as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Yields", "TerrainChange_Refs", "Terrain_YieldChanges", 1,"SELECT T1.rowid from Terrain_YieldChanges as T1 inner join Yields as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC");

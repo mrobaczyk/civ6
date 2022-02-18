@@ -69,6 +69,9 @@
 		<Row Tag="LOC_NOTIFICATION_CLAIM_GREAT_PERSON_MESSAGE">
 			<Text>Claim Great Person</Text>
 		</Row>
+		<Row Tag="LOC_NOTIFICATION_CLAIM_GREAT_PERSON_SUMMARY">
+			<Text>You have earned a Great Person, and need to choose whether to accept them or pass on them.</Text>
+		</Row>
 		<Row Tag="LOC_NOTIFICATION_GIVE_INFLUENCE_TOKEN_MESSAGE">
 			<Text>Send Envoy</Text>
 		</Row>
@@ -106,27 +109,30 @@
 		<Row Tag="LOC_NOTIFICATION_UNMET_PLAYER_DEFEATED_SUMMARY">
 			<Text>An unmet player has been defeated.</Text>
 		</Row>
-    <Row Tag="LOC_NOTIFICATION_UNMET_CITY_STATE_DEFEATED_SUMMARY">
-      <Text>An unmet city-state has been defeated.</Text>
-    </Row>
-    <Row Tag="LOC_NOTIFICATION_UNIT_LOST_TO_OCCUPATION">
+		<Row Tag="LOC_NOTIFICATION_UNMET_CITY_STATE_DEFEATED_SUMMARY">
+			<Text>An unmet city-state has been defeated.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_UNIT_LOST_TO_OCCUPATION">
 			<Text>You have lost a {1_UnitName} due to enemy occupation.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_UNIT_RETREAT_FROM_OCCUPATION">
 			<Text>An enemy occupation has forced your {1_UnitName} to retreat.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_UNIT_LOST_TO_RADIATION_POISONING">
+			<Text>You have lost a {1_UnitName} due to radiation poisoning.</Text>
 		</Row>
 		<!-- Diplomacy Notifications-->
 		<Row Tag="LOC_NOTIFICATION_DECLARE_WAR_MESSAGE">
 			<Text>Declaration of War</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_DECLARE_WAR_SUMMARY">
-			<Text>{1_leader} has declared war on {2_leader}.</Text>
+			<Text>{LOC_GRAMMAR_LEADER_UPPER &lt;&lt; {1_leader}} {1_leader: plural 1?has; other?have;} declared war on {LOC_GRAMMAR_LEADER &lt;&lt; {2_leader}}.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_MAKE_PEACE_MESSAGE">
 			<Text>Negotiated Peace</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_MAKE_PEACE_SUMMARY">
-			<Text>{1_leader} has made peace with {2_leader}.</Text>
+			<Text>{LOC_GRAMMAR_LEADER_UPPER &lt;&lt; {1_leader}} {1_leader: plural 1?has; other?have;} made peace with {LOC_GRAMMAR_LEADER &lt;&lt; {2_leader}}.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_PLAYER_MET_MESSAGE_CIV">
 			<Text>You have met a new civilization</Text>
@@ -135,31 +141,31 @@
 			<Text>You have met a new city-state</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_PLAYER_MET_SUMMARY">
-			<Text>You have met {1_leader} of the {2_CivDesc}.</Text>
+			<Text>You have met {LOC_GRAMMAR_LEADER &lt;&lt; {1_leader}} of {LOC_GRAMMAR_CIVDESC &lt;&lt; {2_CivDesc}}.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_BORDERS_NOW_ENFORCED_MESSAGE">
-			<Text>{1_leader} Enforces Borders</Text>
+			<Text>{LOC_GRAMMAR_LEADER_UPPER &lt;&lt; {1_leader}} Enforces Borders</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_BORDERS_NOW_ENFORCED_SUMMARY">
-			<Text>The {1_leader} is now enforcing their borders. Your units inside their empire have been displaced to a tile just outside their lands.</Text>
+			<Text>{LOC_GRAMMAR_LEADER_UPPER &lt;&lt; {1_leader}} {1_leader: plural 1?is; other?are;} now enforcing their borders. Your units inside their empire have been displaced to a tile just outside their lands.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_DIPLO_FRIENDSHIP_EXPIRED_MESSAGE">
 			<Text>Friendship Expired</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_DIPLO_FRIENDSHIP_EXPIRED_SUMMARY">
-			<Text>Your friendship with {1_leader} has run its course and will have to be renewed.</Text>
+			<Text>Your friendship with {LOC_GRAMMAR_LEADER &lt;&lt; {1_leader}} has run its course and will have to be renewed.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_DIPLO_ALLIANCE_EXPIRED_MESSAGE">
 			<Text>Alliance Expired</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_DIPLO_ALLIANCE_EXPIRED_SUMMARY">
-			<Text>Your alliance with {1_leader} has run its course and will have to be renewed.</Text>
+			<Text>Your alliance with {LOC_GRAMMAR_LEADER &lt;&lt; {1_leader}} has run its course and will have to be renewed.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_CASUS_BELLI_GAINED_MESSAGE">
 			<Text>Casus Belli Gained</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_CASUS_BELLI_GAINED_SUMMARY">
-			<Text>You have gained a Casus Belli to declare a {1_WarType} on {2_leader}.</Text>
+			<Text>You have gained a Casus Belli to declare a {1_WarType} on {LOC_GRAMMAR_LEADER &lt;&lt; {2_leader}}.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_WAR_TYPE_COLONIAL">
 			<Text>Colonial War</Text>
@@ -366,10 +372,10 @@
 			<Text>Trade Route Plundered</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_TRADE_ROUTE_PLUNDERED_SUMMARY_NO_ROUTE">
-			<Text>{1_PlayerName} has plundered your Trader unit.</Text>
+			<Text>{1_PlayerName} {1_PlayerName: plural 1?has; other?have;} plundered your Trader unit.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_TRADE_ROUTE_PLUNDERED_SUMMARY_ACTIVE_ROUTE">
-			<Text>{1_PlayerName} has plundered your Trader unit. Your [ICON_TradeRoute] Trade Route from {2_OriginCityName} to {3_DestinationCityName} is no longer active.</Text>
+			<Text>{1_PlayerName} {1_PlayerName: plural 1?has; other?have;} plundered your Trader unit. Your [ICON_TradeRoute] Trade Route from {2_OriginCityName} to {3_DestinationCityName} is no longer active.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_TRADING_POST_CREATED_MESSAGE">
 			<Text>Trading Post Created</Text>
@@ -457,17 +463,35 @@
 		<Row Tag="LOC_NOTIFICATION_PLAYER_MOD_STATUS_TT">
 			<Text>{1_playerName} is downloading mods required to play in this game. ({2 : number} of {3 : number} total)</Text>
 		</Row>
-		<Row Tag="LOC_NOTIFCATION_HOST_MIGRATION">
+		<Row Tag="LOC_NOTIFICATION_HOST_MIGRATION">
 			<Text>Host Migration</Text>
 		</Row>
-		<Row Tag="LOC_NOTIFCATION_HOST_MIGRATION_TT">
+		<Row Tag="LOC_NOTIFICATION_HOST_MIGRATION_TT">
 			<Text>The game is migrating to a new game host.  The game will resume shortly.</Text>
 		</Row>
-		<Row Tag="LOC_NOTIFCATION_HOST_CHANGED">
+		<Row Tag="LOC_NOTIFICATION_HOST_CHANGED">
 			<Text>Host Migrated</Text>
 		</Row>
-		<Row Tag="LOC_NOTIFCATION_HOST_CHANGED_TT">
+		<Row Tag="LOC_NOTIFICATION_HOST_CHANGED_TT">
 			<Text>{1_playerName} is the new game host.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYBYCLOUD_YOURTURN">
+			<Text>Play By Cloud Your Turn</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYBYCLOUD_YOURTURN_TT">
+			<Text>It is your turn in a Play By Cloud game. ({1_cloudGameName})</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYBYCLOUD_GAMEREADY">
+			<Text>Play By Cloud Game Ready</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYBYCLOUD_GAMEREADY_TT">
+			<Text>One of your Play By Cloud games is ready to start. ({1_cloudGameName})</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYBYCLOUD_UNSEENCOMPLETE">
+			<Text>Play By Cloud Game Completed</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYBYCLOUD_UNSEENCOMPLETE_TT">
+			<Text>One of your Play By Cloud games recently completed. ({1_cloudGameName})</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_WRONG_PHASE_TT">
 			<Text>[color:Civ6Red]Wrong Phase[ENDCOLOR]</Text>

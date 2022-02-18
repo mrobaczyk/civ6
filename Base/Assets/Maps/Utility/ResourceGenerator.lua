@@ -120,7 +120,11 @@ end
 function ResourceGenerator:__InitResourceData()
 
 	self.iResourcesInDB = 0;
-	self.iLuxuriesThisSizeMap = GameInfo.Maps[Map.GetMapSize()].DefaultPlayers * 2;
+	if (GameInfo.Maps[Map.GetMapSize()] ~= nil) then
+		self.iLuxuriesThisSizeMap = GameInfo.Maps[Map.GetMapSize()].DefaultPlayers * 2;
+	else
+		self.iLuxuriesThisSizeMap = 12; -- Default size for Small map
+	end
 
 	-- Get resource value setting input by user.
 	if self.resources == 1 then

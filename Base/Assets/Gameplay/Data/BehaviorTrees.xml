@@ -220,7 +220,7 @@
       <Description>Checks that unit assigned target remains valid. Removes units with invalid targets from tree.</Description>
     </Row>
     <Row NodeType="Can Alpha City" NodeId="67" ShapeId="2">
-      <Description>For shurtcutting a city attack. Check if you can do 50%+ garrison damage or defense units are worth ignoring.</Description>
+      <Description>For shortcutting a city attack. Check if you can do 50%+ garrison damage or defense units are worth ignoring.</Description>
     </Row>
   </NodeDefinitions>
   <NodeDataDefinitions>
@@ -261,7 +261,7 @@
     <Row DataName="Validate new units" DefnId="2" DataType="bool" NodeType="Operation Move" Required="False" UserData="True" />
     <Row DataName="Unit distance" DefnId="3" DataType="int" NodeType="Operation Move" Required="False" UserData="True" />
     <Row DataName="Leader Tag" DefnId="4" DataType="string" NodeType="Operation Move" Required="False" UserData="True" />
-    <Row DataName="AlwaysRunning" DefnId="5" DataType="bool" NodeType="Operation Move" Required="false" UserData="true" />
+    <Row DataName="AlwaysRunning" DefnId="5" DataType="bool" NodeType="Operation Move" Required="False" UserData="True" />
     <Row DataName="Trigger Units" DefnId="0" DataType="UnitTypesList" NodeType="Decode Trigger" RequiredGroup="True" Output="True" />
     <Row DataName="Trigger Buildings" DefnId="1" DataType="BuildingTypesList" NodeType="Decode Trigger" RequiredGroup="True" Output="True" />
     <Row DataName="Trigger Improvements" DefnId="2" DataType="ImprovementList" NodeType="Decode Trigger" RequiredGroup="True" Output="True" />
@@ -280,6 +280,7 @@
     <Row DataName="Goal Plot" DefnId="1" DataType="Map Point" NodeType="Build Improvement" />
     <Row DataName="Improvements" DefnId="2" DataType="ImprovementList" NodeType="Build Improvement" />
     <Row DataName="Release when done" DefnId="3" DataType="bool" NodeType="Build Improvement" Required="False" UserData="True" />
+    <Row DataName="Builder Plot" DefnId="4" DataType="Map Point" NodeType="Build Improvement" Required="False" />
     <Row DataName="Unit ID List" DefnId="0" DataType="ID List" NodeType="Move Unit" Required="False" />
     <Row DataName="Location" DefnId="1" DataType="Map Point" NodeType="Move Unit" Required="False" />
     <Row DataName="Release when done" DefnId="2" DataType="bool" NodeType="Move Unit" Required="False" UserData="True" />
@@ -295,6 +296,7 @@
     <Row DataName="Recruit Value" DefnId="4" DataType="int" NodeType="Recruit Units" Required="False" />
     <Row DataName="Time Limit" DefnId="5" DataType="int" NodeType="Recruit Units" Required="False" UserData="True" />
     <Row DataName="Allow Stealing" DefnId="6" DataType="bool" NodeType="Recruit Units" Required="False" UserData="True" />
+    <Row DataName="Allow Levying" DefnId="7" DataType="bool" NodeType="Recruit Units" Required="False" UserData="True" />
     <Row DataName="Attack Nearby Units" DefnId="0" DataType="bool" NodeType="Operation Attack Units" UserData="True" />
     <Row DataName="Attack Along March" DefnId="1" DataType="bool" NodeType="Operation Attack Units" UserData="True" />
     <Row DataName="Allow Unequal Attacks" DefnId="2" DataType="bool" NodeType="Operation Attack Units" Required="False" UserData="True" />
@@ -318,6 +320,7 @@
     <Row DataName="Building Improvements" DefnId="3" DataType="ImprovementList" NodeType="Check Plot" RequiredGroup="True" />
     <Row DataName="Resource Harvesting" DefnId="4" DataType="bool" NodeType="Check Plot" Required="False" Output="True" />
     <Row DataName="Builder List" DefnId="5" DataType="UnitTypesList" NodeType="Check Plot" Output="True" />
+    <Row DataName="Plot To Move" DefnId="6" DataType="Map Point" NodeType="Check Plot" Required="False" Output="True" />
     <Row DataName="Builder List" DefnId="0" DataType="ID List" NodeType="Clear Plot" Required="False" />
     <Row DataName="Release on Complete" DefnId="1" DataType="bool" NodeType="Clear Plot" Required="False" UserData="True" />
     <Row DataName="Plot To Clear" DefnId="2" DataType="Map Point" NodeType="Clear Plot" />
@@ -330,6 +333,7 @@
     <Row DataName="Raiding Party" DefnId="5" DataType="bool" NodeType="Barbarian Recruit" Required="False" UserData="True" />
     <Row DataName="Turns to Run" DefnId="0" DataType="int" NodeType="Interval" UserData="True" />
     <Row DataName="AutoProtect Percentage" DefnId="0" DataType="int" NodeType="Operation Defend Units" Required="False" UserData="True" />
+    <Row DataName="Protect Outside Range" DefnId="1" DataType="int" NodeType="Operation Defend Units" Required="False" UserData="True" />
     <Row DataName="Turns to Run" DefnId="0" DataType="int" NodeType="Turn Limiter" UserData="True" />
     <Row DataName="Fail at Limit" DefnId="1" DataType="bool" NodeType="Turn Limiter" Required="False" UserData="True" />
     <Row DataName="Limit Is Min" DefnId="2" DataType="bool" NodeType="Turn Limiter" Required="False" UserData="True" />
@@ -452,31 +456,32 @@
     <Row TreeName="Free Cities Assault" />
   </BehaviorTrees>
   <BehaviorTreeNodes>
-    <Row NodeType="Concurrent" NodeId="0" TreeName="Barbarian City Attack" JumpTo="25" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Barbarian City Attack" JumpTo="26" />
     <Row NodeType="Operation Defend Units" NodeId="1" TreeName="Barbarian City Attack" />
-    <Row NodeType="Sequence" NodeId="2" TreeName="Barbarian City Attack" JumpTo="25" />
+    <Row NodeType="Sequence" NodeId="2" TreeName="Barbarian City Attack" JumpTo="26" />
     <Row NodeType="Decode Trigger" NodeId="3" TreeName="Barbarian City Attack" />
-    <Row NodeType="Sequence" NodeId="4" TreeName="Barbarian City Attack" JumpTo="10" />
+    <Row NodeType="Sequence" NodeId="4" TreeName="Barbarian City Attack" JumpTo="11" />
     <Row NodeType="Barbarian Spawn Change" NodeId="5" TreeName="Barbarian City Attack" />
     <Row NodeType="Priority" NodeId="6" TreeName="Barbarian City Attack" JumpTo="10" />
     <Row NodeType="Turn Limiter" NodeId="7" TreeName="Barbarian City Attack" JumpTo="9" />
     <Row NodeType="Barbarian Recruit" NodeId="8" TreeName="Barbarian City Attack" />
     <Row NodeType="Barbarian Spawn Change" NodeId="9" TreeName="Barbarian City Attack" />
-    <Row NodeType="Concurrent" NodeId="10" TreeName="Barbarian City Attack" JumpTo="13" />
-    <Row NodeType="Make Formation" NodeId="11" TreeName="Barbarian City Attack" />
-    <Row NodeType="Operation Move" NodeId="12" TreeName="Barbarian City Attack" />
-    <Row NodeType="Concurrent" NodeId="13" TreeName="Barbarian City Attack" JumpTo="17" />
-    <Row NodeType="Operation Attack Units" NodeId="14" TreeName="Barbarian City Attack" />
-    <Row NodeType="Make Formation" NodeId="15" TreeName="Barbarian City Attack" />
-    <Row NodeType="Operation Move" NodeId="16" TreeName="Barbarian City Attack" />
-    <Row NodeType="Concurrent" NodeId="17" TreeName="Barbarian City Attack" JumpTo="24" />
-    <Row NodeType="Operation Siege City" NodeId="18" TreeName="Barbarian City Attack" />
-    <Row NodeType="Operation Attack City" NodeId="19" TreeName="Barbarian City Attack" />
-    <Row NodeType="Operation Attack Units" NodeId="20" TreeName="Barbarian City Attack" />
-    <Row NodeType="Make Formation" NodeId="21" TreeName="Barbarian City Attack" />
-    <Row NodeType="Operation Pillage" NodeId="22" TreeName="Barbarian City Attack" />
-    <Row NodeType="Operation Move" NodeId="23" TreeName="Barbarian City Attack" />
-    <Row NodeType="Notify Owner" NodeId="24" TreeName="Barbarian City Attack" />
+    <Row NodeType="Barbarian Spawn Change" NodeId="10" TreeName="Barbarian City Attack" />
+    <Row NodeType="Concurrent" NodeId="11" TreeName="Barbarian City Attack" JumpTo="14" />
+    <Row NodeType="Make Formation" NodeId="12" TreeName="Barbarian City Attack" />
+    <Row NodeType="Operation Move" NodeId="13" TreeName="Barbarian City Attack" />
+    <Row NodeType="Concurrent" NodeId="14" TreeName="Barbarian City Attack" JumpTo="18" />
+    <Row NodeType="Operation Attack Units" NodeId="15" TreeName="Barbarian City Attack" />
+    <Row NodeType="Make Formation" NodeId="16" TreeName="Barbarian City Attack" />
+    <Row NodeType="Operation Move" NodeId="17" TreeName="Barbarian City Attack" />
+    <Row NodeType="Concurrent" NodeId="18" TreeName="Barbarian City Attack" JumpTo="25" />
+    <Row NodeType="Operation Siege City" NodeId="19" TreeName="Barbarian City Attack" />
+    <Row NodeType="Operation Attack City" NodeId="20" TreeName="Barbarian City Attack" />
+    <Row NodeType="Operation Attack Units" NodeId="21" TreeName="Barbarian City Attack" />
+    <Row NodeType="Make Formation" NodeId="22" TreeName="Barbarian City Attack" />
+    <Row NodeType="Operation Pillage" NodeId="23" TreeName="Barbarian City Attack" />
+    <Row NodeType="Operation Move" NodeId="24" TreeName="Barbarian City Attack" />
+    <Row NodeType="Notify Owner" NodeId="25" TreeName="Barbarian City Attack" />
     <Row NodeType="Sequence" NodeId="0" TreeName="Barbarian Found City" JumpTo="6" />
     <Row NodeType="Decode Trigger" NodeId="1" TreeName="Barbarian Found City" />
     <Row NodeType="Concurrent" NodeId="2" TreeName="Barbarian Found City" JumpTo="5" />
@@ -604,59 +609,62 @@
     <Row NodeType="Add Goal Tech" NodeId="3" TreeName="Build Trigger Unit" />
     <Row NodeType="Contract Manager Decorator" NodeId="4" TreeName="Build Trigger Unit" JumpTo="6" />
     <Row NodeType="Build Unit" NodeId="5" TreeName="Build Trigger Unit" />
-    <Row NodeType="Concurrent" NodeId="0" TreeName="Early City Assault" JumpTo="53" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Early City Assault" JumpTo="56" />
     <Row NodeType="Decode Trigger" NodeId="1" TreeName="Early City Assault" />
-    <Row NodeType="Operation Defend Units" NodeId="2" TreeName="Early City Assault" />
-    <Row NodeType="Operation Change Target" NodeId="3" TreeName="Early City Assault" />
-    <Row NodeType="Sequence" NodeId="4" TreeName="Early City Assault" JumpTo="53" />
-    <Row NodeType="Concurrent" NodeId="5" TreeName="Early City Assault" JumpTo="12" />
-    <Row NodeType="Priority" NodeId="6" TreeName="Early City Assault" JumpTo="10" />
-    <Row NodeType="Operation Is Ready" NodeId="7" TreeName="Early City Assault" />
-    <Row NodeType="Contract Manager Decorator" NodeId="8" TreeName="Early City Assault" JumpTo="10" />
-    <Row NodeType="Recruit Units" NodeId="9" TreeName="Early City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="10" TreeName="Early City Assault" />
-    <Row NodeType="Operation Move" NodeId="11" TreeName="Early City Assault" />
-    <Row NodeType="Lock Units" NodeId="12" TreeName="Early City Assault" />
-    <Row NodeType="Operation Diplomacy" NodeId="13" TreeName="Early City Assault" />
-    <Row NodeType="Turn Limiter" NodeId="14" TreeName="Early City Assault" JumpTo="22" />
-    <Row NodeType="Priority" NodeId="15" TreeName="Early City Assault" JumpTo="22" />
-    <Row NodeType="Is At War" NodeId="16" TreeName="Early City Assault" />
-    <Row NodeType="Concurrent" NodeId="17" TreeName="Early City Assault" JumpTo="22" />
-    <Row NodeType="Operation Change Target" NodeId="18" TreeName="Early City Assault" />
-    <Row NodeType="Recruit Units" NodeId="19" TreeName="Early City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="20" TreeName="Early City Assault" />
-    <Row NodeType="Operation Move" NodeId="21" TreeName="Early City Assault" />
-    <Row NodeType="Priority" NodeId="22" TreeName="Early City Assault" JumpTo="30" />
-    <Row NodeType="Is At War" NodeId="23" TreeName="Early City Assault" />
-    <Row NodeType="Turn Limiter" NodeId="24" TreeName="Early City Assault" JumpTo="30" />
-    <Row NodeType="Concurrent" NodeId="25" TreeName="Early City Assault" JumpTo="30" />
-    <Row NodeType="Contract Manager Decorator" NodeId="26" TreeName="Early City Assault" JumpTo="28" />
-    <Row NodeType="Operation Diplomacy" NodeId="27" TreeName="Early City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="28" TreeName="Early City Assault" />
-    <Row NodeType="Operation Move" NodeId="29" TreeName="Early City Assault" />
-    <Row NodeType="Turn Limiter" NodeId="30" TreeName="Early City Assault" JumpTo="39" />
-    <Row NodeType="Concurrent" NodeId="31" TreeName="Early City Assault" JumpTo="39" />
-    <Row NodeType="Is At War" NodeId="32" TreeName="Early City Assault" />
-    <Row NodeType="Operation Change Target" NodeId="33" TreeName="Early City Assault" />
-    <Row NodeType="Recruit Units" NodeId="34" TreeName="Early City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="35" TreeName="Early City Assault" />
-    <Row NodeType="Operation Pillage" NodeId="36" TreeName="Early City Assault" />
-    <Row NodeType="Operation Siege City" NodeId="37" TreeName="Early City Assault" />
-    <Row NodeType="Operation Move" NodeId="38" TreeName="Early City Assault" />
-    <Row NodeType="Concurrent" NodeId="39" TreeName="Early City Assault" JumpTo="53" />
-    <Row NodeType="Operation Change Target" NodeId="40" TreeName="Early City Assault" />
-    <Row NodeType="Recruit Units" NodeId="41" TreeName="Early City Assault" />
-    <Row NodeType="Priority" NodeId="42" TreeName="Early City Assault" JumpTo="46" />
-    <Row NodeType="Not" NodeId="43" TreeName="Early City Assault" JumpTo="45" />
-    <Row NodeType="Can Alpha City" NodeId="44" TreeName="Early City Assault" />
-    <Row NodeType="Operation Attack City" NodeId="45" TreeName="Early City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="46" TreeName="Early City Assault" />
-    <Row NodeType="Operation Pillage" NodeId="47" TreeName="Early City Assault" />
-    <Row NodeType="Operation Siege City" NodeId="48" TreeName="Early City Assault" />
-    <Row NodeType="Build Military Improvement" NodeId="49" TreeName="Early City Assault" />
-    <Row NodeType="Operation Attack City" NodeId="50" TreeName="Early City Assault" />
-    <Row NodeType="Operation Pillage" NodeId="51" TreeName="Early City Assault" />
-    <Row NodeType="Operation Move" NodeId="52" TreeName="Early City Assault" />
+    <Row NodeType="Priority" NodeId="2" TreeName="Early City Assault" JumpTo="6" />
+    <Row NodeType="Not" NodeId="3" TreeName="Early City Assault" JumpTo="5" />
+    <Row NodeType="Can Alpha City" NodeId="4" TreeName="Early City Assault" />
+    <Row NodeType="Operation Defend Units" NodeId="5" TreeName="Early City Assault" />
+    <Row NodeType="Operation Change Target" NodeId="6" TreeName="Early City Assault" />
+    <Row NodeType="Sequence" NodeId="7" TreeName="Early City Assault" JumpTo="56" />
+    <Row NodeType="Concurrent" NodeId="8" TreeName="Early City Assault" JumpTo="15" />
+    <Row NodeType="Priority" NodeId="9" TreeName="Early City Assault" JumpTo="13" />
+    <Row NodeType="Operation Is Ready" NodeId="10" TreeName="Early City Assault" />
+    <Row NodeType="Contract Manager Decorator" NodeId="11" TreeName="Early City Assault" JumpTo="13" />
+    <Row NodeType="Recruit Units" NodeId="12" TreeName="Early City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="13" TreeName="Early City Assault" />
+    <Row NodeType="Operation Move" NodeId="14" TreeName="Early City Assault" />
+    <Row NodeType="Lock Units" NodeId="15" TreeName="Early City Assault" />
+    <Row NodeType="Operation Diplomacy" NodeId="16" TreeName="Early City Assault" />
+    <Row NodeType="Turn Limiter" NodeId="17" TreeName="Early City Assault" JumpTo="25" />
+    <Row NodeType="Priority" NodeId="18" TreeName="Early City Assault" JumpTo="25" />
+    <Row NodeType="Is At War" NodeId="19" TreeName="Early City Assault" />
+    <Row NodeType="Concurrent" NodeId="20" TreeName="Early City Assault" JumpTo="25" />
+    <Row NodeType="Operation Change Target" NodeId="21" TreeName="Early City Assault" />
+    <Row NodeType="Recruit Units" NodeId="22" TreeName="Early City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="23" TreeName="Early City Assault" />
+    <Row NodeType="Operation Move" NodeId="24" TreeName="Early City Assault" />
+    <Row NodeType="Priority" NodeId="25" TreeName="Early City Assault" JumpTo="33" />
+    <Row NodeType="Is At War" NodeId="26" TreeName="Early City Assault" />
+    <Row NodeType="Turn Limiter" NodeId="27" TreeName="Early City Assault" JumpTo="33" />
+    <Row NodeType="Concurrent" NodeId="28" TreeName="Early City Assault" JumpTo="33" />
+    <Row NodeType="Contract Manager Decorator" NodeId="29" TreeName="Early City Assault" JumpTo="31" />
+    <Row NodeType="Operation Diplomacy" NodeId="30" TreeName="Early City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="31" TreeName="Early City Assault" />
+    <Row NodeType="Operation Move" NodeId="32" TreeName="Early City Assault" />
+    <Row NodeType="Turn Limiter" NodeId="33" TreeName="Early City Assault" JumpTo="42" />
+    <Row NodeType="Concurrent" NodeId="34" TreeName="Early City Assault" JumpTo="42" />
+    <Row NodeType="Is At War" NodeId="35" TreeName="Early City Assault" />
+    <Row NodeType="Operation Change Target" NodeId="36" TreeName="Early City Assault" />
+    <Row NodeType="Recruit Units" NodeId="37" TreeName="Early City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="38" TreeName="Early City Assault" />
+    <Row NodeType="Operation Pillage" NodeId="39" TreeName="Early City Assault" />
+    <Row NodeType="Operation Siege City" NodeId="40" TreeName="Early City Assault" />
+    <Row NodeType="Operation Move" NodeId="41" TreeName="Early City Assault" />
+    <Row NodeType="Concurrent" NodeId="42" TreeName="Early City Assault" JumpTo="56" />
+    <Row NodeType="Operation Change Target" NodeId="43" TreeName="Early City Assault" />
+    <Row NodeType="Recruit Units" NodeId="44" TreeName="Early City Assault" />
+    <Row NodeType="Priority" NodeId="45" TreeName="Early City Assault" JumpTo="49" />
+    <Row NodeType="Not" NodeId="46" TreeName="Early City Assault" JumpTo="48" />
+    <Row NodeType="Can Alpha City" NodeId="47" TreeName="Early City Assault" />
+    <Row NodeType="Operation Attack City" NodeId="48" TreeName="Early City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="49" TreeName="Early City Assault" />
+    <Row NodeType="Operation Pillage" NodeId="50" TreeName="Early City Assault" />
+    <Row NodeType="Operation Siege City" NodeId="51" TreeName="Early City Assault" />
+    <Row NodeType="Build Military Improvement" NodeId="52" TreeName="Early City Assault" />
+    <Row NodeType="Operation Attack City" NodeId="53" TreeName="Early City Assault" />
+    <Row NodeType="Operation Pillage" NodeId="54" TreeName="Early City Assault" />
+    <Row NodeType="Operation Move" NodeId="55" TreeName="Early City Assault" />
     <Row NodeType="Sequence" NodeId="0" TreeName="Escort Worker To Camp" JumpTo="9" />
     <Row NodeType="Make Formation" NodeId="1" TreeName="Escort Worker To Camp" />
     <Row NodeType="Operation Change Target" NodeId="2" TreeName="Escort Worker To Camp" />
@@ -878,69 +886,75 @@
     <Row NodeType="Operation Naval Escort" NodeId="25" TreeName="Settle City Op" />
     <Row NodeType="Operation Move" NodeId="26" TreeName="Settle City Op" />
     <Row NodeType="Settle" NodeId="27" TreeName="Settle City Op" />
-    <Row NodeType="Concurrent" NodeId="0" TreeName="Siege City Assault" JumpTo="55" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Siege City Assault" JumpTo="58" />
     <Row NodeType="Decode Trigger" NodeId="1" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Defend Units" NodeId="2" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Change Target" NodeId="3" TreeName="Siege City Assault" />
-    <Row NodeType="Sequence" NodeId="4" TreeName="Siege City Assault" JumpTo="55" />
-    <Row NodeType="Concurrent" NodeId="5" TreeName="Siege City Assault" JumpTo="13" />
-    <Row NodeType="Priority" NodeId="6" TreeName="Siege City Assault" JumpTo="10" />
-    <Row NodeType="Operation Is Ready" NodeId="7" TreeName="Siege City Assault" />
-    <Row NodeType="Contract Manager Decorator" NodeId="8" TreeName="Siege City Assault" JumpTo="10" />
-    <Row NodeType="Recruit Units" NodeId="9" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="10" TreeName="Siege City Assault" />
-    <Row NodeType="Make Formation" NodeId="11" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Move" NodeId="12" TreeName="Siege City Assault" />
-    <Row NodeType="Lock Units" NodeId="13" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Diplomacy" NodeId="14" TreeName="Siege City Assault" />
-    <Row NodeType="Turn Limiter" NodeId="15" TreeName="Siege City Assault" JumpTo="23" />
-    <Row NodeType="Priority" NodeId="16" TreeName="Siege City Assault" JumpTo="23" />
-    <Row NodeType="Is At War" NodeId="17" TreeName="Siege City Assault" />
-    <Row NodeType="Concurrent" NodeId="18" TreeName="Siege City Assault" JumpTo="23" />
-    <Row NodeType="Operation Change Target" NodeId="19" TreeName="Siege City Assault" />
-    <Row NodeType="Recruit Units" NodeId="20" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="21" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Move" NodeId="22" TreeName="Siege City Assault" />
-    <Row NodeType="Concurrent" NodeId="23" TreeName="Siege City Assault" JumpTo="30" />
-    <Row NodeType="Turn Limiter" NodeId="24" TreeName="Siege City Assault" JumpTo="27" />
-    <Row NodeType="Contract Manager Decorator" NodeId="25" TreeName="Siege City Assault" JumpTo="27" />
-    <Row NodeType="Operation Diplomacy" NodeId="26" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="27" TreeName="Siege City Assault" />
-    <Row NodeType="Turn Limiter" NodeId="28" TreeName="Siege City Assault" JumpTo="30" />
-    <Row NodeType="Operation Move" NodeId="29" TreeName="Siege City Assault" />
-    <Row NodeType="Turn Limiter" NodeId="30" TreeName="Siege City Assault" JumpTo="40" />
-    <Row NodeType="Concurrent" NodeId="31" TreeName="Siege City Assault" JumpTo="40" />
-    <Row NodeType="Is At War" NodeId="32" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Change Target" NodeId="33" TreeName="Siege City Assault" />
-    <Row NodeType="Recruit Units" NodeId="34" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="35" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Air Assault" NodeId="36" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Pillage" NodeId="37" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Siege City" NodeId="38" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Move" NodeId="39" TreeName="Siege City Assault" />
-    <Row NodeType="Concurrent" NodeId="40" TreeName="Siege City Assault" JumpTo="55" />
-    <Row NodeType="Operation Change Target" NodeId="41" TreeName="Siege City Assault" />
-    <Row NodeType="Recruit Units" NodeId="42" TreeName="Siege City Assault" />
-    <Row NodeType="Priority" NodeId="43" TreeName="Siege City Assault" JumpTo="47" />
-    <Row NodeType="Not" NodeId="44" TreeName="Siege City Assault" JumpTo="46" />
-    <Row NodeType="Can Alpha City" NodeId="45" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Attack City" NodeId="46" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Attack Units" NodeId="47" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Pillage" NodeId="48" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Siege City" NodeId="49" TreeName="Siege City Assault" />
-    <Row NodeType="Build Military Improvement" NodeId="50" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Air Assault" NodeId="51" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Attack City" NodeId="52" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Pillage" NodeId="53" TreeName="Siege City Assault" />
-    <Row NodeType="Operation Move" NodeId="54" TreeName="Siege City Assault" />
-    <Row NodeType="Concurrent" NodeId="0" TreeName="Simple City Defense" JumpTo="8" />
+    <Row NodeType="Priority" NodeId="2" TreeName="Siege City Assault" JumpTo="6" />
+    <Row NodeType="Not" NodeId="3" TreeName="Siege City Assault" JumpTo="5" />
+    <Row NodeType="Can Alpha City" NodeId="4" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Defend Units" NodeId="5" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Change Target" NodeId="6" TreeName="Siege City Assault" />
+    <Row NodeType="Sequence" NodeId="7" TreeName="Siege City Assault" JumpTo="58" />
+    <Row NodeType="Concurrent" NodeId="8" TreeName="Siege City Assault" JumpTo="16" />
+    <Row NodeType="Priority" NodeId="9" TreeName="Siege City Assault" JumpTo="13" />
+    <Row NodeType="Operation Is Ready" NodeId="10" TreeName="Siege City Assault" />
+    <Row NodeType="Contract Manager Decorator" NodeId="11" TreeName="Siege City Assault" JumpTo="13" />
+    <Row NodeType="Recruit Units" NodeId="12" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="13" TreeName="Siege City Assault" />
+    <Row NodeType="Make Formation" NodeId="14" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Move" NodeId="15" TreeName="Siege City Assault" />
+    <Row NodeType="Lock Units" NodeId="16" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Diplomacy" NodeId="17" TreeName="Siege City Assault" />
+    <Row NodeType="Turn Limiter" NodeId="18" TreeName="Siege City Assault" JumpTo="26" />
+    <Row NodeType="Priority" NodeId="19" TreeName="Siege City Assault" JumpTo="26" />
+    <Row NodeType="Is At War" NodeId="20" TreeName="Siege City Assault" />
+    <Row NodeType="Concurrent" NodeId="21" TreeName="Siege City Assault" JumpTo="26" />
+    <Row NodeType="Operation Change Target" NodeId="22" TreeName="Siege City Assault" />
+    <Row NodeType="Recruit Units" NodeId="23" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="24" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Move" NodeId="25" TreeName="Siege City Assault" />
+    <Row NodeType="Concurrent" NodeId="26" TreeName="Siege City Assault" JumpTo="33" />
+    <Row NodeType="Turn Limiter" NodeId="27" TreeName="Siege City Assault" JumpTo="30" />
+    <Row NodeType="Contract Manager Decorator" NodeId="28" TreeName="Siege City Assault" JumpTo="30" />
+    <Row NodeType="Operation Diplomacy" NodeId="29" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="30" TreeName="Siege City Assault" />
+    <Row NodeType="Turn Limiter" NodeId="31" TreeName="Siege City Assault" JumpTo="33" />
+    <Row NodeType="Operation Move" NodeId="32" TreeName="Siege City Assault" />
+    <Row NodeType="Turn Limiter" NodeId="33" TreeName="Siege City Assault" JumpTo="43" />
+    <Row NodeType="Concurrent" NodeId="34" TreeName="Siege City Assault" JumpTo="43" />
+    <Row NodeType="Is At War" NodeId="35" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Change Target" NodeId="36" TreeName="Siege City Assault" />
+    <Row NodeType="Recruit Units" NodeId="37" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="38" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Air Assault" NodeId="39" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Pillage" NodeId="40" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Siege City" NodeId="41" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Move" NodeId="42" TreeName="Siege City Assault" />
+    <Row NodeType="Concurrent" NodeId="43" TreeName="Siege City Assault" JumpTo="58" />
+    <Row NodeType="Operation Change Target" NodeId="44" TreeName="Siege City Assault" />
+    <Row NodeType="Recruit Units" NodeId="45" TreeName="Siege City Assault" />
+    <Row NodeType="Priority" NodeId="46" TreeName="Siege City Assault" JumpTo="50" />
+    <Row NodeType="Not" NodeId="47" TreeName="Siege City Assault" JumpTo="49" />
+    <Row NodeType="Can Alpha City" NodeId="48" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Attack City" NodeId="49" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Attack Units" NodeId="50" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Pillage" NodeId="51" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Siege City" NodeId="52" TreeName="Siege City Assault" />
+    <Row NodeType="Build Military Improvement" NodeId="53" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Air Assault" NodeId="54" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Attack City" NodeId="55" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Pillage" NodeId="56" TreeName="Siege City Assault" />
+    <Row NodeType="Operation Move" NodeId="57" TreeName="Siege City Assault" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Simple City Defense" JumpTo="11" />
     <Row NodeType="Is City Threatened" NodeId="1" TreeName="Simple City Defense" />
-    <Row NodeType="Concurrent" NodeId="2" TreeName="Simple City Defense" JumpTo="8" />
-    <Row NodeType="Recruit Units" NodeId="3" TreeName="Simple City Defense" />
-    <Row NodeType="Garrison City" NodeId="4" TreeName="Simple City Defense" />
-    <Row NodeType="Operation Attack City" NodeId="5" TreeName="Simple City Defense" />
-    <Row NodeType="Operation Attack Units" NodeId="6" TreeName="Simple City Defense" />
-    <Row NodeType="Operation Move" NodeId="7" TreeName="Simple City Defense" />
+    <Row NodeType="Operation Defend Units" NodeId="2" TreeName="Simple City Defense" />
+    <Row NodeType="Concurrent" NodeId="3" TreeName="Simple City Defense" JumpTo="11" />
+    <Row NodeType="Recruit Units" NodeId="4" TreeName="Simple City Defense" />
+    <Row NodeType="Priority" NodeId="5" TreeName="Simple City Defense" JumpTo="8" />
+    <Row NodeType="Can Alpha City" NodeId="6" TreeName="Simple City Defense" />
+    <Row NodeType="Garrison City" NodeId="7" TreeName="Simple City Defense" />
+    <Row NodeType="Operation Attack City" NodeId="8" TreeName="Simple City Defense" />
+    <Row NodeType="Operation Attack Units" NodeId="9" TreeName="Simple City Defense" />
+    <Row NodeType="Operation Move" NodeId="10" TreeName="Simple City Defense" />
     <Row NodeType="Concurrent" NodeId="0" TreeName="Simple City Tree" JumpTo="2" />
     <Row NodeType="City Attack" NodeId="1" TreeName="Simple City Tree" />
     <Row NodeType="Concurrent" NodeId="0" TreeName="Simple Operation Attack" JumpTo="22" />
@@ -993,35 +1007,36 @@
     <Row DefnId="4" NodeId="8" TreeName="Barbarian City Attack" DefaultData="1" />
     <Row DefnId="5" NodeId="8" TreeName="Barbarian City Attack" DefaultData="false" />
     <Row DefnId="0" NodeId="9" TreeName="Barbarian City Attack" Tag="Tribe" />
-    <Row DefnId="1" NodeId="11" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_MELEE" />
-    <Row DefnId="2" NodeId="11" TreeName="Barbarian City Attack" />
-    <Row DefnId="3" NodeId="11" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
-    <Row DefnId="4" NodeId="11" TreeName="Barbarian City Attack" />
-    <Row DefnId="0" NodeId="12" TreeName="Barbarian City Attack" DefaultData="0" />
-    <Row DefnId="1" NodeId="12" TreeName="Barbarian City Attack" DefaultData="2" />
-    <Row DefnId="2" NodeId="12" TreeName="Barbarian City Attack" DefaultData="1" />
-    <Row DefnId="3" NodeId="12" TreeName="Barbarian City Attack" DefaultData="2" />
-    <Row DefnId="0" NodeId="14" TreeName="Barbarian City Attack" DefaultData="true" />
-    <Row DefnId="1" NodeId="14" TreeName="Barbarian City Attack" DefaultData="true" />
-    <Row DefnId="1" NodeId="15" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_MELEE" />
-    <Row DefnId="2" NodeId="15" TreeName="Barbarian City Attack" />
-    <Row DefnId="3" NodeId="15" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
-    <Row DefnId="4" NodeId="15" TreeName="Barbarian City Attack" />
-    <Row DefnId="0" NodeId="16" TreeName="Barbarian City Attack" DefaultData="1" />
-    <Row DefnId="1" NodeId="16" TreeName="Barbarian City Attack" DefaultData="2" />
-    <Row DefnId="2" NodeId="16" TreeName="Barbarian City Attack" DefaultData="false" />
-    <Row DefnId="3" NodeId="16" TreeName="Barbarian City Attack" DefaultData="2" />
-    <Row DefnId="0" NodeId="20" TreeName="Barbarian City Attack" DefaultData="true" />
-    <Row DefnId="1" NodeId="20" TreeName="Barbarian City Attack" DefaultData="false" />
-    <Row DefnId="1" NodeId="21" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_MELEE" />
-    <Row DefnId="2" NodeId="21" TreeName="Barbarian City Attack" />
-    <Row DefnId="3" NodeId="21" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
-    <Row DefnId="4" NodeId="21" TreeName="Barbarian City Attack" />
-    <Row DefnId="0" NodeId="23" TreeName="Barbarian City Attack" DefaultData="1" />
-    <Row DefnId="1" NodeId="23" TreeName="Barbarian City Attack" DefaultData="0" />
-    <Row DefnId="2" NodeId="23" TreeName="Barbarian City Attack" DefaultData="false" />
-    <Row DefnId="3" NodeId="23" TreeName="Barbarian City Attack" DefaultData="2" />
-    <Row DefnId="0" NodeId="24" TreeName="Barbarian City Attack" Tag="Tribe" />
+    <Row DefnId="0" NodeId="10" TreeName="Barbarian City Attack" Tag="Tribe" />
+    <Row DefnId="1" NodeId="12" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_MELEE" />
+    <Row DefnId="2" NodeId="12" TreeName="Barbarian City Attack" />
+    <Row DefnId="3" NodeId="12" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
+    <Row DefnId="4" NodeId="12" TreeName="Barbarian City Attack" />
+    <Row DefnId="0" NodeId="13" TreeName="Barbarian City Attack" DefaultData="0" />
+    <Row DefnId="1" NodeId="13" TreeName="Barbarian City Attack" DefaultData="2" />
+    <Row DefnId="2" NodeId="13" TreeName="Barbarian City Attack" DefaultData="1" />
+    <Row DefnId="3" NodeId="13" TreeName="Barbarian City Attack" DefaultData="2" />
+    <Row DefnId="0" NodeId="15" TreeName="Barbarian City Attack" DefaultData="true" />
+    <Row DefnId="1" NodeId="15" TreeName="Barbarian City Attack" DefaultData="true" />
+    <Row DefnId="1" NodeId="16" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_MELEE" />
+    <Row DefnId="2" NodeId="16" TreeName="Barbarian City Attack" />
+    <Row DefnId="3" NodeId="16" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
+    <Row DefnId="4" NodeId="16" TreeName="Barbarian City Attack" />
+    <Row DefnId="0" NodeId="17" TreeName="Barbarian City Attack" DefaultData="1" />
+    <Row DefnId="1" NodeId="17" TreeName="Barbarian City Attack" DefaultData="2" />
+    <Row DefnId="2" NodeId="17" TreeName="Barbarian City Attack" DefaultData="false" />
+    <Row DefnId="3" NodeId="17" TreeName="Barbarian City Attack" DefaultData="2" />
+    <Row DefnId="0" NodeId="21" TreeName="Barbarian City Attack" DefaultData="true" />
+    <Row DefnId="1" NodeId="21" TreeName="Barbarian City Attack" DefaultData="false" />
+    <Row DefnId="1" NodeId="22" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_MELEE" />
+    <Row DefnId="2" NodeId="22" TreeName="Barbarian City Attack" />
+    <Row DefnId="3" NodeId="22" TreeName="Barbarian City Attack" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
+    <Row DefnId="4" NodeId="22" TreeName="Barbarian City Attack" />
+    <Row DefnId="0" NodeId="24" TreeName="Barbarian City Attack" DefaultData="1" />
+    <Row DefnId="1" NodeId="24" TreeName="Barbarian City Attack" DefaultData="0" />
+    <Row DefnId="2" NodeId="24" TreeName="Barbarian City Attack" DefaultData="false" />
+    <Row DefnId="3" NodeId="24" TreeName="Barbarian City Attack" DefaultData="2" />
+    <Row DefnId="0" NodeId="25" TreeName="Barbarian City Attack" Tag="Tribe" />
     <Row DefnId="0" NodeId="1" TreeName="Barbarian Found City" />
     <Row DefnId="1" NodeId="1" TreeName="Barbarian Found City" />
     <Row DefnId="2" NodeId="1" TreeName="Barbarian Found City" />
@@ -1194,6 +1209,7 @@
     <Row DefnId="3" NodeId="8" TreeName="Build City Improvement" Tag="Needed Improvement" />
     <Row DefnId="4" NodeId="8" TreeName="Build City Improvement" Tag="Harvest" />
     <Row DefnId="5" NodeId="8" TreeName="Build City Improvement" Tag="Builder Type" />
+    <Row DefnId="6" NodeId="8" TreeName="Build City Improvement" Tag="Builder Location" />
     <Row DefnId="0" NodeId="11" TreeName="Build City Improvement" Tag="Builder Type" />
     <Row DefnId="1" NodeId="11" TreeName="Build City Improvement" Tag="Location" />
     <Row DefnId="2" NodeId="11" TreeName="Build City Improvement" Tag="Plot Clear Builder" />
@@ -1232,12 +1248,13 @@
     <Row DefnId="8" NodeId="23" TreeName="Build City Improvement" Tag="Present Value" />
     <Row DefnId="0" NodeId="24" TreeName="Build City Improvement" Tag="Improvement Builder Contract" />
     <Row DefnId="1" NodeId="26" TreeName="Build City Improvement" DefaultData="0" />
-    <Row DefnId="1" NodeId="27" TreeName="Build City Improvement" Tag="Location" />
+    <Row DefnId="1" NodeId="27" TreeName="Build City Improvement" Tag="Builder Location" />
     <Row DefnId="2" NodeId="27" TreeName="Build City Improvement" DefaultData="0" />
     <Row DefnId="3" NodeId="27" TreeName="Build City Improvement" DefaultData="0" />
     <Row DefnId="1" NodeId="28" TreeName="Build City Improvement" Tag="Location" />
     <Row DefnId="2" NodeId="28" TreeName="Build City Improvement" Tag="Needed Improvement" />
     <Row DefnId="3" NodeId="28" TreeName="Build City Improvement" DefaultData="1" />
+    <Row DefnId="4" NodeId="28" TreeName="Build City Improvement" Tag="Builder Location" />
     <Row DefnId="0" NodeId="1" TreeName="Build Trigger Building" />
     <Row DefnId="1" NodeId="1" TreeName="Build Trigger Building" Tag="Trigger Buildings" />
     <Row DefnId="2" NodeId="1" TreeName="Build Trigger Building" />
@@ -1329,6 +1346,7 @@
     <Row DefnId="2" NodeId="6" TreeName="Build Trigger Improvement" />
     <Row DefnId="3" NodeId="6" TreeName="Build Trigger Improvement" Tag="Improvement" />
     <Row DefnId="5" NodeId="6" TreeName="Build Trigger Improvement" Tag="Clear Plot Builder" />
+    <Row DefnId="6" NodeId="6" TreeName="Build Trigger Improvement" Tag="Builder Plot" />
     <Row DefnId="0" NodeId="9" TreeName="Build Trigger Improvement" Tag="Clear Plot Builder" />
     <Row DefnId="1" NodeId="9" TreeName="Build Trigger Improvement" Tag="Improve Spot" />
     <Row DefnId="2" NodeId="9" TreeName="Build Trigger Improvement" Tag="Clear Plot Builder" />
@@ -1363,11 +1381,12 @@
     <Row DefnId="4" NodeId="19" TreeName="Build Trigger Improvement" Tag="Builder Contract" />
     <Row DefnId="6" NodeId="19" TreeName="Build Trigger Improvement" />
     <Row DefnId="1" NodeId="21" TreeName="Build Trigger Improvement" DefaultData="0" />
-    <Row DefnId="1" NodeId="22" TreeName="Build Trigger Improvement" Tag="Improve Spot" />
+    <Row DefnId="1" NodeId="22" TreeName="Build Trigger Improvement" Tag="Builder Plot" />
     <Row DefnId="2" NodeId="22" TreeName="Build Trigger Improvement" DefaultData="0" />
     <Row DefnId="1" NodeId="23" TreeName="Build Trigger Improvement" Tag="Improve Spot" />
     <Row DefnId="2" NodeId="23" TreeName="Build Trigger Improvement" Tag="Improvement" />
     <Row DefnId="3" NodeId="23" TreeName="Build Trigger Improvement" DefaultData="1" />
+    <Row DefnId="4" NodeId="23" TreeName="Build Trigger Improvement" Tag="Builder Plot" />
     <Row DefnId="0" NodeId="1" TreeName="Build Trigger Unit" Tag="Trigger Units" />
     <Row DefnId="1" NodeId="1" TreeName="Build Trigger Unit" />
     <Row DefnId="2" NodeId="1" TreeName="Build Trigger Unit" />
@@ -1404,95 +1423,97 @@
     <Row DefnId="6" NodeId="1" TreeName="Early City Assault" />
     <Row DefnId="7" NodeId="1" TreeName="Early City Assault" />
     <Row DefnId="8" NodeId="1" TreeName="Early City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="2" TreeName="Early City Assault" DefaultData="66" />
-    <Row DefnId="0" NodeId="3" TreeName="Early City Assault" DefaultData="-100" />
-    <Row DefnId="1" NodeId="3" TreeName="Early City Assault" DefaultData="-100" />
-    <Row DefnId="0" NodeId="8" TreeName="Early City Assault" Tag="City Attack Contract" />
-    <Row DefnId="1" NodeId="8" TreeName="Early City Assault" />
-    <Row DefnId="2" NodeId="8" TreeName="Early City Assault" DefaultData="8" />
-    <Row DefnId="3" NodeId="8" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="0" NodeId="9" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="1" NodeId="9" TreeName="Early City Assault" Tag="City Attack Contract" />
-    <Row DefnId="4" NodeId="9" TreeName="Early City Assault" Tag="Present Value" />
-    <Row DefnId="5" NodeId="9" TreeName="Early City Assault" DefaultData="10" />
-    <Row DefnId="0" NodeId="10" TreeName="Early City Assault" DefaultData="True" />
-    <Row DefnId="1" NodeId="10" TreeName="Early City Assault" DefaultData="False" />
-    <Row DefnId="0" NodeId="11" TreeName="Early City Assault" DefaultData="0" />
-    <Row DefnId="1" NodeId="11" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="11" TreeName="Early City Assault" DefaultData="0" />
-    <Row DefnId="3" NodeId="11" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="12" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="12" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="13" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="13" TreeName="Early City Assault" />
-    <Row DefnId="2" NodeId="13" TreeName="Early City Assault" />
-    <Row DefnId="3" NodeId="13" TreeName="Early City Assault" />
-    <Row DefnId="4" NodeId="13" TreeName="Early City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="14" TreeName="Early City Assault" DefaultData="15" />
-    <Row DefnId="0" NodeId="16" TreeName="Early City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="16" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="2" NodeId="16" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="18" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="1" NodeId="18" TreeName="Early City Assault" DefaultData="0" />
-    <Row DefnId="0" NodeId="19" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="4" NodeId="19" TreeName="Early City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="20" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="1" NodeId="20" TreeName="Early City Assault" DefaultData="True" />
-    <Row DefnId="0" NodeId="21" TreeName="Early City Assault" DefaultData="5" />
-    <Row DefnId="1" NodeId="21" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="21" TreeName="Early City Assault" DefaultData="1" />
-    <Row DefnId="3" NodeId="21" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="23" TreeName="Early City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="23" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="2" NodeId="23" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="24" TreeName="Early City Assault" DefaultData="1" />
-    <Row DefnId="2" NodeId="24" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="25" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="26" TreeName="Early City Assault" Tag="Declare War" />
-    <Row DefnId="1" NodeId="26" TreeName="Early City Assault" />
-    <Row DefnId="2" NodeId="26" TreeName="Early City Assault" DefaultData="5" />
-    <Row DefnId="3" NodeId="26" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="27" TreeName="Early City Assault" />
-    <Row DefnId="1" NodeId="27" TreeName="Early City Assault" />
+    <Row DefnId="0" NodeId="5" TreeName="Early City Assault" DefaultData="66" />
+    <Row DefnId="0" NodeId="6" TreeName="Early City Assault" DefaultData="-100" />
+    <Row DefnId="1" NodeId="6" TreeName="Early City Assault" DefaultData="-100" />
+    <Row DefnId="0" NodeId="11" TreeName="Early City Assault" Tag="City Attack Contract" />
+    <Row DefnId="1" NodeId="11" TreeName="Early City Assault" />
+    <Row DefnId="2" NodeId="11" TreeName="Early City Assault" DefaultData="8" />
+    <Row DefnId="3" NodeId="11" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="0" NodeId="12" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="1" NodeId="12" TreeName="Early City Assault" Tag="City Attack Contract" />
+    <Row DefnId="4" NodeId="12" TreeName="Early City Assault" Tag="Present Value" />
+    <Row DefnId="5" NodeId="12" TreeName="Early City Assault" DefaultData="10" />
+    <Row DefnId="0" NodeId="13" TreeName="Early City Assault" DefaultData="True" />
+    <Row DefnId="1" NodeId="13" TreeName="Early City Assault" DefaultData="False" />
+    <Row DefnId="0" NodeId="14" TreeName="Early City Assault" DefaultData="0" />
+    <Row DefnId="1" NodeId="14" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="14" TreeName="Early City Assault" DefaultData="0" />
+    <Row DefnId="3" NodeId="14" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="0" NodeId="15" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="15" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="16" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="16" TreeName="Early City Assault" />
+    <Row DefnId="2" NodeId="16" TreeName="Early City Assault" />
+    <Row DefnId="3" NodeId="16" TreeName="Early City Assault" />
+    <Row DefnId="4" NodeId="16" TreeName="Early City Assault" Tag="Present Value" />
+    <Row DefnId="0" NodeId="17" TreeName="Early City Assault" DefaultData="15" />
+    <Row DefnId="0" NodeId="19" TreeName="Early City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="19" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="2" NodeId="19" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="21" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="1" NodeId="21" TreeName="Early City Assault" DefaultData="0" />
+    <Row DefnId="0" NodeId="22" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="4" NodeId="22" TreeName="Early City Assault" Tag="Present Value" />
+    <Row DefnId="0" NodeId="23" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="1" NodeId="23" TreeName="Early City Assault" DefaultData="True" />
+    <Row DefnId="0" NodeId="24" TreeName="Early City Assault" DefaultData="5" />
+    <Row DefnId="1" NodeId="24" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="24" TreeName="Early City Assault" DefaultData="1" />
+    <Row DefnId="3" NodeId="24" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="0" NodeId="26" TreeName="Early City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="26" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="2" NodeId="26" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="27" TreeName="Early City Assault" DefaultData="1" />
     <Row DefnId="2" NodeId="27" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="3" NodeId="27" TreeName="Early City Assault" />
-    <Row DefnId="4" NodeId="27" TreeName="Early City Assault" Tag="Present Value" />
-    <Row DefnId="5" NodeId="27" TreeName="Early City Assault" Tag="Declare War" />
-    <Row DefnId="0" NodeId="28" TreeName="Early City Assault" DefaultData="false" />
     <Row DefnId="1" NodeId="28" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="3" NodeId="28" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="29" TreeName="Early City Assault" DefaultData="5" />
-    <Row DefnId="1" NodeId="29" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="29" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="3" NodeId="29" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="30" TreeName="Early City Assault" DefaultData="15" />
-    <Row DefnId="0" NodeId="32" TreeName="Early City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="32" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="2" NodeId="32" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="33" TreeName="Early City Assault" DefaultData="-0.5" />
-    <Row DefnId="1" NodeId="33" TreeName="Early City Assault" DefaultData="-50" />
-    <Row DefnId="0" NodeId="34" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="4" NodeId="34" TreeName="Early City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="35" TreeName="Early City Assault" DefaultData="True" />
-    <Row DefnId="1" NodeId="35" TreeName="Early City Assault" DefaultData="True" />
-    <Row DefnId="0" NodeId="38" TreeName="Early City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="38" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="38" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="3" NodeId="38" TreeName="Early City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="40" TreeName="Early City Assault" DefaultData="-2" />
-    <Row DefnId="1" NodeId="40" TreeName="Early City Assault" DefaultData="-6" />
-    <Row DefnId="0" NodeId="41" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="4" NodeId="41" TreeName="Early City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="46" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="46" TreeName="Early City Assault" DefaultData="False" />
-    <Row DefnId="4" NodeId="46" TreeName="Early City Assault" DefaultData="True" />
-    <Row DefnId="0" NodeId="47" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="47" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="0" NodeId="29" TreeName="Early City Assault" Tag="Declare War" />
+    <Row DefnId="1" NodeId="29" TreeName="Early City Assault" />
+    <Row DefnId="2" NodeId="29" TreeName="Early City Assault" DefaultData="5" />
+    <Row DefnId="3" NodeId="29" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="30" TreeName="Early City Assault" />
+    <Row DefnId="1" NodeId="30" TreeName="Early City Assault" />
+    <Row DefnId="2" NodeId="30" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="3" NodeId="30" TreeName="Early City Assault" />
+    <Row DefnId="4" NodeId="30" TreeName="Early City Assault" Tag="Present Value" />
+    <Row DefnId="5" NodeId="30" TreeName="Early City Assault" Tag="Declare War" />
+    <Row DefnId="0" NodeId="31" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="1" NodeId="31" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="3" NodeId="31" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="32" TreeName="Early City Assault" DefaultData="5" />
+    <Row DefnId="1" NodeId="32" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="32" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="3" NodeId="32" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="0" NodeId="33" TreeName="Early City Assault" DefaultData="15" />
+    <Row DefnId="0" NodeId="35" TreeName="Early City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="35" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="2" NodeId="35" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="36" TreeName="Early City Assault" DefaultData="-0.5" />
+    <Row DefnId="1" NodeId="36" TreeName="Early City Assault" DefaultData="-50" />
+    <Row DefnId="0" NodeId="37" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="4" NodeId="37" TreeName="Early City Assault" Tag="Present Value" />
+    <Row DefnId="7" NodeId="37" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="38" TreeName="Early City Assault" DefaultData="True" />
+    <Row DefnId="1" NodeId="38" TreeName="Early City Assault" DefaultData="True" />
+    <Row DefnId="0" NodeId="41" TreeName="Early City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="41" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="41" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="3" NodeId="41" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="0" NodeId="43" TreeName="Early City Assault" DefaultData="-2" />
+    <Row DefnId="1" NodeId="43" TreeName="Early City Assault" DefaultData="-6" />
+    <Row DefnId="0" NodeId="44" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="4" NodeId="44" TreeName="Early City Assault" Tag="Present Value" />
+    <Row DefnId="7" NodeId="44" TreeName="Early City Assault" DefaultData="true" />
     <Row DefnId="0" NodeId="49" TreeName="Early City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="52" TreeName="Early City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="52" TreeName="Early City Assault" DefaultData="0" />
-    <Row DefnId="2" NodeId="52" TreeName="Early City Assault" DefaultData="false" />
-    <Row DefnId="3" NodeId="52" TreeName="Early City Assault" DefaultData="2" />
+    <Row DefnId="1" NodeId="49" TreeName="Early City Assault" DefaultData="False" />
+    <Row DefnId="4" NodeId="49" TreeName="Early City Assault" DefaultData="True" />
+    <Row DefnId="0" NodeId="50" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="50" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="0" NodeId="52" TreeName="Early City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="55" TreeName="Early City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="55" TreeName="Early City Assault" DefaultData="0" />
+    <Row DefnId="2" NodeId="55" TreeName="Early City Assault" DefaultData="false" />
+    <Row DefnId="3" NodeId="55" TreeName="Early City Assault" DefaultData="2" />
     <Row DefnId="1" NodeId="1" TreeName="Escort Worker To Camp" DefaultData="UNITTYPE_LAND_COMBAT" />
     <Row DefnId="2" NodeId="1" TreeName="Escort Worker To Camp" DefaultData="UNITTYPE_CIVILIAN" />
     <Row DefnId="3" NodeId="1" TreeName="Escort Worker To Camp" />
@@ -1593,7 +1614,7 @@
     <Row DefnId="8" NodeId="1" TreeName="Naval Superiority Tree" Tag="Present Value" />
     <Row DefnId="0" NodeId="3" TreeName="Naval Superiority Tree" DefaultData="60" />
     <Row DefnId="0" NodeId="4" TreeName="Naval Superiority Tree" DefaultData="false" />
-    <Row DefnId="3" NodeId="4" TreeName="Naval Superiority Tree" DefaultData="false" />
+    <Row DefnId="3" NodeId="4" TreeName="Naval Superiority Tree" DefaultData="true" />
     <Row DefnId="4" NodeId="4" TreeName="Naval Superiority Tree" Tag="Present Value" />
     <Row DefnId="0" NodeId="5" TreeName="Naval Superiority Tree" DefaultData="true" />
     <Row DefnId="1" NodeId="5" TreeName="Naval Superiority Tree" DefaultData="false" />
@@ -1672,7 +1693,7 @@
     <Row DefnId="0" NodeId="11" TreeName="Raid City" DefaultData="1" />
     <Row DefnId="1" NodeId="11" TreeName="Raid City" DefaultData="2" />
     <Row DefnId="2" NodeId="11" TreeName="Raid City" DefaultData="0" />
-    <Row DefnId="3" NodeId="11" TreeName="Raid City" DefaultData="3" />
+    <Row DefnId="3" NodeId="11" TreeName="Raid City" DefaultData="0" />
     <Row DefnId="0" NodeId="13" TreeName="Raid City" Tag="Tribe" />
     <Row DefnId="1" NodeId="13" TreeName="Raid City" DefaultData="10" />
     <Row DefnId="2" NodeId="13" TreeName="Raid City" DefaultData="true" />
@@ -1990,115 +2011,119 @@
     <Row DefnId="6" NodeId="1" TreeName="Siege City Assault" />
     <Row DefnId="7" NodeId="1" TreeName="Siege City Assault" />
     <Row DefnId="8" NodeId="1" TreeName="Siege City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="2" TreeName="Siege City Assault" DefaultData="66" />
-    <Row DefnId="0" NodeId="3" TreeName="Siege City Assault" DefaultData="-100" />
-    <Row DefnId="1" NodeId="3" TreeName="Siege City Assault" DefaultData="-100" />
-    <Row DefnId="0" NodeId="8" TreeName="Siege City Assault" Tag="Initial recruits" />
-    <Row DefnId="1" NodeId="8" TreeName="Siege City Assault" />
-    <Row DefnId="2" NodeId="8" TreeName="Siege City Assault" DefaultData="10" />
-    <Row DefnId="3" NodeId="8" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="1" NodeId="9" TreeName="Siege City Assault" Tag="Initial recruits" />
-    <Row DefnId="4" NodeId="9" TreeName="Siege City Assault" Tag="Present Value" />
-    <Row DefnId="5" NodeId="9" TreeName="Siege City Assault" DefaultData="10" />
-    <Row DefnId="0" NodeId="10" TreeName="Siege City Assault" DefaultData="True" />
-    <Row DefnId="1" NodeId="10" TreeName="Siege City Assault" DefaultData="False" />
-    <Row DefnId="1" NodeId="11" TreeName="Siege City Assault" DefaultData="UNITTYPE_MELEE" />
-    <Row DefnId="2" NodeId="11" TreeName="Siege City Assault" />
-    <Row DefnId="3" NodeId="11" TreeName="Siege City Assault" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
-    <Row DefnId="4" NodeId="11" TreeName="Siege City Assault" />
-    <Row DefnId="0" NodeId="12" TreeName="Siege City Assault" DefaultData="0" />
-    <Row DefnId="1" NodeId="12" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="12" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="3" NodeId="12" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="13" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="13" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="14" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="14" TreeName="Siege City Assault" />
+    <Row DefnId="0" NodeId="5" TreeName="Siege City Assault" DefaultData="66" />
+    <Row DefnId="0" NodeId="6" TreeName="Siege City Assault" DefaultData="-100" />
+    <Row DefnId="1" NodeId="6" TreeName="Siege City Assault" DefaultData="-100" />
+    <Row DefnId="0" NodeId="11" TreeName="Siege City Assault" Tag="Initial recruits" />
+    <Row DefnId="1" NodeId="11" TreeName="Siege City Assault" />
+    <Row DefnId="2" NodeId="11" TreeName="Siege City Assault" DefaultData="10" />
+    <Row DefnId="3" NodeId="11" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="1" NodeId="12" TreeName="Siege City Assault" Tag="Initial recruits" />
+    <Row DefnId="4" NodeId="12" TreeName="Siege City Assault" Tag="Present Value" />
+    <Row DefnId="5" NodeId="12" TreeName="Siege City Assault" DefaultData="10" />
+    <Row DefnId="0" NodeId="13" TreeName="Siege City Assault" DefaultData="True" />
+    <Row DefnId="1" NodeId="13" TreeName="Siege City Assault" DefaultData="False" />
+    <Row DefnId="1" NodeId="14" TreeName="Siege City Assault" DefaultData="UNITTYPE_MELEE" />
     <Row DefnId="2" NodeId="14" TreeName="Siege City Assault" />
-    <Row DefnId="3" NodeId="14" TreeName="Siege City Assault" />
-    <Row DefnId="4" NodeId="14" TreeName="Siege City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="15" TreeName="Siege City Assault" DefaultData="15" />
-    <Row DefnId="0" NodeId="17" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="17" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="2" NodeId="17" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="19" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="19" TreeName="Siege City Assault" DefaultData="-2" />
-    <Row DefnId="0" NodeId="20" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="20" TreeName="Siege City Assault" Tag="Ongoing Recruits" />
-    <Row DefnId="4" NodeId="20" TreeName="Siege City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="21" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="1" NodeId="21" TreeName="Siege City Assault" DefaultData="True" />
-    <Row DefnId="3" NodeId="21" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="0" NodeId="22" TreeName="Siege City Assault" DefaultData="5" />
-    <Row DefnId="1" NodeId="22" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="22" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="3" NodeId="22" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="1" NodeId="23" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="0" NodeId="24" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="2" NodeId="24" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="25" TreeName="Siege City Assault" Tag="Declare War" />
-    <Row DefnId="1" NodeId="25" TreeName="Siege City Assault" />
-    <Row DefnId="2" NodeId="25" TreeName="Siege City Assault" DefaultData="5" />
-    <Row DefnId="3" NodeId="25" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="26" TreeName="Siege City Assault" />
-    <Row DefnId="1" NodeId="26" TreeName="Siege City Assault" />
-    <Row DefnId="2" NodeId="26" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="3" NodeId="26" TreeName="Siege City Assault" />
-    <Row DefnId="4" NodeId="26" TreeName="Siege City Assault" Tag="Present Value" />
-    <Row DefnId="5" NodeId="26" TreeName="Siege City Assault" Tag="Declare War" />
-    <Row DefnId="0" NodeId="27" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="1" NodeId="27" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="3" NodeId="27" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="0" NodeId="28" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="28" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="2" NodeId="28" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="29" TreeName="Siege City Assault" DefaultData="5" />
-    <Row DefnId="1" NodeId="29" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="29" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="3" NodeId="29" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="30" TreeName="Siege City Assault" DefaultData="15" />
-    <Row DefnId="0" NodeId="32" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="32" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="2" NodeId="32" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="33" TreeName="Siege City Assault" DefaultData="-0.5" />
-    <Row DefnId="1" NodeId="33" TreeName="Siege City Assault" DefaultData="-50" />
-    <Row DefnId="0" NodeId="34" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="4" NodeId="34" TreeName="Siege City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="35" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="35" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="36" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="1" NodeId="36" TreeName="Siege City Assault" DefaultData="3" />
-    <Row DefnId="2" NodeId="36" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="3" NodeId="36" TreeName="Siege City Assault" DefaultData="UNITTYPE_AIR_SIEGE" />
-    <Row DefnId="0" NodeId="39" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="39" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="2" NodeId="39" TreeName="Siege City Assault" DefaultData="false" />
-    <Row DefnId="3" NodeId="39" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="41" TreeName="Siege City Assault" DefaultData="-2" />
-    <Row DefnId="1" NodeId="41" TreeName="Siege City Assault" DefaultData="-8" />
-    <Row DefnId="0" NodeId="42" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="4" NodeId="42" TreeName="Siege City Assault" Tag="Present Value" />
-    <Row DefnId="0" NodeId="47" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="47" TreeName="Siege City Assault" DefaultData="False" />
-    <Row DefnId="4" NodeId="47" TreeName="Siege City Assault" DefaultData="True" />
-    <Row DefnId="0" NodeId="48" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="1" NodeId="48" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="3" NodeId="14" TreeName="Siege City Assault" DefaultData="UNITTYPE_SIEGE_SUPPORT" />
+    <Row DefnId="4" NodeId="14" TreeName="Siege City Assault" />
+    <Row DefnId="0" NodeId="15" TreeName="Siege City Assault" DefaultData="0" />
+    <Row DefnId="1" NodeId="15" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="15" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="3" NodeId="15" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="0" NodeId="16" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="16" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="17" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="17" TreeName="Siege City Assault" />
+    <Row DefnId="2" NodeId="17" TreeName="Siege City Assault" />
+    <Row DefnId="3" NodeId="17" TreeName="Siege City Assault" />
+    <Row DefnId="4" NodeId="17" TreeName="Siege City Assault" Tag="Present Value" />
+    <Row DefnId="0" NodeId="18" TreeName="Siege City Assault" DefaultData="15" />
+    <Row DefnId="0" NodeId="20" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="20" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="2" NodeId="20" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="22" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="22" TreeName="Siege City Assault" DefaultData="-2" />
+    <Row DefnId="0" NodeId="23" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="23" TreeName="Siege City Assault" Tag="Ongoing Recruits" />
+    <Row DefnId="4" NodeId="23" TreeName="Siege City Assault" Tag="Present Value" />
+    <Row DefnId="0" NodeId="24" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="1" NodeId="24" TreeName="Siege City Assault" DefaultData="True" />
+    <Row DefnId="3" NodeId="24" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="0" NodeId="25" TreeName="Siege City Assault" DefaultData="5" />
+    <Row DefnId="1" NodeId="25" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="25" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="3" NodeId="25" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="1" NodeId="26" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="0" NodeId="27" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="2" NodeId="27" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="28" TreeName="Siege City Assault" Tag="Declare War" />
+    <Row DefnId="1" NodeId="28" TreeName="Siege City Assault" />
+    <Row DefnId="2" NodeId="28" TreeName="Siege City Assault" DefaultData="5" />
+    <Row DefnId="3" NodeId="28" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="29" TreeName="Siege City Assault" />
+    <Row DefnId="1" NodeId="29" TreeName="Siege City Assault" />
+    <Row DefnId="2" NodeId="29" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="3" NodeId="29" TreeName="Siege City Assault" />
+    <Row DefnId="4" NodeId="29" TreeName="Siege City Assault" Tag="Present Value" />
+    <Row DefnId="5" NodeId="29" TreeName="Siege City Assault" Tag="Declare War" />
+    <Row DefnId="0" NodeId="30" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="1" NodeId="30" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="3" NodeId="30" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="0" NodeId="31" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="31" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="2" NodeId="31" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="32" TreeName="Siege City Assault" DefaultData="5" />
+    <Row DefnId="1" NodeId="32" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="32" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="3" NodeId="32" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="0" NodeId="33" TreeName="Siege City Assault" DefaultData="15" />
+    <Row DefnId="0" NodeId="35" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="35" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="2" NodeId="35" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="36" TreeName="Siege City Assault" DefaultData="-0.5" />
+    <Row DefnId="1" NodeId="36" TreeName="Siege City Assault" DefaultData="-50" />
+    <Row DefnId="0" NodeId="37" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="4" NodeId="37" TreeName="Siege City Assault" Tag="Present Value" />
+    <Row DefnId="7" NodeId="37" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="38" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="38" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="39" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="1" NodeId="39" TreeName="Siege City Assault" DefaultData="3" />
+    <Row DefnId="2" NodeId="39" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="3" NodeId="39" TreeName="Siege City Assault" DefaultData="UNITTYPE_AIR_SIEGE" />
+    <Row DefnId="0" NodeId="42" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="42" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="2" NodeId="42" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="3" NodeId="42" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="0" NodeId="44" TreeName="Siege City Assault" DefaultData="-2" />
+    <Row DefnId="1" NodeId="44" TreeName="Siege City Assault" DefaultData="-8" />
+    <Row DefnId="0" NodeId="45" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="4" NodeId="45" TreeName="Siege City Assault" Tag="Present Value" />
+    <Row DefnId="7" NodeId="45" TreeName="Siege City Assault" DefaultData="true" />
     <Row DefnId="0" NodeId="50" TreeName="Siege City Assault" DefaultData="true" />
-    <Row DefnId="0" NodeId="51" TreeName="Siege City Assault" DefaultData="3" />
-    <Row DefnId="1" NodeId="51" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="2" NodeId="51" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="3" NodeId="51" TreeName="Siege City Assault" DefaultData="UNITTYPE_AIR_SIEGE" />
-    <Row DefnId="0" NodeId="54" TreeName="Siege City Assault" DefaultData="1" />
-    <Row DefnId="1" NodeId="54" TreeName="Siege City Assault" DefaultData="0" />
-    <Row DefnId="2" NodeId="54" TreeName="Siege City Assault" DefaultData="0" />
-    <Row DefnId="3" NodeId="54" TreeName="Siege City Assault" DefaultData="2" />
-    <Row DefnId="0" NodeId="3" TreeName="Simple City Defense" DefaultData="1" />
-    <Row DefnId="6" NodeId="3" TreeName="Simple City Defense" DefaultData="true" />
-    <Row DefnId="0" NodeId="6" TreeName="Simple City Defense" DefaultData="1" />
-    <Row DefnId="1" NodeId="6" TreeName="Simple City Defense" DefaultData="false" />
-    <Row DefnId="2" NodeId="6" TreeName="Simple City Defense" DefaultData="true" />
-    <Row DefnId="0" NodeId="7" TreeName="Simple City Defense" DefaultData="1" />
-    <Row DefnId="1" NodeId="7" TreeName="Simple City Defense" DefaultData="0" />
+    <Row DefnId="1" NodeId="50" TreeName="Siege City Assault" DefaultData="False" />
+    <Row DefnId="4" NodeId="50" TreeName="Siege City Assault" DefaultData="True" />
+    <Row DefnId="0" NodeId="51" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="1" NodeId="51" TreeName="Siege City Assault" DefaultData="false" />
+    <Row DefnId="0" NodeId="53" TreeName="Siege City Assault" DefaultData="true" />
+    <Row DefnId="0" NodeId="54" TreeName="Siege City Assault" DefaultData="3" />
+    <Row DefnId="1" NodeId="54" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="2" NodeId="54" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="3" NodeId="54" TreeName="Siege City Assault" DefaultData="UNITTYPE_AIR_SIEGE" />
+    <Row DefnId="0" NodeId="57" TreeName="Siege City Assault" DefaultData="1" />
+    <Row DefnId="1" NodeId="57" TreeName="Siege City Assault" DefaultData="0" />
+    <Row DefnId="2" NodeId="57" TreeName="Siege City Assault" DefaultData="0" />
+    <Row DefnId="3" NodeId="57" TreeName="Siege City Assault" DefaultData="2" />
+    <Row DefnId="1" NodeId="2" TreeName="Simple City Defense" DefaultData="5" />
+    <Row DefnId="0" NodeId="4" TreeName="Simple City Defense" DefaultData="1" />
+    <Row DefnId="6" NodeId="4" TreeName="Simple City Defense" DefaultData="true" />
+    <Row DefnId="7" NodeId="4" TreeName="Simple City Defense" DefaultData="true" />
+    <Row DefnId="0" NodeId="9" TreeName="Simple City Defense" DefaultData="1" />
+    <Row DefnId="1" NodeId="9" TreeName="Simple City Defense" DefaultData="false" />
+    <Row DefnId="2" NodeId="9" TreeName="Simple City Defense" DefaultData="true" />
+    <Row DefnId="0" NodeId="10" TreeName="Simple City Defense" DefaultData="1" />
+    <Row DefnId="1" NodeId="10" TreeName="Simple City Defense" DefaultData="0" />
     <Row DefnId="0" NodeId="0" TreeName="Simple City Tree" DefaultData="3" />
     <Row DefnId="0" NodeId="1" TreeName="Simple City Tree" DefaultData="UNITTYPE_SIEGE" />
     <Row DefnId="0" NodeId="1" TreeName="Simple Operation Attack" DefaultData="50" />

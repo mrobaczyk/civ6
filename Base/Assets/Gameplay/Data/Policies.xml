@@ -258,7 +258,8 @@
 		<Row PolicyType="POLICY_REVELATION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_PROPHET" ObsoletePolicy="POLICY_INVENTION"/>
 		<!--Classical Era-->
 		<Row PolicyType="POLICY_INSULAE" ObsoletePolicy="POLICY_MEDINA_QUARTER"/>
-		<Row PolicyType="POLICY_CHARISMATIC_LEADER" ObsoletePolicy="POLICY_GUNBOAT_DIPLOMACY"/>
+    <Row PolicyType="POLICY_LITERARY_TRADITION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_WRITER"/>
+    <Row PolicyType="POLICY_CHARISMATIC_LEADER" ObsoletePolicy="POLICY_GUNBOAT_DIPLOMACY"/>
 		<Row PolicyType="POLICY_RAID" ObsoletePolicy="POLICY_TOTAL_WAR"/>
 		<Row PolicyType="POLICY_BASTIONS" ObsoletePolicy="POLICY_PUBLIC_WORKS"/>
 		<Row PolicyType="POLICY_LIMES" ObsoletePolicy="POLICY_PUBLIC_WORKS"/>
@@ -1515,7 +1516,7 @@
 		<Row>
 			<ModifierId>COLLECTIVEACTIVISM_CULTUREPERTRIBUTARY</ModifierId>
 			<Name>Amount</Name>
-			<Value>10</Value>
+			<Value>5</Value>
 		</Row>
 		<Row>
 			<ModifierId>COLLECTIVIZATION_INTERNAL_TRADE_FOOD</ModifierId>
@@ -1975,7 +1976,7 @@
 		<Row>
 			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
 			<Name>StartEra</Name>
-			<Value>ERA_MEDIEVAL</Value>
+			<Value>ERA_ANCIENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
@@ -2243,7 +2244,7 @@
 		<Row>
 			<ModifierId>INTERNATIONALSPACEAGENCY_SCIENCEPERTRIBUTARY</ModifierId>
 			<Name>Amount</Name>
-			<Value>10</Value>
+			<Value>5</Value>
 		</Row>
 		<Row>
 			<ModifierId>INTERNATIONALWATERS_MODERN_NAVAL_MELEE_PRODUCTION</ModifierId>
@@ -3622,12 +3623,12 @@
 		<Row>
 			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
 			<Name>StartEra</Name>
-			<Value>ERA_INDUSTRIAL</Value>
+			<Value>ERA_ANCIENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
 			<Name>EndEra</Name>
-			<Value>ERA_INFORMATION</Value>
+			<Value>ERA_FUTURE</Value>
 		</Row>
 		<Row>
 			<ModifierId>MILITARYFIRST_ATOMIC_MELEE_PRODUCTION</ModifierId>
@@ -4096,6 +4097,22 @@
 			<ModifierId>CHIVALRY_INDUSTRIAL_LIGHT_CAVALRY_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_CHIVALRY</PolicyType>
+			<ModifierId>MANEUVER_ANCIENT_HEAVY_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CHIVALRY</PolicyType>
+			<ModifierId>MANEUVER_CLASSICAL_HEAVY_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CHIVALRY</PolicyType>
+			<ModifierId>MANEUVER_ANCIENT_LIGHT_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CHIVALRY</PolicyType>
+			<ModifierId>MANEUVER_CLASSICAL_LIGHT_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_COLLECTIVE_ACTIVISM</PolicyType>
 			<ModifierId>COLLECTIVEACTIVISM_CULTUREPERTRIBUTARY</ModifierId>
 		</Row>
@@ -4174,6 +4191,26 @@
 		<Row>
 			<PolicyType>POLICY_EXPROPRIATION</PolicyType>
 			<ModifierId>EXPROPRIATION_PLOTPURCHASECOST</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
+			<ModifierId>AGOGE_CLASSICAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_RANGED_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
@@ -4276,6 +4313,50 @@
 			<ModifierId>GRANDEARMEE_MODERN_RANGED_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>AGOGE_CLASSICAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_GRAND_OPERA</PolicyType>
 			<ModifierId>GRANDOPERA_DOUBLEAMPHITHEATER</ModifierId>
 		</Row>
@@ -4376,6 +4457,54 @@
 			<ModifierId>INTERNATIONALWATERS_INFORMATION_NAVAL_RAIDER_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_RENAISSANCE_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_INDUSTRIAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_RENAISSANCE_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_INDUSTRIAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_RENAISSANCE_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_INDUSTRIAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_ANCIENT_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_ANCIENT_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_ANCIENT_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_INVENTION</PolicyType>
 			<ModifierId>INVENTION_GREATENGINEERPOINTS</ModifierId>
 		</Row>
@@ -4414,6 +4543,46 @@
 		<Row>
 			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
 			<ModifierId>LIGHTNINGWARFARE_INFORMATION_LIGHT_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>CHIVALRY_MEDIEVAL_HEAVY_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>CHIVALRY_RENAISSANCE_HEAVY_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>CHIVALRY_INDUSTRIAL_HEAVY_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>CHIVALRY_MEDIEVAL_LIGHT_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>CHIVALRY_RENAISSANCE_LIGHT_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>CHIVALRY_INDUSTRIAL_LIGHT_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>MANEUVER_ANCIENT_HEAVY_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>MANEUVER_CLASSICAL_HEAVY_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>MANEUVER_ANCIENT_LIGHT_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
+			<ModifierId>MANEUVER_CLASSICAL_LIGHT_CAVALRY_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_LIMES</PolicyType>
@@ -4644,6 +4813,30 @@
 			<ModifierId>PRESSGANGS_INDUSTRIAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_ANCIENT_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_ANCIENT_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_ANCIENT_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>
 			<ModifierId>PROFESSIONAL_ARMY_UNITUPGRADEDISCOUNT</ModifierId>
 		</Row>
@@ -4800,6 +4993,74 @@
 			<ModifierId>MILITARYFIRST_INFORMATION_RANGED_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>GRANDEARMEE_MODERN_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>GRANDEARMEE_MODERN_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>GRANDEARMEE_MODERN_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>AGOGE_CLASSICAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_SPORTS_MEDIA</PolicyType>
 			<ModifierId>SPORTSMEDIA_DISTRICTCULTURE</ModifierId>
 		</Row>
@@ -4822,6 +5083,22 @@
 		<Row>
 			<PolicyType>POLICY_STRATEGIC_AIR_FORCE</PolicyType>
 			<ModifierId>STRATEGICAIRFORCE_INFORMATION_NAVALCARRIER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_STRATEGIC_AIR_FORCE</PolicyType>
+			<ModifierId>FINESTHOUR_MODERN_AIRFIGHTER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_STRATEGIC_AIR_FORCE</PolicyType>
+			<ModifierId>FINESTHOUR_ATOMIC_AIRFIGHTER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_STRATEGIC_AIR_FORCE</PolicyType>
+			<ModifierId>FINESTHOUR_MODERN_AIRBOMBER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_STRATEGIC_AIR_FORCE</PolicyType>
+			<ModifierId>FINESTHOUR_ATOMIC_AIRBOMBER_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_STRATEGOS</PolicyType>

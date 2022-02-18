@@ -79,6 +79,9 @@
 		<Row Tag="LOC_OPTIONS_TUTORIAL_EXPERIENCED_PLAYER">
 			<Text>Experienced Player</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS_TUTORIAL_NEW_TO_XP2">
+			<Text>New to Civilization VI - Gathering Storm</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_TUTORIAL_NEW_TO_XP1">
 			<Text>New to Civilization VI - Rise and Fall</Text>
 		</Row>
@@ -96,6 +99,9 @@
 		</Row>
 		<Row Tag="LOC_OPTIONS_HISTORIC_MOMENT_ANIMATION">
 			<Text>Historic Moment Reveal Animation:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_TOUCH_ENABLED">
+			<Text>Touch Input Enabled</Text>
 		</Row>
 		<!-- Graphics Panel - Option Enums -->
 
@@ -202,6 +208,10 @@
 			<Text>4 Passes</Text>
 		</Row>
 
+		<Row Tag="LOC_OPTIONS_LEADERS_STATIC">
+			<Text>Static (No Audio)</Text>
+		</Row>
+    
 		<Row Tag="LOC_OPTIONS_100_PERCENT">
 			<Text>100%</Text>
 		</Row>
@@ -353,17 +363,17 @@
 		<Row Tag="LOC_OPTIONS_SHADOWS_RESOLUTION_TOOLTIP">
 			<Text>Changes the sharpness and detail of shadows.[NEWLINE][NEWLINE]Lower values [COLOR_Blue]decrease memory usage[ENDCOLOR].</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_CLOUD_SHADOWS_ENABLED_TEXT">
+      <Text>Cloud Shadows</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CLOUD_SHADOWS_ENABLED_TOOLTIP">
+      <Text>Add dark areas where light is blocked by clouds.[NEWLINE][NEWLINE]Disabling [COLOR_Civ6DarkRed]increases performance[ENDCOLOR].</Text>
+    </Row>
 
 		<!-- Graphics Panel - Overlay -->
 
 		<Row Tag="LOC_OPTIONS_OVERLAY">
 			<Text>Overlay</Text>
-		</Row>
-		<Row Tag="LOC_OPTIONS_OVERLAY_RESOLUTION_TEXT">
-			<Text>Overlay Resolution:</Text>
-		</Row>
-		<Row Tag="LOC_OPTIONS_OVERLAY_RESOLUTION_TOOLTIP">
-			<Text>Changes the sharpness and detail of overlays.[NEWLINE][NEWLINE]Lower values [COLOR_Blue]decrease memory usage[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_SSOVERLAY_ENABLED_TEXT">
 			<Text>Screen-Space Overlay</Text>
@@ -432,7 +442,25 @@
 			<Text>Control the quality of water reflections.[NEWLINE][NEWLINE]Disabling [COLOR_Civ6DarkRed]increases performance[ENDCOLOR].</Text>
 		</Row>
 
-		<!-- Graphics Panel - Leaders -->
+    <!-- Graphics Panel - Reflections -->
+
+    <Row Tag="LOC_OPTIONS_REFLECTIONS">
+      <Text>Reflections</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_REFLECTIONS_ENABLED_TEXT">
+      <Text>Reflections</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_REFLECTIONS_ENABLED_TOOLTIP">
+      <Text>Add reflections to terrain and water.[NEWLINE][NEWLINE]Disabling [COLOR_Civ6DarkRed]increases performance[ENDCOLOR].</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_REFLECTION_PASSES_TEXT">
+      <Text>Reflection Quality:</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_REFLECTION_PASSES_TOOLTIP">
+      <Text>Control the quality of reflections.[NEWLINE][NEWLINE]Using fewer passes or disabling will [COLOR_Civ6DarkRed]increase performance[ENDCOLOR].</Text>
+    </Row>
+    
+    <!-- Graphics Panel - Leaders -->
 
 		<Row Tag="LOC_OPTIONS_LEADERS">
 			<Text>Animated Leaders</Text>
@@ -441,7 +469,7 @@
 			<Text>Quality:</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_LEADER_QUALITY_TOOLTIP">
-			<Text>Changes the appearance of leaders.[NEWLINE][NEWLINE]Disabling [COLOR_Civ6DarkRed]increases performance[ENDCOLOR] and lower values [COLOR_Blue]decrease memory usage[ENDCOLOR].</Text>
+			<Text>Changes the audiovisual quality of leaders.[NEWLINE][NEWLINE]Disabling [COLOR_Civ6DarkRed]increases performance[ENDCOLOR] and lower values [COLOR_Blue]decrease memory usage[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_LEADER_MOTIONBLUR_TEXT">
 			<Text>Motion Blur</Text>
@@ -454,6 +482,10 @@
 
 		<Row Tag="LOC_OPTIONS_APP_SHOW_MOVIE">
 			<Text>Show Intro Video:</Text>
+		</Row>
+		
+		<Row Tag="LOC_OPTIONS_APP_WARN_MOD_COMPATIBILITY">
+			<Text>Warn about mod compatibility</Text>
 		</Row>
 
 		<!-- Interface Panel -->
@@ -492,9 +524,64 @@
     <Row Tag="LOC_OPTIONS_PLOT_TOOLTIP_DELAY_VALUE">
       <Text>{1_Value : number #.##}s</Text>
     </Row>
- 
+    <Row Tag="LOC_OPTIONS_SCROLL_SPEED">
+      <Text>Mouse Wheel Speed:</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_SCROLL_SPEED_VALUE">
+      <Text>{1_Value : number #.##}</Text>
+    </Row>
+		<Row Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_END_TURN_BEHAVIOR">
+			<Text>PlayByCloud End Turn Behavior:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_ASK_ME">
+			<Text>Ask Me</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_DO_NOTHING">
+			<Text>Do Nothing</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_EXIT_TO_MAINMENU">
+			<Text>Exit to Main Menu</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR">
+			<Text>PlayByCloud Client Ready Behavior:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR_ASK_ME">
+			<Text>Ask Me</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR_DO_NOTHING">
+			<Text>Do Nothing</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR_EXIT_TO_LOBBY">
+			<Text>Exit to Lobby</Text>
+		</Row>
+    <Row Tag="LOC_OPTIONS_INTERFACE_COLOR_BLINDNESS_ADAPTATION">
+        <Text>Colorblind Accessibility:</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CBADAPT_DO_NOTHING">
+        <Text>Default Colors</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CBADAPT_PROTANOPIA">
+        <Text>Red-blind Protanopia</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CBADAPT_DEUTERANOPIA">
+        <Text>Green-blind Deuteranopia</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA">
+        <Text>Blue-blind Tritanopia</Text>
+    </Row>
 		<!-- Hotkeys Panel -->
 		
+        <!-- Expansion 2 - Additional Hotkeys-->
+        <Row Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UI_XP2">
+            <Text>User Interface (Gathering Storm):</Text>
+        </Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_WORLDCLIMATE">
+			<Text>Toggle World Climate Popup</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_WORLDCLIMATE_HELP">
+			<Text>Toggles visibility of the World Climate Screen</Text>
+		</Row>
+    		
 		<!-- Expansion 1 - Additional Hotkeys-->
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_GOVERNORS">
 			<Text>Toggle Governors Popup</Text>
@@ -563,6 +650,9 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA">
 			<Text>Open the Civilopedia</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_FSMAP">
+			<Text>Toggle Full Screen Map</Text>
+		</Row>
 
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_TECH_HELP">
 			<Text>Toggles visibility of the Tech Tree</Text>
@@ -596,6 +686,9 @@
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA_HELP">
 			<Text>Opens the Civilopedia</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_FSMAP_HELP">
+			<Text>Toggles visibility of the Full Screen Map</Text>
 		</Row>
 
 
@@ -814,6 +907,9 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_LOYALTY">
 			<Text>Loyalty</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_EMPIRE">
+			<Text>Empire</Text>
+		</Row>
 
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_RELIGION_HELP">
 			<Text>Toggles the Religion lens.</Text>
@@ -838,6 +934,9 @@
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_LOYALTY_HELP">
 			<Text>Toggles the Loyalty lens.</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_EMPIRE_HELP">
+			<Text>Toggles the Empire lens.</Text>
 		</Row>
 	
 		<Row Tag="LOC_OPTIONS_KEY_UNDERSCORE">
@@ -1211,12 +1310,6 @@
 		</Row>
 		<Row Tag="LOC_OPTIONS_KEY_APPS">
 			<Text>Apps</Text>
-		</Row>
-		<Row Tag="LOC_OPTIONS_KEY_DANOMITE">
-			<Text></Text>
-		</Row>
-		<Row Tag="LOC_OPTIONS_KEY_IGNORE">
-			<Text></Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_PAD_A">
 			<Text>Pad A</Text>

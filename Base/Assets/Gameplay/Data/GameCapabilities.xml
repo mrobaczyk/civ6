@@ -14,6 +14,7 @@
 		<Row Type="CAPABILITY_GOVERNMENTS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENTS_VIEW" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENTS_LEGACY_BONUSES" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_GOVERNORS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_WORKS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_NEW_GREAT_WORKS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_WORKS_VIEW" Kind="KIND_CAPABILITY" />
@@ -21,6 +22,8 @@
 		<Row Type="CAPABILITY_TECHNOLOGIES" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_TECH_CHOOSER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_TECH_TREE" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_CULTURE_BORDER_GROWTH" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_PURCHASE_PLOTS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_TRADE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_NEW_TRADE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_TRADE_VIEW" Kind="KIND_CAPABILITY" />
@@ -45,16 +48,25 @@
 		<Row Type="CAPABILITY_ESPIONAGE_VIEW" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_FAITH" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_TOURISM" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_EMERGENCIES" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_ERAS" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_GOLDEN_AND_DARK_AGES" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_HISTORIC_MOMENTS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_WORLD_RANKINGS" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_REPORTS_LIST" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_REPORTS_DIPLOMATIC_DEALS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_REPORTS_UNIT_EXPENSES" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_WORLD_TRACKER" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_AMENITIES" Kind="KIND_CAPABILITY" />
 		<!-- Mini-map panel lenses -->
 		<Row Type="CAPABILITY_LENS_RELIGION" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_APPEAL" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_SETTLER" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_GOVERNMENT" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_TOURISM" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_CONTINENT" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_EMPIRE" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_LOYALTY" Kind="KIND_CAPABILITY"/>
 		<!-- City HUD -->
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" Kind="KIND_CAPABILITY"/>
@@ -108,7 +120,7 @@
 		<Row GameCapability="CAPABILITY_GOVERNMENTS_VIEW"/>
 		<!-- Separate from government functionality, does the game mode enable Legacy Bonuses? -->
 		<Row GameCapability="CAPABILITY_GOVERNMENTS_LEGACY_BONUSES"/>
-
+		<Row GameCapability="CAPABILITY_GOVERNORS"/>
 		<!-- Great Works in game -->
 		<Row GameCapability="CAPABILITY_GREAT_WORKS"/>
 		<!-- Can create new Great Works. Turn this off if you want to have existing pantheons, but no new ones -->
@@ -119,6 +131,8 @@
 		<Row GameCapability="CAPABILITY_TECHNOLOGIES"/>
 		<Row GameCapability="CAPABILITY_TECH_CHOOSER"/>
 		<Row GameCapability="CAPABILITY_TECH_TREE"/>
+		<Row GameCapability="CAPABILITY_CULTURE_BORDER_GROWTH"/>
+		<Row GameCapability="CAPABILITY_PURCHASE_PLOTS"/>
 		<!-- Trade in game -->
 		<Row GameCapability="CAPABILITY_TRADE"/>
 		<!-- Are new traders allowed? -->
@@ -163,10 +177,20 @@
 		<Row GameCapability="CAPABILITY_NEW_ESPIONAGE"/>
 		<!-- Can you view the current espionage activity? -->
 		<Row GameCapability="CAPABILITY_ESPIONAGE_VIEW"/>
+		<!-- Can you view the reports list menu? -->
+		<Row GameCapability="CAPABILITY_REPORTS_LIST"/>
 		<!-- Faith enabled-->
 		<Row GameCapability="CAPABILITY_FAITH"/>
 		<!-- Tourism enabled-->
 		<Row GameCapability="CAPABILITY_TOURISM"/>
+		<!-- Emergencies enabled-->
+		<Row GameCapability="CAPABILITY_EMERGENCIES"/>
+		<!-- Eras enabled-->
+		<Row GameCapability="CAPABILITY_ERAS"/>
+		<!-- Golden & Dark Ages enabled-->
+		<Row GameCapability="CAPABILITY_GOLDEN_AND_DARK_AGES"/>
+		<!-- Historic Moments enabled-->
+		<Row GameCapability="CAPABILITY_HISTORIC_MOMENTS"/>
 		<!-- World Rankings is a thing -->
 		<Row GameCapability="CAPABILITY_WORLD_RANKINGS" />
 		<!-- Do diplomatic deals appear in the reports screen -->
@@ -175,6 +199,7 @@
 		<Row GameCapability="CAPABILITY_REPORTS_UNIT_EXPENSES" />
 		<!-- Can you view the World Tracker? -->
 		<Row GameCapability="CAPABILITY_WORLD_TRACKER" />
+		<Row GameCapability="CAPABILITY_AMENITIES" />
 
 		<!-- Mini-map panel lenses -->
 		<Row GameCapability="CAPABILITY_LENS_RELIGION" />
@@ -182,6 +207,9 @@
 		<Row GameCapability="CAPABILITY_LENS_SETTLER" />
 		<Row GameCapability="CAPABILITY_LENS_GOVERNMENT" />
 		<Row GameCapability="CAPABILITY_LENS_TOURISM" />
+		<Row GameCapability="CAPABILITY_LENS_CONTINENT" />
+		<Row GameCapability="CAPABILITY_LENS_EMPIRE" />
+		<Row GameCapability="CAPABILITY_LENS_LOYALTY" />
 
 		<!-- City HUD -->
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" />
@@ -206,7 +234,7 @@
 		<!-- Do these policy filters show up on the government screen -->
 		<Row GameCapability="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER"/>
 		<Row GameCapability="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER"/>
-
+		
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY"/>
 		<Row GameCapability="CAPABILITY_CIVIC_BOOSTS"/>
@@ -226,6 +254,7 @@
 		<Row GameCapability="CAPABILITY_TECHNOLOGIES" DependsOnCapability="CAPABILITY_SCIENCE" />
 		<Row GameCapability="CAPABILITY_TECH_CHOOSER" DependsOnCapability="CAPABILITY_TECHNOLOGIES" />
 		<Row GameCapability="CAPABILITY_TECH_TREE" DependsOnCapability="CAPABILITY_TECHNOLOGIES" />
+		<Row GameCapability="CAPABILITY_CULTURE_BORDER_GROWTH" DependsOnCapability="CAPABILITY_CULTURE" />
 		<Row GameCapability="CAPABILITY_TRADE_VIEW" DependsOnCapability="CAPABILITY_TRADE" />
 		<Row GameCapability="CAPABILITY_DIPLOMACY_DEALS" DependsOnCapability="CAPABILITY_DIPLOMACY" />
 		<Row GameCapability="CAPABILITY_FOUND_PANTHEONS" DependsOnCapability="CAPABILITY_RELIGION" />
@@ -241,20 +270,29 @@
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_FAITH"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_CAN_REJECT" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
-		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_VIEW" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
+		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_VIEW" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>		
 		<Row GameCapability="CAPABILITY_NEW_ESPIONAGE" DependsOnCapability="CAPABILITY_ESPIONAGE"/>
 		<Row GameCapability="CAPABILITY_ESPIONAGE_VIEW" DependsOnCapability="CAPABILITY_ESPIONAGE"/>
 		<Row GameCapability="CAPABILITY_LENS_RELIGION" DependsOnCapability="CAPABILITY_RELIGION"/>
 		<Row GameCapability="CAPABILITY_LENS_GOVERNMENT" DependsOnCapability="CAPABILITY_GOVERNMENTS"/>
 		<Row GameCapability="CAPABILITY_LENS_TOURISM" DependsOnCapability="CAPABILITY_TOURISM"/>
+		<Row GameCapability="CAPABILITY_GOLDEN_AND_DARK_AGES" DependsOnCapability="CAPABILITY_ERAS"/>
+		<Row GameCapability="CAPABILITY_HISTORIC_MOMENTS" DependsOnCapability="CAPABILITY_ERAS"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" DependsOnCapability="CAPABILITY_CIVICS"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" DependsOnCapability="CAPABILITY_AMENITIES"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" DependsOnCapability="CAPABILITY_RELIGION"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" DependsOnCapability="CAPABILITY_AMENITIES"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" DependsOnCapability="CAPABILITY_AMENITIES"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_NATIONAL_PARKS" DependsOnCapability="CAPABILITY_AMENITIES"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CITY_STATES" DependsOnCapability="CAPABILITY_AMENITIES"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_WAR_WEARINESS" DependsOnCapability="CAPABILITY_AMENITIES"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_BANKRUPTCY" DependsOnCapability="CAPABILITY_AMENITIES"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_HOUSING_GREAT_PEOPLE" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_RELIGION_TAB" DependsOnCapability="CAPABILITY_RELIGION"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_TRADING_POSTS" DependsOnCapability="CAPABILITY_TRADE"/>
 		<Row GameCapability="CAPABILITY_FAITH_PURCHASE" DependsOnCapability="CAPABILITY_FAITH"/>
-
+		
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY" DependsOnCapability="CAPABILITY_TOURISM" />
 		<Row GameCapability="CAPABILITY_CIVIC_BOOSTS" DependsOnCapability="CAPABILITY_CIVICS" />

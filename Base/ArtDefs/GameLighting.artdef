@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>250</build>
-		<revision>203</revision>
+		<build>376</build>
+		<revision>938</revision>
 	</m_Version>
 	<m_TemplateName text="TimeOfDay"/>
 	<m_RootCollections>
@@ -2979,6 +2979,175 @@
 							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="CloudShadows"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="XP2_CloudLayer1"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="SkyBox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.004800</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.000010</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.350000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Civ6_GameLighting_WeightCurve"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer1"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="XP2_CloudLayer2"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="SkyBox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.004300</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000050</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Civ6_GameLighting_WeightCurve"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="XP2_CloudLayer3"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="SkyBox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.004000</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000350</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.350000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Civ6_GameLighting_WeightCurve"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer3"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="DEFAULT_LIGHTING"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
@@ -5950,6 +6119,10 @@
 							<m_Name text="FOWTintColor004"/>
 							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="CloudShadows"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="WONDER_TOD"/>

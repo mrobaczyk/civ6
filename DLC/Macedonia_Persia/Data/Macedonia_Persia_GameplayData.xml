@@ -307,7 +307,7 @@
 		<Row LeaderType="LEADER_CYRUS" ReligionType="RELIGION_ZOROASTRIANISM"/>
 	</FavoredReligions>
 	<Improvements>
-		<Row ImprovementType="IMPROVEMENT_PAIRIDAEZA" Name="LOC_IMPROVEMENT_PAIRIDAEZA_NAME" Description="LOC_IMPROVEMENT_PAIRIDAEZA_DESCRIPTION" Icon="ICON_IMPROVEMENT_PAIRIDAEZA" PlunderType="PLUNDER_CULTURE" PlunderAmount="25" Buildable="true" PrereqCivic="CIVIC_EARLY_EMPIRE" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_PAIRIDAEZA" Appeal="2" SameAdjacentValid="false"/>
+		<Row ImprovementType="IMPROVEMENT_PAIRIDAEZA" Name="LOC_IMPROVEMENT_PAIRIDAEZA_NAME" Description="LOC_IMPROVEMENT_PAIRIDAEZA_DESCRIPTION" Icon="ICON_IMPROVEMENT_PAIRIDAEZA" PlunderType="PLUNDER_CULTURE" PlunderAmount="15" Buildable="true" PrereqCivic="CIVIC_EARLY_EMPIRE" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_PAIRIDAEZA" Appeal="2" SameAdjacentValid="false"/>
 	</Improvements>
 	<Improvement_Adjacencies>
 		<Row ImprovementType="IMPROVEMENT_PAIRIDAEZA" YieldChangeId="Pairidaeza_CityCenterAdjacency"/>
@@ -465,9 +465,9 @@
 	<AiLists>
 		<Row ListType="AlexanderPreferWar" LeaderType="TRAIT_LEADER_TO_WORLDS_END" System="Strategies"/>
 		<Row ListType="CyrusPreferBackstabbing" LeaderType="TRAIT_AGENDA_BACKSTABBER" System="DiplomaticActions"/>
-		<Row ListType="AlexanderCivics" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Civics"/>
-		<Row ListType="AlexanderTechs" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Technologies"/>
-		<Row ListType="AlexanderWonders" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Buildings"/>
+		<Row ListType="AlexanderCivics" LeaderType="TRAIT_LEADER_TO_WORLDS_END" System="Civics"/>
+		<Row ListType="AlexanderTechs" LeaderType="TRAIT_LEADER_TO_WORLDS_END" System="Technologies"/>
+		<Row ListType="AlexanderWonders" LeaderType="TRAIT_LEADER_TO_WORLDS_END" System="Buildings"/>
 		<Row ListType="CyrusCivics" LeaderType="TRAIT_LEADER_FALL_BABYLON" System="Civics"/>
 		<Row ListType="CyrusTechs" LeaderType="TRAIT_LEADER_FALL_BABYLON" System="Technologies"/>
 		<Row ListType="CyrusWonders" LeaderType="TRAIT_LEADER_FALL_BABYLON" System="Buildings"/>
@@ -645,25 +645,6 @@
 			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_YIELD_PER_UNIT_COST</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
-		</Row>
-		<!--Existing-->
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_APADANA</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_MAUSOLEUM</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_APADANAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_MAUSOLEUMPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -911,47 +892,6 @@
 			<Name>UnitProductionPercent</Name>
 			<Value>25</Value>
 		</Row>
-		<!--Existing-->
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_APADANA</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_APADANA</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_APADANA</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_MAUSOLEUM</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_TERRACOTTA_ARMY</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_MAUSOLEUM</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_APADANAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_APADANA</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_APADANAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_MAUSOLEUMPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_HALICARNASSUS_MAUSOLEUM</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_MAUSOLEUMPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
 	</ModifierArguments>
 	<ModifierStrings>
 		<Row ModifierId="AGENDA_SHORT_LIFE_GLORY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
@@ -988,24 +928,6 @@
 			<ModifierId>BASILIKOI_PAIDES_SCIENCE_TRAINED_UNIT</ModifierId>
 		</Row>
 	</BuildingModifiers>
-	<BeliefModifiers>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_APADANA</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_MAUSOLEUM</ModifierId>
-		</Row>
-	</BeliefModifiers>
-	<PolicyModifiers>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_APADANAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_MAUSOLEUMPRODUCTION</ModifierId>
-		</Row>
-	</PolicyModifiers>
 	<RequirementSets>
 	.	<Row>
 			<RequirementSetId>BASILIKOI_PAIDES_UNIT_REQUIREMENTS</RequirementSetId>

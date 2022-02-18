@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>320</build>
-		<revision>617</revision>
+		<build>360</build>
+		<revision>125</revision>
 	</m_Version>
 	<m_TemplateName text="Features"/>
 	<m_RootCollections>
@@ -69,7 +69,7 @@
 										<m_ParamName text="XrefName"/>
 									</Element>
 									<Element class="AssetObjects..ArtDefReferenceValue">
-										<m_ElementName text="BLOCKER_DESERT"/>
+										<m_ElementName text="CLUTTER_FLOODPLAINS"/>
 										<m_RootCollectionName text="ClutterSets"/>
 										<m_ArtDefPath text="Clutter.artdef"/>
 										<m_CollectionIsLocked>true</m_CollectionIsLocked>
@@ -87,7 +87,7 @@
 								</m_Values>
 							</m_Fields>
 							<m_ChildCollections/>
-							<m_Name text="Clutter001"/>
+							<m_Name text="CLUTTER_FLOODPLAINS"/>
 							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 						</Element>
 					</Element>
@@ -578,6 +578,10 @@
 									<Element class="AssetObjects..IntValue">
 										<m_nValue>0</m_nValue>
 										<m_ParamName text="SelectionPriority"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>true</m_bValue>
+										<m_ParamName text="Primary Landmark"/>
 									</Element>
 								</m_Values>
 							</m_Fields>

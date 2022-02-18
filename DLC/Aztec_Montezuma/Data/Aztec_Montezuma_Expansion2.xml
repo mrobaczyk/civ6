@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_AZTEC_EAGLE_WARRIOR" Texture="Moment_UniqueUnit_Aztec.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_TLACHTLI" Texture="Moment_Infrastructure_Aztec.dds"/>
+	</MomentIllustrations>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_TLACHTLI"/>
+			<Set>
+				<Description>LOC_BUILDING_TLACHTLI_EXPANSION1_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Buildings>
+	<Building_YieldChanges>
+		<Row BuildingType="BUILDING_TLACHTLI" YieldType="YIELD_CULTURE" YieldChange="1"/>
+	</Building_YieldChanges>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_ATOYAC_RIVER" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedRiverType="NAMED_RIVER_BALSAS" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedRiverType="NAMED_RIVER_COATZACOALCOS_RIVER" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedRiverType="NAMED_RIVER_MIXTECO_RIVER" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedRiverType="NAMED_RIVER_PAPALOAPAN_RIVER" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedRiverType="NAMED_RIVER_TEHUANTEPEC_RIVER" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedRiverType="NAMED_RIVER_TONALA_RIVER" CivilizationType="CIVILIZATION_AZTEC"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_CITLALTEPETL" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_COLIMA" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_POPOCATEPETL" CivilizationType="CIVILIZATION_AZTEC"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_CHICHINAUTZIN" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_DE_LOS_TUXTLAS" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_DE_TAMAULIPAS" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRES" CivilizationType="CIVILIZATION_AZTEC"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_ZEMPOALTEPETL" CivilizationType="CIVILIZATION_AZTEC"/>
+	</NamedMountainCivilizations>
+	<Building_TourismBombs_XP2>
+		<Row BuildingType="BUILDING_TLACHTLI" TourismBombValue="250"/>
+	</Building_TourismBombs_XP2>
+</GameInfo>

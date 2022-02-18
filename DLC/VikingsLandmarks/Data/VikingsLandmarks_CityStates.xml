@@ -55,50 +55,6 @@
 		<Row CivilizationType="CIVILIZATION_MUSCAT" CityName="LOC_CITY_NAME_MUSCAT"/>
 		<Row CivilizationType="CIVILIZATION_PALENQUE" CityName="LOC_CITY_NAME_PALENQUE"/>
 	</CityNames>
-	<PlayerColors>
-		<Row>
-			<Type>CIVILIZATION_AUCKLAND</Type>
-			<Usage>Minor</Usage>
-			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_CITY_STATE_INDUSTRIAL_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_CITY_STATE_INDUSTRIAL_SECONDARY</TextColor>
-		</Row>
-		<Row>
-			<Type>CIVILIZATION_ANTANANARIVO</Type>
-			<Usage>Minor</Usage>
-			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_CITY_STATE_CULTURAL_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_CITY_STATE_CULTURAL_SECONDARY</TextColor>
-		</Row>
-		<Row>
-			<Type>CIVILIZATION_ARMAGH</Type>
-			<Usage>Minor</Usage>
-			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_CITY_STATE_RELIGIOUS_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_CITY_STATE_RELIGIOUS_SECONDARY</TextColor>
-		</Row>
-		<Row>
-			<Type>CIVILIZATION_GRANADA</Type>
-			<Usage>Minor</Usage>
-			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_CITY_STATE_MILITARISTIC_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_CITY_STATE_MILITARISTIC_SECONDARY</TextColor>
-		</Row>
-		<Row>
-			<Type>CIVILIZATION_MUSCAT</Type>
-			<Usage>Minor</Usage>
-			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_CITY_STATE_TRADE_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_CITY_STATE_TRADE_SECONDARY</TextColor>
-		</Row>
-		<Row>
-			<Type>CIVILIZATION_PALENQUE</Type>
-			<Usage>Minor</Usage>
-			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_CITY_STATE_SCIENCE_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_CITY_STATE_SCIENCE_SECONDARY</TextColor>
-		</Row>
-	</PlayerColors>
 	<Leaders>
 		<Row LeaderType="LEADER_MINOR_CIV_AUCKLAND" Name="LOC_CIVILIZATION_AUCKLAND_NAME" InheritFrom="LEADER_MINOR_CIV_INDUSTRIAL"/>
 		<Row LeaderType="LEADER_MINOR_CIV_ANTANANARIVO" Name="LOC_CIVILIZATION_ANTANANARIVO_NAME" InheritFrom="LEADER_MINOR_CIV_CULTURAL"/>
@@ -133,7 +89,7 @@
 		<Row TraitType="MINOR_CIV_PALENQUE_TRAIT" ModifierId="MINOR_CIV_PALENQUE_UNIQUE_INFLUENCE_BONUS"/>
 	</TraitModifiers>
 	<Improvements>
-		<Row ImprovementType="IMPROVEMENT_ALCAZAR" Name="LOC_IMPROVEMENT_ALCAZAR_NAME" Description="LOC_IMPROVEMENT_ALCAZAR_DESCRIPTION" Icon="ICON_IMPROVEMENT_ALCAZAR" PlunderType="PLUNDER_CULTURE" PlunderAmount="25" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_GRANADA_TRAIT" DefenseModifier="4" GrantFortification="2"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" Name="LOC_IMPROVEMENT_ALCAZAR_NAME" Description="LOC_IMPROVEMENT_ALCAZAR_DESCRIPTION" Icon="ICON_IMPROVEMENT_ALCAZAR" PlunderType="PLUNDER_CULTURE" PlunderAmount="15" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_GRANADA_TRAIT" DefenseModifier="4" GrantFortification="2"/>
 		<Row ImprovementType="IMPROVEMENT_MONASTERY" Name="LOC_IMPROVEMENT_MONASTERY_NAME" Description="LOC_IMPROVEMENT_MONASTERY_DESCRIPTION" Icon="ICON_IMPROVEMENT_MONASTERY" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_ARMAGH_TRAIT" ReligiousUnitHealRate="15"/>
 	</Improvements>
 	<Improvement_ValidTerrains>

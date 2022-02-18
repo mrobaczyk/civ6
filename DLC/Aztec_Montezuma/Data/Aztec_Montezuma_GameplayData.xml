@@ -6,10 +6,10 @@
 		<Row Type="LEADER_MONTEZUMA" Kind="KIND_LEADER"/>
 		<Row Type="UNIT_AZTEC_EAGLE_WARRIOR" Kind="KIND_UNIT"/>
 
-    <Row Type="TRAIT_CIVILIZATION_LEGEND_FIVE_SUNS" Kind="KIND_TRAIT" />
-    <Row Type="TRAIT_CIVILIZATION_BUILDING_TLACHTLI" Kind="KIND_TRAIT" />
-    <Row Type="TRAIT_CIVILIZATION_UNIT_AZTEC_EAGLE_WARRIOR" Kind="KIND_TRAIT" />
-  </Types>
+		<Row Type="TRAIT_CIVILIZATION_LEGEND_FIVE_SUNS" Kind="KIND_TRAIT" />
+		<Row Type="TRAIT_CIVILIZATION_BUILDING_TLACHTLI" Kind="KIND_TRAIT" />
+		<Row Type="TRAIT_CIVILIZATION_UNIT_AZTEC_EAGLE_WARRIOR" Kind="KIND_TRAIT" />
+	</Types>
 	<TypeTags>
 		<Row Type="UNIT_AZTEC_EAGLE_WARRIOR" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_AZTEC_EAGLE_WARRIOR" Tag="CLASS_CAPTURE_WORKER"/>
@@ -130,25 +130,6 @@
 		<Row CivilizationType="CIVILIZATION_AZTEC" TraitType="TRAIT_CIVILIZATION_BUILDING_TLACHTLI"/>
 		<Row CivilizationType="CIVILIZATION_AZTEC" TraitType="TRAIT_CIVILIZATION_UNIT_AZTEC_EAGLE_WARRIOR"/>
 	</CivilizationTraits>
-	<Colors>
-		<Row>
-			<Type>COLOR_PLAYER_AZTEC_SECONDARY</Type>
-			<Color>161,57,35,255</Color>
-		</Row>
-		<Row>
-			<Type>COLOR_PLAYER_AZTEC_PRIMARY</Type>
-			<Color>137,239,213,255</Color>
-		</Row>
-	</Colors>
-	<PlayerColors>
-		<Row>
-			<Type>LEADER_MONTEZUMA</Type>
-			<Usage>Unique</Usage>
-			<PrimaryColor>COLOR_PLAYER_AZTEC_PRIMARY</PrimaryColor>
-			<SecondaryColor>COLOR_PLAYER_AZTEC_SECONDARY</SecondaryColor>
-			<TextColor>COLOR_PLAYER_WHITE_TEXT</TextColor>
-		</Row>
-	</PlayerColors>
 	<Leaders>
 		<Row LeaderType="LEADER_MONTEZUMA" Name="LOC_LEADER_MONTEZUMA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 	</Leaders>
@@ -182,32 +163,32 @@
 		<Row ListType="MontezumaTechs" Item="TECH_WRITING"/>
 		<Row ListType="MontezumaTechs" Item="TECH_BRONZE_WORKING"/>
 		<Row ListType="MontezumaTechs" Item="TECH_APPRENTICESHIP"/>
-		</AiFavoredITems>
-		<Buildings>
-			<Row BuildingType="BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" PrereqCivic="CIVIC_GAMES_RECREATION" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="135" Maintenance="1" Entertainment="1" TraitType="TRAIT_CIVILIZATION_BUILDING_TLACHTLI"/>
-		</Buildings>
-		<BuildingReplaces>
-			<Row CivUniqueBuildingType="BUILDING_TLACHTLI" ReplacesBuildingType="BUILDING_ARENA"/>
-		</BuildingReplaces>
-		<Building_GreatPersonPoints>
-			<Row BuildingType="BUILDING_TLACHTLI" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" PointsPerTurn="1"/>
-		</Building_GreatPersonPoints>
-		<Building_YieldChanges>
-			<Row BuildingType="BUILDING_TLACHTLI" YieldType="YIELD_FAITH" YieldChange="2"/>
-		</Building_YieldChanges>
-		<Units>
-			<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" BaseMoves="2" Cost="65" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Description="LOC_UNIT_AZTEC_EAGLE_WARRIOR_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Combat="28" TraitType="TRAIT_CIVILIZATION_UNIT_AZTEC_EAGLE_WARRIOR" MandatoryObsoleteTech="TECH_GUNPOWDER"/>
-		</Units>
-		<UnitAiInfos>
-			<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITAI_COMBAT"/>
-			<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITAI_EXPLORE"/>
-			<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITTYPE_MELEE"/>
-			<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITTYPE_LAND_COMBAT"/>
-		</UnitAiInfos>
-		<UnitReplaces>
-			<Row CivUniqueUnitType="UNIT_AZTEC_EAGLE_WARRIOR" ReplacesUnitType="UNIT_WARRIOR"/>
-		</UnitReplaces>
-		<UnitUpgrades>
-			<Row Unit="UNIT_AZTEC_EAGLE_WARRIOR" UpgradeUnit="UNIT_SWORDSMAN"/>
-		</UnitUpgrades>
-	</GameInfo>
+	</AiFavoredItems>
+	<Buildings>
+		<Row BuildingType="BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" PrereqCivic="CIVIC_GAMES_RECREATION" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="135" Maintenance="1" Entertainment="1" TraitType="TRAIT_CIVILIZATION_BUILDING_TLACHTLI"/>
+	</Buildings>
+	<BuildingReplaces>
+		<Row CivUniqueBuildingType="BUILDING_TLACHTLI" ReplacesBuildingType="BUILDING_ARENA"/>
+	</BuildingReplaces>
+	<Building_GreatPersonPoints>
+		<Row BuildingType="BUILDING_TLACHTLI" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" PointsPerTurn="1"/>
+	</Building_GreatPersonPoints>
+	<Building_YieldChanges>
+		<Row BuildingType="BUILDING_TLACHTLI" YieldType="YIELD_FAITH" YieldChange="2"/>
+	</Building_YieldChanges>
+	<Units>
+		<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" BaseMoves="2" Cost="65" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Description="LOC_UNIT_AZTEC_EAGLE_WARRIOR_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Combat="28" TraitType="TRAIT_CIVILIZATION_UNIT_AZTEC_EAGLE_WARRIOR" MandatoryObsoleteTech="TECH_GUNPOWDER"/>
+	</Units>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_AZTEC_EAGLE_WARRIOR" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_AZTEC_EAGLE_WARRIOR" ReplacesUnitType="UNIT_WARRIOR"/>
+	</UnitReplaces>
+	<UnitUpgrades>
+		<Row Unit="UNIT_AZTEC_EAGLE_WARRIOR" UpgradeUnit="UNIT_SWORDSMAN"/>
+	</UnitUpgrades>
+</GameInfo>

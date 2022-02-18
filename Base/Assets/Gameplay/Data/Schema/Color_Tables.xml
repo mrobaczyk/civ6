@@ -8,12 +8,12 @@
 		<Column name="Blue" type="float"/>
 		<Column name="Alpha" type="float"/>
 	</Table>
-		
-    <Table name="PlayerColors">
+
+	<Table name="PlayerColors">
 		<Column name="Type" type="text" notnull="true" primarykey="true" />
 		<Column name="Usage" type="text" notnull="true" />
-		<Column name="PrimaryColor" type="text" notnull="true" reference="Colors(Type)" />
-		<Column name="SecondaryColor" type="text" notnull="true" reference="Colors(Type)" />
-		<Column name="TextColor" type="text" notnull="true" reference="Colors(Type)" />
+		<Column name="PrimaryColor" type="text" notnull="true" />
+		<Column name="SecondaryColor" type="text" notnull="true" />
+		<Column name="TextColor" type="text" />
 	</Table>
 </GameData>

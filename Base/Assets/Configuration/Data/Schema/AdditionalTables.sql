@@ -3,6 +3,13 @@
 -- But are referenced in queries.
 -- These tables are intended to make it easier to supply additional values or
 -- restrict domains without significant SQL work.
+CREATE TABLE 'Credits'(
+	'Package' TEXT NOT NULL,
+	'DisplayName' TEXT NOT NULL,
+	'Credits' TEXT NOT NULL,
+	'SortOrder' INTEGER NOT NULL DEFAULT 0
+);
+
 CREATE TABLE 'Defeats'(
 	'Domain' TEXT NOT NULL DEFAULT 'StandardDefeats',
 	'DefeatType' TEXT NOT NULL,
@@ -89,14 +96,28 @@ CREATE TABLE 'Rulesets' (
 	'FixedMaxTurns' BOOLEAN NOT NULL DEFAULT 0,
 	'SupportsSinglePlayer' BOOLEAN NOT NULL DEFAULT 1,
 	'SupportsMultiPlayer' BOOLEAN NOT NULL DEFAULT 1,
+	'SupportsHotSeat' BOOLEAN NOT NULL DEFAULT 1,
+	'SupportsPlayByCloud' BOOLEAN NOT NULL DEFAULT 1,
 	'SortIndex' INTEGER NOT NULL DEFAULT 100,
 	'IsScenario' BOOLEAN NOT NULL DEFAULT 0,
 	'RequiresNoTeams' BOOLEAN NOT NULL DEFAULT 0,
+	'RequiresUniqueCivilizations' BOOLEAN NOT NULL DEFAULT 0,
 	'RequiresUniqueLeaders' BOOLEAN NOT NULL DEFAULT 0,
 	'ScenarioSetupPortrait' TEXT,
 	'ScenarioSetupPortraitBackground' TEXT,
 	'GameCore' TEXT NOT NULL DEFAULT 'Base',
 	PRIMARY KEY('RulesetType')
+);
+
+-- List of types for a given ruleset.
+CREATE TABLE 'RulesetTypes' (
+	'Ruleset' TEXT NOT NULL,
+	'Type' TEXT NOT NULL,
+	'Kind' TEXT NOT NULL,
+	'Name' TEXT NOT NULL,
+	'Icon' TEXT,
+	PRIMARY KEY('Ruleset','Type'),
+	FOREIGN KEY('Ruleset') REFERENCES 'Rulesets'('RulesetType') ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE 'Players' (
@@ -115,6 +136,9 @@ CREATE TABLE 'Players' (
 	'CivilizationAbilityIcon' TEXT NOT NULL,
 	'Portrait' TEXT,
 	'PortraitBackground' TEXT,
+	'PlayerColor' TEXT,
+	'HumanPlayable' BOOLEAN NOT NULL DEFAULT 1,
+	'SortIndex' INTEGER,
 	PRIMARY KEY('Domain', 'CivilizationType', 'LeaderType')
 );
 
@@ -128,6 +152,18 @@ CREATE TABLE 'PlayerItems' (
 	'Icon' TEXT NOT NULL,
 	'SortIndex' INTEGER DEFAULT 0,
 	PRIMARY KEY('Domain', 'CivilizationType', 'LeaderType', 'Type')
+);
+
+CREATE TABLE 'DuplicateLeaders' (
+	'Domain' TEXT DEFAULT 'Players:StandardPlayers',
+	'LeaderType' TEXT NOT NULL,
+	'OtherLeaderType' TEXT NOT NULL
+);
+
+CREATE TABLE 'DuplicateCivilizations' (
+	'Domain' TEXT DEFAULT 'Players:StandardPlayers',
+	'CivilizationType' TEXT NOT NULL,
+	'OtherCivilizationType' TEXT NOT NULL
 );
 
 CREATE TABLE 'TurnTimers' (
@@ -151,6 +187,7 @@ CREATE TABLE 'Victories'(
 	'VictoryType' TEXT NOT NULL,
 	'Name' TEXT NOT NULL,
 	'Description' TEXT NOT NULL,
+	'Icon' TEXT,
 	'Visible' BOOLEAN NOT NULL DEFAULT 1,
 	'ReadOnly' BOOLEAN NOT NULL DEFAULT 0,
 	'EnabledByDefault' BOOLEAN NOT NULL DEFAULT 1

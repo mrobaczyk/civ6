@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Edward Beach (Firaxis Games) -->
+<GameInfo>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_EYJAFJALLAJOKULL" Texture="Moment_NaturalWonder_Eyjafjallajokull.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_GIANTS_CAUSEWAY" Texture="Moment_Naturalwonder_GiantsCauseway.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_LYSEFJORDEN" Texture="Moment_Naturalwonder_Lyseford.dds"/>
+	</MomentIllustrations>
+	<Types>
+		<Row Type="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" Kind="KIND_RANDOM_EVENT"/>
+	</Types>
+	<RandomEvents>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" Name="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC_NAME" Description="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_FERTILITY" EffectOperatorType="FEATURE" Severity="1" NaturalWonder="FEATURE_EYJAFJALLAJOKULL" IconLarge="ClimateEvent_VolcanoActive" IconSmall="ClimateEventStat_Volcanoes"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" Name="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL_NAME" Description="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_FERTILITY" EffectOperatorType="FEATURE" Severity="2" NaturalWonder="FEATURE_EYJAFJALLAJOKULL" IconLarge="ClimateEvent_VolcanoActive" IconSmall="ClimateEventStat_Volcanoes"/>
+	</RandomEvents>
+	<Features>
+		<Update>
+			<Where FeatureType="FEATURE_EYJAFJALLAJOKULL"/>
+			<Set>
+				<Description>LOC_FEATURE_EYJAFJALLAJOKULL_XP2_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Features>
+	<Feature_AdjacentYields>
+		<Update>
+			<Where FeatureType="FEATURE_EYJAFJALLAJOKULL" YieldType="YIELD_FOOD"/>
+			<Set>
+				<YieldChange>1</YieldChange>
+			</Set>
+		</Update>
+	</Feature_AdjacentYields>
+	<Features_XP2>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" Volcano="true"/>
+	</Features_XP2>
+	<RandomEvent_Frequencies>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" RealismSettingType="REALISM_SETTING_MINIMAL" OccurrencesPerGame="2"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_MINIMAL" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" RealismSettingType="REALISM_SETTING_LIGHT" OccurrencesPerGame="3"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_LIGHT" OccurrencesPerGame="2"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" RealismSettingType="REALISM_SETTING_MODERATE" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_MODERATE" OccurrencesPerGame="2.5"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" RealismSettingType="REALISM_SETTING_HEAVY" OccurrencesPerGame="6"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_HEAVY" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" RealismSettingType="REALISM_SETTING_HYPERREAL" OccurrencesPerGame="6"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_HYPERREAL" OccurrencesPerGame="4"/>
+	</RandomEvent_Frequencies>
+	<RandomEvent_Damages>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="IMPROVEMENT_DESTROYED" Percentage="75"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="IMPROVEMENT_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="DISTRICT_PILLAGED" Percentage="75"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="BUILDING_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="POPULATION_LOSS" Percentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="UNIT_KILLED_CIVILIAN" Percentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="40" MaxHP="60"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="CITY_GARRISON" Percentage="100" MinHP="40" MaxHP="60"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" DamageType="CITY_WALLS" Percentage="100" MinHP="40" MaxHP="60"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="IMPROVEMENT_DESTROYED" Percentage="80" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="IMPROVEMENT_PILLAGED" Percentage="100" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="DISTRICT_PILLAGED" Percentage="80" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="BUILDING_PILLAGED" Percentage="100" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="POPULATION_LOSS" Percentage="40" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="UNIT_KILLED_CIVILIAN" Percentage="40" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="60" MaxHP="80" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="CITY_GARRISON" Percentage="100" MinHP="60" MaxHP="80" ExtraRangePercentage="40"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" DamageType="CITY_WALLS" Percentage="100" MinHP="60" MaxHP="80" ExtraRangePercentage="40"/>
+	</RandomEvent_Damages>
+	<RandomEvent_Yields>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" YieldType="YIELD_FOOD" FeatureType="FEATURE_VOLCANIC_SOIL" Percentage="50" ReplaceFeature="true"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" YieldType="YIELD_PRODUCTION" FeatureType="FEATURE_VOLCANIC_SOIL" Percentage="25" ReplaceFeature="true"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" YieldType="YIELD_SCIENCE" FeatureType="FEATURE_VOLCANIC_SOIL" Percentage="10" ReplaceFeature="true"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" YieldType="YIELD_FOOD" FeatureType="FEATURE_VOLCANIC_SOIL" Percentage="75" ReplaceFeature="true"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" YieldType="YIELD_PRODUCTION" FeatureType="FEATURE_VOLCANIC_SOIL" Percentage="35" ReplaceFeature="true"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" YieldType="YIELD_SCIENCE" FeatureType="FEATURE_VOLCANIC_SOIL" Percentage="15" ReplaceFeature="true"/>
+	</RandomEvent_Yields>
+	<Leaders_XP2>
+		<Row LeaderType="LEADER_MINOR_CIV_AUCKLAND" MinorCivBonusType="MINOR_CIV_BONUS_INDUSTRIAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_ANTANANARIVO" MinorCivBonusType="MINOR_CIV_BONUS_CULTURAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_ARMAGH" MinorCivBonusType="MINOR_CIV_BONUS_RELIGIOUS"/>
+		<Row LeaderType="LEADER_MINOR_CIV_GRANADA" MinorCivBonusType="MINOR_CIV_BONUS_MILITARISTIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_MUSCAT" MinorCivBonusType="MINOR_CIV_BONUS_TRADE"/>
+		<Row LeaderType="LEADER_MINOR_CIV_PALENQUE" MinorCivBonusType="MINOR_CIV_BONUS_SCIENTIFIC"/>
+	</Leaders_XP2>
+	<Traits>
+		<Update>
+			<Set Description="LOC_LEADER_TRAIT_GRANADA_EXPANSION2_DESCRIPTION"/>
+			<Where TraitType="MINOR_CIV_GRANADA_TRAIT"/>
+		</Update>
+		<Update>
+			<Set Description="LOC_LEADER_TRAIT_ARMAGH_EXPANSION2_DESCRIPTION"/>
+			<Where TraitType="MINOR_CIV_ARMAGH_TRAIT"/>
+		</Update>
+	</Traits>
+	<Improvements>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_ALCAZAR"/>
+			<Set>
+				<Description>LOC_IMPROVEMENT_ALCAZAR_EXPANSION2_DESCRIPTION</Description>
+				<YieldFromAppeal>YIELD_SCIENCE</YieldFromAppeal>
+				<YieldFromAppealPercent>50</YieldFromAppealPercent>
+			</Set>
+		</Update>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_MONASTERY"/>
+			<Set>
+				<Description>LOC_IMPROVEMENT_MONASTERY_EXPANSION2_DESCRIPTION</Description>
+				<Housing>2</Housing>
+				<TilesRequired>2</TilesRequired>
+			</Set>
+		</Update>
+	</Improvements>
+	<Modifiers>
+		<Row>
+			<ModifierId>MONASTERY_HOUSING</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_IMPROVEMENT_HOUSING</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_COLONIALISM_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>MONASTERY_HOUSING</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<ImprovementModifiers>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MONASTERY</ImprovementType>
+			<ModifierId>MONASTERY_HOUSING</ModifierId>
+		</Row>
+	</ImprovementModifiers>
+	<Improvement_Adjacencies>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" YieldChangeId="Monastery_DistrictAdjacency"/>
+	</Improvement_Adjacencies>
+	<Adjacency_YieldChanges>
+		<Row ID="Monastery_DistrictAdjacency" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="2" OtherDistrictAdjacent="true"/>
+	</Adjacency_YieldChanges>
+</GameInfo>

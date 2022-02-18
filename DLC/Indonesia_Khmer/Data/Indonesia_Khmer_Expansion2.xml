@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<GameInfo>
+	<Leaders>
+		<Update>
+			<Where LeaderType="LEADER_GITARJA"/>
+			<Set>
+				<Sex>Female</Sex>
+			</Set>
+		</Update>
+	</Leaders>
+	<AgendaPreferredLeaders>
+		<Row AgendaType="AGENDA_SYMPATHIZER" LeaderType="LEADER_JAYAVARMAN" PercentageChance="10"/>
+	</AgendaPreferredLeaders>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_INDONESIAN_JONG" Texture="Moment_UniqueUnit_Indonesia.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_KHMER_DOMREY" Texture="Moment_UniqueUnit_Khmer.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_KAMPUNG" Texture="Moment_Infrastructure_Indonesia.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_PRASAT" Texture="Moment_Infrastructure_Khmer.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_HA_LONG_BAY" Texture="Moment_Naturalwonder_HaLongBay.dds"/>
+	</MomentIllustrations>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_AYUNG_RIVER" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_BARITO_RIVER" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_BASSAC_RIVER" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedRiverType="NAMED_RIVER_BATANGHARI_RIVER" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_BENGAWAN_SOLO_RIVER" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_KAPUAS" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_MAHAKAM_RIVER" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_MAMBERAMO_RIVER" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_MEKONG" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedRiverType="NAMED_RIVER_MUSI_RIVER" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedRiverType="NAMED_RIVER_SREPOK_RIVER" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedRiverType="NAMED_RIVER_SE_KONG_RIVER" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedRiverType="NAMED_RIVER_TONLE_SAN_RIVER" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedRiverType="NAMED_RIVER_TONLE_SAP_RIVER" CivilizationType="CIVILIZATION_KHMER"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_AGUNG" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_GALUNGGUNG" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_KELUD" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_KRAKATOA" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MERAPI" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_TAMBORA" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_YAK_LOUM" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_SEMERU" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_PHANOM_RUNG_VOLCANO" CivilizationType="CIVILIZATION_KHMER"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_ANNAMITES" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_BARISAN" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_DAMREI_MOUNTAINS" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_DANGREK_MOUNTAINS" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_IYANG_ARGAPURA_MOUNTAINS" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_KRAVANH_MOUNTAINS" CivilizationType="CIVILIZATION_KHMER"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_MERATUS_MOUNTAINS" CivilizationType="CIVILIZATION_INDONESIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_TENGGER_MASSIF" CivilizationType="CIVILIZATION_INDONESIA"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_TENGGER_SAND_SEA" CivilizationType="CIVILIZATION_INDONESIA"/>
+	</NamedDesertCivilizations>
+	<AiListTypes>
+		<Row ListType="ExaltedGoddessResolutions"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="ExaltedGoddessResolutions" LeaderType="TRAIT_LEADER_EXALTED_GODDESS" System="Resolutions"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="ExaltedGoddessResolutions" Item="WC_RES_MERCENARY_COMPANIES" Favored="true"/>
+	</AiFavoredItems>
+</GameInfo>

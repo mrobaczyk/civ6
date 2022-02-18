@@ -3,36 +3,40 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>296</build>
-		<revision>884</revision>
+		<build>356</build>
+		<revision>594</revision>
 	</m_Version>
 	<m_TemplateName text="GraphicsTweaks"/>
 	<m_RootCollections>
 		<Element>
 			<m_CollectionName text="AO Tweaks"/>
-			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<m_ReplaceMergedCollectionElements>true</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
 						<Element class="AssetObjects..FloatValue">
-							<m_fValue>50.000000</m_fValue>
+							<m_fValue>3.000000</m_fValue>
 							<m_ParamName text="Power"/>
 						</Element>
 						<Element class="AssetObjects..FloatValue">
-							<m_fValue>1.090000</m_fValue>
+							<m_fValue>1.000000</m_fValue>
 							<m_ParamName text="Scale"/>
 						</Element>
 						<Element class="AssetObjects..FloatValue">
-							<m_fValue>0.400000</m_fValue>
+							<m_fValue>0.100000</m_fValue>
 							<m_ParamName text="Bias"/>
 						</Element>
 						<Element class="AssetObjects..FloatValue">
-							<m_fValue>0.050000</m_fValue>
+							<m_fValue>0.025000</m_fValue>
 							<m_ParamName text="Min"/>
 						</Element>
 						<Element class="AssetObjects..FloatValue">
 							<m_fValue>0.100000</m_fValue>
 							<m_ParamName text="DirectLightingInfluence"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>20.000000</m_fValue>
+							<m_ParamName text="Radius"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -43,7 +47,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="Bounce Lighting Tweaks"/>
-			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<m_ReplaceMergedCollectionElements>true</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -60,7 +64,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="Terrain Lighting"/>
-			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<m_ReplaceMergedCollectionElements>true</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>

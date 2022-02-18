@@ -9,11 +9,7 @@
 			<SupportsSinglePlayer>0</SupportsSinglePlayer>
 		</Row>
 	</RuleSets>
-	
-	<RulesetDomainOverrides>
-		<Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" ParameterId="MapSize" Domain="ReligiousCombatMapSizes" />
-	</RulesetDomainOverrides>
-	
+		
 	<RulesetSupportedValues>
 		<Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="StandardEras" Value="ERA_MEDIEVAL"/>
 		<Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="StandardTurnLimits" Value="TURNLIMIT_NONE"/>
@@ -34,21 +30,9 @@
 		<Row ParameterId="MaxTurns" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_RELIGIOUS_COMBAT" />
 	</ParameterCriteria>
 
-
 	<Parameters>
 		<!-- Using a different ParameterId to override the default values for these standard advanced settings. -->
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_RELIGIOUS_COMBAT" ParameterId="ReligiousCombat_NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="LOC_GAME_NO_GOODY_HUTS" Domain="bool" DefaultValue="0" Visible="true" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_RELIGIOUS_COMBAT" ParameterId="ReligiousCombat_NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="LOC_GAME_NO_BARBARIANS" Domain="bool" DefaultValue="0" Visible="true" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
 	</Parameters>
-
-	<!-- Limit Max Players to 6 based on the number of possible beliefs. -->
-	<MapSizes>
-		<Row Domain="ReligiousCombatMapSizes" MapSizeType="MAPSIZE_DUEL" Name="LOC_MAPSIZE_DUEL_NAME" Description="LOC_MAPSIZE_DUEL_DESCRIPTION" MinPlayers="2" MaxPlayers="4" DefaultPlayers="2" MinCityStates="0" MaxCityStates="6" DefaultCityStates="3" SortIndex="10" />
-		<Row Domain="ReligiousCombatMapSizes" MapSizeType="MAPSIZE_TINY" Name="LOC_MAPSIZE_TINY_NAME" Description="LOC_MAPSIZE_TINY_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="4" MinCityStates="0" MaxCityStates="10" DefaultCityStates="6" SortIndex="20" />
-		<Row Domain="ReligiousCombatMapSizes" MapSizeType="MAPSIZE_SMALL" Name="LOC_MAPSIZE_SMALL_NAME" Description="LOC_MAPSIZE_SMALL_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="14" DefaultCityStates="9" SortIndex="30" />
-		<Row Domain="ReligiousCombatMapSizes" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="18" DefaultCityStates="12" SortIndex="40" />
-		<Row Domain="ReligiousCombatMapSizes" MapSizeType="MAPSIZE_LARGE" Name="LOC_MAPSIZE_LARGE_NAME" Description="LOC_MAPSIZE_LARGE_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="22" DefaultCityStates="15" SortIndex="50" />
-		<Row Domain="ReligiousCombatMapSizes" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="24" DefaultCityStates="18" SortIndex="60" />
-	</MapSizes>
-
 </GameInfo>
