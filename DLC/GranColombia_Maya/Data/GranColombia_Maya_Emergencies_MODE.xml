@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Edward Beach (Firaxis Games) -->
+<GameInfo>
+	<Types>
+		<Row Type="EMERGENCY_SOOTHSAYER" Kind="KIND_DIPLOMACY_EMERGENCY"/>
+	</Types>
+	<EmergencyAlliances>
+		<Row EmergencyType="EMERGENCY_SOOTHSAYER" Duration="15" LockoutTime="45" WarOnTarget="false" KillFriendship="false" InformTarget="false" OpenBorders="False" ShareVis="False" RemovesWarState="False" TargetRequirementSet="SOOTHSAYER_EMERGENCY_TARGET_REQUIREMENTS" MemberRequirementSet="SOOTHSAYER_EMERGENCY_MEMBER_REQUIREMENTS" Trigger="EMERGENCY_TRIGGER_GAME_TURN" GoalTrigger="EMERGENCY_TRIGGER_NONE" Name="LOC_EMERGENCY_APPEASE_NAME" EmergencyText="Soothsayer" GoalText="Soothsayer"/>
+	</EmergencyAlliances>
+	<Emergencies_XP2>
+		<Row EmergencyType="EMERGENCY_SOOTHSAYER" Hostile="false" NoTarget="true" UIType="COMPETITION" UIBackgroundPrefix="SOOTHSAYER" NoCongress="true"/>
+	</Emergencies_XP2>
+	<EmergencyBuffs>
+		<Row ModifierID="SOOTHSAYER_EMERGENCY_GRANT_OPERATION" EmergencyType="EMERGENCY_SOOTHSAYER" Description="LOC_EMERGENCY_MEMBER_BUFF_DESCRIPTION_ACCESS_TO_APPEASE_UNIT_ACTION"/>
+	</EmergencyBuffs>
+	<EmergencyRewards>
+    <Row ModifierID="EMERGENCY_SOOTHSAYER_FREE_UNIT_FIRST_PLACE" OnSuccess="True" EmergencyType="EMERGENCY_SOOTHSAYER" Description="LOC_EMERGENCY_REWARD_FREE_SOOTHSAYER_DESCRIPTION" FirstPlace="true"/>
+    <Row ModifierID="EMERGENCY_SOOTHSAYER_PROMOTION_TOP_TIER" OnSuccess="True" EmergencyType="EMERGENCY_SOOTHSAYER" Description="LOC_EMERGENCY_REWARD_SOOTHSAYER_PROMOTION_DESCRIPTION" TopTier="true"/>
+    <Row ModifierID="EMERGENCY_SOOTHSAYER_FAITH_TOP_TIER" OnSuccess="True" EmergencyType="EMERGENCY_SOOTHSAYER" Description="LOC_EMERGENCY_REWARD_FAITH_PER_TURN_DESCRIPTION" TopTier="true"/>
+    <Row ModifierID="EMERGENCY_SOOTHSAYER_FAITH_BOTTOM_TIER" OnSuccess="True" EmergencyType="EMERGENCY_SOOTHSAYER" Description="LOC_EMERGENCY_REWARD_FAITH_PER_TURN_DESCRIPTION" BottomTier="true"/>
+	</EmergencyRewards>
+	<EmergencyTexts>
+		<Row Type="Soothsayer" Flavor="LOC_EMERGENCY_FLAVOR_APPEASE" Description="LOC_EMERGENCY_DESCRIPTION_APPEASE" DescriptionShorter="LOC_WORLD_CONGRESS_APPEASE_SUMMARY"/>
+	</EmergencyTexts>
+	<EmergencyGoalTexts>
+		<Row GoalType="Soothsayer" GoalDescription="LOC_EMERGENCY_GOAL_COMPETE_WITH_OTHERS" ShortGoalDescription="LOC_EMERGENCY_GOAL_SHORT_COMPETE_WITH_OTHERS" TentativeGoalDescription="LOC_EMERGENCY_GOAL_TENTATIVE_COMPETE_WITH_OTHERS" ListGoal="LOC_EMERGENCY_GOAL_LIST_COMPETE_WITH_OTHERS"/>
+	</EmergencyGoalTexts>
+	<EmergencyScoreSources>
+    <Row ScoreSourceType="SOOTHSAYER_EMERGENCY_SCORE_FROM_SACRIFICE" EmergencyType="EMERGENCY_SOOTHSAYER" FromSacrificedUnitStrength="true" ScoreAmount="1" Description="LOC_EMERGENCY_SCORE_APPEASE_DESC"/>
+	</EmergencyScoreSources>
+	<Modifiers>
+    <!--                                          -->
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FREE_UNIT_FIRST_PLACE</ModifierId>
+      <ModifierType>MODIFIER_EMERGENCY_CAPITALS_GRANT_UNIT</ModifierType>
+      <SubjectRequirementSetId>SCORED_COMPETITION_FIRST_PLACE_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_PROMOTION_TOP_TIER</ModifierId>
+      <ModifierType>MODIFIER_MAJOR_PLAYERS_GRANT_BASE_PROMOTION</ModifierType>
+      <SubjectRequirementSetId>SCORED_COMPETITION_TOP_TIER_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FAITH_TOP_TIER</ModifierId>
+      <ModifierType>MODIFIER_EMERGENCY_PLAYERS_YIELD_PER_TURN</ModifierType>
+      <SubjectRequirementSetId>SCORED_COMPETITION_TOP_TIER_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FAITH_BOTTOM_TIER</ModifierId>
+      <ModifierType>MODIFIER_EMERGENCY_PLAYERS_YIELD_PER_TURN</ModifierType>
+      <SubjectRequirementSetId>SCORED_COMPETITION_BOTTOM_TIER_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+    
+    <!--                                          -->
+		<Row>
+			<ModifierId>SOOTHSAYER_EMERGENCY_GRANT_OPERATION</ModifierId>
+			<ModifierType>MODIFIER_ALL_UNITS_DISABLE_OPERATION</ModifierType>
+			<SubjectRequirementSetId>EMERGENCY_IS_SOOTHSAYER_UNIT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FREE_UNIT_FIRST_PLACE</ModifierId>
+      <Name>UnitType</Name>
+      <Value>UNIT_SOOTHSAYER</Value>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FREE_UNIT_FIRST_PLACE</ModifierId>
+      <Name>Amount</Name>
+      <Value>1</Value>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_PROMOTION_TOP_TIER</ModifierId>
+      <Name>UnitType</Name>
+      <Value>UNIT_SOOTHSAYER</Value>
+    </Row>
+		<Row>
+			<ModifierId>SOOTHSAYER_EMERGENCY_GRANT_OPERATION</ModifierId>
+			<Name>Available</Name>
+			<Value>true</Value>
+		</Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_EMERGENCY_GRANT_OPERATION</ModifierId>
+      <Name>OperationType</Name>
+      <Value>UNITOPERATION_SOOTHSAYER_SACRIFICE</Value>
+    </Row>
+    
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FAITH_TOP_TIER</ModifierId>
+      <Name>Amount</Name>
+      <Value>2</Value>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FAITH_TOP_TIER</ModifierId>
+      <Name>YieldType</Name>
+      <Value>YIELD_FAITH</Value>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FAITH_BOTTOM_TIER</ModifierId>
+      <Name>Amount</Name>
+      <Value>2</Value>
+    </Row>
+    <Row>
+      <ModifierId>EMERGENCY_SOOTHSAYER_FAITH_BOTTOM_TIER</ModifierId>
+      <Name>YieldType</Name>
+      <Value>YIELD_FAITH</Value>
+    </Row>
+  </ModifierArguments>
+	<ModifierStrings>
+  </ModifierStrings>
+	<!--REQUIREMENTS-->
+	<RequirementSets>
+		<Row RequirementSetId="SOOTHSAYER_EMERGENCY_TARGET_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+		<Row RequirementSetId="SOOTHSAYER_EMERGENCY_MEMBER_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+    <Row RequirementSetId="EMERGENCY_IS_SOOTHSAYER_UNIT_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>SOOTHSAYER_EMERGENCY_MEMBER_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_IS_EMERGENCY_MEMBER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>SOOTHSAYER_EMERGENCY_TARGET_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_GAME_60_TURNS_IN</RequirementId>
+		</Row>
+    <Row>
+      <RequirementSetId>EMERGENCY_IS_SOOTHSAYER_UNIT_REQUIREMENTS</RequirementSetId>
+      <RequirementId>REQUIRES_UNIT_IS_SOOTHSAYER</RequirementId>
+    </Row>
+	</RequirementSetRequirements>
+	<Requirements>
+    <Row>
+      <RequirementId>REQUIRES_GAME_60_TURNS_IN</RequirementId>
+      <RequirementType>REQUIREMENT_GAME_TURN_ATLEAST</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_UNIT_IS_SOOTHSAYER</RequirementId>
+      <RequirementType>REQUIREMENT_UNIT_TYPE_MATCHES</RequirementType>
+    </Row>
+  </Requirements>
+	<RequirementArguments>
+    <Row>
+      <RequirementId>REQUIRES_GAME_60_TURNS_IN</RequirementId>
+      <Name>MinGameTurn</Name>
+      <Value>60</Value>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_GAME_60_TURNS_IN</RequirementId>
+      <Name>AdjustForGameSpeed</Name>
+      <Value>true</Value>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_UNIT_IS_SOOTHSAYER</RequirementId>
+      <Name>UnitType</Name>
+      <Value>UNIT_SOOTHSAYER</Value>
+    </Row>
+	</RequirementArguments>
+</GameInfo>

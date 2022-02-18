@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <TargetTypes>
+    <Row TargetType="TARGET_DISASTER_CAPABLE"/>
+  </TargetTypes>
+  <AiOperationDefs>
+    <Row OperationName="Wartime Use Soothsayer" TargetType="TARGET_DISASTER_CAPABLE" EnemyType="WAR" TargetParameter="0" OperationType="CITY_ASSAULT" BehaviorTree="Use Soothsayer" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.5" MustBeAtWar="true" MustHaveUnits="4" /> 
+    <Row OperationName="Soothsayer Scored Competition" TargetType="TARGET_DISASTER_CAPABLE" OperationType="EMERGENCY_OPERATION" EnemyType="NONE" TargetParameter="0" BehaviorTree="Use Soothsayer" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.5" MustHaveUnits="4" ActiveEmergency="EMERGENCY_SOOTHSAYER" /> 
+  </AiOperationDefs>
+  <OpTeamRequirements>
+    <Row TeamName="Soothsayer Team" AiType="UNITTYPE_SOOTHSAYER" MinNumber="1" MaxNumber="1" />
+    <Row TeamName="Soothsayer Team" AiType="UNITAI_COMBAT" MinNumber="2" ReconsiderWhilePreparing="false" />
+    <Row TeamName="Soothsayer Team" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
+    <Row TeamName="Soothsayer Team" AiType="UNITTYPE_AIR" MaxNumber="0" />
+    <Row TeamName="Soothsayer Competition Team" AiType="UNITTYPE_SOOTHSAYER" MinNumber="1" MaxNumber="1" />
+    <Row TeamName="Soothsayer Competition Team" AiType="UNITAI_COMBAT" MinNumber="1" MaxNumber="3" ReconsiderWhilePreparing="false" />
+    <Row TeamName="Soothsayer Competition Team" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
+    <Row TeamName="Soothsayer Competition Team" AiType="UNITTYPE_AIR" MaxNumber="0" />
+  </OpTeamRequirements>
+  <AiOperationTeams>
+    <Row TeamName="Soothsayer Team" OperationName="Wartime Use Soothsayer" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="1" SafeRallyPoint="true" />
+    <Row TeamName="Soothsayer Competition Team" OperationName="Soothsayer Scored Competition" InitialStrengthAdvantage="0" SafeRallyPoint="true" />
+  </AiOperationTeams>
+  <AiTeams>
+    <Row TeamName="Soothsayer Team" />
+    <Row TeamName="Soothsayer Competition Team"/>
+  </AiTeams>
+  <AllowedOperations>
+    <Row ListType="Default_List" OperationDef="Wartime Use Soothsayer" />
+    <Row ListType="Default_List" OperationDef="Soothsayer Scored Competition" />
+  </AllowedOperations>
+  <AiOperationTypes>
+    <Row OperationType="EMERGENCY_OPERATION" Value="7" />
+  </AiOperationTypes>
+  <AiFavoredItems>
+    <Row ListType="BaseOperationsLimits" Item="EMERGENCY_OPERATION" Value="1" />
+  </AiFavoredItems>
+</GameInfo>

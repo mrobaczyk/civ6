@@ -40,7 +40,7 @@
 	</Victories>
 	<!-- AI victory strategies (may move this to its own file in the future if it gets too large) -->
 	<Strategies>
-		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" VictoryType="VICTORY_CULTURE" NumConditionsNeeded="2"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" VictoryType="VICTORY_CULTURE" NumConditionsNeeded="3"/>
 		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" VictoryType="VICTORY_CONQUEST" NumConditionsNeeded="3"/>
 		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" VictoryType="VICTORY_RELIGIOUS" NumConditionsNeeded="2"/>
 		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" VictoryType="VICTORY_TECHNOLOGY" NumConditionsNeeded="3"/>
@@ -58,7 +58,7 @@
 	</Strategies>
 	<!-- Reminder: These conditions must be met to START following the strategy - they are not victory conditions themselves -->
 	<StrategyConditions>
-		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Good Culture City" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Good Culture" ThresholdValue="50"/> <!-- Requires empire to be in top 50% of known, living majors -->
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Writer" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Artist" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Musician" ThresholdValue="1"/>

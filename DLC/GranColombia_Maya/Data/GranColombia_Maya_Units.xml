@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_MAYAN_HULCHE" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_HULCHE" Kind="KIND_ABILITY"/>
+		<Row Type="PROMOTION_CLASS_NIHANG" Kind="KIND_PROMOTION_CLASS"/>
+		<Row Type="UNIT_LAHORE_NIHANG" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_NIHANG_BARRACKS_STRENGTH" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_NIHANG_ARMORY_STRENGTH" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_NIHANG_ACADEMY_STRENGTH" Kind="KIND_ABILITY"/>
+		<Row Type="UNIT_COMANDANTE_GENERAL" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_COLOMBIAN_LLANERO" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_LLANERO_ADJACENCY_STRENGTH" Kind="KIND_ABILITY"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_MAYAN_HULCHE" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_LAHORE_NIHANG" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_COLOMBIAN_LLANERO" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<TypeTags>
+		<Row Type="UNIT_MAYAN_HULCHE" Tag="CLASS_MAYAN_HULCHE"/>
+		<Row Type="UNIT_MAYAN_HULCHE" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_HULCHE" Tag="CLASS_MAYAN_HULCHE"/>
+		<Row Type="UNIT_LAHORE_NIHANG" Tag="CLASS_MELEE"/>
+		<Row Type="UNIT_LAHORE_NIHANG" Tag="CLASS_LAHORE_NIHANG"/>
+    <Row Type="UNIT_LAHORE_NIHANG" Tag="CLASS_ALL_ERAS"/>
+		<Row Type="ABILITY_NIHANG_BARRACKS_STRENGTH" Tag="CLASS_LAHORE_NIHANG"/>
+		<Row Type="ABILITY_NIHANG_ARMORY_STRENGTH" Tag="CLASS_LAHORE_NIHANG"/>
+		<Row Type="ABILITY_NIHANG_ACADEMY_STRENGTH" Tag="CLASS_LAHORE_NIHANG"/>
+		<Row Type="UNIT_COMANDANTE_GENERAL" Tag="CLASS_LANDCIVILIAN"/>
+    <Row Type="UNIT_COMANDANTE_GENERAL" Tag="CLASS_ALL_ERAS"/>
+		<Row Type="UNIT_COLOMBIAN_LLANERO" Tag="CLASS_COLOMBIAN_LLANERO"/>
+		<Row Type="UNIT_COLOMBIAN_LLANERO" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_LLANERO_ADJACENCY_STRENGTH" Tag="CLASS_COLOMBIAN_LLANERO"/>
+	</TypeTags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_MAYAN_HULCHE" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_MAYAN_HULCHE" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_MAYAN_HULCHE" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_LAHORE_NIHANG" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_LAHORE_NIHANG" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_LAHORE_NIHANG" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_LAHORE_NIHANG" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_COMANDANTE_GENERAL" AiType="UNITTYPE_CIVILIAN_LEADER"/>
+		<Row UnitType="UNIT_COMANDANTE_GENERAL" AiType="UNITAI_LEADER"/>
+		<Row UnitType="UNIT_COLOMBIAN_LLANERO" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_COLOMBIAN_LLANERO" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_COLOMBIAN_LLANERO" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_COLOMBIAN_LLANERO" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_COLOMBIAN_LLANERO" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_MAYAN_HULCHE" ReplacesUnitType="UNIT_ARCHER"/>
+		<Row CivUniqueUnitType="UNIT_COLOMBIAN_LLANERO" ReplacesUnitType="UNIT_CAVALRY"/>
+	</UnitReplaces>
+	<Units>
+		<Row UnitType="UNIT_MAYAN_HULCHE" Cost="60" Maintenance="1" BaseMoves="2" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" Combat="15" RangedCombat="28" Range="2" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_MAYAN_HULCHE_NAME" Description="LOC_UNIT_MAYAN_HULCHE_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_BALLISTICS" PrereqTech="TECH_ARCHERY" TraitType="TRAIT_CIVILIZATION_HULCHE"/>
+		<Row UnitType="UNIT_LAHORE_NIHANG" Cost="100" Maintenance="2" BaseMoves="2" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="25" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_NIHANG" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_LAHORE_NIHANG_NAME" Description="LOC_UNIT_LAHORE_NIHANG_DESCRIPTION" PurchaseYield="YIELD_FAITH" MustPurchase="true" TraitType="MINOR_CIV_LAHORE_NIHANG_TRAIT"/>
+		<Row UnitType="UNIT_COMANDANTE_GENERAL" Cost="1" BaseMoves="4" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_COMANDANTE_GENERAL_NAME" Description="LOC_UNIT_COMANDANTE_GENERAL_DESCRIPTION" CanCapture="False" CanRetreatWhenCaptured="True" CanTrain="False" TraitType="TRAIT_CIVILIZATION_COMANDANTE_GENERAL"/>
+		<Row UnitType="UNIT_COLOMBIAN_LLANERO" Cost="330" Maintenance="2" BaseMoves="5" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="62" StrategicResource="RESOURCE_HORSES" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_LIGHT_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_COLOMBIAN_LLANERO_NAME" Description="LOC_UNIT_COLOMBIAN_LLANERO_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_MILITARY_SCIENCE" TraitType="TRAIT_CIVILIZATION_LLANERO"/>
+  </Units>
+	<UnitUpgrades>
+		<Row Unit="UNIT_MAYAN_HULCHE" UpgradeUnit="UNIT_CROSSBOWMAN"/>
+		<Row Unit="UNIT_COLOMBIAN_LLANERO" UpgradeUnit="UNIT_HELICOPTER"/>
+	</UnitUpgrades>
+	<UnitPromotionClasses>
+		<Row PromotionClassType="PROMOTION_CLASS_NIHANG" Name="LOC_PROMOTION_CLASS_NIHANG_NAME"/>
+	</UnitPromotionClasses>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_HULCHE" Name="LOC_ABILITY_HULCHE_NAME" Description="LOC_ABILITY_HULCHE_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_NIHANG_BARRACKS_STRENGTH" Name="LOC_ABILITY_NIHANG_BARRACKS_STRENGTH_NAME" Description="LOC_ABILITY_NIHANG_BARRACKS_STRENGTH_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_NIHANG_ARMORY_STRENGTH" Name="LOC_ABILITY_NIHANG_ARMORY_STRENGTH_NAME" Description="LOC_ABILITY_NIHANG_ARMORY_STRENGTH_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_NIHANG_ACADEMY_STRENGTH" Name="LOC_ABILITY_NIHANG_ACADEMY_STRENGTH_NAME" Description="LOC_ABILITY_NIHANG_ACADEMY_STRENGTH_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_LLANERO_ADJACENCY_STRENGTH" Name="LOC_ABILITY_LLANERO_ADJACENCY_STRENGTH_NAME" Description="LOC_ABILITY_LLANERO_ADJACENCY_STRENGTH_DESCRIPTION"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_HULCHE</UnitAbilityType>
+			<ModifierId>HULCHE_BONUS_VS_WOUNDED_UNITS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_NIHANG_BARRACKS_STRENGTH</UnitAbilityType>
+			<ModifierId>NIHANG_BARRACKS_STRENGTH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_NIHANG_ARMORY_STRENGTH</UnitAbilityType>
+			<ModifierId>NIHANG_ARMORY_STRENGTH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_NIHANG_ACADEMY_STRENGTH</UnitAbilityType>
+			<ModifierId>NIHANG_ACADEMY_STRENGTH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_LLANERO_ADJACENCY_STRENGTH</UnitAbilityType>
+			<ModifierId>LLANERO_ADJACENCY_STRENGTH</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>HULCHE_BONUS_VS_WOUNDED_UNITS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_OPPONENT_IS_WOUNDED</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_BARRACKS_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_BASE_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_ARMORY_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_BASE_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_ACADEMY_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_BASE_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>LLANERO_ADJACENCY_STRENGTH</ModifierId>
+			<ModifierType>GRANT_STRENGTH_PER_ADJACENT_UNIT_TYPE</ModifierType>
+      <OwnerRequirementSetId>LLANERO_IS_ADJACENT_REQUIREMENTS</OwnerRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>HULCHE_BONUS_VS_WOUNDED_UNITS</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_BARRACKS_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_ARMORY_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_ACADEMY_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>LLANERO_ADJACENCY_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>LLANERO_ADJACENCY_STRENGTH</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_COLOMBIAN_LLANERO</Value>
+		</Row>
+	</ModifierArguments>
+  <RequirementSets>
+    <Row>
+      <RequirementSetId>LLANERO_IS_ADJACENT_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+  </RequirementSets>
+  <RequirementSetRequirements>
+    <Row>
+      <RequirementSetId>LLANERO_IS_ADJACENT_REQUIREMENTS</RequirementSetId>
+      <RequirementId>LLANERO_IS_ADJACENT_REQUIREMENT</RequirementId>
+    </Row>
+  </RequirementSetRequirements>
+  <Requirements>
+    <Row>
+      <RequirementId>LLANERO_IS_ADJACENT_REQUIREMENT</RequirementId>
+      <RequirementType>REQUIREMENT_PLOT_ADJACENT_FRIENDLY_UNIT_TYPE_MATCHES</RequirementType>
+    </Row>
+  </Requirements>
+  <RequirementArguments>
+    <Row>
+      <RequirementId>LLANERO_IS_ADJACENT_REQUIREMENT</RequirementId>
+      <Name>UnitType</Name>
+      <Value>UNIT_COLOMBIAN_LLANERO</Value>
+    </Row>
+  </RequirementArguments>
+  <ModifierStrings>
+		<Row ModifierId="HULCHE_BONUS_VS_WOUNDED_UNITS" Context="Preview" Text="LOC_ABILITY_HULCHE_DESCRIPTION"/>
+		<Row ModifierId="LLANERO_ADJACENCY_STRENGTH" Context="Preview" Text="LOC_LLANERO_ADJACENCY_STRENGTH_DESCRIPTION"/>
+	</ModifierStrings>
+</GameInfo>

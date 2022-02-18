@@ -2573,7 +2573,15 @@
 			<RequirementSetId>PLAYER_ENCROACHING_RELIGION</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NEIGHBORS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NOT_NEIGHBORS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+    <Row>
 			<RequirementSetId>PLAYER_NOT_COMPETING_MINORS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -2855,7 +2863,31 @@
 			<RequirementSetId>PLAYER_HAS_LOW_FAITH</RequirementSetId>
 			<RequirementId>REQUIRES_HAS_LOW_FAITH</RequirementId>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NEIGHBORS</RequirementSetId>
+      <RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NEIGHBORS</RequirementSetId>
+      <RequirementId>REQUIRES_NEIGHBOR_CIVS</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NEIGHBORS</RequirementSetId>
+      <RequirementId>REQUIRES_MET_10_TURNS_AGO</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NOT_NEIGHBORS</RequirementSetId>
+      <RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NOT_NEIGHBORS</RequirementSetId>
+      <RequirementId>REQUIRES_NOT_NEIGHBOR_CIVS</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>PLAYERS_ARE_NOT_NEIGHBORS</RequirementSetId>
+      <RequirementId>REQUIRES_MET_10_TURNS_AGO</RequirementId>
+    </Row>
+    <Row>
 			<RequirementSetId>PLAYER_CLEARS_BARBARIAN_CAMPS</RequirementSetId>
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
 		</Row>
@@ -3352,7 +3384,16 @@
 			<RequirementId>REQUIRES_ATTACKED_CONTINENT</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_ATTACKED_CONTINENT</RequirementType>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementId>REQUIRES_NEIGHBOR_CIVS</RequirementId>
+      <RequirementType>REQUIREMENT_PLAYER_IS_NEIGHBOR</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_NOT_NEIGHBOR_CIVS</RequirementId>
+      <RequirementType>REQUIREMENT_PLAYER_IS_NEIGHBOR</RequirementType>
+      <Inverse>true</Inverse>
+    </Row>
+    <Row>
 			<RequirementId>REQUIRES_PEACEFUL_ON_CONTINENT</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_PEACEFUL_ON_CONTINENT</RequirementType>
 		</Row>

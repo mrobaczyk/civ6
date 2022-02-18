@@ -39,6 +39,7 @@
 		<Row TeamName="Civilian Builder Capture"/>
 		<Row TeamName="Settle City Team"/>
 		<Row TeamName="City Defense"/>
+		<Row TeamName="City Naval Defense"/>
 		<Row TeamName="Barbarian Raid"/>
     <Row TeamName="Nuclear Attack" />
     <Row TeamName="Aid Ally Attack Force" />
@@ -59,6 +60,7 @@
     <Row TeamName="Civilian Builder Capture" OperationName="Civilian Builder Capture" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0.5" />
     <Row TeamName="Settle City Team" OperationName="Settle New City" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="1" SafeRallyPoint="true" />
     <Row TeamName="City Defense" OperationName="City Defense" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="1" />
+    <Row TeamName="City Naval Defense" OperationName="City Defense" InitialStrengthAdvantage="-5" OngoingStrengthAdvantage="1" Condition="IsCoastalTarget" />
     <Row TeamName="Barbarian Raid" OperationName="Barbarian Attack" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="-1" />
     <Row TeamName="Barbarian Raid" OperationName="Barbarian City Assault" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="-1" />
     <Row TeamName="Nuclear Attack" OperationName="Nuclear Assault" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="0" />
@@ -113,6 +115,10 @@
     <Row TeamName="City Defense" AiType="UNITAI_EXPLORE" MinNumber="0" />
     <Row TeamName="City Defense" AiType="UNITTYPE_AIR" MaxNumber="0" />
     <Row TeamName="City Defense" AiType="UNITTYPE_AIR_SIEGE" MaxNumber="0" />
+    <Row TeamName="City Naval Defense" AiType="UNITTYPE_NAVAL" MinPercentage="1" />
+    <Row TeamName="City Naval Defense" AiType="UNITTYPE_MELEE" MinNumber="0" />
+    <Row TeamName="City Naval Defense" AiType="UNITTYPE_RANGED" MinNumber="0" />
+    <Row TeamName="City Naval Defense" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="Barbarian Raid" AiType="UNITAI_COMBAT" MinNumber="1" />
     <Row TeamName="Nuclear Attack" AiType="UNITTYPE_NUCLEAR" MinNumber="1"/>
     <Row TeamName="Nuclear Attack" AiType="UNITTYPE_NUCLEAR_ESCORT" MinNumber="0" />

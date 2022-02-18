@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_SIMON_BOLIVAR" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_LADY_SIX_SKY" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_CAMPANA_ADMIRABLE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_MUTAL" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_LADY_SIX_SKY" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_SIMON_BOLIVAR" Kind="KIND_TRAIT"/>
+		<!-- Ability -->
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Kind="KIND_ABILITY"/>
+		<!-- Minor-->
+		<Row Type="LEADER_MINOR_CIV_CAGUANA" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_HUNZA" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_LAHORE" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_SINGAPORE" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_TARUGA" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_VATICAN_CITY" Kind="KIND_LEADER"/>
+		<!-- Minor Traits-->
+		<Row Type="MINOR_CIV_CAGUANA_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_HUNZA_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_LAHORE_NIHANG_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_SINGAPORE_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_TARUGA_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_VATICAN_CITY_TRAIT" Kind="KIND_TRAIT"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_RECON"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_HEAVY_CHARIOT"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_LIGHT_CHARIOT"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_AIRCRAFT"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_SIMON_BOLIVAR" Name="LOC_LEADER_SIMON_BOLIVAR_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_LADY_SIX_SKY" Name="LOC_LEADER_LADY_SIX_SKY_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<!-- Minor-->
+		<Row LeaderType="LEADER_MINOR_CIV_CAGUANA" Name="LOC_CIVILIZATION_CAGUANA_NAME" InheritFrom="LEADER_MINOR_CIV_CULTURAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_HUNZA" Name="LOC_CIVILIZATION_HUNZA_NAME" InheritFrom="LEADER_MINOR_CIV_TRADE"/>
+		<Row LeaderType="LEADER_MINOR_CIV_LAHORE" Name="LOC_CIVILIZATION_LAHORE_NAME" InheritFrom="LEADER_MINOR_CIV_MILITARISTIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_SINGAPORE" Name="LOC_CIVILIZATION_SINGAPORE_NAME" InheritFrom="LEADER_MINOR_CIV_INDUSTRIAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_TARUGA" Name="LOC_CIVILIZATION_TARUGA_NAME" InheritFrom="LEADER_MINOR_CIV_SCIENTIFIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_VATICAN_CITY" Name="LOC_CIVILIZATION_VATICAN_CITY_NAME" InheritFrom="LEADER_MINOR_CIV_RELIGIOUS"/>
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_LADY_SIX_SKY" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_LADY_SIX_SKY_QUOTE" QuoteAudio="LADYSIXSKY_MA_MISC_PEP_TALK_B_02"/>
+		<Row LeaderType="LEADER_SIMON_BOLIVAR" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_SIMON_BOLIVAR_QUOTE" QuoteAudio="BOLIVAR_MA_MISC_PEP_TALK_B_04"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_SIMON_BOLIVAR" TraitType="TRAIT_LEADER_CAMPANA_ADMIRABLE"/>
+		<Row LeaderType="LEADER_LADY_SIX_SKY" TraitType="TRAIT_LEADER_MUTAL"/>
+		<!-- Minor-->
+		<Row LeaderType="LEADER_MINOR_CIV_CAGUANA" TraitType="MINOR_CIV_CAGUANA_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_HUNZA" TraitType="MINOR_CIV_HUNZA_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_LAHORE" TraitType="MINOR_CIV_LAHORE_NIHANG_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_SINGAPORE" TraitType="MINOR_CIV_SINGAPORE_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_TARUGA" TraitType="MINOR_CIV_TARUGA_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_VATICAN_CITY" TraitType="MINOR_CIV_VATICAN_CITY_TRAIT"/>
+	</LeaderTraits>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_CAMPANA_ADMIRABLE" Name="LOC_TRAIT_LEADER_CAMPANA_ADMIRABLE_NAME" Description="LOC_TRAIT_LEADER_CAMPANA_ADMIRABLE_DESCRIPTION"/>
+		<Row TraitType="TRAIT_LEADER_MUTAL" Name="LOC_TRAIT_LEADER_MUTAL_NAME" Description="LOC_TRAIT_LEADER_MUTAL_DESCRIPTION"/>
+		<!-- Minor-->
+		<Row TraitType="MINOR_CIV_CAGUANA_TRAIT" Name="LOC_LEADER_TRAIT_CAGUANA_NAME" Description="LOC_LEADER_TRAIT_CAGUANA_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_HUNZA_TRAIT" Name="LOC_LEADER_TRAIT_HUNZA_NAME" Description="LOC_LEADER_TRAIT_HUNZA_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_LAHORE_NIHANG_TRAIT" Name="LOC_LEADER_TRAIT_LAHORE_NAME" Description="LOC_LEADER_TRAIT_LAHORE_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_SINGAPORE_TRAIT" Name="LOC_LEADER_TRAIT_SINGAPORE_NAME" Description="LOC_LEADER_TRAIT_SINGAPORE_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" Name="LOC_LEADER_TRAIT_TARUGA_NAME" Description="LOC_LEADER_TRAIT_TARUGA_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_VATICAN_CITY_TRAIT" Name="LOC_LEADER_TRAIT_VATICAN_CITY_NAME" Description="LOC_LEADER_TRAIT_VATICAN_CITY_DESCRIPTION"/>
+		<!--Agendas-->
+		<Row TraitType="TRAIT_AGENDA_LADY_SIX_SKY"/>
+		<Row TraitType="TRAIT_AGENDA_SIMON_BOLIVAR"/>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_CLASSICAL</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MEDIEVAL</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_RENAISSANCE</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INDUSTRIAL</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MODERN</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_ATOMIC</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INFORMATION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_MUTAL</TraitType>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_YIELDS</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_MUTAL</TraitType>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_MUTAL</TraitType>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_ABILITY</ModifierId>
+		</Row>
+		<!-- Minor-->
+		<Row TraitType="MINOR_CIV_CAGUANA_TRAIT" ModifierId="MINOR_CIV_CAGUANA_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_HUNZA_TRAIT" ModifierId="MINOR_CIV_HUNZA_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_LAHORE_NIHANG_TRAIT" ModifierId="MINOR_CIV_LAHORE_UNIQUE_UNIT_UNLOCK"/>
+		<Row TraitType="MINOR_CIV_SINGAPORE_TRAIT" ModifierId="MINOR_CIV_SINGAPORE_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" ModifierId="MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_ALUMINUM_RESOURCE"/>
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" ModifierId="MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_COAL_RESOURCE"/>F
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" ModifierId="MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_HORSES_RESOURCE"/>
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" ModifierId="MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_IRON_RESOURCE"/>
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" ModifierId="MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_NITER_RESOURCE"/>
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" ModifierId="MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_OIL_RESOURCE"/>
+		<Row TraitType="MINOR_CIV_TARUGA_TRAIT" ModifierId="MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_URANIUM_RESOURCE"/>
+		<Row TraitType="MINOR_CIV_VATICAN_CITY_TRAIT" ModifierId="MINOR_CIV_VATICAN_CITY_UNIQUE_INFLUENCE_BONUS"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_CLASSICAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MEDIEVAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_RENAISSANCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INDUSTRIAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MODERN</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_ATOMIC</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INFORMATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_YIELDS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER_GRANCOLOMBIA_MAYA</ModifierType>
+			<SubjectRequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER_GRANCOLOMBIA_MAYA</ModifierType>
+			<SubjectRequirementSetId>OBJECT_IS_7_OR_MORE_TILES_FROM_CAPITAL_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY_GRANCOLOMBIA_MAYA</ModifierType>
+			<SubjectRequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MUTAL_NEAR_CAPITAL_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<!-- Minor-->
+		<Row>
+			<ModifierId>MINOR_CIV_CAGUANA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_CAGUANA_CAN_BATEY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_VALID_IMPROVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_HUNZA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_HUNZA_GOLD_FROM_TRADE_ROUTE_LENGTH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_PATH_TILE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_LAHORE_UNIQUE_UNIT_UNLOCK</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_LAHORE_NIHANG_UNIQUE_UNIT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_VALID_UNIT_BUILD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SINGAPORE_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SINGAPORE_PRODUCTION_PER_MAJOR_TRADE_PARTNER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_ALUMINUM_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_ALUMINUM_RESOURCE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_IMPROVED_ALUMINUM</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_COAL_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_COAL_RESOURCE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_IMPROVED_COAL</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_HORSES_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_HORSES_RESOURCE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_IMPROVED_HORSES</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_IRON_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_IRON_RESOURCE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_IMPROVED_IRON</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_NITER_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_NITER_RESOURCE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_IMPROVED_NITER</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_OIL_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_OIL_RESOURCE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_IMPROVED_OIL</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_URANIUM_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_URANIUM_RESOURCE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_IMPROVED_URANIUM</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_VATICAN_CITY_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_VATICAN_CITY_GREAT_PERSON_RELIGIOUS_PRESSURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_RELIGIOUS_PRESSURE_GREAT_PERSON_ACTIVATED</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_CLASSICAL</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_CLASSICAL</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_CLASSICAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MEDIEVAL</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MEDIEVAL</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MEDIEVAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_RENAISSANCE</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_RENAISSANCE</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_RENAISSANCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INDUSTRIAL</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INDUSTRIAL</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_INDUSTRIAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MODERN</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_MODERN</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MODERN</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_ATOMIC</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_ATOMIC</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_ATOMIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INFORMATION</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INFORMATION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_INFORMATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_YIELDS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION, YIELD_FOOD, YIELD_SCIENCE, YIELD_CULTURE, YIELD_GOLD, YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_YIELDS</ModifierId>
+			<Name>Amount</Name>
+			<Value>10, 10, 10, 10, 10, 10</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION, YIELD_FOOD, YIELD_SCIENCE, YIELD_CULTURE, YIELD_GOLD, YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS</ModifierId>
+			<Name>Amount</Name>
+			<Value>-15, -15, -15, -15, -15, -15</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>MUTAL_NEAR_CAPITAL_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<!-- Minor-->
+		<Row>
+			<ModifierId>MINOR_CIV_CAGUANA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_CAGUANA_CAN_BATEY</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_CAGUANA_CAN_BATEY</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_BATEY</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_HUNZA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_HUNZA_GOLD_FROM_TRADE_ROUTE_LENGTH</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_HUNZA_GOLD_FROM_TRADE_ROUTE_LENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>0.2</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_HUNZA_GOLD_FROM_TRADE_ROUTE_LENGTH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_LAHORE_UNIQUE_UNIT_UNLOCK</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_LAHORE_NIHANG_UNIQUE_UNIT</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_LAHORE_NIHANG_UNIQUE_UNIT</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_LAHORE_NIHANG</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SINGAPORE_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_SINGAPORE_PRODUCTION_PER_MAJOR_TRADE_PARTNER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SINGAPORE_PRODUCTION_PER_MAJOR_TRADE_PARTNER</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SINGAPORE_PRODUCTION_PER_MAJOR_TRADE_PARTNER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_ALUMINUM_RESOURCE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_TARUGA_ALUMINUM_RESOURCE_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_ALUMINUM_RESOURCE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_ALUMINUM_RESOURCE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_COAL_RESOURCE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_TARUGA_COAL_RESOURCE_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_COAL_RESOURCE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_COAL_RESOURCE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_HORSES_RESOURCE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_TARUGA_HORSES_RESOURCE_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_HORSES_RESOURCE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_HORSES_RESOURCE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_IRON_RESOURCE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_TARUGA_IRON_RESOURCE_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_IRON_RESOURCE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_IRON_RESOURCE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_NITER_RESOURCE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_TARUGA_NITER_RESOURCE_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_NITER_RESOURCE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_NITER_RESOURCE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_OIL_RESOURCE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_TARUGA_OIL_RESOURCE_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_OIL_RESOURCE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_OIL_RESOURCE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_UNIQUE_INFLUENCE_URANIUM_RESOURCE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_TARUGA_URANIUM_RESOURCE_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_URANIUM_RESOURCE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_TARUGA_URANIUM_RESOURCE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_VATICAN_CITY_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_VATICAN_CITY_GREAT_PERSON_RELIGIOUS_PRESSURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_VATICAN_CITY_GREAT_PERSON_RELIGIOUS_PRESSURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>400</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>OBJECT_IS_9_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_10_OR_MORE_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_7_OR_MORE_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_ALUMINUM</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_COAL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_HORSES</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_IRON</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_NITER</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_OIL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_URANIUM</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_9_TILES_FROM_CAPITAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_NEAR_CAPITAL</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_10_OR_MORE_TILES_FROM_CAPITAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_NEAR_CAPITAL</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL_NOT_CAPITAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_NEAR_CAPITAL</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_NEAR_CAPITAL</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_7_OR_MORE_TILES_FROM_CAPITAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_NEAR_CAPITAL</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_ALUMINUM</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_COAL</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_HORSES</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_IRON</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_NITER</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_OIL</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_URANIUM</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_9_TILES_FROM_CAPITAL</RequirementId>
+			<Name>MaxDistance</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_10_OR_MORE_TILES_FROM_CAPITAL</RequirementId>
+			<Name>MinDistance</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL_NOT_CAPITAL</RequirementId>
+			<Name>MinDistance</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL_NOT_CAPITAL</RequirementId>
+			<Name>MaxDistance</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL</RequirementId>
+			<Name>MaxDistance</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OBJECT_7_OR_MORE_TILES_FROM_CAPITAL</RequirementId>
+			<Name>MinDistance</Name>
+			<Value>7</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_ALUMINUM</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_ALUMINUM</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_COAL</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_COAL</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_HORSES</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_HORSES</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_IRON</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_IRON</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_NITER</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_NITER</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_OIL</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_OIL</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_URANIUM</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_URANIUM</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>OBJECT_IS_9_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OBJECT_9_TILES_FROM_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_10_OR_MORE_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OBJECT_10_OR_MORE_TILES_FROM_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL_NOT_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_7_OR_MORE_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OBJECT_7_OR_MORE_TILES_FROM_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_ALUMINUM</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_ALUMINUM</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_COAL</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_COAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_HORSES</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_HORSES</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_IRON</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_IRON</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_NITER</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_NITER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_OIL</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_OIL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_IMPROVED_URANIUM</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_URANIUM</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Name="LOC_ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL_NAME" Description="LOC_ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL</UnitAbilityType>
+			<ModifierId>MUTAL_NEAR_CAPITAL_COMBAT</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<ModifierStrings>
+		<Row ModifierId="MUTAL_NEAR_CAPITAL_COMBAT" Context="Preview" Text="LOC_ABILITY_MUTAL_NEAR_CAPITAL_COMBAT_DESCRIPTION"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_SIMON_BOLIVAR" ReligionType="RELIGION_CATHOLICISM"/>
+	</FavoredReligions>
+	<!-- AI Adjustments for Leaders -->
+	<AiListTypes>
+		<Row ListType="CompactEmpire"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="CompactEmpire" LeaderType="TRAIT_LEADER_MUTAL" System="PlotEvaluations"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="CompactEmpire" Item="Nearest Friendly City" Favored="false" Value="-5"/>
+	</AiFavoredItems>
+	<!-- Agendas, largely AI -->
+	<Agendas>
+		<Row AgendaType="AGENDA_LADY_SIX_SKY" Name="LOC_AGENDA_LADY_SIX_SKY_NAME" Description="LOC_AGENDA_LADY_SIX_SKY_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_SIMON_BOLIVAR" Name="LOC_AGENDA_SIMON_BOLIVAR_NAME" Description="LOC_AGENDA_SIMON_BOLIVAR_DESCRIPTION"/>
+	</Agendas>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_LADY_SIX_SKY" AgendaType="AGENDA_LADY_SIX_SKY"/>
+		<Row LeaderType="LEADER_SIMON_BOLIVAR" AgendaType="AGENDA_SIMON_BOLIVAR"/>
+	</HistoricalAgendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_LADY_SIX_SKY" TraitType="TRAIT_AGENDA_LADY_SIX_SKY"/>
+		<Row AgendaType="AGENDA_SIMON_BOLIVAR" TraitType="TRAIT_AGENDA_SIMON_BOLIVAR"/>
+	</AgendaTraits>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_LADY_SIX_SKY" AgendaTwo="AGENDA_PARANOID"/>
+	</ExclusiveAgendas>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_AGENDA_LADY_SIX_SKY" ModifierId="AGENDA_MODIFIER_LADY_SIX_SKY_NEIGHBORS"/>
+		<Row TraitType="TRAIT_AGENDA_LADY_SIX_SKY" ModifierId="AGENDA_MODIFIER_LADY_SIX_SKY_NOT_NEIGHBORS"/>
+		<Row TraitType="TRAIT_AGENDA_SIMON_BOLIVAR" ModifierId="AGENDA_MODIFIER_SIMON_BOLIVAR"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NEIGHBORS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYERS_ARE_NEIGHBORS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NOT_NEIGHBORS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYERS_ARE_NOT_NEIGHBORS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_SIMON_BOLIVAR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_10_TURNS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NEIGHBORS</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-8</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NEIGHBORS</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_EXIT_LEADER_LADY_SIX_SKY_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NEIGHBORS</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_LADY_SIX_SKY_NEIGHBOR</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NOT_NEIGHBORS</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>8</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NOT_NEIGHBORS</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_EXIT_LEADER_LADY_SIX_SKY_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_LADY_SIX_SKY_NOT_NEIGHBORS</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_LADY_SIX_SKY_NOT_NEIGHBOR</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_SIMON_BOLIVAR</ModifierId>
+			<Name>MinPromotedUnits</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_SIMON_BOLIVAR</ModifierId>
+			<Name>PercentageDifferencePerStep</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_SIMON_BOLIVAR</ModifierId>
+			<Name>NumSteps</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_SIMON_BOLIVAR</ModifierId>
+			<Name>ScorePerStep</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_SIMON_BOLIVAR</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_EXIT_LEADER_SIMON_BOLIVAR_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_SIMON_BOLIVAR</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_AGENDA_SIMON_BOLIVAR</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_MODIFIER_LADY_SIX_SKY_NEIGHBORS" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_MODIFIER_LADY_SIX_SKY_NOT_NEIGHBORS" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_MODIFIER_SIMON_BOLIVAR" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+</GameInfo>

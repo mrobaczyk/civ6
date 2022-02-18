@@ -254,7 +254,7 @@
 
 		<!-- Value Queries -->
 		<Row QueryId="DomainValues" SQL="SELECT * FROM DomainValues WHERE Key1 IS NULL AND Key2 IS NULL"/>
-		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' AS Domain, Name, Description, RulesetType AS Value, SortIndex FROM Rulesets WHERE ((?1 = -379035929 and SupportsSinglePlayer = 1) or ((?1 = 1161765858 or ?1 = 20463770) and SupportsMultiplayer = 1) or (?1 = 208129763 and SupportsHotSeat = 1) or (?1 = 285185446 and SupportsPlayByCloud = 1))"/>
+		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' AS Domain, Name, Description, RulesetType AS Value, SortIndex FROM Rulesets WHERE ((?1 = -379035929 and SupportsSinglePlayer = 1) or ((?1 = 1161765858 or ?1 = 20463770 or ?1 = -413661464) and SupportsMultiplayer = 1) or (?1 = 208129763 and SupportsHotSeat = 1) or (?1 = 285185446 and SupportsPlayByCloud = 1))"/>
 		<Row QueryId="Difficulties" SQL="SELECT Domain, Name, Name AS Description, DifficultyType AS Value, SortIndex FROM Difficulties"/>
 		<Row QueryId="Eras" SQL="SELECT Domain, Name, Description, EraType AS Value, SortIndex FROM Eras"/>
 		<Row QueryId="GameSpeeds" SQL="SELECT Domain, Name, Description, GameSpeedType AS Value, SortIndex FROM GameSpeeds"/>
@@ -305,7 +305,6 @@
 	</Queries>
 
 	<QueryParameters>
-		<Row QueryId="Parameters" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
 		<Row QueryId="Rulesets" Index="1" ConfigurationGroup="Game" ConfigurationId="GAME_MODE" />
 		<Row QueryId="RulesetParameters" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
 		<Row QueryId="Defeats" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>

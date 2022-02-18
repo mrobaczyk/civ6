@@ -24,6 +24,7 @@
   </OpTeamRequirements>
   <AllowedOperations>
     <Row ListType="Civ Royale Ops" OperationDef="Civ Royale Operation"/>
+    <Row ListType="Civ Royale Ops" OperationDef="Attack Barb Camp"/>
   </AllowedOperations>
   <AiOperationLists>
     <Row ListType="Civ Royale Ops"/>
@@ -31,11 +32,32 @@
   <!-- The following puts all gold into slush funds. We're not supposed to have gold in this scenario, but putting something here prevents some asserts and other division by zero problems -->
   <AiListTypes>
     <Row ListType="CivRoyaleSavings"/>
+    <Row ListType="CivRoyaleScouts"/>
+    <Row ListType="CivRoyaleAttackTactics"/>
+    <Row ListType="CivRoyaleTactics"/>
   </AiListTypes>
   <AiLists>
     <Row ListType="CivRoyaleSavings" LeaderType="TRAIT_LEADER_CIVROYALE_SCENARIO" System="SavingTypes"/>
+    <Row ListType="CivRoyaleScouts" LeaderType="TRAIT_LEADER_CIVROYALE_SCENARIO" System="AiScoutUses"/>
+    <Row ListType="CivRoyaleAttackTactics" LeaderType="TRAIT_LEADER_CIVROYALE_SCENARIO" System="Tactics" />
+    <Row ListType="CivRoyaleTactics" LeaderType="TRAIT_LEADER_CIVROYALE_SCENARIO" System="Homeland" />
   </AiLists>
   <AiFavoredItems>
     <Row ListType="CivRoyaleSavings" Item="SAVING_SLUSH_FUND" Value="1"/>
+    <Row ListType="CivRoyaleScouts" Item="DEFAULT_LAND_SCOUTS" Value="500"/>
+    <Row ListType="CivRoyaleScouts" Item="DEFAULT_NAVAL_SCOUTS" Value="0"/>
+    <Row ListType="CivRoyaleScouts" Item="LAND_SCOUTS_PER_PRIMARY_REGION" Value="500"/>
+    <Row ListType="CivRoyaleScouts" Item="LAND_SCOUTS_PER_SECONDARY_REGION" Value="500"/>
+    <Row ListType="CivRoyaleScouts" Item="NAVAL_SCOUTS_FOR_WORLD_EXPLORATION" Value="0"/>
+    <Row ListType="CivRoyaleAttackTactics" Item="Support Formation" />
+    <Row ListType="CivRoyaleAttackTactics" Item="Promotion" />
+    <Row ListType="CivRoyaleAttackTactics" Item="Attack High Priority" />
+    <Row ListType="CivRoyaleAttackTactics" Item="Attack Medium Priority" />
+    <Row ListType="CivRoyaleAttackTactics" Item="Attack Low Priority" />
+    <Row ListType="CivRoyaleTactics" Item="Move to Safety" Value="20" />
+    <Row ListType="CivRoyaleTactics" Item="Support Formation" Value="30" />
+    <Row ListType="CivRoyaleTactics" Item="Gather Goody Hut" Value="40" />
+    <Row ListType="CivRoyaleTactics" Item="Explore Land" Value="100" />
+    <Row ListType="CivRoyaleTactics" Item="Wander" Value="150" />
   </AiFavoredItems>
 </GameInfo>

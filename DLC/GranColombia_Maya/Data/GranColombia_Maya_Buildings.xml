@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<BuildingModifiers>
+		<Row BuildingType="BUILDING_BARRACKS" ModifierId="LAHORE_NIHANG_BARRACKS_ABILITY"/>
+		<Row BuildingType="BUILDING_ARMORY" ModifierId="LAHORE_NIHANG_ARMORY_ABILITY"/>
+		<Row BuildingType="BUILDING_MILITARY_ACADEMY" ModifierId="LAHORE_NIHANG_ACADEMY_ABILITY"/>
+		<Row BuildingType="BUILDING_WATER_MILL" ModifierId="WATERMILL_ADDMAIZEYIELD"/>
+	</BuildingModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>LAHORE_NIHANG_BARRACKS_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>LAHORE_NIHANG_ARMORY_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>LAHORE_NIHANG_ACADEMY_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WATERMILL_ADDMAIZEYIELD</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>RESOURCE_IS_MAIZE</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>LAHORE_NIHANG_BARRACKS_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_NIHANG_BARRACKS_STRENGTH</Value>
+		</Row>
+		<Row>
+			<ModifierId>LAHORE_NIHANG_ARMORY_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_NIHANG_ARMORY_STRENGTH</Value>
+		</Row>
+		<Row>
+			<ModifierId>LAHORE_NIHANG_ACADEMY_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_NIHANG_ACADEMY_STRENGTH</Value>
+		</Row>
+		<Row>
+			<ModifierId>WATERMILL_ADDMAIZEYIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>WATERMILL_ADDMAIZEYIELD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>RESOURCE_IS_MAIZE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>RESOURCE_IS_MAIZE</RequirementSetId>
+			<RequirementId>REQUIRES_MAIZE_IN_PLOT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_MAIZE_IN_PLOT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_RESOURCE_TYPE_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_MAIZE_IN_PLOT</RequirementId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_MAIZE</Value>
+		</Row>
+	</RequirementArguments>
+</GameInfo>

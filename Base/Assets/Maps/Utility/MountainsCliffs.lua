@@ -168,6 +168,7 @@ function AddLonelyMountains(plotTypes, mountainRatio)
 	local iW, iH = Map.GetGridSize();
 	local iTotalLandPlots= 0;
 	local iTotalMountains = 0;
+	local vIndices = {};
 
 	for iX = 0, iW - 1 do
 		for iY = 0, iH - 1 do
@@ -175,10 +176,12 @@ function AddLonelyMountains(plotTypes, mountainRatio)
 
 			if plotTypes[index] ~= g_PLOT_TYPE_OCEAN then
 				iTotalLandPlots = iTotalLandPlots + 1;
-			end
 
-			if plotTypes[index] == g_PLOT_TYPE_MOUNTAIN then
-				iTotalMountains = iTotalMountains + 1;
+				if (plotTypes[index] == g_PLOT_TYPE_MOUNTAIN) then
+					iTotalMountains = iTotalMountains + 1;
+				else
+					table.insert(vIndices, index);
+				end
 			end
 		end
 	end
@@ -192,24 +195,23 @@ function AddLonelyMountains(plotTypes, mountainRatio)
 	else
 		iNewMountains = 0;
 	end
-
-	local iI = 0;
+	
 	local iMountainsSet = 0;
-	while iMountainsSet < iNewMountains  and iI < iTotalLandPlots do
-		local iRandomY = TerrainBuilder.GetRandomNumber(iH, "Random Y");
-		local iRandomX = TerrainBuilder.GetRandomNumber(iW, "Random X");
-		local pPlot = Map.GetPlot(iRandomX,iRandomY);
-		local index = (iRandomY * iW) + iRandomX;
+	local aShuffledIndices =  GetShuffledCopyOfTable(vIndices);
+	for i, index in ipairs(aShuffledIndices) do
+		local pPlot = Map.GetPlotByIndex(index);
 
 		if(CanAddLonelyMountains(plotTypes, pPlot) ) then
 			iMountainsSet = iMountainsSet + 1;
 			plotTypes[index] = g_PLOT_TYPE_MOUNTAIN;
 		end
 
-		iI = iI + 1;
+		if (iMountainsSet > iNewMountains) then
+			break;
+		end;
 	end
 
-	print("Mountaint Set", iMountainsSet);
+	print("Mountain Set", iMountainsSet);
 
 	return plotTypes;
 end
@@ -227,11 +229,11 @@ function CanAddLonelyMountains(plotTypes, plot)
 		adjacentPlot = Map.GetAdjacentPlot(iX, iY, direction);
 
 		if (adjacentPlot ~= nil) then
-			if (adjacentPlot:IsWater() or plotTypes[index] == g_PLOT_TYPE_OCEAN) then
+			if (plotTypes[adjacentPlot:GetIndex()] == g_PLOT_TYPE_OCEAN) then
 				return false;
 			end
 
-			if (adjacentPlot:IsImpassable() or plotTypes[index] == g_PLOT_TYPE_MOUNTAIN) then
+			if (plotTypes[adjacentPlot:GetIndex()] == g_PLOT_TYPE_MOUNTAIN) then
 				return false;
 			end
 		else
@@ -241,6 +243,7 @@ function CanAddLonelyMountains(plotTypes, plot)
 
 	return true
 end
+
 ------------------------------------------------------------------------------
 function RemoveCoastalMountains(plotTypes, terrainTypes)
 	local mountainsTransformed = 0;

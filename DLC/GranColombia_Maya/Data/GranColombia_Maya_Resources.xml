@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!--Bonus -->
+		<Row Type="RESOURCE_MAIZE" Kind="KIND_RESOURCE"/>
+		<!--Luxury -->
+		<Row Type="RESOURCE_HONEY" Kind="KIND_RESOURCE"/>
+	</Types>
+	<TypeTags>
+		<!-- Bonus-->
+		<Row Type="RESOURCE_MAIZE" Tag="CLASS_FOOD"/>
+		<Row Type="RESOURCE_MAIZE" Tag="CLASS_GOLD"/>
+	<!-- Luxury-->
+		<Row Type="RESOURCE_HONEY" Tag="CLASS_FOOD"/>
+		<Row Type="RESOURCE_HONEY" Tag="CLASS_GOLD"/>
+	</TypeTags>
+	<Resources>
+		<!-- Bonus-->
+		<Row ResourceType="RESOURCE_MAIZE" Name="LOC_RESOURCE_MAIZE_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="6"/>
+		<!-- Luxury-->
+		<Row ResourceType="RESOURCE_HONEY" Name="LOC_RESOURCE_HONEY_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="2"/>
+	</Resources>
+	<Resource_ValidTerrains>
+		<Row ResourceType="RESOURCE_MAIZE" TerrainType="TERRAIN_GRASS"/>
+		<Row ResourceType="RESOURCE_MAIZE" TerrainType="TERRAIN_PLAINS"/>
+		<Row ResourceType="RESOURCE_HONEY" TerrainType="TERRAIN_GRASS"/>
+		<Row ResourceType="RESOURCE_HONEY" TerrainType="TERRAIN_PLAINS"/>
+	</Resource_ValidTerrains>
+	<Resource_Harvests>
+		<Row ResourceType="RESOURCE_MAIZE" YieldType="YIELD_GOLD" Amount="40" PrereqTech="TECH_POTTERY"/>
+	</Resource_Harvests>
+	<Resource_YieldChanges>
+		<!-- Bonus-->
+		<Row ResourceType="RESOURCE_MAIZE" YieldType="YIELD_GOLD" YieldChange="2"/>
+		<!-- Luxury-->
+		<Row ResourceType="RESOURCE_HONEY" YieldType="YIELD_FOOD" YieldChange="2"/>
+	</Resource_YieldChanges>
+</GameInfo>

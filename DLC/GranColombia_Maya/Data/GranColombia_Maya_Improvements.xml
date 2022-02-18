@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="IMPROVEMENT_BATEY" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="IMPROVEMENT_HACIENDA" Kind="KIND_IMPROVEMENT"/>
+	</Types>
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_BATEY" Name="LOC_IMPROVEMENT_BATEY_NAME" Description="LOC_IMPROVEMENT_BATEY_DESCRIPTION" Icon="ICON_IMPROVEMENT_BATEY" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_CAGUANA_TRAIT"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" Name="LOC_IMPROVEMENT_HACIENDA_NAME" Description="LOC_IMPROVEMENT_HACIENDA_DESCRIPTION" Icon="ICON_IMPROVEMENT_HACIENDA" PrereqCivic="CIVIC_MERCANTILISM" PlunderType="PLUNDER_HEAL" PlunderAmount="50" Buildable="true" Housing="2" TilesRequired="2" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_HACIENDA"/>
+	</Improvements>
+	<Improvement_Adjacencies>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" YieldChangeId="Hacienda_PlantationAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" YieldChangeId="Hacienda_MechanizedPlantationAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" YieldChangeId="Hacienda_HaciendaAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" YieldChangeId="Hacienda_AdvancedHaciendaAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_PLANTATION" YieldChangeId="Plantation_HaciendaAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_PLANTATION" YieldChangeId="Plantation_AdvancedHaciendaAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" YieldChangeId="Batey_EntertainmentComplexAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" YieldChangeId="Batey_LateEntertainmentComplexAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" YieldChangeId="Batey_BonusResourceAdjacency"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" YieldChangeId="Batey_LateBonusResourceAdjacency"/>
+	</Improvement_Adjacencies>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_BATEY" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_BATEY" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" TerrainType="TERRAIN_GRASS"/>
+	</Improvement_ValidTerrains>
+	<Improvement_ValidResources>
+		<Row ImprovementType="IMPROVEMENT_CAMP" ResourceType="RESOURCE_HONEY" MustRemoveFeature="false"/>
+		<Row ImprovementType="IMPROVEMENT_FARM" ResourceType="RESOURCE_MAIZE"/>
+	</Improvement_ValidResources>
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_BATEY" UnitType="UNIT_BUILDER"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" UnitType="UNIT_BUILDER"/>
+	</Improvement_ValidBuildUnits>
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_BATEY" YieldType="YIELD_CULTURE" YieldChange="1"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" YieldType="YIELD_FOOD" YieldChange="0"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" YieldType="YIELD_GOLD" YieldChange="2"/>
+		<Row ImprovementType="IMPROVEMENT_PLANTATION" YieldType="YIELD_PRODUCTION" YieldChange="0"/>
+		<Row ImprovementType="IMPROVEMENT_HACIENDA" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+	</Improvement_YieldChanges>
+	<Improvement_Tourism>
+		<Row ImprovementType="IMPROVEMENT_BATEY" TourismSource="TOURISMSOURCE_CULTURE" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
+	</Improvement_Tourism>
+	<Adjacency_YieldChanges>
+		<Row ID="Hacienda_PlantationAdjacency" Description="Placeholder" YieldType="YIELD_FOOD" YieldChange="1" TilesRequired="2" AdjacentImprovement="IMPROVEMENT_PLANTATION" ObsoleteTech="TECH_REPLACEABLE_PARTS"/>
+		<Row ID="Hacienda_MechanizedPlantationAdjacency" Description="Placeholder" YieldType="YIELD_FOOD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_PLANTATION" PrereqTech="TECH_REPLACEABLE_PARTS"/>
+		<Row ID="Hacienda_HaciendaAdjacency" Description="Placeholder" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="2" AdjacentImprovement="IMPROVEMENT_HACIENDA" ObsoleteCivic="CIVIC_RAPID_DEPLOYMENT"/>
+		<Row ID="Hacienda_AdvancedHaciendaAdjacency" Description="Placeholder" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_HACIENDA" PrereqCivic="CIVIC_RAPID_DEPLOYMENT"/>
+		<Row ID="Plantation_HaciendaAdjacency" Description="Placeholder" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="2" AdjacentImprovement="IMPROVEMENT_HACIENDA" ObsoleteCivic="CIVIC_RAPID_DEPLOYMENT"/>
+		<Row ID="Plantation_AdvancedHaciendaAdjacency" Description="Placeholder" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_HACIENDA" PrereqCivic="CIVIC_RAPID_DEPLOYMENT"/>
+		<Row ID="Batey_EntertainmentComplexAdjacency" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" ObsoleteCivic="CIVIC_EXPLORATION"/>
+		<Row ID="Batey_LateEntertainmentComplexAdjacency" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PrereqCivic="CIVIC_EXPLORATION"/>
+		<Row ID="Batey_BonusResourceAdjacency" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="1" TilesRequired="1" AdjacentResourceClass="RESOURCECLASS_BONUS" ObsoleteCivic="CIVIC_EXPLORATION"/>
+		<Row ID="Batey_LateBonusResourceAdjacency" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="2" TilesRequired="1" AdjacentResourceClass="RESOURCECLASS_BONUS" PrereqCivic="CIVIC_EXPLORATION"/>
+	</Adjacency_YieldChanges>
+</GameInfo>

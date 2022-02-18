@@ -70,7 +70,7 @@
 			<Text>Feature</Text>
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_FEATURE_DIRECTION">
-			<Text>Feature Direction</Text>
+			<Text>Feature Rotation</Text>
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_RESOURCE">
 			<Text>Resource</Text>
@@ -206,6 +206,50 @@
 			<Text>If checked, the World Builder map is a self-contained Mod and can be used as a Map Type when starting a game.  If not checked, the map is assumed to be used as part of a larger Mod.</Text>
 		</Row>
 
+		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_REFERENCE_MAP">
+			<Text>Reference Map</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_REFERENCE_ALPHA">
+			<Text>Reference Alpha</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_REFERENCE_MAP_LOADED">
+			<Text>Reference map loaded successfully</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_REFERENCE_MAP_NOT_FOUND">
+			<Text>Reference map file not found</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_RULESET_TT">
+			<Text>Sets what ruleset this map is made for.</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_SCRIPT_TT">
+			<Text>Sets what LUA file to use to generate this map, if any.</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_REFERENCE_MAP_TT">
+			<Text>Sets a PNG file to overlay translucently over World Builder's map.</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_REFERENCE_ALPHA_TT">
+			<Text>Sets how much you see of the overlay vs. the map.[NEWLINE]0.0 shows all map and no overlay, and 1.0 shows all overlay and no map.[NEWLINE]0.5 is the starting value.</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_REFERENCE_ALPHA_SET">
+			<Text>New reference map alpha set</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_REFERENCE_ALPHA_BAD">
+			<Text>Alpha must be between 0.0 and 1.0</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLDBUILDER_REFERENCE_ALPHA_BAD_2">
+			<Text>Alpha must be a number</Text>
+		</Row>
+
 		<Row Tag="LOC_WORLDBUILDER_DEFAULT_MAP_NAME">
 			<Text>Untitled Map</Text>
 		</Row>
@@ -262,6 +306,15 @@
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_DIRECTION_NORTHWEST">
 			<Text>Northwest</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_AUTO_FIT">
+			<Text>Auto Fit</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_ROTATE_PLACEMENT_LEFT_TOOLTIP">
+			<Text>Turn placement rotation to the left</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_ROTATE_PLACEMENT_RIGHT_TOOLTIP">
+			<Text>Turn placement rotation to the right</Text>
 		</Row>
 
 		<Row Tag="LOC_WORLDBUILDER_NO_RESOURCE">
@@ -378,6 +431,9 @@
 		<Row Tag="LOC_WORLDBUILDER_ALREADY_EXISTS">
 			<Text>One of these already exists</Text>
 		</Row>
+		<Row Tag="LOC_WORLDBUILDER_ALREADY_EXISTS_LOCATION">
+			<Text>One of these already exists at this location</Text>
+		</Row>
 		<Row Tag="LOC_WORLDBUILDER_OCCUPIED_BY_ENEMY">
 			<Text>District is occupied by an opponent</Text>
 		</Row>
@@ -404,6 +460,12 @@
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_FAILURE_FEATURE">
 			<Text>Couldn't place a feature here</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_FEATURE_ROTATION">
+			<Text>Successfully changed the feature's rotation</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_FAILURE_FEATURE_ROTATION">
+			<Text>This feature cannot be placed here in the selected rotation</Text>
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_STATUS_STARTUP">
 			<Text>Welcome to World Builder!</Text>

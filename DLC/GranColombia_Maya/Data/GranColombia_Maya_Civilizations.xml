@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Civs -->
+		<Row Type="CIVILIZATION_GRAN_COLOMBIA" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_MAYA" Kind="KIND_CIVILIZATION"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_CIVILIZATION_MAYAB" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_DISTRICT_OBSERVATORY" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_HULCHE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_EJERCITO_PATRIOTA" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_IMPROVEMENT_HACIENDA" Kind="KIND_TRAIT"/>
+    <Row Type="TRAIT_CIVILIZATION_COMANDANTE_GENERAL" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_LLANERO" Kind="KIND_TRAIT"/>
+		<!-- Ability -->
+		<Row Type="ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT" Kind="KIND_ABILITY"/>
+		<!-- Minors -->
+		<Row Type="CIVILIZATION_CAGUANA" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_HUNZA" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_LAHORE" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_SINGAPORE" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_TARUGA" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_VATICAN_CITY" Kind="KIND_CIVILIZATION"/>
+	</Types>
+	<TypeProperties>
+		<Row Type="CIVILIZATION_CAGUANA" Name="CityStateCategory" Value="CULTURAL"/>
+		<Row Type="CIVILIZATION_HUNZA" Name="CityStateCategory" Value="TRADE"/>
+		<Row Type="CIVILIZATION_LAHORE" Name="CityStateCategory" Value="MILITARISTIC"/>
+		<Row Type="CIVILIZATION_SINGAPORE" Name="CityStateCategory" Value="INDUSTRIAL"/>
+		<Row Type="CIVILIZATION_TARUGA" Name="CityStateCategory" Value="SCIENTIFIC"/>
+		<Row Type="CIVILIZATION_VATICAN_CITY" Name="CityStateCategory" Value="RELIGIOUS"/>
+	</TypeProperties>
+	<TypeTags>
+		<Row Type="ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT" Tag="CLASS_ALL_UNITS"/>
+	</TypeTags>
+	<Civilizations>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" Name="LOC_CIVILIZATION_GRAN_COLOMBIA_NAME" Description="LOC_CIVILIZATION_GRAN_COLOMBIA_DESCRIPTION" Adjective="LOC_CIVILIZATION_GRAN_COLOMBIA_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_FULL_CIV" RandomCityNameDepth="10" Ethnicity="ETHNICITY_SOUTHAM"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" Name="LOC_CIVILIZATION_MAYA_NAME" Description="LOC_CIVILIZATION_MAYA_DESCRIPTION" Adjective="LOC_CIVILIZATION_MAYA_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_FULL_CIV" RandomCityNameDepth="10" Ethnicity="ETHNICITY_SOUTHAM"/>
+		<!-- Minor Civs -->
+		<Row CivilizationType="CIVILIZATION_CAGUANA" Name="LOC_CIVILIZATION_CAGUANA_NAME" Description="LOC_CIVILIZATION_CAGUANA_DESCRIPTION" Adjective="LOC_CIVILIZATION_CAGUANA_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_HUNZA" Name="LOC_CIVILIZATION_HUNZA_NAME" Description="LOC_CIVILIZATION_HUNZA_DESCRIPTION" Adjective="LOC_CIVILIZATION_HUNZA_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_LAHORE" Name="LOC_CIVILIZATION_LAHORE_NAME" Description="LOC_CIVILIZATION_LAHORE_DESCRIPTION" Adjective="LOC_CIVILIZATION_LAHORE_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_SINGAPORE" Name="LOC_CIVILIZATION_SINGAPORE_NAME" Description="LOC_CIVILIZATION_SINGAPORE_DESCRIPTION" Adjective="LOC_CIVILIZATION_SINGAPORE_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_TARUGA" Name="LOC_CIVILIZATION_TARUGA_NAME" Description="LOC_CIVILIZATION_TARUGA_DESCRIPTION" Adjective="LOC_CIVILIZATION_TARUGA_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_VATICAN_CITY" Name="LOC_CIVILIZATION_VATICAN_CITY_NAME" Description="LOC_CIVILIZATION_VATICAN_CITY_DESCRIPTION" Adjective="LOC_CIVILIZATION_VATICAN_CITY_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+	</Civilizations>
+	<CivilizationInfo>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_GRAN_COLOMBIA_LOCATION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_GRAN_COLOMBIA_SIZE" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_GRAN_COLOMBIA_POPULATION" SortIndex="30"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" Header="LOC_CIVINFO_CAPITAL" Caption="LOC_CIVINFO_GRAN_COLOMBIA_CAPITAL" SortIndex="40"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_MAYA_LOCATION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_MAYA_SIZE" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_MAYA_POPULATION" SortIndex="30"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" Header="LOC_CIVINFO_CAPITAL" Caption="LOC_CIVINFO_MAYA_CAPITAL" SortIndex="40"/>
+	</CivilizationInfo>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" LeaderType="LEADER_SIMON_BOLIVAR" CapitalName="LOC_CITY_NAME_BOGOTA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" LeaderType="LEADER_LADY_SIX_SKY" CapitalName="LOC_CITY_NAME_NARANJO"/>
+		<!-- Minor Civs -->
+		<Row CivilizationType="CIVILIZATION_CAGUANA" LeaderType="LEADER_MINOR_CIV_CAGUANA" CapitalName="LOC_CITY_NAME_CAGUANA"/>
+		<Row CivilizationType="CIVILIZATION_HUNZA" LeaderType="LEADER_MINOR_CIV_HUNZA" CapitalName="LOC_CITY_NAME_HUNZA"/>
+		<Row CivilizationType="CIVILIZATION_LAHORE" LeaderType="LEADER_MINOR_CIV_LAHORE" CapitalName="LOC_CITY_NAME_LAHORE"/>
+		<Row CivilizationType="CIVILIZATION_SINGAPORE" LeaderType="LEADER_MINOR_CIV_SINGAPORE" CapitalName="LOC_CITY_NAME_SINGAPORE"/>
+		<Row CivilizationType="CIVILIZATION_TARUGA" LeaderType="LEADER_MINOR_CIV_TARUGA" CapitalName="LOC_CITY_NAME_TARUGA"/>
+		<Row CivilizationType="CIVILIZATION_VATICAN_CITY" LeaderType="LEADER_MINOR_CIV_VATICAN_CITY" CapitalName="LOC_CITY_NAME_VATICAN_CITY"/>
+	</CivilizationLeaders>
+	<CivilizationTraits>
+		<!--Gran Colombia-->
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_EJERCITO_PATRIOTA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_HACIENDA"/>
+    <Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_COMANDANTE_GENERAL"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_LLANERO"/>
+		<!--Maya-->
+		<Row CivilizationType="CIVILIZATION_MAYA" TraitType="TRAIT_CIVILIZATION_MAYAB"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TraitType="TRAIT_CIVILIZATION_DISTRICT_OBSERVATORY"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TraitType="TRAIT_CIVILIZATION_HULCHE"/>
+	</CivilizationTraits>
+	<CityNames>
+		<!--Gran Colombia-->
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_BOGOTA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_CARACAS"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_QUITO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_GUAYAQUIL"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_MARACAIBO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_CARTAGENA_DE_INDIAS"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_PANAMA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_POPAYAN"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_CUENCA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_CUMANA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_BARINAS"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_CALI"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_VALENCIA_DE_CARABOBO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_SANTA_MARTA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_LOJA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_ANGOSTURA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_PASTO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_NUEVA_BARCELONA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_NEIVA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_MERIDA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_PORTOVIEJO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_RIOBAMBA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_IBARRA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_RIOHACHA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_QUIBDO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_NUEVA_PAMPLONA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_SANTIAGO_DE_VERAGUAS"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_LA_ASUNCION"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_ACHAGUAS"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_HONDA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_SOCORRO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_MOMPOS"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_TRUJILLO"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_SANTA_FE_DE_ANTIOQUIA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_PORE"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_CUCUTA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_MARIQUITA"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_SAN_FERNANDO_DE_APURE"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_MEDELLIN"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CityName="LOC_CITY_NAME_BARQUISIMETO"/>
+		<!--Maya-->
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_NARANJO"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_PALENQUE_MAYA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_TIKAL"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_CHICHEN_ITZA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_UXMAL"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_COPAN"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_COBA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_EL_MIRADOR"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_CALAKMUL"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_XUNANTUNICH"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_YAXCHILAN"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_YOKIB"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_QUIRIGUA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_UAXACTUN"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_TONINA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_KAMINALJUYU"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_UCANAL"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_IZAPA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_COMALCALCO"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_LAMANAI"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_DZIBILCHALTUN"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_EDZNA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_SACUL"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_BECAN"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_SAYIL"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_MAYAPAN"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_DOS_PILAS"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_BONAMPAK"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_KABAH"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_SEIBA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_IZAMAL"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_ALTAR_DE_SACRIFICIOS"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_RIO_BEC"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_MACHAQUILA"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_XTAMPAK"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_CHINKULTIC"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CityName="LOC_CITY_NAME_XPUHIL"/>
+		<!-- City-States-->
+		<Row CivilizationType="CIVILIZATION_CAGUANA" CityName="LOC_CITY_NAME_CAGUANA"/>
+		<Row CivilizationType="CIVILIZATION_HUNZA" CityName="LOC_CITY_NAME_HUNZA"/>
+		<Row CivilizationType="CIVILIZATION_LAHORE" CityName="LOC_CITY_NAME_LAHORE"/>
+		<Row CivilizationType="CIVILIZATION_SINGAPORE" CityName="LOC_CITY_NAME_SINGAPORE"/>
+		<Row CivilizationType="CIVILIZATION_TARUGA" CityName="LOC_CITY_NAME_TARUGA"/>
+		<Row CivilizationType="CIVILIZATION_VATICAN_CITY" CityName="LOC_CITY_NAME_VATICAN_CITY"/>
+	</CityNames>
+	<CivilizationCitizenNames>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_1"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_2"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_3"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_4"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_5"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_6"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_7"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_8"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_9"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MALE_10"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_1" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_2" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_3" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_4" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_5" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_6" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_7" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_8" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_9" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_FEMALE_10" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_1" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_2" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_3" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_4" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_5" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_6" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_7" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_8" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_9" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_MALE_10" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_1" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_2" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_3" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_4" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_5" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_6" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_7" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_8" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_9" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" CitizenName="LOC_CITIZEN_GRAN_COLOMBIA_MODERN_FEMALE_10" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_1"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_4"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_5"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_6"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_7"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_8"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_9"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MALE_10"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_1" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_2" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_3" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_4" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_5" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_6" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_7" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_8" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_9" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_FEMALE_10" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_1" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_2" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_3" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_4" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_5" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_6" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_7" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_8" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_9" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_MALE_10" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_1" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_2" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_3" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_4" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_5" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_6" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_7" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_8" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_9" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" CitizenName="LOC_CITIZEN_MAYA_MODERN_FEMALE_10" Female="true" Modern="true"/>
+	</CivilizationCitizenNames>
+	<StartBiasResources>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_CITRUS" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_COFFEE" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_COCOA" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_COTTON" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_DYES" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_GYPSUM" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_JADE" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_MARBLE" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_MERCURY" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SALT" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SILK" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SPICES" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SUGAR" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_TEA" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_TOBACCO" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_WINE" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_INCENSE" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_IVORY" Tier="2"/>
+	</StartBiasResources>
+	<StartBiasTerrains>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_GRASS" Tier="1"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_PLAINS" Tier="1"/>
+	</StartBiasTerrains>
+	<Traits>
+		<!--Gran Colombia-->
+		<Row TraitType="TRAIT_CIVILIZATION_EJERCITO_PATRIOTA" Name="LOC_TRAIT_CIVILIZATION_EJERCITO_PATRIOTA_NAME" Description="LOC_TRAIT_CIVILIZATION_EJERCITO_PATRIOTA_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_HACIENDA" Name="LOC_IMPROVEMENT_HACIENDA_NAME"/>
+    <Row TraitType="TRAIT_CIVILIZATION_COMANDANTE_GENERAL" Name="LOC_UNIT_COMANDANTE_GENERAL_NAME"/>
+		<Row TraitType="TRAIT_CIVILIZATION_LLANERO" Name="LOC_TRAIT_CIVILIZATION_LLANERO_NAME"/>
+		<!--Maya-->
+		<Row TraitType="TRAIT_CIVILIZATION_MAYAB" Name="LOC_TRAIT_CIVILIZATION_MAYAB_NAME" Description="LOC_TRAIT_CIVILIZATION_MAYAB_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_DISTRICT_OBSERVATORY" Name="LOC_DISTRICT_OBSERVATORY_NAME"/>
+		<Row TraitType="TRAIT_CIVILIZATION_HULCHE" Name="LOC_UNIT_MAYAN_HULCHE_NAME"/>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_EJERCITO_PATRIOTA</TraitType>
+			<ModifierId>TRAIT_EJERCITO_PATRIOTA_EXTRA_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_EJERCITO_PATRIOTA</TraitType>
+			<ModifierId>TRAIT_PROMOTE_NO_FINISH_MOVES</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_MAYAB</TraitType>
+			<ModifierId>TRAIT_NO_FRESH_WATER_HOUSING</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_MAYAB</TraitType>
+			<ModifierId>TRAIT_ADD_AMENITY_PER_ADJACENT_LUXURY</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_MAYAB</TraitType>
+			<ModifierId>TRAIT_MAYA_FARMS_PRODUCTION</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<ImprovementModifiers>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
+			<ModifierId>FARM_HOUSING_WITH_MAYAB_TRAIT</ModifierId>
+		</Row>
+	</ImprovementModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_EJERCITO_PATRIOTA_EXTRA_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY_GRANCOLOMBIA_MAYA</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>EJERCITO_PATRIOTA_EXTRA_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_PROMOTE_NO_FINISH_MOVES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_NO_FRESH_WATER_HOUSING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_NO_FRESH_WATER_HOUSING</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ADD_AMENITY_PER_ADJACENT_LUXURY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADD_AMENITY_PER_ADJACENT_LUXURY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MAYA_FARMS_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD_GRANCOLOMBIA_MAYA</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_FARMS_GRANCOLOMBIA_MAYA_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>FARM_HOUSING_WITH_MAYAB_TRAIT</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_IMPROVEMENT_HOUSING_GRANCOLOMBIA_MAYA</ModifierType>
+			<SubjectRequirementSetId>MAYA_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_EJERCITO_PATRIOTA_EXTRA_MOVEMENT</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>EJERCITO_PATRIOTA_EXTRA_MOVEMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_PROMOTE_NO_FINISH_MOVES</ModifierId>
+			<Name>NoFinishMoves</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_NO_FRESH_WATER_HOUSING</ModifierId>
+			<Name>NoHousing</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ADD_AMENITY_PER_ADJACENT_LUXURY</ModifierId>
+			<Name>AddAmenity</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MAYA_FARMS_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MAYA_FARMS_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>FARM_HOUSING_WITH_MAYAB_TRAIT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row RequirementSetId="MAYA_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+		<Row>
+			<RequirementSetId>PLOT_HAS_FARMS_GRANCOLOMBIA_MAYA_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row RequirementId="PLAYER_IS_MAYA" RequirementType="REQUIREMENT_PLAYER_TYPE_MATCHES"/>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_FARM_GRANCOLOMBIA_MAYA</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_IMPROVEMENT_TYPE_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row RequirementId="PLAYER_IS_MAYA" Name="CivilizationType" Value="CIVILIZATION_MAYA"/>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_FARM_GRANCOLOMBIA_MAYA</RequirementId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_FARM</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row RequirementSetId="MAYA_REQUIREMENTS" RequirementId="PLAYER_IS_MAYA"/>
+		<Row>
+			<RequirementSetId>PLOT_HAS_FARMS_GRANCOLOMBIA_MAYA_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_FARM_GRANCOLOMBIA_MAYA</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT" Name="LOC_ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT_NAME" Description="LOC_ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT</UnitAbilityType>
+			<ModifierId>EJERCITO_PATRIOTA_EXTRA_MOVEMENT</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<!-- AI Adjustments for Civs -->
+	<AiListTypes>
+		<Row ListType="MayanEmpire"/>
+    <Row ListType="MayanObservatory"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="MayanEmpire" LeaderType="TRAIT_CIVILIZATION_MAYAB" System="PlotEvaluations"/>
+		<Row ListType="MayanObservatory" LeaderType="TRAIT_CIVILIZATION_MAYAB" System="Yields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="MayanEmpire" Item="Fresh Water" Favored="false" Value="-20" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FRESH_WATER"/>
+		<Row ListType="MayanEmpire" Item="Resource Class" Favored="false" Value="3" StringVal="RESOURCECLASS_LUXURY" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES"/>
+		<Row ListType="MayanObservatory" Item="YIELD_SCIENCE" Favored="false" Value="25"/>
+	</AiFavoredItems>
+</GameInfo>

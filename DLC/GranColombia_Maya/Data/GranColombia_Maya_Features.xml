@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="FEATURE_BERMUDA_TRIANGLE" Kind="KIND_FEATURE"/>
+    <Row Type="FEATURE_FOUNTAIN_OF_YOUTH" Kind="KIND_FEATURE"/>
+    <Row Type="FEATURE_PAITITI" Kind="KIND_FEATURE"/>
+    <Row Type="ABILITY_MYSTERIOUS_CURRENTS" Kind="KIND_ABILITY"/>
+    <Row Type="ABILITY_WATER_OF_LIFE" Kind="KIND_ABILITY"/>
+	</Types>
+	<Features>
+		<Row FeatureType="FEATURE_BERMUDA_TRIANGLE" Name="LOC_FEATURE_BERMUDA_TRIANGLE_NAME" Description="LOC_FEATURE_BERMUDA_TRIANGLE_DESCRIPTION" Quote="LOC_FEATURE_BERMUDA_TRIANGLE_QUOTE" QuoteAudio="PLAY_BERMUDA_TRIANGLE_QUOTE_2"
+         NaturalWonder="true" 
+         Tiles="3"
+         Appeal="2"
+         NoRiver="true"
+         NoCoast="true"
+         Impassable="false"
+         Settlement="false"
+         FollowRulesInWB="false"
+         MinDistanceNW="8"
+         DangerValue="10"
+         />
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" Name="LOC_FEATURE_FOUNTAIN_OF_YOUTH_NAME" Description="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Quote="LOC_FEATURE_FOUNTAIN_OF_YOUTH_QUOTE" QuoteAudio="PLAY_FOUNTAIN_OF_YOUTH_QUOTE_1"
+         NaturalWonder="true"
+         Tiles="1"
+         Appeal="2"
+         NoRiver="true"
+         NoCoast="true"
+         Impassable="false"
+         Settlement="false"
+         FollowRulesInWB="false"
+         MinDistanceNW="8"
+         AddsFreshWater="true"
+         />
+    <Row FeatureType="FEATURE_PAITITI" Name="LOC_FEATURE_PAITITI_NAME" Description="LOC_FEATURE_PAITITI_DESCRIPTION" Quote="LOC_FEATURE_PAITITI_QUOTE" QuoteAudio="PLAY_PAITITI_QUOTE_1"
+         NaturalWonder="true"
+         Tiles="3"
+         Appeal="2"
+         NoRiver="true"
+         NoCoast="true"
+         Impassable="true"
+         Settlement="false"
+         FollowRulesInWB="false"
+         MinDistanceNW="8"
+         CustomPlacement="PLACEMENT_PAITITI"
+         />
+	</Features>
+	<Feature_ValidTerrains>
+		<Row FeatureType="FEATURE_BERMUDA_TRIANGLE" TerrainType="TERRAIN_OCEAN"/>
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" TerrainType="TERRAIN_GRASS"/>
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" TerrainType="TERRAIN_DESERT"/>
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" TerrainType="TERRAIN_GRASS_HILLS"/>
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" TerrainType="TERRAIN_PLAINS_HILLS"/>
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" TerrainType="TERRAIN_DESERT_HILLS"/>
+    <Row FeatureType="FEATURE_PAITITI" TerrainType="TERRAIN_GRASS"/>
+    <Row FeatureType="FEATURE_PAITITI" TerrainType="TERRAIN_PLAINS"/>
+    <Row FeatureType="FEATURE_PAITITI" TerrainType="TERRAIN_DESERT"/>
+    <Row FeatureType="FEATURE_PAITITI" TerrainType="TERRAIN_GRASS_HILLS"/>
+    <Row FeatureType="FEATURE_PAITITI" TerrainType="TERRAIN_PLAINS_HILLS"/>
+    <Row FeatureType="FEATURE_PAITITI" TerrainType="TERRAIN_DESERT_HILLS"/>
+	</Feature_ValidTerrains>
+	<Feature_NotAdjacentTerrains>
+		<Row FeatureType="FEATURE_BERMUDA_TRIANGLE" TerrainType="TERRAIN_COAST"/>
+	</Feature_NotAdjacentTerrains>
+  <Feature_NotNearFeatures>
+    <Row FeatureType="FEATURE_BERMUDA_TRIANGLE" FeatureTypeAvoid="FEATURE_ICE"/>
+  </Feature_NotNearFeatures>
+  <Feature_YieldChanges>
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" YieldType="YIELD_SCIENCE" YieldChange="4"/>
+    <Row FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" YieldType="YIELD_FAITH" YieldChange="4"/>
+  </Feature_YieldChanges>
+  <Feature_AdjacentYields>
+    <Row FeatureType="FEATURE_BERMUDA_TRIANGLE" YieldType="YIELD_SCIENCE" YieldChange="5"/>
+    <Row FeatureType="FEATURE_PAITITI" YieldType="YIELD_GOLD" YieldChange="3"/>
+    <Row FeatureType="FEATURE_PAITITI" YieldType="YIELD_CULTURE" YieldChange="2"/>
+  </Feature_AdjacentYields>
+  <Feature_UnitMovements>
+    <Row FeatureType="FEATURE_BERMUDA_TRIANGLE" AllowPassthrough="false" AllowDestination="true"/>
+  </Feature_UnitMovements>
+  <District_Adjacencies>
+    <Row DistrictType="DISTRICT_THEATER" YieldChangeId="Paititi_Culture"/>
+    <Row DistrictType="DISTRICT_ACROPOLIS" YieldChangeId="Paititi_Culture"/>
+    <Row DistrictType="DISTRICT_COMMERCIAL_HUB" YieldChangeId="Paititi_Gold"/>
+  </District_Adjacencies>
+  <Adjacency_YieldChanges>
+    <Row ID="Paititi_Culture" Description="LOC_DISTRICT_PAITITI_CULTURE" YieldType="YIELD_CULTURE" YieldChange="2" TilesRequired="1" AdjacentFeature="FEATURE_PAITITI"/>
+    <Row ID="Paititi_Gold" Description="LOC_DISTRICT_PAITITI_GOLD" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentFeature="FEATURE_PAITITI"/>
+  </Adjacency_YieldChanges>
+  <UnitAbilities>
+    <Row UnitAbilityType="ABILITY_MYSTERIOUS_CURRENTS" Name="LOC_ABILITY_MYSTERIOUS_CURRENTS_NAME" Description="LOC_ABILITY_MYSTERIOUS_CURRENTS_DESCRIPTION" Inactive="true" ShowFloatTextWhenEarned="true"/>
+    <Row UnitAbilityType="ABILITY_WATER_OF_LIFE" Name="LOC_ABILITY_WATER_OF_LIFE_NAME" Description="LOC_ABILITY_WATER_OF_LIFE_DESCRIPTION" Inactive="true" ShowFloatTextWhenEarned="true"/>
+  </UnitAbilities>
+  <UnitAbilityModifiers>
+    <Row>
+      <UnitAbilityType>ABILITY_MYSTERIOUS_CURRENTS</UnitAbilityType>
+      <ModifierId>MYSTERIOUS_CURRENTS_MOVEMENT</ModifierId>
+    </Row>
+    <Row>
+      <UnitAbilityType>ABILITY_WATER_OF_LIFE</UnitAbilityType>
+      <ModifierId>WATER_OF_LIFE_HEAL_EVERYWHERE</ModifierId>
+    </Row>
+  </UnitAbilityModifiers>
+  <TypeTags>
+    <Row Type="ABILITY_MYSTERIOUS_CURRENTS" Tag="CLASS_NAVAL_MELEE"/>
+    <Row Type="ABILITY_MYSTERIOUS_CURRENTS" Tag="CLASS_NAVAL_RANGED"/>
+    <Row Type="ABILITY_MYSTERIOUS_CURRENTS" Tag="CLASS_NAVAL_RAIDER"/>
+    <Row Type="ABILITY_MYSTERIOUS_CURRENTS" Tag="CLASS_NAVAL_CARRIER"/>    
+    <Row Type="ABILITY_WATER_OF_LIFE" Tag="CLASS_ALL_COMBAT_UNITS"/>
+  </TypeTags>
+  <GameModifiers>
+    <Row ModifierId="FOUNTAIN_OF_YOUTH_UNITS_GRANT_ABILITY"/>
+    <Row ModifierId="PAITITI_GOLD_FROM_INTERNATIONAL_TRADE_ROUTES"/>
+    <Row ModifierId="BERMUDA_TRIANGLE_TELEPORT"/>
+    <Row ModifierId="BERMUDA_TRIANGLE_UNITS_GRANT_ABILITY"/>
+  </GameModifiers>
+  <Modifiers>
+    <Row>
+      <ModifierId>FOUNTAIN_OF_YOUTH_UNITS_GRANT_ABILITY</ModifierId>
+      <ModifierType>MODIFIER_ALL_UNITS_GRANT_ABILITY</ModifierType>
+      <Permanent>true</Permanent>
+      <OwnerRequirementSetId>FOUNTAIN_OF_YOUTH_REQUIREMENTS</OwnerRequirementSetId>
+      <SubjectRequirementSetId>UNIT_ENTERS_FOUNTAIN_OF_YOUTH</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>WATER_OF_LIFE_HEAL_EVERYWHERE</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_HEAL_PER_TURN</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>PAITITI_GOLD_FROM_INTERNATIONAL_TRADE_ROUTES</ModifierId>
+      <ModifierType>MODIFIER_ALL_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
+      <OwnerRequirementSetId>PAITITI_REQUIREMENTS</OwnerRequirementSetId>
+      <SubjectRequirementSetId>CITY_HAS_PAITITI</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>BERMUDA_TRIANGLE_TELEPORT</ModifierId>
+      <ModifierType>MODIFIER_UNIT_TELEPORT</ModifierType>
+      <Permanent>true</Permanent>
+      <Repeatable>true</Repeatable>
+      <OwnerRequirementSetId>BERMUDA_TRIANGLE_REQUIREMENTS</OwnerRequirementSetId>
+      <SubjectRequirementSetId>UNIT_ENTERS_BERMUDA_TRIANGLE</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>BERMUDA_TRIANGLE_UNITS_GRANT_ABILITY</ModifierId>
+      <ModifierType>MODIFIER_ALL_UNITS_GRANT_ABILITY</ModifierType>
+      <Permanent>true</Permanent>
+      <OwnerRequirementSetId>BERMUDA_TRIANGLE_REQUIREMENTS</OwnerRequirementSetId>
+      <SubjectRequirementSetId>UNIT_ENTERS_BERMUDA_TRIANGLE</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>MYSTERIOUS_CURRENTS_MOVEMENT</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+    </Row>
+  </Modifiers>
+  <ModifierArguments>
+    <Row>
+      <ModifierId>FOUNTAIN_OF_YOUTH_UNITS_GRANT_ABILITY</ModifierId>
+      <Name>AbilityType</Name>
+      <Value>ABILITY_WATER_OF_LIFE</Value>
+    </Row>
+    <Row>
+      <ModifierId>WATER_OF_LIFE_HEAL_EVERYWHERE</ModifierId>
+      <Name>Type</Name>
+      <Value>ALL</Value>
+    </Row>
+    <Row>
+      <ModifierId>WATER_OF_LIFE_HEAL_EVERYWHERE</ModifierId>
+      <Name>Amount</Name>
+      <Value>10</Value>
+    </Row>
+    <Row>
+      <ModifierId>PAITITI_GOLD_FROM_INTERNATIONAL_TRADE_ROUTES</ModifierId>
+      <Name>YieldType</Name>
+      <Value>YIELD_GOLD</Value>
+    </Row>
+    <Row>
+      <ModifierId>PAITITI_GOLD_FROM_INTERNATIONAL_TRADE_ROUTES</ModifierId>
+      <Name>Amount</Name>
+      <Value>4</Value>
+    </Row>
+    <Row>
+      <ModifierId>BERMUDA_TRIANGLE_UNITS_GRANT_ABILITY</ModifierId>
+      <Name>AbilityType</Name>
+      <Value>ABILITY_MYSTERIOUS_CURRENTS</Value>
+    </Row>
+    <Row>
+      <ModifierId>MYSTERIOUS_CURRENTS_MOVEMENT</ModifierId>
+      <Name>Amount</Name>
+      <Value>1</Value>
+    </Row>
+  </ModifierArguments>
+  <RequirementSets>
+    <Row>
+      <RequirementSetId>FOUNTAIN_OF_YOUTH_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+    <Row>
+      <RequirementSetId>UNIT_ENTERS_FOUNTAIN_OF_YOUTH</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+    <Row>
+      <RequirementSetId>PAITITI_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+    <Row>
+      <RequirementSetId>CITY_HAS_PAITITI</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+    <Row>
+      <RequirementSetId>BERMUDA_TRIANGLE_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+    <Row>
+      <RequirementSetId>UNIT_ENTERS_BERMUDA_TRIANGLE</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+  </RequirementSets>
+  <RequirementSetRequirements>
+    <Row>
+      <RequirementSetId>FOUNTAIN_OF_YOUTH_REQUIREMENTS</RequirementSetId>
+      <RequirementId>MAP_CONTAINS_FOUNTAIN_OF_YOUTH</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>UNIT_ENTERS_FOUNTAIN_OF_YOUTH</RequirementSetId>
+      <RequirementId>REQUIRES_LAND_UNIT</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>UNIT_ENTERS_FOUNTAIN_OF_YOUTH</RequirementSetId>
+      <RequirementId>REQUIRES_UNIT_INSIDE_FOUNTAIN_OF_YOUTH</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>PAITITI_REQUIREMENTS</RequirementSetId>
+      <RequirementId>MAP_CONTAINS_PAITITI</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>CITY_HAS_PAITITI</RequirementSetId>
+      <RequirementId>REQUIRES_PAITITI_IN_CITY</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>BERMUDA_TRIANGLE_REQUIREMENTS</RequirementSetId>
+      <RequirementId>MAP_CONTAINS_BERMUDA_TRIANGLE</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>UNIT_ENTERS_BERMUDA_TRIANGLE</RequirementSetId>
+      <RequirementId>REQUIRES_UNIT_INSIDE_BERMUDA_TRIANGLE</RequirementId>
+    </Row>
+  </RequirementSetRequirements>
+  <Requirements>
+    <Row>
+      <RequirementId>MAP_CONTAINS_FOUNTAIN_OF_YOUTH</RequirementId>
+      <RequirementType>REQUIREMENT_MAP_HAS_FEATURE</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_UNIT_INSIDE_FOUNTAIN_OF_YOUTH</RequirementId>
+      <RequirementType>REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>MAP_CONTAINS_PAITITI</RequirementId>
+      <RequirementType>REQUIREMENT_MAP_HAS_FEATURE</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_PAITITI_IN_CITY</RequirementId>
+      <RequirementType>REQUIREMENT_CITY_HAS_FEATURE</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>MAP_CONTAINS_BERMUDA_TRIANGLE</RequirementId>
+      <RequirementType>REQUIREMENT_MAP_HAS_FEATURE</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_UNIT_INSIDE_BERMUDA_TRIANGLE</RequirementId>
+      <RequirementType>REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES</RequirementType>
+    </Row>
+  </Requirements>
+  <RequirementArguments>
+    <Row>
+      <RequirementId>MAP_CONTAINS_FOUNTAIN_OF_YOUTH</RequirementId>
+      <Name>FeatureType</Name>
+      <Value>FEATURE_FOUNTAIN_OF_YOUTH</Value>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_UNIT_INSIDE_FOUNTAIN_OF_YOUTH</RequirementId>
+      <Name>FeatureType</Name>
+      <Value>FEATURE_FOUNTAIN_OF_YOUTH</Value>
+    </Row>
+    <Row>
+      <RequirementId>MAP_CONTAINS_PAITITI</RequirementId>
+      <Name>FeatureType</Name>
+      <Value>FEATURE_PAITITI</Value>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_PAITITI_IN_CITY</RequirementId>
+      <Name>FeatureType</Name>
+      <Value>FEATURE_PAITITI</Value>
+    </Row>
+    <Row>
+      <RequirementId>MAP_CONTAINS_BERMUDA_TRIANGLE</RequirementId>
+      <Name>FeatureType</Name>
+      <Value>FEATURE_BERMUDA_TRIANGLE</Value>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_UNIT_INSIDE_BERMUDA_TRIANGLE</RequirementId>
+      <Name>FeatureType</Name>
+      <Value>FEATURE_BERMUDA_TRIANGLE</Value>
+    </Row>
+  </RequirementArguments>
+</GameInfo>

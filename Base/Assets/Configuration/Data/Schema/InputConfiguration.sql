@@ -20,6 +20,7 @@ CREATE TABLE 'InputActions'(
 	'Description' TEXT,
 	'CategoryId' TEXT NOT NULL,
 	'ContextId' TEXT NOT NULL,
+	'LayoutType' TEXT NOT NULL DEFAULT 'PC',
 	PRIMARY KEY('ActionId'),
 	FOREIGN KEY('CategoryId') REFERENCES 'InputCategories'('CategoryId') ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY('ContextId') REFERENCES 'InputContexts'('ContextId') ON DELETE CASCADE ON UPDATE CASCADE
@@ -32,4 +33,12 @@ CREATE TABLE 'InputActionDefaultGestures' (
 	'GestureData' TEXT NOT NULL,	
 	PRIMARY KEY('ActionId', 'Index'),
 	FOREIGN KEY('ActionId') REFERENCES 'InputActions'('ActionId')
+);
+
+CREATE TABLE 'InputKeyData' (
+	'KeyId' TEXT NOT NULL,
+	'KeyString' TEXT NOT NULL,
+	'KeyIcon' TEXT NOT NULL,
+	'KeyType' TEXT NOT NULL,
+	PRIMARY KEY('KeyId')
 );

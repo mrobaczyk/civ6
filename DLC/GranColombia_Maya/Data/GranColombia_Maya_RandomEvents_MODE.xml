@@ -1,0 +1,447 @@
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Edward Beach (Firaxis Games) -->
+<GameInfo>
+  <!-- Set the realism setting now, and once the game reaches the last level of climate change-->
+  <GameModifiers>
+    <Row ModifierId="MEGADISASTERS_MODE_SET_REALISM_TO_MEGADISASTERS"/>
+    <Row ModifierId="MEGADISASTERS_MODE_SET_REALISM_TO_APOCALYPSE"/>
+    <Row ModifierId="MEAGDISASTERS_MODE_ACTIVATE_VOLCANOES"/>
+  </GameModifiers>
+  <Modifiers>
+    <Row>
+      <ModifierId>MEGADISASTERS_MODE_SET_REALISM_TO_MEGADISASTERS</ModifierId>
+      <ModifierType>MODIFIER_GAME_SET_REALISM_SETTING</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>MEGADISASTERS_MODE_SET_REALISM_TO_APOCALYPSE</ModifierId>
+      <ModifierType>MODIFIER_GAME_SET_REALISM_SETTING</ModifierType>
+      <OwnerRequirementSetId>MEGADISASTERS_MODE_SET_REALISM_TO_APOCALYPSE_REQUIREMENTS</OwnerRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>MEAGDISASTERS_MODE_ACTIVATE_VOLCANOES</ModifierId>
+      <ModifierType>MODIFIER_GAME_SET_ACTIVE_VOLCANOES</ModifierType>
+    </Row>
+  </Modifiers>
+  <ModifierArguments>
+    <Row>
+      <ModifierId>MEGADISASTERS_MODE_SET_REALISM_TO_MEGADISASTERS</ModifierId>
+      <Name>RealismSettingType</Name>
+      <Value>REALISM_SETTING_MEGADISASTERS</Value>
+    </Row>
+    <Row>
+      <ModifierId>MEGADISASTERS_MODE_SET_REALISM_TO_APOCALYPSE</ModifierId>
+      <Name>RealismSettingType</Name>
+      <Value>REALISM_SETTING_APOCALYPSE</Value>
+    </Row>
+    <Row>
+      <ModifierId>MEAGDISASTERS_MODE_ACTIVATE_VOLCANOES</ModifierId>
+      <Name>PercentageActive</Name>
+      <Value>100</Value>
+    </Row>
+  </ModifierArguments>
+  <RequirementSets>
+    <Row>
+      <RequirementSetId>MEGADISASTERS_MODE_SET_REALISM_TO_APOCALYPSE_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+  </RequirementSets>
+  <RequirementSetRequirements>
+    <Row>
+      <RequirementSetId>MEGADISASTERS_MODE_SET_REALISM_TO_APOCALYPSE_REQUIREMENTS</RequirementSetId>
+      <RequirementId>CLIMATE_LEVEL_AT_LEAST_8</RequirementId>
+    </Row>
+  </RequirementSetRequirements>
+  <Requirements>
+    <Row>
+      <RequirementId>CLIMATE_LEVEL_AT_LEAST_8</RequirementId>
+      <RequirementType>REQUIREMENT_GAME_CLIMATE_CHANGE_LEVEL_AT_LEAST</RequirementType>
+    </Row>
+  </Requirements>
+  <RequirementArguments>
+    <Row>
+      <RequirementId>CLIMATE_LEVEL_AT_LEAST_8</RequirementId>
+      <Name>Amount</Name>
+      <Value>8</Value>
+    </Row>
+  </RequirementArguments>
+  
+	<Types>
+		<!--Environmental Effects-->
+		<Row Type="RANDOM_EVENT_FLOOD_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_KILIMANJARO_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_VESUVIUS_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_VOLCANO_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_BLIZZARD_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_DUST_STORM_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+    
+    <Row Type="RANDOM_EVENT_COMET_STRIKE" Kind="KIND_RANDOM_EVENT"/>
+    <Row Type="RANDOM_EVENT_SOLAR_FLARE" Kind="KIND_RANDOM_EVENT"/>
+    <Row Type="RANDOM_EVENT_COMET_STRIKE_TARGETED" Kind="KIND_RANDOM_EVENT"/>
+  
+		<Row Type="REALISM_SETTING_MEGADISASTERS" Kind="KIND_REALISM_SETTING"/>
+		<Row Type="REALISM_SETTING_APOCALYPSE" Kind="KIND_REALISM_SETTING"/>
+	</Types>
+	<RandomEvents>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_FLOOD_1000_YEAR_NAME" Description="LOC_RANDOM_EVENT_FLOOD_1000_YEAR_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_NO_FERTILITY" EffectOperatorType="FLOODPLAIN" Severity="2" MitigatedYieldReduction="50" IconLarge="ClimateEvent_Flood" IconSmall="ClimateEventStat_Flooding"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_KILIMANJARO_CATASTROPHIC_NAME" Description="LOC_RANDOM_EVENT_KILIMANJARO_CATASTROPHIC_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_NO_FERTILITY" EffectOperatorType="FEATURE" Severity="1" NaturalWonder="FEATURE_KILIMANJARO" IconLarge="ClimateEvent_VolcanoActive" IconSmall="ClimateEventStat_Volcanoes"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_VESUVIUS_MEGACOLOSSAL_NAME" Description="LOC_RANDOM_EVENT_VESUVIUS_MEGACOLOSSAL_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_NO_FERTILITY" EffectOperatorType="FEATURE" Severity="2" NaturalWonder="FEATURE_VESUVIUS" IconLarge="ClimateEvent_VolcanoErupting" IconSmall="ClimateEventStat_Volcanoes"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_VOLCANO_MEGACOLOSSAL_NAME" Description="LOC_RANDOM_EVENT_VOLCANO_MEGACOLOSSAL_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_NO_FERTILITY" EffectOperatorType="VOLCANO" Severity="2" IconLarge="ClimateEvent_VolcanoErupting" IconSmall="ClimateEventStat_Volcanoes"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_BLIZZARD_CRIPPLING_NAME" Description="LOC_RANDOM_EVENT_BLIZZARD_CRIPPLING_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_NO_FERTILITY" EffectOperatorType="STORM" Severity="2" Hexes="3" Movement="8" Duration="3" Spacing="1" IconLarge="ClimateEvent_Blizzard" IconSmall="ClimateEventStat_Blizzard"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_DUST_STORM_HABOOB_NAME" Description="LOC_RANDOM_EVENT_DUST_STORM_HABOOB_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_NO_FERTILITY" EffectOperatorType="STORM" Severity="2" Hexes="3" Movement="8" Duration="3" Spacing="1" IconLarge="ClimateEvent_DustStorm" IconSmall="ClimateEventStat_DustStorm"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="9" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="9" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
+	 
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" Name="LOC_RANDOM_EVENT_COMET_STRIKE_NAME" Description="LOC_RANDOM_EVENT_COMET_STRIKE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_COMET_STRIKE_EFFECT_DESCRIPTION" EffectOperatorType="COMET_STRIKE" Severity="1" Hexes="1" TargetCities="true" IconLarge="ClimateEvent_CometImpact" IconSmall="ClimateEventStat_CometImpact"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" Name="LOC_RANDOM_EVENT_COMET_STRIKE_NAME" Description="LOC_RANDOM_EVENT_COMET_STRIKE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_COMET_STRIKE_EFFECT_DESCRIPTION" EffectOperatorType="COMET_STRIKE" Severity="1" Hexes="4" IconLarge="ClimateEvent_CometImpact" IconSmall="ClimateEventStat_CometImpact"/>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" Global="true" Name="LOC_RANDOM_EVENT_SOLAR_FLARE_NAME" Description="LOC_RANDOM_EVENT_SOLAR_FLARE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_SOLAR_FLARE_EFFECT_DESCRIPTION" EffectOperatorType="SOLAR_FLARE" Severity="1" IconLarge="ClimateEvent_SolarFlare" IconSmall="ClimateEventStat_SolarFlare"/>
+  </RandomEvents>
+
+  <RealismSettings>
+		<Row RealismSettingType="REALISM_SETTING_MEGADISASTERS" Name="LOC_REALISM_SETTING_MEGADISASTERS_NAME" PercentVolcanoesActive="100" ExtraRange="true" ClimateChangePoints="2"/>
+		<Row RealismSettingType="REALISM_SETTING_APOCALYPSE" Name="LOC_REALISM_SETTING_APOCALYPSE_NAME" PercentVolcanoesActive="100" ExtraRange="true" ClimateChangePoints="2"/>
+	</RealismSettings>
+    
+  <RandomEvent_Notifications>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" NotificationType="NOTIFICATION_SOLAR_FLARE" Title="LOC_SOLAR_FLARE_HAPPENED" Summary="LOC_SOLAR_FLARE_HAPPENED_DESC" />
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" NotificationType="NOTIFICATION_COMET_LANDS" Title="LOC_COMET_HAPPENED" Summary="LOC_COMET_HAPPENED_DESC"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" NotificationType="NOTIFICATION_COMET_LANDS" Title="LOC_COMET_HAPPENED" Summary="LOC_COMET_HAPPENED_DESC"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" NotificationType="NOTIFICATION_FIRE_STARTS" Title="LOC_FIRE_STARTED" Summary="LOC_FIRE_STARTED_DESC" MaxTurn="0" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" NotificationType="NOTIFICATION_FIRE_ENDS" Title="LOC_FIRE_CONTINUED" Summary="LOC_FIRE_CONTINUED_DESC" MinTurn="3" MaxTurn="3" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" NotificationType="NOTIFICATION_JUNGLE_REGROWS" Title="LOC_FIRE_JUNGLE_OVER" Summary="LOC_FIRE_JUNGLE_OVER_DESC" MinTurn="8" MaxTurn="8" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" NotificationType="NOTIFICATION_FIRE_STARTS" Title="LOC_FIRE_STARTED" Summary="LOC_FIRE_STARTED_DESC" MaxTurn="0" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" NotificationType="NOTIFICATION_FIRE_ENDS" Title="LOC_FIRE_CONTINUED" Summary="LOC_FIRE_CONTINUED_DESC" MinTurn="3" MaxTurn="3" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" NotificationType="NOTIFICATION_FOREST_REGROWS" Title="LOC_FIRE_FOREST_OVER" Summary="LOC_FIRE_FOREST_OVER_DESC" MinTurn="8" MaxTurn="8" CompilationRadius="4"/>
+  </RandomEvent_Notifications>
+  
+	<RandomEvent_Terrains>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_PLAINS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_PLAINS_HILLS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_GRASS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_GRASS_HILLS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_SNOW"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_SNOW_HILLS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_DESERT"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_TUNDRA"/>
+		<Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+    
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_PLAINS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_PLAINS_HILLS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_GRASS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_GRASS_HILLS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_SNOW"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_SNOW_HILLS"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_DESERT"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_TUNDRA"/>
+		<Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+    
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" TerrainType="TERRAIN_SNOW"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" TerrainType="TERRAIN_TUNDRA"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" TerrainType="TERRAIN_DESERT"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" TerrainType="TERRAIN_DESERT_HILLS"/>
+	</RandomEvent_Terrains>
+  
+	<RandomEvent_Features>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" FeatureType="FEATURE_JUNGLE"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" FeatureType="FEATURE_FOREST"/>
+	</RandomEvent_Features>
+    
+	<RandomEvent_Frequencies>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_MAJOR" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_1000_YEAR" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="5"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_GENTLE" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_CATASTROPHIC" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="6"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="9"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_CATASTROPHIC" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_SIGNIFICANT" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_CRIPPLING" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="30"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_GRADIENT" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_HABOOB" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="30"/>
+		<Row RandomEventType="RANDOM_EVENT_TORNADO_FAMILY" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_TORNADO_OUTBREAK" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="30"/>
+		<Row RandomEventType="RANDOM_EVENT_HURRICANE_CAT_4" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_HURRICANE_CAT_5" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="30"/>
+		<Row RandomEventType="RANDOM_EVENT_NUCLEAR_ACCIDENT_MINOR" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_NUCLEAR_ACCIDENT_MAJOR" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_NUCLEAR_ACCIDENT_CATASTROPHIC" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_DROUGHT_MAJOR" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="15"/>
+		<Row RandomEventType="RANDOM_EVENT_DROUGHT_EXTREME" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="20"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE1" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE2" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE3" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE4" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE5" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE6" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE7" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_1000_YEAR" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_CATASTROPHIC" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_NUCLEAR_ACCIDENT_MINOR" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_NUCLEAR_ACCIDENT_MAJOR" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_NUCLEAR_ACCIDENT_CATASTROPHIC" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE1" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE2" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE3" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE4" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE5" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE6" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+		<Row RandomEventType="RANDOM_EVENT_SEA_LEVEL_RISE7" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    
+    <Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="30"/>
+    <Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="30"/>
+    <Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="20"/>
+    
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="400"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="200"/>
+    
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="50"/>
+    
+    <!-- We need to have occurences on these, so that they go through for creating with the Soothsayer.  These will not happen randomly-->
+    <Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+	</RandomEvent_Frequencies>
+  
+	<RandomEvent_Damages>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DamageType="SPECIFIC_UNIT_DAMAGED" Percentage="70" MinHP="25" MaxHP="75"/>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DamageType="SPECIFIC_DISTRICT_PILLAGED" Percentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DamageType="SPECIFIC_BUILDING_DESTROYED" Percentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DamageType="SPECIFIC_IMPROVEMENT_DESTROYED" Percentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DamageType="SPECIFIC_IMPROVEMENT_PILLAGED" Percentage="70"/>
+    
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" DamageType="IMPROVEMENT_DESTROYED" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" DamageType="DISTRICT_PILLAGED" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" DamageType="UNIT_KILLED_CIVILIAN" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" DamageType="UNIT_DAMAGE_LAND" Percentage="101" MinHP="101" MaxHP="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" DamageType="POPULATION_LOSS" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" DamageType="CITY_DESTROYED" Percentage="101"/>
+    
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" DamageType="IMPROVEMENT_DESTROYED" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" DamageType="DISTRICT_PILLAGED" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" DamageType="UNIT_DAMAGE_LAND" Percentage="101" MinHP="101" MaxHP="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" DamageType="POPULATION_LOSS" Percentage="101"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" DamageType="CITY_DESTROYED" Percentage="101"/>
+
+    <Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="IMPROVEMENT_DESTROYED" Percentage="80"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="80"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="BUILDING_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="25"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="25"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="50" MaxHP="70"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="CITY_GARRISON" Percentage="100" MinHP="50" MaxHP="70"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" DamageType="CITY_WALLS" Percentage="100" MinHP="50" MaxHP="70"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="IMPROVEMENT_DESTROYED" Percentage="80" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="80" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="BUILDING_PILLAGED" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="20" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="20" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="40" MaxHP="60" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="CITY_GARRISON" Percentage="100" MinHP="40" MaxHP="60" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" DamageType="CITY_WALLS" Percentage="100" MinHP="40" MaxHP="60" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="IMPROVEMENT_DESTROYED" Percentage="80" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="80" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="BUILDING_PILLAGED" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="70" MaxHP="90" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="CITY_GARRISON" Percentage="100" MinHP="70" MaxHP="90" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" DamageType="CITY_WALLS" Percentage="100" MinHP="70" MaxHP="90" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="IMPROVEMENT_DESTROYED" Percentage="80" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="100" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="80" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="BUILDING_PILLAGED" Percentage="100" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="35" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="35" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="60" MaxHP="80" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="CITY_GARRISON" Percentage="100" MinHP="60" MaxHP="80" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" DamageType="CITY_WALLS" Percentage="100" MinHP="60" MaxHP="80" ExtraRangePercentage="30"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="IMPROVEMENT_DESTROYED" Percentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="BUILDING_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="15"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="20"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="40" MaxHP="60"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" DamageType="UNIT_DAMAGE_NAVAL" Percentage="60" MinHP="40" MaxHP="60"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="IMPROVEMENT_DESTROYED" Percentage="75"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="75"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="BUILDING_PILLAGED" Percentage="100"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="20"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="20"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="40" MaxHP="60"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" DamageType="UNIT_DAMAGE_NAVAL" Percentage="60" MinHP="40" MaxHP="60"/>
+  
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="101" MinTurn="0" MaxTurn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="101" MinHP="50" MaxHP="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" DamageType="SPREAD" Percentage="100" MinTurn="1" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="101" MinTurn="0" MaxTurn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="101" MinHP="50" MaxHP="101" MinTurn="0" MaxTurn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" DamageType="SPREAD" Percentage="100" MinTurn="1" MaxTurn="2"/>
+  
+	</RandomEvent_Damages>
+	<RandomEvent_PillagedImprovements>
+  
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" ImprovementType="IMPROVEMENT_SOLAR_FARM"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" ImprovementType="IMPROVEMENT_WIND_FARM"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" ImprovementType="IMPROVEMENT_OFFSHORE_WIND_FARM"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" ImprovementType="IMPROVEMENT_SEASTEAD"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" ImprovementType="IMPROVEMENT_GEOTHERMAL_PLANT"/>
+	</RandomEvent_PillagedImprovements>
+  <RandomEvent_PillagedDistricts>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DistrictType="DISTRICT_INDUSTRIAL_ZONE"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DistrictType="DISTRICT_CAMPUS"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DistrictType="DISTRICT_AERODROME"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" DistrictType="DISTRICT_SPACEPORT"/>
+  </RandomEvent_PillagedDistricts>
+  <RandomEvent_PillagedBuildings>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_FACTORY"/>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_ELECTRONICS_FACTORY"/>
+    <Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_COAL_POWER_PLANT"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_FOSSIL_FUEL_POWER_PLANT"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_POWER_PLANT"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_STOCK_EXCHANGE"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_RESEARCH_LAB"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_STADIUM"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_AQUATICS_CENTER"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_BROADCAST_CENTER"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_FILM_STUDIO"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_FOOD_MARKET"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_SHOPPING_MALL"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_AIRPORT"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" BuildingType="BUILDING_HYDROELECTRIC_DAM"/>
+  </RandomEvent_PillagedBuildings>
+  <RandomEvent_DamagedUnits>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_GIANT_DEATH_ROBOT"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_ROCK_BAND"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_AIRCRAFT_CARRIER"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_DESTROYER"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_BATTLESHIP"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_NUCLEAR_SUBMARINE"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_MECHANIZED_INFANTRY"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_MACHINE_GUN"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_HELICOPTER"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_ROCKET_ARTILLERY"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_MODERN_ARMOR"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_JET_BOMBER"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" UnitType="UNIT_JET_FIGHTER"/>
+  </RandomEvent_DamagedUnits>
+	<RandomEvent_Yields>
+		<!--FEATURE_ICE is the equivalent of no feature here since Feature type is a primary key.-->
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" YieldType="YIELD_FOOD" FeatureType="FEATURE_ICE" Percentage="20" ReplaceFeature="true"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" YieldType="YIELD_FOOD" FeatureType="FEATURE_ICE" Percentage="20" ReplaceFeature="true"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" YieldType="YIELD_PRODUCTION" FeatureType="FEATURE_ICE" Percentage="30" ReplaceFeature="true"/>
+
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" YieldType="YIELD_SCIENCE" Amount ="0" FeatureType="FEATURE_COMET_LAKE" Percentage="100" ReplaceFeature="true"/>
+    <Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" YieldType="YIELD_SCIENCE" Amount ="0" FeatureType="FEATURE_COMET_LAKE" Percentage="100" ReplaceFeature="true"/>
+  
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" YieldType="YIELD_FOOD" Amount="0" FeatureType="FEATURE_BURNING_JUNGLE" Percentage="100" ReplaceFeature="true" Turn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" YieldType="YIELD_FOOD" Amount="1" FeatureType="FEATURE_BURNT_JUNGLE" Percentage="100" ReplaceFeature="true" Turn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" YieldType="YIELD_PRODUCTION" Amount="1" FeatureType="FEATURE_JUNGLE" Percentage="100" ReplaceFeature="true" Turn="8"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" YieldType="YIELD_FOOD" Amount="0" FeatureType="FEATURE_BURNING_FOREST" Percentage="100" ReplaceFeature="true" Turn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" YieldType="YIELD_FOOD" Amount="1" FeatureType="FEATURE_BURNT_FOREST" Percentage="100" ReplaceFeature="true" Turn="3"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" YieldType="YIELD_PRODUCTION" Amount="1" FeatureType="FEATURE_FOREST" Percentage="100" ReplaceFeature="true" Turn="8"/>
+	</RandomEvent_Yields>
+  
+	<RandomEvent_Presentation>
+		<Row RandomEventType="RANDOM_EVENT_VOLCANO_TRIGGERED" Animation="REVEAL_ERUPTION_MEGACOLOSSAL" Sound="Play_Disaster_Volcano_Movie_Loop"/>
+		<Row RandomEventType="RANDOM_EVENT_VESUVIUS_TRIGGERED" Animation="REVEAL_ERUPTION_MEGACOLOSSAL" Sound="Play_Disaster_Volcano_Movie_Loop" Callback="GetAffectedPlots_NaturalWonder"/>
+		<Row RandomEventType="RANDOM_EVENT_KILIMANJARO_TRIGGERED" Animation="REVEAL_ERUPTION_CATASTROPHIC" Sound="Play_Disaster_Volcano_Movie_Loop" Callback="GetAffectedPlots_NaturalWonder"/>
+		<Row RandomEventType="RANDOM_EVENT_FLOOD_TRIGGERED" Animation="REVEAL_FLOOD" Sound="Play_Disaster_Flood_Movie_Loop" Callback="GetAffectedPlots_Flood"/>
+		<Row RandomEventType="RANDOM_EVENT_BLIZZARD_TRIGGERED" Animation="REVEAL_STORM" Sound="Play_Disaster_Blizzard_Movie_Loop" Callback="GetAffectedPlots_Storm"/>
+		<Row RandomEventType="RANDOM_EVENT_DUST_STORM_TRIGGERED" Animation="REVEAL_STORM" Sound="Play_Disaster_Sandstorm_Movie_Loop" Callback="GetAffectedPlots_Storm"/>
+		<Row RandomEventType="RANDOM_EVENT_SOLAR_FLARE" Animation="REVEAL_FLOOD" Sound="Play_Disaster_SolarFlare_Movie_Loop" VFX="DISASTER_SOLAR_FLARE" ForceShowVFX="true"/>
+		<Row RandomEventType="RANDOM_EVENT_COMET_STRIKE" Animation="REVEAL_COMET" Sound="Play_Disaster_CometStrike_Movie_Loop" MFX="Comet_Strike" SequenceType="SCENE_EVENT_TRIGGER" Callback="GetAffectedPlots_OneOff"/>
+		<Row RandomEventType="RANDOM_EVENT_COMET_STRIKE_TARGETED" Animation="REVEAL_COMET" Sound="Play_Disaster_CometStrike_Movie_Loop" MFX="Comet_Strike" SequenceType="SCENE_EVENT_TRIGGER" Callback="GetAffectedPlots_OneOff"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE_TRIGGERED" Animation="REVEAL_FLOOD" Sound="Play_Disaster_Drought_Movie_Loop" />
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE_TRIGGERED" Animation="REVEAL_FLOOD" Sound="Play_Disaster_Drought_Movie_Loop" />
+	</RandomEvent_Presentation>
+  
+  <!--Update traits that are related to random event types, to include their new triggered versions-->
+  <TraitModifiers>
+    <Row>
+       <TraitType>TRAIT_CIVILIZATION_ITERU</TraitType>
+       <ModifierId>TRAIT_AVOID_TRIGGERED_FLOOD</ModifierId>
+    </Row>
+    <Row>
+      <TraitType>TRAIT_CIVILIZATION_MOTHER_RUSSIA</TraitType>
+      <ModifierId>TRAIT_BLIZZARD_PREVENTION_TRIGGERED</ModifierId>
+    </Row>
+    <Row>
+      <TraitType>TRAIT_CIVILIZATION_MOTHER_RUSSIA</TraitType>
+      <ModifierId>TRAIT_BLIZZARD_DOUBLE_DAMAGE_TRIGGERED</ModifierId>
+    </Row>
+  </TraitModifiers>
+  <Modifiers>
+    <Row>
+      <ModifierId>TRAIT_AVOID_TRIGGERED_FLOOD</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_ADJUST_AVOID_RANDOM_EVENT</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>TRAIT_BLIZZARD_PREVENTION_TRIGGERED</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_ADJUST_RANDOM_EVENT_NO_UNIT_DAMAGE</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>TRAIT_BLIZZARD_DOUBLE_DAMAGE_TRIGGERED</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_ADJUST_RANDOM_EVENT_MODIFIED_DAMAGE_OPPOSING_PLAYER</ModifierType>
+    </Row>
+  </Modifiers>
+  <ModifierArguments>
+    <Row>
+      <ModifierId>TRAIT_AVOID_TRIGGERED_FLOOD</ModifierId>
+      <Name>RandomEventType</Name>
+      <Value>RANDOM_EVENT_FLOOD_TRIGGERED</Value>
+    </Row>
+    <Row>
+      <ModifierId>TRAIT_BLIZZARD_PREVENTION_TRIGGERED</ModifierId>
+      <Name>RandomEventType</Name>
+      <Value>RANDOM_EVENT_BLIZZARD_TRIGGERED</Value>
+    </Row>
+    <Row>
+      <ModifierId>TRAIT_BLIZZARD_PREVENTION_TRIGGERED</ModifierId>
+      <Name>NoDamage</Name>
+      <Value>true</Value>
+    </Row>
+    <Row>
+      <ModifierId>TRAIT_BLIZZARD_DOUBLE_DAMAGE_TRIGGERED</ModifierId>
+      <Name>RandomEventType</Name>
+      <Value>RANDOM_EVENT_BLIZZARD_TRIGGERED</Value>
+    </Row>
+    <Row>
+      <ModifierId>TRAIT_BLIZZARD_DOUBLE_DAMAGE_TRIGGERED</ModifierId>
+      <Name>Amount</Name>
+      <Value>100</Value>
+    </Row>
+  </ModifierArguments>
+</GameInfo>

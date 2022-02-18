@@ -471,10 +471,10 @@
 		<Row UnitAbilityType="ABILITY_SAMURAI" Name="LOC_ABILITY_SAMURAI_NAME" Description="LOC_ABILITY_SAMURAI_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_PUSHBACK" Name="LOC_ABILITY_PUSHBACK" Description="LOC_ABILITY_PUSHBACK_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_DIGGER" Name="LOC_ABILITY_DIGGER_NAME" Description="LOC_ABILITY_DIGGER_DESCRIPTION"/>
-		<Row UnitAbilityType="ABILITY_GREAT_ADMIRAL_MOVEMENT" Name="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_NAME" Description="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_DESCRIPTION" Inactive="true"/>
-		<Row UnitAbilityType="ABILITY_GREAT_ADMIRAL_STRENGTH" Name="LOC_GREAT_PERSON_CLASS_ADMIRAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER" Inactive="true"/>
-		<Row UnitAbilityType="ABILITY_GREAT_GENERAL_MOVEMENT" Name="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_NAME" Description="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_DESCRIPTION" Inactive="true"/>
-		<Row UnitAbilityType="ABILITY_GREAT_GENERAL_STRENGTH" Name="LOC_GREAT_PERSON_CLASS_GENERAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_GREAT_ADMIRAL_MOVEMENT" Name="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_NAME" Description="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_DESCRIPTION" Inactive="true" Permanent="false"/>
+		<Row UnitAbilityType="ABILITY_GREAT_ADMIRAL_STRENGTH" Name="LOC_GREAT_PERSON_CLASS_ADMIRAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER" Inactive="true" Permanent="false"/>
+		<Row UnitAbilityType="ABILITY_GREAT_GENERAL_MOVEMENT" Name="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_NAME" Description="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_DESCRIPTION" Inactive="true" Permanent="false"/>
+		<Row UnitAbilityType="ABILITY_GREAT_GENERAL_STRENGTH" Name="LOC_GREAT_PERSON_CLASS_GENERAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER" Inactive="true" Permanent="false"/>
 		<Row UnitAbilityType="ABILITY_BARRACKS_TRAINED_UNIT_XP" Name="LOC_ABILITY_BARRACKS_TRAINED_UNIT_XP_NAME" Description="LOC_ABILITY_BARRACKS_TRAINED_UNIT_XP_DESCRIPTION" Inactive="true"/>
 		<Row UnitAbilityType="ABILITY_STABLE_TRAINED_UNIT_XP" Name="LOC_ABILITY_STABLE_TRAINED_UNIT_XP_NAME" Description="LOC_ABILITY_STABLE_TRAINED_UNIT_XP_DESCRIPTION" Inactive="true"/>
 		<Row UnitAbilityType="ABILITY_ARMORY_TRAINED_UNIT_XP" Name="LOC_ABILITY_ARMORY_TRAINED_UNIT_XP_NAME" Description="LOC_ABILITY_ARMORY_TRAINED_UNIT_XP_DESCRIPTION" Inactive="true"/>
@@ -1283,7 +1283,7 @@
 		</Row>
 		<Row>
 			<ModifierId>HORATIO_NELSON_FLANKING_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>LASKARINA_BOUBOULINA_BONUS_EXPERIENCE</ModifierId>
@@ -1295,7 +1295,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GEORGY_ZHUKOV_FLANKING_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_UNIT_IS_LAND_DOMAIN</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>JOHN_MONASH_BONUS_EXPERIENCE</ModifierId>
@@ -1990,6 +1991,10 @@
 			<RequirementSetId>UNIT_ATTACKING_DISTRICT_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_LAND_DOMAIN</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
@@ -2136,6 +2141,10 @@
 			<RequirementSetId>UNIT_ATTACKING_DISTRICT_REQUIREMENTS</RequirementSetId>
 			<RequirementId>OPPONENT_IS_DISTRICT</RequirementId>
 		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_LAND_DOMAIN</RequirementSetId>
+			<RequirementId>REQUIRES_UNIT_IS_LAND_DOMAIN</RequirementId>
+		</Row>
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
@@ -2252,6 +2261,10 @@
 			<RequirementId>REQUIRES_UNIT_NOT_IN_OWNER_TERRITORY</RequirementId>
 			<RequirementType>REQUIREMENT_UNIT_IN_OWNER_TERRITORY</RequirementType>
 			<Inverse>1</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_LAND_DOMAIN</RequirementId>
+			<RequirementType>REQUIREMENT_UNIT_DOMAIN_MATCHES</RequirementType>
 		</Row>
 	</Requirements>
 	<RequirementArguments>
@@ -2379,6 +2392,11 @@
 			<RequirementId>PLOT_IS_SNOW_HILLS_TERRAIN_REQUIREMENT</RequirementId>
 			<Name>TerrainType</Name>
 			<Value>TERRAIN_SNOW_HILLS</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_LAND_DOMAIN</RequirementId>
+			<Name>UnitDomain</Name>
+			<Value>DOMAIN_LAND</Value>
 		</Row>
 	</RequirementArguments>
 	<ModifierStrings>

@@ -12,6 +12,18 @@
 			<ShortName>Unit_Bank_3D_Addons</ShortName>
 			<Path>Unit_Bank_3D_Addons.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3231401772" Name="GDR_Death_LowBlast" GUID="{30F25E96-64C4-4249-9FCF-1215D68B76A7}"/>
+				<Event Id="2669916283" Name="GDR_Death_PowerDown_01" GUID="{20832D11-BE84-42FC-9577-1E62CC0D868C}"/>
+				<Event Id="2669916280" Name="GDR_Death_PowerDown_02" GUID="{8178FF89-B36E-43EC-A669-F2E79EF343B8}"/>
+				<Event Id="439681209" Name="GDR_Death_Sizzle" GUID="{095838D1-0524-4440-BFB9-F37ADF01B14D}"/>
+				<Event Id="2529614187" Name="GDR_Fire_Cannon" GUID="{518A3D5A-A171-4CCA-A2D3-5BB708A64F8E}"/>
+				<Event Id="1007374632" Name="GDR_Fire_Hand_Long" GUID="{1C755CCC-0F86-410E-9E94-E3E481771C51}"/>
+				<Event Id="4095615208" Name="GDR_Fire_Hand_Short" GUID="{FF5B546D-7551-479F-82D5-08A658865A78}"/>
+				<Event Id="59992335" Name="GDR_Footstep" GUID="{BC5FA3D7-A5AA-4128-A89D-18BE2CCAB00C}"/>
+				<Event Id="2324394224" Name="GDR_Jump_Charge" GUID="{3F455D76-82BF-4BCA-99D8-8750FBD5E06E}"/>
+				<Event Id="3740676395" Name="GDR_Jump_Land" GUID="{4972709E-A2AD-4F51-91EF-EC813A022426}"/>
+				<Event Id="4120466172" Name="GDR_Jump_Takeoff" GUID="{D1D21D15-8604-4D34-8831-F4348FB74D79}"/>
+				<Event Id="2923551480" Name="GDR_Stomp" GUID="{FB74E622-B710-4076-B248-D1AE6F236C8A}"/>
 				<Event Id="895999982" Name="Guru_Heal_VFX" GUID="{9B82ADBF-DA72-498F-BA29-69EA648ABAD6}"/>
 				<Event Id="3149584096" Name="Unit_CondemnHeretic" GUID="{A2C496DA-0F56-4F74-ABD1-FDCA0447E4DA}"/>
 				<Event Id="1219107964" Name="WarriorMonk_Attack_Strike" GUID="{002D9C35-EC3C-4C20-BADE-4219A84E1E58}"/>
@@ -19,17 +31,53 @@
 				<Event Id="226957043" Name="WarriorMonk_Twirl" GUID="{B3DE7F20-90FC-478A-A592-7072374F7037}"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="18350949" Language="SFX">
+					<ShortName>GDR_Footstep_11.wav</ShortName>
+					<Path>SFX\GDR_Footstep_11_10F921B3.wem</Path>
+				</File>
 				<File Id="19254579" Language="SFX">
 					<ShortName>WarriorMonk_Twirl03.wav</ShortName>
 					<Path>SFX\WarriorMonk_Twirl03_10F921B3.wem</Path>
+				</File>
+				<File Id="22020597" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_09.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_09_10F921B3.wem</Path>
 				</File>
 				<File Id="41184712" Language="SFX">
 					<ShortName>WarriorMonk_Attack_Windup-04.wav</ShortName>
 					<Path>SFX\WarriorMonk_Attack_Windup-04_10F921B3.wem</Path>
 				</File>
+				<File Id="52297193" Language="SFX">
+					<ShortName>GDR_Stomp_Water_16.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_16_10F921B3.wem</Path>
+				</File>
+				<File Id="64265387" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_03.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_03_10F921B3.wem</Path>
+				</File>
 				<File Id="64858849" Language="SFX">
 					<ShortName>WarriorMonk_Attack_Strike-05.wav</ShortName>
 					<Path>SFX\WarriorMonk_Attack_Strike-05_10F921B3.wem</Path>
+				</File>
+				<File Id="72108909" Language="SFX">
+					<ShortName>GDR_Footstep_07.wav</ShortName>
+					<Path>SFX\GDR_Footstep_07_10F921B3.wem</Path>
+				</File>
+				<File Id="76159898" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_19.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_19_10F921B3.wem</Path>
+				</File>
+				<File Id="101975983" Language="SFX">
+					<ShortName>GDR_Footstep_12.wav</ShortName>
+					<Path>SFX\GDR_Footstep_12_10F921B3.wem</Path>
+				</File>
+				<File Id="119966203" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_05.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_05_10F921B3.wem</Path>
+				</File>
+				<File Id="139523944" Language="SFX">
+					<ShortName>GDR_Cannon_04.wav</ShortName>
+					<Path>SFX\GDR_Cannon_04_10F921B3.wem</Path>
 				</File>
 				<File Id="148879270" Language="SFX">
 					<ShortName>Guru_Heal_03.wav</ShortName>
@@ -39,21 +87,237 @@
 					<ShortName>Guru_Heal_02.wav</ShortName>
 					<Path>SFX\Guru_Heal_02_E1E65BF4.wem</Path>
 				</File>
+				<File Id="165709221" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Long_02.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Long_02_10F921B3.wem</Path>
+				</File>
+				<File Id="175367025" Language="SFX">
+					<ShortName>GDR_Stomp_Water_12.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_12_10F921B3.wem</Path>
+				</File>
+				<File Id="181835195" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_23.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_23_10F921B3.wem</Path>
+				</File>
+				<File Id="182894011" Language="SFX">
+					<ShortName>GDR_Stomp_Water_02.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_02_10F921B3.wem</Path>
+				</File>
+				<File Id="183951457" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Short_01.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Short_01_10F921B3.wem</Path>
+				</File>
+				<File Id="191426186" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Short_06.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Short_06_10F921B3.wem</Path>
+				</File>
+				<File Id="208630986" Language="SFX">
+					<ShortName>GDR_Footstep_05.wav</ShortName>
+					<Path>SFX\GDR_Footstep_05_10F921B3.wem</Path>
+				</File>
+				<File Id="245555500" Language="SFX">
+					<ShortName>GDR_Stomp_Land_07.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_07_10F921B3.wem</Path>
+				</File>
 				<File Id="249157446" Language="SFX">
 					<ShortName>Denounce_Heretic_01.wav</ShortName>
 					<Path>SFX\Denounce_Heretic_01_10F921B3.wem</Path>
+				</File>
+				<File Id="254504696" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_07.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_07_10F921B3.wem</Path>
+				</File>
+				<File Id="264402600" Language="SFX">
+					<ShortName>GDR_Stomp_Land_09.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_09_10F921B3.wem</Path>
+				</File>
+				<File Id="272705626" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_15.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_15_10F921B3.wem</Path>
+				</File>
+				<File Id="274232796" Language="SFX">
+					<ShortName>GDR_Death_PowerDown_02.wav</ShortName>
+					<Path>SFX\GDR_Death_PowerDown_02_10F921B3.wem</Path>
+				</File>
+				<File Id="288534965" Language="SFX">
+					<ShortName>GDR_Stomp_Land_17.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_17_10F921B3.wem</Path>
+				</File>
+				<File Id="292838368" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_01.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_01_10F921B3.wem</Path>
+				</File>
+				<File Id="298242351" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_25.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_25_10F921B3.wem</Path>
+				</File>
+				<File Id="303483747" Language="SFX">
+					<ShortName>GDR_Cannon_02.wav</ShortName>
+					<Path>SFX\GDR_Cannon_02_10F921B3.wem</Path>
+				</File>
+				<File Id="305420012" Language="SFX">
+					<ShortName>GDR_Death_LowBlast_05.wav</ShortName>
+					<Path>SFX\GDR_Death_LowBlast_05_10F921B3.wem</Path>
+				</File>
+				<File Id="320434496" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_19.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_19_10F921B3.wem</Path>
+				</File>
+				<File Id="321598138" Language="SFX">
+					<ShortName>GDR_Footstep_09.wav</ShortName>
+					<Path>SFX\GDR_Footstep_09_10F921B3.wem</Path>
+				</File>
+				<File Id="342061046" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_13.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_13_10F921B3.wem</Path>
+				</File>
+				<File Id="344056628" Language="SFX">
+					<ShortName>GDR_Jump_Takeoff_01.wav</ShortName>
+					<Path>SFX\GDR_Jump_Takeoff_01_6DA9CEB9.wem</Path>
+				</File>
+				<File Id="348993167" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Short_02.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Short_02_10F921B3.wem</Path>
+				</File>
+				<File Id="352872201" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_27.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_27_10F921B3.wem</Path>
 				</File>
 				<File Id="357738778" Language="SFX">
 					<ShortName>WarriorMonk_Attack_Strike-04.wav</ShortName>
 					<Path>SFX\WarriorMonk_Attack_Strike-04_10F921B3.wem</Path>
 				</File>
+				<File Id="376424709" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Long_05.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Long_05_10F921B3.wem</Path>
+				</File>
+				<File Id="435611166" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_01.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_01_10F921B3.wem</Path>
+				</File>
+				<File Id="442882346" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_17.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_17_10F921B3.wem</Path>
+				</File>
+				<File Id="449878218" Language="SFX">
+					<ShortName>GDR_Stomp_Land_23.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_23_10F921B3.wem</Path>
+				</File>
+				<File Id="451082419" Language="SFX">
+					<ShortName>GDR_Cannon_03.wav</ShortName>
+					<Path>SFX\GDR_Cannon_03_10F921B3.wem</Path>
+				</File>
+				<File Id="451634900" Language="SFX">
+					<ShortName>GDR_Stomp_Land_05.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_05_10F921B3.wem</Path>
+				</File>
+				<File Id="470434634" Language="SFX">
+					<ShortName>GDR_Stomp_Land_19.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_19_10F921B3.wem</Path>
+				</File>
+				<File Id="478544649" Language="SFX">
+					<ShortName>GDR_Footstep_04.wav</ShortName>
+					<Path>SFX\GDR_Footstep_04_10F921B3.wem</Path>
+				</File>
+				<File Id="492178793" Language="SFX">
+					<ShortName>GDR_Cannon_07.wav</ShortName>
+					<Path>SFX\GDR_Cannon_07_10F921B3.wem</Path>
+				</File>
+				<File Id="503616101" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_07.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_07_10F921B3.wem</Path>
+				</File>
 				<File Id="531946435" Language="SFX">
 					<ShortName>WarriorMonk_Attack_Strike-06.wav</ShortName>
 					<Path>SFX\WarriorMonk_Attack_Strike-06_10F921B3.wem</Path>
 				</File>
+				<File Id="540516449" Language="SFX">
+					<ShortName>GDR_Stomp_Water_18.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_18_10F921B3.wem</Path>
+				</File>
+				<File Id="560300704" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Short_04.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Short_04_10F921B3.wem</Path>
+				</File>
+				<File Id="567061979" Language="SFX">
+					<ShortName>GDR_Stomp_Water_21.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_21_10F921B3.wem</Path>
+				</File>
+				<File Id="572882648" Language="SFX">
+					<ShortName>GDR_Jump_Charge_01.wav</ShortName>
+					<Path>SFX\GDR_Jump_Charge_01_10F921B3.wem</Path>
+				</File>
+				<File Id="599625133" Language="SFX">
+					<ShortName>GDR_Death_PowerDown_01.wav</ShortName>
+					<Path>SFX\GDR_Death_PowerDown_01_10F921B3.wem</Path>
+				</File>
+				<File Id="606444133" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_13.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_13_10F921B3.wem</Path>
+				</File>
+				<File Id="617539206" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_05.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_05_10F921B3.wem</Path>
+				</File>
+				<File Id="625654988" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_09.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_09_10F921B3.wem</Path>
+				</File>
+				<File Id="632894442" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_28.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_28_10F921B3.wem</Path>
+				</File>
+				<File Id="638762566" Language="SFX">
+					<ShortName>GDR_Footstep_06.wav</ShortName>
+					<Path>SFX\GDR_Footstep_06_10F921B3.wem</Path>
+				</File>
+				<File Id="645572247" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_11.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_11_10F921B3.wem</Path>
+				</File>
+				<File Id="664938345" Language="SFX">
+					<ShortName>GDR_Death_LowBlast_01.wav</ShortName>
+					<Path>SFX\GDR_Death_LowBlast_01_10F921B3.wem</Path>
+				</File>
+				<File Id="667196092" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Short_03.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Short_03_10F921B3.wem</Path>
+				</File>
+				<File Id="680897832" Language="SFX">
+					<ShortName>GDR_Stomp_Land_13.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_13_10F921B3.wem</Path>
+				</File>
+				<File Id="682855663" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Long_04.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Long_04_10F921B3.wem</Path>
+				</File>
+				<File Id="686493589" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_15.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_15_10F921B3.wem</Path>
+				</File>
 				<File Id="699868662" Language="SFX">
 					<ShortName>WarriorMonk_Twirl06.wav</ShortName>
 					<Path>SFX\WarriorMonk_Twirl06_10F921B3.wem</Path>
+				</File>
+				<File Id="724310699" Language="SFX">
+					<ShortName>GDR_Jump_Land_01.wav</ShortName>
+					<Path>SFX\GDR_Jump_Land_01_4B848B0E.wem</Path>
+				</File>
+				<File Id="728138459" Language="SFX">
+					<ShortName>GDR_Footstep_10.wav</ShortName>
+					<Path>SFX\GDR_Footstep_10_10F921B3.wem</Path>
+				</File>
+				<File Id="735516540" Language="SFX">
+					<ShortName>GDR_Footstep_08.wav</ShortName>
+					<Path>SFX\GDR_Footstep_08_10F921B3.wem</Path>
+				</File>
+				<File Id="736486185" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Short_05.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Short_05_10F921B3.wem</Path>
+				</File>
+				<File Id="740206504" Language="SFX">
+					<ShortName>GDR_Stomp_Land_03.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_03_10F921B3.wem</Path>
 				</File>
 				<File Id="751084826" Language="SFX">
 					<ShortName>WarriorMonk_Attack_Windup-01.wav</ShortName>
@@ -63,17 +327,97 @@
 					<ShortName>Denounce_Heretic_03.wav</ShortName>
 					<Path>SFX\Denounce_Heretic_03_10F921B3.wem</Path>
 				</File>
+				<File Id="755897061" Language="SFX">
+					<ShortName>GDR_Death_LowBlast_03.wav</ShortName>
+					<Path>SFX\GDR_Death_LowBlast_03_10F921B3.wem</Path>
+				</File>
+				<File Id="775204301" Language="SFX">
+					<ShortName>GDR_Footstep_03.wav</ShortName>
+					<Path>SFX\GDR_Footstep_03_10F921B3.wem</Path>
+				</File>
 				<File Id="786508265" Language="SFX">
 					<ShortName>WarriorMonk_Twirl01.wav</ShortName>
 					<Path>SFX\WarriorMonk_Twirl01_10F921B3.wem</Path>
+				</File>
+				<File Id="792727050" Language="SFX">
+					<ShortName>GDR_Water_Footsteps_20.wav</ShortName>
+					<Path>SFX\GDR_Water_Footsteps_20_10F921B3.wem</Path>
+				</File>
+				<File Id="821913030" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_03.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_03_10F921B3.wem</Path>
+				</File>
+				<File Id="823546454" Language="SFX">
+					<ShortName>GDR_Stomp_Water_06.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_06_10F921B3.wem</Path>
+				</File>
+				<File Id="827606238" Language="SFX">
+					<ShortName>GDR_Stomp_Water_14.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_14_10F921B3.wem</Path>
 				</File>
 				<File Id="836931179" Language="SFX">
 					<ShortName>WarriorMonk_Twirl02.wav</ShortName>
 					<Path>SFX\WarriorMonk_Twirl02_10F921B3.wem</Path>
 				</File>
+				<File Id="844193878" Language="SFX">
+					<ShortName>GDR_Footstep_02.wav</ShortName>
+					<Path>SFX\GDR_Footstep_02_10F921B3.wem</Path>
+				</File>
+				<File Id="854024649" Language="SFX">
+					<ShortName>GDR_Stomp_Water_08.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_08_10F921B3.wem</Path>
+				</File>
+				<File Id="870206562" Language="SFX">
+					<ShortName>GDR_Death_LowBlast_06.wav</ShortName>
+					<Path>SFX\GDR_Death_LowBlast_06_10F921B3.wem</Path>
+				</File>
+				<File Id="872446774" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Long_01.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Long_01_10F921B3.wem</Path>
+				</File>
+				<File Id="879317178" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_11.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_11_10F921B3.wem</Path>
+				</File>
+				<File Id="884270599" Language="SFX">
+					<ShortName>GDR_Stomp_Land_11.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_11_10F921B3.wem</Path>
+				</File>
+				<File Id="887411325" Language="SFX">
+					<ShortName>GDR_Stomp_Land_15.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_15_10F921B3.wem</Path>
+				</File>
+				<File Id="890349462" Language="SFX">
+					<ShortName>GDR_Cannon_05.wav</ShortName>
+					<Path>SFX\GDR_Cannon_05_10F921B3.wem</Path>
+				</File>
+				<File Id="898055861" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_21.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_21_10F921B3.wem</Path>
+				</File>
+				<File Id="898356145" Language="SFX">
+					<ShortName>GDR_Stomp_Water_22.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_22_10F921B3.wem</Path>
+				</File>
+				<File Id="969238208" Language="SFX">
+					<ShortName>GDR_Stomp_Land_22.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Land_22_10F921B3.wem</Path>
+				</File>
+				<File Id="974752597" Language="SFX">
+					<ShortName>GDR_Cannon_06.wav</ShortName>
+					<Path>SFX\GDR_Cannon_06_10F921B3.wem</Path>
+				</File>
 				<File Id="990260196" Language="SFX">
 					<ShortName>WarriorMonk_Attack_Windup-02.wav</ShortName>
 					<Path>SFX\WarriorMonk_Attack_Windup-02_10F921B3.wem</Path>
+				</File>
+				<File Id="996784216" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Long_06.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Long_06_10F921B3.wem</Path>
+				</File>
+				<File Id="1012015850" Language="SFX">
+					<ShortName>GDR_Stomp_Water_03.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_03_10F921B3.wem</Path>
 				</File>
 				<File Id="1018557811" Language="SFX">
 					<ShortName>Guru_Heal_01.wav</ShortName>
@@ -82,6 +426,18 @@
 				<File Id="1026334776" Language="SFX">
 					<ShortName>Denounce_Heretic_02.wav</ShortName>
 					<Path>SFX\Denounce_Heretic_02_10F921B3.wem</Path>
+				</File>
+				<File Id="1033993272" Language="SFX">
+					<ShortName>GDR_Death_Sizzle_17.wav</ShortName>
+					<Path>SFX\GDR_Death_Sizzle_17_10F921B3.wem</Path>
+				</File>
+				<File Id="1043293059" Language="SFX">
+					<ShortName>GDR_Stomp_Water_10.wav</ShortName>
+					<Path>SFX\GDR_Stomp_Water_10_10F921B3.wem</Path>
+				</File>
+				<File Id="1043881638" Language="SFX">
+					<ShortName>GDR_Fire_Hand_Long_03.wav</ShortName>
+					<Path>SFX\GDR_Fire_Hand_Long_03_10F921B3.wem</Path>
 				</File>
 				<File Id="1067709023" Language="SFX">
 					<ShortName>WarriorMonk_Twirl04.wav</ShortName>

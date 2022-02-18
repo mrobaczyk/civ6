@@ -33,7 +33,7 @@ include( "GameCapabilities" );
 --	Toggle these for temporary debugging help.
 -- ===========================================================================
 debugFilterEraMaxIndex	= -1;		-- (-1 default) Only load up to a specific ERA (Value less than 1 to disable)
-debugOutputCivicInfo	= false;	-- (false default) Send to console detailed information on tech? 
+debugOutputCivicInfo	= false;	-- (false default) Send to console detailed information on tech?
 debugShowIDWithName		= false;	-- (false default) Show the ID before the name in each node.
 debugShowAllMarkers		= false;	-- (false default) Show all player markers in the timline; even if they haven't been met.
 debugExplicitList		= {};		-- List of indexes to (only) explicitly show. e.g., {0,1,2,3,4} or {5,11,17}
@@ -283,7 +283,7 @@ end
 -- ===========================================================================
 --	Get visual row for tech.
 -- ===========================================================================
-function GetRandomizedTreeRow( uirow:number )	
+function GetRandomizedTreeRow( uirow:number )
 	local range :number = (ROW_MAX - ROW_MIN);
 	local index	:number = ((uirow + m_gameSeed) % range) + 1;
 	uirow = m_kScrambledRowLookup[index];
@@ -425,21 +425,93 @@ function LayoutNodeGrid()
 	m_maxColumns = priorColumns;
 	
 
+	-- Temp grid used to try and avoid large node collisions with other nodes
+	local kNodeCollGrid: table = {};
+
 	-- Create grid used to route lines, determine maximum number of columns.
 	kNodeGrid	 = {};
 	for i = ROW_MIN,ROW_MAX,1 do
 		kNodeGrid[i] = {};
+		kNodeCollGrid[i] = {};
 	end
 	for _,item in pairs(g_kItemDefaults) do	
 		local era		:table  = g_kEras[item.EraType];
 		local columnNum :number = era.PriorColumns + item.Column;
+
+		-- determine if this is a large node
+		local playerId = Game.GetLocalPlayer();
+		local civic:table		= GameInfo.Civics[item.Type];
+		local civicType:string	= civic and civic.CivicType;
+		local unlockableTypes	= GetUnlockablesForCivic_Cached(civicType, playerId);
+		local numUnlocks		:number = 0;
+		local extraUnlocks		:table = {};
+		
+		if unlockableTypes ~= nil then
+			for _, unlockItem in ipairs(unlockableTypes) do
+				local typeInfo = GameInfo.Types[unlockItem[1]];
+
+				if typeInfo.Kind == "KIND_GOVERNMENT" then
+					numUnlocks = numUnlocks + 4;				-- 4 types of policy slots
+				else
+					numUnlocks = numUnlocks + 1;
+				end
+			end
+		end
+
+		-- Include extra icons in total unlocks
+		if ( item.ModifierList ) then
+			for _,tModifier in ipairs(item.ModifierList) do
+				local tIconData :table = g_ExtraIconData[tModifier.ModifierType];
+				if ( tIconData ) then
+					numUnlocks = numUnlocks + 1;
+					hideDescriptionIcon = hideDescriptionIcon or tIconData.HideDescriptionIcon;
+					table.insert(extraUnlocks, {IconData=tIconData, ModifierTable=tModifier});
+				end
+			end
+		end
+
+		if numUnlocks > 8 then
+			item.IsLarge = true;
+		end
 
 		-- Randomize UI tree row (if this game & era does that sort of thing.)
 		if IsEraRandomizingLayout(item.EraType) then
 			item.UITreeRow = GetRandomizedTreeRow(item.UITreeRow);
 		end
 
-		kNodeGrid[item.UITreeRow][columnNum] = true;
+		kNodeCollGrid[item.UITreeRow][columnNum] = item;
+	end
+
+	-- pass 2: fix large node collisions if possible (if we fail, it looks ugly, but will still work)
+	for _,item in pairs(g_kItemDefaults) do
+		local era		:table  = g_kEras[item.EraType];
+		local columnNum :number = era.PriorColumns + item.Column;
+
+		-- is this a large item with a node beneath it?
+		if item.IsLarge and item.UITreeRow < (ROW_MAX - 1) and kNodeCollGrid[item.UITreeRow + 1][columnNum] ~= nil then
+			-- first, see if we can move the large node up
+			if item.UITreeRow > (ROW_MIN + 1) then
+				for i = (item.UITreeRow - 1),ROW_MIN,-1 do
+					-- if there's a 2-high space available, let's use it
+					if kNodeCollGrid[i][columnNum] == nil and (kNodeCollGrid[i][columnNum] == nil or kNodeCollGrid[i][columnNum] == kNodeCollGrid[item.UITreeRow][columnNum]) then
+						kNodeCollGrid[i][columnNum] = kNodeCollGrid[item.UITreeRow][columnNum];
+						kNodeCollGrid[i][columnNum].UITreeRow = item.UITreeRow - 1;
+						kNodeCollGrid[item.UITreeRow][columnNum] = nil;
+						break;
+					end
+				end
+			elseif item.UITreeRow < (ROW_MAX - 3) then
+				-- couldn't move the large node up, try moving the other node down
+				for i = (item.UITreeRow + 2),ROW_MAX,1 do
+					if kNodeCollGrid[i][columnNum] == nil then
+						kNodeCollGrid[i][columnNum] = kNodeCollGrid[item.UITreeRow + 1][columnNum];
+						kNodeCollGrid[i][columnNum].UITreeRow = item.UITreeRow + 2;
+						kNodeCollGrid[item.UITreeRow + 1][columnNum] = nil;
+						break;
+					end
+				end
+			end
+		end
 	end
 
 	return kNodeGrid, kPaths;
@@ -544,6 +616,8 @@ function AllocateUI( kNodeGrid:table, kPaths:table )
 			end
 		end
 
+		local era:table = g_kEras[item.EraType];
+
 		-- Create node based on # of unlocks for this civic.	
 		if numUnlocks <= 8 then
 			node = m_kNodeIM:GetInstance();
@@ -553,7 +627,6 @@ function AllocateUI( kNodeGrid:table, kPaths:table )
 		end
 		node.Top:SetTag( item.Hash );	-- Set the hash of the civic to the tag of the node (for tutorial to be able to callout)
 		
-		local era:table = g_kEras[item.EraType];
 
 		-- Horizontal # = All prior nodes across all previous eras + node position in current era (based on cost vs. other nodes in that era)
 		local horizontal, vertical = ColumnRowToPixelXY(era.PriorColumns + item.Column, item.UITreeRow );
@@ -604,8 +677,8 @@ function AllocateUI( kNodeGrid:table, kPaths:table )
 	--		 consistent regardless of the look.
 	local spaceBetweenColumns:number = COLUMN_WIDTH - SIZE_NODE_X;
 	for _,item in pairs(g_kItemDefaults) do
-		
 		local node:table = g_uiNodes[item.Type];
+		local scanRow:number = item.UITreeRow;
 
 		for _,prereqId in pairs(item.Prereqs) do
 			
@@ -619,6 +692,7 @@ function AllocateUI( kNodeGrid:table, kPaths:table )
 				local prereq :table = g_kItemDefaults[prereqId];
 				if (prereq ~= nil) then
 					previousRow		= prereq.UITreeRow;
+					scanRow			= previousRow;		-- scan the row that this dependancy is on
 					previousColumn	= g_kEras[prereq.EraType].PriorColumns + prereq.Column;
 				else			
 					if table.count(debugExplicitList) == 0 then
@@ -627,12 +701,11 @@ function AllocateUI( kNodeGrid:table, kPaths:table )
 				end
 			end
 			
-			local startColumn	:number = g_kEras[item.EraType].PriorColumns + item.Column;				
+			local startColumn	:number = g_kEras[item.EraType].PriorColumns + item.Column;
 			local column		:number = startColumn - 1;										-- start one back
-			while kNodeGrid[item.UITreeRow][column] == nil and column > previousColumn do		-- keep working backwards until hitting a node
+			while kNodeGrid[scanRow][column] == nil and column > previousColumn do		-- keep working backwards until hitting a node
 				column = column - 1;
 			end
-
 
 			if previousRow == TREE_START_NONE_ID then
 

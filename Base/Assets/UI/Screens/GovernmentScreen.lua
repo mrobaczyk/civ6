@@ -186,7 +186,6 @@ local m_PrevDropTargetSlot		:number = -1;
 -- Which slot is currently hovered? (Stack because multiple things may be moused over, but only one should be on top)
 local m_MouseoverStack :table = {};
 
-
 -- ===========================================================================
 --	FUNCTIONS
 -- ===========================================================================
@@ -580,6 +579,10 @@ function RealizeGovernmentsPage()
 		Controls.UnlockGovernments:SetDisabled(false);
 		AutoSizeGridButton(Controls.UnlockGovernments,150,41,20,"H");
 		--Controls.UnlockGovernmentsContainer:SetSizeX(Controls.UnlockGovernments:GetSizeX() + 50);
+	end
+
+	if(IsReadOnly()) then
+		Controls.UnlockGovernments:SetDisabled(true);
 	end
 
 	pPlayerCulture:SetGovernmentChangeConsidered(true);
@@ -1378,6 +1381,11 @@ function RealizeActivePoliciesRows()
 		end
 		Controls.UnlockPolicies:SetDisabled(false);
 	end
+
+	if(IsReadOnly()) then
+		Controls.UnlockPolicies:SetDisabled(true);
+	end
+
 end
 
 function RealizeActivePolicyRowSize()
@@ -2518,6 +2526,13 @@ function CreatePolicyTabButton(text, callback)
 	instance.Button:SetText( Locale.Lookup(text) );
 	instance.Button:SetToolTipString( Locale.Lookup("LOC_GOVT_FILTER_W_DOTS") .. "[NEWLINE]" .. Locale.Lookup(text));
 	instance.Button:RegisterCallback( Mouse.eLClick, function() OnPolicyFilterClicked( {Func=callback, Description=text} ); end );
+end
+
+-- ===========================================================================
+-- FOR OVERRIDE
+-- ===========================================================================
+function IsReadOnly()
+	return false;
 end
 
 -- ===========================================================================

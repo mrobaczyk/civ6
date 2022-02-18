@@ -225,6 +225,12 @@
     <Row NodeType="Is Near Fallout" NodeId="69" ShapeId="2">
       <Description>Returns true if any unit is within range of fallout and puts all such members in the Endangered list (if there is an operation)</Description>
     </Row>
+    <Row NodeType="LUA Script Condition" NodeId="70" ShapeId="2">
+      <Description>Run a lua script function that returns a boolean value. Only the player is passed in to the script</Description>
+    </Row>
+    <Row NodeType="Operation Military Formation" NodeId="71" ShapeId="1">
+      <Description>Within an operation, attempt to combine units into corps and armies</Description>
+    </Row>
   </NodeDefinitions>
   <NodeDataDefinitions>
     <Row DataName="Max Failures" DefnId="0" DataType="int" NodeType="Concurrent" Required="False" UserData="True" />
@@ -406,6 +412,7 @@
     <Row DataName="Release When Done" DefnId="1" DataType="bool" NodeType="Build Production" Required="False" />
     <Row DataName="Unused" DefnId="0" DataType="int" NodeType="Has Inquisition" Required="False" />
     <Row DataName="Apostle" DefnId="0" DataType="ID List" NodeType="Launch Inquisition" Required="False" />
+    <Row DataName="Target Units" DefnId="0" DataType="bool" NodeType="Operation Launch nuke" Required="False" UserData="True" />
     <Row DataName="Unused" DefnId="0" DataType="int" NodeType="Operation Is Ready" Required="False" />
     <Row DataName="Defensive Improvement" DefnId="0" DataType="bool" NodeType="Build Military Improvement" Required="False" UserData="True" />
     <Row DataName="Specific Improvement" DefnId="1" DataType="string" NodeType="Build Military Improvement" Required="False" UserData="True" />
@@ -418,6 +425,8 @@
     <Row DataName="Fail for no target" DefnId="1" DataType="bool" NodeType="Naval Choose Target" Required="False" UserData="True" />
     <Row DataName="Unused" DefnId="0" DataType="string" NodeType="Naval Pillage" UserData="True" />
     <Row DataName="Range" DefnId="0" DataType="int" NodeType="Is Near Fallout" UserData="True" />
+    <Row DataName="Script Function" DefnId="0" DataType="string" NodeType="LUA Script Condition" UserData="True" />
+    <Row DataName="Unused" DefnId="0" DataType="string" NodeType="Operation Military Formation" Required="False" UserData="True" />
   </NodeDataDefinitions>
   <DataTypes>
     <Row TypeName="UnitTypesList" DataId="0" />
@@ -462,6 +471,7 @@
     <Row TreeName="Naval Superiority Tree" />
     <Row TreeName="Free Cities Assault" />
     <Row TreeName="Civ Royale Behavior" />
+    <Row TreeName="Use Soothsayer" />
   </BehaviorTrees>
   <BehaviorTreeNodes>
     <Row NodeType="Concurrent" NodeId="0" TreeName="Barbarian City Attack" JumpTo="26" />
@@ -617,18 +627,27 @@
     <Row NodeType="Add Goal Tech" NodeId="3" TreeName="Build Trigger Unit" />
     <Row NodeType="Contract Manager Decorator" NodeId="4" TreeName="Build Trigger Unit" JumpTo="6" />
     <Row NodeType="Build Unit" NodeId="5" TreeName="Build Trigger Unit" />
-    <Row NodeType="Concurrent" NodeId="0" TreeName="Civ Royale Behavior" JumpTo="12" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Civ Royale Behavior" JumpTo="21" />
     <Row NodeType="Operation Change Target" NodeId="1" TreeName="Civ Royale Behavior" />
     <Row NodeType="Recruit Units" NodeId="2" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Priority" NodeId="3" TreeName="Civ Royale Behavior" JumpTo="7" />
-    <Row NodeType="Not" NodeId="4" TreeName="Civ Royale Behavior" JumpTo="6" />
-    <Row NodeType="Is Near Fallout" NodeId="5" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Defend Units" NodeId="6" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Make Formation" NodeId="7" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Pillage" NodeId="8" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Pillage" NodeId="9" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Attack Units" NodeId="10" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Move" NodeId="11" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Priority" NodeId="3" TreeName="Civ Royale Behavior" JumpTo="21" />
+    <Row NodeType="Sequence" NodeId="4" TreeName="Civ Royale Behavior" JumpTo="11" />
+    <Row NodeType="LUA Script Condition" NodeId="5" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Concurrent" NodeId="6" TreeName="Civ Royale Behavior" JumpTo="11" />
+    <Row NodeType="Operation Defend Units" NodeId="7" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Launch nuke" NodeId="8" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Attack Units" NodeId="9" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Move" NodeId="10" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Concurrent" NodeId="11" TreeName="Civ Royale Behavior" JumpTo="21" />
+    <Row NodeType="Operation Pillage" NodeId="12" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Priority" NodeId="13" TreeName="Civ Royale Behavior" JumpTo="17" />
+    <Row NodeType="Not" NodeId="14" TreeName="Civ Royale Behavior" JumpTo="16" />
+    <Row NodeType="Is Near Fallout" NodeId="15" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Defend Units" NodeId="16" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Make Formation" NodeId="17" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Pillage" NodeId="18" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Attack Units" NodeId="19" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Move" NodeId="20" TreeName="Civ Royale Behavior" />
     <Row NodeType="Concurrent" NodeId="0" TreeName="Early City Assault" JumpTo="55" />
     <Row NodeType="Decode Trigger" NodeId="1" TreeName="Early City Assault" />
     <Row NodeType="Priority" NodeId="2" TreeName="Early City Assault" JumpTo="5" />
@@ -1002,6 +1021,39 @@
     <Row NodeType="Find Unit Targets" NodeId="2" TreeName="Upgrade Units" />
     <Row NodeType="Upgrade Units" NodeId="3" TreeName="Upgrade Units" />
     <Row NodeType="Move Unit" NodeId="4" TreeName="Upgrade Units" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Use Soothsayer" JumpTo="33" />
+    <Row NodeType="Decode Trigger" NodeId="1" TreeName="Use Soothsayer" />
+    <Row NodeType="Operation Defend Units" NodeId="2" TreeName="Use Soothsayer" />
+    <Row NodeType="Sequence" NodeId="3" TreeName="Use Soothsayer" JumpTo="33" />
+    <Row NodeType="Operation Change Target" NodeId="4" TreeName="Use Soothsayer" />
+    <Row NodeType="Concurrent" NodeId="5" TreeName="Use Soothsayer" JumpTo="15" />
+    <Row NodeType="Priority" NodeId="6" TreeName="Use Soothsayer" JumpTo="15" />
+    <Row NodeType="Find Available Unit" NodeId="7" TreeName="Use Soothsayer" />
+    <Row NodeType="Concurrent" NodeId="8" TreeName="Use Soothsayer" JumpTo="15" />
+    <Row NodeType="Contract Manager Decorator" NodeId="9" TreeName="Use Soothsayer" JumpTo="11" />
+    <Row NodeType="Build Unit" NodeId="10" TreeName="Use Soothsayer" />
+    <Row NodeType="Contract Manager Decorator" NodeId="11" TreeName="Use Soothsayer" JumpTo="15" />
+    <Row NodeType="Concurrent" NodeId="12" TreeName="Use Soothsayer" JumpTo="15" />
+    <Row NodeType="Recruit Units" NodeId="13" TreeName="Use Soothsayer" />
+    <Row NodeType="Operation Move" NodeId="14" TreeName="Use Soothsayer" />
+    <Row NodeType="Priority" NodeId="15" TreeName="Use Soothsayer" JumpTo="22" />
+    <Row NodeType="Operation Is Ready" NodeId="16" TreeName="Use Soothsayer" />
+    <Row NodeType="Concurrent" NodeId="17" TreeName="Use Soothsayer" JumpTo="22" />
+    <Row NodeType="Recruit Units" NodeId="18" TreeName="Use Soothsayer" />
+    <Row NodeType="Make Formation" NodeId="19" TreeName="Use Soothsayer" />
+    <Row NodeType="Operation Attack Units" NodeId="20" TreeName="Use Soothsayer" />
+    <Row NodeType="Operation Move" NodeId="21" TreeName="Use Soothsayer" />
+    <Row NodeType="Lock Units" NodeId="22" TreeName="Use Soothsayer" />
+    <Row NodeType="Concurrent" NodeId="23" TreeName="Use Soothsayer" JumpTo="30" />
+    <Row NodeType="Operation Change Target" NodeId="24" TreeName="Use Soothsayer" />
+    <Row NodeType="Recruit Units" NodeId="25" TreeName="Use Soothsayer" />
+    <Row NodeType="Make Formation" NodeId="26" TreeName="Use Soothsayer" />
+    <Row NodeType="Operation Attack Units" NodeId="27" TreeName="Use Soothsayer" />
+    <Row NodeType="Operation Naval Escort" NodeId="28" TreeName="Use Soothsayer" />
+    <Row NodeType="Operation Move" NodeId="29" TreeName="Use Soothsayer" />
+    <Row NodeType="Concurrent" NodeId="30" TreeName="Use Soothsayer" JumpTo="33" />
+    <Row NodeType="Operation Move" NodeId="31" TreeName="Use Soothsayer" />
+    <Row NodeType="Settle" NodeId="32" TreeName="Use Soothsayer" />
   </BehaviorTreeNodes>
   <TreeData>
     <Row DefnId="0" NodeId="1" TreeName="Barbarian City Attack" DefaultData="66" />
@@ -1067,7 +1119,7 @@
     <Row DefnId="1" NodeId="3" TreeName="Barbarian Found City" DefaultData=".25" />
     <Row DefnId="1" NodeId="4" TreeName="Barbarian Found City" Tag="Home Camp" />
     <Row DefnId="2" NodeId="4" TreeName="Barbarian Found City" DefaultData="1" />
-    <Row DefnId="3" NodeId="4" TreeName="Barbarian Found City" DefaultData="false" />
+    <Row DefnId="3" NodeId="4" TreeName="Barbarian Found City" DefaultData="true" />
     <Row DefnId="4" NodeId="4" TreeName="Barbarian Found City" DefaultData="1" />
     <Row DefnId="0" NodeId="5" TreeName="Barbarian Found City" Tag="Tribe Index" />
     <Row DefnId="0" NodeId="1" TreeName="Build City Building" Tag="Needed Unit" />
@@ -1440,23 +1492,38 @@
     <Row DefnId="2" NodeId="2" TreeName="Civ Royale Behavior" DefaultData="-1" />
     <Row DefnId="3" NodeId="2" TreeName="Civ Royale Behavior" DefaultData="false" />
     <Row DefnId="6" NodeId="2" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="0" NodeId="5" TreeName="Civ Royale Behavior" DefaultData="4" />
-    <Row DefnId="0" NodeId="6" TreeName="Civ Royale Behavior" DefaultData="50" />
-    <Row DefnId="1" NodeId="6" TreeName="Civ Royale Behavior" DefaultData="-1" />
-    <Row DefnId="1" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="UNITAI_COMBAT" />
-    <Row DefnId="2" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="UNITTYPE_CIVILIAN" />
-    <Row DefnId="3" NodeId="7" TreeName="Civ Royale Behavior" />
-    <Row DefnId="4" NodeId="7" TreeName="Civ Royale Behavior" />
-    <Row DefnId="2" NodeId="8" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="1" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="0" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="1" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="2" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="1" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="4" />
-    <Row DefnId="3" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="6" />
-    <Row DefnId="4" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
-    <Row DefnId="5" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="6" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="5" TreeName="Civ Royale Behavior" DefaultData="CivRoyale_SmallSafeZone" />
+    <Row DefnId="0" NodeId="6" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="0" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="0" />
+    <Row DefnId="1" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="0" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="2" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="3" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="4" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="3" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="6" />
+    <Row DefnId="4" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
+    <Row DefnId="5" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="6" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="1" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="2" NodeId="12" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="15" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="0" NodeId="16" TreeName="Civ Royale Behavior" DefaultData="50" />
+    <Row DefnId="1" NodeId="16" TreeName="Civ Royale Behavior" DefaultData="-1" />
+    <Row DefnId="1" NodeId="17" TreeName="Civ Royale Behavior" DefaultData="UNITAI_COMBAT" />
+    <Row DefnId="2" NodeId="17" TreeName="Civ Royale Behavior" DefaultData="UNITTYPE_CIVILIAN" />
+    <Row DefnId="3" NodeId="17" TreeName="Civ Royale Behavior" />
+    <Row DefnId="4" NodeId="17" TreeName="Civ Royale Behavior" />
+    <Row DefnId="1" NodeId="18" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="19" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="19" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="2" NodeId="19" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="1" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="3" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="0" />
+    <Row DefnId="4" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
+    <Row DefnId="5" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="6" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="true" />
     <Row DefnId="0" NodeId="1" TreeName="Early City Assault" Tag="Unused" />
     <Row DefnId="1" NodeId="1" TreeName="Early City Assault" />
     <Row DefnId="2" NodeId="1" TreeName="Early City Assault" />
@@ -2219,5 +2286,83 @@
     <Row DefnId="4" NodeId="1" TreeName="Upgrade Units" />
     <Row DefnId="0" NodeId="2" TreeName="Upgrade Units" DefaultData="true" />
     <Row DefnId="3" NodeId="4" TreeName="Upgrade Units" DefaultData="false" />
+    <Row DefnId="0" NodeId="1" TreeName="Use Soothsayer" Tag="Soothsayer" />
+    <Row DefnId="1" NodeId="1" TreeName="Use Soothsayer" />
+    <Row DefnId="2" NodeId="1" TreeName="Use Soothsayer" />
+    <Row DefnId="3" NodeId="1" TreeName="Use Soothsayer" />
+    <Row DefnId="4" NodeId="1" TreeName="Use Soothsayer" />
+    <Row DefnId="5" NodeId="1" TreeName="Use Soothsayer" />
+    <Row DefnId="6" NodeId="1" TreeName="Use Soothsayer" />
+    <Row DefnId="7" NodeId="1" TreeName="Use Soothsayer" />
+    <Row DefnId="8" NodeId="1" TreeName="Use Soothsayer" Tag="Soothsayer Worth" />
+    <Row DefnId="0" NodeId="4" TreeName="Use Soothsayer" DefaultData="-1.5" />
+    <Row DefnId="1" NodeId="4" TreeName="Use Soothsayer" DefaultData="-3" />
+    <Row DefnId="0" NodeId="7" TreeName="Use Soothsayer" Tag="SoothsayerUnitList" />
+    <Row DefnId="2" NodeId="7" TreeName="Use Soothsayer" Tag="Soothsayer" />
+    <Row DefnId="3" NodeId="7" TreeName="Use Soothsayer" />
+    <Row DefnId="4" NodeId="7" TreeName="Use Soothsayer" DefaultData="UNIT_SOOTHSAYER" />
+    <Row DefnId="0" NodeId="9" TreeName="Use Soothsayer" Tag="Soothsayer Build Contract" />
+    <Row DefnId="1" NodeId="9" TreeName="Use Soothsayer" />
+    <Row DefnId="2" NodeId="9" TreeName="Use Soothsayer" DefaultData="10" />
+    <Row DefnId="3" NodeId="9" TreeName="Use Soothsayer" DefaultData="1" />
+    <Row DefnId="0" NodeId="10" TreeName="Use Soothsayer" Tag="SoothsayerUnitList" />
+    <Row DefnId="1" NodeId="10" TreeName="Use Soothsayer" />
+    <Row DefnId="3" NodeId="10" TreeName="Use Soothsayer" DefaultData="0" />
+    <Row DefnId="4" NodeId="10" TreeName="Use Soothsayer" Tag="Soothsayer Build Contract" />
+    <Row DefnId="6" NodeId="10" TreeName="Use Soothsayer" />
+    <Row DefnId="8" NodeId="10" TreeName="Use Soothsayer" Tag="Soothsayer Worth" />
+    <Row DefnId="0" NodeId="11" TreeName="Use Soothsayer" Tag="Soothsayer Build Contract" />
+    <Row DefnId="1" NodeId="11" TreeName="Use Soothsayer" />
+    <Row DefnId="2" NodeId="11" TreeName="Use Soothsayer" DefaultData="-1" />
+    <Row DefnId="3" NodeId="11" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="4" NodeId="11" TreeName="Use Soothsayer" DefaultData="5" />
+    <Row DefnId="0" NodeId="12" TreeName="Use Soothsayer" DefaultData="2" />
+    <Row DefnId="0" NodeId="13" TreeName="Use Soothsayer" DefaultData="0" />
+    <Row DefnId="3" NodeId="13" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="4" NodeId="13" TreeName="Use Soothsayer" Tag="Soothsayer Worth" />
+    <Row DefnId="0" NodeId="14" TreeName="Use Soothsayer" DefaultData="0" />
+    <Row DefnId="1" NodeId="14" TreeName="Use Soothsayer" DefaultData="2" />
+    <Row DefnId="2" NodeId="14" TreeName="Use Soothsayer" DefaultData="true" />
+    <Row DefnId="3" NodeId="14" TreeName="Use Soothsayer" DefaultData="2" />
+    <Row DefnId="0" NodeId="18" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="3" NodeId="18" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="4" NodeId="18" TreeName="Use Soothsayer" Tag="Soothsayer Worth" />
+    <Row DefnId="1" NodeId="19" TreeName="Use Soothsayer" DefaultData="UNITAI_COMBAT" />
+    <Row DefnId="2" NodeId="19" TreeName="Use Soothsayer" DefaultData="UNITTYPE_SOOTHSAYER" />
+    <Row DefnId="3" NodeId="19" TreeName="Use Soothsayer" />
+    <Row DefnId="4" NodeId="19" TreeName="Use Soothsayer" />
+    <Row DefnId="0" NodeId="20" TreeName="Use Soothsayer" DefaultData="true" />
+    <Row DefnId="1" NodeId="20" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="2" NodeId="20" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="0" NodeId="21" TreeName="Use Soothsayer" DefaultData="0" />
+    <Row DefnId="1" NodeId="21" TreeName="Use Soothsayer" DefaultData="2" />
+    <Row DefnId="2" NodeId="21" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="3" NodeId="21" TreeName="Use Soothsayer" DefaultData="1" />
+    <Row DefnId="4" NodeId="21" TreeName="Use Soothsayer" DefaultData="UNITTYPE_SOOTHSAYER" />
+    <Row DefnId="5" NodeId="21" TreeName="Use Soothsayer" DefaultData="true" />
+    <Row DefnId="0" NodeId="22" TreeName="Use Soothsayer" DefaultData="true" />
+    <Row DefnId="0" NodeId="24" TreeName="Use Soothsayer" DefaultData="0.5" />
+    <Row DefnId="1" NodeId="24" TreeName="Use Soothsayer" DefaultData="-2" />
+    <Row DefnId="2" NodeId="24" TreeName="Use Soothsayer" DefaultData="False" />
+    <Row DefnId="3" NodeId="24" TreeName="Use Soothsayer" DefaultData="UNITTYPE_SOOTHSAYER" />
+    <Row DefnId="0" NodeId="25" TreeName="Use Soothsayer" DefaultData="1" />
+    <Row DefnId="4" NodeId="25" TreeName="Use Soothsayer" Tag="Soothsayer Worth" />
+    <Row DefnId="1" NodeId="26" TreeName="Use Soothsayer" DefaultData="UNITAI_COMBAT" />
+    <Row DefnId="2" NodeId="26" TreeName="Use Soothsayer" DefaultData="UNITTYPE_SOOTHSAYER" />
+    <Row DefnId="3" NodeId="26" TreeName="Use Soothsayer" />
+    <Row DefnId="4" NodeId="26" TreeName="Use Soothsayer" />
+    <Row DefnId="0" NodeId="27" TreeName="Use Soothsayer" DefaultData="true" />
+    <Row DefnId="1" NodeId="27" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="0" NodeId="28" TreeName="Use Soothsayer" DefaultData="1" />
+    <Row DefnId="0" NodeId="29" TreeName="Use Soothsayer" DefaultData="1" />
+    <Row DefnId="1" NodeId="29" TreeName="Use Soothsayer" DefaultData="0" />
+    <Row DefnId="2" NodeId="29" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="3" NodeId="29" TreeName="Use Soothsayer" DefaultData="-2" />
+    <Row DefnId="4" NodeId="29" TreeName="Use Soothsayer" DefaultData="UNITTYPE_SOOTHSAYER" />
+    <Row DefnId="0" NodeId="31" TreeName="Use Soothsayer" DefaultData="1" />
+    <Row DefnId="1" NodeId="31" TreeName="Use Soothsayer" DefaultData="0" />
+    <Row DefnId="2" NodeId="31" TreeName="Use Soothsayer" DefaultData="false" />
+    <Row DefnId="3" NodeId="31" TreeName="Use Soothsayer" DefaultData="0" />
+    <Row DefnId="4" NodeId="31" TreeName="Use Soothsayer" DefaultData="UNITTYPE_SOOTHSAYER" />
   </TreeData>
 </GameInfo>

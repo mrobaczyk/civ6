@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<GameInfo>
+  <GoodyHuts>
+    <Row GoodyHutType="METEOR_GOODIES" ImprovementType="IMPROVEMENT_METEOR_GOODY" ShowMoment="False" Weight="100"/>
+  </GoodyHuts>
+  <GoodyHutSubTypes>
+    <Row GoodyHut="METEOR_GOODIES" SubTypeGoodyHut="METEOR_GRANT_GOODIES"	Description="LOC_METEOR_GOODIES_GRANT_UNIT_DESCRIPTION" Weight="100" ModifierID="GOODY_METEOR_FREE_UNIT"/>
+  </GoodyHutSubTypes>
+  <Modifiers>
+    <Row>
+      <ModifierId>GOODY_METEOR_FREE_UNIT</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_GRANT_ADVANCED_UNIT_OF_CLASS_IN_NEAREST_OWNER_CITY_AND_APPLY_ABILITY</ModifierType>
+      <RunOnce>true</RunOnce>
+      <Permanent>true</Permanent>
+    </Row>
+    <Row>
+      <ModifierId>GOODY_METEOR_UNIT_REFUND_COST</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_IGNORE_RESOURCE_MAINTENANCE</ModifierType>
+    </Row>
+  </Modifiers>
+  <ModifierArguments>
+    <Row>
+      <ModifierId>GOODY_METEOR_FREE_UNIT</ModifierId>
+      <Name>UnitPromotionClassType</Name>
+      <Value>PROMOTION_CLASS_HEAVY_CAVALRY</Value>
+    </Row>
+    <Row>
+      <ModifierId>GOODY_METEOR_FREE_UNIT</ModifierId>
+      <Name>ModifierId</Name>
+      <Value>GOODY_METEOR_UNIT_REFUND_COST</Value>
+    </Row>
+    <Row>
+      <ModifierId>GOODY_METEOR_UNIT_REFUND_COST</ModifierId>
+      <Name>Ignore</Name>
+      <Value>true</Value>
+    </Row>
+  </ModifierArguments>
+  
+</GameInfo>

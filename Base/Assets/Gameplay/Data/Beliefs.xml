@@ -2257,6 +2257,11 @@
 			<RequirementType>REQUIREMENT_UNIT_TAG_MATCHES</RequirementType>
 			<Inverse>true</Inverse>
 		</Row>
+    <Row>
+      <RequirementId>REQUIRES_NON_SUPPORT_UNIT</RequirementId>
+      <RequirementType>REQUIREMENT_UNIT_TAG_MATCHES</RequirementType>
+      <Inverse>true</Inverse>
+    </Row>
 	</Requirements>
 	<RequirementArguments>
 		<Row>
@@ -2404,6 +2409,11 @@
 			<Name>Tag</Name>
 			<Value>CLASS_RELIGIOUS</Value>
 		</Row>
+    <Row>
+      <RequirementId>REQUIRES_NON_SUPPORT_UNIT</RequirementId>
+      <Name>Tag</Name>
+      <Value>CLASS_SUPPORT</Value>
+    </Row>
 	</RequirementArguments>
 	<RequirementSetRequirements>
 		<Row>
@@ -2438,6 +2448,10 @@
 			<RequirementSetId>DEFENDER_OF_FAITH_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_NON_RELIGIOUS_UNIT</RequirementId>
 		</Row>
+    <Row>
+      <RequirementSetId>DEFENDER_OF_FAITH_REQUIREMENTS</RequirementSetId>
+      <RequirementId>REQUIRES_NON_SUPPORT_UNIT</RequirementId>
+    </Row>
 		<Row>
 			<RequirementSetId>JUST_WAR_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_FOUNDED_RELIGION</RequirementId>
@@ -2450,6 +2464,10 @@
 			<RequirementSetId>JUST_WAR_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_NON_RELIGIOUS_UNIT</RequirementId>
 		</Row>
+    <Row>
+      <RequirementSetId>JUST_WAR_REQUIREMENTS</RequirementSetId>
+      <RequirementId>REQUIRES_NON_SUPPORT_UNIT</RequirementId>
+    </Row>
 		<Row>
 			<RequirementSetId>CITY_FOLLOWS_RELIGION_HAS_SHRINE</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_FOLLOWS_RELIGION</RequirementId>

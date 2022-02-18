@@ -133,6 +133,7 @@ CREATE TABLE "AiOperationDefs" (
 		"OperationType" TEXT,
 		"AllowTargetUpdate" BOOLEAN NOT NULL CHECK (AllowTargetUpdate IN (0,1)) DEFAULT 1,
 		"TargetLuaScript" TEXT,
+		"ActiveEmergency" TEXT,
 		PRIMARY KEY(OperationName),
 		FOREIGN KEY (BehaviorTree) REFERENCES BehaviorTrees(TreeName) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (TargetType) REFERENCES TargetTypes(TargetType) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -667,7 +668,7 @@ CREATE TABLE "CivilopediaPageChapterParagraphs" (
 		"ChapterId" TEXT NOT NULL,
 		"Paragraph" LocalizedText NOT NULL,
 		"SortIndex" INTEGER NOT NULL DEFAULT 0,
-		PRIMARY KEY(SectionId, PageId, ChapterId));
+		PRIMARY KEY(SectionId, PageId, ChapterId, Paragraph));
 
 -- This table specifies pages that should be hidden from the civilopedia.
 CREATE TABLE "CivilopediaPageExcludes" (
@@ -1164,6 +1165,7 @@ CREATE TABLE "Features" (
 		"QuoteAudio" TEXT,
 		"Settlement" BOOLEAN NOT NULL CHECK (Settlement IN (0,1)) DEFAULT 1,
 		"FollowRulesInWB" BOOLEAN NOT NULL CHECK (FollowRulesInWB IN (0,1)) DEFAULT 1,
+		"DangerValue" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(FeatureType),
 		FOREIGN KEY (RemoveTech) REFERENCES Technologies(TechnologyType) ON DELETE SET NULL ON UPDATE CASCADE,
 		FOREIGN KEY (AddCivic) REFERENCES Civics(CivicType) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -1212,6 +1214,14 @@ CREATE TABLE "Feature_Removes" (
 		PRIMARY KEY(FeatureType, YieldType),
 		FOREIGN KEY (FeatureType) REFERENCES Features(FeatureType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+-- Unit Movement modifiers for a feature
+CREATE TABLE "Feature_UnitMovements" (
+		"FeatureType" TEXT NOT NULL,
+		"AllowPassthrough" BOOLEAN NOT NULL CHECK (AllowPassthrough IN (0,1)) DEFAULT 1,
+		"AllowDestination" BOOLEAN NOT NULL CHECK (AllowDestination IN (0,1)) DEFAULT 1,
+		PRIMARY KEY(FeatureType),
+		FOREIGN KEY (FeatureType) REFERENCES Features(FeatureType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Feature_ValidTerrains" (
 		"FeatureType" TEXT NOT NULL,
@@ -1317,6 +1327,7 @@ CREATE TABLE "GoodyHuts" (
 		"GoodyHutType" TEXT NOT NULL,
 		"ImprovementType" TEXT NOT NULL DEFAULT "IMPROVEMENT_GOODY_HUT",
 		"Weight" INTEGER NOT NULL,
+		"ShowMoment" BOOLEAN NOT NULL CHECK (ShowMoment IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(GoodyHutType),
 		FOREIGN KEY (ImprovementType) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1408,6 +1419,8 @@ CREATE TABLE "GreatPersonClasses" (
 		"PseudoYieldType" TEXT,
 		"IconString" TEXT NOT NULL,
 		"ActionIcon" TEXT NOT NULL,
+		"AvailableInTimeline" BOOLEAN NOT NULL CHECK (AvailableInTimeline IN (0,1)) DEFAULT 1,
+		"GenerateDuplicateIndividuals" BOOLEAN NOT NULL CHECK (GenerateDuplicateIndividuals IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(GreatPersonClassType),
 		FOREIGN KEY (UnitType) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (DistrictType) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1434,6 +1447,10 @@ CREATE TABLE "GreatPersonIndividuals" (
 		"ActionRequiresPlayerRelicSlot" BOOLEAN NOT NULL CHECK (ActionRequiresPlayerRelicSlot IN (0,1)) DEFAULT 0,
 		"ActionRequiresMilitaryUnitDomain" TEXT,
 		"ActionRequiresUnitMilitaryFormation" TEXT,
+		"ActionRequiresNearbyUnitWithTagA" TEXT,
+		"ActionRequiresNearbyUnitWithTagB" TEXT,
+		"ActionRequiresLandMilitaryUnitWithinXTiles" INTEGER,
+		"ActionRequiresEnemyMilitaryUnitWithinXTiles" INTEGER,
 		"ActionRequiresCityGreatWorkObjectType" TEXT,
 		"ActionRequiresCompletedDistrictType" TEXT,
 		"ActionRequiresMissingBuildingType" TEXT,
@@ -1581,6 +1598,12 @@ CREATE TABLE "Improvements" (
 		"MovementChange" INTEGER NOT NULL DEFAULT 0,
 		"Workable" BOOLEAN NOT NULL CHECK (Workable IN (0,1)) DEFAULT 1,
 		"ImprovementOnRemove" TEXT,
+		"GoodyNotify" BOOLEAN NOT NULL CHECK (GoodyNotify IN (0,1)) DEFAULT 1,
+		"NoAdjacentSpecialtyDistrict" BOOLEAN NOT NULL CHECK (NoAdjacentSpecialtyDistrict IN (0,1)) DEFAULT 0,
+		"RequiresAdjacentLuxury" BOOLEAN NOT NULL CHECK (RequiresAdjacentLuxury IN (0,1)) DEFAULT 0,
+		"AdjacentToLand" BOOLEAN NOT NULL CHECK (AdjacentToLand IN (0,1)) DEFAULT 0,
+		"Removable" BOOLEAN NOT NULL CHECK (Removable IN (0,1)) DEFAULT 1,
+		"OnlyOpenBorders" BOOLEAN NOT NULL CHECK (OnlyOpenBorders IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(ImprovementType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -1751,6 +1774,8 @@ CREATE TABLE "LoadingInfo" (
 		"EraText" TEXT,
 		"LeaderText" TEXT,
 		"PlayDawnOfManAudio" BOOLEAN NOT NULL CHECK (PlayDawnOfManAudio IN (0,1)) DEFAULT 1,
+		"DawnOfManLeaderId" TEXT,
+		"DawnOfManEraId" TEXT,
 		PRIMARY KEY(LeaderType),
 		FOREIGN KEY (LeaderType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1853,6 +1878,7 @@ CREATE TABLE "Modifiers" (
 		"RunOnce" BOOLEAN NOT NULL CHECK (RunOnce IN (0,1)) DEFAULT 0,
 		"NewOnly" BOOLEAN NOT NULL CHECK (NewOnly IN (0,1)) DEFAULT 0,
 		"Permanent" BOOLEAN NOT NULL CHECK (Permanent IN (0,1)) DEFAULT 0,
+		"Repeatable" BOOLEAN CHECK (Repeatable IN (0,1)) DEFAULT 0,
 		"OwnerRequirementSetId" TEXT,
 		"SubjectRequirementSetId" TEXT,
 		"OwnerStackLimit" INTEGER,
@@ -2240,6 +2266,12 @@ CREATE TABLE "Route_ValidBuildUnits" (
 CREATE TABLE "SavingTypes" (
 		"SavingType" TEXT NOT NULL,
 		PRIMARY KEY(SavingType));
+
+CREATE TABLE "ScenarioSpecificCommand" (
+		"TraitName" TEXT NOT NULL DEFAULT "The leader or civ trait this command is hooked up to",
+		"CommandName" TEXT NOT NULL,
+		"TargetHeuristic" TEXT DEFAULT "The heuristic the AI uses to determine when to use this. Note that it will not, in general, understand its own cooldown if it is done in lua",
+		PRIMARY KEY(TraitName, CommandName));
 
 CREATE TABLE "ScoringCategories" (
 		"CategoryType" TEXT NOT NULL,
@@ -2660,6 +2692,7 @@ CREATE TABLE "Units" (
 		"AdvisorType" TEXT,
 		"EnabledByReligion" BOOLEAN NOT NULL CHECK (EnabledByReligion IN (0,1)) DEFAULT 0,
 		"TrackReligion" BOOLEAN NOT NULL CHECK (TrackReligion IN (0,1)) DEFAULT 0,
+		"DisasterCharges" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(UnitType),
 		FOREIGN KEY (Flavor) REFERENCES Flavors(FlavorType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -2699,6 +2732,7 @@ CREATE TABLE "UnitAbilities" (
 		"Description" LocalizedText,
 		"Inactive" BOOLEAN NOT NULL CHECK (Inactive IN (0,1)) DEFAULT 0,
 		"ShowFloatTextWhenEarned" BOOLEAN NOT NULL CHECK (ShowFloatTextWhenEarned IN (0,1)) DEFAULT 0,
+		"Permanent" BOOLEAN NOT NULL CHECK (Permanent IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(UnitAbilityType));
 
 CREATE TABLE "UnitAbilityModifiers" (
@@ -3069,6 +3103,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Features", "NotNearFeatures", "Features", 1,"SELECT T1.rowid from Features as T1 inner join Feature_NotNearFeatures as T2 on T2.FeatureTypeAvoid = T1.FeatureType inner join Features as T3 on T3.FeatureType = T2.FeatureType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Features", "RemoveTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join Features as T2 on T2.RemoveTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Features", "StartBiasFeatureCollection", "StartBiasFeatures", 1,"SELECT T1.rowid from StartBiasFeatures as T1 inner join Features as T2 on T2.FeatureType = T1.FeatureType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Features", "UnitMovements", "Feature_UnitMovements", 1,"SELECT T1.rowid from Feature_UnitMovements as T1 inner join Features as T2 on T2.FeatureType = T1.FeatureType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Features", "ValidTerrains", "Terrains", 1,"SELECT T1.rowid from Terrains as T1 inner join Feature_ValidTerrains as T2 on T2.TerrainType = T1.TerrainType inner join Features as T3 on T3.FeatureType = T2.FeatureType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Features", "YieldChanges", "Feature_YieldChanges", 1,"SELECT T1.rowid from Feature_YieldChanges as T1 inner join Features as T2 on T2.FeatureType = T1.FeatureType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Feature_AdjacentYields", "YieldReference", "Yields", 0,"SELECT T1.rowid from Yields as T1 inner join Feature_AdjacentYields as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");

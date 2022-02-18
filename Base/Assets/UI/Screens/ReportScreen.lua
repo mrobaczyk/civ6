@@ -1494,11 +1494,13 @@ function UpdatePageInstance()
 	m_uiPaginationInstance.LeftJumpStack:SetHide( m_CurrentGossipPage < 4 );
 	m_uiPaginationInstance.FirstButton:SetVoid1( 1 );
 	m_uiPaginationInstance.FirstButton:RegisterCallback( Mouse.eLClick, NavCallback );
+	m_uiPaginationInstance.FirstButton:RegisterCallback( Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 
 	--Same for the right, but for max pages
 	m_uiPaginationInstance.RightJumpStack:SetHide( (m_MaxPages - m_CurrentGossipPage) < 3 );
 	m_uiPaginationInstance.LastButton:SetVoid1( m_MaxPages );
 	m_uiPaginationInstance.LastButton:RegisterCallback( Mouse.eLClick, NavCallback );
+	m_uiPaginationInstance.LastButton:RegisterCallback( Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	m_uiPaginationInstance.LastButton:SetText(m_MaxPages);
 
 
@@ -1508,6 +1510,7 @@ function UpdatePageInstance()
 		m_uiPaginationInstance.Button1:SetText(m_CurrentGossipPage - 2);
 		m_uiPaginationInstance.Button1:SetVoid1(m_CurrentGossipPage - 2);
 		m_uiPaginationInstance.Button1:RegisterCallback(Mouse.eLClick, NavCallback);
+		m_uiPaginationInstance.Button1:RegisterCallback(Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	else
 		m_uiPaginationInstance.Button1:SetHide(true);
 	end
@@ -1517,6 +1520,7 @@ function UpdatePageInstance()
 		m_uiPaginationInstance.Button2:SetText(m_CurrentGossipPage - 1);
 		m_uiPaginationInstance.Button2:SetVoid1(m_CurrentGossipPage - 1);
 		m_uiPaginationInstance.Button2:RegisterCallback(Mouse.eLClick, NavCallback);
+		m_uiPaginationInstance.Button2:RegisterCallback(Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	else
 		m_uiPaginationInstance.Button2:SetHide(true);
 	end
@@ -1527,6 +1531,7 @@ function UpdatePageInstance()
 		m_uiPaginationInstance.Button3:SetText(m_CurrentGossipPage);
 		m_uiPaginationInstance.Button3:SetVoid1(m_CurrentGossipPage);
 		m_uiPaginationInstance.Button3:RegisterCallback(Mouse.eLClick, NavCallback);
+		m_uiPaginationInstance.Button3:RegisterCallback(Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	else
 		--This is a fail case
 		UI.DataError("Current Page is 0! Gossip Reports, UpdatePageInstance.");
@@ -1537,6 +1542,7 @@ function UpdatePageInstance()
 		m_uiPaginationInstance.Button4:SetText(m_CurrentGossipPage + 1);
 		m_uiPaginationInstance.Button4:SetVoid1(m_CurrentGossipPage + 1);
 		m_uiPaginationInstance.Button4:RegisterCallback(Mouse.eLClick, NavCallback);
+		m_uiPaginationInstance.Button4:RegisterCallback(Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	else
 		m_uiPaginationInstance.Button4:SetHide(true);
 	end
@@ -1546,6 +1552,7 @@ function UpdatePageInstance()
 		m_uiPaginationInstance.Button5:SetText(m_CurrentGossipPage + 2);
 		m_uiPaginationInstance.Button5:SetVoid1(m_CurrentGossipPage + 2);
 		m_uiPaginationInstance.Button5:RegisterCallback(Mouse.eLClick, NavCallback);
+		m_uiPaginationInstance.Button5:RegisterCallback(Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	else
 		m_uiPaginationInstance.Button5:SetHide(true);
 	end
@@ -1554,10 +1561,12 @@ function UpdatePageInstance()
 	m_uiPaginationInstance.LeftArrow:SetDisabled(m_CurrentGossipPage == 1);
 	m_uiPaginationInstance.LeftArrow:SetVoid1(m_CurrentGossipPage - 1);
 	m_uiPaginationInstance.LeftArrow:RegisterCallback(Mouse.eLClick, NavCallback);
+	m_uiPaginationInstance.LeftArrow:RegisterCallback(Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 
 	m_uiPaginationInstance.RightArrow:SetDisabled(m_CurrentGossipPage >= m_MaxPages);
 	m_uiPaginationInstance.RightArrow:SetVoid1(m_CurrentGossipPage + 1);
 	m_uiPaginationInstance.RightArrow:RegisterCallback(Mouse.eLClick, NavCallback);
+	m_uiPaginationInstance.RightArrow:RegisterCallback(Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 
 	local kAliveLeaders:table = PlayerManager.GetAliveMajorIDs();
 	local kGroupFiltersToShow:table = {};

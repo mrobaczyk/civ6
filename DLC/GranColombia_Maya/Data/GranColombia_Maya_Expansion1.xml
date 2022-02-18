@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Expansion 1 specific data -->
+<GameInfo>
+  <MomentIllustrations>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_MAYAN_HULCHE" Texture="MomentSTK_Hulche.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COMANDANTE_GENERAL" Texture="MomentSTK_ComandanteGeneral.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COLOMBIAN_LLANERO" Texture="MomentSTK_Llanero.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_OBSERVATORY" Texture="MomentSTK_Observatory.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_HACIENDA" Texture="MomentSTK_Hacienda.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_BERMUDA_TRIANGLE" Texture="MomentSTK_BermudaTriangle.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_FOUNTAIN_OF_YOUTH" Texture="MomentSTK_FountainOfYouth.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_PAITITI" Texture="MomentSTK_Paititi.dds"/>
+  </MomentIllustrations>
+	<StartBiasResources>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_OLIVES" Tier="2"/>
+	</StartBiasResources>
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_OBSERVATORY" YieldChangeId="Government_Science"/>
+	</District_Adjacencies>
+	<Traits>
+	    <Update>
+	      <Where TraitType="TRAIT_LEADER_CAMPANA_ADMIRABLE"/>
+	      <Set>
+	        <Description>LOC_TRAIT_LEADER_CAMPANA_ADMIRABLE_DESCRIPTION_XP1</Description>
+	      </Set>
+	    </Update>
+	</Traits>
+	<GreatPersonIndividualActionModifiers>
+		<Update>
+			<Where GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_COMMANDANTE_PAULA_SANTANDER" ModifierId="GREAT_PERSON_INDIVIDUAL_COMMANDANTE_RANDOM_CIVIC"/>
+			<Set>
+				<ModifierId>GREAT_PERSON_INDIVIDUAL_COMMANDANTE_GOVERNOR_TITLE</ModifierId>
+				<AttachmentTargetType>GREAT_PERSON_ACTION_ATTACHMENT_TARGET_PLAYER</AttachmentTargetType>
+			</Set>
+		</Update>
+	</GreatPersonIndividualActionModifiers>
+</GameInfo>

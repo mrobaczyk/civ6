@@ -43,11 +43,11 @@ include( "GameCapabilities" );
 -- ===========================================================================
 debugFilterEraMaxIndex	= -1;		-- (-1 default) Only load up to a specific ERA (Value less than 1 to disable)
 debugFilterTechMaxIndex	= -1;		-- (-1 default) maximum index to fill the tree with, this is overriden by the debug explicit list.
-debugOutputTechInfo		= false;	-- (false default) Send to console detailed information on tech? 
+debugOutputTechInfo		= false;	-- (false default) Send to console detailed information on tech?
 debugShowIDWithName		= false;	-- (false default) Show the ID before the name in each node.
 debugShowAllMarkers		= false;	-- (false default) Show all player markers in the timline; even if they haven't been met.
 debugExplicitList		= {};		-- List of indexes to (only) explicitly show. e.g., {0,1,2,3,4} or {5,11,17}
-
+debugExcludeList		= {};		-- list of indexes to NOT show (the opposite of debugExplicitList)
 
 -- ===========================================================================
 --	GLOBALS
@@ -282,28 +282,6 @@ function RealizePathMarkers()
 end
 
 -- ===========================================================================
---	Does the era randomize layout?
--- ===========================================================================
-function IsEraRandomizingLayout( eraType:string )
-	-- TODO: Remove ERA_FUTURE check and instead look for TechTreeLayoutMethod (RandomCost) or (RandomPrereq);
-	local hasLayoutMethod	:boolean = g_kEras[eraType].TechTreeLayoutMethod ~= nil;
-	local isUsingPrereq		:boolean = g_kEras[eraType].TechTreeLayoutMethod == "Cost";
-	local isFutureEra		:boolean = eraType=="ERA_FUTURE";
-	return hasLayoutMethod and isUsingPrereq and isFutureEra;
-end
-
--- ===========================================================================
---	Get visual row for tech.
--- ===========================================================================
-function GetRandomizedTreeRow( uirow:number )	
-	local range :number = (ROW_MAX - ROW_MIN);
-	local index	:number = ((uirow + m_gameSeed) % range) + 1;
-	uirow = m_kScrambledRowLookup[index];
-	return uirow;
-end
-
-
--- ===========================================================================
 --	Convert a virtual column # and row # to actual pixels within the
 --	scrollable tree area.
 -- ===========================================================================
@@ -369,9 +347,11 @@ function LayoutNodeGrid()
 				for _,prereqId in pairs(item.Prereqs) do										
 					if prereqId ~= PREREQ_ID_TREE_START then
 						local kPrereq		:table  = g_kItemDefaults[prereqId];					
-						local depth			:number = GetItemsInEraPrereqChain(kPrereq, era);	-- Recurse
-						if (largestDepth < depth) then
-							largestDepth = depth;
+						if kPrereq ~= nil then
+							local depth			:number = GetItemsInEraPrereqChain(kPrereq, era);	-- Recurse
+							if (largestDepth < depth) then
+								largestDepth = depth;
+							end
 						end
 					end
 				end
@@ -429,11 +409,6 @@ function LayoutNodeGrid()
 			end
 			era.Columns.__orderedIndex = nil;
 		end
-
-		-- Randomize UI tree row (if this game & era does that sort of thing.)
-		if IsEraRandomizingLayout(item.EraType) then
-			item.UITreeRow = GetRandomizedTreeRow(item.UITreeRow);
-		end
 	end
 
 	-- Determine total # of columns prior to a given era, and max columns overall.
@@ -458,10 +433,39 @@ function LayoutNodeGrid()
 	for i = ROW_MIN,ROW_MAX,1 do
 		kNodeGrid[i] = {};
 	end
-	for _,item in pairs(g_kItemDefaults) do	
+
+	-- give everything its preferred slot
+	for _,item in pairs(g_kItemDefaults) do
 		local era		:table  = g_kEras[item.EraType];
 		local columnNum :number = era.PriorColumns + item.Column;
-		kNodeGrid[item.UITreeRow][columnNum] = item.Type;
+		-- Only place the node if there isn't already another node there.  See below.
+		if kNodeGrid[item.UITreeRow][columnNum] == nil then
+			kNodeGrid[item.UITreeRow][columnNum] = item.Type;
+		end
+	end
+
+	-- We don't know the columns the C++ intended, so there is a chance in the first era
+	-- that coalescing into minimal columns will cause nodes to overlap.  Fix that if it's happening.
+	for _,item in pairs(g_kItemDefaults) do
+		local era		:table  = g_kEras[item.EraType];
+		local columnNum :number = era.PriorColumns + item.Column;
+		local placedThisNode :boolean = false;
+
+		-- is there a collision between this and another node?
+		if kNodeGrid[item.UITreeRow][columnNum] ~= nil and kNodeGrid[item.UITreeRow][columnNum] ~= item.Type then
+			for j = ROW_MIN,ROW_MAX,1 do
+				if kNodeGrid[j][columnNum] == nil then
+					item.UITreeRow = j;
+					kNodeGrid[item.UITreeRow][columnNum] = item.Type;
+					placedThisNode = true;
+					break;
+				end
+			end
+
+			if not placedThisNode then
+				UI.DataError("Too many collisions in a column!");
+			end
+		end
 	end
 
 	return kNodeGrid, kPaths;
@@ -862,7 +866,7 @@ function PopulateNode(uiNode, playerTechData)
 	end
 
 	-- Show/Hide Recommended Icon
-	if live.IsRecommended and live.AdvisorType ~= nil then
+	if live.IsRecommended and live.AdvisorType ~= nil and live.Status ~= ITEM_STATUS.RESEARCHED then
 		uiNode.RecommendedIcon:SetIcon(live.AdvisorType);
 		uiNode.RecommendedIcon:SetHide(false);
 	else
@@ -1093,14 +1097,15 @@ function GetCurrentData( ePlayer:number, eCompletedTech:number )
 		-- DEBUG: Output to console detailed information about the tech.
 		if debugOutputTechInfo then
 			local this:table = data[DATA_FIELD_LIVEDATA][type];
-			print( string.format("%30s %-3d %-10s %4d/%-4d %3d %-16s %s",
+			print( string.format("%30s %-3d %-10s %4d/%-4d %3d %-16s %s %d",
 				type,item.Index,
 				STATUS_ART[status].Name,
 				this.Progress,
 				this.Cost,
 				this.Turns,
 				item.EraType,
-				GetPrereqsString(item.Prereqs)
+				GetPrereqsString(item.Prereqs),
+				item.UITreeRow
 			));
 		end
 	end
@@ -1326,10 +1331,10 @@ end
 --	Base costs and relationships (prerequisites)
 --	RETURN: A table of node data (techs/civics/etc...) with a prereq for each entry.
 -- ===========================================================================
-function PopulateItemData( tableName:string, tableColumn:string, prereqTableName:string, itemColumn:string, prereqColumn:string)	
-		
+function PopulateItemData()
+
 	local kItemDefaults :table = {};		-- Table to return
-	
+
 	function GetHash(t)
 		local r = GameInfo.Types[t];
 		if(r) then
@@ -1339,31 +1344,35 @@ function PopulateItemData( tableName:string, tableColumn:string, prereqTableName
 		end
 	end
 
-	for row:table in GameInfo[tableName]() do
+	local techNodes:table = UITree.GetAvailableTechs();
+	for _,techNode in ipairs(techNodes) do
+
+		local row:table		= GameInfo.Technologies[techNode.Name];
 
 		local kEntry:table	= {};
-		kEntry.Type			= row[tableColumn];
+		kEntry.Type			= row.TechnologyType;
 		kEntry.Name			= row.Name;
 		kEntry.BoostText	= "";
 		kEntry.Column		= -1;
-		kEntry.Cost			= row.Cost;
+		kEntry.Cost			= techNode.Cost;
 		kEntry.Description	= row.Description and Locale.Lookup( row.Description );
 		kEntry.EraType		= row.EraType;
 		kEntry.Hash			= GetHash(kEntry.Type);
 		kEntry.Index		= row.Index;
 		kEntry.IsBoostable	= false;
 		kEntry.Prereqs		= {};				-- IDs for prerequisite item(s)
-		kEntry.UITreeRow	= row.UITreeRow;		
+		kEntry.UITreeRow	= techNode.TreeRow;
 		kEntry.Unlocks		= {};				-- Each unlock has: unlockType, iconUnavail, iconAvail, tooltip
 
 		-- Only add if not debugging or in debug range.
-		if	(table.count(debugExplicitList) == 0 and debugFilterTechMaxIndex ==-1 ) or 
-			(table.count(debugExplicitList) == 0 and kEntry.Index < debugFilterTechMaxIndex) or 
-			(table.count(debugExplicitList) ~= 0 and debugExplicitList[kEntry.Index ] ~= nil)  then
+		if	((table.count(debugExplicitList) == 0 and debugFilterTechMaxIndex ==-1 ) or
+			(table.count(debugExplicitList) == 0 and kEntry.Index < debugFilterTechMaxIndex) or
+			(table.count(debugExplicitList) ~= 0 and debugExplicitList[kEntry.Index ] ~= nil)) and
+			((table.count(debugExcludeList) == 0) or debugExcludeList[kEntry.Index] == nil) then
 
 			-- Boost?
 			for boostRow in GameInfo.Boosts() do
-				if boostRow.TechnologyType == kEntry.Type then				
+				if boostRow.TechnologyType == kEntry.Type then
 					kEntry.BoostText = Locale.Lookup( boostRow.TriggerDescription );
 					kEntry.IsBoostable = true;
 					kEntry.BoostAmount = boostRow.Boost;
@@ -1371,9 +1380,10 @@ function PopulateItemData( tableName:string, tableColumn:string, prereqTableName
 				end
 			end
 
-			for prereqRow in GameInfo[prereqTableName]() do
-				if prereqRow[itemColumn] == kEntry.Type then
-					table.insert( kEntry.Prereqs, prereqRow[prereqColumn] );
+			if (table.count(techNode.PrereqTechTypes) > 0) then
+				for __,prereqTechType in ipairs(techNode.PrereqTechTypes) do
+					local prereqRow:table = GameInfo.Technologies[prereqTechType];
+					table.insert( kEntry.Prereqs, prereqRow.TechnologyType );
 				end
 			end
 			-- If no prereqs were found, set item to special tree start value
@@ -1396,7 +1406,6 @@ function PopulateItemData( tableName:string, tableColumn:string, prereqTableName
 	return kItemDefaults;
 end
 
-
 -- ===========================================================================
 --	Create a hash table of EraType to its chronological index.
 -- ===========================================================================
@@ -1413,7 +1422,8 @@ function PopulateEraData()
 				Index		= -1,
 				PriorColumns= -1,
 				Columns		= {},		-- column data
-				TechTreeLayoutMethod= (row.TechTreeLayoutMethod ~= nil) and row.TechTreeLayoutMethod or ""		-- how to layout nodes within era: "Cost" (default), "Prereq"
+				EraLayoutMethod = (row.TechTreeLayoutMethod ~= nil) and row.TechTreeLayoutMethod or "",
+				TechTreeLayoutMethod = UITree.GetLayoutType();
 			});
 		end
 	end	
@@ -1424,6 +1434,18 @@ function PopulateEraData()
 	for i,v in ipairs(g_kEras) do
 		v.Index = i - 1 ; -- 0-based indexing.
 		g_kEras[v.EraType] = v;
+
+		-- if the code is saying cost-based but the era in the DB says prereq, take prereq
+		if Locale.ToUpper(v.TechTreeLayoutMethod) ~= "PREREQ" then
+			if Locale.ToUpper(v.EraLayoutMethod) == "PREREQ" then
+				v.TechTreeLayoutMethod = v.EraLayoutMethod;
+			end
+
+			-- also, future era is always prereq
+			if v.Description == "Future Era" then
+				v.TechTreeLayoutMethod = "PREREQ";
+			end
+		end
 	end
 end
 
@@ -1621,6 +1643,8 @@ function OnOpen()
 	end
 
 	UI.PlaySound("UI_Screen_Open");
+
+	m_kCurrentData = GetCurrentData( m_ePlayer );
 	View( m_kCurrentData );
 	ContextPtr:SetHide(false);
 
@@ -1919,7 +1943,7 @@ end
 -- ===========================================================================
 function LateInitialize()
 	-- Obtain the data
-	g_kItemDefaults = PopulateItemData("Technologies","TechnologyType","TechnologyPrereqs","Technology","PrereqTech");	
+	g_kItemDefaults = PopulateItemData();
 	PopulateEraData();
 	PopulateFilterData();
 	PopulateSearchData();		
@@ -1962,6 +1986,16 @@ function Initialize()
 			temp[v] = true;
 		end
 		debugExplicitList = temp;
+	end
+
+	-- Debug: do the same conversion for the exclusion list
+	if debugExcludeList == nil then debugExcludeList = {} end
+	if table.count(debugExcludeList) ~= 0 then
+		local temp:table = {};
+		for i,v in ipairs(debugExcludeList) do
+			temp[v] = true;
+		end
+		debugExcludeList = temp;
 	end
 
 	-- UI Events

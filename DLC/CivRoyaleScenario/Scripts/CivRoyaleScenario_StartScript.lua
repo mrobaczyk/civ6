@@ -618,11 +618,7 @@ function CivRoyale_GetSafeZone(targetInfo)
 	targetInfo.PlotY = Game:GetProperty(g_ObjectStateKeys.SafeZoneY);
 	targetInfo.Extra = Game:GetProperty(g_ObjectStateKeys.CurrentSafeZoneDistance);	
 
-	if ( targetInfo.PlotX < 0 ) then
-		local mapWidth, mapHeight = Map.GetGridSize();
-		targetInfo.PlotY = mapHeight / 2;
-		targetInfo.PlotX = mapWidth / 2;
-
+	if ( targetInfo.PlotX > 0 ) then
 		-- Check if the plot is on water. We don't want that. Look for a land spot
 		local centerPlot = Map.GetPlot(targetInfo.PlotX, targetInfo.PlotY);
 		if ( centerPlot:IsWater() ) then

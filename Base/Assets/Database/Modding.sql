@@ -1,6 +1,14 @@
 -- Modding Framework Schema
 -- 
 -- Revision History
+-- Version 24:
+-- * No changes. Bumping to force a rebuild.
+-- Version 23:
+-- * Added 'SettingCriteria' to control how settings are applied.
+-- * Added 'AdditionalScannedFiles' table to track additional files referenced by other files.
+-- * Removed unused 'Exclusivity' column from Mods table.
+-- Version 22:
+-- * Added 'Disabled' to ModGroupItems effectively giving them a tri-state instead of just an enabled/disabled state.
 -- Version 21:
 -- * Added 'ModCompatibilityWhitelist' table for checking whether a mod should ignore compatibility warnings.
 -- Version 20:
@@ -80,19 +88,29 @@ CREATE TABLE ScannedFiles(
 	'LastWriteTime' INTEGER NOT NULL
 );
 
+-- Track any additional files associated with a mod.
+-- @ScannedFileRowId is the specific scanned file associated.
+-- @Path is the path to the file.
+-- @LastWriteTime represents the time stamp the file was written.  Used to invalidate mods and other data.
+CREATE TABLE AdditionalScannedFiles(
+	'ScannedFileRowId' INTEGER NOT NULL,
+	'Path' TEXT NOT NULL, 
+	'LastWriteTime' INTEGER NOT NULL,
+	PRIMARY KEY(ScannedFileRowId, Path)
+	FOREIGN KEY(ScannedFileRowId) REFERENCES ScannedFiles(ScannedFileRowId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 -- Primary table of all discovered mods
 -- @ModRowId is a locally unique identifier representing a discovered mod.
 -- @FileId is a reference to the .modinfo file discovered in ScannedFiles.
 -- @ModId is a globally unique identifier representing the mod.
 -- @Version is an integer value > 0.  Values of 0 or less are considered invalid.
--- @Exclusivity represents the mod's exclusivity.
 -- @LastRetrieved is a times tamp for when the mod was discovered.
 CREATE TABLE Mods(
 	'ModRowId' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 	'ScannedFileRowId' INTEGER NOT NULL, 
 	'ModId' TEXT NOT NULL,
 	'Version' INTEGER NOT NULL,
-	'Exclusivity' TEXT, 
 	FOREIGN KEY(ScannedFileRowId) REFERENCES ScannedFiles(ScannedFileRowId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -206,6 +224,17 @@ CREATE TABLE ComponentCriteria(
 	FOREIGN KEY('CriteriaRowId') REFERENCES Criteria('CriteriaRowId') ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- This table contains criteria that must be met for the setting to be applied.
+-- @SettingRowId is the locally unique identifier referring to the setting.
+-- @CriteriaRowId is the locally unique identifier referring to the criteria.
+CREATE TABLE SettingCriteria(
+	'SettingRowId' INTEGER NOT NULL,
+	'CriteriaRowId' TEXT NOT NULL,
+	PRIMARY KEY('SettingRowId', 'CriteriaRowId'),
+	FOREIGN KEY('SettingRowId') REFERENCES Settings('SettingRowId') ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY('CriteriaRowId') REFERENCES Criteria('CriteriaRowId') ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 -- This table contains all file references in settings.
 -- @SettingRowId is the locally unique identifier referring to the mod setting.
 -- @FileRowId is the locally unique identifier to the mod file.
@@ -314,20 +343,10 @@ CREATE TABLE ModGroups(
 CREATE TABLE ModGroupItems(
 	'ModGroupRowId' INTEGER NOT NULL,
 	'ModRowId' INTEGER NOT NULL,
+	'Disabled' BOOLEAN DEFAULT 0,
 	PRIMARY KEY ('ModGroupRowId', 'ModRowId'),	
 	FOREIGN KEY ('ModGroupRowId') REFERENCES ModGroups('ModGroupRowId') ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY ('ModRowId') REFERENCES Mods('ModRowId') ON DELETE CASCADE ON UPDATE CASCADE
-);
-
--- This table contains various stored procedures used by native code to access the database.
--- @Name is the name of the stored procedure
--- @Context is a shared group of procedures
--- @SQL is the SQL text to be used.
-CREATE TABLE StoredProcedures(
-	'Name' TEXT NOT NULL,
-	'Context' TEXT,
-	'SQL' TEXT NOT NULL,
-	PRIMARY KEY('Name', 'Context')
 );
 
 -- This table contains statements to assist with migrating data during a database upgrade.
@@ -365,87 +384,10 @@ INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16
 INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,'INSERT INTO ScannedFiles(ScannedFileRowId,Path,LastWriteTime) SELECT ScannedFileRowId,Path,0 from old.ScannedFiles;');
 
 -- Copy Mod data (the mod row ids are needed the most here)
-INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,"INSERT INTO Mods('ModRowId','ScannedFileRowId','ModId','Version','Exclusivity') SELECT ModRowId,ScannedFileRowId,ModId,Version,Exclusivity from old.Mods");
+INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,"INSERT INTO Mods('ModRowId','ScannedFileRowId','ModId','Version') SELECT ModRowId,ScannedFileRowId,ModId,Version from old.Mods");
 
 -- Copy Mod Group Item data
 INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,"INSERT INTO ModGroupItems('ModGroupRowId','ModRowId') SELECT ModGroupRowId,ModRowId from old.ModGroupItems");
 
--- Stored procedures used by framework
--- Some rough naming conventions.
--- Prefix with "Get" if query is read-only and expected to return 1 and only 1 row.
--- Prefix with "List" if query is read-only and expected to return 0 or many rows.
--- Prefix with verb if query is intended modify database and be executed.
--- If the table is required to distinguish between different procedures include a "From<TableName>"
--- If a procedure takes any arguments,  use "By<ArgumentName>([And|Or]<ArgumentName>)*
--- An exception to this pattern is if the procedure is a predicate against some argument.  e.g GetModIdExists or GetModEnabled.
--- In this case, the argument is inferred by what you're testing.
-
--- Framework Procedures
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'EnableModByModRowId', 'INSERT OR IGNORE INTO ModGroupItems("ModGroupRowId", "ModRowId") SELECT ModGroupRowId, ? FROM ModGroups WHERE Selected = 1 LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'DisableModByModRowId', 'DELETE from ModGroupItems where ModGroupRowId IN (select ModGroupRowId from ModGroups where Selected = 1 LIMIT 1) and ModRowId = ?');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModIdExists', 'SELECT 1 FROM Mods WHERE ModId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModRowIdExists', 'SELECT 1 FROM Mods WHERE ModRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModIdEnabled', 'SELECT 1 from ModGroupItems INNER JOIN ModGroups ON ModGroupItems.ModGroupRowId = ModGroups.ModGroupRowId INNER JOIN Mods on ModGroupItems.ModRowId = Mods.ModRowId WHERE ModGroups.Selected = 1 AND Mods.ModId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModRowIdEnabled', 'SELECT 1 from ModGroupItems INNER JOIN ModGroups ON ModGroupItems.ModGroupRowId = ModGroups.ModGroupRowId WHERE ModGroups.Selected = 1 AND ModGroupItems.ModRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetFirstModRowIdByModId', 'SELECT ModRowId FROM Mods WHERE ModId = ? ORDER BY ModRowId LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModIdByModRowId', 'SELECT ModId FROM Mods WHERE ModRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetVersionByModRowId', 'SELECT Version FROM Mods WHERE ModRowId = ? LIMIT 1');
-
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListModRowIds', 'SELECT ModRowId FROM Mods ORDER BY ModRowId');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListDistinctModIds', 'SELECT distinct ModId FROM Mods ORDER BY ModId');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListEnabledMods', 'SELECT ModGroupItems.ModRowId from ModGroupItems inner join ModGroups on ModGroupItems.ModGroupRowId = ModGroups.ModGroupRowId where ModGroups.Selected = 1 ORDER BY ModGroupItems.ModRowId');
-
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListSettingsByModRowId', 'SELECT SettingRowId FROM Settings WHERE ModRowId = ? ORDER BY SettingRowId');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetSettingIdBySettingRowId', 'SELECT SettingId FROM Settings WHERE SettingRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModRowIdBySettingRowId', 'SELECT ModRowId FROM Settings WHERE SettingRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetSettingTypeBySettingRowId', 'SELECT SettingType FROM Settings WHERE SettingRowId = ? LIMIT 1');
-
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListComponentsByModRowId', 'SELECT ComponentRowId FROM Components WHERE ModRowId = ? ORDER BY ComponentRowId');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetComponentIdByComponentRowId', 'SELECT ComponentId FROM Components WHERE ComponentRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModRowIdByComponentRowId', 'SELECT ModRowId FROM Components WHERE ComponentRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetComponentTypeByComponentRowId', 'SELECT ComponentType FROM Components WHERE ComponentRowId = ? LIMIT 1');
-
--- Discovery Service Procedures
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListScannedFiles', 'SELECT Path, LastWriteTime FROM ScannedFiles');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'DeleteScannedFile', 'DELETE FROM ScannedFiles WHERE Path = ?');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'AddScannedFile', 'INSERT INTO ScannedFiles(Path, LastWriteTime) VALUES(?,?)');
-
--- Property Service Procedures
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModPropertyByModRowIdAndName', 'SELECT Value FROM ModProperties WHERE ModRowId = ? AND Name = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetComponentPropertyByComponentRowIdAndName', 'SELECT Value FROM ComponentProperties WHERE ComponentRowId = ? AND Name = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetSettingPropertyBySettingRowIdAndName', 'SELECT Value FROM SettingProperties WHERE SettingRowId = ? AND Name = ? LIMIT 1');
-
--- Loader Service Procedures
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddModRelation', 'INSERT INTO ModRelationships(ModRowID, OtherModID, Relationship, OtherModTitle) VALUES(?,?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddFile', 'INSERT INTO ModFiles(ModRowId, Path) VALUES(?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddMod', 'INSERT INTO Mods(ScannedFileRowId, ModId, Version) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddProperty', 'INSERT INTO ModProperties(ModRowId, Name, Value) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddLocalizedText', 'INSERT INTO LocalizedText(ModRowId, Tag, Locale, Text) VALUES(?,?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'GetFileId', 'SELECT FileRowId from ModFiles WHERE ModRowId = ? and Path = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'GetComponentId', 'SELECT ComponentRowId from Components WHERE ModRowId = ? and ComponentId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddSetting', 'INSERT INTO Settings(ModRowId, SettingId, SettingType) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddSettingFile', 'INSERT INTO SettingFiles(SettingRowId, FileRowId, Priority) VALUES (?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddSettingProperty', 'INSERT INTO SettingProperties(SettingRowId, Name, Value) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponent', 'INSERT INTO Components(ModRowId, ComponentId, ComponentType) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentCriteria', 'INSERT INTO ComponentCriteria(ComponentRowId, CriteriaRowId) VALUES (?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentFile', 'INSERT INTO ComponentFiles(ComponentRowId, FileRowId, Priority) VALUES (?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentReference', 'INSERT INTO ComponentReferences(ComponentRowId, Uri, Priority) VALUES (?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentRelationship', 'INSERT INTO ComponentRelationships(ComponentRowId, OtherModId, OtherComponentId, Relationship) VALUES (?,?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentProperty', 'INSERT INTO ComponentProperties(ComponentRowId, Name, Value) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriteria', 'INSERT INTO Criteria(ModRowId, CriteriaId, Any) VALUES (?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriterion', 'INSERT INTO Criterion(CriteriaRowId, CriterionType, Inverse) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriterionProperty', 'INSERT INTO CriterionProperties(CriterionRowId, Name, Value) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'GetCriteriaId', 'SELECT CriteriaRowId from Criteria where ModRowId = ? and CriteriaId = ? LIMIT 1');
-
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListModAssociations', 'SELECT OtherModId, OtherModTitle from ModRelationships where ModRowId = ? and Relationship = ?');
-
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListModGroups', 'SELECT ModGroupRowId from ModGroups ORDER BY ModGroupRowId');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModGroupDetails', 'SELECT Name, CanDelete, SortIndex from ModGroups WHERE ModGroupRowId = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetSelectedModGroup', 'SELECT ModGroupRowId from ModGroups where Selected = 1 LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ChangeSelectedModGroup', 'UPDATE ModGroups SET Selected = CASE WHEN ModGroupRowId = ? THEN 1 ELSE 0 END');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'CreateModGroup', 'INSERT INTO ModGroups(Name) VALUES(?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'CopyModGroup', 'INSERT INTO ModGroupItems(ModGroupRowId, ModRowId) SELECT ?, ModRowId from ModGroupItems where ModGroupRowId = ?');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'DeleteModGroup', 'DELETE FROM ModGroups where ModGroupRowId = ? and CanDelete = 1');
-
 -- User version is written at the end.
-PRAGMA user_version(21);
+PRAGMA user_version(24);

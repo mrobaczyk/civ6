@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="NOTIFICATION_FIRE_STARTS" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_FIRE_ENDS" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_FOREST_REGROWS" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_JUNGLE_REGROWS" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_COMET_LANDS" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_SOLAR_FLARE" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_METEOR_STRIKES" Kind="KIND_NOTIFICATION"/>
+  </Types>
+	<Notifications>
+    <Row NotificationType="NOTIFICATION_FIRE_STARTS" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_FIRE_STARTED" Summary="LOC_FIRE_STARTED_DESC"/>
+    <Row NotificationType="NOTIFICATION_FIRE_ENDS" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_FIRE_CONTINUED" Summary="LOC_FIRE_CONTINUED_DESC"/>
+    <Row NotificationType="NOTIFICATION_FOREST_REGROWS" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_FIRE_FOREST_OVER" Summary="LOC_FIRE_FOREST_OVER_DESC"/>
+    <Row NotificationType="NOTIFICATION_JUNGLE_REGROWS" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_FIRE_JUNGLE_OVER" Summary="LOC_FIRE_JUNGLE_OVER_DESC"/>
+    <Row NotificationType="NOTIFICATION_COMET_LANDS" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_COMET_HAPPENED" Summary="LOC_COMET_HAPPENED_DESC"/>
+    <Row NotificationType="NOTIFICATION_SOLAR_FLARE" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_SOLAR_FLARE_HAPPENED" Summary="LOC_SOLAR_FLARE_HAPPENED_DESC"/>
+    <Row NotificationType="NOTIFICATION_METEOR_STRIKES" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_METEOR_HAPPENED" Summary="LOC_METEOR_HAPPENED_DESC"/>
+  </Notifications>
+</GameInfo>

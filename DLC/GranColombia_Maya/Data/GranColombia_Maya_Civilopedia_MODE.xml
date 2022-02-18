@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<!-- Populate additional data. -->
+	<CivilopediaPageLayouts>
+		<Row PageLayoutId="MegaDisasters" ScriptTemplate="Simple" />
+	</CivilopediaPageLayouts>
+	<CivilopediaPageLayoutChapters>
+    <Row PageLayoutId="MegaDisasters" ChapterId="WELCOME" SortIndex="10"/>
+		<Row PageLayoutId="MegaDisasters" ChapterId="SOOTHSAYER" SortIndex="20"/>
+		<Row PageLayoutId="MegaDisasters" ChapterId="SCORED_COMPETITION" SortIndex="30"/>
+		<Row PageLayoutId="MegaDisasters" ChapterId="NEW_DISASTERS" SortIndex="40"/>
+		<Row PageLayoutId="MegaDisasters" ChapterId="END_OF_WORLD" SortIndex="50"/>
+
+    <Row PageLayoutId="EnvironmentalEffects" ChapterId="FLARES" SortIndex="3"/>
+    <Row PageLayoutId="EnvironmentalEffects" ChapterId="COMETS" SortIndex="4"/>
+	</CivilopediaPageLayoutChapters>
+	<CivilopediaPageGroups>
+		<Row SectionID="CONCEPTS" PageGroupId="GAME_MODES" Name="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Tooltip="" VisibleIfEmpty="false" SortIndex="4"/>
+	</CivilopediaPageGroups>
+	<CivilopediaPages>
+		<Row SectionId="CONCEPTS" PageId="MEGADISASTERS" PageGroupId="GAME_MODES" PageLayoutId="MegaDisasters" Name="LOC_PEDIA_CONCEPTS_PAGE_MEGADISASTERS_CHAPTER_CONTENT_TITLE" Tooltip="" SortIndex="1"/>
+	</CivilopediaPages>
+	<CivilopediaPageSearchTerms>
+		<Row SectionId="CONCEPTS" PageId="MEGADISASTERS" Term="LOC_PEDIA_CONCEPTS_PAGE_MEGADISASTERS_CHAPTER_SOOTHSAYER_TITLE"/>
+		<Row SectionId="CONCEPTS" PageId="MEGADISASTERS" Term="LOC_PEDIA_CONCEPTS_PAGE_MEGADISASTERS_CHAPTER_SCORED_COMPETITION_TITLE"/>
+		<Row SectionId="CONCEPTS" PageId="MEGADISASTERS" Term="LOC_PEDIA_CONCEPTS_PAGE_MEGADISASTERS_CHAPTER_END_OF_WORLD_TITLE"/>
+
+    <Row SectionId="CONCEPTS" PageId="ENVIRONMENTAL_EFFECTS" Term="LOC_PEDIA_CONCEPTS_PAGE_ENVIRONMENTAL_EFFECTS_CHAPTER_FLARES_TITLE"/>
+    <Row SectionId="CONCEPTS" PageId="ENVIRONMENTAL_EFFECTS" Term="LOC_PEDIA_CONCEPTS_PAGE_ENVIRONMENTAL_EFFECTS_CHAPTER_COMETS_TITLE"/>
+	</CivilopediaPageSearchTerms>
+</GameInfo>

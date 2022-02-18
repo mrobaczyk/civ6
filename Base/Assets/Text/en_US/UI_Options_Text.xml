@@ -520,6 +520,12 @@
     <Row Tag="LOC_OPTIONS_AUTO_UNIT_CYCLING">
       <Text>Auto Unit Cycling:</Text>
     </Row>
+    <Row Tag="LOC_OPTIONS_CHAT_TEXT_SIZE">
+      <Text>Text Size for Chat:</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CHAT_TEXT_SIZE_VALUE">
+      <Text>{1_Value : number #.##}</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_INTERFACE_MINIMAP_SIZE">
 			<Text>Minimap Size:</Text>
 		</Row>
@@ -604,6 +610,15 @@
 	<Row Tag="LOC_OPTIONS_INTERFACE_LIGHTING_TOOLTIP">
 		<Text>Allows Civilization VI to control lighting on computers and peripherals that are compatible with Logitech Gaming Software or Alienware AlienFX.</Text>
 	</Row>
+    <Row Tag="LOC_OPTIONS_SWITCH_UI_LAYOUT">
+      <Text>Switch UI Layout</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_LAYOUT_PC">
+      <Text>PC / Keyboard and Mouse</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_LAYOUT_CONSOLE">
+      <Text>Console / Gamepad</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_QUEUE_DISPLAY">
 			<Text>Production Queue:</Text>
 		</Row>
@@ -706,6 +721,12 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA">
 			<Text>Open the Civilopedia</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVBACK">
+			<Text>Civilopedia History Back</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVFWD">
+			<Text>Civilopedia History Forward</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_FSMAP">
 			<Text>Toggle Full Screen Map</Text>
 		</Row>
@@ -742,6 +763,12 @@
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA_HELP">
 			<Text>Opens the Civilopedia</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVBACK_HELP">
+			<Text>Goes back in the page history when the Civilopedia is open</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_CIVFWD_HELP">
+			<Text>Goes forward in the page history when the Civilopedia is open</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UI_FSMAP_HELP">
 			<Text>Toggles visibility of the Full Screen Map</Text>
@@ -973,6 +1000,24 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_EMPIRE">
 			<Text>Empire</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_HOTKEY_MOVE_CURSOR">
+      <Text>Move Cursor</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_HOTKEY_LEFT_CLICK_CURSOR">
+      <Text>Left Click Cursor</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_UP">
+      <Text>Camera Pan Up</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_DOWN">
+      <Text>Camera Pan Down</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_LEFT">
+      <Text>Camera Pan Left</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_RIGHT">
+      <Text>Camera Pan Right</Text>
+    </Row>
 
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_RELIGION_HELP">
 			<Text>Toggles the Religion lens.</Text>
@@ -1001,6 +1046,24 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_EMPIRE_HELP">
 			<Text>Toggles the Empire lens.</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_HOTKEY_MOVE_CURSOR_HELP">
+      <Text>Emulates cursor movement using analog sticks.</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_HOTKEY_LEFT_CLICK_CURSOR_HELP">
+      <Text>Emulate left clicking the cursor.</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_UP_HELP">
+      <Text>Pan the game camera up.</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_DOWN_HELP">
+      <Text>Pan the game camera down.</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_LEFT_HELP">
+      <Text>Pan the game camera left.</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_CAMERA_PAN_RIGHT_HELP">
+      <Text>Pan the game camera right.</Text>
+    </Row>
 	
 		<Row Tag="LOC_OPTIONS_KEY_UNDERSCORE">
 			<Text>_</Text>
@@ -1374,6 +1437,18 @@
 		<Row Tag="LOC_OPTIONS_KEY_APPS">
 			<Text>Apps</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_MOUSE_L">
+      <Text>Left Mouse</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_MOUSE_R">
+      <Text>Right Mouse</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_MOUSE_M">
+      <Text>Middle Mouse</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_MOUSE_X">
+      <Text>Mouse {1_ButtonIndex}</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_PAD_A">
 			<Text>Pad A</Text>
 		</Row>
@@ -1395,9 +1470,15 @@
 		<Row Tag="LOC_OPTIONS_PAD_LTRIGGER">
 			<Text>Pad LT</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_PAD_LTRIGGER_CLICK">
+      <Text>Pad LT Click</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_PAD_RTRIGGER">
 			<Text>Pad RT</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_PAD_RTRIGGER_CLICK">
+      <Text>Pad RT Click</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_PAD_DPAD_UP">
 			<Text>Pad Dpad Up</Text>
 		</Row>
@@ -1410,18 +1491,81 @@
 		<Row Tag="LOC_OPTIONS_PAD_DPAD_RIGHT">
 			<Text>Pad Dpad Right</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_DPAD_UP">
+      <Text>Pad Right Dpad Up</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_DPAD_DOWN">
+      <Text>Pad Right Dpad Down</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_DPAD_LEFT">
+      <Text>Pad Right Dpad Left</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_DPAD_RIGHT">
+      <Text>Pad Right Dpad Right</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_PAD_START">
 			<Text>Pad Start</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_PAD_BACK">
 			<Text>Pad Back</Text>
 		</Row>
-		<Row Tag="LOC_OPTIONS_PAD_LTHUMB_PRESS">
-			<Text>Pad LStick</Text>
-		</Row>
-		<Row Tag="LOC_OPTIONS_PAD_RTHUMB_PRESS">
-			<Text>Pad RStick</Text>
-		</Row>
+    <Row Tag="LOC_OPTIONS_PAD_LTHUMB_PRESS">
+      <Text>Pad LStick Press</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RTHUMB_PRESS">
+      <Text>Pad RStick Press</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_LTHUMB_AXIS">
+      <Text>Pad Left Stick</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RTHUMB_AXIS">
+      <Text>Pad Right Stick</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_LEFT_GRIP">
+      <Text>Pad Left Grip</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_GRIP">
+      <Text>Pad Right Grip</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_LEFT_TOUCHPAD_TOUCH">
+      <Text>Left Touchpad Touch</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_LEFT_TOUCHPAD_SWIPE">
+      <Text>Left Touchpad Swipe</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_LEFT_TOUCHPAD_CLICK">
+      <Text>Left Touchpad Click</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_MIDDLE_TOUCHPAD_TOUCH">
+      <Text>Middle Touchpad Touch</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_MIDDLE_TOUCHPAD_SWIPE">
+      <Text>Middle Touchpad Swipe</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_MIDDLE_TOUCHPAD_CLICK">
+      <Text>Middle Touchpad Click</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_TOUCHPAD_TOUCH">
+      <Text>Right Touchpad Touch</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_TOUCHPAD_SWIPE">
+      <Text>Right Touchpad Swipe</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_RIGHT_TOUCHPAD_CLICK">
+      <Text>Right Touchpad Click</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_GYRO_MOVE">
+      <Text>Pad Gyro Move</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_GYRO_PITCH">
+      <Text>Pad Gyro Pitch</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_GYRO_YAW">
+      <Text>Pad Gyro Yaw</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_PAD_GYRO_ROLL">
+      <Text>Pad Gyro Roll</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_KEY_VOLUME_MUTE">
 			<Text>Mute</Text>
 		</Row>
@@ -1443,6 +1587,9 @@
 		<Row Tag="LOC_OPTIONS_KEY_MEDIA_PLAY_PAUSE">
 			<Text>Play / Pause</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_PAD_TOOLTIP_REFRESH">
+      <Text>Tooltip Refresh</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_KEY_NUM_KEYS">
 			<Text>Num Keys</Text>
 		</Row>

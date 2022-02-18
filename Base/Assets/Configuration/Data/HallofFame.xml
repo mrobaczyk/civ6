@@ -300,42 +300,42 @@
 	<DataPointAggregateQueries>	
 		<!-- Enumerates all values from a specific data set. -->
 		<Row Query="ObjectDataSet_Values">
-			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and ObjectId = @ObjectId) order by X</SQL>
+			<SQL>WITH RECURSIVE range(X,MaxX) AS (SELECT MIN(X),MAX(X) FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets WHERE DataSet = @DataPoint and ObjectId = @ObjectId) UNION ALL SELECT X+1,MaxX FROM range WHERE X &lt; MaxX) SELECT (SELECT Y FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets WHERE DataSet = @DataPoint and ObjectId = @ObjectId) AND X &lt;= range.X ORDER BY X DESC LIMIT 1) AS ValueNumeric FROM range WHERE ValueNumeric IS NOT NULL</SQL>
 		</Row>
 		
 		<!-- Enumerates the last value from a specific data set. -->
 		<Row Query="ObjectDataSet_LastValue">
-			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and ObjectId = @ObjectId) order by X DESC LIMIT 1</SQL>
+			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and ObjectId = @ObjectId) AND Y IS NOT NULL order by X DESC LIMIT 1</SQL>
 		</Row>
 		
 		<!-- Enumerates all values from a specific data set. -->
 		<Row Query="PlayerDataSet_Values">
-			<SQL>select Y as ValueNumeric, ObjectId as ValueObjectId from DataSetValues where DataSetId = (select DataSetId from DataSets inner join GameObjects on GameObjects.ObjectId = DataSets.ObjectId where DataSet = @DataPoint and (GameObjects.ObjectId = @ObjectId or PlayerObjectId = @ObjectId)) order by X</SQL>
+			<SQL>WITH RECURSIVE range(X,MaxX) AS (SELECT MIN(X),MAX(X) FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets INNER JOIN GameObjects ON GameObjects.ObjectId = DataSets.ObjectId WHERE DataSet = @DataPoint and (GameObjects.ObjectId = @ObjectId or PlayerObjectId = @ObjectId)) UNION ALL SELECT X+1,MaxX FROM range WHERE X &lt; MaxX) SELECT (SELECT Y FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets INNER JOIN GameObjects ON GameObjects.ObjectId = DataSets.ObjectId WHERE DataSet = @DataPoint and (GameObjects.ObjectId = @ObjectId or PlayerObjectId = @ObjectId)) AND X &lt;= range.X ORDER BY X DESC LIMIT 1) AS ValueNumeric FROM range WHERE ValueNumeric IS NOT NULL</SQL>
 		</Row>
 		
 		<!-- Enumerates the last value from a specific data set. -->
 		<Row Query="PlayerDataSet_LastValue">
-			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets inner join GameObjects on GameObjects.ObjectId = DataSets.ObjectId where DataSet = @DataPoint and (GameObjects.ObjectId = @ObjectId or PlayerObjectId = @ObjectId)) order by X DESC LIMIT 1</SQL>
+			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets inner join GameObjects on GameObjects.ObjectId = DataSets.ObjectId where DataSet = @DataPoint and (GameObjects.ObjectId = @ObjectId or PlayerObjectId = @ObjectId)) AND Y IS NOT NULL order by X DESC LIMIT 1</SQL>
 		</Row>
 		
 		<!-- Enumerates all values from a specific data set. -->
 		<Row Query="GameDataSet_Values">
-			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and GameId = @GameId) order by X</SQL>
+			<SQL>WITH RECURSIVE range(X,MaxX) AS (SELECT MIN(X),MAX(X) FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets WHERE DataSet = @DataPoint AND GameId = @GameId) UNION ALL SELECT X+1,MaxX FROM range WHERE X &lt; MaxX) SELECT (SELECT Y FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets WHERE DataSet = @DataPoint AND GameId = @GameId) AND X &lt;= range.X ORDER BY X DESC LIMIT 1) AS ValueNumeric FROM range WHERE ValueNumeric IS NOT NULL</SQL>
 		</Row>
 		
 		<!-- Enumerates the last value from a specific data set. -->
 		<Row Query="GameDataSet_LastValue">
-			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and GameId = @GameId) order by X DESC LIMIT 1</SQL>
+			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and GameId = @GameId) AND Y IS NOT NULL order by X DESC LIMIT 1</SQL>
 		</Row>
 		
 		<!-- Enumerates all values from a specific data set. -->
 		<Row Query="RulesetDataSet_Values">
-			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and Ruleset = @Ruleset) order by X</SQL>
+			<SQL>WITH RECURSIVE range(X,MaxX) AS (SELECT MIN(X),MAX(X) FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets WHERE DataSet = @DataPoint AND Ruleset = @Ruleset) UNION ALL SELECT X+1,MaxX FROM range WHERE X &lt; MaxX) SELECT (SELECT Y FROM DataSetValues WHERE DataSetId = (SELECT DataSetId FROM DataSets WHERE DataSet = @DataPoint AND Ruleset = @Ruleset) AND X &lt;= range.X ORDER BY X DESC LIMIT 1) AS ValueNumeric FROM range WHERE ValueNumeric IS NOT NULL</SQL>
 		</Row>
 		
 		<!-- Enumerates the last value from a specific data set. -->
 		<Row Query="RulesetDataSet_LastValue">
-			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and Ruleset = @Ruleset) order by X DESC LIMIT 1</SQL>
+			<SQL>select Y as ValueNumeric from DataSetValues where DataSetId = (select DataSetId from DataSets where DataSet = @DataPoint and Ruleset = @Ruleset) AND Y IS NOT NULL order by X DESC LIMIT 1</SQL>
 		</Row>	
 		
 		<Row Query="ObjectDataPoints">

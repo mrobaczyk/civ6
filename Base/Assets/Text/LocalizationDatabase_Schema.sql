@@ -19,6 +19,10 @@ CREATE TABLE DefaultAudioLanguages(	'Locale' TEXT NOT NULL,
 CREATE TABLE SteamLanguages('SteamLanguage' TEXT NOT NULL,
 							'Locale' TEXT NOT NULL,
 							PRIMARY KEY (SteamLanguage));
+							
+CREATE TABLE EpicLanguages('EpicLanguage' TEXT NOT NULL,
+							'Locale' TEXT NOT NULL,
+							PRIMARY KEY (EpicLanguage));
 						
 CREATE TABLE LanguagePriorities('PrimaryLanguage' TEXT NOT NULL,
 								'Language' TEXT NOT NULL,

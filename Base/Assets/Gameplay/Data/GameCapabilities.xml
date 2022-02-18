@@ -91,9 +91,11 @@
 		<!-- Do these policy filters show up on the government screen -->
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER" Kind="KIND_CAPABILITY" />
-    <Row Type="CAPABILITY_GOSSIP_REPORT" Kind="KIND_CAPABILITY" />		
+    <Row Type="CAPABILITY_GOSSIP_REPORT" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_DISPLAY_SCORE" Kind="KIND_CAPABILITY"/>
 
-    <!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
+		
+		<!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
 		<Row Type="CAPABILITY_DISPLAY_NORMALIZED_TURN" Kind="KIND_CAPABILITY" />
     
     <!--Display of Top Panel Yields. ONLY the display.-->
@@ -248,7 +250,7 @@
 		<Row GameCapability="CAPABILITY_CITY_HUD_WONDERS" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_TRADING_POSTS" />
     <Row GameCapability="CAPABILITY_GOSSIP_REPORT" />
-
+		<Row GameCapability="CAPABILITY_DISPLAY_SCORE" />		
 
     <!-- Can the user purchase using faith -->
 		<Row GameCapability="CAPABILITY_FAITH_PURCHASE" />

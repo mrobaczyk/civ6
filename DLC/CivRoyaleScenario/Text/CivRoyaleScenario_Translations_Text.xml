@@ -94,7 +94,7 @@
       <Text>{LOC_CIVROYALE_TERRAIN_WASTELAND_MOUNTAIN_NAME}</Text>
     </Replace>
     <Replace Tag="LOC_CIV_ROYALE_VICTORY_WIN_BLURB" Language="pt_BR">
-      <Text>Todos riram de nós. Disseram que éramos muito fracos e muito poucos para chegar ao aterrissador. Quem é que está rindo agora? Quem é a última facção desde planeta estúpido e podre? Quem é que tem uma passagem só de ida para uma nave espacial novinha em folha, bebendo água limpa e respirando ar que não contém poeira tóxica? Nós![NEWLINE][NEWLINE]Estamos dando o fora! Cuidado, universo!</Text>
+      <Text>Todos riram de nós. Disseram que éramos muito fracos e muito poucos para chegar ao aterrissador. Quem é que está rindo agora? Qual é a última facção a sair deste planeta estúpido e podre? Quem é que tem uma passagem só de ida para uma nave espacial novinha em folha, bebendo água limpa e respirando ar que não contém poeira tóxica? Nós![NEWLINE][NEWLINE]Estamos dando o fora! Cuidado, universo!</Text>
     </Replace>
     <Replace Tag="LOC_GOODYHUT_MILITARY_GRANT_WARRIOR_DESCRIPTION" Language="pt_BR">
       <Text>[COLOR_FLOAT_MILITARY]Uma unidade de infantaria entrou em sua facção.[ENDCOLOR]</Text>
@@ -208,7 +208,7 @@
       <Text>Pode lançar ADMs.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="pt_BR">
-      <Text>Ignora custo adicional de movimento para embarcar e desembarcar.</Text>
+      <Text>Ignora custo adicional de [ICON_Movement] movimento para embarcar e desembarcar.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="pt_BR">
       <Text>Ermo</Text>
@@ -461,7 +461,7 @@
       <Text>Peut utiliser des armes de destruction massive.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="fr_FR">
-      <Text>Aucun PM consommé pour embarquer ou débarquer.</Text>
+      <Text>Aucun [ICON_Movement] PM consommé pour embarquer ou débarquer.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="fr_FR">
       <Text>No man's land</Text>
@@ -714,7 +714,7 @@
       <Text>Kann MVW starten.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="de_DE">
-      <Text>Ignoriert zusätzliche Fortbewegungskosten durch Wassern und Ausschiffen.</Text>
+      <Text>Ignoriert zusätzliche [ICON_Movement] Fortbewegungskosten durch Wassern und Ausschiffen.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="de_DE">
       <Text>Ödnis</Text>
@@ -969,7 +969,7 @@
       <Text>Può lanciare ADM.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="it_IT">
-      <Text>Ignora i costi aggiuntivi di movimento per l'imbarco e lo sbarco.</Text>
+      <Text>Ignora i costi aggiuntivi di [ICON_Movement] movimento per l'imbarco e lo sbarco.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="it_IT">
       <Text>Landa</Text>
@@ -1204,7 +1204,7 @@
       <Text>大量破壊兵器を発射できる。</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="ja_JP">
-      <Text>乗船と下船に追加移動コストを必要としなくなる。</Text>
+      <Text>乗船と下船に追加の [ICON_Movement] 移動コストを必要としなくなる。</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="ja_JP">
       <Text>ウェイストランド</Text>
@@ -1240,7 +1240,7 @@
       <Text>リング内では放射性降下物によってユニットが{1_Damage}ダメージを受けます。[NEWLINE]これまでに安全地帯は{2_RingCount}回縮小しています。</Text>
     </Replace>
     <Replace Tag="LOC_CIV_ROYALE_HUD_TURNS" Language="ja_JP">
-      <Text>{1_Turns}ターン</Text>
+      <Text>{1_Turns : plural 1?ターン; other?ターン;}</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_SCOUTING_REGIMENT_NAME" Language="ja_JP">
       <Text>斥候連隊</Text>
@@ -1435,7 +1435,7 @@
       <Text>WMD(대량살상무기)를 발사할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="ko_KR">
-      <Text>승선 및 하선에 대한 이동 비용이 추가로 들지 않습니다.</Text>
+      <Text>승선 및 하선에 대한 [ICON_Movement] 이동 비용이 추가로 들지 않습니다.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="ko_KR">
       <Text>불모지</Text>
@@ -1477,7 +1477,7 @@
       <Text>정찰병 연대</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_SETTLER_NAME" Language="ko_KR">
-      <Text>시민</Text>
+      <Text>민간인</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_SUPPLY_DROP_NAME" Language="pl_PL">
       <Text>Zrzut zaopatrzenia|Zrzutu zaopatrzenia|Zrzutowi zaopatrzenia|Zrzut zaopatrzenia|Zrzutem zaopatrzenia|Zrzucie zaopatrzenia|zrzut zaopatrzenia|zrzutu zaopatrzenia|zrzutowi zaopatrzenia|zrzut zaopatrzenia|zrzutem zaopatrzenia|zrzucie zaopatrzenia</Text>
@@ -1686,7 +1686,7 @@
       <Text>Może użyć BMR</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="pl_PL">
-      <Text>Ignoruje dodatkowe koszty ruchu za okrętowanie i wyokrętowanie.</Text>
+      <Text>Ignoruje dodatkowe koszty [ICON_Movement] ruchu za okrętowanie i wyokrętowanie.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="pl_PL">
       <Text>Pustkowie</Text>
@@ -2176,7 +2176,7 @@
       <Text>可发射大规模杀伤性武器。</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>上下船不消耗额外移动力。</Text>
+      <Text>上下船不消耗额外 [ICON_Movement] 移动力。</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="zh_Hans_CN">
       <Text>荒漠</Text>
@@ -2212,7 +2212,7 @@
       <Text>圈中的辐射将对一个单位造成{1_Damage}点伤害。[NEWLINE]目前安全区已关闭{2_RingCount}次。</Text>
     </Replace>
     <Replace Tag="LOC_CIV_ROYALE_HUD_TURNS" Language="zh_Hans_CN">
-      <Text>{1_Turns}回合</Text>
+      <Text>{1_Turns : plural 1?回合; other?回合;}</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_SCOUTING_REGIMENT_NAME" Language="zh_Hans_CN">
       <Text>侦察团</Text>
@@ -2425,7 +2425,7 @@
       <Text>Puede lanzar armas de destrucción masiva.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="es_ES">
-      <Text>Ignora los costes de Movimiento adicionales por embarcar y desembarcar.</Text>
+      <Text>Ignora los costes de Movimiento [ICON_Movement] adicionales por embarcar y desembarcar.</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="es_ES">
       <Text>Yermo</Text>
@@ -2660,7 +2660,7 @@
       <Text>能發射大規模殺傷性武器。</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="zh_Hant_HK">
-      <Text>上下船不消耗額外的移動力。</Text>
+      <Text>上下船不消耗額外的 [ICON_Movement] 移動力。</Text>
     </Replace>
     <Replace Tag="LOC_CIVROYALE_TERRAIN_WASTELAND_NAME" Language="zh_Hant_HK">
       <Text>廢土</Text>
@@ -2696,7 +2696,7 @@
       <Text>一個單位將承受圈中放射的{1_Damage}點傷害。[NEWLINE]目前安全區已關閉{2_RingCount}次。</Text>
     </Replace>
     <Replace Tag="LOC_CIV_ROYALE_HUD_TURNS" Language="zh_Hant_HK">
-      <Text>{1_Turns}回合</Text>
+      <Text>{1_Turns : plural 1?回合; other?回合;}</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_SCOUTING_REGIMENT_NAME" Language="zh_Hant_HK">
       <Text>偵察兵軍團</Text>

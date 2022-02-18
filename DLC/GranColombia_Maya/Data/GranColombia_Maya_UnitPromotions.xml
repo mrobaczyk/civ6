@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="PROMOTION_NIHANG_FLANKED_BONUS" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_NIHANG_FAITH_FOR_VICTORIES" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_NIHANG_MOVEMENT_BONUS" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_NIHANG_NO_WOUNDED_PENALTY" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS" Kind="KIND_PROMOTION"/>
+	</Types>
+	<UnitPromotions>
+		<Row UnitPromotionType="PROMOTION_NIHANG_FLANKED_BONUS" Name="LOC_PROMOTION_NIHANG_FLANKED_BONUS_NAME" Description="LOC_PROMOTION_NIHANG_FLANKED_BONUS_DESCRIPTION" Level="1" Column="1" PromotionClass="PROMOTION_CLASS_NIHANG"/>
+		<Row UnitPromotionType="PROMOTION_NIHANG_FAITH_FOR_VICTORIES" Name="LOC_PROMOTION_NIHANG_FAITH_FOR_VICTORIES_NAME" Description="LOC_PROMOTION_NIHANG_FAITH_FOR_VICTORIES_DESCRIPTION" Level="1" Column="3" PromotionClass="PROMOTION_CLASS_NIHANG"/>
+		<Row UnitPromotionType="PROMOTION_NIHANG_MOVEMENT_BONUS" Name="LOC_PROMOTION_NIHANG_MOVEMENT_BONUS_NAME" Description="LOC_PROMOTION_NIHANG_MOVEMENT_BONUS_DESCRIPTION" Level="2" Column="1" PromotionClass="PROMOTION_CLASS_NIHANG"/>
+		<Row UnitPromotionType="PROMOTION_NIHANG_NO_WOUNDED_PENALTY" Name="LOC_PROMOTION_NIHANG_NO_WOUNDED_PENALTY_NAME" Description="LOC_PROMOTION_NIHANG_NO_WOUNDED_PENALTY_DESCRIPTION" Level="2" Column="3" PromotionClass="PROMOTION_CLASS_NIHANG"/>
+		<Row UnitPromotionType="PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS" Name="LOC_PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS_NAME" Description="LOC_PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS_DESCRIPTION" Level="3" Column="2" PromotionClass="PROMOTION_CLASS_NIHANG"/>
+	</UnitPromotions>
+	<UnitPromotionPrereqs>
+		<Row UnitPromotion="PROMOTION_NIHANG_MOVEMENT_BONUS" PrereqUnitPromotion="PROMOTION_NIHANG_FLANKED_BONUS"/>
+		<Row UnitPromotion="PROMOTION_NIHANG_MOVEMENT_BONUS" PrereqUnitPromotion="PROMOTION_NIHANG_NO_WOUNDED_PENALTY"/>
+		<Row UnitPromotion="PROMOTION_NIHANG_NO_WOUNDED_PENALTY" PrereqUnitPromotion="PROMOTION_NIHANG_FAITH_FOR_VICTORIES"/>
+		<Row UnitPromotion="PROMOTION_NIHANG_NO_WOUNDED_PENALTY" PrereqUnitPromotion="PROMOTION_NIHANG_MOVEMENT_BONUS"/>
+		<Row UnitPromotion="PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS" PrereqUnitPromotion="PROMOTION_NIHANG_MOVEMENT_BONUS"/>
+		<Row UnitPromotion="PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS" PrereqUnitPromotion="PROMOTION_NIHANG_NO_WOUNDED_PENALTY"/>
+	</UnitPromotionPrereqs>
+	<UnitPromotionModifiers>
+		<Row>
+			<UnitPromotionType>PROMOTION_NIHANG_FLANKED_BONUS</UnitPromotionType>
+			<ModifierId>NIHANG_FLANKED_BONUS</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_NIHANG_FAITH_FOR_VICTORIES</UnitPromotionType>
+			<ModifierId>NIHANG_FAITH_FOR_VICTORIES</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_NIHANG_MOVEMENT_BONUS</UnitPromotionType>
+			<ModifierId>NIHANG_MOVEMENT_BONUS</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_NIHANG_NO_WOUNDED_PENALTY</UnitPromotionType>
+			<ModifierId>NIHANG_NO_WOUNDED_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS</UnitPromotionType>
+			<ModifierId>NIHANG_SUZERAIN_COMBAT_BONUS</ModifierId>
+		</Row>
+	</UnitPromotionModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>NIHANG_FLANKED_BONUS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>UNIT_IS_FLANKED_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_FAITH_FOR_VICTORIES</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_POST_COMBAT_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_MOVEMENT_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_NO_WOUNDED_PENALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_NO_REDUCTION_DAMAGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_SUZERAIN_COMBAT_BONUS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_LAHORE_SUZERAIN_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>NIHANG_FLANKED_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>7</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_FAITH_FOR_VICTORIES</ModifierId>
+			<Name>PercentDefeatedStrength</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_FAITH_FOR_VICTORIES</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_MOVEMENT_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_NO_WOUNDED_PENALTY</ModifierId>
+			<Name>NoReduction</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>NIHANG_SUZERAIN_COMBAT_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>UNIT_IS_FLANKED_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_LAHORE_SUZERAIN_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>UNIT_IS_FLANKED_REQUIREMENTS</RequirementSetId>
+			<RequirementId>UNIT_IS_FLANKED_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_LAHORE_SUZERAIN_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLAYER_HAS_LAHORE_SUZERAIN</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>UNIT_IS_FLANKED_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_UNIT_FLANKED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLAYER_HAS_LAHORE_SUZERAIN</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_IS_SUZERAIN_OF_X</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>PLAYER_HAS_LAHORE_SUZERAIN</RequirementId>
+			<Name>LeaderType</Name>
+			<Value>LEADER_MINOR_CIV_LAHORE</Value>
+		</Row>
+	</RequirementArguments>
+	<ModifierStrings>
+		<Row ModifierId="NIHANG_FLANKED_BONUS" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_NIHANG_FLANKED_BONUS_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+		<Row ModifierId="NIHANG_SUZERAIN_COMBAT_BONUS" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_NIHANG_SUZERAIN_COMBAT_BONUS_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+	</ModifierStrings>
+</GameInfo>

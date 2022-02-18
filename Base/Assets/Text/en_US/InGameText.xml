@@ -602,9 +602,15 @@
 		<Row Tag="LOC_HUD_UNIT_PANEL_VS">
 			<Text>VS</Text>
 		</Row>
+    <Row Tag="LOC_HUD_UNIT_PANEL_LINKED">
+      <Text>LINKED</Text>
+    </Row>
 		<Row Tag="LOC_HUD_UNIT_PANEL_WATER_AVAILABILITY_GUIDE">
 			<Text>WATER AVAILABILITY GUIDE</Text>
 		</Row>
+    <Row Tag="LOC_HUD_UNIT_PANEL_SETTLING_LOCATION_GUIDE">
+      <Text>SETTLING LOCATION GUIDE</Text>
+    </Row>
 		<Row Tag="LOC_HUD_UNIT_PANEL_TOOLTIP_FRESH_WATER">
 			<Text>Fresh Water</Text>
 		</Row>
@@ -614,6 +620,9 @@
 		<Row Tag="LOC_HUD_UNIT_PANEL_TOOLTIP_NO_WATER">
 			<Text>No Water</Text>
 		</Row>
+    <Row Tag="LOC_HUD_UNIT_PANEL_TOOLTIP_VALID_LOCATION">
+      <Text>Valid Settling Location</Text>
+    </Row>
 		<Row Tag="LOC_HUD_UNIT_PANEL_TOOLTIP_TOO_CLOSE_TO_CITY">
 			<Text>Too Close to City or Blocked by Terrain</Text>
 		</Row>
@@ -906,7 +915,7 @@
 			<Text>Not enough movement points left.</Text>
 		</Row>
 		<Row Tag="LOC_HUD_UNIT_ACTION_AUTOEXPLORE_NEAR_GOODY_HUT">
-			<Text>Too close to Tribal Village</Text>
+			<Text>Too close to {1_Improvement_Name}</Text>
 		</Row>
 		<Row Tag="LOC_HUD_UNIT_ACTION_AUTOEXPLORE_IN_FORMATION">
 			<Text>In formation with other units</Text>
@@ -1471,6 +1480,9 @@
 		<Row Tag="LOC_HUD_RIBBON_FAITH">
 			<Text>Faith balance</Text>
 		</Row>
+    <Row Tag="LOC_HUD_RIBBON_REDDEATH_ELIMINATED">
+      <Text>Claimed by the Red Death</Text>
+    </Row>
 		<Row Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_HIDE">
 			<Text>Always hide stats</Text>
 		</Row>
@@ -2180,6 +2192,9 @@
 		<Row Tag="LOC_TECH_BOOST_CAPTURED_CITY">
 			<Text>You have gained new scientific knowledge from the capture of this city.</Text>
 		</Row>
+    <Row Tag="LOC_TECH_BOOST_TRADING_POST">
+      <Text>Your merchants bring new ideas from distant lands.</Text>
+    </Row>
 		<Row Tag="LOC_TECH_BOOST_COMPLETE">
 			<Text>Your research in {1_techString} is now complete!</Text>
 		</Row>
@@ -2989,6 +3004,9 @@
 		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_ON_MISSING_BUILDING">
 			<Text>Must be in a city without a {1_BuildingName} building.</Text>
 		</Row>
+    <Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_NEARBY_VALID_UNIT">
+      <Text>Must be within 2 hexes of a valid unit.</Text>
+    </Row>
 		<Row Tag="LOC_UNITCOMMAND_DISTRICT_PRODUCTION_DESCRIPTION">
 			<Text>Add Production to a District.</Text>
 		</Row>
@@ -3344,6 +3362,9 @@
 		</Row>
 		<Row Tag="LOC_TOOLTIP_RIVER">
 			<Text>River</Text>
+		</Row>
+		<Row Tag="LOC_TOOLTIP_CLIFF">
+			<Text>Cliff</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_IMPROVEMENT_RECOMMENDATION">
 			<Text>Recommended Improvement: {1_ImprovementName}</Text>
@@ -4649,6 +4670,12 @@
 			<Text>An unknown player</Text>
 		</Row>
 		<!-- ==================== Chat Panel Text ==================== -->
+    <Row Tag="LOC_CLICK_TO_DRAG">
+      <Text>Click and hold to drag</Text>
+    </Row>
+    <Row Tag="LOC_COLLAPSE_AND_RESET">
+      <Text>Collapse and reset the chat panel</Text>
+    </Row>
 		<Row Tag="LOC_DIPLO_TO_ALL">
 			<Text>To All</Text>
 		</Row>
@@ -5568,25 +5595,25 @@
 			<Text>Order Civilizations by</Text>
 		</Row>
 		<Row Tag="LOC_REPORTS_ORDER_AMOUNT">
-			<Text>amount</Text>
+			<Text>Amount</Text>
 		</Row>
 		<Row Tag="LOC_REPORTS_ORDER_PLAYER">
-			<Text>player</Text>
+			<Text>Player</Text>
 		</Row>
 		<Row Tag="LOC_REPORTS_ORDER_PLAYER_SLOT">
-			<Text>player slot</Text>
+			<Text>Player Slot</Text>
 		</Row>		
 		<Row Tag="LOC_REPORTS_SORT_BY">
 			<Text>Sort by</Text>
 		</Row>
 		<Row Tag="LOC_REPORTS_SORT_NAME">
-			<Text>name</Text>
+			<Text>Name</Text>
 		</Row>
 		<Row Tag="LOC_REPORTS_SORT_TYPE">
-			<Text>type</Text>
+			<Text>Type</Text>
 		</Row>
 		<Row Tag="LOC_REPORTS_SORT_SCARCITY">
-			<Text>scarcity</Text>
+			<Text>Scarcity</Text>
 		</Row>
 		<Row Tag="LOC_REPORTS_SORT_BY_RESOURCE_NAME">
 			<Text>Sort by resource name</Text>
@@ -5830,12 +5857,18 @@
 		<Row Tag="LOC_CITY_YIELD_FROM_RELIGIOUS_FOLLOWERS_TOOLTIP">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from having {1} Religious Followers</Text>
 		</Row>
+    <Row Tag="LOC_CITY_YIELD_FROM_FAITH">
+      <Text>{Value : number +#.#;-#.#} from Faith</Text>
+    </Row>
 		<Row Tag="LOC_CITY_YIELD_FROM_PASSING_TRADE_ROUTES_TOOLTIP">
 			<Text>{Value : number +#.##;-#.##} from Foreign Routes Passing Through</Text>
 		</Row>
 		<Row Tag="LOC_CITY_YIELD_FROM_INCOMING_TRADE_ROUTES_TOOLTIP">
 			<Text>{Value : number +#.#;-#.#} from Incoming Trade Routes</Text>
 		</Row>
+    <Row Tag="LOC_CITY_YIELD_FROM_MAJOR_TRADE_PARTNERS_TOOLTIP">
+      <Text>{Value : number +#.#;-#.#} from number of civilizations this city has Trade Routes to</Text>
+    </Row>
 		<Row Tag="LOC_CITY_YIELD_FROM_OUTGOING_TRADE_ROUTES_TOOLTIP">
 			<Text>{Value : number +#.#;-#.#} from Outgoing Trade Routes</Text>
 		</Row>
@@ -5981,6 +6014,9 @@
 		<Row Tag="LOC_TOURISM_LENS_GREAT_PEOPLE_LINE_TOOLTIP">
 			<Text>{1_TourismInfo}Tourism added by buildings or Great People: +{2_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
+    <Row Tag="LOC_TOURISM_LENS_DISTRICT_YIELDS_TOOLTIP">
+      <Text>{1_TourismInfo}Tourism added by district yields: +{2_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
+    </Row>
 		<Row Tag="LOC_TOURISM_LENS_GREAT_WORK_LINE_TOOLTIP">
 			<Text>{1_TourismInfo}Tourism from Great Works in {2_BuildingName}, +{3_GreatWorkTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
@@ -6124,7 +6160,7 @@
 			<Text>EARLY-GAME RESOURCES</Text>
 		</Row>
 		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES">
-			<Text>unused</Text>
+			<Text>RESOURCES</Text>
 		</Row>
 		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_STRATEGIC_RESOURCES">
 			<Text>RESOURCES</Text>

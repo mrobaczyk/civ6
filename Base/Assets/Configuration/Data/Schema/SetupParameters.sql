@@ -38,6 +38,7 @@ CREATE TABLE 'ParameterQueries'(
 	'DomainValuesConfigurationIdField' TEXT NOT NULL DEFAULT 'DomainValuesConfigurationId',
 	'ValueNameConfigurationIdField' TEXT NOT NULL DEFAULT 'ValueNameConfigurationId',
 	'ValueDomainConfigurationIdField' TEXT NOT NULL DEFAULT 'ValueDomainConfigurationId',
+	'NameArrayConfigurationIdField' TEXT NOT NULL DEFAULT 'NameArrayConfigurationId',
 	'GroupField' TEXT NOT NULL DEFAULT 'GroupId',
 	'VisibleField' TEXT NOT NULL DEFAULT 'Visible',
 	'ReadOnlyField' TEXT NOT NULL DEFAULT 'ReadOnly',
@@ -84,6 +85,7 @@ CREATE TABLE 'Parameters'(
 	'DomainValuesConfigurationId' TEXT,							-- [Optional] Write out a comma delimited list of all values (including original domain).  This only applies to name-value domains.					
 	'ValueNameConfigurationId' TEXT,							-- [Optional] Write out the name of the value as a localization bundle.	This only applies to name-value domains.
 	'ValueDomainConfigurationId' TEXT,							-- [Optional] Write out the original domain of the selected value. (This may not match the parameter's domain).
+	'NameArrayConfigurationId' TEXT,							-- [Optional] Include the name of the parameter in a comma delimited list so long as the value is not false or null.
 	'GroupId' TEXT NOT NULL,									-- Used by the UI to determine how to triage the parameter.
 	'Visible' BOOLEAN NOT NULL DEFAULT 1,						-- Used by the UI to determine whether the parameter should be shown.  Parameter dependencies may override this.
 	'ReadOnly' BOOLEAN NOT NULL DEFAULT 0,						-- Used by the UI to determine whether the parameter should be disabled. Parameter criteria may override this.

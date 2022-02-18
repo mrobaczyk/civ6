@@ -184,7 +184,10 @@ function ResourceGenerator:__GetLuxuryResources()
 		local index = 1;
 		while max >= iI and failed < 2 do 
 			local eChosenLux = self.aLuxuryType[self.aIndex[index]];
-			local isValid = true;
+			local isValid = false;
+			if (eChosenLux ~= nil) then
+				isValid = true;
+			end
 			
 			if (isValid == true and #self.aLuxuryType > 0) then
 				table.remove(self.aLuxuryType,index);
@@ -197,6 +200,8 @@ function ResourceGenerator:__GetLuxuryResources()
 
 			if index > #self.aLuxuryType then
 				index = 1;
+				failed = failed + 1;
+			elseif (isValid == false) then
 				failed = failed + 1;
 			end
 		end

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Civilization.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_ADJUST_PLOT_YIELD_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_ADD_AMENITY_PER_ADJACENT_LUXURY" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_NO_FRESH_WATER_HOUSING" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_SINGLE_CITY_ADJUST_IMPROVEMENT_HOUSING_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
+		<!-- District.xml Modifiers-->
+		<Row Type="MODIFIER_SINGLE_CITY_GRANT_YIELD_PER_BUILDING_COST_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
+    <!-- Features.xml Modifiers-->
+    <Row Type="MODIFIER_ALL_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL" Kind="KIND_MODIFIER"/>
+    <Row Type="MODIFIER_UNIT_TELEPORT" Kind="KIND_MODIFIER"/>
+    <!-- Leaders.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_GRANT_RELIGIOUS_PRESSURE_GREAT_PERSON_ACTIVATED" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_UNITS_GRANT_ABILITY_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
+    <Row Type="MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_PATH_TILE" Kind="KIND_MODIFIER"/>
+    <Row Type="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER" Kind="KIND_MODIFIER"/>
+    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR" Kind="KIND_MODIFIER"/>
+    
+    <Row Type="MODIFIER_MAJOR_PLAYERS_GRANT_BASE_PROMOTION" Kind="KIND_MODIFIER"/>
+  </Types>
+  <TypeTags>
+    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR" Tag="DIPLOMACY_MODIFIER"/>
+  </TypeTags>
+	<DynamicModifiers>
+		<!-- Civilization.xml Modifiers -->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD_GRANCOLOMBIA_MAYA</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_PLOT_YIELDS</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLOT_YIELD</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADD_AMENITY_PER_ADJACENT_LUXURY</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_ADD_AMENITY_PER_ADJACENT_LUXURY</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_NO_FRESH_WATER_HOUSING</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_NO_FRESH_WATER_HOUSING</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_UNITS</CollectionType>
+			<EffectType>EFFECT_ADJUST_UNIT_PROMOTE_NO_FINISH_MOVES</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_IMPROVEMENT_HOUSING_GRANCOLOMBIA_MAYA</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_IMPROVEMENT_HOUSING</EffectType>
+		</Row>
+		<!-- District.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_YIELD_PER_BUILDING_COST_GRANCOLOMBIA_MAYA</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_GRANT_CITY_YIELD_PERCENT_BUILDING_CREATED_COST</EffectType>
+		</Row>
+    <!-- Features.xml Modifiers-->
+    <Row>
+      <ModifierType>MODIFIER_ALL_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
+      <CollectionType>COLLECTION_ALL_CITIES</CollectionType>
+      <EffectType>EFFECT_ADJUST_CITY_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</EffectType>
+    </Row>
+		<!-- Leaders.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER_GRANCOLOMBIA_MAYA</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_YIELD_MODIFIER</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_GRANT_RELIGIOUS_PRESSURE_GREAT_PERSON_ACTIVATED</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_GRANT_PLAYER_RELIGIOUS_PRESSURE_GREAT_PERSON_ACTIVATED</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY_GRANCOLOMBIA_MAYA</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_UNITS</CollectionType>
+			<EffectType>EFFECT_GRANT_ABILITY</EffectType>
+		</Row>
+    <Row>
+      <ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_PATH_TILE</ModifierType>
+      <CollectionType>COLLECTION_OWNER</CollectionType>
+      <EffectType>EFFECT_ADJUST_PLAYER_TRADE_ROUTE_YIELD_PER_PATH_TILE</EffectType>
+    </Row>
+    <Row>
+      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER</ModifierType>
+      <CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+      <EffectType>EFFECT_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER</EffectType>
+    </Row>
+    <Row>
+      <ModifierType>MODIFIER_UNIT_TELEPORT</ModifierType>
+      <CollectionType>COLLECTION_ALL_UNITS</CollectionType>
+      <EffectType>EFFECT_UNIT_TELEPORT</EffectType>
+    </Row>
+    <Row>
+      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR</ModifierType>
+      <CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
+      <EffectType>EFFECT_DIPLOMACY_AGENDA_SIMON_BOLIVAR</EffectType>
+    </Row>
+
+    <Row>
+      <ModifierType>MODIFIER_MAJOR_PLAYERS_GRANT_BASE_PROMOTION</ModifierType>
+      <CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
+      <EffectType>EFFECT_GRANT_RANDOM_BASE_PROMOTION</EffectType>
+    </Row>
+  </DynamicModifiers>
+</GameInfo>

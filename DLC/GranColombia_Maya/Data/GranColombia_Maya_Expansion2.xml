@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<!-- Named Places -->
+		<Row Type="NAMED_RIVER_MAGDALENA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_APURE_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_META_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_ARAUCA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_CAUCA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_CARONI_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_MOTAGUA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_GRIJALVA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_SAMALA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_CHIXOY_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_USUMACINTA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_BELIZE_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_HONDO_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_VOLCANO_CHIMBORAZO" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_PURACE" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_NEVADO_DEL_TOLIMA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_COTOPAXI" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_GUAGUA_PICHINCHA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_TUNGURAHUA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_HUNAHPU" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_ATITLAN" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_TOLIMAN" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_PACAYA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_MOUNTAIN_MAYA_MOUNTAINS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_SIERRA_MADRE_DE_CHIAPAS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_SIERRA_DE_LOS_CUCHUMATANES" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_GUATEMALAN_HIGHLANDS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_SIERRA_DE_LAS_MINAS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_CENTRAL" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_OCCIDENTAL" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_ORIENTAL" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_GUIANA_HIGHLANDS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_DE_MERIDA" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_DE_LA_COSTA" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_DESERT_LA_GUAJIRA_DESERT" Kind="KIND_NAMED_DESERT"/>
+		<Row Type="NAMED_DESERT_TATACOA_DESERT" Kind="KIND_NAMED_DESERT"/>
+		<Row Type="NAMED_DESERT_MEDANOS_DE_CORO" Kind="KIND_NAMED_DESERT"/>
+		<Row Type="NAMED_LAKE_LAKE_IZABAL" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_PETEN_ITZA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_AMATITLAN" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_GUIJA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_LEOPOLDO" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_VALENCIA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_TOTA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAGUNA_DE_LA_COCHA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_HERRERA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_SEA_GULF_OF_HONDURAS" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_AMATIQUE_BAY" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_TERMINOS_LAGOON" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_GULF_OF_DARIEN" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_GULF_OF_VENEZUELA" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_GULF_OF_PARIA" Kind="KIND_NAMED_SEA"/>
+		<!-- Features -->
+		<Row Type="FEATURE_BURNING_FOREST" Kind="KIND_FEATURE"/>
+		<Row Type="FEATURE_BURNT_FOREST" Kind="KIND_FEATURE"/>
+		<Row Type="FEATURE_BURNING_JUNGLE" Kind="KIND_FEATURE"/>
+		<Row Type="FEATURE_BURNT_JUNGLE" Kind="KIND_FEATURE"/>
+		<!-- Environmental Effects -->
+		<Row Type="RANDOM_EVENT_METEOR_SHOWER" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_JUNGLE_FIRE" Kind="KIND_RANDOM_EVENT"/>
+		<Row Type="RANDOM_EVENT_FOREST_FIRE" Kind="KIND_RANDOM_EVENT"/>
+		<!-- Improvements -->
+		<Row Type="IMPROVEMENT_METEOR_GOODY" Kind="KIND_IMPROVEMENT"/>
+		<!-- Dynamic Modifiers -->
+		<Row Type="MODIFIER_GAME_SET_REALISM_SETTING" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_GAME_SET_ACTIVE_VOLCANOES" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_UNIT_ADJUST_DISASTER_CHARGES" Kind="KIND_MODIFIER"/>
+	</Types>
+  <MomentIllustrations>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_MAYAN_HULCHE" Texture="MomentSTK_Hulche.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COMANDANTE_GENERAL" Texture="MomentSTK_ComandanteGeneral.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COLOMBIAN_LLANERO" Texture="MomentSTK_Llanero.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_OBSERVATORY" Texture="MomentSTK_Observatory.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_HACIENDA" Texture="MomentSTK_Hacienda.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_BERMUDA_TRIANGLE" Texture="MomentSTK_BermudaTriangle.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_FOUNTAIN_OF_YOUTH" Texture="MomentSTK_FountainOfYouth.dds"/>
+    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_PAITITI" Texture="MomentSTK_Paititi.dds"/>
+  </MomentIllustrations>
+	<!-- Expansion 2 specific data -->
+	<TypeTags>
+		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_GIANT_DEATH_ROBOT"/>
+	</TypeTags>
+	<StartBiasResources>
+		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_OLIVES" Tier="2"/>
+	</StartBiasResources>
+	<Resource_ValidFeatures>
+		<Row ResourceType="RESOURCE_MAIZE" FeatureType="FEATURE_FLOODPLAINS_GRASSLAND"/>
+		<Row ResourceType="RESOURCE_MAIZE" FeatureType="FEATURE_FLOODPLAINS_PLAINS"/>
+	</Resource_ValidFeatures>
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_OBSERVATORY" YieldChangeId="Government_Science"/>
+		<Row DistrictType="DISTRICT_OBSERVATORY" YieldChangeId="Pamukkale_Science"/>
+		<Row DistrictType="DISTRICT_SUGUBA" YieldChangeId="Paititi_Gold"/>
+	</District_Adjacencies>
+  <Units_XP2>
+    <Row UnitType="UNIT_COMANDANTE_GENERAL" CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+  </Units_XP2>
+	<Leaders_XP2>
+		<Row LeaderType="LEADER_MINOR_CIV_CAGUANA" MinorCivBonusType="MINOR_CIV_BONUS_CULTURAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_HUNZA" MinorCivBonusType="MINOR_CIV_BONUS_TRADE"/>
+		<Row LeaderType="LEADER_MINOR_CIV_LAHORE" MinorCivBonusType="MINOR_CIV_BONUS_MILITARISTIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_SINGAPORE" MinorCivBonusType="MINOR_CIV_BONUS_INDUSTRIAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_TARUGA" MinorCivBonusType="MINOR_CIV_BONUS_SCIENTIFIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_VATICAN_CITY" MinorCivBonusType="MINOR_CIV_BONUS_RELIGIOUS"/>
+	</Leaders_XP2>
+	<NamedRivers>
+		<Row NamedRiverType="NAMED_RIVER_MAGDALENA_RIVER" Name="LOC_NAMED_RIVER_MAGDALENA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_APURE_RIVER" Name="LOC_NAMED_RIVER_APURE_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_META_RIVER" Name="LOC_NAMED_RIVER_META_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_ARAUCA_RIVER" Name="LOC_NAMED_RIVER_ARAUCA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_CAUCA_RIVER" Name="LOC_NAMED_RIVER_CAUCA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_CARONI_RIVER" Name="LOC_NAMED_RIVER_CARONI_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_MOTAGUA_RIVER" Name="LOC_NAMED_RIVER_MOTAGUA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_GRIJALVA_RIVER" Name="LOC_NAMED_RIVER_GRIJALVA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_SAMALA_RIVER" Name="LOC_NAMED_RIVER_SAMALA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_CHIXOY_RIVER" Name="LOC_NAMED_RIVER_CHIXOY_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_USUMACINTA_RIVER" Name="LOC_NAMED_RIVER_USUMACINTA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_BELIZE_RIVER" Name="LOC_NAMED_RIVER_BELIZE_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_HONDO_RIVER" Name="LOC_NAMED_RIVER_HONDO_RIVER_NAME"/>
+	</NamedRivers>
+	<NamedVolcanoes>
+		<Row NamedVolcanoType="NAMED_VOLCANO_CHIMBORAZO" Name="LOC_NAMED_VOLCANO_CHIMBORAZO_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_PURACE" Name="LOC_NAMED_VOLCANO_VOLCAN_PURACE_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_NEVADO_DEL_TOLIMA" Name="LOC_NAMED_VOLCANO_NEVADO_DEL_TOLIMA_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_COTOPAXI" Name="LOC_NAMED_VOLCANO_VOLCAN_COTOPAXI_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_GUAGUA_PICHINCHA" Name="LOC_NAMED_VOLCANO_GUAGUA_PICHINCHA_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_TUNGURAHUA" Name="LOC_NAMED_VOLCANO_TUNGURAHUA_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_HUNAHPU" Name="LOC_NAMED_VOLCANO_HUNAHPU_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_ATITLAN" Name="LOC_NAMED_VOLCANO_VOLCAN_ATITLAN_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_TOLIMAN" Name="LOC_NAMED_VOLCANO_VOLCAN_TOLIMAN_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_PACAYA" Name="LOC_NAMED_VOLCANO_PACAYA_NAME"/>
+	</NamedVolcanoes>
+	<NamedMountains>
+		<Row NamedMountainType="NAMED_MOUNTAIN_MAYA_MOUNTAINS" Name="LOC_NAMED_MOUNTAIN_MAYA_MOUNTAINS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_DE_CHIAPAS" Name="LOC_NAMED_MOUNTAIN_SIERRA_MADRE_DE_CHIAPAS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_DE_LOS_CUCHUMATANES" Name="LOC_NAMED_MOUNTAIN_SIERRA_DE_LOS_CUCHUMATANES_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_GUATEMALAN_HIGHLANDS" Name="LOC_NAMED_MOUNTAIN_GUATEMALAN_HIGHLANDS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_DE_LAS_MINAS" Name="LOC_NAMED_MOUNTAIN_SIERRA_DE_LAS_MINAS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_CENTRAL" Name="LOC_NAMED_MOUNTAIN_CORDILLERA_CENTRAL_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_OCCIDENTAL" Name="LOC_NAMED_MOUNTAIN_CORDILLERA_OCCIDENTAL_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_ORIENTAL" Name="LOC_NAMED_MOUNTAIN_CORDILLERA_ORIENTAL_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_GUIANA_HIGHLANDS" Name="LOC_NAMED_MOUNTAIN_GUIANA_HIGHLANDS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_DE_MERIDA" Name="LOC_NAMED_MOUNTAIN_CORDILLERA_DE_MERIDA_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_DE_LA_COSTA" Name="LOC_NAMED_MOUNTAIN_CORDILLERA_DE_LA_COSTA_NAME"/>
+	</NamedMountains>
+	<NamedDeserts>
+		<Row NamedDesertType="NAMED_DESERT_LA_GUAJIRA_DESERT" Name="LOC_NAMED_DESERT_LA_GUAJIRA_DESERT_NAME"/>
+		<Row NamedDesertType="NAMED_DESERT_TATACOA_DESERT" Name="LOC_NAMED_DESERT_TATACOA_DESERT_NAME"/>
+		<Row NamedDesertType="NAMED_DESERT_MEDANOS_DE_CORO" Name="LOC_NAMED_DESERT_MEDANOS_DE_CORO_NAME"/>
+	</NamedDeserts>
+	<NamedLakes>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_IZABAL" Name="LOC_NAMED_LAKE_LAKE_IZABAL_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_PETEN_ITZA" Name="LOC_NAMED_LAKE_LAKE_PETEN_ITZA_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_AMATITLAN" Name="LOC_NAMED_LAKE_LAKE_AMATITLAN_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_GUIJA" Name="LOC_NAMED_LAKE_LAKE_GUIJA_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_LEOPOLDO" Name="LOC_NAMED_LAKE_LAKE_LEOPOLDO_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_VALENCIA" Name="LOC_NAMED_LAKE_LAKE_VALENCIA_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_TOTA" Name="LOC_NAMED_LAKE_LAKE_TOTA_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAGUNA_DE_LA_COCHA" Name="LOC_NAMED_LAKE_LAGUNA_DE_LA_COCHA_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_HERRERA" Name="LOC_NAMED_LAKE_LAKE_HERRERA_NAME"/>
+	</NamedLakes>
+	<NamedSeas>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_HONDURAS" Name="LOC_NAMED_SEA_GULF_OF_HONDURAS_NAME"/>
+		<Row NamedSeaType="NAMED_SEA_AMATIQUE_BAY" Name="LOC_NAMED_SEA_AMATIQUE_BAY_NAME"/>
+		<Row NamedSeaType="NAMED_SEA_TERMINOS_LAGOON" Name="LOC_NAMED_SEA_TERMINOS_LAGOON_NAME"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_DARIEN" Name="LOC_NAMED_SEA_GULF_OF_DARIEN_NAME"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_VENEZUELA" Name="LOC_NAMED_SEA_GULF_OF_VENEZUELA_NAME"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_PARIA" Name="LOC_NAMED_SEA_GULF_OF_PARIA_NAME"/>
+	</NamedSeas>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_MAGDALENA_RIVER" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_APURE_RIVER" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_META_RIVER" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_ARAUCA_RIVER" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_CAUCA_RIVER" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_CARONI_RIVER" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_AMAZON" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_ORINOCO" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_RIO_NEGRO" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedRiverType="NAMED_RIVER_MOTAGUA_RIVER" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedRiverType="NAMED_RIVER_GRIJALVA_RIVER" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedRiverType="NAMED_RIVER_SAMALA_RIVER" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedRiverType="NAMED_RIVER_CHIXOY_RIVER" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedRiverType="NAMED_RIVER_USUMACINTA_RIVER" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedRiverType="NAMED_RIVER_BELIZE_RIVER" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedRiverType="NAMED_RIVER_HONDO_RIVER" CivilizationType="CIVILIZATION_MAYA"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_CHIMBORAZO" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_PURACE" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_NEVADO_DEL_TOLIMA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_COTOPAXI" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_GUAGUA_PICHINCHA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_NEVADO_DEL_RUIZ" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_GALERAS" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_TUNGURAHUA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_HUNAHPU" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_ATITLAN" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_VOLCAN_TOLIMAN" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_PACAYA" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_CHI_GAG" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_SANTA_MARIA" CivilizationType="CIVILIZATION_MAYA"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_MAYA_MOUNTAINS" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_DE_CHIAPAS" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_DE_LOS_CUCHUMATANES" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_GUATEMALAN_HIGHLANDS" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SIERRA_DE_LAS_MINAS" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_CENTRAL" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_OCCIDENTAL" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_ORIENTAL" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_GUIANA_HIGHLANDS" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_DE_MERIDA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_DE_LA_COSTA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_ANDES" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_LA_GUAJIRA_DESERT" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedDesertType="NAMED_DESERT_TATACOA_DESERT" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedDesertType="NAMED_DESERT_MEDANOS_DE_CORO" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+	</NamedDesertCivilizations>
+	<NamedLakeCivilizations>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_IZABAL" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_PETEN_ITZA" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_AMATITLAN" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_GUIJA" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_LEOPOLDO" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_VALENCIA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_TOTA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAGUNA_DE_LA_COCHA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_HERRERA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+	</NamedLakeCivilizations>
+	<NamedSeaCivilizations>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_HONDURAS" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedSeaType="NAMED_SEA_AMATIQUE_BAY" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedSeaType="NAMED_SEA_TERMINOS_LAGOON" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedSeaType="NAMED_SEA_CARIBBEAN_SEA" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedSeaType="NAMED_SEA_BAY_OF_CAMPECHE" CivilizationType="CIVILIZATION_MAYA"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_DARIEN" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_VENEZUELA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_PARIA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedSeaType="NAMED_SEA_LAKE_MARACAIBO" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedSeaType="NAMED_SEA_CARIBBEAN_SEA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_PANAMA" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_GUAYAQUIL" CivilizationType="CIVILIZATION_GRAN_COLOMBIA"/>
+	</NamedSeaCivilizations>
+	<Features>
+		<Row FeatureType="FEATURE_BURNING_FOREST" Name="LOC_FEATURE_BURNING_FOREST_NAME" Description="LOC_FEATURE_BURNING_FOREST_DESCRIPTION" SightThroughModifier="1" DefenseModifier="3" MovementChange="1" Appeal="-1" AntiquityPriority="1" DangerValue="80" Settlement="false"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" Name="LOC_FEATURE_BURNT_FOREST_NAME" Description="LOC_FEATURE_BURNT_FOREST_DESCRIPTION" SightThroughModifier="1" DefenseModifier="3" MovementChange="1" Appeal="-1" AntiquityPriority="1" Settlement="false"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" Name="LOC_FEATURE_BURNING_JUNGLE_NAME" Description="LOC_FEATURE_BURNING_JUNGLE_DESCRIPTION" SightThroughModifier="1" DefenseModifier="3" MovementChange="1" Appeal="-1" AntiquityPriority="1" DangerValue="80" Settlement="false"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" Name="LOC_FEATURE_BURNT_JUNGLE_NAME" Description="LOC_FEATURE_BURNT_JUNGLE_DESCRIPTION" SightThroughModifier="1" DefenseModifier="3" MovementChange="1" Appeal="-1" AntiquityPriority="1" Settlement="false"/>
+	</Features>
+	<Features_XP2>
+		<Row FeatureType="FEATURE_BURNING_FOREST" ValidForReplacement="true"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" ValidForReplacement="true"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" ValidForReplacement="true"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" ValidForReplacement="true"/>
+	</Features_XP2>
+	<Feature_ValidTerrains>
+		<Row FeatureType="FEATURE_BURNING_FOREST" TerrainType="TERRAIN_GRASS"/>
+		<Row FeatureType="FEATURE_BURNING_FOREST" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_BURNING_FOREST" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_BURNING_FOREST" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNING_FOREST" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNING_FOREST" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" TerrainType="TERRAIN_GRASS"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNT_FOREST" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_GRASS"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_GRASS"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+	</Feature_ValidTerrains>
+	<RandomEvents>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" Name="LOC_RANDOM_EVENT_METEOR_SHOWER_NAME" Description="LOC_RANDOM_EVENT_METEOR_SHOWER_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_METEOR_SHOWER_EFFECT_DESCRIPTION" EffectOperatorType="METEOR_SHOWER" Severity="1" Hexes="1" IconLarge="ClimateEvent_MeteorShowers" IconSmall="ClimateEventStat_MeteorShowers" AvoidTerritory="true"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="7" ChanceIncreasePerDegree="50" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="7" ChanceIncreasePerDegree="50" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
+	</RandomEvents>
+	<RandomEvent_Notifications>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" NotificationType="NOTIFICATION_FIRE_STARTS" Title="LOC_FIRE_STARTED" Summary="LOC_FIRE_STARTED_DESC" MaxTurn="0" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" NotificationType="NOTIFICATION_FIRE_ENDS" Title="LOC_FIRE_CONTINUED" Summary="LOC_FIRE_CONTINUED_DESC" MinTurn="2" MaxTurn="2" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" NotificationType="NOTIFICATION_JUNGLE_REGROWS" Title="LOC_FIRE_JUNGLE_OVER" Summary="LOC_FIRE_JUNGLE_OVER_DESC" MinTurn="6" MaxTurn="6" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" NotificationType="NOTIFICATION_FIRE_STARTS" Title="LOC_FIRE_STARTED" Summary="LOC_FIRE_STARTED_DESC" MaxTurn="0" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" NotificationType="NOTIFICATION_FIRE_ENDS" Title="LOC_FIRE_CONTINUED" Summary="LOC_FIRE_CONTINUED_DESC" MinTurn="2" MaxTurn="2" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" NotificationType="NOTIFICATION_FOREST_REGROWS" Title="LOC_FIRE_FOREST_OVER" Summary="LOC_FIRE_FOREST_OVER_DESC" MinTurn="6" MaxTurn="6" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" NotificationType="NOTIFICATION_METEOR_STRIKES" Title="LOC_METEOR_HAPPENED" Summary="LOC_METEOR_HAPPENED_DESC"/>
+	</RandomEvent_Notifications>
+	<RandomEvent_Features>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" FeatureType="FEATURE_JUNGLE"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" FeatureType="FEATURE_FOREST"/>
+	</RandomEvent_Features>
+	<RandomEvent_Presentation>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" Animation="REVEAL_STORM_SMALL" Sound="Play_Disaster_MeteorShower_Movie_Loop" MFX="Meteor_Shower" SequenceType="SCENE_EVENT_TRIGGER" Callback="GetAffectedPlots_OneOff"/>
+	</RandomEvent_Presentation>
+	<RandomEvent_Terrains>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_PLAINS"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_GRASS"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_SNOW"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_DESERT"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" TerrainType="TERRAIN_DESERT_HILLS"/>
+	</RandomEvent_Terrains>
+	<RandomEvent_Frequencies>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" RealismSettingType="REALISM_SETTING_MINIMAL" OccurrencesPerGame="3"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" RealismSettingType="REALISM_SETTING_LIGHT" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" RealismSettingType="REALISM_SETTING_MODERATE" OccurrencesPerGame="6"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" RealismSettingType="REALISM_SETTING_HEAVY" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" RealismSettingType="REALISM_SETTING_HYPERREAL" OccurrencesPerGame="15"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" RealismSettingType="REALISM_SETTING_MINIMAL" OccurrencesPerGame="3"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" RealismSettingType="REALISM_SETTING_LIGHT" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" RealismSettingType="REALISM_SETTING_MODERATE" OccurrencesPerGame="6"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" RealismSettingType="REALISM_SETTING_HEAVY" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" RealismSettingType="REALISM_SETTING_HYPERREAL" OccurrencesPerGame="15"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" RealismSettingType="REALISM_SETTING_MINIMAL" OccurrencesPerGame="3"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" RealismSettingType="REALISM_SETTING_LIGHT" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" RealismSettingType="REALISM_SETTING_MODERATE" OccurrencesPerGame="6"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" RealismSettingType="REALISM_SETTING_HEAVY" OccurrencesPerGame="10"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" RealismSettingType="REALISM_SETTING_HYPERREAL" OccurrencesPerGame="15"/>
+	</RandomEvent_Frequencies>
+	<RandomEvent_Improvement_Placements>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" ImprovementType="IMPROVEMENT_METEOR_GOODY"/>
+	</RandomEvent_Improvement_Placements>
+	<RandomEvent_Damages>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" DamageType="IMPROVEMENT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" DamageType="DISTRICT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" DamageType="POPULATION_LOSS" Percentage="101" MinTurn="0" MaxTurn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" DamageType="UNIT_KILLED_CIVILIAN" Percentage="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" DamageType="UNIT_DAMAGE_LAND" Percentage="101" MinHP="50" MaxHP="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" DamageType="SPREAD" Percentage="50" MinTurn="1" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" DamageType="IMPROVEMENT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" DamageType="DISTRICT_PILLAGED" Percentage="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" DamageType="POPULATION_LOSS" Percentage="101" MinTurn="0" MaxTurn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" DamageType="UNIT_KILLED_CIVILIAN" Percentage="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" DamageType="UNIT_DAMAGE_LAND" Percentage="101" MinHP="50" MaxHP="101" MinTurn="0" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" DamageType="SPREAD" Percentage="50" MinTurn="1" MaxTurn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" DamageType="IMPROVEMENT_PILLAGED" Percentage="101"/>
+		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" DamageType="DISTRICT_PILLAGED" Percentage="101"/>
+	</RandomEvent_Damages>
+	<RandomEvent_Yields>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" YieldType="YIELD_FOOD" Amount="0" FeatureType="FEATURE_BURNING_JUNGLE" Percentage="100" ReplaceFeature="true" Turn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" YieldType="YIELD_FOOD" Amount="1" FeatureType="FEATURE_BURNT_JUNGLE" Percentage="100" ReplaceFeature="true" Turn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" YieldType="YIELD_PRODUCTION" Amount="1" FeatureType="FEATURE_JUNGLE" Percentage="100" ReplaceFeature="true" Turn="6"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" YieldType="YIELD_FOOD" Amount="0" FeatureType="FEATURE_BURNING_FOREST" Percentage="100" ReplaceFeature="true" Turn="0"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" YieldType="YIELD_FOOD" Amount="1" FeatureType="FEATURE_BURNT_FOREST" Percentage="100" ReplaceFeature="true" Turn="2"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" YieldType="YIELD_PRODUCTION" Amount="1" FeatureType="FEATURE_FOREST" Percentage="100" ReplaceFeature="true" Turn="6"/>
+	</RandomEvent_Yields>
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" Name="LOC_IMPROVEMENT_METEOR_GOODY_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="true" Goody="true" GoodyNotify="false"/>
+	</Improvements>
+	<Improvement_ValidFeatures>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" FeatureType="FEATURE_FOREST"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" FeatureType="FEATURE_JUNGLE"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" FeatureType="FEATURE_MARSH"/>
+	</Improvement_ValidFeatures>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_METEOR_GOODY" TerrainType="TERRAIN_SNOW_HILLS"/>
+	</Improvement_ValidTerrains>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_LADY_SIX_SKY" AgendaTwo="AGENDA_EXPANSIONIST"/>
+	</ExclusiveAgendas>
+	<Units_XP2>
+		<Row UnitType="UNIT_COLOMBIAN_LLANERO" ResourceCost="20"/>
+	</Units_XP2>
+	<Traits>
+		<Update>
+			<Where TraitType="TRAIT_LEADER_CAMPANA_ADMIRABLE"/>
+			<Set>
+				<Description>LOC_TRAIT_LEADER_CAMPANA_ADMIRABLE_DESCRIPTION_XP1</Description>
+			</Set>
+		</Update>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_LEADER_CAMPANA_ADMIRABLE</TraitType>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_FUTURE</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<GreatPersonIndividualActionModifiers>
+		<Update>
+			<Where GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_COMMANDANTE_PAULA_SANTANDER" ModifierId="GREAT_PERSON_INDIVIDUAL_COMMANDANTE_RANDOM_CIVIC"/>
+			<Set>
+				<ModifierId>GREAT_PERSON_INDIVIDUAL_COMMANDANTE_GOVERNOR_TITLE</ModifierId>
+				<AttachmentTargetType>GREAT_PERSON_ACTION_ATTACHMENT_TARGET_PLAYER</AttachmentTargetType>
+			</Set>
+		</Update>
+	</GreatPersonIndividualActionModifiers>
+	<UnitPromotionModifiers>
+		<Row>
+			<UnitPromotionType>PROMOTION_SPACE_ROCK</UnitPromotionType>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SPACE_ROCK</UnitPromotionType>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY_MODIFIER</ModifierId>
+		</Row>
+	</UnitPromotionModifiers>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_GAME_SET_REALISM_SETTING</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_GAME_REALISM_SETTING</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_GAME_SET_ACTIVE_VOLCANOES</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ACTIVATE_VOLCANOES</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_UNIT_ADJUST_DISASTER_CHARGES</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_UNIT_DISASTER_CHARGES</EffectType>
+		</Row>
+	</DynamicModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_FUTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_OBSERVATORY</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY_MODIFIER</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_OBSERVATORY</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROCKBAND_SPACE_ROCK_OBSERVATORY_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>500</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_FUTURE</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_COMANDANTE_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_FUTURE</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_FUTURE</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Update>
+			<Where ModifierId="GREAT_PERSON_JOSE_DE_SUCRE_SPAWN_UNIT"/>
+			<Set>
+				<Text>LOC_GREAT_PERSON_JOSE_DE_SUCRE_SPAWN_UNIT_XP2</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where ModifierId="GREAT_PERSON_JOSE_DE_SUCRE_SPAWN_UNIT"/>
+			<Set>
+				<Text>LOC_GREAT_PERSON_JOSE_DE_SUCRE_SPAWN_UNIT_XP2</Text>
+			</Set>
+		</Update>
+	</ModifierStrings>
+	<CivilopediaPageExcludes>
+		<Row SectionId="FEATURES" PageId="FEATURE_BURNING_FOREST"/>
+		<Row SectionId="FEATURES" PageId="FEATURE_BURNT_FOREST"/>
+		<Row SectionId="FEATURES" PageId="FEATURE_BURNING_JUNGLE"/>
+		<Row SectionId="FEATURES" PageId="FEATURE_BURNT_JUNGLE"/>
+	</CivilopediaPageExcludes>
+</GameInfo>

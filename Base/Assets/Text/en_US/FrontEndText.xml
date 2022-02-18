@@ -514,6 +514,9 @@
 		<Row Tag="LOC_MULTIPLAYER_LOBBY_MODS">
 			<Text>Additional Content</Text>
 		</Row>
+    <Row Tag="LOC_MULTIPLAYER_LOBBY_GAMEMODES_OFFICIAL">
+      <Text>Official GameModes:</Text>
+    </Row>
 		<Row Tag="LOC_MULTIPLAYER_LOBBY_MODS_OFFICIAL">
 			<Text>Official Content:</Text>
 		</Row>
@@ -820,6 +823,9 @@
 		<Row Tag="LOC_READY_COUNTDOWN_FORMAT">
 			<Text>Get Ready</Text>
 		</Row>
+		<Row Tag="LOC_WAITING_FOR_PLAYERS_COUNTDOWN_FORMAT">
+			<Text>Waiting for Players</Text>
+		</Row>
 		<Row Tag="LOC_HOTSEAT_DEFAULT_PLAYER_NAME">
 			<Text>Player</Text>
 		</Row>
@@ -1016,6 +1022,9 @@
 		<Row Tag="LOC_PRESENCE_INVITED_OFFLINE">
 			<Text>[COLOR:ButtonCS]Invited[ENDCOLOR]</Text>
 		</Row>
+    <Row Tag="LOC_PRESENCE_WORLD_BUILDER">
+      <Text>[COLOR:ConnectionStatus_Connected]World Builder[ENDCOLOR]</Text>
+    </Row>
 		<!-- Player Connection EVents -->
 		<Row Tag="LOC_MP_PLAYER_CONNECTED_CHAT">
 			<Text>Connected</Text>
@@ -1077,6 +1086,12 @@
 		<Row Tag="LOC_SETUP_MAP_SIZE">
 			<Text>Choose Map Size</Text>
 		</Row>
+    <Row Tag="LOC_SETUP_MODE_SELECT">
+      <Text>Game Modes</Text>
+    </Row>
+    <Row Tag="LOC_SETUP_NO_GAME_MODES">
+      <Text>No Game Modes available.</Text>
+    </Row>
 		<Row Tag="LOC_DELETE_AI">
 			<Text>Delete</Text>
 		</Row>
@@ -1085,6 +1100,9 @@
 		</Row>
 		<Row Tag="LOC_SETUP_VICTORY_CONDITIONS">
 			<Text>Victory Conditions</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_GAME_MODES">
+			<Text>Game Modes</Text>
 		</Row>
 		<Row Tag="LOC_ADVANCED_OPTIONS">
 			<Text>Advanced Options</Text>
@@ -1114,7 +1132,7 @@
 			<Text>Map Select</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_MAP_CREATE_GAME_SELECT_MAP">
-			<Text>Create Game - Select Map</Text>
+			<Text>Select Map</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_MAP_SELECT_MAP">
 			<Text>Select Map</Text>
@@ -1187,6 +1205,15 @@
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_HUMANS_REQUIRED_TT">
 			<Text>Cannot start game. All Open player slots must be occuped before the game can begin.</Text>
+		</Row>
+		<Row Tag="LOC_READY_BLOCKED_READY_COUNTDOWN_TT">
+			<Text>Cannot start game. Waiting for Ready Countdown or full, readied up game.</Text>
+		</Row>
+		<Row Tag="LOC_READY_COUNTDOWN_TT">
+			<Text>You will be set to ready at the end of this countdown. Click to toggle ready now.</Text>
+		</Row>
+		<Row Tag="LOC_WAITING_FOR_PLAYERS_COUNTDOWN_TT">
+			<Text>Waiting for additional players. Game will start at the end of the countdown or once the game is full of ready players.</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_INVALID_OPTION">
 			<Text>Invalid Option</Text>
@@ -1558,6 +1585,9 @@
     <Row Tag="LOC_GAME_START_ERA">
 			<Text>Start Era</Text>
 		</Row>
+	<Row Tag="LOC_KICK_VOTE">
+		<Text>Kick Voting</Text>
+	</Row>
 		<Row Tag="LOC_MAP_SCRIPT">
 			<Text>Map</Text>
 		</Row>
@@ -1811,7 +1841,7 @@
 		</Row>
 		<!-- Copyright screen -->
 		<Row Tag="LOC_COPYRIGHT_TEXT">
-			<Text>© 1991 – 2019 Take-Two Interactive Software, Inc. Developed by Firaxis Games. 2K, Firaxis Games, Sid Meier’s Civilization VI, Sid Meier’s Civilization, Civilization, Civ, and their respective logos are trademarks of Take-Two Interactive Software, Inc. Uses Bink Video. Copyright © 1997 – 2019 by RAD Game Tools, Inc. Uses Granny Animation. Copyright © 1999 – 2019 by RAD Game Tools Inc. Powered by WWise © 2006- 2019 Audiokinetic Inc. All rights reserved. Fork Copyright © 2019 Fork Particle, Inc. Sid Meier’s Civilization VI uses Havok®. © 1999 – 2019 Havok.com, Inc. (and its Licensors). All Rights Reserved. See www.havok.com for details. Microsoft, DirectX, Visual Studio, and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Lua Copyright © 1994 – 2019 Lua.org, PUC-Rio. All other marks and trademarks are property of their respective owners. All rights reserved. The content of this videogame is fictional and is not intended to represent or depict an actual record of the events, persons or entities in the game’s historical setting.</Text>
+			<Text>© 1991 – 2020 Take-Two Interactive Software, Inc. Developed by Firaxis Games. 2K, Firaxis Games, Sid Meier’s Civilization VI, Sid Meier’s Civilization, Civilization, Civ, and their respective logos are trademarks of Take-Two Interactive Software, Inc. Uses Bink Video. Copyright © 1997 – 2020 by RAD Game Tools, Inc. Uses Granny Animation. Copyright © 1999 – 2020 by RAD Game Tools Inc. Powered by WWise © 2006- 2020 Audiokinetic Inc. All rights reserved. Fork Copyright © 2020 Fork Particle, Inc. Sid Meier’s Civilization VI uses Havok®. © 1999 – 2020 Havok.com, Inc. (and its Licensors). All Rights Reserved. See www.havok.com for details. Microsoft, DirectX, Visual Studio, and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Lua Copyright © 1994 – 2020 Lua.org, PUC-Rio. All other marks and trademarks are property of their respective owners. All rights reserved. The content of this videogame is fictional and is not intended to represent or depict an actual record of the events, persons or entities in the game’s historical setting.</Text>
 		</Row>
 		<Row Tag="LOC_COPYRIGHT_ACCEPT">
 			<Text>Continue</Text>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Promotion Classes -->
+		<Row Type="PROMOTION_CLASS_SOOTHSAYER" Kind="KIND_PROMOTION_CLASS"/>
+		<!--Soothsayer-->
+		<Row Type="PROMOTION_SOOTHSAYER_MESSENGER" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SOOTHSAYER_INQUISITOR" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SOOTHSAYER_ZEALOT" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SOOTHSAYER_INCANTATION" Kind="KIND_PROMOTION"/>
+    <Row Type="PROMOTION_SOOTHSAYER_PLAGUE_BEARER" Kind="KIND_PROMOTION"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Kind="KIND_ABILITY"/>
+    <Row Type="ABILITY_AUTO_SIEGE" Kind="KIND_ABILITY"/>
+	</Types>
+	<UnitPromotionClasses>
+		<Row PromotionClassType="PROMOTION_CLASS_SOOTHSAYER" Name="LOC_PROMOTION_CLASS_SOOTHSAYER_NAME"/>
+	</UnitPromotionClasses>
+	<UnitPromotions>
+		<!--Soothsayer-->
+		<Row UnitPromotionType="PROMOTION_SOOTHSAYER_MESSENGER" Name="LOC_PROMOTION_SOOTHSAYER_MESSENGER_NAME" Description="LOC_PROMOTION_SOOTHSAYER_MESSENGER_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_SOOTHSAYER"/>
+		<Row UnitPromotionType="PROMOTION_SOOTHSAYER_INQUISITOR" Name="LOC_PROMOTION_SOOTHSAYER_INQUISITOR_NAME" Description="LOC_PROMOTION_SOOTHSAYER_INQUISITOR_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_SOOTHSAYER"/>
+		<Row UnitPromotionType="PROMOTION_SOOTHSAYER_ZEALOT" Name="LOC_PROMOTION_SOOTHSAYER_ZEALOT_NAME" Description="LOC_PROMOTION_SOOTHSAYER_ZEALOT_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_SOOTHSAYER"/>
+		<Row UnitPromotionType="PROMOTION_SOOTHSAYER_INCANTATION" Name="LOC_PROMOTION_SOOTHSAYER_INCANTATION_NAME" Description="LOC_PROMOTION_SOOTHSAYER_INCANTATION_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_SOOTHSAYER"/>
+    <Row UnitPromotionType="PROMOTION_SOOTHSAYER_PLAGUE_BEARER" Name="LOC_PROMOTION_SOOTHSAYER_PLAGUE_BEARER_NAME" Description="LOC_PROMOTION_SOOTHSAYER_PLAGUE_BEARER_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_SOOTHSAYER"/>
+	</UnitPromotions>
+  <UnitAbilities>
+    <Row UnitAbilityType="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Name="LOC_ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH_NAME" Description="LOC_ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH_DESCRIPTION" Inactive="true"/>
+    <Row UnitAbilityType="ABILITY_AUTO_SIEGE" Inactive="true"/>
+  </UnitAbilities>
+  <TypeTags>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_RECON"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_MELEE"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_RANGED"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_SIEGE"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_HEAVY_CAVALRY"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_LIGHT_CAVALRY"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_RANGED_CAVALRY"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_ANTI_CAVALRY"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_HEAVY_CHARIOT"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_LIGHT_CHARIOT"/>
+    <Row Type="ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH" Tag="CLASS_WARRIOR_MONK"/>
+    <Row Type="ABILITY_AUTO_SIEGE" Tag="CLASS_SOOTHSAYER"/>
+  </TypeTags>
+	<UnitPromotionModifiers>
+		<!--Soothsayer-->
+		<Row>
+			<UnitPromotionType>PROMOTION_SOOTHSAYER_MESSENGER</UnitPromotionType>
+			<ModifierId>SOOTHSAYER_INCREASED_MOVEMENT</ModifierId>
+		</Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_MESSENGER</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_CHARGES</ModifierId>
+    </Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_INQUISITOR</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_STEALTH</ModifierId>
+    </Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_INQUISITOR</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_CHARGES</ModifierId>
+    </Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_ZEALOT</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_CHARGES_ZEALOT</ModifierId>
+    </Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_INCANTATION</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_ADJACENT_UNIT_STRENGTH</ModifierId>
+    </Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_INCANTATION</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_CHARGES</ModifierId>
+    </Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_PLAGUE_BEARER</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_CHARGES</ModifierId>
+    </Row>
+    <Row>
+      <UnitPromotionType>PROMOTION_SOOTHSAYER_PLAGUE_BEARER</UnitPromotionType>
+      <ModifierId>SOOTHSAYER_AUTO_SIEGE</ModifierId>
+    </Row>
+	</UnitPromotionModifiers>
+	<Modifiers>
+		<!--Soothsayer-->
+		<Row>
+			<ModifierId>SOOTHSAYER_INCREASED_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_STEALTH</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_HIDDEN_VISIBILITY</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_CHARGES</ModifierId>
+      <ModifierType>MODIFIER_UNIT_ADJUST_DISASTER_CHARGES</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_CHARGES_ZEALOT</ModifierId>
+      <ModifierType>MODIFIER_UNIT_ADJUST_DISASTER_CHARGES</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_ADJACENT_UNIT_STRENGTH</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+      <SubjectRequirementSetId>SOOTHSAYER_AOE_LAND_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_AOE_COMBAT_STRENGTH</ModifierId>
+      <ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_AUTO_SIEGE</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_UNIT_GRANT_ABILITY</ModifierType>
+    </Row>
+  </Modifiers>
+  <UnitAbilityModifiers>
+    <Row>
+      <UnitAbilityType>ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH</UnitAbilityType>
+      <ModifierId>SOOTHSAYER_AOE_COMBAT_STRENGTH</ModifierId>
+    </Row>
+  </UnitAbilityModifiers>
+	<ModifierArguments>
+		<!--Soothsayer-->
+    <Row>
+      <ModifierId>SOOTHSAYER_INCREASED_MOVEMENT</ModifierId>
+      <Name>Amount</Name>
+      <Value>2</Value>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_CHARGES</ModifierId>
+      <Name>Amount</Name>
+      <Value>1</Value>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_CHARGES_ZEALOT</ModifierId>
+      <Name>Amount</Name>
+      <Value>2</Value>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_ADJACENT_UNIT_STRENGTH</ModifierId>
+      <Name>AbilityType</Name>
+      <Value>ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH</Value>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_AOE_COMBAT_STRENGTH</ModifierId>
+      <Name>Amount</Name>
+      <Value>5</Value>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_AUTO_SIEGE</ModifierId>
+      <Name>AbilityType</Name>
+      <Value>ABILITY_AUTO_SIEGE</Value>
+    </Row>
+    <Row>
+      <ModifierId>SOOTHSAYER_STEALTH</ModifierId>
+      <Name>Hidden</Name>
+      <Value>true</Value>
+    </Row>
+	</ModifierArguments>
+	<RequirementSets>
+    <!--Soothsayer-->
+    <Row>
+      <RequirementSetId>SOOTHSAYER_AOE_LAND_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+    <!--Soothsayer-->
+    <Row>
+      <RequirementSetId>SOOTHSAYER_AOE_LAND_REQUIREMENTS</RequirementSetId>
+      <RequirementId>AOE_REQUIRES_LAND_DOMAIN</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>SOOTHSAYER_AOE_LAND_REQUIREMENTS</RequirementSetId>
+      <RequirementId>REQUIRES_IMMEDIATELY_ADJACENT_TO_OWNER</RequirementId>
+    </Row>
+	</RequirementSetRequirements>
+  <Requirements>
+    <Row>
+      <RequirementId>REQUIRES_IMMEDIATELY_ADJACENT_TO_OWNER</RequirementId>
+      <RequirementType>REQUIREMENT_PLOT_ADJACENT_TO_OWNER</RequirementType>
+    </Row>
+  </Requirements>
+  <RequirementArguments>
+    <Row>
+      <RequirementId>REQUIRES_IMMEDIATELY_ADJACENT_TO_OWNER</RequirementId>
+      <Name>MinDistance</Name>
+      <Value>0</Value>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_IMMEDIATELY_ADJACENT_TO_OWNER</RequirementId>
+      <Name>MaxDistance</Name>
+      <Value>1</Value>
+    </Row>
+  </RequirementArguments>
+	<ModifierStrings>
+    <Row ModifierId="SOOTHSAYER_AOE_COMBAT_STRENGTH" Context="Preview" Text="LOC_SOOTHSAYER_AOE_COMBAT_STRENGTH_PREVIEW"/>
+	</ModifierStrings>
+</GameInfo>

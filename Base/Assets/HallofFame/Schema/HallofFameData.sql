@@ -1,6 +1,6 @@
 
 -- Game Summary Schema
-pragma user_version(6);
+pragma user_version(7);
 
 -- This table contains statements to assist with migrating data during a database upgrade.
 -- @SQL is the statement to run.
@@ -32,7 +32,7 @@ CREATE TABLE 'RulesetTypes' (
 
 -- Root table specifying games.
 CREATE TABLE 'Games' (
-	'GameId'	INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+	'GameId'	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 	'Ruleset'	TEXT NOT NULL,
 	'GameMode'	INTEGER,
 	'TurnCount'	INTEGER NOT NULL,
@@ -118,7 +118,7 @@ CREATE TABLE 'ObjectDataPointValues' (
 );
 
 CREATE TABLE 'DataSets' (
-	'DataSetId' INTEGER PRIMARY KEY AUTOINCREMENT,
+	'DataSetId' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 	'DataSet'	TEXT NOT NULL,
 	'Ruleset' TEXT,
 	'GameId'	INTEGER,
@@ -131,11 +131,11 @@ CREATE TABLE 'DataSets' (
 
 CREATE TABLE 'DataSetValues' (
 	'DataSetId'	INTEGER NOT NULL,
-	'X'	NUMERIC NOT NULL,
-	'Y'	NUMERIC NOT NULL,
+	'X'	INTEGER NOT NULL,
+	'Y'	NUMERIC,
 	PRIMARY KEY('DataSetId','X'),
 	FOREIGN KEY('DataSetId') REFERENCES 'DataSets'('DataSetId') ON DELETE CASCADE ON UPDATE CASCADE
-);
+) WITHOUT ROWID;
 
 -- Additional Indices for Performance
 CREATE INDEX GameDataPointValues_DataPointGameId on GameDataPointValues(DataPoint, GameId);
@@ -145,22 +145,25 @@ CREATE INDEX RulesetDataPointValues_DataPointRuleset on RulesetDataPointValues(D
 CREATE INDEX DataSets_DataSetObjectId on DataSets(DataSet,ObjectId);
 
 
--- Migrate Data from Version 3 to 6 (No changes, just copy)
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO Rulesets SELECT * From old.Rulesets");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO RulesetTypes SELECT * From old.RulesetTypes");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO GamePlayers SELECT * From old.GamePlayers");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO GameObjects SELECT * From old.GameObjects");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO RulesetDataPointValues SELECT * From old.RulesetDataPointValues");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO GameDataPointValues SELECT * From old.GameDataPointValues");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO ObjectDataPointValues SELECT * From old.ObjectDataPointValues");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO DataSets SELECT * From old.DataSets");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO DataSetValues SELECT * From old.DataSetValues");
+-- Migrate Data from Version 3 to 7 (No changes, just copy)
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO Rulesets SELECT * From old.Rulesets");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO RulesetTypes SELECT * From old.RulesetTypes");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO GamePlayers SELECT * From old.GamePlayers");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO GameObjects SELECT * From old.GameObjects");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO RulesetDataPointValues SELECT * From old.RulesetDataPointValues");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO GameDataPointValues SELECT * From old.GameDataPointValues");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO ObjectDataPointValues SELECT * From old.ObjectDataPointValues");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "INSERT INTO DataSets SELECT * From old.DataSets");
 
--- Migrate Data from Version 5 to 6 (No changes, just copy)
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(5, 5, "INSERT INTO Games SELECT * From old.Games");
+-- Migrate Data from Version 5 to 7 (No changes, just copy)
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(5, 6, "INSERT INTO Games SELECT * From old.Games");
 
--- Migrate Data from Version 3 to 6 (Added Start Game Turn, Game Mode)
+-- Migrate Data from Version 3 to 7 (Added Start Game Turn, Game Mode)
 INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 3, "INSERT INTO Games(GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, StartTurn, VictorTeamId, VictoryType, LastPlayed) SELECT GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, -1, VictorTeamId, VictoryType, LastPlayed from old.Games");
 
--- Migrate Data from Version 4 to 6 (Added Game Mode)
+-- Migrate Data from Version 4 to 7 (Added Game Mode)
 INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(4, 4, "INSERT INTO Games(GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, StartTurn, VictorTeamId, VictoryType, LastPlayed) SELECT GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, StartTurn, VictorTeamId, VictoryType, LastPlayed from old.Games");
+
+-- Version 7 made heavy changes to DataSetValues.  Missing rows now means 'no change' rather than 'null' with the initial value being 'null'.
+-- By only storing changed values, the size requirements have reduced considerably.
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 6, "WITH RECURSIVE range(X,MaxX) AS (SELECT MIN(X),MAX(X) FROM Old.DataSetValues UNION ALL SELECT X+1,MaxX FROM range WHERE X < MaxX) INSERT INTO DataSetValues(DataSetId,X,Y) SELECT ds.DataSetId, r.X, (SELECT Y FROM Old.DataSetValues WHERE DataSetId = ds.DataSetId AND X = r.X) AS Y FROM (SELECT distinct DataSetId FROM Old.DataSetValues) ds, range r WHERE Y IS NOT (SELECT Y FROM Old.DataSetValues WHERE DataSetId = ds.DataSetId AND X = r.X - 1)");

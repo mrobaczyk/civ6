@@ -51,6 +51,19 @@ CREATE TABLE 'GameCores'(
 	PRIMARY KEY('GameCore')
 );
 
+CREATE TABLE 'GameModeItems' (
+	'GameModeType' TEXT NOT NULL,
+	'Name' TEXT NOT NULL,
+	'Description' TEXT,
+	'Icon' TEXT,
+	'UnitIcon' TEXT,
+	'UnitDescription' TEXT,
+	'UnitName' TEXT,
+	'Portrait' TEXT,
+	'Background' TEXT,
+	'SortIndex' INTEGER DEFAULT 0
+);
+
 CREATE TABLE 'GameSpeeds' (
 	'Domain' TEXT NOT NULL DEFAULT 'StandardGameSpeeds',
 	'GameSpeedType' TEXT NOT NULL,
