@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <Types>
+    <Row Type="TRAIT_LEADER_CIVROYALE_SCENARIO" Kind="KIND_TRAIT"/>
+  </Types>
+  <Traits>
+    <Row TraitType="TRAIT_LEADER_CIVROYALE_SCENARIO"  InternalOnly="true"/>
+  </Traits>
+  <LeaderTraits>
+    <Row LeaderType="LEADER_CIVROYALE_SCENARIO_DEFAULT" TraitType="TRAIT_LEADER_CIVROYALE_SCENARIO"/>
+  </LeaderTraits>
+  <AiOperationDefs>
+    <Row OperationName="Civ Royale Operation" TargetType="TARGET_SCRIPT_SUPPLIED" EnemyType="NONE" BehaviorTree="Civ Royale Behavior" Priority="3" SelfStart="true"  MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" TargetLuaScript="CivRoyale_GetSafeZone"/>
+  </AiOperationDefs>
+  <AiTeams>
+    <Row TeamName="Civ Royale Team"/>
+  </AiTeams>
+  <AiOperationTeams>
+    <Row TeamName="Civ Royale Team" OperationName="Civ Royale Operation" InitialStrengthAdvantage="50" OngoingStrengthAdvantage="50" />
+  </AiOperationTeams>
+  <OpTeamRequirements>
+    <Row TeamName="Civ Royale Team" AiType="UNITAI_COMBAT" MinNumber="0" />
+    <Row TeamName="Civ Royale Team" AiType="UNITTYPE_CIVILIAN" MinNumber="1" />
+  </OpTeamRequirements>
+  <AllowedOperations>
+    <Row ListType="Civ Royale Ops" OperationDef="Civ Royale Operation"/>
+  </AllowedOperations>
+  <AiOperationLists>
+    <Row ListType="Civ Royale Ops"/>
+  </AiOperationLists>
+  <!-- The following puts all gold into slush funds. We're not supposed to have gold in this scenario, but putting something here prevents some asserts and other division by zero problems -->
+  <AiListTypes>
+    <Row ListType="CivRoyaleSavings"/>
+  </AiListTypes>
+  <AiLists>
+    <Row ListType="CivRoyaleSavings" LeaderType="TRAIT_LEADER_CIVROYALE_SCENARIO" System="SavingTypes"/>
+  </AiLists>
+  <AiFavoredItems>
+    <Row ListType="CivRoyaleSavings" Item="SAVING_SLUSH_FUND" Value="1"/>
+  </AiFavoredItems>
+</GameInfo>

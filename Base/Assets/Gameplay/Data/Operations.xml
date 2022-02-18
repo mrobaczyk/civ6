@@ -19,6 +19,7 @@
     <Row TargetType="TARGET_ALLY_SUPPORT" />
     <Row TargetType="TARGET_AIR_UNIT" />
     <Row TargetType="TARGET_NAVAL_SUPERIORITY"/> <!-- Note: 'blank' target intended for use by the naval superiority op. -->
+    <Row TargetType="TARGET_SCRIPT_SUPPLIED"/>  <!-- For scenario usage. Will call the lua script supplied in the operation definition -->
   </TargetTypes>
   <AiOperationTypes>
     <Row OperationType="ATTACK_BARBARIANS" Value="0" />

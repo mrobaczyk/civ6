@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<RuleSets>
+		<Row>
+			<RuleSetType>RULESET_SCENARIO_CIV_ROYALE</RuleSetType>
+			<Name>LOC_CIV_ROYALE_RULESET_TITLE</Name>
+			<Description>LOC_CIV_ROYALE_RULESET_TEASER</Description>
+			<VictoryDomain>CivRoyaleScenario_Victories</VictoryDomain>
+			<SupportsSinglePlayer>0</SupportsSinglePlayer>
+			<RequiresNoTeams>1</RequiresNoTeams>
+			<IsScenario>1</IsScenario>
+		</Row>
+	</RuleSets>
+	<RulesetDomainOverrides>
+		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" ParameterId="PlayerLeader" Domain="Players:CivRoyaleScenarioPlayers"/>
+	  	<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" ParameterId="Map" Domain="Maps:CivRoyalScenarioMaps"/>
+	</RulesetDomainOverrides>
+	<ConfigurationUpdates>
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_CIV_ROYALE" TargetGroup="Game" TargetId="CITY_STATE_COUNT" TargetValue="0" Hash="0" Static="1" />
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_CIV_ROYALE" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="0" Hash="0" />
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_CIV_ROYALE" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="0" Hash="0" />
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_CIV_ROYALE" TargetGroup="Game" TargetId="TURN_TIMER_TYPE" TargetValue="TURNTIMER_DYNAMIC" Hash="1" />		
+	</ConfigurationUpdates>
+	<ParameterCriteria>
+		<Row ParameterId="CityStateCount" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_CIV_ROYALE" />
+	</ParameterCriteria>
+	<Victories>
+		<Row Domain="CivRoyaleScenario_Victories" VictoryType="VICTORY_DEFAULT" Name="LOC_CIV_ROYALE_VICTORY_TITLE" Description="LOC_CIV_ROYALE_VICTORY_DESC" ReadOnly="true" />
+	</Victories>
+	<RulesetSupportedValues>
+		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardEras" Value="ERA_INFORMATION"/>
+		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardTurnLimits" Value="TURNLIMIT_NONE"/>
+	</RulesetSupportedValues>	
+	<Parameters>
+		<!-- Using a different ParameterId to override the default values for these standard advanced settings. -->
+		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_CIV_ROYALE" ParameterId="CivRoyal_NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="LOC_GAME_NO_GOODY_HUTS" Domain="bool" DefaultValue="0" Visible="false" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
+		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_CIV_ROYALE" ParameterId="CivRoyal_NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="LOC_GAME_NO_BARBARIANS" Domain="bool" DefaultValue="0" Visible="false" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
+	</Parameters>
+	<Maps>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Continents.lua" Name="LOC_MAP_CONTINENTS" Description="LOC_MAP_CONTINENTS_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Fractal.lua" Name="LOC_MAP_FRACTAL" Description="LOC_MAP_FRACTAL_DESCRIPTION" SortIndex="20"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="InlandSea.lua" Name="LOC_MAP_INLANDSEA" Description="LOC_MAP_INLANDSEA_DESCRIPTION" DisableWorldWrap="1" SortIndex="25"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Island_Plates.lua" Name="LOC_MAP_ISLAND_PLATES" Description="LOC_MAP_ISLAND_PLATES_DESCRIPTION" SortIndex="30"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Lakes.lua" Name="LOC_MAP_LAKES" Description="LOC_MAP_LAKES_DESCRIPTION" SortIndex="35"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Pangaea.lua" Name="LOC_MAP_PANGAEA" Description="LOC_MAP_PANGAEA_DESCRIPTION" SortIndex="40"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Seven_Seas.lua" Name="LOC_MAP_SEVEN_SEAS" Description="LOC_MAP_SEVEN_SEAS_DESCRIPTION" SortIndex="45"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Shuffle.lua" Name="LOC_MAP_SHUFFLE" Description="LOC_MAP_SHUFFLE_DESCRIPTION" SortIndex="50"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Small_Continents.lua" Name="LOC_MAP_SMALL_CONTINENTS" Description="LOC_MAP_SMALL_CONTINENTS_DESCRIPTION" SortIndex="55"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Terra.lua" Name="LOC_MAP_TERRA" Description="LOC_MAP_TERRA_DESCRIPTION" SortIndex="60"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" Name="LOC_EARTH_MAP_STANDARD_NAME" Description="LOC_EARTH_MAP_STANDARD_DESCRIPTION" StaticMap="1" SortIndex="80"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION1_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION1_DESCRIPTION" StaticMap="1" SortIndex="70" />
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION2_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION2_DESCRIPTION" StaticMap="1" SortIndex="70" />
+	</Maps>
+	<Players>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_CULTISTS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_CULTISTS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_CULTISTS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS</CivilizationIcon>
+			<LeaderAbilityName>NONE</LeaderAbilityName>
+			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
+			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_CULTISTS</Portrait>
+			<PortraitBackground>LEADER_CULTISTS_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_EDGELORDS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_EDGELORDS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_EDGELORDS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS</CivilizationIcon>
+			<LeaderAbilityName>NONE</LeaderAbilityName>
+			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
+			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_EDGELORDS</Portrait>
+			<PortraitBackground>LEADER_EDGELORDS_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_JOCKS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_JOCKS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_JOCKS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_JOCKS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS</CivilizationIcon>
+			<LeaderAbilityName>NONE</LeaderAbilityName>
+			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
+			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_JOCKS</Portrait>
+			<PortraitBackground>LEADER_JOCKS_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_MUTANTS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_MUTANTS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_MUTANTS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS</CivilizationIcon>
+			<LeaderAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_WMD_RESIST_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_WMD_RESIST_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_ABILITY</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_FALLOUT_MOVE_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_FALLOUT_MOVE_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_MUTANTS</Portrait>
+			<PortraitBackground>LEADER_MUTANTS_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_PIRATES</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_PIRATES</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_PIRATES_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_PIRATES</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES</CivilizationIcon>
+			<LeaderAbilityName>NONE</LeaderAbilityName>
+			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
+			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_CIV_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_PIRATES</Portrait>
+			<PortraitBackground>LEADER_PIRATES_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_PREPPERS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_PREPPERS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_PREPPERS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS</CivilizationIcon>
+			<LeaderAbilityName>NONE</LeaderAbilityName>
+			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
+			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_PREPPERS</Portrait>
+			<PortraitBackground>LEADER_PREPPERS_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_SCIENTISTS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_SCIENTISTS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_SCIENTISTS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS</CivilizationIcon>
+			<LeaderAbilityName>NONE</LeaderAbilityName>
+			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
+			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_SCIENTISTS</Portrait>
+			<PortraitBackground>LEADER_SCIENTISTS_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_WANDERERS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_WANDERERS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_WANDERERS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS</CivilizationIcon>
+			<LeaderAbilityName>NONE</LeaderAbilityName>
+			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
+			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_WANDERERS</Portrait>
+			<PortraitBackground>LEADER_WANDERERS_BACKGROUND</PortraitBackground>
+		</Row>
+	</Players>
+</GameInfo>

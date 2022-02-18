@@ -12,6 +12,7 @@
 		<Row Type="TRAIT_AGENDA_CITY_PLANNER" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_CIVILIZATION_UNIT_NUBIAN_PITATI" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_KANDAKE_OF_MEROE" Kind="KIND_TRAIT"/>
+		<Row Type="ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER" Kind="KIND_ABILITY"/>
 	</Types>
 	<Traits>
 		<Row TraitType="TRAIT_CIVILIZATION_TA_SETI" Name="LOC_TRAIT_CIVILIZATION_TA_SETI_NAME" Description="LOC_TRAIT_CIVILIZATION_TA_SETI_DESCRIPTION"/>
@@ -20,6 +21,15 @@
 		<Row TraitType="TRAIT_CIVILIZATION_UNIT_NUBIAN_PITATI" Name="LOC_TRAIT_CIVILIZATION_UNIT_NUBIAN_PITATI_NAME" Description="LOC_TRAIT_CIVILIZATION_UNIT_NUBIAN_PITATI_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_KANDAKE_OF_MEROE" Name="LOC_TRAIT_LEADER_KANDAKE_OF_MEROE_NAME" Description="LOC_TRAIT_LEADER_KANDAKE_OF_MEROE_DESCRIPTION"/>
 	</Traits>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER" Name="LOC_ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER_NAME" Description="LOC_ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER</UnitAbilityType>
+			<ModifierId>NUBIA_RANGED_EXPERIENCE_MODIFIER</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
 	<AiListTypes>
 		<Row ListType="AmanitoreCivics"/>
 		<Row ListType="AmanitoreTechs"/>
@@ -46,6 +56,7 @@
 	</AiFavoredItems>
 	<TypeTags>
 		<Row Type="UNIT_NUBIAN_PITATI" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER" Tag="CLASS_RANGED"/>
 	</TypeTags>
 	<Buildings>
 		<Row BuildingType="BUILDING_JEBEL_BARKAL" Name="LOC_BUILDING_JEBEL_BARKAL_NAME" Description="LOC_BUILDING_JEBEL_BARKAL_DESCRIPTION" PrereqTech="TECH_IRON_WORKING" Cost="400" AdvisorType="ADVISOR_RELIGIOUS" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" ObsoleteEra="ERA_RENAISSANCE" Quote="LOC_BUILDING_JEBEL_BARKAL_QUOTE" QuoteAudio="Play_JEBEL_BARKAL_QUOTE" RegionalRange="6"/>
@@ -366,8 +377,11 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_RANGED_EXPERIENCE_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>TA_SETI_UNIT_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NUBIA_RANGED_EXPERIENCE_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
 		</Row>
 		<!-- Leader Ability-->
 		<Row>
@@ -556,6 +570,11 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_RANGED_EXPERIENCE_MODIFIER</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>NUBIA_RANGED_EXPERIENCE_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>50</Value>
 		</Row>

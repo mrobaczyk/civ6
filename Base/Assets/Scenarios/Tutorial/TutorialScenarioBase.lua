@@ -4388,7 +4388,7 @@ function TutorialItemBank2()
 	item:SetPrereqs("FIRST_PANTHEON_C");
 	item:SetUITriggers("LaunchBar", "TutorialOpenReligionScreen" );
 	item:SetEnabledControls(UITutorialManager:GetHash("ReligionButton"));
-	item:SetIsDoneEvents("ReligionPanelOpened");
+	item:SetIsDoneEvents("PantheonPanelOpened");
 	item:SetNextTutorialItemId("FIRST_PANTHEON_E");
 
 	-- =============================== FIRST_PANTHEON_E =====================================
@@ -4420,7 +4420,7 @@ function TutorialItemBank2()
 
 	-- =============================== FIRST_PANTHEON_G =====================================
 	local item:TutorialItem = TutorialItem:new("FIRST_PANTHEON_G");
-	item:SetPrereqs("FIRST_PANTHEON_E");
+	item:SetPrereqs("FIRST_PANTHEON_F");
 	item:SetRaiseEvents("PantheonFounded");
 	item:SetAdvisorMessage("LOC_META_130_BODY");
 	item:AddAdvisorButton("LOC_ADVISOR_BUTTON_CONTINUE",
@@ -4451,9 +4451,9 @@ function TutorialItemBank2()
 	local item:TutorialItem = TutorialItem:new("FIRST_PANTHEON_I");
 	item:SetPrereqs("FIRST_PANTHEON_H");
 	item:SetIsEndOfChain(true);
-	item:SetUITriggers("ReligionScreen", "TutorialCloseReligionScreenPointer" );
+	item:SetUITriggers("PantheonChooser", "TutorialCloseReligionScreenPointer" );
 	item:SetEnabledControls(UITutorialManager:GetHash("ModalControls"));
-	item:SetIsDoneEvents("ReligionPanelClosed");
+	item:SetIsDoneEvents("ReligionPanelClosed","PantheonPanelClosed");
 
 	-- =============================== ILLEGAL_RESEARCH_CHANGE_A =====================================
 	local item:TutorialItem = TutorialItem:new("ILLEGAL_RESEARCH_CHANGE_A");

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+
+	<Container		ID="RootControl" Size="auto, auto">
+		<Box										Size="296,auto"	Color="5,40,80,200" Padding="0,4">
+			<Box		Anchor="L,T"	Size="parent,2" Color="0,0,0,255" />
+			<Box		Anchor="L,B"	Size="parent,2" Color="0,0,0,255" />
+			<Box		Anchor="L,T"	Size="2,95" Color="0,0,0,255" />
+			<Box		Anchor="R,T"	Size="2,95" Color="0,0,0,255" />
+
+			<Stack ID="StuffStack" Anchor="L,C" Offset="20,0" StackGrowth="Bottom" Padding="15">
+				<Stack ID="SafeCountdownStack" Anchor="L,C" Offset="0,0" StackGrowth="Right" Padding="0">
+					<Label				ID="BoundryLabel"		Anchor="L,C" Offset="0,0" Style="FontFlair18"		 Color="255,255,255,255" EffectColor="0,0,0,255" FontEffect="Shadow" SmallCapsType="EveryWord" String="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS"/>
+					<Meter				ID="CountdownMeter"		Anchor="L,C" Offset="0,0"		Size="56,56"				Texture="CivicPanel_Meter"					Percent="100"	Color="0,255,0,255">
+						<AlphaAnim										Anchor="C,C"  Size="parent,44" AlphaBegin="0.5" AlphaEnd="1" Speed="0.5" Cycle="Bounce" Function="OutSine" Stopped="0">
+							<Label		ID="BoundryValue" Anchor="C,C"  Style="FontNormal30"	Color="20,200,30,255" EffectColor="100,255,100,140" FontEffect="Glow" String="$"/>
+						</AlphaAnim>
+					</Meter>
+				</Stack>
+				<Label				ID="StormStrengthLabel"		Anchor="L,C" Offset="0,0" Style="FontFlair18"		 Color="255,255,255,255" EffectColor="0,0,0,255" FontEffect="Shadow" SmallCapsType="EveryWord"/>
+			</Stack>
+		</Box>
+	</Container>
+	
+</Context>

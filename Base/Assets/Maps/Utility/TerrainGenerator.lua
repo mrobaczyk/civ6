@@ -7,7 +7,7 @@
 ------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
-function GenerateTerrainTypes(plotTypes, iW, iH, iFlags, bNoCoastalMountains, temperature, bonus_cold_shift)
+function GenerateTerrainTypes(plotTypes, iW, iH, iFlags, bNoCoastalMountains, temperature, notExpandCoasts)
 	print("Generating Terrain Types");
 	local terrainTypes = {};
 
@@ -154,10 +154,10 @@ function GenerateTerrainTypes(plotTypes, iW, iH, iFlags, bNoCoastalMountains, te
 		end
 	end
 
-	local bExpandCoasts = true;
+	local bNotExpandCoasts = notExpandCoasts or false;
 
-	if bExpandCoasts == false then
-		return
+	if bNotExpandCoasts == true then
+		return terrainTypes;
 	end
 
 	print("Expanding coasts");

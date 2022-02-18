@@ -1,0 +1,3319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..ArtDefSet>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>425</build>
+		<revision>378</revision>
+	</m_Version>
+	<m_TemplateName text="TimeOfDay"/>
+	<m_RootCollections>
+		<Element>
+			<m_CollectionName text="TimeOfDay"/>
+			<m_ReplaceMergedCollectionElements>true</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>12.000000</m_fValue>
+							<m_ParamName text="DefaultTime"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.800000</m_fValue>
+							<m_ParamName text="ShadowMapBias"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.400000</m_fValue>
+							<m_ParamName text="Night Threshold"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="Day Threshold"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="CubeLights"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="Noon_Cubemap"/>
+										<m_XLPClass text="GameLighting"/>
+										<m_XLPPath text="default_lighting.xlp"/>
+										<m_BLPPackage text="lighting/default_lighting"/>
+										<m_LibraryName text="GameLighting"/>
+										<m_ParamName text="Light"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>19.035715</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.900000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Noon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunAzimuth"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.500000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-20.000000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunAzimuth"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunTilt"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunZenith"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>50.000000</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_GameLighting_SunZenith"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunColor"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.500000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.480000</m_fValue>
+										<m_ParamName text="Red_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.880000</m_fValue>
+										<m_ParamName text="Green_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>3.520000</m_fValue>
+										<m_ParamName text="Blue_Intensity"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunColor004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="LightMapWeight"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_GameLighting_LightMapWeight"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Exposure"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="ColorKeys"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Noon"/>
+										<m_XLPClass text="ColorKey"/>
+										<m_XLPPath text="colorkeys.xlp"/>
+										<m_BLPPackage text="ColorKeys"/>
+										<m_LibraryName text="ColorKey"/>
+										<m_ParamName text="Key"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.800000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_GameLighting_WeightCurve"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Noon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="FOWTintColor"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>162.000000</m_r>
+										<m_g>172.000000</m_g>
+										<m_b>202.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="FOWTintColor002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="CloudShadows"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_CloudLayer1"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="skybox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.006000</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.002000</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="EXP2_GameLighting_WeightCurve004"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer1"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_CloudLayer1"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="skybox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.004300</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000050</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.100000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="EXP2_GameLighting_WeightCurve004"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_CloudLayer1"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="skybox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.006500</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000350</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.100000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="EXP2_GameLighting_WeightCurve004"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer3"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="DEFAULT_LIGHTING"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>12.000000</m_fValue>
+							<m_ParamName text="DefaultTime"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.800000</m_fValue>
+							<m_ParamName text="ShadowMapBias"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="Day Threshold"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.400000</m_fValue>
+							<m_ParamName text="Night Threshold"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="CubeLights"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="Noon_Cubemap"/>
+										<m_XLPClass text="GameLighting"/>
+										<m_XLPPath text="default_lighting.xlp"/>
+										<m_BLPPackage text="lighting/default_lighting"/>
+										<m_LibraryName text="GameLighting"/>
+										<m_ParamName text="Light"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>19.035715</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>5.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve003"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>9.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve004"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>15.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve005"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Noon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="Noon_Cubemap"/>
+										<m_XLPClass text="GameLighting"/>
+										<m_XLPPath text="default_lighting.xlp"/>
+										<m_BLPPackage text="lighting/default_lighting"/>
+										<m_LibraryName text="GameLighting"/>
+										<m_ParamName text="Light"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>8.964286</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>19.035715</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.600000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve003"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>24.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve004"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>5.035714</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.350000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve005"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>14.964286</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve006"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Sunset"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="Noon_Cubemap"/>
+										<m_XLPClass text="GameLighting"/>
+										<m_XLPPath text="default_lighting.xlp"/>
+										<m_BLPPackage text="lighting/default_lighting"/>
+										<m_LibraryName text="GameLighting"/>
+										<m_ParamName text="Light"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>5.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>24.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.100000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>19.075001</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve003"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>2.535714</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.100000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve004"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Night"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunAzimuth"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.500000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-20.000000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunAzimuth"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>24.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>160.000000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EXP2_GameLighting_SunAzimuth001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>13.250000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EXP2_GameLighting_SunAzimuth"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>13.251000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.100000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EXP2_GameLighting_SunAzimuth002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.251000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-180.000000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EXP2_GameLighting_SunAzimuth003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>160.000000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EXP2_GameLighting_SunAzimuth004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.250000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>180.000000</m_fValue>
+										<m_ParamName text="Azimuth"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EXP2_GameLighting_SunAzimuth005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunTilt"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunZenith"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>70.000000</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint0"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.242424</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.959732</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint1"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.484848</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.839096</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.727273</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.638573</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint3"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.969697</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.358971</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint4"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.212121</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.001419</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint5"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.454545</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>68.567360</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint6"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.696970</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>68.058533</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint7"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.939394</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>67.476990</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint8"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.181818</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>66.825073</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint9"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.424242</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>66.105408</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint10"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.666667</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>65.320892</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint11"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.909091</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>64.474678</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint12"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>3.151515</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>63.570187</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint13"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>3.393939</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>62.611053</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint14"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>3.636364</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>61.601139</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint15"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>3.878788</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>60.544510</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint16"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.121212</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>59.445423</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint17"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.363636</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>58.308300</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint18"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.606061</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>57.137726</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint19"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>4.848485</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>55.938408</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint20"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>5.090909</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>54.715179</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint21"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>5.333333</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>53.472965</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint22"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>5.575758</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>52.216763</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint23"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>5.818182</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>50.951637</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint24"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.060606</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>49.682682</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint25"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.303030</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>48.415001</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint26"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.545455</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>47.153702</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint27"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.787879</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>45.903866</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint28"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>7.030303</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>44.670525</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint29"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>7.272727</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>43.458641</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint30"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>7.515152</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>42.273098</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint31"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>7.757576</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>41.118668</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint32"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>8.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>40.000000</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint33"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>8.242424</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>38.921600</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint34"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>8.484848</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>37.887806</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint35"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>8.727273</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>36.902786</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint36"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>8.969697</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>35.970501</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint37"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>9.212121</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>35.094711</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint38"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>9.454545</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>34.278938</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint39"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>9.696970</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>33.526470</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint40"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>9.939394</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>32.840332</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint41"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>10.181818</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>32.223289</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint42"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>10.424242</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>31.677832</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint43"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>10.666667</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>31.206148</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint44"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>10.909091</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.810141</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint45"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.151515</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.491404</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint46"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.393939</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.251223</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint47"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.636364</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.090561</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint48"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.878788</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.010069</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint49"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>12.121212</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.010069</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint50"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>12.363636</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.090561</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint51"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>12.606061</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.251223</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint52"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>12.848485</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.491404</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint53"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>13.090909</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>30.810141</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint54"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>13.333333</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>31.206148</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint55"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>13.575758</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>31.677832</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint56"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>13.818182</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>32.223289</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint57"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>14.060606</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>32.840332</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint58"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>14.303030</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>33.526470</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint59"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>14.545455</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>34.278938</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint60"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>14.787879</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>35.094711</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint61"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>15.030303</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>35.970501</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint62"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>15.272727</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>36.902786</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint63"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>15.515152</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>37.887806</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint64"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>15.757576</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>38.921600</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint65"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>40.000000</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint66"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.242424</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>41.118668</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint67"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.484848</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>42.273098</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint68"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.727272</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>43.458641</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint69"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.969696</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>44.670525</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint70"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>17.212122</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>45.903866</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint71"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>17.454546</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>47.153702</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint72"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>17.696970</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>48.415001</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint73"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>17.939394</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>49.682682</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint74"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.181818</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>50.951637</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint75"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.424242</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>52.216763</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint76"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.666666</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>53.472965</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint77"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.909090</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>54.715179</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint78"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>19.151516</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>55.938408</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint79"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>19.393940</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>57.137726</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint80"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>19.636364</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>58.308300</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint81"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>19.878788</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>59.445423</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint82"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>20.121212</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>60.544510</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint83"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>20.363636</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>61.601139</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint84"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>20.606060</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>62.611053</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint85"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>20.848484</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>63.570187</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint86"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>21.090910</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>64.474678</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint87"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>21.333334</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>65.320892</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint88"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>21.575758</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>66.105408</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint89"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>21.818182</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>66.825073</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint90"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>22.060606</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>67.476990</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint91"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>22.303030</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>68.058533</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint92"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>22.545454</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>68.567360</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint93"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>22.787878</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.001419</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint94"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>23.030304</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.358971</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint95"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>23.272728</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.638573</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint96"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>23.515152</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.839096</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint97"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>23.757576</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>69.959732</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint98"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>24.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>70.000000</m_fValue>
+										<m_ParamName text="Zenith"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="parameterPoint99"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SunColor"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>11.500000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Red_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>3.000000</m_fValue>
+										<m_ParamName text="Green_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.000000</m_fValue>
+										<m_ParamName text="Blue_Intensity"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunColor004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.500000</m_fValue>
+										<m_ParamName text="Red_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.500000</m_fValue>
+										<m_ParamName text="Green_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.000000</m_fValue>
+										<m_ParamName text="Blue_Intensity"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunColor001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.549999</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>7.000000</m_fValue>
+										<m_ParamName text="Red_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>3.000000</m_fValue>
+										<m_ParamName text="Green_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Blue_Intensity"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunColor002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>2.714286</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.280000</m_fValue>
+										<m_ParamName text="Red_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.180000</m_fValue>
+										<m_ParamName text="Green_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.900000</m_fValue>
+										<m_ParamName text="Blue_Intensity"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunColor005"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>23.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.280000</m_fValue>
+										<m_ParamName text="Red_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.180000</m_fValue>
+										<m_ParamName text="Green_Intensity"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.900000</m_fValue>
+										<m_ParamName text="Blue_Intensity"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="SunColor005001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="LightMapWeight"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>17.049999</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.450000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LightMapWeight1"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>16.875000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LightMapWeight2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.450000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LightMapWeight3"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.150000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LightMapWeight4"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.450000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LightMapWeight5"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.450000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="LightMapWeight6"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Exposure"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="ExposureValue"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Exposure"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.928572</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="ExposureValue"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Exposure001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>24.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.750000</m_fValue>
+										<m_ParamName text="ExposureValue"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Exposure002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.750000</m_fValue>
+										<m_ParamName text="ExposureValue"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Exposure003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="ColorKeys"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Night"/>
+										<m_XLPClass text="ColorKey"/>
+										<m_XLPPath text="colorkeys.xlp"/>
+										<m_BLPPackage text="ColorKeys"/>
+										<m_LibraryName text="ColorKey"/>
+										<m_ParamName text="Key"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>24.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Night"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Noon"/>
+										<m_XLPClass text="ColorKey"/>
+										<m_XLPPath text="colorkeys.xlp"/>
+										<m_BLPPackage text="ColorKeys"/>
+										<m_LibraryName text="ColorKey"/>
+										<m_ParamName text="Key"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>12.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>1.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>24.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Time"/>
+												</Element>
+												<Element class="AssetObjects..FloatValue">
+													<m_fValue>0.000000</m_fValue>
+													<m_ParamName text="Weight"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WeightCurve002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Noon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="Sunsrise"/>
+										<m_XLPClass text="ColorKey"/>
+										<m_XLPPath text="ColorKeys.xlp"/>
+										<m_BLPPackage text="ColorKeys"/>
+										<m_LibraryName text="ColorKey"/>
+										<m_ParamName text="Key"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Sunrise"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="Sunset"/>
+										<m_XLPClass text="ColorKey"/>
+										<m_XLPPath text="ColorKeys.xlp"/>
+										<m_BLPPackage text="ColorKeys"/>
+										<m_LibraryName text="ColorKey"/>
+										<m_ParamName text="Key"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Sunset"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="FOWTintColor"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>24.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>171.000000</m_r>
+										<m_g>174.000000</m_g>
+										<m_b>203.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="FOWTintColor001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>6.025000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="FOWTintColor002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>18.025000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="FOWTintColor003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Time"/>
+									</Element>
+									<Element class="AssetObjects..RGBValue">
+										<m_r>171.000000</m_r>
+										<m_g>174.000000</m_g>
+										<m_b>203.000000</m_b>
+										<m_ParamName text="Color"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="FOWTintColor004"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="CloudShadows"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="XP2_CloudLayer1"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="SkyBox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.004800</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.000010</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.350000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer1"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="XP2_CloudLayer2"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="SkyBox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.004300</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000050</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="XP2_CloudLayer3"/>
+										<m_XLPClass text="SkyBoxTexture"/>
+										<m_XLPPath text="SkyBox.xlp"/>
+										<m_BLPPackage text="SkyBox"/>
+										<m_LibraryName text="SkyBoxTexture"/>
+										<m_ParamName text="Texture"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>-0.004000</m_fValue>
+										<m_ParamName text="ScrollSpeedU"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000350</m_fValue>
+										<m_ParamName text="ScrollSpeedV"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="PlaneDistance"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.350000</m_fValue>
+										<m_ParamName text="Weight"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="WeightCurve"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="CloudLayer3"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="WONDER_TOD"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+	</m_RootCollections>
+</AssetObjects..ArtDefSet>
+

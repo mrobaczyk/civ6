@@ -562,8 +562,7 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_IGNORE_EMBARK_DISEMBARK_COST</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_IGNORE_SHORES</ModifierType>
-			<SubjectRequirementSetId>UNIT_IS_DOMAIN_LAND</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_EARLY_OCEAN_NAVIGATION</ModifierId>
@@ -703,6 +702,11 @@
 			<ModifierId>TRAIT_BARBARIAN_CAMP_GOODY</ModifierId>
 			<Name>ImprovementType</Name>
 			<Value>IMPROVEMENT_BARBARIAN_CAMP</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BARBARIAN_CAMP_GOODY</ModifierId>
+			<Name>GoodyHutImprovementType</Name>
+			<Value>IMPROVEMENT_GOODY_HUT</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_LEVY_DISCOUNT</ModifierId>
@@ -1553,8 +1557,8 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_IGNORE_EMBARK_DISEMBARK_COST</ModifierId>
-			<Name>Ignore</Name>
-			<Value>true</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_KNARR_IGNORE_EMBARK_DISEMBARK_COST</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_EARLY_OCEAN_NAVIGATION</ModifierId>

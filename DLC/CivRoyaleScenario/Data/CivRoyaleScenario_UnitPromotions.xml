@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>	
+		
+		<!-- PROMOTION_CLASS_MELEE -->
+		<Delete Type="PROMOTION_ZWEIHANDER"/>
+		<Delete Type="PROMOTION_URBAN_WARFARE"/>
+		<Delete Type="PROMOTION_AMPHIBIOUS"/>
+
+		<!-- PROMOTION_CLASS_RANGED -->
+		<Delete Type="PROMOTION_GARRISON"/>
+		<Delete Type="PROMOTION_INCENDIARIES"/>
+		<Delete Type="PROMOTION_EMPLACEMENT"/>
+
+		<!-- PROMOTION_CLASS_LIGHT_CAVALRY -->
+		<Delete Type="PROMOTION_DEPREDATION"/>
+		<Delete Type="PROMOTION_SPIKING_THE_GUNS"/>
+		
+		<!-- PROMOTION_CLASS_HEAVY_CAVALRY -->
+		<Delete Type="PROMOTION_MARAUDING"/>
+		
+		<!-- PROMOTION_CLASS_MELEE -->
+		<Row Type="PROMOTION_SCOUTING_REGIMENT_MELEE" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SPYGLASS_MELEE" Kind="KIND_PROMOTION"/>
+
+		<!-- PROMOTION_CLASS_RANGED -->
+		<Row Type="PROMOTION_SCOUTING_REGIMENT_RANGED" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SPYGLASS_RANGED" Kind="KIND_PROMOTION"/>
+		
+		<!-- PROMOTION_CLASS_SIEGE -->
+		<Delete Type="PROMOTION_SHELLS"/>
+		<Delete Type="PROMOTION_ADVANCED_RANGEFINDING"/>
+
+		<!-- PROMOTION_CLASS_ANTI_CAVALRY -->
+		<Delete Type="PROMOTION_SQUARE"/>
+		<Row Type="PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY" Kind="KIND_PROMOTION"/>
+	</Types>
+	<UnitPromotions>
+		<!-- Reposition remaining PROMOTION_CLASS_MELEE promotions and inherit some scout promotions --> 
+		<Update>
+			<Where UnitPromotionType="PROMOTION_COMMANDO"/>
+			<Set Column="2"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_ELITE_GUARD"/>
+			<Set Level="3" Column="2"/>
+		</Update>
+		
+		<Row UnitPromotionType="PROMOTION_SCOUTING_REGIMENT_MELEE"	Name="LOC_PROMOTION_SCOUTING_REGIMENT_NAME"	Description="LOC_PROMOTION_SCOUTING_REGIMENT_DESCRIPTION"	Level="1" Column="5" Specialization="" PromotionClass="PROMOTION_CLASS_MELEE"/>
+		<Row UnitPromotionType="PROMOTION_SPYGLASS_MELEE"			Name="LOC_PROMOTION_SPYGLASS_NAME"			Description="LOC_PROMOTION_SPYGLASS_DESCRIPTION"			Level="2" Column="5" Specialization="" PromotionClass="PROMOTION_CLASS_MELEE"/>
+
+		<!-- Reposition remaining PROMOTION_CLASS_RANGED promotions and inherit some scout promotions -->
+		<Update>
+			<Where UnitPromotionType="PROMOTION_SUPPRESSION"/>
+			<Set Level="1" Column="3"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_EXPERT_MARKSMAN"/>
+			<Set Level="2" Column="3"/>
+		</Update>
+		
+		<Row UnitPromotionType="PROMOTION_SCOUTING_REGIMENT_RANGED"	Name="LOC_PROMOTION_SCOUTING_REGIMENT_NAME"	Description="LOC_PROMOTION_SCOUTING_REGIMENT_DESCRIPTION"	Level="1" Column="5" Specialization="" PromotionClass="PROMOTION_CLASS_RANGED"/>
+		<Row UnitPromotionType="PROMOTION_SPYGLASS_RANGED"			Name="LOC_PROMOTION_SPYGLASS_NAME"			Description="LOC_PROMOTION_SPYGLASS_DESCRIPTION"			Level="2" Column="5" Specialization="" PromotionClass="PROMOTION_CLASS_RANGED"/>
+		
+		<!-- PROMOTION_CLASS_LIGHT_CAVALRY - Helicopters-->
+		<Update>
+			<Where UnitPromotionType="PROMOTION_COURSERS"/>
+			<Set Level="1" Column="1" Description="LOC_CIVROYALE_PROMOTION_COURSERS_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_CAPARISON"/>
+			<Set Level="2" Column="1" Description="LOC_CIVROYALE_PROMOTION_CAPARISON_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_DOUBLE_ENVELOPMENT"/>
+			<Set Level="1" Column="3"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_ESCORT_MOBILITY"/>
+			<Set Level="1" Column="5"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_PURSUIT"/>
+			<Set Level="3" Column="3"/>
+		</Update>
+
+		<!-- PROMOTION_CLASS_HEAVY_CAVALRY - Tanks -->
+		<Update>
+			<Where UnitPromotionType="PROMOTION_CHARGE"/>
+			<Set Level="2" Column="5"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_ROUT"/>
+			<Set Level="1" Column="5"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_ARMOR_PIERCING"/>
+			<Set Level="1" Column="1" Description="LOC_CIVROYALE_PROMOTION_ARMOR_PIERCING_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_REACTIVE_ARMOR"/>
+			<Set Level="2" Column="1" Description="LOC_CIVROYALE_PROMOTION_REACTIVE_ARMOR_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_BREAKTHROUGH"/>
+			<Set Level="3" Column="3"/>
+		</Update>
+		
+		<!-- PROMOTION_CLASS_ANTI_CAVALRY -->
+		<Update>
+			<Where UnitPromotionType="PROMOTION_THRUST"/>
+			<Set Level="1" Column="1"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_SCHILTRON"/>
+			<Set Level="2" Column="1"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_ECHELON"/>
+			<Set Level="1" Column="3" Description="LOC_CIVROYALE_PROMOTION_ECHELON_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_HOLD_THE_LINE"/>
+			<Set Level="2" Column="3" Description="LOC_CIVROYALE_PROMOTION_HOLD_THE_LINE_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_CHOKE_POINTS"/>
+			<Set Level="2" Column="5" Description="LOC_CIVROYALE_PROMOTION_CHOKE_POINTS_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_REDEPLOY"/>
+			<Set Level="3" Column="3" />
+		</Update>
+
+		<Row UnitPromotionType="PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY"	Name="LOC_PROMOTION_SCOUTING_REGIMENT_NAME"	Description="LOC_PROMOTION_SCOUTING_REGIMENT_DESCRIPTION"	Level="1" Column="5" Specialization="" PromotionClass="PROMOTION_CLASS_ANTI_CAVALRY"/>
+
+		<!-- PROMOTION_CLASS_SIEGE -->
+		<Update>
+			<Where UnitPromotionType="PROMOTION_EXPERT_CREW"/>
+			<Set Level="1" Column="5" />
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_FORWARD_OBSERVERS"/>
+			<Set Level="2" Column="5" />
+		</Update>		
+	</UnitPromotions>
+	<UnitPromotionPrereqs>
+		<!-- Completely redefine PROMOTION_CLASS_MELEE prereqs -->
+		<Delete UnitPromotion="PROMOTION_COMMANDO"/>
+		<Delete UnitPromotion="PROMOTION_TORTOISE"/>
+		<Delete UnitPromotion="PROMOTION_ELITE_GUARD"/>
+		
+		<Row UnitPromotion="PROMOTION_COMMANDO" PrereqUnitPromotion="PROMOTION_BATTLECRY"/>
+		<Row UnitPromotion="PROMOTION_COMMANDO" PrereqUnitPromotion="PROMOTION_TORTOISE"/>
+		<Row UnitPromotion="PROMOTION_SPYGLASS_MELEE" PrereqUnitPromotion="PROMOTION_SCOUTING_REGIMENT_MELEE"/>
+		<Row UnitPromotion="PROMOTION_ELITE_GUARD" PrereqUnitPromotion="PROMOTION_COMMANDO"/>
+
+		<!-- Completely redefine PROMOTION_CLASS_RANGED prereqs -->
+		<Delete UnitPromotion="PROMOTION_VOLLEY"/>
+		<Delete UnitPromotion="PROMOTION_ARROW_STORM"/>
+		<Delete UnitPromotion="PROMOTION_SUPPRESSION"/>
+		<Delete UnitPromotion="PROMOTION_EXPERT_MARKSMAN"/>
+
+		<Row UnitPromotion="PROMOTION_ARROW_STORM" PrereqUnitPromotion="PROMOTION_VOLLEY"/>
+		<Row UnitPromotion="PROMOTION_EXPERT_MARKSMAN" PrereqUnitPromotion="PROMOTION_SUPPRESSION"/>
+		<Row UnitPromotion="PROMOTION_SPYGLASS_RANGED" PrereqUnitPromotion="PROMOTION_SCOUTING_REGIMENT_RANGED"/>
+
+		<!-- Completely redefine PROMOTION_CLASS_LIGHT_CAVALRY prereqs -->
+		<Delete UnitPromotion="PROMOTION_CAPARISON"/>
+		<Delete UnitPromotion="PROMOTION_COURSERS"/>
+		<Delete UnitPromotion="PROMOTION_DOUBLE_ENVELOPMENT"/>
+		<Delete UnitPromotion="PROMOTION_PURSUIT"/>
+		<Delete UnitPromotion="PROMOTION_ESCORT_MOBILITY"/>
+
+		<Row UnitPromotion="PROMOTION_CAPARISON" PrereqUnitPromotion="PROMOTION_COURSERS"/>
+		<Row UnitPromotion="PROMOTION_PURSUIT" PrereqUnitPromotion="PROMOTION_CAPARISON"/>
+		<Row UnitPromotion="PROMOTION_PURSUIT" PrereqUnitPromotion="PROMOTION_DOUBLE_ENVELOPMENT"/>
+		<Row UnitPromotion="PROMOTION_PURSUIT" PrereqUnitPromotion="PROMOTION_ESCORT_MOBILITY"/>
+
+		<!-- Completely redefine PROMOTION_CLASS_HEAVY_CAVALRY prereqs -->
+		<Delete UnitPromotion="PROMOTION_CHARGE"/>
+		<Delete UnitPromotion="PROMOTION_BARDING"/>
+		<Delete UnitPromotion="PROMOTION_ROUT"/>
+		<Delete UnitPromotion="PROMOTION_ARMOR_PIERCING"/>
+		<Delete UnitPromotion="PROMOTION_REACTIVE_ARMOR"/>
+		<Delete UnitPromotion="PROMOTION_BREAKTHROUGH"/>
+
+		<Row UnitPromotion="PROMOTION_CHARGE"			PrereqUnitPromotion="PROMOTION_ROUT"/>
+		<Row UnitPromotion="PROMOTION_REACTIVE_ARMOR"	PrereqUnitPromotion="PROMOTION_ARMOR_PIERCING"/>
+		<Row UnitPromotion="PROMOTION_BREAKTHROUGH"		PrereqUnitPromotion="PROMOTION_BARDING"/>
+		<Row UnitPromotion="PROMOTION_BREAKTHROUGH"		PrereqUnitPromotion="PROMOTION_CHARGE"/>
+		<Row UnitPromotion="PROMOTION_BREAKTHROUGH"		PrereqUnitPromotion="PROMOTION_REACTIVE_ARMOR"/>
+
+		<!-- Completely redefine PROMOTION_CLASS_ANTI_CAVALRY prereqs -->
+		<Delete UnitPromotion="PROMOTION_ECHELON"/>
+		<Delete UnitPromotion="PROMOTION_THRUST"/>
+		<Delete UnitPromotion="PROMOTION_SCHILTRON"/>
+		<Delete UnitPromotion="PROMOTION_REDEPLOY"/>
+		<Delete UnitPromotion="PROMOTION_CHOKE_POINTS"/>
+		<Delete UnitPromotion="PROMOTION_HOLD_THE_LINE"/>
+
+		<Row UnitPromotion="PROMOTION_SCHILTRON"		PrereqUnitPromotion="PROMOTION_THRUST"/>
+		<Row UnitPromotion="PROMOTION_HOLD_THE_LINE"	PrereqUnitPromotion="PROMOTION_ECHELON"/>
+		<Row UnitPromotion="PROMOTION_CHOKE_POINTS"		PrereqUnitPromotion="PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY"/>
+		<Row UnitPromotion="PROMOTION_REDEPLOY"			PrereqUnitPromotion="PROMOTION_SCHILTRON"/>
+		<Row UnitPromotion="PROMOTION_REDEPLOY"			PrereqUnitPromotion="PROMOTION_HOLD_THE_LINE"/>
+		<Row UnitPromotion="PROMOTION_REDEPLOY"			PrereqUnitPromotion="PROMOTION_CHOKE_POINTS"/>
+
+		<!-- Completely redefine PROMOTION_CLASS_SIEGE prereqs -->
+		<Delete UnitPromotion="PROMOTION_GRAPE_SHOT"/>
+		<Delete UnitPromotion="PROMOTION_SHRAPNEL"/>
+		<Delete UnitPromotion="PROMOTION_CREW_WEAPONS"/>
+		<Delete UnitPromotion="PROMOTION_EXPERT_CREW"/>
+		<Delete UnitPromotion="PROMOTION_FORWARD_OBSERVERS"/>
+		
+		<Row UnitPromotion="PROMOTION_SHRAPNEL"				PrereqUnitPromotion="PROMOTION_GRAPE_SHOT"/>
+		<Row UnitPromotion="PROMOTION_FORWARD_OBSERVERS"	PrereqUnitPromotion="PROMOTION_EXPERT_CREW"/>
+	</UnitPromotionPrereqs>
+	<UnitPromotionModifiers>
+		<!--PROMOTION_CLASS_MELEE Scout Promotion Modifiers -->
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_MELEE</UnitPromotionType>
+			<ModifierId>RANGER_IGNORE_FOREST_MOVEMENT_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_MELEE</UnitPromotionType>
+			<ModifierId>ALPINE_IGNORE_HILLS_MOVEMENT_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_MELEE</UnitPromotionType>
+			<ModifierId>ESCORT_MOBILITY_SHARED_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SPYGLASS_MELEE</UnitPromotionType>
+			<ModifierId>SPYGLASS_BONUS_SIGHT</ModifierId>
+		</Row>
+		<!--PROMOTION_CLASS_RANGED Modifiers -->
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_RANGED</UnitPromotionType>
+			<ModifierId>RANGER_IGNORE_FOREST_MOVEMENT_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_RANGED</UnitPromotionType>
+			<ModifierId>ALPINE_IGNORE_HILLS_MOVEMENT_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_RANGED</UnitPromotionType>
+			<ModifierId>ESCORT_MOBILITY_SHARED_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SPYGLASS_RANGED</UnitPromotionType>
+			<ModifierId>SPYGLASS_BONUS_SIGHT</ModifierId>
+		</Row>
+		<!-- PROMOTION_CLASS_ANTI_CAVALRY Scout Promotion Modifiers -->
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY</UnitPromotionType>
+			<ModifierId>RANGER_IGNORE_FOREST_MOVEMENT_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY</UnitPromotionType>
+			<ModifierId>ALPINE_IGNORE_HILLS_MOVEMENT_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY</UnitPromotionType>
+			<ModifierId>ESCORT_MOBILITY_SHARED_MOVEMENT</ModifierId>
+		</Row>
+	</UnitPromotionModifiers>
+</GameInfo>

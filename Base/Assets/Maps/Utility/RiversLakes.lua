@@ -275,30 +275,15 @@ function DoRiver(startPlot, thisFlowDirection, originalFlowDirection, riverID)
 			end
 		end
 		
-		-- Try a second pass allowing the river to "flow backwards".
 		if(bestFlowDirection == FlowDirectionTypes.NO_FLOWDIRECTION) then
 		
-			local bestValue = math.huge;
-			for flowDirection, getAdjacentPlot in pairs(adjacentPlotFunctions) do
-			
-				if (thisFlowDirection == FlowDirectionTypes.NO_FLOWDIRECTION or
-					flowDirection == TurnRightFlowDirections[thisFlowDirection] or 
-					flowDirection == TurnLeftFlowDirections[thisFlowDirection]) then
-				
-					local adjacentPlot = getAdjacentPlot();
-					
-					if (adjacentPlot ~= nil) then
-						
-						local value = GetRiverValueAtPlot(adjacentPlot);
-						if (value < bestValue) then
-							bestValue = value;
-							bestFlowDirection = flowDirection;
-						end
-					end	
-				end
+			-- Patch river to north edge of map if can't flow off their normally
+			if (originalFlowDirection == FlowDirectionTypes.FLOWDIRECTION_NORTHEAST) then
+				TerrainBuilder.SetNWOfRiver(riverPlot, true, FlowDirectionTypes.FLOWDIRECTION_NORTHEAST, riverID);
+				TerrainBuilder.SetWOfRiver(riverPlot, true, FlowDirectionTypes.FLOWDIRECTION_NORTH, riverID);
+				print ("*** NORTH EDGE OF MAP RIVER REPAIR ***");
 			end
 		end
-		
 	end
 	
 	--Recursively generate river.
@@ -316,7 +301,7 @@ function AddRivers()
 	--GlobalParameters.RIVER_SEA_WATER_RANGE_DEFAULT or 
 	local riverSourceRangeDefault = GlobalParameters.RIVER_SOURCE_RANGE_DEFAULT or 4;
 	local seaWaterRangeDefault = 3;
-	local plotsPerRiverEdge = GlobalParameters.RIVER_PLOTS_PER_RIVER_EDGE_DEFAULT or 12;
+	local plotsPerRiverEdge = GlobalParameters.RIVER_PLOTS_PER_EDGE or 12;
 	
 	print("Map Generation - Adding Rivers");
 	

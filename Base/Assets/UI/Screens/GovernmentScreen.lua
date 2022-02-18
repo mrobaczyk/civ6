@@ -586,6 +586,16 @@ function RealizeGovernmentsPage()
 end
 
 -- ===========================================================================
+function CreateMinSlotInstance( uiStack:object, prefix:string )
+	local slotTypeInstance:table = {};
+	ContextPtr:BuildInstanceForControl( "MiniSlotType", slotTypeInstance, uiStack );	
+	slotTypeInstance.TypeIcon:SetTexture(prefix..PIC_CARD_SUFFIX_SMALL);
+
+	-- Return the icon size so we can adjust stack padding to prevent overflow
+	return slotTypeInstance.TypeIcon:GetSizeX();
+end
+
+-- ===========================================================================
 --	By separating this function from RealizeGovernmentsPage we can extend
 --	its behavior.
 -- ===========================================================================
@@ -598,34 +608,38 @@ function RealizeGovernmentInstance(governmentType:string, inst:table, isCivilope
 	end
 
 	local totalSlots	:number = 0;
+	local totalSlotsSize:number = 0;
 	inst.SlotStack:DestroyAllChildren();
-	for i=1,government.NumSlotMilitary,1 do			
-		local slotTypeInstance:table = {};
-		ContextPtr:BuildInstanceForControl( "MiniSlotType", slotTypeInstance, inst.SlotStack );	
-		slotTypeInstance.TypeIcon:SetTexture(PIC_CARD_TYPE_MILITARY..PIC_CARD_SUFFIX_SMALL);			
+	for i=1,government.NumSlotMilitary,1 do					
+		totalSlotsSize = totalSlotsSize + CreateMinSlotInstance(inst.SlotStack, PIC_CARD_TYPE_MILITARY);
 	end
 	totalSlots = totalSlots + government.NumSlotMilitary;
 
 	for i=1,government.NumSlotEconomic,1 do
-		local slotTypeInstance:table = {};
-		ContextPtr:BuildInstanceForControl( "MiniSlotType", slotTypeInstance, inst.SlotStack );	
-		slotTypeInstance.TypeIcon:SetTexture(PIC_CARD_TYPE_ECONOMIC..PIC_CARD_SUFFIX_SMALL);			
+		totalSlotsSize = totalSlotsSize + CreateMinSlotInstance(inst.SlotStack, PIC_CARD_TYPE_ECONOMIC);				
 	end
 	totalSlots = totalSlots + government.NumSlotEconomic;
 
 	for i=1,government.NumSlotDiplomatic,1 do
-		local slotTypeInstance:table = {};
-		ContextPtr:BuildInstanceForControl( "MiniSlotType", slotTypeInstance, inst.SlotStack );	
-		slotTypeInstance.TypeIcon:SetTexture(PIC_CARD_TYPE_DIPLOMACY..PIC_CARD_SUFFIX_SMALL);			
+		totalSlotsSize = totalSlotsSize + CreateMinSlotInstance(inst.SlotStack, PIC_CARD_TYPE_DIPLOMACY);		
 	end
 	totalSlots = totalSlots + government.NumSlotDiplomatic;
 
 	for i=1,government.NumSlotWildcard,1 do
-		local slotTypeInstance:table = {};
-		ContextPtr:BuildInstanceForControl( "MiniSlotType", slotTypeInstance, inst.SlotStack );	
-		slotTypeInstance.TypeIcon:SetTexture(PIC_CARD_TYPE_WILDCARD..PIC_CARD_SUFFIX_SMALL);			
+		totalSlotsSize = totalSlotsSize + CreateMinSlotInstance(inst.SlotStack, PIC_CARD_TYPE_WILDCARD);				
 	end
 	totalSlots = totalSlots + government.NumSlotWildcard;
+
+	-- Adjust stack padding to fit all slot icons
+	local sizeDiff:number = inst.SlotStack:GetParent():GetSizeX() - totalSlotsSize;
+	if sizeDiff < 0 and totalSlots ~= 0 then
+		local stackPadding:number = math.floor(sizeDiff / totalSlots);
+		if stackPadding < 0 then
+			inst.SlotStack:SetStackPadding(stackPadding);
+		end
+	else
+		inst.SlotStack:SetStackPadding(0);
+	end
 
 	-- Special logic if showing all (for ones that haven't been selected).
 	if m_kUnlockedGovernments[governmentType] == nil then

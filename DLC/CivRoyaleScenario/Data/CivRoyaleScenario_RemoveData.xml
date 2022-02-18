@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<!-- Delete base game data that is irrelevant to the scenario.-->
+	<Types>
+		<!-- Whole Type Range Removals -->
+		<Delete Kind="KIND_POLICY"/>
+		<Delete Kind="KIND_CONTINENT"/>
+		<Delete Kind="KIND_MOMENT"/>
+		<Delete Kind="KIND_GOVERNMENT"/>
+		<Delete Kind="KIND_GREATWORK"/>
+		<Delete Kind="KIND_GREAT_PERSON_CLASS"/>
+		<Delete Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Delete Kind="KIND_PROJECT"/>
+		<!-- Capabilities -->
+		<Delete Type="CAPABILITY_CITY_HUD_AMENITIES_NATIONAL_PARKS"/>
+		<Delete Type="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE"/>
+		<Delete Type="CAPABILITY_CITY_HUD_HOUSING_DISTRICTS"/>
+		<Delete Type="CAPABILITY_CITY_HUD_HOUSING_GREAT_PEOPLE"/>
+		<Delete Type="CAPABILITY_CITY_STATES_VIEW"/>
+		<Delete Type="CAPABILITY_CIVICS_CHOOSER"/>
+		<Delete Type="CAPABILITY_CIVICS_TREE"/>
+		<Delete Type="CAPABILITY_DISPLAY_HUD_GOSSIP_LIST"/>
+		<Delete Type="CAPABILITY_DISPLAY_HUD_RIBBON_RELATIONSHIPS"/>		
+		<Delete Type="CAPABILITY_DISPLAY_HUD_WORLD_RANKINGS"/>
+		<Delete Type="CAPABILITY_DISPLAY_MINIMAP_RESOURCES"/>
+		<Delete Type="CAPABILITY_DISPLAY_MINIMAP_YIELDS"/>
+		<Delete Type="CAPABILITY_DISPLAY_PLOT_YIELDS"/>	
+		<Delete Type="CAPABILITY_DISPLAY_TOP_PANEL_CIVPEDIA"/>
+		<Delete Type="CAPABILITY_DISPLAY_TOP_PANEL_RESOURCES"/>
+		<Delete Type="CAPABILITY_DISPLAY_TOP_PANEL_YIELDS"/>	
+		<Delete Type="CAPABILITY_DIPLOMACY"/>
+		<Delete Type="CAPABILITY_ERAS"/>
+		<Delete Type="CAPABILITY_ESPIONAGE"/>
+		<Delete Type="CAPABILITY_FAITH"/>   
+		<Delete Type="CAPABILITY_GOVERNMENTS"/>
+		<Delete Type="CAPABILITY_GREAT_WORKS"/>
+		<Delete Type="CAPABILITY_GREAT_PEOPLE_CAN_REJECT"/>		
+		<Delete Type="CAPABILITY_LENS_TOGGLING_UI"/>
+		<Delete Type="CAPABILITY_LENS_APPEAL"/>
+		<Delete Type="CAPABILITY_LENS_CONTINENT"/>
+		<Delete Type="CAPABILITY_LENS_EMPIRE"/>
+		<Delete Type="CAPABILITY_LENS_GOVERNMENT"/>
+		<Delete Type="CAPABILITY_LENS_LOYALTY"/>
+		<Delete Type="CAPABILITY_LENS_RELIGION"/>
+		<Delete Type="CAPABILITY_LENS_SETTLER"/>
+		<Delete Type="CAPABILITY_LENS_TOURISM"/>
+		<Delete Type="CAPABILITY_RELIGION"/>
+		<Delete Type="CAPABILITY_REPORTS_LIST"/>
+    <Delete Type="CAPABILITY_SCORE"/>
+		<Delete Type="CAPABILITY_SEARCH_GAME_MAP"/>
+		<Delete Type="CAPABILITY_TECH_CHOOSER"/>
+		<Delete Type="CAPABILITY_TECH_TREE"/>
+		<Delete Type="CAPABILITY_TOP_PANEL_ENVOYS"/>		
+		<Delete Type="CAPABILITY_TOURISM"/>
+		<Delete Type="CAPABILITY_TRADE"/>
+		<Delete Type="CAPABILITY_WORLD_CLIMATE"/>
+		<Delete Type="CAPABILITY_WORLD_CLIMATE_VIEW"/>
+		<Delete Type="CAPABILITY_WORLD_CONGRESS"/>
+		
+		<!-- Civilizations -->
+		<Delete Type="CIVILIZATION_AMERICA"/>
+		<Delete Type="CIVILIZATION_ARABIA"/>
+		<Delete Type="CIVILIZATION_BRAZIL"/>
+		<Delete Type="CIVILIZATION_CHINA"/>
+		<Delete Type="CIVILIZATION_ENGLAND"/>
+		<Delete Type="CIVILIZATION_EGYPT"/>
+		<Delete Type="CIVILIZATION_FRANCE"/>
+		<Delete Type="CIVILIZATION_GERMANY"/>
+		<Delete Type="CIVILIZATION_GREECE"/>
+		<Delete Type="CIVILIZATION_INDIA"/>
+		<Delete Type="CIVILIZATION_JAPAN"/>
+		<Delete Type="CIVILIZATION_KONGO"/>
+		<Delete Type="CIVILIZATION_NORWAY"/>
+		<Delete Type="CIVILIZATION_ROME"/>
+		<Delete Type="CIVILIZATION_RUSSIA"/>
+		<Delete Type="CIVILIZATION_SCYTHIA"/>
+		<Delete Type="CIVILIZATION_SPAIN"/>
+		<Delete Type="CIVILIZATION_SUMERIA"/>
+		<Delete Type="CIVILIZATION_AMSTERDAM"/>
+		<Delete Type="CIVILIZATION_BRUSSELS"/>
+		<Delete Type="CIVILIZATION_BUENOS_AIRES"/>
+		<Delete Type="CIVILIZATION_CARTHAGE"/>
+		<Delete Type="CIVILIZATION_GENEVA"/>
+		<Delete Type="CIVILIZATION_HATTUSA"/>
+		<Delete Type="CIVILIZATION_HONG_KONG"/>
+		<Delete Type="CIVILIZATION_JAKARTA"/>
+		<Delete Type="CIVILIZATION_JERUSALEM"/>
+		<Delete Type="CIVILIZATION_KABUL"/>
+		<Delete Type="CIVILIZATION_KANDY"/>
+		<Delete Type="CIVILIZATION_KUMASI"/>
+		<Delete Type="CIVILIZATION_LA_VENTA"/>
+		<Delete Type="CIVILIZATION_LISBON"/>
+		<Delete Type="CIVILIZATION_MOHENJO_DARO"/>
+		<Delete Type="CIVILIZATION_NAN_MADOL"/>
+		<Delete Type="CIVILIZATION_PRESLAV"/>
+		<Delete Type="CIVILIZATION_SEOUL"/>
+		<Delete Type="CIVILIZATION_STOCKHOLM"/>
+		<Delete Type="CIVILIZATION_TORONTO"/>
+		<Delete Type="CIVILIZATION_VALLETTA"/>
+		<Delete Type="CIVILIZATION_VILNIUS"/>
+		<Delete Type="CIVILIZATION_YEREVAN"/>
+		<Delete Type="CIVILIZATION_ZANZIBAR"/>
+		<Delete Type="CIVILIZATION_AZTEC"/>
+		<Delete Type="CIVILIZATION_POLAND"/>
+		<Delete Type="CIVILIZATION_AUSTRALIA"/>
+		<!-- Resources -->
+		<Delete Type="RESOURCE_ALUMINUM"/>
+		<Delete Type="RESOURCE_JADE"/>
+		<Delete Type="RESOURCE_NITER"/>
+		<Delete Type="RESOURCE_COCOA"/>
+		<Delete Type="RESOURCE_COFFEE"/>
+		<Delete Type="RESOURCE_DYES"/>
+		<Delete Type="RESOURCE_BANANAS"/>
+		<Delete Type="RESOURCE_CATTLE"/>
+		<Delete Type="RESOURCE_CITRUS"/>
+		<Delete Type="RESOURCE_COAL"/>
+		<Delete Type="RESOURCE_COPPER"/>
+		<Delete Type="RESOURCE_COTTON"/>
+		<Delete Type="RESOURCE_CRABS"/>
+		<Delete Type="RESOURCE_DIAMONDS"/>
+		<Delete Type="RESOURCE_FISH"/>
+		<Delete Type="RESOURCE_GYPSUM"/>
+		<Delete Type="RESOURCE_HORSES"/>
+		<Delete Type="RESOURCE_IRON"/>
+		<Delete Type="RESOURCE_MARBLE"/>
+		<Delete Type="RESOURCE_MERCURY"/>
+		<Delete Type="RESOURCE_PEARLS"/>
+		<Delete Type="RESOURCE_RICE"/>
+		<Delete Type="RESOURCE_SALT"/>
+		<Delete Type="RESOURCE_SHEEP"/>
+		<Delete Type="RESOURCE_SILVER"/>
+		<Delete Type="RESOURCE_STONE"/>
+		<Delete Type="RESOURCE_SUGAR"/>
+		<Delete Type="RESOURCE_TEA"/>
+		<Delete Type="RESOURCE_WHEAT"/>
+		<Delete Type="RESOURCE_WINE"/>
+		<Delete Type="RESOURCE_SILK"/>
+		<Delete Type="RESOURCE_SPICES"/>
+		<Delete Type="RESOURCE_TOBACCO"/>
+		<Delete Type="RESOURCE_DEER"/>
+		<Delete Type="RESOURCE_FURS"/>
+		<Delete Type="RESOURCE_OIL"/>
+		<Delete Type="RESOURCE_TRUFFLES"/>
+		<Delete Type="RESOURCE_INCENSE"/>
+		<Delete Type="RESOURCE_IVORY"/>
+		<Delete Type="RESOURCE_ANTIQUITY_SITE"/>
+		<Delete Type="RESOURCE_SHIPWRECK"/>
+		<Delete Type="RESOURCE_CINNAMON"/>
+		<Delete Type="RESOURCE_CLOVES"/>
+		<Delete Type="RESOURCE_JEANS"/>
+		<Delete Type="RESOURCE_COSMETICS"/>
+		<Delete Type="RESOURCE_TOYS"/>
+		<Delete Type="RESOURCE_PERFUME"/>
+		<Delete Type="RESOURCE_URANIUM"/>
+		<Delete Type="RESOURCE_WHALES"/>
+		<!--Natural Wonders -->
+		<Delete Type="FEATURE_BARRIER_REEF"/>
+		<Delete Type="FEATURE_CLIFFS_DOVER"/>
+		<Delete Type="FEATURE_CRATER_LAKE"/>
+		<Delete Type="FEATURE_DEAD_SEA"/>
+		<Delete Type="FEATURE_EVEREST"/>
+		<Delete Type="FEATURE_GALAPAGOS"/>
+		<Delete Type="FEATURE_KILIMANJARO"/>
+		<Delete Type="FEATURE_PANTANAL"/>
+		<Delete Type="FEATURE_PIOPIOTAHI"/>
+		<Delete Type="FEATURE_TORRES_DEL_PAINE"/>
+		<Delete Type="FEATURE_TSINGY"/>
+		<Delete Type="FEATURE_YOSEMITE"/>
+	</Types>
+	<CivilopediaSectionExcludes>
+		<Row SectionId="CITYSTATES"/>
+		<Row SectionId="GREATPEOPLE"/>
+		<Row SectionId="GOVERNORS"/>
+		<Row SectionId="MOMENTS"/>
+		<Row SectionId="WONDERS"/>
+	</CivilopediaSectionExcludes>
+	<HistoricRankings>
+		<Delete/>
+	</HistoricRankings>
+	<Notifications>
+		<Delete NotificationType="NOTIFICATION_CIVIC_BOOST"/>
+		<Delete NotificationType="NOTIFICATION_DECLARE_WAR"/>
+		<Delete NotificationType="NOTIFICATION_TECH_BOOST"/>
+		<Delete NotificationType="NOTIFICATION_TRADE_ROUTE_CAPACITY_INCREASED"/>
+		<Delete NotificationType="NOTIFICATION_WORLD_CONGRESS_EMERGENCY_CAN_BE_CALLED"/>		
+	</Notifications>
+	<MajorStartingUnits>
+		<Delete/>
+	</MajorStartingUnits>
+</GameInfo>

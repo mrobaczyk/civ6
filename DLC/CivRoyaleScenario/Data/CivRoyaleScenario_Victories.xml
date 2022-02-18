@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <Defeats>
+    <!-- Remove time defeat because this is a battle to the death! -->
+    <Delete DefeatType="DEFEAT_TIME" />
+
+	<!-- Disable 'Just One More Turn' for all Victories and Defeats-->
+	<Update>
+		<Set OneMoreTurn="0"/>
+	</Update>
+  </Defeats>
+	<Victories>
+		<!-- Disable 'Just One More Turn' for all Victories and Defeats-->
+		<Update>
+			<Set OneMoreTurn="0"/>
+		</Update>
+		
+		<Update>
+			<Set EnabledByDefault="0" />
+		</Update>
+		<Update>
+			<Where VictoryType="VICTORY_DEFAULT" />
+			<Set EnabledByDefault="1" Blurb="LOC_CIV_ROYALE_VICTORY_WIN_BLURB"/>
+		</Update>
+	</Victories>
+</GameInfo>
+

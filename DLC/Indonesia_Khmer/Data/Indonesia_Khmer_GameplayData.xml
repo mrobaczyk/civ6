@@ -24,6 +24,7 @@
 		<Row Type="TRAIT_AGENDA_ARCHIPELAGIC_STATE" Kind="KIND_TRAIT"/>
 		<Row Type="ABILITY_JONG" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_MARTYR" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST" Kind="KIND_ABILITY"/>
 	</Types>
 	<Traits>
 		<!--Indonesia Traits-->
@@ -162,6 +163,7 @@
 	<TypeTags>
 		<Row Type="ABILITY_JONG" Tag="CLASS_JONG"/>
 		<Row Type="ABILITY_MARTYR" Tag="CLASS_MISSIONARY"/>
+		<Row Type="ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST" Tag="CLASS_RELIGIOUS_ALL"/>
 		<Row Type="UNIT_INDONESIAN_JONG" Tag="CLASS_NAVAL_RANGED"/>
 		<Row Type="UNIT_INDONESIAN_JONG" Tag="CLASS_JONG"/>
 		<Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_SIEGE"/>
@@ -489,6 +491,7 @@
 	<UnitAbilities>
 		<Row UnitAbilityType="ABILITY_JONG" Name="LOC_ABILITY_JONG_NAME" Description="LOC_ABILITY_JONG_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_MARTYR" Name="LOC_PROMOTION_MARTYR_NAME" Description="LOC_ABILITY_MARTYR_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST" Name="LOC_ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST_NAME" Description="LOC_ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST_DESCRIPTION" Inactive="true"/>
 	</UnitAbilities>
 	<UnitAbilityModifiers>
 		<Row>
@@ -503,6 +506,11 @@
 			<UnitAbilityType>ABILITY_MARTYR</UnitAbilityType>
 			<ModifierId>APOSTLE_MARTYR</ModifierId>
 		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST</UnitAbilityType>
+			<ModifierId>GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST</ModifierId>
+		</Row>
+		MODIFIER_PLAYER_UNITS_ADJUST_IGNORE_SHORES
 	</UnitAbilityModifiers>
 	<Modifiers>
 		<!--Leader Agendas-->
@@ -594,8 +602,11 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_IGNORE_EMBARK_DISEMBARK_COST_RELIGIOUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_IGNORE_SHORES</ModifierType>
-			<SubjectRequirementSetId>UNIT_IS_RELIGIOUS_EMBARK_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_FAITH_CITY_CENTER</ModifierId>
@@ -721,6 +732,11 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_IGNORE_EMBARK_DISEMBARK_COST_RELIGIOUS</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST</Value>
+		</Row>
+		<Row>
+			<ModifierId>GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST</ModifierId>
 			<Name>Ignore</Name>
 			<Value>true</Value>
 		</Row>

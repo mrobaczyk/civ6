@@ -794,12 +794,16 @@
 		<!--Units Adjust Sea Movement-->
 		<Row>
 			<ModifierId>GREATLIGHTHOUSE_ADJUST_SEA_MOVEMENT</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_SEA_MOVEMENT</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<!-- Embarked Unit Movement -->
 		<Row>
 			<ModifierId>GREATLIGHTHOUSE_ADJUST_EMBARKED_MOVEMENT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_EMBARKED_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREATLIGHTHOUSE_ADD_EMBARKED_ABILITY_TEXT_ONLY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<!--Adjust Religious Unit Charges-->
 		<Row>
@@ -1350,14 +1354,19 @@
 		<!--Units Adjust Sea Movement-->
 		<Row>
 			<ModifierId>GREATLIGHTHOUSE_ADJUST_SEA_MOVEMENT</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_LIGHTHOUSE_MOVEMENT</Value>
 		</Row>
 		<!-- Embarked Unit Movement -->
 		<Row>
 			<ModifierId>GREATLIGHTHOUSE_ADJUST_EMBARKED_MOVEMENT</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATLIGHTHOUSE_ADD_EMBARKED_ABILITY_TEXT_ONLY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_LIGHTHOUSE_EMBARKED_MOVEMENT</Value>
 		</Row>
 		<!--Adjust Religious Unit Charges-->
 		<Row>
@@ -1728,6 +1737,10 @@
 		<Row>
 			<BuildingType>BUILDING_GREAT_LIGHTHOUSE</BuildingType>
 			<ModifierId>GREATLIGHTHOUSE_ADJUST_EMBARKED_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIGHTHOUSE</BuildingType>
+			<ModifierId>GREATLIGHTHOUSE_ADD_EMBARKED_ABILITY_TEXT_ONLY</ModifierId>
 		</Row>
 		<!--Adjust Religious Unit Charges-->
 		<Row>

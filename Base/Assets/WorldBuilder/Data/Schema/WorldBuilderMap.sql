@@ -249,3 +249,18 @@ CREATE TABLE "GameConfig" (
 		"ID" TEXT NOT NULL,
 		"Value" TEXT,
 		PRIMARY KEY(ID));
+		
+DROP TABLE IF EXISTS "NamedRiverPlot";
+CREATE TABLE "NamedRiverPlot" (
+		"ID" INTEGER NOT NULL,
+		"PlotIndex" INTEGER NOT NULL,
+		"Edge" INTEGER NOT NULL,
+		PRIMARY KEY(ID, PlotIndex, Edge));
+		
+DROP TABLE IF EXISTS "NamedRiver";
+CREATE TABLE "NamedRiver" (
+		"ID" INTEGER NOT NULL,
+		"Type" TEXT,
+		"DiscoveringCiv" TEXT,
+		"CustomName" TEXT,
+		PRIMARY KEY(ID));

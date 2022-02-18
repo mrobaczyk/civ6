@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..ArtDefSet>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>423</build>
+		<revision>65</revision>
+	</m_Version>
+	<m_TemplateName text="DynamicGeo"/>
+	<m_RootCollections>
+		<Element>
+			<m_CollectionName text="WallSet"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text=""/>
+							<m_ParamName text="Gameplay Name"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>1</m_nValue>
+							<m_ParamName text="Ordering"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Era Art Set"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>9.000000</m_fValue>
+										<m_ParamName text="Unit Length"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="GarbageBarrierTowers"/>
+										<m_RootCollectionName text="TowerSet"/>
+										<m_ArtDefPath text="Walls.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text="DynamicGeo"/>
+										<m_ParamName text="Tower Set"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="DEFAULT"/>
+										<m_RootCollectionName text="ArtEra"/>
+										<m_ArtDefPath text="Eras.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text="Eras"/>
+										<m_ParamName text="Era"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="SEAWALL_COASTAL"/>
+										<m_ParamName text="Generator"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="RANDOM"/>
+										<m_ParamName text="WallPartOrdering"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="Wall Pieces"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="CR_Garbage_Barrier_WallA"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_Walls_Wall Pieces"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="CR_Garbage_Barrier_WallB"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_Walls_Wall Pieces001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="CR_Garbage_Barrier_WallC"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>1</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_Walls_Wall Pieces002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="CR_Garbage_Barrier_WallD"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>3</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_Walls_Wall Pieces003"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="CR_Garbage_Barrier_WallE"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_Walls_Wall Pieces004"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="CR_Garbage_Barrier_WallF"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>1</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_Walls_Wall Pieces005"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="CR_Garbage_Barrier_WallG"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="CivRoyaleScenario_Walls_Wall Pieces006"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+								<Element>
+									<m_CollectionName text="Gate"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Default"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="GarbageBarrierWalls"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+		<Element>
+			<m_CollectionName text="TowerSet"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Pieces"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Garbage_Barrier_TowerA"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_Walls_Pieces"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Garbage_Barrier_TowerB"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_Walls_Pieces001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Garbage_Barrier_Tower_Blank"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_Walls_Pieces002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Garbage_Barrier_Tower_Blank"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_Walls_Pieces002001"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Garbage_Barrier_Tower_Blank"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_Walls_Pieces002002"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="CR_Garbage_Barrier_Tower_Blank"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="CivRoyaleScenario_Walls_Pieces002003"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="GarbageBarrierTowers"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+	</m_RootCollections>
+</AssetObjects..ArtDefSet>
+

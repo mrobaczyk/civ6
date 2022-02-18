@@ -627,11 +627,6 @@
 		</Row>
 		<!--Adjust Great Person Charges-->
 		<Row>
-			<ModifierId>HALICARNASSUS_ADJUST_ADMIRAL_CHARGES</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_GREAT_PERSON_CHARGES</ModifierType>
-			<SubjectRequirementSetId>UNIT_IS_ADMIRAL</SubjectRequirementSetId>
-		</Row>
-		<Row>
 			<ModifierId>HALICARNASSUS_ADJUST_ENGINEER_CHARGES</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_GREAT_PERSON_CHARGES</ModifierType>
 			<SubjectRequirementSetId>UNIT_IS_ENGINEER</SubjectRequirementSetId>
@@ -652,19 +647,17 @@
 			<ModifierId>APADANA_AWARD_TWO_INFLUENCE_TOKEN_MODIFIER</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_GRANT_INFLUENCE_TOKEN_FROM_CITY_WONDER</ModifierType>
 		</Row>
-		<!--Grant Unit-->
-		<Row>
-			<ModifierId>HALICARNASSUS_GRANT_ADMIRAL</ModifierId>
-			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_GREAT_PERSON_CLASS_IN_CITY</ModifierType>
-			<RunOnce>true</RunOnce>
-			<Permanent>true</Permanent>
-		</Row>
 		<!--Grant Yield-->
 		<Row>
 			<ModifierId>BASILIKOI_PAIDES_SCIENCE_TRAINED_UNIT</ModifierId>
 			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_YIELD_PER_UNIT_COST</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -864,11 +857,6 @@
 		</Row>
 		<!--Adjust Charges-->
 		<Row>
-			<ModifierId>HALICARNASSUS_ADJUST_ADMIRAL_CHARGES</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
-		</Row>
-		<Row>
 			<ModifierId>HALICARNASSUS_ADJUST_ENGINEER_CHARGES</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
@@ -890,17 +878,6 @@
 			<Name>Amount</Name>
 			<Value>2</Value>
 		</Row>
-		<!--Grant Unit-->
-		<Row>
-			<ModifierId>HALICARNASSUS_GRANT_ADMIRAL</ModifierId>
-			<Name>GreatPersonClassType</Name>
-			<Value>GREAT_PERSON_CLASS_ADMIRAL</Value>
-		</Row>
-		<Row>
-			<ModifierId>HALICARNASSUS_GRANT_ADMIRAL</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
-		</Row>
 		<!--Grant Yield-->
 		<Row>
 			<ModifierId>BASILIKOI_PAIDES_SCIENCE_TRAINED_UNIT</ModifierId>
@@ -912,6 +889,16 @@
 			<Name>UnitProductionPercent</Name>
 			<Value>25</Value>
 		</Row>
+		<Row>
+			<ModifierId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE,YIELD_FAITH,YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1,1,1</Value>
+		</Row>
 	</ModifierArguments>
 	<ModifierStrings>
 		<Row ModifierId="AGENDA_SHORT_LIFE_GLORY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
@@ -919,10 +906,6 @@
 	</ModifierStrings>
 	<BuildingModifiers>
 		<!--Adjust Charges-->
-		<Row>
-			<BuildingType>BUILDING_HALICARNASSUS_MAUSOLEUM</BuildingType>
-			<ModifierId>HALICARNASSUS_ADJUST_ADMIRAL_CHARGES</ModifierId>
-		</Row>
 		<Row>
 			<BuildingType>BUILDING_HALICARNASSUS_MAUSOLEUM</BuildingType>
 			<ModifierId>HALICARNASSUS_ADJUST_ENGINEER_CHARGES</ModifierId>
@@ -937,15 +920,14 @@
 			<BuildingType>BUILDING_APADANA</BuildingType>
 			<ModifierId>APADANA_AWARD_TWO_INFLUENCE_TOKEN</ModifierId>
 		</Row>
-		<!--Grant Unit-->
-		<Row>
-			<BuildingType>BUILDING_HALICARNASSUS_MAUSOLEUM</BuildingType>
-			<ModifierId>HALICARNASSUS_GRANT_ADMIRAL</ModifierId>
-		</Row>
 		<!--Grant Yield-->
 		<Row>
 			<BuildingType>BUILDING_BASILIKOI_PAIDES</BuildingType>
 			<ModifierId>BASILIKOI_PAIDES_SCIENCE_TRAINED_UNIT</ModifierId>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HALICARNASSUS_MAUSOLEUM</BuildingType>
+			<ModifierId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER</ModifierId>
 		</Row>
 	</BuildingModifiers>
 	<RequirementSets>
@@ -989,6 +971,10 @@
 			<RequirementSetId>PLAYER_HAS_POLITICAL_PHILOSOPHY</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
 	<Requirements>
 		<Row>
@@ -1018,6 +1004,11 @@
 		<Row>
 			<RequirementId>REQUIREMENT_UNIT_IS_HETAIROI</RequirementId>
 			<RequirementType>REQUIREMENT_UNIT_TAG_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_IS_NOT_LAKE_REQUIREMENTS</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_IS_LAKE</RequirementType>
+			<Inverse>true</Inverse>
 		</Row>
 	</Requirements>
 	<RequirementSetRequirements>
@@ -1073,6 +1064,14 @@
 		<Row>
 			<RequirementSetId>PLAYER_HAS_POLITICAL_PHILOSOPHY</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_HAS_POLITICAL_PHILOSOPHY</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>HALICARNASSUS_MAUSOLEUM_YIELD_MODIFIER_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLOT_IS_NOT_LAKE_REQUIREMENTS</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<RequirementArguments>

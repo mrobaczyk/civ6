@@ -62,6 +62,8 @@ function AssignStartingPlots.Create(args)
 		uiStartConfig = args.START_CONFIG or 2,
 		waterMap  = args.WATER or false,
 		landMap  = args.LAND or false,
+		noStartBiases = args.IGNORESTARTBIAS or false,
+		startLargestLandmassOnly = args.START_LARGEST_LANDMASS_ONLY or false,
 		majorStartPlots = {},
 		majorCopy = {},
 		minorStartPlots = {},	
@@ -97,7 +99,7 @@ function AssignStartingPlots:__InitStartingData()
 	self.iNumRegions = self.iNumMajorCivs + self.iNumMinorCivs;
 	local iMinNumBarbarians = self.iNumMajorCivs / 2;
 
-	StartPositioner.DivideMapIntoMajorRegions(self.iNumMajorCivs, self.uiMinMajorCivFertility, self.uiMinMinorCivFertility);
+	StartPositioner.DivideMapIntoMajorRegions(self.iNumMajorCivs, self.uiMinMajorCivFertility, self.uiMinMinorCivFertility, self.startLargestLandmassOnly);
 	
 	local iMajorCivStartLocs = StartPositioner.GetNumMajorCivStarts();
 
@@ -155,7 +157,33 @@ function AssignStartingPlots:__InitStartingData()
 	end
 
 	--Begin Start Bias for major
-	self:__InitStartBias(false);
+	if (self.noStartBiases or (GameInfo.StartBiasResources() == nil and GameInfo.StartBiasFeatures() == nil and GameInfo.StartBiasTerrains() == nil and GameInfo.StartBiasRivers() == nil)) then
+		self.playerStarts = {};
+		for i = 1, self.iNumMajorCivs do
+			local playerStart = {}
+			for j, plot in ipairs(self.majorStartPlots) do
+				playerStart[j] = plot;
+			end
+			self.playerStarts[i] = playerStart;
+		end
+
+		for j, playerIndex in ipairs(self.majorList) do
+			local hasPlot = false;
+			local index = playerIndex + 1;
+
+			if(index > 0 and self:__ArraySize(self.playerStarts, index) > 1) then
+				for k, v in pairs(self.playerStarts[index]) do
+					if(v~= nil and hasPlot == false) then
+						hasPlot = true;
+						--Call Removal
+						self:__StartBiasPlotRemoval(v, false, index);
+					end
+				end
+			end
+		end
+	else
+		self:__InitStartBias(false);
+	end
 
 	if(self.uiStartConfig == 1 ) then
 		self:__AddResourcesBalanced();
@@ -221,7 +249,33 @@ function AssignStartingPlots:__InitStartingData()
 	end
 
 	--Begin Start Bias for minor
-	self:__InitStartBias(true);
+	if (self.noStartBiases or (GameInfo.StartBiasResources() == nil and GameInfo.StartBiasFeatures() == nil and GameInfo.StartBiasTerrains() == nil and GameInfo.StartBiasRivers() == nil)) then
+		self.playerStarts = {};
+		for i = 1, self.iNumMinorCivs do
+			local playerStart = {}
+			for j, plot in ipairs(self.minorStartPlots) do
+				playerStart[j] = plot;
+			end
+			self.playerStarts[self.iNumMajorCivs + i] = playerStart
+		end
+
+		for j, playerIndex in ipairs(self.minorList) do
+			local hasPlot = false;
+			local index = playerIndex + 1;
+
+			if(index > 0 and self:__ArraySize(self.playerStarts, index) > 1) then
+				for k, v in pairs(self.playerStarts[index]) do
+					if(v~= nil and hasPlot == false) then
+						hasPlot = true;
+						--Call Removal
+						self:__StartBiasPlotRemoval(v, true, index);
+					end
+				end
+			end
+		end
+	else
+		self:__InitStartBias(true);
+	end
 
 	for i = 1, self.iNumMinorCivs do
 		local player = Players[self.minorList[i]]

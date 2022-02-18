@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<GameInfo>
+	<GoodyHuts>
+		<Update>
+			<Set Weight="0"/>
+		</Update>
+		<Update>
+			<Where GoodyHutType="GOODYHUT_MILITARY"/>
+			<Set Weight="100"/>
+		</Update>
+		<Update>
+			<!-- Grant gold as a unlikely but always possible reward action.  The goody hut code crashes if there are no valid goody hut options to apply for a given situation. -->
+			<Where GoodyHutType="GOODYHUT_GOLD"/>
+			<Set Weight="1"/>
+		</Update>
+		<Row GoodyHutType="SUPPLY_DROP_GOODY" ImprovementType="IMPROVEMENT_SUPPLY_DROP" Weight="100"/>
+		<Row GoodyHutType="BARB_GOODIES" ImprovementType="IMPROVEMENT_BARBARIAN_CAMP" Weight="100"/>
+	</GoodyHuts>
+	<GoodyHutSubTypes>
+		<!-- By default, set all to never happen. -->
+		<Update>
+			<Set Weight="0"/>
+		</Update>
+
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_GRANT_EXPERIENCE"/>
+			<Set Weight="30"/>
+		</Update>
+		<!-- This was causing modifier crashes I think.
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_GRANT_UPGRADE"/>
+			<Set Weight="30"/>
+		</Update>
+		-->
+		<Row GoodyHut="GOODYHUT_MILITARY" 	SubTypeGoodyHut="GOODYHUT_GRANT_WARRIOR"			Description="LOC_GOODYHUT_MILITARY_GRANT_WARRIOR_DESCRIPTION"		Weight="21" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_MELEE"/>
+		<Row GoodyHut="GOODYHUT_MILITARY" 	SubTypeGoodyHut="GOODYHUT_GRANT_ARCHER"				Description="LOC_GOODYHUT_MILITARY_GRANT_ARCHER_DESCRIPTION"		Weight="21" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_RANGED"/>
+		<Row GoodyHut="GOODYHUT_MILITARY" 	SubTypeGoodyHut="GOODYHUT_GRANT_AT_TEAM"			Description="LOC_GOODYHUT_MILITARY_GRANT_AT_TEAM_DESCRIPTION"		Weight="21" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_AT_CREW"/>
+		<Row GoodyHut="GOODYHUT_MILITARY" 	SubTypeGoodyHut="GOODYHUT_GRANT_SETTLER_ON_UNIT"	Description="LOC_GOODYHUT_MILITARY_GRANT_SETTLER_DESCRIPTION"		Weight="7"	MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_SETTLER"/>
+		
+		<Row GoodyHut="BARB_GOODIES" 		SubTypeGoodyHut="BARB_GRANT_GUNSHIP"				Description="LOC_GOODYHUT_MILITARY_GRANT_GUNSHIP_DESCRIPTION"		Weight="85" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_GUNSHIP"/>
+		<Row GoodyHut="BARB_GOODIES" 		SubTypeGoodyHut="BARB_GRANT_SUB_STRIKE"				Description="LOC_GOODYHUT_MILITARY_GRANT_NUKE_STRIKE_DESCRIPTION"	Weight="15" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_WMD"/>
+
+		<Row GoodyHut="SUPPLY_DROP_GOODY" 	SubTypeGoodyHut="SUPPLY_DROP_GRANT_TANK"			Description="LOC_GOODYHUT_MILITARY_GRANT_TANK_DESCRIPTION"			Weight="42" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_TANK"/>
+		<Row GoodyHut="SUPPLY_DROP_GOODY" 	SubTypeGoodyHut="SUPPLY_DROP_GRANT_ARTILLERY"		Description="LOC_GOODYHUT_MILITARY_GRANT_ARTILLERY_DESCRIPTION"		Weight="42" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_ARTILLERY"/>
+		<Row GoodyHut="SUPPLY_DROP_GOODY" 	SubTypeGoodyHut="SUPPLY_DROP_GRANT_SUB_STRIKE"		Description="LOC_GOODYHUT_MILITARY_GRANT_NUKE_STRIKE_DESCRIPTION"	Weight="15"	MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_WMD"/>
+	</GoodyHutSubTypes>
+	<Modifiers>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_MELEE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_SETTLER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_WMD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CREATE_WMD</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_RANGED</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_AT_CREW</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_GUNSHIP</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_TANK</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_ARTILLERY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_MELEE</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_INFANTRY</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_MELEE</ModifierId>
+			<Name>Experience</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_SETTLER</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_SETTLER</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_SETTLER</ModifierId>
+			<Name>Experience</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_WMD</ModifierId>
+			<Name>Type</Name>
+			<Value>WMD_THERMONUCLEAR_DEVICE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_WMD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_RANGED</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_MACHINE_GUN</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_RANGED</ModifierId>
+			<Name>Experience</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_AT_CREW</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_AT_CREW</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_AT_CREW</ModifierId>
+			<Name>Experience</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_GUNSHIP</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_HELICOPTER</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_GUNSHIP</ModifierId>
+			<Name>Experience</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_TANK</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_TANK</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_TANK</ModifierId>
+			<Name>Experience</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_ARTILLERY</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_ROCKET_ARTILLERY</Value>
+		</Row>
+		<Row>
+			<ModifierId>GOODY_MILITARY_GRANT_ARTILLERY</ModifierId>
+			<Name>Experience</Name>
+			<Value>0</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

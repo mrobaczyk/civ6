@@ -566,13 +566,13 @@ function AllocateUI( kNodeGrid:table, kPaths:table )
 		if node["unlockIM"] == nil then
 			node["unlockIM"] = InstanceManager:new( "UnlockInstance", "UnlockIcon", node.UnlockStack );
 		else
-			node["unlockIM"]:DestroyInstances()
+			node["unlockIM"]:ResetInstances();
 		end
 		
 		if node["unlockGOV"] == nil then
 			node["unlockGOV"] = InstanceManager:new( "GovernmentIcon", "GovernmentInstanceGrid", node.UnlockStack );
 		else
-			node["unlockGOV"]:DestroyInstances()
+			node["unlockGOV"]:ResetInstances();
 		end
 
 		item.Callback = function()
@@ -1259,20 +1259,24 @@ function GetCurrentData( ePlayer:number )
 	return data;
 end
 
--- Optional parameter
-function RefreshDataIfNeeded( )
-	if ContextPtr:IsVisible() then
-		m_kCurrentData = GetCurrentData( m_ePlayer );
-		View( m_kCurrentData );
-    end
+-- ===========================================================================
+function RefreshDataIfNeeded( ePlayer:number )
+	if ContextPtr:IsHidden() then return; end													-- Screen hidden
+	if (m_ePlayer == PlayerTypes.NONE or m_ePlayer == PlayerTypes.OBSERVER) then return; end	-- Autoplay support.
+	if m_ePlayer ~= ePlayer then return; end													-- Some other player
+			
+	m_kCurrentData = GetCurrentData( m_ePlayer, -1 );
+	View( m_kCurrentData );
 end
 
+-- ===========================================================================
+function OnUpdateDueToCity(ePlayer:number, cityID:number, plotX:number, plotY:number)
+	RefreshDataIfNeeded(ePlayer);	
+end
+
+-- ===========================================================================
 function UpdateLocalPlayer()
-	local ePlayer :number = Game.GetLocalPlayer();
-	if ePlayer ~= -1 and m_ePlayer ~= ePlayer then
-		m_ePlayer = ePlayer;
-		RefreshDataIfNeeded( );
-    end
+	RefreshDataIfNeeded( m_ePlayer );
 end
 
 -- ===========================================================================
@@ -1310,19 +1314,24 @@ function OnLocalPlayerTurnEnd()
 end
 
 -- ===========================================================================
-function OnCivicChanged( ePlayer:number, eTech:number )
-	if ePlayer == Game.GetLocalPlayer() then
-		m_ePlayer = ePlayer;
-		RefreshDataIfNeeded( );
+--	EVENT
+-- ===========================================================================
+function OnLocalPlayerChanged()
+	local localPlayer:number =  Game.GetLocalPlayer();
+	if  localPlayer ~= PlayerTypes.NONE then
+		m_ePlayer = localPlayer;
+		Controls.NodeScroller:SetScrollValue( 0 );
 	end
 end
 
 -- ===========================================================================
-function OnCivicComplete( ePlayer:number, eTech:number)
-	if ePlayer == Game.GetLocalPlayer() then
-		m_ePlayer = ePlayer;
-		RefreshDataIfNeeded( );
-	end
+function OnCivicChanged( ePlayer:number, eCivic:number )
+	RefreshDataIfNeeded( ePlayer );	
+end
+
+-- ===========================================================================
+function OnCivicComplete( ePlayer:number, eCivic:number)
+	RefreshDataIfNeeded( ePlayer );
 end
 
 -- ===========================================================================
@@ -1675,7 +1684,7 @@ end
 
 -- ===========================================================================
 function OnOpen()
-	if (Game.GetLocalPlayer() == -1) then
+	if (Game.GetLocalPlayer() == PlayerTypes.NONE) then
 		return;
 	end
 
@@ -1724,7 +1733,19 @@ end
 function OnClickCurrentPolicy(clickedPolicy:number)
 	local percent:number = 0;
 	local prereqCivic:string = GameInfo.Policies[clickedPolicy].PrereqCivic;
-	percent = (g_uiNodes[prereqCivic].x - PADDING_TIMELINE_LEFT)/(m_maxColumns * COLUMN_WIDTH);
+
+	percent = (g_uiNodes[prereqCivic].x)/((m_maxColumns * COLUMN_WIDTH)*2);
+	--offset the scroll percent depending on the scroll value to better center the policy on the screen
+	if percent < .25 then
+		percent = percent - .025
+	elseif percent >= .25 and percent < .5 then
+		percent = percent;
+	elseif percent >= .5 and percent < .75 then
+		percent = percent + .025;
+	elseif percent >= .75 then 
+		percent = percent + .05;
+	end
+
 	Controls.NodeScroller:SetScrollValue(percent);
 
 end
@@ -1986,13 +2007,18 @@ function OnShutdown()
 	LuaEvents.LaunchBar_RaiseCivicsTree.Remove( OnOpen );
 	LuaEvents.LaunchBar_CloseCivicsTree.Remove( OnClose );
 
+	Events.BuildingChanged.Remove( OnBuildingChanged );
+	Events.CityFocusChanged.Remove( OnUpdateDueToCity );
+	Events.CityInitialized.Remove( OnCityInitialized );
+	Events.CityWorkerChanged.Remove( OnUpdateDueToCity );
+	Events.CivicChanged.Remove( OnCivicChanged );
+	Events.CivicCompleted.Remove( OnCivicComplete );
 	Events.GovernmentChanged.Remove( OnGovernmentChanged );
 	Events.GovernmentPolicyChanged.Remove( OnGovernmentPolicyChanged );
 	Events.GovernmentPolicyObsoleted.Remove( OnGovernmentPolicyChanged );
+	Events.LocalPlayerChanged.Remove( OnLocalPlayerChanged );
 	Events.LocalPlayerTurnBegin.Remove( OnLocalPlayerTurnBegin );
-	Events.LocalPlayerTurnEnd.Remove( OnLocalPlayerTurnEnd );
-	Events.CivicChanged.Remove( OnCivicChanged );
-	Events.CivicCompleted.Remove( OnCivicComplete );
+	Events.LocalPlayerTurnEnd.Remove( OnLocalPlayerTurnEnd );	
 	Events.SystemUpdateUI.Remove( OnUpdateUI );
 
 	Search.DestroyContext("Civics");
@@ -2131,16 +2157,12 @@ end
 
 -- ===========================================================================
 function OnCityInitialized(owner, ID)
-	if (owner == m_ePlayer) then
-		RefreshDataIfNeeded( );
-	end
+	RefreshDataIfNeeded( owner );
 end
 
 -- ===========================================================================
 function OnBuildingChanged( plotX:number, plotY:number, buildingIndex:number, playerID:number, cityID:number, iPercentComplete:number )
-	if playerID == m_ePlayer then	
-		RefreshDataIfNeeded( ); -- Buildings can change culture/science yield which can effect "turns to complete" values
-	end
+	RefreshDataIfNeeded( playerID ); -- Buildings can change culture/science yield which can effect "turns to complete" values
 end
 
 -- ===========================================================================
@@ -2222,20 +2244,22 @@ function Initialize()
 
 	-- Game engine Event	
 	Events.BuildingChanged.Add( OnBuildingChanged );
+	Events.CityFocusChanged.Add( OnUpdateDueToCity );
 	Events.CityInitialized.Add( OnCityInitialized );
+	Events.CityWorkerChanged.Add( OnUpdateDueToCity );
 	Events.CivicChanged.Add( OnCivicChanged );
 	Events.CivicCompleted.Add( OnCivicComplete );
 	Events.GovernmentChanged.Add( OnGovernmentChanged );
 	Events.GovernmentPolicyChanged.Add( OnGovernmentPolicyChanged );
 	Events.GovernmentPolicyObsoleted.Add( OnGovernmentPolicyChanged );
+	Events.LocalPlayerChanged.Add( OnLocalPlayerChanged );
 	Events.LocalPlayerTurnBegin.Add( OnLocalPlayerTurnBegin );
 	Events.LocalPlayerTurnEnd.Add( OnLocalPlayerTurnEnd );
-	Events.LocalPlayerChanged.Add( BuildTree );
 	Events.SystemUpdateUI.Add( OnUpdateUI );
 
 	m_TopPanelConsideredHeight = Controls.Vignette:GetSizeY() - TOP_PANEL_OFFSET;
 end
 
-if HasCapability("CAPABILITY_CIVICS_CHOOSER") then
+if HasCapability("CAPABILITY_CIVICS_TREE") then
 	Initialize();
 end

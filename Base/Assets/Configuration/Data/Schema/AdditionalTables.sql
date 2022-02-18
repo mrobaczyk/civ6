@@ -10,6 +10,14 @@ CREATE TABLE 'Credits'(
 	'SortOrder' INTEGER NOT NULL DEFAULT 0
 );
 
+-- Stores references to main menu logos.  
+-- The row with the highest priority is shown.
+CREATE TABLE 'Logos'(
+	'LogoTexture' TEXT NOT NULL,
+	'LogoMovie' TEXT NOT NULL,
+	'Priority' INTEGER NOT NULL
+);
+
 CREATE TABLE 'Defeats'(
 	'Domain' TEXT NOT NULL DEFAULT 'StandardDefeats',
 	'DefeatType' TEXT NOT NULL,
@@ -57,6 +65,7 @@ CREATE TABLE 'Maps' (
 	'File' TEXT NOT NULL,
 	'Name' TEXT NOT NULL,
 	'Description' TEXT,
+	'Image' TEXT,
 	'StaticMap' BOOLEAN NOT NULL DEFAULT 0,
 	'WorldBuilderOnly' BOOLEAN NOT NULL DEFAULT 0,
 	'RequiresUniqueLeaders' BOOLEAN NOT NULL DEFAULT 0,
@@ -76,8 +85,7 @@ CREATE TABLE 'MapStartPositions' (
 	'Map' TEXT NOT NULL,		-- A reference to Maps::File
 	'Plot' INTEGER NOT NULL,
 	'Type' TEXT NOT NULL,
-	'Value' TEXT,
-	PRIMARY KEY('Map','Plot')
+	'Value' TEXT
 );
 
 CREATE TABLE 'MapSizes' (

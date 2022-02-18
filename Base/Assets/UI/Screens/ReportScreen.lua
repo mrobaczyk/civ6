@@ -16,30 +16,27 @@ local m_debugNumResourcesStrategic	:number = 0;			-- (0) number of extra strateg
 local m_debugNumBonuses				:number = 0;			-- (0) number of extra bonuses to show for screen testing.
 local m_debugNumResourcesLuxuries	:number = 0;			-- (0) number of extra luxuries to show for screen testing.
 
-
 -- ===========================================================================
 --	CONSTANTS
 -- ===========================================================================
+
+local RELOAD_CACHE_ID:string = "ReportScreen"; -- Must be unique (usually the same as the file name)
+
 local DARKEN_CITY_INCOME_AREA_ADDITIONAL_Y		:number = 6;
 local DATA_FIELD_SELECTION						:string = "Selection";
 local SIZE_HEIGHT_BOTTOM_YIELDS					:number = 135;
 local SIZE_HEIGHT_PADDING_BOTTOM_ADJUST			:number = 85;	-- (Total Y - (scroll area + THIS PADDING)) = bottom area
 local INDENT_STRING								:string = "        ";
-local GOSSIP_GROUP_TYPES						:table	= {
-	"ALL",
-	"BARBARIAN",
-	"DIPLOMACY",
-	"CITY",
-	"CULTURE",
-	"DISCOVER",
-	"ESPIONAGE",
-	"GREATPERSON",
-	"MILITARY",
-	"RELIGION",
-	"SCIENCE",
-	"SETTLEMENT",
-	"VICTORY"
-};
+local GOSSIP_ENTRY_CONSTANT						:number = 62;
+local GOSSIP_HEADER_SIZE						:number = 230;
+local GOSSIP_FILTER_ALL							:string = "ALL";
+
+local REPORT_PAGES	:table = {
+	YIELDS		= 1,
+	RESOURCES	= 2,
+	CITY_STATUS = 3,
+	GOSSIP		= 4
+}
 
 -- Mapping of unit type to cost.
 local UnitCostMap:table = {};
@@ -49,22 +46,22 @@ do
 	end
 end
 
-
 -- ===========================================================================
 --	VARIABLES
 -- ===========================================================================
 
-m_simpleIM							= InstanceManager:new("SimpleInstance",			"Top",		Controls.Stack);				-- Non-Collapsable, simple
-m_tabIM								= InstanceManager:new("TabInstance",				"Button",	Controls.TabContainer);
-m_strategicResourcesIM				= InstanceManager:new("ResourceAmountInstance",	"Info",		Controls.StrategicResources);
-m_bonusResourcesIM					= InstanceManager:new("ResourceAmountInstance",	"Info",		Controls.BonusResources);
-m_luxuryResourcesIM					= InstanceManager:new("ResourceAmountInstance",	"Info",		Controls.LuxuryResources);
-local m_groupIM				:table	= InstanceManager:new("GroupInstance",			"Top",		Controls.Stack);				-- Collapsable
+local m_simpleIM				:table = InstanceManager:new("SimpleInstance",			"Top",		Controls.Stack);				-- Non-Collapsable, simple
+local m_tabIM					:table = InstanceManager:new("TabInstance",				"Button",	Controls.TabContainer);
+local m_strategicResourcesIM	:table = InstanceManager:new("ResourceAmountInstance",	"Info",		Controls.StrategicResources);
+local m_bonusResourcesIM		:table = InstanceManager:new("ResourceAmountInstance",	"Info",		Controls.BonusResources);
+local m_luxuryResourcesIM		:table = InstanceManager:new("ResourceAmountInstance",	"Info",		Controls.LuxuryResources);
+local m_groupIM					:table = InstanceManager:new("GroupInstance",			"Top",		Controls.Stack);				-- Collapsable
 
+local m_kTabs:table = nil;
+local m_CurrentReportTab:number = 1;
 
-m_kCityData = nil;
-m_tabs = nil;
-m_kResourceData = nil;
+local m_kResourceData		:table = nil;
+local m_kCityData			:table = nil;
 local m_kCityTotalData		:table = nil;
 local m_kUnitData			:table = nil;	-- TODO: Show units by promotion class
 local m_kDealData			:table = nil;
@@ -74,9 +71,18 @@ local m_isCollapsing		:boolean = true;
 
 --Gossip filtering
 local m_kGossipInstances:table = {};
-local m_groupFilter:number = 1;	-- (1) Indicates Unfiltered by this criteria (Group Type Index)
+local m_groupFilter:string = GOSSIP_FILTER_ALL;
 local m_leaderFilter:number = -1;	-- (-1) Indicates Unfilitered by this criteria (PlayerID)
+local m_kGossipLog:table = {};
+local m_kGossipLogFiltered:table = {};
+local m_kGossipFiltersToShow:table = {}; -- GroupType indexed table used to determine which gossip GroupType filters to show
+local m_CountPerPage:number = 0;
+local m_CurrentGossipPage:number = 0;
+local m_MaxPages:number = 0;
+local m_uiPaginationInstance:table = {};
+local m_uiGossipFilterInstance:table = {};
 
+local m_kGossipGroupTypes:table	= {};
 
 -- ===========================================================================
 --	Single exit point for display
@@ -100,13 +106,11 @@ end
 -- ===========================================================================
 --	Single entry point for display
 -- ===========================================================================
-function Open( tabToOpen:string )
+function Open( tabToOpen:number )
 	
-	local displayedTabIndex:number = 1;
-	if tabToOpen=="Resources" then displayedTabIndex = 2; end
-	if tabToOpen=="CityStatus" then displayedTabIndex = 3; end
-	if tabToOpen=="Gossip" then displayedTabIndex = 4; end
-
+	if tabToOpen == nil then
+		tabToOpen = REPORT_PAGES.YIELDS;
+	end
 
 	UIManager:QueuePopup( ContextPtr, PopupPriority.Medium );
 	Controls.ScreenAnimIn:SetToBeginning();
@@ -114,9 +118,15 @@ function Open( tabToOpen:string )
 	UI.PlaySound("UI_Screen_Open");
 
 	m_kCityData, m_kCityTotalData, m_kResourceData, m_kUnitData, m_kDealData = GetData();
+	table.sort(m_kCityData, SortCities);
 	
 	Resize();
-	m_tabs.SelectTab( displayedTabIndex );
+	m_kTabs.SelectTab( tabToOpen );
+end
+
+-- ===========================================================================
+function SortCities(a,b)
+	return a.Order < b.Order;
 end
 
 -- ===========================================================================
@@ -131,21 +141,21 @@ end
 --	LUA Events
 -- ===========================================================================
 function OnOpenCityStatus()
-	Open("CityStatus");
+	Open(REPORT_PAGES.CITY_STATUS);
 end
 
 -- ===========================================================================
 --	LUA Events
 -- ===========================================================================
 function OnOpenResources()
-	Open("Resources");
+	Open(REPORT_PAGES.RESOURCES);
 end
 
 -- ===========================================================================
 --	LUA Events
 -- ===========================================================================
 function OnOpenGossip()
-	Open("Gossip");
+	Open(REPORT_PAGES.GOSSIP);
 end
 
 -- ===========================================================================
@@ -221,6 +231,7 @@ function GetData()
 		local data		:table	= GetCityData( pCity );
 		data.Resources			= GetCityResourceData( pCity );					-- Add more data (not in CitySupport)			
 		data.WorkedTileYields	= GetWorkedTileYieldData( pCity, pCulture );	-- Add more data (not in CitySupport)
+		data.Order= i;
 
 		-- Add to totals.
 		kCityTotalData.Income[YieldTypes.CULTURE]	= kCityTotalData.Income[YieldTypes.CULTURE] + data.CulturePerTurn;
@@ -231,11 +242,11 @@ function GetData()
 		kCityTotalData.Income[YieldTypes.SCIENCE]	= kCityTotalData.Income[YieldTypes.SCIENCE] + data.SciencePerTurn;
 		kCityTotalData.Income["TOURISM"]			= kCityTotalData.Income["TOURISM"] + data.WorkedTileYields["TOURISM"];
 			
-		kCityData[cityName] = data;
+		table.insert(kCityData, data);
 
 		-- Add outgoing route data
 		data.OutgoingRoutes = pCity:GetTrade():GetOutgoingRoutes();
-
+	
 		-- Add resources
 		if m_debugNumResourcesStrategic > 0 or m_debugNumResourcesLuxuries > 0 or m_debugNumBonuses > 0 then
 			for debugRes=1,m_debugNumResourcesStrategic,1 do
@@ -274,6 +285,8 @@ function GetData()
 			AddResourceData(kResources, eResourceType, cityName, "LOC_HUD_REPORTS_TRADE_OWNED", amount);
 		end
 	end
+
+
 
 	kCityTotalData.Expenses[YieldTypes.GOLD] = pTreasury:GetTotalMaintenance();
 
@@ -489,6 +502,7 @@ function AddMiscResourceData(pResourceData:table, kResourceTable:table)
 end
 
 -- ===========================================================================
+--	kResources	(in) the table to add resources to.
 function AddResourceData( kResources:table, eResourceType:number, EntryString:string, ControlString:string, InAmount:number)
 	local kResource :table = GameInfo.Resources[eResourceType];
 
@@ -509,12 +523,14 @@ function AddResourceData( kResources:table, eResourceType:number, EntryString:st
 		};
 	end
 
-	table.insert( kResources[eResourceType].EntryList, 
-	{
-		EntryText	= EntryString,
-		ControlText = ControlString,
-		Amount		= InAmount,					
-	});
+	if EntryString ~= "" then
+		table.insert( kResources[eResourceType].EntryList, 
+		{
+			EntryText	= EntryString,
+			ControlText = ControlString,
+			Amount		= InAmount,					
+		});
+	end
 
 	kResources[eResourceType].Total = kResources[eResourceType].Total + InAmount;
 end
@@ -598,8 +614,6 @@ function RealizeGroup( instance:table )
 	local groupHeight	:number = instance.ContentStack:GetSizeY();
 	instance.CollapseAnim:SetBeginVal(0, -(groupHeight - instance["CollapsePadding"]));
 	instance.CollapseScroll:SetSizeY( groupHeight );				
-
-	instance.Top:ReprocessAnchoring();
 end
 
 -- ===========================================================================
@@ -629,8 +643,6 @@ function OnAnimGroupCollapse( instance:table)
 	local sizeY			:number = lerp(startY,endY,progress);
 		
 	instance.CollapseScroll:SetSizeY( sizeY );	
-	instance.ContentStack:ReprocessAnchoring();	
-	instance.Top:ReprocessAnchoring()
 
 	Controls.Stack:CalculateSize();
 	Controls.Scroll:CalculateSize();			
@@ -652,6 +664,11 @@ function ResetTabForNewPageContent()
 	Controls.CollapseAll:LocalizeAndSetText("LOC_HUD_REPORTS_COLLAPSE_ALL");
 	Controls.Scroll:SetScrollValue( 0 );	
 	m_kGossipInstances = {};
+	m_CurrentGossipPage = 0;
+	m_MaxPages = 0;
+	m_CountPerPage = 0;
+	m_uiPaginationInstance = {};
+	m_uiGossipFilterInstance = {};
 end
 
 
@@ -723,6 +740,7 @@ end
 -- ===========================================================================
 function ViewYieldsPage()	
 
+	m_CurrentReportTab = REPORT_PAGES.YIELDS;
 	ResetTabForNewPageContent();
 
 	local instance:table = nil;
@@ -755,7 +773,8 @@ function ViewYieldsPage()
 		return lineInstance;
 	end
 
-	for cityName,kCityData in pairs(m_kCityData) do
+	for i,kCityData in ipairs(m_kCityData) do
+		local cityName :string = kCityData.CityName;
 		local pCityInstance:table = {};
 		ContextPtr:BuildInstanceForControl( "CityIncomeInstance", pCityInstance, instance.ContentStack ) ;
 		pCityInstance.LineItemStack:DestroyAllChildren();
@@ -986,7 +1005,6 @@ function ViewYieldsPage()
 
 		pCityInstance.LineItemStack:CalculateSize();
 		pCityInstance.Darken:SetSizeY( pCityInstance.LineItemStack:GetSizeY() + DARKEN_CITY_INCOME_AREA_ADDITIONAL_Y );
-		pCityInstance.Top:ReprocessAnchoring();
 	end
 
 	local pFooterInstance:table = {};
@@ -1010,7 +1028,8 @@ function ViewYieldsPage()
 	ContextPtr:BuildInstanceForControl( "BuildingExpensesHeaderInstance", pHeader, instance.ContentStack ) ;
 
 	local iTotalBuildingMaintenance :number = 0;
-	for cityName,kCityData in pairs(m_kCityData) do
+	for i,kCityData in ipairs(m_kCityData) do
+		local cityName :string = kCityData.CityName;
 		for _,kBuilding in ipairs(kCityData.Buildings) do
 			if (kBuilding.Maintenance > 0 and kBuilding.isPillaged == false) then
 				local pBuildingInstance:table = {};		
@@ -1146,12 +1165,19 @@ function ViewYieldsPage()
 	Controls.Scroll:SetSizeY( Controls.Main:GetSizeY() - (Controls.BottomYieldTotals:GetSizeY() + SIZE_HEIGHT_PADDING_BOTTOM_ADJUST ) );	
 end
 
+-- ===========================================================================
+--	Allow for override.
+-- ===========================================================================
+function GetStrategicString( kSingleResourceData:table )
+	return kSingleResourceData.Icon .. tostring( kSingleResourceData.Total );
+end
 
 -- ===========================================================================
 --	Tab Callback
 -- ===========================================================================
 function ViewResourcesPage()	
 
+	m_CurrentReportTab = REPORT_PAGES.RESOURCES;
 	ResetTabForNewPageContent();
 
 	local strategicResources:string = "";
@@ -1162,62 +1188,68 @@ function ViewResourcesPage()
 	
 
 	for eResourceType,kSingleResourceData in pairs(m_kResourceData) do
-		
-		local instance:table = NewCollapsibleGroupInstance();	
 
-		local kResource :table = GameInfo.Resources[eResourceType];
-		instance.RowHeaderButton:SetText(  kSingleResourceData.Icon..Locale.Lookup( kResource.Name ) );
+		if next(kSingleResourceData.EntryList) then
+			local instance:table = NewCollapsibleGroupInstance();	
 
-		local pHeaderInstance:table = {};
-		ContextPtr:BuildInstanceForControl( "ResourcesHeaderInstance", pHeaderInstance, instance.ContentStack ) ;
+			local kResource :table = GameInfo.Resources[eResourceType];
+			instance.RowHeaderButton:SetText(  kSingleResourceData.Icon..Locale.Lookup( kResource.Name ) );
 
-		local kResourceEntries:table = kSingleResourceData.EntryList;
-		for i,kEntry in ipairs(kResourceEntries) do
-			local pEntryInstance:table = {};
-			ContextPtr:BuildInstanceForControl( "ResourcesEntryInstance", pEntryInstance, instance.ContentStack ) ;
-			pEntryInstance.CityName:SetText( Locale.Lookup(kEntry.EntryText) );
-			pEntryInstance.Control:SetText( Locale.Lookup(kEntry.ControlText) );
-			pEntryInstance.Amount:SetText( (kEntry.Amount<=0) and tostring(kEntry.Amount) or "+"..tostring(kEntry.Amount) );
-		end
+			local pHeaderInstance:table = {};
+			ContextPtr:BuildInstanceForControl( "ResourcesHeaderInstance", pHeaderInstance, instance.ContentStack ) ;
 
-		local pFooterInstance:table = {};
-		ContextPtr:BuildInstanceForControl( "ResourcesFooterInstance", pFooterInstance, instance.ContentStack ) ;
-		pFooterInstance.Amount:SetText( tostring(kSingleResourceData.Total) );		
-
-		-- Show how many of this resource are being allocated to what cities
-		local localPlayerID = Game.GetLocalPlayer();
-		local localPlayer = Players[localPlayerID];
-		local citiesProvidedTo: table = localPlayer:GetResources():GetResourceAllocationCities(GameInfo.Resources[kResource.ResourceType].Index);
-		local numCitiesProvidingTo: number = table.count(citiesProvidedTo);
-		if (numCitiesProvidingTo > 0) then
-			pFooterInstance.AmenitiesContainer:SetHide(false);
-			pFooterInstance.Amenities:SetText("[ICON_Amenities][ICON_GoingTo]" .. Locale.Lookup("LOC_HUD_REPORTS_CITY_AMENITIES", numCitiesProvidingTo));
-			local amenitiesTooltip: string = "";
-			local playerCities = localPlayer:GetCities();
-			for i,city in ipairs(citiesProvidedTo) do
-				local cityName = Locale.Lookup(playerCities:FindID(city.CityID):GetName());
-				if i ~=1 then
-					amenitiesTooltip = amenitiesTooltip.. "[NEWLINE]";
-				end
-				amenitiesTooltip = amenitiesTooltip.. city.AllocationAmount.." [ICON_".. kResource.ResourceType.."] [Icon_GoingTo] " ..cityName;
+			local kResourceEntries:table = kSingleResourceData.EntryList;
+			for i,kEntry in ipairs(kResourceEntries) do
+				local pEntryInstance:table = {};
+				ContextPtr:BuildInstanceForControl( "ResourcesEntryInstance", pEntryInstance, instance.ContentStack ) ;
+				pEntryInstance.CityName:SetText( Locale.Lookup(kEntry.EntryText) );
+				pEntryInstance.Control:SetText( Locale.Lookup(kEntry.ControlText) );
+				pEntryInstance.Amount:SetText( (kEntry.Amount<=0) and tostring(kEntry.Amount) or "+"..tostring(kEntry.Amount) );
 			end
-			pFooterInstance.Amenities:SetToolTipString(amenitiesTooltip);
-		else
-			pFooterInstance.AmenitiesContainer:SetHide(true);
+
+			local pFooterInstance:table = {};
+			ContextPtr:BuildInstanceForControl( "ResourcesFooterInstance", pFooterInstance, instance.ContentStack ) ;
+			local valueString:string = tostring(kSingleResourceData.Total);
+			if kSingleResourceData.IsStrategic then
+				if kSingleResourceData.Total > 0 then
+					valueString = "+" .. valueString;
+				end
+			end
+			pFooterInstance.Amount:SetText( valueString );		
+
+			-- Show how many of this resource are being allocated to what cities
+			local localPlayerID = Game.GetLocalPlayer();
+			local localPlayer = Players[localPlayerID];
+			local citiesProvidedTo: table = localPlayer:GetResources():GetResourceAllocationCities(GameInfo.Resources[kResource.ResourceType].Index);
+			local numCitiesProvidingTo: number = table.count(citiesProvidedTo);
+			if (numCitiesProvidingTo > 0) then
+				pFooterInstance.AmenitiesContainer:SetHide(false);
+				pFooterInstance.Amenities:SetText("[ICON_Amenities][ICON_GoingTo]" .. Locale.Lookup("LOC_HUD_REPORTS_CITY_AMENITIES", numCitiesProvidingTo));
+				local amenitiesTooltip: string = "";
+				local playerCities = localPlayer:GetCities();
+				for i,city in ipairs(citiesProvidedTo) do
+					local cityName = Locale.Lookup(playerCities:FindID(city.CityID):GetName());
+					if i ~=1 then
+						amenitiesTooltip = amenitiesTooltip.. "[NEWLINE]";
+					end
+					amenitiesTooltip = amenitiesTooltip.. city.AllocationAmount.." [ICON_".. kResource.ResourceType.."] [Icon_GoingTo] " ..cityName;
+				end
+				pFooterInstance.Amenities:SetToolTipString(amenitiesTooltip);
+			else
+				pFooterInstance.AmenitiesContainer:SetHide(true);
+			end
+
+			SetGroupCollapsePadding(instance, pFooterInstance.Top:GetSizeY() );
+			RealizeGroup( instance );
 		end
 
 		if kSingleResourceData.IsStrategic then
-			--strategicResources = strategicResources .. kSingleResourceData.Icon .. tostring( kSingleResourceData.Total );
-			table.insert(kStrategics, kSingleResourceData.Icon .. tostring( kSingleResourceData.Total ) );
-		elseif kSingleResourceData.IsLuxury then			
-			--luxuryResources = luxuryResources .. kSingleResourceData.Icon .. tostring( kSingleResourceData.Total );			
+			table.insert(kStrategics, GetStrategicString(kSingleResourceData) );
+		elseif kSingleResourceData.IsLuxury then					
 			table.insert(kLuxuries, kSingleResourceData.Icon .. tostring( kSingleResourceData.Total ) );
 		else
 			table.insert(kBonuses, kSingleResourceData.Icon .. tostring( kSingleResourceData.Total ) );
 		end
-
-		SetGroupCollapsePadding(instance, pFooterInstance.Top:GetSizeY() );
-		RealizeGroup( instance );
 	end
 	
 	m_strategicResourcesIM:ResetInstances();
@@ -1226,7 +1258,6 @@ function ViewResourcesPage()
 		resourceInstance.Info:SetText( v );
 	end
 	Controls.StrategicResources:CalculateSize();
-	Controls.StrategicGrid:ReprocessAnchoring();
 
 	m_bonusResourcesIM:ResetInstances();
 	for i,v in ipairs(kBonuses) do
@@ -1234,7 +1265,6 @@ function ViewResourcesPage()
 		resourceInstance.Info:SetText( v );
 	end
 	Controls.BonusResources:CalculateSize();
-	Controls.BonusGrid:ReprocessAnchoring();
 
 	m_luxuryResourcesIM:ResetInstances();
 	for i,v in ipairs(kLuxuries) do
@@ -1243,8 +1273,6 @@ function ViewResourcesPage()
 	end
 	
 	Controls.LuxuryResources:CalculateSize();
-	Controls.LuxuryResources:ReprocessAnchoring();
-	Controls.LuxuryGrid:ReprocessAnchoring();
 	
 	Controls.Stack:CalculateSize();
 	Controls.Scroll:CalculateSize();
@@ -1256,10 +1284,26 @@ function ViewResourcesPage()
 end
 
 -- ===========================================================================
+function AddGossipForTarget( targetID:number )
+	local bHasGossip = false;
+
+	local kAppendTable:table = Game.GetGossipManager():GetRecentVisibleGossipStrings(0, Game.GetLocalPlayer(), targetID);
+	for _, entry in pairs(kAppendTable) do
+		table.insert(m_kGossipLog, entry);
+		bHasGossip = true;
+	end
+
+	return bHasGossip;
+end
+
+-- ===========================================================================
 --	Tab Callback
 -- ===========================================================================
-function ViewGossipPage()	
+function ViewGossipPage()
+
+	m_CurrentReportTab = REPORT_PAGES.GOSSIP;
 	ResetTabForNewPageContent();
+
 	local playerID:number = Game.GetLocalPlayer();
 	if playerID == -1 then
 		--Observer. No report.
@@ -1279,33 +1323,24 @@ function ViewGossipPage()
 	local instance:table = m_simpleIM:GetInstance();	
 	instance.Top:DestroyAllChildren();
 
-	local uiFilterInstance:table = {};
-	ContextPtr:BuildInstanceForControl("GossipFilterInstance", uiFilterInstance, instance.Top);
-
-	--Generate our filters for each group
-	for i, type in pairs(GOSSIP_GROUP_TYPES) do
-		local uiFilter:table = {};
-		uiFilterInstance.GroupFilter:BuildEntry("InstanceOne", uiFilter);
-		uiFilter.Button:SetText(Locale.Lookup("LOC_HUD_REPORTS_FILTER_" .. type));
-		uiFilter.Button:SetVoid1(i);
-		uiFilter.Button:SetSizeX(252);
-	end
-	uiFilterInstance.GroupFilter:RegisterSelectionCallback(function(i:number)
-		uiFilterInstance.GroupFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_FILTER_" .. GOSSIP_GROUP_TYPES[i]));
-		m_groupFilter = i;
-		FilterGossip();
+	-- Setup Filter Pulldown
+	ContextPtr:BuildInstanceForControl("GossipFilterInstance", m_uiGossipFilterInstance, instance.Top);
+	m_uiGossipFilterInstance.GroupFilter:RegisterSelectionCallback(function(i:number)
+		local type:string = m_kGossipGroupTypes[i];
+		m_uiGossipFilterInstance.GroupFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_FILTER_" .. type));
+		m_groupFilter = type;
+		RefreshGossip();
 	end);
-	uiFilterInstance.GroupFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_FILTER_ALL"));
+	m_uiGossipFilterInstance.GroupFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_FILTER_ALL"));
 
+	ContextPtr:BuildInstanceForControl("GossipPageInstance", m_uiPaginationInstance, instance.Top);
 
 	local pHeaderInstance:table = {}
-	ContextPtr:BuildInstanceForControl( "GossipHeaderInstance", pHeaderInstance, instance.Top );
-	
-	local kGossipLog:table = {};	
+	ContextPtr:BuildInstanceForControl( "GossipHeaderInstance", pHeaderInstance, instance.Top );	
 
 	--Make our 'All' Filter for players
 	local uiAllFilter:table = {};
-	uiFilterInstance.PlayerFilter:BuildEntry("InstanceOne", uiAllFilter);
+	m_uiGossipFilterInstance.PlayerFilter:BuildEntry("InstanceOne", uiAllFilter);
 	uiAllFilter.LeaderIcon.Portrait:SetIcon("ICON_LEADER_ALL");
 	uiAllFilter.LeaderIcon.Portrait:SetHide(false);
 	uiAllFilter.LeaderIcon.TeamRibbon:SetHide(true);
@@ -1315,21 +1350,19 @@ function ViewGossipPage()
 
 
 	--Populate with all of our Gossip and build Player Filter
+	m_kGossipLog = {};
+
+	local kAliveLeaders:table = PlayerManager.GetAliveMajorIDs();
 	for targetID, kPlayer in pairs(Players) do
 		--If we are not ourselves, are a major civ, and we have met these people
 		if targetID ~= playerID and kPlayer:IsMajor() and pLocalPlayerDiplomacy:HasMet(targetID) then
 			--Append their gossip
-			local bHasGossip:boolean = false;
-			local kAppendTable:table =  Game.GetGossipManager():GetRecentVisibleGossipStrings(0, playerID, targetID);
-			for _, entry in pairs(kAppendTable) do
-				table.insert(kGossipLog, entry);
-				bHasGossip = true;
-			end
+			local bHasGossip:boolean = AddGossipForTarget(targetID);
 
 			--If we had gossip, add them as a filter
 			if bHasGossip then
 				local uiFilter:table = {};
-				uiFilterInstance.PlayerFilter:BuildEntry("InstanceOne", uiFilter);
+				m_uiGossipFilterInstance.PlayerFilter:BuildEntry("InstanceOne", uiFilter);
 
 				local leaderName:string = PlayerConfigurations[targetID]:GetLeaderTypeName();
 				local iconName:string = "ICON_" .. leaderName;
@@ -1339,89 +1372,259 @@ function ViewGossipPage()
 				uiFilter.Button:SetText(Locale.Lookup(PlayerConfigurations[targetID]:GetLeaderName()));
 				uiFilter.Button:SetVoid1(targetID);
 				uiFilter.Button:SetSizeX(252);
+
+				if(not kPlayer:IsAlive())then
+					uiFilter.LeaderIcon.Portrait:SetAlpha(0.25);
+					uiFilter.LeaderIcon.Relationship:SetHide(true);
+					local leaderTooltip:string = uiFilter.LeaderIcon.Portrait:GetToolTipString();
+					leaderTooltip = leaderTooltip.."[NEWLINE]"..Locale.Lookup("LOC_DEFEATED_SUBHEADER");
+					uiFilter.LeaderIcon.Portrait:SetToolTipString(leaderTooltip);
+				end
 			end
 		end
 	end
 
-	uiFilterInstance.PlayerFilter:RegisterSelectionCallback(function(i:number)
+	m_uiGossipFilterInstance.PlayerFilter:RegisterSelectionCallback(function(i:number)
 		if i == -1 then
-			uiFilterInstance.LeaderIcon.Portrait:SetIcon("ICON_LEADER_ALL");
-			uiFilterInstance.LeaderIcon.Portrait:SetHide(false);
-			uiFilterInstance.LeaderIcon.TeamRibbon:SetHide(true);
-			uiFilterInstance.LeaderIcon.Relationship:SetHide(true);
-			uiFilterInstance.PlayerFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_PLAYER_FILTER_ALL"));
+			m_uiGossipFilterInstance.LeaderIcon.Portrait:SetIcon("ICON_LEADER_ALL");
+			m_uiGossipFilterInstance.LeaderIcon.Portrait:SetHide(false);
+			m_uiGossipFilterInstance.LeaderIcon.TeamRibbon:SetHide(true);
+			m_uiGossipFilterInstance.LeaderIcon.Relationship:SetHide(true);
+			m_uiGossipFilterInstance.PlayerFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_PLAYER_FILTER_ALL"));
+			m_uiGossipFilterInstance.LeaderIcon.Portrait:SetAlpha(1);
+			m_uiGossipFilterInstance.LeaderIcon.Portrait:SetToolTipString("");
 		else
 			local leaderName:string = PlayerConfigurations[i]:GetLeaderTypeName();
 			local iconName:string = "ICON_" .. leaderName;
 			--Build and update
-			local filterLeaderIcon:table = LeaderIcon:AttachInstance(uiFilterInstance.LeaderIcon);
+			local filterLeaderIcon:table = LeaderIcon:AttachInstance(m_uiGossipFilterInstance.LeaderIcon);
 			filterLeaderIcon:UpdateIcon(iconName, i, true);
-			uiFilterInstance.PlayerFilter:GetButton():SetText(Locale.Lookup(PlayerConfigurations[i]:GetLeaderName()));
+			m_uiGossipFilterInstance.PlayerFilter:GetButton():SetText(Locale.Lookup(PlayerConfigurations[i]:GetLeaderName()));
+
+			local leaderIsAlive:boolean = false;
+			for k, v in pairs(kAliveLeaders) do
+				if(i == v) then
+					leaderIsAlive = true;
+				end
+			end
+
+			if(not leaderIsAlive) then
+				local leaderTooltip:string = m_uiGossipFilterInstance.LeaderIcon.Portrait:GetToolTipString();
+				leaderTooltip = leaderTooltip.."[NEWLINE]"..Locale.Lookup("LOC_DEFEATED_SUBHEADER");
+				m_uiGossipFilterInstance.LeaderIcon.Portrait:SetToolTipString(leaderTooltip);
+				m_uiGossipFilterInstance.LeaderIcon.Portrait:SetAlpha(0.25);
+				m_uiGossipFilterInstance.LeaderIcon.Relationship:SetHide(true);
+			else
+				m_uiGossipFilterInstance.LeaderIcon.Portrait:SetAlpha(1);
+				m_uiGossipFilterInstance.LeaderIcon.Relationship:SetHide(false);
+			end
 		end
+
 		m_leaderFilter = i;
-		FilterGossip();
+		RefreshGossip();
 	end);
 
-	uiFilterInstance.LeaderIcon.Portrait:SetIcon("ICON_LEADER_ALL");
-	uiFilterInstance.LeaderIcon.Portrait:SetHide(false);
-	uiFilterInstance.LeaderIcon.TeamRibbon:SetHide(true);
-	uiFilterInstance.LeaderIcon.Relationship:SetHide(true);
-	uiFilterInstance.PlayerFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_PLAYER_FILTER_ALL"));
+	m_uiGossipFilterInstance.LeaderIcon.Portrait:SetIcon("ICON_LEADER_ALL");
+	m_uiGossipFilterInstance.LeaderIcon.Portrait:SetHide(false);
+	m_uiGossipFilterInstance.LeaderIcon.TeamRibbon:SetHide(true);
+	m_uiGossipFilterInstance.LeaderIcon.Relationship:SetHide(true);
+	m_uiGossipFilterInstance.PlayerFilter:GetButton():SetText(Locale.Lookup("LOC_HUD_REPORTS_PLAYER_FILTER_ALL"));
 
-	table.sort(kGossipLog, function(a, b) return a[2] > b[2]; end);
-	
-	for _, kGossipEntry in pairs(kGossipLog) do
-		local leaderName:string = PlayerConfigurations[kGossipEntry[4]]:GetLeaderTypeName();
-		local iconName:string = "ICON_" .. leaderName;
+	m_CountPerPage = math.floor((Controls.Main:GetSizeY() - GOSSIP_HEADER_SIZE) / GOSSIP_ENTRY_CONSTANT);
+
+	--Refresh our sizes
+	m_uiGossipFilterInstance.PlayerFilter:CalculateInternals();
+
+	-- Create blank gossip instances to be filled in later
+	for i=1, m_CountPerPage, 1 do
 		local pGossipInstance:table = {}
 		ContextPtr:BuildInstanceForControl( "GossipEntryInstance", pGossipInstance, instance.Top ) ;
-
-		local kGossipData:table = GameInfo.Gossips[kGossipEntry[3]];
-		
-		--Build and update
-		local gossipLeaderIcon:table = LeaderIcon:AttachInstance(pGossipInstance.Leader);
-		gossipLeaderIcon:UpdateIcon(iconName, kGossipEntry[4], true);
-		
-		pGossipInstance.Date:SetText(kGossipEntry[2]);
-		pGossipInstance.Icon:SetIcon("ICON_GOSSIP_" .. kGossipData.GroupType);
-		pGossipInstance.Description:SetText(kGossipEntry[1]);
-
-		--Build our references
-		table.insert(m_kGossipInstances, {instance = pGossipInstance, leaderID = kGossipEntry[4], gossipType = kGossipData.GroupType});
+		table.insert(m_kGossipInstances, pGossipInstance);
 	end
-		--Refresh our sizes
-	uiFilterInstance.GroupFilter:CalculateInternals();
-	uiFilterInstance.PlayerFilter:CalculateInternals();
 
-	Controls.Stack:CalculateSize();
-	Controls.Scroll:CalculateSize();
+	table.sort(m_kGossipLog, function(a, b) return a[2] > b[2]; end);
+
+	RefreshGossip();
 
 	Controls.CollapseAll:SetHide(true);
 	Controls.BottomYieldTotals:SetHide( true );
 	Controls.BottomResourceTotals:SetHide( true );
-	Controls.Scroll:SetSizeY( Controls.Main:GetSizeY() - 98);
+	Controls.Scroll:SetSizeY( Controls.Main:GetSizeY() - 92);
+end
+
+-- ===========================================================================
+function RefreshGossip()
+	m_kGossipLogFiltered = FilterGossip(m_kGossipLog);
+	
+	m_MaxPages = math.ceil(table.count(m_kGossipLogFiltered) / m_CountPerPage);
+	m_CurrentGossipPage = 1;
+
+	UpdatePageInstance();
+
+	-- Only show gossip filters for types currently being shown
+	m_uiGossipFilterInstance.GroupFilter:ClearEntries();
+	for i, type in pairs(m_kGossipGroupTypes) do
+		if type == GOSSIP_FILTER_ALL or m_kGossipFiltersToShow[type] then
+			local uiFilter:table = {};
+			m_uiGossipFilterInstance.GroupFilter:BuildEntry("InstanceOne", uiFilter);
+			uiFilter.Button:SetText(Locale.Lookup("LOC_HUD_REPORTS_FILTER_" .. type));
+			uiFilter.Button:SetVoid1(i);
+			uiFilter.Button:SetSizeX(252);
+		end
+	end
+	m_uiGossipFilterInstance.GroupFilter:CalculateInternals();
+
+	Controls.Stack:CalculateSize();
+	Controls.Scroll:CalculateSize();
+end
+
+-- ===========================================================================
+--	Navigation Callback for Gossip Report
+-- ===========================================================================
+function NavCallback(page:number)
+	m_CurrentGossipPage = page;
+	UpdatePageInstance();
+end
+
+-- ===========================================================================
+--	Pagination Widget
+-- ===========================================================================
+function UpdatePageInstance()
+	--If we are low enough, we do not need jump to on the left
+	m_uiPaginationInstance.LeftJumpStack:SetHide( m_CurrentGossipPage < 4 );
+	m_uiPaginationInstance.FirstButton:SetVoid1( 1 );
+	m_uiPaginationInstance.FirstButton:RegisterCallback( Mouse.eLClick, NavCallback );
+
+	--Same for the right, but for max pages
+	m_uiPaginationInstance.RightJumpStack:SetHide( (m_MaxPages - m_CurrentGossipPage) < 3 );
+	m_uiPaginationInstance.LastButton:SetVoid1( m_MaxPages );
+	m_uiPaginationInstance.LastButton:RegisterCallback( Mouse.eLClick, NavCallback );
+	m_uiPaginationInstance.LastButton:SetText(m_MaxPages);
+
+
+	--Set up our main nav buttons
+	if m_CurrentGossipPage - 2 > 0 then
+		m_uiPaginationInstance.Button1:SetHide(false);
+		m_uiPaginationInstance.Button1:SetText(m_CurrentGossipPage - 2);
+		m_uiPaginationInstance.Button1:SetVoid1(m_CurrentGossipPage - 2);
+		m_uiPaginationInstance.Button1:RegisterCallback(Mouse.eLClick, NavCallback);
+	else
+		m_uiPaginationInstance.Button1:SetHide(true);
+	end
+
+	if m_CurrentGossipPage - 1 > 0 then
+		m_uiPaginationInstance.Button2:SetHide(false);
+		m_uiPaginationInstance.Button2:SetText(m_CurrentGossipPage - 1);
+		m_uiPaginationInstance.Button2:SetVoid1(m_CurrentGossipPage - 1);
+		m_uiPaginationInstance.Button2:RegisterCallback(Mouse.eLClick, NavCallback);
+	else
+		m_uiPaginationInstance.Button2:SetHide(true);
+	end
+
+	if m_CurrentGossipPage > 0 then
+		m_uiPaginationInstance.Button3:SetHide(false);
+		m_uiPaginationInstance.Button3:SetSelected(true);
+		m_uiPaginationInstance.Button3:SetText(m_CurrentGossipPage);
+		m_uiPaginationInstance.Button3:SetVoid1(m_CurrentGossipPage);
+		m_uiPaginationInstance.Button3:RegisterCallback(Mouse.eLClick, NavCallback);
+	else
+		--This is a fail case
+		UI.DataError("Current Page is 0! Gossip Reports, UpdatePageInstance.");
+	end
+
+	if m_CurrentGossipPage + 1 <= m_MaxPages then
+		m_uiPaginationInstance.Button4:SetHide(false);
+		m_uiPaginationInstance.Button4:SetText(m_CurrentGossipPage + 1);
+		m_uiPaginationInstance.Button4:SetVoid1(m_CurrentGossipPage + 1);
+		m_uiPaginationInstance.Button4:RegisterCallback(Mouse.eLClick, NavCallback);
+	else
+		m_uiPaginationInstance.Button4:SetHide(true);
+	end
+
+	if m_CurrentGossipPage + 2 <= m_MaxPages then
+		m_uiPaginationInstance.Button5:SetHide(false);
+		m_uiPaginationInstance.Button5:SetText(m_CurrentGossipPage + 2);
+		m_uiPaginationInstance.Button5:SetVoid1(m_CurrentGossipPage + 2);
+		m_uiPaginationInstance.Button5:RegisterCallback(Mouse.eLClick, NavCallback);
+	else
+		m_uiPaginationInstance.Button5:SetHide(true);
+	end
+
+	--Set up our static buttons
+	m_uiPaginationInstance.LeftArrow:SetDisabled(m_CurrentGossipPage == 1);
+	m_uiPaginationInstance.LeftArrow:SetVoid1(m_CurrentGossipPage - 1);
+	m_uiPaginationInstance.LeftArrow:RegisterCallback(Mouse.eLClick, NavCallback);
+
+	m_uiPaginationInstance.RightArrow:SetDisabled(m_CurrentGossipPage >= m_MaxPages);
+	m_uiPaginationInstance.RightArrow:SetVoid1(m_CurrentGossipPage + 1);
+	m_uiPaginationInstance.RightArrow:RegisterCallback(Mouse.eLClick, NavCallback);
+
+	local kAliveLeaders:table = PlayerManager.GetAliveMajorIDs();
+	local kGroupFiltersToShow:table = {};
+	for i=1, m_CountPerPage, 1 do
+		local pageIndex:number = i + ((m_CurrentGossipPage - 1) * m_CountPerPage);
+		if pageIndex <= table.count(m_kGossipLogFiltered) then
+			local kGossipEntry:table = m_kGossipLogFiltered[pageIndex];
+			local leaderName:string = PlayerConfigurations[kGossipEntry[4]]:GetLeaderTypeName();
+			local iconName:string = "ICON_" .. leaderName;
+			local pGossipInstance:table = m_kGossipInstances[i];
+
+			pGossipInstance.Top:SetHide(false);
+
+			local kGossipData:table = GameInfo.Gossips[kGossipEntry[3]];
+			
+			--Build and update
+			local gossipLeaderIcon:table = LeaderIcon:AttachInstance(pGossipInstance.Leader);
+			gossipLeaderIcon:UpdateIcon(iconName, kGossipEntry[4], true);
+			
+			pGossipInstance.Date:SetText(kGossipEntry[2]);
+			pGossipInstance.Icon:SetIcon("ICON_GOSSIP_" .. kGossipData.GroupType);
+			pGossipInstance.Description:SetText(kGossipEntry[1]);
+
+			local leaderIsAlive:boolean = false;
+			for k, v in pairs(kAliveLeaders) do
+				if(kGossipEntry[4] == v) then
+					leaderIsAlive = true;
+				end
+			end
+
+			if(not leaderIsAlive) then
+				pGossipInstance.Leader.Portrait:SetAlpha(0.25);
+				pGossipInstance.Leader.Relationship:SetHide(true);
+				local leaderTooltip:string = pGossipInstance.Leader.Portrait:GetToolTipString();
+				leaderTooltip = leaderTooltip.."[NEWLINE]"..Locale.Lookup("LOC_DEFEATED_SUBHEADER");
+				pGossipInstance.Leader.Portrait:SetToolTipString(leaderTooltip);
+			else
+				pGossipInstance.Leader.Portrait:SetAlpha(1);
+				pGossipInstance.Leader.Relationship:SetHide(false);
+			end
+
+		else
+			if i <= table.count(m_kGossipInstances) then
+				m_kGossipInstances[i].Top:SetHide(true);
+			end
+		end
+	end
 end
 
 -- ===========================================================================
 --	Filter Callbacks
 -- ===========================================================================
-function FilterGossip()
-	local gossipGroupType:string = GOSSIP_GROUP_TYPES[m_groupFilter];
-	for _, entry in pairs(m_kGossipInstances) do
-		local bShouldHide:boolean = false;
+function FilterGossip( kGossip:table )
+	local kFilteredGossip:table = {};
 
-		--Leader matches, or all?
-		if m_leaderFilter ~= -1 and entry.leaderID ~= m_leaderFilter then
-			bShouldHide = true;
+	m_kGossipFiltersToShow = {};
+
+	local gossipGroupType:string = m_groupFilter;
+	for i, kEntry in ipairs(kGossip) do
+		local kGossipData:table = GameInfo.Gossips[kEntry[3]];
+		if (m_leaderFilter == -1 or kEntry[4] == m_leaderFilter) and (m_groupFilter == GOSSIP_FILTER_ALL or gossipGroupType == kGossipData.GroupType) then
+			table.insert(kFilteredGossip, kEntry);
+			m_kGossipFiltersToShow[kGossipData.GroupType] = true;
 		end
-
-		--Group type, or all?
-		if m_groupFilter ~= 1 and entry.gossipType ~= gossipGroupType then
-			bShouldHide = true;
-		end
-
-		entry.instance.Top:SetHide(bShouldHide);
 	end
+
+	return kFilteredGossip;
 end
 
 -- ===========================================================================
@@ -1429,49 +1632,17 @@ end
 -- ===========================================================================
 function ViewCityStatusPage()	
 
+	m_CurrentReportTab = REPORT_PAGES.CITY_STATUS;
 	ResetTabForNewPageContent();
 
 	local instance:table = m_simpleIM:GetInstance();	
 	instance.Top:DestroyAllChildren();
 	
 	local pHeaderInstance:table = {}
-	ContextPtr:BuildInstanceForControl( "CityStatusHeaderInstance", pHeaderInstance, instance.Top ) ;	
+	ContextPtr:BuildInstanceForControl( "CityStatusHeaderInstance", pHeaderInstance, instance.Top ) ;
 
-	-- 
-	for cityName,kCityData in pairs(m_kCityData) do
-
-		local pCityInstance:table = {}
-		ContextPtr:BuildInstanceForControl( "CityStatusEntryInstance", pCityInstance, instance.Top ) ;	
-		TruncateStringWithTooltip(pCityInstance.CityName, 130, Locale.Lookup(kCityData.CityName)); 
-		pCityInstance.Population:SetText( tostring(kCityData.Population) );
-
-		if kCityData.HousingMultiplier == 0 or kCityData.Occupied then
-			status = "LOC_HUD_REPORTS_STATUS_HALTED";
-		elseif kCityData.HousingMultiplier <= 0.5 then
-			status = "LOC_HUD_REPORTS_STATUS_SLOWED";
-		else
-			if kCityData.HappinessGrowthModifier > 0 then
-				status = "LOC_HUD_REPORTS_STATUS_ACCELERATED";
-			else
-				status = "LOC_HUD_REPORTS_STATUS_NORMAL";
-			end
-		end
-		pCityInstance.GrowthRateStatus:SetText( Locale.Lookup(status) );
-
-		pCityInstance.Housing:SetText( tostring(kCityData.Housing) );
-		pCityInstance.Amenities:SetText( tostring(kCityData.AmenitiesNum).." / "..tostring(kCityData.AmenitiesRequiredNum) );
-
-		local happinessText:string = Locale.Lookup( GameInfo.Happinesses[kCityData.Happiness].Name );
-		pCityInstance.CitizenHappiness:SetText( happinessText );
-
-		local warWearyValue:number = kCityData.AmenitiesLostFromWarWeariness;
-		pCityInstance.WarWeariness:SetText( (warWearyValue==0) and "0" or "-"..tostring(warWearyValue) );
-
-		local statusText:string = kCityData.IsUnderSiege and Locale.Lookup("LOC_HUD_REPORTS_STATUS_UNDER_SEIGE") or Locale.Lookup("LOC_HUD_REPORTS_STATUS_NORMAL");
-		TruncateStringWithTooltip(pCityInstance.Status, 80, statusText); 
-
-		pCityInstance.Strength:SetText( tostring(kCityData.Defense) );
-		pCityInstance.Damage:SetText( tostring(kCityData.Damage) );			
+	for i,kCityData in ipairs(m_kCityData) do
+		CreateCityStatusInstance(instance, kCityData);
 	end
 
 	Controls.Stack:CalculateSize();
@@ -1484,6 +1655,43 @@ function ViewCityStatusPage()
 end
 
 -- ===========================================================================
+function CreateCityStatusInstance( kParentInstance:table, kCityData:table )
+	local cityName :string = kCityData.CityName;
+	local pCityInstance:table = {}
+	ContextPtr:BuildInstanceForControl( "CityStatusEntryInstance", pCityInstance, kParentInstance.Top ) ;	
+	TruncateStringWithTooltip(pCityInstance.CityName, 130, Locale.Lookup(kCityData.CityName)); 
+	pCityInstance.Population:SetText( tostring(kCityData.Population) );
+
+	if kCityData.HousingMultiplier == 0 or kCityData.Occupied then
+		status = "LOC_HUD_REPORTS_STATUS_HALTED";
+	elseif kCityData.HousingMultiplier <= 0.5 then
+		status = "LOC_HUD_REPORTS_STATUS_SLOWED";
+	else
+		if kCityData.HappinessGrowthModifier > 0 then
+			status = "LOC_HUD_REPORTS_STATUS_ACCELERATED";
+		else
+			status = "LOC_HUD_REPORTS_STATUS_NORMAL";
+		end
+	end
+	pCityInstance.GrowthRateStatus:SetText( Locale.Lookup(status) );
+
+	pCityInstance.Housing:SetText( tostring(kCityData.Housing) );
+	pCityInstance.Amenities:SetText( tostring(kCityData.AmenitiesNum).." / "..tostring(kCityData.AmenitiesRequiredNum) );
+
+	local happinessText:string = Locale.Lookup( GameInfo.Happinesses[kCityData.Happiness].Name );
+	pCityInstance.CitizenHappiness:SetText( happinessText );
+
+	local warWearyValue:number = kCityData.AmenitiesLostFromWarWeariness;
+	pCityInstance.WarWeariness:SetText( (warWearyValue==0) and "0" or "-"..tostring(warWearyValue) );
+
+	local statusText:string = kCityData.IsUnderSiege and Locale.Lookup("LOC_HUD_REPORTS_STATUS_UNDER_SEIGE") or Locale.Lookup("LOC_HUD_REPORTS_STATUS_NORMAL");
+	TruncateStringWithTooltip(pCityInstance.Status, 80, statusText); 
+
+	pCityInstance.Strength:SetText( tostring(kCityData.Defense) );
+	pCityInstance.Damage:SetText( tostring(kCityData.Damage) );
+end
+
+-- ===========================================================================
 --
 -- ===========================================================================
 function AddTabSection( name:string, populateCallback:ifunction )
@@ -1491,8 +1699,8 @@ function AddTabSection( name:string, populateCallback:ifunction )
 	kTab.Button[DATA_FIELD_SELECTION]	= kTab.Selection;
 
 	local callback	:ifunction	= function()
-		if m_tabs.prevSelectedControl ~= nil then
-			m_tabs.prevSelectedControl[DATA_FIELD_SELECTION]:SetHide(true);
+		if m_kTabs.prevSelectedControl ~= nil then
+			m_kTabs.prevSelectedControl[DATA_FIELD_SELECTION]:SetHide(true);
 		end
 		kTab.Selection:SetHide(false);
 		populateCallback();
@@ -1502,7 +1710,7 @@ function AddTabSection( name:string, populateCallback:ifunction )
 	kTab.Button:SetSizeToText( 40, 20 );
     kTab.Button:RegisterCallback( Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 
-	m_tabs.AddTab( kTab.Button, callback );
+	m_kTabs.AddTab( kTab.Button, callback );
 end
 
 
@@ -1545,7 +1753,9 @@ end
 -- ===========================================================================
 function LateInitialize()
 
-	m_tabs = CreateTabs( Controls.TabContainer, 42, 34, UI.GetColorValueFromHexLiteral(0xFF331D05) );
+	RefreshGroupTypes();
+
+	m_kTabs = CreateTabs( Controls.TabContainer, 42, 34, UI.GetColorValueFromHexLiteral(0xFF331D05) );
 	--AddTabSection( "Test",								ViewTestPage );			--TRONSTER debug
 	--AddTabSection( "Test2",								ViewTestPage );			--TRONSTER debug
 	AddTabSection( "LOC_HUD_REPORTS_TAB_YIELDS",		ViewYieldsPage );
@@ -1555,8 +1765,10 @@ function LateInitialize()
 		AddTabSection( "LOC_HUD_REPORTS_TAB_GOSSIP",		ViewGossipPage );
 	end
 
-	m_tabs.SameSizedTabs(50);
-	m_tabs.CenterAlignTabs(-10);		
+	m_kTabs.SameSizedTabs(50);
+	m_kTabs.CenterAlignTabs(-10);
+	
+	m_kTabs.AddAnimDeco(Controls.TabAnim, Controls.TabArrow);	
 end
 
 -- ===========================================================================
@@ -1564,27 +1776,87 @@ end
 -- ===========================================================================
 function OnInit( isReload:boolean )
 	LateInitialize();
-	if isReload then		
-		if ContextPtr:IsHidden()==false then
-			Open();
-		end
+	if isReload then	
+		LuaEvents.GameDebug_GetValues(RELOAD_CACHE_ID);	
 	end
-	m_tabs.AddAnimDeco(Controls.TabAnim, Controls.TabArrow);
 end
 
+-- ===========================================================================
+--	UI EVENT
+-- ===========================================================================
+function OnShutdown()
+	-- Cache values for hotloading...
+	LuaEvents.GameDebug_AddValue(RELOAD_CACHE_ID, "currentReportTab", m_CurrentReportTab );
+
+	-- Unregister Events
+	LuaEvents.GameDebug_Return.Remove(OnGameDebugReturn);
+	LuaEvents.TopPanel_OpenReportsScreen.Remove( OnTopOpenReportsScreen );
+	LuaEvents.TopPanel_CloseReportsScreen.Remove( OnTopCloseReportsScreen );
+	LuaEvents.ReportsList_OpenCityStatus.Remove( OnOpenCityStatus );
+	LuaEvents.ReportsList_OpenResources.Remove( OnOpenResources );
+	LuaEvents.ReportsList_OpenYields.Remove( OnTopOpenReportsScreen );
+	if GameCapabilities.HasCapability("CAPABILITY_GOSSIP_REPORT") then
+		LuaEvents.ReportsList_OpenGossip.Remove( OnOpenGossip );
+	end
+
+	Events.LocalPlayerTurnEnd.Remove( OnLocalPlayerTurnEnd );
+end
+
+-- ===========================================================================
+--	LUA EVENT
+--	Reload support
+-- ===========================================================================
+function OnGameDebugReturn(context:string, contextTable:table)
+	if context == RELOAD_CACHE_ID then
+		if not ContextPtr:IsHidden() and contextTable["currentReportTab"] ~= nil then			
+			Open(contextTable["currentReportTab"]);
+		end
+	end
+end
+
+-- ===========================================================================
+function RefreshGroupTypes()
+	-- Skip if we've already cached group types
+	if table.count(m_kGossipGroupTypes) > 0 then
+		return;
+	end
+
+	-- Use type keyed table to prevent duplicate groups
+	local kTypeKeyed:table = {};
+	for row in GameInfo.Gossips() do
+		if row.GroupType ~= nil and kTypeKeyed[row.GroupType] == nil then
+			kTypeKeyed[row.GroupType] = true;
+		end
+	end
+
+	-- Move types to index keyed table
+	for type,_ in pairs(kTypeKeyed) do
+		table.insert(m_kGossipGroupTypes, type);
+	end
+
+	-- Alphabetize
+	table.sort(m_kGossipGroupTypes, function(a, b) return a < b; end);
+
+	-- Add "ALL" option to the front of the filter types
+	table.insert(m_kGossipGroupTypes, 1, GOSSIP_FILTER_ALL);
+end
 
 -- ===========================================================================
 function Initialize()
 
-	-- UI Callbacks
+	-- Context Callbacks
 	ContextPtr:SetInitHandler( OnInit );
+	ContextPtr:SetShutdown( OnShutdown );
 	ContextPtr:SetInputHandler( OnInputHandler, true );
+
+	-- UI Callbacks
 	Controls.CloseButton:RegisterCallback( Mouse.eLClick, OnCloseButton );
 	Controls.CloseButton:RegisterCallback(	Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	Controls.CollapseAll:RegisterCallback( Mouse.eLClick, OnCollapseAllButton );
 	Controls.CollapseAll:RegisterCallback(	Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 	
 	-- Events
+	LuaEvents.GameDebug_Return.Add(OnGameDebugReturn);
 	LuaEvents.TopPanel_OpenReportsScreen.Add( OnTopOpenReportsScreen );
 	LuaEvents.TopPanel_CloseReportsScreen.Add( OnTopCloseReportsScreen );
 	LuaEvents.ReportsList_OpenCityStatus.Add( OnOpenCityStatus );

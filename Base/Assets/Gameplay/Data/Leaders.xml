@@ -66,9 +66,9 @@
 		<Row Type="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_CULTURAL_MAJOR_CIV" Kind="KIND_TRAIT"/>
-    <Row Type="TRAIT_LEADER_SCIENCE_MAJOR_CIV" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_SCIENCE_MAJOR_CIV" Kind="KIND_TRAIT"/>
 		<Row Type="CULTURE_KILLS_TRAIT" Kind="KIND_TRAIT"/>
-    <Row Type="TRAIT_LEADER_ADVENTURES_ENKIDU" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_ADVENTURES_ENKIDU" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_MEDITERRANEAN" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_DIVINE_WIND" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_EL_ESCORIAL" Kind="KIND_TRAIT"/>
@@ -937,7 +937,7 @@
 		<Row TraitType="TRAIT_LEADER_MAGNANIMOUS" Name="LOC_TRAIT_LEADER_MAGNANIMOUS_NAME" Description="LOC_TRAIT_LEADER_MAGNANIMOUS_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_SURROUNDED_BY_GLORY" Name="LOC_TRAIT_LEADER_SURROUNDED_BY_GLORY_NAME" Description="LOC_TRAIT_LEADER_SURROUNDED_BY_GLORY_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" InternalOnly="true"/>
-    <Row TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" InternalOnly="true"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" InternalOnly="true"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" Name="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_NAME" Description="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_RELIGIOUS_TRAIT" Name="LOC_MINOR_CIV_RELIGIOUS_TRAIT_NAME" Description="LOC_MINOR_CIV_RELIGIOUS_TRAIT_DESCRIPTION"/>
@@ -1478,39 +1478,11 @@
 		</Row>
 		<Row>
 			<ModifierId>BONUS_VS_WOUNDED_UNITS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_COMBAT_STRENGTH</ModifierType>
-			<SubjectRequirementSetId>REQUIREMENTS_OPPONENT_IS_WOUNDED</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_HOME_CONTINENT_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
-			<SubjectRequirementSetId>REQUIREMENTS_UNIT_ON_HOME_CONTINENT</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_LAND_ON_COAST_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
-			<OwnerRequirementSetId>REQUIREMENTS_UNIT_LAND_DOMAIN</OwnerRequirementSetId>
-			<SubjectRequirementSetId>REQUIREMENTS_UNIT_ON_COAST</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_NAVAL_SHALLOW_WATER_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
-			<OwnerRequirementSetId>REQUIREMENTS_UNIT_SEA_DOMAIN</OwnerRequirementSetId>
-			<SubjectRequirementSetId>REQUIREMENTS_UNIT_IN_SHALLOW_WATER</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_OTHER_RELIGION_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
-			<SubjectRequirementSetId>REQUIREMENTS_OPPONENT_IS_OTHER_RELIGION</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_VS_CITY_STATES_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
-			<SubjectRequirementSetId>REQUIREMENTS_OPPONENT_IS_MINOR_CIV</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>HEAL_AFTER_DEFEATING_UNIT</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_HEAL_FROM_COMBAT</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_ADJUST_BUILDER_CHARGES</ModifierId>
@@ -1560,11 +1532,11 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_CITY_STATES</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_HOME_CONTINENT</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_BEFRIEND_MINOR_CIV_HOME_CONTINENT</ModifierId>
@@ -1578,19 +1550,19 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_LAND_ON_COAST</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_NAVAL_SHALLOW_WATER</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_OTHER_RELIGION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_PER_LUXURY</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_PER_LUXURY_ATTACK_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_FREE_APOSTLE_FINISH_MBANZA</ModifierId>
@@ -3620,39 +3592,9 @@
 			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>BONUS_VS_WOUNDED_UNITS</ModifierId>
-			<Name>Amount</Name>
-			<Value>5</Value>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_HOME_CONTINENT_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>5</Value>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_LAND_ON_COAST_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>5</Value>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_NAVAL_SHALLOW_WATER_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>5</Value>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_OTHER_RELIGION_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>4</Value>
-		</Row>
-		<Row>
-			<ModifierId>COMBAT_BONUS_VS_CITY_STATES_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>7</Value>
-		</Row>
-		<Row>
 			<ModifierId>HEAL_AFTER_DEFEATING_UNIT</ModifierId>
-			<Name>Amount</Name>
-			<Value>30</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_TOMYRIS_HEAL_AFTER_DEFEATING_UNIT</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_ADJUST_BUILDER_CHARGES</ModifierId>
@@ -3726,33 +3668,38 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_CITY_STATES</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>COMBAT_BONUS_VS_CITY_STATES_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_BARBAROSSA_COMBAT_BONUS_VS_CITY_STATES</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_HOME_CONTINENT</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>COMBAT_BONUS_HOME_CONTINENT_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_ROOSEVELT_COMBAT_BONUS_HOME_CONTINENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_LAND_ON_COAST</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>COMBAT_BONUS_LAND_ON_COAST_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_HOJO_TOKIMUNE_COASTAL_COMBAT_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_NAVAL_SHALLOW_WATER</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>COMBAT_BONUS_NAVAL_SHALLOW_WATER_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_HOJO_TOKIMUNE_SHALLOW_WATER_COMBAT_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_OTHER_RELIGION</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>COMBAT_BONUS_OTHER_RELIGION_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_PHILIP_II_COMBAT_BONUS_OTHER_RELIGION</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_COMBAT_BONUS_PER_LUXURY</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_MONTEZUMA_COMBAT_BONUS_PER_LUXURY</Value>
+		</Row>
+		<Row>
+			<ModifierId>BONUS_VS_WOUNDED_UNITS</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_TOMYRIS_BONUS_VS_WOUNDED_UNITS</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_FAITH_PEACEFUL_FOUNDERS</ModifierId>
@@ -5354,12 +5301,6 @@
 		<Row ModifierId="STANDARD_DIPLOMATIC_3RD_PARTY_DENOUNCED_ENEMY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_3RD_PARTY_DECLARED_FRIENDSHIP_WITH_ENEMY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_3RD_PARTY_ALLIED_WITH_ENEMY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
-		<Row ModifierId="COMBAT_BONUS_HOME_CONTINENT_MODIFIER" Context="Preview" Text="LOC_PROMOTION_COMBAT_HOME_CONTINENT_DESCRIPTION"/>
-		<Row ModifierId="COMBAT_BONUS_LAND_ON_COAST_MODIFIER" Context="Preview" Text="LOC_PROMOTION_COMBAT_LAND_ON_COAST_DESCRIPTION"/>
-		<Row ModifierId="COMBAT_BONUS_NAVAL_SHALLOW_WATER_MODIFIER" Context="Preview" Text="LOC_PROMOTION_COMBAT_SHALLOW_WATER_DESCRIPTION"/>
-		<Row ModifierId="COMBAT_BONUS_OTHER_RELIGION_MODIFIER" Context="Preview" Text="LOC_PROMOTION_COMBAT_OTHER_RELIGION_DESCRIPTION"/>
-		<Row ModifierId="COMBAT_BONUS_VS_CITY_STATES_MODIFIER" Context="Preview" Text="LOC_PROMOTION_COMBAT_VS_CITY_STATES_DESCRIPTION"/>
-		<Row ModifierId="BONUS_VS_WOUNDED_UNITS" Context="Preview" Text="LOC_COMBAT_PREVIEW_TRAIT_KILLER_OF_CYRUS"/>
 		<Row ModifierId="HIGH_DIFFICULTY_COMBAT_SCALING" Context="Preview" Text="LOC_COMBAT_DIFFICULTY_SCALING"/>
 		<Row ModifierId="LOW_DIFFICULTY_COMBAT_SCALING" Context="Preview" Text="LOC_COMBAT_DIFFICULTY_SCALING"/>
 		<Row ModifierId="MINOR_CIV_SCIENTIFIC_SMALL_INFLUENCE_BONUS" Context="Preview" Text="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_SMALL_INFLUENCE_BONUS"/>
@@ -6333,7 +6274,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>FOREIGN_CITY_ROYAL_NAVY_DOCKYARD_REQUIREMENTS</RequirementSetId>
-			<RequirementId>CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
+			<RequirementId>FOREIGN_CITY_REQUIRES_CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<Requirements>
@@ -6681,7 +6622,7 @@
 			<RequirementType>REQUIREMENT_CITY_TRANSFER_TYPE_MATCHES</RequirementType>
 		</Row>
 		<Row>
-			<RequirementId>CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
+			<RequirementId>FOREIGN_CITY_REQUIRES_CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
 		</Row>
 	</Requirements>
@@ -6897,9 +6838,14 @@
 			<Value>BY_SETTLER</Value>
 		</Row>
 		<Row>
-			<RequirementId>CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
+			<RequirementId>FOREIGN_CITY_REQUIRES_CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
 			<Name>DistrictType</Name>
 			<Value>DISTRICT_ROYAL_NAVY_DOCKYARD</Value>
+		</Row>
+		<Row>
+			<RequirementId>FOREIGN_CITY_REQUIRES_CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
+			<Name>MustBeFunctioning</Name>
+			<Value>false</Value>
 		</Row>
 	</RequirementArguments>
 </GameInfo>

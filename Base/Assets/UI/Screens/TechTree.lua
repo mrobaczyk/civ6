@@ -253,8 +253,11 @@ end
 -- ===========================================================================
 function RealizePathMarkers()
 	
-	local pTechs	:table = Players[Game.GetLocalPlayer()]:GetTechs();
-	local kNodeIds	:table = pTechs:GetResearchQueue();		-- table: index, IDs
+	local localPlayer	:number = Game.GetLocalPlayer();
+	if localPlayer==PlayerTypes.NONE or localPlayer==PlayerTypes.OBSERVER then return; end
+
+	local pTechs		:table = Players[localPlayer]:GetTechs();
+	local kNodeIds		:table = pTechs:GetResearchQueue();		-- table: index, IDs
 	
 	m_kPathMarkerIM:ResetInstances();
 
@@ -1240,23 +1243,31 @@ function OnLocalPlayerTurnEnd()
 end
 
 -- ===========================================================================
-function OnResearchChanged( ePlayer:number, eTech:number )
-	
-	if (m_ePlayer == -1) then return;	end			-- Autoplay support.	
-
-	-- Always refresh the live data for this tech in case it was boosted
-	m_kCurrentData = GetCurrentData( m_ePlayer, -1 );
-
-	if not ContextPtr:IsHidden() and ShouldUpdateWhenResearchChanges( m_ePlayer ) then
+function OnResearchChanged( ePlayer:number, eTech:number )	
+	if (m_ePlayer == PlayerTypes.NONE or m_ePlayer == PlayerTypes.OBSERVER) then return; end			-- Autoplay support.	
+	if not ContextPtr:IsHidden() and ShouldUpdateWhenResearchChanges( ePlayer ) then
+		m_kCurrentData = GetCurrentData( m_ePlayer, -1 );
+		View( m_kCurrentData );
+	end
+end
+-- ===========================================================================
+-- Updates the amount of turns needed to complete tech research when tech per-
+-- turn is increased or decreased.
+-- ===========================================================================
+function OnUpdateResearchOnTechChanged(ePlayer:number, cityID:number, plotX:number, plotY:number)
+	if (ePlayer == m_ePlayer) then
+		m_kCurrentData = GetCurrentData( ePlayer, -1 );
 		View( m_kCurrentData );
 	end
 end
 
 -- ===========================================================================
---	This function was separated so behavior can be modified in mods/expasions
+--	Should a view be updated (an expensive operation.)
+--	Broken out for eash override behavior in MODs.
+--
+--		ePlayer, the current player 
 -- ===========================================================================
-function ShouldUpdateWhenResearchChanges(ePlayer)
-	m_ePlayer = Game.GetLocalPlayer();
+function ShouldUpdateWhenResearchChanges( ePlayer:number )
 	return m_ePlayer == ePlayer;
 end
 
@@ -1981,6 +1992,8 @@ function Initialize()
 	Events.ResearchQueueChanged.Add( OnResearchChanged );
 	Events.ResearchCompleted.Add( OnResearchComplete );
 	Events.SystemUpdateUI.Add( OnUpdateUI );
+	Events.CityWorkerChanged.Add( OnUpdateResearchOnTechChanged );
+	Events.CityFocusChanged.Add( OnUpdateResearchOnTechChanged );
 
 	-- Key Label Truncation to Tooltip
 	TruncateStringWithTooltip(Controls.AvailableLabelKey, MAX_BEFORE_TRUNC_KEY_LABEL, Controls.AvailableLabelKey:GetText());

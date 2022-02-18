@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Edward Beach (Firaxis Games) -->
 <GameData>
 	<FrontEndText>
 		<!-- Generic -->
@@ -23,7 +24,6 @@
 		<Row Tag="LOC_GENERIC_CONFIRM_BUTTON">
 			<Text>Confirm</Text>
 		</Row>
-
 		<!-- Front End Popups -->
 		<Row Tag="LOC_FRONTEND_POPUP_UNKNOWN_DEVICE">
 			<Text>Failed to determine graphics device capabilities.[NEWLINE][NEWLINE]Please set your graphics options manually.</Text>
@@ -40,7 +40,6 @@
 		<Row Tag="LOC_FRONTEND_POPUP_GRAPHICS_SETTINGS_CHANGED">
 			<Text>Graphics settings have been adjusted. You may review or change these settings in the Options menu.</Text>
 		</Row>
-
 		<!-- Main Menu-->
 		<Row Tag="LOC_MAIN_MENU_RESUME_GAME">
 			<Text>Resume Game</Text>
@@ -77,6 +76,12 @@
 		</Row>
 		<Row Tag="LOC_MAIN_MENU_MODS">
 			<Text>Mods</Text>
+		</Row>
+		<Row Tag="LOC_MAIN_MENU_MODS_AND_DLC">
+			<Text>Mods and DLC</Text>
+		</Row>
+		<Row Tag="LOC_MAIN_MENU_MODS_AND_DLC_TT">
+			<Text>Modifications and downloadable content to expand and enhance Civilization VI.</Text>
 		</Row>
 		<Row Tag="LOC_MAIN_MENU_MY2K_LOGIN">
 			<Text>My2K Login</Text>
@@ -154,7 +159,6 @@
 		<Row Tag="LOC_SAVE_WAITING_FOR_CLOUD_SAVE_LIST_TOOLTIP">
 			<Text>Waiting for cloud save list.</Text>
 		</Row>
-
 		<Row Tag="LOC_CONFIRM_TITLE_TXT">
 			<Text>Confirm Overwrite</Text>
 		</Row>
@@ -236,7 +240,6 @@
 		<Row Tag="LOC_LOADSAVE_QUICK_SAVE">
 			<Text>(Quick Save)</Text>
 		</Row>
-
 		<!-- Advanced Game Setup -->
 		<Row Tag="LOC_NETWORK_NAME_TT">
 			<Text>Network Name[NEWLINE]This is how your name will appear to other players.</Text>
@@ -329,7 +332,7 @@
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_MATCH_DELETED_TITLE">
 			<Text>Game Deleted</Text>
-		</Row>		
+		</Row>
 		<!-- Multiplayer PlayByCloud End Turn Error Popup -->
 		<Row Tag="LOC_GAME_CLOUD_END_TURN_FAILED">
 			<Text>The game was unable to process your game turn due to an error. Check your internet connection and try again.[NEWLINE]Error Code: {1_ErrorCode}</Text>
@@ -676,6 +679,9 @@
 		<Row Tag="LOC_MULTIPLAYER_CONNECTING_TO_PLAYERS">
 			<Text>Connecting to Players...</Text>
 		</Row>
+		<Row Tag="LOC_MULTIPLAYER_MATCHMAKING">
+			<Text>Finding a Game...</Text>
+		</Row>
 		<Row Tag="LOC_MP_ROOM_FULL">
 			<Text>Unable to join game. The game has the maximum number of players.</Text>
 		</Row>
@@ -950,7 +956,7 @@
 		</Row>
 		<Row Tag="LOC_MP_PLAYER_RESYNCING_SUMMARY">
 			<Text>[COLOR:ConnectionStatus_Resyncing]Resyncing[ENDCOLOR]</Text>
-		</Row>		
+		</Row>
 		<Row Tag="LOC_TIME_MILLISECONDS">
 			<Text>ms</Text>
 		</Row>
@@ -1104,6 +1110,42 @@
 		<Row Tag="LOC_SETUP_RESTORE_DEFAULT_TT">
 			<Text>Restore all parameters to their default values.</Text>
 		</Row>
+		<Row Tag="LOC_SETUP_MAP_MAP_SELECT">
+			<Text>Map Select</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_CREATE_GAME_SELECT_MAP">
+			<Text>Create Game - Select Map</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_SELECT_MAP">
+			<Text>Select Map</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_OFFICIAL_MAPS">
+			<Text>Official Maps</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_FIRAXIS_MAPS">
+			<Text>Firaxis Maps</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_FIRAXIS_MAPS_TOOLTIP">
+			<Text>Only show official maps made by Firaxis.</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_WORLD_BUILDER_MAPS">
+			<Text>World Builder Maps</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_WORLD_BUILDER_MAPS_TOOLTIP">
+			<Text>Only show World Builder maps.</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_ALL_MAPS">
+			<Text>All Maps</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_ALL_MAPS_TOOLTIP">
+			<Text>Show all maps.</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_MAP_INFO">
+			<Text>Map Info</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_MAP_SELECTED_MAP">
+			<Text>Selected Map</Text>
+		</Row>
 		<Row Tag="LOC_START_GAME">
 			<Text>Start Game</Text>
 		</Row>
@@ -1161,7 +1203,6 @@
 		<Row Tag="LOC_SETUP_PLAYER_COLOR_COLLISION">
 			<Text>This civilization's colors may conflict with those of another civilization.  You may choose an alternate color scheme from the drop-down list if you wish.</Text>
 		</Row>
-
 		<!-- Configuration Parameters.  Move these to a better location -->
 		<Row Tag="LOC_RULESET">
 			<Text>Ruleset</Text>
@@ -1313,10 +1354,12 @@
 		<Row Tag="LOC_MAP_PREDEFINED_START_LOCATIONS_NAME">
 			<Text>Predefined Start Locations</Text>
 		</Row>
-		<Row Tag="LOC_MAP_PREDEFINED_START_LOCATIONS_DESCRIPTION">
+    <Row Tag="LOC_MAP_START_POSITION_MIRRORED_NAME">
+      <Text>Mirrored</Text>
+    </Row>
+    <Row Tag="LOC_MAP_PREDEFINED_START_LOCATIONS_DESCRIPTION">
 			<Text>Use starting locations that are predefined in the map.</Text>
 		</Row>
-
 		<!--Game Speed Descriptions -->
 		<Row Tag="LOC_GAMESPEED_MARATHON_HELP">
 			<Text>Very prolonged game (200% slower).</Text>
@@ -1346,14 +1389,29 @@
 		<Row Tag="LOC_MAP_INLANDSEA_DESCRIPTION">
 			<Text>One large ocean in the center of the map.</Text>
 		</Row>
+		<Row Tag="LOC_MAP_SEVEN_SEAS_DESCRIPTION">
+			<Text>Several large bodies of water surrounded by land. Islands can be found in these waters.</Text>
+		</Row>
+		<Row Tag="LOC_MAP_SMALL_CONTINENTS_DESCRIPTION">
+			<Text>The world will consist of a few medium landmasses and some smaller islands.</Text>
+		</Row>
 		<Row Tag="LOC_MAP_ISLAND_PLATES_DESCRIPTION">
 			<Text>Islands ranging in size from small to large.</Text>
+		</Row>
+		<Row Tag="LOC_MAP_LAKES_DESCRIPTION">
+			<Text>A world without oceans, only lakes and inland seas.</Text>
+		</Row>
+		<Row Tag="LOC_MAP_MIRROR_DESCRIPTION">
+			<Text>Randomly generated balanced four-player map ideal for competitive multiplayer matches.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_PANGAEA_DESCRIPTION">
 			<Text>One massive landmass with surrounding islands.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_SHUFFLE_DESCRIPTION">
 			<Text>What secrets will this map reveal?</Text>
+		</Row>
+		<Row Tag="LOC_MAP_TERRA_DESCRIPTION">
+			<Text>A continents map where all major civilizations start on the largest continent.</Text>
 		</Row>
 		<!-- Map Size Descriptions -->
 		<Row Tag="LOC_MAPSIZE_DUEL_DESCRIPTION">
@@ -1494,7 +1552,10 @@
 		<Row Tag="LOC_MAP_START_POSITION_LEGENDARY_DESCRIPTION">
 			<Text>All players have great, but not necessarily equal starts.</Text>
 		</Row>
-		<Row Tag="LOC_GAME_START_ERA">
+    <Row Tag="LOC_MAP_START_POSITION_MIRRORED_DESCRIPTION">
+      <Text>All players start in the exact same position within their map quadrant.</Text>
+    </Row>
+    <Row Tag="LOC_GAME_START_ERA">
 			<Text>Start Era</Text>
 		</Row>
 		<Row Tag="LOC_MAP_SCRIPT">
@@ -1733,6 +1794,9 @@
 		<Row Tag="LOC_MAINMENU_BENCHMARK_TT">
 			<Text>How does your hardware stack up?</Text>
 		</Row>
+		<Row Tag="LOC_MAINMENU_WORLDBUILDER_TT">
+			<Text>The World Builder map editor.</Text>
+		</Row>
 		<Row Tag="LOC_MAINMENU_CREDITS_TT">
 			<Text>Everyone who made contributions to Civilization VI.</Text>
 		</Row>
@@ -1745,8 +1809,6 @@
 		<Row Tag="LOC_MAIN_MENU_HALL_OF_FAME_TT">
 			<Text>Does your gameplay stand the test of time?</Text>
 		</Row>
-
-
 		<!-- Copyright screen -->
 		<Row Tag="LOC_COPYRIGHT_TEXT">
 			<Text>© 1991 – 2019 Take-Two Interactive Software, Inc. Developed by Firaxis Games. 2K, Firaxis Games, Sid Meier’s Civilization VI, Sid Meier’s Civilization, Civilization, Civ, and their respective logos are trademarks of Take-Two Interactive Software, Inc. Uses Bink Video. Copyright © 1997 – 2019 by RAD Game Tools, Inc. Uses Granny Animation. Copyright © 1999 – 2019 by RAD Game Tools Inc. Powered by WWise © 2006- 2019 Audiokinetic Inc. All rights reserved. Fork Copyright © 2019 Fork Particle, Inc. Sid Meier’s Civilization VI uses Havok®. © 1999 – 2019 Havok.com, Inc. (and its Licensors). All Rights Reserved. See www.havok.com for details. Microsoft, DirectX, Visual Studio, and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Lua Copyright © 1994 – 2019 Lua.org, PUC-Rio. All other marks and trademarks are property of their respective owners. All rights reserved. The content of this videogame is fictional and is not intended to represent or depict an actual record of the events, persons or entities in the game’s historical setting.</Text>
@@ -1836,7 +1898,7 @@
 			<Text>Additional Content</Text>
 		</Row>
 		<Row Tag="LOC_MAIN_MENU_ADDITIONAL_CONTENT_TT">
-			<Text>Additional content and mods to expand Civilization VI.</Text>
+			<Text>Additional content for Civilization VI.</Text>
 		</Row>
 		<Row Tag="LOC_MAIN_MENU_DEMO">
 			<Text>Demo</Text>
@@ -1865,7 +1927,6 @@
 		<Row Tag="LOC_ARX_GOSSIP_LOG">
 			<Text>Gossip Log</Text>
 		</Row>
-
 		<!-- File Errors -->
 		<Row Tag="LOC_SERIALIZATION_ERROR_VERSION_MISMATCH">
 			<Text>Save cannot be loaded in this version of the game.</Text>
@@ -1951,7 +2012,7 @@
 		</Row>
 		<Row Tag="LOC_GAME_START_ERROR_SCRIPT_PROCESSING">
 			<Text>One or more of the startup scripts has an error. See lua.log</Text>
-		</Row>		
+		</Row>
 		<Row Tag="LOC_CLOUD_SAVES_REQUIRE_LINKED_ACCOUNT">
 			<Text>Cloud saves require a linked 2K Account.</Text>
 		</Row>

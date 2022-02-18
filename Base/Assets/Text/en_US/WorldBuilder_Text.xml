@@ -84,6 +84,12 @@
 		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_IMPROVEMENT_PILLAGED">
 			<Text>Improvement Pillaged</Text>
 		</Row>
+    <Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_DISTRICT">
+      <Text>District</Text>
+    </Row>
+    <Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_DISTRICT_PILLAGED">
+      <Text>District Pillaged</Text>
+    </Row>
 		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_ROUTE">
 			<Text>Route</Text>
 		</Row>
@@ -159,6 +165,13 @@
 
 		<Row Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP">
 			<Text>No plot selected</Text>
+		</Row>
+
+		<Row Tag="LOC_WORLD_BUILDER_PLACEMENT_TT">
+			<Text>Lets you paint the map</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_BUILDER_PLOT_TT">
+			<Text>Gives finer-grained control over each plot</Text>
 		</Row>
 
 		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_ID">
@@ -257,6 +270,9 @@
 		<Row Tag="LOC_WORLDBUILDER_NO_IMPROVEMENT">
 			<Text>No Improvement</Text>
 		</Row>
+    <Row Tag="LOC_WORLDBUILDER_NO_DISTRICT">
+      <Text>No District</Text>
+    </Row>
 		<Row Tag="LOC_WORLDBUILDER_NO_ROUTE">
 			<Text>No Route</Text>
 		</Row>
@@ -313,6 +329,9 @@
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_SWITCH_BASIC_TOOLTIP">
 			<Text>Switches World Builder back to Basic Mode.  This map will still be saved as Advanced Mode, and edits made in Advanced Mode will remain intact.</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL">
+			<Text>Level</Text>
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE">
 			<Text>Tribe</Text>
@@ -401,14 +420,107 @@
 		<Row Tag="LOC_WORLDBUILDER_RIVER_PLACED">
 			<Text>River placed successfully</Text>
 		</Row>
+		<Row Tag="LOC_WORLDBUILDER_RIVER_REMOVED">
+			<Text>River removed successfully</Text>
+		</Row>
 		<Row Tag="LOC_WORLDBUILDER_RIVER_ERROR">
 			<Text>Couldn't place a river at this location</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_RIVER_INVALID_LOCATION">
+			<Text>Invalid location for a river segment</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_RIVER_JOINING_RIVERS">
+			<Text>Can't join two different rivers</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_RIVER_NOT_NEAR_RIVER_OR_WATER">
+			<Text>No joining river or water at this location</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_RIVER_SPLITTING_RIVER">
+			<Text>Can't split a river from it's mouth</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_RIVER_REMOVED_ERROR">
+			<Text>Couldn't remove a river from this location</Text>
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_CLIFF_PLACED">
 			<Text>Cliff placed successfully</Text>
 		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CLIFF_REMOVED">
+			<Text>Cliff removed successfully</Text>
+		</Row>
 		<Row Tag="LOC_WORLDBUILDER_CLIFF_ERROR">
 			<Text>Couldn't place a cliff at this location</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CLIFF_REMOVED_ERROR">
+			<Text>Couldn't remove a cliff from this location</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_FEATURE_REMOVED">
+			<Text>Feature removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_FEATURE_TO_REMOVE">
+			<Text>No Feature found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_WONDER_REMOVED">
+			<Text>Wonder removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_WONDER_TO_REMOVE">
+			<Text>No Wonder found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_WONDER_DISTANCE">
+			<Text>This location is too close to another Wonder</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_RESOURCE_REMOVED">
+			<Text>Resources removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_RESOURCE_TO_REMOVE">
+			<Text>No Resources found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CITY_REMOVED">
+			<Text>City removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CITY_REMOVED_NONE">
+			<Text>No City found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_DISTRICT_REMOVED">
+			<Text>District removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_DISTRICT_TO_REMOVE">
+			<Text>No District found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_BUILDING_REMOVED">
+			<Text>Building removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_BUILDING_TO_REMOVE">
+			<Text>No Building found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_BUILDING_TO_REMOVE_CITY">
+			<Text>Tile contains no City, so no Building is possible</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_BUILDING_TO_REMOVE_DISTRICT">
+			<Text>Tile contains no District, so no Building is possible</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_IMPROVEMENT_REMOVED">
+			<Text>Improvement removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_IMPROVEMENT_TO_REMOVE">
+			<Text>No Improvement found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_GHIMPROVEMENT_REMOVED">
+			<Text>Goody Hut removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_GHIMPROVEMENT_TO_REMOVE">
+			<Text>No Goody Hut found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_ROUTE_REMOVED">
+			<Text>Route removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SPAWN_REMOVED">
+			<Text>Start Position removed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_NO_SPAWN_TO_REMOVE">
+			<Text>No Start Position found to remove</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_UNIT_REMOVED">
+			<Text>Unit removed successfully</Text>
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_CONTINENT_PLACED">
 			<Text>Successfully made this plot part of {1_Name}</Text>
@@ -418,6 +530,9 @@
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_OWNERSHIP_SET">
 			<Text>Set plot's owner successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_OWNERSHIP_REMOVED">
+			<Text>Ownership has been removed successfully</Text>
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_START_POS_SET">
 			<Text>Starting position set successfully</Text>
@@ -578,6 +693,12 @@
 		</Row>
 		<Row Tag="LOC_WORLDBUILDER_TITLE">
 			<Text>World Builder</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_ERA">
+			<Text>Era</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_TOOL_ITEM_TIP">
+			<Text>Hotkey: {1_KeyName}</Text>
 		</Row>
 	</EnglishText>
 </GameData>

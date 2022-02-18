@@ -52,21 +52,23 @@
 		<Row Type="CAPABILITY_ERAS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOLDEN_AND_DARK_AGES" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_HISTORIC_MOMENTS" Kind="KIND_CAPABILITY" />
-		<Row Type="CAPABILITY_WORLD_RANKINGS" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_DISPLAY_HUD_WORLD_RANKINGS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_REPORTS_LIST" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_REPORTS_DIPLOMATIC_DEALS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_REPORTS_UNIT_EXPENSES" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_WORLD_TRACKER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_AMENITIES" Kind="KIND_CAPABILITY" />
-		<!-- Mini-map panel lenses -->
-		<Row Type="CAPABILITY_LENS_RELIGION" Kind="KIND_CAPABILITY"/>
-		<Row Type="CAPABILITY_LENS_APPEAL" Kind="KIND_CAPABILITY"/>
-		<Row Type="CAPABILITY_LENS_SETTLER" Kind="KIND_CAPABILITY"/>
-		<Row Type="CAPABILITY_LENS_GOVERNMENT" Kind="KIND_CAPABILITY"/>
-		<Row Type="CAPABILITY_LENS_TOURISM" Kind="KIND_CAPABILITY"/>
-		<Row Type="CAPABILITY_LENS_CONTINENT" Kind="KIND_CAPABILITY"/>
-		<Row Type="CAPABILITY_LENS_EMPIRE" Kind="KIND_CAPABILITY"/>
-		<Row Type="CAPABILITY_LENS_LOYALTY" Kind="KIND_CAPABILITY"/>
+		<!-- Mini-map panel lenses -->		
+		<Row Type="CAPABILITY_LENS_TOGGLING_UI"	Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_RELIGION"		Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_APPEAL"			Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_SETTLER"			Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_GOVERNMENT"	Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_TOURISM"			Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_CONTINENT"		Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_EMPIRE"			Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_LOYALTY"			Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_SEARCH_GAME_MAP"	Kind="KIND_CAPABILITY"/>
 		<!-- City HUD -->
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" Kind="KIND_CAPABILITY"/>
@@ -89,7 +91,7 @@
 		<!-- Do these policy filters show up on the government screen -->
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER" Kind="KIND_CAPABILITY" />
-    <Row Type="CAPABILITY_GOSSIP_REPORT" Kind="KIND_CAPABILITY" />
+    <Row Type="CAPABILITY_GOSSIP_REPORT" Kind="KIND_CAPABILITY" />		
 
     <!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
 		<Row Type="CAPABILITY_DISPLAY_NORMALIZED_TURN" Kind="KIND_CAPABILITY" />
@@ -111,6 +113,8 @@
 
 		<Row Type="CAPABILITY_DISPLAY_PLOT_YIELDS" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_DISPLAY_HUD_RIBBON_RELATIONSHIPS" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_DISPLAY_HUD_GOSSIP_LIST" Kind="KIND_CAPABILITY"/>
+		
 
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row Type="CAPABILITY_ARCHEOLOGY" Kind="KIND_CAPABILITY" />		
@@ -146,6 +150,7 @@
 		<!-- Separate from allowing creation of Great Works, can you view the exiting Great Works? -->
 		<Row GameCapability="CAPABILITY_GREAT_WORKS_VIEW"/>
 		<Row GameCapability="CAPABILITY_SCIENCE"/>
+		<Row GameCapability="CAPABILITY_SEARCH_GAME_MAP"/>
 		<Row GameCapability="CAPABILITY_TECHNOLOGIES"/>
 		<Row GameCapability="CAPABILITY_TECH_CHOOSER"/>
 		<Row GameCapability="CAPABILITY_TECH_TREE"/>
@@ -209,8 +214,7 @@
 		<Row GameCapability="CAPABILITY_GOLDEN_AND_DARK_AGES"/>
 		<!-- Historic Moments enabled-->
 		<Row GameCapability="CAPABILITY_HISTORIC_MOMENTS"/>
-		<!-- World Rankings is a thing -->
-		<Row GameCapability="CAPABILITY_WORLD_RANKINGS" />
+		<Row GameCapability="CAPABILITY_DISPLAY_HUD_WORLD_RANKINGS" />
 		<!-- Do diplomatic deals appear in the reports screen -->
 		<Row GameCapability="CAPABILITY_REPORTS_DIPLOMATIC_DEALS" />
 		<!-- Do unit expenses appear in the reports screen -->
@@ -219,7 +223,8 @@
 		<Row GameCapability="CAPABILITY_WORLD_TRACKER" />
 		<Row GameCapability="CAPABILITY_AMENITIES" />
 
-		<!-- Mini-map panel lenses -->
+		<!-- Mini-map panel lenses -->		
+		<Row GameCapability="CAPABILITY_LENS_TOGGLING_UI" />
 		<Row GameCapability="CAPABILITY_LENS_RELIGION" />
 		<Row GameCapability="CAPABILITY_LENS_APPEAL" />
 		<Row GameCapability="CAPABILITY_LENS_SETTLER" />
@@ -271,7 +276,8 @@
     <Row GameCapability="CAPABILITY_DISPLAY_MINIMAP_RESOURCES"/>
 
 		<Row GameCapability="CAPABILITY_DISPLAY_PLOT_YIELDS"/>
-		<Row GameCapability="CAPABILITY_DISPLAY_HUD_RIBBON_RELATIONSHIPS"/>		
+		<Row GameCapability="CAPABILITY_DISPLAY_HUD_RIBBON_RELATIONSHIPS"/>
+		<Row GameCapability="CAPABILITY_DISPLAY_HUD_GOSSIP_LIST"/>		
 
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY"/>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Units>
+		<!-- Removing ranged attack from barb rangers and slightly boosting their attack ability instead. -->
+		<Update>
+			<Where UnitType="UNIT_RANGER"/>
+			<Set Combat="55" RangedCombat="0"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_SETTLER"/>
+			<Set FoundCity="false"/>
+		</Update>
+		<Update>
+			<Set Maintenance="0"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_HELICOPTER"/>
+			<Set Combat="75" BaseMoves="3"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_TANK"/>
+			<Set BaseMoves="3"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_NUCLEAR_SUBMARINE"/>
+			<Set Domain="DOMAIN_LAND"  Combat="60" RangedCombat="0" Range="0" BaseMoves="1"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_ROCKET_ARTILLERY"/>
+			<Set Combat="65"/>
+		</Update>
+	</Units>
+	<BarbarianTribes>
+		<!-- Remove naval barbarians because player units can't fight back while embarked. -->
+		<Delete TribeType="TRIBE_NAVAL" />
+		
+		<!-- Reducing the barbarian unit spawn rates. -->
+		<Update>
+			<Where TribeType="TRIBE_MELEE"/>
+			<Set TurnsToWarriorSpawn="25"/>
+		</Update>	
+	</BarbarianTribes>
+	<BarbarianTribeNames>
+		<!-- Lower barbarian unit cap per camp. -->
+		<Update>
+			<Set NumMilitary="3"/>
+		</Update>	
+	</BarbarianTribeNames>
+</GameInfo>

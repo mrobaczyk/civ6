@@ -215,8 +215,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_RAJENDRA_CHOLA_ACTIVE_PLUNDER_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_PLUNDER_YIELDS</ModifierType>
-			<SubjectRequirementSetId>SEA_TRADE_ROUTE_PLUNDER_BONUS_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
@@ -227,8 +226,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_FRANCIS_DRAKE_ACTIVE_PLUNDER_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_PLUNDER_YIELDS</ModifierType>
-			<SubjectRequirementSetId>SEA_TRADE_ROUTE_PLUNDER_BONUS_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
@@ -257,13 +255,12 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_CHING_SHIH_ACTIVE_PLUNDER_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_PLUNDER_YIELDS</ModifierType>
-			<SubjectRequirementSetId>SEA_TRADE_ROUTE_PLUNDER_BONUS_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_HORATIO_NELSON_ACTIVE</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>GREATPERSON_HORATIO_NELSON_SEA_REQUIREMENTS</SubjectRequirementSetId>
 			<Permanent>true</Permanent>
 		</Row>
@@ -275,7 +272,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_LASKARINA_BOUBOULINA_ACTIVE_UNIT_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_ABILITY</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -322,7 +319,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_SERGEY_GORSHKOV_ACTIVE_UNIT_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_ABILITY</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -334,7 +331,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_CLANCY_FERNANDO_ACTIVE_UNIT_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_ABILITY</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -432,6 +429,11 @@
 			<Name>Experience</Name>
 			<Value>0</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_THEMISTOCLES_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_LEIF_ERIKSON_ACTIVE</ModifierId>
 			<Name>TerrainType</Name>
@@ -455,8 +457,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_RAJENDRA_CHOLA_ACTIVE_PLUNDER_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>40</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_RAJENDRA_CHOLA_PLUNDER_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_FRANCIS_DRAKE_ACTIVE</ModifierId>
@@ -471,8 +473,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_FRANCIS_DRAKE_ACTIVE_PLUNDER_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>50</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_FRANCIS_DRAKE_PLUNDER_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_ZHENG_HE_ACTIVE</ModifierId>
@@ -494,6 +496,11 @@
 			<Name>Experience</Name>
 			<Value>-1</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_YI_SUN_SIN_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_CHING_SHIH_ACTIVE</ModifierId>
 			<Name>Amount</Name>
@@ -507,13 +514,13 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_CHING_SHIH_ACTIVE_PLUNDER_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>60</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_CHING_SHIH_PLUNDER_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_HORATIO_NELSON_ACTIVE</ModifierId>
-			<Name>Percent</Name>
-			<Value>50</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_HORATIO_NELSON_FLANKING_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_LASKARINA_BOUBOULINA_ACTIVE</ModifierId>
@@ -522,8 +529,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_LASKARINA_BOUBOULINA_ACTIVE_UNIT_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>50</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_LASKARINA_BOUBOULINA_BONUS_EXPERIENCE</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_FRANZ_VON_HIPPER_ACTIVE</ModifierId>
@@ -535,6 +542,11 @@
 			<Name>Experience</Name>
 			<Value>-1</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_FRANZ_VON_HIPPER_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_JOAQUIM_MARQUES_LISBOA_ACTIVE</ModifierId>
 			<Name>Amount</Name>
@@ -587,8 +599,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_SERGEY_GORSHKOV_ACTIVE_UNIT_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>100</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SERGEY_GORSHKOV_BONUS_EXPERIENCE</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_CLANCY_FERNANDO_ACTIVE</ModifierId>
@@ -597,8 +609,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_CLANCY_FERNANDO_ACTIVE_UNIT_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>200</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_CLANCY_FERNANDO_BONUS_EXPERIENCE</Value>
 		</Row>
 	</ModifierArguments>
 	<RequirementSets>

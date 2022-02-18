@@ -1480,6 +1480,12 @@
 		<Row Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_SHOW">
 			<Text>Always show stats</Text>
 		</Row>
+		<Row Tag="LOC_PLAYERNAME_AUTOPLAY_OBSERVER">
+			<Text>AutoPlay Observer</Text>
+		</Row>
+		<Row Tag="LOC_PLAYERNAME_UNKNOWN">
+			<Text>Unknown</Text>
+		</Row>
 
 		<!-- ==================== Production Menu (for cities) ==================== -->
 		<Row Tag="LOC_BUILDING_CONSTRUCT_NO_SUITABLE_LOCATION">
@@ -1542,7 +1548,14 @@
 		<Row Tag="LOC_DISTRICT_ZONE_CONFIRM_POPUP">
 			<Text>Do you want to build a district here?</Text>
 		</Row>
-		<Row Tag="LOC_DISTRICT_ZONE_CONFIRM_DISTRICT_POPUP">
+    <Row Tag="LOC_FOUND_CITY_CONFIRM_POPUP">
+      <Text>Do you want to found a city here?</Text>
+    </Row>
+    <Row Tag="LOC_FOUND_CITY_WILL_REMOVE_FEATURE">
+			<Text>It will remove the {1_Feature} on this tile.</Text>
+		</Row>
+    <!-- TODO: Add reason strings here -->
+    <Row Tag="LOC_DISTRICT_ZONE_CONFIRM_DISTRICT_POPUP">
 			<Text>Do you want to build {LOC_GRAMMAR_A_AN &lt;&lt; {1_DistrictName}} district here?</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_ZONE_CONFIRM_WONDER_POPUP">
@@ -3811,6 +3824,9 @@
 		<Row Tag="LOC_UI_RELIGION_FOUND_PANTHEON">
 			<Text>Found this Pantheon</Text>
 		</Row>
+    <Row Tag="LOC_UI_RELIGION_RESELECT_PANTHEON">
+      <Text>Reselect Pantheon</Text>
+    </Row>
 		<Row Tag="LOC_UI_RELIGION_FOUND_RELIGION">
 			<Text>Found this Religion</Text>
 		</Row>

@@ -222,6 +222,9 @@
     <Row NodeType="Can Alpha City" NodeId="67" ShapeId="2">
       <Description>For shortcutting a city attack. Check if you can do 50%+ garrison damage or defense units are worth ignoring.</Description>
     </Row>
+    <Row NodeType="Is Near Fallout" NodeId="69" ShapeId="2">
+      <Description>Returns true if any unit is within range of fallout and puts all such members in the Endangered list (if there is an operation)</Description>
+    </Row>
   </NodeDefinitions>
   <NodeDataDefinitions>
     <Row DataName="Max Failures" DefnId="0" DataType="int" NodeType="Concurrent" Required="False" UserData="True" />
@@ -262,6 +265,7 @@
     <Row DataName="Unit distance" DefnId="3" DataType="int" NodeType="Operation Move" Required="False" UserData="True" />
     <Row DataName="Leader Tag" DefnId="4" DataType="string" NodeType="Operation Move" Required="False" UserData="True" />
     <Row DataName="AlwaysRunning" DefnId="5" DataType="bool" NodeType="Operation Move" Required="False" UserData="True" />
+    <Row DataName="Can Explore" DefnId="6" DataType="bool" NodeType="Operation Move" Required="False" UserData="True" />
     <Row DataName="Trigger Units" DefnId="0" DataType="UnitTypesList" NodeType="Decode Trigger" RequiredGroup="True" Output="True" />
     <Row DataName="Trigger Buildings" DefnId="1" DataType="BuildingTypesList" NodeType="Decode Trigger" RequiredGroup="True" Output="True" />
     <Row DataName="Trigger Improvements" DefnId="2" DataType="ImprovementList" NodeType="Decode Trigger" RequiredGroup="True" Output="True" />
@@ -341,6 +345,7 @@
     <Row DataName="Failure Amount" DefnId="1" DataType="float" NodeType="Operation Change Target" UserData="True" />
     <Row DataName="Fail on Invalid Team" DefnId="2" DataType="bool" NodeType="Operation Change Target" Required="False" UserData="True" />
     <Row DataName="Required Tag" DefnId="3" DataType="string" NodeType="Operation Change Target" Required="False" UserData="True" />
+    <Row DataName="Always Swap" DefnId="4" DataType="bool" NodeType="Operation Change Target" Required="False" UserData="True" />
     <Row DataName="Contract" DefnId="0" DataType="int" NodeType="Contract Manager Decorator" RequiredGroup="True" />
     <Row DataName="Multi-Contracts" DefnId="1" DataType="ID List" NodeType="Contract Manager Decorator" RequiredGroup="True" />
     <Row DataName="Turn Limit" DefnId="2" DataType="int" NodeType="Contract Manager Decorator" UserData="True" />
@@ -361,6 +366,7 @@
     <Row DataName="Tag" DefnId="3" DataType="string" NodeType="Reserve Plot" Required="False" UserData="True" />
     <Row DataName="Pillage Districts" DefnId="0" DataType="bool" NodeType="Operation Pillage" Required="False" UserData="True" />
     <Row DataName="Pillage Improvements" DefnId="1" DataType="bool" NodeType="Operation Pillage" Required="False" UserData="True" />
+    <Row DataName="Get Goody Huts" DefnId="2" DataType="bool" NodeType="Operation Pillage" Required="False" UserData="True" />
     <Row DataName="Unused" DefnId="0" DataType="int" NodeType="Operation Siege City" Required="False" />
     <Row DataName="Unused" DefnId="0" DataType="int" NodeType="Garrison City" Required="False" />
     <Row DataName="Unused" DefnId="0" DataType="int" NodeType="Is City Threatened" Required="False" />
@@ -411,6 +417,7 @@
     <Row DataName="Target Domain" DefnId="0" DataType="string" NodeType="Naval Choose Target" UserData="True" />
     <Row DataName="Fail for no target" DefnId="1" DataType="bool" NodeType="Naval Choose Target" Required="False" UserData="True" />
     <Row DataName="Unused" DefnId="0" DataType="string" NodeType="Naval Pillage" UserData="True" />
+    <Row DataName="Range" DefnId="0" DataType="int" NodeType="Is Near Fallout" UserData="True" />
   </NodeDataDefinitions>
   <DataTypes>
     <Row TypeName="UnitTypesList" DataId="0" />
@@ -454,6 +461,7 @@
     <Row TreeName="Reinforce Ally" />
     <Row TreeName="Naval Superiority Tree" />
     <Row TreeName="Free Cities Assault" />
+    <Row TreeName="Civ Royale Behavior" />
   </BehaviorTrees>
   <BehaviorTreeNodes>
     <Row NodeType="Concurrent" NodeId="0" TreeName="Barbarian City Attack" JumpTo="26" />
@@ -609,6 +617,18 @@
     <Row NodeType="Add Goal Tech" NodeId="3" TreeName="Build Trigger Unit" />
     <Row NodeType="Contract Manager Decorator" NodeId="4" TreeName="Build Trigger Unit" JumpTo="6" />
     <Row NodeType="Build Unit" NodeId="5" TreeName="Build Trigger Unit" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Civ Royale Behavior" JumpTo="12" />
+    <Row NodeType="Operation Change Target" NodeId="1" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Recruit Units" NodeId="2" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Priority" NodeId="3" TreeName="Civ Royale Behavior" JumpTo="7" />
+    <Row NodeType="Not" NodeId="4" TreeName="Civ Royale Behavior" JumpTo="6" />
+    <Row NodeType="Is Near Fallout" NodeId="5" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Defend Units" NodeId="6" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Make Formation" NodeId="7" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Pillage" NodeId="8" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Pillage" NodeId="9" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Attack Units" NodeId="10" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Move" NodeId="11" TreeName="Civ Royale Behavior" />
     <Row NodeType="Concurrent" NodeId="0" TreeName="Early City Assault" JumpTo="55" />
     <Row NodeType="Decode Trigger" NodeId="1" TreeName="Early City Assault" />
     <Row NodeType="Priority" NodeId="2" TreeName="Early City Assault" JumpTo="5" />
@@ -1412,6 +1432,31 @@
     <Row DefnId="4" NodeId="5" TreeName="Build Trigger Unit" Tag="UnitContract" />
     <Row DefnId="6" NodeId="5" TreeName="Build Trigger Unit" />
     <Row DefnId="8" NodeId="5" TreeName="Build Trigger Unit" Tag="Unit Value" />
+    <Row DefnId="1" NodeId="0" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="0" NodeId="1" TreeName="Civ Royale Behavior" DefaultData="0" />
+    <Row DefnId="1" NodeId="1" TreeName="Civ Royale Behavior" DefaultData="0" />
+    <Row DefnId="4" NodeId="1" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="2" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="2" NodeId="2" TreeName="Civ Royale Behavior" DefaultData="-1" />
+    <Row DefnId="3" NodeId="2" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="6" NodeId="2" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="5" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="0" NodeId="6" TreeName="Civ Royale Behavior" DefaultData="50" />
+    <Row DefnId="1" NodeId="6" TreeName="Civ Royale Behavior" DefaultData="-1" />
+    <Row DefnId="1" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="UNITAI_COMBAT" />
+    <Row DefnId="2" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="UNITTYPE_CIVILIAN" />
+    <Row DefnId="3" NodeId="7" TreeName="Civ Royale Behavior" />
+    <Row DefnId="4" NodeId="7" TreeName="Civ Royale Behavior" />
+    <Row DefnId="2" NodeId="8" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="2" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="1" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="3" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="6" />
+    <Row DefnId="4" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
+    <Row DefnId="5" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="6" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="true" />
     <Row DefnId="0" NodeId="1" TreeName="Early City Assault" Tag="Unused" />
     <Row DefnId="1" NodeId="1" TreeName="Early City Assault" />
     <Row DefnId="2" NodeId="1" TreeName="Early City Assault" />

@@ -271,7 +271,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_JOHN_MONASH_ACTIVE_UNIT_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_ABILITY</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -295,8 +295,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_GEORGY_ZHUKOV_ACTIVE</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>GREATPERSON_GEORGY_ZHUKOV_LAND_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
@@ -331,7 +330,7 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_VIJAYA_WIMALARATNE_ACTIVE_UNIT_BONUS</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_ABILITY</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -429,6 +428,11 @@
 			<Name>Experience</Name>
 			<Value>0</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_AETHELFLAED_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_EL_CID_ACTIVE</ModifierId>
 			<Name>MilitaryFormationType</Name>
@@ -454,6 +458,11 @@
 			<Name>Experience</Name>
 			<Value>-1</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_GUSTAVUS_ADOLPHUS_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_JOAN_OF_ARC_ACTIVE</ModifierId>
 			<Name>Amount</Name>
@@ -474,6 +483,11 @@
 			<Name>Experience</Name>
 			<Value>-1</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_RANI_LAKSHMIBAI_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_ANA_NZINGA_ACTIVE</ModifierId>
 			<Name>Amount</Name>
@@ -491,8 +505,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_JOHN_MONASH_ACTIVE_UNIT_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>75</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_JOHN_MONASH_BONUS_EXPERIENCE</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MARINA_RASKOVA_ACTIVE</ModifierId>
@@ -509,6 +523,11 @@
 			<Name>Experience</Name>
 			<Value>-1</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_SAMORI_TURE_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_DWIGHT_EISENHOWER_ACTIVE</ModifierId>
 			<Name>Amount</Name>
@@ -516,8 +535,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_GEORGY_ZHUKOV_ACTIVE</ModifierId>
-			<Name>Percent</Name>
-			<Value>50</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GEORGY_ZHUKOV_FLANKING_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_SUDIRMAN_ACTIVE</ModifierId>
@@ -539,6 +558,11 @@
 			<Name>Experience</Name>
 			<Value>-1</Value>
 		</Row>
+    <Row>
+      <ModifierId>GREATPERSON_DOUGLAS_MACARTHUR_ACTIVE</ModifierId>
+      <Name>UniqueOverride</Name>
+      <Value>true</Value>
+    </Row>
 		<Row>
 			<ModifierId>GREATPERSON_AHMAD_SHAH_MASSOUD_ACTIVE</ModifierId>
 			<Name>UnitType</Name>
@@ -549,6 +573,11 @@
 			<Name>Experience</Name>
 			<Value>-1</Value>
 		</Row>
+    <Row>
+			<ModifierId>GREATPERSON_AHMAD_SHAH_MASSOUD_ACTIVE</ModifierId>
+			<Name>UniqueOverride</Name>
+			<Value>true</Value>
+		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_VIJAYA_WIMALARATNE_ACTIVE</ModifierId>
 			<Name>Amount</Name>
@@ -556,8 +585,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_VIJAYA_WIMALARATNE_ACTIVE_UNIT_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>100</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_VIJAYA_WIMALARATNE_BONUS_EXPERIENCE</Value>
 		</Row>
 	</ModifierArguments>
 	<RequirementSets>
