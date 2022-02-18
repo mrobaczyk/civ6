@@ -92,7 +92,8 @@
 		<Row Type="TRAIT_LEADER_SURROUNDED_BY_GLORY" Kind="KIND_TRAIT"/>
 		<!-- NOTE: This trait is used by the AI. It's intent is to go on a civilization, but it can also go on a leader or agenda if desired. -->
 		<!--   But be warned, in that case it can double or even triple up. -->
-		<Row Type="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Kind="KIND_TRAIT"/>
+    <Row Type="TRAIT_LEADER_AGGRESSIVE_MILITARY" Kind="KIND_TRAIT"/>
+    <Row Type="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_DEFAULT_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_SCIENTIFIC_TRAIT" Kind="KIND_TRAIT"/>
@@ -375,7 +376,9 @@
 		<Row TriggerType="TRIGGER_CAPTURE_BARBARIAN" TreeName="Escort Worker To Camp" OperationName="Barbarian Builder Capture" AIEvent="AI_EVENT_UNIT_CAPTURED" Priority="2"/>
 	</TriggeredBehaviorTrees>
 	<AiListTypes>
-		<Row ListType="BarbarianTriggeredTrees"/>
+    <Row ListType="AgressiveDiplomacy"/>
+    <Row ListType="AggressivePseudoYields"/>
+    <Row ListType="BarbarianTriggeredTrees"/>
 		<Row ListType="BarbarossaCivics"/>
 		<Row ListType="BarbarossaTechs"/>
 		<Row ListType="BarbarossaWonders"/>
@@ -537,6 +540,9 @@
 		<Row ListType="DefaultScoutUse" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="AiScoutUses"/>
 		<Row ListType="ExpansionistCitySettlement" LeaderType="TRAIT_LEADER_EXPANSIONIST" System="SettlementPreferences"/>
 		<Row ListType="CavalryLoverCitySettlement" LeaderType="TRAIT_LEADER_KILLER_OF_CYRUS" System="PlotEvaluations"/>
+		<!-- Militaristic trait (Shaka and Genghis) -->
+		<Row ListType="AgressiveDiplomacy" LeaderType="TRAIT_LEADER_AGGRESSIVE_MILITARY" System="DiplomaticActions"/>
+		<Row ListType="AggressivePseudoYields" LeaderType="TRAIT_LEADER_AGGRESSIVE_MILITARY" System="PseudoYields"/>
 		<Row ListType="LowReligiousPreferencePseudoYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="PseudoYields"/>
 		<Row ListType="LowReligiousPreferenceYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="Yields"/>
 		<Row ListType="LowCityStatePreferenceWarDiploActions" LeaderType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" System="DiplomaticActions"/>
@@ -805,7 +811,13 @@
 		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_PRIMARY_REGION" Value="100"/>
 		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_SECONDARY_REGION" Value="50"/>
 		<Row ListType="DefaultScoutUse" Item="NAVAL_SCOUTS_FOR_WORLD_EXPLORATION" Value="300"/>
-		<Row ListType="LowReligiousPreferencePseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="-75"/>
+    <Row ListType="AgressiveDiplomacy" Item="DIPLOACTION_DENOUNCE" Favored="True"/>
+    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_COMBAT" Value="25"/>
+    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="25"/>
+    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_AIR_COMBAT" Value="25"/>
+    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_CITY_BASE" Value="40"/>
+    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_CITY_DEFENDING_UNITS" Value="-10"/>
+    <Row ListType="LowReligiousPreferencePseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="-75"/>
 		<Row ListType="LowReligiousPreferenceYields" Item="YIELD_FAITH" Value="-50"/>
 		<Row ListType="LowCityStatePreferenceWarDiploActions" Item="DIPLOACTION_DECLARE_WAR_MINOR_CIV" Favored="false"/>
 		<Row ListType="BarbarianTriggeredTrees" Item="TRIGGER_CAPTURE_BARBARIAN"/>
@@ -912,6 +924,7 @@
 		<Row TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV" InternalOnly="true"/>
     <Row TraitType="TRAIT_LEADER_SCIENCE_MAJOR_CIV" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_AGGRESSIVE_MILITARY" InternalOnly="true"/>
 		<Row TraitType="CULTURE_KILLS_TRAIT" Name="LOC_TRAIT_LEADER_THERMOPYLAE_NAME" Description="LOC_TRAIT_LEADER_THERMOPYLAE_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU" Name="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_NAME" Description="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_MEDITERRANEAN" Name="LOC_TRAIT_LEADER_MEDITERRANEAN_NAME" Description="LOC_TRAIT_LEADER_MEDITERRANEAN_DESCRIPTION"/>

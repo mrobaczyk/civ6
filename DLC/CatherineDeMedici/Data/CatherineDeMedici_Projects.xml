@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="PROJECT_COURT_FESTIVAL" Kind="KIND_PROJECT"/>
+		<Row Type="MODIFIER_PLAYER_ALLOW_PROJECT_CATHERINE" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_GRANT_TOURISM_PER_EXCESS_LUXURIES" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_GRANT_YIELD_PER_EXCESS_LUXURIES" Kind="KIND_MODIFIER"/>
+	</Types>
+	<Projects>
+		<Row ProjectType="PROJECT_COURT_FESTIVAL" Name="LOC_PROJECT_COURT_FESTIVAL_NAME" ShortName="LOC_PROJECT_COURT_FESTIVAL_SHORT_NAME" Description="LOC_PROJECT_ECOURT_FESTIVAL_DESCRIPTION" PrereqDistrict="DISTRICT_THEATER" Cost="65" AdvisorType="ADVISOR_CULTURE" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1500" UnlocksFromEffect="true"/>
+	</Projects>
+	<ProjectCompletionModifiers>
+		<Row>
+			<ProjectType>PROJECT_COURT_FESTIVAL</ProjectType>
+			<ModifierId>PROJECT_COMPLETION_GRANT_CULTURE_BASED_ON_EXCESS_LUXURIES</ModifierId>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_COURT_FESTIVAL</ProjectType>
+			<ModifierId>PROJECT_COMPLETION_GRANT_TOURISM_BASED_ON_EXCESS_LUXURIES</ModifierId>
+		</Row>
+	</ProjectCompletionModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_GRANT_CULTURE_BASED_ON_EXCESS_LUXURIES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD_PER_EXCESS_LUXURIES</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_GRANT_TOURISM_BASED_ON_EXCESS_LUXURIES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_TOURISM_PER_EXCESS_LUXURIES</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_GRANT_CULTURE_BASED_ON_EXCESS_LUXURIES</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_GRANT_CULTURE_BASED_ON_EXCESS_LUXURIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_GRANT_TOURISM_BASED_ON_EXCESS_LUXURIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+	</ModifierArguments>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_GRANT_TOURISM_PER_EXCESS_LUXURIES</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_GRANT_TOURISM_PER_EXCESS_LUXURIES</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD_PER_EXCESS_LUXURIES</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_GRANT_YIELD_PER_EXCESS_LUXURIES</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ALLOW_PROJECT_CATHERINE</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADD_PLAYER_PROJECT_AVAILABILITY</EffectType>
+		</Row>
+	</DynamicModifiers>
+</GameInfo>

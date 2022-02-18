@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Expansion 1 specific data -->
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_ETHIOPIAN_OROMO_CAVALRY" Texture="MomentSTK_OromoCavalry.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_ROCK_HEWN_CHURCH" Texture="MomentSTK_RockHewnChurch.dds"/>
+	</MomentIllustrations>
+	<!-- Expansion 2 specific data -->
+	<Types>
+		<!-- Named Places-->
+		<Row Type="NAMED_RIVER_BLUE_NILE_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_BARO_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_DAWA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_GANALE_DORYA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_SHEBELLE_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_AWASH_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_VOLCANO_MOUNT_ALAYTA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_DABBAHU_VOLCANO" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_DALLOL_VOLCANO" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_MOUNT_FENTALE" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_KONE" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_MANDA_HARARO" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_ALU_DALAFILLA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_MOUNTAIN_BALE_MOUNTAINS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_ARSI_MOUNTAINS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_WOLLO_HIGHLANDS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_AHMAR_MOUNTAINS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_AMARO_MOUNTAINS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_LAKE_LAKE_ABAYA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_ZIWAY" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_CHAMO" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_SHALA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_CHEW_BAHIR" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_ABBE" Kind="KIND_NAMED_LAKE"/>
+		<!-- Modifiers-->
+		<Row Type="MODIFIER_PLAYER_ADJUST_FAVOR_FROM_DELEGATIONS" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_FAVOR_FROM_EMBASSIES" Kind="KIND_MODIFIER"/>
+	</Types>
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY"/>
+			<Set>
+				<Description>LOC_UNIT_ETHIOPIAN_OROMO_CAVALRY_EXPANSION2_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Units>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" ReplacesUnitType="UNIT_COURSER"/>
+	</UnitReplaces>
+	<Units_XP2>
+		<Row UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" ResourceCost="10"/>
+	</Units_XP2>
+	<Improvements>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH"/>
+			<Set>
+				<Description>LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_EXPANSION2_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Improvements>
+	<Improvements_XP2>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" DisasterResistant="true"/>
+	</Improvements_XP2>
+	<Improvement_ValidFeatures>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" FeatureType="FEATURE_VOLCANIC_SOIL"/>
+	</Improvement_ValidFeatures>		
+	<NamedRivers>
+		<Row NamedRiverType="NAMED_RIVER_BLUE_NILE_RIVER" Name="LOC_NAMED_RIVER_BLUE_NILE_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_BARO_RIVER" Name="LOC_NAMED_RIVER_BARO_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_DAWA_RIVER" Name="LOC_NAMED_RIVER_DAWA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_GANALE_DORYA_RIVER" Name="LOC_NAMED_RIVER_GANALE_DORYA_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_SHEBELLE_RIVER" Name="LOC_NAMED_RIVER_SHEBELLE_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_AWASH_RIVER" Name="LOC_NAMED_RIVER_AWASH_RIVER_NAME"/>
+	</NamedRivers>
+	<NamedVolcanoes>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_ALAYTA" Name="LOC_NAMED_VOLCANO_MOUNT_ALAYTA_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_DABBAHU_VOLCANO" Name="LOC_NAMED_VOLCANO_DABBAHU_VOLCANO_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_DALLOL_VOLCANO" Name="LOC_NAMED_VOLCANO_DALLOL_VOLCANO_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_FENTALE" Name="LOC_NAMED_VOLCANO_MOUNT_FENTALE_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_KONE" Name="LOC_NAMED_VOLCANO_KONE_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MANDA_HARARO" Name="LOC_NAMED_VOLCANO_MANDA_HARARO_NAME"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_ALU_DALAFILLA" Name="LOC_NAMED_VOLCANO_ALU_DALAFILLA_NAME"/>
+	</NamedVolcanoes>
+	<NamedMountains>
+		<Row NamedMountainType="NAMED_MOUNTAIN_BALE_MOUNTAINS" Name="LOC_NAMED_MOUNTAIN_BALE_MOUNTAINS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_ARSI_MOUNTAINS" Name="LOC_NAMED_MOUNTAIN_ARSI_MOUNTAINS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_WOLLO_HIGHLANDS" Name="LOC_NAMED_MOUNTAIN_WOLLO_HIGHLANDS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_AHMAR_MOUNTAINS" Name="LOC_NAMED_MOUNTAIN_AHMAR_MOUNTAINS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_AMARO_MOUNTAINS" Name="LOC_NAMED_MOUNTAIN_AMARO_MOUNTAINS_NAME"/>
+	</NamedMountains>
+	<NamedLakes>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_ABAYA" Name="LOC_NAMED_LAKE_LAKE_ABAYA_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_ZIWAY" Name="LOC_NAMED_LAKE_LAKE_ZIWAY_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_CHAMO" Name="LOC_NAMED_LAKE_LAKE_CHAMO_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_SHALA" Name="LOC_NAMED_LAKE_LAKE_SHALA_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_CHEW_BAHIR" Name="LOC_NAMED_LAKE_LAKE_CHEW_BAHIR_NAME"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_ABBE" Name="LOC_NAMED_LAKE_LAKE_ABBE_NAME"/>
+	</NamedLakes>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_BLUE_NILE_RIVER" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedRiverType="NAMED_RIVER_BARO_RIVER" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedRiverType="NAMED_RIVER_DAWA_RIVER" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedRiverType="NAMED_RIVER_GANALE_DORYA_RIVER" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedRiverType="NAMED_RIVER_SHEBELLE_RIVER" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedRiverType="NAMED_RIVER_AWASH_RIVER" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_ALAYTA" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_DABBAHU_VOLCANO" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_DALLOL_VOLCANO" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_FENTALE" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_KONE" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MANDA_HARARO" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_ALU_DALAFILLA" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_ERTA_ALE" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_BALE_MOUNTAINS" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_ARSI_MOUNTAINS" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_WOLLO_HIGHLANDS" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_AHMAR_MOUNTAINS" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_AMARO_MOUNTAINS" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SEMIENS" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_DANAKIL" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedDesertType="NAMED_DESERT_OGADEN" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+	</NamedDesertCivilizations>
+	<NamedLakeCivilizations>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_TURKANA" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_TANA" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_ABAYA" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_ZIWAY" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_CHAMO" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_SHALA" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_CHEW_BAHIR" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_ABBE" CivilizationType="CIVILIZATION_ETHIOPIA"/>
+	</NamedLakeCivilizations>
+	<Districts>
+		<Update>
+			<Where DistrictType="DISTRICT_DIPLOMATIC_QUARTER"/>
+			<Set>
+				<Description>LOC_DISTRICT_DIPLOMATIC_QUARTER_EXPANSION2_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Districts>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FAVOR_FROM_DELEGATIONS</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_PLAYER_ADJUST_FAVOR_FROM_DELEGATIONS</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FAVOR_FROM_EMBASSIES</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_PLAYER_ADJUST_FAVOR_FROM_EMBASSIES</EffectType>
+		</Row>
+	</DynamicModifiers>
+	<DistrictModifiers>
+		<Row>
+			<DistrictType>DISTRICT_DIPLOMATIC_QUARTER</DistrictType>
+			<ModifierId>DIPLOMATIC_QUARTER_DELEGATION_FAVOR</ModifierId>
+		</Row>
+		<Row>
+			<DistrictType>DISTRICT_DIPLOMATIC_QUARTER</DistrictType>
+			<ModifierId>DIPLOMATIC_QUARTER_EMBASSY_FAVOR</ModifierId>
+		</Row>
+	</DistrictModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>DIPLOMATIC_QUARTER_DELEGATION_FAVOR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FAVOR_FROM_DELEGATIONS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DIPLOMATIC_QUARTER_EMBASSY_FAVOR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FAVOR_FROM_EMBASSIES</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>DIPLOMATIC_QUARTER_DELEGATION_FAVOR</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>DIPLOMATIC_QUARTER_EMBASSY_FAVOR</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>BUILDING_IS_POWER_PLANT_ETHIOPIA</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_COAL_POWER_PLANT_ETHIOPIA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>BUILDING_IS_POWER_PLANT_ETHIOPIA</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_FOSSIL_FUEL_POWER_PLANT_ETHIOPIA</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_COAL_POWER_PLANT_ETHIOPIA</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_FOSSIL_FUEL_POWER_PLANT_ETHIOPIA</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_COAL_POWER_PLANT_ETHIOPIA</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_COAL_POWER_PLANT</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_FOSSIL_FUEL_POWER_PLANT_ETHIOPIA</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_FOSSIL_FUEL_POWER_PLANT</Value>
+		</Row>
+	</RequirementArguments>
+</GameInfo>

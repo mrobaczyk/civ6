@@ -133,6 +133,18 @@
 
 	</Instance>
 
+  <Instance   Name="JoinCodeEntry">
+
+    <Container ID="JoinCodeRoot" Size="175,35" Anchor="C,T">
+
+      <Stack Anchor="C,T" StackGrowth="Right">
+        <Label ID="JoinCodeLabel" Size="109,25" Anchor="R,C" Style="FontFlair16" String="LOC_STAGING_ROOM_JOIN_CODE"/>
+        <TextButton ID="JoinCodeText"	Size="109,25"	Anchor="L,C" Style="FontFlair16" ColorSet="ShellHeader" ToolTip="LOC_STAGING_ROOM_COPY_JOIN_CODE"/>
+      </Stack>
+    </Container>
+
+  </Instance>
+
   <Instance Name="VoteKickPlayerEntry">
     <Container ID="RootContainer" Size="218,52">
       <Container Anchor="C,T" Size="parent,parent" ConsumeMouseOver="1">

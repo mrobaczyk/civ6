@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_MENELIK" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_MENELIK" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_ETHIOPIAN_HIGHLANDS" Kind="KIND_TRAIT"/>
+		<!-- Ability -->
+		<Row Type="ABILITY_MENELIK_HILLS_COMBAT" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_MENELIK_HILLS_COMBAT" Tag="CLASS_ALL_COMBAT_UNITS"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_MENELIK" Name="LOC_LEADER_MENELIK_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_MENELIK" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_MENELIK_QUOTE" QuoteAudio="MENELIK_MA_MISC_PEP_TALK_A_01"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_MENELIK" TraitType="TRAIT_LEADER_MENELIK"/>
+	</LeaderTraits>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_MENELIK" Name="LOC_TRAIT_LEADER_MENELIK_NAME" Description="LOC_TRAIT_LEADER_MENELIK_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_ETHIOPIAN_HIGHLANDS"/>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_LEADER_MENELIK</TraitType>
+			<ModifierId>TRAIT_FAITH_INTO_SCIENCE_HILLS</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_MENELIK</TraitType>
+			<ModifierId>TRAIT_FAITH_INTO_CULTURE_HILLS</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_MENELIK</TraitType>
+			<ModifierId>TRAIT_HILLS_COMBAT</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_FAITH_INTO_SCIENCE_HILLS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH</ModifierType>
+			<SubjectRequirementSetId>ETHIOPIA_PLOT_IS_HILLS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FAITH_INTO_CULTURE_HILLS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH</ModifierType>
+			<SubjectRequirementSetId>ETHIOPIA_PLOT_IS_HILLS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_HILLS_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MENELIK_HILLS_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>ETHIOPIA_PLOT_IS_HILLS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_FAITH_INTO_SCIENCE_HILLS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FAITH_INTO_SCIENCE_HILLS</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FAITH_INTO_CULTURE_HILLS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FAITH_INTO_CULTURE_HILLS</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_HILLS_COMBAT</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_MENELIK_HILLS_COMBAT</Value>
+		</Row>
+		<Row>
+			<ModifierId>MENELIK_HILLS_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>ETHIOPIA_PLOT_IS_HILLS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+	</Requirements>
+	<RequirementArguments>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>ETHIOPIA_PLOT_IS_HILLS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLOT_IS_HILLS_REQUIREMENT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<ModifierStrings>
+		<Row ModifierId="MENELIK_HILLS_COMBAT" Context="Preview" Text="LOC_ABILITY_MENELIK_HILLS_COMBAT_STRENGTH_DESCRIPTION"/>
+	</ModifierStrings>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_MENELIK_HILLS_COMBAT" Name="LOC_ABILITY_MENELIK_HILLS_COMBAT_NAME" Description="LOC_ABILITY_MENELIK_HILLS_COMBAT_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_MENELIK_HILLS_COMBAT</UnitAbilityType>
+			<ModifierId>MENELIK_HILLS_COMBAT</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_MENELIK" ReligionType="RELIGION_ORTHODOXY"/>
+	</FavoredReligions>
+	<!-- Agendas, largely AI -->
+	<Agendas>
+		<Row AgendaType="AGENDA_ETHIOPIAN_HIGHLANDS" Name="LOC_AGENDA_ETHIOPIAN_HIGHLANDS_NAME" Description="LOC_AGENDA_ETHIOPIAN_HIGHLANDS_DESCRIPTION"/>
+	</Agendas>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_MENELIK" AgendaType="AGENDA_ETHIOPIAN_HIGHLANDS"/>
+	</HistoricalAgendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_ETHIOPIAN_HIGHLANDS" TraitType="TRAIT_AGENDA_ETHIOPIAN_HIGHLANDS"/>
+	</AgendaTraits>
+	<AiListTypes>
+		<Row ListType="PreferHills"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="PreferHills" LeaderType="AGENDA_ETHIOPIAN_HIGHLANDS" System="PlotEvaluations"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="PreferHills" Item="Inner Ring Yield" Favored="false" Value="1" StringVal="YIELD_PRODUCTION" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD"/>
+    <Row ListType="MinorCivDistricts" Item="DISTRICT_DIPLOMATIC_QUARTER" Favored="false"/>
+  </AiFavoredItems>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_AGENDA_ETHIOPIAN_HIGHLANDS" ModifierId="AGENDA_MODIFIER_CITIES_NEAR_HILLS"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_CITIES_NEAR_HILLS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_ETHIOPIAN_HIGHLANDS</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+  <ModifierArguments>
+    <Row>
+      <ModifierId>AGENDA_MODIFIER_CITIES_NEAR_HILLS</ModifierId>
+      <Name>StatementKey</Name>
+      <Value>LOC_PLACEHOLDER</Value>
+    </Row>
+  </ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_MODIFIER_CITIES_NEAR_HILLS" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+</GameInfo>

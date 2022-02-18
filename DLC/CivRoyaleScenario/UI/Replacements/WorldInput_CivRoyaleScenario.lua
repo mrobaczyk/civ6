@@ -9,7 +9,6 @@ include("CivRoyaleScenario_PropKeys");
 
 InterfaceModeTypes.GRIEVING_GIFT	= 0x1D7FAB3F;				-- This is actually the hash value of "INTERFACEMODE_GRIEVING_GIFT" but standard lua exposures for interfacemodes drop the "INTERFACEMODE_"
 
-
 -- ===========================================================================
 --	CACHE BASE FUNCTIONS
 -- ===========================================================================
@@ -42,9 +41,9 @@ function DropGrievingGift(pInputStruct)
 			tParameters[UnitCommandTypes.PARAM_X] = plot:GetX();
 			tParameters[UnitCommandTypes.PARAM_Y] = plot:GetY();
 			tParameters[UnitCommandTypes.PARAM_NAME] = "ScenarioCommand_GrievingGift";
+			tParameters.CommandSubType = "GrievingGift";
 			UnitManager.RequestCommand(pSelectedUnit, UnitCommandTypes.EXECUTE_SCRIPT, tParameters);
 			UI.SetInterfaceMode(InterfaceModeTypes.SELECTION);
-			UI.PlaySound("Unit_Airlift");
 		else
 			print("ERROR: Missing head selected unit");
 		end

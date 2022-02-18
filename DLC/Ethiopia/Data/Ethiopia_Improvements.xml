@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="IMPROVEMENT_ROCK_HEWN_CHURCH" Kind="KIND_IMPROVEMENT"/>
+	</Types>
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" Name="LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_NAME" PrereqCivic="CIVIC_DRAMA_POETRY" Description="LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_DESCRIPTION" Icon="ICON_IMPROVEMENT_ROCK_HEWN_CHURCH" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true"  SameAdjacentValid="false" Appeal="1" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_ROCK_HEWN_CHURCH"/>
+	</Improvements>
+	<Improvement_Adjacencies>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Mountain_Faith1"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Mountain_Faith2"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Mountain_Faith3"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Mountain_Faith4"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Mountain_Faith5"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Hills_Faith1"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Hills_Faith2"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Hills_Faith3"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Hills_Faith4"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldChangeId="Hills_Faith5"/>
+	</Improvement_Adjacencies>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" TerrainType="TERRAIN_SNOW_HILLS"/>
+	</Improvement_ValidTerrains>
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" UnitType="UNIT_BUILDER"/>
+	</Improvement_ValidBuildUnits>
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" YieldType="YIELD_FAITH" YieldChange="1"/>
+	</Improvement_YieldChanges>
+	<Improvement_Tourism>
+		<Row ImprovementType="IMPROVEMENT_ROCK_HEWN_CHURCH" TourismSource="TOURISMSOURCE_FAITH" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
+	</Improvement_Tourism>
+	<Adjacency_YieldChanges>
+		<Row ID="Hills_Faith1" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentTerrain="TERRAIN_GRASS_HILLS"/>
+		<Row ID="Hills_Faith2" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentTerrain="TERRAIN_PLAINS_HILLS"/>
+		<Row ID="Hills_Faith3" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentTerrain="TERRAIN_DESERT_HILLS"/>
+		<Row ID="Hills_Faith4" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentTerrain="TERRAIN_TUNDRA_HILLS"/>
+		<Row ID="Hills_Faith5" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentTerrain="TERRAIN_SNOW_HILLS"/>
+	</Adjacency_YieldChanges>
+</GameInfo>

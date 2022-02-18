@@ -203,7 +203,7 @@
     </Replace>
     <Replace Tag="LOC_CIVILIZATION_MAYA_ADJECTIVE" Language="fr_FR">
       <Text>maya|maya|mayas|mayas</Text>
-      <Gender>masculine:vowel|feminine:vowel|masculine:vowel|feminine:vowel</Gender>
+      <Gender>masculine|feminine|masculine|feminine</Gender>
       <Plurality>1|1|2|2</Plurality>
     </Replace>
     <Replace Tag="LOC_LEADER_SIMON_BOLIVAR_NAME" Language="fr_FR">
@@ -379,10 +379,10 @@
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_GAMEMODE_APOCALYPSE_NAME" Language="de_DE">
-      <Text>Apokalypsen-Modus</Text>
+      <Text>Apokalypse-Modus</Text>
     </Replace>
     <Replace Tag="LOC_GAMEMODE_APOCALYPSE_DESCRIPTION" Language="de_DE">
-      <Text>Dieser Spielmodus fügt neue Naturkatastrophen sowie größere und verheerendere Versionen vorhandener Katastrophen hinzu und erhöht die Wahrscheinlichkeit für alle Naturkatastrophen. Der Apokalypsen-Modus fügt dem Spiel zudem die Seher-Einheit hinzu. Sollte die letzte Stufe des Klimawandels erreicht werden, prasseln Kometen auf die Erde und vernichten die Menschheit.</Text>
+      <Text>Dieser Spielmodus fügt neue Naturkatastrophen sowie größere und verheerendere Versionen vorhandener Katastrophen hinzu und erhöht die Wahrscheinlichkeit für alle Naturkatastrophen. Der Apokalypse-Modus fügt dem Spiel zudem die Seher-Einheit hinzu. Sollte die letzte Stufe des Klimawandels erreicht werden, prasseln Kometen auf die Erde und vernichten die Menschheit.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_EJERCITO_PATRIOTA_NAME" Language="de_DE">
       <Text>Ejército Patriota</Text>
@@ -454,7 +454,7 @@
       <Text>Spezialeinheit des Stadtstaats Lahore mit einzigartigem Beförderungsbaum. Kauf mit [ICON_Faith] Glauben möglich. [ICON_Strength] Kampfstärke steigt, wenn die Gebäude Kaserne, Waffenkammer und Militärakademie zum ersten Mal gebaut werden.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_SOOTHSAYER_DESCRIPTION" Language="de_DE">
-      <Text>Eine Unterstützungseinheit, die es nur im Apokalypsen-Modus gibt. Kann mit der Aktion 'Katastrophe auslösen' eine zufällige Katastrophe auf Geländefeldern in der Nähe der Einheit verursachen. Dabei wird der Seher zerstört, wenn er keine weiteren Ladungen besitzt.</Text>
+      <Text>Eine Unterstützungseinheit, die es nur im Apokalypse-Modus gibt. Kann mit der Aktion 'Katastrophe auslösen' eine zufällige Katastrophe auf Geländefeldern in der Nähe der Einheit verursachen. Dabei wird der Seher zerstört, wenn er keine weiteren Ladungen besitzt.</Text>
     </Replace>
     <Replace Tag="LOC_CLIMATE_FOREST_FIRE" Language="de_DE">
       <Text>Waldbrände</Text>
@@ -577,7 +577,7 @@
       <Text>Guadagni un Comandante General quando la partita entra in una nuova epoca.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COMANDANTE_GENERAL_DESCRIPTION" Language="it_IT">
-      <Text>Un Grande Personaggio speciale, esclusivo di Simón Bolívar. Ogni General ha abilità distinte, tra cui un effetto passivo e uno che scatta al momento del ritiro dal gioco.</Text>
+      <Text>Un tipo di Grande Personaggio speciale, esclusivo di Simón Bolívar, ciascuno con abilità distinte, tra cui un effetto passivo e uno che scatta al momento del ritiro dal gioco.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COLOMBIAN_LLANERO_DESCRIPTION" Language="it_IT">
       <Text>Unità di epoca industriale esclusiva della Grande Colombia che sostituisce la Cavalleria. Costi di mantenimento bassi. +4 alla [ICON_Strength] Forza di combattimento per ogni Llanero adiacente. Si cura completamente quando è nel raggio d'azione di un Comandante General che attiva la sua abilità al momento del ritiro.</Text>
@@ -628,7 +628,7 @@
       <Text>+{1_num} [ICON_Science] Scienza {1_Num : plural 1?dalla casella adiacente che contiene; other?dalle caselle adiacenti che contengono;} una Piantagione.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_FARM_SCIENCE" Language="it_IT">
-      <Text>+{1_num} [ICON_Science] Scienza {1_Num : plural 1?dalla casella adiacente che contiene; other?dalle casella adiacenti che contengono;} una Fattoria.</Text>
+      <Text>+{1_num} [ICON_Science] Scienza {1_Num : plural 1?dalla casella adiacente che contiene; other?dalle caselle adiacenti che contengono;} una Fattoria.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MUTAL_NEAR_CAPITAL_COMBAT_DESCRIPTION" Language="it_IT">
       <Text>+{1_Amount} alla Forza di combattimento dal tratto caratteristico Mutal</Text>
@@ -869,7 +869,7 @@
       <Text>담수와 해안 근처에 정착해도 추가 [ICON_HOUSING] 주거공간을 제공하지 않습니다. 대신에 각 농장이 추가로 [ICON_HOUSING] 주거공간 +1과 [ICON_GOLD] 금 +1을 제공합니다. 도심부에 인접한 사치 자원마다 [ICON_AMENITIES] 쾌적도 +1을 얻습니다.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_OBSERVATORY_DESCRIPTION" Language="ko_KR">
-      <Text>과학 활동을 위한 마야 특유의 특수지구입니다. 캠퍼스 특수지구를 대체하고 건설 비용이 더 낮습니다.[NEWLINE][NEWLINE]인근에 재배지가 있으면 [ICON_Science] 과학 보너스 +2를 얻습니다. 인접한 농장 또는 특수지구 타일 2개마다 [ICON_Science] 과학 보너스 +1을 제공합니다.</Text>
+      <Text>과학 활동을 위한 마야 특유의 특수지구입니다. 캠퍼스 특수지구를 대체하고 건설 비용이 더 낮습니다.[NEWLINE][NEWLINE]인접한 재배지에서 [ICON_Science] 과학 보너스 +2를 얻습니다. 인접한 농장 또는 특수지구 타일 2개마다 [ICON_Science] 과학 보너스 +1을 얻습니다.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_OBSERVATORY_DESCRIPTION_ADJACENCY" Language="ko_KR">
       <Text>인접: 인접한 각 재배지로부터 많은 [ICON_Science] 과학 보너스를 얻습니다. 인접한 농장 또는 특수지구 타일로부터 약간의 [ICON_Science] 과학 보너스를 얻습니다.</Text>
@@ -974,7 +974,7 @@
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_LEADER_LADY_SIX_SKY_NAME" Language="pl_PL">
-      <Text>Panie Szóste Niebo|Pani Szóste Niebo|Pani Szóste Niebo|Panią Szóste Niebo|Panią Szóste Niebo|Pani Szóste Niebo</Text>
+      <Text>Pani Szóste Niebo|Pani Szóste Niebo|Pani Szóste Niebo|Panią Szóste Niebo|Panią Szóste Niebo|Pani Szóste Niebo</Text>
       <Gender>feminine</Gender>
       <Plurality>1</Plurality>
     </Replace>

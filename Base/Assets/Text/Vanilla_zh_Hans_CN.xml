@@ -13299,7 +13299,7 @@
 			</Text>
     </Replace>
     <Replace Tag="LOC_FRONTIER_CREDITS_NAME" Language="zh_Hans_CN">
-      <Text>新纪元季票制作名单</Text>
+      <Text>新纪元季票</Text>
     </Replace>
     <Replace Tag="LOC_FRONTIER_CREDITS" Language="zh_Hans_CN">
       <Text>
@@ -13308,7 +13308,7 @@
 [1]Firaxis Games
 
 [1]Sid Meier’s Civilization VI
-[2]Frontier Pass
+[2]新纪元季票
 
 
 [2]TEAM LEADERSHIP
@@ -13320,10 +13320,10 @@
 [4]Ken Grey
 
 [3]Art Director
-[4]Jason Johnson
-
-[3]Art Manager
 [4]Kat Berkley
+
+[3]Additional Art Direction
+[4]Jason Johnson
 
 [3]Senior Producer
 [4]Dennis Shirk
@@ -13366,6 +13366,7 @@
 
 [3]Associate Producer
 [4]Kevin Schultz
+[4]Rony Kahana
 
 [3]Writers
 [4]Peter Murray
@@ -13424,10 +13425,10 @@
 [2]ART TEAM
 
 [3]Art Director
-[4]Jason Johnson
-
-[3]Associate Art Director
 [4]Kat Berkley
+
+[3]Additional Art Direction
+[4]Jason Johnson
 
 [3]Lead Interface Designer
 [4]Rob Sugama
@@ -26055,6 +26056,9 @@
     <Replace Tag="LOC_DIPLOMACY_DRAG_BUTTON_TOOLTIP" Language="zh_Hans_CN">
       <Text>拖拽来调整大小。</Text>
     </Replace>
+    <Replace Tag="LOC_DIPLOMACY_DRAG_BUTTON_CLICK_TOOLTIP" Language="zh_Hans_CN">
+      <Text>点击调整大小</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLOMACY_MAKE_DEAL_EQUITABLE" Language="zh_Hans_CN">
       <Text>让这一交易更公平。</Text>
     </Replace>
@@ -29376,7 +29380,7 @@
       <Text>保存配置</Text>
     </Replace>
     <Replace Tag="LOC_SAVE_OBSERVER_MODE_TT" Language="zh_Hans_CN">
-      <Text>在观察者模式中无法进行保存。</Text>
+      <Text>在观看者模式中无法进行保存。</Text>
     </Replace>
     <Replace Tag="LOC_SAVE_AT_MAXIMUM_CLOUD_SAVES_TOOLTIP" Language="zh_Hans_CN">
       <Text>您的云存储已达最大数量。需要覆盖或删除一个保存文档。</Text>
@@ -29967,7 +29971,7 @@
       <Text>真人玩家加入开放的位置后方可开始游戏。</Text>
     </Replace>
     <Replace Tag="LOC_SLOTTYPE_OBSERVER" Language="zh_Hans_CN">
-      <Text>观察者</Text>
+      <Text>观看者</Text>
     </Replace>
     <Replace Tag="LOC_SLOTTYPE_OBSERVER_TT" Language="zh_Hans_CN">
       <Text>旁观游戏，不直接参与。</Text>
@@ -29985,10 +29989,10 @@
       <Text>打开</Text>
     </Replace>
     <Replace Tag="LOC_SLOTLABEL_OBSERVER" Language="zh_Hans_CN">
-      <Text>观察者</Text>
+      <Text>观看者</Text>
     </Replace>
     <Replace Tag="LOC_SLOTLABEL_OBSERVER_HOST" Language="zh_Hans_CN">
-      <Text>[ICON_Host] 观察者</Text>
+      <Text>[ICON_Host] 观看者</Text>
     </Replace>
     <Replace Tag="LOC_SLOTTYPE_AI" Language="zh_Hans_CN">
       <Text>AI</Text>
@@ -32672,13 +32676,13 @@
       <Text>否</Text>
     </Replace>
     <Replace Tag="LOC_END_GAME_MENU_OBSERVE" Language="zh_Hans_CN">
-      <Text>观察</Text>
+      <Text>观看</Text>
     </Replace>
     <Replace Tag="LOC_ACTION_PANEL_OBSERVING" Language="zh_Hans_CN">
-      <Text>正在观察</Text>
+      <Text>正在观看</Text>
     </Replace>
     <Replace Tag="LOC_ACTION_PANEL_END_OBSERVER_MODE" Language="zh_Hans_CN">
-      <Text>结束观察者模式</Text>
+      <Text>结束观看模式</Text>
     </Replace>
     <Replace Tag="LOC_GAME_SETTINGS_TITLE" Language="zh_Hans_CN">
       <Text>游戏设置</Text>
@@ -35799,6 +35803,9 @@
     </Replace>
     <Replace Tag="LOC_CLICK_TO_DRAG" Language="zh_Hans_CN">
       <Text>点击并长按进行拖拽</Text>
+    </Replace>
+    <Replace Tag="LOC_CLICK_TO_RESIZE" Language="zh_Hans_CN">
+      <Text>点击调整大小</Text>
     </Replace>
     <Replace Tag="LOC_COLLAPSE_AND_RESET" Language="zh_Hans_CN">
       <Text>重叠并重置聊天面板</Text>
@@ -39729,6 +39736,15 @@
     </Replace>
     <Replace Tag="LOC_BUILDING_BROADWAY_QUOTE" Language="zh_Hans_CN">
       <Text>轻歌曼舞好营生，娱乐业至上。[NEWLINE]——欧文·柏林《飞燕金枪》</Text>
+    </Replace>
+    <Replace Tag="LOC_RELIC_TRIBAL_VILLAGE" Language="zh_Hans_CN">
+      <Text>部落村庄</Text>
+    </Replace>
+    <Replace Tag="LOC_RELIC_GOVERNOR" Language="zh_Hans_CN">
+      <Text>总督</Text>
+    </Replace>
+    <Replace Tag="LOC_RELIC_CITY_STATE" Language="zh_Hans_CN">
+      <Text>宗主国</Text>
     </Replace>
     <Replace Tag="LOC_BELIEF_DANCE_OF_THE_AURORA_DESCRIPTION" Language="zh_Hans_CN">
       <Text>圣地区域从相邻冻土单元格+1 [ICON_Faith] 信仰值 。</Text>
@@ -45404,7 +45420,7 @@
       <Text>人口：{1_number}</Text>
     </Replace>
     <Replace Tag="LOC_DEAL_ITEM_TRANSFERRED_WITH_CITY_TOOLTIP" Language="zh_Hans_CN">
-      <Text>和{1_CityName}进行转让</Text>
+      <Text>随{1_CityName}转移</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_DEFAULT_NOTIFICATION_SUMMARY_INITIAL" Language="zh_Hans_CN">
       <Text>{1_name}给您发送了一条信息。</Text>
@@ -48039,6 +48055,9 @@
     </Replace>
     <Replace Tag="LOC_PLAYER_YIELD_GOLD_FROM_TRIBUTARIES" Language="zh_Hans_CN">
       <Text>{Value : number +#.#;-#.#}来自您是领主的城邦</Text>
+    </Replace>
+    <Replace Tag="LOC_PLAYER_YIELD_GOLD_FROM_INTEREST" Language="zh_Hans_CN">
+      <Text>国库利息提供{Value : number +#.#;-#.#}（上限为1000点）</Text>
     </Replace>
     <Replace Tag="LOC_PLAYER_YIELD_GOLD_FROM_OTHER" Language="zh_Hans_CN">
       <Text>{Value : number +#.#;-#.#}来自其他</Text>

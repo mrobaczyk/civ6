@@ -316,6 +316,7 @@ function RealizeNukes()
 	local pPlayerWMDs	:table = pPlayer:GetWMDs();
 	local numNuclear	:number = 0;
 	local numThermo		:number = 0;
+	local numHailMary	:number = 0;
 
 	-- Step 1 total
 	for pEntry in GameInfo.WMDs() do
@@ -327,6 +328,10 @@ function RealizeNukes()
 		elseif (pEntry.WeaponType == "WMD_THERMONUCLEAR_DEVICE") then
 			if (count > 0) then
 				numThermo = numThermo + count;
+			end
+		elseif (pEntry.WeaponType == "WMD_HAIL_MARY") then
+			if (count > 0) then
+				numHailMary = numHailMary + count;
 			end
 		end
 	end
@@ -353,6 +358,17 @@ function RealizeNukes()
 			Controls.ThermoNuclearDevices:SetHide( true );
 		end
 	end
+
+	if numHailMary > 0 then		
+		Controls.HailMaryDeviceCount:SetText(numHailMary);
+		if Controls.HailMaryDevices:IsHidden() then
+			Controls.HailMaryDevices:SetHide( false );
+		end
+	else
+		if Controls.HailMaryDevices:IsVisible() then
+			Controls.HailMaryDevices:SetHide( true );
+		end
+	end
 end
 
 
@@ -371,7 +387,7 @@ end
 function Spark()
 	local uiEndGameMenu :object = ContextPtr:LookUpControl( "/InGame/EndGame/EndGameMenu" );
 	if(uiEndGameMenu ~= nil and not uiEndGameMenu:IsHidden())then return; end
-	UIManager:PlayEffectOneTime(Controls.RingStackAndTurns, "FireFX_CounterSpark");
+	EffectsManager:PlayEffectOneTime(Controls.RingStackAndTurns, "FireFX_CounterSpark");
 end
 
 -- ===========================================================================
@@ -413,7 +429,6 @@ function LateInitialize()
 	Events.SystemUpdateUI.Add(			OnUpdateUI );
 	Events.TurnBegin.Add(				OnTurnBegin );
 	Events.UnitMoveComplete.Add(		OnUnitMoveComplete );
-	Events.VisualStateRestored.Add(		OnLocalPlayerTurnBegin );
 	Events.WMDCountChanged.Add(			OnWMDUpdate );
 	
 	if(GameConfiguration.IsHotseat())then
@@ -421,6 +436,7 @@ function LateInitialize()
 	else
 		Events.LocalPlayerTurnBegin.Add(	OnLocalPlayerTurnBegin );
 		Events.LoadGameViewStateDone.Add(	OnLoadGameViewStateDone );
+		Events.VisualStateRestored.Add(		OnLocalPlayerTurnBegin );
 	end	
 
 	LuaEvents.ActionPanel_ObserverModeTurnBegin.Add(OnObserverModeTurnBegin);

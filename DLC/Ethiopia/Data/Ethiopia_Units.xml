@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_ETHIOPIAN_OROMO_CAVALRY" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_ETHIOPIAN_OROMO_CAVALRY" Kind="KIND_ABILITY"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_ETHIOPIAN_OROMO_CAVALRY" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<TypeTags>
+		<Row Type="UNIT_ETHIOPIAN_OROMO_CAVALRY" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="UNIT_ETHIOPIAN_OROMO_CAVALRY" Tag="CLASS_ETHIOPIAN_OROMO_CAVALRY"/>
+		<Row Type="ABILITY_ETHIOPIAN_OROMO_CAVALRY" Tag="CLASS_ETHIOPIAN_OROMO_CAVALRY"/>
+	</TypeTags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<Units>
+		<Row UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" Cost="200" Maintenance="3" BaseMoves="5" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="46" StrategicResource="RESOURCE_HORSES" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_LIGHT_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_ETHIOPIAN_OROMO_CAVALRY_NAME" Description="LOC_UNIT_ETHIOPIAN_OROMO_CAVALRY_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_SYNTHETIC_MATERIALS" PrereqTech="TECH_CASTLES" TraitType="TRAIT_CIVILIZATION_UNIT_ETHIOPIAN_OROMO_CAVALRY"/>
+	</Units>
+	<UnitUpgrades>
+		<Row Unit="UNIT_ETHIOPIAN_OROMO_CAVALRY" UpgradeUnit="UNIT_CAVALRY"/>
+	</UnitUpgrades>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_ETHIOPIAN_OROMO_CAVALRY" Name="LOC_ABILITY_ETHIOPIAN_OROMO_CAVALRY_NAME" Description="LOC_ABILITY_ETHIOPIAN_OROMO_CAVALRY_DESCRIPTION"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_ETHIOPIAN_OROMO_CAVALRY</UnitAbilityType>
+			<ModifierId>ETHIOPIAN_OROMO_CAVALRY_IGNORE_HILLS_MOVEMENT_PENALTY</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>ETHIOPIAN_OROMO_CAVALRY_IGNORE_HILLS_MOVEMENT_PENALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_IGNORE_TERRAIN_COST</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>ETHIOPIAN_OROMO_CAVALRY_IGNORE_HILLS_MOVEMENT_PENALTY</ModifierId>
+			<Name>Ignore</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETHIOPIAN_OROMO_CAVALRY_IGNORE_HILLS_MOVEMENT_PENALTY</ModifierId>
+			<Name>Type</Name>
+			<Value>HILLS</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

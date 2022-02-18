@@ -20,19 +20,19 @@ include("CivRoyaleScenario_GameStateUtils");
 function OnScenarioCommand_UnitShield(eOwner : number, iUnitID : number)
 	local pPlayer = Players[eOwner];
 	if (pPlayer == nil) then
-		return;
+		return false;
 	end
 
 	local pUnit = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
-		return;
+		return false;
 	end
 
 	-- Ability duration check.  We have to do this because the AI just spams the ability without knowing about the timer status.
 	-- We also do not log this because of the AI spam.
 	local abilityTimerStatus :table = GetUnitAbilityTimerStatus(pUnit, g_unitStateKeys.ShieldTime, MAD_SCIENTIST_SHIELD_DURATION, MAD_SCIENTIST_SHIELD_DEBOUNCE);
 	if(abilityTimerStatus.Status ~= AbilityTimerStatusTypes.Status_Ready) then
-		return;
+		return false;
 	end
 
 	local sLog = "Executing UNIT SHIELD Command for " .. pUnit:GetName();
@@ -55,6 +55,8 @@ function OnScenarioCommand_UnitShield(eOwner : number, iUnitID : number)
 
 	-- Set ShieldTime to current turn.
 	pUnit:SetProperty(g_unitStateKeys.ShieldTime, Game.GetCurrentGameTurn());
+
+	return true;
 end
 
 
@@ -64,19 +66,19 @@ end
 function OnScenarioCommand_RoadVision(eOwner : number, iUnitID : number)
 	local pPlayer = Players[eOwner];
 	if (pPlayer == nil) then
-		return;
+		return false;
 	end
 
 	local pUnit = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
-		return;
+		return false;
 	end
 
 	-- Ability duration check.  We have to do this because the AI just spams the ability without knowing about the timer status.
 	-- We also do not log this because of the AI spam.
 	local abilityTimerStatus = GetPlayerAbilityTimerStatus(pUnit:GetOwner(), g_playerPropertyKeys.RoadVisionTurn, WANDERER_ROAD_VISION_DURATION, WANDERER_ROAD_VISION_DEBOUNCE);
 	if(abilityTimerStatus.Status ~= AbilityTimerStatusTypes.Status_Ready) then
-		return;
+		return false;
 	end
 
 	local sLog = "Executing ROAD VISION Command for " .. pUnit:GetName();
@@ -97,7 +99,7 @@ function OnScenarioCommand_RoadVision(eOwner : number, iUnitID : number)
 	local pCurPlayerVisibility = PlayersVisibility[pPlayer:GetID()];
 	if(pCurPlayerVisibility == nil) then
 		print("ERROR: Missing pCurPlayerVisibility!");
-		return;
+		return false;
 	end
 
 	local plotRoadActiveKey :string = GetPlayerSpecificPropKey(g_plotPlayerSpecificKeys.RoadVisionActive, eOwner);
@@ -111,6 +113,8 @@ function OnScenarioCommand_RoadVision(eOwner : number, iUnitID : number)
 
 	pPlayer:SetProperty(g_playerPropertyKeys.RoadVisionTurn, Game.GetCurrentGameTurn());
 	pPlayer:SetProperty(g_playerPropertyKeys.RoadVisionActive, 1);
+
+	return true;
 end
 
 
@@ -121,18 +125,18 @@ function OnScenarioCommand_PlaceTrap(eOwner : number, iUnitID : number)
 	local pPlayer :object = Players[eOwner];
 	if (pPlayer == nil) then
 		print("ERROR: Missing player object");
-		return;
+		return false;
 	end
 
 	local pUnit = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
 		print("ERROR: Missing unit object");
-		return;
+		return false;
 	end
 	
 	local trapCountProp :number = pPlayer:GetProperty(g_playerPropertyKeys.ImprovisedTrapCount);
 	if(trapCountProp == nil or trapCountProp <= 0) then
-		return;
+		return false;
 	end
 
 	local sLog = "Executing PLACE TRAP Command for " .. pUnit:GetName();
@@ -141,13 +145,13 @@ function OnScenarioCommand_PlaceTrap(eOwner : number, iUnitID : number)
 	local pUnitPlot = Map.GetPlot(pUnit:GetX(), pUnit:GetY());
 	if(pUnitPlot == nil) then
 		print("ERROR: Missing unit plot object");
-		return;
+		return false;
 	end		
 
 	local trapImproData = GameInfo.Improvements[PREPPER_TRAP_IMPROVEMENT];
 	if(trapImproData == nil) then
 		print("ERROR: Missing improvement data for trap " .. tostring(PREPPER_TRAP_IMPROVEMENT));
-		return;
+		return false;
 	end		
 
 	if(not ImprovementBuilder.CanHaveImprovement(pUnitPlot, trapImproData.Index, pPlayer:GetTeam())) then
@@ -162,7 +166,7 @@ function OnScenarioCommand_PlaceTrap(eOwner : number, iUnitID : number)
 		}
 
 		Game.AddWorldViewText(messageData);
-		return;
+		return false;
 	end
 
 	-- Able to Place Trap Here
@@ -173,6 +177,8 @@ function OnScenarioCommand_PlaceTrap(eOwner : number, iUnitID : number)
 	-- Reduce trap count.
 	local newtrapCount :number = trapCountProp ~= nil and (trapCountProp - 1) or 0;
 	pPlayer:SetProperty(g_playerPropertyKeys.ImprovisedTrapCount, newtrapCount);
+
+	return true;
 end
 
 
@@ -183,19 +189,19 @@ function OnScenarioCommand_GrievingGift(eOwner :number, iUnitID :number, paramet
 	local pPlayer = Players[eOwner];
 	if (pPlayer == nil) then
 		print("ERROR: Missing player object");
-		return;
+		return false;
 	end
 
 	local pUnit = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
 		print("ERROR: Missing unit object");
-		return;
+		return false;
 	end
 	
 	-- Check to see if the player has a Grieving Gift to deploy.
 	local giftCountProp :number = pPlayer:GetProperty(g_playerPropertyKeys.GrievingGiftCount);
 	if(giftCountProp == nil or giftCountProp <= 0) then
-		return;
+		return false;
 	end
 
 	local sLog = "Executing GRIEVING GIFT Command for " .. pUnit:GetName();
@@ -207,24 +213,24 @@ function OnScenarioCommand_GrievingGift(eOwner :number, iUnitID :number, paramet
 	local pUnitPlot = Map.GetPlot(pUnit:GetX(), pUnit:GetY());
 	if(pUnitPlot == nil) then
 		print("ERROR: Missing unit plot object");
-		return;
+		return false;
 	end		
 
 	local trapImproData = GameInfo.Improvements[EDGELORDS_GRIEVING_GIFT_IMPROVEMENT];
 	if(trapImproData == nil) then
 		print("ERROR: Missing improvement data for grieving gift " .. tostring(PREPPER_TRAP_IMPROVEMENT));
-		return;
+		return false;
 	end		
 
 	if(parameters[UnitCommandTypes.PARAM_X] == nil or parameters[UnitCommandTypes.PARAM_Y] == nil) then
 		print("ERROR: Missing target plot x/y");
-		return;
+		return false;
 	end
 
 	local targetPlot = Map.GetPlot(parameters[UnitCommandTypes.PARAM_X], parameters[UnitCommandTypes.PARAM_Y]);
 	if(targetPlot == nil) then
 		print("ERROR: Missing target plot");
-		return;
+		return false;
 	end
 
 	if(not ImprovementBuilder.CanHaveImprovement(targetPlot, trapImproData.Index, pPlayer:GetTeam())) then
@@ -232,12 +238,13 @@ function OnScenarioCommand_GrievingGift(eOwner :number, iUnitID :number, paramet
 		local messageData : table = {
 			MessageType = 0;
 			MessageText = message;
-			PlotX = pUnit:GetX();
-			PlotY = pUnit:GetY();
+			PlotX = targetPlot:GetX();
+			PlotY = targetPlot:GetY();
 			Visibility = RevealedState.VISIBLE;
+			TargetID = pUnit:GetOwner();
 		}
 		Game.AddWorldViewText(messageData);
-		return;
+		return false;
 	end
 
 	-- Set DeferredGiftOwner on target plot so it will appear during the next turn.
@@ -251,6 +258,8 @@ function OnScenarioCommand_GrievingGift(eOwner :number, iUnitID :number, paramet
 	if(giftCountProp == nil or giftCountProp == EDGELORDS_GRIEVING_GIFT_MAX_COUNT) then
 		pPlayer:SetProperty(g_playerPropertyKeys.GrievingGiftTurn, Game.GetCurrentGameTurn());
 	end
+
+	return true;
 end
 
 
@@ -260,12 +269,12 @@ end
 function OnScenarioCommand_UnitCloak(eOwner : number, iUnitID : number)
 	local pPlayer = Players[eOwner];
 	if (pPlayer == nil) then
-		return;
+		return false;
 	end
 
 	local pUnit = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
-		return;
+		return false;
 	end
 
 	local abilityTimerStatus :table = GetUnitAbilityTimerStatus(pUnit, g_unitStateKeys.CloakTime, ALIEN_CLOAK_DURATION, ALIEN_CLOAK_DEBOUNCE);
@@ -281,6 +290,8 @@ function OnScenarioCommand_UnitCloak(eOwner : number, iUnitID : number)
 
 	-- Set ShieldTime to current turn.
 	pUnit:SetProperty(g_unitStateKeys.CloakTime, Game.GetCurrentGameTurn());
+
+	return true;
 end
 
 
@@ -290,17 +301,17 @@ end
 function OnScenarioCommand_BurnTreasureMap(eOwner : number, iUnitID : number)
 	local pPlayer :object = Players[eOwner];
 	if (pPlayer == nil) then
-		return;
+		return false;
 	end
 
 	local pUnit = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
-		return;
+		return false;
 	end
 
 	local abilityTimerStatus = GetPlayerAbilityTimerStatus(pUnit:GetOwner(), g_playerPropertyKeys.BurnTreasureTurn, 0, PIRATES_BURN_TREASURE_MAP_DEBOUNCE);
 	if(abilityTimerStatus.Status ~= AbilityTimerStatusTypes.Status_Ready) then
-		return;
+		return false;
 	end
 
 	local sLog : string = "Executing BURN TREASURE MAP Command for " .. pUnit:GetName();
@@ -320,6 +331,8 @@ function OnScenarioCommand_BurnTreasureMap(eOwner : number, iUnitID : number)
 	SelectNewPirateTreasureLocation(eOwner);
 
 	pPlayer:SetProperty(g_playerPropertyKeys.BurnTreasureTurn, Game.GetCurrentGameTurn());
+
+	return true;
 end
 
 
@@ -329,12 +342,12 @@ end
 function OnScenarioCommand_UnitSacrifice(eOwner : number, iUnitID : number)
 	local pPlayer :object = Players[eOwner];
 	if (pPlayer == nil) then
-		return;
+		return false;
 	end
 
 	local pUnit :object = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
-		return;
+		return false;
 	end
 
 	local sLog :string = "Executing UNIT SACRIFICE Command for " .. pUnit:GetName();
@@ -343,7 +356,7 @@ function OnScenarioCommand_UnitSacrifice(eOwner : number, iUnitID : number)
 	local pSacrificeTarget :object = GetSacrificeTarget(pUnit);
 	if(pSacrificeTarget == nil) then
 		print("No Sacrifice target.  Aborting...");
-		return;
+		return false;
 	end
 
 	-- Flyover text
@@ -375,6 +388,7 @@ function OnScenarioCommand_UnitSacrifice(eOwner : number, iUnitID : number)
 	pPlayerUnits:Destroy(pUnit);
 
 	-- Next step is in OnPostUnitPromotionEarned after the user selects a promotion.
+	return true;
 end
 
 
@@ -384,12 +398,12 @@ end
 function OnScenarioCommand_UnitRadSpread(eOwner : number, iUnitID : number)
 	local pPlayer :object = Players[eOwner];
 	if (pPlayer == nil) then
-		return;
+		return false;
 	end
 
 	local pUnit :object = pPlayer:GetUnits():FindID(iUnitID);
 	if (pUnit == nil) then
-		return;
+		return false;
 	end
 
 	local sLog :string = "Executing UNIT RAD TOGGLE Command for " .. pUnit:GetName();
@@ -401,6 +415,8 @@ function OnScenarioCommand_UnitRadSpread(eOwner : number, iUnitID : number)
 		newRadSpread = 1;
 	end
 	pUnit:SetProperty(g_unitStateKeys.RadiationSpread, newRadSpread);
+
+	return true;
 end
 
 

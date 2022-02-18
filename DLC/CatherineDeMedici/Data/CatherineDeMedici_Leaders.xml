@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="LEADER_CATHERINE_DE_MEDICI_ALT" Kind="KIND_LEADER"/>
+		<Row Type="TRAIT_LEADER_MAGNIFICENCES" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_MAGNIFICENCES" Kind="KIND_TRAIT"/>
+	</Types>
+	<Leaders>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" Name="LOC_LEADER_CATHERINE_DE_MEDICI_ALT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Update>
+			<Where LeaderType="LEADER_CATHERINE_DE_MEDICI"/>
+			<Set>
+				<Name>LOC_LEADER_CATHERINE_DE_MEDICI_EXPANDED_NAME</Name>
+			</Set>
+		</Update>
+	</Leaders>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_FRANCE" LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" CapitalName="LOC_CITY_NAME_PARIS"/>
+	</CivilizationLeaders>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI" OtherLeaderType="LEADER_CATHERINE_DE_MEDICI_ALT"/>
+	</DuplicateLeaders>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" TraitType="TRAIT_LEADER_MAGNIFICENCES"/>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+	</LeaderTraits>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_ALT_QUOTE" QuoteAudio="Play_FRAN_CA_VICTORY_CULTURE_B"/>
+	</LeaderQuotes>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_MAGNIFICENCES" Name="LOC_TRAIT_LEADER_MAGNIFICENCES_NAME" Description="LOC_TRAIT_LEADER_MAGNIFICENCES_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_MAGNIFICENCES"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_MAGNIFICENCES" ModifierId="MAGNIFICENCES_ALLOW_PROJECT"/>
+		<Row TraitType="TRAIT_LEADER_MAGNIFICENCES" ModifierId="MAGNIFICENCES_CULTURE_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU"/>
+	</TraitModifiers>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" ReligionType="RELIGION_CATHOLICISM"/>
+	</FavoredReligions>
+	<!-- Agenda and AI information -->
+	<Agendas>
+		<Row AgendaType="AGENDA_MAGNIFICENCES" Name="LOC_TRAIT_AGENDA_MAGNIFICENCES_NAME" Description="LOC_TRAIT_AGENDA_MAGNIFICENCES_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_MAGNIFICENCES" TraitType="TRAIT_AGENDA_MAGNIFICENCES"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" AgendaType="AGENDA_MAGNIFICENCES"/>
+	</HistoricalAgendas>
+	<AiListTypes>
+		<Row ListType="CatherineAltLuxuries"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="CatherineAltLuxuries" AgendaType="TRAIT_AGENDA_MAGNIFICENCES" System="PseudoYields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<!-- This might prove a little high, but it's unused at this time, so will start by making it a bit extreme -->
+		<Row ListType="CatherineAltLuxuries" Item="PSEUDOYIELD_RESOURCE_LUXURY" Value="100"/>
+	</AiFavoredItems>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_AGENDA_MAGNIFICENCES" ModifierId="AGENDA_MAGNIFICENCES"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>MAGNIFICENCES_ALLOW_PROJECT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ALLOW_PROJECT_CATHERINE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MAGNIFICENCES_CULTURE_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAGNIFICENCES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_MAGNIFICENCES</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_10_TURNS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>MAGNIFICENCES_ALLOW_PROJECT</ModifierId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_COURT_FESTIVAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAGNIFICENCES_CULTURE_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAGNIFICENCES_CULTURE_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU </ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAGNIFICENCES</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_PLACEHOLDER</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_MAGNIFICENCES" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_THEATER_SQUARE_OR_CHATEAU</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_CHATEAU</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_IMPROVEMENT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_THEATER_SQUARE</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_DISTRICT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_IMPROVED_LUXURY</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_IMPROVED_RESOURCE_CLASS_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_THEATER_SQUARE_OR_CHATEAU_REQUIREMENTS_MET</RequirementId>
+			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_CHATEAU</RequirementId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_CHATEAU</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_THEATER_SQUARE</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_THEATER</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_IMPROVED_LUXURY</RequirementId>
+			<Name>ResourceClassType</Name>
+			<Value>RESOURCECLASS_LUXURY</Value>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_THEATER_SQUARE_OR_CHATEAU_REQUIREMENTS_MET</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>REQUIREMENTS_PLOT_ADJACENT_THEATER_SQUARE_OR_CHATEAU</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_THEATER_SQUARE_OR_CHATEAU</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_THEATER_SQUARE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_THEATER_SQUARE_OR_CHATEAU</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_CHATEAU</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLOT_ADJACENT_THEATER_SQUARE_OR_CHATEAU_REQUIREMENTS_MET</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_LUXURY_ADJACENT_TO_THEATER_SQUARE_OR_CHATEAU_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_IMPROVED_LUXURY</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<CivilopediaPageChapterParagraphs>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_10" SortIndex="10"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CATHERINE_DE_MEDICI_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CATHERINE_DE_MEDICI_CHAPTER_HISTORY_PARA_10" SortIndex="10"/>
+	</CivilopediaPageChapterParagraphs>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI_ALT" ForegroundImage="LEADER_CATHERINE_DE_MEDICI_ALT_NEUTRAL" BackgroundImage="LEADER_CATHERINE_DE_MEDICI_ALT_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_CATHERINE_DE_MEDICI" DawnOfManLeaderId="LEADER_CATHERINE_DE_MEDICI"/>
+	</LoadingInfo>
+</GameInfo>

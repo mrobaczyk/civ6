@@ -45,6 +45,7 @@ function AssignStartingPlots.Create(args)
 		__FindSpecificStrategic				= AssignStartingPlots.__FindSpecificStrategic,
 		__AddStrategic						= AssignStartingPlots.__AddStrategic,
 		__AddLuxury							= AssignStartingPlots.__AddLuxury,
+		__AddLeyLine						= AssignStartingPlots.__AddLeyLine,
 		__AddBonus							= AssignStartingPlots.__AddBonus,
 		__IsContinentalDivide				= AssignStartingPlots.__IsContinentalDivide,
 		__RemoveBonus						= AssignStartingPlots.__RemoveBonus,
@@ -201,6 +202,7 @@ function AssignStartingPlots:__InitStartingData()
 			for k, v in pairs(self.playerStarts[i]) do
 				if(v~= nil and hasPlot == false) then
 					hasPlot = true;
+					self:__AddLeyLine(v); 
 					player:SetStartingPlot(v);
 					print("Major Start X: ", v:GetX(), "Major Start Y: ", v:GetY());
 				end
@@ -1098,6 +1100,47 @@ function AssignStartingPlots:__AddProduction(plot)
 			dir = dir + 1;
 		end
 	end
+end
+
+
+------------------------------------------------------------------------------
+function AssignStartingPlots:__AddLeyLine(plot)
+	local iResourcesInDB = 0;
+	eResourceType	= {};
+	eResourceClassType = {};
+	aBonus = {};
+
+	for row in GameInfo.Resources() do
+		eResourceType[iResourcesInDB] = row.Hash;
+		eResourceClassType[iResourcesInDB] = row.ResourceClassType;
+	    iResourcesInDB = iResourcesInDB + 1;
+	end
+
+	for row = 0, iResourcesInDB do
+		if (eResourceClassType[row] == "RESOURCECLASS_LEY_LINE") then
+			if(eResourceType[row] ~= nil) then
+				table.insert(aBonus, eResourceType[row]);
+			end
+		end
+	end
+
+	local plotX = plot:GetX();
+	local plotY = plot:GetY();
+	
+	aShuffledBonus =  GetShuffledCopyOfTable(aBonus);
+	for i, resource in ipairs(aShuffledBonus) do
+		for dx = -2, 2, 1 do
+			for dy = -2,2, 1 do
+				local otherPlot = Map.GetPlotXY(plotX, plotY, dx, dy, 2);
+				if(otherPlot) then
+					if(ResourceBuilder.CanHaveResource(otherPlot, resource) and otherPlot:GetIndex() ~= plot:GetIndex()) then
+						ResourceBuilder.SetResourceType(otherPlot, resource, 1);
+						return;
+					end
+				end
+			end
+		end
+	end 
 end
 
 ------------------------------------------------------------------------------
@@ -2319,7 +2362,7 @@ function AssignStartingPlots:__RemoveBonus(plot)
 				local otherPlot = Map.GetPlotXY(plotX, plotY, dx, dy, 3);
 				if(otherPlot) then
 					if(resource  == otherPlot:GetResourceTypeHash()) then
-						ResourceBuilder.SetResourceType(otherPlot, resource, -1);
+						ResourceBuilder.SetResourceType(otherPlot, -1);
 						return;
 					end
 				end

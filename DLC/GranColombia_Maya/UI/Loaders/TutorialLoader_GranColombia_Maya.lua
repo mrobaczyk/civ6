@@ -14,7 +14,8 @@ local CLIMATE_CHANGE_LEVEL_THRESHOLD = 8;
 -- ===========================================================================
 function TutorialLoader:Initialize(TutorialCheck:ifunction)	
 
-	if (GameConfiguration.GetValue("GAMEMODE_APOCALYPSE") == true) then
+	
+	if (GameCapabilities.HasCapability("CAPABILITY_MEGADISASTERS")) then
 		-- Register game core events
 		local iPlayerID : number = Game.GetLocalPlayer();
 		if (iPlayerID < 0) then

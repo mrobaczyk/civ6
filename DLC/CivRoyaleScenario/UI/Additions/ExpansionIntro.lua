@@ -126,5 +126,7 @@ function Initialize()
 	LuaEvents.MainMenu_ShowCivRoyaleIntro.Add(OnShowFromMenu);
 	LuaEvents.InGameTopOptionsMenu_ShowExpansionIntro.Add( OnShowFromMenu );
 	LuaEvents.DiplomacyActionView_HideIngameUI.Add( HideIfVisible );
+
+	Events.UserRequestClose.Add( HideIfVisible );
 end
 Initialize();

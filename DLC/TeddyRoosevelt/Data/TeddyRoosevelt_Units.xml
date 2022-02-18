@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_AMERICAN_ROUGH_RIDER" Kind="KIND_UNIT"/>
+	</Types>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_AMERICAN_ROUGH_RIDER" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_AMERICAN_ROUGH_RIDER" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_AMERICAN_ROUGH_RIDER" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_AMERICAN_ROUGH_RIDER" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_AMERICAN_ROUGH_RIDER" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<TypeTags>
+		<Row Type="UNIT_AMERICAN_ROUGH_RIDER" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="UNIT_AMERICAN_ROUGH_RIDER" Tag="CLASS_ROUGH_RIDER"/>
+	</TypeTags>
+	<Units>
+		<Row UnitType="UNIT_AMERICAN_ROUGH_RIDER" Cost="385" Maintenance="2" BaseMoves="5" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="67" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_AMERICAN_ROUGH_RIDER_NAME" Description="LOC_UNIT_AMERICAN_ROUGH_RIDER_DESCRIPTION" PurchaseYield="YIELD_GOLD" TraitType="TRAIT_LEADER_UNIT_AMERICAN_ROUGH_RIDER" PrereqTech="TECH_RIFLING"/>
+	</Units>
+	<UnitUpgrades>
+		<Row Unit="UNIT_AMERICAN_ROUGH_RIDER" UpgradeUnit="UNIT_MODERN_ARMOR"/>
+	</UnitUpgrades>
+</GameInfo>

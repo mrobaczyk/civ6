@@ -43,6 +43,8 @@
     <Row Type="PSEUDOYIELD_INFLUENCE" Kind="KIND_PSEUDOYIELD"/>
     <Row Type="PSEUDOYIELD_IMPROVEMENT" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_NUCLEAR_WEAPON" Kind="KIND_PSEUDOYIELD"/>
+    <!-- Resource_luxury is the desired to have more than one of a luxury resource, and is primarily used to set a floor for selling them off -->
+    <Row Type="PSEUDOYIELD_RESOURCE_LUXURY" Kind="KIND_PSEUDOYIELD" />
 		<Row Type="PSEUDOYIELD_SPACE_RACE" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_STANDING_ARMY_NUMBER" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_STANDING_ARMY_VALUE" Kind="KIND_PSEUDOYIELD"/>
@@ -103,6 +105,7 @@
 		<Row PseudoYieldType="PSEUDOYIELD_GREATWORK_RELIC" DefaultValue="10.0"/>
 		<Row PseudoYieldType="PSEUDOYIELD_DIPLOMATIC_BONUS" DefaultValue="0.25"/>
 		<Row PseudoYieldType="PSEUDOYIELD_NUCLEAR_WEAPON" DefaultValue="25.0"/>
+		<Row PseudoYieldType="PSEUDOYIELD_RESOURCE_LUXURY" DefaultValue="1.5"/>
 		<Row PseudoYieldType="PSEUDOYIELD_SPACE_RACE" DefaultValue="100.0"/>
 		<Row PseudoYieldType="PSEUDOYIELD_CIVIC" DefaultValue="5"/>
 		<Row PseudoYieldType="PSEUDOYIELD_TECHNOLOGY" DefaultValue="5"/>

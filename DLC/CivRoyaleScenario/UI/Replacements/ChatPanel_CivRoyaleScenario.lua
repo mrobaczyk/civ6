@@ -5,7 +5,8 @@ include( "SupportFunctions"  );		--TruncateString
 include( "PlayerTargetLogic" );
 include( "ChatLogic" );
 include( "NetConnectionIconLogic" );
-include("InstanceManager");
+include( "NetworkUtilities" );
+include( "InstanceManager" );
 
 local CHAT_ENTRY_LOG_FADE_TIME	:number = 1; -- The fade time for chat entries that had already faded out
 											-- when reshown by mousing over the chat log.
@@ -31,6 +32,10 @@ local m_expandedChatTargetEntries :table = {};		-- Chat target pulldown entries 
 
 local m_isPlayerListVisible		:boolean = false;	-- Is the player list visible?
 local m_playerListEntries		:table = {};
+
+local m_isChatPanelFilled		:boolean = false;
+local m_isExpandedChatPanelFilled : boolean = false;
+
 -- See below for m_playerListPullData.
 
 local PlayerConnectedChatStr = Locale.Lookup( "LOC_MP_PLAYER_CONNECTED_CHAT" );
@@ -98,6 +103,7 @@ local m_playerListPullData = {}
 if( Network.GetNetworkPlatform() == NetworkPlatform.NETWORK_PLATFORM_EOS ) then
 	m_playerListPullData = {
 		{ name = "PLAYERACTION_KICKPLAYER",		tooltip = "PLAYERACTION_KICKPLAYER_TOOLTIP",	playerAction = "PLAYERACTION_KICKPLAYER",		isValidFunction=IsKickPlayerValidPull},
+		{ name = "LOC_PLAYERACTION_STARTKICKVOTE", tooltip = "LOC_PLAYERACTION_STARTKICKVOTE_TOOLTIP", playerAction = "PLAYERACTION_STARTKICKVOTE",		isValidFunction=IsStartKickVoteValidPull},
 	};
 else
 	m_playerListPullData = {
@@ -112,6 +118,11 @@ end
 -- OnChat
 -------------------------------------------------
 function OnChat( fromPlayer, toPlayer, text, eTargetType, playSounds :boolean )
+	
+	if(m_isExpandedChatPanelFilled and Controls.ExpandedChatEntryStack:GetSizeY() < Controls.ExpandedChatLogPanel:GetSizeY())then
+		m_isExpandedChatPanelFilled = false;
+	end
+	
 	local pLocalPlayerConfig :table	= PlayerConfigurations[Game.GetLocalPlayer()];
 	local pFromPlayerConfig :table = PlayerConfigurations[fromPlayer];
 
@@ -180,6 +191,21 @@ function OnChat( fromPlayer, toPlayer, text, eTargetType, playSounds :boolean )
 	if fromPlayer ~= Network.GetLocalPlayerID() then
 		local isHidden
 		LuaEvents.ChatPanel_OnChatReceived(fromPlayer, ContextPtr:GetParent():IsHidden());
+	end
+
+	--Ensure the chat panels begin to auto scroll when they are first filled
+	if( not m_isChatPanelFilled )then
+		if(Controls.ChatEntryStack:GetSizeY() > Controls.ChatLogPanel:GetSizeY())then
+			m_isChatPanelFilled = true;
+			Controls.ChatLogPanel:SetScrollValue(1);
+		end
+	end
+
+	if( not m_isExpandedChatPanelFilled )then
+		if(Controls.ExpandedChatEntryStack:GetSizeY() > Controls.ExpandedChatLogPanel:GetSizeY())then
+			m_isExpandedChatPanelFilled = true;
+			Controls.ExpandedChatLogPanel:SetScrollValue(1);
+		end
 	end
 end
 
@@ -396,6 +422,7 @@ function OnDragResizer()
 			OnResetChatButton(); --Ensures the mouse offset is set properly. Needed on the initial drag and when research/civic gets toggled on/off.
 			m_isFirstDrag = false;
 		end
+
 		local mouseX	: number, mouseY : number = UIManager:GetMousePos();
 		--How far has the mouse traveled while dragging?
 		local yDiff		: number = mouseY - m_StartingMouseY;
@@ -411,6 +438,15 @@ function OnDragResizer()
 		end
 		Controls.ChatEntryStack:CalculateSize();
 		LuaEvents.Tutorial_DisableMapDrag(true); --Disable map drag when resizing. Re-enabled in InputHandler();
+
+		if(Controls.ChatEntryStack:GetSizeY() > Controls.ChatLogPanel:GetSizeY())then
+			if(not m_isChatPanelFilled)then
+				m_isChatPanelFilled = true;
+				Controls.ChatLogPanel:SetScrollValue(1);
+			end
+		else
+			m_isChatPanelFilled = false;
+		end
 	end
 end
 
@@ -546,6 +582,13 @@ function GetMapPinConfig(iPlayerID :number, mapPinID :number)
 		end
 	end
 	return nil;
+end
+
+------------------------------------------------- 
+------------------------------------------------- 
+function OnClickToCopy(instance)
+	local sText:string = instance.JoinCodeText:GetText();
+	UIManager:SetClipboardString(sText);
 end
 
 ------------------------------------------------- 
@@ -705,6 +748,24 @@ function PopulatePlayerPull(iPlayerID :number, pullDown :table, playerListPullDa
 	return numEntries;
 end
 
+-- ===========================================================================
+--	Can join codes be used in the current game?
+-- ===========================================================================
+function IsJoinCodeAllowed()
+	local crossPlayMode		:boolean = (Network.GetTransportType() == TransportType.TRANSPORT_EOS);
+	local eosAllowed		:boolean = (Network.GetNetworkPlatform() == NetworkPlatform.NETWORK_PLATFORM_EOS) and GameConfiguration.IsInternetMultiplayer();
+	return crossPlayMode or eosAllowed;
+end
+
+-- ===========================================================================
+function GetInviteTT()
+	if( Network.GetNetworkPlatform() == NetworkPlatform.NETWORK_PLATFORM_EOS ) then
+		return Locale.Lookup("LOC_EPIC_INVITE_BUTTON_TT");
+	end
+
+	return Locale.Lookup("LOC_INVITE_BUTTON_TT");
+end
+
 -------------------------------------------------
 -------------------------------------------------
 function BuildPlayerList()
@@ -726,10 +787,26 @@ function BuildPlayerList()
 	end
 
 	local inviteButtonContainer:table = nil;
-	if Network.GetFriends(Network.GetTransportType()) ~= nil then
+	if CanInviteFriends(true) then
 		inviteButtonContainer = {};
 		ContextPtr:BuildInstanceForControl("InvitePlayerListEntry", inviteButtonContainer, Controls.PlayerListStack);
 		inviteButtonContainer.InviteButton:RegisterCallback(Mouse.eLClick, OnInviteButton);
+		inviteButtonContainer.InviteButton:SetToolTipString(GetInviteTT());
+	end
+
+	local joinCodeContainer:table = nil;
+	local joinCodeAllowed = IsJoinCodeAllowed();
+	if joinCodeAllowed == true then
+		joinCodeContainer = {};
+		ContextPtr:BuildInstanceForControl("JoinCodeEntry", joinCodeContainer, Controls.PlayerListStack);
+		
+		local joinCode :string = Network.GetJoinCode();
+		joinCodeContainer.JoinCodeText:RegisterCallback(Mouse.eLClick, function() OnClickToCopy(joinCodeContainer) end);
+		if joinCode ~= nil and joinCode ~= "" then
+			joinCodeContainer.JoinCodeText:SetText(joinCode);
+		else
+			joinCodeContainer.JoinCodeText:SetText("---");			-- Better than showing nothing?
+		end
 	end
 
 	Controls.PlayerListStack:CalculateSize();
@@ -738,11 +815,17 @@ function BuildPlayerList()
 	Controls.PlayerListScroll:ReprocessAnchoring();
 
 	if Controls.PlayerListScroll:GetScrollBar():IsHidden() then
+		local additionalY:number = 0;
+
 		if inviteButtonContainer ~= nil then
-			Controls.PlayerListBackground:SetSizeVal(PLAYER_LIST_BG_WIDTH, numPlayers * PLAYER_ENTRY_HEIGHT + PLAYER_LIST_BG_PADDING + inviteButtonContainer.InviteButton:GetSizeY());
-		else
-			Controls.PlayerListBackground:SetSizeVal(PLAYER_LIST_BG_WIDTH, numPlayers * PLAYER_ENTRY_HEIGHT + PLAYER_LIST_BG_PADDING);
+			additionalY = additionalY + inviteButtonContainer.InviteButton:GetSizeY();
 		end
+
+		if joinCodeContainer ~= nil then
+			additionalY = additionalY + joinCodeContainer.JoinCodeLabel:GetSizeY();
+		end
+
+		Controls.PlayerListBackground:SetSizeVal(PLAYER_LIST_BG_WIDTH, numPlayers * PLAYER_ENTRY_HEIGHT + PLAYER_LIST_BG_PADDING + additionalY);
 	else
 		Controls.PlayerListBackground:SetSizeVal(PLAYER_LIST_BG_WIDTH + 10, PLAYER_LIST_BG_HEIGHT);
 	end
@@ -895,6 +978,7 @@ function AdjustScreenSize()
 	Controls.ShowPlayerListButton:SetSizeX(Controls.ShowPlayerListCheck:GetSizeX() + 20);
 	Controls.PBCShowPlayerListButton:SetSizeX(Controls.PBCShowPlayerListCheck:GetSizeX() + 20);
 	LuaEvents.WorldTracker_OnScreenResize();
+	ContextPtr:RequestRefresh();
 end
 
 -------------------------------------------------
@@ -920,6 +1004,23 @@ function SetDefaultPanelMode()
 		Controls.ExpandedChatPanelBG:SetHide(true);
 		Controls.PlayByCloudPanel:SetHide(true);
 		Controls.PlayByCloudPanelBG:SetHide(true);
+	end
+end
+
+-- ===========================================================================
+function OnRefresh()
+	ContextPtr:ClearRequestRefresh();
+	if(m_isExpandedChatPanelFilled and Controls.ExpandedChatEntryStack:GetSizeY() < Controls.ExpandedChatLogPanel:GetSizeY())then
+		m_isExpandedChatPanelFilled = false;
+	elseif(not m_isExpandedChatPanelFilled and Controls.ExpandedChatEntryStack:GetSizeY() > Controls.ExpandedChatLogPanel:GetSizeY())then
+		m_isExpandedChatPanelFilled = true;
+		Controls.ExpandedChatLogPanel:SetScrollValue(1);
+	end
+	if(m_isChatPanelFilled and Controls.ChatEntryPanel:GetSizeY() < Controls.ChatLogPanel:GetSizeY())then
+		m_isChatPanelFilled = false;
+	elseif(not isChatPanelFilled and Controls.ChatEntryStack:GetSizeY() > Controls.ChatLogPanel:GetSizeY())then
+		m_isChatPanelFilled = true;
+		Controls.ChatLogPanel:SetScrollValue(1);
 	end
 end
 
@@ -953,6 +1054,7 @@ end
 
 -- ===========================================================================
 function Initialize()
+	ContextPtr:SetRefreshHandler( OnRefresh );	
 
 	Controls.ChatEntry:RegisterCommitCallback( SendChat );
 	Controls.ContractButton:RegisterCallback(Mouse.eLClick, OnCloseExpandedPanel);
@@ -1026,5 +1128,14 @@ function Initialize()
 	--Chat panel drag resizing init.
 	m_ChatStartSizeY = Controls.ChatPanel:GetSizeY();
 	m_StartingMouseX, m_StartingMouseY = Controls.DragButton:GetScreenOffset();
+
+	--This option requires a restart after changing, so we only need to check it at initialize
+	local replaceDragWithClick : number = Options.GetUserOption("Interface", "ReplaceDragWithClick");
+	if(replaceDragWithClick == 1)then
+		Controls.DragButton:LocalizeAndSetToolTip("LOC_CLICK_TO_RESIZE");
+	end
+
+	m_isChatPanelFilled = false;
+	m_isExpandedChatPanelFilled = false;
 end
 Initialize();

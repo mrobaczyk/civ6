@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="LEADER_T_ROOSEVELT_ROUGHRIDER" Kind="KIND_LEADER"/>
+		<Row Type="TRAIT_LEADER_ANTIQUES_AND_PARKS" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_BULL_MOOSE" Kind="KIND_TRAIT"/>
+	</Types>
+	<Leaders>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" Name="LOC_LEADER_T_ROOSEVELT_ROUGHRIDER_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Update>
+			<Where LeaderType="LEADER_T_ROOSEVELT"/>
+			<Set>
+				<Name>LOC_LEADER_T_ROOSEVELT_ORIGINAL_NAME</Name>
+			</Set>
+		</Update>
+	</Leaders>
+	<Traits>
+		<Row TraitType="TRAIT_AGENDA_BULL_MOOSE"/>
+	</Traits>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_AMERICA" LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" CapitalName="LOC_CITY_NAME_WASHINGTON"/>
+	</CivilizationLeaders>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_T_ROOSEVELT" OtherLeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER"/>
+	</DuplicateLeaders>
+	<Agendas>
+		<Row AgendaType="AGENDA_BULL_MOOSE" Name="LOC_AGENDA_BULL_MOOSE_NAME" Description="LOC_AGENDA_BULL_MOOSE_DESCRIPTION"/>
+	</Agendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_BULL_MOOSE" AgendaTwo="AGENDA_NATURALIST"/>
+		<Row AgendaOne="AGENDA_BULL_MOOSE" AgendaTwo="AGENDA_DARWINIST"/>
+		<Row AgendaOne="AGENDA_BULL_MOOSE" AgendaTwo="AGENDA_EXPLOITATIVE"/>
+	</ExclusiveAgendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_BULL_MOOSE" TraitType="TRAIT_AGENDA_BULL_MOOSE"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" AgendaType="AGENDA_BIG_STICK_POLICY"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT" AgendaType="AGENDA_BULL_MOOSE"/>
+	</HistoricalAgendas>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_ANTIQUES_AND_PARKS"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" TraitType="TRAIT_LEADER_ROOSEVELT_COROLLARY"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" TraitType="TRAIT_LEADER_UNIT_AMERICAN_ROUGH_RIDER"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
+	</LeaderTraits>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_T_ROOSEVELT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_BULL_MOOSE_QUOTE"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_QUOTE" QuoteAudio="Play_AMER_TR_MISC_PEP_TALK_C_03"/>
+	</LeaderQuotes>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_ANTIQUES_AND_PARKS" Name="LOC_TRAIT_LEADER_ANTIQUES_AND_PARKS_NAME" Description="LOC_TRAIT_LEADER_ANTIQUES_AND_PARKS_DESCRIPTION"/>
+		<Update>
+			<Where TraitType="TRAIT_LEADER_ROOSEVELT_COROLLARY"/>
+			<Set>
+				<Description>LOC_TRAIT_LEADER_ROOSEVELT_COROLLARY_ROUGH_RIDER_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_ANTIQUES_AND_PARKS" ModifierId="TRAIT_NATIONAL_PARK_APPEAL_BONUS"/>
+		<Row TraitType="TRAIT_LEADER_ANTIQUES_AND_PARKS" ModifierId="TRAIT_ANTIQUES_AND_PARKS_CULTURE_FORESTS_OR_WONDERS"/>
+		<Row TraitType="TRAIT_LEADER_ANTIQUES_AND_PARKS" ModifierId="TRAIT_ANTIQUES_AND_PARKS_SCIENCE_NATIONAL_WONDERS_OR_MOUNTAINS"/>
+		<Row TraitType="TRAIT_LEADER_ROOSEVELT_COROLLARY" ModifierId="TRAIT_ROOSEVELT_COROLLARY_TRADE_ROUTE_TOKEN"/>
+		<Row TraitType="TRAIT_AGENDA_BULL_MOOSE" ModifierId="AGENDA_BULL_MOOSE"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_ANTIQUES_AND_PARKS_CULTURE_FORESTS_OR_WONDERS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS_BREATHTAKING</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ANTIQUES_AND_PARKS_SCIENCE_NATIONAL_WONDERS_OR_MOUNTAINS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS_BREATHTAKING</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ROOSEVELT_COROLLARY_TRADE_ROUTE_TOKEN</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_DUPLICATE_INFLUENCE_TOKEN_WHEN_TRADE_ROUTE_TO</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_BULL_MOOSE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_BULL_MOOSE</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_10_TURNS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_ANTIQUES_AND_PARKS_CULTURE_FORESTS_OR_WONDERS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ANTIQUES_AND_PARKS_CULTURE_FORESTS_OR_WONDERS</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ANTIQUES_AND_PARKS_SCIENCE_NATIONAL_WONDERS_OR_MOUNTAINS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ANTIQUES_AND_PARKS_SCIENCE_NATIONAL_WONDERS_OR_MOUNTAINS</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ROOSEVELT_COROLLARY_TRADE_ROUTE_TOKEN</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+    <Row>
+      <ModifierId>AGENDA_BULL_MOOSE</ModifierId>
+      <Name>StatementKey</Name>
+      <Value>LOC_PLACEHOLDER</Value>
+    </Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS_BREATHTAKING</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS_BREATHTAKING</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_BREATHTAKING_APPEAL_ROOSEVELT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_IS_APPEAL_BETWEEN</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_FOREST_ROOSEVELT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_FORESTS_OR_WONDERS_REQUIREMENTS_MET</RequirementId>
+			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS_MET</RequirementId>
+			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_BREATHTAKING_APPEAL_ROOSEVELT</RequirementId>
+			<Name>MinimumAppeal</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_FOREST_ROOSEVELT</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FOREST</Value>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_FORESTS_OR_WONDERS_REQUIREMENTS_MET</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS</Value>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS_MET</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_TO_WONDER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_FOREST_ROOSEVELT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS_BREATHTAKING</RequirementSetId>
+			<RequirementId>PLOT_ADJACENT_FORESTS_OR_WONDERS_REQUIREMENTS_MET</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_FORESTS_OR_WONDERS_BREATHTAKING</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_BREATHTAKING_APPEAL_ROOSEVELT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_TO_NATURAL_WONDER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_TO_MOUNTAIN</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS_BREATHTAKING</RequirementSetId>
+			<RequirementId>PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS_MET</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_PLOT_ADJACENT_NATURAL_WONDERS_OR_MOUNTAINS_BREATHTAKING</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_BREATHTAKING_APPEAL_ROOSEVELT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_BULL_MOOSE" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" ReligionType="RELIGION_PROTESTANTISM"/>
+	</FavoredReligions>
+	<AiListTypes>
+		<Row ListType="BullMooseEnvironmentPreference"/>
+		<Row ListType="BullMooseResolutions"/>
+		<Row ListType="BullMooseDiscussions"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="BullMooseEnvironmentPreference" AgendaType="TRAIT_AGENDA_BULL_MOOSE" System="PseudoYields"/>
+		<Row ListType="BullMooseResolutions" AgendaType="TRAIT_AGENDA_BULL_MOOSE" System="Resolutions"/>
+		<Row ListType="BullMooseDiscussions" AgendaType="TRAIT_AGENDA_BULL_MOOSE" System="Discussions"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="BullMooseEnvironmentPreference" Item="PSEUDOYIELD_ENVIRONMENT" Value="15"/>
+		<Row ListType="BullMooseResolutions" Item="WC_RES_DEFORESTATION_TREATY" Favored="true"/>
+		<Row ListType="BullMooseResolutions" Item="WC_RES_GLOBAL_ENERGY_TREATY" Favored="true"/>
+		<Row ListType="BullMooseDiscussions" Item="WC_EMERGENCY_CLIMATE_ACCORDS" Favored="true"/>
+	</AiFavoredItems>
+	<CivilopediaPageChapterParagraphs>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_10" SortIndex="10"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="LEADERS" PageId="LEADER_T_ROOSEVELT_ROUGHRIDER" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_CHAPTER_HISTORY_PARA_10" SortIndex="10"/>
+	</CivilopediaPageChapterParagraphs>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_T_ROOSEVELT_ROUGHRIDER" ForegroundImage="LEADER_T_ROOSEVELT_ROUGHRIDER_NEUTRAL" BackgroundImage="LEADER_T_ROOSEVELT_ROUGHRIDER_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_T_ROOSEVELT" DawnOfManLeaderId="LEADER_T_ROOSEVELT"/>
+	</LoadingInfo>
+	<StartBiasTerrains>
+	<Row CivilizationType="CIVILIZATION_AMERICA" TerrainType="TERRAIN_DESERT_MOUNTAIN" Tier="5"/>
+		<Row CivilizationType="CIVILIZATION_AMERICA" TerrainType="TERRAIN_GRASS_MOUNTAIN" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_AMERICA" TerrainType="TERRAIN_PLAINS_MOUNTAIN" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_AMERICA" TerrainType="TERRAIN_TUNDRA_MOUNTAIN" Tier="5"/>
+	</StartBiasTerrains>
+</GameInfo>

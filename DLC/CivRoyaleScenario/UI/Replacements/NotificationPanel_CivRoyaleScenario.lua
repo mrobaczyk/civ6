@@ -1,13 +1,17 @@
 -- Copyright 2017-2018, Firaxis Games
 
-include("NotificationPanel");
+-- This file is being included into the base NotificationPanel file using the wildcard include setup in NotificationPanel.lua
+-- Refer to the bottom of NotificationPanel.lua to see how that's happening
+-- DO NOT include any NotificationPanel files here or it will cause problems
+--include("NotificationPanel");
+
 include("CivRoyaleScenario_PropKeys");
 
 -- ===========================================================================
 -- CACHE BASE FUNCTIONS
 -- ===========================================================================
-BASE_RegisterHandlers = RegisterHandlers;
-BASE_LateInitialize = LateInitialize;
+local BASE_RegisterHandlers = RegisterHandlers;
+local BASE_LateInitialize = LateInitialize;
 
 
 -- ===========================================================================
