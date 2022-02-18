@@ -714,6 +714,10 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
+			<ModifierId>LIMES_STARFORTPRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>LITERARYTRADITION_GREATWRITERPOINTS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS</ModifierType>
 		</Row>
@@ -2562,6 +2566,16 @@
 			<Value>100</Value>
 		</Row>
 		<Row>
+			<ModifierId>LIMES_STARFORTPRODUCTION</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_STAR_FORT</Value>
+		</Row>
+		<Row>
+			<ModifierId>LIMES_STARFORTPRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
 			<ModifierId>LITERARYTRADITION_GREATWRITERPOINTS</ModifierId>
 			<Name>GreatPersonClassType</Name>
 			<Value>GREAT_PERSON_CLASS_WRITER</Value>
@@ -3981,7 +3995,7 @@
 			<ModifierId>VETERANCY_ENCAMPMENT_BUILDINGS_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
 			<Value>30</Value>
-		</Row>	
+		</Row>
 		<Row>
 			<ModifierId>WARS_OF_RELIGION_COMBAT</ModifierId>
 			<Name>ModifierId</Name>
@@ -4408,6 +4422,10 @@
 		<Row>
 			<PolicyType>POLICY_LIMES</PolicyType>
 			<ModifierId>LIMES_WALLSPRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LIMES</PolicyType>
+			<ModifierId>LIMES_STARFORTPRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_LITERARY_TRADITION</PolicyType>

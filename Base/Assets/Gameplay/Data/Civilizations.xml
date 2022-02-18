@@ -2167,6 +2167,18 @@
 		<Row CivilizationType="CIVILIZATION_SUMERIA" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_ZIGGURAT"/>
 		<Row CivilizationType="CIVILIZATION_SUMERIA" TraitType="TRAIT_CIVILIZATION_UNIT_SUMERIAN_WAR_CART"/>
 	</CivilizationTraits>
+  <AiListTypes>
+    <Row ListType="GreeceCivics"/>
+    <Row ListType="GreeceYields"/>
+  </AiListTypes>
+  <AiLists>
+    <Row ListType="GreeceCivics" LeaderType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS" System="Civics"/>
+    <Row ListType="GreeceYields" LeaderType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS" System="Yields"/>
+  </AiLists>
+  <AiFavoredItems>
+    <Row ListType="GreeceCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+    <Row ListType="GreeceYields" Item="YIELD_CULTURE" Value="20"/>
+  </AiFavoredItems>
 	<CityNames>
 		<!--America -->
 		<Row CivilizationType="CIVILIZATION_AMERICA" CityName="LOC_CITY_NAME_WASHINGTON"/>

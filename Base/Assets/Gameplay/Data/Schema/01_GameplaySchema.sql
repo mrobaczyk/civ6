@@ -2742,6 +2742,13 @@ CREATE TABLE "Vocabularies" (
 		"Vocabulary" TEXT NOT NULL,
 		PRIMARY KEY(Vocabulary));
 
+-- Types of wars
+CREATE TABLE "Wars" (
+		"WarType" TEXT NOT NULL,
+		"Name" TEXT,
+		"Description" TEXT,
+		PRIMARY KEY(WarType));
+
 CREATE TABLE "WMDs" (
 		"WeaponType" TEXT NOT NULL,
 		"Name" TEXT NOT NULL,

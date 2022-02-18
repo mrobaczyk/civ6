@@ -432,6 +432,7 @@
 		<Row ListType="PericlesCivics"/>
 		<Row ListType="PericlesTechs"/>
 		<Row ListType="PericlesWonders"/>
+		<Row ListType="PericlesEnvoys"/>
 		<Row ListType="PeterCivics"/>
 		<Row ListType="PeterTechs"/>
 		<Row ListType="PeterWonders"/>
@@ -472,6 +473,7 @@
 		<Row ListType="MvembaWonders" LeaderType="TRAIT_LEADER_RELIGIOUS_CONVERT" System="Buildings"/>
 		<Row ListType="PedroWonders" LeaderType="TRAIT_LEADER_MAGNANIMOUS" System="Buildings"/>
 		<Row ListType="PericlesWonders" LeaderType="TRAIT_LEADER_SURROUNDED_BY_GLORY" System="Buildings"/>
+		<Row ListType="PericlesEnvoys" LeaderType="TRAIT_LEADER_SURROUNDED_BY_GLORY" System="PseudoYields"/>
 		<Row ListType="PeterWonders" LeaderType="TRAIT_LEADER_GRAND_EMBASSY" System="Buildings"/>
 		<Row ListType="PhilipWonders" LeaderType="TRAIT_LEADER_EL_ESCORIAL" System="Buildings"/>
 		<!--Phillip gets these, though they should be tied to Spain's trait instead, as soon as I implement that-->
@@ -589,7 +591,8 @@
 		<Row ListType="MvembaWonders" Item="BUILDING_CRISTO_REDENTOR" Favored="false"/>
 		<Row ListType="PedroWonders" Item="BUILDING_CHICHEN_ITZA" Favored="true"/>
 		<Row ListType="PedroWonders" Item="BUILDING_ORACLE" Favored="true"/>
-		<Row ListType="PericlesWonders" Item="BUILDING_POTALA_PALACE" Favored="true"/>
+		<Row ListType="PericlesWonders" Item="PSEUDOYIELD_INFLUENCE" Favored="true"/>
+		<Row ListType="PericlesEnvoys" Item="BUILDING_POTALA_PALACE" Value="30"/>
 		<Row ListType="PeterWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
@@ -649,7 +652,6 @@
 		<Row ListType="GandhiCivics" Item="CIVIC_CIVIL_SERVICE" Favored="true"/>
 		<Row ListType="GandhiCivics" Item="CIVIC_HUMANISM" Favored="true"/>
 		<Row ListType="GandhiCivics" Item="CIVIC_DIPLOMATIC_SERVICE" Favored="true"/>
-		<Row ListType="GorgoCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
 		<Row ListType="GorgoCivics" Item="CIVIC_MILITARY_TRAINING" Favored="true"/>
 		<Row ListType="GorgoCivics" Item="CIVIC_DIPLOMATIC_SERVICE" Favored="true"/>
 		<Row ListType="GorgoCivics" Item="CIVIC_NATIONALISM" Favored="true"/>
@@ -670,7 +672,6 @@
 		<Row ListType="PedroCivics" Item="CIVIC_NATIONALISM" Favored="true"/>
 		<Row ListType="PedroCivics" Item="CIVIC_OPERA_BALLET" Favored="true"/>
 		<Row ListType="PedroCivics" Item="CIVIC_CAPITALISM" Favored="true"/>
-		<Row ListType="PericlesCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
 		<Row ListType="PericlesCivics" Item="CIVIC_MILITARY_TRAINING" Favored="true"/>
 		<Row ListType="PericlesCivics" Item="CIVIC_POLITICAL_PHILOSOPHY" Favored="true"/>
 		<Row ListType="PericlesCivics" Item="CIVIC_NAVAL_TRADITIION" Favored="true"/>
@@ -768,11 +769,11 @@
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_AVAILABLE_ARCHAEOLOGIST"/>
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_AVAILABLE_GREATPERSON"/>
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_AVAILABLE_SPY"/>
-		<Row ListType="DefaultYieldBias" Item="YEILD_PRODUCTION" Value="25"/>
-		<Row ListType="DefaultYieldBias" Item="YEILD_SCIENCE" Value="10"/>
-		<Row ListType="DefaultYieldBias" Item="YEILD_CULTURE" Value="10"/>
-		<Row ListType="DefaultYieldBias" Item="YEILD_GOLD" Value="20"/>
-		<Row ListType="DefaultYieldBias" Item="YEILD_FAITH" Value="-25"/>
+		<Row ListType="DefaultYieldBias" Item="YIELD_PRODUCTION" Value="25"/>
+		<Row ListType="DefaultYieldBias" Item="YIELD_SCIENCE" Value="10"/>
+		<Row ListType="DefaultYieldBias" Item="YIELD_CULTURE" Value="10"/>
+		<Row ListType="DefaultYieldBias" Item="YIELD_GOLD" Value="20"/>
+		<Row ListType="DefaultYieldBias" Item="YIELD_FAITH" Value="-25"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_DEFAULT" StringVal="Simple City Tree"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_UNIT_OR_BUILDING" StringVal="Build City Building"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_DISTRICT" StringVal="Build City District"/>
@@ -1028,6 +1029,7 @@
 		<Row TraitType="TRAIT_LEADER_HOLY_ROMAN_EMPEROR" ModifierId="TRAIT_MILITARY_GOVERNMENT_SLOT"/>
 		<Row TraitType="TRAIT_LEADER_HOLY_ROMAN_EMPEROR" ModifierId="TRAIT_COMBAT_BONUS_CITY_STATES"/>
 		<Row TraitType="TRAIT_LEADER_PAX_BRITANNICA" ModifierId="TRAIT_FREE_MELEE_UNIT_NON_HOME_CONTINENT"/>
+		<Row TraitType="TRAIT_LEADER_PAX_BRITANNICA" ModifierId="TRAIT_FREE_MELEE_UNIT_FOREIGN_ROYAL_NAVY_DOCKYARD"/>
 		<Row TraitType="TRAIT_LEADER_RELIGIOUS_CONVERT" ModifierId="TRAIT_FREE_APOSTLE_FINISH_MBANZA"/>
 		<Row TraitType="TRAIT_LEADER_RELIGIOUS_CONVERT" ModifierId="TRAIT_FREE_APOSTLE_FINISH_THEATER_DISTRICT"/>
 		<Row TraitType="TRAIT_LEADER_RELIGIOUS_CONVERT" ModifierId="TRAIT_GAINS_FOUNDER_BELIEF_MAJORITY_RELIGION"/>
@@ -1585,6 +1587,12 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_UNIT_BY_CLASS</ModifierType>
 			<Permanent>true</Permanent>
 			<SubjectRequirementSetId>CITY_FOUNDED_ON_NON_HOME_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_MELEE_UNIT_FOREIGN_ROYAL_NAVY_DOCKYARD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_UNIT_BY_CLASS</ModifierType>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>FOREIGN_CITY_ROYAL_NAVY_DOCKYARD_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_FAITH_PEACEFUL_FOUNDERS</ModifierId>
@@ -3759,6 +3767,11 @@
 			<Value>PROMOTION_CLASS_MELEE</Value>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_FREE_MELEE_UNIT_FOREIGN_ROYAL_NAVY_DOCKYARD</ModifierId>
+			<Name>UnitPromotionClassType</Name>
+			<Value>PROMOTION_CLASS_MELEE</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_GAINS_FOUNDER_BELIEF_MAJORITY_RELIGION</ModifierId>
 			<Name>Enable</Name>
 			<Value>true</Value>
@@ -5662,6 +5675,10 @@
 			<RequirementSetId>CITY_FOUNDED_ON_NON_HOME_CONTINENT_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>FOREIGN_CITY_ROYAL_NAVY_DOCKYARD_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
@@ -6288,6 +6305,18 @@
 			<RequirementSetId>CITY_FOUNDED_ON_NON_HOME_CONTINENT_REQUIREMENTS</RequirementSetId>
 			<RequirementId>CITY_FOUNDED_BY_SETTLER_REQUIREMENT</RequirementId>
 		</Row>
+		<Row>
+			<RequirementSetId>FOREIGN_CITY_ROYAL_NAVY_DOCKYARD_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_IS_NOT_OWNER_CAPITAL_CONTINENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>FOREIGN_CITY_ROYAL_NAVY_DOCKYARD_REQUIREMENTS</RequirementSetId>
+			<RequirementId>CITY_FOUNDED_BY_SETTLER_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>FOREIGN_CITY_ROYAL_NAVY_DOCKYARD_REQUIREMENTS</RequirementSetId>
+			<RequirementId>CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
+		</Row>
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
@@ -6633,6 +6662,10 @@
 			<RequirementId>CITY_FOUNDED_BY_SETTLER_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_TRANSFER_TYPE_MATCHES</RequirementType>
 		</Row>
+		<Row>
+			<RequirementId>CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
 	</Requirements>
 	<RequirementArguments>
 		<Row>
@@ -6844,6 +6877,11 @@
 			<RequirementId>CITY_FOUNDED_BY_SETTLER_REQUIREMENT</RequirementId>
 			<Name>TransferType</Name>
 			<Value>BY_SETTLER</Value>
+		</Row>
+		<Row>
+			<RequirementId>CITY_HAS_ROYAL_NAVY_DOCKYARD</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_ROYAL_NAVY_DOCKYARD</Value>
 		</Row>
 	</RequirementArguments>
 </GameInfo>

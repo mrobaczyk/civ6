@@ -15271,7 +15271,7 @@
 [3]Gandhi
 [4]Pawan Shukla
 
-[3]Hardrada
+[3]Harald Hardrada
 [4]Atli Rafn Sigurdsson
 
 [3]Pericles
@@ -26173,6 +26173,9 @@
     <Replace Tag="LOC_BENCHMARK_AI_TT" Language="es_ES">
       <Text>Mide la IA y el rendimiento del procesamiento de turnos de tu ordenador.</Text>
     </Replace>
+    <Replace Tag="LOC_BENCHMARK_AI_TT_ERROR" Language="es_ES">
+      <Text>[COLOR_RED]El Pack de la civilización azteca tiene que estar activado para poder realizar esta prueba de rendimiento.[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_BENCHMARK_TIME" Language="es_ES">
       <Text>Tiempo:</Text>
     </Replace>
@@ -26285,7 +26288,7 @@
       <Text>+1 a la capacidad de Ruta comercial [ICON_TradeRoute]. Garantiza un Comerciante. Debe construirse en la Costa, adyacente a la tierra y en un distrito de Puerto.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_CRISTO_REDENTOR_DESCRIPTION" Language="es_ES">
-      <Text>El resultado del Turismo [ICON_Tourism] por las reliquias [ICON_GreatWork_Relic] y las Ciudades santas no disminuye por otras civilizaciones que hayan investigado el principio de Ilustración. Dobla el resultado de Turismo [ICON_Tourism] de los Centros turísticos costeros de toda tu civilización. Debe construirse en Colinas.</Text>
+      <Text>El resultado del Turismo [ICON_Tourism] por las reliquias [ICON_GreatWork_Relic] y las Ciudades santas no disminuye por otras civilizaciones que hayan investigado el principio de Ilustración. +100% al Turismo [ICON_Tourism] de los Centros turísticos costeros de toda tu civilización. Debe construirse en Colinas.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_EIFFEL_TOWER_DESCRIPTION" Language="es_ES">
       <Text>Todas las casillas de tu civilización ganan un +2 de Atractivo. Debe construirse en terreno llano y adyacente al Centro urbano.</Text>
@@ -26789,7 +26792,7 @@
       <Text>+2 Rutas comerciales [ICON_TradeRoute].</Text>
     </Replace>
     <Replace Tag="LOC_GOVT_INHERENT_BONUS_FASCISM" Language="es_ES">
-      <Text>Todas las unidades de combate ganan +6 a la Fuerza de combate [ICON_Strength].</Text>
+      <Text>Todas las unidades de combate ganan +5 a la Fuerza de combate [ICON_Strength].</Text>
     </Replace>
     <Replace Tag="LOC_GOVT_INHERENT_BONUS_COMMUNISM" Language="es_ES">
       <Text>Las unidades terrestres ganan +4 a la Fuerza de defensa [ICON_Strength].</Text>
@@ -27113,7 +27116,7 @@
       <Text>El Rendimiento obtenido al saquear se duplica con saqueo de distritos.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_SATELLITE_BROADCASTS_DESCRIPTION" Language="es_ES">
-      <Text>Se triplica el Turismo [ICON_Tourism] por las Grandes obras de la música [ICON_GreatWork_Writing].</Text>
+      <Text>+200% al Turismo [ICON_Tourism] por las Grandes obras de la música [ICON_GreatWork_Music].</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_SCRIPTURE_DESCRIPTION" Language="es_ES">
       <Text>+100% de bonificaciones por adyacencia de Lugar sagrado.</Text>
@@ -27137,7 +27140,7 @@
       <Text>+2 puntos de Gran general [ICON_GreatGeneral] por turno.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_SURVEY_DESCRIPTION" Language="es_ES">
-      <Text>Se duplica la experiencia de las unidades de reconocimiento al explorar.</Text>
+      <Text>Se duplica la experiencia obtenida por las unidades de reconocimiento.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_SYMPHONIES_DESCRIPTION" Language="es_ES">
       <Text>+4 puntos de Gran músico [ICON_GreatMusician] por turno.</Text>
@@ -27844,6 +27847,12 @@
     <Replace Tag="LOC_DEAL_CITY_DISTRICTS_TOOLTIP" Language="es_ES">
       <Text>Distritos:</Text>
     </Replace>
+    <Replace Tag="LOC_DEAL_CITY_RESOURCES_TOOLTIP" Language="es_ES">
+      <Text>Recursos:</Text>
+    </Replace>
+    <Replace Tag="LOC_DEAL_CITY_GREAT_WORKS_TOOLTIP" Language="es_ES">
+      <Text>Grandes obras:</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLOACTION_RESIDENT_EMBASSY_NAME" Language="es_ES">
       <Text>Embajada permanente</Text>
     </Replace>
@@ -28041,6 +28050,33 @@
     </Replace>
     <Replace Tag="LOC_DIPLO_DEAL_LEADER_GIFT_EQUALIZE_FAILED" Language="es_ES">
       <Text>No tengo nada que quiera cambiarte por eso.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_FRIENDLY_1" Language="es_ES">
+      <Text>Puede que más adelante lleguemos a un acuerdo.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_FRIENDLY_2" Language="es_ES">
+      <Text>¿Tal vez en otra ocasión?</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_FRIENDLY_3" Language="es_ES">
+      <Text>Me sorprende que no hayamos llegado a un acuerdo.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_NEUTRAL_1" Language="es_ES">
+      <Text>Es una pena.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_NEUTRAL_2" Language="es_ES">
+      <Text>No me atrevo a subir más mi oferta.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_NEUTRAL_3" Language="es_ES">
+      <Text>Qué lamentable.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_AGGRESSIVE_1" Language="es_ES">
+      <Text>¿De qué sirve el tesoro si no lo usáis?</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_AGGRESSIVE_2" Language="es_ES">
+      <Text>De una u otra forma, haré que me deis vuestras riquezas.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_TRADE_REFUSED_AGGRESSIVE_3" Language="es_ES">
+      <Text>Acepto vuestra negativa... por ahora.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_MODIFIER_ALLY" Language="es_ES">
       <Text>Aliado</Text>
@@ -29268,6 +29304,27 @@
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_TERRITORIAL_WAR" Language="es_ES">
       <Text>(Declara una guerra de expansión territorial).</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_JOINT_FORMAL_WAR" Language="es_ES">
+      <Text>(Declara una guerra formal conjunta contra ti).</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_JOINT_HOLY_WAR" Language="es_ES">
+      <Text>(Declara una guerra santa conjunta contra ti).</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_JOINT_RECONQUEST_WAR" Language="es_ES">
+      <Text>(Declara una guerra de reconquista conjunta contra ti).</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_JOINT_LIBERATION_WAR" Language="es_ES">
+      <Text>(Declara una guerra de liberación conjunta contra ti).</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_JOINT_PROTECTORATE_WAR" Language="es_ES">
+      <Text>(Declara una guerra de protectorado conjunta contra ti).</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_JOINT_COLONIAL_WAR" Language="es_ES">
+      <Text>(Declara una guerra colonial conjunta contra ti).</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_JOINT_TERRITORIAL_WAR" Language="es_ES">
+      <Text>(Declara una guerra de expansión territorial conjunta).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_ANY_ANY" Language="es_ES">
       <Text>¡No pensé que vería el final tan pronto!</Text>
@@ -31621,6 +31678,9 @@
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_SPYAPPREHENDED" Language="es_ES">
       <Text>Espía apresado</Text>
     </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_NO_GOLD" Language="es_ES">
+      <Text>Oro [ICON_Gold]</Text>
+    </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_NOMISSIONHISTORY" Language="es_ES">
       <Text>No hay misiones de espionaje recientes</Text>
     </Replace>
@@ -32453,7 +32513,7 @@
       <Text>No hay jugadores suficientes</Text>
     </Replace>
     <Replace Tag="LOC_READY_BLOCKED_NOT_ENOUGH_PLAYERS_TT" Language="es_ES">
-      <Text>No se puede empezar la partida. Se necesitan al menos dos jugadores.</Text>
+      <Text>[COLOR_RED]MISMATCHED TRANSLATION[ENDCOLOR][LOC_READY_BLOCKED_NOT_ENOUGH_PLAYERS_TT]Cannot start game. Two players are required to start.</Text>
     </Replace>
     <Replace Tag="LOC_READY_BLOCKED_PLAYERS_CONNECTING" Language="es_ES">
       <Text>Jugadores uniéndose a la partida</Text>
@@ -33920,7 +33980,7 @@
       <Text>Activa el momento Eureka [ICON_TechBoosted] en todas las tecnologías de la Era de la Información.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_ABU_AL_QASIM_AL_ZAHRAWI_ACTIVE" Language="es_ES">
-      <Text>Las unidades heridas pueden recuperar +5 PG cada turno.</Text>
+      <Text>Las unidades terrestres heridas pueden recuperar +5 PG cada turno.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_BARBARIAN_CAMP_DESCRIPTION" Language="es_ES">
       <Text>Crea Bárbaros adicionales. Otorga Oro [ICON_Gold] si se destruye. -1 de Atractivo.</Text>
@@ -34851,6 +34911,9 @@
     </Replace>
     <Replace Tag="LOC_HUD_CITY_FOOD_CONSUMPTION" Language="es_ES">
       <Text>Consumo de alimentos</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_FOOD_NEEDED_FOR_GROWTH" Language="es_ES">
+      <Text>Alimentos para aumentar la población</Text>
     </Replace>
     <Replace Tag="LOC_HUD_CITY_FOOD_PER_TURN" Language="es_ES">
       <Text>Alimentos por turno</Text>
@@ -36998,7 +37061,7 @@
       <Text>Una declaración directa de guerra acabará con todos los Enviados [ICON_Envoy] que tenemos aquí, y no dejará que enviemos a otras unidades hasta que haya paz. Todas las misiones activas se cancelarán.</Text>
     </Replace>
     <Replace Tag="LOC_CITY_STATES_LEVY_MILITARY_BUTTON" Language="es_ES">
-      <Text>Recluta militar</Text>
+      <Text>Reclutar tropas</Text>
     </Replace>
     <Replace Tag="LOC_CITY_STATES_MILITARY_ALREADY_LEVIED" Language="es_ES">
       <Text>Ya has reclutado al ejército de esta ciudad-estado.</Text>
@@ -38468,7 +38531,7 @@
       <Text>Espacio adicional para política militar. +7 a la Fuerza de combate [ICON_Strength] al atacar ciudades-estado.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_PAX_BRITANNICA_DESCRIPTION" Language="es_ES">
-      <Text>Todas las ciudades descubiertas o conquistadas en un continente distinto a tu continente de origen recibirán una unidad de cuerpo a cuerpo gratis. Consigues la unidad exclusiva Casaca roja cuando investigues la tecnología de la Belicología.</Text>
+      <Text>Todas las ciudades fundadas en un continente distinto a tu continente de origen recibirán una unidad de cuerpo a cuerpo gratis. Después de su fundación, si construyes allí un Astillero de la Marina Real recibirás otra unidad de cuerpo a cuerpo adicional. Consigues la unidad exclusiva Casaca roja cuando investigues la tecnología de la Belicología.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_RIGHTEOUSNESS_OF_FAITH_DESCRIPTION" Language="es_ES">
       <Text>Cualquier jugador puede comprar el edificio de culto de su religión por una décima parte del coste de Fe [ICON_Faith] habitual. Este edificio está mejorado para añadir un 10% de producción a Ciencia [ICON_Science], Fe [ICON_Faith] y Cultura [ICON_Culture] en las ciudades árabes.</Text>
@@ -39326,7 +39389,7 @@
       <Text>Puede moverse después de atacar</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_COMMANDO_DESCRIPTION" Language="es_ES">
-      <Text>Puede escalar paredes de Acantilado.</Text>
+      <Text>+1 al Movimiento. Puede escalar paredes de Acantilado.</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_AMBUSH_DESCRIPTION" Language="es_ES">
       <Text>+20 a la Fuerza de combate [ICON_Strength] en todas las situaciones.</Text>
@@ -40730,7 +40793,7 @@
       <Text>+25% a la Producción [ICON_Production] de unidades militares antiguas y clásicas.</Text>
     </Replace>
     <Replace Tag="LOC_BELIEF_GOD_OF_HEALING_DESCRIPTION" Language="es_ES">
-      <Text>Aumenta un +30% la Curación en tu distrito de Lugar sagrado o cualquier casilla adyacente.</Text>
+      <Text>Aumenta un +30 la Curación en tu distrito de Lugar sagrado o cualquier casilla adyacente.</Text>
     </Replace>
     <Replace Tag="LOC_BELIEF_GOD_OF_WAR_DESCRIPTION" Language="es_ES">
       <Text>Bonificación de Fe [ICON_Faith] equivalente al 50% de la fuerza de cada unidad enemiga asesinada a 8 casillas de un distrito de Lugar sagrado.</Text>
@@ -40835,7 +40898,7 @@
       <Text>+1 a Cultura [ICON_Culture] por cada 5 devotos de esta religión en otras civilizaciones</Text>
     </Replace>
     <Replace Tag="LOC_BELIEF_BURIAL_GROUNDS_DESCRIPTION" Language="es_ES">
-      <Text>Casillas adyacentes al Bombardeo cultural cuando se completa un Lugar sagrado.</Text>
+      <Text>Bombardeo Cultural en las casillas adyacentes cuando se completa un Lugar Sagrado.</Text>
     </Replace>
     <Replace Tag="LOC_BELIEF_DEFENDER_OF_FAITH_DESCRIPTION" Language="es_ES">
       <Text>Las unidades de combate obtienen +10 a la Fuerza de combate [ICON_Strength] cuando están dentro de las fronteras de las ciudades amistosas que sigan esta religión.</Text>
@@ -40907,7 +40970,7 @@
       <Text>Permite recoger Trigo y Arroz.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_ANIMAL_HUSBANDRY_DESCRIPTION" Language="es_ES">
-      <Text>Permite recoger Ganado [ICON_RESOURCE_CATTLE] y Ovejas [ICON_RESOURCE_SHEEP].</Text>
+      <Text>Permite recoger Ganado [ICON_RESOURCE_CATTLE], Ovejas [ICON_RESOURCE_SHEEP] y Ciervos [ICON_RESOURCE_DEER].</Text>
     </Replace>
     <Replace Tag="LOC_TECH_MINING_DESCRIPTION" Language="es_ES">
       <Text>Permite la tala de Bosques y la recolección de Cobre [ICON_RESOURCE_Copper].</Text>
@@ -40916,7 +40979,7 @@
       <Text>Permite embarcar a los Constructores.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_IRRIGATION_DESCRIPTION" Language="es_ES">
-      <Text>Permite despejar el Pantano y recolectar [ICON_RESOURCE_BANANAS].</Text>
+      <Text>Permite despejar el Pantano y recolectar Plátanos [ICON_RESOURCE_BANANAS].</Text>
     </Replace>
     <Replace Tag="LOC_TECH_MASONRY_DESCRIPTION" Language="es_ES">
       <Text>Permite recoger Piedra [ICON_RESOURCE_STONE].</Text>
@@ -40928,7 +40991,7 @@
       <Text>Permite embarcar a todas las unidades terrestres.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_CELESTIAL_NAVIGATION_DESCRIPTION" Language="es_ES">
-      <Text>Permite a los Comerciantes embarcar y recoger Pescado.</Text>
+      <Text>Permite a los Comerciantes embarcar y recoger Pescado [ICON_RESOURCE_FISH] y Cangrejos [ICON_RESOURCE_CRABS].</Text>
     </Replace>
     <Replace Tag="LOC_TECH_MATHEMATICS_DESCRIPTION" Language="es_ES">
       <Text>+1 al Movimiento [ICON_Movement] para todas las unidades navales.</Text>
@@ -41144,7 +41207,7 @@
       <Text>Construye 2 Plantas eléctricas.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_COMBINED_ARMS" Language="es_ES">
-      <Text>Construye una Pista de aterrizaje.</Text>
+      <Text>Ten 3 Ejércitos o Armadas.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_PLASTICS" Language="es_ES">
       <Text>Construye un Pozo petrolífero.</Text>
@@ -41321,7 +41384,7 @@
       <Text>El desarrollo de Plantas eléctricas nuevas ha motivado avances industriales que podrían ayudarte en la producción armamentística.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_COMBINED_ARMS" Language="es_ES">
-      <Text>Ahora que ya sabes cómo construir Pistas de aterrizaje portátiles en tierra, ¿por qué no pruebas a hacerlo en el mar?</Text>
+      <Text>Ahora que tus fuerzas armadas se han ampliado, ¿podrían mejorarse aún más con un nuevo recurso?</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_PLASTICS" Language="es_ES">
       <Text>Tener una fuente de productos petroquímicos debería suponer muchos avances. Su plasticidad tiene un interés particular.</Text>
@@ -41705,7 +41768,7 @@
       <Text>Conversión religiosa</Text>
     </Replace>
     <Replace Tag="LOC_QUEST_SEND_TRADE_ROUTE_NAME" Language="es_ES">
-      <Text>Enviar Ruta comercial [ICON_TradeRoute]</Text>
+      <Text>Mandar Ruta comercial</Text>
     </Replace>
     <Replace Tag="LOC_QUEST_CLEAR_BARBARIAN_CAMP_NAME" Language="es_ES">
       <Text>Destruye un Campamento bárbaro a 5 casillas.</Text>
@@ -43787,13 +43850,13 @@
       <Text>Unidad de cuerpo a cuerpo débil de la Antigüedad.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_SPEARMAN_DESCRIPTION" Language="es_ES">
-      <Text>Unidad de cuerpo a cuerpo de la Antigüedad, efectiva contra unidades montadas.</Text>
+      <Text>Unidad anticaballería de la Antigüedad.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_SWORDSMAN_DESCRIPTION" Language="es_ES">
       <Text>Unidad de cuerpo a cuerpo fuerte de la Época Clásica.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_PIKEMAN_DESCRIPTION" Language="es_ES">
-      <Text>Unidad de cuerpo a cuerpo de la Edad Media, fuerte contra unidades montadas.</Text>
+      <Text>Unidad anticaballería de la Edad Media.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_MUSKETMAN_DESCRIPTION" Language="es_ES">
       <Text>Unidad de cuerpo a cuerpo del Renacimiento.</Text>
@@ -44216,7 +44279,7 @@
       <Text>+5 a la Fuerza religiosa [ICON_Religion] de las Órdenes religiosas.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_FASCISM_ATTACK_BUFF_DESCRIPTION" Language="es_ES">
-      <Text>+4 a la Fuerza de combate [ICON_Strength] al atacar con Fascismo.</Text>
+      <Text>+5 a la Fuerza de combate [ICON_Strength] al atacar con Fascismo.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COMMUNISM_DEFENSE_BUFF_DESCRIPTION" Language="es_ES">
       <Text>+6 a la Fuerza de combate [ICON_Strength] al defenderse del Comunismo.</Text>
@@ -44354,7 +44417,7 @@
       <Text>+5 al Combate por Órdenes religiosas.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_FASCISM_ATTACK_BUFF_MODIFIER_DESCRIPTION" Language="es_ES">
-      <Text>+4 al Ataque contra el fascismo.</Text>
+      <Text>+5 al Ataque contra el fascismo.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COMMUNISM_DEFENSE_BUFF_MODIFIER_DESCRIPTION" Language="es_ES">
       <Text>+4 a la Defensa contra el Comunismo</Text>
@@ -44424,6 +44487,39 @@
     </Replace>
     <Replace Tag="LOC_MOD_VIKINGSLANDMARKS_DESCRIPTION" Language="es_ES">
       <Text>Tres nuevas maravillas naturales y seis nuevas ciudades-estado, incluidas dos que confieren mejoras de casilla.</Text>
+    </Replace>
+    <Replace Tag="LOC_SURPRISE_WAR_NAME" Language="es_ES">
+      <Text>Guerra por sorpresa</Text>
+    </Replace>
+    <Replace Tag="LOC_FORMAL_WAR_NAME" Language="es_ES">
+      <Text>Guerra formal</Text>
+    </Replace>
+    <Replace Tag="LOC_HOLY_WAR_NAME" Language="es_ES">
+      <Text>Guerra santa</Text>
+    </Replace>
+    <Replace Tag="LOC_RECONQUEST_WAR_NAME" Language="es_ES">
+      <Text>Guerra de reconquista</Text>
+    </Replace>
+    <Replace Tag="LOC_LIBERATION_WAR_NAME" Language="es_ES">
+      <Text>Guerra de liberación</Text>
+    </Replace>
+    <Replace Tag="LOC_DEFENSIVE_PACT_NAME" Language="es_ES">
+      <Text>Pacto defensivo</Text>
+    </Replace>
+    <Replace Tag="LOC_JOINT_WAR_NAME" Language="es_ES">
+      <Text>Guerra conjunta</Text>
+    </Replace>
+    <Replace Tag="LOC_SUZERAIN_WAR_NAME" Language="es_ES">
+      <Text>Guerra suzerana</Text>
+    </Replace>
+    <Replace Tag="LOC_PROTECTORATE_WAR_NAME" Language="es_ES">
+      <Text>Guerra de protectorado</Text>
+    </Replace>
+    <Replace Tag="LOC_COLONIAL_WAR_NAME" Language="es_ES">
+      <Text>Guerra colonial</Text>
+    </Replace>
+    <Replace Tag="LOC_TERRITORIAL_WAR_NAME" Language="es_ES">
+      <Text>Guerra territorial</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_TAB_TECHS" Language="es_ES">
       <Text>Tecnologías</Text>
@@ -45343,6 +45439,9 @@
     <Replace Tag="LOC_DEAL_CITY_POPULATION_TOOLTIP" Language="es_ES">
       <Text>Población: {1_number}</Text>
     </Replace>
+    <Replace Tag="LOC_DEAL_ITEM_TRANSFERRED_WITH_CITY_TOOLTIP" Language="es_ES">
+      <Text>Se transfiere con {1_CityName}</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLOMACY_DEFAULT_NOTIFICATION_SUMMARY_INITIAL" Language="es_ES">
       <Text>{1_name} te ha enviado un mensaje.</Text>
     </Replace>
@@ -45922,20 +46021,38 @@
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_DETECTED_CAPTURED" Language="es_ES">
       <Text>La misión en la ciudad de {1_CityName} ha tenido éxito pero han capturado al espía tras ser detectado.</Text>
     </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_DETECTED_CAPTURED_STOLELOOT" Language="es_ES">
+      <Text>La misión para robar {1_Loot} en la ciudad de {2_CityName} ha tenido éxito pero han capturado al espía tras ser detectado.</Text>
+    </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_DETECTED_KILLED" Language="es_ES">
       <Text>La misión en la ciudad de {1_CityName} ha tenido éxito pero han asesinado al espía tras ser detectado.</Text>
+    </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_DETECTED_KILLED_STOLELOOT" Language="es_ES">
+      <Text>La misión para robar {1_Loot} en la ciudad de {2_CityName} ha tenido éxito pero han asesinado al espía tras ser detectado.</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_UNDETECTED" Language="es_ES">
       <Text>La misión en la ciudad de {1_CityName} ha fracasado pero el espía no fue detectado.</Text>
     </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_UNDETECTED_STOLELOOT" Language="es_ES">
+      <Text>La misión para robar {1_Loot} en la ciudad de {2_CityName} ha fracasado, pero el espía no fue detectado.</Text>
+    </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_ESCAPED" Language="es_ES">
       <Text>La misión en la ciudad de {1_CityName} ha fracasado pero el espía consiguió escapar tras ser detectado.</Text>
+    </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_ESCAPED_STOLELOOT" Language="es_ES">
+      <Text>La misión para robar {1_Loot} en la ciudad de {2_CityName} ha fracasado pero el espía consiguió escapar tras ser detectado.</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_CAPTURED" Language="es_ES">
       <Text>La misión en la ciudad de {1_CityName} ha fracasado y han capturado al espía tras ser detectado.</Text>
     </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_CAPTURED_STOLELOOT" Language="es_ES">
+      <Text>La misión para robar {1_Loot} en la ciudad de {2_CityName} ha fracasado y han capturado al espía tras ser detectado.</Text>
+    </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_KILLED" Language="es_ES">
       <Text>La misión en la ciudad de {1_CityName} ha fracasado y han asesinado al espía tras ser detectado.</Text>
+    </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_KILLED_STOLELOOT" Language="es_ES">
+      <Text>La misión para robar {1_Loot} en la ciudad de {2_CityName} ha fracasado y han asesinado al espía tras ser detectado.</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_GOLD" Language="es_ES">
       <Text>{1_AmountOfGold} de Oro [ICON_Gold]</Text>
@@ -45943,8 +46060,14 @@
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_KILLED" Language="es_ES">
       <Text>El espía ha sido asesinado en una misión en la ciudad de {1_CityName}.</Text>
     </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_KILLED_STOLELOOT" Language="es_ES">
+      <Text>El espía fue asesinado en una misión para robar {1_Loot} en la ciudad de {2_CityName}.</Text>
+    </Replace>
     <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_CAPTURED" Language="es_ES">
       <Text>Un espía ha sido capturado en una misión en la ciudad de {1_CityName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_CAPTURED_STOLELOOT" Language="es_ES">
+      <Text>El espía fue capturado en una misión para robar {1_Loot} en la ciudad de {2_CityName}.</Text>
     </Replace>
     <Replace Tag="LOC_UNITPANEL_ESPIONAGE_MORE_TURNS" Language="es_ES">
       <Text>{1_RemainingTurns} {1_RemainingTurns: plural 1?turno; other?turnos;} más</Text>
@@ -46816,6 +46939,12 @@
     <Replace Tag="LOC_DISTRICT_ZONE_POPULATION_TOO_LOW" Language="es_ES">
       <Text>La Población de la ciudad debe ser de {1_Population} para poder añadir otro distrito.</Text>
     </Replace>
+    <Replace Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_TECH" Language="es_ES">
+      <Text>No se puede reparar, se necesita la tecnología: {1_TechName}</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_CIVIC" Language="es_ES">
+      <Text>No se puede reparar, se necesita el principio: {1_CivicName}</Text>
+    </Replace>
     <Replace Tag="LOC_DISTRICT_ZONE_ALREADY_BEING_BUILT" Language="es_ES">
       <Text>El distrito de {1_District}, parcialmente construido en {2_CityName}, debe completarse (o desmantelarse) antes de poder empezar un distrito de {3_District}.</Text>
     </Replace>
@@ -47102,7 +47231,7 @@
       <Text>{1_DistrictName}</Text>
     </Replace>
     <Replace Tag="LOC_TOOLTIP_BUILDING_REQUIRES_ADJACENT_DISTRICT" Language="es_ES">
-      <Text>Debe estar adyacente a {1: plural 1?{1: gender masculine?un; feminine?una;}; other?{1: gender masculine?unos; other?unas;};} {1_DistrictName}</Text>
+      <Text>Debe estar adyacente a un distrito de {1_DistrictName} de esta ciudad.</Text>
     </Replace>
     <Replace Tag="LOC_TOOLTIP_BUILDING_REQUIRES_ADJACENT_RESOURCE" Language="es_ES">
       <Text>Debe estar adyacente a {1_ResourceName}</Text>
@@ -47609,7 +47738,7 @@
       <Text>{1_type} concuerda con el tema del Museo. Añade otra obra de este tipo para recibir la bonificación por tema.</Text>
     </Replace>
     <Replace Tag="LOC_GREAT_WORKS_ART_MATCHED_THEME" Language="es_ES">
-      <Text>[COLOR:ResCultureLabelCS]{1_building} {1: plural 1?{1: gender masculine?es temático; feminine?es temática;}; other?{1: gender masculine?son temáticos; other?son temáticas;};}. Se obtiene el doble de Cultura [ICON_Culture] y Turismo [ICON_Tourism].[ENDCOLOR]</Text>
+      <Text>[COLOR:ResCultureLabelCS]{1_building} {1: plural 1?{1: gender masculine?es temático; feminine?es temática;}; other?{1: gender masculine?son temáticos; other?son temáticas;};}. +100% a Cultura [ICON_Culture] y a Turismo [ICON_Tourism].[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_GREAT_WORKS_LOCKED_FROM_MOVE" Language="es_ES">
       <Text>Se ha movido a este espacio hace poco. No se puede mover otra vez durante {1_Turns} {1: plural 1?turno; other?turnos;}.</Text>
@@ -48234,6 +48363,18 @@
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_CIVIC_BOOST_SUMMARY" Language="es_ES">
       <Text>¡Principio mejorado: {1_Name}!</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_TECH_DISCOVERED_MESSAGE" Language="es_ES">
+      <Text>Descubrimiento de: {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_TECH_DISCOVERED_SUMMARY" Language="es_ES">
+      <Text>¡Has descubierto: {1_Name}!</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_CIVIC_DISCOVERED_MESSAGE" Language="es_ES">
+      <Text>Descubrimiento de: {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_CIVIC_DISCOVERED_SUMMARY" Language="es_ES">
+      <Text>¡Has descubierto: {1_Name}!</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_RELIC_CREATED_SUMMARY" Language="es_ES">
       <Text>Se ha puesto la sagrada reliquia {1: plural 1?{1: gender masculine?del; feminine?de la;}; other?{1: gender masculine?de los; other?de las;};} {1_RelicName} [ICON_GreatWork_Relic] en {2_buildingName: gender *:sinartmasc?{2}; *:sinartfem?{2}; masculine?{2: plural 1?el {2}; other?los {2};}; feminine?{2: plural 1?la {2}; other?las {2};};} de {3_CityName}.</Text>

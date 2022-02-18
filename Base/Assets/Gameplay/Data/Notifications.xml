@@ -42,6 +42,8 @@
 		<Row Type="NOTIFICATION_SIMULTANEOUS_TURNS" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_TECH_BOOST" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_CIVIC_BOOST" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_TECH_DISCOVERED" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_CIVIC_DISCOVERED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_SPY_HEIST_GREAT_WORK" Kind="KIND_NOTIFICATION"/>
@@ -142,6 +144,8 @@
 		<Row NotificationType="NOTIFICATION_SIMULTANEOUS_TURNS" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False"/>
 		<Row NotificationType="NOTIFICATION_TECH_BOOST" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True" GroupType="TECH_BOOST"/>
 		<Row NotificationType="NOTIFICATION_CIVIC_BOOST" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True" GroupType="CIVIC_BOOST"/>
+		<Row NotificationType="NOTIFICATION_TECH_DISCOVERED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="False" ShowIconSinglePlayer="False" GroupType="NOTIFICATION_TECH_DISCOVERED"/>
+		<Row NotificationType="NOTIFICATION_CIVIC_DISCOVERED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="False" ShowIconSinglePlayer="False" GroupType="NOTIFICATION_CIVIC_DISCOVERED"/>
 		<Row NotificationType="NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE" SeverityType="HIGH" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE_MESSAGE" Summary="LOC_NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE_SUMMARY" GroupType="ESPIONAGE"/>
 		<Row NotificationType="NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY" SeverityType="HIGH" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY_MESSAGE" Summary="LOC_NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY_SUMMARY" GroupType="ESPIONAGE"/>
 		<Row NotificationType="NOTIFICATION_SPY_HEIST_GREAT_WORK" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="ESPIONAGE"/>

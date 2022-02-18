@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_TECH"/>
@@ -452,8 +450,9 @@
 		<Row BoostType="BOOST_TRIGGER_TURN_NUMBER" BoostValue="57"/>
 		<Row BoostType="BOOST_TRIGGER_REVEAL_X_OF_RESOURCE" BoostValue="58"/>
 		<Row BoostType="BOOST_TRIGGER_SUZERAIN_X_CITY_STATES" BoostValue="59"/>
-    <Row BoostType="BOOST_TRIGGER_HAVE_UNIT_AND_IMPROVEMENT" BoostValue="60"/>
-  </BoostNames>
+		<Row BoostType="BOOST_TRIGGER_HAVE_UNIT_AND_IMPROVEMENT" BoostValue="60"/>
+		<Row BoostType="BOOST_TRIGGER_HAVE_X_ARMIES" BoostValue="61"/>
+	</BoostNames>
 	<Boosts>
 		<!-- Some boosts, like find natural wonder, have an unnecessary unit field - that is an aid for the AI. Please leave it -->
 		<Row TechnologyType="TECH_SAILING" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_SAILING" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_SAILING" BoostClass="BOOST_TRIGGER_SETTLE_COAST"/>
@@ -506,7 +505,7 @@
 		<Row TechnologyType="TECH_ADVANCED_FLIGHT" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_ADVANCED_FLIGHT" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_ADVANCED_FLIGHT" BoostClass="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" Unit1Type="UNIT_BIPLANE" NumItems="3"/>
 		<Row TechnologyType="TECH_ROCKETRY" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_MUST_STEAL" TriggerLongDescription="Critical late game tech - boost description not needed" BoostClass="BOOST_TRIGGER_NONE_LATE_GAME_CRITICAL_TECH"/>
 		<Row TechnologyType="TECH_ADVANCED_BALLISTICS" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_ADVANCED_BALLISTICS" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_ADVANCED_BALLISTICS" BoostClass="BOOST_TRIGGER_HAVE_X_BUILDINGS" BuildingType="BUILDING_POWER_PLANT" NumItems="2"/>
-		<Row TechnologyType="TECH_COMBINED_ARMS" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_COMBINED_ARMS" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_COMBINED_ARMS" BoostClass="BOOST_TRIGGER_HAVE_X_IMPROVEMENTS" ImprovementType="IMPROVEMENT_AIRSTRIP" RequiresResource="false" NumItems="1"/>
+		<Row TechnologyType="TECH_COMBINED_ARMS" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_COMBINED_ARMS" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_COMBINED_ARMS" BoostClass="BOOST_TRIGGER_HAVE_X_ARMIES" NumItems="3"/>
 		<Row TechnologyType="TECH_PLASTICS" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_PLASTICS" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_PLASTICS" BoostClass="BOOST_TRIGGER_IMPROVE_SPECIFIC_RESOURCE" ImprovementType="IMPROVEMENT_OIL_WELL" ResourceType="RESOURCE_OIL"/>
 		<Row TechnologyType="TECH_COMPUTERS" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_COMPUTERS" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_COMPUTERS" BoostClass="BOOST_TRIGGER_HAVE_X_POLICY_SLOTS" NumItems="8"/>
 		<Row TechnologyType="TECH_NUCLEAR_FISSION" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_MUST_STEAL" TriggerLongDescription="Critical late game tech - boost description not needed" BoostClass="BOOST_TRIGGER_NONE_LATE_GAME_CRITICAL_TECH"/>

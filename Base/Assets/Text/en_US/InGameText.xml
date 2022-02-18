@@ -1078,6 +1078,9 @@
 		<Row Tag="LOC_HUD_CITY_FOOD_CONSUMPTION">
 			<Text>Food consumption</Text>
 		</Row>
+		<Row Tag="LOC_HUD_CITY_FOOD_NEEDED_FOR_GROWTH">
+			<Text>Food needed to grow population</Text>
+		</Row>
 		<Row Tag="LOC_HUD_CITY_FOOD_PER_TURN">
 			<Text>Food per turn</Text>
 		</Row>
@@ -1427,6 +1430,12 @@
 		<Row Tag="LOC_DISTRICT_REPAIR_LOCATION_CONTAMINATED">
 			<Text>Cannot repair, location contaminated.</Text>
 		</Row>
+    <Row Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_TECH">
+      <Text>Cannot repair, requires Technology: {1_TechName}.</Text>
+    </Row>
+    <Row Tag="LOC_DISTRICT_REPAIR_MISSING_PREREQ_CIVIC">
+      <Text>Cannot repair, requires Civic: {1_CivicName}.</Text>
+    </Row>
 		<Row Tag="LOC_DISTRICT_ZONE_ALREADY_BEING_BUILT">
 			<Text>The partially-constructed {1_District} in {2_CityName} must be completed (or dismantled) before you can start on another {3_District}.</Text>
 		</Row>
@@ -2840,7 +2849,7 @@
 			<Text>{1_DistrictName}</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_BUILDING_REQUIRES_ADJACENT_DISTRICT">
-			<Text>Must be adjacent to {LOC_GRAMMAR_A_AN &lt;&lt; {1_DistrictName}}</Text>
+			<Text>Must be adjacent to {LOC_GRAMMAR_A_AN &lt;&lt; {1_DistrictName}} owned by this city.</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_BUILDING_REQUIRES_ADJACENT_RESOURCE">
 			<Text>Must be adjacent to {1_ResourceName}</Text>
@@ -4532,7 +4541,7 @@
 			<Text>This Museum already has a Great Work from this artist. Add Great Works of the same theme, but from unique artists to receive the bonus.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_ART_MATCHED_THEME">
-			<Text>[COLOR:ResCultureLabelCS]{1_building} is now themed. [ICON_Culture] Culture and [ICON_Tourism] Tourism are doubled.[ENDCOLOR]</Text>
+			<Text>[COLOR:ResCultureLabelCS]{1_building} is now themed. +100% [ICON_Culture] Culture and [ICON_Tourism] Tourism.[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_LOCKED_FROM_MOVE">
 			<Text>Moved into this slot recently. Cannot be moved again for another {1_Turns} turns.</Text>

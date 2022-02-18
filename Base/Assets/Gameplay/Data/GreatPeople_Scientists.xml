@@ -287,6 +287,7 @@
 			<ModifierId>GREATPERSON_ABU_AL_QASIM_AL_ZAHRAWI_ACTIVE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
 			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>ABU_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_ABU_AL_QASIM_AL_ZAHRAWI_ACTIVE_HEAL_BONUS</ModifierId>
@@ -691,11 +692,11 @@
 			<Value>3000</Value>
 			<Type>ScaleByGameSpeed</Type>
 		</Row>
-    <Row>
-      <ModifierId>GREATPERSON_GRANT_PRODUCTION_IN_CITY_LATE_SPACE_RACE</ModifierId>
-      <Name>KeepOverflow</Name>
-      <Value>false</Value>
-    </Row>
+		<Row>
+			<ModifierId>GREATPERSON_GRANT_PRODUCTION_IN_CITY_LATE_SPACE_RACE</ModifierId>
+			<Name>KeepOverflow</Name>
+			<Value>false</Value>
+		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_ABU_AL_QASIM_AL_ZAHRAWI_ACTIVE</ModifierId>
 			<Name>ModifierId</Name>
@@ -741,4 +742,16 @@
 		<Row ModifierId="GREATPERSON_GRANT_PRODUCTION_IN_CITY_LATE_SPACE_RACE" Context="Summary" Text="LOC_GREATPERSON_GRANT_PRODUCTION_IN_CITY_LATE_SPACE_RACE"/>
 		<Row ModifierId="GREATPERSON_ABU_AL_QASIM_AL_ZAHRAWI_ACTIVE" Context="Summary" Text="LOC_GREATPERSON_ABU_AL_QASIM_AL_ZAHRAWI_ACTIVE"/>
 	</ModifierStrings>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>ABU_LAND_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>ABU_LAND_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_LAND_DOMAIN</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
 </GameInfo>

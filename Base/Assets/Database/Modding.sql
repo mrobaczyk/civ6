@@ -1,6 +1,9 @@
 -- Modding Framework Schema
 -- 
 -- Revision History
+-- Version 20:
+-- * Added 'Any' attribute to criteria for whether to match any of the criterion rather than all.
+-- * Moved 'Inverse' from Criteria to individual Criterion.
 -- Version 19:
 -- * Added support for migrating data during an upgrade.
 -- * Added 'Inverse' to Criteria.
@@ -99,18 +102,19 @@ CREATE TABLE Criteria(
 	'CriteriaRowId' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 	'ModRowId' INTEGER NOT NULL,
 	'CriteriaId' INTEGER NOT NULL,
-	'Inverse' BOOLEAN NOT NULL DEFAULT 0,
+	'Any' BOOLEAN NOT NULL DEFAULT 0,
 	FOREIGN KEY ('ModRowId') REFERENCES Mods('ModRowId') ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Individual criterion of criteria.
 -- @CriterionRowId is the unique id associated with the criterion
--- @CriteriaRowId is the criteria which the citerion is associated with.
+-- @CriteriaRowId is the criteria which the criterion is associated with.
 -- @CriteriaType is the type of criterion.
 CREATE TABLE Criterion(
 	'CriterionRowId' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 	'CriteriaRowId' INTEGER NOT NULL,
 	'CriterionType' TEXT NOT NULL,
+	'Inverse' BOOLEAN NOT NULL DEFAULT 0,
 	FOREIGN KEY ('CriteriaRowId') REFERENCES Criteria('CriteriaRowId') ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -265,7 +269,7 @@ CREATE TABLE ModRelationships(
 -- A table describing the relationship of one mod component to another.
 -- @ComponentRowId represents the component instance initiating the relationship.
 -- @OtherModId represents the other mod (note that this is the ModId and not ModRowId).
--- @OtherComponentId repfresents the other mod's component (note that this is ComponentId and not ComponentRowId).
+-- @OtherComponentId represents the other mod's component (note that this is ComponentId and not ComponentRowId).
 -- @Relationship represents the kind of relationship.
 CREATE TABLE ComponentRelationships(
 	'ComponentRowId' INTEGER NOT NULL, 
@@ -417,8 +421,8 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod',
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentReference', 'INSERT INTO ComponentReferences(ComponentRowId, Uri, Priority) VALUES (?,?,?)');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentRelationship', 'INSERT INTO ComponentRelationships(ComponentRowId, OtherModId, OtherComponentId, Relationship) VALUES (?,?,?,?)');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentProperty', 'INSERT INTO ComponentProperties(ComponentRowId, Name, Value) VALUES(?,?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriteria', 'INSERT INTO Criteria(ModRowId, CriteriaId) VALUES (?,?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriterion', 'INSERT INTO Criterion(CriteriaRowId, CriterionType) VALUES(?,?)');
+INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriteria', 'INSERT INTO Criteria(ModRowId, CriteriaId, Any) VALUES (?,?,?)');
+INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriterion', 'INSERT INTO Criterion(CriteriaRowId, CriterionType, Inverse) VALUES(?,?,?)');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddCriterionProperty', 'INSERT INTO CriterionProperties(CriterionRowId, Name, Value) VALUES(?,?,?)');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'GetCriteriaId', 'SELECT CriteriaRowId from Criteria where ModRowId = ? and CriteriaId = ? LIMIT 1');
 
@@ -432,6 +436,5 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'Create
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'CopyModGroup', 'INSERT INTO ModGroupItems(ModGroupRowId, ModRowId) SELECT ?, ModRowId from ModGroupItems where ModGroupRowId = ?');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'DeleteModGroup', 'DELETE FROM ModGroups where ModGroupRowId = ? and CanDelete = 1');
 
-
 -- User version is written at the end.
-PRAGMA user_version(19);
+PRAGMA user_version(20);

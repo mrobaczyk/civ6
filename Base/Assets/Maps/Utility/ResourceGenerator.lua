@@ -417,6 +417,8 @@ function ResourceGenerator:__SetWaterLuxury(eChosenLux, latitudeMax, latitudeMin
 	local iW, iH;
 	iW, iH = Map.GetGridSize();
 
+	local iNumToPlace = self.iOccurencesPerFrequency * self.iSeaFrequency[eChosenLux];
+
 	for x = 0, iW - 1 do
 		for y = 0, iH - 1 do
 			local i = y * iW + x;
@@ -424,7 +426,7 @@ function ResourceGenerator:__SetWaterLuxury(eChosenLux, latitudeMax, latitudeMin
 			-- Water plots
 			if(pPlot~=nil and pPlot:IsWater() == true and IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == false) then
 				local lat = math.abs((iH/2) - y)/(iH/2) * 100.0;
-				if(lat < latitudeMax and lat > latitudeMin and iNumber <= self.iOccurencesPerFrequency) then
+				if(lat < latitudeMax and lat > latitudeMin and iNumber <= iNumToPlace) then
 
 					-- If the the luxury is placed then it returns true and is removed
 					local bChosen = self:__PlaceWaterLuxury(eChosenLux, pPlot);
@@ -477,7 +479,7 @@ function ResourceGenerator:__PlaceWaterLuxury(eChosenLux, pPlot)
 		local score = TerrainBuilder.GetRandomNumber(iRandom, "Resource Placement Score Adjust");
 		score = score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * (3.0 + iBonusAdjacent));
 			
-		if(score >= 85 + 5 * self.iOccurencesPerFrequency) then
+		if(score * self.iSeaFrequency[eChosenLux] >= 85 + 5 * self.iOccurencesPerFrequency) then
 			ResourceBuilder.SetResourceType(pPlot, self.eResourceType[eChosenLux], 1);
 			return true
 		end
@@ -799,7 +801,7 @@ function ResourceGenerator:__PlaceWaterStrategic(eChosenStrat, pPlot)
 		local iBonusAdjacent = 0;
 
 		if( self.iStandardPercentage < self.iTargetPercentage) then
-			iBonusAdjacent = 0.5;
+			iBonusAdjacent = -1.5;
 		elseif ( self.iStandardPercentage > self.iTargetPercentage) then
 			iBonusAdjacent = -0.5;
 		end
