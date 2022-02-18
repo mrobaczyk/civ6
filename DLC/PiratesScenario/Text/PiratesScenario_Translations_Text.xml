@@ -292,9 +292,9 @@
       <Plurality>2</Plurality>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_JOLLY_ROGERS_NAME" Language="pt_BR">
-      <Text>Bandeira pirata de Jack Rackham|Bandeiras piratas de Jack Rackham</Text>
+      <Text>Bandeira pirata de Jack Rackham</Text>
       <Gender>feminine</Gender>
-      <Plurality>1|2</Plurality>
+      <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_BLACKBEARD_FUSE_NAME" Language="pt_BR">
       <Text>Pavio Curto do Barba Negra</Text>
@@ -324,7 +324,7 @@
     <Replace Tag="LOC_POLICY_RELIC_SKULL_FIRESHOT_NAME" Language="pt_BR">
       <Text>Disparo do Crânio Guinchante</Text>
       <Gender>masculine</Gender>
-      <Plurality>1|2</Plurality>
+      <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_FISHING_FLOATS_NAME" Language="pt_BR">
       <Text>Boias de Pesca do Vento do Mar do Norte</Text>
@@ -342,9 +342,9 @@
       <Plurality>2</Plurality>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_ENGLISH_POINTER_NAME" Language="pt_BR">
-      <Text>Figura de proa de cão |Figuras de proa de cão</Text>
+      <Text>Figura de proa de cão</Text>
       <Gender>feminine</Gender>
-      <Plurality>1|2</Plurality>
+      <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_BLACK_SPOT_NAME" Language="pt_BR">
       <Text>Ferrete Mancha Negra</Text>
@@ -362,9 +362,9 @@
       <Plurality>2</Plurality>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_DOWSING_ROD_NAME" Language="pt_BR">
-      <Text>Varinha de radiestesia|Varinhas de radiestesia</Text>
+      <Text>Varinha de radiestesia</Text>
       <Gender>feminine</Gender>
-      <Plurality>1|2</Plurality>
+      <Plurality>2</Plurality>
     </Replace>
     <Replace Tag="LOC_PIRATES_VICTORY_WIN_BLURB" Language="pt_BR">
       <Text>Ganhou o dia!</Text>
@@ -379,13 +379,16 @@
       <Text>Lutando</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="pt_BR">
-      <Text>Pontuação geral</Text>
+      <Text>Infâmia geral</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="pt_BR">
       <Text>Você tem novas Relíquias disponíveis!</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="pt_BR">
       <Text>Tripulação</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="pt_BR">
+      <Text>Rei dos Piratas</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="pt_BR">
       <Text>[COLOR:Red]Não há pontos de [ICON_Movement] movimento suficientes disponíveis.[ENDCOLOR]</Text>
@@ -1369,13 +1372,16 @@
       <Text>Au combat</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="fr_FR">
-      <Text>Score général</Text>
+      <Text>Infamie générale</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="fr_FR">
       <Text>Nouvelles reliques disponibles !</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="fr_FR">
       <Text>Équipage</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="fr_FR">
+      <Text>Roi des pirates</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="fr_FR">
       <Text>[COLOR:Red][ICON_Movement] PM insuffisants.[ENDCOLOR]</Text>
@@ -1639,7 +1645,7 @@
       <Text>On raconte qu'un dénommé capitaine Cleveland aurait récupéré ces pièces dans la cale d'un galion espagnol, mais les aurait perdues dans un duel. Le vainqueur s'en est trouvé enrichi pendant un temps, mais fut ensuite empoisonné par une amante éconduite, elle-même propriétaire d'une taverne sur l'île de la Tortue jusqu'à sa mort de la vérole, et ainsi de suite. Ces pièces d'or ont autant porté chance que malchance, et aujourd'hui, elles vous appartiennent.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_CURSED_PIECES_OF_EIGHT_DESCRIPTION" Language="fr_FR">
-      <Text>[ICON_Gold] Or +3 pour le coût d'entretien des unités (risque de mutinerie plus élevé) et 3% d'intérêts sur les réserves d'or chaque tour.</Text>
+      <Text>[ICON_Gold] Or +3 pour le coût d'entretien des unités (risque de mutinerie plus élevé) et 3 % d'intérêts sur les réserves d'or chaque tour.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_CRATES_OF_RUM_DESCRIPTION" Language="fr_FR">
       <Text>Un gros fût de rhum ! Nous pourrons le vendre à bon prix dans les ports que nous visiterons.</Text>
@@ -1882,8 +1888,7 @@
       <Text>Avantage contre les boucaniers +{1_Value}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_BURIED_TREASURE_MESSAGE" Language="fr_FR">
-      <Text>Carte au trésor 
-{1: gender *:vowel?d'; other?de ;} {1_playerName} trouvée.</Text>
+      <Text>Carte au trésor {1: gender *:vowel?d'; other?de ;} {1_playerName} trouvée.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_BURIED_TREASURE_SUMMARY" Language="fr_FR">
       <Text>Vous avez trouvé la carte du trésor {1: gender *:vowel?d'; other?de ;}{1_playerName}.</Text>
@@ -1916,7 +1921,7 @@
       <Text>Par tour : {1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="fr_FR">
-      <Text>Mutinerie imminente dans {1_Turns: plural 1?{1_turns}tour; other?{1_Turns} tours;} !</Text>
+      <Text>Mutinerie dans : {1_Turns: plural 1?{1_turns}tour; other?{1_Turns} tours;} !</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="fr_FR">
       <Text>Mutinerie totale dans {1_Turns: plural 1?{1_turns}tour; other?{1_Turns} tours;} !</Text>
@@ -2068,7 +2073,7 @@
       <Text>Nassau</Text>
     </Replace>
     <Replace Tag="LOC_CITY_NAME_ELUTHERA" Language="de_DE">
-      <Text>Eluthera</Text>
+      <Text>Eleuthera</Text>
     </Replace>
     <Replace Tag="LOC_CITY_NAME_GRAND_BAHAMA" Language="de_DE">
       <Text>Grand Bahama</Text>
@@ -2276,13 +2281,16 @@
       <Text>Kampf</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="de_DE">
-      <Text>Gesamtpunkte</Text>
+      <Text>Gesamt-Verrufenheit</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="de_DE">
       <Text>Neue Reliquien sind verfügbar!</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="de_DE">
       <Text>Besatzung</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="de_DE">
+      <Text>König der Piraten</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="de_DE">
       <Text>[COLOR:Red]Nicht genug [ICON_Movement] Fortbewegungspunkte.[ENDCOLOR]</Text>
@@ -2549,7 +2557,7 @@
       <Text>+3 Gold für Einheitenunterhalt (höhere Wahrscheinlichkeit für Meuterei); in jeder Runde 3 % Zinsen auf Goldreserven.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_CRATES_OF_RUM_DESCRIPTION" Language="de_DE">
-      <Text>Ein Fass besten Rums! Das können wir für jede Menge Münzen an den Häfen verkaufen, an denen wir landen.</Text>
+      <Text>Ein Fass besten Rums! Das können wir für jede Menge Münzen in den Häfen verkaufen, in denen wir anlanden.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_CRATES_OF_RUM_DESCRIPTION" Language="de_DE">
       <Text>+10 [ICON_Gold] Gold pro Runde</Text>
@@ -2822,7 +2830,7 @@
       <Text>Pro Runde: -{1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="de_DE">
-      <Text>Meuterei steht bevor in {1_Turns: plural 1?{1_turns} Runde; other?{1_Turns} Runden;}!</Text>
+      <Text>Meuterei in: {1_Turns: plural 1?{1_turns} Runde; other?{1_Turns} Runden;}!</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="de_DE">
       <Text>Allgemeine Meuterei in {1_Turns: plural 1?{1_turns} Runde; other?{1_Turns} Runden;}!</Text>
@@ -3204,13 +3212,16 @@
       <Text>Combattimento</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="it_IT">
-      <Text>Punteggio globale</Text>
+      <Text>Infamia globale</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="it_IT">
       <Text>Hai nuove Reliquie disponibili!</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="it_IT">
       <Text>Equipaggio</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="it_IT">
+      <Text>Re dei pirati</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="it_IT">
       <Text>[COLOR:Red]Non restano abbastanza [ICON_Movement] punti movimento.[ENDCOLOR]</Text>
@@ -3750,7 +3761,7 @@
       <Text>Per Turno: {1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="it_IT">
-      <Text>Ammutinamento imminente fra {1_Turns: plural 1?{1_turns}turno; other?{1_Turns} turni;}!</Text>
+      <Text>Ammutinamento fra {1_Turns: plural 1?{1_turns}turno; other?{1_Turns} turni;}!</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="it_IT">
       <Text>Ammutinamento totale fra {1_Turns: plural 1?{1_turns}turno; other?{1_Turns} turni;}!</Text>
@@ -4046,13 +4057,16 @@
       <Text>戦闘</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="ja_JP">
-      <Text>総合スコア</Text>
+      <Text>悪名の合計</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="ja_JP">
       <Text>新たな遺物があります！</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="ja_JP">
       <Text>船員</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="ja_JP">
+      <Text>海賊の王</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="ja_JP">
       <Text>[COLOR:Red][ICON_Movement] 移動ポイントが不足しています。[ENDCOLOR]</Text>
@@ -4466,7 +4480,7 @@
       <Text>お宝がどんどん増えている！</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_STABLE" Language="ja_JP">
-      <Text>お宝は増えも減りもしていない！</Text>
+      <Text>お宝の増減なし！</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_NO_MORE_UNITS" Language="ja_JP">
       <Text>艦隊を構成する船が一隻もありません！</Text>
@@ -4592,7 +4606,7 @@
       <Text>ターンごとに: {1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="ja_JP">
-      <Text>船員の反乱勃発まであと{1_Turns}ターン！</Text>
+      <Text>船員の反乱勃発まで{1_Turns}ターン！</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="ja_JP">
       <Text>全面的反乱まであと{1_Turns}ターン！</Text>
@@ -4724,7 +4738,7 @@
       <Text>나소</Text>
     </Replace>
     <Replace Tag="LOC_CITY_NAME_ELUTHERA" Language="ko_KR">
-      <Text>엘루테라</Text>
+      <Text>엘유세라</Text>
     </Replace>
     <Replace Tag="LOC_CITY_NAME_GRAND_BAHAMA" Language="ko_KR">
       <Text>그랜드바하마</Text>
@@ -4874,13 +4888,16 @@
       <Text>파이팅</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="ko_KR">
-      <Text>전체 점수</Text>
+      <Text>전체 악명</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="ko_KR">
       <Text>새로운 성유물을 획득할 수 있습니다!</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="ko_KR">
       <Text>크루</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="ko_KR">
+      <Text>해적왕</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="ko_KR">
       <Text>[COLOR:Red][ICON_Movement] 이동력이 충분히 남아있지 않습니다.[ENDCOLOR]</Text>
@@ -5848,13 +5865,16 @@
       <Text>Walka</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="pl_PL">
-      <Text>Ogólny wynik</Text>
+      <Text>Ogólna niesława</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="pl_PL">
       <Text>Zyskujesz nowe relikwie!</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="pl_PL">
       <Text>Załoga</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="pl_PL">
+      <Text>Król piratów</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="pl_PL">
       <Text>[COLOR:Red]Za mało dostępnych [ICON_Movement] punktów ruchu.[ENDCOLOR]</Text>
@@ -6848,13 +6868,16 @@
       <Text>Борьба</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="ru_RU">
-      <Text>Общий счет</Text>
+      <Text>Общая дурная слава</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="ru_RU">
       <Text>Доступны новые реликвии!</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="ru_RU">
       <Text>Команда</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="ru_RU">
+      <Text>Король пиратов</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="ru_RU">
       <Text>[COLOR:Red]Недостаточно [ICON_Movement] ОП.[ENDCOLOR]</Text>
@@ -7394,7 +7417,7 @@
       <Text>За ход: {1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="ru_RU">
-      <Text>Мятеж неизбежен через {1_Turns : plural 1?{1_turns} ход; 2?{1_Turns}  хода; other? ходов;}!</Text>
+      <Text>Мятеж через {1_Turns : plural 1?{1_turns} ход; 2?{1_Turns}  хода; other? ходов;}!</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="ru_RU">
       <Text>Разгар мятежа через {1_Turns : plural 1?{1_turns} ход; 2?{1_Turns}  хода; other? ходов;}!</Text>
@@ -7702,13 +7725,16 @@
       <Text>战斗</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="zh_Hans_CN">
-      <Text>整体得分</Text>
+      <Text>总体声望</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="zh_Hans_CN">
       <Text>您有新的遗物可供使用！</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="zh_Hans_CN">
       <Text>船员</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="zh_Hans_CN">
+      <Text>海盗之王</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="zh_Hans_CN">
       <Text>[COLOR:Red][ICON_Movement] 移动力不足。[ENDCOLOR]</Text>
@@ -7741,7 +7767,7 @@
       <Text>[COLOR:Red]在浅水中才能进行倾侧检修。[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_CAPTURE_BOAT_TOOLTIP" Language="zh_Hans_CN">
-      <Text>俘获船只[NEWLINE][NEWLINE]消耗1名船员来俘获1支受伤的地方船只，并将其添加到你的舰队。</Text>
+      <Text>俘获船只[NEWLINE][NEWLINE]消耗1名船员来俘获1艘受损的地方船只，并将其添加到你的舰队。</Text>
     </Replace>
     <Replace Tag="LOC_CAPTURE_BOAT_WORLDTEXT" Language="zh_Hans_CN">
       <Text>她是我们的了！</Text>
@@ -7750,7 +7776,7 @@
       <Text>海岸巡逻队[NEWLINE][NEWLINE]让1名船员前往陆地。</Text>
     </Replace>
     <Replace Tag="LOC_SHORE_PARTY_WORLDTEXT" Language="zh_Hans_CN">
-      <Text>上船来，你们这群腌臜小厮！</Text>
+      <Text>下船吧，你们这群腌臜小厮！</Text>
     </Replace>
     <Replace Tag="LOC_SHORE_PARTY_NO_LAND_TOOLTIP" Language="zh_Hans_CN">
       <Text>[COLOR:Red]未与陆地相邻。[ENDCOLOR]</Text>
@@ -7903,10 +7929,10 @@
       <Text>棉布杰克</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_TREASURE_LOCATED_MESSAGE" Language="zh_Hans_CN">
-      <Text>发现宝藏！</Text>
+      <Text>定位宝藏！</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_TREASURE_LOCATED_SUMMARY" Language="zh_Hans_CN">
-      <Text>您发现了宝藏。</Text>
+      <Text>您定位了宝藏。</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_INFAMOUS_PIRATE_MESSAGE" Language="zh_Hans_CN">
       <Text>发现极恶海盗！</Text>
@@ -8017,7 +8043,7 @@
       <Text>所有单位额外+1攻击次数。所有单位在攻击后均可移动。</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_SKULL_FIRESHOT_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>这并不是真正的头骨，而是精心制作的铸铁炮弹。迷信的海上敌人看到这些头骨口眼喷出烈火、带着刺耳的啸叫在天空中划过时……有人就要倒大霉了。</Text>
+      <Text>这并不是真正的头骨，而是精心制作的铸铁炮弹。迷信的海上敌人看到这些头骨口眼喷出烈火、带着刺耳的啸叫在天空中划过时……他们就知道要倒大霉了。</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_SKULL_FIRESHOT_DESCRIPTION" Language="zh_Hans_CN">
       <Text>海军船只+3 [ICON_Strength] 战斗力。</Text>
@@ -8035,7 +8061,7 @@
       <Text>每艘船只将察觉到20个格位中未被发现的最近船只。</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_RELIC_BLACK_SPOT_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>您可以用此物为敌人施加诅咒。敌人在海洋中将获得诅咒效果，只要此效果仍然有效，便无法消除。</Text>
+      <Text>您可以用此物标记敌人，让敌人在海洋中获得诅咒效果，只要诅咒持续，效果便无法消除。</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_RELIC_BLACK_SPOT_DESCRIPTION" Language="zh_Hans_CN">
       <Text>与残暴海盗或极恶海盗战斗时+10 [ICON_Strength] 战斗力。</Text>
@@ -8230,7 +8256,7 @@
       <Text>{1_CivAdjective}私掠许可证</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_LETTER_OF_MARQUE_SUMMARY" Language="zh_Hans_CN">
-      <Text>陛下决定给我们颁发私掠许可证。我们现在将以{1_CivShortName}的名义在海洋中横行霸道。</Text>
+      <Text>陛下决定给我们颁发私掠许可证。我们现在将以{1_CivShortName}的名义在海洋中掠夺财富。</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_RELIC_MESSAGE" Language="zh_Hans_CN">
       <Text>已获得{1_relicName}</Text>
@@ -8676,13 +8702,16 @@
       <Text>Zafarrancho</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="es_ES">
-      <Text>Puntuación general</Text>
+      <Text>Infamia general</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="es_ES">
       <Text>¡Tienes nuevas reliquias disponibles!</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="es_ES">
       <Text>Tripulación</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="es_ES">
+      <Text>El rey de los piratas</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="es_ES">
       <Text>[COLOR:Red]No quedan puntos de Movimiento [ICON_Movement] disponibles.[ENDCOLOR]</Text>
@@ -9222,7 +9251,7 @@
       <Text>Por turno: {1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="es_ES">
-      <Text>¡Motín inminente en {1_Turns: plural 1?{1_turns} turno; other?{1_Turns} turnos;}!</Text>
+      <Text>¡Motín inminente: {1_Turns: plural 1?{1_turns} turno; other?{1_Turns} turnos;}!</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="es_ES">
       <Text>¡Motín total en {1_Turns: plural 1?{1_turns} turno; other?{1_Turns} turnos;}!</Text>
@@ -9380,7 +9409,7 @@
       <Text>拿騷</Text>
     </Replace>
     <Replace Tag="LOC_CITY_NAME_ELUTHERA" Language="zh_Hant_HK">
-      <Text>埃留特拉</Text>
+      <Text>伊柳塞拉</Text>
     </Replace>
     <Replace Tag="LOC_CITY_NAME_GRAND_BAHAMA" Language="zh_Hant_HK">
       <Text>大巴哈馬</Text>
@@ -9530,13 +9559,16 @@
       <Text>戰鬥</Text>
     </Replace>
     <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="zh_Hant_HK">
-      <Text>整體分數</Text>
+      <Text>整體極惡點數</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GOVT_FREE_CHANGES" Language="zh_Hant_HK">
       <Text>你有新的遺物可供使用！</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_PANEL_CREW" Language="zh_Hant_HK">
       <Text>船員</Text>
+    </Replace>
+    <Replace Tag="LOC_VICTORY_SCORE_NAME" Language="zh_Hant_HK">
+      <Text>海盜王</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT" Language="zh_Hant_HK">
       <Text>[COLOR:Red][ICON_Movement] 移動力不足。[ENDCOLOR]</Text>
@@ -9554,7 +9586,7 @@
       <Text>傾側修理[NEWLINE][NEWLINE]在淺水水域進行緊急維修。消耗 [ICON_Movement] 移動力來換取快速治癒效果。治癒量將取決於所消耗的 [ICON_Movement] 移動力。</Text>
     </Replace>
     <Replace Tag="LOC_CAREENING_WORLDTEXT" Language="zh_Hant_HK">
-      <Text>給我賣力修啊！我們能救它的！</Text>
+      <Text>給我賣力修啊！我們能救她的！</Text>
     </Replace>
     <Replace Tag="LOC_CAREENING_NO_DAMAGE_TOOLTIP" Language="zh_Hant_HK">
       <Text>[COLOR:Red]無法在未受損傷的情況下進行傾側修理。[ENDCOLOR]</Text>
@@ -9578,7 +9610,7 @@
       <Text>登陸隊[NEWLINE][NEWLINE]讓船員下船到陸地。</Text>
     </Replace>
     <Replace Tag="LOC_SHORE_PARTY_WORLDTEXT" Language="zh_Hant_HK">
-      <Text>快給我上船，你們這群骯髒的鼠輩！</Text>
+      <Text>滾上小船，準備登陸，你們這群骯髒的鼠輩！</Text>
     </Replace>
     <Replace Tag="LOC_SHORE_PARTY_NO_LAND_TOOLTIP" Language="zh_Hant_HK">
       <Text>[COLOR:Red]未相鄰於陸地。[ENDCOLOR]</Text>
@@ -9770,13 +9802,13 @@
       <Text>新的海賊堡壘</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_DISCOVER_GOODY_HUT_SUMMARY" Language="zh_Hant_HK">
-      <Text>我們收到傳聞，有新的海賊艦隊遷徙到了附近地區。</Text>
+      <Text>傳聞有新的海賊艦隊遷徙到了附近地區。</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_MESSAGE" Language="zh_Hant_HK">
       <Text>新的海賊堡壘</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_SUMMARY" Language="zh_Hant_HK">
-      <Text>我們收到傳聞，有新的海賊艦隊遷徙到了附近地區。</Text>
+      <Text>傳聞有新的海賊艦隊遷徙到了附近地區。</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_RELIC_SUMMARY" Language="zh_Hant_HK">
       <Text>你在航行中發現了強大的遺物。</Text>
@@ -9971,7 +10003,7 @@
       <Text>全軍覆沒！</Text>
     </Replace>
     <Replace Tag="LOC_DEFEAT_PIRATE_TEXT" Language="zh_Hant_HK">
-      <Text>大海來收割屬於它的性命了。</Text>
+      <Text>大海來收割屬於她的性命了。</Text>
     </Replace>
     <Replace Tag="LOC_DEFEAT_COLONIAL_NAME" Language="zh_Hant_HK">
       <Text>殖民勢力遭到擊敗</Text>

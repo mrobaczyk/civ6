@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="BUILDING_PALGUM" Kind="KIND_BUILDING"/>
+	</Types>
+	<BuildingReplaces>
+		<Row CivUniqueBuildingType="BUILDING_PALGUM" ReplacesBuildingType="BUILDING_WATER_MILL"/>
+	</BuildingReplaces>
+	<Buildings>
+		<Row BuildingType="BUILDING_PALGUM" Name="LOC_BUILDING_PALGUM_NAME" Description="LOC_BUILDING_PALGUM_DESCRIPTION" PrereqTech="TECH_IRRIGATION" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="80" AdvisorType="ADVISOR_GENERIC" RequiresAdjacentRiver="true" Housing="1" TraitType="TRAIT_CIVILIZATION_BUILDING_PALGUM"/>
+	</Buildings>
+	<Building_YieldChanges>
+		<Row BuildingType="BUILDING_PALGUM" YieldType="YIELD_PRODUCTION" YieldChange="2"/>
+	</Building_YieldChanges>
+	<BuildingModifiers>
+		<Row>
+			<BuildingType>BUILDING_PALGUM</BuildingType>
+			<ModifierId>PALGUM_ADDFOOD</ModifierId>
+		</Row>
+	</BuildingModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>PALGUM_ADDFOOD</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_IS_FRESH</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>PALGUM_ADDFOOD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>PALGUM_ADDFOOD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLOT_IS_FRESH</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_IS_FRESH_WATER_BABYLON</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_IS_FRESH_WATER</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLOT_IS_FRESH</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_IS_FRESH_WATER_BABYLON</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+</GameInfo>

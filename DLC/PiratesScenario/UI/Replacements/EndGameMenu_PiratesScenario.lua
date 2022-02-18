@@ -22,7 +22,7 @@ Styles = {
 		SndStart = "Play_Cinematic_Endgame_Domination",
 		SndStop = "Stop_Cinematic_Endgame_Domination",
 		Color = "COLOR_VICTORY_DEFAULT",
-		FadeOutTime = 13,
+		FadeOutTime = 7,
 	},
 
 	["VICTORY_SCORE"] = {
@@ -33,7 +33,7 @@ Styles = {
 		SndStart = "Play_Cinematic_Endgame_Domination",
 		SndStop = "Stop_Cinematic_Endgame_Domination",
 		Color = "COLOR_VICTORY_DEFAULT",
-		FadeOutTime = 13,
+		FadeOutTime = 7,
 	},
 }
 
@@ -56,4 +56,5 @@ function LateInitialize()
 	local leaderName : string = PlayerConfigurations[ Game.GetLocalPlayer() ]:GetLeaderTypeName();
 	Styles["GENERIC_DEFEAT"].Background		= leaderName .. "_BACKGROUND";
 	Styles["VICTORY_DEFAULT"].Background	= leaderName .. "_BACKGROUND";
+	Styles["VICTORY_SCORE"].Background	= leaderName .. "_BACKGROUND";
 end

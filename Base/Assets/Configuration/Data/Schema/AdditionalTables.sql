@@ -166,6 +166,15 @@ CREATE TABLE 'NaturalWonders' (
 	PRIMARY KEY ('Domain','FeatureType')
 );
 
+CREATE TABLE 'CityStates' (
+	'Domain' TEXT NOT NULL DEFAULT 'StandardCityStates',
+	'CivilizationType' TEXT NOT NULL,
+	'Name' TEXT NOT NULL,
+	'Description' TEXT,
+	'SortIndex' INTEGER NOT NULL DEFAULT 0,
+	PRIMARY KEY ('Domain','CivilizationType')
+);
+
 CREATE TABLE 'Rulesets' (
 	'RulesetType' TEXT NOT NULL,
  	'Name' TEXT NOT NULL,

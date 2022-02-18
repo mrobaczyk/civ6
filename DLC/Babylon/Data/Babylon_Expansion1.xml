@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Expansion 2 specific data -->
+	<Types>
+		<!-- Named Places
+		<Row Type="NAMED_RIVER_MAGDALENA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_APURE_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_META_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_ARAUCA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_CAUCA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_CARONI_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_MOTAGUA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_GRIJALVA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_SAMALA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_CHIXOY_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_USUMACINTA_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_BELIZE_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_HONDO_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_VOLCANO_CHIMBORAZO" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_PURACE" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_NEVADO_DEL_TOLIMA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_COTOPAXI" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_GUAGUA_PICHINCHA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_TUNGURAHUA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_HUNAHPU" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_ATITLAN" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_VOLCAN_TOLIMAN" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_VOLCANO_PACAYA" Kind="KIND_NAMED_VOLCANO"/>
+		<Row Type="NAMED_MOUNTAIN_MAYA_MOUNTAINS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_SIERRA_MADRE_DE_CHIAPAS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_SIERRA_DE_LOS_CUCHUMATANES" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_GUATEMALAN_HIGHLANDS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_SIERRA_DE_LAS_MINAS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_CENTRAL" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_OCCIDENTAL" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_ORIENTAL" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_GUIANA_HIGHLANDS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_DE_MERIDA" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_CORDILLERA_DE_LA_COSTA" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_DESERT_LA_GUAJIRA_DESERT" Kind="KIND_NAMED_DESERT"/>
+		<Row Type="NAMED_DESERT_TATACOA_DESERT" Kind="KIND_NAMED_DESERT"/>
+		<Row Type="NAMED_DESERT_MEDANOS_DE_CORO" Kind="KIND_NAMED_DESERT"/>
+		<Row Type="NAMED_LAKE_LAKE_IZABAL" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_PETEN_ITZA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_AMATITLAN" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_GUIJA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_LEOPOLDO" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_VALENCIA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_TOTA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAGUNA_DE_LA_COCHA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_LAKE_LAKE_HERRERA" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="NAMED_SEA_GULF_OF_HONDURAS" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_AMATIQUE_BAY" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_TERMINOS_LAGOON" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_GULF_OF_DARIEN" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_GULF_OF_VENEZUELA" Kind="KIND_NAMED_SEA"/>
+		<Row Type="NAMED_SEA_GULF_OF_PARIA" Kind="KIND_NAMED_SEA"/> -->
+	</Types>
+	<Traits>
+		<Update>
+			<Where TraitType="TRAIT_LEADER_HAMMURABI"/>
+			<Set>
+				<Description>LOC_TRAIT_LEADER_HAMMURABI_XP1_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_LEADER_HAMMURABI</TraitType>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE_EXCEPT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_HAMMURABI</TraitType>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_BABYLONIAN_SABUM_KIBITTUM" Texture="MomentSTK_Sabum.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_PALGUM" Texture="MomentSTK_Palgum.dds"/>
+	</MomentIllustrations>
+	<GreatPersonIndividualActionModifiers>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_STAMFORD_RAFFLES" ModifierId="GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+	</GreatPersonIndividualActionModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE_EXCEPT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_FREE_BUILDING_WHEN_SPECIALTY_DISTRICT_CONSTRUCTED_EXCEPT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_SPECIFIC_DISTRICT_GRANT_ENVOYS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ABSORB_CITY_STATE_AS_GIFT_AND_APPLY_MODIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS_LOYALTY_ATTACHMENT</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_IDENTITY_PER_TURN</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE_EXCEPT</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS_LOYALTY_ATTACHMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS_LOYALTY_ATTACHMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS" Context="Summary" Text="LOC_GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS"/>
+	</ModifierStrings>
+	<NamedRivers>
+	</NamedRivers>
+	<NamedVolcanoes>
+	</NamedVolcanoes>
+	<NamedMountains>
+	</NamedMountains>
+	<NamedDeserts>
+	</NamedDeserts>
+	<NamedLakes>
+	</NamedLakes>
+	<NamedSeas>
+	</NamedSeas>
+	<NamedRiverCivilizations>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+	</NamedDesertCivilizations>
+	<NamedLakeCivilizations>
+	</NamedLakeCivilizations>
+	<NamedSeaCivilizations>
+	</NamedSeaCivilizations>
+</GameInfo>

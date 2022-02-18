@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Expansion 2 specific data -->
+	<Traits>
+		<Update>
+			<Where TraitType="TRAIT_LEADER_HAMMURABI"/>
+			<Set>
+				<Description>LOC_TRAIT_LEADER_HAMMURABI_XP1_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_LEADER_HAMMURABI</TraitType>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE_EXCEPT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_HAMMURABI</TraitType>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_BABYLONIAN_SABUM_KIBITTUM" Texture="MomentSTK_Sabum.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_PALGUM" Texture="MomentSTK_Palgum.dds"/>
+	</MomentIllustrations>
+	<GreatPersonIndividualActionModifiers>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_STAMFORD_RAFFLES" ModifierId="GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+	</GreatPersonIndividualActionModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE_EXCEPT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_FREE_BUILDING_WHEN_SPECIALTY_DISTRICT_CONSTRUCTED_EXCEPT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_SPECIFIC_DISTRICT_GRANT_ENVOYS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ABSORB_CITY_STATE_AS_GIFT_AND_APPLY_MODIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS_LOYALTY_ATTACHMENT</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_IDENTITY_PER_TURN</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE_EXCEPT</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE_SPECIFIC</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS_LOYALTY_ATTACHMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS_LOYALTY_ATTACHMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS" Context="Summary" Text="LOC_GREATPERSON_CITY_STATE_ABSORB_EXPANSIONS"/>
+	</ModifierStrings>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_EUPHRATES" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedRiverType="NAMED_RIVER_GREAT_ZAB_RIVER" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedRiverType="NAMED_RIVER_KARUN" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedRiverType="NAMED_RIVER_KHABUR_RIVER" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedRiverType="NAMED_RIVER_TIGRIS" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+	</NamedRiverCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_HAMRIN_MOUNTAINS" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_QANDIL_MOUNTAINS" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_SINJAR_MOUNTAINS" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_ZAGROS" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_HAMAD" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+	</NamedDesertCivilizations>
+	<NamedLakeCivilizations>
+		<Row NamedLakeType="NAMED_LAKE_HAWR_AS_SADIYAH" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_HABBANIYAH" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_HAMMAR" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+		<Row NamedLakeType="NAMED_LAKE_MALAREN" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+	</NamedLakeCivilizations>
+	<NamedSeaCivilizations>
+		<Row NamedSeaType="NAMED_SEA_PERSIAN_GULF" CivilizationType="CIVILIZATION_BABYLON_STK"/>
+	</NamedSeaCivilizations>
+	<Leaders_XP2>
+		<Row LeaderType="LEADER_MINOR_CIV_AYUTTHAYA" MinorCivBonusType="MINOR_CIV_BONUS_CULTURAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_CHINGUETTI" MinorCivBonusType="MINOR_CIV_BONUS_RELIGIOUS"/>
+		<Row LeaderType="LEADER_MINOR_CIV_JOHANNESBURG" MinorCivBonusType="MINOR_CIV_BONUS_INDUSTRIAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_NALANDA" MinorCivBonusType="MINOR_CIV_BONUS_SCIENTIFIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_SAMARKAND" MinorCivBonusType="MINOR_CIV_BONUS_TRADE"/>
+		<Row LeaderType="LEADER_MINOR_CIV_WOLIN" MinorCivBonusType="MINOR_CIV_BONUS_MILITARISTIC"/>
+	</Leaders_XP2>
+</GameInfo>

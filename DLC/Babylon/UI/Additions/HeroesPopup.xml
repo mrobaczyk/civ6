@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+
+  <Container Style="FullScreenVignetteConsumer"/>
+  <BoxButton ID="ScreenConsumer" Color="0,0,0,0" Size="parent,parent" ConsumeMouseButton="1" ConsumeMouseWheel="1"/>
+
+  <Grid ID="DropShadow" Size="595,768" Anchor="C,C" Offset="0,0" Style="DropShadow2" Color="255,255,255,200">
+    <Grid ID="Window" Size="parent-5,parent+8" Anchor="C,C" Offset="0,0" SizePadding="0,20" Style="EventPopupFrame">
+
+      <Grid Style="EventPopupTitleBar" Size="parent-32,65" Offset="0,17" Anchor="C,T">
+        <Label ID="EventTitle" Style="EventPopupTitle" Offset="0,2" Align="Center" WrapWidth="420" String="LOC_DISCOVERED_SOCIETY" Anchor="C,C"/>
+      </Grid>
+      
+      <Container Size="parent-32,100" Offset="0,80" Anchor="C,T">
+        <Label ID="EventDescription" Style="EventPopupDescription" Align="Center" WrapWidth="parent-20" Anchor="C,C"/>
+        <Line Start="1,0" End="parent-2,0" Width="2" Color="35,66,92,150" Anchor="C,B"/>
+      </Container>
+      
+      <Image ID="HeroImage" Size="400,256" Texture="Heroes_Anansi" Anchor="C,T" Offset="0,190"/>
+
+      <Grid Style="EventPopupEffectsDeco" Anchor="C,B" Offset="0,120" Size="parent-50,200" AutoSizePadding="0,10">
+        <ScrollPanel Size="parent-25,parent-20" Anchor="C,C" Vertical="1" AutoScrollBar="1">  
+          <ScrollBar Size="11,100" Anchor="R,C"  Offset="0,0" Style="ScrollVerticalBar" />
+          <Stack Anchor="C,C" StackPadding="5">
+            <Label ID="HeroDescription" Style="EventPopupEffects" Align="Center" WrapWidth="parent-50" Anchor="C,T"/>
+            <Stack ID="AbilityStack" StackGrowth="Down" StackPadding="5"/>
+            <Stack ID="CommandStack" StackGrowth="Down" StackPadding="5"/>
+            <Label ID="ClaimText" Style="EventPopupEffects" Align="Center" WrapWidth="parent-50" Anchor="C,T"/>
+          </Stack>
+        </ScrollPanel>
+      </Grid>
+
+      <Stack ID="ButtonStack" Anchor="C,B" Offset="0,26" StackPadding="4" StackGrowth="Down">
+        <GridButton ID="LookAtHeroButton" Style="MainButton" Size="270,40" Anchor="C,T" Offset="0,0" String="LOC_LOOK_AT_HERO"/>
+        <GridButton ID="ContinueButton" Style="MainButton" Size="270,40" Anchor="C,T" Offset="0,0" String="LOC_CONTINUE"/>
+      </Stack>
+    </Grid>
+  </Grid>
+
+  <!-- ==================================================================	-->
+  <!--	Instances																													-->
+  <!-- ==================================================================	-->
+
+  <Instance	Name="AbilityInstance">
+    <Container				ID="Top" Size="parent,auto" Offset="35,0">
+      <Image					Size="50,50" IconSize="50" Icon="ICON_HERO_PASSIVE_ABILITY"/>
+      <Stack Anchor="L,T" Offset="50,0" StackGrowth="Down" StackPadding="4">
+        <ScrollTextField  ID="AbilityName" Anchor="L,T"	Size="425,40" Style="GreatPeopleLargeText"/>
+        <Label				    ID="AbilityText" Anchor="L,T" WrapWidth="430" Style="EventPopupEffects"/>
+      </Stack>
+    </Container>
+  </Instance>
+
+  <Instance	Name="CommandInstance">
+    <Container				ID="Top" Size="parent,auto" Offset="35,0">
+      <Image					ID="CommandIcon" Size="50,50" Texture="Controls_SlotCircle3"/>
+      <Stack Anchor="L,T" Offset="50,0" StackGrowth="Down" StackPadding="4">
+        <ScrollTextField  ID="CommandName" Anchor="L,T"	Size="425,40" Style="GreatPeopleLargeText"/>
+        <Label				    ID="CommandText" Anchor="L,T" WrapWidth="430" Style="EventPopupEffects"/>
+      </Stack>
+    </Container>
+  </Instance>
+  
+</Context>

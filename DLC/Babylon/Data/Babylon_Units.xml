@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_BABYLONIAN_SABUM_KIBITTUM" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_SABUM_KIBITTUM_ANTI_CAVALRY" Kind="KIND_ABILITY"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_SABUM_KIBITTUM_ANTI_CAVALRY" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<TypeTags>
+		<Row Type="UNIT_BABYLONIAN_SABUM_KIBITTUM" Tag="CLASS_MELEE"/>
+		<Row Type="UNIT_BABYLONIAN_SABUM_KIBITTUM" Tag="CLASS_SABUM_KIBITTUM_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_SABUM_KIBITTUM_ANTI_CAVALRY" Tag="CLASS_SABUM_KIBITTUM_ANTI_CAVALRY"/>
+	</TypeTags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_BABYLONIAN_SABUM_KIBITTUM" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_BABYLONIAN_SABUM_KIBITTUM" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_BABYLONIAN_SABUM_KIBITTUM" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_BABYLONIAN_SABUM_KIBITTUM" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<Units>
+		<Row UnitType="UNIT_BABYLONIAN_SABUM_KIBITTUM" Cost="35" BaseMoves="3" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="17" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_NAME" Description="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_GUNPOWDER" TraitType="TRAIT_CIVILIZATION_UNIT_BABYLONIAN_SABUM_KIBITTUM"/>
+	</Units>
+	<UnitUpgrades>
+		<Row Unit="UNIT_BABYLONIAN_SABUM_KIBITTUM" UpgradeUnit="UNIT_SWORDSMAN"/>
+	</UnitUpgrades>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_SABUM_KIBITTUM_ANTI_CAVALRY" Name="LOC_ABILITY_SABUM_KIBITTUM_ANTI_CAVALRY_NAME" Description="LOC_ABILITY_SABUM_KIBITTUM_ANTI_CAVALRY_DESCRIPTION"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_SABUM_KIBITTUM_ANTI_CAVALRY</UnitAbilityType>
+			<ModifierId>SABUM_KIBITTUM_ANTI_CAVALRY</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>SABUM_KIBITTUM_ANTI_CAVALRY</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>ANTI_CAVALRY_PROMOTION_CLASS_OPPONENT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>SABUM_KIBITTUM_ANTI_CAVALRY</ModifierId>
+			<Name>Amount</Name>
+			<Value>17</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="SABUM_KIBITTUM_ANTI_CAVALRY" Context="Preview" Text="LOC_ABUM_KIBITTUM_ANTI_CAVALRY_MODIFIER_DESCRIPTION"/>
+	</ModifierStrings>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>ANTI_CAVALRY_PROMOTION_CLASS_OPPONENT_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_PROMOTION_CLASS_REQUIREMENT_LC</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_UNIT_PROMOTION_CLASS_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_PROMOTION_CLASS_REQUIREMENT_HC</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_UNIT_PROMOTION_CLASS_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_PROMOTION_CLASS_REQUIREMENT_LC</RequirementId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_LIGHT_CAVALRY</Value>
+		</Row>
+		<Row>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_PROMOTION_CLASS_REQUIREMENT_HC</RequirementId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_HEAVY_CAVALRY</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>ANTI_CAVALRY_PROMOTION_CLASS_OPPONENT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_PROMOTION_CLASS_REQUIREMENT_LC</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>ANTI_CAVALRY_PROMOTION_CLASS_OPPONENT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_PROMOTION_CLASS_REQUIREMENT_HC</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+</GameInfo>

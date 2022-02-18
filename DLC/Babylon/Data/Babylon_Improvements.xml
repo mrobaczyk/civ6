@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="IMPROVEMENT_MAHAVIHARA" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="IMPROVEMENT_TRADING_DOME" Kind="KIND_IMPROVEMENT"/>
+	</Types>
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" Name="LOC_IMPROVEMENT_MAHAVIHARA_NAME" Description="LOC_IMPROVEMENT_MAHAVIHARA_DESCRIPTION" Icon="ICON_IMPROVEMENT_MAHAVIHARA" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Housing="2" TilesRequired="2" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_NALANDA_TRAIT"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" Name="LOC_IMPROVEMENT_TRADING_DOME_NAME" Description="LOC_IMPROVEMENT_TRADING_DOME_DESCRIPTION" Icon="ICON_IMPROVEMENT_TRADING_DOME" PlunderType="PLUNDER_GOLD" PlunderAmount="50" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_SAMARKAND_TRAIT"/>
+	</Improvements>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" TerrainType="TERRAIN_SNOW_HILLS"/>
+	</Improvement_ValidTerrains>
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" UnitType="UNIT_BUILDER"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" UnitType="UNIT_BUILDER"/>
+	</Improvement_ValidBuildUnits>
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" YieldType="YIELD_SCIENCE" YieldChange="2"/>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" YieldType="YIELD_FAITH" YieldChange="0"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" YieldType="YIELD_GOLD" YieldChange="2"/>
+	</Improvement_YieldChanges>
+	<Improvement_Adjacencies>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" YieldChangeId="Mahavihara_Campus_Science_Early"/>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" YieldChangeId="Mahavihara_Campus_Science_Late"/>
+		<Row ImprovementType="IMPROVEMENT_MAHAVIHARA" YieldChangeId="Mahavihara_Holy_Site_Faith"/>
+		<Row ImprovementType="IMPROVEMENT_TRADING_DOME" YieldChangeId="TradingDome_LuxuryAdjacency"/>
+	</Improvement_Adjacencies>
+	<Adjacency_YieldChanges>
+		<Row ID="Mahavihara_Campus_Science_Early" Description="Placeholder" YieldType="YIELD_SCIENCE" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_CAMPUS" ObsoleteTech="TECH_SCIENTIFIC_THEORY"/>
+		<Row ID="Mahavihara_Campus_Science_Late" Description="Placeholder" YieldType="YIELD_SCIENCE" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_CAMPUS" PrereqTech="TECH_SCIENTIFIC_THEORY"/>
+		<Row ID="Mahavihara_Holy_Site_Faith" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_HOLY_SITE"/>
+		<Row ID="TradingDome_LuxuryAdjacency" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentResourceClass="RESOURCECLASS_LUXURY"/>
+	</Adjacency_YieldChanges>
+</GameInfo>

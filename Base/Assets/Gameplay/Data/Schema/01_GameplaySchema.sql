@@ -1494,6 +1494,11 @@ CREATE TABLE "GreatPersonIndividuals" (
 		"BirthEffectTextOverride" TEXT,
 		"AreaHighlightRadius" INTEGER,
 		"Gender" TEXT NOT NULL,
+		"ActionRequiresEnemyTerritory" BOOLEAN NOT NULL CHECK (ActionRequiresEnemyTerritory IN (0,1)) DEFAULT 0,
+		"ActionRequiresCityStateTerritory" BOOLEAN NOT NULL CHECK (ActionRequiresCityStateTerritory IN (0,1)) DEFAULT 0,
+		"ActionRequiresNonHostileTerritory" BOOLEAN NOT NULL CHECK (ActionRequiresNonHostileTerritory IN (0,1)) DEFAULT 0,
+		"ActionRequiresSuzerainTerritory" BOOLEAN NOT NULL CHECK (ActionRequiresSuzerainTerritory IN (0,1)) DEFAULT 0,
+		"ActionRequiresUnitCanGainExperience" BOOLEAN NOT NULL CHECK (ActionRequiresUnitCanGainExperience IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(GreatPersonIndividualType),
 		FOREIGN KEY (GreatPersonClassType) REFERENCES GreatPersonClasses(GreatPersonClassType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (EraType) REFERENCES Eras(EraType) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1535,6 +1540,15 @@ CREATE TABLE "GreatWorks" (
 		FOREIGN KEY (EraType) REFERENCES Eras(EraType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (GreatPersonIndividualType) REFERENCES GreatPersonIndividuals(GreatPersonIndividualType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (GreatWorkObjectType) REFERENCES GreatWorkObjectTypes(GreatWorkObjectType) ON DELETE RESTRICT ON UPDATE CASCADE);
+
+CREATE TABLE "GreatWorks_ImprovementType" (
+		"GreatWorkType" TEXT NOT NULL,
+		"ImprovementType" TEXT,
+		"ResourceType" TEXT,
+		PRIMARY KEY(GreatWorkType),
+		FOREIGN KEY (ImprovementType) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (GreatWorkType) REFERENCES GreatWorks(GreatWorkType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "GreatWork_ValidSubTypes" (
 		"GreatWorkSlotType" TEXT NOT NULL,
@@ -2138,6 +2152,13 @@ CREATE TABLE "Project_GreatPersonPoints" (
 		PRIMARY KEY(ProjectType, GreatPersonClassType),
 		FOREIGN KEY (ProjectType) REFERENCES Projects(ProjectType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (GreatPersonClassType) REFERENCES GreatPersonClasses(GreatPersonClassType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "Projects_MODE" (
+		"ProjectType" TEXT NOT NULL,
+		"PrereqImprovement" TEXT,
+		PRIMARY KEY(ProjectType),
+		FOREIGN KEY (ProjectType) REFERENCES Projects(ProjectType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (PrereqImprovement) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Project_YieldConversions" (
 		"ProjectType" TEXT NOT NULL,

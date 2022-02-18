@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Players>
+		<Row CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" CivilizationName="LOC_CIVILIZATION_BABYLON_STK_NAME" CivilizationIcon="ICON_CIVILIZATION_BABYLON_STK" LeaderName="LOC_LEADER_HAMMURABI_NAME" LeaderIcon="ICON_LEADER_HAMMURABI" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_BABYLON_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_BABYLON_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_BABYLON_STK" LeaderAbilityName="LOC_TRAIT_LEADER_HAMMURABI_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_HAMMURABI_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_HAMMURABI" Portrait="LEADER_HAMMURABI_NEUTRAL" PortraitBackground="LEADER_HAMMURABI_BACKGROUND"/>
+		<!-- Expansion 1 Support -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" CivilizationName="LOC_CIVILIZATION_BABYLON_STK_NAME" CivilizationIcon="ICON_CIVILIZATION_BABYLON_STK" LeaderName="LOC_LEADER_HAMMURABI_NAME" LeaderIcon="ICON_LEADER_HAMMURABI" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_BABYLON_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_BABYLON_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_BABYLON_STK" LeaderAbilityName="LOC_TRAIT_LEADER_HAMMURABI_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_HAMMURABI_XP1_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_HAMMURABI" Portrait="LEADER_HAMMURABI_NEUTRAL" PortraitBackground="LEADER_HAMMURABI_BACKGROUND"/>
+		<!-- Expansion 2 Support -->
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" CivilizationName="LOC_CIVILIZATION_BABYLON_STK_NAME" CivilizationIcon="ICON_CIVILIZATION_BABYLON_STK" LeaderName="LOC_LEADER_HAMMURABI_NAME" LeaderIcon="ICON_LEADER_HAMMURABI" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_BABYLON_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_BABYLON_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_BABYLON_STK" LeaderAbilityName="LOC_TRAIT_LEADER_HAMMURABI_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_HAMMURABI_XP1_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_HAMMURABI" Portrait="LEADER_HAMMURABI_NEUTRAL" PortraitBackground="LEADER_HAMMURABI_BACKGROUND"/>
+	</Players>
+	<PlayerItems>
+		<Row CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" Type="UNIT_BABYLONIAN_SABUM_KIBITTUM" Icon="ICON_UNIT_BABYLONIAN_SABUM_KIBITTUM" Name="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_NAME" Description="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_DESCRIPTION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" Type="BUILDING_PALGUM" Icon="ICON_BUILDING_PALGUM" Name="LOC_BUILDING_PALGUM_NAME" Description="LOC_BUILDING_PALGUM_DESCRIPTION" SortIndex="20"/>
+		<!-- Expansion 1 Support -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" Type="UNIT_BABYLONIAN_SABUM_KIBITTUM" Icon="ICON_UNIT_BABYLONIAN_SABUM_KIBITTUM" Name="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_NAME" Description="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" Type="BUILDING_PALGUM" Icon="ICON_BUILDING_PALGUM" Name="LOC_BUILDING_PALGUM_NAME" Description="LOC_BUILDING_PALGUM_DESCRIPTION" SortIndex="20"/>
+		<!-- Expansion 2 Support -->
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" Type="UNIT_BABYLONIAN_SABUM_KIBITTUM" Icon="ICON_UNIT_BABYLONIAN_SABUM_KIBITTUM" Name="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_NAME" Description="LOC_UNIT_BABYLONIAN_SABUM_KIBITTUM_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BABYLON_STK" LeaderType="LEADER_HAMMURABI" Type="BUILDING_PALGUM" Icon="ICON_BUILDING_PALGUM" Name="LOC_BUILDING_PALGUM_NAME" Description="LOC_BUILDING_PALGUM_DESCRIPTION" SortIndex="20"/>
+	</PlayerItems>
+	<Parameters>
+		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="GameMode_Heroes" Name="LOC_GAMEMODE_HEROES_NAME" Description="LOC_GAMEMODE_HEROES_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HEROES" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
+		<Row Key1="Ruleset" Key2="RULESET_EXPANSION_1" ParameterId="GameMode_Heroes" Name="LOC_GAMEMODE_HEROES_NAME" Description="LOC_GAMEMODE_HEROES_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HEROES" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
+		<Row Key1="Ruleset" Key2="RULESET_EXPANSION_2" ParameterId="GameMode_Heroes" Name="LOC_GAMEMODE_HEROES_NAME" Description="LOC_GAMEMODE_HEROES_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HEROES" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
+	</Parameters>
+	<ParameterCriteria>
+		<Row ParameterId="GameMode_Heroes" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_RANDOM" Operator="NotEquals" ConfigurationValue="1"/>
+	</ParameterCriteria>
+	<ParameterDependencies>
+		<Row ParameterID="GameMode_Heroes" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
+	</ParameterDependencies>
+	<GameModeItems>
+		<Row GameModeType="GAMEMODE_HEROES" Name="LOC_GAMEMODE_HEROES_NAME" Description="LOC_GAMEMODE_HEROES_DESCRIPTION" Portrait="GAMEMODE_HEROES_NEUTRAL" Background="GAMEMODE_HEROES_BACKGROUND" Icon="ICON_GAMEMODE_HEROES" SortIndex="10"/>
+	</GameModeItems>
+	<!--Mode-based Player Overrides-->
+	<GameModePlayerInfoOverrides>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:StandardPlayers" CivilizationType="CIVILIZATION_SUMERIA" LeaderType="LEADER_GILGAMESH" LeaderAbilityName="LOC_TRAIT_LEADER_GILGAMESH_HEROES_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_GILGAMESH_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_SUMERIA" LeaderType="LEADER_GILGAMESH" LeaderAbilityName="LOC_TRAIT_LEADER_GILGAMESH_HEROES_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_GILGAMESH_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_SUMERIA" LeaderType="LEADER_GILGAMESH" LeaderAbilityName="LOC_TRAIT_LEADER_GILGAMESH_HEROES_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_GILGAMESH_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:StandardPlayers" CivilizationType="CIVILIZATION_KONGO" LeaderType="LEADER_MVEMBA" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_NKISI_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_KONGO" LeaderType="LEADER_MVEMBA" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_NKISI_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_KONGO" LeaderType="LEADER_MVEMBA" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_NKISI_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:StandardPlayers" CivilizationType="CIVILIZATION_POLAND" LeaderType="LEADER_JADWIGA" LeaderAbilityDescription="LOC_TRAIT_LEADER_LITHUANIAN_UNION_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_POLAND" LeaderType="LEADER_JADWIGA" LeaderAbilityDescription="LOC_TRAIT_LEADER_LITHUANIAN_UNION_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_POLAND" LeaderType="LEADER_JADWIGA" LeaderAbilityDescription="LOC_TRAIT_LEADER_LITHUANIAN_UNION_HEROES_DESCRIPTION"/>
+	</GameModePlayerInfoOverrides>
+	<PlayerInfoOverrideQueries>
+		<Row QueryId="HeroesModePlayerInfoOverrides"/>
+	</PlayerInfoOverrideQueries>
+	<Queries>
+		<Row QueryId="HeroesModePlayerInfoOverrides" SQL="SELECT * FROM GameModePlayerInfoOverrides WHERE GameModeType = 'GAMEMODE_HEROES'"/>
+	</Queries>
+	<QueryCriteria>
+		<Row QueryId="HeroesModePlayerInfoOverrides" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HEROES" Operator="Equals" ConfigurationValue="1"/>
+	</QueryCriteria>
+	<MapLeaders>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_HAMMURABI"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" LeaderType="LEADER_HAMMURABI"/>
+	</MapLeaders>
+	<MapStartPositions>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" Plot="3325" Type="LEADER" Value="LEADER_HAMMURABI"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" Plot="3325" Type="LEADER" Value="LEADER_HAMMURABI"/>
+	</MapStartPositions>
+</GameInfo>

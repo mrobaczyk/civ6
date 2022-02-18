@@ -1669,6 +1669,9 @@
 		<Row Tag="LOC_PROJECT_FAILED_RESOURCE_REQUIREMENT">
 			<Text>This Project requires {1_ResourceName} in order to advance.</Text>
 		</Row>
+		<Row Tag="LOC_PROJECT_FAILED_PREREQ_PILLAGED">
+			<Text>The required {1_ObjectName} is pillaged.</Text>
+		</Row>
     <Row Tag="LOC_PRODUCTION_MANAGER_NO_CURRENT_PRODUCTION">
       <Text>This city is not currently producing anything.</Text>
     </Row>
@@ -2962,6 +2965,18 @@
 		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_UNOWNED_TILE">
 			<Text>Must be on a tile no player owns.</Text>
 		</Row>
+		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_ENEMY_TERRITORY">
+			<Text>Must be on a tile in enemy territory.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_NONHOSTILE_TERRITORY">
+			<Text>Must be on a tile owned by a non-hostile foreign power.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_CITY_STATE_TERRITORY">
+			<Text>Must be on a tile in city state territory.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_SUZERAIN_TERRITORY">
+			<Text>Must be in the territory of a city state of which you are suzerain.</Text>
+		</Row>
 		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_ADJACENT_TO_OWNED_TILE">
 			<Text>Must be on a tile next to one you own.</Text>
 		</Row>
@@ -2976,6 +2991,9 @@
 		</Row>
 		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_MILITARY_UNIT">
 			<Text>Must be on a tile with a military unit.</Text>
+		</Row>
+		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_EXPERIENCE_UNIT">
+			<Text>Must be on a tile with a unit that can gain experience.</Text>
 		</Row>
 		<Row Tag="LOC_UNITCOMMAND_ACTIVATE_GREAT_PERSON_REQUIRES_DOMAIN_TYPE">
 			<Text>Must be on a tile with a military unit with the appropriate domain type for the great person.</Text>
@@ -3185,6 +3203,12 @@
 		</Row>
 		<Row Tag="LOC_UNIT_BOMBARD_STRENGTH">
 			<Text>[ICON_Bombard] Bombard Strength: {1_Bombard} ([ICON_Range] Range {2_Range})</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_LIFESPAN">
+			<Text>[ICON_Lifespan] Lifespan: {1_Amount}</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ACTION_CHARGES">
+			<Text>[ICON_Charges] Charges: {1_Amount}</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_MOVEMENT">
 			<Text>[ICON_Movement] Movement: {1_Movement}</Text>
@@ -3577,6 +3601,9 @@
     <Row Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING">
       <Text>Healing</Text>
     </Row>
+		<Row Tag="LOC_TYPE_TRAIT_CANNOT_EARN_EXPERIENCE">
+			<Text>Cannot earn XP or gain promotions</Text>
+		</Row>
 		<!-- ==================== Calendar Text ==================== -->
 		<Row Tag="LOC_TIME_AD">
 			<Text>{1_Date: number #} AD</Text>

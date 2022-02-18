@@ -641,7 +641,7 @@ function CreateNewTreasure(iPlayerID :number)
 		local treasurePlot = treasurePlots[treasureRand];
 
 		-- Use an infamous pirate's name as the owner of randomly generated treasure.
-		local infamousPirateRand :number = RandRange(1, #g_InfamousPirates, "Infamous Pirate Owner for Treasure Plot Roll");
+		local infamousPirateRand :number = RandRange(1, #g_InfamousPirates + 1, "Infamous Pirate Owner for Treasure Plot Roll");
 		local infamousPirateName :string = g_InfamousPirates[infamousPirateRand].Name;
 
 		treasurePlot:SetProperty(g_plotPropertyKeys.TreasureOwnerName, infamousPirateName);
@@ -816,7 +816,7 @@ function GetShorePartyEmbarkStatusForUnit(pHomeUnit :object)
 	end
 
 	local adjPlots = Map.GetAdjacentPlots(pHomeUnit:GetX(), pHomeUnit:GetY());
-	for _, adjPlot in ipairs(adjPlots) do
+	for _, adjPlot in pairs(adjPlots) do
 		local adjPlotResults = GetShorePartyEmbarkStatusForPlot(pHomeUnit:GetOwner(), adjPlot);
 		if(adjPlotResults.Result == m_GetShorePartyEmbarkResults.VALID) then
 			results = adjPlotResults;
@@ -948,7 +948,7 @@ function GrantRelic(iPlayerID :number)
 		return;
 	end
 
-	local relicRand :number = RandRange(1, #lockedRelics, "Picking Pirate Relic");
+	local relicRand :number = RandRange(1, #lockedRelics + 1, "Picking Pirate Relic");
 	pPlayerCulture:SetCivic(lockedRelics[relicRand].Index, true);
 	pPlayerCulture:SetCivicCompletedThisTurn(true); -- allow free relic selection this turn.
 	NotificationManager.SendNotification(iPlayerID, NotificationTypes.FILL_CIVIC_SLOT); -- this adds the fill civic slot end turn blocker which isn't triggered by script civic unlocks.

@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Admirals -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_MATTHEW_PERRY" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_HIMERIOS" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<!-- Artists -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_KAMAL_UD_DIN_BEHZAD" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_HASEGAWA_TOHAKU" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_WASSILY_KANDINSKY" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<!-- Engineers -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_IMHOTEP" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_SHAH_JAHAN" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_KENZO_TANGE" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<!-- Generals -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_DANDARA" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<!-- Merchants -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_ZHOU_DAGUAN" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_IBN_FADLAN" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_STAMFORD_RAFFLES" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<!-- Musicians -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_DIMITRIE_CANTEMIR" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_SCOTT_JOPLIN" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<!-- Scientists -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_ZHANG_HENG" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_MARGARET_MEAD" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<!-- Writers -->
+		<Row Type="GREAT_PERSON_INDIVIDUAL_VALMIKI" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_RUMI" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_BEATRIX_POTTER" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_GABRIELA_MISTRAL" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+		
+		<!-- Modifiers -->
+		<Row Type="MODIFIER_GRANT_UNITS_IN_DISTRICTS" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_ADJUST_AMENITIES_IN_DISTRICT" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_ADJUST_HOUSING_IN_DISTRICT" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_UNIT_BECOME_CITY_SUZERAIN" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_CITY_PURCHASE_PRODUCTION" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_CITY_GRANT_FREE_ENVOYS_HERE" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_GRANT_UNIT_OF_ABILITY_WITH_MODIFIER" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_UNIT_ABSORB_CITY_STATE_AS_GIFT_AND_APPLY_MODIFIER" Kind="KIND_MODIFIER"/>
+		
+		<!-- Abilities -->
+		<Row Type="ABILITY_HIMERIOS_BONUS_EXPERIENCE" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_HIMERIOS_BONUS_EXPERIENCE" Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="ABILITY_HIMERIOS_BONUS_EXPERIENCE" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_HIMERIOS_BONUS_EXPERIENCE" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_HIMERIOS_BONUS_EXPERIENCE" Tag="CLASS_NAVAL_CARRIER"/>
+	</TypeTags>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_HIMERIOS_BONUS_EXPERIENCE" Name="LOC_ABILITY_HIMERIOS_BONUS_EXPERIENCE_NAME" Description="LOC_ABILITY_HIMERIOS_BONUS_EXPERIENCE_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_HIMERIOS_BONUS_EXPERIENCE</UnitAbilityType>
+			<ModifierId>HIMERIOS_BONUS_EXPERIENCE</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_GRANT_UNITS_IN_DISTRICTS</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_GRANT_UNIT_IN_EACH_DISTRICT</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_ADJUST_AMENITIES_IN_DISTRICT</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_DISTRICT_AMENITY</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_ADJUST_HOUSING_IN_DISTRICT</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_DISTRICT_HOUSING</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_HAPPINESS_YIELD</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_GRANT_UNIT_OF_ABILITY_WITH_MODIFIER</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_GRANT_UNIT_OF_CLASS_AND_APPLY_ABILITY</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_UNIT_BECOME_CITY_SUZERAIN</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_BECOME_CITY_SUZERAIN</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_CITY_PURCHASE_PRODUCTION</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_PURCHASE_PRODUCTION_IN_CITY</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_CITY_GRANT_FREE_ENVOYS_HERE</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_GRANT_FREE_ENVOYS_HERE</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_UNIT_ABSORB_CITY_STATE_AS_GIFT_AND_APPLY_MODIFIER</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_UNIT_TRANSFER_CITY_AS_GIFT_AND_APPLY_MODIFIER</EffectType>
+		</Row>
+	</DynamicModifiers>
+	<GreatPersonIndividuals>
+		<!-- Admirals -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MATTHEW_PERRY" Name="LOC_GREAT_PERSON_INDIVIDUAL_MATTHEW_PERRY_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ADMIRAL" EraType="ERA_MODERN" Gender="F" ActionCharges="1" ActionRequiresOwnedTile="false" ActionRequiresCityStateTerritory="true" ActionNameTextOverride="LOC_GREATPERSON_ACTION_NAME_RETIRE" ActionEffectTileHighlighting="false" AreaHighlightRadius="2"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HIMERIOS" Name="LOC_GREAT_PERSON_INDIVIDUAL_HIMERIOS_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ADMIRAL" EraType="ERA_MEDIEVAL" Gender="M" ActionCharges="1" ActionRequiresOwnedTile="false" ActionRequiresMilitaryUnitDomain="DOMAIN_SEA" ActionRequiresUnitCanGainExperience="true" ActionNameTextOverride="LOC_GREATPERSON_ACTION_NAME_RETIRE" ActionEffectTileHighlighting="false" AreaHighlightRadius="2"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR" Name="LOC_GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ADMIRAL" EraType="ERA_CLASSICAL" Gender="M" ActionCharges="1" ActionRequiresOwnedTile="false" ActionRequiresNoMilitaryUnit="true" ActionNameTextOverride="LOC_GREATPERSON_ACTION_NAME_RETIRE" ActionEffectTileHighlighting="false" AreaHighlightRadius="2"/>
+		<!-- Artists -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_KAMAL_UD_DIN_BEHZAD" Name="LOC_GREAT_PERSON_INDIVIDUAL_KAMAL_UD_DIN_BEHZAD_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ARTIST" EraType="ERA_RENAISSANCE" ActionCharges="0" Gender="M"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HASEGAWA_TOHAKU" Name="LOC_GREAT_PERSON_INDIVIDUAL_HASEGAWA_TOHAKU_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ARTIST" EraType="ERA_INDUSTRIAL" ActionCharges="0" Gender="M"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_WASSILY_KANDINSKY" Name="LOC_GREAT_PERSON_INDIVIDUAL_WASSILY_KANDINSKY_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ARTIST" EraType="ERA_INFORMATION" ActionCharges="0" Gender="M"/>
+		<!-- Engineers -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IMHOTEP" Name="LOC_GREAT_PERSON_INDIVIDUAL_IMHOTEPI_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_MEDIEVAL" Gender="M" ActionCharges="2" ActionRequiresIncompleteWonder="true"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_SHAH_JAHAN" Name="LOC_GREAT_PERSON_INDIVIDUAL_SHAH_JAHAN_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_MODERN" Gender="M" ActionCharges="1" ActionRequiresIncompleteWonder="true"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_KENZO_TANGE" Name="LOC_GREAT_PERSON_INDIVIDUAL_KENZO_TANGE_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_INFORMATION" Gender="M" ActionCharges="1"/>
+		<!-- Generals -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_DANDARA" Name="LOC_GREAT_PERSON_INDIVIDUAL_DANDARA_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" EraType="ERA_INDUSTRIAL" Gender="F" ActionCharges="2" ActionRequiresOwnedTile="false" ActionRequiresNoMilitaryUnit="true" ActionNameTextOverride="LOC_GREATPERSON_ACTION_NAME_RETIRE" ActionEffectTileHighlighting="false" AreaHighlightRadius="2"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC" Name="LOC_GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" EraType="ERA_CLASSICAL" Gender="F" ActionCharges="1" ActionNameTextOverride="LOC_GREATPERSON_ACTION_NAME_RETIRE" ActionEffectTileHighlighting="true" AreaHighlightRadius="2" ActionRequiresCompletedDistrictType="DISTRICT_ENCAMPMENT"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU" Name="LOC_GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" EraType="ERA_MODERN" Gender="M" ActionCharges="1" ActionRequiresOwnedTile="false" ActionRequiresEnemyTerritory="true" ActionNameTextOverride="LOC_GREATPERSON_ACTION_NAME_RETIRE" ActionEffectTileHighlighting="false" AreaHighlightRadius="2"/>
+		<!-- Merchants -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ZHOU_DAGUAN" Name="LOC_GREAT_PERSON_INDIVIDUAL_ZHOU_DAGUAN_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_MERCHANT" EraType="ERA_RENAISSANCE" Gender="M" ActionCharges="1" ActionRequiresOwnedTile="false" ActionRequiresCityStateTerritory="true" ActionRequiresNonHostileTerritory="True"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_FADLAN" Name="LOC_GREAT_PERSON_INDIVIDUAL_IBN_FADLAN_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_MERCHANT" EraType="ERA_MEDIEVAL" Gender="M" ActionCharges="1" ActionRequiresCompletedDistrictType="DISTRICT_COMMERCIAL_HUB"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_STAMFORD_RAFFLES" Name="LOC_GREAT_PERSON_INDIVIDUAL_STAMFORD_RAFFLES_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_MERCHANT" EraType="ERA_MODERN" Gender="M" ActionCharges="1" ActionRequiresOwnedTile="false" ActionRequiresSuzerainTerritory="True"/>
+		<!-- Musicians -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_DIMITRIE_CANTEMIR" Name="LOC_GREAT_PERSON_INDIVIDUAL_DIMITRIE_CANTEMIR_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_MUSICIAN" EraType="ERA_INDUSTRIAL" ActionCharges="0" Gender="M"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_SCOTT_JOPLIN" Name="LOC_GREAT_PERSON_INDIVIDUAL_SCOTT_JOPLIN_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_MUSICIAN" EraType="ERA_MODERN" ActionCharges="0" Gender="M"/>
+		<!-- Scientists -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ZHANG_HENG" Name="LOC_GREAT_PERSON_INDIVIDUAL_ZHANG_HENG_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_SCIENTIST" EraType="ERA_CLASSICAL" Gender="M" ActionCharges="1" ActionRequiresCompletedDistrictType="DISTRICT_CAMPUS"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" Name="LOC_GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_SCIENTIST" EraType="ERA_RENAISSANCE" Gender="M" ActionCharges="1" ActionRequiresCompletedDistrictType="DISTRICT_CAMPUS"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MARGARET_MEAD" Name="LOC_GREAT_PERSON_INDIVIDUAL_MARGARET_MEAD_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_SCIENTIST" EraType="ERA_ATOMIC" Gender="F" ActionCharges="1" ActionRequiresCompletedDistrictType="DISTRICT_CAMPUS" ActionRequiresOwnedTile="false" ActionRequiresNonHostileTerritory="True"/>
+		<!-- Writers -->
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_VALMIKI" Name="LOC_GREAT_PERSON_INDIVIDUAL_VALMIKIY_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_WRITER" EraType="ERA_CLASSICAL" ActionCharges="0" Gender="M"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_RUMI" Name="LOC_GREAT_PERSON_INDIVIDUAL_RUMI_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_WRITER" EraType="ERA_MEDIEVAL" ActionCharges="0" Gender="M"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_BEATRIX_POTTER" Name="LOC_GREAT_PERSON_INDIVIDUAL_BEATRIX_POTTER_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_WRITER" EraType="ERA_MODERN" ActionCharges="0" Gender="M"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_GABRIELA_MISTRAL" Name="LOC_GREAT_PERSON_INDIVIDUAL_GABRIELA_MISTRAL_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_WRITER" EraType="ERA_INFORMATION" ActionCharges="0" Gender="M"/>
+	</GreatPersonIndividuals>
+	<GreatPersonIndividualBirthModifiers>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR" ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_SEA"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR" ModifierId="GREATPERSON_MOVEMENT_AOE_CLASSICAL_SEA"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HIMERIOS" ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_MEDIEVAL_SEA"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HIMERIOS" ModifierId="GREATPERSON_MOVEMENT_AOE_MEDIEVAL_SEA"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MATTHEW_PERRY" ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_MODERN_SEA"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MATTHEW_PERRY" ModifierId="GREATPERSON_MOVEMENT_AOE_MODERN_SEA"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_DANDARA" ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_INDUSTRIAL_LAND"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_DANDARA" ModifierId="GREATPERSON_MOVEMENT_AOE_INDUSTRIAL_LAND"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC" ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC" ModifierId="GREATPERSON_MOVEMENT_AOE_CLASSICAL_LAND"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU" ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_MODERN_LAND"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU" ModifierId="GREATPERSON_MOVEMENT_AOE_MODERN_LAND"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ZHOU_DAGUAN" ModifierId="GREAT_PERSON_ENTER_FOREIGN_LANDS"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MATTHEW_PERRY" ModifierId="GREAT_PERSON_ENTER_FOREIGN_LANDS"/>
+	</GreatPersonIndividualBirthModifiers>
+	<GreatPersonIndividualActionModifiers>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_DANDARA" ModifierId="GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC" ModifierId="GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC_PERMANENT_ACTIVE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_PLAYER"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU" ModifierId="GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_ACTIVE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ZHANG_HENG" ModifierId="GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_MATHEMATICS" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ZHANG_HENG" ModifierId="GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_CEL_NAV" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ZHANG_HENG" ModifierId="GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_ENGINEERING" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_HOUSING" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_AMENITY" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_SCIENCE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_CULTURE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_PRODUCTION" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_GOLD" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_FAITH" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_SCIENCE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_CULTURE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_PRODUCTION" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_GOLD" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN" ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_FAITH" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MARGARET_MEAD" ModifierId="GREAT_PERSON_GRANT_LOTSO_SCIENCE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MARGARET_MEAD" ModifierId="GREAT_PERSON_GRANT_LOTSO_CULTURE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MATTHEW_PERRY" ModifierId="GREATPERSON_CITY_STATE_STEAL_ENVOYS" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HIMERIOS" ModifierId="GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_DOMAIN_MILITARY_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HIMERIOS" ModifierId="GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE_UNIT_BONUS" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_DOMAIN_MILITARY_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR" ModifierId="GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR_FREE_UNIT" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IMHOTEP" ModifierId="GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_ANCIENT_CLASSICAL" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_WONDER_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IMHOTEP" ModifierId="GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_OTHER" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_WONDER_IN_TILE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_SHAH_JAHAN" ModifierId="GREATPERSON_WONDER_PURCHASE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_KENZO_TANGE" ModifierId="GREATPERSON_DISTRICT_SCIENCE_ADJACENCY_AS_TOURISM" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_KENZO_TANGE" ModifierId="GREATPERSON_DISTRICT_CULTURE_ADJACENCY_AS_TOURISM" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_KENZO_TANGE" ModifierId="GREATPERSON_DISTRICT_GOLD_ADJACENCY_AS_TOURISM" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_KENZO_TANGE" ModifierId="GREATPERSON_DISTRICT_FAITH_ADJACENCY_AS_TOURISM" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_KENZO_TANGE" ModifierId="GREATPERSON_DISTRICT_PRODUCTION_ADJACENCY_AS_TOURISM" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ZHOU_DAGUAN" ModifierId="GREATPERSON_GAIN_THREE_ENVOYS_HERE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_FADLAN" ModifierId="GREATPERSON_HAVE_A_FREE_TRADE_ROUTE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_IBN_FADLAN" ModifierId="GREATPERSON_CITY_STATE_TRADE_FAITH" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_CITY"/>
+	</GreatPersonIndividualActionModifiers>
+	<Modifiers>
+		<!-- Unique Action Modifiers, different for each individual -->
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC_PERMANENT_ACTIVE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_WAR_WEARINESS</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_ACTIVE</ModifierId>
+			<ModifierType>MODIFIER_GRANT_UNITS_IN_DISTRICTS</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_MATHEMATICS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_CEL_NAV</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_ENGINEERING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_HOUSING</ModifierId>
+			<ModifierType>MODIFIER_ADJUST_HOUSING_IN_DISTRICT</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_AMENITY</ModifierId>
+			<ModifierType>MODIFIER_ADJUST_AMENITIES_IN_DISTRICT</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD_BAB</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_GRANT_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE_UNIT_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_ABILITY</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>HIMERIOS_BONUS_EXPERIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_STEAL_ENVOYS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_BECOME_CITY_SUZERAIN</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR_FREE_UNIT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_UNIT_OF_ABILITY_WITH_MODIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>HANNO_FREE_UNIT_MOVEMENT_BUFF</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_SEA_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_ANCIENT_CLASSICAL</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_PRODUCTION_IN_CITY</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>THIS_WONDER_IS_ANCIENT_OR_CLASSICAL</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_OTHER</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_PRODUCTION_IN_CITY</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>THIS_WONDER_IS_ANCIENT_OR_CLASSICAL_INVERSE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_SCIENCE_ADJACENCY_AS_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_CITY_DISTRICTS_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_CULTURE_ADJACENCY_AS_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_CITY_DISTRICTS_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_GOLD_ADJACENCY_AS_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_CITY_DISTRICTS_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_FAITH_ADJACENCY_AS_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_CITY_DISTRICTS_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_PRODUCTION_ADJACENCY_AS_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_CITY_DISTRICTS_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_WONDER_PURCHASE</ModifierId>
+			<ModifierType>MODIFIER_CITY_PURCHASE_PRODUCTION</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_HAVE_A_FREE_TRADE_ROUTE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_TRADE_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTES_CITY_STATE_YIELD</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_GAIN_THREE_ENVOYS_HERE</ModifierId>
+			<ModifierType>MODIFIER_CITY_GRANT_FREE_ENVOYS_HERE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_ENTER_FOREIGN_LANDS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ENTER_FOREIGN_LANDS</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!-- Unique Action Modifiers, different for each individual -->
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_WARRIOR_MONK</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE</ModifierId>
+			<Name>Experience</Name>
+			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE</ModifierId>
+			<Name>UniqueOverride</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC_PERMANENT_ACTIVE</ModifierId>
+			<Name>Overall</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC_PERMANENT_ACTIVE</ModifierId>
+			<Name>Amount</Name>
+			<Value>-25</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_ACTIVE</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_MUSKETMAN</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_ACTIVE</ModifierId>
+			<Name>IgnoreDefensible</Name>
+			<Value>True</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_ACTIVE</ModifierId>
+			<Name>UniqueOverride</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_MATHEMATICS</ModifierId>
+			<Name>TechType</Name>
+			<Value>TECH_MATHEMATICS</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_MATHEMATICS</ModifierId>
+			<Name>GrantTechIfBoosted</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_ENGINEERING</ModifierId>
+			<Name>TechType</Name>
+			<Value>TECH_ENGINEERING</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_ENGINEERING</ModifierId>
+			<Name>GrantTechIfBoosted</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_CEL_NAV</ModifierId>
+			<Name>TechType</Name>
+			<Value>TECH_CELESTIAL_NAVIGATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_CEL_NAV</ModifierId>
+			<Name>GrantTechIfBoosted</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_HOUSING</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_AMENITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_SCIENCE</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_HAPPY</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_CULTURE</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_HAPPY</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_PRODUCTION</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_HAPPY</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_GOLD</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_HAPPY</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_FAITH</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_HAPPY</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_SCIENCE</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_ECSTATIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_CULTURE</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_ECSTATIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_PRODUCTION</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_ECSTATIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_GOLD</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_ECSTATIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_FAITH</ModifierId>
+			<Name>HappinessType</Name>
+			<Value>HAPPINESS_ECSTATIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE_UNIT_BONUS</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_HIMERIOS_BONUS_EXPERIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>HIMERIOS_BONUS_EXPERIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR_FREE_UNIT</ModifierId>
+			<Name>UnitPromotionClassType</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR_FREE_UNIT</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>HANNO_FREE_UNIT_MOVEMENT_BUFF</Value>
+		</Row>
+		<Row>
+			<ModifierId>HANNO_FREE_UNIT_MOVEMENT_BUFF</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_ANCIENT_CLASSICAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>350</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_ANCIENT_CLASSICAL</ModifierId>
+			<Name>KeepOverflow</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_OTHER</ModifierId>
+			<Name>Amount</Name>
+			<Value>175</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_OTHER</ModifierId>
+			<Name>KeepOverflow</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_PRODUCTION_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_PRODUCTION_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_SCIENCE_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_SCIENCE_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_CULTURE_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_CULTURE_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_GOLD_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_GOLD_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_FAITH_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_DISTRICT_FAITH_ADJACENCY_AS_TOURISM</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_STEAL_ENVOYS</ModifierId>
+			<Name>RemoveOthers</Name>
+			<Value>True</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_HAVE_A_FREE_TRADE_ROUTE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_TRADE_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_CITY_STATE_TRADE_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_GAIN_THREE_ENVOYS_HERE</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1000</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_SCIENCE</ModifierId>
+			<Name>Scale</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1000</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_CULTURE</ModifierId>
+			<Name>Scale</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_GRANT_LOTSO_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_PERSON_ENTER_FOREIGN_LANDS</ModifierId>
+			<Name>Enter</Name>
+			<Value>true</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE"/>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC_PERMANENT_ACTIVE" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_TRUNG_TRAC_PERMANENT_ACTIVE"/>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_ACTIVE" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_TUPAC_AMARU_ACTIVE"/>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_MATHEMATICS" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_BOOST_OR_GRANT_MATHEMATICS"/>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_HOUSING" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_CAMPUS_HOUSING"/>
+		<Row ModifierId="GREAT_PERSON_GRANT_LOTSO_SCIENCE" Context="Summary" Text="LOC_GREAT_PERSON_GRANT_LOTSO_SCIENCE"/>
+		<Row ModifierId="GREATPERSON_CITY_STATE_STEAL_ENVOYS" Context="Summary" Text="LOC_GREATPERSON_CITY_STATE_STEAL_ENVOYS"/>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_HIMERIOS_ACTIVE"/>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR_FREE_UNIT" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_HANNO_THE_NAVIGATOR_FREE_UNIT"/>
+		<Row ModifierId="GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_ANCIENT_CLASSICAL" Context="Summary" Text="LOC_GREAT_PERSON_INDIVIDUAL_IMHOTEP_PRODUCTION_ANCIENT_CLASSICAL"/>
+		<Row ModifierId="GREATPERSON_WONDER_PURCHASE" Context="Summary" Text="LOC_GREATPERSON_WONDER_PURCHASE"/>
+		<Row ModifierId="GREATPERSON_DISTRICT_SCIENCE_ADJACENCY_AS_TOURISM" Context="Summary" Text="LOC_GREATPERSON_DISTRICT_SCIENCE_ADJACENCY_AS_TOURISM"/>
+		<Row ModifierId="GREATPERSON_GAIN_THREE_ENVOYS_HERE" Context="Summary" Text="LOC_GREATPERSON_GAIN_THREE_ENVOYS_HERE"/>
+		<Row ModifierId="GREATPERSON_HAVE_A_FREE_TRADE_ROUTE" Context="Summary" Text="LOC_GREATPERSON_HAVE_A_FREE_TRADE_ROUTE"/>
+	</ModifierStrings>
+
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>THIS_WONDER_IS_ANCIENT_OR_CLASSICAL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>THIS_WONDER_IS_ANCIENT_OR_CLASSICAL_INVERSE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>THIS_WONDER_IS_ANCIENT_OR_CLASSICAL</RequirementSetId>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>THIS_WONDER_IS_ANCIENT_OR_CLASSICAL_INVERSE</RequirementSetId>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL_INVERSE</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_WONDER_IS_ERA</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL_INVERSE</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_WONDER_IS_ERA</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL</RequirementId>
+			<Name>EarliestEra</Name>
+			<Value>ERA_ANCIENT</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL</RequirementId>
+			<Name>LatestEra</Name>
+			<Value>ERA_CLASSICAL</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL_INVERSE</RequirementId>
+			<Name>EarliestEra</Name>
+			<Value>ERA_ANCIENT</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRE_THIS_WONDER_IS_ANCIENT_OR_CLASSICAL_INVERSE</RequirementId>
+			<Name>LatestEra</Name>
+			<Value>ERA_CLASSICAL</Value>
+		</Row>
+	</RequirementArguments>
+</GameInfo>

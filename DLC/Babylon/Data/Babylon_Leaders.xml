@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_HAMMURABI" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_AYUTTHAYA" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_CHINGUETTI" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_JOHANNESBURG" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_NALANDA" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_SAMARKAND" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_WOLIN" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_HAMMURABI" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_HAMMURABI_DISTRICTS" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_AYUTTHAYA_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_CHINGUETTI_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_JOHANNESBURG_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_NALANDA_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_SAMARKAND_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_WOLIN_TRAIT" Kind="KIND_TRAIT"/>
+		<!-- Ability -->
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_WOLIN_NAVAL_UNITS" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_RECON"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_HEAVY_CHARIOT"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_LIGHT_CHARIOT"/>
+		<Row Type="ABILITY_WOLIN_NAVAL_UNITS" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_WOLIN_NAVAL_UNITS" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_WOLIN_NAVAL_UNITS" Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="ABILITY_WOLIN_LAND_UNITS" Tag="CLASS_WARRIOR_MONK"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_HAMMURABI" Name="LOC_LEADER_HAMMURABI_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<!-- Minor-->
+		<Row LeaderType="LEADER_MINOR_CIV_AYUTTHAYA" Name="LOC_CIVILIZATION_AYUTTHAYA_NAME" InheritFrom="LEADER_MINOR_CIV_CULTURAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_CHINGUETTI" Name="LOC_CIVILIZATION_CHINGUETTI_NAME" InheritFrom="LEADER_MINOR_CIV_RELIGIOUS"/>
+		<Row LeaderType="LEADER_MINOR_CIV_JOHANNESBURG" Name="LOC_CIVILIZATION_JOHANNESBURG_NAME" InheritFrom="LEADER_MINOR_CIV_INDUSTRIAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_NALANDA" Name="LOC_CIVILIZATION_NALANDA_NAME" InheritFrom="LEADER_MINOR_CIV_SCIENTIFIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_SAMARKAND" Name="LOC_CIVILIZATION_SAMARKAND_NAME" InheritFrom="LEADER_MINOR_CIV_TRADE"/>
+		<Row LeaderType="LEADER_MINOR_CIV_WOLIN" Name="LOC_CIVILIZATION_WOLIN_NAME" InheritFrom="LEADER_MINOR_CIV_MILITARISTIC"/>
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_HAMMURABI" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_HAMMURABI_QUOTE" QuoteAudio="HAMMURABI_MA_MISC_PEP_TALK_A_05"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_HAMMURABI" TraitType="TRAIT_LEADER_HAMMURABI"/>
+		<!-- Minor-->
+		<Row LeaderType="LEADER_MINOR_CIV_AYUTTHAYA" TraitType="MINOR_CIV_AYUTTHAYA_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_CHINGUETTI" TraitType="MINOR_CIV_CHINGUETTI_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_JOHANNESBURG" TraitType="MINOR_CIV_JOHANNESBURG_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_NALANDA" TraitType="MINOR_CIV_NALANDA_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_SAMARKAND" TraitType="MINOR_CIV_SAMARKAND_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_WOLIN" TraitType="MINOR_CIV_WOLIN_TRAIT"/>
+	</LeaderTraits>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_HAMMURABI" Name="LOC_TRAIT_LEADER_HAMMURABI_NAME" Description="LOC_TRAIT_LEADER_HAMMURABI_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_HAMMURABI_DISTRICTS"/>
+		<!-- Minor-->
+		<Row TraitType="MINOR_CIV_AYUTTHAYA_TRAIT" Name="LOC_LEADER_TRAIT_AYUTTHAYA_NAME" Description="LOC_LEADER_TRAIT_AYUTTHAYA_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_CHINGUETTI_TRAIT" Name="LOC_LEADER_TRAIT_CHINGUETTI_NAME" Description="LOC_LEADER_TRAIT_CHINGUETTI_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_JOHANNESBURG_TRAIT" Name="LOC_LEADER_TRAIT_JOHANNESBURG_NAME" Description="LOC_LEADER_TRAIT_JOHANNESBURG_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_NALANDA_TRAIT" Name="LOC_LEADER_TRAIT_NALANDA_NAME" Description="LOC_LEADER_TRAIT_NALANDA_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_SAMARKAND_TRAIT" Name="LOC_LEADER_TRAIT_SAMARKAND_NAME" Description="LOC_LEADER_TRAIT_SAMARKAND_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_WOLIN_TRAIT" Name="LOC_LEADER_TRAIT_WOLIN_NAME" Description="LOC_LEADER_TRAIT_WOLIN_DESCRIPTION"/>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_LEADER_HAMMURABI</TraitType>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_HAMMURABI</TraitType>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE</ModifierId>
+		</Row>
+		<!-- Minor-->
+		<Row TraitType="MINOR_CIV_AYUTTHAYA_TRAIT" ModifierId="MINOR_CIV_AYUTTHAYA_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_CHINGUETTI_TRAIT" ModifierId="MINOR_CIV_CHINGUETTI_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_JOHANNESBURG_TRAIT" ModifierId="MINOR_CIV_JOHANNESBURG_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_JOHANNESBURG_TRAIT" ModifierId="MINOR_CIV_JOHANNESBURG_UNIQUE_INFLUENCE_BONUS_LATE"/>
+		<Row TraitType="MINOR_CIV_NALANDA_TRAIT" ModifierId="MINOR_CIV_NALANDA_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_NALANDA_TRAIT" ModifierId="MINOR_CIV_NALANDA_FREE_TECHNOLOGY"/>
+		<Row TraitType="MINOR_CIV_SAMARKAND_TRAIT" ModifierId="MINOR_CIV_SAMARKAND_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_SAMARKAND_TRAIT" ModifierId="MINOR_CIV_SAMARKAND_TRADE_GOLD"/>
+		<Row TraitType="MINOR_CIV_WOLIN_TRAIT" ModifierId="MINOR_CIV_WOLIN_GREAT_GENERAL_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_WOLIN_TRAIT" ModifierId="MINOR_CIV_WOLIN_GREAT_ADMIRAL_INFLUENCE_BONUS"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_FREE_BUILDING_WHEN_DISTRICT_MADE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_FREE_BUILDING_WHEN_SPECIALTY_DISTRICT_CONSTRUCTED</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_PLAYER_ENVOYS_NON_SPECIALTY</ModifierType>
+		</Row>
+		<!-- Minor-->
+		<Row>
+			<ModifierId>MINOR_CIV_AYUTTHAYA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AYUTTHAYA_CULTURE_COMPLETE_BUILDING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_YIELD_PER_BUILDING_COST</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_CHINGUETTI_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_CHINGUETTI_FAITH_FOLLOWERS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_FOLLOWER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_YIELD_BY_NUMBER_RESOURCES</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_UNIQUE_INFLUENCE_BONUS_LATE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES_LATE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_YIELD_BY_NUMBER_RESOURCES</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_INDUSTRIALIZATION</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_CAN_MAHAVIHARA</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_VALID_IMPROVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_FREE_TECHNOLOGY</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_FREE_TECHNOLOGY_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_RANDOM_TECHNOLOGY</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>PLAYER_HAS_MAHAVIHARA</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_CAN_TRADING_DOME</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_VALID_IMPROVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_TRADE_GOLD</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_TRADE_GOLD_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_IMPROVEMENT_AT_LOCATION_BABYLON</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_GENERAL_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_GENERAL_INFLUENCE_BONUS_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_ADMIRAL_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_ADMIRAL_INFLUENCE_BONUS_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WOLIN_GREAT_GENERAL_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_UNITS_GREAT_PEOPLE_POINTS_PER_KILL_BY_DEFEATED_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WOLIN_GREAT_ADMIRAL_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_UNITS_GREAT_PEOPLE_POINTS_PER_KILL_BY_DEFEATED_STRENGTH</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_FREE_ENVOY_WHEN_DISTRICT_MADE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<!-- Minor-->
+		<Row>
+			<ModifierId>MINOR_CIV_AYUTTHAYA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_AYUTTHAYA_CULTURE_COMPLETE_BUILDING</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AYUTTHAYA_CULTURE_COMPLETE_BUILDING</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AYUTTHAYA_CULTURE_COMPLETE_BUILDING</ModifierId>
+			<Name>BuildingProductionPercent</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AYUTTHAYA_CULTURE_COMPLETE_BUILDING</ModifierId>
+			<Name>IncludeWonder</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_CHINGUETTI_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_CHINGUETTI_FAITH_FOLLOWERS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_CHINGUETTI_FAITH_FOLLOWERS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_CHINGUETTI_FAITH_FOLLOWERS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_UNIQUE_INFLUENCE_BONUS_LATE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES_LATE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES_LATE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_JOHANNESBURG_PRODUCTION_RESOURCES_LATE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_NALANDA_CAN_MAHAVIHARA</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_CAN_MAHAVIHARA</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MAHAVIHARA</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_FREE_TECHNOLOGY</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_NALANDA_FREE_TECHNOLOGY_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_NALANDA_FREE_TECHNOLOGY_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_SAMARKAND_CAN_TRADING_DOME</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_CAN_TRADING_DOME</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_TRADING_DOME</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_TRADE_GOLD</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_SAMARKAND_TRADE_GOLD_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_TRADE_GOLD_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_TRADE_GOLD_MODIFIER</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_TRADING_DOME</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_SAMARKAND_TRADE_GOLD_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_GENERAL_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_WOLIN_GREAT_GENERAL_INFLUENCE_BONUS_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_GENERAL_INFLUENCE_BONUS_MODIFIER</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_WOLIN_LAND_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_ADMIRAL_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_WOLIN_GREAT_ADMIRAL_INFLUENCE_BONUS_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_WOLIN_GREAT_ADMIRAL_INFLUENCE_BONUS_MODIFIER</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_WOLIN_NAVAL_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>WOLIN_GREAT_GENERAL_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>WOLIN_GREAT_GENERAL_POINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>WOLIN_GREAT_ADMIRAL_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_ADMIRAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>WOLIN_GREAT_ADMIRAL_POINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_MAHAVIHARA</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_INDUSTRIALIZATION</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_MAHAVIHARA</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_MAHAVIHARA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_INDUSTRIALIZATION</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_INDUSTRIALIZATION</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_MAHAVIHARA</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_IMPROVEMENT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_INDUSTRIALIZATION</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_TECHNOLOGY</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_MAHAVIHARA</RequirementId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MAHAVIHARA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_INDUSTRIALIZATION</RequirementId>
+			<Name>TechnologyType</Name>
+			<Value>TECH_INDUSTRIALIZATION</Value>
+		</Row>
+	</RequirementArguments>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_WOLIN_LAND_UNITS" Name="LOC_ABILITY_WOLIN_LAND_UNITS_NAME" Description="LOC_ABILITY_WOLIN_LAND_UNITS_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_WOLIN_NAVAL_UNITS" Name="LOC_ABILITY_WOLIN_NAVAL_UNITS_UNITS_NAME" Description="LOC_ABILITY_WOLIN_NAVAL_UNITS_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_WOLIN_LAND_UNITS</UnitAbilityType>
+			<ModifierId>WOLIN_GREAT_GENERAL_POINTS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_WOLIN_NAVAL_UNITS</UnitAbilityType>
+			<ModifierId>WOLIN_GREAT_ADMIRAL_POINTS</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<!-- Agenda Definitions -->
+	<Agendas>
+		<Row AgendaType="AGENDA_HAMMURABI_DISTRICTS" Name="LOC_AGENDA_HAMMURABI_DISTRICTS_NAME" Description="LOC_AGENDA_HAMMURABI_DISTRICTS_DESCRIPTION"/>
+	</Agendas>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_HAMMURABI" AgendaType="AGENDA_HAMMURABI_DISTRICTS"/>
+	</HistoricalAgendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_HAMMURABI_DISTRICTS" TraitType="TRAIT_AGENDA_HAMMURABI_DISTRICTS"/>
+	</AgendaTraits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_AGENDA_HAMMURABI_DISTRICTS" ModifierId="AGENDA_HAMMURABI_DISTRICTS"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>AGENDA_HAMMURABI_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_HAMMURABI_DISTRICTS</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>AGENDA_HAMMURABI_DISTRICTS</ModifierId>
+			<Name>StatementKey</Name>
+			<!-- Note: Value not actually used, just has to have something so we know this is a kudo/warning -->
+			<Value>AGENDA_HAMMURABI_DISTRICTS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HAMMURABI_DISTRICTS</ModifierId>
+      <Name>SimpleModifierDescription</Name>
+      <Value>LOC_TOOLTIP_SAMPLE_DIPLOMACY_HAMMURABI_DISTRICT</Value>
+		</Row>
+  </ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_HAMMURABI_DISTRICTS" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<AiListTypes>
+		<Row ListType="HammurabiFavoredDistricts"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="HammurabiFavoredDistricts" AgendaType="TRAIT_AGENDA_HAMMURABI_DISTRICTS" System="PseudoYields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="HammurabiFavoredDistricts" Item="PSEUDOYIELD_DISTRICT" Value="50"/>
+	</AiFavoredItems>
+</GameInfo>

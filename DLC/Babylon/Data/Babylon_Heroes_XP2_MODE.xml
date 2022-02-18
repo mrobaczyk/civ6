@@ -1,0 +1,71 @@
+<GameInfo>
+	<HeroClassProgressions>
+		<!--Anansi-->
+		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_FUTURE"		CombatStrength="90" RangedCombatStrength="108"/>
+		<!--Arthur-->
+		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_FUTURE"		CombatStrength="132"/>
+		<!--Beowulf-->
+		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_FUTURE"		CombatStrength="130"/>
+		<!--Hercules-->
+		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_FUTURE"	CombatStrength="140"/>
+		<!--Hippolyta-->
+		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_FUTURE"	CombatStrength="126"/>
+		<!--Hunahpu-->
+		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_FUTURE"		CombatStrength="116"/>
+		<!--Maui-->
+		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_FUTURE"		CombatStrength="120"/>
+		<!--Mulan-->
+		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_FUTURE"		CombatStrength="80" RangedCombatStrength="100"/>
+		<!--Oya-->
+		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_FUTURE"			CombatStrength="118"/>
+		<!--Sinbad-->
+		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_FUTURE"		CombatStrength="126"/>
+		<!--Sun Wukong-->
+		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_FUTURE"		CombatStrength="126"/>
+	</HeroClassProgressions>
+	<Units_XP2>
+		<Row UnitType="UNIT_HERO_ANANSI"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_ARTHUR"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_BEOWULF"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_HERCULES"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_HIMIKO"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_HIPPOLYTA"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_HUNAHPU"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_OYA"			CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_MAUI"			CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_MULAN"			CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_SINBAD"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_HERO_WUKONG"		CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+		<Row UnitType="UNIT_QUESTING_KNIGHT"	CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+	</Units_XP2>
+	<TypeProperties>
+		<Row Type="UNITCOMMAND_RESOURCE_INSPIRE" Name="GRIEVANCES_PER_ACTION" Value="15"/>
+	</TypeProperties>
+	<GameModifiers>
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ATTACH_FUTURE"/>
+	</GameModifiers>
+	<Modifiers>
+		<Row ModifierID="MODIFIER_QUESTING_KNIGHT_ATTACH_FUTURE"		ModifierType="MODIFIER_ALL_UNITS_ATTACH_MODIFIER" SubjectRequirementSetId="QUESTING_KNIGHT_FUTURE"/>
+		<Row ModifierID="MODIFIER_QUESTING_KNIGHT_FUTURE_STRENGTH"		ModifierType="MODIFIER_UNIT_ADJUST_BASE_COMBAT_STRENGTH"/>
+	</Modifiers>
+	<ModifierArguments>
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ATTACH_FUTURE" Name="ModifierId" Value="MODIFIER_QUESTING_KNIGHT_FUTURE_STRENGTH"/>
+		<!--Tuning: Questing Knight strength-->
+		<!--Delta above base strength (30) -->
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_FUTURE_STRENGTH" Name="Amount" Value="88"/>
+	</ModifierArguments>
+	<!--REQUIREMENTS-->
+	<RequirementSets>
+		<Row RequirementSetId="QUESTING_KNIGHT_FUTURE" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row RequirementSetId="QUESTING_KNIGHT_FUTURE" RequirementId="REQUIRES_FUTURE_ERA"/>
+		<Row RequirementSetId="QUESTING_KNIGHT_FUTURE" RequirementId="REQUIRES_UNIT_IS_QUESTING_KNIGHT"/>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row RequirementId="REQUIRES_FUTURE_ERA" RequirementType="REQUIREMENT_ERA_IS"/>
+	</Requirements>
+	<RequirementArguments>
+		<Row RequirementId="REQUIRES_FUTURE_ERA" Name="EraType" Value="ERA_FUTURE"/>
+	</RequirementArguments>
+</GameInfo>

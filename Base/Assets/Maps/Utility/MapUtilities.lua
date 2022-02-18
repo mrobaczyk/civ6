@@ -760,3 +760,122 @@ function AddGoodies(iW, iH)
 	end
 	print("-------------------------------");
 end
+
+function AddLeyLines()
+	local iResourcesInDB = 0;
+	local iFrequencyTotal  = 0;
+	eResourceType	= {};
+	eResourceClassType = {};
+	aBonus = {};
+	aaPossibleLocs = {};
+	aResourcePlacementOrder = {};
+
+	for row in GameInfo.Resources() do
+		eResourceType[iResourcesInDB] = row.Index;
+		eResourceClassType[iResourcesInDB] = row.ResourceClassType;
+		aaPossibleLocs[iResourcesInDB] = {};
+	    iResourcesInDB = iResourcesInDB + 1;
+	end
+
+	for row = 0, iResourcesInDB do
+		if (eResourceClassType[row] == "RESOURCECLASS_LEY_LINE") then
+			if(eResourceType[row] ~= nil) then
+				table.insert(aBonus, eResourceType[row]);
+			end
+		end
+	end
+
+	if(#aBonus < 1) then
+		return;
+	end
+
+	local iW, iH;
+	iW, iH = Map.GetGridSize();
+
+	local iBaseScore = 1;
+	local iValidPlots = 0;
+	local iSize = #aBonus;
+	local iPlotCount = Map.GetPlotCount();
+
+	for i = 0, iPlotCount - 1 do
+		local pPlot = Map.GetPlotByIndex(i);
+		local bCanHaveSomeResource = false;
+
+		-- See which resources can appear here
+		for iI = 1, iSize do
+			if (ResourceBuilder.CanHaveResource(pPlot, eResourceType[aBonus[iI]])) then
+				row = {};
+				row.MapIndex = i;
+				row.Score = iBaseScore;
+				table.insert (aaPossibleLocs[aBonus[iI]], row);
+				bCanHaveSomeResource = true;
+			end
+		end
+
+		if (bCanHaveSomeResource == true) then
+			iValidPlots = iValidPlots + 1;
+		end
+	end
+
+	for iI = 1, iSize do
+		row = {};
+		row.ResourceIndex = aBonus[iI];
+		row.NumEntries = #aaPossibleLocs[iI];
+		table.insert (aResourcePlacementOrder, row);
+	end
+
+	table.sort (aResourcePlacementOrder, function(a, b) return a.NumEntries < b.NumEntries; end);
+
+	--print ("Total frequency: " .. tostring(self.iFrequencyTotal));
+
+	-- Compute how many of each resource to place
+	local iFrequency = 0.175 * iValidPlots;
+
+	for i, row in ipairs(aResourcePlacementOrder) do
+
+		local eType = eResourceType[row.ResourceIndex]
+
+		local iNumToPlace;
+
+		-- Compute how many to place
+		iNumToPlace = iFrequency;
+	
+		local iW, iH;
+		iW, iH = Map.GetGridSize();
+
+		-- Clear all earlier entries (some might not be valid if resources have been placed
+		for k, v in pairs(aaPossibleLocs[eType]) do
+			aaPossibleLocs[eType][k] = nil;
+		end
+
+		for x = 0, iW - 1 do
+			for y = 0, iH - 1 do
+				local i = y * iW + x;
+				local pPlot = Map.GetPlotByIndex(i);
+				if (ResourceBuilder.CanHaveResource(pPlot, eType)) then
+					row2 = {};
+					row2.MapIndex = i;
+					row2.Score = 500;
+					row2.Score = row2.Score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * 1.1);
+					row2.Score = row2.Score + TerrainBuilder.GetRandomNumber(100, "Resource Placement Score Adjust");
+					table.insert (aaPossibleLocs[eType], row2);
+				end
+			end
+		end
+	
+		-- Sort and take best score
+		table.sort (aaPossibleLocs[row.ResourceIndex], function(a, b) return a.Score > b.Score; end);
+
+		for iI = 1, iNumToPlace do
+			if (iI <= #aaPossibleLocs[row.ResourceIndex]) then
+				local iMapIndex = aaPossibleLocs[row.ResourceIndex][iI].MapIndex;
+				local iScore = aaPossibleLocs[row.ResourceIndex][iI].Score;
+
+					-- Place at this location
+				local pPlot = Map.GetPlotByIndex(iMapIndex);
+				ResourceBuilder.SetResourceType(pPlot, eType, 1);
+--				print ("   Placed at (" .. tostring(pPlot:GetX()) .. ", " .. tostring(pPlot:GetY()) .. ") with score of " .. tostring(iScore));
+			end
+		end
+	end
+end

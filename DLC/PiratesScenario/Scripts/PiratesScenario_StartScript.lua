@@ -215,7 +215,7 @@ function SpawnInfamousPirate( )
 	-- Remove plots near pirate players
 	pirateSpawnPlots = FilterAllAdjPlots(pirateSpawnPlots, INFAMOUS_PIRATES_MIN_PLAYER_UNIT_DISTANCE, PlotHasNoPirateUnits, true);
 
-	local pirateRand :number = RandRange(1, #g_InfamousPirates, "Picking Infamous Pirate Pick");
+	local pirateRand :number = RandRange(1, #g_InfamousPirates + 1, "Picking Infamous Pirate Pick");
 	local curPirate = g_InfamousPirates[pirateRand];
 	local spawnPlotIndex: number = RandRange(1, #pirateSpawnPlots, "Selecting spawn plot for infamous pirate");
 	local spawnPlot :object = pirateSpawnPlots[spawnPlotIndex];
