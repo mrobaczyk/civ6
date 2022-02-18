@@ -80,8 +80,8 @@ function GenerateMap()
 
 	local resourcesConfig = MapConfiguration.GetValue("resources");
 	local args = {
+		iWaterLux = 4,
 		resources = resourcesConfig,
-		bCoastalBias = true,
 	};
 	local resGen = ResourceGenerator.Create(args);
 	print("Creating start plot database.");
@@ -105,9 +105,9 @@ end
 function GeneratePlotTypes()
 	print("Generating Plot Types");
 	local plotTypes = {};
-	local world_age_old = 1;
-	local world_age_normal = 2;
 	local world_age_new = 3;
+	local world_age_normal = 2;
+	local world_age_old = 1;
 
 	for x = 0, g_iW - 1 do
 		for y = 0, g_iH - 1 do

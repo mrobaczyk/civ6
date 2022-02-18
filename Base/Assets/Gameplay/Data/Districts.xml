@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_DISTRICT"/>
@@ -40,27 +40,27 @@
 		<Row DistrictType="DISTRICT_HOLY_SITE" TraitType="TRAIT_LEADER_RELIGIOUS_CONVERT"/>
 	</ExcludedDistricts>
 	<Districts>
-		<Row DistrictType="DISTRICT_CITY_CENTER" Name="LOC_DISTRICT_CITY_CENTER_NAME" Description="LOC_DISTRICT_CITY_CENTER_DESCRIPTION" PlunderType="NO_PLUNDER" AdvisorType="ADVISOR_GENERIC" Cost="60" RequiresPlacement="false" RequiresPopulation="false" CityCenter="true" Aqueduct="false" FreeEmbark="true" NoAdjacentCity="false" InternalOnly="false" ZOC="true" HitPoints="200" TradeEmbark="true" CaptureRemovesBuildings="true" CaptureRemovesCityDefenses="true" MilitaryDomain="NO_DOMAIN" AirSlots="1" TravelTime="4"/>
-		<Row DistrictType="DISTRICT_HOLY_SITE" Name="LOC_DISTRICT_HOLY_SITE_NAME" Description="LOC_DISTRICT_HOLY_SITE_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PlunderType="PLUNDER_FAITH" PlunderAmount="25" AdvisorType="ADVISOR_RELIGIOUS" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" AllowsHolyCity="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_CAMPUS" Name="LOC_DISTRICT_CAMPUS_NAME" Description="LOC_DISTRICT_CAMPUS_DESCRIPTION" PrereqTech="TECH_WRITING" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_TECHNOLOGY" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_ENCAMPMENT" Name="LOC_DISTRICT_ENCAMPMENT_NAME" Description="LOC_DISTRICT_ENCAMPMENT_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PlunderType="NO_PLUNDER" AdvisorType="ADVISOR_CONQUEST" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="true" InternalOnly="false" ZOC="true" HitPoints="100" CaptureRemovesBuildings="true" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_LAND" Appeal="-1" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_HARBOR" Name="LOC_DISTRICT_HARBOR_NAME" Description="LOC_DISTRICT_HARBOR_DESCRIPTION" PrereqTech="TECH_CELESTIAL_NAVIGATION" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" RequiresPlacement="true" RequiresPopulation="true" Coast="true" Aqueduct="false" FreeEmbark="true" NoAdjacentCity="false" AdjacentToLand="true" InternalOnly="false" ZOC="false" TradeEmbark="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_SEA" TravelTime="2" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_AERODROME" Name="LOC_DISTRICT_AERODROME_NAME" Description="LOC_DISTRICT_AERODROME_DESCRIPTION" PrereqTech="TECH_FLIGHT" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_CONQUEST" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Coast="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_AIR" AirSlots="4" TravelTime="1" Appeal="-1" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_COMMERCIAL_HUB" Name="LOC_DISTRICT_COMMERCIAL_HUB_NAME" Description="LOC_DISTRICT_COMMERCIAL_HUB_DESCRIPTION" PrereqTech="TECH_CURRENCY" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" TravelTime="3" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_ENTERTAINMENT_COMPLEX" Name="LOC_DISTRICT_ENTERTAINMENT_COMPLEX_NAME" Description="LOC_DISTRICT_ENTERTAINMENT_COMPLEX_DESCRIPTION" PrereqCivic="CIVIC_GAMES_RECREATION" PlunderType="PLUNDER_HEAL" PlunderAmount="100" AdvisorType="ADVISOR_GENERIC" Cost="60" Entertainment="1" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_THEATER" Name="LOC_DISTRICT_THEATER_NAME" Description="LOC_DISTRICT_THEATER_DESCRIPTION" PrereqCivic="CIVIC_DRAMA_POETRY" PlunderType="PLUNDER_CULTURE" PlunderAmount="25" AdvisorType="ADVISOR_CULTURE" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_INDUSTRIAL_ZONE" Name="LOC_DISTRICT_INDUSTRIAL_ZONE_NAME" Description="LOC_DISTRICT_INDUSTRIAL_ZONE_DESCRIPTION" PrereqTech="TECH_APPRENTICESHIP" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_GENERIC" Cost="60" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="-1" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_NEIGHBORHOOD" Name="LOC_DISTRICT_NEIGHBORHOOD_NAME" Description="LOC_DISTRICT_NEIGHBORHOOD_DESCRIPTION" PrereqCivic="CIVIC_URBANIZATION" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="60" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" OnePerCity="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Housing="4" CityStrengthModifier="2"/>
-		<Row DistrictType="DISTRICT_AQUEDUCT" Name="LOC_DISTRICT_AQUEDUCT_NAME" Description="LOC_DISTRICT_AQUEDUCT_DESCRIPTION" PrereqTech="TECH_ENGINEERING" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="50" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" Aqueduct="true" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN"/>
-		<Row DistrictType="DISTRICT_SPACEPORT" Name="LOC_DISTRICT_SPACEPORT_NAME" Description="LOC_DISTRICT_SPACEPORT_DESCRIPTION" PrereqTech="TECH_ROCKETRY" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_TECHNOLOGY" Cost="2000" RequiresPlacement="true" RequiresPopulation="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="-1" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_CITY_CENTER" Name="LOC_DISTRICT_CITY_CENTER_NAME" Description="LOC_DISTRICT_CITY_CENTER_DESCRIPTION" PlunderType="NO_PLUNDER" AdvisorType="ADVISOR_GENERIC" Cost="54" RequiresPlacement="false" RequiresPopulation="false" CityCenter="true" Aqueduct="false" FreeEmbark="true" NoAdjacentCity="false" InternalOnly="false" ZOC="true" HitPoints="200" TradeEmbark="true" CaptureRemovesBuildings="true" CaptureRemovesCityDefenses="true" MilitaryDomain="NO_DOMAIN" AirSlots="1" TravelTime="4"/>
+		<Row DistrictType="DISTRICT_HOLY_SITE" Name="LOC_DISTRICT_HOLY_SITE_NAME" Description="LOC_DISTRICT_HOLY_SITE_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PlunderType="PLUNDER_FAITH" PlunderAmount="25" AdvisorType="ADVISOR_RELIGIOUS" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" AllowsHolyCity="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_CAMPUS" Name="LOC_DISTRICT_CAMPUS_NAME" Description="LOC_DISTRICT_CAMPUS_DESCRIPTION" PrereqTech="TECH_WRITING" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_TECHNOLOGY" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_ENCAMPMENT" Name="LOC_DISTRICT_ENCAMPMENT_NAME" Description="LOC_DISTRICT_ENCAMPMENT_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PlunderType="NO_PLUNDER" AdvisorType="ADVISOR_CONQUEST" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="true" InternalOnly="false" ZOC="true" HitPoints="100" CaptureRemovesBuildings="true" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_LAND" Appeal="-1" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_HARBOR" Name="LOC_DISTRICT_HARBOR_NAME" Description="LOC_DISTRICT_HARBOR_DESCRIPTION" PrereqTech="TECH_CELESTIAL_NAVIGATION" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" RequiresPlacement="true" RequiresPopulation="true" Coast="true" Aqueduct="false" FreeEmbark="true" NoAdjacentCity="false" AdjacentToLand="true" InternalOnly="false" ZOC="false" TradeEmbark="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_SEA" TravelTime="2" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_AERODROME" Name="LOC_DISTRICT_AERODROME_NAME" Description="LOC_DISTRICT_AERODROME_DESCRIPTION" PrereqTech="TECH_FLIGHT" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_CONQUEST" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Coast="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_AIR" AirSlots="4" TravelTime="1" Appeal="-1" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_COMMERCIAL_HUB" Name="LOC_DISTRICT_COMMERCIAL_HUB_NAME" Description="LOC_DISTRICT_COMMERCIAL_HUB_DESCRIPTION" PrereqTech="TECH_CURRENCY" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" TravelTime="3" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_ENTERTAINMENT_COMPLEX" Name="LOC_DISTRICT_ENTERTAINMENT_COMPLEX_NAME" Description="LOC_DISTRICT_ENTERTAINMENT_COMPLEX_DESCRIPTION" PrereqCivic="CIVIC_GAMES_RECREATION" PlunderType="PLUNDER_HEAL" PlunderAmount="100" AdvisorType="ADVISOR_GENERIC" Cost="54" Entertainment="1" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_THEATER" Name="LOC_DISTRICT_THEATER_NAME" Description="LOC_DISTRICT_THEATER_DESCRIPTION" PrereqCivic="CIVIC_DRAMA_POETRY" PlunderType="PLUNDER_CULTURE" PlunderAmount="25" AdvisorType="ADVISOR_CULTURE" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_INDUSTRIAL_ZONE" Name="LOC_DISTRICT_INDUSTRIAL_ZONE_NAME" Description="LOC_DISTRICT_INDUSTRIAL_ZONE_DESCRIPTION" PrereqTech="TECH_APPRENTICESHIP" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_GENERIC" Cost="54" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="-1" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_NEIGHBORHOOD" Name="LOC_DISTRICT_NEIGHBORHOOD_NAME" Description="LOC_DISTRICT_NEIGHBORHOOD_DESCRIPTION" PrereqCivic="CIVIC_URBANIZATION" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="54" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" OnePerCity="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Housing="4" CityStrengthModifier="2"/>
+		<Row DistrictType="DISTRICT_AQUEDUCT" Name="LOC_DISTRICT_AQUEDUCT_NAME" Description="LOC_DISTRICT_AQUEDUCT_DESCRIPTION" PrereqTech="TECH_ENGINEERING" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="36" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" Aqueduct="true" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN"/>
+		<Row DistrictType="DISTRICT_SPACEPORT" Name="LOC_DISTRICT_SPACEPORT_NAME" Description="LOC_DISTRICT_SPACEPORT_DESCRIPTION" PrereqTech="TECH_ROCKETRY" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_TECHNOLOGY" Cost="1800" RequiresPlacement="true" RequiresPopulation="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="-1" CityStrengthModifier="2"/>
 		<Row DistrictType="DISTRICT_WONDER" Name="LOC_WONDER_NAME" Description="LOC_WONDER_DESCRIPTION" PlunderType="NO_PLUNDER" PlunderAmount="0" Cost="0" RequiresPlacement="false" RequiresPopulation="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="true" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1"/>
-		<Row DistrictType="DISTRICT_ACROPOLIS" Name="LOC_DISTRICT_ACROPOLIS_NAME" Description="LOC_DISTRICT_ACROPOLIS_DESCRIPTION" PrereqCivic="CIVIC_DRAMA_POETRY" PlunderType="PLUNDER_CULTURE" PlunderAmount="25" AdvisorType="ADVISOR_CULTURE" Cost="30" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS"/>
-		<Row DistrictType="DISTRICT_BATH" Name="LOC_DISTRICT_BATH_NAME" Description="LOC_DISTRICT_BATH_DESCRIPTION" PrereqTech="TECH_ENGINEERING" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="25" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" Aqueduct="true" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Housing="2" Entertainment="1" TraitType="TRAIT_CIVILIZATION_DISTRICT_BATH"/>
-		<Row DistrictType="DISTRICT_HANSA" Name="LOC_DISTRICT_HANSA_NAME" Description="LOC_DISTRICT_HANSA_DESCRIPTION" PrereqTech="TECH_APPRENTICESHIP" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_GENERIC" Cost="30" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="-1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_HANSA"/>
-		<Row DistrictType="DISTRICT_LAVRA" Name="LOC_DISTRICT_LAVRA_NAME" Description="LOC_DISTRICT_LAVRA_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PlunderType="PLUNDER_FAITH" PlunderAmount="25" AdvisorType="ADVISOR_RELIGIOUS" Cost="30" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" AllowsHolyCity="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_LAVRA"/>
-		<Row DistrictType="DISTRICT_MBANZA" Name="LOC_DISTRICT_MBANZA_NAME" Description="LOC_DISTRICT_MBANZA_DESCRIPTION" PrereqCivic="CIVIC_GUILDS" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="30" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" OnePerCity="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Housing="5" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_MBANZA"/>
-		<Row DistrictType="DISTRICT_STREET_CARNIVAL" Name="LOC_DISTRICT_STREET_CARNIVAL_NAME" Description="LOC_DISTRICT_STREET_CARNIVAL_DESCRIPTION" PrereqCivic="CIVIC_GAMES_RECREATION" PlunderType="PLUNDER_HEAL" PlunderAmount="100" AdvisorType="ADVISOR_GENERIC" Cost="30" Entertainment="2" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_STREET_CARNIVAL"/>
-		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" Name="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_NAME" Description="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION" PrereqTech="TECH_CELESTIAL_NAVIGATION" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="30" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="25" RequiresPlacement="true" RequiresPopulation="true" Coast="true" Aqueduct="false" FreeEmbark="true" NoAdjacentCity="false" AdjacentToLand="true" InternalOnly="false" ZOC="false" TradeEmbark="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_SEA" TravelTime="2" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_ROYAL_NAVY_DOCKYARD"/>
+		<Row DistrictType="DISTRICT_ACROPOLIS" Name="LOC_DISTRICT_ACROPOLIS_NAME" Description="LOC_DISTRICT_ACROPOLIS_DESCRIPTION" PrereqCivic="CIVIC_DRAMA_POETRY" PlunderType="PLUNDER_CULTURE" PlunderAmount="25" AdvisorType="ADVISOR_CULTURE" Cost="27" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS"/>
+		<Row DistrictType="DISTRICT_BATH" Name="LOC_DISTRICT_BATH_NAME" Description="LOC_DISTRICT_BATH_DESCRIPTION" PrereqTech="TECH_ENGINEERING" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="18" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" Aqueduct="true" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Housing="2" Entertainment="1" TraitType="TRAIT_CIVILIZATION_DISTRICT_BATH"/>
+		<Row DistrictType="DISTRICT_HANSA" Name="LOC_DISTRICT_HANSA_NAME" Description="LOC_DISTRICT_HANSA_DESCRIPTION" PrereqTech="TECH_APPRENTICESHIP" PlunderType="PLUNDER_SCIENCE" PlunderAmount="25" AdvisorType="ADVISOR_GENERIC" Cost="27" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="-1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_HANSA"/>
+		<Row DistrictType="DISTRICT_LAVRA" Name="LOC_DISTRICT_LAVRA_NAME" Description="LOC_DISTRICT_LAVRA_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PlunderType="PLUNDER_FAITH" PlunderAmount="25" AdvisorType="ADVISOR_RELIGIOUS" Cost="27" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" AllowsHolyCity="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_LAVRA"/>
+		<Row DistrictType="DISTRICT_MBANZA" Name="LOC_DISTRICT_MBANZA_NAME" Description="LOC_DISTRICT_MBANZA_DESCRIPTION" PrereqCivic="CIVIC_GUILDS" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="27" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="false" OnePerCity="false" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Housing="5" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_MBANZA"/>
+		<Row DistrictType="DISTRICT_STREET_CARNIVAL" Name="LOC_DISTRICT_STREET_CARNIVAL_NAME" Description="LOC_DISTRICT_STREET_CARNIVAL_DESCRIPTION" PrereqCivic="CIVIC_GAMES_RECREATION" PlunderType="PLUNDER_HEAL" PlunderAmount="100" AdvisorType="ADVISOR_GENERIC" Cost="27" Entertainment="2" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_STREET_CARNIVAL"/>
+		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" Name="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_NAME" Description="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION" PrereqTech="TECH_CELESTIAL_NAVIGATION" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="27" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" RequiresPlacement="true" RequiresPopulation="true" Coast="true" Aqueduct="false" FreeEmbark="true" NoAdjacentCity="false" AdjacentToLand="true" InternalOnly="false" ZOC="false" TradeEmbark="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_SEA" TravelTime="2" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_ROYAL_NAVY_DOCKYARD"/>
 	</Districts>
 	<District_Adjacencies>
 		<Row DistrictType="DISTRICT_CAMPUS" YieldChangeId="Mountains_Science1"/>
@@ -241,18 +241,22 @@
 		<Row ID="RoyalDock_City_Gold" Description="LOC_DISTRICT_CITY_CENTER_GOLD" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_CITY_CENTER"/>
 	</Adjacency_YieldChanges>
 	<DistrictModifiers>
-    <Row>
-      <DistrictType>DISTRICT_COMMERCIAL_HUB</DistrictType>
-      <ModifierId>COMMERCIAL_HUB_TRADE_ROUTE_CAPACITY</ModifierId>
-    </Row>
-    <Row>
-      <DistrictType>DISTRICT_HARBOR</DistrictType>
-      <ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
-    </Row>
-    <Row>
-      <DistrictType>DISTRICT_ROYAL_NAVY_DOCKYARD</DistrictType>
-      <ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
-    </Row>
+		<Row>
+			<DistrictType>DISTRICT_ACROPOLIS</DistrictType>
+			<ModifierId>CIVIC_AWARD_ONE_INFLUENCE_TOKEN</ModifierId>
+		</Row>
+		<Row>
+			<DistrictType>DISTRICT_COMMERCIAL_HUB</DistrictType>
+			<ModifierId>COMMERCIAL_HUB_TRADE_ROUTE_CAPACITY</ModifierId>
+		</Row>
+		<Row>
+			<DistrictType>DISTRICT_HARBOR</DistrictType>
+			<ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
+		</Row>
+		<Row>
+			<DistrictType>DISTRICT_ROYAL_NAVY_DOCKYARD</DistrictType>
+			<ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
+		</Row>
 		<Row>
 			<DistrictType>DISTRICT_ROYAL_NAVY_DOCKYARD</DistrictType>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GRANT_MOVEMENT_BONUS</ModifierId>
@@ -271,19 +275,19 @@
 		</Row>
 	</DistrictModifiers>
 	<Modifiers>
-    <Row>
-      <ModifierId>COMMERCIAL_HUB_TRADE_ROUTE_CAPACITY</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
-    </Row>
-    <Row>
-      <ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
-      <SubjectRequirementSetId>HARBOR_TRADE_ROUTE_CAPACITY_REQUIREMENTS</SubjectRequirementSetId>
-    </Row>
-    <Row>
-      <ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
-    </Row>
+		<Row>
+			<ModifierId>COMMERCIAL_HUB_TRADE_ROUTE_CAPACITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+			<SubjectRequirementSetId>HARBOR_TRADE_ROUTE_CAPACITY_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+		</Row>
 		<Row>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GRANT_MOVEMENT_BONUS</ModifierId>
 			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_MOVEMENT</ModifierType>
@@ -305,21 +309,21 @@
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
-    <Row>
-      <ModifierId>COMMERCIAL_HUB_TRADE_ROUTE_CAPACITY</ModifierId>
-      <Name>Amount</Name>
-      <Value>1</Value>
-    </Row>
-    <Row>
-      <ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
-      <Name>Amount</Name>
-      <Value>1</Value>
-    </Row>
-    <Row>
-      <ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
-      <Name>Amount</Name>
-      <Value>1</Value>
-    </Row>
+		<Row>
+			<ModifierId>COMMERCIAL_HUB_TRADE_ROUTE_CAPACITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
 		<Row>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GRANT_MOVEMENT_BONUS</ModifierId>
 			<Name>Amount</Name>

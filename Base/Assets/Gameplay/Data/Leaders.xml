@@ -196,12 +196,6 @@
 		<Row LeaderType="LEADER_T_ROOSEVELT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_QUOTE" QuoteAudio="Play_AMER_TR_MISC_PEP_TALK_C_03"/>
 		<Row LeaderType="LEADER_VICTORIA" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_QUOTE" QuoteAudio="Play_ENGL_QV_MISC_PEP_TALK_B"/>
 	</LeaderQuotes>
-	<Flavors>
-		<Row FlavorType="Offense"/>
-		<Row FlavorType="Defense"/>
-		<Row FlavorType="City Defense"/>
-		<Row FlavorType="Expansion"/>
-	</Flavors>
 	<BoostHandlers>
 		<Row HandlerId="DEFAULT_HANDLER_MEET_CIV" TechBoostType="BOOST_TRIGGER_MEET_CIV" UniquenessTag="SCOUT" WinnowFunction="HasScout" BehaviorTree="Build Trigger Unit"/>
 		<Row HandlerId="DEFAULT_HANDLER_ENCOUNTER_UNIT" TechBoostType="BOOST_TRIGGER_ENCOUNTER_UNIT" UniquenessTag="SCOUT" WinnowFunction="HasScout" BehaviorTree="Build Trigger Unit"/>
@@ -265,15 +259,17 @@
 		<Row ListType="FavorCulturalVictory" Item="VICTORY_STRATEGY_CULTURAL_VICTORY" Value="-1"/>
 		<Row ListType="FavorReligiousVictory" Item="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Value="-1"/>
 		<Row ListType="ForbidReligiousVictory" Item="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Value="5"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="90"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="30"/>
 		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_ADDITIONAL_VALUE_PER_CITY" Value="3"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_TURNS" Value="10"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_AMOUNT" Value="6"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="150"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="3"/>
-		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-30"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_TURNS" Value="9"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_AMOUNT" Value="3"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="100"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="5"/>
+		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-25"/>
+		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_ADDITIONAL_VALUE_PER_CITY" Value="-1"/>
+		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_DECAY_TURNS" Value="-3"/>
 		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_DECAY_AMOUNT" Value="3"/>
-		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="45"/>
+		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
 		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="1"/>
 	</AiFavoredItems>
 	<Agendas>
@@ -388,11 +384,11 @@
 		<Row ListType="DefaultCityBuilds"/>
 		<Row ListType="DefaultCitySettlement"/>
 		<Row ListType="DefaultCitySpecialization"/>
-		<Row ListType="DefaultFlavorList"/>
 		<Row ListType="DefaultSavings"/>
 		<Row ListType="DefaultScoutUse"/>
 		<Row ListType="DefaultTechBoostSupportList"/>
 		<Row ListType="DefaultTriggeredTrees"/>
+		<Row ListType="DefaultYieldBias"/>
 		<Row ListType="ExpansionistCitySettlement"/>
 		<Row ListType="FavorCulturalVictory"/>
 		<Row ListType="FavorReligiousVictory"/>
@@ -419,7 +415,7 @@
 		<Row ListType="MinorCivReligiousDistrict"/>
 		<Row ListType="MinorCivScienceDistrict"/>
 		<Row ListType="MinorCivTradeDistrict"/>
-    <Row ListType="MinorCivPseudoYields"/>
+		<Row ListType="MinorCivPseudoYields"/>
 		<Row ListType="MinorCivUnitBuilds"/>
 		<Row ListType="MvembaCivics"/>
 		<Row ListType="MvembaTechs"/>
@@ -520,9 +516,9 @@
 		<Row ListType="GilgameshSciencePreference" LeaderType="TRAIT_LEADER_ADVENTURES_ENKIDU" System="Yields"/>
 		<Row ListType="DefaultCitySettlement" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="SettlementPreferences"/>
 		<Row ListType="DefaultCitySpecialization" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="AiBuildSpecializations"/>
-		<Row ListType="DefaultFlavorList" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="Flavors"/>
 		<Row ListType="DefaultTechBoostSupportList" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="TechBoosts" MinDifficulty="DIFFICULTY_WARLORD"/>
 		<Row ListType="DefaultTriggeredTrees" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="TriggeredTrees"/>
+		<Row ListType="DefaultYieldBias" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="Yields"/>
 		<Row ListType="UnitPriorityBoosts" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="Units"/>
 		<Row ListType="DefaultCityBuilds" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="CityEvents"/>
 		<Row ListType="DefaultSavings" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="SavingTypes"/>
@@ -531,7 +527,6 @@
 		<Row ListType="TomyrisCitySettlement" LeaderType="TRAIT_LEADER_KILLER_OF_CYRUS" System="PlotEvaluations"/>
 		<!-- Minor Civ Lists -->
 		<Row ListType="DefaultCitySpecialization" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="AiBuildSpecializations"/>
-		<Row ListType="DefaultFlavorList" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="Flavors"/>
 		<Row ListType="MinorCivUnitBuilds" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="UnitPromotionClasses"/>
 		<Row ListType="MinorCivCityBuilds" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="CityEvents"/>
 		<Row ListType="MinorCivPseudoYields" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="PseudoYields"/>
@@ -757,10 +752,6 @@
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_CITY_DEFENSES" Value="-1"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_MILITARY_UNITS" Value="1"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_TRADE_UNITS" Value="2"/>
-		<Row ListType="DefaultFlavorList" Item="Offense" Value="7"/>
-		<Row ListType="DefaultFlavorList" Item="Defense" Value="3"/>
-		<Row ListType="DefaultFlavorList" Item="City Defense" Value="3"/>
-		<Row ListType="DefaultFlavorList" Item="Expansion" Value="6"/>
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_TECH_UPGRADE"/>
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_CIVIC_UPGRADE"/>
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_CAPTURE_CIV"/>
@@ -768,6 +759,10 @@
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_AVAILABLE_ARCHAEOLOGIST"/>
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_AVAILABLE_GREATPERSON"/>
 		<Row ListType="DefaultTriggeredTrees" Item="TRIGGER_AVAILABLE_SPY"/>
+		<Row ListType="DefaultYieldBias" Item="YEILD_PRODUCTION" Value="25"/>
+		<Row ListType="DefaultYieldBias" Item="YEILD_SCIENCE" Value="10"/>
+		<Row ListType="DefaultYieldBias" Item="YEILD_CULTURE" Value="10"/>
+		<Row ListType="DefaultYieldBias" Item="YEILD_GOLD" Value="20"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_DEFAULT" StringVal="Simple City Tree"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_UNIT_OR_BUILDING" StringVal="Build City Building"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_DISTRICT" StringVal="Build City District"/>
@@ -938,6 +933,7 @@
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_ALLY"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_ARCHAEOLOGY"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_BROKEN_PROMISE"/>
+		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_CONVERTED_CITY"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_CULTURE_BOMBED"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_DECLARED_FRIEND"/>
@@ -1024,10 +1020,20 @@
 		<Row TraitType="TRAIT_LEADER_SATYAGRAHA" ModifierId="TRAIT_FAITH_PEACEFUL_FOUNDERS"/>
 		<Row TraitType="TRAIT_LEADER_SATYAGRAHA" ModifierId="TRAIT_INCREASE_ENEMY_WAR_WEARINESS"/>
 		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_GRANT_COASTAL_RAID_ABILITY"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_ANCIENT_NAVAL_MELEE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_CLASSICAL_NAVAL_MELEE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_MEDIEVAL_NAVAL_MELEE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_RENAISSANCE_NAVAL_MELEE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_INDUSTRIAL_NAVAL_MELEE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_MODERN_NAVAL_MELEE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_ATOMIC_NAVAL_MELEE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS" ModifierId="TRAIT_INFORMATION_NAVAL_MELEE_PRODUCTION"/>
 		<Row TraitType="FIRST_EMPEROR_TRAIT" ModifierId="TRAIT_ADJUST_BUILDER_CHARGES"/>
 		<Row TraitType="FIRST_EMPEROR_TRAIT" ModifierId="TRAIT_BUILDER_WONDER_PERCENT"/>
 		<Row TraitType="FLYING_SQUADRON_TRAIT" ModifierId="UNIQUE_LEADER_ADD_VISIBILITY"/>
-		<Row TraitType="FLYING_SQUADRON_TRAIT" ModifierId="UNIQUE_LEADER_ADD_SPY"/>
+		<Row TraitType="FLYING_SQUADRON_TRAIT" ModifierId="UNIQUE_LEADER_ADD_SPY_CAPACITY"/>
+		<Row TraitType="FLYING_SQUADRON_TRAIT" ModifierId="UNIQUE_LEADER_ADD_SPY_UNIT"/>
+		<Row TraitType="FLYING_SQUADRON_TRAIT" ModifierId="UNIQUE_LEADER_SPIES_START_PROMOTED"/>
 		<Row TraitType="TRAJANS_COLUMN_TRAIT" ModifierId="TRAIT_ADJUST_NON_CAPITAL_FREE_CHEAPEST_BUILDING"/>
 		<Row TraitType="TRAIT_LEADER_KILLER_OF_CYRUS" ModifierId="BONUS_VS_WOUNDED_UNITS"/>
 		<Row TraitType="TRAIT_LEADER_KILLER_OF_CYRUS" ModifierId="HEAL_AFTER_DEFEATING_UNIT"/>
@@ -1157,6 +1163,11 @@
 			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_BROKEN_PROMISE</ModifierType>
 			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
 			<SubjectRequirementSetId>PLAYER_IS_KNOWN_MAJOR_CIV</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_CLOSE_TO_VICTORY</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_KEPT_PROMISE</ModifierId>
@@ -1566,6 +1577,38 @@
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_ANCIENT_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CLASSICAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_RENAISSANCE_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INDUSTRIAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MODERN_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ATOMIC_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INFORMATION_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_GREAT_PERSON_REFUND</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS_REFUND_PERCENT</ModifierType>
 		</Row>
@@ -1623,9 +1666,22 @@
 			<ModifierType>MODIFIER_PLAYER_ADD_DIPLO_VISIBILITY</ModifierType>
 		</Row>
 		<Row>
-			<ModifierId>UNIQUE_LEADER_ADD_SPY</ModifierId>
+			<ModifierId>UNIQUE_LEADER_ADD_SPY_CAPACITY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_GRANT_SPY</ModifierType>
 			<SubjectRequirementSetId>PLAYER_HAS_CASTLES_TECHNOLOGY</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_ADD_SPY_UNIT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+			<OwnerRequirementsetId>PLAYER_HAS_CASTLES_TECHNOLOGY</OwnerRequirementsetId>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_SPIES_START_PROMOTED</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_GRANT_EXPERIENCE</ModifierType>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>UNIT_IS_SPY</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>UNIQUE_LEADER_CULTURE_KILLS</ModifierId>
@@ -2540,6 +2596,32 @@
 			<Value>LOC_DIPLO_MODIFIER_BROKEN_PROMISE</Value>
 		</Row>
 		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
+			<Name>MaxValue</Name>
+			<Value>-500</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
+			<Name>IncrementTurns</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
+			<Name>IncrementValue</Name>
+			<Value>-1</Value>
+			<Type>ScaleByGameSpeed</Type>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_CLOSE_TO_VICTORY</Value>
+		</Row>
+		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_CONVERTED_CITY</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>-9</Value>
@@ -2583,6 +2665,11 @@
 			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
 			<Name>ReductionValue</Name>
 			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
+			<Name>Accumulates</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
@@ -2932,7 +3019,7 @@
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_ONE_SIDED_TRADES</ModifierId>
 			<Name>ReductionTurns</Name>
-			<Value>1</Value>
+			<Value>2</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_ONE_SIDED_TRADES</ModifierId>
@@ -3001,6 +3088,11 @@
 			<ModifierId>STANDARD_DIPLOMATIC_RAZED_MY_CITY</ModifierId>
 			<Name>ReductionTurns</Name>
 			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_RAZED_MY_CITY</ModifierId>
+			<Name>Accumulates</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_RAZED_MY_CITY</ModifierId>
@@ -3497,7 +3589,7 @@
 		<Row>
 			<ModifierId>HEAL_AFTER_DEFEATING_UNIT</ModifierId>
 			<Name>Amount</Name>
-			<Value>50</Value>
+			<Value>30</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_ADJUST_BUILDER_CHARGES</ModifierId>
@@ -3640,6 +3732,126 @@
 			<Value>ABILITY_MELEE_COASTAL_RAID</Value>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_ANCIENT_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ANCIENT_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_ANCIENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ANCIENT_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CLASSICAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CLASSICAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_CLASSICAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CLASSICAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MEDIEVAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_RENAISSANCE_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_RENAISSANCE_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_RENAISSANCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_RENAISSANCE_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INDUSTRIAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INDUSTRIAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_INDUSTRIAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INDUSTRIAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MODERN_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MODERN_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MODERN</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_MODERN_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ATOMIC_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ATOMIC_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_ATOMIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ATOMIC_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INFORMATION_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INFORMATION_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_INFORMATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INFORMATION_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_GREAT_PERSON_REFUND</ModifierId>
 			<Name>Amount</Name>
 			<Value>20</Value>
@@ -3780,9 +3992,29 @@
 			<Value>DIPLO_SOURCE_FEMALE_ONLY</Value>
 		</Row>
 		<Row>
-			<ModifierId>UNIQUE_LEADER_ADD_SPY</ModifierId>
+			<ModifierId>UNIQUE_LEADER_ADD_SPY_CAPACITY</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_ADD_SPY_UNIT</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_SPY</Value>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_ADD_SPY_UNIT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_ADD_SPY_UNIT</ModifierId>
+			<Name>AllowUniqueOverride</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_SPIES_START_PROMOTED</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
 		</Row>
 		<Row>
 			<ModifierId>UNIQUE_LEADER_CULTURE_KILLS</ModifierId>
@@ -5005,6 +5237,7 @@
 		<Row ModifierId="STANDARD_DIPLOMATIC_ALLY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_ARCHAEOLOGY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_BROKEN_PROMISE" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_CONVERTED_CITY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_CULTURE_BOMBED" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_DECLARED_FRIEND" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
@@ -5112,6 +5345,10 @@
 		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_CITY_CONVERTED</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_CLOSE_TO_VICTORY</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
@@ -5460,10 +5697,10 @@
 			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_NEAR_CULTURE_BORDER</RequirementId>
 		</Row>
-    <Row>
-      <RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
-      <RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
-    </Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
+			<RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
+		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
@@ -5543,6 +5780,18 @@
 		<Row>
 			<RequirementSetId>PLAYER_CITY_CONVERTED</RequirementSetId>
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_CLOSE_TO_VICTORY</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_CLOSE_TO_VICTORY</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_CLOSE_TO_VICTORY</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_CLOSE_TO_VICTORY</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_CITY_LIBERATED</RequirementSetId>
@@ -5990,10 +6239,10 @@
 			<RequirementId>REQUIRES_PLAYER_NEAR_CULTURE_BORDER</RequirementId>
 			<RequirementType>REQUIREMENT_NEAR_CULTURE_BORDER</RequirementType>
 		</Row>
-    <Row>
-      <RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
-      <RequirementType>REQUIREMENT_PLAYER_IS_AT_PEACE</RequirementType>
-    </Row>
+		<Row>
+			<RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_IS_AT_PEACE</RequirementType>
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_NOT_ALLY</RequirementId>
 			<RequirementType>REQUIREMENT_ALLY</RequirementType>
@@ -6092,6 +6341,10 @@
 		<Row>
 			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_HAS_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_CLOSE_TO_VICTORY</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_IS_CLOSE_TO_VICTORY</RequirementType>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_IS_HUMAN</RequirementId>
@@ -6369,11 +6622,11 @@
 			<Name>GracePeriod</Name>
 			<Value>2</Value>
 		</Row>
-    <Row>
-      <RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
-      <Name>Min Turns</Name>
-      <Value>10</Value>
-    </Row>
+		<Row>
+			<RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
+			<Name>Min Turns</Name>
+			<Value>10</Value>
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_CITY_LIBERATED</RequirementId>
 			<Name>OnlyOwnersCity</Name>

@@ -15,4 +15,10 @@
 		<Row Map="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" ParameterId="MapSize" Domain="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map"/>
 		<Row Map="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map" ParameterId="MapSize" Domain="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map"/>
 	</MapDomainOverrides>
+		<ParameterDependencies>
+		<Row ParameterId="Resources" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map"/>
+		<Row ParameterId="Resources" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map"/>
+		<Row ParameterId="StartPosition" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map"/>
+		<Row ParameterId="StartPosition" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map"/>
+	</ParameterDependencies>
 </GameInfo>

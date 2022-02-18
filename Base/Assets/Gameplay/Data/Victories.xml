@@ -19,18 +19,20 @@
     <Row Type="STRATEGY_EARLY_EXPLORATION" Kind="KIND_VICTORY_STRATEGY" />
     <Row Type="STRATEGY_RAPID_EXPANSION" Kind="KIND_VICTORY_STRATEGY" />
     <Row Type="STRATEGY_NAVAL" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_RENAISSANCE_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_MODERN_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
   </Types>
   <Defeats>
     <Row DefeatType="DEFEAT_DEFAULT" Name="LOC_DEFEAT_DEFAULT_NAME" Blurb="LOC_DEFEAT_DEFAULT_TEXT" RequirementSetId="DEFAULT_DEFEAT_REQUIREMENTS"/>
     <Row DefeatType="DEFEAT_TIME" Name="LOC_DEFEAT_TIME_NAME" Blurb="LOC_DEFEAT_TIME_TEXT" RequirementSetId="TIME_DEFEAT_REQUIREMENTS"/>
   </Defeats>
   <Victories>
-    <Row VictoryType="VICTORY_SCORE" Name="LOC_VICTORY_SCORE_NAME" Blurb="LOC_VICTORY_SCORE_TEXT" RequirementSetId="REQUIREMENTS_SCORE_VICTORY"/>
-    <Row VictoryType="VICTORY_DEFAULT" Name="LOC_VICTORY_DEFAULT_NAME" Blurb="LOC_VICTORY_DEFAULT_TEXT" RequirementSetId="REQUIREMENTS_DEFAULT_VICTORY"/>
-    <Row VictoryType="VICTORY_CONQUEST" Name="LOC_VICTORY_DOMINATION_NAME" Blurb="LOC_VICTORY_DOMINATION_TEXT" RequirementSetId="REQUIREMENTS_CONQUEST_VICTORY"/>
-    <Row VictoryType="VICTORY_CULTURE" Name="LOC_VICTORY_CULTURE_NAME" Blurb="LOC_VICTORY_CULTURE_TEXT" RequirementSetId="REQUIREMENTS_CULTURE_VICTORY"/>
-    <Row VictoryType="VICTORY_RELIGIOUS" Name="LOC_VICTORY_RELIGIOUS_NAME" Blurb="LOC_VICTORY_RELIGION_TEXT" RequirementSetId="REQUIREMENTS_RELIGIOUS_VICTORY"/>
-    <Row VictoryType="VICTORY_TECHNOLOGY" Name="LOC_VICTORY_SCIENCE_NAME" Blurb="LOC_VICTORY_SCIENCE_TEXT" RequirementSetId="REQUIREMENTS_TECHNOLOGY_VICTORY"/>
+    <Row VictoryType="VICTORY_SCORE" Name="LOC_VICTORY_SCORE_NAME" Blurb="LOC_VICTORY_SCORE_TEXT" RequirementSetId="REQUIREMENTS_SCORE_VICTORY" CriticalPercentage="110"/>
+    <Row VictoryType="VICTORY_DEFAULT" Name="LOC_VICTORY_DEFAULT_NAME" Blurb="LOC_VICTORY_DEFAULT_TEXT" RequirementSetId="REQUIREMENTS_DEFAULT_VICTORY" CriticalPercentage="110"/>
+    <Row VictoryType="VICTORY_CONQUEST" Name="LOC_VICTORY_DOMINATION_NAME" Blurb="LOC_VICTORY_DOMINATION_TEXT" RequirementSetId="REQUIREMENTS_CONQUEST_VICTORY" CriticalPercentage="50"/>
+    <Row VictoryType="VICTORY_CULTURE" Name="LOC_VICTORY_CULTURE_NAME" Blurb="LOC_VICTORY_CULTURE_TEXT" RequirementSetId="REQUIREMENTS_CULTURE_VICTORY" CriticalPercentage="110"/>
+    <Row VictoryType="VICTORY_RELIGIOUS" Name="LOC_VICTORY_RELIGIOUS_NAME" Blurb="LOC_VICTORY_RELIGION_TEXT" RequirementSetId="REQUIREMENTS_RELIGIOUS_VICTORY" CriticalPercentage="80"/>
+    <Row VictoryType="VICTORY_TECHNOLOGY" Name="LOC_VICTORY_SCIENCE_NAME" Blurb="LOC_VICTORY_SCIENCE_TEXT" RequirementSetId="REQUIREMENTS_TECHNOLOGY_VICTORY" CriticalPercentage="60"/>
   </Victories>
   <!-- AI victory strategies (may move this to its own file in the future if it gets too large) -->
   <Strategies>
@@ -42,6 +44,8 @@
     <Row StrategyType ="STRATEGY_EARLY_EXPLORATION" NumConditionsNeeded="1"/>
     <Row StrategyType ="STRATEGY_RAPID_EXPANSION" NumConditionsNeeded="3"/>
     <Row StrategyType="STRATEGY_NAVAL" NumConditionsNeeded="1"/>
+    <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" NumConditionsNeeded="1"/>
+    <Row StrategyType="STRATEGY_MODERN_CHANGES" NumConditionsNeeded="1"/>
   </Strategies>
   <!-- Reminder: These conditions must be met to START following the strategy - they are not victory conditions themselves -->
   <StrategyConditions>
@@ -81,6 +85,11 @@
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Is Not Major" Disqualifier="true"/>
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Handicap at or below" ThresholdValue="2" Disqualifier="true"/>
     <Row StrategyType="STRATEGY_NAVAL" ConditionFunction="Is On Island"/>
+    <!-- Timing based strategies (eras, really) -->
+    <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ConditionFunction="Is Renaissance"/>
+    <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
+    <Row StrategyType="STRATEGY_MODERN_CHANGES" ConditionFunction="Is Modern"/>
+    <Row StrategyType="STRATEGY_MODERN_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
   </StrategyConditions>
   <!-- The AI will increase or decrease the value of these yields while running the appropriate strategy -->
   <Strategy_Priorities>
@@ -90,7 +99,10 @@
     <Row StrategyType="STRATEGY_NAVAL" ListType="NavalPreferredTechs"/>
     <Row StrategyType="STRATEGY_EARLY_EXPLORATION" ListType="EarlyExplorationBoost"/>
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementBoost"/>
+    <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementPreferences"/>
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionUnitPreferences"/>
+    <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ListType="RenaissanceYields"/>
+    <Row StrategyType="STRATEGY_MODERN_CHANGES" ListType="ModernYields"/>
     <Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryPseudoYields"/>
     <Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryYields"/>
     <Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryPseudoYields"/>
@@ -111,10 +123,12 @@
     <Row ListType="CultureVictoryYields" />
     <Row ListType="EarlyExplorationBoost" />
     <Row ListType="ExpansionSettlementBoost" />
+    <Row ListType="ExpansionSettlementPreferences" />
     <Row ListType="ExpansionUnitPreferences" />
     <Row ListType="MilitaryVictoryOperations" />
     <Row ListType="MilitaryVictoryPseudoYields" />
     <Row ListType="MilitaryVictoryYields" />
+    <Row ListType="ModernYields"/>
     <Row ListType="NavalUnitPreferences" />
     <Row ListType="NavalSettlementPreferences" />
     <Row ListType="NavalSettlementBoost" />
@@ -123,6 +137,7 @@
     <Row ListType="ReligiousVictoryDiplomacy" />
     <Row ListType="ReligiousVictoryPseudoYields" />
     <Row ListType="ReligiousVictoryYields" />
+    <Row ListType="RenaissanceYields"/>
     <Row ListType="ScienceVictoryDistricts" />
     <Row ListType="ScienceVictoryProjects" />
     <Row ListType="ScienceVictoryPseudoYields" />
@@ -134,10 +149,12 @@
     <Row ListType="CultureVictoryYields" System="Yields"/>
     <Row ListType="EarlyExplorationBoost" System="AiScoutUses"/>
     <Row ListType="ExpansionSettlementBoost" System="SettlementPreferences"/>
+    <Row ListType="ExpansionSettlementPreferences" System="PlotEvaluations"/>
     <Row ListType="ExpansionUnitPreferences" System="PseudoYields"/>
     <Row ListType="MilitaryVictoryOperations" System="AiOperationTypes"/>
     <Row ListType="MilitaryVictoryPseudoYields" System="PseudoYields"/>
     <Row ListType="MilitaryVictoryYields" System="Yields"/>
+    <Row ListType="ModernYields" System="Yields"/>
     <Row ListType="NavalUnitPreferences" System="PseudoYields"/>
     <Row ListType="NavalSettlementPreferences" System="PlotEvaluations"/>
     <Row ListType="NavalSettlementBoost" System="SettlementPreferences"/>
@@ -146,6 +163,7 @@
     <Row ListType="ReligiousVictoryDiplomacy" System="DiplomaticActions"/>
     <Row ListType="ReligiousVictoryPseudoYields" System="PseudoYields"/>
     <Row ListType="ReligiousVictoryYields" System="Yields"/>
+    <Row ListType="RenaissanceYields" System="Yields"/>
     <Row ListType="ScienceVictoryDistricts" System="Districts"/>
     <Row ListType="ScienceVictoryProjects" System="Projects"/>
     <Row ListType="ScienceVictoryPseudoYields" System="PseudoYields"/>
@@ -170,23 +188,34 @@
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_DECAY_TURNS" Value="-3"/>
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="1"/>
+    <Row ListType="ExpansionSettlementPreferences" Item="Foreign Continent" Favored="false" Value="4"/>
+    <Row ListType="ExpansionSettlementPreferences" Item="Nearest Friendly City" Favored="false" Value="8"/>
     <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-25"/>
     <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="-25"/>
     <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_SETTLER" Value="25"/>
     <Row ListType="MilitaryVictoryOperations" Item="CITY_ASSAULT" Value="2"/>
+    <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_CITY_DEFENSES" Value="-25"/>
+    <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_CITY_ORIGINAL_CAPITAL" Value="100"/>
     <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_DIPLOMATIC_BONUS" Value="-50"/>
     <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_NUCLEAR_WEAPON" Value="25"/>
     <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_COMBAT" Value="25"/>
     <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="25"/>
     <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_AIR_COMBAT" Value="25"/>
     <Row ListType="MilitaryVictoryYields" Item="YIELD_PRODUCTION" Value="25"/>
+    <Row ListType="ModernYields" Item="YIELD_FOOD" Value="5"/>
+    <Row ListType="ModernYields" Item="YIELD_GOLD" Value="10"/>
     <Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="150"/>
     <Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-90" />
-    <Row ListType="NavalSettlementPreferences" Item="Coastal" Favored="false" Value="30"/>
-    <Row ListType="NavalSettlementPreferences" Item="Nearest Friendly City" Favored="false" Value="2"/>
-    <Row ListType="NavalSettlementPreferences" Item="Foreign Continent" Favored="false" Value="30"/>
-    <Row ListType="NavalSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="150"/>
+    
+    <Row ListType="NavalSettlementPreferences" Item="Coastal" Favored="false" Value="10"/>
+    <Row ListType="NavalSettlementPreferences" Item="Specific Resource" Value="-3" StringVal="RESOURCE_HORSES"/>
+    <Row ListType="NavalSettlementPreferences" Item="Specific Resource" Value="-5" StringVal="RESOURCE_IRON"/>
+    <Row ListType="NavalSettlementPreferences" Item="Foreign Continent" Favored="true" Value="4"/>
+    <Row ListType="NavalSettlementPreferences" Item="Nearest Friendly City" Favored="false" Value="4"/>
+
+    <Row ListType="NavalSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="100"/>
     <Row ListType="NavalSettlementBoost" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="2"/>
+    
     <Row ListType="NavalPreferredTechs" Item="TECH_SAILING" Favored="true"/>
     <Row ListType="NavalPreferredTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
     <Row ListType="NavalPreferredTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
@@ -195,6 +224,8 @@
     <Row ListType="ReligiousVictoryDiplomacy" Item="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Favored="false" />
     <Row ListType="ReligiousVictoryPseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="25"/>
     <Row ListType="ReligiousVictoryYields" Item="YIELD_FAITH" Value="50"/>
+    <Row ListType="RenaissanceYields" Item="YIELD_FOOD" Value="10"/>
+    <Row ListType="RenaissanceYields" Item="YIELD_GOLD" Value="5"/>
     <Row ListType="ScienceVictoryDistricts" Item="DISTRICT_SPACEPORT" Favored="true"/>
     <Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_EARTH_SATELLITE" Favored="true"/>
     <Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MOON_LANDING" Favored="true"/>

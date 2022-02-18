@@ -11,6 +11,7 @@
 		<Row Type="CAPABILITY_CULTURE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENTS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENTS_VIEW" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_GOVERNMENTS_LEGACY_BONUSES" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_WORKS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_NEW_GREAT_WORKS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_WORKS_VIEW" Kind="KIND_CAPABILITY" />
@@ -29,21 +30,40 @@
 		<Row Type="CAPABILITY_FOUND_RELIGIONS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_RELIGION_VIEW" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE" Kind="KIND_CAPABILITY" />
-		<Row Type="CAPABILITY_GREAT_PEOPLE_CAN_RECRUIT" Kind="KIND_CAPABILITY" />		
+		<Row Type="CAPABILITY_GREAT_PEOPLE_CAN_RECRUIT" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_CAN_REJECT" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_VIEW" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_ESPIONAGE" Kind="KIND_CAPABILITY" />
-		<Row Type="CAPABILITY_NEW_ESPIONAGE" Kind="KIND_CAPABILITY" />		
+		<Row Type="CAPABILITY_NEW_ESPIONAGE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_ESPIONAGE_VIEW" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_TOURISM" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_WORLD_RANKINGS" Kind="KIND_CAPABILITY" />
+		<!-- Mini-map panel lenses -->
+		<Row Type="CAPABILITY_LENS_RELIGION" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_APPEAL" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_SETTLER" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_GOVERNMENT" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_LENS_TOURISM" Kind="KIND_CAPABILITY"/>
+		<!-- City HUD "Amenities from" Counters -->
+		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_NATIONAL_PARKS" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" Kind="KIND_CAPABILITY"/>
+		<!-- Can the user open city states panel -->
+		<Row Type="CAPABILITY_CITY_STATES_VIEW" Kind="KIND_CAPABILITY" />
+		<!-- Do envoys show up on the Top Panel -->
+		<Row Type="CAPABILITY_TOP_PANEL_ENVOYS" Kind="KIND_CAPABILITY" />
+		<!-- Does the diplomacy filter show up on the government screen -->
+		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER" Kind="KIND_CAPABILITY" />
+		
 		<!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
 		<Row Type="CAPABILITY_DISPLAY_NORMALIZED_TURN" Kind="KIND_CAPABILITY" />
 
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row Type="CAPABILITY_ARCHEOLOGY" Kind="KIND_CAPABILITY" />
-		<Row Type="CAPABILITY_TOURISM" Kind="KIND_CAPABILITY" />
+		
 		<Row Type="CAPABILITY_CIVIC_BOOSTS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_CIVIC_BOOST_POPUP" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENT_POLICIES" Kind="KIND_CAPABILITY" />
@@ -63,6 +83,9 @@
 		<Row GameCapability="CAPABILITY_GOVERNMENTS"/>
 		<!-- Separate from government functionality, can you access Governments screen? -->
 		<Row GameCapability="CAPABILITY_GOVERNMENTS_VIEW"/>
+		<!-- Separate from government functionality, does the game mode enable Legacy Bonuses? -->
+		<Row GameCapability="CAPABILITY_GOVERNMENTS_LEGACY_BONUSES"/>
+		
 		<!-- Great Works in game -->
 		<Row GameCapability="CAPABILITY_GREAT_WORKS"/>
 		<!-- Can create new Great Works. Turn this off if you want to have existing pantheons, but no new ones -->
@@ -107,19 +130,41 @@
 		<!-- Separate from allowing new great people, can you view the current great people? -->
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_VIEW"/>
 
-		<!-- Espionage int game -->
+		<!-- Espionage in game -->
 		<Row GameCapability="CAPABILITY_ESPIONAGE"/>
 		<!-- Can you start new espionage? -->
 		<Row GameCapability="CAPABILITY_NEW_ESPIONAGE"/>
 		<!-- Can you view the current espionage activity? -->
 		<Row GameCapability="CAPABILITY_ESPIONAGE_VIEW"/>
 
+		<!-- Tourism enabled-->
+		<Row GameCapability="CAPABILITY_TOURISM"/>
+
 		<!-- World Rankings is a thing -->
 		<Row GameCapability="CAPABILITY_WORLD_RANKINGS" />
 
+		<!-- Mini-map panel lenses -->
+		<Row GameCapability="CAPABILITY_LENS_RELIGION" />
+		<Row GameCapability="CAPABILITY_LENS_APPEAL" />
+		<Row GameCapability="CAPABILITY_LENS_SETTLER" />
+		<Row GameCapability="CAPABILITY_LENS_GOVERNMENT" />
+		<Row GameCapability="CAPABILITY_LENS_TOURISM" />
+
+		<!-- City HUD "Amenities from" Counters -->
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_NATIONAL_PARKS" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" />
+		
+		<!-- Can the user open city states panel -->
+		<Row GameCapability="CAPABILITY_CITY_STATES_VIEW" />
+		<!-- Do envoys show up on the Top Panel -->
+		<Row GameCapability="CAPABILITY_TOP_PANEL_ENVOYS"/>
+		<!-- Does the diplomacy filter show up on the government screen -->
+		<Row GameCapability="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER"/>
+
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY"/>
-		<Row GameCapability="CAPABILITY_TOURISM"/>
 		<Row GameCapability="CAPABILITY_CIVIC_BOOSTS"/>
 		<Row GameCapability="CAPABILITY_CIVIC_BOOST_POPUP"/>
 		<Row GameCapability="CAPABILITY_GOVERNMENT_POLICIES"/>
@@ -143,6 +188,7 @@
 		<Row GameCapability="CAPABILITY_FOUND_RELIGIONS" DependsOnCapability="CAPABILITY_RELIGION" />
 		<Row GameCapability="CAPABILITY_RELIGION_VIEW" DependsOnCapability="CAPABILITY_RELIGION" />
 		<Row GameCapability="CAPABILITY_GOVERNMENTS_VIEW" DependsOnCapability="CAPABILITY_GOVERNMENTS" />
+		<Row GameCapability="CAPABILITY_GOVERNMENTS_LEGACY_BONUSES" DependsOnCapability="CAPABILITY_GOVERNMENTS_VIEW" />
 		<Row GameCapability="CAPABILITY_NEW_GREAT_WORKS" DependsOnCapability="CAPABILITY_GREAT_WORKS"/>
 		<Row GameCapability="CAPABILITY_GREAT_WORKS_VIEW" DependsOnCapability="CAPABILITY_GREAT_WORKS"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_CAN_RECRUIT" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
@@ -152,6 +198,12 @@
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_VIEW" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_NEW_ESPIONAGE" DependsOnCapability="CAPABILITY_ESPIONAGE"/>
 		<Row GameCapability="CAPABILITY_ESPIONAGE_VIEW" DependsOnCapability="CAPABILITY_ESPIONAGE"/>
+		<Row GameCapability="CAPABILITY_LENS_RELIGION" DependsOnCapability="CAPABILITY_RELIGION"/>
+		<Row GameCapability="CAPABILITY_LENS_GOVERNMENT" DependsOnCapability="CAPABILITY_GOVERNMENTS"/>
+		<Row GameCapability="CAPABILITY_LENS_TOURISM" DependsOnCapability="CAPABILITY_TOURISM"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" DependsOnCapability="CAPABILITY_CIVICS"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" DependsOnCapability="CAPABILITY_RELIGION"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY" DependsOnCapability="CAPABILITY_TOURISM" />

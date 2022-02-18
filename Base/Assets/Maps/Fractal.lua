@@ -79,6 +79,7 @@ function GenerateMap()
 	--end
 	local resourcesConfig = MapConfiguration.GetValue("resources");
 	local args = {
+		iWaterLux = 2,
 		resources = resourcesConfig,
 	};
 	local resGen = ResourceGenerator.Create(args);
@@ -108,9 +109,9 @@ function GeneratePlotTypes()
 	local sea_level_low = 59;
 	local sea_level_normal = 62;
 	local sea_level_high = 68;
-	local world_age_old = 2;
-	local world_age_normal = 3;
 	local world_age_new = 5;
+	local world_age_normal = 3;
+	local world_age_old = 2;
 	local extra_mountains = 0;
 	local adjust_plates = 1.0;
 	local shift_plot_types = true;

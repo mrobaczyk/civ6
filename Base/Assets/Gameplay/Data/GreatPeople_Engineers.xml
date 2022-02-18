@@ -24,7 +24,7 @@
 	<GreatPersonIndividuals>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_BI_SHENG" Name="LOC_GREAT_PERSON_INDIVIDUAL_BI_SHENG_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_MEDIEVAL" Gender="M" ActionCharges="1" ActionRequiresCompletedDistrictType="DISTRICT_CITY_CENTER"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ISIDORE_OF_MILETUS" Name="LOC_GREAT_PERSON_INDIVIDUAL_ISIDORE_OF_MILETUS_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_MEDIEVAL" Gender="M" ActionCharges="2" ActionRequiresIncompleteWonder="true"/>
-		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE" Name="LOC_GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_MEDIEVAL" Gender="M" ActionCharges="2" ActionRequiresCompletedDistrictType="DISTRICT_CITY_CENTER" ActionRequiresMissingBuildingType="BUILDING_CASTLE" ActionEffectTextOverride="LOC_GREATPERSON_JAMES_OF_ST_GEORGE_ACTIVE"/>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE" Name="LOC_GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_MEDIEVAL" Gender="M" ActionCharges="3" ActionRequiresCompletedDistrictType="DISTRICT_CITY_CENTER" ActionRequiresMissingBuildingType="BUILDING_CASTLE" ActionEffectTextOverride="LOC_GREATPERSON_JAMES_OF_ST_GEORGE_ACTIVE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_FILIPPO_BRUNELLESCHI" Name="LOC_GREAT_PERSON_INDIVIDUAL_FILIPPO_BRUNELLESCHI_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_RENAISSANCE" Gender="M" ActionCharges="2" ActionRequiresIncompleteWonder="true"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_LEONARDO_DA_VINCI" Name="LOC_GREAT_PERSON_INDIVIDUAL_LEONARDO_DA_VINCI_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_RENAISSANCE" Gender="M" ActionCharges="1" ActionRequiresCompletedDistrictType="DISTRICT_INDUSTRIAL_ZONE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_MIMAR_SINAN" Name="LOC_GREAT_PERSON_INDIVIDUAL_MIMAR_SINAN_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" EraType="ERA_RENAISSANCE" Gender="M" ActionCharges="2" ActionRequiresCompletedDistrictType="DISTRICT_CITY_CENTER"/>
@@ -46,9 +46,7 @@
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_BI_SHENG" ModifierId="GREATPERSON_PRINTINGTECHBOOST" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ISIDORE_OF_MILETUS" ModifierId="GREATPERSON_GRANT_PRODUCTION_IN_CITY_MEDIEVAL" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_WONDER_IN_TILE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE" ModifierId="GREATPERSON_WALLS" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
-		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE" ModifierId="GREATPERSON_WALLS_FREE_MAINTENANCE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE" ModifierId="GREATPERSON_CASTLE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
-		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JAMES_OF_ST_GEORGE" ModifierId="GREATPERSON_CASTLE_FREE_MAINTENANCE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_FILIPPO_BRUNELLESCHI" ModifierId="GREATPERSON_GRANT_PRODUCTION_IN_CITY_RENAISSANCE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_WONDER_IN_TILE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_LEONARDO_DA_VINCI" ModifierId="GREATPERSON_WORKSHOP_CULTURE" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
 		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_LEONARDO_DA_VINCI" ModifierId="GREATPERSON_1MODERNTECHBOOST" AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"/>
@@ -101,20 +99,8 @@
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
-			<ModifierId>GREATPERSON_WALLS_FREE_MAINTENANCE</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_YIELD_CHANGE</ModifierType>
-			<RunOnce>true</RunOnce>
-			<Permanent>true</Permanent>
-		</Row>
-		<Row>
 			<ModifierId>GREATPERSON_CASTLE</ModifierId>
 			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE</ModifierType>
-			<RunOnce>true</RunOnce>
-			<Permanent>true</Permanent>
-		</Row>
-		<Row>
-			<ModifierId>GREATPERSON_CASTLE_FREE_MAINTENANCE</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_YIELD_CHANGE</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -262,29 +248,9 @@
 			<Value>BUILDING_WALLS</Value>
 		</Row>
 		<Row>
-			<ModifierId>GREATPERSON_WALLS_FREE_MAINTENANCE</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
-		</Row>
-		<Row>
-			<ModifierId>GREATPERSON_WALLS_FREE_MAINTENANCE</ModifierId>
-			<Name>YieldType</Name>
-			<Value>YIELD_GOLD</Value>
-		</Row>
-		<Row>
 			<ModifierId>GREATPERSON_CASTLE</ModifierId>
 			<Name>BuildingType</Name>
 			<Value>BUILDING_CASTLE</Value>
-		</Row>
-		<Row>
-			<ModifierId>GREATPERSON_CASTLE_FREE_MAINTENANCE</ModifierId>
-			<Name>Amount</Name>
-			<Value>2</Value>
-		</Row>
-		<Row>
-			<ModifierId>GREATPERSON_CASTLE_FREE_MAINTENANCE</ModifierId>
-			<Name>YieldType</Name>
-			<Value>YIELD_GOLD</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_GRANT_PRODUCTION_IN_CITY_RENAISSANCE</ModifierId>

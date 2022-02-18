@@ -24,67 +24,91 @@ function ResourceGenerator.Create(args)
 		__InitResourceData		= ResourceGenerator.__InitResourceData,
 		__FindValidLocs			= ResourceGenerator.__FindValidLocs,
 		__GetLuxuryResources	= ResourceGenerator.__GetLuxuryResources,
-		__IsCoastal				= ResourceGenerator.__IsCoastal,
 		__ValidLuxuryPlots		= ResourceGenerator.__ValidLuxuryPlots,
 		__PlaceLuxuryResources		= ResourceGenerator.__PlaceLuxuryResources,
 		__ScoreLuxuryPlots			= ResourceGenerator.__ScoreLuxuryPlots,
+		__GetWaterLuxuryResources			= ResourceGenerator.__GetWaterLuxuryResources,
+		__SetWaterLuxury			= ResourceGenerator.__SetWaterLuxury,
 		__PlaceWaterLuxury			= ResourceGenerator.__PlaceWaterLuxury,
 		__GetStrategicResources	= ResourceGenerator.__GetStrategicResources,
 		__ValidStrategicPlots		= ResourceGenerator.__ValidStrategicPlots,
 		__ScoreStrategicPlots			= ResourceGenerator.__ScoreStrategicPlots,
 		__PlaceStrategicResources		= ResourceGenerator.__PlaceStrategicResources,
+		__GetWaterStrategicResources	= ResourceGenerator.__GetWaterStrategicResources,
+		__SetWaterStrategic			= ResourceGenerator.__SetWaterStrategic,
+		__PlaceWaterStrategic			= ResourceGenerator.__PlaceWaterStrategic,
 		__GetOtherResources		= ResourceGenerator.__GetOtherResources,
 		__PlaceOtherResources		= ResourceGenerator.__PlaceOtherResources,
+		__GetWaterOtherResources		= ResourceGenerator.__GetWaterOtherResources,
+		__PlaceWaterOtherResources		= ResourceGenerator.__PlaceWaterOtherResources,
 		__RemoveOtherDuplicateResources		= ResourceGenerator.__RemoveOtherDuplicateResources,
 		__RemoveDuplicateResources		= ResourceGenerator.__RemoveDuplicateResources,
 		__ScorePlots			= ResourceGenerator.__ScorePlots,
+		__ScoreWaterPlots			= ResourceGenerator.__ScoreWaterPlots,
 
 		-- data
-		bCoastalBias = args.bCoastalBias or false;
-		bLandBias = args.bLandBias or false;
+		iWaterLux = args.iWaterLux or 3;
+		iWaterBonus = args.iWaterBonus or 1.25;
 		iLuxuriesPerRegion = args.LuxuriesPerRegion or 4;
-
 		resources = args.resources;
+
 		iResourcesInDB      = 0;
 		iNumContinents		= 0;
 		iTotalValidPlots    = 0;
+		iWaterPlots = 0;
 		iFrequencyTotal     = 0;
+		iFrequencyTotalWater     = 0;
 		iFrequencyStrategicTotal     = 0;
+		iFrequencyStrategicTotalWater    = 0;
 		iTargetPercentage   = 28;
 		iStandardPercentage = 28;
 		iLuxuryPercentage   = 20;
-		iStrategicPercentage   = 21;
+		iStrategicPercentage   = 18;
 		iOccurencesPerFrequency = 0;
+		iNumWaterLuxuries = 0;
+		iNumWaterStrategics = 0;
+		bOdd = false;
 		eResourceType		= {},
 		eResourceClassType	= {},
 		iFrequency          = {},
+		iSeaFrequency          = {},
 		aLuxuryType		= {},
 		aLuxuryTypeCoast		= {},
 		aStrategicType		= {},
 		aOtherType		= {},
-		aStrategicCoast = {},
+		aOtherTypeWater		= {},
+		aStrategicTypeCoast = {},
 		aIndex = {},
 		aaPossibleLuxLocs		= {},
-		aaPossibleLuxLocsWater = {},
 		aaPossibleStratLocs		= {},
-		aaPossibleStratLocsWater = {},
 		aaPossibleLocs		= {},
+		aaPossibleWaterLocs		= {},
 		aResourcePlacementOrderStrategic = {},
 		aResourcePlacementOrder = {},
+		aWaterResourcePlacementOrder = {},
 		aPeakEra = {},
 	};
 
 	-- initialize instance data
 	instance:__InitResourceData()
 	
-	-- Chooses and then places the luxury resources
+	-- Chooses and then places the land luxury resources
 	instance:__GetLuxuryResources()
 
-	-- Chooses and then places the strategic resources
+	-- Chooses and then places the water luxury resources
+	instance:__GetWaterLuxuryResources()
+
+	-- Chooses and then places the land strategic resources
 	instance:__GetStrategicResources()
+
+	-- Chooses and then places the water strategic resources
+	instance:__GetWaterStrategicResources()
 
 	-- Chooses and then places the other resources [other is now only bonus, but later could be resource types added through mods]
 	instance:__GetOtherResources()
+
+	-- Chooses and then places the water other resources [other is now only bonus, but later could be resource types added through mods]
+	instance:__GetWaterOtherResources()
 
 	-- Removes too many adjacent other resources.
 	instance:__RemoveOtherDuplicateResources()
@@ -116,13 +140,13 @@ function ResourceGenerator:__InitResourceData()
 		self.aIndex[self.iResourcesInDB] = row.Index;
 		self.eResourceClassType[self.iResourcesInDB] = row.ResourceClassType;
 		self.aaPossibleLocs[self.iResourcesInDB] = {};
+		self.aaPossibleWaterLocs[self.iResourcesInDB] = {};
 		self.aaPossibleLuxLocs[self.iResourcesInDB] = {};
 		self.aaPossibleStratLocs[self.iResourcesInDB] = {};
-		self.aaPossibleLuxLocsWater[self.iResourcesInDB] = {};
-		self.aaPossibleStratLocsWater[self.iResourcesInDB] = {};
 		self.iFrequency[self.iResourcesInDB] = row.Frequency;
+		self.iSeaFrequency[self.iResourcesInDB] = row.SeaFrequency;
 		self.aPeakEra[self.iResourcesInDB] = row.PeakEra;
-	    	self.iResourcesInDB = self.iResourcesInDB + 1;
+	    self.iResourcesInDB = self.iResourcesInDB + 1;
 	end
 end
 
@@ -130,87 +154,21 @@ end
 function ResourceGenerator:__GetLuxuryResources()
 	local continentsInUse = Map.GetContinentsInUse();	
 	self.aLuxuryType = {};
-	self.aLuxuryTypeCoast = {};
-	aLandLuxury = {};
 	local max = self.iLuxuriesPerRegion;
 
 	-- Find the Luxury Resources
 	for row = 0, self.iResourcesInDB do
 		local index = self.aIndex[row]
 		if (self.eResourceClassType[row] == "RESOURCECLASS_LUXURY" and self.iFrequency[index] > 0) then
-			local coast = false;
-				
-			for row2 in GameInfo.Resource_ValidTerrains() do
-				if(GameInfo.Resources[row2.ResourceType].Hash == self.eResourceType[index] and row2.TerrainType=="TERRAIN_COAST") then
-					coast = true;
-				end
-			end
-
-			if(coast == true) then	
-				table.insert(self.aLuxuryTypeCoast, index);
-			end
-
-			if(self.bCoastalBias == true or self.bLandBias == true) then
-				if(coast == false) then	
-					table.insert(aLandLuxury, index);		
-				end
-			else
-				table.insert(self.aLuxuryType, index);		
-			end
+			table.insert(self.aLuxuryType, index);
 		end
 	end
-
 	
-	local index = 1;
-		if(self.bCoastalBias == true) then
-		newLuxuryArray = {};
-		shuffledCoast = GetShuffledCopyOfTable(self.aLuxuryTypeCoast);
-		aLandLuxury = GetShuffledCopyOfTable(aLandLuxury);
-
-		local iLandIndex = 1;
-		local iWaterIndex = 1;
-
-		for row = 0, self.iResourcesInDB do
-			local mod = max + 2;
-			if(row ~= 0 and ((row - math.floor(row / mod) * mod == 0) and iWaterIndex <= #self.aLuxuryTypeCoast)) then
-				table.insert(newLuxuryArray, shuffledCoast[self.aIndex[iWaterIndex]]);
-				iWaterIndex = iWaterIndex + 1;
-			else
-				table.insert(newLuxuryArray, aLandLuxury[self.aIndex[iLandIndex]]);
-				iLandIndex = iLandIndex + 1;
-			end
-		end
-		
-		for  i, eLuxury in ipairs(newLuxuryArray)do
-			table.insert(self.aLuxuryType, eLuxury);
-		end
-	elseif(self.bLandBias == true) then
-		newLuxuryArray = {};
-		shuffledCoast = GetShuffledCopyOfTable(self.aLuxuryTypeCoast);
-		aLandLuxury = GetShuffledCopyOfTable(aLandLuxury);
-
-		local iLandIndex = 1;
-		local iWaterIndex = 1;
-
-		for row = 0, self.iResourcesInDB do
-			if(iLandIndex <= #aLandLuxury) then
-				table.insert(newLuxuryArray, aLandLuxury[self.aIndex[iLandIndex]]);
-				iLandIndex = iLandIndex + 1;
-			else
-				table.insert(newLuxuryArray, shuffledCoast[self.aIndex[iWaterIndex]]);
-				iWaterIndex = iWaterIndex + 1;
-			end
-		end
-		
-		for  i, eLuxury in ipairs(newLuxuryArray)do
-			table.insert(self.aLuxuryType, eLuxury);
-		end
-	else
-		self.aLuxuryType = GetShuffledCopyOfTable(self.aLuxuryType);
-	end
+	-- Shuffle the table
+	self.aLuxuryType = GetShuffledCopyOfTable(self.aLuxuryType);
 
 	for _, eContinent in ipairs(continentsInUse) do 
-		-- Shuffle the table
+
 		--print ("Retrieved plots for continent: " .. tostring(eContinent));
 
 		self:__ValidLuxuryPlots(eContinent);
@@ -218,17 +176,14 @@ function ResourceGenerator:__GetLuxuryResources()
 		-- next find the valid plots for each of the luxuries
 		local failed = 0;
 		local iI = 1;
+		local index = 1;
 		while max >= iI and failed < 2 do 
 			local eChosenLux = self.aLuxuryType[self.aIndex[index]];
 			local isValid = true;
 			
 			if (isValid == true and #self.aLuxuryType > 0) then
 				table.remove(self.aLuxuryType,index);
-				if(self:__IsCoastal(eChosenLux)) then
-					self:__PlaceWaterLuxury(eChosenLux, eContinent);
-				else
-					self:__PlaceLuxuryResources(eChosenLux, eContinent);
-				end
+				self:__PlaceLuxuryResources(eChosenLux, eContinent);
 
 				index = index + 1;
 				iI = iI + 1;
@@ -244,17 +199,6 @@ function ResourceGenerator:__GetLuxuryResources()
 end
 
 ------------------------------------------------------------------------------
-function ResourceGenerator:__IsCoastal(eResource)
-	for  i, eCoastalResource in ipairs(self.aLuxuryTypeCoast)do
-		if eCoastalResource == eResource then
-			return true
-		end
-	end
-
-	return false;
-end
-
-------------------------------------------------------------------------------
 function ResourceGenerator:__ValidLuxuryPlots(eContinent)
 	-- go through each plot on the continent and put the luxuries	
 	local iSize = #self.aLuxuryType;
@@ -263,30 +207,35 @@ function ResourceGenerator:__ValidLuxuryPlots(eContinent)
 
 	plots = Map.GetContinentPlots(eContinent);
 	for i, plot in ipairs(plots) do
+
 		local bCanHaveSomeResource = false;
 		local pPlot = Map.GetPlotByIndex(plot);
 
-		-- See which resources can appear here
-		for iI = 1, iSize do
-			local bIce = false;
+		if(pPlot~=nil and pPlot:IsWater() == false) then
 
-			if(IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == true) then
-				bIce = true;
-			end
+			-- See which resources can appear here
+			for iI = 1, iSize do
+				local bIce = false;
+
+				if(IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == true) then
+					bIce = true;
+				end
 			
-			if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[self.aLuxuryType[iI]]) and bIce == false) then
-				row = {};
-				row.MapIndex = plot;
-				row.Score = iBaseScore;
+				if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[self.aLuxuryType[iI]]) and bIce == false) then
+					row = {};
+					row.MapIndex = plot;
+					row.Score = iBaseScore;
 
-				table.insert (self.aaPossibleLuxLocs[self.aLuxuryType[iI]], row);
-				bCanHaveSomeResource = true;
+					table.insert (self.aaPossibleLuxLocs[self.aLuxuryType[iI]], row);
+					bCanHaveSomeResource = true;
+				end
 			end
-		end
 
 
-		if (bCanHaveSomeResource == true) then
-			self.iTotalValidPlots = self.iTotalValidPlots + 1;
+			if (bCanHaveSomeResource == true) then
+				self.iTotalValidPlots = self.iTotalValidPlots + 1;
+			end
+
 		end
 
 		-- Compute how many of each resource to place
@@ -362,66 +311,178 @@ function ResourceGenerator:__ScoreLuxuryPlots(iResourceIndex, eContinent)
 end
 
 ------------------------------------------------------------------------------
-function ResourceGenerator:__PlaceWaterLuxury(eChosenLux, eContinent)
-	-- Compute how many to place
-	local iNumToPlace = 1;
-	if(self.iOccurencesPerFrequency > 1) then
-		iNumToPlace = self.iOccurencesPerFrequency;
-	end
+function ResourceGenerator:__GetWaterLuxuryResources()
+	self.aLuxuryTypeCoast = {};
 
+	-- Find the Luxury Resources
+	for row = 0, self.iResourcesInDB do
+		local index = self.aIndex[row]
+		if (self.eResourceClassType[row] == "RESOURCECLASS_LUXURY" and self.iSeaFrequency[index] > 0) then
+			table.insert(self.aLuxuryTypeCoast, index);
+		end
+	end
 	
-	-- Find the water luxury plots
-	for k, v in pairs(self.aaPossibleLuxLocsWater[eChosenLux]) do
-		self.aaPossibleLuxLocsWater[eChosenLux][k] = nil;
-	end
+	-- Shuffle the table
+	self.aLuxuryTypeCoast = GetShuffledCopyOfTable(self.aLuxuryTypeCoast);
 
-	coastalPlots = Map.GetContinentCoastalPlots(eContinent, 2);
-	for i, plot in ipairs(coastalPlots) do
-		local pPlot = Map.GetPlotByIndex(plot);
-		local bIce = false;
-		
-		if(IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == true) then
-			bIce = true;
-		end
+	-- Find the Map Size
+	local iW, iH;
+	iW, iH = Map.GetGridSize();
+	local iSize = Map.GetMapSize() + 1;
 
-		-- See if the resources can appear here
-		if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[eChosenLux]) and bIce == false) then
-			local iBonusAdjacent = 0;
-
-			if( self.iStandardPercentage < self.iTargetPercentage) then
-				iBonusAdjacent = 0.5;
-			elseif ( self.iStandardPercentage > self.iTargetPercentage) then
-				iBonusAdjacent = -0.5;
-			end
-			
-			row = {};
-			row.MapIndex = plot;
-			score = TerrainBuilder.GetRandomNumber(200, "Resource Placement Score Adjust");
-			score = score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * (3.5 + iBonusAdjacent));
-			row.Score = score;
-			
-			if(ResourceBuilder.GetAdjacentResourceCount(pPlot) <= 1 or #self.aaPossibleLuxLocsWater == 0) then
-				table.insert (self.aaPossibleLuxLocsWater[eChosenLux], row);
+	-- Use the Map Size to Determine the number of Water Luxuries
+	for row in GameInfo.Resource_SeaLuxuries() do
+		if (row.MapArgument == self.iWaterLux ) then
+			if(iSize <= 1) then
+				self.iNumWaterLuxuries = row.Duel;
+			elseif(iSize == 2) then
+				self.iNumWaterLuxuries = row.Tiny;
+			elseif(iSize == 3) then
+				self.iNumWaterLuxuries = row.Small;
+			elseif(iSize == 4) then
+				self.iNumWaterLuxuries = row.Standard;
+			elseif(iSize == 5) then
+				self.iNumWaterLuxuries = row.Large;
+			else
+				self.iNumWaterLuxuries = row.Huge;
 			end
 		end
 	end
 
+	if (self.iNumWaterLuxuries == 0) then
+		return
+	end
+
+	local iNumLuxuries = math.floor(self.iNumWaterLuxuries / 2);
+	self.bOdd = false;
+
+	-- Determine if the number of water luxuries is odd
+	if(self.iNumWaterLuxuries % 2 == 1) then
+		self.bOdd = true;
+		iNumLuxuries = iNumLuxuries + 1
+	end
 
 
-	-- Sort and take best score
-	table.sort (self.aaPossibleLuxLocsWater[eChosenLux], function(a, b) return a.Score > b.Score; end);
+	-- Water plots
+	self.iWaterPlots = 0;
+	for x = 0, iW - 1 do
+		for y = 0, iH - 1 do
+			local i = y * iW + x;
+			local pPlot = Map.GetPlotByIndex(i);
 
-	for iI = 1, iNumToPlace do
-			if (iI <= #self.aaPossibleLuxLocsWater[eChosenLux]) then
-				local iMapIndex = self.aaPossibleLuxLocsWater[eChosenLux][iI].MapIndex;
-				local iScore = self.aaPossibleLuxLocsWater[eChosenLux][iI].Score;
-
-				-- Place at this location
-				local pPlot = Map.GetPlotByIndex(iMapIndex);
-				ResourceBuilder.SetResourceType(pPlot, self.eResourceType[eChosenLux], 1);
-		--print ("   Placed at (" .. tostring(pPlot:GetX()) .. ", " .. tostring(pPlot:GetY()) .. ") with score of " .. tostring(iScore));
+			if(pPlot~=nil) then
+				local terrainType = pPlot:GetTerrainType();
+				if(terrainType == g_TERRAIN_TYPE_COAST and IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == false) then
+					self.iWaterPlots = self.iWaterPlots + 1;
+				end
+			end
 		end
 	end
+
+
+	self.iOccurencesPerFrequency =  self.iTargetPercentage / 100 * self.iWaterPlots * self.iLuxuryPercentage / 100 / iNumLuxuries / 2;
+	
+	aLuxuries = {};
+	aLuxuries = self.aLuxuryTypeCoast;
+
+	--First go through check the tropics
+	for i = 1, iNumLuxuries do
+		local eChosenLux  = aLuxuries[i];
+		if(eChosenLux == nil)  then
+			return;
+		else
+			self:__SetWaterLuxury(eChosenLux, 100.0, 35.1);
+		end
+	end
+
+	aLuxuries = self.aLuxuryTypeCoast;
+
+	--Then check the equator
+	for i = 1, iNumLuxuries do		
+		local eChosenLux  = aLuxuries[i];
+		if(eChosenLux == nil)  then
+			return;
+		else
+			self:__SetWaterLuxury(eChosenLux, 35.0, 0.0);
+		end
+	end
+end
+
+------------------------------------------------------------------------------
+function ResourceGenerator:__SetWaterLuxury(eChosenLux, latitudeMax, latitudeMin, index)
+	local bOddSwitch = false;
+	local bFirst = true;
+	local iNumber = 0
+	local iW, iH;
+	iW, iH = Map.GetGridSize();
+
+	for x = 0, iW - 1 do
+		for y = 0, iH - 1 do
+			local i = y * iW + x;
+			local pPlot = Map.GetPlotByIndex(i);
+			-- Water plots
+			if(pPlot~=nil and pPlot:IsWater() == true and IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == false) then
+				local lat = math.abs((iH/2) - y)/(iH/2) * 100.0;
+				if(lat < latitudeMax and lat > latitudeMin and iNumber <= self.iOccurencesPerFrequency) then
+
+					-- If the the luxury is placed then it returns true and is removed
+					local bChosen = self:__PlaceWaterLuxury(eChosenLux, pPlot);
+					if(bChosen == true) then
+						if(bFirst == true) then
+							if(self.bOdd == true) then
+								bOddSwitch = true;
+							else
+								if(#self.aLuxuryTypeCoast > 0) then
+									table.remove(self.aLuxuryTypeCoast, 1);
+								else
+									return;
+								end
+							end
+
+							bFirst = false;
+						end
+
+						iNumber = iNumber + 1;
+					end
+				end
+			end
+
+			if(bOddSwitch == true and self.bOdd == true) then
+				self.bOdd  = false;
+			end	
+		end
+	end
+
+	--print("Water Resource: ", eChosenLux, " number placed = ",  iNumber);
+end
+
+------------------------------------------------------------------------------
+function ResourceGenerator:__PlaceWaterLuxury(eChosenLux, pPlot)
+	if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[eChosenLux])) then
+		-- Randomly detetermine each plot if a water luxury is placed less likely if there are adjacent of the same type
+
+		local iBonusAdjacent = 0;
+
+		if( self.iStandardPercentage < self.iTargetPercentage) then
+			iBonusAdjacent = 0.5;
+		elseif ( self.iStandardPercentage > self.iTargetPercentage) then
+			iBonusAdjacent = -0.5;
+		end
+			
+		local iRandom = 15 * self.iOccurencesPerFrequency + 300;
+
+		--print ("Random Frequency: " , iRandom);
+
+		local score = TerrainBuilder.GetRandomNumber(iRandom, "Resource Placement Score Adjust");
+		score = score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * (3.0 + iBonusAdjacent));
+			
+		if(score >= 85 + 5 * self.iOccurencesPerFrequency) then
+			ResourceBuilder.SetResourceType(pPlot, self.eResourceType[eChosenLux], 1);
+			return true
+		end
+	end
+
+	return false;
 end
 
 ------------------------------------------------------------------------------
@@ -432,8 +493,9 @@ function ResourceGenerator:__GetStrategicResources()
 
 	-- Find the Strategic Resources
 	for row = 0, self.iResourcesInDB do
-		if (self.eResourceClassType[row] == "RESOURCECLASS_STRATEGIC" and self.iFrequency[row] > 0) then
-				table.insert(self.aStrategicType, self.aIndex[row]);
+		local index = self.aIndex[row]
+		if (self.eResourceClassType[row] == "RESOURCECLASS_STRATEGIC" and self.iFrequency[index] > 0) then
+				table.insert(self.aStrategicType, index);
 		end
 	end
 
@@ -480,7 +542,6 @@ function ResourceGenerator:__ValidStrategicPlots(iWeight, eContinent)
 	self.iTotalValidPlots = 0;
 	self.aResourcePlacementOrderStrategic = {};
 	plots = Map.GetContinentPlots(eContinent);
-	coastalPlots = Map.GetContinentCoastalPlots(eContinent, 2);
 
 	-- Find valid spots for land resources first
 	for i, plot in ipairs(plots) do
@@ -495,30 +556,6 @@ function ResourceGenerator:__ValidStrategicPlots(iWeight, eContinent)
 				row.MapIndex = plot;
 				row.Score = iBaseScore;
 				table.insert (self.aaPossibleStratLocs[self.aStrategicType[iI]], row);
-				bCanHaveSomeResource = true;
-			end
-		end
-
-		if (bCanHaveSomeResource == true) then
-			self.iTotalValidPlots = self.iTotalValidPlots + 1;
-		end
-	end
-
-	-- Now run through the same logic but for coastal plots
-	for i, plot in ipairs(coastalPlots) do
-		local bCanHaveSomeResource = false;
-		local pPlot = Map.GetPlotByIndex(plot);
-
-		-- See which resources can appear here
-		for iI = 1, iSize do
-			local eResourceType = self.eResourceType[self.aStrategicType[iI]]
-			if (ResourceBuilder.CanHaveResource(pPlot, eResourceType)) then
-				row = {};
-				row.MapIndex = plot;
-				row.Score = 500;
-				row.Score = row.Score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * 4.5);
-				row.Score = row.Score + TerrainBuilder.GetRandomNumber(100, "Resource Placement Score Adjust");
-				table.insert (self.aaPossibleStratLocsWater[self.aStrategicType[iI]], row);
 				bCanHaveSomeResource = true;
 			end
 		end
@@ -583,17 +620,6 @@ function ResourceGenerator:__ScoreStrategicPlots(iResourceIndex, eContinent)
 		self.aaPossibleStratLocs[iResourceIndex][k] = nil;
 	end
 
-	local iSize = #self.aaPossibleStratLocsWater[iResourceIndex];
-
-	if(iSize > 0 ) then
-		for k, v in pairs(self.aaPossibleStratLocsWater[iResourceIndex]) do
-			row = {};
-			row.MapIndex = v.MapIndex;
-			row.Score = v.Score;
-			table.insert (self.aaPossibleStratLocs[iResourceIndex], row);
-		end
-	end
-
 	plots = Map.GetContinentPlots(eContinent);
 	for i, plot in ipairs(plots) do
 		local pPlot = Map.GetPlotByIndex(plot);
@@ -612,13 +638,192 @@ function ResourceGenerator:__ScoreStrategicPlots(iResourceIndex, eContinent)
 end
 
 ------------------------------------------------------------------------------
+function ResourceGenerator:__GetWaterStrategicResources()
+	self.aStrategicTypeCoast = {};
+
+	-- Find the Strategic Resources
+	for row = 0, self.iResourcesInDB do
+		local index = self.aIndex[row]
+		if (self.eResourceClassType[row] == "RESOURCECLASS_STRATEGIC" and self.iSeaFrequency[index] > 0) then
+			table.insert(self.aStrategicTypeCoast, index);
+		end
+	end
+	
+	-- Shuffle the table
+	self.aStrategicTypeCoast = GetShuffledCopyOfTable(self.aStrategicTypeCoast);
+
+	-- Find the Map Size
+	local iW, iH;
+	iW, iH = Map.GetGridSize();
+	local iSize = Map.GetMapSize() + 1;
+
+	-- Use the Map Size to Determine the number of Water Strategics
+	for row in GameInfo.Resource_SeaStrategics() do
+		if (row.MapArgument == self.iWaterLux ) then
+			if(iSize <= 1) then
+				self.iNumWaterStrategics = row.Duel;
+			elseif(iSize == 2) then
+				self.iNumWaterStrategics = row.Tiny;
+			elseif(iSize == 3) then
+				self.iNumWaterStrategics = row.Small;
+			elseif(iSize == 4) then
+				self.iNumWaterStrategics = row.Standard;
+			elseif(iSize == 5) then
+				self.iNumWaterStrategics = row.Large;
+			else
+				self.iNumWaterStrategics = row.Huge;
+			end
+		end
+	end
+
+	if (self.iNumWaterStrategics == 0) then
+		return
+	end
+
+	local iNumStrategics = math.floor(self.iNumWaterStrategics / 2);
+	self.bOdd = false;
+
+	-- Determine if the number of water strategics is odd
+	if(self.iNumWaterStrategics % 2 == 1) then
+		self.bOdd = true;
+		iNumStrategics = iNumStrategics + 1
+	end
+
+	
+
+	-- Water plots
+	self.iWaterPlots = 0;
+	for x = 0, iW - 1 do
+		for y = 0, iH - 1 do
+			local i = y * iW + x;
+			local pPlot = Map.GetPlotByIndex(i);
+
+			if(pPlot~=nil) then
+				local terrainType = pPlot:GetTerrainType();
+				if(terrainType == g_TERRAIN_TYPE_COAST and IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == false) then
+					self.iWaterPlots = self.iWaterPlots + 1;
+				end
+			end
+		end
+	end
+
+
+	self.iOccurencesPerFrequency =  self.iTargetPercentage / 100.0 * self.iWaterPlots * self.iStrategicPercentage / 100.0 / iNumStrategics / 6.0;
+	
+	aStrategics = {};
+	aStrategics = self.aStrategicTypeCoast;
+
+	--First go through check the tropics
+	for i = 1, iNumStrategics do
+		local eChosenStrat  = aStrategics[i];
+		if(eChosenStrat == nil)  then
+			return;
+		else
+			self:__SetWaterStrategic(eChosenStrat, 100.0, 35.1);
+		end
+	end
+
+	aStrategics = self.aStrategicTypeCoast;
+
+	--Then check the equator
+	for i = 1, iNumStrategics do		
+		local eChosenStrat  = aStrategics[i];
+		if(eChosenStrat == nil)  then
+			return;
+		else
+			self:__SetWaterStrategic(eChosenStrat, 35.0, 0.0);
+		end
+	end
+end
+
+------------------------------------------------------------------------------
+function ResourceGenerator:__SetWaterStrategic(eChosenStrat, latitudeMax, latitudeMin, index)
+	local bOddSwitch = false;
+	local bFirst = true;
+	local iNumber = 0
+	local iW, iH;
+	iW, iH = Map.GetGridSize();
+
+	for x = 0, iW - 1 do
+		for y = 0, iH - 1 do
+			local i = y * iW + x;
+			local pPlot = Map.GetPlotByIndex(i);
+			-- Water plots
+			if(pPlot~=nil and pPlot:IsWater() == true and IsAdjacentToIce(pPlot:GetX(), pPlot:GetY()) == false) then
+				local lat = math.abs((iH/2) - y)/(iH/2) * 100.0;
+				if(lat < latitudeMax and lat > latitudeMin and iNumber <= self.iOccurencesPerFrequency) then
+
+					-- If the the strategic is placed then it returns true and is removed
+					local bChosen = self:__PlaceWaterStrategic(eChosenStrat, pPlot);
+					if(bChosen == true) then
+						if(bFirst == true) then
+							if(self.bOdd == true) then
+								bOddSwitch = true;
+							else
+								if(#self.aStrategicTypeCoast > 0) then
+									table.remove(self.aStrategicTypeCoast, 1);
+								else
+									return;
+								end
+							end
+
+							bFirst = false;
+						end
+
+						iNumber = iNumber + 1;
+					end
+				end
+			end
+
+			if(bOddSwitch == true and self.bOdd == true) then
+				self.bOdd  = false;
+			end	
+		end
+	end
+
+	--print("Water Resource: ", eChosenStrat, " number placed = ",  iNumber);
+end
+
+------------------------------------------------------------------------------
+function ResourceGenerator:__PlaceWaterStrategic(eChosenStrat, pPlot)
+	if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[eChosenStrat])) then
+		-- Randomly detetermine each plot if a water strategic is placed less likely if there are adjacent of the same type
+
+		local iBonusAdjacent = 0;
+
+		if( self.iStandardPercentage < self.iTargetPercentage) then
+			iBonusAdjacent = 0.5;
+		elseif ( self.iStandardPercentage > self.iTargetPercentage) then
+			iBonusAdjacent = -0.5;
+		end
+			
+		local iRandom = 15 * self.iOccurencesPerFrequency + 300;
+
+		--print ("Random Frequency: " , iRandom);
+
+		local score = TerrainBuilder.GetRandomNumber(iRandom, "Resource Placement Score Adjust");
+		score = score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * (3.0 + iBonusAdjacent));
+			
+		if(score >= 85 + 5 * self.iOccurencesPerFrequency) then
+			ResourceBuilder.SetResourceType(pPlot, self.eResourceType[eChosenStrat], 1);
+			return true
+		end
+	end
+
+	return false;
+end
+------------------------------------------------------------------------------
 function ResourceGenerator:__GetOtherResources()
 	self.aOtherType = {};
 	-- Find the other resources
     for row = 0, self.iResourcesInDB do
-		local index  =self.aIndex[row];
-		if (self.eResourceClassType[index] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[index] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[index] ~= "RESOURCECLASS_ARTIFACT") then
-			table.insert(self.aOtherType, index);
+		local index  = self.aIndex[row];
+		if(self.eResourceClassType[index] ~= nil) then
+			if (self.eResourceClassType[index] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[index] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[index] ~= "RESOURCECLASS_ARTIFACT") then
+				if(self.iFrequency[index] > 0) then
+					table.insert(self.aOtherType, index);
+				end
+			end
 		end
 	end
 
@@ -727,6 +932,131 @@ function ResourceGenerator:__ScorePlots(iResourceIndex)
 				row.Score = row.Score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * 1.1);
 				row.Score = row.Score + TerrainBuilder.GetRandomNumber(100, "Resource Placement Score Adjust");
 				table.insert (self.aaPossibleLocs[iResourceIndex], row);
+			end
+		end
+	end
+end
+------------------------------------------------------------------------------
+function ResourceGenerator:__GetWaterOtherResources()
+	self.aOtherTypeWater = {};
+	-- Find the other resources
+    for row = 0, self.iResourcesInDB do
+		local index  =self.aIndex[row];
+		if (self.eResourceClassType[index] ~= nil) then
+			if (self.eResourceClassType[index] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[index] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[index] ~= "RESOURCECLASS_ARTIFACT") then
+				if(self.iSeaFrequency[index] > 0) then
+					table.insert(self.aOtherTypeWater, index);
+				end
+			end
+		end
+	end
+
+	-- Shuffle the table
+	self.aOtherTypeWater = GetShuffledCopyOfTable(self.aOtherTypeWater);
+
+	local iW, iH;
+	iW, iH = Map.GetGridSize();
+
+	local iBaseScore = 1;
+	self.iTotalValidPlots = 0;
+	local iSize = #self.aOtherTypeWater;
+	local iPlotCount = Map.GetPlotCount();
+	for i = 0, iPlotCount - 1 do
+		local pPlot = Map.GetPlotByIndex(i);
+		local bCanHaveSomeResource = false;
+
+		-- See which resources can appear here
+		for iI = 1, iSize do
+			if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[self.aOtherTypeWater[iI]])) then
+				row = {};
+				row.MapIndex = i;
+				row.Score = iBaseScore;
+				table.insert (self.aaPossibleWaterLocs[self.aOtherTypeWater[iI]], row);
+				bCanHaveSomeResource = true;
+			end
+		end
+
+		if (bCanHaveSomeResource == true) then
+			self.iTotalValidPlots = self.iTotalValidPlots + 1;
+		end
+	end
+
+	for iI = 1, iSize do
+		row = {};
+		row.ResourceIndex = self.aOtherTypeWater[iI];
+		row.NumEntries = #self.aaPossibleWaterLocs[iI];
+		table.insert (self.aWaterResourcePlacementOrder, row);
+	end
+
+	table.sort (self.aWaterResourcePlacementOrder, function(a, b) return a.NumEntries < b.NumEntries; end);
+	self.iFrequencyTotalWater = 0;
+
+    for i, row in ipairs(self.aOtherTypeWater) do
+		self.iFrequencyTotalWater = self.iFrequencyTotalWater + self.iSeaFrequency[row];
+	end
+
+	--print ("Total frequency: " .. tostring(self.iFrequencyTotalWater));
+
+	-- Compute how many of each resource to place
+	self.iOccurencesPerFrequency = (self.iTargetPercentage / 100 ) * self.iTotalValidPlots * (100 - self.iStrategicPercentage - self.iLuxuryPercentage) / 100 / self.iFrequencyTotalWater * self.iWaterBonus;
+
+	--print ("Occurrences per frequency: " .. tostring(self.iOccurencesPerFrequency));
+
+	self:__PlaceWaterOtherResources();
+end
+------------------------------------------------------------------------------
+function ResourceGenerator:__PlaceWaterOtherResources()
+
+    for i, row in ipairs(self.aWaterResourcePlacementOrder) do
+
+		local eResourceType = self.eResourceType[row.ResourceIndex]
+
+		local iNumToPlace;
+
+		-- Compute how many to place
+		iNumToPlace = self.iOccurencesPerFrequency * self.iSeaFrequency[row.ResourceIndex];
+	
+		-- Score possible locations
+		self:__ScoreWaterPlots(row.ResourceIndex);
+	
+		-- Sort and take best score
+		table.sort (self.aaPossibleWaterLocs[row.ResourceIndex], function(a, b) return a.Score > b.Score; end);
+
+		for iI = 1, iNumToPlace do
+			if (iI <= #self.aaPossibleWaterLocs[row.ResourceIndex]) then
+				local iMapIndex = self.aaPossibleWaterLocs[row.ResourceIndex][iI].MapIndex;
+				local iScore = self.aaPossibleWaterLocs[row.ResourceIndex][iI].Score;
+
+					-- Place at this location
+				local pPlot = Map.GetPlotByIndex(iMapIndex);
+				ResourceBuilder.SetResourceType(pPlot, eResourceType, 1);
+--				print ("   Placed at (" .. tostring(pPlot:GetX()) .. ", " .. tostring(pPlot:GetY()) .. ") with score of " .. tostring(iScore));
+			end
+		end
+	end
+end
+------------------------------------------------------------------------------
+function ResourceGenerator:__ScoreWaterPlots(iResourceIndex)
+
+	local iW, iH;
+	iW, iH = Map.GetGridSize();
+
+	-- Clear all earlier entries (some might not be valid if resources have been placed
+	for k, v in pairs(self.aaPossibleWaterLocs[iResourceIndex]) do
+		self.aaPossibleWaterLocs[iResourceIndex][k] = nil;
+	end
+
+	for x = 0, iW - 1 do
+		for y = 0, iH - 1 do
+			local i = y * iW + x;
+			local pPlot = Map.GetPlotByIndex(i);
+			if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[iResourceIndex])) then
+				row = {};
+				row.MapIndex = i;
+				row.Score = 500;
+				row.Score = row.Score / ((ResourceBuilder.GetAdjacentResourceCount(pPlot) + 1) * 1.1);
+				row.Score = row.Score + TerrainBuilder.GetRandomNumber(100, "Resource Placement Score Adjust");
+				table.insert (self.aaPossibleWaterLocs[iResourceIndex], row);
 			end
 		end
 	end

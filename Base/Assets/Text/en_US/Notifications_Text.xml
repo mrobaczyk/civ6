@@ -33,6 +33,12 @@
 		<Row Tag="LOC_NOTIFICATION_COMMAND_UNITS_SUMMARY">
 			<Text>Move a unit or have it perform an operation.</Text>
 		</Row>
+		<Row Tag="LOC_NOTIFICATION_CITY_RANGE_ATTACK_MESSAGE">
+			<Text>City Ranged Attack</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_CITY_RANGE_ATTACK_SUMMARY">
+			<Text>Your city can perform a ranged attack.</Text>
+		</Row>		
 		<Row Tag="LOC_NOTIFICATION_CONSIDER_GOVERNMENT_CHANGE_MESSAGE">
 			<Text>Consider Changing Governments</Text>
 		</Row>
@@ -313,7 +319,7 @@
 			<Text>Your counterspy {1_unitName} was instrumental in this victory for our security forces.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_SPY_ESCAPED_CAPTURE_SUMMARY">
-			<Text>Your Spy {1_unitName} has eluded capture and will return in your capital in {2_turns} turns.</Text>
+			<Text>Your Spy {1_unitName} has eluded capture and will return to your [ICON_Capital] Capital in {2_turns} turns.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_SPY_ESCAPED_CAPTURE_MESSAGE">
 			<Text>Spy Escaped</Text>
@@ -477,6 +483,19 @@
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_PLAYER_RESYNC_COMPLETE_TT">
 			<Text>{1_playerName} has finished loading.</Text>
+		</Row>
+		<!-- Multiplayer deferred popup notifications -->
+		<Row Tag="LOC_NOTIFICATION_TECH_BOOST_MESSAGE">
+			<Text>Tech Boost</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_TECH_BOOST_SUMMARY">
+			<Text>Tech boost gained: {1_Name} +{2_Boost}%</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_CIVIC_BOOST_MESSAGE">
+			<Text>Civic Boost</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_CIVIC_BOOST_SUMMARY">
+			<Text>Civic boost gained: {1_Name} +{2_Boost}%</Text>
 		</Row>
 		<!-- Great Work Notifications -->
 		<Row Tag="LOC_NOTIFICATION_RELIC_CREATED_MESSAGE">
@@ -777,7 +796,7 @@
 			<Text>Territory Lost</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_TILE_LOST_CULTURE_BOMB_SUMMARY">
-			<Text>We have lost territory to a Culture Bomb initiated by {1_CivName}.</Text>
+			<Text>We have lost territory to a Culture Bomb initiated by the {1_CivName}.</Text>
 		</Row>
 	</BaseGameText>
 </GameData>

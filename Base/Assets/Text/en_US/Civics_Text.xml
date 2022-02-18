@@ -37,10 +37,10 @@
 			<Text>Pasture improvements receive +1 [ICON_Food] Food.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_DIPLOMATIC_SERVICE_DESCRIPTION">
-			<Text>Allows Resident Embassies and grants the ability to construct a Spy. The first four Casus Belli may now be used to justify wars. These Casus Belli are: Holy War, War of Liberation, War of Reconquest, and Protectorate War.</Text>
+			<Text>Grants the ability to construct a Spy.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_MERCANTILISM_DESCRIPTION">
-			<Text>Camp improvements receive +1 [ICON_Production] Production. </Text>
+			<Text>Camp improvements receive +1 [ICON_Production] Production and +1 [ICON_Food] Food. </Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_THE_ENLIGHTENMENT_DESCRIPTION">
 			<Text>Religious [ICON_Tourism] Tourism effects are halved versus your civilization.</Text>
@@ -49,7 +49,7 @@
 			<Text>Awards 2 [ICON_Envoy] Envoys.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_CIVIL_ENGINEERING_DESCRIPTION">
-			<Text>Can build Farms on Grassland Hills and Plains Hills. Unlocks Urban Defenses, giving all of your cities an automatic 200 Fortification Strength and the ability to perform a ranged attack.</Text>
+			<Text>Can build Farms on Grassland Hills and Plains Hills.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_NATIONALISM_DESCRIPTION">
 			<Text>Grants the ability to construct an additional Spy. Allows forming two identical units into a Corps or Fleet. Allows one new Casus Belli that can be used to justify wars: Colonial War.</Text>
@@ -64,7 +64,7 @@
 			<Text>Awards 2 [ICON_Envoy] Envoys.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_CONSERVATION_DESCRIPTION">
-			<Text>Awards 3 [ICON_Envoy] Envoys. Allows the building of National Parks and the purchase of Naturalists with [ICON_Faith] Faith. Allows Builders to plant Woods (second-growth). Woods in your territory that have never been removed (old-growth) gain +1 Appeal.</Text>
+			<Text>Awards 3 [ICON_Envoy] Envoys. Allows the building of National Parks and the purchase of Naturalists with [ICON_Faith] Faith. Allows Builders to plant Woods (second-growth). Woods in your territory that have never been removed (old-growth) gain +1 Appeal. Receive [ICON_TOURISM] Tourism from Walls.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_MOBILIZATION_DESCRIPTION">
 			<Text>Allows formation of Defensive Pacts. Allows forming three identical units into an Army or Armada. Allows one new Casus Belli that can be used to justify wars: War of Territorial Expansion.</Text>
@@ -82,14 +82,14 @@
 			<Text>Allows for the transport of land units between Aerodrome districts that contain Airports.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_GLOBALIZATION_DESCRIPTION">
-			<Text>+1 [ICON_Gold] Gold to Plantations.</Text>
+			<Text>+2 [ICON_Gold] Gold to Plantations.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_FUTURE_CIVIC_DESCRIPTION">
 			<Text>Can be completed multiple times, increasing your points towards the Score Victory.</Text>
 		</Row>
-    <Row Tag="LOC_CIVIC_ENVOY_AWARDED_TOOLTIP">
-      <Text>Awards {1_NumOfEnvoys} [ICON_Envoy] {1_NumOfEnvoys : plural 1?Envoy; other?Envoys;}</Text>
-    </Row>
+		<Row Tag="LOC_CIVIC_ENVOY_AWARDED_TOOLTIP">
+			<Text>Awards {1_NumOfEnvoys} [ICON_Envoy] {1_NumOfEnvoys : plural 1?Envoy; other?Envoys;}</Text>
+		</Row>
 		<!-- Civic Boosts-->
 		<Row Tag="LOC_BOOST_TRIGGER_CRAFTSMANSHIP">
 			<Text>Improve 3 tiles.</Text>
@@ -101,7 +101,7 @@
 			<Text>Clear a Barbarian Outpost.</Text>
 		</Row>
 		<Row Tag="LOC_BOOST_TRIGGER_STATE_WORKFORCE">
-			<Text>Build any district.</Text>
+			<Text>Build any specialty district.</Text>
 		</Row>
 		<Row Tag="LOC_BOOST_TRIGGER_EARLY_EMPIRE">
 			<Text>Grow your civilization to at least 6 population.</Text>
@@ -434,7 +434,7 @@
 			<Text>All cities with a district receive +1 [ICON_Amenities] Amenity.</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_INHERENT_BONUS_MONARCHY">
-			<Text>+2 [ICON_Housing] Housing in any city with Medieval Walls.</Text>
+			<Text>+50% [ICON_Production] Production toward defensive buildings. +1 [ICON_Housing] Housing for each level of wall.</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_INHERENT_BONUS_THEOCRACY">
 			<Text>Can buy land combat units with Faith. All units +5 [ICON_Religion] Religious Strength in theological combat.</Text>

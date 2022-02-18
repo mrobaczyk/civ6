@@ -561,6 +561,10 @@
 			<ModifierId>COMPUTERS_BOOST_ALL_TOURISM</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_TOURISM</ModifierType>
 		</Row>
+		<Row>
+			<ModifierId>STEEL_UNLOCK_URBAN_DEFENSES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_CITIES_URBAN_DEFENSES</ModifierType>
+		</Row>
 	</Modifiers>
 	<ModifierArguments>
 		<!--Units Adjust Sea Movement-->
@@ -633,6 +637,11 @@
 			<Name>Amount</Name>
 			<Value>100</Value>
 		</Row>
+		<Row>
+			<ModifierId>STEEL_UNLOCK_URBAN_DEFENSES</ModifierId>
+			<Name>DefenseValue</Name>
+			<Value>200</Value>
+		</Row>
 	</ModifierArguments>
 	<TechnologyModifiers>
 		<!--Units Adjust Sea Movement-->
@@ -671,6 +680,9 @@
 		</Row>
 		<Row TechnologyType="TECH_COMPUTERS">
 			<ModifierId>COMPUTERS_BOOST_ALL_TOURISM</ModifierId>
+		</Row>
+		<Row TechnologyType="TECH_STEEL">
+			<ModifierId>STEEL_UNLOCK_URBAN_DEFENSES</ModifierId>
 		</Row>
 	</TechnologyModifiers>
 </GameInfo>

@@ -18,6 +18,7 @@
     <Row TargetType="TARGET_SETTLE_LOCATION" />
     <Row TargetType="TARGET_GOODY_HUT" />
     <Row TargetType="TARGET_ALLY_SUPPORT" />
+    <Row TargetType="TARGET_AIR_UNIT" />
   </TargetTypes>
   <AiOperationTypes>
     <Row OperationType="ATTACK_BARBARIANS" Value="0" />
@@ -51,7 +52,7 @@
     <Row TeamName="Settle City Team" OperationName="Settle New City" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="1" SafeRallyPoint="true" />
     <!--Row TeamName="City Defense" OperationName="Civ Defense" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0" -->
     <!--Row TeamName="Border Defense" OperationName="Civ Defense" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0" -->
-    <Row TeamName="City Defense" OperationName="City Defense" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="2" />
+    <Row TeamName="City Defense" OperationName="City Defense" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="1" />
     <Row TeamName="Barbarian Raid" OperationName="Barbarian Attack" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="-1" />
     <Row TeamName="Barbarian Raid" OperationName="Barbarian City Assault" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="-1" />
     <Row TeamName="Nuclear Attack" OperationName="Nuclear Assault" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="0" />
@@ -63,11 +64,14 @@
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
+    <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_AIR" MaxNumber="0" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_MELEE" MinNumber="2" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_RANGED" MinNumber="0" MaxNumber="3" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_SIEGE" MaxNumber="3" />
+    <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
+    <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_AIR" MaxNumber="0" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_MELEE" MinNumber="2" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_RANGED" MinNumber="2" />
 		<Row TeamName="City Attack Force" AiType="UNITTYPE_SIEGE" MinNumber="1" MaxNumber="3" />
@@ -75,6 +79,7 @@
 		<Row TeamName="City Attack Force" AiType="UNITTYPE_SIEGE_SUPPORT" MinNumber="0" MaxNumber="3" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
+    <Row TeamName="City Attack Force" AiType="UNITTYPE_AIR" MaxNumber="0" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
     <Row TeamName="Barbarian Builder Capture" AiType="UNITTYPE_CIVILIAN" MinNumber="1" MaxNumber="1" />
     <Row TeamName="Barbarian Builder Capture" AiType="UNITAI_COMBAT" MinNumber="1" />
@@ -91,6 +96,8 @@
     <Row TeamName="City Defense" AiType="UNITAI_COMBAT" MinNumber="0" />
     <Row TeamName="City Defense" AiType="UNITAI_EXPLORE" MinNumber="0" />
     <Row TeamName="City Defense" AiType="UNITTYPE_SIEGE" MaxNumber="0" />
+    <Row TeamName="City Defense" AiType="UNITTYPE_AIR" MaxNumber="0" />
+    <Row TeamName="City Defense" AiType="UNITTYPE_AIR_SIEGE" MaxNumber="0" />
     <Row TeamName="Barbarian Raid" AiType="UNITAI_COMBAT" MinNumber="1" />
     <Row TeamName="Nuclear Attack" AiType="UNITTYPE_NUCLEAR" MinNumber="1"/>
     <Row TeamName="Nuclear Attack" AiType="UNITTYPE_NUCLEAR_ESCORT" MinNumber="0" />
@@ -98,6 +105,7 @@
     <Row TeamName="Aid Ally Attack Force" AiType="UNITTYPE_RANGED" MinNumber="0" />
     <Row TeamName="Aid Ally Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
     <Row TeamName="Aid Ally Attack Force" AiType="UNITTYPE_SIEGE" MaxNumber="2" />
+    <Row TeamName="Aid Ally Attack Force" AiType="UNITTYPE_AIR" MaxNumber="0" />
   </OpTeamRequirements>
   <AiOperationDefs>
     <Row OperationName="Attack Barb Camp" TargetType="TARGET_BARBARIAN_CAMP" OperationType="ATTACK_BARBARIANS" BehaviorTree="Simple Operation Attack" Priority="3" SelfStart="True" MaxTargetDistInRegion="-1" MaxTargetDistInArea="25" MinOddsOfSuccess="0.5" />

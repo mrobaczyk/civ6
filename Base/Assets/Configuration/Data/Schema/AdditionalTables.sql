@@ -29,6 +29,13 @@ CREATE TABLE 'Eras' (
 	PRIMARY KEY('Domain', 'EraType')
 );
 
+CREATE TABLE 'GameCores'(
+	'GameCore' TEXT NOT NULL,
+	'PackageId' TEXT,
+	'DllPrefix' TEXT NOT NULL,
+	PRIMARY KEY('GameCore')
+);
+
 CREATE TABLE 'GameSpeeds' (
 	'Domain' TEXT NOT NULL DEFAULT 'StandardGameSpeeds',
 	'GameSpeedType' TEXT NOT NULL,
@@ -88,6 +95,7 @@ CREATE TABLE 'Rulesets' (
 	'RequiresUniqueLeaders' BOOLEAN NOT NULL DEFAULT 0,
 	'ScenarioSetupPortrait' TEXT,
 	'ScenarioSetupPortraitBackground' TEXT,
+	'GameCore' TEXT NOT NULL DEFAULT 'Base',
 	PRIMARY KEY('RulesetType')
 );
 

@@ -32,7 +32,7 @@
 	</BuildingReplaces>
 	<Buildings>
 		<!-- Ancient Era-->
-		<Row BuildingType="BUILDING_BASILIKOI_PAIDES" Name="LOC_BUILDING_BASILIKOI_PAIDES_NAME" Description="LOC_BUILDING_BASILIKOI_PAIDES_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="80" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" CitizenSlots="1" Housing="1" TraitType="TRAIT_CIVILIZATION_BUILDING_BASILIKOI_PAIDES"/>
+		<Row BuildingType="BUILDING_BASILIKOI_PAIDES" Name="LOC_BUILDING_BASILIKOI_PAIDES_NAME" Description="LOC_BUILDING_BASILIKOI_PAIDES_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="90" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" CitizenSlots="1" Housing="1" TraitType="TRAIT_CIVILIZATION_BUILDING_BASILIKOI_PAIDES"/>
 		<!-- Wonders -->
 		<Row BuildingType="BUILDING_APADANA" Name="LOC_BUILDING_APADANA_NAME" Description="LOC_BUILDING_APADANA_DESCRIPTION" PrereqCivic="CIVIC_POLITICAL_PHILOSOPHY" Cost="400" AdvisorType="ADVISOR_GENERIC" MaxWorldInstances="1" IsWonder="true" AdjacentCapital="true" RequiresPlacement="true" ObsoleteEra="ERA_RENAISSANCE" Quote="LOC_BUILDING_APADANA_QUOTE" QuoteAudio="Play_APADANA_QUOTE"/>
 		<Row BuildingType="BUILDING_HALICARNASSUS_MAUSOLEUM" Name="LOC_BUILDING_HALICARNASSUS_MAUSOLEUM_NAME" Description="LOC_BUILDING_HALICARNASSUS_MAUSOLEUM_DESCRIPTION" PrereqCivic="CIVIC_DEFENSIVE_TACTICS" AdjacentDistrict="DISTRICT_HARBOR" Cost="400" AdvisorType="ADVISOR_GENERIC" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" ObsoleteEra="ERA_RENAISSANCE" Quote="LOC_BUILDING_HALICARNASSUS_MAUSOLEUM_QUOTE" QuoteAudio="Play_HALICARNASSUS_MAUSOLEUM_QUOTE"/>
@@ -1015,7 +1015,7 @@
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_WONDER</RequirementId>
-			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+			<RequirementType>REQUIREMENT_CITY_HAS_ANY_WONDER</RequirementType>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_ENCAMPMENT</RequirementId>
@@ -1110,11 +1110,6 @@
 			<RequirementId>REQUIRES_CITY_HAS_APADANA</RequirementId>
 			<Name>BuildingType</Name>
 			<Value>BUILDING_APADANA</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_WONDER</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_WONDER</Value>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_ENCAMPMENT</RequirementId>

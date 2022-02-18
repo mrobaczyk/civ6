@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_BUILDING"/>
@@ -95,60 +95,60 @@
 		<Row BuildingType="BUILDING_MONUMENT" Name="LOC_BUILDING_MONUMENT_NAME" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="60" AdvisorType="ADVISOR_CULTURE"/>
 		<Row BuildingType="BUILDING_PALACE" Name="LOC_BUILDING_PALACE_NAME" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="1" AdvisorType="ADVISOR_GENERIC" Housing="1" Entertainment="1" Capital="true" MaxPlayerInstances="1"/>
 		<!-- Ancient Era-->
-		<Row BuildingType="BUILDING_BARRACKS" Name="LOC_BUILDING_BARRACKS_NAME" Description="LOC_BUILDING_BARRACKS_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="80" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" CitizenSlots="1" Housing="1"/>
+		<Row BuildingType="BUILDING_BARRACKS" Name="LOC_BUILDING_BARRACKS_NAME" Description="LOC_BUILDING_BARRACKS_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="90" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" CitizenSlots="1" Housing="1"/>
 		<Row BuildingType="BUILDING_GRANARY" Name="LOC_BUILDING_GRANARY_NAME" PrereqTech="TECH_POTTERY" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="65" AdvisorType="ADVISOR_GENERIC" Housing="2"/>
-		<Row BuildingType="BUILDING_LIBRARY" Name="LOC_BUILDING_LIBRARY_NAME" PrereqTech="TECH_WRITING" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="80" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_SHRINE" Name="LOC_BUILDING_SHRINE_NAME" Description="LOC_BUILDING_SHRINE_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="65" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_WALLS" Name="LOC_BUILDING_WALLS_NAME" Description="LOC_BUILDING_WALLS_DESCRIPTION" PrereqTech="TECH_MASONRY" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="80" AdvisorType="ADVISOR_GENERIC" Maintenance="1" OuterDefenseHitPoints="50" OuterDefenseStrength="2"/>
+		<Row BuildingType="BUILDING_LIBRARY" Name="LOC_BUILDING_LIBRARY_NAME" PrereqTech="TECH_WRITING" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="90" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_SHRINE" Name="LOC_BUILDING_SHRINE_NAME" Description="LOC_BUILDING_SHRINE_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="70" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_WALLS" Name="LOC_BUILDING_WALLS_NAME" Description="LOC_BUILDING_WALLS_DESCRIPTION" PrereqTech="TECH_MASONRY" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="80" AdvisorType="ADVISOR_GENERIC" OuterDefenseHitPoints="50" OuterDefenseStrength="2"/>
 		<Row BuildingType="BUILDING_WATER_MILL" Name="LOC_BUILDING_WATER_MILL_NAME" Description="LOC_BUILDING_WATER_MILL_DESCRIPTION" PrereqTech="TECH_THE_WHEEL" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="80" AdvisorType="ADVISOR_GENERIC" RequiresAdjacentRiver="true"/>
 		<!-- Classical Era-->
-		<Row BuildingType="BUILDING_ARENA" Name="LOC_BUILDING_ARENA_NAME" PrereqCivic="CIVIC_GAMES_RECREATION" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="135" AdvisorType="ADVISOR_GENERIC" Maintenance="1" Entertainment="1"/>
-		<Row BuildingType="BUILDING_LIGHTHOUSE" Name="LOC_BUILDING_LIGHTHOUSE_NAME" Description="LOC_BUILDING_LIGHTHOUSE_DESCRIPTION" PrereqTech="TECH_CELESTIAL_NAVIGATION" PrereqDistrict="DISTRICT_HARBOR" PurchaseYield="YIELD_GOLD" Cost="105" AdvisorType="ADVISOR_GENERIC" Housing="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_MARKET" Name="LOC_BUILDING_MARKET_NAME" PrereqTech="TECH_CURRENCY" PrereqDistrict="DISTRICT_COMMERCIAL_HUB" PurchaseYield="YIELD_GOLD" Cost="105" AdvisorType="ADVISOR_GENERIC" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_STABLE" Name="LOC_BUILDING_STABLE_NAME" Description="LOC_BUILDING_STABLE_DESCRIPTION" PrereqTech="TECH_HORSEBACK_RIDING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="105" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" Housing="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_TEMPLE" Name="LOC_BUILDING_TEMPLE_NAME" Description="LOC_BUILDING_TEMPLE_DESCRIPTION" PrereqCivic="CIVIC_THEOLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="105" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="2" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_STAVE_CHURCH" Name="LOC_BUILDING_STAVE_CHURCH_NAME" Description="LOC_BUILDING_STAVE_CHURCH_DESCRIPTION" PrereqCivic="CIVIC_THEOLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="105" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="2" CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_STAVE_CHURCH"/>
-		<Row BuildingType="BUILDING_AMPHITHEATER" Name="LOC_BUILDING_AMPHITHEATER_NAME" PrereqCivic="CIVIC_DRAMA_POETRY" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="135" AdvisorType="ADVISOR_CULTURE" Maintenance="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_ARENA" Name="LOC_BUILDING_ARENA_NAME" PrereqCivic="CIVIC_GAMES_RECREATION" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="150" AdvisorType="ADVISOR_GENERIC" Maintenance="1" Entertainment="1"/>
+		<Row BuildingType="BUILDING_LIGHTHOUSE" Name="LOC_BUILDING_LIGHTHOUSE_NAME" Description="LOC_BUILDING_LIGHTHOUSE_DESCRIPTION" PrereqTech="TECH_CELESTIAL_NAVIGATION" PrereqDistrict="DISTRICT_HARBOR" PurchaseYield="YIELD_GOLD" Cost="120" AdvisorType="ADVISOR_GENERIC" Housing="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_MARKET" Name="LOC_BUILDING_MARKET_NAME" PrereqTech="TECH_CURRENCY" PrereqDistrict="DISTRICT_COMMERCIAL_HUB" PurchaseYield="YIELD_GOLD" Cost="120" AdvisorType="ADVISOR_GENERIC" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_STABLE" Name="LOC_BUILDING_STABLE_NAME" Description="LOC_BUILDING_STABLE_DESCRIPTION" PrereqTech="TECH_HORSEBACK_RIDING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="120" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" Housing="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_TEMPLE" Name="LOC_BUILDING_TEMPLE_NAME" Description="LOC_BUILDING_TEMPLE_DESCRIPTION" PrereqCivic="CIVIC_THEOLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="120" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="2" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_STAVE_CHURCH" Name="LOC_BUILDING_STAVE_CHURCH_NAME" Description="LOC_BUILDING_STAVE_CHURCH_DESCRIPTION" PrereqCivic="CIVIC_THEOLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="120" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="2" CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_STAVE_CHURCH"/>
+		<Row BuildingType="BUILDING_AMPHITHEATER" Name="LOC_BUILDING_AMPHITHEATER_NAME" PrereqCivic="CIVIC_DRAMA_POETRY" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="150" AdvisorType="ADVISOR_CULTURE" Maintenance="1" CitizenSlots="1"/>
 		<!-- Medieval Era-->
-		<Row BuildingType="BUILDING_CASTLE" Name="LOC_BUILDING_CASTLE_NAME" Description="LOC_BUILDING_CASTLE_DESCRIPTION" PrereqTech="TECH_CASTLES" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="225" AdvisorType="ADVISOR_GENERIC" Maintenance="1" OuterDefenseHitPoints="50" OuterDefenseStrength="2"/>
-		<Row BuildingType="BUILDING_UNIVERSITY" Name="LOC_BUILDING_UNIVERSITY_NAME" PrereqTech="TECH_EDUCATION" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="225" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="2" Housing="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_MADRASA" Name="LOC_BUILDING_MADRASA_NAME" Description="LOC_BUILDING_MADRASA_DESCRIPTION" PrereqCivic="CIVIC_THEOLOGY" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="225" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="2" Housing="1" CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_MADRASA"/>
-		<Row BuildingType="BUILDING_WORKSHOP" Name="LOC_BUILDING_WORKSHOP_NAME" PrereqTech="TECH_APPRENTICESHIP" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="175" AdvisorType="ADVISOR_GENERIC" Maintenance="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_ARMORY" Name="LOC_BUILDING_ARMORY_NAME" Description="LOC_BUILDING_ARMORY_DESCRIPTION" PrereqTech="TECH_MILITARY_ENGINEERING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="175" AdvisorType="ADVISOR_CONQUEST" Maintenance="2" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_CASTLE" Name="LOC_BUILDING_CASTLE_NAME" Description="LOC_BUILDING_CASTLE_DESCRIPTION" PrereqTech="TECH_CASTLES" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="225" AdvisorType="ADVISOR_GENERIC" OuterDefenseHitPoints="50" OuterDefenseStrength="2"/>
+		<Row BuildingType="BUILDING_UNIVERSITY" Name="LOC_BUILDING_UNIVERSITY_NAME" PrereqTech="TECH_EDUCATION" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="250" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="2" Housing="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_MADRASA" Name="LOC_BUILDING_MADRASA_NAME" Description="LOC_BUILDING_MADRASA_DESCRIPTION" PrereqCivic="CIVIC_THEOLOGY" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="250" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="2" Housing="1" CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_MADRASA"/>
+		<Row BuildingType="BUILDING_WORKSHOP" Name="LOC_BUILDING_WORKSHOP_NAME" PrereqTech="TECH_APPRENTICESHIP" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="195" AdvisorType="ADVISOR_GENERIC" Maintenance="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_ARMORY" Name="LOC_BUILDING_ARMORY_NAME" Description="LOC_BUILDING_ARMORY_DESCRIPTION" PrereqTech="TECH_MILITARY_ENGINEERING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="195" AdvisorType="ADVISOR_CONQUEST" Maintenance="2" CitizenSlots="1"/>
 		<!-- Renaissance Era-->
-		<Row BuildingType="BUILDING_SHIPYARD" Name="LOC_BUILDING_SHIPYARD_NAME" Description="LOC_BUILDING_SHIPYARD_DESCRIPTION" PrereqTech="TECH_MASS_PRODUCTION" PrereqDistrict="DISTRICT_HARBOR" PurchaseYield="YIELD_GOLD" Cost="265" AdvisorType="ADVISOR_GENERIC" Maintenance="2" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_BANK" Name="LOC_BUILDING_BANK_NAME" PrereqTech="TECH_BANKING" PrereqDistrict="DISTRICT_COMMERCIAL_HUB" PurchaseYield="YIELD_GOLD" Cost="265" AdvisorType="ADVISOR_GENERIC" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_STAR_FORT" Name="LOC_BUILDING_STAR_FORT_NAME" Description="LOC_BUILDING_STAR_FORT_DESCRIPTION" PrereqTech="TECH_SIEGE_TACTICS" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="305" AdvisorType="ADVISOR_GENERIC" Maintenance="1" OuterDefenseHitPoints="50" OuterDefenseStrength="2"/>
-		<Row BuildingType="BUILDING_MUSEUM_ART" Name="LOC_BUILDING_MUSEUM_ART_NAME" Description="LOC_BUILDING_MUSEUM_ART_DESCRIPTION" PrereqCivic="CIVIC_HUMANISM" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="265" AdvisorType="ADVISOR_CULTURE" Maintenance="2" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_MUSEUM_ARTIFACT" Name="LOC_BUILDING_MUSEUM_ARTIFACT_NAME" Description="LOC_BUILDING_MUSEUM_ARTIFACT_DESCRIPTION" PrereqCivic="CIVIC_HUMANISM" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="265" AdvisorType="ADVISOR_CULTURE" Maintenance="2" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_SHIPYARD" Name="LOC_BUILDING_SHIPYARD_NAME" Description="LOC_BUILDING_SHIPYARD_DESCRIPTION" PrereqTech="TECH_MASS_PRODUCTION" PrereqDistrict="DISTRICT_HARBOR" PurchaseYield="YIELD_GOLD" Cost="290" AdvisorType="ADVISOR_GENERIC" Maintenance="2" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_BANK" Name="LOC_BUILDING_BANK_NAME" PrereqTech="TECH_BANKING" PrereqDistrict="DISTRICT_COMMERCIAL_HUB" PurchaseYield="YIELD_GOLD" Cost="290" AdvisorType="ADVISOR_GENERIC" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_STAR_FORT" Name="LOC_BUILDING_STAR_FORT_NAME" Description="LOC_BUILDING_STAR_FORT_DESCRIPTION" PrereqTech="TECH_SIEGE_TACTICS" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="305" AdvisorType="ADVISOR_GENERIC" OuterDefenseHitPoints="50" OuterDefenseStrength="2"/>
+		<Row BuildingType="BUILDING_MUSEUM_ART" Name="LOC_BUILDING_MUSEUM_ART_NAME" Description="LOC_BUILDING_MUSEUM_ART_DESCRIPTION" PrereqCivic="CIVIC_HUMANISM" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="290" AdvisorType="ADVISOR_CULTURE" Maintenance="2" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_MUSEUM_ARTIFACT" Name="LOC_BUILDING_MUSEUM_ARTIFACT_NAME" Description="LOC_BUILDING_MUSEUM_ARTIFACT_DESCRIPTION" PrereqCivic="CIVIC_HUMANISM" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="290" AdvisorType="ADVISOR_CULTURE" Maintenance="2" CitizenSlots="1"/>
 		<!-- Industrial Era-->
-		<Row BuildingType="BUILDING_FACTORY" Name="LOC_BUILDING_FACTORY_NAME" Description="LOC_BUILDING_FACTORY_DESCRIPTION" PrereqTech="TECH_INDUSTRIALIZATION" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="355" AdvisorType="ADVISOR_GENERIC" Maintenance="2" CitizenSlots="1" RegionalRange="6"/>
-		<Row BuildingType="BUILDING_ELECTRONICS_FACTORY" Name="LOC_BUILDING_ELECTRONICS_FACTORY_NAME" Description="LOC_BUILDING_ELECTRONICS_FACTORY_DESCRIPTION" PrereqTech="TECH_INDUSTRIALIZATION" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="355" AdvisorType="ADVISOR_GENERIC" Maintenance="2" CitizenSlots="1" RegionalRange="6" TraitType="TRAIT_CIVILIZATION_BUILDING_ELECTRONICS_FACTORY"/>
-		<Row BuildingType="BUILDING_STOCK_EXCHANGE" Name="LOC_BUILDING_STOCK_EXCHANGE_NAME" PrereqTech="TECH_ECONOMICS" PrereqDistrict="DISTRICT_COMMERCIAL_HUB" PurchaseYield="YIELD_GOLD" Cost="355" AdvisorType="ADVISOR_GENERIC" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_MILITARY_ACADEMY" Name="LOC_BUILDING_MILITARY_ACADEMY_NAME" Description="LOC_BUILDING_MILITARY_ACADEMY_DESCRIPTION" PrereqTech="TECH_MILITARY_SCIENCE" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="355" AdvisorType="ADVISOR_CONQUEST" Maintenance="2" Housing="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_SEWER" Name="LOC_BUILDING_SEWER_NAME" PrereqTech="TECH_SANITATION" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="405" AdvisorType="ADVISOR_GENERIC" Housing="2" Maintenance="2"/>
-		<Row BuildingType="BUILDING_ZOO" Name="LOC_BUILDING_ZOO_NAME" Description="LOC_BUILDING_ZOO_DESCRIPTION" PrereqCivic="CIVIC_NATURAL_HISTORY" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="405" AdvisorType="ADVISOR_GENERIC" Maintenance="2" Entertainment="1" RegionalRange="6"/>
+		<Row BuildingType="BUILDING_FACTORY" Name="LOC_BUILDING_FACTORY_NAME" Description="LOC_BUILDING_FACTORY_DESCRIPTION" PrereqTech="TECH_INDUSTRIALIZATION" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="390" AdvisorType="ADVISOR_GENERIC" Maintenance="2" CitizenSlots="1" RegionalRange="6"/>
+		<Row BuildingType="BUILDING_ELECTRONICS_FACTORY" Name="LOC_BUILDING_ELECTRONICS_FACTORY_NAME" Description="LOC_BUILDING_ELECTRONICS_FACTORY_DESCRIPTION" PrereqTech="TECH_INDUSTRIALIZATION" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="390" AdvisorType="ADVISOR_GENERIC" Maintenance="2" CitizenSlots="1" RegionalRange="6" TraitType="TRAIT_CIVILIZATION_BUILDING_ELECTRONICS_FACTORY"/>
+		<Row BuildingType="BUILDING_STOCK_EXCHANGE" Name="LOC_BUILDING_STOCK_EXCHANGE_NAME" PrereqTech="TECH_ECONOMICS" PrereqDistrict="DISTRICT_COMMERCIAL_HUB" PurchaseYield="YIELD_GOLD" Cost="390" AdvisorType="ADVISOR_GENERIC" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_MILITARY_ACADEMY" Name="LOC_BUILDING_MILITARY_ACADEMY_NAME" Description="LOC_BUILDING_MILITARY_ACADEMY_DESCRIPTION" PrereqTech="TECH_MILITARY_SCIENCE" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="390" AdvisorType="ADVISOR_CONQUEST" Maintenance="2" Housing="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_SEWER" Name="LOC_BUILDING_SEWER_NAME" PrereqTech="TECH_SANITATION" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="200" AdvisorType="ADVISOR_GENERIC" Housing="2" Maintenance="2"/>
+		<Row BuildingType="BUILDING_ZOO" Name="LOC_BUILDING_ZOO_NAME" Description="LOC_BUILDING_ZOO_DESCRIPTION" PrereqCivic="CIVIC_NATURAL_HISTORY" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="445" AdvisorType="ADVISOR_GENERIC" Maintenance="2" Entertainment="1" RegionalRange="6"/>
 		<!-- Modern Era-->
 		<Row BuildingType="BUILDING_HANGAR" Name="LOC_BUILDING_HANGAR_NAME" Description="LOC_BUILDING_HANGAR_DESCRIPTION" PrereqTech="TECH_FLIGHT" PrereqDistrict="DISTRICT_AERODROME" PurchaseYield="YIELD_GOLD" Cost="465" AdvisorType="ADVISOR_CONQUEST" Maintenance="1"/>
-		<Row BuildingType="BUILDING_SEAPORT" Name="LOC_BUILDING_SEAPORT_NAME" Description="LOC_BUILDING_SEAPORT_DESCRIPTION" PrereqTech="TECH_ELECTRICITY" PrereqDistrict="DISTRICT_HARBOR" PurchaseYield="YIELD_GOLD" Cost="525" AdvisorType="ADVISOR_GENERIC" Housing="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_POWER_PLANT" Name="LOC_BUILDING_POWER_PLANT_NAME" Description="LOC_BUILDING_POWER_PLANT_DESCRIPTION" PrereqTech="TECH_ELECTRICITY" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="525" AdvisorType="ADVISOR_GENERIC" Maintenance="3" CitizenSlots="1" RegionalRange="6"/>
-		<Row BuildingType="BUILDING_BROADCAST_CENTER" Name="LOC_BUILDING_BROADCAST_CENTER_NAME" PrereqTech="TECH_RADIO" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="525" AdvisorType="ADVISOR_CULTURE" Maintenance="3" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_FILM_STUDIO" Name="LOC_BUILDING_FILM_STUDIO_NAME" Description="LOC_BUILDING_FILM_STUDIO_DESCRIPTION" PrereqTech="TECH_RADIO" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="525" AdvisorType="ADVISOR_CULTURE" Maintenance="3" CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_FILM_STUDIO"/>
-		<Row BuildingType="BUILDING_RESEARCH_LAB" Name="LOC_BUILDING_RESEARCH_LAB_NAME" PrereqTech="TECH_CHEMISTRY" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="525" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="3" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_SEAPORT" Name="LOC_BUILDING_SEAPORT_NAME" Description="LOC_BUILDING_SEAPORT_DESCRIPTION" PrereqTech="TECH_ELECTRICITY" PrereqDistrict="DISTRICT_HARBOR" PurchaseYield="YIELD_GOLD" Cost="580" AdvisorType="ADVISOR_GENERIC" Housing="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_POWER_PLANT" Name="LOC_BUILDING_POWER_PLANT_NAME" Description="LOC_BUILDING_POWER_PLANT_DESCRIPTION" PrereqTech="TECH_ELECTRICITY" PrereqDistrict="DISTRICT_INDUSTRIAL_ZONE" PurchaseYield="YIELD_GOLD" Cost="580" AdvisorType="ADVISOR_GENERIC" Maintenance="3" CitizenSlots="1" RegionalRange="6"/>
+		<Row BuildingType="BUILDING_BROADCAST_CENTER" Name="LOC_BUILDING_BROADCAST_CENTER_NAME" PrereqTech="TECH_RADIO" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="580" AdvisorType="ADVISOR_CULTURE" Maintenance="3" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_FILM_STUDIO" Name="LOC_BUILDING_FILM_STUDIO_NAME" Description="LOC_BUILDING_FILM_STUDIO_DESCRIPTION" PrereqTech="TECH_RADIO" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="580" AdvisorType="ADVISOR_CULTURE" Maintenance="3" CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_FILM_STUDIO"/>
+		<Row BuildingType="BUILDING_RESEARCH_LAB" Name="LOC_BUILDING_RESEARCH_LAB_NAME" PrereqTech="TECH_CHEMISTRY" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="580" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="3" CitizenSlots="1"/>
 		<!-- Atomic Era-->
 		<Row BuildingType="BUILDING_AIRPORT" Name="LOC_BUILDING_AIRPORT_NAME" Description="LOC_BUILDING_AIRPORT_DESCRIPTION" PrereqTech="TECH_ADVANCED_FLIGHT" PrereqDistrict="DISTRICT_AERODROME" PurchaseYield="YIELD_GOLD" Cost="600" AdvisorType="ADVISOR_CONQUEST" Maintenance="2"/>
-		<Row BuildingType="BUILDING_STADIUM" Name="LOC_BUILDING_STADIUM_NAME" Description="LOC_BUILDING_STADIUM_DESCRIPTION" PrereqCivic="CIVIC_PROFESSIONAL_SPORTS" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="600" AdvisorType="ADVISOR_GENERIC" Maintenance="3" Entertainment="2" RegionalRange="6"/>
+		<Row BuildingType="BUILDING_STADIUM" Name="LOC_BUILDING_STADIUM_NAME" Description="LOC_BUILDING_STADIUM_DESCRIPTION" PrereqCivic="CIVIC_PROFESSIONAL_SPORTS" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="660" AdvisorType="ADVISOR_GENERIC" Maintenance="3" Entertainment="2" RegionalRange="6"/>
 		<!--Religious-->
-		<Row BuildingType="BUILDING_CATHEDRAL" Name="LOC_BUILDING_CATHEDRAL_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="170" EnabledByReligion="true" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_GURDWARA" Name="LOC_BUILDING_GURDWARA_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="170" EnabledByReligion="true" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_MEETING_HOUSE" Name="LOC_BUILDING_MEETING_HOUSE_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="170" EnabledByReligion="true" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_MOSQUE" Name="LOC_BUILDING_MOSQUE_NAME" Description="LOC_BUILDING_MOSQUE_DESCRIPTION" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="170" EnabledByReligion="true" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_PAGODA" Name="LOC_BUILDING_PAGODA_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="170" EnabledByReligion="true" Housing="1" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_SYNAGOGUE" Name="LOC_BUILDING_SYNAGOGUE_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="170" EnabledByReligion="true" CitizenSlots="1"/>
-		<Row BuildingType="BUILDING_WAT" Name="LOC_BUILDING_WAT_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="170" EnabledByReligion="true" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_CATHEDRAL" Name="LOC_BUILDING_CATHEDRAL_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="190" EnabledByReligion="true" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_GURDWARA" Name="LOC_BUILDING_GURDWARA_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="190" EnabledByReligion="true" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_MEETING_HOUSE" Name="LOC_BUILDING_MEETING_HOUSE_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="190" EnabledByReligion="true" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_MOSQUE" Name="LOC_BUILDING_MOSQUE_NAME" Description="LOC_BUILDING_MOSQUE_DESCRIPTION" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="190" EnabledByReligion="true" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_PAGODA" Name="LOC_BUILDING_PAGODA_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="190" EnabledByReligion="true" Housing="1" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_SYNAGOGUE" Name="LOC_BUILDING_SYNAGOGUE_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="190" EnabledByReligion="true" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_WAT" Name="LOC_BUILDING_WAT_NAME" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_FAITH" Cost="190" EnabledByReligion="true" CitizenSlots="1"/>
 		<!-- Wonders NOTE!!! the following fields should only be used for wondersAdjacentDistrict, AdjacentResource, Coast,RequiresPlacement NOTE: the follow should NOT be used for wonders PrereqDistrict-->
 		<Row BuildingType="BUILDING_STONEHENGE" Name="LOC_BUILDING_STONEHENGE_NAME" Description="LOC_BUILDING_STONEHENGE_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" Cost="180" AdvisorType="ADVISOR_RELIGIOUS" AdjacentResource="RESOURCE_STONE" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" AllowsHolyCity="true" ObsoleteEra="ERA_MEDIEVAL" Quote="LOC_BUILDING_STONEHENGE_QUOTE" QuoteAudio="Play_STONEHENGE_QUOTE"/>
-		<Row BuildingType="BUILDING_HANGING_GARDENS" Name="LOC_BUILDING_HANGING_GARDENS_NAME" Description="LOC_BUILDING_HANGING_GARDENS_DESCRIPTION" PrereqTech="TECH_IRRIGATION" Cost="180" AdvisorType="ADVISOR_GENERIC" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" RequiresRiver="true" ObsoleteEra="ERA_MEDIEVAL" Quote="LOC_BUILDING_HANGING_GARDENS_QUOTE" QuoteAudio="Play_HANGINGGARDENS_QUOTE"/>
+		<Row BuildingType="BUILDING_HANGING_GARDENS" Name="LOC_BUILDING_HANGING_GARDENS_NAME" Description="LOC_BUILDING_HANGING_GARDENS_DESCRIPTION" PrereqTech="TECH_IRRIGATION" Cost="180" AdvisorType="ADVISOR_GENERIC" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" RequiresRiver="true" Housing="2" ObsoleteEra="ERA_MEDIEVAL" Quote="LOC_BUILDING_HANGING_GARDENS_QUOTE" QuoteAudio="Play_HANGINGGARDENS_QUOTE"/>
 		<Row BuildingType="BUILDING_PYRAMIDS" Name="LOC_BUILDING_PYRAMIDS_NAME" Description="LOC_BUILDING_PYRAMIDS_DESCRIPTION" PrereqTech="TECH_MASONRY" Cost="220" AdvisorType="ADVISOR_GENERIC" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" ObsoleteEra="ERA_MEDIEVAL" Quote="LOC_BUILDING_PYRAMIDS_QUOTE" QuoteAudio="Play_PYRAMIDS_QUOTE"/>
 		<Row BuildingType="BUILDING_ORACLE" Name="LOC_BUILDING_ORACLE_NAME" Description="LOC_BUILDING_ORACLE_DESCRIPTION" PrereqCivic="CIVIC_MYSTICISM" Cost="290" AdvisorType="ADVISOR_CULTURE" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" ObsoleteEra="ERA_MEDIEVAL" Quote="LOC_BUILDING_ORACLE_QUOTE" QuoteAudio="Play_ORACLE_QUOTE"/>
 		<Row BuildingType="BUILDING_GREAT_LIGHTHOUSE" Name="LOC_BUILDING_GREAT_LIGHTHOUSE_NAME" Description="LOC_BUILDING_GREAT_LIGHTHOUSE_DESCRIPTION" PrereqTech="TECH_CELESTIAL_NAVIGATION" Cost="290" AdvisorType="ADVISOR_CONQUEST" AdjacentDistrict="DISTRICT_HARBOR" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" MustNotBeLake="true" MustBeAdjacentLand="true" ObsoleteEra="ERA_RENAISSANCE" Quote="LOC_BUILDING_GREAT_LIGHTHOUSE_QUOTE" QuoteAudio="Play_GREATLIGHTHOUSE_QUOTE"/>
@@ -465,7 +465,7 @@
 		<Row BuildingType="BUILDING_BOLSHOI_THEATRE" GreatWorkSlotType="GREATWORKSLOT_WRITING" NumSlots="1"/>
 		<Row BuildingType="BUILDING_BOLSHOI_THEATRE" GreatWorkSlotType="GREATWORKSLOT_MUSIC" NumSlots="1"/>
 		<Row BuildingType="BUILDING_OXFORD_UNIVERSITY" GreatWorkSlotType="GREATWORKSLOT_WRITING" NumSlots="2"/>
-		<Row BuildingType="BUILDING_HERMITAGE" GreatWorkSlotType="GREATWORKSLOT_ART" NumSlots="4"/>
+		<Row BuildingType="BUILDING_HERMITAGE" GreatWorkSlotType="GREATWORKSLOT_ART" NumSlots="4" NonUniquePersonYield="3" NonUniquePersonTourism="2"/>
 		<Row BuildingType="BUILDING_BROADWAY" GreatWorkSlotType="GREATWORKSLOT_WRITING" NumSlots="1"/>
 		<Row BuildingType="BUILDING_BROADWAY" GreatWorkSlotType="GREATWORKSLOT_MUSIC" NumSlots="2"/>
 		<Row BuildingType="BUILDING_SYDNEY_OPERA_HOUSE" GreatWorkSlotType="GREATWORKSLOT_MUSIC" NumSlots="3"/>
@@ -707,10 +707,6 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_EXTRA_UNIT_COPY_TAG</ModifierType>
 		</Row>
 		<Row>
-			<ModifierId>VENETIAN_ARSENAL_EXTRANAVALRAIDER</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_EXTRA_UNIT_COPY_TAG</ModifierType>
-		</Row>
-		<Row>
 			<ModifierId>VENETIAN_ARSENAL_EXTRANAVALCARRIER</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_EXTRA_UNIT_COPY_TAG</ModifierType>
 		</Row>
@@ -925,6 +921,11 @@
 			<ModifierId>SEAPORT_COAST_GOLD</ModifierId>
 			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
 			<SubjectRequirementSetId>PLOT_HAS_COAST_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>STAVECHURCH_SEARESOURCE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>STAVE_CHURCH_SEA_RESOURCE_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -1309,16 +1310,6 @@
 			<Value>1</Value>
 		</Row>
 		<Row>
-			<ModifierId>VENETIAN_ARSENAL_EXTRANAVALRAIDER</ModifierId>
-			<Name>Tag</Name>
-			<Value>CLASS_NAVAL_RAIDER</Value>
-		</Row>
-		<Row>
-			<ModifierId>VENETIAN_ARSENAL_EXTRANAVALRAIDER</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
-		</Row>
-		<Row>
 			<ModifierId>VENETIAN_ARSENAL_EXTRANAVALCARRIER</ModifierId>
 			<Name>Tag</Name>
 			<Value>CLASS_NAVAL_CARRIER</Value>
@@ -1630,6 +1621,16 @@
 			<Name>Amount</Name>
 			<Value>2</Value>
 		</Row>
+		<Row>
+			<ModifierId>STAVECHURCH_SEARESOURCE_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>STAVECHURCH_SEARESOURCE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
 	</ModifierArguments>
 	<BuildingModifiers>
 		<!-- Adjust city garrison strength -->
@@ -1833,10 +1834,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_VENETIAN_ARSENAL</BuildingType>
-			<ModifierId>VENETIAN_ARSENAL_EXTRANAVALRAIDER</ModifierId>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_VENETIAN_ARSENAL</BuildingType>
 			<ModifierId>VENETIAN_ARSENAL_EXTRANAVALCARRIER</ModifierId>
 		</Row>
 		<!--Grant Tech Boosts-->
@@ -1954,6 +1951,10 @@
 		<Row>
 			<BuildingType>BUILDING_SEAPORT</BuildingType>
 			<ModifierId>SEAPORT_COAST_GOLD</ModifierId>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STAVE_CHURCH</BuildingType>
+			<ModifierId>STAVECHURCH_SEARESOURCE_PRODUCTION</ModifierId>
 		</Row>
 		<!--Random Civic Boost-->
 		<Row>
@@ -2322,6 +2323,10 @@
 			<RequirementSetId>STONEHENGE_APOSTLE_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>STAVE_CHURCH_SEA_RESOURCE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
@@ -2481,6 +2486,14 @@
 		<Row>
 			<RequirementSetId>STONEHENGE_APOSTLE_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_CAN_NOT_EVER_EARN_PROPHET</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>STAVE_CHURCH_SEA_RESOURCE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_VISIBLE_RESOURCE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>STAVE_CHURCH_SEA_RESOURCE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<!--Double Modifiers-->

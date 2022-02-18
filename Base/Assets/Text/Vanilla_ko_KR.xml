@@ -5144,7 +5144,7 @@
       <Text>잉여 [ICON_Food] 식량으로 도시가 성장하거나 [ICON_Citizen] 시민이 추가됩니다. [ICON_Citizen] 시민의 총 소비량(시민마다 2만큼)을 초과하는 모든 [ICON_Food] 식량은 잉여 식량으로 간주하며 새로운 [ICON_Citizen] 시민이 추가될 때까지 축적됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_12_CHAPTER_CONTENT_PARA_2" Language="ko_KR">
-      <Text>현재의 [ICON_Citizen] 인구가 도시의 [ICON_Housing] 주거공간 최대치보다 2명 이상 적으면 모든 잉여 [ICON_Food] 식량은 인구 증가에 기여합니다. 도시의 [ICON_Citizen] 인구가 [ICON_Housing] 주거공간 최대치보다 1명만 적으면 성장 속도가 50%로 감소합니다. [ICON_Citizen] 인구가 [ICON_Housing] 주거공간 최대치 도달하면 정상 속도의 25%로만 성장합니다. 도시는 이 속도로 [ICON_Housing] 주거공간 최대치보다 [ICON_Citizen] 시민 5명까지 더 성장할 수 있으며 이후에는 성장이 완전히 멈춥니다.</Text>
+      <Text>현재의 [ICON_Citizen] 인구가 도시의 [ICON_Housing] 주거공간 최대치보다 2명 이상 적으면 모든 잉여 [ICON_Food] 식량은 인구 증가에 기여합니다. 도시의 [ICON_Citizen] 인구가 [ICON_Housing] 주거공간 최대치보다 1명만 적으면 성장 속도가 50%로 감소합니다. [ICON_Citizen] 인구가 [ICON_Housing] 주거공간 최대치에 도달하면 정상 속도의 25%로만 성장합니다. 도시는 이 속도로 [ICON_Housing] 주거공간 최대치보다 [ICON_Citizen] 시민 5명까지 더 성장할 수 있으며 이후에는 성장이 완전히 멈춥니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_12_CHAPTER_CONTENT_PARA_3" Language="ko_KR">
       <Text>잉여 [ICON_Food] 식량이 없으면 도시가 정체되고 성장하지 않습니다. [ICON_Citizen] 시민이 소비하는 양보다 적은 [ICON_Food] 식량을 생산하는 도시는 다시 자족하기 전까지는 굶주리다가 천천히 [ICON_Citizen] 인구를 잃게 됩니다. </Text>
@@ -5486,7 +5486,7 @@
       <Text>경험치와 진급</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_8_CHAPTER_CONTENT_PARA_1" Language="ko_KR">
-      <Text>전투에서 생존한 유닛은 '경험치(XP)'를 획득합니다. 유닛이 특정 XP에 도달하면 '레벨 업'과 동시에 진급할 수 있습니다. 진급한 유닛은 특정 방식으로 향상됩니다. 진급을 선택할 때에는 유닛의 체력이 회복됩니다. 진급이 선택될 때까지 유닛은 더 이상 XP를 획득할 수 없습니다.</Text>
+      <Text>부족 마을을 발견하거나 전투에서 생존한 유닛은 '경험치'(XP)를 획득합니다. 유닛이 특정 XP에 도달하면 '레벨 업'과 동시에 진급할 수 있습니다. 진급한 유닛은 특정 방식으로 향상됩니다. 진급을 선택할 때에는 유닛의 체력이 회복됩니다. 진급이 선택될 때까지 유닛은 더 이상 XP를 획득할 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_9_CHAPTER_CONTENT_TITLE" Language="ko_KR">
       <Text>도시 전투</Text>
@@ -6149,10 +6149,10 @@
       <Text>핵 오염</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_NUKES_3_CHAPTER_CONTENT_PARA_1" Language="ko_KR">
-      <Text>핵 공격 후에는 낙진으로 인해 폭발 반경의 모든 타일이 오염됩니다. 오염된 타일에서 턴을 종료하는 모든 유닛은 턴당 50의 피해를 입습니다. [ICON_Production] 오염된 타일의 어떤 개체에도 생산을 적용할 수 없습니다(예: 건물 및 특수지구 수리). 오염된 타일은 오염 시간이 만료되거나 타일이 '정화'될 때까지 도시에서 사용할 수 없습니다. </Text>
+      <Text>핵 공격 후에는 낙진으로 인해 폭발 반경의 모든 타일이 오염됩니다. 오염된 타일에서 턴을 종료하는 모든 유닛은 턴당 50의 피해를 입습니다. 오염된 타일의 어떤 개체에도 [ICON_Production] 생산을 적용할 수 없습니다(예: 건물 및 특수지구 수리). 오염된 타일은 오염 시간이 만료되거나 타일이 '정화'될 때까지 도시에서 사용할 수 없습니다. </Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_NUKES_3_CHAPTER_CONTENT_PARA_2" Language="ko_KR">
-      <Text>건설자와 공병 유닛을 사용하여 타일의 핵 오염을 '정화'할 수 있습니다. 오염된 타일을 정화하려면 건설 횟수 1이 소비됩니다. 오염 정화가 가능한 건설자와 공병 유닛은 오염 타일에서 턴을 종료할 때 피해를 덜 입습니다. 핵폭발의 직접적인 영향이 미치지 않은 모든 도시 타일은 정상적으로 기능하며 도시의 생산에 기여합니다.</Text>
+      <Text>건설자와 공병 유닛을 사용하여 타일의 핵 오염을 '정화'할 수 있습니다. 오염된 타일을 정화하려면 건설 횟수 1이 소비됩니다. 오염 정화가 가능한 건설자, 공병과 로마 군단병 유닛은 오염 타일에서 턴을 종료할 때 피해를 덜 입습니다. 핵폭발의 직접적인 영향이 미치지 않은 모든 도시 타일은 정상적으로 기능하며 도시의 생산에 기여합니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_TOURISM_NAME" Language="ko_KR">
       <Text>관광</Text>
@@ -6161,7 +6161,7 @@
       <Text>소개</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_1_CHAPTER_CONTENT_PARA_1" Language="ko_KR">
-      <Text>문화 승리를 달성하려면 [ICON_Tourism] 관광이 필요합니다. [ICON_Tourism] 관광은 걸작, 불가사의, 성지, [ICON_GreatWork_Relic] 성유물, [ICON_GreatWork_Artifact] 유물, 해변 리조트 및 국립공원을 통해 생성할 수 있습니다. [ICON_TradeRoute] 교역로, 국경 개방, 위인, 정책 및 공유된(또는 상반된) 게임 후반 정부를 통해 [ICON_Tourism] 관광을 더욱 증가시킬 수 있습니다. </Text>
+      <Text>문화 승리를 달성하려면 [ICON_Tourism] 관광이 필요합니다. [ICON_Tourism] 관광은 걸작, 불가사의, 성지, [ICON_GreatWork_Relic] 성유물, [ICON_GreatWork_Artifact] 유물, 해변 리조트 및 국립공원을 통해 생성할 수 있습니다. [ICON_TradeRoute] 교역로, 국경 개방, 위인, 정책 및 공유된(또는 상반된) 게임 후반 정부를 통해 [ICON_Tourism] 관광을 더욱 증가시킬 수 있습니다.[NEWLINE][NEWLINE]불가사의를 건설하는 것이 아마도 [ICON_Tourism] 관광을 처음 획득하는 방법이 될 것입니다. 각 불가사의는 턴당 [ICON_Tourism] 관광 +2를 제공하며, 해당 불가사의가 처음 건설 가능한 시대부터 지난 각 시대마다 +1을 추가로 제공합니다. 그러므로 스톤헨지와 같은 고대 불가사의는 게임 종료 시점에 [ICON_Tourism] 관광 +9를 제공할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_2_CHAPTER_CONTENT_TITLE" Language="ko_KR">
       <Text>걸작, 성유물 및 유물</Text>
@@ -6452,7 +6452,7 @@
       <Text>내륙에 거주하던 초기 문명은 온갖 부와 먹거리로 가득한 해안가에 이끌려 나왔으며, 따라서 인류는 수천 년 동안 원양 항해를 필요로 하거나 염려하지 않았습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_FEATURES_PAGE_TERRAIN_DESERT_CHAPTER_HISTORY_PARA_1" Language="ko_KR">
-      <Text>일반적으로 사막은 정말 쓸모가 없었지만 여기서 생활하는 법을 배운 이들에게는 그렇지 않았습니다. 사하라, 고비, 모하비, 그레이트빅토리아를 비롯한 세계의 거대한 사막들은 역사가 시작된 이래로 수많은 인류와 문명을 집어 삼켜왔습니다.</Text>
+      <Text>일반적으로 사막은 정말 쓸모가 없었지만 여기서 생활하는 법을 배운 이들에게는 그렇지 않았습니다. 사하라, 고비, 모하비, 그레이트 빅토리아를 비롯한 세계의 거대한 사막들은 역사가 시작된 이래로 수많은 인류와 문명을 집어 삼켜왔습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_FEATURES_PAGE_TERRAIN_DESERT_HILLS_CHAPTER_HISTORY_PARA_1" Language="ko_KR">
       <Text>평지의 사막보다 더욱 매력이 반감되는 언덕 사막의 장점은 전투 시 방어에 용이하다는 것이 유일했지만 베두인족, 베르베르족과 여러 사막 부족들은 그저 맹수처럼 사막 아래로 질주해 돌진하는 방식을 선호했습니다.</Text>
@@ -9359,7 +9359,7 @@
       <Text>로마는 게임에서 최대 규모의 제국으로 만들기에 좋은 문명입니다. 트라야누스는 율리우스 카이사르의 명언 즉, "왔노라, 보았노라, 이겼노라."라는 말을 마음 깊이 새겼습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_TRAJAN_CHAPTER_DETAILED_BODY" Language="ko_KR">
-      <Text>로마는 빠르게 도시를 건설하고 공학을 발전시키고 싶어 합니다. 공학을 활성화하면 목욕탕을 도시에 추가하여 빠른 성장을 실현하고 트라야누스의 무료 기념비를 통해 빠르게 확장할 수 있습니다. "모든 길은 로마로 통한다"라는 능력을 통해 로마는 연결된 여러 도시에서 안정적인 수입을 얻을 수 있습니다. 제국 내 도시에서 외지로 이어지는 [ICON_TradeRoute] 교역로는 자체적으로 구축해야 합니다. 이러한 모든 확장은 분쟁으로 이어질 수 있지만, 군단병이 생산되는 시점으로 한정될 가능성이 높습니다. 군단병의 요새 건설 능력은 로마의 경우 다른 문명에 비해 두 시대 앞서 활성화됩니다. 요새의 효과적은 활용은 이 방대하고 강력한 제국을 유지하기 위한 열쇠입니다.</Text>
+      <Text>로마는 빠르게 도시를 건설하고 공학을 발전시키고 싶어 합니다. 공학을 활성화하면 목욕탕을 도시에 추가하여 빠른 성장을 실현하고 트라야누스의 무료 기념비를 통해 빠르게 확장할 수 있습니다. '모든 길은 로마로 통한다'라는 능력을 통해 로마는 연결된 여러 도시에서 안정적인 수입을 얻을 수 있습니다. 제국 내 도시에서 외지로 이어지는 [ICON_TradeRoute] 교역로는 자체적으로 구축해야 합니다. 이러한 모든 확장은 분쟁으로 이어질 수 있지만, 군단병이 생산되는 시점으로 한정될 가능성이 높습니다. 군단병의 요새 건설 능력은 로마의 경우 다른 문명에 비해 두 시대 앞서 활성화됩니다. 요새의 효과적인 활용은 이 방대하고 강력한 제국을 유지하기 위한 열쇠입니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_T_ROOSEVELT_TITLE" Language="ko_KR">
       <Text>테오도어 루즈벨트</Text>
@@ -10050,6 +10050,24 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_RESOURCES_PAGE_RESOURCE_WINE_CHAPTER_HISTORY_PARA_1" Language="ko_KR">
       <Text>취중진담이라는 말이 있습니다. 와인은 과일, 꿀과 쌀 등 발효가 가능한 각종 재료를 이용하여 만들 수 있는 음료입니다. 고고학적 증거에 따르면 와인은 신석기부터 자그로스 산맥에서 생산되었다고 합니다. 와인은 매우 귀중한 음료로 여겨졌으며 다수의 종교 및 국가 기념식, 그리고 역사를 거쳐간 수많은 귀족들의 저녁 만찬에 꼭 모습을 드러냈습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_SEARCH_TERM_ARMIES" Language="ko_KR">
+      <Text>군대</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_SEARCH_TERM_ARMADA" Language="ko_KR">
+      <Text>함대</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_SEARCH_TERM_CORPS" Language="ko_KR">
+      <Text>군단</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_SEARCH_TERM_FLEET" Language="ko_KR">
+      <Text>선단</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_SEARCH_TERM_THERMONUCLEAR" Language="ko_KR">
+      <Text>수소</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_SEARCH_TERM_NUCLEAR" Language="ko_KR">
+      <Text>원자</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_TECHNOLOGIES_PAGE_INTRO_CHAPTER_CONTENT_PARA_1" Language="ko_KR">
       <Text>기술 발전을 통해 더욱 강대하고 현명하며 위협적인 문명으로 거듭날 수 있으며, 인접 문명과의 기술 경쟁에서 뒤처지지 않는 것이 매우 중요합니다. 계몽되지 않은 문명이 인접한 선진 문명을 극복하는 것이 가능할 수는 있지만 역사에서 이러한 양상을 목격하기는 쉬운 일이 아니며 이는 문명 VI에서도 마찬가지입니다.</Text>
@@ -10902,6 +10920,9 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_GOVERNMENTS_PAGEGROUP_GREATPEOPLE_POLICIES_NAME" Language="ko_KR">
       <Text>위인 정책</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_GOVERNMENTS_PAGEGROUP_WILDCARD_POLICIES_NAME" Language="ko_KR">
+      <Text>와일드카드 정책</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_IMPROVEMENTS_PAGEGROUP_IMPROVEMENTS_NAME" Language="ko_KR">
       <Text>시설</Text>
@@ -12354,12 +12375,14 @@
 [3]Project Lead
 [4]Jason Kolesa
 
+[3]Associate Lead
+[4]Joshua Vance
+
 [3]Support Leads
 [4]Chris Adams
 [4]Nathan Bell
 
 [3]Senior Testers
-[4]Joshua Vance
 [4]Kayla Mager
 [4]Raynard Moreno
 [4]Brian Reiss
@@ -12885,6 +12908,9 @@
 
 [3]Cyrus
 [4]Arian Risbaf
+
+[3]Amanitore
+[4]Fatma Abd Elsalam
 
 [2]French Cast
 
@@ -14055,6 +14081,9 @@
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_SEA_RESOURCE" Language="ko_KR">
       <Text>해안 자원</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_RESOURCE_CLASS" Language="ko_KR">
+      <Text>일치하는 자원 등급</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_RIVER" Language="ko_KR">
       <Text>강</Text>
@@ -19229,7 +19258,7 @@
       <Text>이 도시에서 훈련된 모든 근접 및 원거리 지상 유닛이 얻는 전투 경험치가 +25% 증가합니다.[NEWLINE][NEWLINE]마구간이 있는 주둔지 특수지구에는 지을 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_CASTLE_DESCRIPTION" Language="ko_KR">
-      <Text>외곽 방어 시설의 체력이 증가합니다.</Text>
+      <Text>외곽 방어 시설의 체력이 증가합니다. 보존 사회 제도로 발전 후 [ICON_TOURISM] 관광 +2를 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_ELECTRONICS_FACTORY_DESCRIPTION" Language="ko_KR">
       <Text>일본 특유의 건물입니다. 6타일 내에 있는 모든 도시에 [ICON_Production] 생산력 +4를 제공합니다. 전기 기술을 연구한 후 이 건물은 해당 도시에 [ICON_Culture] 문화 +4를 추가로 제공합니다.</Text>
@@ -19280,16 +19309,16 @@
       <Text>6타일 내에 있는 모든 도심부가 보너스를 받습니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_STAR_FORT_DESCRIPTION" Language="ko_KR">
-      <Text>외곽 방어 시설의 체력이 최대치로 증가합니다.</Text>
+      <Text>외곽 방어 시설의 체력이 최대치로 증가합니다. 보존 사회 제도로 발전 후 [ICON_TOURISM] 관광 +3을 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_STAVE_CHURCH_DESCRIPTION" Language="ko_KR">
-      <Text>노르웨이 특유의 건물입니다. [ICON_Faith] 신앙으로 사도와 이단심문관을 구매하기 위해 요구됩니다. 성지 특수지구에 숲 기본 인접 보너스가 추가로 부여됩니다.</Text>
+      <Text>노르웨이 특유의 건물입니다. [ICON_Faith] 신앙으로 사도와 이단심문관을 구매하기 위해 요구됩니다. 성지 특수지구에 숲 기본 인접 보너스가 추가로 부여됩니다. 도시 내 각 해안 자원에 [ICON_PRODUCTION] 생산력 +1을 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_TEMPLE_DESCRIPTION" Language="ko_KR">
       <Text>사도와 이단심문관의 구매가 가능합니다. 사도와 이단심문관은 [ICON_Faith] 신앙으로만 구매할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_WALLS_DESCRIPTION" Language="ko_KR">
-      <Text>도심부와 주둔지 특수지구 주변에 벽을 제공합니다. 벽은 도심부와 주둔지 특수지구에서 [ICON_Ranged] 원거리 공격을 할 수 있게 하며, 파괴되어야 도시를 공격할 수 있습니다.</Text>
+      <Text>도심부와 주둔지 특수지구 주변에 벽을 제공합니다. 벽은 도심부와 주둔지 특수지구에서 [ICON_Ranged] 원거리 공격을 할 수 있게 하며, 파괴되어야 도시를 공격할 수 있습니다. 보존 사회 제도로 발전 후 [ICON_TOURISM] 관광 +1을 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_WATER_MILL_DESCRIPTION" Language="ko_KR">
       <Text>[ICON_RESOURCE_RICE] 쌀과 [ICON_RESOURCE_WHEAT] 밀 자원은 [ICON_Food] 식량 +1을 제공합니다. 도시는 반드시 강 옆에 위치해야 합니다.</Text>
@@ -19370,7 +19399,7 @@
       <Text>무료 건설자 1명을 제공합니다. 모든 건설자는 시설 1곳을 추가로 건설할 수 있습니다. 언덕이 없는 사막(범람원 포함)에 지어야 합니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_RUHR_VALLEY_DESCRIPTION" Language="ko_KR">
-      <Text>이 도시에 [ICON_Production] 생산력 +30% 및 각 광산 및 채석장에 [ICON_Production] 생산력 +1을 제공합니다. 공장이 있는 산업구역 특수지구 옆 강가에 지어야 합니다.</Text>
+      <Text>이 도시에 [ICON_Production] 생산력 +20% 및 각 광산 및 채석장에 [ICON_Production] 생산력 +1을 제공합니다. 공장이 있는 산업구역 특수지구 옆 강가에 지어야 합니다.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_STONEHENGE_DESCRIPTION" Language="ko_KR">
       <Text>[ICON_GreatProphet] 위대한 선지자를 무료로 제공합니다. [ICON_GreatProphet] 위대한 선지자는 성지 대신 스톤헨지에서 종교를 창시할 수 있습니다. [ICON_RESOURCE_STONE] 석재 옆 평지에 지어야 합니다.</Text>
@@ -19433,10 +19462,10 @@
       <Text>목장 시설에서 [ICON_Food] 식량 +1.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_DIPLOMATIC_SERVICE_DESCRIPTION" Language="ko_KR">
-      <Text>상주대사관을 허용하고 스파이를 생성할 수 있는 능력을 제공합니다. 이제 첫 4가지 개전 이유를 사용하여 전쟁을 정당화할 수 있습니다. 이 4가지 개전 이유는 성전, 해방 전쟁, 재정복 전쟁, 그리고 보호 전쟁입니다.</Text>
+      <Text>스파이를 생성할 수 있는 능력을 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_MERCANTILISM_DESCRIPTION" Language="ko_KR">
-      <Text>야영지 시설에 [ICON_Production] 생산력 +1.</Text>
+      <Text>야영지 시설에 [ICON_Production] 생산력 +1, [ICON_Food] 식량 +1. </Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_THE_ENLIGHTENMENT_DESCRIPTION" Language="ko_KR">
       <Text>플레이어 문명에 대한 종교적 [ICON_Tourism] 관광 효과가 반으로 감소합니다.</Text>
@@ -19445,7 +19474,7 @@
       <Text>보상으로 [ICON_Envoy] 사절 +2.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_CIVIL_ENGINEERING_DESCRIPTION" Language="ko_KR">
-      <Text>초원 언덕 및 평원 언덕에 농장을 지을 수 있습니다. 플레이어의 모든 도시에 자동으로 요새 전투력 200을 부여하고 원거리 공격을 가능하게 하는 도시 방어를 잠금 해제합니다.</Text>
+      <Text>초원 언덕 및 평원 언덕에 농장을 지을 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_NATIONALISM_DESCRIPTION" Language="ko_KR">
       <Text>추가 스파이를 생성할 수 있는 능력을 제공합니다. 같은 유닛 2개로 군단 또는 선단을 형성할 수 있게 됩니다. 1가지의 새로운 개전 이유를 사용하여 전쟁을 정당화할 수 있습니다. 새로운 개전 이유: 식민지 전쟁.</Text>
@@ -19478,7 +19507,7 @@
       <Text>공항이 있는 비행장 특수지구 간의 지상 유닛 공수를 할 수 있게 됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_GLOBALIZATION_DESCRIPTION" Language="ko_KR">
-      <Text>재배지의 [ICON_Gold] 금+1.</Text>
+      <Text>재배지에서 [ICON_Gold] 금+2.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_FUTURE_CIVIC_DESCRIPTION" Language="ko_KR">
       <Text>점수 승리를 위한 플레이어 점수 증가를 위해 여러 번 완료할 수 있습니다.</Text>
@@ -19493,7 +19522,7 @@
       <Text>야만인 전초기지를 제거하십시오.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_STATE_WORKFORCE" Language="ko_KR">
-      <Text>특수지구를 건설하십시오.</Text>
+      <Text>전문 특수지구를 건설하십시오.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_EARLY_EMPIRE" Language="ko_KR">
       <Text>문명의 인구를 6 이상으로 성장시키십시오.</Text>
@@ -19814,7 +19843,7 @@
       <Text>특수지구를 가진 모든 도시는 [ICON_Amenities] 쾌적도 +1을 획득합니다.</Text>
     </Replace>
     <Replace Tag="LOC_GOVT_INHERENT_BONUS_MONARCHY" Language="ko_KR">
-      <Text>중세 성벽이 있는 도시에 [ICON_Housing] 주거공간 +2를 제공합니다.</Text>
+      <Text>방어 건물 건설에 대한 [ICON_Production] 생산력 +50%. 벽의 레벨마다 [ICON_Housing] 주거공간 +1.</Text>
     </Replace>
     <Replace Tag="LOC_GOVT_INHERENT_BONUS_THEOCRACY" Language="ko_KR">
       <Text>지상 전투 유닛을 신앙으로 구매할 수 있습니다. 신학 전투 시 모든 유닛에 [ICON_Religion] 신앙심 +5를 제공합니다.</Text>
@@ -20276,13 +20305,13 @@
       <Text>마지막 선지자</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_LAST_PROPHET_DESCRIPTION" Language="ko_KR">
-      <Text>플레이어가 위대한 선지자가 없을 시, 마지막에서 두 번째 위대한 선지자를 다른 문명이 영입하는 경우, 플레이어는 마지막 위대한 선지자를 즉시 얻습니다. 아라비아의 종교를 믿는 타 문명 도시마다 [ICON_Science] 과학 +1을 제공합니다.</Text>
+      <Text>플레이어가 [ICON_GreatProphet] 위대한 선지자가 없을 시, 마지막에서 두 번째 위대한 선지자를 다른 문명이 영입하는 경우, 플레이어는 마지막 [ICON_GreatProphet] 위대한 선지자를 즉시 얻습니다. 아라비아의 종교를 믿는 타 문명 도시마다 [ICON_Science] 과학 +1을 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_NKISI_NAME" Language="ko_KR">
       <Text>엔키시</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_NKISI_DESCRIPTION" Language="ko_KR">
-      <Text>각 [ICON_GreatWork_Relic] 성유물, [ICON_GreatWork_Artifact] 유물 및 조각상 [ICON_GreatWork_Sculpture] 걸작 예술품에서 일반적으로 받는 [ICON_Culture] 문화 외에 추가로 [ICON_Food] 식량 +2, [ICON_Production] 생산력 +2, [ICON_Gold] 금 +4가 제공됩니다. [ICON_GreatWriter] 위대한 작가, [ICON_GreatArtist] 위대한 예술가, [ICON_GreatMusician] 위대한 음악가 및 [ICON_GreatMerchant] 위대한 상인 점수를 2배로 받습니다. 궁전은 걸작 슬롯 5개를 가지고 있습니다.</Text>
+      <Text>각 [ICON_GreatWork_Relic] 성유물, [ICON_GreatWork_Artifact] 유물 및 조각상 [ICON_GreatWork_Sculpture] 걸작 예술품에서 일반적으로 받는 [ICON_Culture] 문화 외에 추가로 [ICON_Food] 식량 +2, [ICON_Production] 생산력 +2, [ICON_Gold] 금 +4가 제공됩니다. [ICON_GreatWriter] 위대한 작가, [ICON_GreatArtist] 위대한 예술가, [ICON_GreatMusician] 위대한 음악가 및 [ICON_GreatMerchant] 위대한 상인 점수를 +50% 더 받습니다. 궁전은 걸작 슬롯 5개를 가지고 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_TREASURE_FLEET_NAME" Language="ko_KR">
       <Text>보물선단</Text>
@@ -20819,7 +20848,7 @@
       <Text>선물 증정</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_DEAL_EXIT_DEAL" Language="ko_KR">
-      <Text>아무것도 아니오.</Text>
+      <Text>됐습니다</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_DEAL_CANCEL_DEAL" Language="ko_KR">
       <Text>거래 취소</Text>
@@ -21031,6 +21060,42 @@
     <Replace Tag="LOC_DIPLOACTION_PROPOSE_PEACE_DEAL_DESCRIPTION" Language="ko_KR">
       <Text>이 세력과 평화 조약을 제안합니다.</Text>
     </Replace>
+    <Replace Tag="LOC_DIPLOMACY_DEAL_SELECT_TECH" Language="ko_KR">
+      <Text>기술 선택</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_DEAL_SELECT_ALLIANCE" Language="ko_KR">
+      <Text>동맹 선택</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_DEAL_SELECT_TARGET" Language="ko_KR">
+      <Text>대상 선택</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_DEAL_HOW_MANY" Language="ko_KR">
+      <Text>몇 명입니까?</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_GIFT" Language="ko_KR">
+      <Text>선물을 받음</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_GIFT_EFFECT" Language="ko_KR">
+      <Text>선물은 관계에 도움이 됨</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_DEMAND" Language="ko_KR">
+      <Text>협상하기를 원합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_LEADER_DEMAND_EFFECT" Language="ko_KR">
+      <Text>무리한 요구는 관계에 해가 됨</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_UNFAIR" Language="ko_KR">
+      <Text>이 거래는 부당하므로 받아들일 수 없습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_WHAT_WOULD_YOU_GIVE_ME_TOOLTIP" Language="ko_KR">
+      <Text>이 지도자에게 거래의 대가로 무엇을 줄 것인지 묻습니다.[NEWLINE]상대방 협상 조건 측에만 아이템이 추가됩니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_UNACCEPTABLE_DEAL" Language="ko_KR">
+      <Text>어떠한 상황에서도 이런 거래는 용납할 수 없습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEAL_UNACCEPTABLE_ITEM_TOOLTIP" Language="ko_KR">
+      <Text>차단 거래 제안함</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLO_MODIFIER_ALLY" Language="ko_KR">
       <Text>동맹</Text>
     </Replace>
@@ -21117,6 +21182,9 @@
     </Replace>
     <Replace Tag="LOC_DIPLO_MODIFIER_BROKEN_PROMISE" Language="ko_KR">
       <Text>상대방에게 한 외교 약속을 어김</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MODIFIER_CLOSE_TO_VICTORY" Language="ko_KR">
+      <Text>우리가 승리를 거두고 있습니다. 그들은 우리를 두려워합니다.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_MODIFIER_KEPT_PROMISE" Language="ko_KR">
       <Text>상대방에게 한 외교 약속을 지킴</Text>
@@ -21662,13 +21730,22 @@
       <Text>[SIZE_16]성전 선포[NEWLINE][SIZE_12]</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_CHOICE_DECLARE_LIBERATION_WAR" Language="ko_KR">
-      <Text>[SIZE_16]해방 전쟁 선포[NEWLINE][SIZE_12](친분 있는 도시를 점령할 경우 전쟁광 페널티 없음)[NEWLINE]</Text>
+      <Text>[SIZE_16]해방 전쟁 선포[NEWLINE][SIZE_12]</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_CHOICE_DECLARE_LIBERATION_WAR_TOOLTIP" Language="ko_KR">
+      <Text>[NEWLINE][NEWLINE](친분 있는 도시를 점령할 경우 전쟁광 페널티 없음)</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_CHOICE_DECLARE_RECONQUEST_WAR" Language="ko_KR">
-      <Text>[SIZE_16]재정복 전쟁 선포[NEWLINE][SIZE_12](본인의 도시를 점령할 경우 전쟁광 페널티 없음)[NEWLINE]</Text>
+      <Text>[SIZE_16]재정복 전쟁 선포[NEWLINE][SIZE_12]</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_CHOICE_DECLARE_RECONQUEST_WAR_TOOLTIP" Language="ko_KR">
+      <Text>[NEWLINE][NEWLINE](본인의 도시를 점령할 경우 전쟁광 페널티 없음)</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_CHOICE_DECLARE_PROTECTORATE_WAR" Language="ko_KR">
-      <Text>[SIZE_16]보호 전쟁 선포[NEWLINE][SIZE_12](동맹 도시 국가를 방어할 경우 전쟁광 페널티 없음)[NEWLINE]</Text>
+      <Text>[SIZE_16]보호 전쟁 선포[NEWLINE][SIZE_12]</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_CHOICE_DECLARE_PROTECTORATE_WAR_TOOLTIP" Language="ko_KR">
+      <Text>[NEWLINE][NEWLINE](동맹 도시 국가를 방어할 경우 전쟁광 페널티 없음)</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_CHOICE_DECLARE_COLONIAL_WAR" Language="ko_KR">
       <Text>[SIZE_16]식민지 전쟁 선포[NEWLINE][SIZE_12]</Text>
@@ -21732,9 +21809,6 @@
     </Replace>
     <Replace Tag="LOC_DIPLO_CHOICE_DEMAND_PROMISE_DONT_DIG_ARTIFACTS" Language="ko_KR">
       <Text>내 유물의 발굴 통제 약속</Text>
-    </Replace>
-    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_FRIENDLY_TEAM_MEMBERS" Language="ko_KR">
-      <Text>전쟁 선포 불가: 팀 멤버 중 일부가 해당 플레이어 팀 멤버와 친선 또는 동맹 관계에 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_ANY_ANY" Language="ko_KR">
       <Text>그대가 제안한 우정을 기쁘게 받아들이겠소.</Text>
@@ -24212,7 +24286,7 @@
       <Text>과학 승리 프로젝트를 건설하는 데 필요한 특수지구입니다. 인공위성 발사, 달 상륙 개시, 화성 이주지 주거 모듈, 화성 이주지 수경 재배 모듈, 화성 이주지 원자로 모듈이 포함됩니다. 언덕에 지을 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION" Language="ko_KR">
-      <Text>그리스 특유의 문화 특수지구입니다. 극장가 특수지구를 대체합니다.</Text>
+      <Text>그리스 특유의 문화 특수지구입니다. 극장가 특수지구를 대체합니다. 보상으로 [ICON_Envoy] 사절 +1.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION_ADJACENCY" Language="ko_KR">
       <Text>인접효과: 인접 도심부는 일반적인 [ICON_Culture] 문화 보너스를 부여합니다. 인접 불가사의 및 특수지구마다 일반적인 [ICON_Culture] 문화 보너스를 부여합니다. 언덕에만 지을 수 있습니다.</Text>
@@ -24254,7 +24328,7 @@
       <Text>실제 지구와 같은 시작 위치</Text>
     </Replace>
     <Replace Tag="LOC_TSLEARTH_DESCRIPTION" Language="ko_KR">
-      <Text>문명들은 지구 지도의 역사적 수도 위치에서 시작합니다.</Text>
+      <Text>문명들은 지구 지도의 해당 역사적 수도 위치에서 시작합니다.</Text>
     </Replace>
     <Replace Tag="LOC_EARTH_MAP_STANDARD_NAME" Language="ko_KR">
       <Text>지구</Text>
@@ -24637,8 +24711,20 @@
     <Replace Tag="LOC_PLAY_MULTIPLAYER" Language="ko_KR">
       <Text>멀티 플레이</Text>
     </Replace>
+    <Replace Tag="LOC_PLAY_MULTIPLAYER_HAVE_CLOUD_TURN" Language="ko_KR">
+      <Text>[ICON_Exclamation] 멀티 플레이</Text>
+    </Replace>
     <Replace Tag="LOC_LOAD_GAME" Language="ko_KR">
       <Text>게임 불러오기</Text>
+    </Replace>
+    <Replace Tag="LOC_LOAD_CONFIG" Language="ko_KR">
+      <Text>구성 불러오기</Text>
+    </Replace>
+    <Replace Tag="LOC_LOAD_MAP" Language="ko_KR">
+      <Text>지도 불러오기</Text>
+    </Replace>
+    <Replace Tag="LOC_OPEN_DIRECTORY" Language="ko_KR">
+      <Text>열림</Text>
     </Replace>
     <Replace Tag="LOC_NO_FILE_SELECTED" Language="ko_KR">
       <Text>선택된 파일 없음</Text>
@@ -24679,6 +24765,12 @@
     <Replace Tag="LOC_NO_SAVED_GAMES" Language="ko_KR">
       <Text>저장된 게임 없음</Text>
     </Replace>
+    <Replace Tag="LOC_NO_SAVED_CONFIGS" Language="ko_KR">
+      <Text>저장된 구성 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_NO_SAVED_MAPS" Language="ko_KR">
+      <Text>저장된 지도 없음</Text>
+    </Replace>
     <Replace Tag="LOC_SORTBY_NAME" Language="ko_KR">
       <Text>이름 기준 정렬</Text>
     </Replace>
@@ -24696,6 +24788,9 @@
     </Replace>
     <Replace Tag="LOC_SAVE_MAP_BUTTON" Language="ko_KR">
       <Text>지도 저장</Text>
+    </Replace>
+    <Replace Tag="LOC_SAVE_CONFIG" Language="ko_KR">
+      <Text>구성 저장</Text>
     </Replace>
     <Replace Tag="LOC_SAVE_AT_MAXIMUM_CLOUD_SAVES_TOOLTIP" Language="ko_KR">
       <Text>클라우드 저장 파일 최대 개수에 도달했습니다. 저장 파일을 덮어쓰거나 저장 파일을 삭제하십시오.</Text>
@@ -24865,8 +24960,14 @@
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME" Language="ko_KR">
       <Text>클라우드 게임</Text>
     </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_TURN" Language="ko_KR">
+      <Text>[ICON_Exclamation] 클라우드 게임</Text>
+    </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME_TT" Language="ko_KR">
       <Text>FiraxisLive 클라우드 컴퓨팅 기술을 이용하여 멀티 플레이 게임을 즐깁니다. FiraxisLive와 활성화된 연결이 필요합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_TURN_TT" Language="ko_KR">
+      <Text>클라우드 게임 내 플레이어 턴입니다.[NEWLINE][NEWLINE]FiraxisLive 클라우드 컴퓨팅 기술을 이용하여 멀티 플레이 게임을 즐깁니다. FiraxisLive와 활성화된 연결이 필요합니다.</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_PITBOSS_GAME" Language="ko_KR">
       <Text>피트보스</Text>
@@ -24890,13 +24991,31 @@
       <Text>최신 게임 목록의 정보를 불러옵니다.</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_STOP_REFRESH_GAME_LIST" Language="ko_KR">
-      <Text>새로 고침 정지</Text>
+      <Text>정지</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_STOP_REFRESH_GAME_LIST_TT" Language="ko_KR">
       <Text>게임목록 정보검색 기능을 정지합니다.</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_BACK" Language="ko_KR">
       <Text>돌아가기</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_END_GAME" Language="ko_KR">
+      <Text>게임 삭제</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_ENDING_GAME_PROMPT" Language="ko_KR">
+      <Text>게임 종료 중...</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_ENDING_GAME_FAIL" Language="ko_KR">
+      <Text>게임 종료 중 오류가 발생했습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_ENDING_GAME_FAIL_ACCEPT" Language="ko_KR">
+      <Text>확인</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_GAME_LAUNCH_FAILED" Language="ko_KR">
+      <Text>게임 시작에 실패했습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_GAME_LAUNCH_FAILED_ACCEPT" Language="ko_KR">
+      <Text>확인</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_JOIN_GAME" Language="ko_KR">
       <Text>게임 참가</Text>
@@ -24961,8 +25080,20 @@
     <Replace Tag="LOC_MULTIPLAYER_MODSHOSTED" Language="ko_KR">
       <Text>모드</Text>
     </Replace>
+    <Replace Tag="LOC_STAGING_ROOM_LOADING_SAVE" Language="ko_KR">
+      <Text>저장된 게임 로드 중</Text>
+    </Replace>
+    <Replace Tag="LOC_STAGING_ROOM_GAME_IN_PROGRESS" Language="ko_KR">
+      <Text>게임 진행 중</Text>
+    </Replace>
+    <Replace Tag="LOC_STAGING_ROOM_JOIN_CODE" Language="ko_KR">
+      <Text>참여 코드:</Text>
+    </Replace>
     <Replace Tag="LOC_MULTIPLAYER_PITBOSS_LOBBY" Language="ko_KR">
       <Text>피트보스 게임</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_CLOUD_LOBBY" Language="ko_KR">
+      <Text>클라우드 게임</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_INTERNET_LOBBY" Language="ko_KR">
       <Text>인터넷 게임</Text>
@@ -24982,11 +25113,23 @@
     <Replace Tag="LOC_MULTIPLAYER_UNKNOWN" Language="ko_KR">
       <Text>알 수 없음</Text>
     </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_UNKNOWN_MAP_SIZE" Language="ko_KR">
+      <Text>알 수 없는 지도 크기</Text>
+    </Replace>
     <Replace Tag="LOC_MULTIPLAYER_TRUE" Language="ko_KR">
       <Text>켜기</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_FALSE" Language="ko_KR">
       <Text>끄기</Text>
+    </Replace>
+    <Replace Tag="LOC_LOBBY_GAME_STARTED_TOOLTIP" Language="ko_KR">
+      <Text>게임 진행 중</Text>
+    </Replace>
+    <Replace Tag="LOC_LOBBY_GAME_LOADING_SAVE_TOOLTIP" Language="ko_KR">
+      <Text>저장 게임 불러오는 중</Text>
+    </Replace>
+    <Replace Tag="LOC_LOBBY_GAME_YOUR_TURN_TOOLTIP" Language="ko_KR">
+      <Text>게임 내 플레이어 턴입니다.</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_LIST" Language="ko_KR">
       <Text>목록</Text>
@@ -25002,6 +25145,12 @@
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_START" Language="ko_KR">
       <Text>시작</Text>
+    </Replace>
+    <Replace Tag="LOC_LOBBY_MY_GAMES" Language="ko_KR">
+      <Text>내 게임</Text>
+    </Replace>
+    <Replace Tag="LOC_LOBBY_OPEN_GAMES" Language="ko_KR">
+      <Text>진행 중인 게임</Text>
     </Replace>
     <Replace Tag="LOC_CONFIRM_KEY_BINDING" Language="ko_KR">
       <Text>단축기 설정 확정</Text>
@@ -25056,6 +25205,12 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_AUTO_END_TURN" Language="ko_KR">
       <Text>자동 턴 종료:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_CITY_RANGE_ATTACK" Language="ko_KR">
+      <Text>도시 원거리 공격 턴 차단:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_CITY_RANGE_ATTACK_TOOLTIP" Language="ko_KR">
+      <Text>활성화하면 도시 원거리 공격으로 인해 턴이 차단됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_TIME_OF_DAY" Language="ko_KR">
       <Text>게임 내 시간:</Text>
@@ -25139,10 +25294,13 @@
       <Text>게임 콘텐츠 구성 중...</Text>
     </Replace>
     <Replace Tag="LOC_MP_ROOM_FULL" Language="ko_KR">
-      <Text>게임 정원이 다 찼습니다.</Text>
+      <Text>게임에 참가할 수 없습니다. 게임 정원이 다 찼습니다.</Text>
     </Replace>
     <Replace Tag="LOC_MP_JOIN_FAILED" Language="ko_KR">
       <Text>멀티 플레이 세션 참가 중 오류가 발생했습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_MP_ROOM_GAME_STARTED" Language="ko_KR">
+      <Text>게임에 참가할 수 없습니다. 게임이 이미 시작되었습니다.</Text>
     </Replace>
     <Replace Tag="LOC_MP_SWAP_PLAYER" Language="ko_KR">
       <Text>교환</Text>
@@ -25191,12 +25349,6 @@
     </Replace>
     <Replace Tag="LOC_SLOTTYPE_OPEN_TT" Language="ko_KR">
       <Text>열린 슬롯에는 플레이어가 참가할 수 있습니다.</Text>
-    </Replace>
-    <Replace Tag="LOC_SLOTTYPE_HUMANREQ" Language="ko_KR">
-      <Text>인간 필요</Text>
-    </Replace>
-    <Replace Tag="LOC_SLOTTYPE_HUMANREQ_TT" Language="ko_KR">
-      <Text>게임을 시작하려면 필요한 슬롯에 인간 플레이어가 참여해야 합니다.</Text>
     </Replace>
     <Replace Tag="LOC_SLOTLABEL_HOST" Language="ko_KR">
       <Text>[ICON_Host] 주최자</Text>
@@ -25449,6 +25601,9 @@
     </Replace>
     <Replace Tag="LOC_SETUP_CREATE_GAME" Language="ko_KR">
       <Text>새 게임 생성</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_CHOOSE_RULESET" Language="ko_KR">
+      <Text>룰셋 선택</Text>
     </Replace>
     <Replace Tag="LOC_SETUP_CHOOSE_SCENARIO" Language="ko_KR">
       <Text>시나리오 선택</Text>
@@ -26077,6 +26232,9 @@
     <Replace Tag="LOC_MAINMENU_MULTIPLAYER_TT" Language="ko_KR">
       <Text>인터넷, 네트워크 및 핫시트 게임을 설정하거나, 이에 참가할 수 있습니다.</Text>
     </Replace>
+    <Replace Tag="LOC_MAINMENU_MULTIPLAYER_HAVE_CLOUD_TURN_TT" Language="ko_KR">
+      <Text>클라우드 게임 내 플레이어 턴입니다.[NEWLINE][NEWLINE]인터넷, 네트워크 및 핫시트 게임을 설정하거나 참가할 수 있습니다.</Text>
+    </Replace>
     <Replace Tag="LOC_MAINMENU_GAME_OPTIONS_TT" Language="ko_KR">
       <Text>그래픽, 오디오, 단축키 등을 위한 설정입니다.</Text>
     </Replace>
@@ -26244,9 +26402,6 @@
     </Replace>
     <Replace Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_DLC" Language="ko_KR">
       <Text>저장된 게임에 필요한 DLC 패키지 하나 이상이 설치되지 않았습니다.</Text>
-    </Replace>
-    <Replace Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_EXPANSION" Language="ko_KR">
-      <Text>저장된 게임에 필요한 확장 패키지 하나 이상이 설치되지 않았습니다.</Text>
     </Replace>
     <Replace Tag="LOC_TEAM_NAME_SELECT_TITLE" Language="ko_KR">
       <Text>팀 이름</Text>
@@ -26669,7 +26824,7 @@
       <Text>인쇄술과 관련하여 [ICON_TechBoosted] 유레카를 촉발합니다.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_JAMES_OF_ST_GEORGE_ACTIVE" Language="ko_KR">
-      <Text>이 도시에 즉시 고대 성벽과 중세 성벽을 건설하고 턴당 성벽 유지를 위한 [ICON_Gold] 금을 제공합니다.</Text>
+      <Text>이 도시에 즉시 고대 성벽과 중세 성벽을 건설합니다.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_JAMES_WATT_ACTIVE" Language="ko_KR">
       <Text>해당 특수지구에 공장과 작업장을 즉시 건설하고, 지어진 공장은 추가로 [ICON_Production] 생산력 +2를 제공합니다.</Text>
@@ -26762,22 +26917,22 @@
       <Text>건설자의 농장 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Food] 식량 +1을 제공합니다. 초원 또는 평원에 지어야 합니다.[NEWLINE][NEWLINE]농장 옆에 다른 농장을 지으면 주거공간 보너스가 부여됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_MINE_DESCRIPTION" Language="ko_KR">
-      <Text>건설자의 광산 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Production] 생산력 +1을 제공합니다. 매력도 -1이 적용됩니다. 언덕 또는 특정 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 또는 전략 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
+      <Text>건설자의 광산 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Production] 생산력 +1을 제공합니다. 매력도 -1이 적용됩니다. 언덕 또는 유효한 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 또는 전략 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_QUARRY_DESCRIPTION" Language="ko_KR">
-      <Text>건설자의 채석장 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Production] 생산력 +1을 제공합니다. 매력도 -1이 적용됩니다. [ICON_RESOURCE_STONE] 석재, [ICON_RESOURCE_MARBLE] 대리석 또는 [ICON_RESOURCE_GYPSUM] 석고 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
+      <Text>건설자의 채석장 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Production] 생산력 +1을 제공합니다. 매력도 -1이 적용됩니다. 유효한 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_FISHING_BOATS_DESCRIPTION" Language="ko_KR">
-      <Text>건설자의 어선 생산 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Food] 식량 +1을 제공합니다. 해안가 또는 해양 자원 위에 지어야 합니다.[NEWLINE][NEWLINE][ICON_RESOURCE_PEARLS] 진주 또는 [ICON_RESOURCE_WHALES] 고래 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
+      <Text>건설자의 어선 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Food] 식량 +1을 제공합니다. 유효한 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_PASTURE_DESCRIPTION" Language="ko_KR">
-      <Text>건설자의 목장 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Production] 생산력 +1을 제공합니다. [ICON_RESOURCE_CATTLE] 소, [ICON_RESOURCE_SHEEP] 양, 또는 [ICON_RESOURCE_HORSES] 말 자원 위에 지어야 합니다.[NEWLINE][NEWLINE][ICON_RESOURCE_HORSES] 말 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
+      <Text>건설자의 목장 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Production] 생산력 +1을 제공합니다. 유효한 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]전략 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_PLANTATION_DESCRIPTION" Language="ko_KR">
-      <Text>건설자의 재배지 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Gold] 금 +1을 제공합니다. [ICON_RESOURCE_BANANAS] 바나나, [ICON_RESOURCE_CITRUS] 감귤, [ICON_RESOURCE_COCOA] 코코아, [ICON_RESOURCE_COFFEE] 커피, [ICON_RESOURCE_COTTON] 목화, [ICON_RESOURCE_DYES] 염료, [ICON_RESOURCE_SILK] 비단, [ICON_RESOURCE_SPICES] 향신료, [ICON_RESOURCE_SUGAR] 설탕, [ICON_RESOURCE_TEA] 차, [ICON_RESOURCE_TOBACCO] 담배 또는 [ICON_RESOURCE_WINE] 와인 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
+      <Text>건설자의 재배지 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Gold] 금 +2를 제공합니다. 유효한 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_CAMP_DESCRIPTION" Language="ko_KR">
-      <Text>건설자의 주둔지 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Gold] 금 +1을 제공합니다. [ICON_RESOURCE_FURS] 모피, [ICON_RESOURCE_IVORY] 상아, [ICON_RESOURCE_DEER] 사슴, 또는 [ICON_RESOURCE_TRUFFLES] 송로버섯 자원 위에 지어야 합니다.[NEWLINE][NEWLINE][ICON_RESOURCE_FURS] 모피, [ICON_RESOURCE_TRUFFLES] 송로버섯이나 [ICON_RESOURCE_IVORY] 상아와 같은 사치 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
+      <Text>건설자의 야영지 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Gold] 금 +1을 제공합니다. 유효한 자원 위에 지어야 합니다.[NEWLINE][NEWLINE]사치 자원 위에 지으면 도시가 해당 자원을 사용할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_LUMBER_MILL_DESCRIPTION" Language="ko_KR">
       <Text>건설자의 제재소 건설 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Production] 생산력 +1을 제공합니다. 강과 인접한 경우 [ICON_Production] 생산력 +1을 추가 제공합니다. 숲에만 건설할 수 있습니다.</Text>
@@ -26807,7 +26962,7 @@
       <Text>스키타이 특유의 쿠르간을 지을 수 있는 건설자의 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Faith] 신앙 +1, [ICON_Gold] 금 +1을 제공합니다. 인접한 목장마다 [ICON_Faith] 신앙 +1을 추가 제공합니다. 언덕에 지을 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_MISSION_DESCRIPTION" Language="ko_KR">
-      <Text>스페인 특유의 전도관을 지을 수 있는 건설자의 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Faith] 신앙 +2를 제공합니다. [ICON_Capital] 수도와 다른 대륙에 있으면 추가 [ICON_Faith] 신앙 +2를 제공합니다. 캠퍼스 특수지구 옆에 지으면 [ICON_Science] 과학 +1을 제공합니다.</Text>
+      <Text>스페인 특유의 전도관을 지을 수 있는 건설자의 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Faith] 신앙 +2를 제공합니다. [ICON_Capital] 수도와 다른 대륙에 있으면 추가 [ICON_Faith] 신앙 +2를 제공합니다. 캠퍼스 특수지구 옆에 지으면 [ICON_Science] 과학 +2를 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_ROMAN_FORT_DESCRIPTION" Language="ko_KR">
       <Text>로마 특유의 로마 요새를 지을 수 있는 로마 군단병의 능력을  잠금 해제합니다.[NEWLINE][NEWLINE]점유 유닛은 [ICON_Strength] 방어력 +4 및 자동으로 2턴의 방어 태세를 얻습니다.</Text>
@@ -27097,6 +27252,9 @@
     <Replace Tag="LOC_GAME_MENU_QUIT_WARNING" Language="ko_KR">
       <Text>게임을 종료하시겠습니까?</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_MENU_END_GAME_WARNING" Language="ko_KR">
+      <Text>이 멀티 플레이 게임을 삭제하시겠습니까? 모든 플레이어의 게임이 종료됩니다.</Text>
+    </Replace>
     <Replace Tag="LOC_GAME_MENU_SHUTDOWN_WARNING" Language="ko_KR">
       <Text>시드 마이어의 문명 VI를 종료하시겠습니까?</Text>
     </Replace>
@@ -27105,6 +27263,9 @@
     </Replace>
     <Replace Tag="LOC_GAME_MENU_RETIRE_WARNING" Language="ko_KR">
       <Text>정말 퇴장하시겠습니까?</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_MENU_RESTART_WARNING" Language="ko_KR">
+      <Text>정말 재시작하시겠습니까?</Text>
     </Replace>
     <Replace Tag="LOC_COMMON_DIALOG_YES_BUTTON_CAPTION" Language="ko_KR">
       <Text>예</Text>
@@ -27233,7 +27394,7 @@
       <Text>고고학자가 고국 박물관에 어떤 문명의 [ICON_GreatWork_Artifact] 유물을 보낼지 결정해야 합니다.</Text>
     </Replace>
     <Replace Tag="LOC_ACTION_PANEL_CITY_RANGED_ATTACK_TOOLTIP" Language="ko_KR">
-      <Text>도시가 원거리 공격을 가할 수 있습니다.</Text>
+      <Text>도시가 원거리 공격을 가할 수 있습니다. 현재 원거리 공격을 무시하려면 마우스 오른쪽을 버튼을 클릭하십시오.</Text>
     </Replace>
     <Replace Tag="LOC_ACTION_PANEL_NEEDS_PRODUCTION" Language="ko_KR">
       <Text>생산 품목 선택</Text>
@@ -27422,7 +27583,7 @@
       <Text>기본 전투력</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_PREVIEW_EMBARKED_UNIT_STRENGTH" Language="ko_KR">
-      <Text>[COLOR_RED]승선한 동안 전투력 저하</Text>
+      <Text>[COLOR_RED]승선한 동안 기본 전투력 조정</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_PREVIEW_DEFENDING_INTERCEPTOR_AIRCRAFT" Language="ko_KR">
       <Text>[COLOR_RED]방어하는 요격기[ENDCOLOR]</Text>
@@ -27502,14 +27663,35 @@
     <Replace Tag="LOC_PLAYER_CHANGE_POPUP_TITLE_SUFFIX" Language="ko_KR">
       <Text>의 턴</Text>
     </Replace>
+    <Replace Tag="LOC_PLAYER_CHANGE_POPUP_TITLE_PLAYBYCLOUD" Language="ko_KR">
+      <Text>턴을 클라우드에 업로드 중</Text>
+    </Replace>
     <Replace Tag="LOC_PLAYER_CHANGE_POPUP_START_TURN" Language="ko_KR">
       <Text>턴 시작</Text>
+    </Replace>
+    <Replace Tag="LOC_PLAYER_CHANGE_POPUP_WAITING_FOR_CLOUD_UPLOAD" Language="ko_KR">
+      <Text>게임 저장 파일을 업로드 중입니다. 잠시만 기다려주십시오...</Text>
     </Replace>
     <Replace Tag="LOC_PLAYER_CHANGE_POPUP_SAVE_GAME" Language="ko_KR">
       <Text>게임 저장</Text>
     </Replace>
     <Replace Tag="LOC_PLAYER_CHANGE_POPUP_PASSWORD" Language="ko_KR">
       <Text>비밀번호</Text>
+    </Replace>
+    <Replace Tag="LOC_PLAYER_CHANGE_POPUP_CANCEL_UPLOAD" Language="ko_KR">
+      <Text>취소</Text>
+    </Replace>
+    <Replace Tag="LOC_PLAYER_CHANGE_POPUP_CANCEL_UPLOAD_TOOLTIP" Language="ko_KR">
+      <Text>턴 넘기기를 중단하십시오. 이 턴에 대한 진행도를 잃게 됩니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_PLAYER_CHANGE_UPLOAD_IN_PROGRESS" Language="ko_KR">
+      <Text>업로드 진행 중</Text>
+    </Replace>
+    <Replace Tag="LOC_PLAYER_CHANGE_UPLOAD_FAILED" Language="ko_KR">
+      <Text>업로드에 실패했습니다. 다시 시도하십시오.</Text>
+    </Replace>
+    <Replace Tag="LOC_PLAYER_CHANGE_UPLOAD_SUCCESS" Language="ko_KR">
+      <Text>업로드가 완료되었습니다. 주 메뉴로 돌아갑니다.</Text>
     </Replace>
     <Replace Tag="LOC_HUD_UNIT_ACTION_REQUIRES_ADJACENT_SAME_UNIT" Language="ko_KR">
       <Text>같은 종류의 유닛이 인접해 있어야 합니다.</Text>
@@ -27600,6 +27782,9 @@
     </Replace>
     <Replace Tag="LOC_HUD_CITY_AMENITIES_FROM_STARTING_ERA" Language="ko_KR">
       <Text>시작 시대에 의한 쾌적도:</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_AMENITIES_FROM_IMPROVEMENTS" Language="ko_KR">
+      <Text>시설에서 제공하는 쾌적도:</Text>
     </Replace>
     <Replace Tag="LOC_HUD_CITY_AMENITIES_LOST_FROM_WAR_WEARINESS" Language="ko_KR">
       <Text>전쟁 피로도에 의한 쾌적도:</Text>
@@ -28787,7 +28972,7 @@
       <Text>재훈련</Text>
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_REST_REPAIR_DESCRIPTION" Language="ko_KR">
-      <Text>휴식 및 수리</Text>
+      <Text>휴식 및 회복</Text>
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_ROUTE_TO_DESCRIPTION" Language="ko_KR">
       <Text>경로 건설</Text>
@@ -29827,6 +30012,15 @@
     <Replace Tag="LOC_CITY_STATES_QUESTS" Language="ko_KR">
       <Text>퀘스트:</Text>
     </Replace>
+    <Replace Tag="LOC_CITY_STATES_RELATIONSHIPS" Language="ko_KR">
+      <Text>관계:</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_STATES_CIVILIZATION_HEADER" Language="ko_KR">
+      <Text>문명</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_STATES_CITY_STATES" Language="ko_KR">
+      <Text>도시 국가</Text>
+    </Replace>
     <Replace Tag="LOC_CITY_STATES_REMOVE_AN_ENVOY" Language="ko_KR">
       <Text>이 도시 국가와 플레이어 문명 사이에 제안된 [ICON_Envoy] 사절을 제거합니다.</Text>
     </Replace>
@@ -29862,6 +30056,9 @@
     </Replace>
     <Replace Tag="LOC_CITY_STATES_TITLE" Language="ko_KR">
       <Text>도시 국가</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_STATES_TURNS_WAR_NO_PEACE" Language="ko_KR">
+      <Text>현재 전쟁 중입니다.[NEWLINE](협정을 맺을 수 없습니다.)</Text>
     </Replace>
     <Replace Tag="LOC_CITY_STATES_TYPE" Language="ko_KR">
       <Text>유형:</Text>
@@ -30157,6 +30354,9 @@
     <Replace Tag="LOC_ROUTECHOOSER_BEGIN_ROUTE_BUTTON" Language="ko_KR">
       <Text>교역 시작하기</Text>
     </Replace>
+    <Replace Tag="LOC_ROUTECHOOSER_REPEAT_ROUTE_BUTTON" Language="ko_KR">
+      <Text>경로 반복</Text>
+    </Replace>
     <Replace Tag="LOC_ROUTECHOOSER_FILTER_SHOWROUTES" Language="ko_KR">
       <Text>교역로 보기</Text>
     </Replace>
@@ -30210,6 +30410,9 @@
     </Replace>
     <Replace Tag="LOC_DECLARE_WAR_DEALS_TOOLTIP" Language="ko_KR">
       <Text>파기된 협정:</Text>
+    </Replace>
+    <Replace Tag="LOC_JOINT_WAR_CANNOT_EDIT_THEIRS_TOOLTIP" Language="ko_KR">
+      <Text>제안에서 합동 전쟁 대상을 변경만 할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_VICTORYSTATUS_PANEL_HEADER" Language="ko_KR">
       <Text>승리 현황</Text>
@@ -30268,6 +30471,9 @@
     <Replace Tag="TXT_KEY_MP_LAST_PLAYER" Language="ko_KR">
       <Text>게임에 남은 유일한 인간 플레이어가 되었습니다.</Text>
     </Replace>
+    <Replace Tag="TXT_KEY_MP_LAST_PLAYER_TITLE" Language="ko_KR">
+      <Text>혼자서 외로이</Text>
+    </Replace>
     <Replace Tag="LOC_PARTIALSCREEN_CITYSTATES_TOOLTIP" Language="ko_KR">
       <Text>도시 국가[NEWLINE][NEWLINE]만나본 모든 도시 국가를 보고, [ICON_Envoy] 사절을 관리하고, 획득한 보너스를 볼 수 있습니다.</Text>
     </Replace>
@@ -30309,6 +30515,9 @@
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_AMOUNT" Language="ko_KR">
       <Text>수량</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_ADJACENCY_BONUS" Language="ko_KR">
+      <Text>인접 보너스</Text>
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TITLE" Language="ko_KR">
       <Text>보고서</Text>
@@ -30629,7 +30838,7 @@
       <Text>문화의 가치는 그 문화의 업적으로 측정되는 것이 아닙니다. 그 업적이 얼마나 오래가는지, 그리고 어떻게 기억되는지로 측정되는 것입니다. 우리 민족이 당신의 영감을 통해 이룬 아름다움은 우리 문화를 영원히 지속되게 할 것입니다.</Text>
     </Replace>
     <Replace Tag="LOC_VICTORY_DOMINATION_TEXT" Language="ko_KR">
-      <Text>비록 세월이 지나며 보이는 면모는 달라질 수 있지만, 역사는 승자가 기록한다는 점은 불변합니다. 당신의 오늘날의 활약으로 백성의 영광스런 미래가 굳건해졌습니다.</Text>
+      <Text>비록 세월이 지나며 보이는 면모는 달라질 수 있지만, 역사는 승자가 기록한다는 점은 불변합니다. 오늘날의 행실을 통해 백성이 미래에 영광을 얻을 것을 보장하셨습니다.</Text>
     </Replace>
     <Replace Tag="LOC_VICTORY_DEFAULT_TEXT" Language="ko_KR">
       <Text>모두가 패배했습니다... 그러므로 플레이어가 우승했습니다!</Text>
@@ -31214,19 +31423,19 @@
       <Text>종교를 창시했고 현재 전쟁에 참여하지 않는 각 문명(인도 포함)을 접할 때마다 [ICON_Faith] 신앙 +5를 제공합니다. 상대 문명은 간디와 전투 시 전쟁 피로도가 2배 증가합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_THUNDERBOLT_DESCRIPTION" Language="ko_KR">
-      <Text>모든 해상 근접 유닛이 해안 강습을 감행할 수 있게 됩니다.</Text>
+      <Text>모든 해상 근접 유닛이 해안 강습을 감행할 수 있게 되며, [ICON_PRODUCTION] 생산력 +50%를 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_FIRST_EMPEROR_DESCRIPTION" Language="ko_KR">
       <Text>고대 및 고전 시대 불가사의를 건설하는 경우 건설자의 건설 횟수를 소진하여 원래 불가사의 비용의 15%를 기여할 수 있습니다. 건설자에게 1회의 추가 건설 횟수가 부여됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_FLYING_SQUADRON_DESCRIPTION" Language="ko_KR">
-      <Text>접하는 모든 문명마다 [ICON_VisLimited] 외교 시정 레벨이 평소보다 1 높아집니다. 성 기술 연구로 스파이를 1명 더 생성할 수 있습니다.</Text>
+      <Text>접하는 모든 문명마다 [ICON_VisLimited] 외교 시정 레벨이 평소보다 1 높아집니다. 성 기술 연구로 무료 스파이를 1명 더 받으며 스파이를 더 생성할 수 있는 능력을 얻습니다. 모든 스파이는 무료 진급을 가진 요원으로 시작합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_TRAJANS_COLUMN_DESCRIPTION" Language="ko_KR">
       <Text>모든 도시가 추가적인 도심부 건물을 가지고 시작합니다. 고대 시대부터 시작할 경우 기념비 건물을 가지고 시작합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_KILLER_OF_CYRUS_DESCRIPTION" Language="ko_KR">
-      <Text>부상당한 유닛을 공격할 때 모든 유닛은 [ICON_Strength] 전투력 +5를 획득합니다. 적 유닛을 제거하면 체력이 50 회복됩니다.</Text>
+      <Text>부상당한 유닛을 공격할 때 모든 유닛은 [ICON_Strength] 전투력 +5를 획득합니다. 적 유닛을 제거하면 체력이 30 회복됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_MAGNANIMOUS_DESCRIPTION" Language="ko_KR">
       <Text>[ICON_GreatPerson] 위인을 영입하거나 후원한 후에는 소비한 [ICON_GreatPerson] 위인 점수의 20%를 돌려받습니다.</Text>
@@ -31471,6 +31680,12 @@
     <Replace Tag="LOC_NOTIFICATION_COMMAND_UNITS_SUMMARY" Language="ko_KR">
       <Text>유닛을 이동시키거나 활동을 수행하게 하십시오.</Text>
     </Replace>
+    <Replace Tag="LOC_NOTIFICATION_CITY_RANGE_ATTACK_MESSAGE" Language="ko_KR">
+      <Text>도시 원거리 공격</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_CITY_RANGE_ATTACK_SUMMARY" Language="ko_KR">
+      <Text>도시가 원거리 공격을 가할 수 있습니다.</Text>
+    </Replace>
     <Replace Tag="LOC_NOTIFICATION_CONSIDER_GOVERNMENT_CHANGE_MESSAGE" Language="ko_KR">
       <Text>정부 변경 고려</Text>
     </Replace>
@@ -31711,6 +31926,12 @@
     <Replace Tag="LOC_NOTIFICATION_SEQUENTIAL_TURNS_TT" Language="ko_KR">
       <Text>현재 다른 플레이어와 전쟁 중입니다. 전쟁이 끝날 때까지, 참전 중인 모든 문명과 차례대로 턴을 진행하게 됩니다.</Text>
     </Replace>
+    <Replace Tag="LOC_NOTIFICATION_TECH_BOOST_MESSAGE" Language="ko_KR">
+      <Text>기술 상승</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_CIVIC_BOOST_MESSAGE" Language="ko_KR">
+      <Text>사회 제도 상승</Text>
+    </Replace>
     <Replace Tag="LOC_NOTIFICATION_RELIC_CREATED_MESSAGE" Language="ko_KR">
       <Text>성유물 생성됨</Text>
     </Replace>
@@ -31878,6 +32099,24 @@
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_TILE_LOST_CULTURE_BOMB_MESSAGE" Language="ko_KR">
       <Text>영토 손실</Text>
+    </Replace>
+    <Replace Tag="LOC_NUBIA_MOD_TITLE" Language="ko_KR">
+      <Text>DLC: 누비아 문명 팩</Text>
+    </Replace>
+    <Replace Tag="LOC_NUBIA_MOD_TEASER" Language="ko_KR">
+      <Text>새로운 문명 및 지도자 - 누비아의 아마니토레 여왕</Text>
+    </Replace>
+    <Replace Tag="LOC_NUBIA_MOD_DESCRIPTION" Language="ko_KR">
+      <Text>새로운 문명과 지도자는 물론 새로운 세계 불가사의도 포함합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_NUBIA_SCENARIO_TITLE" Language="ko_KR">
+      <Text>시나리오: 나일 강의 선물</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_NUBIA_SCENARIO_TEASER" Language="ko_KR">
+      <Text>125턴 내에 나일 강 계곡 지역의 가장 강력한 제국에 도전해 보십시오.</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_NUBIA_SCENARIO_DESCRIPTION" Language="ko_KR">
+      <Text>이 125턴 제한 시나리오에서 나일 강가 계곡 상하 지역으로 제국을 확장하여 위대한 신 아문의 은총을 가장 많이 받는 민족의 자리를 차지해야 합니다. 아문 신을 찬양하는 신전 7개를 지으면 승리합니다!</Text>
     </Replace>
     <Replace Tag="LOC_POLAND_JADWIGA_MOD_TITLE" Language="ko_KR">
       <Text>DLC: 폴란드 문명 팩</Text>
@@ -32246,7 +32485,7 @@
       <Text>종교를 2번 더 추가로 전파할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_PROSELYTIZER_DESCRIPTION" Language="ko_KR">
-      <Text>종교 전파로 목표 도시의 타 종교를 제거합니다.</Text>
+      <Text>종교 전파로 목표 도시의 타 종교 영향력을 75% 제거합니다.</Text>
     </Replace>
     <Replace Tag="LOC_PROMOTION_TRANSLATOR_DESCRIPTION" Language="ko_KR">
       <Text>다른 문명의 도시에서 종교 전파력이 3배로 증가합니다.</Text>
@@ -33537,13 +33776,13 @@
       <Text>광산 시설에 [ICON_Production] 생산력 +1.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_CASTLES_DESCRIPTION" Language="ko_KR">
-      <Text>만리장성 시설 인접 보너스 [ICON_Culture] 문화를 제공합니다. 카트린 데메디치로 플레이하는 경우 추가 스파이를 생성할 수 있는 능력을 얻습니다.</Text>
+      <Text>만리장성 시설 인접 보너스 [ICON_Culture] 문화를 제공합니다. 카트린 데메디치로 플레이하는 경우 스파이를 무료로 얻습니다.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_CARTOGRAPHY_DESCRIPTION" Language="ko_KR">
-      <Text>어선 시설에서 [ICON_Gold] 금 +1을 제공합니다. 모든 해상 및 승선 유닛이 해양 타일을 항해 가능합니다. 승선 유닛은 [ICON_Movement] 이동력 +1을 획득합니다.</Text>
+      <Text>어선 시설에서 [ICON_Gold] 금 +2를 제공합니다. 모든 해상 및 승선 유닛이 해양 타일을 항해 가능합니다. 승선 유닛은 [ICON_Movement] 이동력 +1을 획득합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_BANKING_DESCRIPTION" Language="ko_KR">
-      <Text>채석장 시설의 [ICON_Gold] 금 +1.</Text>
+      <Text>채석장 시설에서 [ICON_Gold] 금 +2.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_PRINTING_DESCRIPTION" Language="ko_KR">
       <Text>다른 모든 문명에 관한 외교 시정 레벨을 한 단계 더 높입니다. [ICON_GreatWork_Writing] 걸작 저서의 모든 [ICON_Tourism] 관광 생산량이 2배가 됩니다.</Text>
@@ -33564,13 +33803,13 @@
       <Text>승선 유닛의 [ICON_Movement] 이동력 +2.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_FLIGHT_DESCRIPTION" Language="ko_KR">
-      <Text>[ICON_Culture] 문화를 제공하는 모든 시설에 [ICON_Tourism] 관광 보너스를 부여합니다.</Text>
+      <Text>문화를 [ICON_Culture] 제공하는 모든 시설에서 [ICON_Tourism] 관광을 얻습니다. 생성되는 [ICON_Tourism] 관광의 양은 시설의 [ICON_Culture] 문화 생산량과 동일합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_REPLACEABLE_PARTS_DESCRIPTION" Language="ko_KR">
       <Text>농장 시설을 기계화 농장으로 업그레이드합니다. 인접한 각 농장 시설에 [ICON_Food] 식량 인접 보너스 +1을 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_STEEL_DESCRIPTION" Language="ko_KR">
-      <Text>제재소 시설에서 [ICON_Production] 생산력 +1.</Text>
+      <Text>제재소 시설로부터 [ICON_Production] 생산력 +1. 플레이어의 모든 도시에 자동으로 요새 전투력 200을 부여하고 원거리 공격을 가능하게 하는 도시 방어를 잠금 해제합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_COMBUSTION_DESCRIPTION" Language="ko_KR">
       <Text>승선 유닛의 [ICON_Movement] 이동력 +1.</Text>
@@ -33959,6 +34198,9 @@
     <Replace Tag="LOC_DISTRICT_NAME" Language="ko_KR">
       <Text>특수지구</Text>
     </Replace>
+    <Replace Tag="LOC_ENVOY_NAME" Language="ko_KR">
+      <Text>사절</Text>
+    </Replace>
     <Replace Tag="LOC_ERA_NAME" Language="ko_KR">
       <Text>시대</Text>
     </Replace>
@@ -33979,6 +34221,9 @@
     </Replace>
     <Replace Tag="LOC_ROUTE_NAME" Language="ko_KR">
       <Text>경로</Text>
+    </Replace>
+    <Replace Tag="LOC_SPY_NAME" Language="ko_KR">
+      <Text>스파이</Text>
     </Replace>
     <Replace Tag="LOC_TECHNOLOGY_NAME" Language="ko_KR">
       <Text>기술</Text>
@@ -34512,7 +34757,7 @@
       <Text>건설자</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_USAGE" Language="ko_KR">
-      <Text>사용처</Text>
+      <Text>사용</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_USAGE_UNLOCKS_BUILDINGS" Language="ko_KR">
       <Text>건물 잠금 해제</Text>
@@ -34653,13 +34898,13 @@
       <Text>다음 플레이어</Text>
     </Replace>
     <Replace Tag="LOC_UI_ENDGAME_VICTORY_INFO" Language="ko_KR">
-      <Text>정보</Text>
+      <Text>결과</Text>
     </Replace>
     <Replace Tag="LOC_UI_ENDGAME_RANKING" Language="ko_KR">
       <Text>순위</Text>
     </Replace>
     <Replace Tag="LOC_UI_ENDGAME_REPLAY" Language="ko_KR">
-      <Text>통계</Text>
+      <Text>그래프</Text>
     </Replace>
     <Replace Tag="LOC_UI_ENDGAME_CHAT" Language="ko_KR">
       <Text>채팅</Text>
@@ -35486,6 +35731,9 @@
     <Replace Tag="LOC_OPTIONS_AUTO_UNIT_CYCLING" Language="ko_KR">
       <Text>자동 유닛 순환:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_MINIMAP_SIZE" Language="ko_KR">
+      <Text>미니맵 크기:</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_PLOT_TOOLTIP_DELAY" Language="ko_KR">
       <Text>타일 툴팁 지연:</Text>
     </Replace>
@@ -35669,6 +35917,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLERESOURCES" Language="ko_KR">
       <Text>자원 아이콘 전환</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLE2DVIEW" Language="ko_KR">
+      <Text>전략적 보기 화면 전환</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_ENDTURN_HELP" Language="ko_KR">
       <Text>가능한 경우 플레이어 턴을 종료합니다.</Text>
     </Replace>
@@ -35713,6 +35964,9 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLERESOURCES_HELP" Language="ko_KR">
       <Text>자원 아이콘의 가시성을 전환합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLE2DVIEW_HELP" Language="ko_KR">
+      <Text>표준 보기 화면과 전략적(2D) 보기 화면 간 게임을 전환합니다.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_CATEGORY_ONLINE" Language="ko_KR">
       <Text>온라인 행동:</Text>
@@ -36294,7 +36548,7 @@
       <Text>각 [ICON_GreatArtist] 위대한 예술가는 활성화 시 [ICON_GreatWork_Landscape] 걸작 예술품을 생성합니다. 위인 패널에서 추가 정보 및 플레이어 진척도를 확인할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_GREAT_MUSICIAN_DESCRIPTION" Language="ko_KR">
-      <Text>각 [ICON_GreatMusician] 위대한 음악가는 활성화 시 걸작 음악을 생성합니다. 위인 패널에서 추가 정보 및 플레이어 진척도를 확인할 수 있습니다.</Text>
+      <Text>각 [ICON_GreatMusician] 위대한 음악가는 활성화 시 [ICON_GreatWork_Music] 걸작 음악을 생성합니다. 위인 패널에서 추가 정보 및 플레이어 진척도를 확인할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_SCOUT_DESCRIPTION" Language="ko_KR">
       <Text>빠르게 이동하는 고대 시대 정찰 유닛입니다.</Text>
@@ -37010,6 +37264,9 @@
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_FEATURE" Language="ko_KR">
       <Text>특성</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_FEATURE_DIRECTION" Language="ko_KR">
+      <Text>방향 포함</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_RESOURCE" Language="ko_KR">
       <Text>자원</Text>
     </Replace>
@@ -37129,6 +37386,39 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_REMOVE_BUTTON" Language="ko_KR">
       <Text>삭제</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_FEATURE" Language="ko_KR">
+      <Text>특성 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_DIRECTION" Language="ko_KR">
+      <Text>방향 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DIRECTION_NORTHEAST" Language="ko_KR">
+      <Text>북동쪽</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DIRECTION_EAST" Language="ko_KR">
+      <Text>동쪽</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DIRECTION_SOUTHEAST" Language="ko_KR">
+      <Text>남동쪽</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DIRECTION_SOUTHWEST" Language="ko_KR">
+      <Text>남서쪽</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DIRECTION_WEST" Language="ko_KR">
+      <Text>서쪽</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DIRECTION_NORTHWEST" Language="ko_KR">
+      <Text>북서쪽</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_RESOURCE" Language="ko_KR">
+      <Text>자원 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_IMPROVEMENT" Language="ko_KR">
+      <Text>시설 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_ROUTE" Language="ko_KR">
+      <Text>경로 없음</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="ko_KR">
       <Text>문명의 여명</Text>
@@ -37799,6 +38089,36 @@
     <Replace Tag="LOC_DIPLO_CHOICE_GOLD_INFO" Language="ko_KR">
       <Text>비용: [ICON_Gold] 금 {1_Cost}</Text>
     </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_FRIENDLY_TEAM_MEMBERS" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]팀 멤버 중 한 명이 해당 플레이어 팀 멤버와 친선 또는 동맹 관계에 있습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_NO_DENOUNCEMENT" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]아직 해당 플레이어를 비난하지 않았습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_DENOUNCEMENT_TOO_RECENT" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]공개 비난 후 {2_Turns}턴을 기다려야 합니다.({3_Remaining}턴 후 사용 가능)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_DEFENSIVE_PACT" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]이 지도자와 방위 협정을 맺었습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_CASUS_BELLI_NOT_MET" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE][COLOR_RED]이 개전 이유를 사용할 조건을 충족시키지 못했습니다.[ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_PEACE_TOO_RECENT" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]평화 조약 체결 후 {2_Turns}턴을 기다려야 합니다.({3_Remaining}턴 후 사용 가능)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_TOO_EARLY" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]이 게임에서 주요 문명과 전쟁을 선포하기까지 {2_TurnNumber}턴을 기다려야 합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_INSUFFICIENT_GOLD" Language="ko_KR">
+      <Text>{1_ActionType} 불가[NEWLINE][ICON_Gold] 금이 {2_GoldRequirement}만큼 필요합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_TOO_RECENT" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]전쟁 선포 후 {2_Turns}턴을 기다려야 합니다.({3_Remaining}턴 후 사용 가능)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_WITHOUT_END" Language="ko_KR">
+      <Text>{1_WarActionType} 불가[NEWLINE]이 게임에서 전쟁은 중단할 수 없습니다.</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_MVEMBA_ANY" Language="ko_KR">
       <Text>{LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_MVEMBA_ANY}</Text>
     </Replace>
@@ -38251,6 +38571,9 @@
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_DEFAULT_GAME_NAME" Language="ko_KR">
       <Text>{1_PlayerName}의 게임</Text>
+    </Replace>
+    <Replace Tag="LOC_LOBBY_GAME_NAME_YOUR_TURN" Language="ko_KR">
+      <Text>[ICON_Exclamation] {1_gameName}</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_DEFAULT_TEAM_NAME" Language="ko_KR">
       <Text>{1_Num}</Text>
@@ -38853,7 +39176,7 @@
       <Text>성형 요새 방어력 +{1_Value}</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_PREVIEW_DISTRICT_GARRISONED_UNIT_BONUS" Language="ko_KR">
-      <Text>{2_Unit} 주둔 유닛 +{1_Value}</Text>
+      <Text>{2_Unit} 주둔 +{1_Value}</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_PREVIEW_DISTRICT_PALACE_BONUS" Language="ko_KR">
       <Text>왕궁 근위병으로부터 전투력 +{1_Value}</Text>
@@ -39440,6 +39763,12 @@
     <Replace Tag="LOC_TYPE_TRAIT_AIRSLOTS" Language="ko_KR">
       <Text>항공기 적재량: {1_Amount}대</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ENVOYS" Language="ko_KR">
+      <Text>보상으로 [ICON_Envoy] {1_Count : plural 1?사절; other?사절;} +{1_Count}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_SPIES" Language="ko_KR">
+      <Text>보상으로 {1_Count : plural 1?스파이; other?스파이;} +{1_Count}</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_CITIZENSLOTS" Language="ko_KR">
       <Text>시민 수용력: {1_Amount}</Text>
     </Replace>
@@ -39483,7 +39812,7 @@
       <Text>해당 특수지구의 인접 {3_FromYieldIcon} {4_FromYieldName} 보너스에 준하는 {1_ToYieldIcon} {2_ToYieldName} 보너스가 부여됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS" Language="ko_KR">
-      <Text>인접한 {5_AdjacentObject}에서 {2_YieldIcon} {3_YieldName} {1_Amount: number +#,###.#;-#,###.#}.</Text>
+      <Text>인접한 {5_AdjacentObject} 타일에서 각각 {2_YieldIcon} {3_YieldName} {1_Amount: number +#,###.#;-#,###.#}.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_PER" Language="ko_KR">
       <Text>인접한 {5_AdjacentObject} 타일 {4_Count}개에서 {2_YieldIcon} {3_YieldName} {1_Amount: number +#,###.#;-#,###.#}.</Text>
@@ -39698,6 +40027,9 @@
     <Replace Tag="LOC_CITY_STATES_LEVY_MILITARY_DETAILS" Language="ko_KR">
       <Text>이 도시의 종주국은 {1_GoldCost}만큼의 [ICON_Gold] 금을 지급하면 현재 군사 유닛을 일시적으로 소유할 수 있습니다. {2_TurnLimit} [ICON_Turn] 턴이 지나거나 종주국이 변경되면 도시 국가로 반환됩니다.</Text>
     </Replace>
+    <Replace Tag="LOC_CITY_STATES_AT_WAR_WTIH" Language="ko_KR">
+      <Text>{1_CityState} 도시 국가가 {2_PlayerAtWar} 플레이어와 전쟁 중</Text>
+    </Replace>
     <Replace Tag="LOC_CITY_STATES_NUMBER_ENVOYS" Language="ko_KR">
       <Text>[ICON_Envoy] 사절 {1_NumEnvoys}개</Text>
     </Replace>
@@ -39869,6 +40201,9 @@
     <Replace Tag="LOC_DECLARE_WAR_NUM_DEALS_LOST" Language="ko_KR">
       <Text>{1_NumDeals}개의 협정이 파기됩니다.</Text>
     </Replace>
+    <Replace Tag="LOC_DENOUNCE_POPUP_BODY" Language="ko_KR">
+      <Text>{1_PlayerName}을(를) 공개 비난하시겠습니까?</Text>
+    </Replace>
     <Replace Tag="LOC_VICTORYSTATUS_CULTURE_TOURISTS_NEEDED" Language="ko_KR">
       <Text>문화 승리를 위해 필요한 관광객 수: {1_Percent}</Text>
     </Replace>
@@ -39913,6 +40248,9 @@
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TURNS" Language="ko_KR">
       <Text>{1_Turns : plural 1? 턴; other? 턴;}</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_NUMBER_OF_TURNS" Language="ko_KR">
+      <Text>{1_Turns}턴 동안</Text>
     </Replace>
     <Replace Tag="LOC_PLAYER_YIELD_SCIENCE_FROM_CITIES" Language="ko_KR">
       <Text>도시에서 {Value : number +#.#;-#.#}</Text>
@@ -40266,7 +40604,7 @@
       <Text>{1_leader}와(과) 맺은 동맹이 효력을 다하여 갱신되어야 합니다.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_CASUS_BELLI_GAINED_SUMMARY" Language="ko_KR">
-      <Text>{2_leader}에게 {1_WarType}을(를) 선포할 개전 이유를 획득했습니다.</Text>
+      <Text>{2_leader}을(를) 상대로 {1_WarType}을 선포할 개전 이유를 획득했습니다.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_SPY_HEIST_GREAT_WORK_SUMMARY" Language="ko_KR">
       <Text>{2_CityName}에서 플레이어 요원 {1_unitName}이(가) 걸작 '{3_Work}'을(를) 훔치는 데 성공했습니다.</Text>
@@ -40338,7 +40676,7 @@
       <Text>역스파이 {1_unitName}은(는) 플레이어의 치안 부대가 승리를 얻는데 크게 기여했습니다.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_SPY_ESCAPED_CAPTURE_SUMMARY" Language="ko_KR">
-      <Text>스파이 {1_unitName}이(가) 생포를 피했으며 {2_turns}턴 후에 수도로 복귀합니다.</Text>
+      <Text>스파이 {1_unitName}이(가) 생포를 피했으며 {2_turns}턴 후에 [ICON_Capital] 수도로 복귀합니다.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_CITYSTATE_QUEST_GIVEN_SUMMARY" Language="ko_KR">
       <Text>{1_CityStateName}이(가) 새로운 퀘스트를 제시했습니다: {2_QuestName}</Text>
@@ -40423,6 +40761,12 @@
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_PLAYER_RESYNC_COMPLETE_TT" Language="ko_KR">
       <Text>{1_playerName}이(가) 로딩을 완료했습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_TECH_BOOST_SUMMARY" Language="ko_KR">
+      <Text>기술 상승 획득함: {1_Name} +{2_Boost}%</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_CIVIC_BOOST_SUMMARY" Language="ko_KR">
+      <Text>사회 제도 상승 획득함: {1_Name} +{2_Boost}%</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_RELIC_CREATED_SUMMARY" Language="ko_KR">
       <Text>{3_CityName}의 {2_BuildingName}에 [ICON_GreatWork_Relic] 성유물 {1_RelicName}이(가) 소장되었습니다.</Text>

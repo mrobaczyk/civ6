@@ -116,7 +116,7 @@
 		<!--Information Era-->
 		<Row CivicType="CIVIC_GLOBALIZATION" Name="LOC_CIVIC_GLOBALIZATION_NAME" Description="LOC_CIVIC_GLOBALIZATION_DESCRIPTION" Cost="2880" AdvisorType="ADVISOR_TECHNOLOGY" EraType="ERA_INFORMATION" UITreeRow="0"/>
 		<Row CivicType="CIVIC_SOCIAL_MEDIA" Name="LOC_CIVIC_SOCIAL_MEDIA_NAME" Cost="2880" AdvisorType="ADVISOR_CULTURE" EraType="ERA_INFORMATION" UITreeRow="2"/>
-		<Row CivicType="CIVIC_FUTURE_CIVIC" Name="LOC_CIVIC_FUTURE_CIVIC_NAME" Cost="3200" AdvisorType="ADVISOR_CULTURE" EraType="ERA_INFORMATION" UITreeRow="1" Repeatable="true"/>
+		<Row CivicType="CIVIC_FUTURE_CIVIC" Name="LOC_CIVIC_FUTURE_CIVIC_NAME" Description="LOC_CIVIC_FUTURE_CIVIC_DESCRIPTION" Cost="3200" AdvisorType="ADVISOR_CULTURE" EraType="ERA_INFORMATION" UITreeRow="1" Repeatable="true"/>
 	</Civics>
 	<CivicPrereqs>
 		<!-- Ancient Era-->
@@ -396,10 +396,21 @@
 			<ModifierId>CIVIC_GRANT_SPY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_GRANT_SPY</ModifierType>
 		</Row>
-		<!--Urban Defenses-->
+		<!-- Tourism-->
 		<Row>
-			<ModifierId>CIVIL_ENGINEERING_URBAN_DEFENSES</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_GRANT_CITIES_URBAN_DEFENSES</ModifierType>
+			<ModifierId>CONSERVATION_ANCIENT_WALL_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_TOURISM_CHANGE</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_CITY_CENTER_ANCIENT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CONSERVATION_MEDIEVAL_WALL_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_TOURISM_CHANGE</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_CITY_CENTER_MEDIEVAL</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CONSERVATION_RENAISSANCE_WALL_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_TOURISM_CHANGE</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_CITY_CENTER_RENAISSANCE</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -458,11 +469,21 @@
 			<Name>Amount</Name>
 			<Value>1</Value>
 		</Row>
-		<!--Urban Defenses-->
+		<!-- Tourism-->
 		<Row>
-			<ModifierId>CIVIL_ENGINEERING_URBAN_DEFENSES</ModifierId>
-			<Name>DefenseValue</Name>
-			<Value>200</Value>
+			<ModifierId>CONSERVATION_ANCIENT_WALL_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>CONSERVATION_MEDIEVAL_WALL_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>CONSERVATION_RENAISSANCE_WALL_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
 		</Row>
 	</ModifierArguments>
 	<CivicModifiers>
@@ -555,8 +576,99 @@
 			<ModifierId>CIVIC_GRANT_SPY</ModifierId>
 		</Row>
 		<Row>
-			<CivicType>CIVIC_CIVIL_ENGINEERING</CivicType>
-			<ModifierId>CIVIL_ENGINEERING_URBAN_DEFENSES</ModifierId>
+			<CivicType>CIVIC_CONSERVATION</CivicType>
+			<ModifierId>CONSERVATION_ANCIENT_WALL_TOURISM</ModifierId>
+		</Row>
+		<Row>
+			<CivicType>CIVIC_CONSERVATION</CivicType>
+			<ModifierId>CONSERVATION_MEDIEVAL_WALL_TOURISM</ModifierId>
+		</Row>
+		<Row>
+			<CivicType>CIVIC_CONSERVATION</CivicType>
+			<ModifierId>CONSERVATION_RENAISSANCE_WALL_TOURISM</ModifierId>
 		</Row>
 	</CivicModifiers>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_ANCIENT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_MEDIEVAL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_RENAISSANCE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_ANCIENT_WALLS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_MEDIEVAL_WALLS_CONSERVATION</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_RENAISSANCE_WALLS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_DISTRICT_IS_CITY_CENTER</RequirementId>
+			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_ANCIENT_WALLS</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_RENAISSANCE_WALLS</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_DISTRICT_IS_CITY_CENTER</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_CITY_CENTER</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_ANCIENT_WALLS</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_WALLS</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_RENAISSANCE_WALLS</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_STAR_FORT</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_ANCIENT</RequirementSetId>
+			<RequirementId>REQUIRES_DISTRICT_IS_CITY_CENTER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_ANCIENT</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_ANCIENT_WALLS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_MEDIEVAL</RequirementSetId>
+			<RequirementId>REQUIRES_DISTRICT_IS_CITY_CENTER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_MEDIEVAL</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_MEDIEVAL_WALLS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_RENAISSANCE</RequirementSetId>
+			<RequirementId>REQUIRES_DISTRICT_IS_CITY_CENTER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>DISTRICT_IS_CITY_CENTER_RENAISSANCE</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_RENAISSANCE_WALLS</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
 </GameInfo>

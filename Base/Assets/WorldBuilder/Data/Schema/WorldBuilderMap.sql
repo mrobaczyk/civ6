@@ -33,9 +33,10 @@ CREATE TABLE "Plots" (
 DROP TABLE IF EXISTS "PlotAttributes";
 CREATE TABLE "PlotAttributes" (
 		"ID" INTEGER NOT NULL,
+		"Type" TEXT NOT NULL,
 		"Name" TEXT NOT NULL,
 		"Value" TEXT,
-		PRIMARY KEY(ID, Name));
+		PRIMARY KEY(ID, Type, Name));
 
 DROP TABLE IF EXISTS "PlotRivers";
 CREATE TABLE "PlotRivers" (

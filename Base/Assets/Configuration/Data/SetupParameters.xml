@@ -2,7 +2,7 @@
 <GameInfo>
 	<Parameters>
 		<!-- Game Options -->
-		<Row ParameterId="Ruleset" Name="LOC_RULESET" Description="" Domain="Rulesets" Hash="0" DefaultValue="RULESET_STANDARD" ConfigurationGroup="Game" ConfigurationId="RULESET" ValueNameConfigurationId="RULESET_NAME" GroupId="GameOptions" SortIndex="1"/>
+		<Row ParameterId="Ruleset" Name="LOC_RULESET" Description="" Domain="Rulesets" Hash="0" ConfigurationGroup="Game" ConfigurationId="RULESET" ValueNameConfigurationId="RULESET_NAME" GroupId="GameOptions" SortIndex="1"/>
 		<Row ParameterId="GameName" Name="LOC_GAME_NAME" Description="" Domain="text" Hash="0" ConfigurationGroup="Game" ConfigurationId="GAME_NAME" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="2"/>
 		<Row ParameterId="PrivateGame" Name="LOC_PRIVATE_GAME" Description="" Domain="bool" Hash="0" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="PRIVATE_GAME" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="1" SupportsHotSeat="0" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="3"/>
 		<Row ParameterId="GameDifficulty" Name="LOC_GAME_HANDICAP" Description="" Domain="StandardDifficulties" DefaultValue="DIFFICULTY_PRINCE" ConfigurationGroup="Game" ConfigurationId="GAME_HANDICAP" Hash="1" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="50"/>
@@ -63,6 +63,7 @@
 		<!-- Score victory cannot be enabled when there is no turn limit.-->
 		<!-- Mark as criteria so that it can still be visible. -->
 		<Row ParameterId="VICTORY_SCORE" ConfigurationGroup="Game" ConfigurationId="GAME_TURN_LIMIT" Operator="NotEquals" ConfigurationValue="TURNLIMIT_NONE" />
+    <Row ParameterId="VICTORY_SCORE" ConfigurationGroup="Game" ConfigurationId="GAME_MAX_TURNS" Operator="NotEquals" ConfigurationValue="0" />
 	</ParameterCriteria>
 
 	<ParameterDependencyQueries>
@@ -148,6 +149,7 @@
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1" />
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_GAMESPEED" Hash="1" />
 		<Row SourceGroup="Game" SourceId="GAME_TURN_LIMIT" SourceValue="TURNLIMIT_NONE" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
+    <Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
 	</ConfigurationUpdates>
 
 	<Queries>

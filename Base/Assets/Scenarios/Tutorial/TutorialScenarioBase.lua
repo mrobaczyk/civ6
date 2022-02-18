@@ -33,7 +33,7 @@ function InitializeTutorial()
 	DisableUnitAction( "UNITCOMMAND_AUTOMATE" );	
 	DisableUnitAction( "UNITCOMMAND_DELETE" );	
 	DisableUnitAction( "UNITOPERATION_AUTOMATE_EXPLORE" );
-	DisableUnitAction( "UNITOPERATION_REMOVE_IMPROVEMENT" );	
+	DisableUnitAction( "UNITOPERATION_REMOVE_IMPROVEMENT", "UNIT_BUILDER" );	
 	DisableUnitAction( "UNITOPERATION_SKIP_TURN" );	
 	DisableUnitAction( "UNITOPERATION_FORTIFY", "UNIT_BUILDER");		
 	DisableUnitAction( "UNITOPERATION_FORTIFY", "UNIT_SCOUT");	
@@ -1983,9 +1983,8 @@ function TutorialItemBank1()
 		end );
 	item:SetShowPortrait(true);
 	item:SetCleanupFunction(
-		function( )
-			EnableUnitAction( "UNITOPERATION_FORTIFY", "UNIT_BUILDER");		
-			EnableUnitAction( "UNITOPERATION_FORTIFY", "UNIT_SCOUT");				
+		function( )			
+			EnableUnitAction( "UNITOPERATION_SLEEP", "UNIT_BUILDER");	
 			local pUnit = GetFirstUnitOfType("UNIT_SCOUT");
 			UI.SelectUnit(pUnit);		-- Reselect so enabled actions are shown enabled.
 		end );
@@ -2298,6 +2297,9 @@ end
 		function( )
 			EnableUnitAction( "UNITOPERATION_FORTIFY", "UNIT_WARRIOR");
 			EnableUnitAction( "UNITOPERATION_HEAL",	"UNIT_WARRIOR");
+			EnableUnitAction( "UNITOPERATION_FORTIFY", "UNIT_SCOUT");
+			EnableUnitAction( "UNITOPERATION_HEAL",	"UNIT_SCOUT");
+			EnableUnitAction( "UNITOPERATION_FORTIFY", "UNIT_BUILDER");	
 			LuaEvents.Tutorial_DisableMapDrag( true );
 			LuaEvents.Tutorial_DisableMapSelect( true );
 			ForceMoveUnitToCapital();
@@ -2651,7 +2653,9 @@ end
 			LuaEvents.Tutorial_DisableMapDrag( true );
 			DisableUnitAction( "UNITOPERATION_MOVE_TO", "UNIT_SETTLER");		
 			DisableUnitAction( "UNITOPERATION_SLEEP", "UNIT_SETTLER");		
-			DisableUnitAction( "UNITCOMMAND_EXIT_FORMATION");
+			DisableUnitAction( "UNITCOMMAND_EXIT_FORMATION", "UNIT_SETTLER");
+			DisableUnitAction( "UNITCOMMAND_EXIT_FORMATION", "UNIT_WARRIOR");
+			DisableUnitAction( "UNITCOMMAND_CANCEL",	"UNIT_SETTLER");
 			AddMapUnitMoveRestriction( "UNIT_SETTLER" );
 			LuaEvents.Tutorial_DisableMapSelect( true );
 		end );
@@ -3219,6 +3223,12 @@ end
 		function()
 			RemoveMapUnitMoveRestriction( "UNIT_SETTLER" );
 			RemoveMapUnitMoveRestriction( "UNIT_WARRIOR" );
+			EnableUnitAction( "UNITOPERATION_MOVE_TO", "UNIT_SETTLER");		
+			EnableUnitAction( "UNITOPERATION_SLEEP", "UNIT_SETTLER");		
+			EnableUnitAction( "UNITCOMMAND_EXIT_FORMATION", "UNIT_SETTLER");
+			EnableUnitAction( "UNITCOMMAND_EXIT_FORMATION", "UNIT_WARRIOR");
+			EnableUnitAction( "UNITCOMMAND_CANCEL",	"UNIT_SETTLER");
+			EnableUnitAction( "UNITOPERATION_REMOVE_IMPROVEMENT", "UNIT_BUILDER" );
 			UnlockUnit();
 		end );
 	-- ================================ DISTRICTS_9 =====================================
@@ -3406,7 +3416,7 @@ end
 			return Map.GetPlot(13,11):GetIndex();
 		end);
 	item:SetUITriggers("TutorialSelectUnit","WorldInput");
-	item:SetEnabledControls(UITutorialManager:GetHash("WorldInput"));
+	item:SetEnabledControls(UITutorialManager:GetHash("WorldInput"), UITutorialManager:GetHash("PopupRoot"));
 	item:SetOverlayEnabled( false );
 	item:SetIsDoneEvents("CampusPlaced");
 	item:SetNextTutorialItemId("DISTRICTS_I");
@@ -3707,6 +3717,10 @@ end
 	item_campusCompleteK:SetIsDoneFunction(
 		function()
 			return false;
+		end );
+	item_campusCompleteK:SetOpenFunction(
+		function()
+			LuaEvents.Tutorial_EndTutorialRestrictions(); --Removes (some) control restrictions, because the on-rails portion of the tutorial has ended 
 		end );
 	item_campusCompleteK:SetAdvisorUITriggers("TopPanel", "TutorialCivilopediaPointer");
 

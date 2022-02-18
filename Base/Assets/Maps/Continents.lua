@@ -115,9 +115,9 @@ function GeneratePlotTypes()
 	local sea_level_low = 57;
 	local sea_level_normal = 62;
 	local sea_level_high = 66;
-	local world_age_old = 2;
-	local world_age_normal = 3;
 	local world_age_new = 5;
+	local world_age_normal = 3;
+	local world_age_old = 2;
 
 	local extra_mountains = 0;
 	local grain_amount = 3;
@@ -234,7 +234,7 @@ function GeneratePlotTypes()
 	args.blendRidge = 10;
 	args.blendFract = 1;
 	args.extra_mountains = 5;
-	mountainRatio = 11 + world_age * 2;
+	mountainRatio = 8 + world_age * 3;
 	plotTypes = ApplyTectonics(args, plotTypes);
 	plotTypes = AddLonelyMountains(plotTypes, mountainRatio);
 

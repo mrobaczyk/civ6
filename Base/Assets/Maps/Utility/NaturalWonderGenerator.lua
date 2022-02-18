@@ -282,37 +282,37 @@ function CustomGetMultiTileFeaturePlotList(pPlot, eFeatureType, aPlots)
 		end
 
 		local pSWPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_SOUTHWEST);
-		if (pSWPlot ~= nil and pSWPlot:IsWater()) then
+		if (pSWPlot ~= nil and pSWPlot:IsWater() and pSWPlot:IsLake() == false) then
 			table.insert(aPlots, pSWPlot:GetIndex());
 			return true;
 		end
 
 		local pSEPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_SOUTHEAST);
-		if (pSEPlot ~= nil and pSEPlot:IsWater()) then
+		if (pSEPlot ~= nil and pSEPlot:IsWater() and pSEPlot:IsLake() == false) then
 			table.insert(aPlots, pSEPlot:GetIndex());
 			return true;
 		end
 
 		local pWPlot  = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_WEST);
-		if (pWPlot ~= nil and pWPlot:IsWater()) then
+		if (pWPlot ~= nil and pWPlot:IsWater() and pWPlot:IsLake() == false) then
 			table.insert(aPlots, pWPlot:GetIndex());
 			return true;
 		end
 
 		local pEPlot  = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_EAST);
-		if (pEPlot ~= nil and pEPlot:IsWater()) then
+		if (pEPlot ~= nil and pEPlot:IsWater() and pEPlot:IsLake() == false) then
 			table.insert(aPlots, pEPlot:GetIndex());
 			return true;
 		end
 
 		local pNWPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_NORTHWEST);
-		if (pNWPlot ~= nil and pNWPlot:IsWater()) then
+		if (pNWPlot ~= nil and pNWPlot:IsWater() and pNWPlot:IsLake() == false) then
 			table.insert(aPlots, pNWPlot:GetIndex());
 			return true;
 		end
 
 		local pNEPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_NORTHEAST);
-		if (pNEPlot ~= nil and pNEPlot:IsWater()) then
+		if (pNEPlot ~= nil and pNEPlot:IsWater() and pNEPlot:IsLake() == false) then
 			table.insert(aPlots, pNEPlot:GetIndex());
 			return true;
 		end

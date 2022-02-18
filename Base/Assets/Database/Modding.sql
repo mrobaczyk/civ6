@@ -1,6 +1,11 @@
 -- Modding Framework Schema
 -- 
 -- Revision History
+-- Version 19:
+-- * Added support for migrating data during an upgrade.
+-- * Added 'Inverse' to Criteria.
+-- Version 18:
+-- * Removed stored procedures for listing paths.  These are now handled internally.
 -- Version 17:
 -- * Component associations to Criteria is many to many instead of many to 1.
 -- * Components may now contain a list of Uris as well as Files.
@@ -13,7 +18,7 @@
 -- * Removed Component and Setting type tables.
 -- * Removed reliance on Make_Hash function.
 -- * Added criteria structures.
--- * Added loadout structures.
+-- * Added mod group structures.
 -- Version 15:
 -- * Added Icons setting and component types.
 -- Version 14:
@@ -94,6 +99,7 @@ CREATE TABLE Criteria(
 	'CriteriaRowId' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 	'ModRowId' INTEGER NOT NULL,
 	'CriteriaId' INTEGER NOT NULL,
+	'Inverse' BOOLEAN NOT NULL DEFAULT 0,
 	FOREIGN KEY ('ModRowId') REFERENCES Mods('ModRowId') ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -318,8 +324,36 @@ CREATE TABLE StoredProcedures(
 	PRIMARY KEY('Name', 'Context')
 );
 
+-- This table contains statements to assist with migrating data during a database upgrade.
+-- @SQL is the statement to run.
+-- @MinVersion is the minimal old database version to run the SQL.
+-- @MaxVersion is the maximum old database version to run the SQL.
+-- @SortIndex is the column used to sort the statements.
+CREATE TABLE Migrations(
+	'SQL' TEXT NOT NULL,
+	'MinVersion' INTEGER NOT NULL,
+	'MaxVersion' INTEGER NOT NULL,
+	'SortIndex' INTEGER NOT NULL
+);
+
 -- Static Data
-INSERT INTO ModGroups('Name', 'CanDelete', 'Selected', 'SortIndex') VALUES ('LOC_MODS_GROUP_DEFAULT_NAME', 0, 1, 0);
+INSERT INTO ModGroups('ModGroupRowId', 'Name', 'CanDelete', 'Selected', 'SortIndex') VALUES (1, 'LOC_MODS_GROUP_DEFAULT_NAME', 0, 1, 0);
+
+-- Data Migrations.
+-- Copy mod groups.
+INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,0,"INSERT INTO ModGroups SELECT * from old.ModGroups as omg where omg.CanDelete = 1");
+
+-- Copy which mod group is selected.
+INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,"UPDATE ModGroups SET Selected = (SELECT Selected FROM old.ModGroups omg where omg.ModGroupRowId = ModGroups.ModGroupRowId LIMIT 1)");
+
+-- Copy Scanned Files data (but set LastWriteTime to 0 to force rescan)
+INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,'INSERT INTO ScannedFiles(ScannedFileRowId,Path,LastWriteTime) SELECT ScannedFileRowId,Path,0 from old.ScannedFiles;');
+
+-- Copy Mod data (the mod row ids are needed the most here)
+INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,"INSERT INTO Mods('ModRowId','ScannedFileRowId','ModId','Version','Exclusivity') SELECT ModRowId,ScannedFileRowId,ModId,Version,Exclusivity from old.Mods");
+
+-- Copy Mod Group Item data
+INSERT INTO Migrations('MinVersion', 'MaxVersion', 'SortIndex', 'SQL') VALUES(16,999,1,"INSERT INTO ModGroupItems('ModGroupRowId','ModRowId') SELECT ModGroupRowId,ModRowId from old.ModGroupItems");
 
 -- Stored procedures used by framework
 -- Some rough naming conventions.
@@ -361,13 +395,6 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListSc
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'DeleteScannedFile', 'DELETE FROM ScannedFiles WHERE Path = ?');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'AddScannedFile', 'INSERT INTO ScannedFiles(Path, LastWriteTime) VALUES(?,?)');
 
--- File Service Procedures
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsByComponentRowId', 'SELECT Path from ModFiles a inner join ComponentFiles b on a.FileRowId = b.FileRowId where b.ComponentRowId = ? ORDER BY b.Priority DESC');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsByModRowId', 'SELECT Path FROM ModFiles WHERE ModRowId = ? ORDER BY Path');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsBySettingRowId', 'SELECT Path from ModFiles a inner join SettingFiles b on a.FileRowId = b.FileRowId where b.SettingRowId = ? ORDER BY b.Priority DESC');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'PathExistsByModRowId', 'SELECT 1 FROM ModFiles WHERE ModRowId = ? AND Path = ? LIMIT 1');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetPathByModRowId', 'SELECT Path FROM ScannedFiles INNER JOIN Mods ON ScannedFiles.ScannedFileRowId = Mods.ScannedFileRowId WHERE ModRowId = ? LIMIT 1');
-
 -- Property Service Procedures
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetModPropertyByModRowIdAndName', 'SELECT Value FROM ModProperties WHERE ModRowId = ? AND Name = ? LIMIT 1');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetComponentPropertyByComponentRowIdAndName', 'SELECT Value FROM ComponentProperties WHERE ComponentRowId = ? AND Name = ? LIMIT 1');
@@ -407,4 +434,4 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'Delete
 
 
 -- User version is written at the end.
-PRAGMA user_version(17);
+PRAGMA user_version(19);

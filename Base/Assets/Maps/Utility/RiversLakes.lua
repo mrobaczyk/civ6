@@ -377,7 +377,8 @@ function AddLakes(largeLakes)
 
 	local numLakesAdded = 0;
 	local numLargeLakesAdded = 0;
-	local lakePlotRand = GlobalParameters.LAKE_PLOT_RANDOM  or 160;
+
+	local lakePlotRand = GlobalParameters.LAKE_PLOT_RANDOM or 25;
 	local iW, iH = Map.GetGridSize();
 
 	for i = 0, (iW * iH) - 1, 1 do
@@ -389,7 +390,6 @@ function AddLakes(largeLakes)
 						if (AdjacentToNaturalWonder(plot) == false) then
 							local r = TerrainBuilder.GetRandomNumber(lakePlotRand, "MapGenerator AddLakes");
 							if r == 0 then
-								TerrainBuilder.SetTerrainType(plot, g_TERRAIN_TYPE_COAST);
 								numLakesAdded = numLakesAdded + 1;
 								if(largeLakes > numLargeLakesAdded) then
 									local bLakes = AddMoreLake(plot);
@@ -397,6 +397,8 @@ function AddLakes(largeLakes)
 										numLargeLakesAdded = numLargeLakesAdded + 1;
 									end
 								end
+
+								TerrainBuilder.SetTerrainType(plot, g_TERRAIN_TYPE_COAST);
 							end
 						end
 					end
@@ -414,6 +416,8 @@ end
 
 function AddMoreLake(plot)
 	local largeLake = 0;
+	lakePlots = {};
+
 	for direction = 0, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
 		local adjacentPlot = Map.GetAdjacentPlot(plot:GetX(), plot:GetY(), direction);
 		if (adjacentPlot) then
@@ -421,9 +425,9 @@ function AddMoreLake(plot)
 				if (adjacentPlot:IsCoastalLand() == false) then
 					if (adjacentPlot:IsRiver() == false and adjacentPlot:IsRiverAdjacent() == false) then
 						if (AdjacentToNaturalWonder(adjacentPlot) == false) then
-							local r = TerrainBuilder.GetRandomNumber(1 + largeLake, "MapGenerator AddLakes");
-							if r == 0 then
-								TerrainBuilder.SetTerrainType(adjacentPlot, g_TERRAIN_TYPE_COAST);
+							local r = TerrainBuilder.GetRandomNumber(4 + largeLake, "MapGenerator AddLakes");
+							if r < 3 then
+								table.insert(lakePlots, adjacentPlot);
 								largeLake = largeLake + 1;
 							end
 						end
@@ -431,6 +435,10 @@ function AddMoreLake(plot)
 				end
 			end
 		end
+	end
+
+	for iLake, lakePlot in ipairs(lakePlots) do
+		TerrainBuilder.SetTerrainType(lakePlot, g_TERRAIN_TYPE_COAST);
 	end
 
 	if (largeLake > 2) then
@@ -444,7 +452,7 @@ function AdjacentToNaturalWonder(plot)
 	for direction = 0, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
 		local adjacentPlot = Map.GetAdjacentPlot(plot:GetX(), plot:GetY(), direction);
 		if (adjacentPlot ~= nil) then
-			if(adjacentPlot:IsNaturalWonder()) then
+			if(adjacentPlot:IsNaturalWonder() == true) then
 				return true;
 			end
 		end

@@ -52,12 +52,24 @@
 		<Row Tag="LOC_PLAY_MULTIPLAYER">
 			<Text>Multiplayer</Text>
 		</Row>
+		<Row Tag="LOC_PLAY_MULTIPLAYER_HAVE_CLOUD_TURN">
+			<Text>[ICON_Exclamation] Multiplayer</Text>
+		</Row>
 		<Row Tag="LOC_LOAD_GAME">
 			<Text>Load Game</Text>
 		</Row>
-    <Row Tag="LOC_NO_FILE_SELECTED">
-      <Text>No file currently selected</Text>
-    </Row>
+		<Row Tag="LOC_LOAD_CONFIG">
+			<Text>Load Configuration</Text>
+		</Row>
+		<Row Tag="LOC_LOAD_MAP">
+			<Text>Load Map</Text>
+		</Row>
+		<Row Tag="LOC_OPEN_DIRECTORY">
+		<Text>Open</Text>
+		</Row>
+		<Row Tag="LOC_NO_FILE_SELECTED">
+			<Text>No file currently selected</Text>
+		</Row>
 		<Row Tag="LOC_MAIN_MENU_OPTIONS">
 			<Text>Game Options</Text>
 		</Row>
@@ -95,6 +107,12 @@
 		<Row Tag="LOC_NO_SAVED_GAMES">
 			<Text>No saved games</Text>
 		</Row>
+		<Row Tag="LOC_NO_SAVED_CONFIGS">
+			<Text>No saved configurations</Text>
+		</Row>
+		<Row Tag="LOC_NO_SAVED_MAPS">
+			<Text>No saved maps</Text>
+		</Row>
 		<Row Tag="LOC_SORTBY_NAME">
 			<Text>Sort by Name</Text>
 		</Row>
@@ -112,6 +130,9 @@
 		</Row>
 		<Row Tag="LOC_SAVE_MAP_BUTTON">
 			<Text>Save Map</Text>
+		</Row>
+		<Row Tag="LOC_SAVE_CONFIG">
+			<Text>Save Configuration</Text>
 		</Row>
 		<Row Tag="LOC_SAVE_AT_MAXIMUM_CLOUD_SAVES_TOOLTIP">
 			<Text>You've reached the maximum number of Cloud saves. Overwrite or delete a save.</Text>
@@ -299,8 +320,14 @@
 		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME">
 			<Text>Cloud Game</Text>
 		</Row>
+		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_TURN">
+			<Text>[ICON_Exclamation] Cloud Game</Text>
+		</Row>
 		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME_TT">
 			<Text>Play a multiplayer game using FiraxisLive cloud computing technology.  Requires an active connection to FiraxisLive.</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_TURN_TT">
+			<Text>It is your turn in one of your cloud games.[NEWLINE][NEWLINE]Play a multiplayer game using FiraxisLive cloud computing technology.  Requires an active connection to FiraxisLive.</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_PITBOSS_GAME">
 			<Text>Pitboss</Text>
@@ -333,6 +360,24 @@
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_BACK">
 			<Text>BACK</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_END_GAME">
+			<Text>DELETE GAME</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_PROMPT">
+			<Text>Ending Game...</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_FAIL">
+			<Text>Error while ending game.</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_FAIL_ACCEPT">
+			<Text>Ok</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_GAME_LAUNCH_FAILED">
+			<Text>Game failed to launch.</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_GAME_LAUNCH_FAILED_ACCEPT">
+			<Text>Ok</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_JOIN_GAME">
 			<Text>Join Game</Text>
@@ -397,8 +442,20 @@
 		<Row Tag="LOC_MULTIPLAYER_MODSHOSTED">
 			<Text>Mods</Text>
 		</Row>
+		<Row Tag="LOC_STAGING_ROOM_LOADING_SAVE">
+			<Text>Loading Save Game</Text>
+		</Row>
+		<Row Tag="LOC_STAGING_ROOM_GAME_IN_PROGRESS">
+			<Text>Game in Progress</Text>
+		</Row>
+		<Row Tag="LOC_STAGING_ROOM_JOIN_CODE">
+			<Text>Join Code:</Text>
+		</Row>		
 		<Row Tag="LOC_MULTIPLAYER_PITBOSS_LOBBY">
 			<Text>PITBOSS GAMES</Text>
+		</Row>
+		<Row Tag="LOC_MULTIPLAYER_CLOUD_LOBBY">
+			<Text>CLOUD GAMES</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_INTERNET_LOBBY">
 			<Text>INTERNET GAMES</Text>
@@ -418,11 +475,26 @@
 		<Row Tag="LOC_MULTIPLAYER_UNKNOWN">
 			<Text>Unknown</Text>
 		</Row>
+		<Row Tag="LOC_MULTIPLAYER_UNKNOWN_MAP_SIZE">
+			<Text>Unknown Map Size</Text>
+		</Row>
 		<Row Tag="LOC_MULTIPLAYER_TRUE">
 			<Text>True</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_FALSE">
 			<Text>False</Text>
+		</Row>
+		<Row Tag="LOC_LOBBY_GAME_STARTED_TOOLTIP">
+			<Text>Game in progress</Text>
+		</Row>
+		<Row Tag="LOC_LOBBY_GAME_LOADING_SAVE_TOOLTIP">
+			<Text>Game loading save</Text>
+		</Row>
+		<Row Tag="LOC_LOBBY_GAME_YOUR_TURN_TOOLTIP">
+			<Text>It is your turn in this game.</Text>
+		</Row>
+		<Row Tag="LOC_LOBBY_GAME_NAME_YOUR_TURN">
+			<Text>[ICON_Exclamation] {1_gameName}</Text>
 		</Row>
 		<!-- Cloud Game Screen -->
 		<Row Tag="LOC_MULTIPLAYER_CLOUD_LIST">
@@ -440,7 +512,13 @@
 		<Row Tag="LOC_MULTIPLAYER_CLOUD_START">
 			<Text>Start</Text>
 		</Row>
-    <!-- Options -->
+		<Row Tag="LOC_LOBBY_MY_GAMES">
+			<Text>My Games</Text>
+		</Row>
+		<Row Tag="LOC_LOBBY_OPEN_GAMES">
+			<Text>Open Games</Text>
+		</Row>
+		<!-- Options -->
     <Row Tag="LOC_CONFIRM_KEY_BINDING">
       <Text>Confirm Key Binding</Text>
     </Row>
@@ -495,6 +573,12 @@
     <Row Tag="LOC_OPTIONS_AUTO_END_TURN">
       <Text>Auto End Turn:</Text>
     </Row>
+	<Row Tag="LOC_OPTIONS_CITY_RANGE_ATTACK">
+		<Text>City Ranged Attack Turn Blocking:</Text>
+	</Row>
+	<Row Tag="LOC_OPTIONS_CITY_RANGE_ATTACK_TOOLTIP">
+		<Text>When enabled, city ranged attacks are turn blocking.</Text>
+	</Row>
     <Row Tag="LOC_OPTIONS_TIME_OF_DAY">
       <Text>Time of Day:</Text>
     </Row>
@@ -579,10 +663,13 @@
 			<Text>Configuring Game Content...</Text>
 		</Row>
 		<Row Tag="LOC_MP_ROOM_FULL">
-			<Text>The game has the maximum number of players.</Text>
+			<Text>Unable to join game. The game has the maximum number of players.</Text>
 		</Row>
 		<Row Tag="LOC_MP_JOIN_FAILED">
 			<Text>Error joining multiplayer session.</Text>
+		</Row>
+		<Row Tag="LOC_MP_ROOM_GAME_STARTED">
+			<Text>Unable to join game. The game has already been started.</Text>
 		</Row>
 		<!-- Multiplayer Staging Room Screen -->
 		<Row Tag="LOC_MP_SWAP_PLAYER">
@@ -913,6 +1000,9 @@
 		<Row Tag="LOC_SETUP_CREATE_GAME">
 			<Text>Create Game</Text>
 		</Row>
+    <Row Tag="LOC_SETUP_CHOOSE_RULESET">
+      <Text>Choose Ruleset</Text>
+    </Row>
 		<Row Tag="LOC_SETUP_CHOOSE_SCENARIO">
 			<Text>Choose Scenario</Text>
 		</Row>
@@ -990,6 +1080,9 @@
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_NO_DUPLICATE_LEADERS">
 			<Text>No Duplicate Leaders</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_ERROR_HUMANS_REQUIRED">
+			<Text>More Humans Required</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_INVALID_OPTION">
 			<Text>Invalid Option</Text>
@@ -1554,6 +1647,9 @@
 		<Row Tag="LOC_MAINMENU_MULTIPLAYER_TT">
 			<Text>Internet, network, and hot seat matches can be setup or joined here.</Text>
 		</Row>
+		<Row Tag="LOC_MAINMENU_MULTIPLAYER_HAVE_CLOUD_TURN_TT">
+			<Text>It is your turn in one of your cloud games.[NEWLINE][NEWLINE]Internet, network, and hot seat matches can be setup or joined here.</Text>
+		</Row>	
 		<Row Tag="LOC_MAINMENU_GAME_OPTIONS_TT">
 			<Text>Settings for graphics, audio, key bindings, and more.</Text>
 		</Row>
@@ -1734,9 +1830,6 @@
 		</Row>
 		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_DLC">
 			<Text>One or more required DLC packages for the save are not installed.</Text>
-		</Row>
-		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_EXPANSION">
-			<Text>One or more required Expansion packages for the save are not installed.</Text>
 		</Row>
     <Row Tag="LOC_TEAM_NAME_SELECT_TITLE">
       <Text>Team Name</Text>

@@ -20,6 +20,7 @@
 		<Column name="Sort" type="integer" default="0"/>
 		<Column name="Key" type="text" notnull="true" unique="false" primarykey="true"/>
 		<Column name="Text" type="text" notnull="true" unique="false"/>
+    <Column name="Tooltip" type="text" default="" unique="false"/>
     <Column name="DiplomaticActionType" type="text" unique="false"/>
 	</Table>
 

@@ -283,6 +283,9 @@
 		<Row Tag="LOC_GAME_MENU_QUIT_WARNING">
 			<Text>Are you sure you wish to quit your game?</Text>
 		</Row>
+		<Row Tag="LOC_GAME_MENU_END_GAME_WARNING">
+			<Text>Are you sure you wish to delete this multiplayer game? This will end this game for all players.</Text>
+		</Row>
 		<Row Tag="LOC_GAME_MENU_SHUTDOWN_WARNING">
 			<Text>Are you sure you wish to shutdown Sid Meier's Civilization VI?</Text>
 		</Row>
@@ -291,6 +294,9 @@
 		</Row>
 		<Row Tag="LOC_GAME_MENU_RETIRE_WARNING">
 			<Text>Are you sure you wish to retire?</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_RESTART_WARNING">
+			<Text>Are you sure you wish to restart?</Text>
 		</Row>
 		<Row Tag="LOC_COMMON_DIALOG_YES_BUTTON_CAPTION">
 			<Text>YES</Text>
@@ -427,7 +433,7 @@
 			<Text>Your Archaeologist needs to decide which civilization's [ICON_GreatWork_Artifact] Artifact he wants to return to his home Museum.</Text>
 		</Row>
 		<Row Tag="LOC_ACTION_PANEL_CITY_RANGED_ATTACK_TOOLTIP">
-			<Text>Your city can perform a ranged attack.</Text>
+			<Text>Your city can perform a ranged attack. Right click to ignore the current ranged attack.</Text>
 		</Row>
 		<Row Tag="LOC_ACTION_PANEL_NEEDS_PRODUCTION">
 			<Text>CHOOSE PRODUCTION</Text>
@@ -716,7 +722,7 @@
 			<Text>[COLOR_RED]{1_Value} Damaged district[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_COMBAT_PREVIEW_EMBARKED_UNIT_STRENGTH">
-			<Text>[COLOR_RED]Reduced strength when embarked</Text>
+			<Text>[COLOR_RED]Adjusted base strength when embarked</Text>
 		</Row>
 		<Row Tag="LOC_COMBAT_PREVIEW_DISTRICT_ATTACK_BONUS">
 			<Text>+{1 Value} Ranged attack bonus</Text>
@@ -834,14 +840,35 @@
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_TITLE_SUFFIX">
 			<Text>'s Turn</Text>
 		</Row>
+		<Row Tag="LOC_PLAYER_CHANGE_POPUP_TITLE_PLAYBYCLOUD">
+			<Text>Uploading Turn to Cloud</Text>
+		</Row>
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_START_TURN">
 			<Text>Start Turn</Text>
+		</Row>
+		<Row Tag="LOC_PLAYER_CHANGE_POPUP_WAITING_FOR_CLOUD_UPLOAD">
+			<Text>Uploading save game file.  Please wait...</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_SAVE_GAME">
 			<Text>Save Game</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_PASSWORD">
 			<Text>Password</Text>
+		</Row>
+		<Row Tag="LOC_PLAYER_CHANGE_POPUP_CANCEL_UPLOAD">
+			<Text>Cancel</Text>
+		</Row>
+		<Row Tag="LOC_PLAYER_CHANGE_POPUP_CANCEL_UPLOAD_TOOLTIP">
+			<Text>Stop attempting to commit your turn.  You will lose your progress for this turn.</Text>
+		</Row>
+		<Row Tag="LOC_PLAYER_CHANGE_UPLOAD_IN_PROGRESS">
+			<Text>Upload in Progress</Text>
+		</Row>
+		<Row Tag="LOC_PLAYER_CHANGE_UPLOAD_FAILED">
+			<Text>Upload Failed. Try Again.</Text>
+		</Row>
+		<Row Tag="LOC_PLAYER_CHANGE_UPLOAD_SUCCESS">
+			<Text>Upload Completed.  Returning to Main Menu.</Text>
 		</Row>
 		<!-- ==================== Unit Action Info ==================== -->
 		<Row Tag="LOC_HUD_UNIT_ACTION_REQUIRES_TECH">
@@ -987,6 +1014,9 @@
 		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_STARTING_ERA">
 			<Text>Amenities from Starting Era:</Text>
 		</Row>
+		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_IMPROVEMENTS">
+			<Text>Amenities from Improvements:</Text>
+		</Row>
 		<Row Tag="LOC_HUD_CITY_AMENITIES_LOST_FROM_WAR_WEARINESS">
 			<Text>Amenities from War Weariness:</Text>
 		</Row>
@@ -1023,9 +1053,9 @@
 		<Row Tag="LOC_HUD_CITY_CITIZENS">
 			<Text>Citizens</Text>
 		</Row>
-    <Row Tag="LOC_HUD_CITY_CITIZENS_LABEL">
-      <Text>{1_Amount : plural 1?Citizen; other?Citizens;}</Text>
-    </Row>
+		<Row Tag="LOC_HUD_CITY_CITIZENS_LABEL">
+			<Text>{1_Amount : plural 1?Citizen; other?Citizens;}</Text>
+		</Row>
 		<Row Tag="LOC_HUD_CITY_CITIZENS_SATISFIED">
 			<Text>Citizens are satisfied, no positive or negative effects.</Text>
 		</Row>
@@ -1077,10 +1107,10 @@
 		<Row Tag="LOC_HUD_CITY_HOUSING">
 			<Text>Housing</Text>
 		</Row>
-    <Row Tag="LOC_HUD_CITY_HOUSING_LABEL">
-      <Text>Housing</Text>
-    </Row>
-    <Row Tag="LOC_HUD_CITY_HOUSING_BREAKDOWN">
+		<Row Tag="LOC_HUD_CITY_HOUSING_LABEL">
+			<Text>Housing</Text>
+		</Row>
+		<Row Tag="LOC_HUD_CITY_HOUSING_BREAKDOWN">
 			<Text>Water {1_Water}, Bldg {2_Buildings}, Improvement {3_Improvements}, Neighborhoods {4_Districts}, Civics {5_Civics}</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_HOUSING_CAPACITY">
@@ -1772,9 +1802,9 @@
 		<Row Tag="LOC_HUD_OWNER_LENS">
 			<Text>Political</Text>
 		</Row>
-    <Row Tag="LOC_HUD_TOURISM_LENS">
-      <Text>Tourism</Text>
-    </Row>
+		<Row Tag="LOC_HUD_TOURISM_LENS">
+			<Text>Tourism</Text>
+		</Row>
 		<Row Tag="LOC_HUD_RELIGION_LENS_TOOLTIP">
 			<Text>Show majority religion and follower distribution across the map.</Text>
 		</Row>
@@ -1793,9 +1823,9 @@
 		<Row Tag="LOC_HUD_OWNER_LENS_TOOLTIP">
 			<Text>Shows owner of each tile.</Text>
 		</Row>
-    <Row Tag="LOC_HUD_TOURISM_LENS_TOOLTIP">
-      <Text>Show the number of Visiting Tourists in each tile.</Text>
-    </Row>
+		<Row Tag="LOC_HUD_TOURISM_LENS_TOOLTIP">
+			<Text>Show the number of Visiting Tourists in each tile.</Text>
+		</Row>
 		<Row Tag="LOC_HUD_MAP_OPTIONS">
 			<Text>Map Options</Text>
 		</Row>
@@ -1918,13 +1948,13 @@
 		<Row Tag="LOC_TECH_BOOST_RESEARCH_AGREEMENT">
 			<Text>Your Research Agreement has come up with a scientific breakthrough.</Text>
 		</Row>
-    <Row Tag="LOC_TECH_BOOST_TEAMMATE">
-      <Text>Your teammate has researched a new technology. Their scientists are anxious to share their findings.</Text>
-    </Row>
-    <Row Tag="LOC_TECH_BOOST_CAPTURED_CITY">
-      <Text>You have gained new scientific knowledge from the capture of this city.</Text>
-    </Row>
-    <Row Tag="LOC_TECH_BOOST_COMPLETE">
+		<Row Tag="LOC_TECH_BOOST_TEAMMATE">
+			<Text>Your teammate has researched a new technology. Their scientists are anxious to share their findings.</Text>
+		</Row>
+		<Row Tag="LOC_TECH_BOOST_CAPTURED_CITY">
+			<Text>You have gained new scientific knowledge from the capture of this city.</Text>
+		</Row>
+		<Row Tag="LOC_TECH_BOOST_COMPLETE">
 			<Text>Your research in {1_techString} is now complete!</Text>
 		</Row>
 		<Row Tag="LOC_TECH_BOOST_ADVANCED">
@@ -1937,13 +1967,13 @@
 		<Row Tag="LOC_CIVIC_BOOST_WONDER">
 			<Text>Collecting wisdom from across the lands in your library has yielded new ideas for your people.</Text>
 		</Row>
-    <Row Tag="LOC_CIVIC_BOOST_TEAMMATE">
-      <Text>Your teammate has completed a new civic. Their expertise will further our own progress.</Text>
-    </Row>
-    <Row Tag="LOC_CIVIC_BOOST_CAPTURED_CITY">
-      <Text>You have been exposed to new cultural ideas by the citizens of this captured city.</Text>
-    </Row>
-    <Row Tag="LOC_CIVIC_BOOST_GREAT_PERSON">
+		<Row Tag="LOC_CIVIC_BOOST_TEAMMATE">
+			<Text>Your teammate has completed a new civic. Their expertise will further our own progress.</Text>
+		</Row>
+		<Row Tag="LOC_CIVIC_BOOST_CAPTURED_CITY">
+			<Text>You have been exposed to new cultural ideas by the citizens of this captured city.</Text>
+		</Row>
+		<Row Tag="LOC_CIVIC_BOOST_GREAT_PERSON">
 			<Text>The ingenuity of your great person has unlocked new ideas for your society.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_BOOST_COMPLETE">
@@ -2177,7 +2207,7 @@
 		<Row Tag="LOC_GOVT_CHOOSE_POLICIES">
 			<Text>Choose Policies</Text>
 		</Row>
-    		<Row Tag="LOC_GOVT_GOVERNMENT_UNLOCKED">
+		<Row Tag="LOC_GOVT_GOVERNMENT_UNLOCKED">
 			<Text>Government Unlocked</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_COMPLETED_THIS_TURN">
@@ -2291,21 +2321,21 @@
 		<Row Tag="LOC_GOVT_CIVIC_REQUIRED">
 			<Text>Unlocks when the {1_CivicName} civic is completed.</Text>
 		</Row>
-    <Row Tag="LOC_GOVT_NO_WILDCARD_SLOTS">
-      <Text>No Wildcard Policy slots are provided by this government.</Text>
-    </Row>
-    <Row Tag="LOC_GOVT_NO_MILITARY_SLOTS">
-      <Text>No Military Policy slots are provided by this government.</Text>
-    </Row>
-    <Row Tag="LOC_GOVT_NO_DIPLOMACY_SLOTS">
-      <Text>No Diplomacy Policy slots are provided by this government.</Text>
-    </Row>
-    <Row Tag="LOC_GOVT_NO_ECONOMIC_SLOTS">
-      <Text>No Economic Policy slots are provided by this government.</Text>
-    </Row>
-    <Row Tag="LOC_GOVT_NO_LEGACY_BONUS">
-      <Text>Legacy bonuses are the learned benefits that stay with us as we progress through different systems of government.  The learned policy symbol indicates a government bonus that will accumulate over time.</Text>
-    </Row>
+		<Row Tag="LOC_GOVT_NO_WILDCARD_SLOTS">
+			<Text>No Wildcard Policy slots are provided by this government.</Text>
+		</Row>
+		<Row Tag="LOC_GOVT_NO_MILITARY_SLOTS">
+			<Text>No Military Policy slots are provided by this government.</Text>
+		</Row>
+		<Row Tag="LOC_GOVT_NO_DIPLOMACY_SLOTS">
+			<Text>No Diplomacy Policy slots are provided by this government.</Text>
+		</Row>
+		<Row Tag="LOC_GOVT_NO_ECONOMIC_SLOTS">
+			<Text>No Economic Policy slots are provided by this government.</Text>
+		</Row>
+		<Row Tag="LOC_GOVT_NO_LEGACY_BONUS">
+			<Text>Legacy bonuses are the learned benefits that stay with us as we progress through different systems of government.  The learned policy symbol indicates a government bonus that will accumulate over time.</Text>
+		</Row>
 		<!-- ==================== Unit Operations ==================== -->
 		<Row Tag="LOC_UNITOPERATION_BUILD_DISTRICT">
 			<Text>Build District</Text>
@@ -2613,9 +2643,9 @@
 		<Row Tag="LOC_UNITCOMMAND_DELETE_DESCRIPTION">
 			<Text>Delete Unit</Text>
 		</Row>
-    <Row Tag="LOC_UNITCOMMAND_DELETE_GOLD_REFUND">
-      <Text>Will provide {1_GoldAmount} [ICON_Gold] Gold.</Text>
-    </Row>
+		<Row Tag="LOC_UNITCOMMAND_DELETE_GOLD_REFUND">
+			<Text>Will provide {1_GoldAmount} [ICON_Gold] Gold.</Text>
+		</Row>
 		<Row Tag="LOC_UNITCOMMAND_GIFT_DESCRIPTION">
 			<Text>Gift Unit</Text>
 		</Row>
@@ -2864,9 +2894,9 @@
 		<Row Tag="LOC_TOOLTIP_DISTRICT_CITIZEN_YIELDS_HEADER">
 			<Text>Citizen Yields (per citizen):</Text>
 		</Row>
-    <Row Tag="LOC_TOOLTIP_UNLOCKS_DIPLOMACY">
-      <Text>Diplomacy: {1_DiplomacyAction}</Text>
-    </Row>
+		<Row Tag="LOC_TOOLTIP_UNLOCKS_DIPLOMACY">
+			<Text>Diplomacy: {1_DiplomacyAction}</Text>
+		</Row>
 		<Row Tag="LOC_TOOLTIP_UNLOCKS_GOVERNMENT">
 			<Text>Government: {1_GovernmentName}</Text>
 		</Row>
@@ -3032,10 +3062,10 @@
 		<Row Tag="LOC_TOOLTIP_LAKE">
 			<Text>Lake</Text>
 		</Row>
-    <Row Tag="LOC_TOOLTIP_COAST">
-      <Text>Coast</Text>
-    </Row>
-    <Row Tag="LOC_TOOLTIP_RIVER">
+		<Row Tag="LOC_TOOLTIP_COAST">
+			<Text>Coast</Text>
+		</Row>
+		<Row Tag="LOC_TOOLTIP_RIVER">
 			<Text>River</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_IMPROVEMENT_RECOMMENDATION">
@@ -3102,6 +3132,12 @@
 		<Row Tag="LOC_TYPE_TRAIT_AIRSLOTS">
 			<Text>Aircraft Capacity: {1_Amount}</Text>
 		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_ENVOYS">
+			<Text>Awards {1_Count} [ICON_Envoy] {1_Count : plural 1?Envoy; other?Envoys;}</Text>
+		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_SPIES">
+			<Text>Awards {1_Count} {1_Count : plural 1?Spy; other?Spies;}</Text>
+		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_CITIZENSLOTS">
 			<Text>Citizen Capacity: {1_Amount}</Text>
 		</Row>
@@ -3110,7 +3146,7 @@
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_AMENITY_ENTERTAINMENT">
 			<Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] {1_Amount : plural 1?Amenity; other?Amenities;} from entertainment</Text>>
-    </Row>
+		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_CITIZENS">
 			<Text>{1_Amount: number +#,###;-#,###} [ICON_Citizen] Citizen {1_Amount : plural 1?slot; other?slots;}</Text>
 		</Row>
@@ -3145,7 +3181,7 @@
 			<Text>Bonus {1_ToYieldIcon} {2_ToYieldName} equal to the adjacency {3_FromYieldIcon} {4_FromYieldName} bonus of its district.</Text>
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS">
-			<Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} from each adjacent {5_AdjacentObject}.</Text>
+			<Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} from each adjacent {5_AdjacentObject} tile.</Text>
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_PER">
 			<Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} from every {4_Count} adjacent {5_AdjacentObject} tiles.</Text>
@@ -3164,6 +3200,9 @@
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_SEA_RESOURCE">
 			<Text>coastal resource</Text>
+		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_RESOURCE_CLASS">
+			<Text>matching resource class</Text>
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_RIVER">
 			<Text>river</Text>
@@ -3771,9 +3810,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_RELIGION_CONVERT_SUMMARY">
 			<Text>{1_NumConverts} Civs Converted to {2_ReligionName}</Text>
 		</Row>
-    <Row Tag="LOC_WORLD_RANKINGS_RELIGION_TEAMS_RELIGIONS">
-      <Text>team's religions</Text>
-    </Row>
+		<Row Tag="LOC_WORLD_RANKINGS_RELIGION_TEAMS_RELIGIONS">
+			<Text>team's religions</Text>
+		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_SCORE_CONDITION">
 			<Text>at {1_NumTurns} turns</Text>
 		</Row>
@@ -3786,9 +3825,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_YOU_SIMPLE">
 			<Text>You are leading</Text>
 		</Row>
-    <Row Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_TEAM_SIMPLE">
-      <Text>Your team is leading</Text>
-    </Row>
+		<Row Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_TEAM_SIMPLE">
+			<Text>Your team is leading</Text>
+		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_YOU_DETAILS">
 			<Text>You are leading with {1_Details}</Text>
 		</Row>
@@ -3801,9 +3840,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_SIMPLE">
 			<Text>You are in {1_Place} place</Text>
 		</Row>
-    <Row Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_TEAM_SIMPLE">
-      <Text>Your team is in {1_Place} place</Text>
-    </Row>
+		<Row Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_TEAM_SIMPLE">
+			<Text>Your team is in {1_Place} place</Text>
+		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_DETAILS">
 			<Text>You are in {1_Place} place with {2_Details}</Text>
 		</Row>
@@ -3813,9 +3852,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_OTHER_POSITION_DETAILS">
 			<Text>You are in position {1_Place} with {2_Details}</Text>
 		</Row>
-    <Row Tag="LOC_WORLD_RANKINGS_TEAM">
-      <Text>Team {1_TeamNumber}</Text>
-    </Row>
+		<Row Tag="LOC_WORLD_RANKINGS_TEAM">
+			<Text>Team {1_TeamNumber}</Text>
+		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_1_PLACE">
 			<Text>first</Text>
 		</Row>
@@ -3852,30 +3891,30 @@
 		<Row Tag="LOC_WORLD_RANKINGS_12_PLACE">
 			<Text>twelfth</Text>
 		</Row>
-    <Row Tag="LOC_WORLD_RANKINGS_13_PLACE">
-      <Text>thirteenth</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_RANKINGS_14_PLACE">
-      <Text>fourteenth</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_RANKINGS_15_PLACE">
-      <Text>fifteenth</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_RANKINGS_16_PLACE">
-      <Text>sixteenth</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_RANKINGS_17_PLACE">
-      <Text>seventeenth</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_RANKINGS_18_PLACE">
-      <Text>eighteenth</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_RANKINGS_19_PLACE">
-      <Text>nineteenth</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_RANKINGS_20_PLACE">
-      <Text>twentieth</Text>
-    </Row>
+		<Row Tag="LOC_WORLD_RANKINGS_13_PLACE">
+			<Text>thirteenth</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_RANKINGS_14_PLACE">
+			<Text>fourteenth</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_RANKINGS_15_PLACE">
+			<Text>fifteenth</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_RANKINGS_16_PLACE">
+			<Text>sixteenth</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_RANKINGS_17_PLACE">
+			<Text>seventeenth</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_RANKINGS_18_PLACE">
+			<Text>eighteenth</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_RANKINGS_19_PLACE">
+			<Text>nineteenth</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_RANKINGS_20_PLACE">
+			<Text>twentieth</Text>
+		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_STEPS_COMPLETED">
 			<Text>Steps Completed</Text>
 		</Row>
@@ -4014,6 +4053,9 @@
 		<Row Tag="LOC_CITY_STATES_DISTRICT_QUEST">
 			<Text>District Quest</Text>
 		</Row>
+		<Row Tag="LOC_CITY_STATES_AT_WAR_WTIH">
+			<Text>{1_CityState} is at war with {2_PlayerAtWar}</Text>
+		</Row>
 		<Row Tag="LOC_CITY_STATES_ENVOYS">
 			<Text>Envoys</Text>
 		</Row>
@@ -4059,6 +4101,15 @@
 		</Row>
 		<Row Tag="LOC_CITY_STATES_QUESTS">
 			<Text>Quests:</Text>
+		</Row>
+		<Row Tag="LOC_CITY_STATES_RELATIONSHIPS">
+			<Text>Relationships:</Text>
+		</Row>
+		<Row Tag="LOC_CITY_STATES_CIVILIZATION_HEADER">
+			<Text>Civilizations</Text>
+		</Row>
+		<Row Tag="LOC_CITY_STATES_CITY_STATES">
+			<Text>City States</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_REMOVE_AN_ENVOY">
 			<Text>Remove a proposed [ICON_Envoy] Envoy between your civilization and this city-state.</Text>
@@ -4107,6 +4158,9 @@
 		</Row>
 		<Row Tag="LOC_CITY_STATES_TITLE">
 			<Text>City-States</Text>
+		</Row>
+		<Row Tag="LOC_CITY_STATES_TURNS_WAR_NO_PEACE">
+			<Text>Currently at war.[NEWLINE](Cannot make peace.)</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_TURNS_WAR">
 			<Text>Currently at war.[NEWLINE](Peace possible in {1_Turns} {1_Turns:plural 1?turn; other?turns;}.)</Text>
@@ -4525,6 +4579,9 @@
 		<Row Tag="LOC_ROUTECHOOSER_BEGIN_ROUTE_BUTTON">
 			<Text>BEGIN ROUTE</Text>
 		</Row>
+		<Row Tag="LOC_ROUTECHOOSER_REPEAT_ROUTE_BUTTON">
+			<Text>REPEAT ROUTE</Text>
+		</Row>
 		<Row Tag="LOC_ROUTECHOOSER_RECEIVES_RESOURCE">
 			<Text>{1_City} receives:</Text>
 		</Row>
@@ -4619,6 +4676,13 @@
 		<Row Tag="LOC_DECLARE_WAR_DEALS_TOOLTIP">
 			<Text>Deals Lost:</Text>
 		</Row>
+		<Row Tag="LOC_JOINT_WAR_CANNOT_EDIT_THEIRS_TOOLTIP">
+			<Text>You can only change the target of a Joint War on your offer.</Text>
+		</Row>
+    <!-- ==================== DenouncePopup ==================== -->
+    <Row Tag="LOC_DENOUNCE_POPUP_BODY">
+      <Text>Are you sure you want to denounce {1_PlayerName}?</Text>
+    </Row>
 		<!-- ==================== Victory Status Text ==================== -->
 		<Row Tag="LOC_VICTORYSTATUS_PANEL_HEADER">
 			<Text>Victory Status</Text>
@@ -4680,6 +4744,9 @@
 		<!-- Multiplayer Last Remaining Player Popup -->
 		<Row Tag="TXT_KEY_MP_LAST_PLAYER">
 			<Text>You are the last remaining human player in the game.</Text>
+		</Row> 
+		<Row Tag="TXT_KEY_MP_LAST_PLAYER_TITLE">
+			<Text>All Alone</Text>
 		</Row>
 		<Row Tag="LOC_PARTIALSCREEN_CITYSTATES_TOOLTIP">
 			<Text>City-States[NEWLINE][NEWLINE]View all the city-states you've met, manage your [ICON_Envoy] Envoys, and review any bonuses earned.</Text>
@@ -4723,6 +4790,9 @@
 		<!-- ==================== REPORTS =================== -->
 		<Row Tag="LOC_HUD_REPORTS_AMOUNT">
 			<Text>Amount</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_ADJACENCY_BONUS">
+			<Text>Adjacency Bonuses</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_TITLE">
 			<Text>Reports</Text>
@@ -4775,12 +4845,12 @@
 		<Row Tag="LOC_HUD_REPORTS_HEADER_FOOD">
 			<Text>Food</Text>
 		</Row>
-    <Row Tag="LOC_HUD_REPORTS_HEADER_UNITNAME">
-      <Text>Unit Name</Text>
-    </Row>
-    <Row Tag="LOC_HUD_REPORTS_HEADER_UNITCOUNT">
-      <Text>Number of Units</Text>
-    </Row>
+		<Row Tag="LOC_HUD_REPORTS_HEADER_UNITNAME">
+			<Text>Unit Name</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_HEADER_UNITCOUNT">
+			<Text>Number of Units</Text>
+		</Row>
 		<Row Tag="LOC_HUD_REPORTS_HEADER_GOLD">
 			<Text>Gold</Text>
 		</Row>
@@ -4940,9 +5010,9 @@
 		<Row Tag="LOC_HUD_REPORTS_CITY_STATE">
 			<Text>City-State</Text>
 		</Row>
-    <Row Tag="LOC_HUD_REPORTS_MISC_RESOURCE_SOURCE">
-      <Text>Gameplay Bonuses</Text>
-    </Row>
+		<Row Tag="LOC_HUD_REPORTS_MISC_RESOURCE_SOURCE">
+			<Text>Gameplay Bonuses</Text>
+		</Row>
 		<Row Tag="LOC_HUD_REPORTS_TRADE_IMPORTED">
 			<Text>Imported</Text>
 		</Row>
@@ -4982,6 +5052,9 @@
 		<Row Tag="LOC_HUD_REPORTS_WORKED_TILES">
 			<Text>Worked Tiles</Text>
 		</Row>
+		<Row Tag="LOC_REPORTS_NUMBER_OF_TURNS">
+			<Text>for {1_Turns} turns</Text>
+		</Row>
 		<!-- Player Yields ToolTips -->
 		<Row Tag="LOC_PLAYER_YIELD_SCIENCE_FROM_ANARCHY">
 			<Text>No science due to anarchy.</Text>
@@ -5007,9 +5080,9 @@
 		<Row Tag="LOC_PLAYER_YIELD_SCIENCE_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
-    <Row Tag="LOC_PLAYER_YIELD_SCIENCE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
-    </Row>
+		<Row Tag="LOC_PLAYER_YIELD_SCIENCE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_CULTURE_FROM_ANARCHY">
 			<Text>No culture due to anarchy.</Text>
 		</Row>
@@ -5034,9 +5107,9 @@
 		<Row Tag="LOC_PLAYER_YIELD_CULTURE_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
-    <Row Tag="LOC_PLAYER_YIELD_CULTURE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
-    </Row>
+		<Row Tag="LOC_PLAYER_YIELD_CULTURE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_ANARCHY">
 			<Text>No gold due to anarchy.</Text>
 		</Row>
@@ -5070,15 +5143,15 @@
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_OTHER">
 			<Text>{Value : number +#.#;-#.#} from Other</Text>
 		</Row>
-    <Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_NATIONAL_PARKS">
-      <Text>{Value : number +#.#;-#.#} from National Parks</Text>
-    </Row>
-    <Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_TRIBUTARIES">
+		<Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_NATIONAL_PARKS">
+			<Text>{Value : number +#.#;-#.#} from National Parks</Text>
+		</Row>
+		<Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
-    <Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
-    </Row>
+		<Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+		</Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_MAINTENANCE_FROM_BUILDINGS">
 			<Text>{Value : number -#.#;+#.#} from Buildings</Text>
 		</Row>
@@ -5136,9 +5209,9 @@
 		<Row Tag="LOC_PLAYER_YIELD_FAITH_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
-    <Row Tag="LOC_PLAYER_YIELD_FAITH_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
-      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
-    </Row>
+		<Row Tag="LOC_PLAYER_YIELD_FAITH_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+		</Row>
 		<!-- City Yields ToolTips -->
 		<Row Tag="LOC_CITY_YIELD_FROM_BUILDINGS_TOOLTIP">
 			<Text>{Value : number +#.#;-#.#} from {1_BuildingName}</Text>
@@ -5290,12 +5363,12 @@
 		<Row Tag="LOC_DEFEAT_DEFAULT_TEXT">
 			<Text>You have been defeated.</Text>
 		</Row>
-    <Row Tag="LOC_DEFEAT_TIME_NAME">
-      <Text>Out of Time</Text>
-    </Row>
-    <Row Tag="LOC_DEFEAT_TIME_TEXT">
-      <Text>You have run out of time.</Text>
-    </Row>
+		<Row Tag="LOC_DEFEAT_TIME_NAME">
+			<Text>Out of Time</Text>
+		</Row>
+		<Row Tag="LOC_DEFEAT_TIME_TEXT">
+			<Text>You have run out of time.</Text>
+		</Row>
 		<Row Tag="LOC_VICTORY_SCORE_TEXT">
 			<Text>From our humble beginnings ages ago have you forged a civilization that has withstood time itself. Though countless civilizations rise and fall around us, we do not just survive. We prosper.</Text>
 		</Row>
@@ -5309,7 +5382,7 @@
 			<Text>The worth of a culture is not measured by its accomplishments, but in how those accomplishments last, and how they are remembered. The beauty that you have inspired our people to create will ensure that our culture stands for all time.</Text>
 		</Row>
 		<Row Tag="LOC_VICTORY_DOMINATION_TEXT">
-			<Text>Though its face my change throughout the ages, history is written from the hand of the victor. By your actions this day, you ensure our people are glorious tomorrow.</Text>
+			<Text>Though its face may change throughout the ages, history is written from the hand of the victor. By your actions this day, you ensure our people are glorious tomorrow.</Text>
 		</Row>
 		<Row Tag="LOC_VICTORY_DEFAULT_TEXT">
 			<Text>Everyone else has lost... Therefore you've won!</Text>
@@ -5401,59 +5474,59 @@
 		<Row Tag="LOC_DEMO_DIALOG_EXIT_TT">
 			<Text>Main Menu</Text>
 		</Row>
-    <!-- Turn Remaining UI text -->
-    <Row Tag="LOC_TURN_REMAINING">
-      <Text>Turn Remaining</Text>
-    </Row>
-    <Row Tag="LOC_TURNS_REMAINING">
-      <Text>Turns Remaining</Text>
-    </Row>
-    <Row Tag="LOC_TURNS_REMAINING_VAL">
-      <Text>{1_Turns} Turns Remaining</Text>
-    </Row>
-    <Row Tag="LOC_TURN_REMAINING_VAL">
-      <Text>{1_Turns} Turn Remaining</Text>
-    </Row>
-    <Row Tag="LOC_TURN_VAL_OF_VAL1">
-      <Text>Turn {1_Turns}/{2_MaxTurns}</Text>
-    </Row>
-    <Row Tag="LOC_TURN_VAL_OF_VAL2">
-      <Text>Turn {1_Turns} of {2_MaxTurns}</Text>
-    </Row>
-    <!-- Team Related text -->
-    <Row Tag="LOC_TEAM_RELIGION_VICTORY_COUNTER">
-      <Text>{1_Civs}/{2_TotalCivs} Civs Converted to team's religions</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_CULTURE_VICTORY_COUNTER">
-      <Text>{1_Team} leading with {2_Tourists}/{3_TotalTourists} tourists attracted</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_RELIGION_CONVERTED_BY_CIV">
-      <Text>Converted by {1_Civ}</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_RELIGION_CONVERTED_BY_PLAYER">
-      <Text>Converted by {1_SteamID}</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_CIV">
-      <Text>Captured by {1_Civ}</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER">
-      <Text>Captured by {1_SteamID}</Text>
-    </Row>
-    <Row Tag="LOC_TEAM_LIST_HEADING">
-      <Text>Teams and Civilizations</Text>
-    </Row>
-    <!-- World Builder -->
-    <Row Tag="LOC_WORLDBUILDER_SELECT_TOOL">
-      <Text>Plot Selector</Text>
-    </Row>
-    <Row Tag="LOC_WORLDBUILDER_PLACE_TOOL">
-      <Text>Place Plot</Text>
-    </Row>
-    <Row Tag="LOC_WORLDBUILDER_TEXT_STRING">
-      <Text>Text String</Text>
-    </Row>
-    <Row Tag="LOC_WORLDBUILDER_TEXT_TAG">
-      <Text>Text Tag</Text>
-    </Row>
+		<!-- Turn Remaining UI text -->
+		<Row Tag="LOC_TURN_REMAINING">
+			<Text>Turn Remaining</Text>
+		</Row>
+		<Row Tag="LOC_TURNS_REMAINING">
+			<Text>Turns Remaining</Text>
+		</Row>
+		<Row Tag="LOC_TURNS_REMAINING_VAL">
+			<Text>{1_Turns} Turns Remaining</Text>
+		</Row>
+		<Row Tag="LOC_TURN_REMAINING_VAL">
+			<Text>{1_Turns} Turn Remaining</Text>
+		</Row>
+		<Row Tag="LOC_TURN_VAL_OF_VAL1">
+			<Text>Turn {1_Turns}/{2_MaxTurns}</Text>
+		</Row>
+		<Row Tag="LOC_TURN_VAL_OF_VAL2">
+			<Text>Turn {1_Turns} of {2_MaxTurns}</Text>
+		</Row>
+		<!-- Team Related text -->
+		<Row Tag="LOC_TEAM_RELIGION_VICTORY_COUNTER">
+			<Text>{1_Civs}/{2_TotalCivs} Civs Converted to team's religions</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_CULTURE_VICTORY_COUNTER">
+			<Text>{1_Team} leading with {2_Tourists}/{3_TotalTourists} tourists attracted</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_RELIGION_CONVERTED_BY_CIV">
+			<Text>Converted by {1_Civ}</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_RELIGION_CONVERTED_BY_PLAYER">
+			<Text>Converted by {1_SteamID}</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_CIV">
+			<Text>Captured by {1_Civ}</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER">
+			<Text>Captured by {1_SteamID}</Text>
+		</Row>
+		<Row Tag="LOC_TEAM_LIST_HEADING">
+			<Text>Teams and Civilizations</Text>
+		</Row>
+		<!-- World Builder -->
+		<Row Tag="LOC_WORLDBUILDER_SELECT_TOOL">
+			<Text>Plot Selector</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_PLACE_TOOL">
+			<Text>Place Plot</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_TEXT_STRING">
+			<Text>Text String</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_TEXT_TAG">
+			<Text>Text Tag</Text>
+		</Row>
 	</BaseGameText>
 </GameData>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameData>
 	<BaseGameText>
 		<Row Tag="LOC_DIPLO_PERSON_CLEO">
@@ -38,14 +39,23 @@
 			<Text>[SIZE_16]Declare Holy War[NEWLINE][SIZE_12]</Text>
 		</Row>
 		<Row Tag="LOC_DIPLO_CHOICE_DECLARE_LIBERATION_WAR">
-			<Text>[SIZE_16]Declare War of Liberation[NEWLINE][SIZE_12](No warmongering if capture friendly cities)[NEWLINE]</Text>
+			<Text>[SIZE_16]Declare War of Liberation[NEWLINE][SIZE_12]</Text>
 		</Row>
+    <Row Tag="LOC_DIPLO_CHOICE_DECLARE_LIBERATION_WAR_TOOLTIP">
+      <Text>[NEWLINE][NEWLINE](No warmongering penalty when capturing friendly cities)</Text>
+    </Row>
 		<Row Tag="LOC_DIPLO_CHOICE_DECLARE_RECONQUEST_WAR">
-			<Text>[SIZE_16]Declare War of Reconquest[NEWLINE][SIZE_12](No warmongering if capture your cities)[NEWLINE]</Text>
+			<Text>[SIZE_16]Declare War of Reconquest[NEWLINE][SIZE_12]</Text>
 		</Row>
+    <Row Tag="LOC_DIPLO_CHOICE_DECLARE_RECONQUEST_WAR_TOOLTIP">
+      <Text>[NEWLINE][NEWLINE](No warmongering penalty when recapturing your cities)</Text>
+    </Row>
 		<Row Tag="LOC_DIPLO_CHOICE_DECLARE_PROTECTORATE_WAR">
-			<Text>[SIZE_16]Declare Protectorate War[NEWLINE][SIZE_12](No warmongering if defend allied city-state)[NEWLINE]</Text>
+			<Text>[SIZE_16]Declare Protectorate War[NEWLINE][SIZE_12]</Text>
 		</Row>
+    <Row Tag="LOC_DIPLO_CHOICE_DECLARE_PROTECTORATE_WAR_TOOLTIP">
+      <Text>[NEWLINE][NEWLINE](No warmongering penalty when defending allied city-states)</Text>
+    </Row>
 		<Row Tag="LOC_DIPLO_CHOICE_DECLARE_COLONIAL_WAR">
 			<Text>[SIZE_16]Declare Colonial War[NEWLINE][SIZE_12]</Text>
 		</Row>
@@ -117,7 +127,34 @@
 		</Row>
 		<!-- Action Failure Reasons -->
 		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_FRIENDLY_TEAM_MEMBERS">
-			<Text>Unable to declare war: some member of your team is a friend or ally of a member of this player's team.</Text>
-		</Row>		
+			<Text>Unable to {1_WarActionType}[NEWLINE]Some member of your team is a friend or ally of a member of this player's team.</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_NO_DENOUNCEMENT">
+			<Text>Unable to {1_WarActionType}[NEWLINE]You have not denounced this player.</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_DENOUNCEMENT_TOO_RECENT">
+			<Text>Unable to {1_WarActionType}[NEWLINE]You must wait {2_Turns} turns after denouncing (available in {3_Remaining} turns).</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_DEFENSIVE_PACT">
+			<Text>Unable to {1_WarActionType}[NEWLINE]You have a defensive pact with this leader.</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_CASUS_BELLI_NOT_MET">
+			<Text>Unable to {1_WarActionType}[NEWLINE][COLOR_RED]You do not satisfy the conditions for this Casus Belli.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_PEACE_TOO_RECENT">
+			<Text>Unable to {1_WarActionType}[NEWLINE]You must wait {2_Turns} turns after making peace (available in {3_Remaining} turns).</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_TOO_EARLY">
+			<Text>Unable to {1_WarActionType}[NEWLINE]You must wait until Turn {2_TurnNumber} to declare war on a major civilization in this game.</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_INSUFFICIENT_GOLD">
+			<Text>Unable to {1_ActionType}[NEWLINE]You need {2_GoldRequirement} [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_TOO_RECENT">
+			<Text>Unable to {1_WarActionType}[NEWLINE]You must wait {2_Turns} turns after declaring war (available in {3_Remaining} turns).</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_WAR_WITHOUT_END">
+			<Text>Unable to {1_WarActionType}[NEWLINE]Wars last forever in this game.</Text>
+		</Row>
 	</BaseGameText>
 </GameData>
