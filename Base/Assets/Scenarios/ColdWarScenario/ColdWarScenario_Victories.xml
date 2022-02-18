@@ -10,6 +10,10 @@
 		<Row Type="VICTORY_ARMAGEDDON" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_TANKBANKER" Kind="KIND_VICTORY"/>	
 	</Types>
+  <Defeats>
+    <!-- Remove time defeat since the custom victory will handle this -->
+    <Delete DefeatType="DEFEAT_TIME" />
+  </Defeats>
 	<Victories>
 		<Update>
 			<Set EnabledByDefault="0" />

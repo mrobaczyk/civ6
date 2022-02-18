@@ -8,6 +8,7 @@
 	</Kinds>
 	<Types>
 		<Row Type="DEFEAT_DEFAULT" Kind="KIND_DEFEAT"/>
+		<Row Type="DEFEAT_TIME" Kind="KIND_DEFEAT" />
 		<Row Type="VICTORY_DEFAULT" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_CONQUEST" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_CULTURE" Kind="KIND_VICTORY"/>
@@ -18,7 +19,8 @@
 	</Types>
 	<Defeats>
 		<Row DefeatType="DEFEAT_DEFAULT" Name="LOC_DEFEAT_DEFAULT_NAME" Blurb="LOC_DEFEAT_DEFAULT_TEXT" RequirementSetId="DEFAULT_DEFEAT_REQUIREMENTS"/>
-	</Defeats>
+		<Row DefeatType="DEFEAT_TIME" Name="LOC_DEFEAT_TIME_NAME" Blurb="LOC_DEFEAT_TIME_TEXT" RequirementSetId="TIME_DEFEAT_REQUIREMENTS"/>
+  </Defeats>
 	<Victories>
 		<Row VictoryType="VICTORY_SCORE" Name="LOC_VICTORY_SCORE_NAME" Blurb="LOC_VICTORY_SCORE_TEXT" RequirementSetId="REQUIREMENTS_SCORE_VICTORY"/>
 		<Row VictoryType="VICTORY_DEFAULT" Name="LOC_VICTORY_DEFAULT_NAME" Blurb="LOC_VICTORY_DEFAULT_TEXT" RequirementSetId="REQUIREMENTS_DEFAULT_VICTORY"/>
@@ -45,6 +47,7 @@
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Musician" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Works" ThresholdValue="3"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Tourists Taken" ThresholdValue="75" Exclusive="true"/>
 		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Taken Capital" ThresholdValue="1" />
 		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Opponents" ThresholdValue="2" />
 		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Leads Military" ThresholdValue="25" />
@@ -185,6 +188,7 @@
 		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MARS_REACTOR" Favored="true"/>
 		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MARS_HABITATION" Favored="true"/>
 		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MARS_HYDROPONICS" Favored="true"/>
+		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_SPACE_RACE" Value="100"/>
 		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_TECHNOLOGY" Value="25"/>
 		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_GPP_SCIENTIST" Value="25"/>
     <Row ListType="ScienceVictoryTechs" Item="TECH_ROCKETRY" Favored="true" />
@@ -327,6 +331,44 @@
 			<RequirementType>REQUIREMENT_PLAYER_DEFAULT_DEFEAT</RequirementType>
 		</Row>
 	</Requirements>
+
+  <!-- Time Defeat -->
+  <!-- Conditions - Score Victory must not be enabled and the Max Turns must be reached.-->
+  <RequirementSets>
+    <Row>
+      <RequirementSetId>TIME_DEFEAT_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
+  </RequirementSets>
+  <RequirementSetRequirements>
+    <Row>
+      <RequirementSetId>TIME_DEFEAT_REQUIREMENTS</RequirementSetId>
+      <RequirementId>TIME_DEFEAT_SCORE_DISABLED</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>TIME_DEFEAT_REQUIREMENTS</RequirementSetId>
+      <RequirementId>TIME_DEFEAT_MAX_TURN_REACHED</RequirementId>
+    </Row>
+  </RequirementSetRequirements>
+  <Requirements>
+    <Row>
+      <RequirementId>TIME_DEFEAT_SCORE_DISABLED</RequirementId>
+      <RequirementType>REQUIREMENT_GAME_VICTORY_ENABLED</RequirementType>
+      <Inverse>1</Inverse>
+    </Row>
+    <Row>
+      <RequirementId>TIME_DEFEAT_MAX_TURN_REACHED</RequirementId>
+      <RequirementType>REQUIREMENT_GAME_TURN_MAX_REACHED</RequirementType>
+    </Row>   
+  </Requirements>
+  <RequirementArguments>
+    <Row>
+      <RequirementId>TIME_DEFEAT_SCORE_DISABLED</RequirementId>
+      <Name>VictoryType</Name>
+      <Value>VICTORY_SCORE</Value>
+    </Row>
+  </RequirementArguments>
+  
 	<!-- Default Victory -->
 	<!-- Conditions - Player is last major civilization alive. -->
 	<RequirementSets>

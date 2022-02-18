@@ -98,6 +98,13 @@ CREATE TABLE "RevealedPlots" (
 		"Player" INTEGER,
 		PRIMARY KEY(ID));
 
+DROP TABLE IF EXISTS "StartPositions";
+CREATE TABLE "StartPositions" (
+		"Plot" INTEGER NOT NULL,
+		"Type" STRING NOT NULL,
+		"Value" STRING NOT NULL,
+		PRIMARY KEY("Plot"));
+
 DROP TABLE IF EXISTS "Units";
 CREATE TABLE "Units" (
 		"ID" INTEGER NOT NULL,

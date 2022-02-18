@@ -104,6 +104,10 @@
 			<Where Name="UNIT_BARBARIAN_HORSE_ARCHER" />
 			<Set Cost="10000" />
 		</Update>
+		<Update>
+			<Where UnitType="UNIT_TRADER" />
+			<Set PurchaseYield="NULL" />
+		</Update>
 	</Units>
   <!-- AI changes for tutorial -->
   <AiLists>

@@ -590,7 +590,9 @@ function AssignStartingPlots:__GetValidAdjacent(plot, minor)
 		balancedStart = 1;
 	end
 
-	if(impassable >= 2 + minor - balancedStart or (self.LandMap == true and impassable >= 2 + minor)) then
+	if((impassable >= 2 + minor - balancedStart or (self.landMap == true and impassable >= 2 + minor)) and self.waterMap == false) then
+		return false;
+	elseif(self.waterMap == true and impassable >= 2 + minor * 2 - balancedStart) then
 		return false;
 	elseif(water + impassable  >= 4 + minor - balancedStart and self.waterMap == false) then
 		return false;

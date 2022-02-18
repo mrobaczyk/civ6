@@ -201,46 +201,7 @@
 		<Row Tag="LOC_LOADSAVE_QUICK_SAVE">
 			<Text>(Quick Save)</Text>
 		</Row>
-		<!-- Mods Section -->
-		<Row Tag="LOC_MODS_TITLE">
-			<Text>MODS</Text>
-		</Row>
-		<Row Tag="LOC_MODS_INSTALLED">
-			<Text>INSTALLED</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_SUBSCRIPTIONS">
-			<Text>SUBSCRIPTIONS</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_BROWSE_WORKSHOP">
-			<Text>BROWSE WORKSHOP</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_WORLD_BUILDER">
-			<Text>WORLD BUILDER</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_NONE_INSTALLED">
-			<Text>There are no mods installed.</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_NO_SUBSCRIPTIONS">
-			<Text>There are no subscriptions.</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_MOD_TITLE">
-			<Text>Mod Title</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_MOD_TEASER">
-			<Text>Mod Teaser</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_ENABLE">
-			<Text>Enable Mod</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_DOWNLOADING">
-			<Text>Downloading Item...</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_UPDATE">
-			<Text>Update</Text>
-		</Row>
- 		<Row Tag="LOC_MODS_VIEW">
-			<Text>View</Text>
-		</Row>
+    
     <!-- Advanced Game Setup -->
 		 <Row Tag="LOC_NETWORK_NAME_TT">
 			<Text>Network Name[NEWLINE]This is how your name will appear to other players.</Text>
@@ -522,6 +483,9 @@
     <Row Tag="LOC_OPTIONS_AUTOSAVES_TO_KEEP">
       <Text>Number of autosaves to keep:</Text>
     </Row>
+	<Row Tag="LOC_OPTIONS_LAN_PLAYER_NAME">
+		<Text>Local Network Player Name:</Text>
+	</Row>		
     <Row Tag="LOC_OPTIONS_STEAM_CONTROLLER_MESSAGE">
       <Text>Steam Controller configuration happens inside the Steam client and not within this UI.  The escape, left mouse button, and right mouse button are reserved and cannot be bound.</Text>
     </Row>
@@ -617,10 +581,10 @@
 		  <Text>Not Ready</Text>
 		</Row>
 		<Row Tag="LOC_INVALID_SLOT_MAP_SIZE">
-			<Text>[COLOR:StagingStatus_Invalid]Invalid Map Size[ENDCOLOR]</Text>
+			<Text>[COLOR:StagingStatus_Invalid]Invalid for Map Size[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_INVALID_SLOT_MAP_SIZE_TT">
-			<Text>This player slot is invalid for this map size.  Swap to a valid player slot.</Text>
+			<Text>This player slot is unavailable for the current map size.  Have the host increase the map size or swap to an available player slot.</Text>
 		</Row>		
 		<!-- Multiplayer Status Strings END -->
 		<Row Tag="LOC_JOIN">
@@ -976,6 +940,19 @@
 		<Row Tag="LOC_RANDOM_CIVILIZATION">
 			<Text>Random Civilization</Text>
 		</Row>
+		<Row Tag="LOC_SETUP_ERROR_NO_DUPLICATE_LEADERS">
+			<Text>No Duplicate Leaders</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_ERROR_INVALID_OPTION">
+			<Text>Invalid Option</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_ERROR_LEADER_NOT_OWNED">
+			<Text>Not Owned</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_PLAYER_PARAMETER_ERROR">
+			<Text>One or more player options are invalid.</Text>
+		</Row>
+    
 		<!-- Configuration Parameters.  Move these to a better location -->
 		<Row Tag="LOC_RULESET">
 			<Text>Ruleset:</Text>
@@ -1447,6 +1424,12 @@
 		<Row Tag="LOC_TUTORIAL_NEW_TO_CIV_6">
 			<Text>New to Civilization VI</Text>
 		</Row>
+		<Row Tag="LOC_NO_DUPLICATE_LEADERS_NAME">
+			<Text>No Duplicate Leaders</Text>
+		</Row>
+		<Row Tag="LOC_NO_DUPLICATE_LEADERS_DESCRIPTION">
+			<Text>Enabling this option prevents two or more players from choosing the same leader.</Text>
+		</Row>
 		<Row Tag="LOC_LIMIT_TURNS_NAME">
 			<Text>Limit Turns</Text>
 		</Row>
@@ -1471,7 +1454,13 @@
 		<Row Tag="LOC_TURNLIMIT_CUSTOM_DESCRIPTION">
 			<Text>The game will end at the specified number of turns.</Text>
 		</Row>
-		<Row Tag="LOC_MAX_TURNS_NAME">
+    <Row Tag="LOC_CITYSTATE_COUNT_NAME">
+      <Text>City-States:</Text>
+    </Row>
+    <Row Tag="LOC_CITYSTATE_COUNT_DESCRIPTION">
+      <Text>The number of city-states to include in the game.</Text>
+    </Row>
+    <Row Tag="LOC_MAX_TURNS_NAME">
 			<Text>Max Turns:</Text>
 		</Row>
 		<Row Tag="LOC_MAX_TURNS_DESCRIPTION">
@@ -1596,5 +1585,55 @@
 		<Row Tag="LOC_ARX_GOSSIP_LOG">
 			<Text>Gossip Log</Text>
 		</Row>
+		
+		<!-- File Errors -->
+		<Row Tag="LOC_SERIALIZATION_ERROR_VERSION_MISMATCH">
+			<Text>Save cannot be loaded in this version of the game.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_FAILED_TO_OPEN">
+			<Text>Unable to open save.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_FAILED_TO_WRITE">
+			<Text>Unable to write save.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_FAILED_TO_READ">
+			<Text>Unable to read save.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_FAILED_TO_REMOVE">
+			<Text>Unable to remove save.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_NOT_SAVE_GAME">
+			<Text>File is not a save game.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_CORRUPT_SAVE">
+			<Text>Save game is corrupt.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_UNEXPECTED_END_OF_FILE">
+			<Text>Save loading unexpectedly ended.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_RESTORING_STATE">
+			<Text>Unable to restore the game state.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_PATH_NOT_FOUND">
+			<Text>Unable find the path to the save.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_INVALID_DEVICE">
+			<Text>The save device is invalid.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_FILE_LIST">
+			<Text>Unable to retrieve the save list from the device.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_MOD">
+			<Text>One or more required Mods for the save are not installed.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_DLC">
+			<Text>One or more required DLC packages for the save are not installed.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_EXPANSION">
+			<Text>One or more required Expansion packages for the save are not installed.</Text>
+		</Row>
+
+		<!-- -->
+		
 	</FrontEndText>
 </GameData>

@@ -321,6 +321,7 @@
 		<Row Type="EFFECT_DIPLOMACY_FORCE_INCURSION" Kind="KIND_EFFECT"/>
 		<Row Type="EFFECT_DIPLOMACY_GOVERNMENTS" Kind="KIND_EFFECT"/>
 		<Row Type="EFFECT_DIPLOMACY_KEPT_PROMISE" Kind="KIND_EFFECT"/>
+		<Row Type="EFFECT_DIPLOMACY_NEW_WARMONGER" Kind="KIND_EFFECT"/>
 		<Row Type="EFFECT_DIPLOMACY_NO_PROMISE" Kind="KIND_EFFECT"/>
 		<Row Type="EFFECT_DIPLOMACY_ONE_SIDED_TRADES" Kind="KIND_EFFECT"/>
 		<Row Type="EFFECT_DIPLOMACY_RANDOM" Kind="KIND_EFFECT"/>
@@ -451,7 +452,8 @@
 		<Row Type="REQUIREMENT_PLAYER_GOT_GREAT_PERSON" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLAYER_HANDICAP_AT_OR_ABOVE" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLAYER_HAPPINESS_LEAD" Kind="KIND_REQUIREMENT"/>
-		<Row Type="REQUIREMENT_PLAYER_HAS_GIVEN_INFLUENCE_TOKENS" Kind="KIND_REQUIREMENT"/>
+    <Row Type="REQUIREMENT_PLAYER_HAS_AT_LEAST_NUM_MILITARY_UNITS" Kind="KIND_REQUIREMENT"/>
+    <Row Type="REQUIREMENT_PLAYER_HAS_GIVEN_INFLUENCE_TOKENS" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLAYER_HAS_DESIRED_LUXURY" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLAYER_HAS_HIGHEST_SCORE" Kind="KIND_REQUIREMENT"/>
 		<!-- 
@@ -476,6 +478,19 @@
 				Ancient Raider - Pillaged the most hexes.
 				Wonder of the Ancient World - Most wonders. -->
 		<Row Type="REQUIREMENT_PLAYER_HAS_ANCIENT_RIVALS_VICTORY" Kind="KIND_REQUIREMENT"/>
+		<!-- Golden Horde Scenario Victory requirement 
+			Triggers if the player has the highest number of Victory Points. Ties are resolved based on civilization score.
+			1 Victory Point for every barbarian killed.
+			3 Victory Points for every barbarian camp cleared.
+			5 Victory Points for every unpillaged improvement in your territory.
+		-->
+		<Row Type="REQUIREMENT_PLAYER_HAS_GOLDEN_HORDE_VICTORY" Kind="KIND_REQUIREMENT"/>
+		<!-- Comp Stomp Scenario Victory requirement 
+			Triggers when all AI controlled civilizations have been defeated.  The player with the most captured AI civilization cities wins.  Ties are resolved based on civilization score.
+		-->
+		<Row Type="REQUIREMENT_PLAYER_HAS_COMP_STOMP_VICTORY" Kind="KIND_REQUIREMENT"/>
+		<!-- Triggers when the player has the most hexes in their territory.  Does not trigger in the case of a tie. -->
+		<Row Type="REQUIREMENT_PLAYER_HAS_MOST_TERRITORY" Kind="KIND_REQUIREMENT"/>
 		<!-- 
 			Have the most religious followers globally.
 		-->
@@ -522,6 +537,7 @@
 		<Row Type="REQUIREMENT_PLOT_ADJACENT_DISTRICT_TYPE_MATCHES" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLOT_ADJACENT_FRIENDLY_UNIT_TYPE_MATCHES" Kind="KIND_REQUIREMENT"/>
+		<Row Type="REQUIREMENT_PLOT_ADJACENT_FRIENDLY_UNIT_TAG_MATCHES" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLOT_ADJACENT_IMPROVEMENT_TYPE_MATCHES" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLOT_ADJACENT_UNIT_TYPE_MATCHES" Kind="KIND_REQUIREMENT"/>
 		<Row Type="REQUIREMENT_PLOT_ADJACENT_TO_OWNER" Kind="KIND_REQUIREMENT"/>

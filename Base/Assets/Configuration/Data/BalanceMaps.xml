@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <Maps>
+    <Row File="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION1_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION1_DESCRIPTION" SortIndex="70" />
+    <Row File="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION2_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION2_DESCRIPTION" SortIndex="70" />
+  </Maps>
+  <MapSizes>	
+		<!-- Balanced4 Custom Map Size -->
+		<Row Domain="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" MapSizeType="MAPSIZE_TINY" Name="LOC_MAPSIZE_TINY_NAME" Description="LOC_MAPSIZE_TINY_DESCRIPTION" MinPlayers="2" MaxPlayers="4" DefaultPlayers="4" MinCityStates="0" MaxCityStates="6" DefaultCityStates="6" SortIndex="10" />
+		
+		<!-- Balanced6 Custom Map Size -->
+		<Row Domain="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map" MapSizeType="MAPSIZE_SMALL" Name="LOC_MAPSIZE_SMALL_NAME" Description="LOC_MAPSIZE_SMALL_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="9" DefaultCityStates="9" SortIndex="10" />
+</MapSizes>
+<MapDomainOverrides>
+	<Row Map="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" ParameterId="MapSize" Domain="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map"/>
+	<Row Map="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map" ParameterId="MapSize" Domain="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map"/>
+</MapDomainOverrides>
+</GameInfo>

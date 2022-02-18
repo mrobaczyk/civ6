@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>3</major>
 		<minor>0</minor>
-		<build>199</build>
-		<revision>526</revision>
+		<build>221</build>
+		<revision>659</revision>
 	</m_Version>
 	<m_TemplateName text="Terrains"/>
 	<m_RootCollections>
@@ -81,6 +81,9 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_GRASS"/>
 			</Element>
@@ -154,6 +157,9 @@
 							<m_ChildCollections/>
 							<m_Name text="Lighting001"/>
 						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_GRASS_HILLS"/>
@@ -229,6 +235,9 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_GRASS_MOUNTAIN"/>
 			</Element>
@@ -302,6 +311,9 @@
 							<m_ChildCollections/>
 							<m_Name text="Lighting001"/>
 						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_PLAINS"/>
@@ -377,6 +389,9 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_PLAINS_HILLS"/>
 			</Element>
@@ -450,6 +465,9 @@
 							<m_ChildCollections/>
 							<m_Name text="Lighting001"/>
 						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_PLAINS_MOUNTAIN"/>
@@ -525,6 +543,9 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_DESERT"/>
 			</Element>
@@ -586,6 +607,9 @@
 							<m_ChildCollections/>
 							<m_Name text="Lighting001"/>
 						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_DESERT_HILLS"/>
@@ -661,6 +685,9 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_DESERT_MOUNTAIN"/>
 			</Element>
@@ -721,6 +748,21 @@
 							</m_Fields>
 							<m_ChildCollections/>
 							<m_Name text="Lighting001"/>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="TERRAIN_TUNDRA"/>
+										<m_ParamName text="XrefName"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Snow"/>
 						</Element>
 					</Element>
 				</m_ChildCollections>
@@ -797,6 +839,21 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="TERRAIN_TUNDRA_HILLS"/>
+										<m_ParamName text="XrefName"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Snow"/>
+						</Element>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_TUNDRA_HILLS"/>
 			</Element>
@@ -869,6 +926,21 @@
 							</m_Fields>
 							<m_ChildCollections/>
 							<m_Name text="Lighting001"/>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="TERRAIN_TUNDRA_MOUNTAIN"/>
+										<m_ParamName text="XrefName"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Snow"/>
 						</Element>
 					</Element>
 				</m_ChildCollections>
@@ -945,6 +1017,21 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="TERRAIN_SNOW"/>
+										<m_ParamName text="XrefName"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Snow"/>
+						</Element>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_SNOW"/>
 			</Element>
@@ -1017,6 +1104,21 @@
 							</m_Fields>
 							<m_ChildCollections/>
 							<m_Name text="Lighting001"/>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="TERRAIN_SNOW_HILLS"/>
+										<m_ParamName text="XrefName"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Snow"/>
 						</Element>
 					</Element>
 				</m_ChildCollections>
@@ -1093,6 +1195,21 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="TERRAIN_SNOW_MOUNTAIN"/>
+										<m_ParamName text="XrefName"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Snow"/>
+						</Element>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_SNOW_MOUNTAIN"/>
 			</Element>
@@ -1167,6 +1284,9 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_COAST"/>
 			</Element>
@@ -1229,11 +1349,13 @@
 							<m_Name text="Lighting001"/>
 						</Element>
 					</Element>
+					<Element>
+						<m_CollectionName text="Snow"/>
+					</Element>
 				</m_ChildCollections>
 				<m_Name text="TERRAIN_OCEAN"/>
 			</Element>
 		</Element>
 	</m_RootCollections>
-	<m_BLPReferences/>
 </AssetObjects::ArtDefSet>
 

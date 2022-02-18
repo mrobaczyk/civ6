@@ -214,7 +214,7 @@
 		<Row HandlerId="DEFAULT_HANDLER_OWN_X_UNITS" TechBoostType="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" UniquenessTag="TRAIN" WinnowFunction="CannotDeployUnit" BehaviorTree="Build Trigger Unit"/>
 		<Row HandlerId="DEFAULT_HANDLER_RESEARCH_TECH" TechBoostType="BOOST_TRIGGER_RESEARCH_TECH" UniquenessTag="RESEARCH" BehaviorTree="Research Trigger Tech"/>
 		<Row HandlerId="DEFAULT_HANDLER_IMPROVE_SPECIFIC_RESOURCE" TechBoostType="BOOST_TRIGGER_IMPROVE_SPECIFIC_RESOURCE" UniquenessTag="WORKER" WinnowFunction="NoSpecificResource" BehaviorTree="Build City Improvement"/>
-		<Row HandlerId="DEFAULT_HANDLER_NUM_IMPROVED_TILES" TechBoostType="BOOST_TRIGGER_NUM_IMPROVED_TILES" UniquenessTag="WORKER" BehaviorTree="Build City Improvement"/>
+		<Row HandlerId="DEFAULT_HANDLER_NUM_IMPROVED_TILES" TechBoostType="BOOST_TRIGGER_NUM_IMPROVED_TILES" UniquenessTag="WORKER" WinnowFunction="HasAnyUnit" BehaviorTree="Build Trigger Unit"/>
 		<Row HandlerId="DEFAULT_HANDLER_MEET_X_PERCENT_CIVS_HAVE_DISTRICT" TechBoostType="BOOST_TRIGGER_MEET_X_PERCENT_CIVS_HAVE_DISTRICT" UniquenessTag="SCOUT" WinnowFunction="HasScout" BehaviorTree="Build Trigger Unit"/>
 		<Row HandlerId="DEFAULT_HANDLER_MEET_CIVS_WITH_DISTRICT" TechBoostType="BOOST_TRIGGER_MEET_X_PERCENT_CIVS_HAVE_DISTRICT" UniquenessTag="SCOUT" WinnowFunction="HasScout" BehaviorTree="Build Trigger Unit"/>
 		<Row HandlerId="DEFAULT_HANDLER_GOLD_PROFIT" TechBoostType="BOOST_TRIGGER_GOLD_PROFIT" UniquenessTag="TRADE" WinnowFunction="HasTradeRoute" BehaviorTree="Build Trigger Unit"/>
@@ -353,6 +353,7 @@
 		<Row EventType="AI_EVENT_GREAT_PERSON_GAINED"/>
 		<Row EventType="AI_EVENT_MANAGE_SPY"/>
 		<Row EventType="AI_EVENT_RELIGIOUS_CITY_CONVERTED"/>
+		<Row EventType="AI_EVENT_FOUNDED_RELIGION"/>
 	</AiEvents>
 	<TriggeredBehaviorTrees>
 		<Row TriggerType="TRIGGER_TECH_UPGRADE" TreeName="Upgrade Units" AIEvent="AI_EVENT_GAIN_TECH" Priority="3"/>
@@ -1016,7 +1017,9 @@
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_PENALTY"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_BUILDERS"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_HARBORS"/>
-		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION"/>
+    <Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_MILITARY"/>
+    <Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_GOLD_MILITARY_UPGRADE"/>
+    <Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_SEND_TRADE_ROUTE_BONUS"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_SMALL_INFLUENCE_BONUS"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_MEDIUM_INFLUENCE_BONUS"/>
@@ -1283,8 +1286,9 @@
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_WARMONGER</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_WARMONGER</ModifierType>
-			<SubjectRequirementSetId>PLAYER_IS_WARMONGER_SUBJECT</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_NEW_WARMONGER</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_NEW_WARMONGER_SUBJECT</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_3RD_PARTY_DECLARED_SURPRISE_WAR_ON_FRIEND</ModifierId>
@@ -1615,6 +1619,15 @@
 			<ModifierId>MINOR_CIV_PRODUCTION_HARBORS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
 		</Row>
+    <Row>
+      <ModifierId>MINOR_CIV_PRODUCTION_MILITARY</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MILITARY_UNITS_PRODUCTION</ModifierType>
+      <SubjectRequirementSetId>PLAYER_HAS_SMALL_MILITARY</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_ADJUST_UNIT_UPGRADE_DISCOUNT_PERCENT</ModifierType>
+    </Row>
 		<Row>
 			<ModifierId>MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
@@ -2845,7 +2858,7 @@
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_ONE_SIDED_TRADES</ModifierId>
 			<Name>ReductionValue</Name>
-			<Value>2</Value>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_ONE_SIDED_TRADES</ModifierId>
@@ -3739,6 +3752,16 @@
 			<Name>Amount</Name>
 			<Value>500</Value>
 		</Row>
+    <Row>
+      <ModifierId>MINOR_CIV_PRODUCTION_MILITARY</ModifierId>
+      <Name>Amount</Name>
+      <Value>200</Value>
+    </Row>
+    <Row>
+      <ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
+      <Name>Amount</Name>
+      <Value>100</Value>
+    </Row>
 		<Row>
 			<ModifierId>MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION</ModifierId>
 			<Name>DistrictType</Name>
@@ -5091,6 +5114,10 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_IS_NEW_WARMONGER_SUBJECT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>WARMONGER_TRIGGERS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
 		</Row>
@@ -5106,6 +5133,10 @@
 			<RequirementSetId>PLAYER_HAS_DIFFERENT_GOVERNMENT</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+    <Row>
+      <RequirementSetId>PLAYER_HAS_SMALL_MILITARY</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+    </Row>
 		<Row>
 			<RequirementSetId>PLAYER_HAS_SMALL_INFLUENCE</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
@@ -5517,6 +5548,14 @@
 			<RequirementId>REQUIRES_WARMONGER_TRIGGER</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_IS_NEW_WARMONGER_SUBJECT</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_NEW_WARMONGER_SUBJECT</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>WARMONGER_TRIGGERS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_DECLARED_WAR</RequirementId>
 		</Row>
@@ -5548,6 +5587,10 @@
 			<RequirementSetId>PLAYER_HAS_DIFFERENT_GOVERNMENT</RequirementSetId>
 			<RequirementId>REQUIRES_DIFFERENT_GOVERNMENT</RequirementId>
 		</Row>
+    <Row>
+      <RequirementSetId>PLAYER_HAS_SMALL_MILITARY</RequirementSetId>
+      <RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
+    </Row>
 		<Row>
 			<RequirementSetId>PLAYER_HAS_SMALL_INFLUENCE</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_INFLUENCE</RequirementId>
@@ -5956,6 +5999,11 @@
 			<RequirementType>REQUIREMENT_ESPIONAGE_DETECTED</RequirementType>
 			<Triggered>true</Triggered>
 		</Row>
+    <Row>
+      <RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
+      <RequirementType>REQUIREMENT_PLAYER_HAS_AT_LEAST_NUM_MILITARY_UNITS</RequirementType>
+      <Inverse>True</Inverse>
+    </Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_INFLUENCE</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_HAS_GIVEN_INFLUENCE_TOKENS</RequirementType>
@@ -6197,6 +6245,11 @@
 			<Name>OnlyOwnersCity</Name>
 			<Value>True</Value>
 		</Row>
+    <Row>
+      <RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
+      <Name>Amount</Name>
+      <Value>10</Value>
+    </Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_INFLUENCE</RequirementId>
 			<Name>MinimumTokens</Name>

@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>3</major>
 		<minor>0</minor>
-		<build>212</build>
-		<revision>470</revision>
+		<build>220</build>
+		<revision>998</revision>
 	</m_Version>
 	<m_TemplateName text="Buildings"/>
 	<m_RootCollections>
@@ -7348,101 +7348,6 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects::ArtDefReferenceValue">
-										<m_ElementName text="Market"/>
-										<m_RootCollectionName text="Buildings"/>
-										<m_ArtDefPath text="StrategicView.artdef"/>
-										<m_CollectionIsLocked>true</m_CollectionIsLocked>
-										<m_TemplateName text="StrategicView"/>
-										<m_ParamName text="XrefName"/>
-									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
-										<m_ElementName text="Completed"/>
-										<m_RootCollectionName text="BuildStates"/>
-										<m_ArtDefPath text="Buildings.artdef"/>
-										<m_CollectionIsLocked>true</m_CollectionIsLocked>
-										<m_TemplateName text="Buildings"/>
-										<m_ParamName text="State"/>
-									</Element>
-								</m_Values>
-							</m_Fields>
-							<m_ChildCollections/>
-							<m_Name text="StrategicView"/>
-						</Element>
-						<Element>
-							<m_Fields>
-								<m_Values>
-									<Element class="AssetObjects::ArtDefReferenceValue">
-										<m_ElementName text="Market_Pillaged"/>
-										<m_RootCollectionName text="Buildings"/>
-										<m_ArtDefPath text="StrategicView.artdef"/>
-										<m_CollectionIsLocked>true</m_CollectionIsLocked>
-										<m_TemplateName text="StrategicView"/>
-										<m_ParamName text="XrefName"/>
-									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
-										<m_ElementName text="Pillaged"/>
-										<m_RootCollectionName text="BuildStates"/>
-										<m_ArtDefPath text="Buildings.artdef"/>
-										<m_CollectionIsLocked>true</m_CollectionIsLocked>
-										<m_TemplateName text="Buildings"/>
-										<m_ParamName text="State"/>
-									</Element>
-								</m_Values>
-							</m_Fields>
-							<m_ChildCollections/>
-							<m_Name text="StrategicView001"/>
-						</Element>
-						<Element>
-							<m_Fields>
-								<m_Values>
-									<Element class="AssetObjects::ArtDefReferenceValue">
-										<m_ElementName text="Market_UnderConstruction"/>
-										<m_RootCollectionName text="Buildings"/>
-										<m_ArtDefPath text="StrategicView.artdef"/>
-										<m_CollectionIsLocked>true</m_CollectionIsLocked>
-										<m_TemplateName text="StrategicView"/>
-										<m_ParamName text="XrefName"/>
-									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
-										<m_ElementName text="UnderConstruction"/>
-										<m_RootCollectionName text="BuildStates"/>
-										<m_ArtDefPath text="Buildings.artdef"/>
-										<m_CollectionIsLocked>true</m_CollectionIsLocked>
-										<m_TemplateName text="Buildings"/>
-										<m_ParamName text="State"/>
-									</Element>
-								</m_Values>
-							</m_Fields>
-							<m_ChildCollections/>
-							<m_Name text="StrategicView002"/>
-						</Element>
-					</Element>
-				</m_ChildCollections>
-				<m_Name text="BUILDING_SUKIENNICE"/>
-			</Element>
-			<Element>
-				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects::BoolValue">
-							<m_bValue>false</m_bValue>
-							<m_ParamName text="CanAffectDistrict"/>
-						</Element>
-						<Element class="AssetObjects::BoolValue">
-							<m_bValue>false</m_bValue>
-							<m_ParamName text="IsAffectedByDistrict"/>
-						</Element>
-					</m_Values>
-				</m_Fields>
-				<m_ChildCollections>
-					<Element>
-						<m_CollectionName text="Audio"/>
-					</Element>
-					<Element>
-						<m_CollectionName text="StrategicView"/>
-						<Element>
-							<m_Fields>
-								<m_Values>
-									<Element class="AssetObjects::ArtDefReferenceValue">
 										<m_ElementName text="Arena"/>
 										<m_RootCollectionName text="Buildings"/>
 										<m_ArtDefPath text="StrategicView.artdef"/>
@@ -8090,14 +7995,6 @@
 									<m_TemplateName text="Buildings"/>
 									<m_ParamName text="Buildings (Level 1)001"/>
 								</Element>
-								<Element class="AssetObjects::ArtDefReferenceValue">
-									<m_ElementName text="BUILDING_SUKIENNICE"/>
-									<m_RootCollectionName text="Building"/>
-									<m_ArtDefPath text="Buildings.artdef"/>
-									<m_CollectionIsLocked>true</m_CollectionIsLocked>
-									<m_TemplateName text="Buildings"/>
-									<m_ParamName text="Buildings (Level 1)002"/>
-								</Element>
 							</m_Values>
 							<m_ParamName text="Buildings (Level 1)"/>
 						</Element>
@@ -8555,6 +8452,5 @@
 			</Element>
 		</Element>
 	</m_RootCollections>
-	<m_BLPReferences/>
 </AssetObjects::ArtDefSet>
 

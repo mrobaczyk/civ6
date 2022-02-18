@@ -41,10 +41,10 @@
   <AiOperationTeams>
     <Row TeamName="Simple Early Attack Force" OperationName="Attack Barb Camp" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0.5" />
     <Row TeamName="Simple Early Attack Force" OperationName="Barb Camp Tech Boost" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="1" />
-    <Row TeamName="Simple City Attack Force" OperationName="Attack Enemy City" InitialStrengthAdvantage="0.5" OngoingStrengthAdvantage="3" />
-    <Row TeamName="Simple City Attack Force" OperationName="Wartime Attack Enemy City" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="3" />
-    <Row TeamName="City Attack Force" OperationName="Attack Walled City" InitialStrengthAdvantage="0.5" OngoingStrengthAdvantage="4" />
-    <Row TeamName="City Attack Force" OperationName="Wartime Attack Walled City" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="6" />
+    <Row TeamName="Simple City Attack Force" OperationName="Attack Enemy City" InitialStrengthAdvantage="1.5" OngoingStrengthAdvantage="3" />
+    <Row TeamName="Simple City Attack Force" OperationName="Wartime Attack Enemy City" InitialStrengthAdvantage="0.5" OngoingStrengthAdvantage="3" />
+    <Row TeamName="City Attack Force" OperationName="Attack Walled City" InitialStrengthAdvantage="1.5" OngoingStrengthAdvantage="4" />
+    <Row TeamName="City Attack Force" OperationName="Wartime Attack Walled City" InitialStrengthAdvantage="1" OngoingStrengthAdvantage="6" />
     <Row TeamName="Barbarian Builder Capture" OperationName="Barbarian Builder Capture" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0.5" />
     <Row TeamName="Civilian Builder Capture" OperationName="Civilian Builder Capture" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0.5" />
     <Row TeamName="Settle City Team" OperationName="Settle New City" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="1" SafeRallyPoint="true" />
@@ -89,15 +89,15 @@
     <Row TeamName="Nuclear Attack" AiType="UNITTYPE_NUCLEAR_ESCORT" MinNumber="0" />
   </OpTeamRequirements>
   <AiOperationDefs>
-    <Row OperationName="Attack Barb Camp" TargetType="TARGET_BARBARIAN_CAMP" OperationType="ATTACK_BARBARIANS" BehaviorTree="Simple Operation Attack" Priority="4" SelfStart="True" MaxTargetDistInRegion="-1" MaxTargetDistInArea="25" MinOddsOfSuccess="0.5" />
-    <Row OperationName="Barb Camp Tech Boost" TargetType="TARGET_BARBARIAN_CAMP" OperationType="ATTACK_BARBARIANS" BehaviorTree="Simple Operation Attack" Priority="4" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" />
+    <Row OperationName="Attack Barb Camp" TargetType="TARGET_BARBARIAN_CAMP" OperationType="ATTACK_BARBARIANS" BehaviorTree="Simple Operation Attack" Priority="3" SelfStart="True" MaxTargetDistInRegion="-1" MaxTargetDistInArea="25" MinOddsOfSuccess="0.5" />
+    <Row OperationName="Barb Camp Tech Boost" TargetType="TARGET_BARBARIAN_CAMP" OperationType="ATTACK_BARBARIANS" BehaviorTree="Simple Operation Attack" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" />
     <Row OperationName="Attack Enemy City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" OperationType="CITY_ASSAULT" BehaviorTree="Early City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="30" MaxTargetDistInWorld="0" MinOddsOfSuccess="0.5" />
     <Row OperationName="Wartime Attack Enemy City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" OperationType="CITY_ASSAULT" BehaviorTree="Early City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.25" MustBeAtWar="true" />
     <Row OperationName="Attack Walled City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" TargetParameter="1" OperationType="CITY_ASSAULT" BehaviorTree="Siege City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="30" MaxTargetDistInWorld="0" MinOddsOfSuccess="0.6" />
     <Row OperationName="Wartime Attack Walled City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" TargetParameter="1" OperationType="CITY_ASSAULT" BehaviorTree="Siege City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.4" MustBeAtWar="true" />
     <Row OperationName="Barbarian Builder Capture" TargetType="TARGET_BARBARIAN_CAMP" BehaviorTree="Escort Worker To Camp" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="0" />
     <Row OperationName="Civilian Builder Capture" TargetType="TARGET_FRIENDLY_CITY" BehaviorTree="Escort Worker To Camp" Priority="1" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="0" />
-    <Row OperationName="Settle New City" TargetType="TARGET_SETTLE_LOCATION" OperationType="OP_SETTLE" BehaviorTree="Settle City Op" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="-1" />
+    <Row OperationName="Settle New City" TargetType="TARGET_SETTLE_LOCATION" OperationType="OP_SETTLE" BehaviorTree="Settle City Op" Priority="4" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="-1" />
     <!--Row OperationName="Civ Defense" TargetType="TARGET_NONE" OperationType="OP_DEFENSE" BehaviorTree="NOT DONE YET" -->
     <Row OperationName="City Defense" TargetType="TARGET_FRIENDLY_CITY" TargetParameter="1" BehaviorTree="Simple City Defense" Priority="4" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="0" />
     <Row OperationName="Barbarian Attack" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" BehaviorTree="Raid City" Priority="3" SelfStart="false" AllowTargetUpdate="false" />

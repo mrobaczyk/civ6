@@ -19,6 +19,7 @@
 		<Row Type="ABILITY_BYPASS_WALLS" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_ANTI_SPEAR" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_GRANT_RANGE_BONUS" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_RECEIVE_RANGE_BONUS" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_UNOBSTRUCTED_VIEW" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_RELIGIOUS_CANNOT_ATTACK" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_FRIENDLY_TERRITORY_RELIGIOUS" Kind="KIND_ABILITY"/>
@@ -74,7 +75,7 @@
 		<Row Type="ABILITY_ENABLE_WALL_ATTACK" Tag="CLASS_BATTERING_RAM"/>
 		<Row Type="ABILITY_BYPASS_WALLS" Tag="CLASS_SIEGE_TOWER"/>
 		<Row Type="ABILITY_ANTI_SPEAR" Tag="CLASS_MELEE"/>
-		<Row Type="ABILITY_GRANT_RANGE_BONUS" Tag="CLASS_OBSERVATION"/>
+		<Row Type="ABILITY_RECEIVE_RANGE_BONUS" Tag="CLASS_FORWARD_OBSERVER"/>
 		<Row Type="ABILITY_UNOBSTRUCTED_VIEW" Tag="CLASS_OBSERVATION"/>
 		<Row Type="ABILITY_UNOBSTRUCTED_VIEW" Tag="CLASS_AIRCRAFT"/>
 		<Row Type="ABILITY_RELIGIOUS_CANNOT_ATTACK" Tag="CLASS_MISSIONARY"/>
@@ -155,6 +156,7 @@
 		<Row UnitAbilityType="ABILITY_BYPASS_WALLS" Name="LOC_ABILITY_BYPASS_WALLS_NAME" Description="LOC_ABILITY_BYPASS_WALLS_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_ANTI_SPEAR" Name="LOC_ABILITY_ANTI_SPEAR_NAME" Description="LOC_ABILITY_ANTI_SPEAR_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_GRANT_RANGE_BONUS" Name="LOC_ABILITY_GRANT_RANGE_BONUS_NAME" Description="LOC_ABILITY_GRANT_RANGE_BONUS_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_RECEIVE_RANGE_BONUS" Name="LOC_ABILITY_RECEIVE_RANGE_BONUS" Description="LOC_ABILITY_RECEIVE_RANGE_BONUS_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_UNOBSTRUCTED_VIEW" Name="LOC_ABILITY_UNOBSTRUCTED_VIEW_NAME" Description="LOC_ABILITY_UNOBSTRUCTED_VIEW_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_RELIGIOUS_CANNOT_ATTACK" Name="LOC_ABILITY_RELIGIOUS_CANNOT_ATTACK_NAME" Description="LOC_ABILITY_RELIGIOUS_CANNOT_ATTACK_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_FRIENDLY_TERRITORY_RELIGIOUS" Name="LOC_ABILITY_FRIENDLY_TERRITORY_RELIGIOUS_NAME" Description="LOC_ABILITY_FRIENDLY_TERRITORY_RELIGIOUS_DESCRIPTION"/>
@@ -261,6 +263,10 @@
 		<Row>
 			<UnitAbilityType>ABILITY_ANTI_SPEAR</UnitAbilityType>
 			<ModifierId>ANTI_SPEAR</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_RECEIVE_RANGE_BONUS</UnitAbilityType>
+			<ModifierId>RECEIVE_RANGE_BONUS</ModifierId>
 		</Row>
 		<Row>
 			<UnitAbilityType>ABILITY_GRANT_RANGE_BONUS</UnitAbilityType>
@@ -500,9 +506,13 @@
 			<SubjectRequirementSetId>ANTI_SPEAR_OPPONENT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
+			<ModifierId>RECEIVE_RANGE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_ATTACK_RANGE</ModifierType>
+			<SubjectRequirementSetId>RANGE_BONUS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
 			<ModifierId>GRANT_RANGE_BONUS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_ATTACK_RANGE</ModifierType>
-			<SubjectRequirementSetId>RANGE_BONUS_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>UNOBSTRUCTED_VIEW</ModifierId>
@@ -771,6 +781,11 @@
 			<ModifierId>ANTI_SPEAR</ModifierId>
 			<Name>Amount</Name>
 			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>RECEIVE_RANGE_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>GRANT_RANGE_BONUS</ModifierId>
@@ -1130,11 +1145,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>RANGE_BONUS_REQUIREMENTS</RequirementSetId>
-			<RequirementId>SIEGE_UNIT_REQUIREMENT</RequirementId>
-		</Row>
-		<Row>
-			<RequirementSetId>RANGE_BONUS_REQUIREMENTS</RequirementSetId>
-			<RequirementId>ADJACENT_UNIT_REQUIREMENT</RequirementId>
+			<RequirementId>ADJACENT_FRIENDLY_OBSERVER_UNIT_REQUIREMENT</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>FASCISM_REQUIREMENTS</RequirementSetId>
@@ -1267,6 +1278,10 @@
 			<RequirementType>REQUIREMENT_PLOT_ADJACENT_TO_OWNER</RequirementType>
 		</Row>
 		<Row>
+			<RequirementId>ADJACENT_FRIENDLY_OBSERVER_UNIT_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FRIENDLY_UNIT_TAG_MATCHES</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>UNIT_STRONG_WHEN_ATTACKING_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_IS_ATTACKING</RequirementType>
 		</Row>
@@ -1361,6 +1376,11 @@
 			<RequirementId>ANTI_SPEAR_OPPONENT_REQUIREMENT</RequirementId>
 			<Name>UnitPromotionClass</Name>
 			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+		</Row>
+		<Row>
+			<RequirementId>ADJACENT_FRIENDLY_OBSERVER_UNIT_REQUIREMENT</RequirementId>
+			<Name>Tag</Name>
+			<Value>CLASS_OBSERVATION</Value>
 		</Row>
 		<Row>
 			<RequirementId>SIEGE_UNIT_REQUIREMENT</RequirementId>

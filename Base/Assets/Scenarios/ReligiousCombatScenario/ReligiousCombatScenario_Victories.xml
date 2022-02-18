@@ -3,6 +3,10 @@
 	<Types>
 		<Row Type="VICTORY_RELIGIOUSCOMBAT" Kind="KIND_VICTORY"/>
 	</Types>
+  <Defeats>
+    <!-- Remove time defeat since the custom victory will handle this -->
+    <Delete DefeatType="DEFEAT_TIME" />
+  </Defeats>
 	<Victories>
 		<Update>
 			<Set EnabledByDefault="0" />

@@ -40,13 +40,12 @@ CREATE TABLE 'GameSpeeds' (
 
 CREATE TABLE 'Maps' (
 	'Domain' TEXT NOT NULL DEFAULT 'StandardMaps',
-	'PackageId' TEXT,
 	'File' TEXT NOT NULL,
 	'Name' TEXT NOT NULL,
 	'Description' TEXT,
 	'WorldBuilderOnly' BOOLEAN NOT NULL DEFAULT 0,
 	'SortIndex' INTEGER NOT NULL DEFAULT 10,
-	PRIMARY KEY ('Domain', 'PackageId', 'File')
+	PRIMARY KEY ('Domain', 'File')
 );
 
 CREATE TABLE 'MapSizes' (
@@ -90,7 +89,6 @@ CREATE TABLE 'Players' (
 	'CivilizationAbilityName' TEXT NOT NULL,
 	'CivilizationAbilityDescription' TEXT NOT NULL,
 	'CivilizationAbilityIcon' TEXT NOT NULL,
-	'PackageId' TEXT,
 	PRIMARY KEY('Domain', 'CivilizationType', 'LeaderType')
 );
 
@@ -132,35 +130,49 @@ CREATE TABLE 'Victories'(
 );
 
 -- Rulesets are pretty much the only thing which replaces domains.
+CREATE TABLE 'MapDomainOverrides'(
+	'Map' TEXT NOT NULL,				-- The map file
+	'PlayerId' INTEGER,					-- Optional: The player slot.
+	'ParameterId' TEXT NOT NULL,		-- The parameterId to replace the domain.
+	'Domain' TEXT NOT NULL				-- The new domain.  This is a REPLACEMENT not a Union.
+);
+
 CREATE TABLE 'RulesetDomainOverrides'(
 	'Ruleset' TEXT NOT NULL,			-- The ruleset type.
-	'ParameterId' TEXT NOT NULL,	-- The parameterId to replace the domain.
-	'Domain' TEXT NOT NULL,				-- The new domain.  This is a REPLACEMENT not a Union.
-	PRIMARY KEY('Ruleset', 'ParameterId')
+	'PlayerId' INTEGER,					-- Optional: The player slot.
+	'ParameterId' TEXT NOT NULL,		-- The parameterId to replace the domain.
+	'Domain' TEXT NOT NULL				-- The new domain.  This is a REPLACEMENT not a Union.
 );
 
 -- These tables are meant to restrict domains, rather than replace them.
 -- Restriction is done via set intersecting.
 -- Restrict parameter values based on what map is selected.
 CREATE TABLE 'MapSupportedValues'(
-	'Map' TEXT NOT NULL,					-- The primary key of Maps.
-	'PlayerId' INTEGER,						-- Optional: The player slot.
+	'Map' TEXT NOT NULL,				-- The primary key of Maps.
+	'PlayerId' INTEGER,					-- Optional: The player slot.
 	'Domain' TEXT NOT NULL,				-- The domain of the value.
-	'Value' TEXT NOT NULL					-- The domain value to intersect with.
+	'Value' TEXT NOT NULL				-- The domain value to intersect with.
+);
+
+CREATE TABLE 'MapUnSupportedValues'(
+	'Map' TEXT NOT NULL,				-- The primary key of Maps.
+	'PlayerId' INTEGER,					-- Optional: The player slot.
+	'Domain' TEXT NOT NULL,				-- The domain of the value.
+	'Value' TEXT NOT NULL				-- The domain value to intersect with.
 );
 
 CREATE TABLE 'RulesetSupportedValues'(
-	'Ruleset' TEXT NOT NULL,			-- The primary key of Maps.
-	'PlayerId' INTEGER,						-- Optional: The player slot.
+	'Ruleset' TEXT NOT NULL,			-- The ruleset type.
+	'PlayerId' INTEGER,					-- Optional: The player slot.
 	'Domain' TEXT NOT NULL,				-- The domain of the value.
-	'Value' TEXT NOT NULL					-- The domain value to intersect with.
+	'Value' TEXT NOT NULL				-- The domain value to intersect with.
 );
 
 CREATE TABLE 'RulesetUnSupportedValues'(
-	'Ruleset' TEXT NOT NULL,			-- The primary key of Maps.
-	'PlayerId' INTEGER,						-- Optional: The player slot.
+	'Ruleset' TEXT NOT NULL,			-- The ruleset type.
+	'PlayerId' INTEGER,					-- Optional: The player slot.
 	'Domain' TEXT NOT NULL,				-- The domain of the value.
-	'Value' TEXT NOT NULL					-- The domain value to intersect with.
+	'Value' TEXT NOT NULL				-- The domain value to intersect with.
 );
 
 

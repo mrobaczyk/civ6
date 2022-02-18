@@ -27,6 +27,7 @@ function InitializeTutorial()
 	ForceEnableTutorialLevel();
 	ActivateInputFiltering();
 	SetSimpleInGameMenu(true);
+	SetSlowNextTurnEnable(true);
 	DisableSettleHintLens();
 	DisableTechAndCivicPopups();
 	DisableUnitAction( "UNITCOMMAND_AUTOMATE" );	
@@ -4277,10 +4278,10 @@ function TutorialItemBank2()
 	item:SetIsQueueable(true)
 	item:SetRaiseEvents("PantheonAvailable");
 	item:SetAdvisorMessage("LOC_ADVISOR_LINE_FTUE_48");
-	item:SetAdvisorAudio("Play_ADVISOR_LINE_48");
+	item:SetAdvisorAudio("PLAY_ADVISOR_LINE_FTUE_48");
 	item:AddAdvisorButton("LOC_ADVISOR_BUTTON_VERY_GOOD",
 		function( advisorInfo )
-			UI.PlaySound("Stop_ADVISOR_LINE_48")
+			UI.PlaySound("STOP_ADVISOR_LINE_FTUE_48")
 			LuaEvents.AdvisorPopup_ClearActive( advisorInfo );
 		end );
 	item:SetIsDoneFunction(
@@ -4432,7 +4433,18 @@ function TutorialItemBank2()
 -- =============================== AI_DECLARED_WAR_A =====================================
 local item:TutorialItem = TutorialItem:new("AI_DECLARED_WAR_A");
 item:SetIsQueueable(true);
-item:SetRaiseEvents("TutorialWarDeclared");
+item:SetRaiseEvents("DiploScene_SceneClosed");
+item:SetRaiseFunction(
+	function()
+		local pDiplomacy:table	= GetPlayer():GetDiplomacy();
+		for i, pPlayer in ipairs(PlayerManager.GetAliveMajors()) do			
+			local iPlayer :number = pPlayer:GetID();
+			if pDiplomacy:IsAtWarWith( iPlayer ) then
+				return true;		-- At war, let's raise this event!
+			end
+		end
+		return false;
+	end);			
 item:SetAdvisorMessage("ADVISOR_LINE_FTUE_43_ALT");
 item:SetAdvisorAudio("Play_ADVISOR_LINE_FTUE_43_ALT");
 item:AddAdvisorButton("LOC_ADVISOR_BUTTON_OK",
@@ -4473,7 +4485,7 @@ item:SetIsDoneFunction(
 	function()
 		return false;
 	end );
-item:SetNextTutorialItemId("AI_DECLARED_WAR_C");
+item:SetNextTutorialItemId("AI_DECLARED_WAR_D");
 
 -- =============================== AI_DECLARED_WAR_D =====================================
 local item:TutorialItem = TutorialItem:new("AI_DECLARED_WAR_D");

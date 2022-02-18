@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <AssetObjects::ArtDefSet>
 	<m_Version>
-		<major>3</major>
+		<major>4</major>
 		<minor>0</minor>
-		<build>211</build>
-		<revision>939</revision>
+		<build>227</build>
+		<revision>211</revision>
 	</m_Version>
 	<m_TemplateName text="DynamicGeo"/>
 	<m_RootCollections>
@@ -304,7 +304,7 @@
 				<m_Fields>
 					<m_Values>
 						<Element class="AssetObjects::StringValue">
-							<m_Value text="BUILDING_STAR_FORT"/>
+							<m_Value text="NATIONAL_PARK_FENCE"/>
 							<m_ParamName text="Gameplay Name"/>
 						</Element>
 						<Element class="AssetObjects::IntValue">
@@ -453,7 +453,7 @@
 						</Element>
 					</Element>
 				</m_ChildCollections>
-				<m_Name text="StarWallSet"/>
+				<m_Name text="NATIONAL_PARK_FENCE"/>
 			</Element>
 			<Element>
 				<m_Fields>
@@ -759,6 +759,161 @@
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="Baths"/>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects::StringValue">
+							<m_Value text="BUILDING_STAR_FORT"/>
+							<m_ParamName text="Gameplay Name"/>
+						</Element>
+						<Element class="AssetObjects::IntValue">
+							<m_nValue>2</m_nValue>
+							<m_ParamName text="Ordering"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Era Art Set"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::FloatValue">
+										<m_fValue>5.000000</m_fValue>
+										<m_ParamName text="Unit Length"/>
+									</Element>
+									<Element class="AssetObjects::ArtDefReferenceValue">
+										<m_ElementName text="StarWallTowers"/>
+										<m_RootCollectionName text="TowerSet"/>
+										<m_ArtDefPath text="Walls.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="DynamicGeo"/>
+										<m_ParamName text="Tower Set"/>
+									</Element>
+									<Element class="AssetObjects::ArtDefReferenceValue">
+										<m_ElementName text="DEFAULT"/>
+										<m_RootCollectionName text="ArtEra"/>
+										<m_ArtDefPath text="Eras.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text=""/>
+										<m_ParamName text="Era"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="Wall Pieces"/>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects::BLPEntryValue">
+													<m_EntryName text="CityWalls_REN_halfwall"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects::IntValue">
+													<m_nValue>1</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Wall Pieces001"/>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects::BLPEntryValue">
+													<m_EntryName text="CityWalls_REN_wall"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects::IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Wall Pieces002"/>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects::BLPEntryValue">
+													<m_EntryName text="citywalls_ren_halfwall_02"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects::IntValue">
+													<m_nValue>1</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Wall Pieces003"/>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects::BLPEntryValue">
+													<m_EntryName text="CityWalls_REN_wall_02"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects::IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Wall Pieces004"/>
+									</Element>
+								</Element>
+								<Element>
+									<m_CollectionName text="Gate"/>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects::FloatValue">
+													<m_fValue>5.000000</m_fValue>
+													<m_ParamName text="Opening Width"/>
+												</Element>
+												<Element class="AssetObjects::BLPEntryValue">
+													<m_EntryName text="CityWalls_REN_gate"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Gate001"/>
+									</Element>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Default Era"/>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="StarWallSet"/>
 			</Element>
 		</Element>
 		<Element>
@@ -1215,6 +1370,5 @@
 			</Element>
 		</Element>
 	</m_RootCollections>
-	<m_BLPReferences/>
 </AssetObjects::ArtDefSet>
 

@@ -164,7 +164,7 @@
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="25" Cost="50"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="0" Cost="10" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
-		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="15" Cost="15"/>
+		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="15" Cost="10"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="-10" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DENOUNCE" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
@@ -217,6 +217,7 @@
 		<!-- Minor civ / Minor civ -->
 	</DiplomaticStateActions>
 	<DiplomaticStateTransitions>
+		<Row BaseState="DIPLO_STATE_FRIENDLY" TransitionState="DIPLO_STATE_DECLARED_FRIEND" AllowTransitionMin="15" RequireTransitionMax="25" AllowTransitionCheck="CanDeclareFriendship" OnTransitionAction="OnDeclareFriendship"/>
 		<Row BaseState="DIPLO_STATE_FRIENDLY" TransitionState="DIPLO_STATE_NEUTRAL" RequireTransitionMin="0" AllowTransitionMax="10"/>
 		<Row BaseState="DIPLO_STATE_NEUTRAL" TransitionState="DIPLO_STATE_FRIENDLY" RequireTransitionMax="15" AllowTransitionMin="0"/>
 		<Row BaseState="DIPLO_STATE_NEUTRAL" TransitionState="DIPLO_STATE_UNFRIENDLY" RequireTransitionMin="-5" AllowTransitionMax="5"/>

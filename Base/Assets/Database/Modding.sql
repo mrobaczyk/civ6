@@ -1,6 +1,13 @@
 -- Modding Framework Schema
 -- 
 -- Revision History
+-- Version 13:
+-- * Added UpdateARX component type.
+-- Version 12: 
+-- * Removed SettingComponents table.
+-- * Modified stored procedures to order by priority in descending order.
+-- Version 11:
+-- * Added UpdateAudio component type.
 -- Version 10:
 -- * Added LocalizedText setting and component types.
 -- Version 9:
@@ -140,17 +147,6 @@ CREATE Table Settings(
 	'SettingType' TEXT NOT NULL,
 	FOREIGN KEY('ModRowId') REFERENCES Mods('ModRowId') ON DELETE CASCADE ON UPDATE CASCADE
 );
-
--- Components associated with a setting.
--- @SettingRowId is the locally unique id of the setting.
--- @ComponentRowId is the locally unique id of the component.
-CREATE TABLE SettingComponents(
-	'SettingRowId' INTEGER NOT NULL,
-	'ComponentRowId' INTEGER NOT NULL,
-	PRIMARY KEY('SettingRowId', 'ComponentRowId'),
-	FOREIGN KEY('SettingRowId') REFERENCES Settings('SettingRowId') ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY('ComponentRowId') REFERENCES Components('ComponentRowId') ON DELETE CASCADE ON UPDATE CASCADE
-);	
 	
 -- A manifest of all files contained in a mod.
 -- @FileRowId represents a locally unique identifier to the specific file.
@@ -295,6 +291,8 @@ INSERT INTO RelationshipTypes('Name', 'Value') VALUES ('References', 1);
 INSERT INTO RelationshipTypes('Name', 'Value') VALUES ('Depends',  2);
 
 INSERT INTO ComponentTypes('Name') VALUES ('UpdateDatabase');
+INSERT INTO ComponentTypes('Name') VALUES ('UpdateAudio');
+INSERT INTO ComponentTypes('Name') VALUES ('UpdateARX');
 INSERT INTO ComponentTypes('Name') VALUES ('ModArt');
 INSERT INTO ComponentTypes('Name') VALUES ('UserInterface');
 INSERT INTO ComponentTypes('Name') VALUES ('LocalizedText');
@@ -361,9 +359,9 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'Delete
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'AddScannedFile', 'INSERT INTO ScannedFiles(Path, LastWriteTime) VALUES(?,?)');
 
 -- File Service Procedures
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsByComponentRowId', 'SELECT Path from ModFiles a inner join ComponentFiles b on a.FileRowId = b.FileRowId where b.ComponentRowId = ? ORDER BY b.Priority');
+INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsByComponentRowId', 'SELECT Path from ModFiles a inner join ComponentFiles b on a.FileRowId = b.FileRowId where b.ComponentRowId = ? ORDER BY b.Priority DESC');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsByModRowId', 'SELECT Path FROM ModFiles WHERE ModRowId = ? ORDER BY Path');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsBySettingRowId', 'SELECT Path from ModFiles a inner join SettingFiles b on a.FileRowId = b.FileRowId where b.SettingRowId = ? ORDER BY b.Priority');
+INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'ListPathsBySettingRowId', 'SELECT Path from ModFiles a inner join SettingFiles b on a.FileRowId = b.FileRowId where b.SettingRowId = ? ORDER BY b.Priority DESC');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'PathExistsByModRowId', 'SELECT 1 FROM ModFiles WHERE ModRowId = ? AND Path = ? LIMIT 1');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding', 'GetPathByModRowId', 'SELECT Path FROM ScannedFiles INNER JOIN Mods ON ScannedFiles.ScannedFileRowId = Mods.ScannedFileRowId WHERE ModRowId = ? LIMIT 1');
 
@@ -380,7 +378,6 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod',
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'GetFileId', 'SELECT FileRowId from ModFiles WHERE ModRowId = ? and Path = ? LIMIT 1');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'GetComponentId', 'SELECT ComponentRowId from Components WHERE ModRowId = ? and ComponentId = ? LIMIT 1');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddSetting', 'INSERT INTO Settings(ModRowId, SettingId, SettingType) VALUES(?, ?, ?)');
-INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddSettingComponent', 'INSERT INTO SettingComponents(SettingRowId, ComponentRowId) VALUES (?, ?)');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddSettingFile', 'INSERT INTO SettingFiles(SettingRowId, FileRowId, Priority) VALUES (?,?,?)');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddSettingProperty', 'INSERT INTO SettingProperties(SettingRowId, Name, Value) VALUES(?, ?, ?)');
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponent', 'INSERT INTO Components(ModRowId, ComponentId, ComponentType) VALUES(?, ?, ?)');
@@ -388,4 +385,4 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod',
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentProperty', 'INSERT INTO ComponentProperties(ComponentRowId, Name, Value) VALUES(?, ?, ?)');
 
 -- User version is written at the end.
-PRAGMA user_version(10);
+PRAGMA user_version(13);

@@ -4,7 +4,7 @@
 		<major>3</major>
 		<minor>0</minor>
 		<build>218</build>
-		<revision>69</revision>
+		<revision>887</revision>
 	</m_Version>
 	<m_TemplateName text="Overlay"/>
 	<m_RootCollections>
@@ -17275,6 +17275,297 @@
 				</m_ChildCollections>
 				<m_Name text="Callout_Hex"/>
 			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Filled"/>
+					</Element>
+					<Element>
+						<m_CollectionName text="Texture"/>
+					</Element>
+					<Element>
+						<m_CollectionName text="Model"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::BLPEntryValue">
+										<m_EntryName text="HexBorderGrowth_Container_Hex"/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModel"/>
+									</Element>
+									<Element class="AssetObjects::ArtDefReferenceValue">
+										<m_ElementName text="Default"/>
+										<m_RootCollectionName text="Coord3D_WS"/>
+										<m_ArtDefPath text="Overlay.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text=""/>
+										<m_ParamName text="MoveOffset"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="RotateToAlign"/>
+									</Element>
+									<Element class="AssetObjects::RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="RGBColor"/>
+									</Element>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="NONE"/>
+										<m_ParamName text="AnimType"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="NumTiles"/>
+									</Element>
+									<Element class="AssetObjects::FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="AnimDuration"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="AutoPlay"/>
+									</Element>
+									<Element class="AssetObjects::FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Alpha"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>0.000000</m_x>
+										<m_y>0.000000</m_y>
+										<m_ParamName text="UV Offset Start"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="UV_Scale"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="IsBillboard"/>
+									</Element>
+									<Element class="AssetObjects::BLPEntryValue">
+										<m_EntryName text=""/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModelFOW"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Model"/>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SplineBorder"/>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="GrowthHexBG"/>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Filled"/>
+					</Element>
+					<Element>
+						<m_CollectionName text="Texture"/>
+					</Element>
+					<Element>
+						<m_CollectionName text="Model"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::BLPEntryValue">
+										<m_EntryName text="HexBorderGrowth_Meter_Hex"/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModel"/>
+									</Element>
+									<Element class="AssetObjects::ArtDefReferenceValue">
+										<m_ElementName text="Default"/>
+										<m_RootCollectionName text="Coord3D_WS"/>
+										<m_ArtDefPath text="Overlay.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text=""/>
+										<m_ParamName text="MoveOffset"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="RotateToAlign"/>
+									</Element>
+									<Element class="AssetObjects::RGBValue">
+										<m_r>255.000000</m_r>
+										<m_g>255.000000</m_g>
+										<m_b>255.000000</m_b>
+										<m_ParamName text="RGBColor"/>
+									</Element>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="NONE"/>
+										<m_ParamName text="AnimType"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="NumTiles"/>
+									</Element>
+									<Element class="AssetObjects::FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="AnimDuration"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="AutoPlay"/>
+									</Element>
+									<Element class="AssetObjects::FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Alpha"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>0.000000</m_x>
+										<m_y>0.000000</m_y>
+										<m_ParamName text="UV Offset Start"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="UV_Scale"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="IsBillboard"/>
+									</Element>
+									<Element class="AssetObjects::BLPEntryValue">
+										<m_EntryName text=""/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModelFOW"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Model"/>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SplineBorder"/>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="GrowthHexCurrent"/>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Filled"/>
+					</Element>
+					<Element>
+						<m_CollectionName text="Texture"/>
+					</Element>
+					<Element>
+						<m_CollectionName text="Model"/>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects::BLPEntryValue">
+										<m_EntryName text="HexBorderGrowth_Meter_Hex"/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModel"/>
+									</Element>
+									<Element class="AssetObjects::ArtDefReferenceValue">
+										<m_ElementName text="Default"/>
+										<m_RootCollectionName text="Coord3D_WS"/>
+										<m_ArtDefPath text="Overlay.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text=""/>
+										<m_ParamName text="MoveOffset"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="RotateToAlign"/>
+									</Element>
+									<Element class="AssetObjects::RGBValue">
+										<m_r>145.000000</m_r>
+										<m_g>60.000000</m_g>
+										<m_b>154.000000</m_b>
+										<m_ParamName text="RGBColor"/>
+									</Element>
+									<Element class="AssetObjects::StringValue">
+										<m_Value text="NONE"/>
+										<m_ParamName text="AnimType"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="NumTiles"/>
+									</Element>
+									<Element class="AssetObjects::FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="AnimDuration"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="AutoPlay"/>
+									</Element>
+									<Element class="AssetObjects::FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Alpha"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>0.000000</m_x>
+										<m_y>0.000000</m_y>
+										<m_ParamName text="UV Offset Start"/>
+									</Element>
+									<Element class="AssetObjects::Coord2DValue">
+										<m_x>1.000000</m_x>
+										<m_y>1.000000</m_y>
+										<m_ParamName text="UV_Scale"/>
+									</Element>
+									<Element class="AssetObjects::BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="IsBillboard"/>
+									</Element>
+									<Element class="AssetObjects::BLPEntryValue">
+										<m_EntryName text=""/>
+										<m_XLPClass text="UILensAsset"/>
+										<m_XLPPath text="UILensModels.xlp"/>
+										<m_BLPPackage text="UILensAssets"/>
+										<m_LibraryName text="UILensAsset"/>
+										<m_ParamName text="HexModelFOW"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Model"/>
+						</Element>
+					</Element>
+					<Element>
+						<m_CollectionName text="SplineBorder"/>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="GrowthHexNext"/>
+			</Element>
 		</Element>
 		<Element>
 			<m_CollectionName text="Coord3D_WS"/>
@@ -17463,6 +17754,5 @@
 			</Element>
 		</Element>
 	</m_RootCollections>
-	<m_BLPReferences/>
 </AssetObjects::ArtDefSet>
 

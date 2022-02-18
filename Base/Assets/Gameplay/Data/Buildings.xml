@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_BUILDING"/>
@@ -232,6 +232,13 @@
 		<Row Building="BUILDING_BARRACKS" MutuallyExclusiveBuilding="BUILDING_STABLE"/>
 		<Row Building="BUILDING_MUSEUM_ART" MutuallyExclusiveBuilding="BUILDING_MUSEUM_ARTIFACT"/>
 		<Row Building="BUILDING_MUSEUM_ARTIFACT" MutuallyExclusiveBuilding="BUILDING_MUSEUM_ART"/>
+    <!--Though these are "fake" buildings for visualization, only one can be on the Spaceport district at a time, so use gameplay exclusivity rules to enforce this-->
+		<Row Building="BUILDING_SMALL_ROCKET" MutuallyExclusiveBuilding="BUILDING_MEDIUM_ROCKET"/>
+		<Row Building="BUILDING_SMALL_ROCKET" MutuallyExclusiveBuilding="BUILDING_LARGE_ROCKET"/>
+		<Row Building="BUILDING_MEDIUM_ROCKET" MutuallyExclusiveBuilding="BUILDING_SMALL_ROCKET"/>
+		<Row Building="BUILDING_MEDIUM_ROCKET" MutuallyExclusiveBuilding="BUILDING_LARGE_ROCKET"/>
+		<Row Building="BUILDING_LARGE_ROCKET" MutuallyExclusiveBuilding="BUILDING_SMALL_ROCKET"/>
+		<Row Building="BUILDING_LARGE_ROCKET" MutuallyExclusiveBuilding="BUILDING_MEDIUM_ROCKET"/>
 	</MutuallyExclusiveBuildings>
 	<!--NOTE: Right now only use it for Wonders-->
 	<Building_ValidFeatures>
@@ -447,7 +454,7 @@
 		<Row BuildingType="BUILDING_PALACE" GreatWorkSlotType="GREATWORKSLOT_PALACE" NumSlots="1"/>
 		<Row BuildingType="BUILDING_TEMPLE" GreatWorkSlotType="GREATWORKSLOT_RELIC" NumSlots="1"/>
 		<Row BuildingType="BUILDING_STAVE_CHURCH" GreatWorkSlotType="GREATWORKSLOT_RELIC" NumSlots="1"/>
-		<Row BuildingType="BUILDING_AMPHITHEATER" GreatWorkSlotType="GREATWORKSLOT_WRITING" NumSlots="1"/>
+		<Row BuildingType="BUILDING_AMPHITHEATER" GreatWorkSlotType="GREATWORKSLOT_WRITING" NumSlots="2"/>
 		<Row BuildingType="BUILDING_MUSEUM_ART" GreatWorkSlotType="GREATWORKSLOT_ART" NumSlots="3" ThemingUniquePerson="true" ThemingSameObjectType="true" ThemingYieldMultiplier="100" ThemingTourismMultiplier="100" NonUniquePersonYield="1" NonUniquePersonTourism="1" ThemingBonusDescription="LOC_BUILDING_THEMINGBONUS_ART"/>
 		<Row BuildingType="BUILDING_MUSEUM_ARTIFACT" GreatWorkSlotType="GREATWORKSLOT_ARTIFACT" NumSlots="3" ThemingSameEras="true" ThemingUniqueCivs="true" ThemingYieldMultiplier="100" ThemingTourismMultiplier="100" NonUniquePersonYield="1" NonUniquePersonTourism="1" ThemingBonusDescription="LOC_BUILDING_THEMINGBONUS_ARCHAEOLOGY"/>
 		<Row BuildingType="BUILDING_BROADCAST_CENTER" GreatWorkSlotType="GREATWORKSLOT_MUSIC" NumSlots="1"/>

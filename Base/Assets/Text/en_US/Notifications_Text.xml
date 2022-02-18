@@ -100,6 +100,12 @@
 		<Row Tag="LOC_NOTIFICATION_UNMET_PLAYER_DEFEATED_SUMMARY">
 			<Text>An unmet player has been defeated.</Text>
 		</Row>
+		<Row Tag="LOC_NOTIFICATION_UNIT_LOST_TO_OCCUPATION">
+			<Text>You have lost a {1_UnitName} due to enemy occupation.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_UNIT_RETREAT_FROM_OCCUPATION">
+			<Text>An enemy occupation has forced your {1_UnitName} to retreat.</Text>
+		</Row>
 		<!-- Diplomacy Notifications-->
 		<Row Tag="LOC_NOTIFICATION_DECLARE_WAR_MESSAGE">
 			<Text>Declaration of War</Text>
@@ -139,6 +145,30 @@
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_DIPLO_ALLIANCE_EXPIRED_SUMMARY">
 			<Text>Your alliance with {1_leader} has run its course and will have to be renewed.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_CASUS_BELLI_GAINED_MESSAGE">
+			<Text>Casus Belli Gained</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_CASUS_BELLI_GAINED_SUMMARY">
+			<Text>You have gained a Casus Belli to declare a {1_WarType} on {2_leader}.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_WAR_TYPE_COLONIAL">
+			<Text>Colonial War</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_WAR_TYPE_HOLY">
+			<Text>Holy War</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_WAR_TYPE_LIBERATION">
+			<Text>Liberation War</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_WAR_TYPE_PROTECTORATE">
+			<Text>Protectorate War</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_WAR_TYPE_RECONQUEST">
+			<Text>Reconquest War</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_WAR_TYPE_TERRITORIAL_EXPANSION">
+			<Text>War of Territorial Expansion</Text>
 		</Row>
 		<!-- Espionage Notifications -->
 		<Row Tag="LOC_NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE_MESSAGE">
@@ -731,11 +761,11 @@
 		<Row Tag="LOC_NOTIFICATION_FREE_ESPIONAGE_UNIT_SUMMARY">
 			<Text>Due to the excitement over your new spy network, you have received your first {1_UnitName} for free. When you unlock the ability to construct more, train them in your cities.</Text>
 		</Row>
-    <Row Tag="LOC_NOTIFICATION_CITY_BESIEGED_BY_OTHER_PLAYER_MESSAGE">
-      <Text>City Sieged</Text>
-    </Row>
-    <Row Tag="LOC_NOTIFICATION_CITY_BESIEGED_BY_OTHER_PLAYER_SUMMARY">
-      <Text>{1_CityName} is under siege. Until opposing units do not have Zone of Control over all the hexes around your city it will not heal.</Text>
-    </Row>
+		<Row Tag="LOC_NOTIFICATION_CITY_BESIEGED_BY_OTHER_PLAYER_MESSAGE">
+			<Text>City Sieged</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_CITY_BESIEGED_BY_OTHER_PLAYER_SUMMARY">
+			<Text>{1_CityName} is under siege. Until opposing units do not have Zone of Control over all the hexes around your city it will not heal.</Text>
+		</Row>
 	</BaseGameText>
 </GameData>

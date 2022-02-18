@@ -123,6 +123,21 @@
 		<Row Tag="LOC_SELECT_POST_THIS_MOMENT_IN_TIME">
 			<Text>Post this moment in time.</Text>
 		</Row>
+		<Row Tag="LOC_HUD_ALERTED">
+			<Text>Alerted</Text>
+		</Row>
+		<Row Tag="LOC_HUD_ALERTED_ABOUT">
+			<Text>Alerted about {1_name}</Text>
+		</Row>
+		<Row Tag="LOC_HUD_WOKEN_UP_ALERTED">
+			<Text>Woken up by being alerted</Text>
+		</Row>
+		<Row Tag="LOC_HUD_BARBARIAN_SPOTTED_YOUR_CITY">
+			<Text>Barbarians have spotted your city!</Text>
+		</Row>
+		<Row Tag="LOC_HUD_BARBARIAN_SPOTTED_CITY">
+			<Text>Barbarians have spotted {1_CivName}'s city.</Text>
+		</Row>
 		<Row Tag="LOC_UI_ACTION_CLICK">
 			<Text>Click</Text>
 		</Row>
@@ -267,6 +282,12 @@
 		</Row>
 		<Row Tag="LOC_GAME_MENU_QUIT_WARNING">
 			<Text>Are you sure you wish to quit your game?</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_SHUTDOWN_WARNING">
+			<Text>Are you sure you wish to shutdown Sid Meier's Civilization VI?</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_SHUTDOWN_SAVE_WARNING">
+			<Text>Save your game before quitting?</Text>
 		</Row>
 		<Row Tag="LOC_GAME_MENU_RETIRE_WARNING">
 			<Text>Are you sure you wish to retire?</Text>
@@ -990,6 +1011,9 @@
 		<Row Tag="LOC_HUD_CITY_CITIZENS">
 			<Text>Citizens</Text>
 		</Row>
+    <Row Tag="LOC_HUD_CITY_CITIZENS_LABEL">
+      <Text>{1_Amount : plural 1?Citizen; other?Citizens;}</Text>
+    </Row>
 		<Row Tag="LOC_HUD_CITY_CITIZENS_SATISFIED">
 			<Text>Citizens are satisfied, no positive or negative effects.</Text>
 		</Row>
@@ -1041,7 +1065,10 @@
 		<Row Tag="LOC_HUD_CITY_HOUSING">
 			<Text>Housing</Text>
 		</Row>
-		<Row Tag="LOC_HUD_CITY_HOUSING_BREAKDOWN">
+    <Row Tag="LOC_HUD_CITY_HOUSING_LABEL">
+      <Text>Housing</Text>
+    </Row>
+    <Row Tag="LOC_HUD_CITY_HOUSING_BREAKDOWN">
 			<Text>Water {1_Water}, Bldg {2_Buildings}, Improvement {3_Improvements}, Neighborhoods {4_Districts}, Civics {5_Civics}</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_HOUSING_CAPACITY">
@@ -1085,6 +1112,9 @@
 		</Row>
 		<Row Tag="LOC_HUD_CITY_LOSS_IN">
 			<Text>Loss in</Text>
+		</Row>
+		<Row Tag="LOC_HUD_CITY_SPECIALISTS">
+			<Text>Currently {1_num} out of {2_maxNum} specialists are working this tile.</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_MAXIMIZE_SPECIFIC_YIELDS">
 			<Text>Maximize specific yields in city</Text>
@@ -1249,7 +1279,7 @@
 			<Text>{1_Turns : plural 1?{1_Turns} turn; other?{1_Turns} turns;} until growth</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_TURNS_UNTIL_BORDER_GROWTH">
-			<Text>{1_Turns : plural 1? turn; other? turns;} until border growth</Text>
+			<Text>{1_Turns : plural 1?turn; other?turns;} until border growth</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_TURNS_UNTIL_CITIZEN_BORN">
 			<Text>{1_Turns : plural 1? {1_Turns} turn; other?{1_Turns} turns;} until a new citizen is born</Text>
@@ -1551,9 +1581,6 @@
 		</Row>
 		<Row Tag="LOC_UI_VICTORY">
 			<Text>The End of Time</Text>
-		</Row>
-		<Row Tag="LOC_UI_END_GAME_DEMO">
-			<Text>My Liege, alas, your time with Sid Meier's Civilization 6 has come to a close. But fear not! You can begin anew when Fall is upon us!</Text>
 		</Row>
 		<!-- ==================== Top Panel ==================== -->
 		<Row Tag="LOC_TOP_PANEL_SCIENCE">
@@ -2517,6 +2544,9 @@
 		<Row Tag="LOC_UNITOPERATION_FORTIFY_DESCRIPTION">
 			<Text>Fortify</Text>
 		</Row>
+		<Row Tag="LOC_UNITOPERATION_ALERT">
+			<Text>Order the unit to fortify and sleep until it sees an enemy.</Text>
+		</Row>
 		<Row Tag="LOC_UNITOPERATION_HEAL_DESCRIPTION">
 			<Text>Fortify Until Healed</Text>
 		</Row>
@@ -2556,6 +2586,9 @@
 		<Row Tag="LOC_UNITCOMMAND_DELETE_DESCRIPTION">
 			<Text>Delete Unit</Text>
 		</Row>
+    <Row Tag="LOC_UNITCOMMAND_DELETE_GOLD_REFUND">
+      <Text>Will provide {1_GoldAmount} [ICON_Gold] Gold.</Text>
+    </Row>
 		<Row Tag="LOC_UNITCOMMAND_GIFT_DESCRIPTION">
 			<Text>Gift Unit</Text>
 		</Row>
@@ -2835,7 +2868,7 @@
 			<Text>Routes upgrade to {1_RouteName}</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL">
-			<Text>{diplomaticReason} {diplomaticValue}</Text>
+			<Text>{diplomaticReason}</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_DIPLOMACY_UNKNOWN_REASON">
 			<Text>Unknown Reason</Text>
@@ -3074,6 +3107,9 @@
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_GREAT_WORKS_CATHEDRAL_SLOTS">
 			<Text>{1_Amount: number +#,###;-#,###} [ICON_GreatWork_Religious] Great {1_Amount : plural 1?Work; other?Works;} of Religious Art {1_Amount : plural 1?slot; other?slots;}</Text>
+		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_GREAT_WORKS_PALACE_SLOTS">
+			<Text>{1_Amount: number +#,###;-#,###} Great Work {1_Amount : plural 1?slot; other?slots;} (holds any type)</Text>
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_BUILDING_DISTRICT_COPY">
 			<Text>Bonus {1_ToYieldIcon} {2_ToYieldName} equal to the adjacency {3_FromYieldIcon} {4_FromYieldName} bonus of its district.</Text>
@@ -4299,7 +4335,7 @@
 			<Text>{1_name} ({2_type})[NEWLINE]Created by {3_author}[NEWLINE]Created in {4_date}[NEWLINE]Provides {5_providing} per turn when not themed.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_TOOLTIP_DUPLICATE">
-			<Text>Provides 1 [ICON_Culture] Culture 1 [ICON_Tourism] Tourism per turn when authored by an artist who already has art displayed here.</Text>
+			<Text>{1_name} ({2_type})[NEWLINE]Created by {3_author}[NEWLINE]Created in {4_date}[NEWLINE]Provides 1 [ICON_Culture] Culture 1 [ICON_Tourism] Tourism per turn when authored by an artist who already has art displayed here.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_ARTIFACT_TOOLTIP">
 			<Text>{1_name} ({2_type})[NEWLINE]Created by {3_author}[NEWLINE]Found in {4_date}[NEWLINE]Provides {5_providing} per turn.</Text>
@@ -4748,6 +4784,12 @@
 		<Row Tag="LOC_HUD_REPORTS_STATUS_STARVING">
 			<Text>Starving</Text>
 		</Row>
+		<Row Tag="LOC_HUD_REPORTS_BONUSES">
+			<Text>Bonuses</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_LUXURIES">
+			<Text>Luxuries</Text>
+		</Row>
 		<Row Tag="LOC_HUD_REPORTS_LUXURIES_AND_BONUSES">
 			<Text>Luxuries and Bonuses</Text>
 		</Row>
@@ -4811,11 +4853,32 @@
 		<Row Tag="LOC_HUD_REPORTS_TRADE">
 			<Text>Trade</Text>
 		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_DEAL_WITH">
+			<Text>Deal with {1_CivName}</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_GREAT_PERSON_ACTIVATED">
+			<Text>Great Person Activated</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_GREAT_PERSON_ACTIVATED_NAME">
+			<Text>Great Person {1_Name} Activated</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_CITY_STATE">
+			<Text>City State</Text>
+		</Row>
 		<Row Tag="LOC_HUD_REPORTS_TRADE_IMPORTED">
 			<Text>Imported</Text>
 		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_IMPORTED_TURNS">
+			<Text>Imported - {1_Turns : plural 1? turn; other? turns;}</Text>
+		</Row>
 		<Row Tag="LOC_HUD_REPORTS_TRADE_EXPORTED">
 			<Text>Exported</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_EXPORTED_TURNS">
+			<Text>Exported - {1_Turns : plural 1? turn; other? turns;}</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_DIPLOMACY">
+			<Text>Diplomacy</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_TRADE_OWNED">
 			<Text>Owned</Text>
@@ -5122,6 +5185,12 @@
 		<Row Tag="LOC_DEFEAT_DEFAULT_TEXT">
 			<Text>You have been defeated.</Text>
 		</Row>
+    <Row Tag="LOC_DEFEAT_TIME_NAME">
+      <Text>Out of Time</Text>
+    </Row>
+    <Row Tag="LOC_DEFEAT_TIME_TEXT">
+      <Text>You have run out of time.</Text>
+    </Row>
 		<Row Tag="LOC_VICTORY_SCORE_TEXT">
 			<Text>From our humble beginnings ages ago have you forged a civilization that has withstood time itself. Though countless civilizations rise and fall around us, we do not just survive. We prosper.</Text>
 		</Row>
@@ -5207,6 +5276,25 @@
 		</Row>
 		<Row Tag="LOC_LAUNCH_WMD_DIALOG_CANCEL">
 			<Text>Stand down</Text>
+		</Row>
+		<!-- Demo popup text -->
+		<Row Tag="LOC_DEMO_DIALOG_TITLE">
+			<Text>End of Time</Text>
+		</Row>
+		<Row Tag="LOC_DEMO_DIALOG_TEXT">
+			<Text>You have taken the first steps towards building a Civilization that will stand the test of time. Will you continue to test yourself against the greatest leaders of history? Can your people's culture flourish? Your science enlighten? Your faith inspire? Your military dominate? How will you lead in Sid Meier's Civilization VI? Continue your journey now.[NEWLINE][NEWLINE]Build.Conquer.Inspire.</Text>
+		</Row>
+		<Row Tag="LOC_DEMO_DIALOG_BUY">
+			<Text>Achieve Greatness</Text>
+		</Row>
+		<Row Tag="LOC_DEMO_DIALOG_BUY_TT">
+			<Text>Buy It Now</Text>
+		</Row>
+		<Row Tag="LOC_DEMO_DIALOG_EXIT">
+			<Text>Fade into History</Text>
+		</Row>
+		<Row Tag="LOC_DEMO_DIALOG_EXIT_TT">
+			<Text>Main Menu</Text>
 		</Row>
 	</BaseGameText>
 </GameData>

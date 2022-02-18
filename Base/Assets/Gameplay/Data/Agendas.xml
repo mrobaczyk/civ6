@@ -67,6 +67,8 @@
 		<Row ListType="CityStateAllyInfluencePreference"/>
 		<Row ListType="CityStateAllyNoWarPreference"/>
 		<Row ListType="ClearingBarbCampLoverClearingBarbCampPreference"/>
+    <Row ListType="CounterReformerInquisitionPreference" />
+    <Row ListType="CounterReformerInquisitorPreference" />
 		<Row ListType="CultureLoverCulturePreference"/>
 		<Row ListType="DarwinistIgnoreWarmongerValue"/>
 		<Row ListType="GreatPersonObsessedGreatPeople"/>
@@ -97,6 +99,8 @@
 		<Row ListType="CityStateAllyInfluencePreference" AgendaType="TRAIT_AGENDA_DELIAN_LEAGUE" System="PseudoYields"/>
 		<Row ListType="CityStateAllyNoWarPreference" AgendaType="TRAIT_AGENDA_DELIAN_LEAGUE" System="DiplomaticActions"/>
 		<Row ListType="ClearingBarbCampLoverClearingBarbCampPreference" AgendaType="TRAIT_AGENDA_PREFER_CLEAR_BANDIT_CAMPS" System="PseudoYields"/>
+		<Row ListType="CounterReformerInquisitionPreference" AgendaType="TRAIT_AGENDA_COUNTER_REFORMER" System="TriggeredTrees"/>
+		<Row ListType="CounterReformerInquisitorPreference" AgendaType="TRAIT_AGENDA_COUNTER_REFORMER" System="Units"/>
 		<Row ListType="CultureLoverCulturePreference" AgendaType="TRAIT_AGENDA_PREFER_CULTURE" System="Yields"/>
 		<Row ListType="DarwinistIgnoreWarmongerValue" AgendaType="TRAIT_AGENDA_IGNORE_WARMONGERING" System="PseudoYields"/>
 		<Row ListType="GreatPersonObsessedGreatPeople" AgendaType="TRAIT_AGENDA_GREAT_PERSON_OBSESSED" System="PseudoYields"/>
@@ -128,6 +132,8 @@
 		<Row ListType="CityStateAllyNoWarPreference" Item="DIPLOACTION_DECLARE_WAR_MINOR_CIV" Favored="false"/>
 		<Row ListType="CitySateProtectionLoverCityStateProtectionPreference" Item="DIPLOACTION_DECLARE_PROTECTORATE_WAR" Favored="true"/>
 		<Row ListType="ClearingBarbCampLoverClearingBarbCampPreference" Item="PSEUDOYIELD_CLEAR_BANDIT_CAMPS" Value="5"/>
+		<Row ListType="CounterReformerInquisitionPreference" Item="TRIGGER_RELIGION_FOUNDED"/>
+		<Row ListType="CounterReformerInquisitorPreference" Item="UNIT_INQUISITOR" Value="1"/>
 		<Row ListType="CultureLoverCulturePreference" Item="YIELD_CULTURE" Value="20"/>
 		<Row ListType="DarwinistIgnoreWarmongerValue" Item="PSEUDOYIELD_DIPLOMATIC_BONUS" Value="-100"/>
 		<Row ListType="GreatPersonObsessedGreatPeople" Item="PSEUDOYIELD_GPP_GENERAL" Value="25"/>
@@ -170,7 +176,10 @@
 		<Row ListType="WithShieldDiplomacy" Item="DIPLOACTION_MAKE_PEACE" Favored="false"/>
 		<Row ListType="WonderObsessedWonders" Item="PSEUDOYIELD_WONDER" Value="25"/>
 	</AiFavoredItems>
-	<Traits>
+  <TriggeredBehaviorTrees>
+    <Row TriggerType="TRIGGER_RELIGION_FOUNDED" TreeName="Launch Inquisition" AIEvent="AI_EVENT_FOUNDED_RELIGION" Priority="3"/>
+  </TriggeredBehaviorTrees>
+  <Traits>
 		<Row TraitType="TRAIT_AGENDA_ALLY_OF_ENKIDU" Name="LOC_PLACEHOLDER" Description="LOC_PLACEHOLDER"/>
 		<Row TraitType="TRAIT_AGENDA_AYYUBID_DYNASTY" Name="LOC_PLACEHOLDER" Description="LOC_PLACEHOLDER"/>
 		<Row TraitType="TRAIT_AGENDA_BACKSTAB_AVERSE" Name="LOC_PLACEHOLDER" Description="LOC_PLACEHOLDER"/>
@@ -1300,6 +1309,11 @@
 			<Name>PaidForPeacePenaltyTurnsToFadeOut</Name>
 			<Value>30</Value>
 		</Row>
+    <Row>
+      <ModifierId>AGENDA_MODIFIER_WITH_SHIELD_OR_ON_IT</ModifierId>
+      <Name>ReductionTurns</Name>
+      <Value>2</Value>
+    </Row>
 		<Row>
 			<ModifierId>AGENDA_MODIFIER_NEVER_AT_WAR</ModifierId>
 			<Name>InitialValue</Name>

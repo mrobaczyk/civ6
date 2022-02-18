@@ -76,6 +76,14 @@
 			<Where UnitType="UNIT_NUCLEAR_SUBMARINE"/>
 			<Set Cost="340" StrategicResource="" Maintenance="4"/>
 		</Update>
+		<Update>
+			<Where UnitType="UNIT_MISSILE_CRUISER"/>
+			<Set Cost="340" Maintenance="4"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_AIRCRAFT_CARRIER"/>
+			<Set Cost="270" StrategicResource="" Maintenance="3"/>
+		</Update>
 		
 		<!-- Make all the other combat units 50% cheaper as well. -->
 		<Update>
@@ -145,10 +153,6 @@
 		<Update>
 			<Where UnitType="UNIT_MOBILE_SAM"/>
 			<Set Cost="295" Maintenance="3"/>
-		</Update>
-		<Update>
-			<Where UnitType="UNIT_MISSILE_CRUISER"/>
-			<Set Cost="340" Maintenance="4"/>
 		</Update>
 		<Update>
 			<Where UnitType="UNIT_MODERN_AT"/>

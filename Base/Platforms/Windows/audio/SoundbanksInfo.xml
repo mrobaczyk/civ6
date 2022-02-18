@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="10" SoundbankVersion="113">
 	<RootPaths>
-		<ProjectRoot>E:\projects\civ6_main\Civ6\Wwise\Civ6 Project\</ProjectRoot>
-		<SourceFilesRoot>E:\projects\civ6_main\Civ6\Wwise\Civ6 Project\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\projects\civ6_main\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\</ProjectRoot>
+		<SourceFilesRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\projects\civ6_main\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\projects\civ6\Civ6\Wwise\Civ6 Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -22733,10 +22733,6 @@
 			<ShortName>CRAFTSMANSHIP_QUOTE_2.wav</ShortName>
 			<Path>Voices\Chinese(Taiwan)\CRAFTSMANSHIP_QUOTE_2_697BCDAC.wem</Path>
 		</File>
-		<File Id="873475738" Language="SFX">
-			<ShortName>MainMenu.wav</ShortName>
-			<Path>SFX\MainMenu_ADEF7B36.wem</Path>
-		</File>
 		<File Id="873484627" Language="German">
 			<ShortName>ADVISOR_LINE_LISTENER_85.wav</ShortName>
 			<Path>Voices\German\ADVISOR_LINE_LISTENER_85_697BCDAC.wem</Path>
@@ -22900,6 +22896,10 @@
 		<File Id="879901248" Language="French(France)">
 			<ShortName>Radio_Quote_1.wav</ShortName>
 			<Path>Voices\French(France)\Radio_Quote_1_697BCDAC.wem</Path>
+		</File>
+		<File Id="879938382" Language="SFX">
+			<ShortName>MainMenu.wav</ShortName>
+			<Path>SFX\MainMenu_ADEF7B36.wem</Path>
 		</File>
 		<File Id="879995282" Language="German">
 			<ShortName>DEAD_SEA_QUOTE.wav</ShortName>
@@ -25275,7 +25275,7 @@
 		</File>
 		<File Id="970436001" Language="SFX">
 			<ShortName>Nuclear_Bomb_Sequence_Loop.wav</ShortName>
-			<Path>SFX\Nuclear_Bomb_Sequence_Loop_40D1C18A.wem</Path>
+			<Path>SFX\Nuclear_Bomb_Sequence_Loop_C8A5498B.wem</Path>
 		</File>
 		<File Id="970446319" Language="Russian">
 			<ShortName>Cartography_Quote_1.wav</ShortName>
@@ -26791,7 +26791,7 @@
 		</File>
 		<File Id="1030590647" Language="SFX">
 			<ShortName>Nuclear_Bomb_Sequence_Wind_Surround.wav</ShortName>
-			<Path>SFX\Nuclear_Bomb_Sequence_Wind_Surround_434CCD9E.wem</Path>
+			<Path>SFX\Nuclear_Bomb_Sequence_Wind_Surround_0228E01F.wem</Path>
 		</File>
 		<File Id="1030624369" Language="SFX">
 			<ShortName>Qanun_Improv1.wav</ShortName>
@@ -27992,6 +27992,10 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="217494048" GUID="{E7E5B7EC-08DE-47B9-A343-542D8B1CC56E}" Language="SFX">
+			<ShortName>DLC02_UI_Bank</ShortName>
+			<Path>DLC02_UI_Bank.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="401582128" GUID="{BE30581D-AE22-4D4B-99EB-6252EAEA05AA}" Language="SFX">
 			<ShortName>Resources_Features_3D</ShortName>
 			<Path>Resources_Features_3D.bnk</Path>
@@ -29205,6 +29209,14 @@
 					<Path>SFX\HorseNeigh2D-000_E1E65BF4.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="450570298" GUID="{D1BED14C-4594-49F9-812B-92B36CAB5A47}" Language="SFX">
+			<ShortName>DLC04_Cinematic_Intro_Speech</ShortName>
+			<Path>DLC04_Cinematic_Intro_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="494480304" GUID="{A94622ED-1682-4EAE-B8BD-DFA5A640CFBE}" Language="SFX">
+			<ShortName>DLC02_Cinematic_Intro_Speech</ShortName>
+			<Path>DLC02_Cinematic_Intro_Speech.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="518280504" GUID="{BE99D520-F6CE-4E7E-8299-29A8C3271264}" Language="Chinese(PRC)">
 			<ShortName>Cinematic_Intro_Speech</ShortName>
@@ -39895,10 +39907,6 @@
 					<ShortName>FootstepLargeMonsterHeel_03.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_03_E1E65BF4.wem</Path>
 				</File>
-				<File Id="13968262" Language="SFX">
-					<ShortName>JetBomberFlyby-04.wav</ShortName>
-					<Path>SFX\JetBomberFlyby-04_CDD8E493.wem</Path>
-				</File>
 				<File Id="14452218" Language="SFX">
 					<ShortName>SlingThrow-003.wav</ShortName>
 					<Path>SFX\SlingThrow-003_E1E65BF4.wem</Path>
@@ -39917,7 +39925,7 @@
 				</File>
 				<File Id="18247156" Language="SFX">
 					<ShortName>JetBomberFlyby-07.wav</ShortName>
-					<Path>SFX\JetBomberFlyby-07_6778117A.wem</Path>
+					<Path>SFX\JetBomberFlyby-07_B19E5C33.wem</Path>
 				</File>
 				<File Id="18411153" Language="SFX">
 					<ShortName>FoleyLeatherPadHard-001.wav</ShortName>
@@ -40078,10 +40086,6 @@
 				<File Id="43389895" Language="SFX">
 					<ShortName>ShipSailFlap_11.wav</ShortName>
 					<Path>SFX\ShipSailFlap_11_E1E65BF4.wem</Path>
-				</File>
-				<File Id="43463790" Language="SFX">
-					<ShortName>MechInfTurretMoveLong.wav</ShortName>
-					<Path>SFX\MechInfTurretMoveLong_E1E65BF4.wem</Path>
 				</File>
 				<File Id="43514036" Language="SFX">
 					<ShortName>FootstepLeaves-007.wav</ShortName>
@@ -40425,7 +40429,7 @@
 				</File>
 				<File Id="106000540" Language="SFX">
 					<ShortName>JetBomberFlyby-02.wav</ShortName>
-					<Path>SFX\JetBomberFlyby-02_BCC1D25E.wem</Path>
+					<Path>SFX\JetBomberFlyby-02_82F1F299.wem</Path>
 				</File>
 				<File Id="108022867" Language="SFX">
 					<ShortName>VFX_Cannon_Wood_Debris-04.wav</ShortName>
@@ -40697,7 +40701,7 @@
 				</File>
 				<File Id="154566149" Language="SFX">
 					<ShortName>RocketArtillery_RunStop-01.wav</ShortName>
-					<Path>SFX\RocketArtillery_RunStop-01_8FA160EA.wem</Path>
+					<Path>SFX\RocketArtillery_RunStop-01_D7AA930F.wem</Path>
 				</File>
 				<File Id="155053860" Language="SFX">
 					<ShortName>Samurai_SwordTwirl_03.wav</ShortName>
@@ -40894,6 +40898,10 @@
 				<File Id="182058033" Language="SFX">
 					<ShortName>Mounted_Single_Run_Water-10.wav</ShortName>
 					<Path>SFX\Mounted_Single_Run_Water-10_E1E65BF4.wem</Path>
+				</File>
+				<File Id="182460041" Language="SFX">
+					<ShortName>MechInfTurretMoveLong.wav</ShortName>
+					<Path>SFX\MechInfTurretMoveLong_EADB4C71.wem</Path>
 				</File>
 				<File Id="182575418" Language="SFX">
 					<ShortName>ArrowWhistleBig-07.wav</ShortName>
@@ -42425,7 +42433,7 @@
 				</File>
 				<File Id="455772033" Language="SFX">
 					<ShortName>JetBomberFlyby-05.wav</ShortName>
-					<Path>SFX\JetBomberFlyby-05_5F9FB916.wem</Path>
+					<Path>SFX\JetBomberFlyby-05_16D839D6.wem</Path>
 				</File>
 				<File Id="457582089" Language="SFX">
 					<ShortName>ArrowWhistleSmall-05.wav</ShortName>
@@ -42881,7 +42889,7 @@
 				</File>
 				<File Id="546105368" Language="SFX">
 					<ShortName>Nuclear_Bomb_Sequence_Launch_0.wav</ShortName>
-					<Path>SFX\Nuclear_Bomb_Sequence_Launch_0_FE287605.wem</Path>
+					<Path>SFX\Nuclear_Bomb_Sequence_Launch_0_435F8C54.wem</Path>
 				</File>
 				<File Id="546142680" Language="SFX">
 					<ShortName>Horse_Run_Group_Yell-04.wav</ShortName>
@@ -43310,10 +43318,6 @@
 				<File Id="617085840" Language="SFX">
 					<ShortName>GalleyMove-04.wav</ShortName>
 					<Path>SFX\GalleyMove-04_E1E65BF4.wem</Path>
-				</File>
-				<File Id="618892206" Language="SFX">
-					<ShortName>RocketArtillery_RunStop-02.wav</ShortName>
-					<Path>SFX\RocketArtillery_RunStop-02_B77CEC1C.wem</Path>
 				</File>
 				<File Id="619418510" Language="SFX">
 					<ShortName>ArtilleryAttack-12.wav</ShortName>
@@ -44167,10 +44171,6 @@
 					<ShortName>BerserkerAxeScrapeIn0_3.wav</ShortName>
 					<Path>SFX\BerserkerAxeScrapeIn0_3_E1E65BF4.wem</Path>
 				</File>
-				<File Id="754909821" Language="SFX">
-					<ShortName>JetBomberFlyby-01.wav</ShortName>
-					<Path>SFX\JetBomberFlyby-01_AB0B4D9A.wem</Path>
-				</File>
 				<File Id="755279788" Language="SFX">
 					<ShortName>ShipSailFlap_9.wav</ShortName>
 					<Path>SFX\ShipSailFlap_9_E1E65BF4_BAE07E96.wem</Path>
@@ -44205,7 +44205,7 @@
 				</File>
 				<File Id="764176630" Language="SFX">
 					<ShortName>JetBomberFlyby-03.wav</ShortName>
-					<Path>SFX\JetBomberFlyby-03_22C2060B.wem</Path>
+					<Path>SFX\JetBomberFlyby-03_D28309BB.wem</Path>
 				</File>
 				<File Id="764470260" Language="SFX">
 					<ShortName>PropBomberLand-02.wav</ShortName>
@@ -44569,7 +44569,7 @@
 				</File>
 				<File Id="821503117" Language="SFX">
 					<ShortName>JetBomberFlyby-06.wav</ShortName>
-					<Path>SFX\JetBomberFlyby-06_304CE08E.wem</Path>
+					<Path>SFX\JetBomberFlyby-06_0A469E84.wem</Path>
 				</File>
 				<File Id="821971467" Language="SFX">
 					<ShortName>GalleyRow-10.wav</ShortName>
@@ -45729,7 +45729,7 @@
 				</File>
 				<File Id="1028460687" Language="SFX">
 					<ShortName>RocketArtillery_RunStop-03.wav</ShortName>
-					<Path>SFX\RocketArtillery_RunStop-03_45EB5237.wem</Path>
+					<Path>SFX\RocketArtillery_RunStop-03_69C9EA7D.wem</Path>
 				</File>
 				<File Id="1028462409" Language="SFX">
 					<ShortName>GalleyRunStop-06.wav</ShortName>
@@ -45940,6 +45940,46 @@
 					<Path>SFX\RocketArtilleryRocketFire-05_4390EED6.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="757134814" GUID="{3C693434-5589-4CE6-BA06-73094621B339}" Language="SFX">
+			<ShortName>DLC04_UI_Bank</ShortName>
+			<Path>DLC04_UI_Bank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="812967046" GUID="{B000040F-B9BA-4B8E-AE15-5F6E4F05C494}" Language="SFX">
+			<ShortName>DLC03_Notifications</ShortName>
+			<Path>DLC03_Notifications.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="839595572" GUID="{06F5225B-DA87-4C26-ABE4-CD70F9457655}" Language="SFX">
+			<ShortName>DLC01_Unit_Bank_2D</ShortName>
+			<Path>DLC01_Unit_Bank_2D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="856373127" GUID="{F21E3F6A-CA59-4C81-BF64-ED88F14B58D1}" Language="SFX">
+			<ShortName>DLC01_Unit_Bank_3D</ShortName>
+			<Path>DLC01_Unit_Bank_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="857442305" GUID="{57585209-D663-4252-B839-0BFC452AC7CB}" Language="SFX">
+			<ShortName>DLC02_Cinematic_Tutorials_Speech</ShortName>
+			<Path>DLC02_Cinematic_Tutorials_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="868997844" GUID="{48FADD0A-A45B-452C-9A23-5E7EA013A6CC}" Language="SFX">
+			<ShortName>DLC01_Resources_Features_2D</ShortName>
+			<Path>DLC01_Resources_Features_2D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="875663979" GUID="{627E4E6A-9F10-4554-931C-39F235DF8740}" Language="SFX">
+			<ShortName>DLC02_Notifications</ShortName>
+			<Path>DLC02_Notifications.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="885775399" GUID="{E09808C2-BECD-4660-8007-CB255E2F4600}" Language="SFX">
+			<ShortName>DLC01_Resources_Features_3D</ShortName>
+			<Path>DLC01_Resources_Features_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="898914911" GUID="{AE570CD7-4038-468B-BD00-27F09CFE2C69}" Language="SFX">
+			<ShortName>DLC02_Music_Bank</ShortName>
+			<Path>DLC02_Music_Bank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="979392677" GUID="{F787EEE6-FFFF-4B04-A5E1-3C093BA979E6}" Language="SFX">
+			<ShortName>DLC04_Speech</ShortName>
+			<Path>DLC04_Speech.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="1017660616" GUID="{9D21D46E-544D-47D0-9A61-CD2FA548F7F9}" Language="SFX">
 			<ShortName>Ambiences</ShortName>
@@ -49222,6 +49262,22 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="1071052397" GUID="{CB0EBD1D-2ED1-4CDC-B2BC-64755453FDC1}" Language="SFX">
+			<ShortName>DLC01_Cinematic_Intro_Speech</ShortName>
+			<Path>DLC01_Cinematic_Intro_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1084791072" GUID="{555A73E9-096A-403E-9448-5780280FBD2D}" Language="SFX">
+			<ShortName>DLC04_Leader_SFX</ShortName>
+			<Path>DLC04_Leader_SFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1087671060" GUID="{3C0C4D85-2099-4AD0-ACF1-661D78DA150F}" Language="SFX">
+			<ShortName>DLC02_Cinematics_Endgame_Speech</ShortName>
+			<Path>DLC02_Cinematics_Endgame_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1143764257" GUID="{1BA2805D-183E-4C56-B3F3-39E8371447FF}" Language="SFX">
+			<ShortName>DLC03_Leader_SFX</ShortName>
+			<Path>DLC03_Leader_SFX.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1177685652" GUID="{7FD9778A-FE7C-419F-9FC5-977E19120E62}" Language="SFX">
 			<ShortName>Cinematics_Endgame_MusicSFX</ShortName>
 			<Path>Cinematics_Endgame_MusicSFX.bnk</Path>
@@ -49247,6 +49303,14 @@
 				<File Id="858914778"/>
 				<File Id="1003758460"/>
 			</ReferencedStreamedFiles>
+		</SoundBank>
+		<SoundBank Id="1193519676" GUID="{41FCCF1E-E857-4599-AE03-92B0505BF2C7}" Language="SFX">
+			<ShortName>DLC03_Speech</ShortName>
+			<Path>DLC03_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1209673616" GUID="{4779A157-C7E0-42DA-BAC6-A15CC120748F}" Language="SFX">
+			<ShortName>DLC01_Cinematic_Tutorials_MusicSFX</ShortName>
+			<Path>DLC01_Cinematic_Tutorials_MusicSFX.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="1228129509" GUID="{26180755-2D59-48EE-8265-2EF1F99F4F9E}" Language="Chinese(PRC)">
 			<ShortName>Speech_Localized</ShortName>
@@ -66517,9 +66581,37 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="1265806155" GUID="{376F456D-8A8D-4653-A6AF-E8A50A313D41}" Language="SFX">
+			<ShortName>DLC03_Unit_Bank_Common</ShortName>
+			<Path>DLC03_Unit_Bank_Common.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1311375818" GUID="{50F63C6E-A91A-4A77-AF29-8B1113C19E2E}" Language="SFX">
+			<ShortName>DLC04_Cinematics_Endgame_Speech</ShortName>
+			<Path>DLC04_Cinematics_Endgame_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1324467828" GUID="{BE893B11-DEA4-4AEA-8DB6-A0A66651CD8A}" Language="SFX">
+			<ShortName>DLC04_Unit_Bank_3D</ShortName>
+			<Path>DLC04_Unit_Bank_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1341245383" GUID="{3F45B4F0-0CAA-4426-BB1A-735877574E8C}" Language="SFX">
+			<ShortName>DLC04_Unit_Bank_2D</ShortName>
+			<Path>DLC04_Unit_Bank_2D.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1438256416" GUID="{B2BE235A-876B-4D11-A3BB-A42865078B37}" Language="SFX">
+			<ShortName>DLC01_Speech_Localized</ShortName>
+			<Path>DLC01_Speech_Localized.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1457400769" GUID="{21FBD7FB-1516-4FE9-84B2-1CA840BCAFD5}" Language="SFX">
+			<ShortName>DLC03_Ambiences</ShortName>
+			<Path>DLC03_Ambiences.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1530817625" GUID="{BE8DE059-F450-4F36-85DF-70E88AD0A147}" Language="SFX">
+			<ShortName>DLC01_Unit_Bank_Common</ShortName>
+			<Path>DLC01_Unit_Bank_Common.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="1546231383" GUID="{AD4D06FD-95CA-42CD-9536-9ADB0555E7E1}" Language="SFX">
 			<ShortName>Music_Bank</ShortName>
@@ -66784,11 +66876,11 @@
 				<File Id="848529603"/>
 				<File Id="850619713"/>
 				<File Id="866414075"/>
-				<File Id="873475738"/>
 				<File Id="875968682"/>
 				<File Id="878352276"/>
 				<File Id="878996410"/>
 				<File Id="879661457"/>
+				<File Id="879938382"/>
 				<File Id="881590776"/>
 				<File Id="885675293"/>
 				<File Id="886379909"/>
@@ -66904,6 +66996,26 @@
 					<Path>SFX\Norway_Ancient_Bukkehorn_Bukkehornlåt-01_ADEF7B36.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1611304765" GUID="{DF8441F4-CBD5-45A7-948B-2E44F4C9165B}" Language="SFX">
+			<ShortName>DLC04_Notifications</ShortName>
+			<Path>DLC04_Notifications.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1685439088" GUID="{92CCCA2F-2041-4ECA-9371-FEA3FC770BA9}" Language="SFX">
+			<ShortName>DLC02_Cinematic_Intro_MusicSFX</ShortName>
+			<Path>DLC02_Cinematic_Intro_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1785271135" GUID="{54E8C28C-F76C-44FB-8A8E-B6A542502EC2}" Language="SFX">
+			<ShortName>DLC01_Cinematics_Endgame_Speech</ShortName>
+			<Path>DLC01_Cinematics_Endgame_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1785528887" GUID="{051A7232-6BE2-491E-BD76-7BF676060B8A}" Language="SFX">
+			<ShortName>DLC01_UI_Bank</ShortName>
+			<Path>DLC01_UI_Bank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1817335567" GUID="{BDC28429-5C97-4BC4-8F92-44789C036746}" Language="SFX">
+			<ShortName>DLC02_Wonders</ShortName>
+			<Path>DLC02_Wonders.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="1839668536" GUID="{37D1AFEC-1633-4059-B762-3269F2E66F55}" Language="SFX">
 			<ShortName>UI_Bank</ShortName>
@@ -68122,6 +68234,34 @@
 					<Path>SFX\LeaderScreenEnter_E1E65BF4.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1876374124" GUID="{79A1CC30-906D-49C1-A709-6F244D5CA44B}" Language="SFX">
+			<ShortName>DLC02_Cinematics_Endgame_MusicSFX</ShortName>
+			<Path>DLC02_Cinematics_Endgame_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1905467255" GUID="{53CBAC46-2AB3-4793-BE78-FBD873A6711A}" Language="SFX">
+			<ShortName>DLC04_Speech_Localized</ShortName>
+			<Path>DLC04_Speech_Localized.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1944255931" GUID="{25DB1E1C-C310-40B7-8CD8-A8DB2A09ECEB}" Language="SFX">
+			<ShortName>DLC03_Cinematic_Intro_MusicSFX</ShortName>
+			<Path>DLC03_Cinematic_Intro_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2102479058" GUID="{0C05D98A-3661-490C-BDB8-D0C6743137F4}" Language="SFX">
+			<ShortName>DLC01_Speech</ShortName>
+			<Path>DLC01_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2219892411" GUID="{2E6A6837-D3F2-4589-94AA-53F4B91A7520}" Language="SFX">
+			<ShortName>DLC01_Cinematics_Endgame_MusicSFX</ShortName>
+			<Path>DLC01_Cinematics_Endgame_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2225944658" GUID="{D3CA456F-F835-4721-A4B7-A841B146774B}" Language="SFX">
+			<ShortName>DLC04_Cinematic_Intro_MusicSFX</ShortName>
+			<Path>DLC04_Cinematic_Intro_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2232198605" GUID="{EDBF5DC7-CC03-4A88-B757-5DAD11141CC4}" Language="SFX">
+			<ShortName>DLC03_Cinematics_Endgame_Speech</ShortName>
+			<Path>DLC03_Cinematics_Endgame_Speech.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="2356030302" GUID="{B9013A32-674F-41BD-ACF1-BAEA02624B01}" Language="SFX">
 			<ShortName>Leader_SFX</ShortName>
@@ -70828,6 +70968,33 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="2356751080" GUID="{C9BC359B-8675-4E76-BFCC-888C461C6AB2}" Language="SFX">
+			<ShortName>DLC03_Music_Bank</ShortName>
+			<Path>DLC03_Music_Bank.bnk</Path>
+			<ReferencedStreamedFiles>
+				<File Id="42282583"/>
+				<File Id="199695835"/>
+				<File Id="221255491"/>
+				<File Id="351037960"/>
+				<File Id="505707220"/>
+				<File Id="617363448"/>
+				<File Id="658062853"/>
+				<File Id="704289277"/>
+				<File Id="766403748"/>
+				<File Id="848529603"/>
+				<File Id="881590776"/>
+				<File Id="904020359"/>
+				<File Id="929001752"/>
+				<File Id="1001820055"/>
+				<File Id="1017840058"/>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="827301099" Language="SFX">
+					<ShortName>Barbarian_Spotted.wav</ShortName>
+					<Path>SFX\Barbarian_Spotted_ADEF7B36.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="2375246825" GUID="{19F5D72E-1409-4D1A-83BB-FC7BAAC0D7D2}" Language="Chinese(PRC)">
 			<ShortName>Cinematic_Tutorials_Speech</ShortName>
 			<Path>Chinese(PRC)\Cinematic_Tutorials_Speech.bnk</Path>
@@ -71113,6 +71280,86 @@
 					<PrefetchSize>324064</PrefetchSize>
 				</File>
 			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2439127089" GUID="{94B5C6DC-653F-422E-9C83-4E5965A1E172}" Language="SFX">
+			<ShortName>DLC04_Wonders</ShortName>
+			<Path>DLC04_Wonders.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2466164769" GUID="{609230B9-A48C-4974-B192-BEBBD3526001}" Language="SFX">
+			<ShortName>DLC03_Cinematics_Endgame_MusicSFX</ShortName>
+			<Path>DLC03_Cinematics_Endgame_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2502212518" GUID="{2040FF11-2AD7-41A8-ADCB-2B2CAED54C42}" Language="SFX">
+			<ShortName>DLC02_Unit_Bank_3D</ShortName>
+			<Path>DLC02_Unit_Bank_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2518990129" GUID="{DA7CD08E-4476-4AAC-BC27-6F1A202585A6}" Language="SFX">
+			<ShortName>DLC02_Unit_Bank_2D</ShortName>
+			<Path>DLC02_Unit_Bank_2D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2573458850" GUID="{C4E5BCEB-BEFC-4440-A99E-6E20758C6159}" Language="SFX">
+			<ShortName>DLC03_Wonders</ShortName>
+			<Path>DLC03_Wonders.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2598086109" GUID="{1C200E0A-99E5-4963-A678-B336803E0438}" Language="SFX">
+			<ShortName>DLC02_Cinematic_Tutorials_MusicSFX</ShortName>
+			<Path>DLC02_Cinematic_Tutorials_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2618729377" GUID="{D37A6507-0638-4F22-8125-8FB34CC232E5}" Language="SFX">
+			<ShortName>DLC04_Music_Bank</ShortName>
+			<Path>DLC04_Music_Bank.bnk</Path>
+			<ReferencedStreamedFiles>
+				<File Id="32484186"/>
+				<File Id="42282583"/>
+				<File Id="199695835"/>
+				<File Id="221255491"/>
+				<File Id="241120469"/>
+				<File Id="289146968"/>
+				<File Id="329265388"/>
+				<File Id="351037960"/>
+				<File Id="390517944"/>
+				<File Id="505707220"/>
+				<File Id="573962560"/>
+				<File Id="617363448"/>
+				<File Id="618215648"/>
+				<File Id="654428115"/>
+				<File Id="658062853"/>
+				<File Id="673925690"/>
+				<File Id="704289277"/>
+				<File Id="766403748"/>
+				<File Id="785292412"/>
+				<File Id="825186465"/>
+				<File Id="848529603"/>
+				<File Id="881590776"/>
+				<File Id="904020359"/>
+				<File Id="929001752"/>
+				<File Id="993232006"/>
+				<File Id="1001820055"/>
+				<File Id="1017840058"/>
+				<File Id="1039664144"/>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="827301099" Language="SFX">
+					<ShortName>Barbarian_Spotted.wav</ShortName>
+					<Path>SFX\Barbarian_Spotted_ADEF7B36.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2648282090" GUID="{1BF553CD-5876-4226-B957-A398659FFF40}" Language="SFX">
+			<ShortName>DLC03_Unit_Bank_2D</ShortName>
+			<Path>DLC03_Unit_Bank_2D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2665059653" GUID="{2F51E314-0B14-4BD0-B12E-FE22B4DB2FA0}" Language="SFX">
+			<ShortName>DLC03_Unit_Bank_3D</ShortName>
+			<Path>DLC03_Unit_Bank_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2812610595" GUID="{D286E332-5DC1-4A16-A9DE-5C372FBC164E}" Language="SFX">
+			<ShortName>DLC01_Ambiences</ShortName>
+			<Path>DLC01_Ambiences.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2916138652" GUID="{6E45D3EE-5F55-4977-BB18-85ECA7D45698}" Language="SFX">
+			<ShortName>DLC01_Notifications</ShortName>
+			<Path>DLC01_Notifications.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="2996433372" GUID="{63CD0DCF-C3E7-415F-8382-F7758A50A35D}" Language="Chinese(PRC)">
 			<ShortName>Cinematics_Endgame_Speech</ShortName>
@@ -71414,6 +71661,108 @@
 				<File Id="658952642"/>
 			</ReferencedStreamedFiles>
 		</SoundBank>
+		<SoundBank Id="3067098342" GUID="{6AA0F763-2D89-47BA-A4DD-114F579F2B5C}" Language="SFX">
+			<ShortName>DLC04_Ambiences</ShortName>
+			<Path>DLC04_Ambiences.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3174997499" GUID="{B334CBFA-4B56-4739-BCDF-C912421E2366}" Language="SFX">
+			<ShortName>DLC02_Speech</ShortName>
+			<Path>DLC02_Speech.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2134615590" Name="POLA_JA_DEFEAT_B_1" GUID="{A6BA29C2-32E2-44D9-98ED-3FC648B43F14}"/>
+				<Event Id="2417174313" Name="POLA_JA_DELCARE_WAR_FROM_AI_C_1" GUID="{4A197E4E-2C58-45B9-8712-FDF61C1C3E33}"/>
+				<Event Id="664905327" Name="POLA_JA_DELCARE_WAR_FROM_HUMAN_D_3" GUID="{BA657BA9-6E66-4FD7-89E1-84F433A98692}"/>
+				<Event Id="3259943382" Name="POLA_JA_FIRST_MEET_B_4" GUID="{ECC0EE31-B8C7-4FD1-A65F-C06465BCAABA}"/>
+				<Event Id="1699860505" Name="POLA_JA_KUDOS_E_2" GUID="{7DA97FB1-D00F-446E-A810-016393BDDE09}"/>
+				<Event Id="2783489602" Name="POLA_JA_WARNING_C_1" GUID="{2E8973BA-623E-499F-82BB-EE80E486DFE8}"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="612396668" Language="SFX">
+					<ShortName>POLA_JA_DELCARE_WAR_FROM_AI_C_1.wav</ShortName>
+					<Path>SFX\POLA_JA_DELCARE_WAR_FROM_AI_C_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="627813081" Language="SFX">
+					<ShortName>POLA_JA_KUDOS_E_2.wav</ShortName>
+					<Path>SFX\POLA_JA_KUDOS_E_2_E1E65BF4.wem</Path>
+				</File>
+				<File Id="677247462" Language="SFX">
+					<ShortName>POLA_JA_DELCARE_WAR_FROM_HUMAN_D_3.wav</ShortName>
+					<Path>SFX\POLA_JA_DELCARE_WAR_FROM_HUMAN_D_3_E1E65BF4.wem</Path>
+				</File>
+				<File Id="746882220" Language="SFX">
+					<ShortName>POLA_JA_FIRST_MEET_B_4.wav</ShortName>
+					<Path>SFX\POLA_JA_FIRST_MEET_B_4_E1E65BF4.wem</Path>
+				</File>
+				<File Id="963440344" Language="SFX">
+					<ShortName>POLA_JA_DEFEAT_B_1.wav</ShortName>
+					<Path>SFX\POLA_JA_DEFEAT_B_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1021175947" Language="SFX">
+					<ShortName>POLA_JA_WARNING_C_1.wav</ShortName>
+					<Path>SFX\POLA_JA_WARNING_C_1_E1E65BF4.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3187943632" GUID="{E35E4868-00AB-4D03-A9E6-15CA30B7702F}" Language="SFX">
+			<ShortName>DLC01_Cinematic_Tutorials_Speech</ShortName>
+			<Path>DLC01_Cinematic_Tutorials_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3204508194" GUID="{6EC20058-69DE-4B91-BEE7-C9B3BA92C6DD}" Language="SFX">
+			<ShortName>DLC04_Cinematics_Endgame_MusicSFX</ShortName>
+			<Path>DLC04_Cinematics_Endgame_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3205678330" GUID="{1435FE9B-89BF-4D20-A054-921FCE7EF046}" Language="SFX">
+			<ShortName>DLC03_Resources_Features_2D</ShortName>
+			<Path>DLC03_Resources_Features_2D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3222455893" GUID="{F4108013-9F98-4F9D-AD1E-70F131A5DD1D}" Language="SFX">
+			<ShortName>DLC03_Resources_Features_3D</ShortName>
+			<Path>DLC03_Resources_Features_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3247016214" GUID="{400BCB1C-5AA2-40D6-A1EC-9DCE48289D31}" Language="SFX">
+			<ShortName>DLC04_Unit_Bank_Common</ShortName>
+			<Path>DLC04_Unit_Bank_Common.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3274725983" GUID="{B85F8F7A-B54F-4E32-B305-0FC03BD8CF4F}" Language="SFX">
+			<ShortName>DLC03_Cinematic_Intro_Speech</ShortName>
+			<Path>DLC03_Cinematic_Intro_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3299339197" GUID="{980A4C60-237C-488A-9BC7-E1550851E179}" Language="SFX">
+			<ShortName>DLC03_UI_Bank</ShortName>
+			<Path>DLC03_UI_Bank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3309985811" GUID="{A1D57D10-9CA1-48CD-A2D8-73373F95CA07}" Language="SFX">
+			<ShortName>DLC04_Cinematic_Tutorials_Speech</ShortName>
+			<Path>DLC04_Cinematic_Tutorials_Speech.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3346804237" GUID="{29E7A9A7-0390-4FB3-8800-8AADFEEB3768}" Language="SFX">
+			<ShortName>DLC02_Speech_Localized</ShortName>
+			<Path>DLC02_Speech_Localized.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3411365162" GUID="{14D240CF-4FC3-450B-B29F-DF78835DEAE0}" Language="SFX">
+			<ShortName>DLC03_Cinematic_Tutorials_MusicSFX</ShortName>
+			<Path>DLC03_Cinematic_Tutorials_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3460534088" GUID="{027B52F9-D058-4DB0-A76B-E6D7AE774A9F}" Language="SFX">
+			<ShortName>DLC02_Resources_Features_3D</ShortName>
+			<Path>DLC02_Resources_Features_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3477311707" GUID="{68A17ED7-FC47-4FE1-9A54-EF02E6F31450}" Language="SFX">
+			<ShortName>DLC02_Resources_Features_2D</ShortName>
+			<Path>DLC02_Resources_Features_2D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3585535847" GUID="{7E6912DF-F216-4B0B-8319-830FFB5BF7E9}" Language="SFX">
+			<ShortName>DLC04_Cinematic_Tutorials_MusicSFX</ShortName>
+			<Path>DLC04_Cinematic_Tutorials_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3617970072" GUID="{17632737-3036-44F3-AD7C-A4A82A81CA3A}" Language="SFX">
+			<ShortName>DLC01_Wonders</ShortName>
+			<Path>DLC01_Wonders.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3625679538" GUID="{817431DF-5FBD-4CF8-8335-05C1C004AC83}" Language="SFX">
+			<ShortName>DLC03_Cinematic_Tutorials_Speech</ShortName>
+			<Path>DLC03_Cinematic_Tutorials_Speech.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="3666146279" GUID="{E1E36930-B4CB-4B9C-A001-B8DE62566818}" Language="SFX">
 			<ShortName>Wonders</ShortName>
 			<Path>Wonders.bnk</Path>
@@ -71555,6 +71904,10 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="3690013120" GUID="{BA303976-92C3-40E4-B624-E7992013F1A1}" Language="SFX">
+			<ShortName>DLC02_Ambiences</ShortName>
+			<Path>DLC02_Ambiences.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="3764405816" GUID="{48338B24-D824-4C4B-AEF1-C596B07B2E63}" Language="SFX">
 			<ShortName>Cinematic_Intro_MusicSFX</ShortName>
 			<Path>Cinematic_Intro_MusicSFX.bnk</Path>
@@ -71572,6 +71925,22 @@
 					<PrefetchSize>324064</PrefetchSize>
 				</File>
 			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3947606738" GUID="{875B11CE-B094-4CA2-948C-E4BADBC45D5C}" Language="SFX">
+			<ShortName>DLC03_Speech_Localized</ShortName>
+			<Path>DLC03_Speech_Localized.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4002639774" GUID="{CB9ACD97-207E-47D9-AEFA-1AB6B414106A}" Language="SFX">
+			<ShortName>DLC04_Resources_Features_3D</ShortName>
+			<Path>DLC04_Resources_Features_3D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4019417577" GUID="{DB85E96A-0E88-414F-833B-5584DC2AC3BB}" Language="SFX">
+			<ShortName>DLC04_Resources_Features_2D</ShortName>
+			<Path>DLC04_Resources_Features_2D.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4035191135" GUID="{9DE87D41-9755-49AB-8F4D-E17CB895FA73}" Language="SFX">
+			<ShortName>DLC01_Leader_SFX</ShortName>
+			<Path>DLC01_Leader_SFX.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="4080886643" GUID="{C9CBBEFB-AC9A-448B-82E9-2F442F446530}" Language="SFX">
 			<ShortName>Notifications</ShortName>
@@ -71751,7 +72120,7 @@
 				</File>
 				<File Id="541500929" Language="SFX">
 					<ShortName>Game_Begin_Button_Click.wav</ShortName>
-					<Path>SFX\Game_Begin_Button_Click_0BA2326A.wem</Path>
+					<Path>SFX\Game_Begin_Button_Click_04D23139.wem</Path>
 				</File>
 				<File Id="562168523" Language="SFX">
 					<ShortName>NotificationSpySuccess.wav</ShortName>
@@ -71854,6 +72223,101 @@
 					<Path>SFX\LeaderScreenEnter_E1E65BF4.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4130695598" GUID="{7B504E3B-01BD-426E-BF52-BCB96B7FCFE5}" Language="SFX">
+			<ShortName>DLC01_Music_Bank</ShortName>
+			<Path>DLC01_Music_Bank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4158845350" GUID="{AECAA089-26D4-4311-9284-5379827C9DA1}" Language="SFX">
+			<ShortName>DLC02_Leader_SFX</ShortName>
+			<Path>DLC02_Leader_SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3459808583" Name="Leader_Jadwiga_Foley_DeclareWarFromAI" GUID="{C0D64C6D-4615-467C-97E7-5036CAA2BA0A}"/>
+				<Event Id="4175764672" Name="Leader_Jadwiga_Foley_DeclareWarFromHuman" GUID="{3CB52D00-8BB0-40D6-8586-3EA456233307}"/>
+				<Event Id="247641572" Name="Leader_Jadwiga_Foley_Defeat" GUID="{7989BB10-301B-4612-93DB-D7FE6E653917}"/>
+				<Event Id="3483921694" Name="Leader_Jadwiga_Foley_HappyNegA" GUID="{F56019CF-1523-4102-ABA4-E58B56B72815}"/>
+				<Event Id="3483921693" Name="Leader_Jadwiga_Foley_HappyNegB" GUID="{C182D7C7-9E61-459A-B942-AFA53DC85B6D}"/>
+				<Event Id="187168666" Name="Leader_Jadwiga_Foley_HappyNeutral" GUID="{AA36F115-B9B0-4A6F-B15A-DBE50099B44E}"/>
+				<Event Id="2815114254" Name="Leader_Jadwiga_Foley_HappyPosA" GUID="{902A8068-2E93-4213-A69C-71EA0F0CB5C3}"/>
+				<Event Id="2815114253" Name="Leader_Jadwiga_Foley_HappyPosB" GUID="{2DC1B0C9-76F7-458D-8961-00D7828087B7}"/>
+				<Event Id="1012509461" Name="Leader_Jadwiga_Foley_Kudos" GUID="{809E6F7D-B988-4012-95EE-DDDFBEACF4B3}"/>
+				<Event Id="3079461096" Name="Leader_Jadwiga_Foley_NeutralHappy" GUID="{BF8AAD73-C09C-4A82-A86B-D1C6A9F685DD}"/>
+				<Event Id="271358793" Name="Leader_Jadwiga_Foley_NeutralNegA" GUID="{D9882420-EAA9-4145-9623-978581901926}"/>
+				<Event Id="271358794" Name="Leader_Jadwiga_Foley_NeutralNegB" GUID="{EB9440B6-A1EE-4CEA-9F0D-6E736EC89D06}"/>
+				<Event Id="3371772085" Name="Leader_Jadwiga_Foley_NeutralPosA" GUID="{8BD0D1D5-86C0-4425-8F66-B49C45630D54}"/>
+				<Event Id="3371772086" Name="Leader_Jadwiga_Foley_NeutralPosB" GUID="{45C9C472-199E-4103-8BF3-2A6840F56885}"/>
+				<Event Id="324254387" Name="Leader_Jadwiga_Foley_Warning" GUID="{B04DE0CF-F867-4F7A-B118-2C1ED5ADB1A4}"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="10883666" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-Defeat.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-Defeat_E1E65BF4.wem</Path>
+				</File>
+				<File Id="119838061" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-DeclareWarFromHuman.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-DeclareWarFromHuman_E1E65BF4.wem</Path>
+				</File>
+				<File Id="120466770" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-Kudos.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-Kudos_E1E65BF4.wem</Path>
+				</File>
+				<File Id="202906353" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-NeutralHappy.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-NeutralHappy_E1E65BF4.wem</Path>
+				</File>
+				<File Id="301382001" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-NeutralPosB.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-NeutralPosB_E1E65BF4.wem</Path>
+				</File>
+				<File Id="322324084" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-NeutralNegA.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-NeutralNegA_E1E65BF4.wem</Path>
+				</File>
+				<File Id="347434842" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-Warning.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-Warning_E1E65BF4.wem</Path>
+				</File>
+				<File Id="395407691" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-DeclareWarFromAI.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-DeclareWarFromAI_E1E65BF4.wem</Path>
+				</File>
+				<File Id="424335410" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-HappyPosA.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-HappyPosA_E1E65BF4.wem</Path>
+				</File>
+				<File Id="453610870" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-NeutralNegB.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-NeutralNegB_E1E65BF4.wem</Path>
+				</File>
+				<File Id="682391375" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-HappyNeutral.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-HappyNeutral_E1E65BF4.wem</Path>
+				</File>
+				<File Id="805789914" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-HappyPosB.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-HappyPosB_E1E65BF4.wem</Path>
+				</File>
+				<File Id="882676117" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-NeutralPosA.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-NeutralPosA_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1007094767" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-HappyNegB.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-HappyNegB_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1022123863" Language="SFX">
+					<ShortName>Leader-Jadwiga-Foley-HappyNegA.wav</ShortName>
+					<Path>SFX\Leader-Jadwiga-Foley-HappyNegA_E1E65BF4.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4171183809" GUID="{93D62BFD-700B-4B30-ABE5-46FEC7D7DF57}" Language="SFX">
+			<ShortName>DLC01_Cinematic_Intro_MusicSFX</ShortName>
+			<Path>DLC01_Cinematic_Intro_MusicSFX.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4242680764" GUID="{53C352F6-44B9-4781-9A80-DAD0A29F2A2C}" Language="SFX">
+			<ShortName>DLC02_Unit_Bank_Common</ShortName>
+			<Path>DLC02_Unit_Bank_Common.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="4245458931" GUID="{2DC2F8C1-FBAF-4C5F-812C-ED10A6181490}" Language="SFX">
 			<ShortName>Speech</ShortName>

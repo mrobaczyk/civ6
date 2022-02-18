@@ -5,6 +5,15 @@ CREATE TABLE 'Queries' (
  	PRIMARY KEY('QueryId')
 );
 
+CREATE TABLE 'QueryCriteria'(
+	'QueryId' TEXT NOT NULL,
+	'ConfigurationGroup' TEXT NOT NULL,
+	'ConfigurationId' TEXT NOT NULL,
+	'Operator' TEXT NOT NULL DEFAULT 'Equals',
+	'ConfigurationValue',
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
+);
+
 CREATE TABLE 'QueryParameters'(
 	'QueryId' TEXT NOT NULL,
 	'Index' INTEGER NOT NULL,
@@ -100,15 +109,29 @@ CREATE TABLE 'ParameterDependencies'(
 	'ConfigurationValue'
 );
 
+CREATE TABLE 'DomainOverrideQueries'(
+	'QueryId' TEXT NOT NULL,
+	'ParameterIdField' TEXT NOT NULL DEFAULT 'ParameterId',
+	'DomainField' TEXT NOT NULL DEFAULT 'Domain',
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
+);
+
+CREATE TABLE 'DomainOverrides'(
+	'Key1' TEXT,
+	'Key2' TEXT,
+	'ParameterId' TEXT,
+	'DomainOverride' TEXT NOT NULL
+);
+
 CREATE TABLE 'DomainValueQueries'(
-	'DomainValueQueryId' TEXT NOT NULL,
 	'QueryId' TEXT NOT NULL,
 	'DomainField' TEXT NOT NULL DEFAULT 'Domain',
 	'ValueField' TEXT NOT NULL DEFAULT 'Value',
 	'NameField' TEXT NOT NULL DEFAULT 'Name',
 	'DescriptionField' TEXT NOT NULL DEFAULT 'Description',
 	'SortIndexField' TEXT NOT NULL DEFAULT 'SortIndex',
-	'Set' TEXT NOT NULL DEFAULT 'union'
+	'Set' TEXT NOT NULL DEFAULT 'union',
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
 );
 
 CREATE TABLE 'DomainValues'(
@@ -131,7 +154,8 @@ CREATE TABLE 'ConfigurationUpdateQueries'(
 	'TargetGroupField' TEXT NOT NULL DEFAULT 'TargetGroup',
 	'TargetIdField' TEXT NOT NULL DEFAULT 'TargetId',
 	'TargetValueField' TEXT NOT NULL DEFAULT 'TargetValue',
-	'HashField' TEXT NOT NULL DEFAULT 'Hash'
+	'HashField' TEXT NOT NULL DEFAULT 'Hash',
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
 );
 
 -- When a setup parameter writes to the configuration..
