@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<InputCategories>
+		<Row CategoryId="UI" Name="LOC_OPTIONS_HOTKEY_CATEGORY_UI" Visible="1" SortIndex="0" />
+		<Row CategoryId="UNIT" Name="LOC_OPTIONS_HOTKEY_CATEGORY_UNIT" Visible="1" SortIndex="0" />
+		<Row CategoryId="GLOBAL" Name="LOC_OPTIONS_HOTKEY_CATEGORY_GLOBAL" Visible="1" SortIndex="0" />
+		<Row CategoryId="ONLINE" Name="LOC_OPTIONS_HOTKEY_CATEGORY_ONLINE" Visible="1" SortIndex="0" />
+		<Row CategoryId="LENSES" Name="LOC_OPTIONS_HOTKEY_CATEGORY_LENSES" Visible="1" SortIndex="0" />
+
+		<!-- Hidden Categories -->
+		<!--
+		<Row CategoryId="STARTUP" Name="LOC_OPTIONS_HOTKEY_CATEGORY_STARTUP" Visible="0" />
+		<Row CategoryId="READY" Name="LOC_OPTIONS_HOTKEY_CATEGORY_READY" Visible="0" />
+		<Row CategoryId="POPUP" Name="LOC_OPTIONS_HOTKEY_CATEGORY_POPUP" Visible="0" />
+		<Row CategoryId="TUTORIAL" Name="LOC_OPTIONS_HOTKEY_CATEGORY_TUTORIAL" Visible="0" />	-->
+	</InputCategories>
+	
+	<InputContexts>
+		<Row ContextId="Default" Value="0" />
+		<Row ContextId="Universal" Value="0" />
+		<Row ContextId="StartupGame" Value="1" />
+		<Row ContextId="Shell" Value="2" />
+		<Row ContextId="Loading" Value="4" />
+		<Row ContextId="Ready" Value="8" />
+		<Row ContextId="World" Value="16" />
+		<Row ContextId="Diplomacy" Value="32" />
+		<Row ContextId="GameOptions" Value="64" />
+		<Row ContextId="EndGame" Value="128" />
+		<Row ContextId="Popup" Value="256" />
+		<Row ContextId="Tutorial" Value="4096" />
+	</InputContexts>
+	
+	<InputActions>	
+		<!--
+		<Row ActionId="Accept" CategoryId="STARTUP" ContextId="StartupGame" />
+		<Row ActionId="AcceptAlt" CategoryId="STARTUP" ContextId="StartupGame" />
+		
+		<Row ActionId="StartGame" CategoryId="READY" ContextId="Ready" />
+		<Row ActionId="StartGameAlt" CategoryId="READY" ContextId="Ready" />
+		-->
+
+		<Row ActionId="ToggleTechTree" Name="LOC_OPTIONS_HOTKEY_UI_TECH" Description="LOC_OPTIONS_HOTKEY_UI_TECH_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleCivicsTree" Name="LOC_OPTIONS_HOTKEY_UI_CIVICS" Description="LOC_OPTIONS_HOTKEY_UI_CIVICS_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleGovernment" Name="LOC_OPTIONS_HOTKEY_UI_GOV" Description="LOC_OPTIONS_HOTKEY_UI_GOV_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleReligion" Name="LOC_OPTIONS_HOTKEY_UI_RELIGION" Description="LOC_OPTIONS_HOTKEY_UI_RELIGION_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleGreatPeople" Name="LOC_OPTIONS_HOTKEY_UI_GPEOPLE" Description="LOC_OPTIONS_HOTKEY_UI_GPEOPLE_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleGreatWorks" Name="LOC_OPTIONS_HOTKEY_UI_GWORKS" Description="LOC_OPTIONS_HOTKEY_UI_GWORKS_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleRankings" Name="LOC_OPTIONS_HOTKEY_UI_RANKINGS" Description="LOC_OPTIONS_HOTKEY_UI_RANKINGS_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleCityStates" Name="LOC_OPTIONS_HOTKEY_UI_CITYSTATES" Description="LOC_OPTIONS_HOTKEY_UI_CITYSTATES_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleEspionage" Name="LOC_OPTIONS_HOTKEY_UI_ESPIONAGE" Description="LOC_OPTIONS_HOTKEY_UI_ESPIONAGE_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="ToggleTradeRoutes" Name="LOC_OPTIONS_HOTKEY_UI_TRADEROUTES" Description="LOC_OPTIONS_HOTKEY_UI_TRADEROUTES_HELP" CategoryId="UI" ContextId="World" />
+		<Row ActionId="OpenCivilopedia" Name="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA" Description="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA_HELP" CategoryId="UI" ContextId="World" />
+
+		<Row ActionId="FoundCity" Name="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY" Description="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="MoveTo" Name="LOC_OPTIONS_HOTKEY_UNIT_MOVETO" Description="LOC_OPTIONS_HOTKEY_UNIT_MOVETO_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="Fortify" Name="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY" Description="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="DeleteUnit" Name="LOC_OPTIONS_HOTKEY_UNIT_DELETE" Description="LOC_OPTIONS_HOTKEY_UNIT_DELETE_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="Attack" Name="LOC_OPTIONS_HOTKEY_UNIT_ATTACK" Description="LOC_OPTIONS_HOTKEY_UNIT_ATTACK_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="RangedAttack" Name="LOC_OPTIONS_HOTKEY_UNIT_RANGED" Description="LOC_OPTIONS_HOTKEY_UNIT_RANGED_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="AutoExplore" Name="LOC_OPTIONS_HOTKEY_UNIT_AUTOEXP" Description="LOC_OPTIONS_HOTKEY_UNIT_AUTOEXP_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="SkipTurn" Name="LOC_OPTIONS_HOTKEY_UNIT_SKIPTURN" Description="LOC_OPTIONS_HOTKEY_UNIT_SKIPTURN_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="Sleep" Name="LOC_OPTIONS_HOTKEY_UNIT_SLEEP" Description="LOC_OPTIONS_HOTKEY_UNIT_SLEEP_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="Alert" Name="LOC_OPTIONS_HOTKEY_UNIT_ALERT" Description="LOC_OPTIONS_HOTKEY_UNIT_ALERT_HELP" CategoryId="UNIT" ContextId="World" />
+
+		<Row ActionId="EndTurn" Name="LOC_OPTIONS_HOTKEY_GLOBAL_ENDTURN" Description="LOC_OPTIONS_HOTKEY_GLOBAL_ENDTURN_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="ToggleGrid" Name="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLEGRID" Description="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLEGRID_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="PauseMenu" Name="LOC_OPTIONS_HOTKEY_GLOBAL_PAUSEMENU" Description="LOC_OPTIONS_HOTKEY_GLOBAL_PAUSEMENU_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="QuickSave" Name="LOC_OPTIONS_HOTKEY_GLOBAL_QUICKSAVE" Description="LOC_OPTIONS_HOTKEY_GLOBAL_QUICKSAVE_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="QuickLoad" Name="LOC_OPTIONS_HOTKEY_GLOBAL_QUICKLOAD" Description="LOC_OPTIONS_HOTKEY_GLOBAL_QUICKLOAD_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="ToggleYield" Name="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLEYIELD" Description="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLEYIELD_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="PrevUnit" Name="LOC_OPTIONS_HOTKEY_GLOBAL_PREVUNIT" Description="LOC_OPTIONS_HOTKEY_GLOBAL_PREVUNIT_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="NextUnit" Name="LOC_OPTIONS_HOTKEY_GLOBAL_NEXTUNIT" Description="LOC_OPTIONS_HOTKEY_GLOBAL_NEXTUNIT_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="PrevCity" Name="LOC_OPTIONS_HOTKEY_GLOBAL_PREVCITY" Description="LOC_OPTIONS_HOTKEY_GLOBAL_PREVCITY_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="NextCity" Name="LOC_OPTIONS_HOTKEY_GLOBAL_NEXTCITY" Description="LOC_OPTIONS_HOTKEY_GLOBAL_NEXTCITY_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="ToggleResources" Name="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLERESOURCES" Description="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLERESOURCES_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="Toggle2DView" Name="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLE2DVIEW" Description="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLE2DVIEW_HELP" CategoryId="GLOBAL" ContextId="World" />
+		<Row ActionId="CapitalCity" Name="LOC_OPTIONS_HOTKEY_GLOBAL_CAPITALCITY" Description="LOC_OPTIONS_HOTKEY_GLOBAL_CAPITALCITY_HELP" CategoryId="GLOBAL" ContextId="World" />
+
+		<Row ActionId="OnlinePause" Name="LOC_OPTIONS_HOTKEY_ONLINE_PAUSE" Description="LOC_OPTIONS_HOTKEY_ONLINE_PAUSE_HELP" CategoryId="ONLINE" ContextId="World" />
+
+		<Row ActionId="LensReligion" Name="LOC_OPTIONS_HOTKEY_LENSES_RELIGION" Description="LOC_OPTIONS_HOTKEY_LENSES_RELIGION_HELP" CategoryId="LENSES" ContextId="World" />
+		<Row ActionId="LensContinent" Name="LOC_OPTIONS_HOTKEY_LENSES_CONTINENT" Description="LOC_OPTIONS_HOTKEY_LENSES_CONTINENT_HELP" CategoryId="LENSES" ContextId="World" />
+		<Row ActionId="LensAppeal" Name="LOC_OPTIONS_HOTKEY_LENSES_APPEAL" Description="LOC_OPTIONS_HOTKEY_LENSES_APPEAL_HELP" CategoryId="LENSES" ContextId="World" />
+		<Row ActionId="LensSettler" Name="LOC_OPTIONS_HOTKEY_LENSES_SETTLER" Description="LOC_OPTIONS_HOTKEY_LENSES_SETTLER_HELP" CategoryId="LENSES" ContextId="World" />
+		<Row ActionId="LensGovernment" Name="LOC_OPTIONS_HOTKEY_LENSES_GOVERNMENT" Description="LOC_OPTIONS_HOTKEY_LENSES_GOVERNMENT_HELP" CategoryId="LENSES" ContextId="World" />
+		<Row ActionId="LensPolitical" Name="LOC_OPTIONS_HOTKEY_LENSES_POLITICAL" Description="LOC_OPTIONS_HOTKEY_LENSES_POLITICAL_HELP" CategoryId="LENSES" ContextId="World" />
+		<Row ActionId="LensTourism" Name="LOC_OPTIONS_HOTKEY_LENSES_TOURISM" Description="LOC_OPTIONS_HOTKEY_LENSES_TOURISM_HELP" CategoryId="LENSES" ContextId="World" />
+	
+		<!--
+		<Row ActionId="PopupAccept" CategoryId="POPUP" ContextId="Popup" />
+		<Row ActionId="PopupCancel" CategoryId="POPUP" ContextId="Popup" />
+		<Row ActionId="PopupActivate" CategoryId="POPUP" ContextId="Popup" />
+
+		<Row ActionId="TutorialContinue" CategoryId="TUTORIAL" ContextId="Tutorial" />
+		<Row ActionId="TutorialContinueAlt" CategoryId="TUTORIAL" ContextId="Tutorial" />
+		<Row ActionId="TutorialShowMore" CategoryId="TUTORIAL" ContextId="Tutorial" /> 
+		-->
+	</InputActions>
+	
+	<InputActionDefaultGestures>
+		<Row ActionId="ToggleTechTree" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_T"/>
+		<Row ActionId="ToggleCivicsTree" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_C"/>
+		<Row ActionId="ToggleGovernment" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F7"/>
+		<Row ActionId="ToggleReligion" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_L"/>
+		<Row ActionId="ToggleGreatPeople" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_O"/>
+		<Row ActionId="ToggleGreatWorks" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_W"/>
+		<Row ActionId="ToggleRankings" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F1"/>
+		<Row ActionId="ToggleCityStates" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F2"/>
+		<Row ActionId="ToggleEspionage" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F3"/>
+		<Row ActionId="ToggleTradeRoutes" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F4"/>
+		<Row ActionId="OpenCivilopedia" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F9"/>
+	
+		<Row ActionId="FoundCity" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_B"/>
+		<Row ActionId="MoveTo" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_M"/>
+		<Row ActionId="Fortify" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F"/>
+		<Row ActionId="DeleteUnit" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_DELETE"/>
+		<Row ActionId="Attack" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_A"/>
+		<Row ActionId="RangedAttack" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_R"/>
+		<Row ActionId="AutoExplore" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_E"/>
+		<Row ActionId="SkipTurn" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_SPACE"/>
+		<Row ActionId="Sleep" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_Z"/>
+		<Row ActionId="Alert" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_V"/>
+		<Row ActionId="EndTurn" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_RETURN"/>
+		<Row ActionId="ToggleGrid" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_G"/>
+		<Row ActionId="PauseMenu" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_HOME"/>
+		<Row ActionId="QuickSave" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F5"/>
+		<Row ActionId="QuickLoad" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F6"/>
+		<Row ActionId="ToggleYield" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_Y"/>
+		<Row ActionId="PrevUnit" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_COMMA"/>
+		<Row ActionId="NextUnit" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_PERIOD"/>
+		<Row ActionId="PrevCity" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_LBRACKET"/>
+		<Row ActionId="NextCity" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_RBRACKET"/>
+		<Row ActionId="ToggleResources" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_Q"/>
+		<Row ActionId="Toggle2DView" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_PLUS"/>
+		<Row ActionId="CapitalCity" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_BACKSLASH"/>	
+		<Row ActionId="OnlinePause" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_P"/>
+		<Row ActionId="LensReligion" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_1"/>
+		<Row ActionId="LensContinent" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_2"/>
+		<Row ActionId="LensAppeal" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_3"/>
+		<Row ActionId="LensSettler" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_4"/>
+		<Row ActionId="LensGovernment" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_5"/>
+		<Row ActionId="LensPolitical" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_6"/>
+		<Row ActionId="LensTourism" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_7"/>
+	
+	</InputActionDefaultGestures>
+</GameInfo>

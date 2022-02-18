@@ -20,6 +20,30 @@
 		<Row TraitType="TRAIT_CIVILIZATION_UNIT_NUBIAN_PITATI" Name="LOC_TRAIT_CIVILIZATION_UNIT_NUBIAN_PITATI_NAME" Description="LOC_TRAIT_CIVILIZATION_UNIT_NUBIAN_PITATI_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_KANDAKE_OF_MEROE" Name="LOC_TRAIT_LEADER_KANDAKE_OF_MEROE_NAME" Description="LOC_TRAIT_LEADER_KANDAKE_OF_MEROE_DESCRIPTION"/>
 	</Traits>
+	<AiListTypes>
+		<Row ListType="AmanitoreCivics"/>
+		<Row ListType="AmanitoreTechs"/>
+		<Row ListType="AmanitoreUnitBuilds"/>
+		<Row ListType="AmanitoreWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="AmanitoreCivics" LeaderType="TRAIT_LEADER_KANDAKE_OF_MEROE" System="Civics"/>
+		<Row ListType="AmanitoreTechs" LeaderType="TRAIT_LEADER_KANDAKE_OF_MEROE" System="Technologies"/>
+		<Row ListType="AmanitoreUnitBuilds" LeaderType="TRAIT_LEADER_KANDAKE_OF_MEROE" System="UnitPromotionClasses"/>
+		<Row ListType="AmanitoreWonders" LeaderType="TRAIT_LEADER_KANDAKE_OF_MEROE" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="AmanitoreCivics" Item="CIVIC_CRAFTSMANSHIP" Favored="true"/>
+		<Row ListType="AmanitoreCivics" Item="CIVIC_FEUDALISM" Favored="true"/>
+		<Row ListType="AmanitoreTechs" Item="TECH_ARCHERY" Favored="true"/>
+		<Row ListType="AmanitoreTechs" Item="TECH_MASONRY" Favored="true"/>
+		<Row ListType="AmanitoreTechs" Item="TECH_BALLISTICS" Favored="true"/>
+		<Row ListType="AmanitoreTechs" Item="TECH_INDUSTRIALIZATION" Favored="true"/>
+		<Row ListType="AmanitoreTechs" Item="TECH_APPRENTICESHIP" Favored="true"/>
+		<Row ListType="AmanitoreUnitBuilds" Item="PROMOTION_CLASS_RANGED" Value="1"/>
+		<Row ListType="AmanitoreWonders" Item="BUILDING_PETRA" Favored="true"/>
+		<Row ListType="AmanitoreWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+	</AiFavoredItems>
 	<TypeTags>
 		<Row Type="UNIT_NUBIAN_PITATI" Tag="CLASS_RANGED"/>
 	</TypeTags>

@@ -68,7 +68,25 @@
 		<Row Tag="LOC_DIPLO_CHOICE_GOLD_INFO">
 			<Text>Costs {1_Cost} [ICON_Gold] Gold</Text>
 		</Row>
-		<Row Tag="LOC_DIPLO_ARE_YOU_SURE_WAR">
+    <Row Tag="LOC_CASUS_BELLI_HOLY_WAR_DESCRIPTION">
+      <Text>Target power has religiously converted one of your cities.</Text>
+    </Row>		
+    <Row Tag="LOC_CASUS_BELLI_RECONQUEST_WAR_DESCRIPTION">
+      <Text>Target power has captured one of your cities.</Text>
+    </Row>		
+    <Row Tag="LOC_CASUS_BELLI_LIBERATION_WAR_DESCRIPTION">
+      <Text>Target power has captured a city from one of your current friends or allies.</Text>
+    </Row>		
+    <Row Tag="LOC_CASUS_BELLI_PROTECTORATE_WAR_DESCRIPTION">
+      <Text>Target power has declared war of one of your current allied city-states.</Text>
+    </Row>		
+    <Row Tag="LOC_CASUS_BELLI_COLONIAL_WAR_DESCRIPTION">
+      <Text>Target power is two technology eras behind you.</Text>
+    </Row>		
+    <Row Tag="LOC_CASUS_BELLI_TERRITORIAL_WAR_DESCRIPTION">
+      <Text>Two of the target power's cities are within 10 tiles of 2 opponents' cities.</Text>
+    </Row>
+   <Row Tag="LOC_DIPLO_ARE_YOU_SURE_WAR">
 			<Text>Are you sure you want to go to war?</Text>
 		</Row>
 		<Row Tag="LOC_DIPLO_ARE_YOU_SURE_YES">
@@ -139,7 +157,7 @@
 			<Text>Unable to {1_WarActionType}[NEWLINE]You have a defensive pact with this leader.</Text>
 		</Row>
 		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_CASUS_BELLI_NOT_MET">
-			<Text>Unable to {1_WarActionType}[NEWLINE][COLOR_RED]You do not satisfy the conditions for this Casus Belli.[ENDCOLOR]</Text>
+			<Text>Unable to {1_WarActionType}[NEWLINE][COLOR_RED]You do not satisfy the conditions for this Casus Belli.[ENDCOLOR][NEWLINE][{2_CasusBelliDescription}]</Text>
 		</Row>
 		<Row Tag="LOC_DIPLOMACY_ACTION_FAILURE_REASON_PEACE_TOO_RECENT">
 			<Text>Unable to {1_WarActionType}[NEWLINE]You must wait {2_Turns} turns after making peace (available in {3_Remaining} turns).</Text>

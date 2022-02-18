@@ -44,6 +44,8 @@
     <Row Type="PSEUDOYIELD_IMPROVEMENT" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_NUCLEAR_WEAPON" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_SPACE_RACE" Kind="KIND_PSEUDOYIELD"/>
+		<Row Type="PSEUDOYIELD_STANDING_ARMY_NUMBER" Kind="KIND_PSEUDOYIELD"/>
+		<Row Type="PSEUDOYIELD_STANDING_ARMY_VALUE" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_TECHNOLOGY" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_TOURISM" Kind="KIND_PSEUDOYIELD"/>
 		<Row Type="PSEUDOYIELD_UNIT_ARCHAEOLOGIST" Kind="KIND_PSEUDOYIELD"/>
@@ -106,6 +108,9 @@
 		<Row PseudoYieldType="PSEUDOYIELD_TECHNOLOGY" DefaultValue="5"/>
 		<Row PseudoYieldType="PSEUDOYIELD_TOURISM" DefaultValue="1"/>
     <Row PseudoYieldType="PSEUDOYIELD_HAPPINESS" DefaultValue="1"/>
+    <!-- NUmber is a multiplier to the sum of the sqrt of each city population. Value increases the priority of the builds accordingly -->
+    <Row PseudoYieldType="PSEUDOYIELD_STANDING_ARMY_NUMBER" DefaultValue="1"/>
+    <Row PseudoYieldType="PSEUDOYIELD_STANDING_ARMY_VALUE" DefaultValue="0.1"/>
     <!-- The following are used to determine which cities to attack, and how high to rate that attack in comparison to all other production or uses -->
     <Row PseudoYieldType="PSEUDOYIELD_CITY_BASE" DefaultValue="450"/>
     <Row PseudoYieldType="PSEUDOYIELD_CITY_DEFENSES" DefaultValue="400"/>

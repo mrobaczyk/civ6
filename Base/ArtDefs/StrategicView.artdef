@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>287</build>
-		<revision>458</revision>
+		<build>312</build>
+		<revision>562</revision>
 	</m_Version>
 	<m_TemplateName text="StrategicView"/>
 	<m_RootCollections>
@@ -635,6 +635,14 @@
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="MultipleEntriesPerTile"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligiousPressure"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>
@@ -58375,6 +58383,2006 @@
 				<m_Name text="MovementGood_Destination"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Buddhism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_BUDDHISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Catholicism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CATHOLICISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Confucianism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CONFUCIANISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom1"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_1"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom10"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_10"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom11"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_11"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom12"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_12"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom2"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_2"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom3"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_3"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom4"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_4"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom5"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_5"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom6"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_6"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom7"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_7"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom8"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_8"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Custom9"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_CUSTOM_9"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Hinduism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_HINDUISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Islam"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_ISLAM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Judaism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_JUDAISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Orthodoxy"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_ORTHODOXY"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Pantheon"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_PANTHEON"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Protestantism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_PROTESTANTISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Shinto"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_SHINTO"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Sikhism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_SIKHISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Taoism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_TAOISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="1_Center"/>
+							<m_RootCollectionName text="PositionSets"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PositionSet"/>
+						</Element>
+						<Element class="AssetObjects..ArtDefReferenceValue">
+							<m_ElementName text="ReligiousPressure"/>
+							<m_RootCollectionName text="PlacementRules"/>
+							<m_ArtDefPath text="StrategicView.artdef"/>
+							<m_CollectionIsLocked>true</m_CollectionIsLocked>
+							<m_TemplateName text="StrategicView"/>
+							<m_ParamName text="PlacementRule"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="Render"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.000000</m_fValue>
+							<m_ParamName text="AnimDuration"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="NONE"/>
+							<m_ParamName text="AnimType"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="RotateToAlign"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Entries"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureArrow_ReligionPressureArrow"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Arrow"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ReligionPressureIcon_Zoroastrianism"/>
+										<m_RootCollectionName text="UILensEntries"/>
+										<m_ArtDefPath text="StrategicView.artdef"/>
+										<m_CollectionIsLocked>false</m_CollectionIsLocked>
+										<m_TemplateName text="StrategicView"/>
+										<m_ParamName text="ArtDefEntry"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Icon"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="RELIGION_ZOROASTRIANISM"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
 		</Element>
 		<Element>
 			<m_CollectionName text="UILensEntries"/>
@@ -64702,6 +66710,1436 @@
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="MoveReticule_Valid"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Buddhism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Buddhism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Buddhism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Catholicism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Catholicism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Catholicism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Confucianism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Confucianism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Confucianism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom1"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom1"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom1"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom10"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom10"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom10"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom11"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom11"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom11"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom12"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom12"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom12"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom2"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom2"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom2"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom3"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom3"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom3"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom4"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom4"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom4"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom5"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom5"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom5"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom6"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom6"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom6"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom7"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom7"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom7"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom8"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom8"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom8"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom9"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Custom9"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Custom9"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Hinduism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Hinduism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Hinduism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Islam"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Islam"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Islam"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Judaism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Judaism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Judaism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Orthodoxy"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Orthodoxy"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Orthodoxy"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Pantheon"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Pantheon"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Pantheon"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Protestantism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Protestantism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Protestantism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Shinto"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Shinto"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Shinto"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Sikhism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Sikhism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Sikhism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Taoism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Taoism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Taoism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Zoroastrianism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureIcon_Zoroastrianism"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureIcon_Zoroastrianism"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureArrow_ReligionPressureArrow"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Visible_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Visible_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="ReligionPressureArrow_ReligionPressureArrow"/>
+							<m_XLPClass text="StrategicView_Sprite"/>
+							<m_XLPPath text="StrategicView_UILenses.xlp"/>
+							<m_BLPPackage text="strategicview/strategicview_uilenses"/>
+							<m_LibraryName text="StrategicView_Sprite"/>
+							<m_ParamName text="Revealed_XLPEntry"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_TopLeft"/>
+						</Element>
+						<Element class="AssetObjects..Coord2DValue">
+							<m_x>0.000000</m_x>
+							<m_y>0.000000</m_y>
+							<m_ParamName text="Revealed_BottomRight"/>
+						</Element>
+						<Element class="AssetObjects..RGBValue">
+							<m_r>255.000000</m_r>
+							<m_g>255.000000</m_g>
+							<m_b>255.000000</m_b>
+							<m_ParamName text="TintColor"/>
+						</Element>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>1.000000</m_fValue>
+							<m_ParamName text="Scale"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="ReligionPressureArrow_ReligionPressureArrow"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

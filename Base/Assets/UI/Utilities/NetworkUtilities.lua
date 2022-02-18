@@ -1,5 +1,5 @@
 
-function DefaultSteamFriendsSortFunction(a:table,b:table)
+function DefaultFriendsSortFunction(a:table,b:table)
 	if not a.PlayingCiv and b.PlayingCiv then
 		return false;
 	elseif a.PlayingCiv and not b.PlayingCiv then
@@ -8,7 +8,7 @@ function DefaultSteamFriendsSortFunction(a:table,b:table)
 	return false;
 	end
 
-function FlippedSteamFriendsSortFunction(a:table,b:table)
+function FlippedFriendsSortFunction(a:table,b:table)
 	if a.PlayingCiv and not b.PlayingCiv then
 		return false;
 	elseif not a.PlayingCiv and b.PlayingCiv then
@@ -17,35 +17,41 @@ function FlippedSteamFriendsSortFunction(a:table,b:table)
 	return false;
 end
 
-function GetSteamFriendsList(sortFunction:ifunction)
+function GetFriendsList(sortFunction:ifunction)
 	
 	local friends:table = {};
-	local numFriends:number = Steam.GetFriendCount();
-	for i:number = 0, numFriends - 1 do
-		local friend:table = Steam.GetFriendByIndex(i);
-		if friend.IsOnline then
-			friend.RichPresence = Locale.Lookup(Steam.GetRichPresence(friend.ID, "civPresence"));
-			friend.PlayingCiv = friend.RichPresence ~= nil and friend.RichPresence ~= "";
-			table.insert(friends, friend);
+	local pFriends = Network.GetFriends();
+	if pFriends ~= nil then
+		local numFriends:number = pFriends:GetFriendCount();
+		for i:number = 0, numFriends - 1 do
+			local friend:table = pFriends:GetFriendByIndex(i);
+			if friend.IsOnline then
+				friend.RichPresence = Locale.Lookup(pFriends:GetRichPresence(friend.ID, "civPresence"));
+				friend.PlayingCiv = friend.RichPresence ~= nil and friend.RichPresence ~= "";
+				table.insert(friends, friend);
+			end
 		end
-	end
 
-	if sortFunction then
-		table.sort(friends, sortFunction);
-	else
-		table.sort(friends, DefaultSteamFriendsSortFunction);
+		if sortFunction then
+			table.sort(friends, sortFunction);
+		else
+			table.sort(friends, DefaultFriendsSortFunction);
+		end
 	end
 
 	return friends;
 end
 
 function OnFriendPulldownCallback(friendID:string, actionType:string)
-	if actionType == "profile" then
-		Steam.ActivateGameOverlayToUser(friendID);
-	elseif actionType == "chat" then
-		Steam.ActivateGameOverlayToChat(friendID);
-	elseif actionType == "invite" then
-		Steam.InviteUserToGame(friendID);
+	local pFriends = Network.GetFriends();
+	if pFriends ~= nil then
+		if actionType == "profile" then
+			pFriends:ActivateGameOverlayToUser(friendID);
+		elseif actionType == "chat" then
+			pFriends:ActivateGameOverlayToChat(friendID);
+		elseif actionType == "invite" then
+			pFriends:InviteUserToGame(friendID);
+		end
 	end
 end
 

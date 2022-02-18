@@ -62,11 +62,11 @@
 		<Row DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Name="LOC_DIPLOACTION_OPEN_BORDERS_NAME" Description="LOC_DIPLOACTION_OPEN_BORDERS_DESCRIPTION" CivilopediaKey="DIPLO_9" InitiatorPrereqCivic="CIVIC_EARLY_EMPIRE" Agreement="true" Duration="30" NoCurrentOpenBorders="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_DEFENSIVE_PACT" Name="LOC_DIPLOACTION_DEFENSIVE_PACT_NAME" Description="LOC_DIPLOACTION_DEFENSIVE_PACT_DESCRIPTION" CivilopediaKey="DIPLO_11" InitiatorPrereqCivic="CIVIC_MOBILIZATION" TargetPrereqCivic="CIVIC_MOBILIZATION" Agreement="true" Duration="30" NoCurrentDefensivePact="true" RequiresAlliance="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_JOINT_WAR" Name="LOC_DIPLOACTION_JOINT_WAR_NAME" Description="LOC_DIPLOACTION_JOINT_WAR_DESCRIPTION" CivilopediaKey="DIPLO_14" InitiatorPrereqCivic="CIVIC_FOREIGN_TRADE" Agreement="true" Duration="30" WarmongerPercent="100"/>
-		<Row DiplomaticActionType="DIPLOACTION_RESEARCH_AGREEMENT" Name="LOC_DIPLOACTION_RESEARCH_AGREEMENT_NAME" Description="LOC_DIPLOACTION_RESEARCH_AGREEMENT_DESCRIPTION" CivilopediaKey="DIPLO_10" InitiatorPrereqTech="TECH_SCIENTIFIC_THEORY" TargetPrereqTech="TECH_SCIENTIFIC_THEORY" Agreement="true" Duration="-1" NoCurrentResearchAgreement="true"/>
+		<Row DiplomaticActionType="DIPLOACTION_RESEARCH_AGREEMENT" Name="LOC_DIPLOACTION_RESEARCH_AGREEMENT_NAME" Description="LOC_DIPLOACTION_RESEARCH_AGREEMENT_DESCRIPTION" CivilopediaKey="DIPLO_10" InitiatorPrereqTech="TECH_SCIENTIFIC_THEORY" TargetPrereqTech="TECH_SCIENTIFIC_THEORY" Agreement="true" NoCurrentResearchAgreement="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_REQUEST_ASSISTANCE" Name="LOC_DIPLOACTION_REQUEST_ASSISTANCE_NAME" Description="LOC_DIPLOACTION_REQUEST_ASSISTANCE_DESCRIPTION" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_DENOUNCE" Name="LOC_DIPLOACTION_DENOUNCE_NAME" Description="LOC_DIPLOACTION_DENOUNCE_DESCRIPTION" Cost="0" NoCurrentDenunciation="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR" Name="LOC_DIPLOACTION_DECLARE_SURPRISE_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_SURPRISE_WAR_DESCRIPTION" Cost="0" WarmongerPercent="150"/>
-		<Row DiplomaticActionType="DIPLOACTION_MAKE_PEACE" Name="LOC_DIPLOACTION_MAKE_PEACE_NAME" Description="LOC_DIPLOACTION_MAKE_PEACE_DESCRIPTION" Cost="0" Agreement="true" Duration="20"/>
+		<Row DiplomaticActionType="DIPLOACTION_MAKE_PEACE" Name="LOC_DIPLOACTION_MAKE_PEACE_NAME" Description="LOC_DIPLOACTION_MAKE_PEACE_DESCRIPTION" Cost="0" Agreement="true" Duration="30"/>
 		<Row DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Name="LOC_DIPLOACTION_DIPLOMATIC_DELEGATION_NAME" Description="LOC_DIPLOACTION_DIPLOMATIC_DELEGATION_DESCRIPTION" InitiatorObsoleteCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="25" RequiresCapitalPath="true" NoCurrentDelegation="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_ALLIANCE" Name="LOC_DIPLOACTION_ALLIANCE_NAME" Description="LOC_DIPLOACTION_ALLIANCE_DESCRIPTION" CivilopediaKey="DIPLO_12" InitiatorPrereqCivic="CIVIC_CIVIL_SERVICE" TargetPrereqCivic="CIVIC_CIVIL_SERVICE" Cost="0" Agreement="true" Duration="30"/>
 		<Row DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Name="LOC_DIPLOACTION_DECLARE_FRIENDSHIP_NAME" Description="LOC_DIPLOACTION_DECLARE_FRIENDSHIP_DESCRIPTION" Cost="0" NoCurrentDOF="true"/>
@@ -82,9 +82,9 @@
 		<Row DiplomaticActionType="DIPLOACTION_DECLARE_COLONIAL_WAR" Name="LOC_DIPLOACTION_DECLARE_COLONIAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_COLONIAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" InitiatorPrereqCivic="CIVIC_NATIONALISM" Cost="0" WarmongerPercent="50" RequiresLeadXEras="2"/>
 		<Row DiplomaticActionType="DIPLOACTION_DECLARE_TERRITORIAL_WAR" Name="LOC_DIPLOACTION_DECLARE_TERRITORIAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_TERRITORIAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" InitiatorPrereqCivic="CIVIC_MOBILIZATION" Cost="0" WarmongerPercent="75" RequiresAdjacentEmpires="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Name="LOC_DIPLOACTION_PROPOSE_TRADE_NAME" Description="LOC_DIPLOACTION_PROPOSE_TRADE_DESCRIPTION"/>
-		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_SPY_NAME" UIGroup="DISCUSS" Cost="10"/>
+		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_SPY_NAME" UIGroup="DISCUSS" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_CONVERT_NAME" UIGroup="DISCUSS" Cost="0"/>
-		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS_NAME" UIGroup="DISCUSS" Cost="5"/>
+		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS_NAME" UIGroup="DISCUSS" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR_NAME" UIGroup="DISCUSS" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_PROPOSE_PEACE_DEAL" Name="LOC_DIPLOACTION_PROPOSE_PEACE_DEAL" Description="LOC_DIPLOACTION_PROPOSE_PEACE_DEAL_DESCRIPTION"/>
 		<!-- DIPLOACTION_VIEW_TRADE and DIPLOACTION_VIEW_DEMAND_TRIBUTE are helper actions that the human uses to view trade/demand that is pending. -->
@@ -138,7 +138,8 @@
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_REQUEST_ASSISTANCE" Worth="-50" Cost="70"/>
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="40" Cost="-10"/>
-		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
+    <Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="35" Cost="-25" AiAllowed="false"/> <!-- Note: This may look silly here, but it predisposes the AI to accepting a new declaration when the old one expires -->
+    <Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_DEFENSIVE_PACT" Worth="-10" Cost="10"/>
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_RESEARCH_AGREEMENT" Worth="40" Cost="-40"/>
@@ -151,7 +152,7 @@
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="20" Cost="0"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_REQUEST_ASSISTANCE" Worth="-70" Cost="80"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="40" Cost="-10"/>
-    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="25" Cost="0" AiAllowed="false"/> <!-- Note: This may look silly here, but it predisposes the AI to accepting a new declaration when the old one expires -->
+    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="25" Cost="-15" AiAllowed="false"/> <!-- Note: This may look silly here, but it predisposes the AI to accepting a new declaration when the old one expires -->
     <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DEFENSIVE_PACT" Worth="-20" Cost="20"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
@@ -165,7 +166,7 @@
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_REQUEST_ASSISTANCE" Worth="-90" Cost="90"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="25" Cost="5"/>
-		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="15" Cost="0" AiAllowed="false"/>
+		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="15" Cost="-15" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DENOUNCE" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
@@ -189,7 +190,7 @@
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DEMAND_TRIBUTE" Worth="5"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="0" Cost="75"/>
-		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="-40" Cost="30" AiAllowed="false"/>
+		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="-40" Cost="40" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DENOUNCE" TransitionToState="DIPLO_STATE_DENOUNCED"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="0" Cost="10" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>

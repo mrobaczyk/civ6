@@ -8,7 +8,7 @@
 		<Row ParameterId="GameDifficulty" Name="LOC_GAME_HANDICAP" Description="" Domain="StandardDifficulties" DefaultValue="DIFFICULTY_PRINCE" ConfigurationGroup="Game" ConfigurationId="GAME_HANDICAP" Hash="1" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="50"/>
 		<Row ParameterId="GameStartEra" Name="LOC_GAME_START_ERA" Description="" Domain="StandardEras" DefaultValue="ERA_ANCIENT" ConfigurationGroup="Game" ConfigurationId="GAME_START_ERA" ValueNameConfigurationId="GAME_START_ERA_NAME" Hash="1" GroupId="GameOptions" SortIndex="60"/>
 		<Row ParameterId="TurnTimerType" Name="LOC_GAME_TURNTIMER_TYPE" Description="LOC_GAME_TURNTIMER_DESC" Domain="StandardTurnTimers" DefaultValue="TURNTIMER_NONE" Hash="1" ConfigurationGroup="Game" ConfigurationId="TURN_TIMER_TYPE" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="20"/>
-		<Row ParameterId="TurnTimerTime" Name="LOC_GAME_TURN_TIMER_TIME" Description="LOC_GAME_TURN_TIMER_TIME_TOOLTIP" Domain="int" DefaultValue="180" ConfigurationGroup="Game" ConfigurationId="TURN_TIMER_TIME" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="30"/>
+		<Row ParameterId="TurnTimerTime" Name="LOC_GAME_TURN_TIMER_TIME" Description="LOC_GAME_TURN_TIMER_TIME_TOOLTIP" Domain="uint" DefaultValue="180" ConfigurationGroup="Game" ConfigurationId="TURN_TIMER_TIME" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="30"/>
 		<Row ParameterId="TurnPhaseType" Name="LOC_GAME_TURNPHASE_TYPE" Description="LOC_GAME_TURNPHASE_DESC" Domain="StandardTurnPhases" Hash="1" DefaultValue="TURNPHASE_SIMULTANEOUS" ConfigurationGroup="Game" ConfigurationId="TURN_PHASE_TYPE" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsHotSeat="0" ChangeableAfterGameStart="0" SortIndex="40"/>
 		<!-- Two mutually exclusive game speed parameters.  The MP version defaults to GameSpeed Online, while the SP version defaults to GameSpeed Standard. -->
 		<Row ParameterId="GameSpeeds" Name="LOC_GAME_SPEED" Description="" Domain="StandardGameSpeeds" DefaultValue="GAMESPEED_STANDARD" ConfigurationGroup="Game" ConfigurationId="GAME_SPEED_TYPE" ValueNameConfigurationId="GAME_SPEED_NAME" Hash="1" GroupId="GameOptions"  SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0"  SortIndex="70"/>
@@ -165,9 +165,13 @@
 
 	<ConfigurationUpdates>
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1" />
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_SPEED_TYPE" TargetValue="GAMESPEED_STANDARD" Hash="1" />
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_GAMESPEED" Hash="1" />
 		<Row SourceGroup="Game" SourceId="GAME_TURN_LIMIT" SourceValue="TURNLIMIT_NONE" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
+		<Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_NONE" Hash="1"  />
+
+		<Row SourceGroup="Game" SourceId="TURN_TIMER_TIME" SourceValue="0" TargetGroup="Game" TargetId="TURN_TIMER_TIME" TargetValue="180" Hash="0"  />		
 	</ConfigurationUpdates>
 
 	<Queries>

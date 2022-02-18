@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- Expansion 1 specific data -->
+<GameInfo>
+	<Leaders>
+		<Update>
+			<Where LeaderType="LEADER_JADWIGA"/>
+			<Set>
+				<Sex>Female</Sex>
+			</Set>
+		</Update>
+	</Leaders>
+	<AgendaPreferredLeaders>
+		<Row AgendaType="AGENDA_SYMPATHIZER" LeaderType="LEADER_JADWIGA" PercentageChance="10"/>
+	</AgendaPreferredLeaders>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_SUKIENNICE"/>
+			<Set>
+				<Description>LOC_BUILDING_SUKIENNICE_EXPANSION1_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Buildings>
+	<Building_YieldChanges>
+		<Update>
+			<Where BuildingType="BUILDING_SUKIENNICE" YieldType="YIELD_GOLD"/>
+			<Set>
+				<YieldChange>2</YieldChange>
+			</Set>
+		</Update>
+	</Building_YieldChanges>
+	<BuildingModifiers>
+		<Row BuildingType="BUILDING_SUKIENNICE" ModifierId="MARKET_TRADE_ROUTE_CAPACITY"/>
+	</BuildingModifiers>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_POLISH_HUSSAR" Texture="Moment_UniqueUnit_Poland.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_SUKIENNICE" Texture="Moment_Infrastructure_Poland.dds"/>
+	</MomentIllustrations>
+</GameInfo>

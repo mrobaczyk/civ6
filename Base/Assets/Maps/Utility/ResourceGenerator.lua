@@ -51,6 +51,7 @@ function ResourceGenerator.Create(args)
 		iWaterBonus = args.iWaterBonus or 1.25;
 		iLuxuriesPerRegion = args.LuxuriesPerRegion or 4;
 		resources = args.resources;
+		uiStartConfig = args.START_CONFIG or 2,
 
 		iResourcesInDB      = 0;
 		iNumContinents		= 0;
@@ -60,10 +61,10 @@ function ResourceGenerator.Create(args)
 		iFrequencyTotalWater     = 0;
 		iFrequencyStrategicTotal     = 0;
 		iFrequencyStrategicTotalWater    = 0;
-		iTargetPercentage   = 28;
-		iStandardPercentage = 28;
+		iTargetPercentage   = 29;
+		iStandardPercentage = 29;
 		iLuxuryPercentage   = 20;
-		iStrategicPercentage   = 18;
+		iStrategicPercentage   = 19;
 		iOccurencesPerFrequency = 0;
 		iNumWaterLuxuries = 0;
 		iNumWaterStrategics = 0;
@@ -123,11 +124,11 @@ function ResourceGenerator:__InitResourceData()
 
 	-- Get resource value setting input by user.
 	if self.resources == 1 then
-			self.resources = -5;
+			self.resources = -3;
 	elseif self.resources == 3 then
-			self.resources = 5;	
+			self.resources = 3;	
 	elseif self.resources == 4 then
-		self.resources = TerrainBuilder.GetRandomNumber(13, "Random Resources - Lua") - 6;
+		self.resources = TerrainBuilder.GetRandomNumber(9, "Random Resources - Lua") - 4;
 	else 
 		self.resources = 0;
 	end
@@ -464,9 +465,9 @@ function ResourceGenerator:__PlaceWaterLuxury(eChosenLux, pPlot)
 		local iBonusAdjacent = 0;
 
 		if( self.iStandardPercentage < self.iTargetPercentage) then
-			iBonusAdjacent = 0.5;
+			iBonusAdjacent = -1.5;
 		elseif ( self.iStandardPercentage > self.iTargetPercentage) then
-			iBonusAdjacent = -0.5;
+			iBonusAdjacent = 1;
 		end
 			
 		local iRandom = 15 * self.iOccurencesPerFrequency + 300;
@@ -502,16 +503,22 @@ function ResourceGenerator:__GetStrategicResources()
 	aWeight = {};
 	for row in GameInfo.Resource_Distribution() do
 		if (row.Continents == self.iNumContinents) then
-			for iI = 1, row.Scarce do
-				table.insert(aWeight, 1 - row.PercentAdjusted / 100);
-			end
+			if(self.uiStartConfig == 1 ) then
+				for iI = 1, row.Continents do
+					table.insert(aWeight, 1);
+				end
+			else
+				for iI = 1, row.Scarce do
+					table.insert(aWeight, 1 - row.PercentAdjusted / 100);
+				end
 
-			for iI = 1, row.Average do
-				table.insert(aWeight, 1);
-			end
+				for iI = 1, row.Average do
+					table.insert(aWeight, 1);
+				end
 
-			for iI = 1, row.Plentiful do
-				table.insert(aWeight, 1 + row.PercentAdjusted / 100);
+				for iI = 1, row.Plentiful do
+					table.insert(aWeight, 1 + row.PercentAdjusted / 100);
+				end
 			end
 		end
 	end

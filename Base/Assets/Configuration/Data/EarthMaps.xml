@@ -41,19 +41,22 @@
 		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_TRAJAN"/>
 		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_T_ROOSEVELT"/>
 		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_VICTORIA"/>
+
+		<!-- Expansion 1 Leaders -->
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_CHANDRAGUPTA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_GENGHIS_KHAN"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_LAUTARO"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_POUNDMAKER"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_ROBERT_THE_BRUCE"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_SEONDEOK"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_SHAKA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_TAMAR"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_WILHELMINA"/>
 	</MapLeaders>
-	<ParameterCriteria>
-		<Row ParameterId="NoGoodyHuts" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map"/>
-		<Row ParameterId="NoGoodyHuts" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map"/>
-	</ParameterCriteria>
 	<ParameterDependencies>
 		<Row ParameterId="Resources" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map"/>
 		<Row ParameterId="Resources" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map"/>
 		<Row ParameterId="StartPosition" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map"/>
 		<Row ParameterId="StartPosition" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map"/>
 	</ParameterDependencies>
-	<ConfigurationUpdates>
-		<Row SourceGroup="Map" SourceId="MAP_SCRIPT" SourceValue="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" TargetGroup="Game" TargetId="GAME_NO_GOODY_HUTS" TargetValue="1" Hash="0"/>
-		<Row SourceGroup="Map" SourceId="MAP_SCRIPT" SourceValue="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" TargetGroup="Game" TargetId="GAME_NO_GOODY_HUTS" TargetValue="1" Hash="0"/>
-	</ConfigurationUpdates>
 </GameInfo>

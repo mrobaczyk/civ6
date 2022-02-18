@@ -25,6 +25,10 @@
 			<RequirementId>REQUIRES_CITY_HAS_HARBOR</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
 		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_INDUSTRIAL_ZONE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
 		<!-- Districts -->
 		<Row>
 			<RequirementId>REQUIRES_DISTRICT_IS_CITY_CENTER</RequirementId>
@@ -70,11 +74,11 @@
 			<RequirementId>REQUIRES_DISTRICT_IS_AQUEDUCT</RequirementId>
 			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
 		</Row>
-    <Row>
-      <RequirementId>REQUIRES_DISTRICT_IS_WORLD_WONDER</RequirementId>
-      <RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-    </Row>
-    <!--Plot -->
+		<Row>
+			<RequirementId>REQUIRES_DISTRICT_IS_WORLD_WONDER</RequirementId>
+			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<!--Plot -->
 		<Row>
 			<RequirementId>REQUIRES_PLOT_HAS_HARBOR</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_DISTRICT_TYPE_MATCHES</RequirementType>
@@ -129,6 +133,11 @@
 			<RequirementId>REQUIRES_CITY_HAS_HARBOR</RequirementId>
 			<Name>DistrictType</Name>
 			<Value>DISTRICT_HARBOR</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_INDUSTRIAL_ZONE</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_INDUSTRIAL_ZONE</Value>
 		</Row>
 		<!-- Districts -->
 		<Row>
@@ -186,12 +195,12 @@
 			<Name>DistrictType</Name>
 			<Value>DISTRICT_CITY_CENTER</Value>
 		</Row>
-    <Row>
-      <RequirementId>REQUIRES_DISTRICT_IS_WORLD_WONDER</RequirementId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_WONDER</Value>
-    </Row>
-    <!--Plot-->
+		<Row>
+			<RequirementId>REQUIRES_DISTRICT_IS_WORLD_WONDER</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_WONDER</Value>
+		</Row>
+		<!--Plot-->
 		<Row>
 			<RequirementId>REQUIRES_PLOT_HAS_HARBOR</RequirementId>
 			<Name>DistrictType</Name>

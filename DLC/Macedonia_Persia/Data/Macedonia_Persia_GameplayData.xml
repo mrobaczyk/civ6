@@ -449,14 +449,52 @@
 	<AiListTypes>
 		<Row ListType="AlexanderPreferWar"/>
 		<Row ListType="CyrusPreferBackstabbing"/>
+		<Row ListType="AlexanderCivics"/>
+		<Row ListType="AlexanderTechs"/>
+		<Row ListType="AlexanderWonders"/>
+		<Row ListType="CyrusCivics"/>
+		<Row ListType="CyrusTechs"/>
+		<Row ListType="CyrusWonders"/>
+		<Row ListType="ShortLifeDiplomacy"/>
 	</AiListTypes>
 	<AiLists>
 		<Row ListType="AlexanderPreferWar" LeaderType="TRAIT_LEADER_TO_WORLDS_END" System="Strategies"/>
 		<Row ListType="CyrusPreferBackstabbing" LeaderType="TRAIT_AGENDA_BACKSTABBER" System="DiplomaticActions"/>
+		<Row ListType="AlexanderCivics" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Civics"/>
+		<Row ListType="AlexanderTechs" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Technologies"/>
+		<Row ListType="AlexanderWonders" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Buildings"/>
+		<Row ListType="CyrusCivics" LeaderType="TRAIT_LEADER_FALL_BABYLON" System="Civics"/>
+		<Row ListType="CyrusTechs" LeaderType="TRAIT_LEADER_FALL_BABYLON" System="Technologies"/>
+		<Row ListType="CyrusWonders" LeaderType="TRAIT_LEADER_FALL_BABYLON" System="Buildings"/>
+		<Row ListType="ShortLifeDiplomacy" AgendaType="TRAIT_AGENDA_SHORT_LIFE_GLORY" System="DiplomaticActions"/>
 	</AiLists>
 	<AiFavoredItems>
 		<Row ListType="AlexanderPreferWar" Item="VICTORY_STRATEGY_MILITARY_VICTORY" Value="-2"/>
 		<Row ListType="CyrusPreferBackstabbing" Item="DIPLOACTION_DECLARE_SURPRISE_WAR" Favored="true"/>
+		<Row ListType="CyrusPreferBackstabbing" Item="DIPLOACTION_DENOUNCE" Favored="false"/>
+		<Row ListType="AlexanderCivics" Item="CIVIC_MILITARY_TRADITION" Favored="true"/>
+		<Row ListType="AlexanderTechs" Item="TECH_BRONZE_WORKING" Favored="true"/>
+		<Row ListType="AlexanderTechs" Item="TECH_HORSEBACK_RIDING" Favored="true"/>
+		<Row ListType="AlexanderTechs" Item="TECH_IRON_WORKING" Favored="true"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_STONEHENGE" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_HANGING_GARDENS" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_ORACLE" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_COLOSSUS" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_PETRA" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_GREAT_LIBRARY" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_CHICHEN_ITZA" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_MONT_ST_MICHEL" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_APADANA" Favored="false"/>
+		<Row ListType="AlexanderWonders" Item="BUILDING_HALICARNASSUS_MAUSOLEUM" Favored="false"/>
+		<Row ListType="CyrusCivics" Item="CIVIC_DIPLOMATIC_SERVICE"/>
+		<Row ListType="CyrusCivics" Item="CIVIC_POLITICAL_PHILOSOPHY"/>
+		<Row ListType="CyrusTechs" Item="TECH_FLIGHT"/>
+		<Row ListType="CyrusTechs" Item="TECH_CURRENCY"/>
+		<Row ListType="CyrusTechs" Item="TECH_IRON_WORKING"/>
+		<Row ListType="CyrusWonders" Item="BUILDING_COLOSSUS"/>
+		<Row ListType="CyrusWonders" Item="BUILDING_GREAT_ZIMBABWE"/>
+		<Row ListType="ShortLifeDiplomacy" Item="DIPLOACTION_MAKE_PEACE" Favored="false"/>
 	</AiFavoredItems>
 	<Modifiers>
 		<!--Civ Abilities-->
@@ -779,12 +817,12 @@
 		<Row>
 			<ModifierId>AGENDA_SHORT_LIFE_GLORY</ModifierId>
 			<Name>NotAtWarPenalty</Name>
-			<Value>-3</Value>
+			<Value>-6</Value>
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_SHORT_LIFE_GLORY</ModifierId>
 			<Name>SinceWarPenaltyTurns</Name>
-			<Value>20</Value>
+			<Value>40</Value>
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_SHORT_LIFE_GLORY</ModifierId>
@@ -1018,7 +1056,6 @@
 			<RequirementId>REQUIRES_CITY_HAS_WONDER</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_HAS_ANY_WONDER</RequirementType>
 		</Row>
-
 		<Row>
 			<RequirementId>REQUIREMENT_UNIT_IS_ADMIRAL</RequirementId>
 			<RequirementType>REQUIREMENT_GREAT_PERSON_TYPE_MATCHES</RequirementType>

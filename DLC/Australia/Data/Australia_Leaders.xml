@@ -38,6 +38,25 @@
 			<ModifierId>AGENDA_PERPETUALLY_ON_GUARD_OCCUPATION</ModifierId>
 		</Row>
 	</TraitModifiers>
+	<AiListTypes>
+		<Row ListType="CurtinCivics"/>
+		<Row ListType="CurtinTechs"/>
+		<Row ListType="CurtinWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="CurtinCivics" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Civics"/>
+		<Row ListType="CurtinTechs" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Technologies"/>
+		<Row ListType="CurtinWonders" LeaderType="TRAIT_LEADER_CITADEL_CIVILIZATION" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="CurtinCivics" Item="CIVIC_DIPLOMATIC_SERVICE" Favored="true"/>
+		<Row ListType="CurtinCivics" Item="CIVIC_GUILDS" Favored="true"/>
+		<Row ListType="CurtinCivics" Item="CIVIC_RAPID_DEPLOYMENT" Favored="true"/>
+		<Row ListType="CurtinTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="CurtinTechs" Item="TECH_STEAM_POWER" Favored="true"/>
+		<Row ListType="CurtinTechs" Item="TECH_REPLACEABLE_PARTS" Favored="true"/>
+		<Row ListType="CurtinWonders" Item="BUILDING_EIFFEL_TOWER" Favored="true"/>
+	</AiFavoredItems>
 	<Agendas>
 		<Row AgendaType="AGENDA_PERPETUALLY_ON_GUARD" Name="LOC_AGENDA_PERPETUALLY_ON_GUARD_NAME" Description="LOC_AGENDA_PERPETUALLY_ON_GUARD_DESCRIPTION"/>
 	</Agendas>

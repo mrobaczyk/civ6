@@ -73,13 +73,14 @@ function GenerateMap()
 		--print ("i: plotType, terrainType, featureType: " .. tostring(i) .. ": " .. tostring(plotTypes[i]) .. ", " .. tostring(terrainTypes[i]) .. ", " .. tostring(pPlot:GetFeatureType(i)));
 	--end
 	resourcesConfig = MapConfiguration.GetValue("resources");
+	local startconfig = MapConfiguration.GetValue("start"); -- Get the start config
 	local args = {
 		resources = resourcesConfig,
+		START_CONFIG = startconfig,
 	};
 	local resGen = ResourceGenerator.Create(args);
 
 	print("Creating start plot database.");
-	local startconfig = MapConfiguration.GetValue("start"); -- Get the start config
 	-- START_MIN_Y and START_MAX_Y is the percent of the map ignored for major civs' starting positions.
 	local args = {
 		MIN_MAJOR_CIV_FERTILITY = 100,

@@ -372,6 +372,22 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_DISTRICTS</ModifierType>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_NEIGHBORHOOD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_DISTRICTS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AERODROME</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_DISTRICTS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_SPACEPORT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_DISTRICTS</ModifierType>
+		</Row>
+		<Row>
+		<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_DISTRICTS</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_FLOODPLAINS_VALID_WONDER</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_WONDERS</ModifierType>
 		</Row>
@@ -541,56 +557,8 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_ALHAMBRAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_CHICHENITZAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_FORBIDDENCITYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_GREATZIMBABWEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_HAGIASOPHIAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_VENETIANARSENALPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_MONTSTMICHELPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_POTALAPALACEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_BOLSHOITHEATREPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_HERMITAGEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_RUHRVALLEYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_BIGBENPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
+			<ModifierId>TRAIT_WONDER_MEDIAVALINDUSTRIAL_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_IGNORE_EMBARK_DISEMBARK_COST</ModifierId>
@@ -1000,6 +968,46 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_FLOODPLAINS_VALID_INDUSTRIAL_ZONE</ModifierId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_NEIGHBORHOOD</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_NEIGHBORHOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_NEIGHBORHOOD</ModifierId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AERODROME</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_AERODROME</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AERODROME</ModifierId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_SPACEPORT</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_SPACEPORT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_SPACEPORT</ModifierId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS</Value>
+		</Row>
+		<Row>
+		<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_AQUEDUCT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
 			<Name>FeatureType</Name>
 			<Value>FEATURE_FLOODPLAINS</Value>
 		</Row>
@@ -1524,134 +1532,24 @@
 			<Value>200</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_ALHAMBRAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_ALHAMBRA</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_ALHAMBRAPRODUCTION</ModifierId>
+			<ModifierId>TRAIT_WONDER_MEDIAVALINDUSTRIAL_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
 			<Value>20</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_CHICHENITZAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_CHICHEN_ITZA</Value>
+			<ModifierId>TRAIT_WONDER_MEDIAVALINDUSTRIAL_PRODUCTION</ModifierId>
+			<Name>IsWonder</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_CHICHENITZAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
+			<ModifierId>TRAIT_WONDER_MEDIAVALINDUSTRIAL_PRODUCTION</ModifierId>
+			<Name>StartEra</Name>
+			<Value>ERA_MEDIEVAL</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_FORBIDDENCITYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_FORBIDDEN_CITY</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_FORBIDDENCITYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_GREATZIMBABWEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_GREAT_ZIMBABWE</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_GREATZIMBABWEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_HAGIASOPHIAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_HAGIA_SOPHIA</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_HAGIASOPHIAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_VENETIANARSENALPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_VENETIAN_ARSENAL</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_VENETIANARSENALPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_MONTSTMICHELPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_MONT_ST_MICHEL</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_MONTSTMICHELPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_POTALAPALACEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_POTALA_PALACE</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_POTALAPALACEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_BOLSHOITHEATREPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_BOLSHOI_THEATRE</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_BOLSHOITHEATREPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_HERMITAGEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_HERMITAGE</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_HERMITAGEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_RUHRVALLEYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_RUHR_VALLEY</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_RUHRVALLEYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_OXFORD_UNIVERSITY</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_BIGBENPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_BIG_BEN</Value>
-		</Row>
-		<Row>
-			<ModifierId>TRAIT_BIGBENPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>20</Value>
+			<ModifierId>TRAIT_WONDER_MEDIAVALINDUSTRIAL_PRODUCTION</ModifierId>
+			<Name>EndEra</Name>
+			<Value>ERA_INDUSTRIAL</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_IGNORE_EMBARK_DISEMBARK_COST</ModifierId>
@@ -2065,6 +1963,22 @@
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_ITERU</TraitType>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_ITERU</TraitType>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_NEIGHBORHOOD</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_ITERU</TraitType>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_SPACEPORT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_ITERU</TraitType>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AERODROME</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_ITERU</TraitType>
 			<ModifierId>TRAIT_FLOODPLAINS_VALID_WONDER</ModifierId>
 		</Row>
 		<Row>
@@ -2193,55 +2107,7 @@
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_ALHAMBRAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_CHICHENITZAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_FORBIDDENCITYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_GREATZIMBABWEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_HAGIASOPHIAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_VENETIANARSENALPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_MONTSTMICHELPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_POTALAPALACEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_BOLSHOITHEATREPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_HERMITAGEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_RUHRVALLEYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
-			<ModifierId>TRAIT_BIGBENPRODUCTION</ModifierId>
+			<ModifierId>TRAIT_WONDER_MEDIAVALINDUSTRIAL_PRODUCTION</ModifierId>
 		</Row>
 	</TraitModifiers>
 	<CivilizationTraits>

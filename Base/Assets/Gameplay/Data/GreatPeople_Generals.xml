@@ -120,81 +120,73 @@
 	<Modifiers>
 		<!-- Generic Birth Modifiers, shared by all individuals -->
 		<Row>
-			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
-		</Row>
-		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_CLASSICAL_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_MEDIEVAL_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_MEDIEVAL_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_RENAISSANCE_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_RENAISSANCE_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_INDUSTRIAL_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_INDUSTRIAL_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_MODERN_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_MODERN_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_ATOMIC_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_ATOMIC_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_INFORMATION_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_INFORMATION_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_CLASSICAL_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_CLASSICAL_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_MEDIEVAL_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_MEDIEVAL_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_RENAISSANCE_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_RENAISSANCE_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_INDUSTRIAL_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_INDUSTRIAL_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_MODERN_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_MODERN_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_ATOMIC_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_ATOMIC_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_INFORMATION_LAND</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 			<SubjectRequirementSetId>AOE_INFORMATION_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<!-- Unique Action Modifiers, different for each individual -->
@@ -347,84 +339,74 @@
 	<ModifierArguments>
 		<!-- Generic Birth Modifiers, shared by all individuals -->
 		<Row>
-			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>5</Value>
-		</Row>
-		<Row>
-			<ModifierId>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
-		</Row>
-		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_STRENGTH</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_MEDIEVAL_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_STRENGTH</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_RENAISSANCE_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_STRENGTH</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_INDUSTRIAL_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_STRENGTH</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_MODERN_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_STRENGTH</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_ATOMIC_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_STRENGTH</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_COMBAT_STRENGTH_AOE_INFORMATION_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_STRENGTH</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_CLASSICAL_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_MOVEMENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_MEDIEVAL_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_MOVEMENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_RENAISSANCE_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_MOVEMENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_INDUSTRIAL_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_MOVEMENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_MODERN_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_MOVEMENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_ATOMIC_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_MOVEMENT</Value>
 		</Row>
 		<Row>
 			<ModifierId>GREATPERSON_MOVEMENT_AOE_INFORMATION_LAND</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>GREATPERSON_MOVEMENT_AOE_LAND_MODIFIER</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GREAT_GENERAL_MOVEMENT</Value>
 		</Row>
 		<!-- Unique Action Modifiers, different for each individual -->
 		<Row>
@@ -809,7 +791,6 @@
 	</RequirementArguments>
 	<ModifierStrings>
 		<!-- Generic Birth Modifiers, shared by all individuals -->
-		<Row ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER" Context="Preview" Text="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER"/>
 		<Row ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND" Context="Summary" Text="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND"/>
 		<Row ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_MEDIEVAL_LAND" Context="Summary" Text="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_MEDIEVAL_LAND"/>
 		<Row ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_RENAISSANCE_LAND" Context="Summary" Text="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_RENAISSANCE_LAND"/>

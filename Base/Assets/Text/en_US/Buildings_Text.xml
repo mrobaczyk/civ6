@@ -15,10 +15,10 @@
 			<Text>Increases the strength of your outer defenses. Provides 2 [ICON_TOURISM] Tourism after advancing to the Conservation Civic.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_ELECTRONICS_FACTORY_DESCRIPTION">
-			<Text>A building unique to Japan. +4 [ICON_Production] Production to all cities within 6 tiles. After researching the Electricity technology this building provides an additional +4 [ICON_Culture] Culture to its city.</Text>
+			<Text>A building unique to Japan. +4 [ICON_Production] Production to all city centers within 6 tiles. After researching the Electricity technology this building provides an additional +4 [ICON_Culture] Culture to its city. This bonus applies once to a city, and multiple copies of this building within 6 tiles of a city center do not provide additional bonuses.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_FACTORY_DESCRIPTION">
-			<Text>Bonus is extended to all cities within 6 tiles.</Text>
+			<Text>Bonus is extended to all city centers within 6 tiles. This bonus applies once to a city, and multiple copies of this building within 6 tiles of a city center do not provide additional bonuses.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_FILM_STUDIO_DESCRIPTION">
 			<Text>A building unique to America. +100% [ICON_Tourism] Tourism pressure from this city towards other civilizations in the Modern era.</Text>
@@ -33,11 +33,14 @@
 			<Text>A building unique to Arabia. Bonus [ICON_Faith] Faith equal to the adjacency bonus of the Campus district.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_MILITARY_ACADEMY_DESCRIPTION">
-			<Text>+25% combat experience for all land units trained in this city. Faster Corps and Army training.</Text>
+			<Text>+25% combat experience for all land units trained in this city. Allows Corps and Armies to be trained directly. Corps and Army training costs reduced 25%.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_MOSQUE_DESCRIPTION">
 			<Text>Missionary and Apostles created here have +1 spread.</Text>
 		</Row>
+    <Row Tag="LOC_BUILDING_DAR_E_MEHR_DESCRIPTION">
+      <Text>+1 additional [ICON_FAITH] Faith for each era since constructed or last repaired.</Text>
+    </Row>
 		<Row Tag="LOC_BUILDING_MUSEUM_ART_DESCRIPTION">
 			<Text>Holds [ICON_GreatWork_Landscape] Great Works of Art. May not be built in a Theater Square district that already has an Archaeological Museum.</Text>
 		</Row>
@@ -45,10 +48,10 @@
 			<Text>Holds [ICON_GreatWork_Artifact] Artifacts. May not be built in a Theater Square district that already has an Art Museum.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_POWER_PLANT_DESCRIPTION">
-			<Text>Bonus extends to each city center within 6 tiles.</Text>
+			<Text>Bonus extends to each city center within 6 tiles. This bonus applies once to a city, and multiple copies of this building within 6 tiles of a city center do not provide additional bonuses.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_SEAPORT_DESCRIPTION">
-			<Text>Faster Fleet and Armada training. +25% combat experience for all naval units trained in this city. +2 [ICON_GOLD] Gold on all Coast tiles for this city.</Text>
+			<Text>+25% combat experience for all naval units trained in this city. Allows Fleets and Armadas to be trained directly. Fleet and Armada training costs reduced 25%.  +2 [ICON_GOLD] Gold on all Coast tiles for this city.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_SHRINE_DESCRIPTION">
 			<Text>Allows the purchasing of Missionaries. Missionaries can only be purchased with [ICON_Faith] Faith.</Text>
@@ -60,7 +63,7 @@
 			<Text>+25% combat experience for all naval units trained in this city. Bonus [ICON_Production] Production equal to the adjacency bonus of the Harbor district.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_STADIUM_DESCRIPTION">
-			<Text>Bonus extends to each city center within 6 tiles.</Text>
+			<Text>Bonus extends to each city center within 6 tiles. This bonus applies once to a city, and multiple copies of this building within 6 tiles of a city center do not provide additional bonuses.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_STAR_FORT_DESCRIPTION">
 			<Text>Raises the strength of your outer defenses to the highest possible level. Provides 3 [ICON_TOURISM] Tourism after advancing to the Conservation Civic.</Text>
@@ -78,7 +81,7 @@
 			<Text>[ICON_RESOURCE_RICE] Rice and [ICON_RESOURCE_WHEAT] Wheat resources gain +1 [ICON_Food] Food each. City must be adjacent to a River.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_ZOO_DESCRIPTION">
-			<Text>Bonus extends to each city center within 6 tiles.</Text>
+			<Text>Bonus extends to each city center within 6 tiles. This bonus applies once to a city, and multiple copies of this building within 6 tiles of a city center do not provide additional bonuses.</Text>
 		</Row>
 		<!-- Wonders -->
 		<Row Tag="LOC_BUILDING_ALHAMBRA_DESCRIPTION">

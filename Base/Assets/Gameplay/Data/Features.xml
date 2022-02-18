@@ -190,6 +190,18 @@
 	<!-- Dead Sea Adjacency Modifier-->
 	<Requirements>
 		<Row>
+			<RequirementId>MAP_CONTAINS_DEAD_SEA</RequirementId>
+			<RequirementType>REQUIREMENT_MAP_HAS_FEATURE</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>MAP_CONTAINS_EVEREST</RequirementId>
+			<RequirementType>REQUIREMENT_MAP_HAS_FEATURE</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LAND_UNIT</RequirementId>
+			<RequirementType>REQUIREMENT_UNIT_DOMAIN_MATCHES</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>DEAD_SEA_REQUIRES_ADJACENT_UNIT</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES</RequirementType>
 		</Row>
@@ -199,6 +211,21 @@
 		</Row>
 	</Requirements>
 	<RequirementArguments>
+		<Row>
+			<RequirementId>MAP_CONTAINS_DEAD_SEA</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_DEAD_SEA</Value>
+		</Row>
+		<Row>
+			<RequirementId>MAP_CONTAINS_EVEREST</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_EVEREST</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LAND_UNIT</RequirementId>
+			<Name>UnitDomain</Name>
+			<Value>DOMAIN_LAND</Value>
+		</Row>
 		<Row>
 			<RequirementId>DEAD_SEA_REQUIRES_ADJACENT_UNIT</RequirementId>
 			<Name>FeatureType</Name>
@@ -212,6 +239,14 @@
 	</RequirementArguments>
 	<RequirementSets>
 		<Row>
+			<RequirementSetId>DEAD_SEA_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>EVEREST_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>DEAD_SEA_ADJACENT_UNITS_ADJUST_HEAL_PER_TURN_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -222,8 +257,24 @@
 	</RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
+			<RequirementSetId>DEAD_SEA_REQUIREMENTS</RequirementSetId>
+			<RequirementId>MAP_CONTAINS_DEAD_SEA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>EVEREST_REQUIREMENTS</RequirementSetId>
+			<RequirementId>MAP_CONTAINS_EVEREST</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>DEAD_SEA_ADJACENT_UNITS_ADJUST_HEAL_PER_TURN_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_LAND_UNIT</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>DEAD_SEA_ADJACENT_UNITS_ADJUST_HEAL_PER_TURN_REQUIREMENTS</RequirementSetId>
 			<RequirementId>DEAD_SEA_REQUIRES_ADJACENT_UNIT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>EVEREST_ADJACENT_UNITS_GRANT_ABILITY_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_LAND_UNIT</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>EVEREST_ADJACENT_UNITS_GRANT_ABILITY_REQUIREMENTS</RequirementSetId>
@@ -234,12 +285,14 @@
 		<Row>
 			<ModifierId>DEAD_SEA_ADJACENT_UNITS_ADJUST_HEAL_PER_TURN</ModifierId>
 			<ModifierType>MODIFIER_ALL_UNITS_ADJUST_HEAL_PER_TURN</ModifierType>
+			<OwnerRequirementSetId>DEAD_SEA_REQUIREMENTS</OwnerRequirementSetId>
 			<SubjectRequirementSetId>DEAD_SEA_ADJACENT_UNITS_ADJUST_HEAL_PER_TURN_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>EVEREST_ADJACENT_UNITS_GRANT_ABILITY</ModifierId>
 			<ModifierType>MODIFIER_ALL_UNITS_GRANT_ABILITY</ModifierType>
 			<Permanent>true</Permanent>
+			<OwnerRequirementSetId>EVEREST_REQUIREMENTS</OwnerRequirementSetId>
 			<SubjectRequirementSetId>EVEREST_ADJACENT_UNITS_GRANT_ABILITY_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>

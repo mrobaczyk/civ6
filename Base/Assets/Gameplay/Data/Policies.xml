@@ -282,7 +282,6 @@
 		<Row PolicyType="POLICY_LIBERALISM" ObsoletePolicy="POLICY_NEW_DEAL"/>
 		<!--Industrial Era-->
 		<Row PolicyType="POLICY_GRANDE_ARMEE" ObsoletePolicy="POLICY_MILITARY_FIRST"/>
-		<Row PolicyType="POLICY_GRAND_OPERA" ObsoletePolicy="POLICY_SPORTS_MEDIA"/>
 		<Row PolicyType="POLICY_PRESS_GANGS" ObsoletePolicy="POLICY_INTERNATIONAL_WATERS"/>
 		<Row PolicyType="POLICY_MILITARY_RESEARCH" ObsoletePolicy="POLICY_INTEGRATED_SPACE_CELL"/>
 		<!--Modern Era-->
@@ -301,6 +300,14 @@
 		</Row>
 		<Row>
 			<ModifierId>AGOGE_CLASSICAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
@@ -398,48 +405,8 @@
 			<ModifierType>MODIFIER_PLAYER_ADJUST_DUPLICATE_INFLUENCE_TOKEN_WHEN_RIVAL_GOVERNMENT</ModifierType>
 		</Row>
 		<Row>
-			<ModifierId>CORVEE_COLOSSEUMPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_COLOSSUSPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_GREATLIBRARYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_GREATLIGHTHOUSEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_HANGINGGARDENSPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_MAHABODHITEMPLEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_ORACLEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_PETRAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_PYRAMIDSPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_STONEHENGEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_TERRACOTTAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
+			<ModifierId>CORVEE_ANCIENTCLASSICALWONDER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>CRAFTSMEN_DISTRICTPRODUCTION</ModifierId>
@@ -513,6 +480,14 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>FEUDALCONTRACT_RENAISSANCE_MELEE_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
 		</Row>
@@ -559,36 +534,8 @@
 			<ModifierType>MODIFIER_PLAYER_CAPITAL_CITY_ADJUST_CITY_YIELD_CHANGE</ModifierType>
 		</Row>
 		<Row>
-			<ModifierId>GOTHICARCHITECTURE_ALHAMBRAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_CHICHENITZAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_FORBIDDENCITYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_GREATZIMBABWEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_HAGIASOPHIAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_MONTSTMICHELPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_POTALAPALACEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_VENETIANARSENALPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
+			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>GRANDEARMEE_INDUSTRIAL_MELEE_PRODUCTION</ModifierId>
@@ -596,6 +543,14 @@
 		</Row>
 		<Row>
 			<ModifierId>GRANDEARMEE_MODERN_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_MODERN_ANTI_CAVALRY_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
@@ -1001,11 +956,7 @@
 		</Row>
 		<Row>
 			<ModifierId>PUBLICWORKS_BUILDERCHARGES</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>PUBLICWORKS_BUILDERCHARGES_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_SINGLE_CITY_BUILDER_CHARGES</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_TRAINED_UNITS_ADJUST_BUILDER_CHARGES</ModifierType>
 			<SubjectRequirementSetId>UNIT_IS_BUILDER</SubjectRequirementSetId>
 			<Permanent>true</Permanent>
 		</Row>
@@ -1072,11 +1023,7 @@
 		</Row>
 		<Row>
 			<ModifierId>SERFDOM_BUILDERCHARGES</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SERFDOM_BUILDERCHARGES_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_SINGLE_CITY_BUILDER_CHARGES</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_TRAINED_UNITS_ADJUST_BUILDER_CHARGES</ModifierType>
 			<SubjectRequirementSetId>UNIT_IS_BUILDER</SubjectRequirementSetId>
 			<Permanent>true</Permanent>
 		</Row>
@@ -1097,10 +1044,10 @@
 			<ModifierId>SIMULTANEUM_DOUBLECATHEDRAL</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
 		</Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
-    </Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
+		</Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLEGURDWARA</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
@@ -1117,10 +1064,10 @@
 			<ModifierId>SIMULTANEUM_DOUBLEPAGODA</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
 		</Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
-    </Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
+		</Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLESYNAGOGUE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
@@ -1130,44 +1077,8 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
 		</Row>
 		<Row>
-			<ModifierId>SKYSCRAPERS_BIGBENPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_BOLSHOITHEATREPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_BROADWAYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_CRISTOREDENTORPRPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_EIFFELTOWERPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_ESTADIODOMARACANAPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_HERMITAGEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_RUHRVALLEYPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_SYDNEYOPERAHOUSEPRODUCTION</ModifierId>
-			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
+			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>MILITARYFIRST_ATOMIC_MELEE_PRODUCTION</ModifierId>
@@ -1175,6 +1086,14 @@
 		</Row>
 		<Row>
 			<ModifierId>MILITARYFIRST_INFORMATION_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_ATOMIC_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_INFORMATION_ANTI_CAVALRY_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
@@ -1347,6 +1266,42 @@
 		</Row>
 		<Row>
 			<ModifierId>AGOGE_CLASSICAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_ANCIENT</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_CLASSICAL</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
 			<Value>50</Value>
 			<Extra>-1</Extra>
@@ -1616,114 +1571,24 @@
 			<Value>1</Value>
 		</Row>
 		<Row>
-			<ModifierId>CORVEE_COLOSSEUMPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_COLOSSEUM</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_COLOSSEUMPRODUCTION</ModifierId>
+			<ModifierId>CORVEE_ANCIENTCLASSICALWONDER</ModifierId>
 			<Name>Amount</Name>
 			<Value>15</Value>
 		</Row>
 		<Row>
-			<ModifierId>CORVEE_COLOSSUSPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_COLOSSUS</Value>
+			<ModifierId>CORVEE_ANCIENTCLASSICALWONDER</ModifierId>
+			<Name>IsWonder</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>CORVEE_COLOSSUSPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>CORVEE_ANCIENTCLASSICALWONDER</ModifierId>
+			<Name>StartEra</Name>
+			<Value>ERA_ANCIENT</Value>
 		</Row>
 		<Row>
-			<ModifierId>CORVEE_GREATLIBRARYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_GREAT_LIBRARY</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_GREATLIBRARYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_GREATLIGHTHOUSEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_GREAT_LIGHTHOUSE</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_GREATLIGHTHOUSEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_HANGINGGARDENSPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_HANGING_GARDENS</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_HANGINGGARDENSPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_MAHABODHITEMPLEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_MAHABODHI_TEMPLE</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_MAHABODHITEMPLEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_ORACLEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_ORACLE</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_ORACLEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_PETRAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_PETRA</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_PETRAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_PYRAMIDSPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_PYRAMIDS</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_PYRAMIDSPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_STONEHENGEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_STONEHENGE</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_STONEHENGEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_TERRACOTTAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_TERRACOTTA_ARMY</Value>
-		</Row>
-		<Row>
-			<ModifierId>CORVEE_TERRACOTTAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>CORVEE_ANCIENTCLASSICALWONDER</ModifierId>
+			<Name>EndEra</Name>
+			<Value>ERA_CLASSICAL</Value>
 		</Row>
 		<Row>
 			<ModifierId>CRAFTSMEN_DISTRICTPRODUCTION</ModifierId>
@@ -1904,6 +1769,24 @@
 			<Extra>-1</Extra>
 		</Row>
 		<Row>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MEDIEVAL</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
 			<ModifierId>FEUDALCONTRACT_RENAISSANCE_MELEE_PRODUCTION</ModifierId>
 			<Name>UnitPromotionClass</Name>
 			<Value>PROMOTION_CLASS_MELEE</Value>
@@ -1917,6 +1800,24 @@
 		</Row>
 		<Row>
 			<ModifierId>FEUDALCONTRACT_RENAISSANCE_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_RENAISSANCE</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_ANTI_CAVALRY_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
 			<Value>50</Value>
 			<Extra>-1</Extra>
@@ -2070,84 +1971,24 @@
 			<Value>1</Value>
 		</Row>
 		<Row>
-			<ModifierId>GOTHICARCHITECTURE_ALHAMBRAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_ALHAMBRA</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_ALHAMBRAPRODUCTION</ModifierId>
+			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
 			<Name>Amount</Name>
 			<Value>15</Value>
 		</Row>
 		<Row>
-			<ModifierId>GOTHICARCHITECTURE_CHICHENITZAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_CHICHEN_ITZA</Value>
+			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
+			<Name>IsWonder</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>GOTHICARCHITECTURE_CHICHENITZAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
+			<Name>StartEra</Name>
+			<Value>ERA_MEDIEVAL</Value>
 		</Row>
 		<Row>
-			<ModifierId>GOTHICARCHITECTURE_FORBIDDENCITYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_FORBIDDEN_CITY</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_FORBIDDENCITYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_GREATZIMBABWEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_GREAT_ZIMBABWE</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_GREATZIMBABWEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_HAGIASOPHIAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_HAGIA_SOPHIA</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_HAGIASOPHIAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_MONTSTMICHELPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_MONT_ST_MICHEL</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_MONTSTMICHELPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_POTALAPALACEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_POTALA_PALACE</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_POTALAPALACEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_VENETIANARSENALPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_VENETIAN_ARSENAL</Value>
-		</Row>
-		<Row>
-			<ModifierId>GOTHICARCHITECTURE_VENETIANARSENALPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
+			<Name>EndEra</Name>
+			<Value>ERA_RENAISSANCE</Value>
 		</Row>
 		<Row>
 			<ModifierId>GRANDEARMEE_INDUSTRIAL_MELEE_PRODUCTION</ModifierId>
@@ -2181,6 +2022,42 @@
 		</Row>
 		<Row>
 			<ModifierId>GRANDEARMEE_MODERN_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_INDUSTRIAL</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_MODERN_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_MODERN_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MODERN</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>GRANDEARMEE_MODERN_ANTI_CAVALRY_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
 			<Value>50</Value>
 			<Extra>-1</Extra>
@@ -3410,11 +3287,6 @@
 		</Row>
 		<Row>
 			<ModifierId>PUBLICWORKS_BUILDERCHARGES</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>PUBLICWORKS_BUILDERCHARGES_MODIFIER</Value>
-		</Row>
-		<Row>
-			<ModifierId>PUBLICWORKS_BUILDERCHARGES_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>2</Value>
 		</Row>
@@ -3562,11 +3434,6 @@
 		</Row>
 		<Row>
 			<ModifierId>SERFDOM_BUILDERCHARGES</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>SERFDOM_BUILDERCHARGES_MODIFIER</Value>
-		</Row>
-		<Row>
-			<ModifierId>SERFDOM_BUILDERCHARGES_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>2</Value>
 		</Row>
@@ -3620,21 +3487,21 @@
 			<Name>Amount</Name>
 			<Value>100</Value>
 		</Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
-      <Name>BuildingType</Name>
-      <Value>BUILDING_DAR_E_MEHR</Value>
-    </Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
-      <Name>YieldType</Name>
-      <Value>YIELD_FAITH</Value>
-    </Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
-      <Name>Amount</Name>
-      <Value>100</Value>
-    </Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_DAR_E_MEHR</Value>
+		</Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLEGURDWARA</ModifierId>
 			<Name>BuildingType</Name>
@@ -3695,21 +3562,21 @@
 			<Name>Amount</Name>
 			<Value>100</Value>
 		</Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
-      <Name>BuildingType</Name>
-      <Value>BUILDING_STUPA</Value>
-    </Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
-      <Name>YieldType</Name>
-      <Value>YIELD_FAITH</Value>
-    </Row>
-    <Row>
-      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
-      <Name>Amount</Name>
-      <Value>100</Value>
-    </Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_STUPA</Value>
+		</Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLESYNAGOGUE</ModifierId>
 			<Name>BuildingType</Name>
@@ -3741,104 +3608,24 @@
 			<Value>100</Value>
 		</Row>
 		<Row>
-			<ModifierId>SKYSCRAPERS_BIGBENPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_BIG_BEN</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_BIGBENPRODUCTION</ModifierId>
+			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
 			<Name>Amount</Name>
 			<Value>15</Value>
 		</Row>
 		<Row>
-			<ModifierId>SKYSCRAPERS_BOLSHOITHEATREPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_BOLSHOI_THEATRE</Value>
+			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
+			<Name>IsWonder</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>SKYSCRAPERS_BOLSHOITHEATREPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
+			<Name>StartEra</Name>
+			<Value>ERA_INDUSTRIAL</Value>
 		</Row>
 		<Row>
-			<ModifierId>SKYSCRAPERS_BROADWAYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_BROADWAY</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_BROADWAYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_CRISTOREDENTORPRPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_CRISTO_REDENTOR</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_CRISTOREDENTORPRPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_EIFFELTOWERPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_EIFFEL_TOWER</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_EIFFELTOWERPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_ESTADIODOMARACANAPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_ESTADIO_DO_MARACANA</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_ESTADIODOMARACANAPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_HERMITAGEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_HERMITAGE</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_HERMITAGEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_OXFORD_UNIVERSITY</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_RUHRVALLEYPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_RUHR_VALLEY</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_RUHRVALLEYPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_SYDNEYOPERAHOUSEPRODUCTION</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_SYDNEY_OPERA_HOUSE</Value>
-		</Row>
-		<Row>
-			<ModifierId>SKYSCRAPERS_SYDNEYOPERAHOUSEPRODUCTION</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
+			<Name>EndEra</Name>
+			<Value>ERA_INFORMATION</Value>
 		</Row>
 		<Row>
 			<ModifierId>MILITARYFIRST_ATOMIC_MELEE_PRODUCTION</ModifierId>
@@ -3872,6 +3659,42 @@
 		</Row>
 		<Row>
 			<ModifierId>MILITARYFIRST_INFORMATION_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_ATOMIC_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_ATOMIC_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_ATOMIC</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_ATOMIC_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_INFORMATION_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_ANTI_CAVALRY</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_INFORMATION_ANTI_CAVALRY_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_INFORMATION</Value>
+			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYFIRST_INFORMATION_ANTI_CAVALRY_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
 			<Value>50</Value>
 			<Extra>-1</Extra>
@@ -4230,6 +4053,14 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AGOGE</PolicyType>
+			<ModifierId>AGOGE_ANCIENT_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AGOGE</PolicyType>
+			<ModifierId>AGOGE_CLASSICAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AGOGE</PolicyType>
 			<ModifierId>AGOGE_ANCIENT_RANGED_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
@@ -4322,47 +4153,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_COLOSSEUMPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_COLOSSUSPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_GREATLIBRARYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_GREATLIGHTHOUSEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_HANGINGGARDENSPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_MAHABODHITEMPLEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_ORACLEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_PETRAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_PYRAMIDSPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_STONEHENGEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CORVEE</PolicyType>
-			<ModifierId>CORVEE_TERRACOTTAPRODUCTION</ModifierId>
+			<ModifierId>CORVEE_ANCIENTCLASSICALWONDER</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_CRAFTSMEN</PolicyType>
@@ -4422,6 +4213,14 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
+			<ModifierId>FEUDALCONTRACT_MEDIEVAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
+			<ModifierId>FEUDALCONTRACT_RENAISSANCE_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FEUDAL_CONTRACT</PolicyType>
 			<ModifierId>FEUDALCONTRACT_MEDIEVAL_RANGED_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
@@ -4478,35 +4277,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_ALHAMBRAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_CHICHENITZAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_FORBIDDENCITYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_GREATZIMBABWEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_HAGIASOPHIAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_MONTSTMICHELPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_POTALAPALACEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GOTHIC_ARCHITECTURE</PolicyType>
-			<ModifierId>GOTHICARCHITECTURE_VENETIANARSENALPRODUCTION</ModifierId>
+			<ModifierId>GOTHICARCHITECTURE_MEDIEVALRENAISSANCEWONDER</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
@@ -4515,6 +4286,14 @@
 		<Row>
 			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
 			<ModifierId>GRANDEARMEE_MODERN_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>GRANDEARMEE_INDUSTRIAL_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
+			<ModifierId>GRANDEARMEE_MODERN_ANTI_CAVALRY_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDE_ARMEE</PolicyType>
@@ -4984,11 +4763,11 @@
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLECATHEDRAL</ModifierId>
 		</Row>
-    <Row>
-      <PolicyType>POLICY_SIMULTANEUM</PolicyType>
-      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
-    </Row>
-    <Row>
+		<Row>
+			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
+			<ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLEGURDWARA</ModifierId>
 		</Row>
@@ -5004,10 +4783,10 @@
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLEPAGODA</ModifierId>
 		</Row>
-    <Row>
-      <PolicyType>POLICY_SIMULTANEUM</PolicyType>
-      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
-    </Row>
+		<Row>
+			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
+			<ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+		</Row>
 		<Row>
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLESYNAGOGUE</ModifierId>
@@ -5018,43 +4797,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_BIGBENPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_BOLSHOITHEATREPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_BROADWAYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_CRISTOREDENTORPRPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_EIFFELTOWERPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_ESTADIODOMARACANAPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_HERMITAGEPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_OXFORDUNIVERSITYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_RUHRVALLEYPRODUCTION</ModifierId>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SKYSCRAPERS</PolicyType>
-			<ModifierId>SKYSCRAPERS_SYDNEYOPERAHOUSEPRODUCTION</ModifierId>
+			<ModifierId>SKYSCRAPERS_INDUSTRIALINFORMATION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
@@ -5063,6 +4806,14 @@
 		<Row>
 			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
 			<ModifierId>MILITARYFIRST_INFORMATION_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>MILITARYFIRST_ATOMIC_ANTI_CAVALRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>
+			<ModifierId>MILITARYFIRST_INFORMATION_ANTI_CAVALRY_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_MILITARY_FIRST</PolicyType>

@@ -106,7 +106,10 @@
 		<Row Tag="LOC_NOTIFICATION_UNMET_PLAYER_DEFEATED_SUMMARY">
 			<Text>An unmet player has been defeated.</Text>
 		</Row>
-		<Row Tag="LOC_NOTIFICATION_UNIT_LOST_TO_OCCUPATION">
+    <Row Tag="LOC_NOTIFICATION_UNMET_CITY_STATE_DEFEATED_SUMMARY">
+      <Text>An unmet city-state has been defeated.</Text>
+    </Row>
+    <Row Tag="LOC_NOTIFICATION_UNIT_LOST_TO_OCCUPATION">
 			<Text>You have lost a {1_UnitName} due to enemy occupation.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_UNIT_RETREAT_FROM_OCCUPATION">
@@ -303,7 +306,10 @@
 		<Row Tag="LOC_NOTIFICATION_SPY_ENEMY_KILLED_MESSAGE">
 			<Text>Enemy Spy Killed</Text>
 		</Row>
-		<Row Tag="LOC_NOTIFICATION_SPY_MISSION_ABORTED_SUMMARY">
+    <Row Tag="LOC_NOTIFICATION_SPY_MISSION_ABORTED_TO_CAPITAL">
+      <Text>Your spy {1_unitName} has aborted their travel since the target city changed hands. You can find them in your capital.</Text>
+    </Row>
+    <Row Tag="LOC_NOTIFICATION_SPY_MISSION_ABORTED_SUMMARY">
 			<Text>Your agent {1_unitName} aborted the {2_mission} mission in the city of {3_cityName}. The mission target is no longer valid.</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_SPY_MISSION_ABORTED_MESSAGE">
@@ -324,6 +330,12 @@
 		<Row Tag="LOC_NOTIFICATION_SPY_ESCAPED_CAPTURE_MESSAGE">
 			<Text>Spy Escaped</Text>
 		</Row>
+    <Row Tag="LOC_NOTIFICATION_SPY_ENEMY_ESCAPED_CAPTURE_SUMMARY">
+      <Text>An enemy Spy from an unknown civ has eluded capture and has escaped your city of {1_cityName}.</Text>
+    </Row>
+    <Row Tag="LOC_NOTIFICATION_SPY_ENEMY_ESCAPED_CAPTURE_MESSAGE">
+      <Text>Enemy Spy Escaped</Text>
+    </Row>
 		<!-- City-State Notifications -->
 		<Row Tag="LOC_NOTIFICATION_CITYSTATE_QUEST_GIVEN_MESSAGE">
 			<Text>New City-State Quest</Text>
@@ -489,13 +501,13 @@
 			<Text>Tech Boost</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_TECH_BOOST_SUMMARY">
-			<Text>Tech boost gained: {1_Name} +{2_Boost}%</Text>
+			<Text>Tech Boosted: {1_Name}!</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_CIVIC_BOOST_MESSAGE">
 			<Text>Civic Boost</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_CIVIC_BOOST_SUMMARY">
-			<Text>Civic boost gained: {1_Name} +{2_Boost}%</Text>
+			<Text>Civic Boosted: {1_Name}!</Text>
 		</Row>
 		<!-- Great Work Notifications -->
 		<Row Tag="LOC_NOTIFICATION_RELIC_CREATED_MESSAGE">
@@ -621,7 +633,13 @@
 		<Row Tag="LOC_NOTIFICATION_WONDER_COMPLETED_UNMET_PLAYER_SUMMARY">
 			<Text>An unmet player has finished building the world wonder {1_WonderName}.</Text>
 		</Row>
-		<Row Tag="LOC_NOTIFICATION_CITY_LOST_MESSAGE">
+    <Row Tag="LOC_NOTIFICATION_WONDER_FAILED_MESSAGE">
+      <Text>Production Salvaged</Text>
+    </Row>
+    <Row Tag="LOC_NOTIFICATION_WONDER_FAILED_SUMMARY">
+      <Text>You were not able to complete the world wonder {1_WonderName} in time. However {2_Production} [ICON_Production] Production has been salvaged from the attempt and awarded to the city of {3_CityName}.</Text>
+    </Row>
+    <Row Tag="LOC_NOTIFICATION_CITY_LOST_MESSAGE">
 			<Text>City Captured</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_CITY_LOST_SUMMARY">
@@ -797,6 +815,18 @@
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_TILE_LOST_CULTURE_BOMB_SUMMARY">
 			<Text>We have lost territory to a Culture Bomb initiated by the {1_CivName}.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_AIRCRAFT_FORCED_REBASE_MESSAGE">
+			<Text>Aircraft forced re-base</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_AIRCRAFT_FORCED_REBASE_SUMMARY">
+			<Text>{1_AirUnit} location has been compromised and has been forced to re-base.</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_AIRCRAFT_BASE_OVERRUN_MESSAGE">
+			<Text>Air base overrun</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_AIRCRAFT_BASE_OVERRUN_SUMMARY">
+			<Text>{1_AirUnit} was unable to re-base itself and has been destroyed.</Text>
 		</Row>
 	</BaseGameText>
 </GameData>

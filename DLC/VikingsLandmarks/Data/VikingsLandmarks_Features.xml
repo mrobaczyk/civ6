@@ -43,12 +43,14 @@
 			<ModifierId>LYSEFJORDEN_GRANT_NAVAL_UNIT_EXPERIENCE</ModifierId>
 			<ModifierType>MODIFIER_UNITS_ADJUST_GRANT_EXPERIENCE</ModifierType>
 			<Permanent>true</Permanent>
+			<OwnerRequirementSetId>LYSEFJORDEN_REQUIREMENTS</OwnerRequirementSetId>
 			<SubjectRequirementSetId>LYSEFJORDEN_GRANT_EXPERIENCE_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY</ModifierId>
 			<ModifierType>MODIFIER_ALL_UNITS_GRANT_ABILITY</ModifierType>
 			<Permanent>true</Permanent>
+			<OwnerRequirementSetId>GIANTS_CAUSEWAY_REQUIREMENTS</OwnerRequirementSetId>
 			<SubjectRequirementSetId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
@@ -66,7 +68,15 @@
 	</ModifierArguments>
 	<RequirementSets>
 		<Row>
+			<RequirementSetId>LYSEFJORDEN_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>LYSEFJORDEN_GRANT_EXPERIENCE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>GIANTS_CAUSEWAY_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
@@ -76,6 +86,10 @@
 	</RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
+			<RequirementSetId>LYSEFJORDEN_REQUIREMENTS</RequirementSetId>
+			<RequirementId>MAP_CONTAINS_LYSEFJORDEN</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>LYSEFJORDEN_GRANT_EXPERIENCE_REQUIREMENTS</RequirementSetId>
 			<RequirementId>PLOT_ADJACENT_TO_LYSEFJORDEN_REQUIREMENT</RequirementId>
 		</Row>
@@ -84,16 +98,28 @@
 			<RequirementId>UNIT_IS_NAVAL_REQUIREMENT</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>GIANTS_CAUSEWAY_REQUIREMENTS</RequirementSetId>
+			<RequirementId>MAP_CONTAINS_GIANTS_CAUSEWAY</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY_REQUIREMENTS</RequirementSetId>
 			<RequirementId>PLOT_ADJACENT_TO_GIANTS_CAUSEWAY_REQUIREMENT</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY_REQUIREMENTS</RequirementSetId>
-			<RequirementId>UNIT_IS_LAND_REQUIREMENT</RequirementId>
+			<RequirementId>REQUIRES_LAND_UNIT</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
+			<RequirementId>MAP_CONTAINS_LYSEFJORDEN</RequirementId>
+			<RequirementType>REQUIREMENT_MAP_HAS_FEATURE</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>MAP_CONTAINS_GIANTS_CAUSEWAY</RequirementId>
+			<RequirementType>REQUIREMENT_MAP_HAS_FEATURE</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>PLOT_ADJACENT_TO_LYSEFJORDEN_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES</RequirementType>
 		</Row>
@@ -105,12 +131,18 @@
 			<RequirementId>PLOT_ADJACENT_TO_GIANTS_CAUSEWAY_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES</RequirementType>
 		</Row>
-		<Row>
-			<RequirementId>UNIT_IS_LAND_REQUIREMENT</RequirementId>
-			<RequirementType>REQUIREMENT_UNIT_DOMAIN_MATCHES</RequirementType>
-		</Row>
 	</Requirements>
 	<RequirementArguments>
+		<Row>
+			<RequirementId>MAP_CONTAINS_LYSEFJORDEN</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_LYSEFJORDEN</Value>
+		</Row>
+		<Row>
+			<RequirementId>MAP_CONTAINS_GIANTS_CAUSEWAY</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_GIANTS_CAUSEWAY</Value>
+		</Row>
 		<Row>
 			<RequirementId>PLOT_ADJACENT_TO_LYSEFJORDEN_REQUIREMENT</RequirementId>
 			<Name>FeatureType</Name>
@@ -126,11 +158,5 @@
 			<Name>FeatureType</Name>
 			<Value>FEATURE_GIANTS_CAUSEWAY</Value>
 		</Row>
-		<Row>
-			<RequirementId>UNIT_IS_LAND_REQUIREMENT</RequirementId>
-			<Name>UnitDomain</Name>
-			<Value>DOMAIN_LAND</Value>
-		</Row>
 	</RequirementArguments>
-	-->
 </GameInfo>

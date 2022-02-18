@@ -452,7 +452,8 @@
 		<Row BoostType="BOOST_TRIGGER_TURN_NUMBER" BoostValue="57"/>
 		<Row BoostType="BOOST_TRIGGER_REVEAL_X_OF_RESOURCE" BoostValue="58"/>
 		<Row BoostType="BOOST_TRIGGER_SUZERAIN_X_CITY_STATES" BoostValue="59"/>
-	</BoostNames>
+    <Row BoostType="BOOST_TRIGGER_HAVE_UNIT_AND_IMPROVEMENT" BoostValue="60"/>
+  </BoostNames>
 	<Boosts>
 		<!-- Some boosts, like find natural wonder, have an unnecessary unit field - that is an aid for the AI. Please leave it -->
 		<Row TechnologyType="TECH_SAILING" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_SAILING" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_SAILING" BoostClass="BOOST_TRIGGER_SETTLE_COAST"/>
@@ -497,7 +498,7 @@
 		<Row TechnologyType="TECH_RIFLING" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_RIFLING" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_RIFLING" BoostClass="BOOST_TRIGGER_IMPROVE_SPECIFIC_RESOURCE" ImprovementType="IMPROVEMENT_MINE" ResourceType="RESOURCE_NITER"/>
 		<Row TechnologyType="TECH_FLIGHT" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_FLIGHT" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_FLIGHT" BoostClass="BOOST_TRIGGER_HAVE_WONDER_PAST_X_ERA" NumItems="5"/>
 		<Row TechnologyType="TECH_REPLACEABLE_PARTS" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_REPLACEABLE_PARTS" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_REPLACEABLE_PARTS" BoostClass="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" Unit1Type="UNIT_MUSKETMAN" NumItems="3"/>
-		<Row TechnologyType="TECH_STEEL" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_STEEL" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_STEEL" BoostClass="BOOST_TRIGGER_IMPROVE_SPECIFIC_RESOURCE" ImprovementType="IMPROVEMENT_MINE" ResourceType="RESOURCE_COAL"/>
+		<Row TechnologyType="TECH_STEEL" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_STEEL" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_STEEL" BoostClass="BOOST_TRIGGER_HAVE_UNIT_AND_IMPROVEMENT" ImprovementType="IMPROVEMENT_MINE" ResourceType="RESOURCE_COAL" Unit1Type="UNIT_IRONCLAD"/>
 		<Row TechnologyType="TECH_ELECTRICITY" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_ELECTRICITY" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_ELECTRICITY" BoostClass="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" Unit1Type="UNIT_PRIVATEER" NumItems="3"/>
 		<Row TechnologyType="TECH_RADIO" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_RADIO" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_RADIO" BoostClass="BOOST_TRIGGER_CREATED_NATIONAL_PARK"/>
 		<Row TechnologyType="TECH_CHEMISTRY" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_CHEMISTRY" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_CHEMISTRY" BoostClass="BOOST_TRIGGER_HAVE_RESEARCH_AGREEMENT"/>

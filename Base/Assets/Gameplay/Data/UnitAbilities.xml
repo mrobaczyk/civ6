@@ -58,6 +58,10 @@
 		<Row Type="ABILITY_SAMURAI" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_PUSHBACK" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_DIGGER" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_MOVEMENT" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_STRENGTH" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Kind="KIND_ABILITY"/>
 	</Types>
 	<TypeTags>
 		<Row Type="ABILITY_ANTI_CAVALRY" Tag="CLASS_ANTI_CAVALRY"/>
@@ -85,8 +89,8 @@
 		<Row Type="ABILITY_NO_FOREIGN_SPREAD" Tag="CLASS_INQUISITOR"/>
 		<Row Type="ABILITY_OLIGARCHY_MELEE_BUFF" Tag="CLASS_MELEE"/>
 		<Row Type="ABILITY_OLIGARCHY_MELEE_BUFF" Tag="CLASS_ANTI_CAVALRY"/>
-    		<Row Type="ABILITY_OLIGARCHY_MELEE_BUFF" Tag="CLASS_WARRIOR_MONK"/>
-    		<Row Type="ABILITY_THEOCRACY_RELIGIOUS_BUFF" Tag="CLASS_RELIGIOUS"/>
+		<Row Type="ABILITY_OLIGARCHY_MELEE_BUFF" Tag="CLASS_WARRIOR_MONK"/>
+		<Row Type="ABILITY_THEOCRACY_RELIGIOUS_BUFF" Tag="CLASS_RELIGIOUS"/>
 		<Row Type="ABILITY_THEOCRACY_RELIGIOUS_BUFF" Tag="CLASS_INQUISITOR"/>
 		<Row Type="ABILITY_RELIGIOUS_ORDERS_BUFF" Tag="CLASS_RELIGIOUS"/>
 		<Row Type="ABILITY_RELIGIOUS_ORDERS_BUFF" Tag="CLASS_INQUISITOR"/>
@@ -144,7 +148,37 @@
 		<Row Type="ABILITY_MUSTANG" Tag="CLASS_MUSTANG"/>
 		<Row Type="ABILITY_PUSHBACK" Tag="CLASS_PUSHBACK"/>
 		<Row Type="ABILITY_DIGGER" Tag="CLASS_DIGGER"/>
-	</TypeTags>
+		<Row Type="ABILITY_GREAT_ADMIRAL_MOVEMENT" Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_MOVEMENT" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_MOVEMENT" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_MOVEMENT" Tag="CLASS_NAVAL_CARRIER"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_STRENGTH" Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_STRENGTH" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_STRENGTH" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_GREAT_ADMIRAL_STRENGTH" Tag="CLASS_NAVAL_CARRIER"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_RECON"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_HEAVY_CHARIOT"/>
+		<Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_LIGHT_CHARIOT"/>
+    <Row Type="ABILITY_GREAT_GENERAL_MOVEMENT" Tag="CLASS_WARRIOR_MONK"/>
+    <Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_RECON"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_HEAVY_CHARIOT"/>
+		<Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_LIGHT_CHARIOT"/>
+    <Row Type="ABILITY_GREAT_GENERAL_STRENGTH" Tag="CLASS_WARRIOR_MONK"/>
+  </TypeTags>
 	<UnitAbilities>
 		<Row UnitAbilityType="ABILITY_ANTI_CAVALRY" Name="LOC_ABILITY_ANTI_CAVALRY_NAME" Description="LOC_ABILITY_ANTI_CAVALRY_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_HEAVY_CHARIOT" Name="LOC_ABILITY_HEAVY_CHARIOT_NAME" Description="LOC_ABILITY_HEAVY_CHARIOT_DESCRIPTION"/>
@@ -199,6 +233,10 @@
 		<Row UnitAbilityType="ABILITY_SAMURAI" Name="LOC_ABILITY_SAMURAI_NAME" Description="LOC_ABILITY_SAMURAI_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_PUSHBACK" Name="LOC_ABILITY_PUSHBACK" Description="LOC_ABILITY_PUSHBACK_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_DIGGER" Name="LOC_ABILITY_DIGGER_NAME" Description="LOC_ABILITY_DIGGER_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_GREAT_ADMIRAL_MOVEMENT" Name="LOC_GREAT_PERSON_CLASS_ADMIRAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_GREAT_ADMIRAL_STRENGTH" Name="LOC_GREAT_PERSON_CLASS_ADMIRAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_GREAT_GENERAL_MOVEMENT" Name="LOC_GREAT_PERSON_CLASS_GENERAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_GREAT_GENERAL_STRENGTH" Name="LOC_GREAT_PERSON_CLASS_GENERAL_NAME" Description="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER" Inactive="true"/>
 	</UnitAbilities>
 	<!--  -->
 	<UnitAbilityModifiers>
@@ -458,6 +496,22 @@
 			<UnitAbilityType>ABILITY_DIGGER</UnitAbilityType>
 			<ModifierId>DIGGER_NON_DOMESTIC_BONUS</ModifierId>
 		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_GREAT_ADMIRAL_MOVEMENT</UnitAbilityType>
+			<ModifierId>GREAT_GENERAL_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_GREAT_ADMIRAL_STRENGTH</UnitAbilityType>
+			<ModifierId>GREAT_ADMIRAL_STRENGTH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_GREAT_GENERAL_MOVEMENT</UnitAbilityType>
+			<ModifierId>GREAT_GENERAL_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_GREAT_GENERAL_STRENGTH</UnitAbilityType>
+			<ModifierId>GREAT_GENERAL_STRENGTH</ModifierId>
+		</Row>
 	</UnitAbilityModifiers>
 	<Modifiers>
 		<Row>
@@ -710,7 +764,7 @@
 			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
 			<SubjectRequirementSetId>ROUGH_RIDER_HILL_TERRAIN_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
-    <Row>
+		<Row>
 			<ModifierId>MUSTANG_MORE_EXPERIENCE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
 		</Row>
@@ -736,7 +790,23 @@
 			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
 			<SubjectRequirementSetId>DIGGER_NON_DOMESTIC_PLOT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
-  </Modifiers>
+		<Row>
+			<ModifierId>GREAT_ADMIRAL_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_ADMIRAL_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_GENERAL_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_GENERAL_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+	</Modifiers>
 	<ModifierArguments>
 		<Row>
 			<ModifierId>ANTI_CAVALRY_COMBAT_BONUS</ModifierId>
@@ -1088,6 +1158,26 @@
 			<Name>Amount</Name>
 			<Value>5</Value>
 		</Row>
+		<Row>
+			<ModifierId>GREAT_ADMIRAL_MOVEMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_ADMIRAL_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_GENERAL_MOVEMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREAT_GENERAL_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
 	</ModifierArguments>
 	<!--  -->
 	<!-- REQUIREMENTS -->
@@ -1193,7 +1283,7 @@
 			<RequirementSetId>UNIT_ATTACKING_DISTRICT_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
-  </RequirementSets>
+	</RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
 			<RequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</RequirementSetId>
@@ -1202,6 +1292,10 @@
 		<Row>
 			<RequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</RequirementSetId>
 			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_HC</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_RC</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>ANTI_FIGHTER_AIRCRAFT_OPPONENT_REQUIREMENTS</RequirementSetId>
@@ -1283,11 +1377,11 @@
 			<RequirementSetId>CONQUISTADOR_SPECIFIC_UNIT_REQUIREMENTS</RequirementSetId>
 			<RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
 		</Row>
-    <Row>
-      <RequirementSetId>CONQUISTADOR_SPECIFIC_UNIT_REQUIREMENTS</RequirementSetId>
-      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
-    </Row>
-    <Row>
+		<Row>
+			<RequirementSetId>CONQUISTADOR_SPECIFIC_UNIT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>GARDE_PLOT_IS_CAPITAL_CONTINENT_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_UNIT_ON_HOME_CONTINENT</RequirementId>
 		</Row>
@@ -1343,6 +1437,10 @@
 		</Row>
 		<Row>
 			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_HC</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_UNIT_TAG_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_RC</RequirementId>
 			<RequirementType>REQUIREMENT_OPPONENT_UNIT_TAG_MATCHES</RequirementType>
 		</Row>
 		<Row>
@@ -1402,11 +1500,11 @@
 			<RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_UNIT_TYPE_MATCHES</RequirementType>
 		</Row>
-    <Row>
-      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
-      <RequirementType>REQUIREMENT_PLOT_UNIT_TYPE_MATCHES</RequirementType>
-    </Row>
-    <Row>
+		<Row>
+			<RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_UNIT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_UNIT_ON_HOME_CONTINENT</RequirementType>
 			<Inverse>true</Inverse>
@@ -1443,20 +1541,20 @@
 			<RequirementId>PLOT_IS_SNOW_HILLS_TERRAIN_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
 		</Row>
-    <Row>
-      <RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
-      <RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
-    </Row>
-    <Row>
-      <RequirementId>PLOT_IS_DESERT_OR_DESERT_HILLS_REQUIREMENT</RequirementId>
-      <RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
-    </Row>
-    <Row>
-      <RequirementId>REQUIRES_UNIT_NOT_IN_OWNER_TERRITORY</RequirementId>
-      <RequirementType>REQUIREMENT_UNIT_IN_OWNER_TERRITORY</RequirementType>
-      <Inverse>1</Inverse>
-    </Row>
-  </Requirements>
+		<Row>
+			<RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_IS_DESERT_OR_DESERT_HILLS_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_NOT_IN_OWNER_TERRITORY</RequirementId>
+			<RequirementType>REQUIREMENT_UNIT_IN_OWNER_TERRITORY</RequirementType>
+			<Inverse>1</Inverse>
+		</Row>
+	</Requirements>
 	<RequirementArguments>
 		<Row>
 			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_LC</RequirementId>
@@ -1467,6 +1565,11 @@
 			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_HC</RequirementId>
 			<Name>Tag</Name>
 			<Value>CLASS_HEAVY_CAVALRY</Value>
+		</Row>
+		<Row>
+			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_RC</RequirementId>
+			<Name>Tag</Name>
+			<Value>CLASS_RANGED_CAVALRY</Value>
 		</Row>
 		<Row>
 			<RequirementId>ANTI_FIGHTER_AIRCRAFT_OPPONENT_REQUIREMENT</RequirementId>
@@ -1508,42 +1611,42 @@
 			<Name>UnitType</Name>
 			<Value>UNIT_APOSTLE</Value>
 		</Row>
-    <Row>
-      <RequirementId>PLOT_UNIT_IS_APOSTLE_REQUIREMENTS</RequirementId>
-      <Name>LayerIndex</Name>
-      <Value>3</Value>
-    </Row>
-    <Row>
+		<Row>
+			<RequirementId>PLOT_UNIT_IS_APOSTLE_REQUIREMENTS</RequirementId>
+			<Name>LayerIndex</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
 			<RequirementId>PLOT_UNIT_IS_INQUISITOR_REQUIREMENTS</RequirementId>
 			<Name>UnitType</Name>
 			<Value>UNIT_INQUISITOR</Value>
 		</Row>
-    <Row>
-      <RequirementId>PLOT_UNIT_IS_INQUISITOR_REQUIREMENTS</RequirementId>
-      <Name>LayerIndex</Name>
-      <Value>3</Value>
-    </Row>
-    <Row>
+		<Row>
+			<RequirementId>PLOT_UNIT_IS_INQUISITOR_REQUIREMENTS</RequirementId>
+			<Name>LayerIndex</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
 			<RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
 			<Name>UnitType</Name>
 			<Value>UNIT_MISSIONARY</Value>
 		</Row>
-    <Row>
-      <RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
-      <Name>LayerIndex</Name>
-      <Value>3</Value>
-    </Row>
-    <Row>
-      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
-      <Name>UnitType</Name>
-      <Value>UNIT_GURU</Value>
-    </Row>
-    <Row>
-      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
-      <Name>LayerIndex</Name>
-      <Value>3</Value>
-    </Row>
-    <Row>
+		<Row>
+			<RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
+			<Name>LayerIndex</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+			<Name>UnitType</Name>
+			<Value>UNIT_GURU</Value>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+			<Name>LayerIndex</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_UNIT_NEXT_TO_HOPLITE</RequirementId>
 			<Name>UnitType</Name>
 			<Value>UNIT_GREEK_HOPLITE</Value>
@@ -1583,11 +1686,11 @@
 			<Name>TerrainType</Name>
 			<Value>TERRAIN_SNOW_HILLS</Value>
 		</Row>
-    <Row>
-      <RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
-      <Name>TerrainType</Name>
-      <Value>TERRAIN_DESERT</Value>
-    </Row>
+		<Row>
+			<RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
+			<Name>TerrainType</Name>
+			<Value>TERRAIN_DESERT</Value>
+		</Row>
 	</RequirementArguments>
 	<ModifierStrings>
 		<Row ModifierId="ANTI_CAVALRY_COMBAT_BONUS" Context="Preview" Text="LOC_ABILITY_ANTI_CAVALRY_MODIFIER_DESCRIPTION"/>
@@ -1629,5 +1732,7 @@
 		<Row ModifierId="ROUGH_RIDER_BONUS_ON_HILLS" Context="Preview" Text="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION"/>
 		<Row ModifierId="DIGGER_BONUS_ON_COAST" Context="Preview" Text="LOC_ABILITY_DIGGER_BONUS_ON_COAST_DESCRIPTION"/>
 		<Row ModifierId="DIGGER_NON_DOMESTIC_BONUS" Context="Preview" Text="LOC_ABILITY_DIGGER_NON_DOMESTIC_BONUS_DESCRIPTION"/>
+		<Row ModifierId="GREAT_ADMIRAL_STRENGTH" Context="Preview" Text="{LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER}"/>
+		<Row ModifierId="GREAT_GENERAL_STRENGTH" Context="Preview" Text="{LOC_GREATPERSON_COMBAT_STRENGTH_AOE_LAND_MODIFIER}"/>
 	</ModifierStrings>
 </GameInfo>

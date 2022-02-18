@@ -33,7 +33,7 @@
     <Row VictoryType="VICTORY_SCORE" Name="LOC_VICTORY_SCORE_NAME" Blurb="LOC_VICTORY_SCORE_TEXT" RequirementSetId="REQUIREMENTS_SCORE_VICTORY" CriticalPercentage="110"/>
     <Row VictoryType="VICTORY_DEFAULT" Name="LOC_VICTORY_DEFAULT_NAME" Blurb="LOC_VICTORY_DEFAULT_TEXT" RequirementSetId="REQUIREMENTS_DEFAULT_VICTORY" CriticalPercentage="110"/>
     <Row VictoryType="VICTORY_CONQUEST" Name="LOC_VICTORY_DOMINATION_NAME" Blurb="LOC_VICTORY_DOMINATION_TEXT" RequirementSetId="REQUIREMENTS_CONQUEST_VICTORY" CriticalPercentage="50"/>
-    <Row VictoryType="VICTORY_CULTURE" Name="LOC_VICTORY_CULTURE_NAME" Blurb="LOC_VICTORY_CULTURE_TEXT" RequirementSetId="REQUIREMENTS_CULTURE_VICTORY" CriticalPercentage="110"/>
+    <Row VictoryType="VICTORY_CULTURE" Name="LOC_VICTORY_CULTURE_NAME" Blurb="LOC_VICTORY_CULTURE_TEXT" RequirementSetId="REQUIREMENTS_CULTURE_VICTORY" CriticalPercentage="75"/>
     <Row VictoryType="VICTORY_RELIGIOUS" Name="LOC_VICTORY_RELIGIOUS_NAME" Blurb="LOC_VICTORY_RELIGION_TEXT" RequirementSetId="REQUIREMENTS_RELIGIOUS_VICTORY" CriticalPercentage="80"/>
     <Row VictoryType="VICTORY_TECHNOLOGY" Name="LOC_VICTORY_SCIENCE_NAME" Blurb="LOC_VICTORY_SCIENCE_TEXT" RequirementSetId="REQUIREMENTS_TECHNOLOGY_VICTORY" CriticalPercentage="60"/>
   </Victories>
@@ -114,10 +114,15 @@
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementPreferences"/>
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionUnitPreferences"/>
     <Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ListType="ClassicalYields"/>
+    <Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ListType="ClassicalPseudoYields"/>
     <Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" ListType="MedievalYields"/>
+    <Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" ListType="MedievalPseudoYields"/>
     <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ListType="RenaissanceYields"/>
+    <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ListType="RenaissancePseudoYields"/>
     <Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" ListType="IndustrialYields"/>
+    <Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" ListType="IndustrialPseudoYields"/>
     <Row StrategyType="STRATEGY_MODERN_CHANGES" ListType="ModernYields"/>
+    <Row StrategyType="STRATEGY_MODERN_CHANGES" ListType="ModernPseudoYields"/>
     <Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryPseudoYields"/>
     <Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryYields"/>
     <Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryPseudoYields"/>
@@ -134,6 +139,7 @@
     <Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryYields"/>
   </Strategy_Priorities>
   <AiListTypes>
+    <Row ListType="ClassicalPseudoYields"/>
     <Row ListType="ClassicalYields"/>
     <Row ListType="CultureVictoryPseudoYields" />
     <Row ListType="CultureVictoryYields" />
@@ -141,12 +147,15 @@
     <Row ListType="ExpansionSettlementBoost" />
     <Row ListType="ExpansionSettlementPreferences" />
     <Row ListType="ExpansionUnitPreferences" />
+    <Row ListType="IndustrialPseudoYields" />
     <Row ListType="IndustrialYields" />
     <Row ListType="MedievalSettlements"/>
+    <Row ListType="MedievalPseudoYields"/>
     <Row ListType="MedievalYields"/>
     <Row ListType="MilitaryVictoryOperations" />
     <Row ListType="MilitaryVictoryPseudoYields" />
     <Row ListType="MilitaryVictoryYields" />
+    <Row ListType="ModernPseudoYields"/>
     <Row ListType="ModernYields"/>
     <Row ListType="NavalUnitPreferences" />
     <Row ListType="NavalSettlementPreferences" />
@@ -156,6 +165,7 @@
     <Row ListType="ReligiousVictoryDiplomacy" />
     <Row ListType="ReligiousVictoryPseudoYields" />
     <Row ListType="ReligiousVictoryYields" />
+    <Row ListType="RenaissancePseudoYields"/>
     <Row ListType="RenaissanceYields"/>
     <Row ListType="ScienceVictoryDistricts" />
     <Row ListType="ScienceVictoryProjects" />
@@ -164,6 +174,7 @@
     <Row ListType="ScienceVictoryYields" />
   </AiListTypes>
   <AiLists>
+    <Row ListType="ClassicalPseudoYields" System="PseudoYields"/>
     <Row ListType="ClassicalYields" System="Yields"/>
     <Row ListType="CultureVictoryPseudoYields" System="PseudoYields"/>
     <Row ListType="CultureVictoryYields" System="Yields"/>
@@ -171,12 +182,15 @@
     <Row ListType="ExpansionSettlementBoost" System="SettlementPreferences"/>
     <Row ListType="ExpansionSettlementPreferences" System="PlotEvaluations"/>
     <Row ListType="ExpansionUnitPreferences" System="PseudoYields"/>
+    <Row ListType="IndustrialPseudoYields" System="PseudoYields"/>
     <Row ListType="IndustrialYields" System="Yields"/>
     <Row ListType="MedievalSettlements" System="SettlementPreferences"/>
+    <Row ListType="MedievalPseudoYields" System="PseudoYields"/>
     <Row ListType="MedievalYields" System="Yields"/>
     <Row ListType="MilitaryVictoryOperations" System="AiOperationTypes"/>
     <Row ListType="MilitaryVictoryPseudoYields" System="PseudoYields"/>
     <Row ListType="MilitaryVictoryYields" System="Yields"/>
+    <Row ListType="ModernPseudoYields" System="PseudoYields"/>
     <Row ListType="ModernYields" System="Yields"/>
     <Row ListType="NavalUnitPreferences" System="PseudoYields"/>
     <Row ListType="NavalSettlementPreferences" System="PlotEvaluations"/>
@@ -186,6 +200,7 @@
     <Row ListType="ReligiousVictoryDiplomacy" System="DiplomaticActions"/>
     <Row ListType="ReligiousVictoryPseudoYields" System="PseudoYields"/>
     <Row ListType="ReligiousVictoryYields" System="Yields"/>
+    <Row ListType="RenaissancePseudoYields" System="PseudoYields"/>
     <Row ListType="RenaissanceYields" System="Yields"/>
     <Row ListType="ScienceVictoryDistricts" System="Districts"/>
     <Row ListType="ScienceVictoryProjects" System="Projects"/>
@@ -194,18 +209,29 @@
     <Row ListType="ScienceVictoryYields" System="Yields"/>
   </AiLists>
   <AiFavoredItems>
+    <Row ListType="ClassicalPseudoYields" Item="PSEUDOYIELD_GPP_MERCHANT" Value="20"/>
     <Row ListType="ClassicalYields" Item="YIELD_FAITH" Value="20"/>
     <Row ListType="ClassicalYields" Item="YIELD_FOOD" Value="15"/>
     <Row ListType="ClassicalYields" Item="YIELD_GOLD" Value="20"/>
     <Row ListType="MedievalSettlements" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-10"/>
     <Row ListType="MedievalSettlements" Item="SETTLEMENT_DECAY_TURNS" Value="-3"/>
     <Row ListType="MedievalSettlements" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
+    <Row ListType="MedievalPseudoYields" Item="PSEUDOYIELD_GPP_ENGINEER" Value="20"/>
+    <Row ListType="MedievalPseudoYields" Item="PSEUDOYIELD_GPP_MERCHANT" Value="20"/>
+    <Row ListType="MedievalPseudoYields" Item="PSEUDOYIELD_GPP_SCIENTIST" Value="30"/>
     <Row ListType="MedievalYields" Item="YIELD_FAITH" Value="-25"/>
     <Row ListType="MedievalYields" Item="YIELD_FOOD" Value="25"/>
     <Row ListType="MedievalYields" Item="YIELD_GOLD" Value="15"/>
     <Row ListType="MedievalYields" Item="YIELD_PRODUCTION" Value="20"/>
+    <Row ListType="RenaissancePseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="-100"/>
+    <Row ListType="RenaissancePseudoYields" Item="PSEUDOYIELD_GPP_ENGINEER" Value="20"/>
+    <Row ListType="RenaissancePseudoYields" Item="PSEUDOYIELD_GPP_ARTIST" Value="10"/>
+    <Row ListType="RenaissancePseudoYields" Item="PSEUDOYIELD_GPP_WRITER" Value="10"/>
+    <Row ListType="RenaissancePseudoYields" Item="PSEUDOYIELD_GPP_SCIENTIST" Value="30"/>
     <Row ListType="RenaissanceYields" Item="YIELD_FOOD" Value="10"/>
     <Row ListType="RenaissanceYields" Item="YIELD_GOLD" Value="15"/>
+    <Row ListType="IndustrialPseudoYields" Item="PSEUDOYIELD_GPP_ENGINEER" Value="20"/>
+    <Row ListType="IndustrialPseudoYields" Item="PSEUDOYIELD_GPP_SCIENTIST" Value="20"/>
     <Row ListType="IndustrialYields" Item="YIELD_FAITH" Value="-40"/>
     <Row ListType="IndustrialYields" Item="YIELD_GOLD" Value="15"/>
     <Row ListType="ModernYields" Item="YIELD_FOOD" Value="5"/>
@@ -229,7 +255,7 @@
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="1"/>
     <Row ListType="ExpansionSettlementPreferences" Item="Foreign Continent" Favored="false" Value="4"/>
-    <Row ListType="ExpansionSettlementPreferences" Item="Nearest Friendly City" Favored="false" Value="8"/>
+    <Row ListType="ExpansionSettlementPreferences" Item="Nearest Friendly City" Favored="false" Value="6"/>
     <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-25"/>
     <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="-25"/>
     <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_SETTLER" Value="25"/>

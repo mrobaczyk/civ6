@@ -200,5 +200,17 @@
     <Row Tag="LOC_DIPLOMACY_INTEL_REPORT_RELATIONSHIP">
       <Text>Intel Report : Relationship</Text>
     </Row>
+    <Row Tag="LOC_GOVERNMENT_ANARCHY_TURNS">
+      <Text>Anarchy ({1_num} {1_Num : plural 1?turn; other?turns;})</Text>
+    </Row>
+		<Row Tag="LOC_DIPLOMACY_GOVERNMENT_NONE">
+			<Text>None</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_DENOUNCED_TOOLTIP">
+			<Text>{1_CivName} has denounced the evil deeds of {2_CivName}.</Text>
+		</Row>
+		<Row Tag="LOC_DIPLOMACY_DECLARED_FRIENDSHIP_TOOLTIP">
+			<Text>{1_CivName} has declared their friendship with {2_CivName}. [{3_RemainingTurns} more {3_RemainingTurns : plural 1?turn; other?turns;}]</Text>
+		</Row>
   </BaseGameText>
 </GameData>

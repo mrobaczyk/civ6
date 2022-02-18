@@ -35,9 +35,11 @@
     <Row AllowedMoveType="Leader Formation" Value="31" isTactical="true" />
     <Row AllowedMoveType="Barbarian Rampage" Value="32" isTactical="true" />
     <Row AllowedMoveType="Charge Heal" Value="33" isHomeland="true"/> <!-- At this point, this only applies to the Guru, leaving open to future heal charge units, though -->
+    <Row AllowedMoveType="Support Formation" Value="34" isTactical="true" /> <!-- Support units not in use by an operation should try to move close to allied military -->
    </AllowedMoves>
 	<AiFavoredItems>
 		<Row ListType="Default Tactical" Item="Leader Formation" />
+		<Row ListType="Default Tactical" Item="Support Formation" />
     <Row ListType="Default Tactical" Item="Attack High Priority"/>
     <Row ListType="Default Tactical" Item="Attack Camps"/>
 		<Row ListType="Default Tactical" Item="Move to Safety"/>
@@ -88,6 +90,7 @@
 		<Row ListType="Default Barbarian HL" Item="Move to Safety" />
 		<Row ListType="Default Barbarian HL" Item="Explore Land" />
 		<Row ListType="Default Barbarian HL" Item="End Turn" />
+    <Row ListType="Minor Civ Tactical" Item="Support Formation"/>
     <Row ListType="Minor Civ Tactical" Item="Attack High Priority"/>
 		<Row ListType="Minor Civ Tactical" Item="Move to Safety"/>
 		<Row ListType="Minor Civ Tactical" Item="Attack Medium Priority" />
@@ -101,7 +104,8 @@
 		<Row ListType="Minor Civ Homeland" Item="First Turn Settler" />
 		<Row ListType="Minor Civ Homeland" Item="Move to Safety" />
     <Row ListType="Minor Civ Homeland" Item="Promotion" />
-		<Row ListType="Minor Civ Homeland" Item="End Turn" />
+    <Row ListType="Minor Civ Homeland" Item="Builder Outside Ring" />
+    <Row ListType="Minor Civ Homeland" Item="End Turn" />
   </AiFavoredItems>
 	<AiListTypes>
 		<Row ListType="Default Tactical" />

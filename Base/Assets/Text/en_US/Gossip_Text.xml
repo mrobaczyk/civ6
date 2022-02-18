@@ -137,7 +137,10 @@
 		<Row Tag="LOC_GOSSIP_CONQUER_CITY">
 			<Text>{1_CivName} has conquered {2_CityName}.</Text>
 		</Row>
-		<Row Tag="LOC_GOSSIP_CONSTRUCT_BUILDING">
+    <Row Tag="LOC_GOSSIP_CONQUER_CAPITAL_CITY">
+      <Text>{1_CivName} has conquered the original {2_CivAdjective} capital of {3_CityName}.</Text>
+    </Row>
+    <Row Tag="LOC_GOSSIP_CONSTRUCT_BUILDING">
 			<Text>{1_CivName} has built {LOC_GRAMMAR_A_AN &lt;&lt; {2_BuildingName}} in {3_CityName}.</Text>
 		</Row>
 		<Row Tag="LOC_GOSSIP_CONSTRUCT_DISTRICT">

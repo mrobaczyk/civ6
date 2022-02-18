@@ -37,8 +37,11 @@
 		<Row Tag="LOC_FRONTEND_POPUP_OUTDATED_DRIVER_LOUD">
 			<Text>Remind Me Next Time.</Text>
 		</Row>
+    <Row Tag="LOC_FRONTEND_POPUP_GRAPHICS_SETTINGS_CHANGED">
+      <Text>Graphics settings have been adjusted. You may review or change these settings in the Options menu.</Text>
+    </Row>
 
-		<!-- Main Menu-->
+    <!-- Main Menu-->
 		<Row Tag="LOC_MAIN_MENU_RESUME_GAME">
 			<Text>Resume Game</Text>
 		</Row>
@@ -268,7 +271,7 @@
 			<Text>Unable to apply additional content.</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_MOD_MISSING">
-			<Text>Unable to acquire required additional content.[NEWLINE]Content:[NEWLINE]</Text>
+			<Text>Additional content is required but either has not been purchased or is not installed.[NEWLINE]Content:[NEWLINE]</Text>
 		</Row>
     <Row Tag="LOC_GAME_ABANDONED_MOD_ACCESS_DENIED">
       <Text>Steam Workshop denied access to required additional content.[NEWLINE]Content:[NEWLINE]</Text>
@@ -343,7 +346,7 @@
 			<Text>BACK</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_END_GAME">
-			<Text>DELETE GAME</Text>
+			<Text>DELETE</Text>
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_ENDING_GAME_PROMPT">
 			<Text>Ending Game...</Text>
@@ -428,10 +431,7 @@
 		</Row>
 		<Row Tag="LOC_STAGING_ROOM_GAME_IN_PROGRESS">
 			<Text>Game in Progress</Text>
-		</Row>
-		<Row Tag="LOC_STAGING_ROOM_JOIN_CODE">
-			<Text>Join Code:</Text>
-		</Row>		
+		</Row>	
 		<Row Tag="LOC_MULTIPLAYER_INTERNET_LOBBY">
 			<Text>INTERNET GAMES</Text>
 		</Row>
@@ -1067,10 +1067,10 @@
 			<Text>No Barbarians</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ALLIES_SHARE_VISIBILITY">
-			<Text>Allies Share Visibility</Text>
+			<Text>Teams Share Visibility</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ALLIES_SHARE_VISIBILITY_DESCRIPTION">
-			<Text>Allied players will share their visibility of the map.</Text>
+			<Text>Players on the same team will share their visibility of the map.</Text>
 		</Row>		
 		<Row Tag="LOC_GAME_TURNTIMER_TYPE">
 			<Text>Turn Timer</Text>
@@ -1568,7 +1568,7 @@
 			<Text>Max Turns:</Text>
 		</Row>
 		<Row Tag="LOC_MAX_TURNS_DESCRIPTION">
-			<Text>The number of turns until the Score Victory.  Use 0 for unlimited.</Text>
+			<Text>The maximum number of turns for the game.</Text>
 		</Row>
 		<Row Tag="LOC_MAINMENU_RESUME_GAME_TT">
 			<Text>Resume the last game you were playing.</Text>
@@ -1612,7 +1612,7 @@
 
 		<!-- Copyright screen -->
 		<Row Tag="LOC_COPYRIGHT_TEXT">
-			<Text>© 1991-2016 Take-Two Interactive Software, Inc.  Developed by Firaxis Games. 2K, Firaxis Games, Sid Meier's Civilization VI, Sid Meier's Civilization, Civilization, Civ, and their respective logos are trademarks of Take-Two Interactive Software, Inc.  Uses Bink Video. Copyright © 1997-2016 by RAD Game Tools, Inc. Uses Granny Animation. Copyright © 1999-2016 by RAD Game Tools Inc.  Fork Copyright © 2016 Fork Particle, Inc. Sid Meier's Civilization VI uses Havok®. © Copyright 1999 – 2016 Havok.com, Inc. (and its Licensors). All Rights Reserved. See www.havok.com for details. AMD, the AMD Arrow logo, Radeon, Crossfire, and combinations thereof are either registered trademarks or trademarks of Advanced Micro Devices, Inc. in the United States and/or other countries. Microsoft, DirectX, Visual Studio, and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Lua Copyright © 1994-2016 Lua.org, PUC-Rio. All other marks and trademarks are the property of their respective owners.  All rights reserved.  The content of this videogame is fictional and is not intended to represent or depict an actual record of the events, persons or entities in the game's historical setting.</Text>
+			<Text>© 1991-2018 Take-Two Interactive Software, Inc.  Developed by Firaxis Games. 2K, Firaxis Games, Sid Meier's Civilization VI, Sid Meier's Civilization, Civilization, Civ, and their respective logos are trademarks of Take-Two Interactive Software, Inc.  Uses Bink Video. Copyright © 1997-2018 by RAD Game Tools, Inc. Uses Granny Animation. Copyright © 1999-2018 by RAD Game Tools Inc.  Fork Copyright © 2018 Fork Particle, Inc. Sid Meier's Civilization VI uses Havok®. © Copyright 1999 – 2018 Havok.com, Inc. (and its Licensors). All Rights Reserved. See www.havok.com for details. AMD, the AMD Arrow logo, Radeon, Crossfire, and combinations thereof are either registered trademarks or trademarks of Advanced Micro Devices, Inc. in the United States and/or other countries. Microsoft, DirectX, Visual Studio, and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Lua Copyright © 1994-2018 Lua.org, PUC-Rio. All other marks and trademarks are the property of their respective owners.  All rights reserved.  The content of this videogame is fictional and is not intended to represent or depict an actual record of the events, persons or entities in the game's historical setting.</Text>
 		</Row>
 		<Row Tag="LOC_COPYRIGHT_ACCEPT">
 			<Text>Continue</Text>
@@ -1771,6 +1771,9 @@
 		</Row>
 		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_DLC">
 			<Text>One or more required DLC packages for the save are not installed.</Text>
+		</Row>
+		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_EXPANSION">
+			<Text>One or more required Expansion packages for the save are not installed.</Text>
 		</Row>
     <Row Tag="LOC_TEAM_NAME_SELECT_TITLE">
       <Text>Team Name</Text>

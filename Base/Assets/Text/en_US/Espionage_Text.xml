@@ -189,7 +189,7 @@
 		</Row>
 		<!-- ==================== Spy Operation Details ==================== -->
 		<Row Tag="LOC_SPYMISSIONDETAILS_UNITOPERATION_SPY_LISTENING_POST">
-			<Text>Increases diplomatic visibility by 1 rank.</Text>
+			<Text>Increases [ICON_VisLimited] Diplomatic Visibility by 1 rank.</Text>
 		</Row>
 		<Row Tag="LOC_SPYMISSIONDETAILS_UNITOPERATION_SPY_GAIN_SOURCES">
 			<Text>Spies will operate at {1_Levels} {1_Levels : plural 1?level; other?levels;} higher for {2_Turns} {2_Turns : plural 1?turn; other?turns;}.</Text>
@@ -407,7 +407,7 @@
       <Text>Stole {1_LootName} after evading detection from the city of {2_CityName}.</Text>
     </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_DETECTED_ESCAPED">
-      <Text>Mission was successful in the city of {1_CityName} and the spy successfully evaded captured after being detected.</Text>
+      <Text>Mission was successful in the city of {1_CityName} and the spy successfully evaded capture after being detected.</Text>
     </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_SUCCESS_DETECTED_CAPTURED">
       <Text>Mission was successful in the city of {1_CityName} but the spy was captured after being detected.</Text>
@@ -419,7 +419,7 @@
       <Text>Mission failed in the city of {1_CityName} but spy was undetected.</Text>
     </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_ESCAPED">
-      <Text>Mission failed in the city of {1_CityName} but the spy successfully evaded captured after being detected.</Text>
+      <Text>Mission failed in the city of {1_CityName} but the spy successfully evaded capture after being detected.</Text>
     </Row>
     <Row Tag="LOC_ESPIONAGEOVERVIEW_MISSIONOUTCOME_FAILURE_DETECTED_CAPTURED">
       <Text>Mission failed in the city of {1_CityName} and the spy was captured after being detected.</Text>
@@ -465,5 +465,8 @@
 		<Row Tag="LOC_UNITPANEL_ESPIONAGE_CHOOSE_MISSION">
 			<Text>Choose Mission</Text>
 		</Row>
+    <Row Tag="LOC_ESPIONAGE_SPY_TRADE_DISABLED_AT_WAR">
+      <Text>[COLOR_RED]Trading for {1_SpyName} is not currently possible. You are at war with {2_CivName}.</Text>
+    </Row>
 	</BaseGameText>
 </GameData>

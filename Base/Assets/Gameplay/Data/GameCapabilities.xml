@@ -3,11 +3,12 @@
 	<Kinds>
 		<Row Kind="KIND_CAPABILITY"/>
 	</Kinds>
-	
+
 	<Types>
+		<Row Type="CAPABILITY_RENAME" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_CIVICS" Kind="KIND_CAPABILITY" />
-    <Row Type="CAPABILITY_MILITARY" Kind="KIND_CAPABILITY" />
-    <Row Type="CAPABILITY_CIVICS_CHOOSER" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_MILITARY" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_CIVICS_CHOOSER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_CIVICS_TREE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_CULTURE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENTS" Kind="KIND_CAPABILITY" />
@@ -35,8 +36,8 @@
 		<Row Type="CAPABILITY_GREAT_PEOPLE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_CAN_RECRUIT" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" Kind="KIND_CAPABILITY" />
-    <Row Type="CAPABILITY_GOLD" Kind="KIND_CAPABILITY" />
-    <Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_GOLD" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_CAN_REJECT" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_VIEW" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_ESPIONAGE" Kind="KIND_CAPABILITY" />
@@ -61,8 +62,8 @@
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_CITY_STATES" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_WAR_WEARINESS" Kind="KIND_CAPABILITY"/>
-    <Row Type="CAPABILITY_CITY_HUD_AMENITIES_BANKRUPTCY" Kind="KIND_CAPABILITY"/>
-    <Row Type="CAPABILITY_CITY_HUD_HOUSING_DISTRICTS" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_BANKRUPTCY" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_HOUSING_DISTRICTS" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_HOUSING_GREAT_PEOPLE" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_RELIGION_TAB" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_WONDERS" Kind="KIND_CAPABILITY"/>
@@ -76,7 +77,7 @@
 		<!-- Do these policy filters show up on the government screen -->
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER" Kind="KIND_CAPABILITY" />
-		
+
 		<!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
 		<Row Type="CAPABILITY_DISPLAY_NORMALIZED_TURN" Kind="KIND_CAPABILITY" />
 
@@ -94,19 +95,20 @@
 	</Types>
 
 	<GameCapabilities>
+		<Row GameCapability="CAPABILITY_RENAME"/>
 		<Row GameCapability="CAPABILITY_CIVICS"/>
 		<Row GameCapability="CAPABILITY_CIVICS_CHOOSER"/>
 		<Row GameCapability="CAPABILITY_CIVICS_TREE"/>
-    <Row GameCapability="CAPABILITY_MILITARY"/>
+		<Row GameCapability="CAPABILITY_MILITARY"/>
 		<Row GameCapability="CAPABILITY_CULTURE"/>
-    <Row GameCapability="CAPABILITY_GOLD"/>
-    <!-- Government functionality in game -->
+		<Row GameCapability="CAPABILITY_GOLD"/>
+		<!-- Government functionality in game -->
 		<Row GameCapability="CAPABILITY_GOVERNMENTS"/>
 		<!-- Separate from government functionality, can you access Governments screen? -->
 		<Row GameCapability="CAPABILITY_GOVERNMENTS_VIEW"/>
 		<!-- Separate from government functionality, does the game mode enable Legacy Bonuses? -->
 		<Row GameCapability="CAPABILITY_GOVERNMENTS_LEGACY_BONUSES"/>
-		
+
 		<!-- Great Works in game -->
 		<Row GameCapability="CAPABILITY_GREAT_WORKS"/>
 		<!-- Can create new Great Works. Turn this off if you want to have existing pantheons, but no new ones -->
@@ -173,7 +175,7 @@
 		<Row GameCapability="CAPABILITY_REPORTS_UNIT_EXPENSES" />
 		<!-- Can you view the World Tracker? -->
 		<Row GameCapability="CAPABILITY_WORLD_TRACKER" />
-		
+
 		<!-- Mini-map panel lenses -->
 		<Row GameCapability="CAPABILITY_LENS_RELIGION" />
 		<Row GameCapability="CAPABILITY_LENS_APPEAL" />
@@ -188,8 +190,8 @@
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CITY_STATES" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_WAR_WEARINESS" />
-    <Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_BANKRUPTCY" />
-    <Row GameCapability="CAPABILITY_CITY_HUD_HOUSING_DISTRICTS" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_BANKRUPTCY" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_HOUSING_DISTRICTS" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_HOUSING_GREAT_PEOPLE" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_RELIGION_TAB" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_WONDERS" />
@@ -235,8 +237,8 @@
 		<Row GameCapability="CAPABILITY_GREAT_WORKS_VIEW" DependsOnCapability="CAPABILITY_GREAT_WORKS"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_CAN_RECRUIT" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
-    <Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" DependsOnCapability="CAPABILITY_GOLD"/>
-    <Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
+		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" DependsOnCapability="CAPABILITY_GOLD"/>
+		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_FAITH"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_CAN_REJECT" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_VIEW" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>

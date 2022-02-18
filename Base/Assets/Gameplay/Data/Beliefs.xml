@@ -185,59 +185,13 @@
 			<SubjectRequirementSetId>PLOT_HAS_HOLY_SITE_RIVER_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSEUM</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSUS</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIBRARY</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIGHTHOUSE</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_HANGINGGARDENS</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_MAHABODHITEMPLE</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_ORACLE</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_PETRA</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_PYRAMIDS</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_STONEHENGE</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_TERRACOTTA</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_BUILDING_PRODUCTION</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>DIVINE_SPARK_HOLY_SITE</ModifierId>
@@ -914,114 +868,29 @@
 			<Value>1</Value>
 		</Row>
 		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSEUM</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_COLOSSEUM</Value>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER_MODIFIER</Value>
 		</Row>
 		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSEUM</ModifierId>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>15</Value>
 		</Row>
 		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSUS</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_COLOSSUS</Value>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER_MODIFIER</ModifierId>
+			<Name>IsWonder</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER_MODIFIER</ModifierId>
+			<Name>StartEra</Name>
+			<Value>ERA_ANCIENT</Value>
 		</Row>
 		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIBRARY</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_GREAT_LIBRARY</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIBRARY</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIGHTHOUSE</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_GREAT_LIGHTHOUSE</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIGHTHOUSE</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_HANGINGGARDENS</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_HANGING_GARDENS</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_HANGINGGARDENS</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_MAHABODHITEMPLE</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_MAHABODHI_TEMPLE</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_MAHABODHITEMPLE</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_ORACLE</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_ORACLE</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_ORACLE</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_PETRA</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_PETRA</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_PETRA</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_PYRAMIDS</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_PYRAMIDS</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_PYRAMIDS</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_STONEHENGE</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_STONEHENGE</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_STONEHENGE</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_TERRACOTTA</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_TERRACOTTA_ARMY</Value>
-		</Row>
-		<Row>
-			<ModifierId>MONUMENT_TO_THE_GODS_TERRACOTTA</ModifierId>
-			<Name>Amount</Name>
-			<Value>15</Value>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER_MODIFIER</ModifierId>
+			<Name>EndEra</Name>
+			<Value>ERA_CLASSICAL</Value>
 		</Row>
 		<Row>
 			<ModifierId>DIVINE_SPARK_HOLY_SITE</ModifierId>
@@ -1959,37 +1828,7 @@
 			<ModifierId>RIVER_GODDESS_HOLY_SITE_AMENITY</ModifierId>
 		</Row>
 		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSEUM</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_COLOSSUS</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIBRARY</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_GREATLIGHTHOUSE</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_HANGINGGARDENS</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_MAHABODHITEMPLE</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_ORACLE</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_PETRA</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_PYRAMIDS</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_STONEHENGE</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_MONUMENT_TO_THE_GODS">
-			<ModifierId>MONUMENT_TO_THE_GODS_TERRACOTTA</ModifierId>
+			<ModifierId>MONUMENT_TO_THE_GODS_ANCIENTCLASSICALWONDER</ModifierId>
 		</Row>
 		<Row BeliefType="BELIEF_DIVINE_SPARK">
 			<ModifierId>DIVINE_SPARK_HOLY_SITE</ModifierId>

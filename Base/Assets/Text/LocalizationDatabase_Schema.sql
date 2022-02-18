@@ -2,7 +2,8 @@
 CREATE TABLE Languages(	'Locale' TEXT NOT NULL UNIQUE,
 						'Name' TEXT NOT NULL,
                         'Collator' TEXT,
-						'PluralRule' INTEGER DEFAULT 1);
+						'PluralRule' INTEGER DEFAULT 1,
+						'SupportsSmallCaps' BOOLEAN NOT NULL DEFAULT 1);
 						
 CREATE TABLE AudioLanguages('AudioLanguage' TEXT NOT NULL,
 							'Locale' TEXT NOT NULL,
@@ -36,6 +37,7 @@ CREATE TABLE LocalizedText(	'Language' TEXT NOT NULL,
 							
 CREATE TABLE FontStyleSheets('Language' TEXT NOT NULL,
 							'StyleSheet' TEXT NOT NULL,
+							'StyleOverride' TEXT,
 							'DefaultFont' TEXT NOT NULL,
 							PRIMARY KEY (Language));
 							

@@ -38,12 +38,24 @@
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DESTROYED_ENEMY">
 			<Text>Your {1_UnitName} ({2_Num} damage) destroyed an enemy {3_UnitName}!</Text>
 		</Row>
+    <Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_ANTI_AIR">
+      <Text>Your attacking {1_UnitName} died from enemy {2_EnUName}!</Text>
+    </Row>
+    <Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_INTERCEPTED">
+      <Text>Your attacking {1_UnitName} died from enemy {2_EnUName} ({3_Num} damage) intercept!</Text>
+    </Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING">
 			<Text>Your {1_UnitName} died attacking an enemy {2_EnUName} ({3_Num} damage)!</Text>
 		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_ATTACKING_CITY">
 			<Text>Your {1_UnitName} died attacking the enemy City of {2_EnUName} ({3_Num} damage)!</Text>
 		</Row>
+    <Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW_ANTI_AIR">
+      <Text>Your attacking {2_UnitName} ({3_Num} damage) was damaged by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName}!</Text>
+    </Row>
+    <Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW_INTERCEPTED">
+      <Text>Your attacking {2_UnitName} ({3_Num} damage) was intercepted by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName} ({6_Num} damage)!</Text>
+    </Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_WITHDREW">
 			<Text>Your {1_UnitName} ({2_Num} damage) attacked an enemy {3_EnUName} ({4_Num} damage)!</Text>
 		</Row>
@@ -56,6 +68,12 @@
 		<Row Tag="LOC_COMBAT_ENEMY_UNIT_WITHDREW">
 			<Text>Your {1_UnitName} ({2_Num} damage) was attacked by an enemy {3_EnUName} ({4_Num} damage)!</Text>
 		</Row>
+    <Row Tag="LOC_COMBAT_ENEMY_UNIT_WITHDREW_INTERCEPTING">
+      <Text>Your {1_UnitName} ({2_Num} damage) intercepted an enemy {3_EnUName} ({4_Num} damage)!</Text>
+    </Row>
+    <Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_INTERCEPTING">
+      <Text>While intercepting, your {2_UnitName} was destroyed by {LOC_GRAMMAR_A_AN &lt;&lt; {4_EnemyAdjective}} {5_EnemyUnitName} ({6_Num} damage)!</Text>
+    </Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_DIED_DEFENDING">
 			<Text>While defending, your {2_UnitName} was destroyed by {LOC_GRAMMAR_A_AN &lt;&lt; {3_EnemyAdjective}} {4_EnemyUnitName} ({5_Num} damage)!</Text>
 		</Row>
@@ -68,24 +86,27 @@
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_WAS_STRAFED_BY_ENEMY">
 			<Text>Your {1_UnitName} was strafed by an enemy {2_EnUName} taking {3_Num} damage!</Text>
 		</Row>
+    <Row Tag="LOC_COMBAT_YOUR_UNIT_DAMAGED_ENEMY">
+      <Text>Your {1_UnitName} damaged an enemy {2_EnUName}({3_Num} damage)!</Text>
+    </Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_BOMBARDED_ENEMY">
 			<Text>Your {1_UnitName} bombarded an enemy {2_EnUName} causing {3_Num} damage!</Text>
 		</Row>
 		<Row Tag="LOC_COMBAT_YOUR_UNIT_WAS_BOMBARDED_BY_ENEMY">
 			<Text>Your {1_UnitName} was bombarded by an enemy {2_EnUName} taking {3_Num} damage!</Text>
 		</Row>
-		<Row Tag="LOC_COMBAT_YOUR_WMD_SURVIVED_INTERCEPT">
-			<Text>Your {1_UnitName} survived a WMD intercept, taking {2_Num} damage from {LOC_GRAMMAR_A_AN &lt;&lt; {3_EnemyAdjective}} {4_EnemyUnitName} and dealing {5_Num} damage!</Text>
-		</Row>
-		<Row Tag="LOC_COMBAT_YOUR_WMD_INTERCEPT_FAILED">
-			<Text>Your {1_UnitName} failed to intercept a WMD attack by dealing {2_Num} damage to {LOC_GRAMMAR_A_AN &lt;&lt; {3_EnemyAdjective}} {4_EnemyUnitName} and taking {5_Num} damage!</Text>
-		</Row>
-		<Row Tag="LOC_COMBAT_YOUR_WMD_FAILED_DUE_TO_INTERCEPT">
-			<Text>Your {1_UnitName} failed to deploy a WMD. It was intercepted, taking {2_Num} damage from {LOC_GRAMMAR_A_AN &lt;&lt; {3_EnemyAdjective}} {4_EnemyUnitName} and dealing {5_Num} damage!</Text>
-		</Row>
-		<Row Tag="LOC_COMBAT_YOUR_WMD_INTERCEPT_SUCCEEDED">
-			<Text>Your {1_UnitName} intercepted a WMD attack by dealing {2_Num} damage to {LOC_GRAMMAR_A_AN &lt;&lt; {3_EnemyAdjective}} {4_EnemyUnitName} and taking {5_Num} damage!</Text>
-		</Row>
+    <Row Tag="LOC_COMBAT_YOUR_WMD_SUCCEEDED">
+      <Text>Your {1_UnitName} WMD attack succeeded!</Text>
+    </Row>
+    <Row Tag="LOC_COMBAT_YOUR_WMD_FAILED_HIGH_DAMAGE">
+      <Text>Your {1_UnitName} WMD attack failed because of high damage.</Text>
+    </Row>
+    <Row Tag="LOC_COMBAT_ENEMY_WMD_SUCCEEDED">
+      <Text>You failed to stop {LOC_GRAMMAR_A_AN &lt;&lt; {1_EnemyAdjective}} {2_EnemyUnitName} WMD attack!</Text>
+    </Row>
+    <Row Tag="LOC_COMBAT_ENEMY_WMD_FAILED_HIGH_DAMAGE">
+      <Text>You successfully stopped {LOC_GRAMMAR_A_AN &lt;&lt; {1_EnemyAdjective}} {2_EnemyUnitName} WMD attack by causing {3_Num} damage!</Text>
+    </Row>
 		<Row Tag="LOC_MISC_YOUR_UNIT_DIED_BY_UNKNOWN">
 			<Text>While defending, your {1_UnitName} was destroyed by a disguised {2_EnUName} ({3_Num} damage)!</Text>
 		</Row>
@@ -181,7 +202,7 @@
 			<Text>Liberating a city will return it to one of their previous owners, possibly bringing that civilization back into the game.[NEWLINE][NEWLINE]{1_WarmongerInfo}</Text>
 		</Row>
 		<Row Tag="LOC_RAZE_CITY_LIBERATE_WARMONGER_EXPLANATION">
-			<Text>Liberating a city provides a [COLOR_GREEN]SEVERE REDUCTION[ENDCOLOR] to previously earned warmonger penalties.</Text>
+			<Text>Liberating a city provides a [COLOR_MEDIUM_GREEN]SEVERE REDUCTION[ENDCOLOR] to previously earned warmonger penalties.</Text>
 		</Row>
 		<Row Tag="LOC_RAZE_CITY_KEEP_EXPLANATION">
 			<Text>Keep this city in your empire for now.  It will be a less productive, occupied city until its post-war ownership is discussed at the peace table.[NEWLINE][NEWLINE]{1_WarmongerInfo}</Text>

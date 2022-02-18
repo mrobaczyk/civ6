@@ -84,6 +84,7 @@
 		<Row ListType="PeacekeeperWarLimits"/>
 		<Row ListType="ScienceLoverSciencePreference"/>
 		<Row ListType="StandardSettlePlot"/>
+    <Row ListType="StandingArmyPseudoYields"/>
 		<Row ListType="SettleAllContinents"/>
 		<Row ListType="WithShieldDiplomacy"/>
 		<Row ListType="WonderObsessedWonders"/>
@@ -118,6 +119,7 @@
 		<Row ListType="PeacekeeperWarLimits" AgendaType="TRAIT_AGENDA_PEACEKEEPER" System="DiplomaticActions"/>
 		<Row ListType="ScienceLoverSciencePreference" AgendaType="TRAIT_AGENDA_PREFER_SCIENCE" System="Yields"/>
 		<Row ListType="StandardSettlePlot" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="PlotEvaluations"/>
+		<Row ListType="StandingArmyPseudoYields" AgendaType="TRAIT_AGENDA_PREFER_STANDING_ARMY" System="PseudoYields"/>
 		<Row ListType="SettleAllContinents" AgendaType="TRAIT_AGENDA_SUN_NEVER_SETS" System="PlotEvaluations"/>
 		<Row ListType="WithShieldDiplomacy" AgendaType="TRAIT_AGENDA_WITH_SHIELD" System="DiplomaticActions"/>
 		<Row ListType="WonderObsessedWonders" AgendaType="TRAIT_AGENDA_WONDER_OBSESSED" System="PseudoYields"/>
@@ -165,21 +167,23 @@
 		<Row ListType="ExploitationLoverExploitationPreference" Item="PSEUDOYIELD_IMPROVEMENT" Value="5"/>
 		<Row ListType="EnvironmentLoverEnvironmentPreference" Item="PSEUDOYIELD_ENVIRONMENT" Value="5"/>
 		<Row ListType="ExplorationObsessedExplorers" Item="PSEUDOYIELD_UNIT_EXPLORER" Value="50"/>
-		<Row ListType="StandardSettlePlot" Item="Total Yield" Value="1" StringVal="YIELD_PRODUCTION"/>
-		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Value="1" StringVal="YIELD_FOOD"/>
-		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Value="1" StringVal="YIELD_PRODUCTION"/>
+		<Row ListType="StandardSettlePlot" Item="Total Yield" favored="false" Value="1" StringVal="YIELD_PRODUCTION"/>
+		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" favored="false" Value="1" StringVal="YIELD_FOOD"/>
+		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" favored="false" Value="1" StringVal="YIELD_PRODUCTION"/>
 		<Row ListType="StandardSettlePlot" Item="Fresh Water" favored="false" Value="13"/>
 		<Row ListType="StandardSettlePlot" Item="New Resources" favored="false" Value="4"/>
 		<Row ListType="StandardSettlePlot" Item="Coastal" favored="false" Value="8"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Resource" Value="3" StringVal="RESOURCE_HORSES"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Resource" Value="5" StringVal="RESOURCE_IRON"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Resource" Value="2" StringVal="RESOURCE_NITER"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Resource" favored="false" Value="3" StringVal="RESOURCE_HORSES"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Resource" favored="false" Value="5" StringVal="RESOURCE_IRON"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Resource" favored="false" Value="2" StringVal="RESOURCE_NITER"/>
 		<Row ListType="StandardSettlePlot" Item="Resource Class" Favored="false" Value="2" StringVal="RESOURCECLASS_LUXURY"/>
 		<Row ListType="StandardSettlePlot" Item="Resource Class" Favored="false" Value="2" StringVal="RESOURCECLASS_STRATEGIC"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Feature" Value="-3" StringVal="FEATURE_ICE"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Feature" Value="2" StringVal="FEATURE_DEAD_SEA"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Feature" favored="false" Value="-3" StringVal="FEATURE_ICE"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Feature" favored="false" Value="2" StringVal="FEATURE_DEAD_SEA"/>
 		<Row ListType="StandardSettlePlot" Item="Foreign Continent" Favored="true" Value="-2"/>
 		<Row ListType="StandardSettlePlot" Item="Nearest Friendly City" favored="false" Value="-10"/>
+    <Row ListType="StandingArmyPseudoYields" Item="PSEUDOYIELD_STANDING_ARMY_NUMBER" Value="33"/>
+    <Row ListType="StandingArmyPseudoYields" Item="PSEUDOYIELD_STANDING_ARMY_VALUE" Value="50"/>
 		<Row ListType="SettleAllContinents" Item="Foreign Continent" Favored="true" Value="120"/>
 		<Row ListType="WithShieldDiplomacy" Item="DIPLOACTION_MAKE_PEACE" Favored="false"/>
 		<Row ListType="WonderObsessedWonders" Item="PSEUDOYIELD_WONDER" Value="25"/>
@@ -283,8 +287,9 @@
 		<Row AgendaType="AGENDA_WONDER_ADVOCATE"/>
 	</RandomAgendas>
 	<AgendaPreferredLeaders>
-		<Row AgendaType="AGENDA_NUKE_LOVER" LeaderType="LEADER_GANDHI"/>
-		<Row AgendaType="AGENDA_ENVIRONMENTALIST" LeaderType="LEADER_T_ROOSEVELT"/>
+		<Row AgendaType="AGENDA_NUKE_LOVER" LeaderType="LEADER_GANDHI" PercentageChance="70"/>
+		<Row AgendaType="AGENDA_POPULOUS" LeaderType="LEADER_GANDHI" PercentageChance="20"/>
+		<Row AgendaType="AGENDA_ENVIRONMENTALIST" LeaderType="LEADER_T_ROOSEVELT" PercentageChance="33"/>
 	</AgendaPreferredLeaders>
 	<ExclusiveAgendas>
 		<Row AgendaOne="AGENDA_DELIAN_LEAGUE" AgendaTwo="AGENDA_CITY_STATE_ALLY"/>
@@ -1325,6 +1330,11 @@
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_MODIFIER_WITH_SHIELD_OR_ON_IT</ModifierId>
+			<Name>ReductionValue</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MODIFIER_WITH_SHIELD_OR_ON_IT</ModifierId>
 			<Name>ReductionTurns</Name>
 			<Value>2</Value>
 		</Row>
@@ -1747,11 +1757,6 @@
 			<ModifierId>AGENDA_CLEARS_BARBARIAN_CAMPS</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>6</Value>
-		</Row>
-		<Row>
-			<ModifierId>AGENDA_CLEARS_BARBARIAN_CAMPS</ModifierId>
-			<Name>Accumulates</Name>
-			<Value>true</Value>
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_CLEARS_BARBARIAN_CAMPS</ModifierId>
@@ -3019,6 +3024,10 @@
 		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_HAS_HIGH_AIRPOWER</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_HIGH_AIRPOWER</RequirementSetId>
 			<RequirementId>REQUIRES_HAS_HIGH_AIRPOWER</RequirementId>
 		</Row>
 		<Row>
@@ -3029,7 +3038,11 @@
 			<RequirementSetId>PLAYER_HAS_LOW_AIRPOWER</RequirementSetId>
 			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementSetId>PLAYER_HAS_LOW_AIRPOWER</RequirementSetId>
+      <RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+    </Row>
+    <Row>
 			<RequirementSetId>PLAYER_HAS_LOW_AIRPOWER</RequirementSetId>
 			<RequirementId>REQUIRES_HAS_LOW_AIRPOWER</RequirementId>
 		</Row>
@@ -3447,6 +3460,10 @@
 			<RequirementType>REQUIREMENT_PLAYER_MILITARY_STRENGTH_LEAD</RequirementType>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_TECHNOLOGY</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_HIGH_NUKE_LOVE</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_NUKE_LOVER</RequirementType>
 		</Row>
@@ -3485,9 +3502,7 @@
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_NOT_WARMONGER_SUBJECT</RequirementId>
-			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
-			<Triggered>true</Triggered>
-			<Inverse>true</Inverse>
+			<RequirementType>REQUIREMENT_PLAYER_IS_NOT_WARMONGER</RequirementType>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_SAME_RELIGION</RequirementId>
@@ -3708,7 +3723,7 @@
 			<Value>1</Value>
 		</Row>
 		<Row>
-			<RequirementId>REQUIRES_CLEARS_BARBARIAN_CAMPS</RequirementId>
+			<RequirementId>REQUIRES_IGNORES_BARBARIAN_CAMPS</RequirementId>
 			<Name>BelowThreshold</Name>
 			<Value>true</Value>
 		</Row>
@@ -3922,7 +3937,12 @@
 			<Name>DomainType</Name>
 			<Value>DOMAIN_AIR</Value>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+      <Name>TechnologyType</Name>
+      <Value>TECH_FLIGHT</Value>
+    </Row>
+    <Row>
 			<RequirementId>REQUIRES_HIGH_NUKE_LOVE</RequirementId>
 			<Name>UsedNukeValue</Name>
 			<Value>1</Value>
@@ -3991,11 +4011,6 @@
 			<RequirementId>REQUIRES_COMPETING_MINORS</RequirementId>
 			<Name>PercentCompeting</Name>
 			<Value>50</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_NOT_WARMONGER_SUBJECT</RequirementId>
-			<Name>RequirementSetId</Name>
-			<Value>WARMONGER_TRIGGERS</Value>
 		</Row>
 	</RequirementArguments>
 </GameInfo>

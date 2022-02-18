@@ -41,14 +41,14 @@
 		-->
 		<Row Era="ERA_ANCIENT" Unit="UNIT_SETTLER"/>
 		<Row Era="ERA_ANCIENT" Unit="UNIT_WARRIOR" NotStartTile="true"/>
-		<Row Era="ERA_ANCIENT" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_ANCIENT" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_ANCIENT" Unit="UNIT_WARRIOR" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_ANCIENT" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_CLASSICAL" Unit="UNIT_SETTLER"/>
 		<Row Era="ERA_CLASSICAL" Unit="UNIT_BUILDER"/>
 		<Row Era="ERA_CLASSICAL" Unit="UNIT_SCOUT" NotStartTile="true"/>
 		<Row Era="ERA_CLASSICAL" Unit="UNIT_SPEARMAN"/>
-		<Row Era="ERA_CLASSICAL" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_CLASSICAL" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_CLASSICAL" Unit="UNIT_SPEARMAN" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_CLASSICAL" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_MEDIEVAL" Unit="UNIT_SETTLER" Quantity="2"/>
@@ -57,7 +57,7 @@
 		<Row Era="ERA_MEDIEVAL" Unit="UNIT_SCOUT" NotStartTile="true"/>
 		<Row Era="ERA_MEDIEVAL" Unit="UNIT_SPEARMAN" OnDistrictCreated="true"/>
 		<Row Era="ERA_MEDIEVAL" Unit="UNIT_ARCHER"/>
-		<Row Era="ERA_MEDIEVAL" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_MEDIEVAL" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_MEDIEVAL" Unit="UNIT_SPEARMAN" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_MEDIEVAL" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_SETTLER" Quantity="2"/>
@@ -66,7 +66,7 @@
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_SCOUT" Quantity="2" NotStartTile="true"/>
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_PIKEMAN" Quantity="2" OnDistrictCreated="true"/>
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_CROSSBOWMAN"/>
-		<Row Era="ERA_RENAISSANCE" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_RENAISSANCE" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_PIKEMAN" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_SETTLER" Quantity="2"/>
@@ -75,7 +75,7 @@
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_PIKEMAN" Quantity="2" OnDistrictCreated="true"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_SCOUT" Quantity="2" NotStartTile="true"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_CROSSBOWMAN" Quantity="2"/>
-		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_PIKEMAN" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_SETTLER" Quantity="3"/>
@@ -84,7 +84,7 @@
 		<Row Era="ERA_MODERN" Unit="UNIT_RANGER" Quantity="3" NotStartTile="true"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_PIKEMAN" Quantity="3" OnDistrictCreated="true"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_FIELD_CANNON" Quantity="2"/>
-		<Row Era="ERA_MODERN" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_MODERN" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_RANGER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_SETTLER" Quantity="3"/>
@@ -93,7 +93,7 @@
 		<Row Era="ERA_ATOMIC" Unit="UNIT_RANGER" Quantity="3" NotStartTile="true"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_INFANTRY" Quantity="3" OnDistrictCreated="true"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_FIELD_CANNON" Quantity="3"/>
-		<Row Era="ERA_ATOMIC" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_ATOMIC" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_INFANTRY" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_SETTLER" Quantity="4"/>
@@ -102,7 +102,7 @@
 		<Row Era="ERA_INFORMATION" Unit="UNIT_RANGER" Quantity="3" NotStartTile="true"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_INFANTRY" Quantity="4" OnDistrictCreated="true"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_MACHINE_GUN" Quantity="3"/>
-		<Row Era="ERA_INFORMATION" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5"/>
+		<Row Era="ERA_INFORMATION" Unit="UNIT_SETTLER" AiOnly="true" MinDifficulty="DIFFICULTY_EMPEROR" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_INFANTRY" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="1" NotStartTile="true"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_BUILDER" AiOnly="true" MinDifficulty="DIFFICULTY_KING" DifficultyDelta="0.5" OnDistrictCreated="true"/>
 	</MajorStartingUnits>

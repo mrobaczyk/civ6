@@ -387,7 +387,7 @@
 			<Text>Allows spending [ICON_Faith] Faith to train Warrior Monks, medieval land combat units with a unique promotion tree. May only be purchased in a city with a Temple in its Holy Site.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_WORK_ETHIC_DESCRIPTION">
-			<Text>+1% [ICON_Production] Production for each follower.</Text>
+			<Text>+1% [ICON_Production] Production for each citizen following this religion in the city.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_ZEN_MEDITATION_DESCRIPTION">
 			<Text>+1 [ICON_Amenities] Amenity in cities with 2 specialty districts.</Text>
@@ -406,10 +406,10 @@
 			<Text>Type bonuses from city-states following your Religion are 50% more powerful.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_PILGRIMAGE_DESCRIPTION">
-			<Text>+2 [ICON_Faith] Faith for every city following this Religion in other civilizations and city-states.</Text>
+			<Text>+2 [ICON_Faith] Faith for every city following this Religion in other civilizations and City-States.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_RELIGIOUS_UNITY_DESCRIPTION">
-			<Text>+1 [ICON_Envoy] Envoy at each city-state when it first adopts this religion, in addition to any envoy from a city-state quest.</Text>
+			<Text>+1 [ICON_Envoy] Envoy at each City-State when it first adopts this Religion, in addition to any envoy from a City-State quest.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_STEWARDSHIP_DESCRIPTION">
 			<Text>Each Campus or Commercial Hub district in a city following this Religion provides +1 [ICON_Science] Science or +1 [ICON_Gold] Gold respectively.</Text>
@@ -443,7 +443,7 @@
 			<Text>Your Religion's pressure never drops due to losses in Theological Combat.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_RELIGIOUS_COLONIZATION_DESCRIPTION">
-			<Text>Cities start with this religion in place if founded by a player who has this as their majority religion.</Text>
+			<Text>Cities start with this Religion in place if founded by a player who has this as their majority Religion.</Text>
 		</Row>
 		<Row Tag="LOC_BELIEF_SCRIPTURE_DESCRIPTION">
 			<Text>Religious spread from adjacent city pressure is 25% stronger. Boosted to 50% once Printing is researched.</Text>
@@ -455,5 +455,20 @@
 		<Row Tag="LOC_PROMOTION_JUST_WAR_DESCRIPTION">
 			<Text>+{1_Value} Crusade Belief</Text>
 		</Row>
+    <Row Tag="LOC_CITY_BANNER_INCOMING_RELIGION_PRESSURE">
+      <Text>Incoming pressure per turn</Text>
+    </Row>
+    <Row Tag="LOC_CITY_BANNER_OUTGOING_RELIGION_PRESSURE">
+      <Text>Outgoing pressure per turn</Text>
+    </Row>
+    <Row Tag="LOC_CITY_BANNER_PREDOMINANT_RELIGION">
+      <Text>{1_ReligionName} (Predominant)</Text>
+    </Row>
+    <Row Tag="LOC_CITY_BANNER_FOLLOWER_PRESSURE_TOOLTIP_HEADER">
+      <Text>Followers / Total Pressure Received:</Text>
+    </Row>
+    <Row Tag="LOC_CITY_BANNER_FOLLOWER_PRESSURE_TOOLTIP">
+      <Text>{1_ReligionName}:[NEWLINE]{2_Followers} Followers, {3_TotalPressure} pressure</Text>
+    </Row>
 	</BaseGameText>
 </GameData>

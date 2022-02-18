@@ -281,9 +281,6 @@
 		<Row Tag="LOC_GAME_MENU_QUIT_WARNING">
 			<Text>Are you sure you wish to quit your game?</Text>
 		</Row>
-		<Row Tag="LOC_GAME_MENU_END_GAME_WARNING">
-			<Text>Are you sure you wish to delete this multiplayer game? This will end this game for all players.</Text>
-		</Row>
 		<Row Tag="LOC_GAME_MENU_SHUTDOWN_WARNING">
 			<Text>Are you sure you wish to shutdown Sid Meier's Civilization VI?</Text>
 		</Row>
@@ -573,7 +570,7 @@
 			<Text>No Water</Text>
 		</Row>
 		<Row Tag="LOC_HUD_UNIT_PANEL_TOOLTIP_TOO_CLOSE_TO_CITY">
-			<Text>Too Close to City</Text>
+			<Text>Too Close to City or Blocked by Terrain</Text>
 		</Row>
 		<Row Tag="LOC_HUD_UNIT_PANEL_OUTCOME_STALEMATE">
 			<Text>Stalemate</Text>
@@ -918,6 +915,9 @@
 		<Row Tag="LOC_CITY_BANNER_THERMONUCLEAR_STRIKE_CAPABLE">
 			<Text>Thermonuclear Strike Capable</Text>
 		</Row>
+    <Row Tag="LOC_CITY_BANNER_STAGNATE">
+      <Text>"City population stagnate."</Text>
+    </Row>
 		<Row Tag="LOC_CITY_BANNER_TURNS_STARVATION">
 			<Text>{1_Turns : plural 1?{1_Turns} turn; other?{1_Turns} turns;} until starvation.</Text>
 		</Row>
@@ -1241,7 +1241,7 @@
 			<Text>Religion</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_RELIGION_NO_CITIZENS">
-			<Text>There are no religious citizens in your city at this time.</Text>
+			<Text>There are no Religious Citizens in your city at this time.</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_RELIGIOUS_CITIZENS">
 			<Text>Religious Citizens</Text>
@@ -1397,6 +1397,9 @@
 		<Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_BUILDING">
 			<Text>This building requires {LOC_GRAMMAR_A_AN &lt;&lt; {1_Building}} building.</Text>
 		</Row>
+    <Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_THREE_BUILDINGS">
+      <Text>This building requires {LOC_GRAMMAR_A_AN &lt;&lt; {1_Building}}, {2_BuildingTheSecond}, or {3_BuildingTheThird} building.</Text>
+    </Row>
 		<Row Tag="LOC_BUILDING_CONSTRUCT_IS_OCCUPIED">
 			<Text>The district is occupied by an enemy.</Text>
 		</Row>
@@ -1987,7 +1990,7 @@
 			<Text>[COLOR_Civ6Green]None[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_WARMONGER_LEVEL_LIGHT">
-			<Text>Light</Text>
+			<Text>[COLOR_White]Light[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_WARMONGER_LEVEL_MODERATE">
 			<Text>[COLOR_Civ6Yellow]Moderate[ENDCOLOR]</Text>
@@ -2171,6 +2174,9 @@
 		</Row>
 		<Row Tag="LOC_CIVICS_KEY_DISTRICT">
 			<Text>District</Text>
+		</Row>
+		<Row Tag="LOC_CIVICS_KEY_UNLOCK">
+			<Text>Special Unlock</Text>
 		</Row>
 		<Row Tag="LOC_CIVICS_KEY_WONDER">
 			<Text>Wonder</Text>
@@ -3020,7 +3026,7 @@
 			<Text>Decided to not make a diplomatic promise to them</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ONE_SIDED_TRADES">
-			<Text>Favorable trades to them</Text>
+			<Text>Favorable trade deals to them</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_RANDOM">
 			<Text>First impressions of you</Text>
@@ -3029,7 +3035,7 @@
 			<Text>Settled near them</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_TRADE_RELATIONS">
-			<Text>Good trade relations</Text>
+			<Text>Trade routes between our nations</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_WARMONGER">
 			<Text>Your warmongering</Text>
@@ -3586,7 +3592,7 @@
       <Text>You must have a Temple in a Holy Site district to purchase Gurus.</Text>
     </Row>
     <Row Tag="LOC_UI_RELIGION_APOSTLE_TT">
-			<Text>Apostles may convert [ICON_Citizen] Citizens to their Religion and initiate theological combat with units of other Religions.</Text>
+			<Text>Apostles may convert [ICON_Citizen] Citizens to their Religion and initiate theological combat with units of other Religions. Once per game may Launch Inquisition to allow the purchase of Inquisitors. Once per game may Evangelize Belief to add an additional Belief to their Religion. These uses consume the Apostle.</Text>
 		</Row>
 		<Row Tag="LOC_UI_RELIGION_MISSIONARY_TT">
 			<Text>Missionaries may convert [ICON_Citizen] Citizens to their Religion. May not initiate theological combat with units of other Religions (but can defend).</Text>
@@ -4062,7 +4068,7 @@
 			<Text>Levy Military</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_LEVY_MILITARY_DETAILS">
-			<Text>The Suzerain of this city-state can pay {1_GoldCost} [ICON_Gold] Gold to take temporary control of all its current military units. They will return to the city-state after {2_TurnLimit} [ICON_Turn] Turns, or if the Suzerain changes.</Text>
+			<Text>The Suzerain of this city-state can pay {1_GoldCost} [ICON_Gold] Gold to take temporary control of all its current military units. The units will not be able to move on the turn they are levied, but will take orders from the Suzerain on the following turn. They will return to the city-state after {2_TurnLimit} [ICON_Turn] Turns, or if the Suzerain changes.</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_MILITARY_ALREADY_LEVIED">
 			<Text>You have already levied the military of this city-state.</Text>
@@ -4183,7 +4189,7 @@
 			<Text>{1_CityStateName} Unique Bonus:</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS">
-			<Text>Suzerain Diplomacy Bonus:[NEWLINE][ICON_Bolt]The city-state follows you into war and peace with other players.[NEWLINE][ICON_Bolt]City-state lands become friendly territory. You units can move there, heal there, and upgrade there.[NEWLINE][ICON_Bolt]Your Builder units may improve city-state tiles.[NEWLINE][ICON_Bolt]See 3 tiles around the city-state.[NEWLINE][ICON_Bolt]Can pay [ICON_Gold] Gold to temporarily take control of the city-state's military.[NEWLINE][ICON_Bolt]Gain ownership of all the city-state's resources.</Text>
+			<Text>Suzerain Diplomacy Bonus:[NEWLINE][ICON_Bolt]The city-state follows you into war and peace with other players.[NEWLINE][ICON_Bolt]City-state lands become friendly territory. Your units can move there, heal there, and upgrade there.[NEWLINE][ICON_Bolt]Your Builder units may improve city-state tiles.[NEWLINE][ICON_Bolt]See 3 tiles around the city-state.[NEWLINE][ICON_Bolt]Can pay [ICON_Gold] Gold to temporarily take control of the city-state's military.[NEWLINE][ICON_Bolt]Gain ownership of all the city-state's resources.</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_SUZERAIN_NO_RESOURCES_AVAILABLE">
 			<Text>(None currently available)</Text>
@@ -4463,7 +4469,7 @@
 			<Text>PROVIDING:</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_THEMED_BONUS">
-			<Text>[ICON_ThemeBonus_Active][COLOR:ResCultureLabelCS]THEMED[ENDCOLOR]</Text>
+			<Text>[ICON_ThemeBonus_Active][COLOR:72,39,111,255]THEMED[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_THEME_BONUS_PROGRESS">
 			<Text>[ICON_ThemeBonus]Theming({1_current}/{2_total})</Text>
@@ -4523,7 +4529,7 @@
 			<Text>{1_type} matching the theme for this Museum. Add one more work of this type to receive the theming bonus.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_ART_THEME_DUPLICATE_ARTIST">
-			<Text>{1_type} matches the theme, but this Museum already has a Great Work from this artist. Add Great Works of the same theme, but from unique artists to receive the bonus.</Text>
+			<Text>This Museum already has a Great Work from this artist. Add Great Works of the same theme, but from unique artists to receive the bonus.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_ART_MATCHED_THEME">
 			<Text>[COLOR:ResCultureLabelCS]{1_building} is now themed. [ICON_Culture] Culture and [ICON_Tourism] Tourism are doubled.[ENDCOLOR]</Text>
@@ -5082,6 +5088,9 @@
 			<Text>{1_Turns : plural 1? turn; other? turns;}</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_VIEW_REPORTS">
+			<Text>[ICON_Reports]</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_VIEW_REPORTS_TT">
 			<Text>Reports</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_WORKED_LAND">
@@ -5451,7 +5460,7 @@
 			<Text>{1_TourismInfo}Holy City for the religion of {2_ReligionName} provides +{3_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_TOURISM_LENS_GREAT_PEOPLE_LINE_TOOLTIP">
-			<Text>{1_TourismInfo}Tourism added by Walls or Great People: +{2_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
+			<Text>{1_TourismInfo}Tourism added by buildings or Great People: +{2_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_TOURISM_LENS_GREAT_WORK_LINE_TOOLTIP">
 			<Text>{1_TourismInfo}Tourism from Great Works in {2_BuildingName}, +{3_GreatWorkTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>

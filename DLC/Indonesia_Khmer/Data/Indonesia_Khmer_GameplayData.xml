@@ -117,6 +117,45 @@
 			<ModifierId>AGENDA_ARCHIPELAGIC_STATE</ModifierId>
 		</Row>
 	</TraitModifiers>
+	<AiListTypes>
+		<Row ListType="GitarjaCivics"/>
+		<Row ListType="GitarjaTechs"/>
+		<Row ListType="GitarjaWonders"/>
+		<Row ListType="JayavarmanCivics"/>
+		<Row ListType="JayavarmanTechs"/>
+		<Row ListType="JayavarmanUnitBuilds"/>
+		<Row ListType="JayavarmanWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="GitarjaCivics" LeaderType="TRAIT_LEADER_EXALTED_GODDESS" System="Civics"/>
+		<Row ListType="GitarjaTechs" LeaderType="TRAIT_LEADER_EXALTED_GODDESS" System="Technologies"/>
+		<Row ListType="GitarjaWonders" LeaderType="TRAIT_LEADER_EXALTED_GODDESS" System="Buildings"/>
+		<Row ListType="JayavarmanCivics" LeaderType="TRAIT_LEADER_MONASTERIES_KING" System="Civics"/>
+		<Row ListType="JayavarmanTechs" LeaderType="TRAIT_LEADER_MONASTERIES_KING" System="Technologies"/>
+		<Row ListType="JayavarmanUnitBuilds" LeaderType="TRAIT_LEADER_MONASTERIES_KING" System="Units"/>
+		<Row ListType="JayavarmanWonders" LeaderType="TRAIT_LEADER_MONASTERIES_KING" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="GitarjaCivics" Item="CIVIC_MERCENARIES" Favored="true"/>
+		<Row ListType="GitarjaCivics" Item="CIVIC_CIVIL_ENGINEERING" Favored="true"/>
+		<Row ListType="GitarjaTechs" Item="TECH_SAILING" Favored="true"/>
+		<Row ListType="GitarjaTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
+		<Row ListType="GitarjaTechs" Item="TECH_FLIGHT" Favored="true"/>
+		<Row ListType="GitarjaTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
+		<Row ListType="GitarjaTechs" Item="TECH_ELECTRICITY" Favored="true"/>
+		<Row ListType="GitarjaTechs" Item="TECH_MASS_PRODUCTION" Favored="true"/>
+		<Row ListType="GitarjaWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
+		<Row ListType="JayavarmanCivics" Item="CIVIC_THEOLOGY" Favored="true"/>
+		<Row ListType="JayavarmanCivics" Item="CIVIC_FEUDALISM" Favored="true"/>
+		<Row ListType="JayavarmanTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="JayavarmanTechs" Item="TECH_ENGINEERING" Favored="true"/>
+		<Row ListType="JayavarmanTechs" Item="TECH_MILITARY_ENGINEERING" Favored="true"/>
+		<Row ListType="JayavarmanTechs" Item="TECH_REPLACEABLE_PARTS" Favored="true"/>
+		<Row ListType="JayavarmanUnitBuilds" Item="UNIT_MISSIONARY" Value="1"/>
+		<Row ListType="JayavarmanWonders" Item="BUILDING_CRISTO_REDENTOR" Favored="true"/>
+		<Row ListType="JayavarmanWonders" Item="BUILDING_ANGKOR_WAT" Favored="true"/>
+		<Row ListType="JayavarmanWonders" Item="BUILDING_HAGIA_SOPHIA" Favored="true"/>
+	</AiFavoredItems>
 	<Tags>
 		<Row Tag="CLASS_JONG" Vocabulary="ABILITY_CLASS"/>
 	</Tags>
@@ -125,7 +164,8 @@
 		<Row Type="ABILITY_MARTYR" Tag="CLASS_MISSIONARY"/>
 		<Row Type="UNIT_INDONESIAN_JONG" Tag="CLASS_NAVAL_RANGED"/>
 		<Row Type="UNIT_INDONESIAN_JONG" Tag="CLASS_JONG"/>
-		<Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_RANGED"/>
+    <Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_SIEGE"/>
+    <Row Type="UNIT_KHMER_DOMREY" Tag="CLASS_FORWARD_OBSERVER"/>
 	</TypeTags>
 	<BuildingReplaces>
 		<Row CivUniqueBuildingType="BUILDING_PRASAT" ReplacesBuildingType="BUILDING_TEMPLE"/>
@@ -259,11 +299,11 @@
 	<Colors>
 		<Row>
 			<Type>COLOR_PLAYER_INDONESIA_PRIMARY</Type>
-			<Color>15,0,117,255</Color>
+			<Color>0,192,162,255</Color>
 		</Row>
 		<Row>
 			<Type>COLOR_PLAYER_INDONESIA_SECONDARY</Type>
-			<Color>166,37,8,255</Color>
+			<Color>144,11,0,255</Color>
 		</Row>
 		<Row>
 			<Type>COLOR_PLAYER_KHMER_PRIMARY</Type>
@@ -278,7 +318,7 @@
 		<Row>
 			<Type>LEADER_GITARJA</Type>
 			<Usage>Unique</Usage>
-      <!--Primary and secondary colors have been swapped to counteract bug which automatically swapped them in-game. The cause of that swap is unknown.-->
+			<!--Primary and secondary colors have been swapped to counteract bug which automatically swapped them in-game. The cause of that swap is unknown.-->
 			<PrimaryColor>COLOR_PLAYER_INDONESIA_SECONDARY</PrimaryColor>
 			<SecondaryColor>COLOR_PLAYER_INDONESIA_PRIMARY</SecondaryColor>
 			<TextColor>COLOR_PLAYER_RED_TEXT</TextColor>
@@ -286,7 +326,7 @@
 		<Row>
 			<Type>LEADER_JAYAVARMAN</Type>
 			<Usage>Unique</Usage>
-      <!--Primary and secondary colors have been swapped to counteract bug which automatically swapped them in-game. The cause of that swap is unknown.-->
+			<!--Primary and secondary colors have been swapped to counteract bug which automatically swapped them in-game. The cause of that swap is unknown.-->
 			<PrimaryColor>COLOR_PLAYER_KHMER_SECONDARY</PrimaryColor>
 			<SecondaryColor>COLOR_PLAYER_KHMER_PRIMARY</SecondaryColor>
 			<TextColor>COLOR_PLAYER_WHITE_TEXT</TextColor>

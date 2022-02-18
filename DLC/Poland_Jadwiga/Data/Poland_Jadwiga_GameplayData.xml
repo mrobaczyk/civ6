@@ -130,6 +130,32 @@
 		<Row LeaderType="LEADER_JADWIGA" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_JADWIGA" TraitType="TRAIT_LEADER_LITHUANIAN_UNION"/>
 	</LeaderTraits>
+	<AiListTypes>
+		<Row ListType="JadwigaCivics"/>
+		<Row ListType="JadwigaTechs"/>
+		<Row ListType="JadwigaUnitBuilds"/>
+		<Row ListType="JadwigaWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="JadwigaCivics" LeaderType="TRAIT_LEADER_LITHUANIAN_UNION" System="Civics"/>
+		<Row ListType="JadwigaTechs" LeaderType="TRAIT_LEADER_LITHUANIAN_UNION" System="Technologies"/>
+		<Row ListType="JadwigaUnitBuilds" LeaderType="TRAIT_LEADER_LITHUANIAN_UNION" System="Units"/>
+		<Row ListType="JadwigaWonders" LeaderType="TRAIT_LEADER_LITHUANIAN_UNION" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="JadwigaCivics" Item="CIVIC_MYSTICISM" Favored="true"/>
+		<Row ListType="JadwigaCivics" Item="CIVIC_MERCENARIES" Favored="true"/>
+		<Row ListType="JadwigaCivics" Item="CIVIC_MILITARY_TRAINING" Favored="true"/>
+		<Row ListType="JadwigaCivics" Item="CIVIC_DIVINE_RIGHT" Favored="true"/>
+		<Row ListType="JadwigaTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="JadwigaTechs" Item="TECH_BRONZE_WORKING" Favored="true"/>
+		<Row ListType="JadwigaTechs" Item="TECH_MILITARY_ENGINEERING" Favored="true"/>
+		<Row ListType="JadwigaTechs" Item="TECH_SIEGE_TACTICS" Favored="true"/>
+		<Row ListType="JadwigaTechs" Item="TECH_CURRENCY" Favored="true"/>
+		<Row ListType="JadwigaUnitBuilds" Item="UNIT_MILITARY_ENGINEER" Value="1"/>
+		<Row ListType="JadwigaWonders" Item="BUILDING_STONEHENGE" Favored="true"/>
+		<Row ListType="JadwigaWonders" Item="BUILDING_CRISTO_REDENTOR" Favored="true"/>
+	</AiFavoredItems>
 	<PlayerColors>
 		<Row>
 			<Type>LEADER_JADWIGA</Type>

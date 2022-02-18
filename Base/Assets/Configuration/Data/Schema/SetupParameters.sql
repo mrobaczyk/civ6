@@ -45,6 +45,7 @@ CREATE TABLE 'ParameterQueries'(
 	'SupportsLANMultiplayerField' TEXT NOT NULL DEFAULT 'SupportsLANMultiplayer',
 	'SupportsInternetMultiplayerField' TEXT NOT NULL DEFAULT 'SupportsInternetMultiplayer',
 	'SupportsHotSeatField' TEXT NOT NULL DEFAULT 'SupportsHotSeat',
+	'SupportsPlayByCloudField' TEXT NOT NULL DEFAULT 'SupportsPlayByCloud',
 	'ChangeableAfterGameStartField' TEXT NOT NULL DEFAULT 'ChangeableAfterGameStart',
 	'SortIndexField' TEXT NOT NULL DEFAULT 'SortIndex',
 	PRIMARY KEY('ParameterQueryId'),
@@ -89,6 +90,7 @@ CREATE TABLE 'Parameters'(
 	'SupportsLANMultiplayer' BOOLEAN NOT NULL DEFAULT 1,
 	'SupportsInternetMultiplayer' BOOLEAN NOT NULL DEFAULT 1,
 	'SupportsHotSeat' BOOLEAN NOT NULL DEFAULT 1,
+	'SupportsPlayByCloud' BOOLEAN NOT NULL DEFAULT 1,			-- This parameter is supported by the PlayByCloud mode.
 	'ChangeableAfterGameStart' BOOLEAN NOT NULL DEFAULT 0,
 	'SortIndex' INTEGER NOT NULL DEFAULT 100
 );

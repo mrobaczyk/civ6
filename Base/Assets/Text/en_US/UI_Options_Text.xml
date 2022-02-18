@@ -76,7 +76,12 @@
 		</Row>
 
 		<!-- Gameplay Panel -->
-
+		<Row Tag="LOC_OPTIONS_TUTORIAL_EXPERIENCED_PLAYER">
+			<Text>Experienced Player</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_TUTORIAL_NEW_TO_XP1">
+			<Text>New to Civilization VI - Rise and Fall</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_TUTORIAL_FAMILIAR_CIVILIZATION">
 			<Text>New to Civilization VI</Text>
 		</Row>
@@ -89,7 +94,9 @@
 		<Row Tag="LOC_OPTIONS_TIME_OF_DAY_TEXT">
 			<Text>Animated Time of Day:</Text>
 		</Row>
-
+		<Row Tag="LOC_OPTIONS_HISTORIC_MOMENT_ANIMATION">
+			<Text>Historic Moment Reveal Animation:</Text>
+		</Row>
 		<!-- Graphics Panel - Option Enums -->
 
 		<Row Tag="LOC_OPTIONS_TICK_INTERVAL_30_FPS">
@@ -436,6 +443,12 @@
 		<Row Tag="LOC_OPTIONS_LEADER_QUALITY_TOOLTIP">
 			<Text>Changes the appearance of leaders.[NEWLINE][NEWLINE]Disabling [COLOR_Civ6DarkRed]increases performance[ENDCOLOR] and lower values [COLOR_Blue]decrease memory usage[ENDCOLOR].</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS_LEADER_MOTIONBLUR_TEXT">
+			<Text>Motion Blur</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_LEADER_MOTIONBLUR_TOOLTIP">
+			<Text>Enable motion blur on leaders.</Text>
+		</Row>
 
 		<!-- Application Panel -->
 
@@ -481,6 +494,38 @@
     </Row>
  
 		<!-- Hotkeys Panel -->
+		
+		<!-- Expansion 1 - Additional Hotkeys-->
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_GOVERNORS">
+			<Text>Toggle Governors Popup</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_GOVERNORS_HELP">
+			<Text>Toggles visibility of the Governors Screen</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_TIMELINE">
+			<Text>Toggle Timeline Popup</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_TIMELINE_HELP">
+			<Text>Toggles visibility of the Historic Timeline Screen</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_ERA_PROGRESS">
+			<Text>Toggle Era Progress Panel</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UI_ERA_PROGRESS_HELP">
+			<Text>Toggles visibility of the Era Progress Panel</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_GLOBAL_CAPITALCITY">
+			<Text>Capital City</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_GLOBAL_CAPITALCITY_HELP">
+			<Text>Switches to the Capital City</Text>
+		</Row>
+
+		<Row Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UI_XP1">
+			<Text>User Interface (Rise and Fall):</Text>
+		</Row>
+
+		<!-- Base Game Hot Keys-->
 		<Row Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UI">
 			<Text>User Interface:</Text>
 		</Row>
@@ -661,6 +706,12 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_GLOBAL_PANRIGHT">
 			<Text>Pan right</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_GLOBAL_ZOOMIN">
+			<Text>Zoom in</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_GLOBAL_ZOOMOUT">
+			<Text>Zoom out</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_GLOBAL_NEXTCITY">
 			<Text>Next City</Text>
 		</Row>
@@ -760,6 +811,9 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_TOURISM">
 			<Text>Tourism</Text>
 		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_LOYALTY">
+			<Text>Loyalty</Text>
+		</Row>
 
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_RELIGION_HELP">
 			<Text>Toggles the Religion lens.</Text>
@@ -782,7 +836,10 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_TOURISM_HELP">
 			<Text>Toggles the Tourism lens.</Text>
 		</Row>
-
+		<Row Tag="LOC_OPTIONS_HOTKEY_LENSES_LOYALTY_HELP">
+			<Text>Toggles the Loyalty lens.</Text>
+		</Row>
+	
 		<Row Tag="LOC_OPTIONS_KEY_UNDERSCORE">
 			<Text>_</Text>
 		</Row>

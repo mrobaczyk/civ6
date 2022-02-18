@@ -127,11 +127,11 @@
 	<Leaders>
 		<Row LeaderType="LEADER_DEFAULT" Name="LOC_PLACEHOLDER"/>
 		<Row LeaderType="LEADER_BARBAROSSA" Name="LOC_LEADER_BARBAROSSA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
-		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI" Name="LOC_LEADER_CATHERINE_DE_MEDICI_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
-		<Row LeaderType="LEADER_CLEOPATRA" Name="LOC_LEADER_CLEOPATRA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_CATHERINE_DE_MEDICI" Name="LOC_LEADER_CATHERINE_DE_MEDICI_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_CLEOPATRA" Name="LOC_LEADER_CLEOPATRA_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_GANDHI" Name="LOC_LEADER_GANDHI_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_GILGAMESH" Name="LOC_LEADER_GILGAMESH_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
-		<Row LeaderType="LEADER_GORGO" Name="LOC_LEADER_GORGO_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_GORGO" Name="LOC_LEADER_GORGO_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_HARDRADA" Name="LOC_LEADER_HARDRADA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_HOJO" Name="LOC_LEADER_HOJO_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_MVEMBA" Name="LOC_LEADER_MVEMBA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
@@ -141,10 +141,10 @@
 		<Row LeaderType="LEADER_PHILIP_II" Name="LOC_LEADER_PHILIP_II_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_QIN" Name="LOC_LEADER_QIN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_SALADIN" Name="LOC_LEADER_SALADIN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
-		<Row LeaderType="LEADER_TOMYRIS" Name="LOC_LEADER_TOMYRIS_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_TOMYRIS" Name="LOC_LEADER_TOMYRIS_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_TRAJAN" Name="LOC_LEADER_TRAJAN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" Name="LOC_LEADER_T_ROOSEVELT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
-		<Row LeaderType="LEADER_VICTORIA" Name="LOC_LEADER_VICTORIA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_VICTORIA" Name="LOC_LEADER_VICTORIA_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
 		<Row LeaderType="LEADER_MINOR_CIV_DEFAULT" Name="LOC_PLACEHOLDER"/>
 		<Row LeaderType="LEADER_MINOR_CIV_SCIENTIFIC" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
 		<Row LeaderType="LEADER_MINOR_CIV_RELIGIOUS" Name="LOC_PLACEHOLDER" InheritFrom="LEADER_MINOR_CIV_DEFAULT"/>
@@ -420,6 +420,7 @@
 		<Row ListType="MinorCivReligiousDistrict"/>
 		<Row ListType="MinorCivScienceDistrict"/>
 		<Row ListType="MinorCivTradeDistrict"/>
+		<Row ListType="MinorCivTriggeredTrees"/>
 		<Row ListType="MinorCivPseudoYields"/>
 		<Row ListType="MinorCivUnitBuilds"/>
 		<Row ListType="MvembaCivics"/>
@@ -447,7 +448,7 @@
 		<Row ListType="SaladinCivics"/>
 		<Row ListType="SaladinTechs"/>
 		<Row ListType="SaladinWonders"/>
-		<Row ListType="TomyrisCitySettlement"/>
+		<Row ListType="CavalryLoverCitySettlement"/>
 		<Row ListType="TomyrisCivics"/>
 		<Row ListType="TomyrisTechs"/>
 		<Row ListType="TomyrisiUnitBuilds"/>
@@ -529,11 +530,12 @@
 		<Row ListType="DefaultSavings" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="SavingTypes"/>
 		<Row ListType="DefaultScoutUse" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="AiScoutUses"/>
 		<Row ListType="ExpansionistCitySettlement" LeaderType="TRAIT_LEADER_EXPANSIONIST" System="SettlementPreferences"/>
-		<Row ListType="TomyrisCitySettlement" LeaderType="TRAIT_LEADER_KILLER_OF_CYRUS" System="PlotEvaluations"/>
+		<Row ListType="CavalryLoverCitySettlement" LeaderType="TRAIT_LEADER_KILLER_OF_CYRUS" System="PlotEvaluations"/>
 		<Row ListType="LowReligiousPreferencePseudoYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="PseudoYields"/>
 		<Row ListType="LowReligiousPreferenceYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="Yields"/>
 		<!-- Minor Civ Lists -->
 		<Row ListType="DefaultCitySpecialization" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="AiBuildSpecializations"/>
+		<Row ListType="MinorCivTriggeredTrees" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="TriggeredTrees"/>
 		<Row ListType="MinorCivUnitBuilds" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="UnitPromotionClasses"/>
 		<Row ListType="MinorCivCityBuilds" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="CityEvents"/>
 		<Row ListType="MinorCivPseudoYields" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="PseudoYields"/>
@@ -554,202 +556,202 @@
 	</AiLists>
 	<AiFavoredItems>
 		<Row ListType="BaseListTest" Item="CIVIC_IMPERIALISM"/>
-		<Row ListType="BarbarossaWonders" Item="BUILDING_RUHR_VALLEY"/>
-		<Row ListType="CatherineWonders" Item="BUILDING_FORBIDDEN_CITY"/>
-		<Row ListType="CatherineWonders" Item="BUILDING_POTALA_PALACE"/>
-		<Row ListType="CatherineWonders" Item="BUILDING_MONT_ST_MICHEL"/>
-		<Row ListType="CatherineWonders" Item="BUILDING_EIFFEL_TOWER"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_PYRAMIDS"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_GREAT_LIBRARY"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_HANGING_GARDENS"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_STONEHENGE"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_PETRA"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_MONT_ST_MICHEL"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_BIG_BEN"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_HERMITAGE"/>
-		<Row ListType="CleopatraWonders" Item="BUILDING_RUHR_VALLEY"/>
-		<Row ListType="GandhiWonders" Item="BUILDING_HANGING_GARDENS"/>
-		<Row ListType="GandhiWonders" Item="BUILDING_MAHABODHI_TEMPLE"/>
-		<Row ListType="GandhiWonders" Item="BUILDING_OXFORD_UNIVERSITY"/>
-		<Row ListType="GorgoWonders" Item="BUILDING_TERRACOTTA_ARMY"/>
-		<Row ListType="HaraldWonders" Item="BUILDING_GREAT_LIGHTHOUSE"/>
-		<Row ListType="HaraldWonders" Item="BUILDING_VENETIAN_ARSENAL"/>
-		<Row ListType="HoJoWonders" Item="BUILDING_VENETIAN_ARSENAL"/>
-		<Row ListType="MvembaWonders" Item="BUILDING_HANGING_GARDENS"/>
-		<Row ListType="MvembaWonders" Item="BUILDING_CHICHEN_ITZA"/>
-		<Row ListType="MvembaWonders" Item="BUILDING_OXFORD_UNIVERSITY"/>
-		<Row ListType="MvembaWonders" Item="BUILDING_HERMITAGE"/>
-		<Row ListType="MvembaWonders" Item="BUILDING_BOLSHOI_THEATRE"/>
-		<Row ListType="MvembaWonders" Item="BUILDING_BROADWAY"/>
-		<Row ListType="MvembaWonders" Item="BUILDING_SYDNEY_OPERA_HOUSE"/>
+		<Row ListType="BarbarossaWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+		<Row ListType="CatherineWonders" Item="BUILDING_FORBIDDEN_CITY" Favored="true"/>
+		<Row ListType="CatherineWonders" Item="BUILDING_POTALA_PALACE" Favored="true"/>
+		<Row ListType="CatherineWonders" Item="BUILDING_MONT_ST_MICHEL" Favored="true"/>
+		<Row ListType="CatherineWonders" Item="BUILDING_EIFFEL_TOWER" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_PYRAMIDS" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_GREAT_LIBRARY" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_HANGING_GARDENS" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_STONEHENGE" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_PETRA" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_MONT_ST_MICHEL" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_BIG_BEN" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_HERMITAGE" Favored="true"/>
+		<Row ListType="CleopatraWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+		<Row ListType="GandhiWonders" Item="BUILDING_HANGING_GARDENS" Favored="true"/>
+		<Row ListType="GandhiWonders" Item="BUILDING_MAHABODHI_TEMPLE" Favored="true"/>
+		<Row ListType="GandhiWonders" Item="BUILDING_OXFORD_UNIVERSITY" Favored="true"/>
+		<Row ListType="GorgoWonders" Item="BUILDING_TERRACOTTA_ARMY" Favored="true"/>
+		<Row ListType="HaraldWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
+		<Row ListType="HaraldWonders" Item="BUILDING_VENETIAN_ARSENAL" Favored="true"/>
+		<Row ListType="HoJoWonders" Item="BUILDING_VENETIAN_ARSENAL" Favored="true"/>
+		<Row ListType="MvembaWonders" Item="BUILDING_HANGING_GARDENS" Favored="true"/>
+		<Row ListType="MvembaWonders" Item="BUILDING_CHICHEN_ITZA" Favored="true"/>
+		<Row ListType="MvembaWonders" Item="BUILDING_OXFORD_UNIVERSITY" Favored="true"/>
+		<Row ListType="MvembaWonders" Item="BUILDING_HERMITAGE" Favored="true"/>
+		<Row ListType="MvembaWonders" Item="BUILDING_BOLSHOI_THEATRE" Favored="true"/>
+		<Row ListType="MvembaWonders" Item="BUILDING_BROADWAY" Favored="true"/>
+		<Row ListType="MvembaWonders" Item="BUILDING_SYDNEY_OPERA_HOUSE" Favored="true"/>
 		<Row ListType="MvembaWonders" Item="BUILDING_STONEHENGE" Favored="false"/>
 		<Row ListType="MvembaWonders" Item="BUILDING_ORACLE" Favored="false"/>
 		<Row ListType="MvembaWonders" Item="BUILDING_CRISTO_REDENTOR" Favored="false"/>
-		<Row ListType="PedroWonders" Item="BUILDING_CHICHEN_ITZA"/>
-		<Row ListType="PedroWonders" Item="BUILDING_ORACLE"/>
-		<Row ListType="PericlesWonders" Item="BUILDING_POTALA_PALACE"/>
-		<Row ListType="PeterWonders" Item="BUILDING_COLOSSUS"/>
-		<Row ListType="PhilipWonders" Item="BUILDING_COLOSSUS"/>
-		<Row ListType="PhilipWonders" Item="BUILDING_GREAT_LIGHTHOUSE"/>
-		<Row ListType="PhilipWonders" Item="BUILDING_HAGIA_SOPHIA"/>
-		<Row ListType="PhilipWonders" Item="BUILDING_MAHABODHI_TEMPLE"/>
+		<Row ListType="PedroWonders" Item="BUILDING_CHICHEN_ITZA" Favored="true"/>
+		<Row ListType="PedroWonders" Item="BUILDING_ORACLE" Favored="true"/>
+		<Row ListType="PericlesWonders" Item="BUILDING_POTALA_PALACE" Favored="true"/>
+		<Row ListType="PeterWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
+		<Row ListType="PhilipWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
+		<Row ListType="PhilipWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
+		<Row ListType="PhilipWonders" Item="BUILDING_HAGIA_SOPHIA" Favored="true"/>
+		<Row ListType="PhilipWonders" Item="BUILDING_MAHABODHI_TEMPLE" Favored="true"/>
 		<Row ListType="PhilipForeignSettlement" Item="Foreign Continent" Favored="false" Value="60"/>
-		<Row ListType="QinWonders" Item="BUILDING_HANGING_GARDENS"/>
-		<Row ListType="QinWonders" Item="BUILDING_PYRAMIDS"/>
-		<Row ListType="QinWonders" Item="BUILDING_GREAT_LIBRARY"/>
-		<Row ListType="QinWonders" Item="BUILDING_GREAT_LIGHTHOUSE"/>
-		<Row ListType="QinWonders" Item="BUILDING_COLOSSUS"/>
-		<Row ListType="QinWonders" Item="BUILDING_FORBIDDEN_CITY"/>
-		<Row ListType="QinWonders" Item="BUILDING_COLOSSEUM"/>
-		<Row ListType="QinWonders" Item="BUILDING_TERRACOTTA_ARMY"/>
-		<Row ListType="RooseveltWonders" Item="BUILDING_BROADWAY"/>
-		<Row ListType="SaladinWonders" Item="BUILDING_HAGIA_SOPHIA"/>
-		<Row ListType="SaladinWonders" Item="BUILDING_MAHABODHI_TEMPLE"/>
-		<Row ListType="SaladinWonders" Item="BUILDING_MONT_ST_MICHEL"/>
+		<Row ListType="QinWonders" Item="BUILDING_HANGING_GARDENS" Favored="true"/>
+		<Row ListType="QinWonders" Item="BUILDING_PYRAMIDS" Favored="true"/>
+		<Row ListType="QinWonders" Item="BUILDING_GREAT_LIBRARY" Favored="true"/>
+		<Row ListType="QinWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
+		<Row ListType="QinWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
+		<Row ListType="QinWonders" Item="BUILDING_FORBIDDEN_CITY" Favored="true"/>
+		<Row ListType="QinWonders" Item="BUILDING_COLOSSEUM" Favored="true"/>
+		<Row ListType="QinWonders" Item="BUILDING_TERRACOTTA_ARMY" Favored="true"/>
+		<Row ListType="RooseveltWonders" Item="BUILDING_BROADWAY" Favored="true"/>
+		<Row ListType="SaladinWonders" Item="BUILDING_HAGIA_SOPHIA" Favored="true"/>
+		<Row ListType="SaladinWonders" Item="BUILDING_MAHABODHI_TEMPLE" Favored="true"/>
+		<Row ListType="SaladinWonders" Item="BUILDING_MONT_ST_MICHEL" Favored="true"/>
 		<Row ListType="SaladinWonders" Item="BUILDING_STONEHENGE" Favored="false"/>
-		<Row ListType="TrajanWonders" Item="BUILDING_COLOSSEUM"/>
-		<Row ListType="TrajanWonders" Item="BUILDING_COLOSSUS"/>
-		<Row ListType="TrajanWonders" Item="BUILDING_GREAT_ZIMBABWE"/>
-		<Row ListType="TrajanWonders" Item="BUILDING_ESTADIO_DO_MARACANA"/>
-		<Row ListType="VictoriaWonders" Item="BUILDING_GREAT_LIGHTHOUSE"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_CRAFTSMANSHIP"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_FOREIGN_TRADE"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_STATE_WORKFORCE"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_EARLY_EMPIRE"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_GAMES_RECREATION"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_POLITICAL_PHILOSOPHY"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_DRAMA_POETRY"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_DEFENSIVE_TACTICS"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_RECORDED_HISTORY"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_FEUDALISM"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_CIVIL_SERVICE"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_MEDIEVAL_FAIRES"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_GUILDS"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_HUMANISM"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_DIPLOMATIC_SERVICE"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_MERCANTILISM"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_THE_ENLIGHTENMENT"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_CIVIL_ENGINEERING"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_NATIONALISM"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_URBANIZATION"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_MASS_MEDIA"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_MOBILIZATION"/>
-		<Row ListType="BarbarossaCivics" Item="CIVIC_IDEOLOGY"/>
-		<Row ListType="CatherineCivics" Item="CIVIC_STATE_WORKFORCE"/>
-		<Row ListType="CatherineCivics" Item="CIVIC_DIVINE_RIGHT"/>
-		<Row ListType="CatherineCivics" Item="CIVIC_HUMANISM"/>
-		<Row ListType="CatherineCivics" Item="CIVIC_CIVIL_ENGINEERING"/>
-		<Row ListType="CleopatraCivics" Item="CIVIC_CRAFTSMANSHIP"/>
-		<Row ListType="CleopatraCivics" Item="CIVIC_FOREIGN_TRADE"/>
-		<Row ListType="CleopatraCivics" Item="CIVIC_STATE_WORKFORCE"/>
-		<Row ListType="CleopatraCivics" Item="CIVIC_NATURAL_HISTORY"/>
-		<Row ListType="GandhiCivics" Item="CIVIC_THEOLOGY"/>
-		<Row ListType="GandhiCivics" Item="CIVIC_CIVIL_SERVICE"/>
-		<Row ListType="GandhiCivics" Item="CIVIC_HUMANISM"/>
-		<Row ListType="GandhiCivics" Item="CIVIC_DIPLOMATIC_SERVICE"/>
-		<Row ListType="GorgoCivics" Item="CIVIC_DRAMA_POETRY"/>
-		<Row ListType="GorgoCivics" Item="CIVIC_MILITARY_TRAINING"/>
-		<Row ListType="GorgoCivics" Item="CIVIC_DIPLOMATIC_SERVICE"/>
-		<Row ListType="GorgoCivics" Item="CIVIC_NATIONALISM"/>
-		<Row ListType="GorgoCivics" Item="CIVIC_MOBILIZATION"/>
-		<Row ListType="HaraldCivics" Item="CIVIC_MILITARY_TRAINING"/>
-		<Row ListType="HaraldCivics" Item="CIVIC_THEOLOGY"/>
-		<Row ListType="HaraldCivics" Item="CIVIC_MERCENARIES"/>
-		<Row ListType="HoJoCivics" Item="CIVIC_DRAMA_POETRY"/>
-		<Row ListType="HoJoCivics" Item="CIVIC_THEOLOGY"/>
-		<Row ListType="HoJoCivics" Item="CIVIC_HUMANISM"/>
-		<Row ListType="MvembaCivics" Item="CIVIC_DRAMA_POETRY"/>
-		<Row ListType="MvembaCivics" Item="CIVIC_GUILDS"/>
-		<Row ListType="PedroCivics" Item="CIVIC_MYSTICISM"/>
-		<Row ListType="PedroCivics" Item="CIVIC_DRAMA_POETRY"/>
-		<Row ListType="PedroCivics" Item="CIVIC_GAMES_RECREATION"/>
-		<Row ListType="PedroCivics" Item="CIVIC_GUILDS"/>
-		<Row ListType="PedroCivics" Item="CIVIC_HUMANISM"/>
-		<Row ListType="PedroCivics" Item="CIVIC_NATIONALISM"/>
-		<Row ListType="PedroCivics" Item="CIVIC_OPERA_BALLET"/>
-		<Row ListType="PedroCivics" Item="CIVIC_CAPITALISM"/>
-		<Row ListType="PericlesCivics" Item="CIVIC_DRAMA_POETRY"/>
-		<Row ListType="PericlesCivics" Item="CIVIC_MILITARY_TRAINING"/>
-		<Row ListType="PericlesCivics" Item="CIVIC_POLITICAL_PHILOSOPHY"/>
-		<Row ListType="PericlesCivics" Item="CIVIC_NAVAL_TRADITIION"/>
-		<Row ListType="PericlesCivics" Item="CIVIC_MEDIEVAL_FAIRES"/>
-		<Row ListType="PericlesCivics" Item="CIVIC_MERCENARIES"/>
-		<Row ListType="PeterCivics" Item="CIVIC_FEUDALISM"/>
-		<Row ListType="PhilipCivics" Item="CIVIC_EXPLORATION"/>
-		<Row ListType="PhilipCivics" Item="CIVIC_COLONIALISM"/>
-		<Row ListType="PhilipCivics" Item="CIVIC_CULTURAL_HERITAGE"/>
-		<Row ListType="QinCivics" Item="CIVIC_STATE_WORKFORCE"/>
-		<Row ListType="QinCivics" Item="CIVIC_DIVINE_RIGHT"/>
-		<Row ListType="QinCivics" Item="CIVIC_CIVIL_ENGINEERING"/>
-		<Row ListType="RooseveltCivics" Item="CIVIC_POLITICAL_PHILOSOPHY"/>
-		<Row ListType="RooseveltCivics" Item="CIVIC_DIVINE_RIGHT"/>
-		<Row ListType="RooseveltCivics" Item="CIVIC_CONSERVATION"/>
-		<Row ListType="RooseveltCivics" Item="CIVIC_SUFFRAGE"/>
-		<Row ListType="SaladinCivics" Item="CIVIC_THEOLOGY"/>
-		<Row ListType="SaladinCivics" Item="CIVIC_REFORMED_CHURCH"/>
-		<Row ListType="TomyrisCivics" Item="CIVIC_MILITARY_TRADITION"/>
-		<Row ListType="TomyrisCivics" Item="CIVIC_GUILDS"/>
-		<Row ListType="TomyrisCivics" Item="CIVIC_DIVINE_RIGHT"/>
-		<Row ListType="TomyrisCivics" Item="CIVIC_CAPITALISM"/>
-		<Row ListType="TomyrisCivics" Item="CIVIC_TOTALITARIANISM"/>
-		<Row ListType="TrajanCivics" Item="CIVIC_CRAFTSMANSHIP"/>
-		<Row ListType="TrajanCivics" Item="CIVIC_EARLY_EMPIRE"/>
-		<Row ListType="TrajanCivics" Item="CIVIC_SCORCHED_EARTH"/>
-		<Row ListType="VictoriaCivics" Item="CIVIC_EXPLORATION"/>
-		<Row ListType="VictoriaCivics" Item="CIVIC_COLONIALISM"/>
-		<Row ListType="VictoriaCivics" Item="CIVIC_MERCANTILISM"/>
-		<Row ListType="BarbarossaTechs" Item="TECH_APPRENTICESHIP"/>
-		<Row ListType="BarbarossaTechs" Item="TECH_ELECTRICITY"/>
-		<Row ListType="CatherineTechs" Item="TECH_CASTLES"/>
-		<Row ListType="CatherineTechs" Item="TECH_PRINTING"/>
-		<Row ListType="CatherineTechs" Item="TECH_FLIGHT"/>
-		<Row ListType="CatherineTechs" Item="TECH_COMPUTERS"/>
-		<Row ListType="CleopatraTechs" Item="TECH_ANIMAL_HUSBANDRY"/>
-		<Row ListType="CleopatraTechs" Item="TECH_FLIGHT"/>
-		<Row ListType="GandhiTechs" Item="TECH_ASTROLOGY"/>
-		<Row ListType="GandhiTechs" Item="TECH_IRRIGATION"/>
-		<Row ListType="GandhiTechs" Item="TECH_HORSEBACK_RIDING"/>
-		<Row ListType="GandhiTechs" Item="TECH_ELECTRICITY"/>
-		<Row ListType="GorgoTechs" Item="TECH_BRONZE_WORKING"/>
-		<Row ListType="HaraldTechs" Item="TECH_SAILING"/>
-		<Row ListType="HaraldTechs" Item="TECH_ASTROLOGY"/>
-		<Row ListType="HaraldTechs" Item="TECH_SHIPBUILDING"/>
-		<Row ListType="HaraldTechs" Item="TECH_MILITARY_TACTICS"/>
-		<Row ListType="HoJoTechs" Item="TECH_ASTROLOGY"/>
-		<Row ListType="HoJoTechs" Item="TECH_BRONZE_WORKING"/>
-		<Row ListType="HoJoTechs" Item="TECH_MILITARY_TACTICS"/>
-		<Row ListType="MvembaTechs" Item="TECH_IRON_WORKING"/>
-		<Row ListType="MvembaTechs" Item="TECH_CURRENCY"/>
-		<Row ListType="PedroTechs" Item="TECH_ASTROLOGY"/>
-		<Row ListType="PedroTechs" Item="TECH_CURRENCY"/>
-		<Row ListType="PericlesTechs" Item="TECH_BRONZE_WORKING"/>
-		<Row ListType="PeterTechs" Item="TECH_ANIMAL_HUSBANDRY"/>
-		<Row ListType="PeterTechs" Item="TECH_ASTROLOGY"/>
-		<Row ListType="PeterTechs" Item="TECH_MILITARY_SCIENCE"/>
-		<Row ListType="PhilipTechs" Item="TECH_ANIMAL_HUSBANDRY"/>
-		<Row ListType="PhilipTechs" Item="TECH_ASTROLOGY"/>
-		<Row ListType="PhilipTechs" Item="TECH_CELESTIAL_NAVIGATION"/>
-		<Row ListType="PhilipTechs" Item="TECH_CARTOGRAPHY"/>
-		<Row ListType="PhilipTechs" Item="TECH_GUNPOWDER"/>
-		<Row ListType="QinTechs" Item="TECH_MASONRY"/>
-		<Row ListType="QinTechs" Item="TECH_CASTLES"/>
-		<Row ListType="QinTechs" Item="TECH_FLIGHT"/>
-		<Row ListType="RooseveltTechs" Item="TECH_RIFLING"/>
-		<Row ListType="RooseveltTechs" Item="TECH_RADIO"/>
-		<Row ListType="SaladinTechs" Item="TECH_STIRRUPS"/>
-		<Row ListType="TomyrisTechs" Item="TECH_ANIMAL_HUSBANDRY"/>
-		<Row ListType="TomyrisTechs" Item="TECH_HORSEBACK_RIDING"/>
-		<Row ListType="TrajanTechs" Item="TECH_ANIMAL_HUSBANDRY"/>
-		<Row ListType="TrajanTechs" Item="TECH_ENGINEERING"/>
-		<Row ListType="TrajanTechs" Item="TECH_IRON_WORKING"/>
-		<Row ListType="TrajanTechs" Item="TECH_MILITARY_ENGINEERING"/>
-		<Row ListType="TrajanTechs" Item="TECH_INDUSTRIALIZATION"/>
-		<Row ListType="TrajanTechs" Item="TECH_COMBUSTION"/>
-		<Row ListType="VictoriaTechs" Item="TECH_CELESTIAL_NAVIGATION"/>
-		<Row ListType="VictoriaTechs" Item="TECH_MILITARY_SCIENCE"/>
+		<Row ListType="TrajanWonders" Item="BUILDING_COLOSSEUM" Favored="true"/>
+		<Row ListType="TrajanWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
+		<Row ListType="TrajanWonders" Item="BUILDING_GREAT_ZIMBABWE" Favored="true"/>
+		<Row ListType="TrajanWonders" Item="BUILDING_ESTADIO_DO_MARACANA" Favored="true"/>
+		<Row ListType="VictoriaWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_CRAFTSMANSHIP" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_FOREIGN_TRADE" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_STATE_WORKFORCE" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_EARLY_EMPIRE" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_GAMES_RECREATION" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_POLITICAL_PHILOSOPHY" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_DEFENSIVE_TACTICS" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_RECORDED_HISTORY" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_FEUDALISM" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_CIVIL_SERVICE" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_MEDIEVAL_FAIRES" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_GUILDS" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_HUMANISM" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_DIPLOMATIC_SERVICE" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_MERCANTILISM" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_THE_ENLIGHTENMENT" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_CIVIL_ENGINEERING" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_NATIONALISM" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_URBANIZATION" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_MASS_MEDIA" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_MOBILIZATION" Favored="true"/>
+		<Row ListType="BarbarossaCivics" Item="CIVIC_IDEOLOGY" Favored="true"/>
+		<Row ListType="CatherineCivics" Item="CIVIC_STATE_WORKFORCE" Favored="true"/>
+		<Row ListType="CatherineCivics" Item="CIVIC_DIVINE_RIGHT" Favored="true"/>
+		<Row ListType="CatherineCivics" Item="CIVIC_HUMANISM" Favored="true"/>
+		<Row ListType="CatherineCivics" Item="CIVIC_CIVIL_ENGINEERING" Favored="true"/>
+		<Row ListType="CleopatraCivics" Item="CIVIC_CRAFTSMANSHIP" Favored="true"/>
+		<Row ListType="CleopatraCivics" Item="CIVIC_FOREIGN_TRADE" Favored="true"/>
+		<Row ListType="CleopatraCivics" Item="CIVIC_STATE_WORKFORCE" Favored="true"/>
+		<Row ListType="CleopatraCivics" Item="CIVIC_NATURAL_HISTORY" Favored="true"/>
+		<Row ListType="GandhiCivics" Item="CIVIC_THEOLOGY" Favored="true"/>
+		<Row ListType="GandhiCivics" Item="CIVIC_CIVIL_SERVICE" Favored="true"/>
+		<Row ListType="GandhiCivics" Item="CIVIC_HUMANISM" Favored="true"/>
+		<Row ListType="GandhiCivics" Item="CIVIC_DIPLOMATIC_SERVICE" Favored="true"/>
+		<Row ListType="GorgoCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="GorgoCivics" Item="CIVIC_MILITARY_TRAINING" Favored="true"/>
+		<Row ListType="GorgoCivics" Item="CIVIC_DIPLOMATIC_SERVICE" Favored="true"/>
+		<Row ListType="GorgoCivics" Item="CIVIC_NATIONALISM" Favored="true"/>
+		<Row ListType="GorgoCivics" Item="CIVIC_MOBILIZATION" Favored="true"/>
+		<Row ListType="HaraldCivics" Item="CIVIC_MILITARY_TRAINING" Favored="true"/>
+		<Row ListType="HaraldCivics" Item="CIVIC_THEOLOGY" Favored="true"/>
+		<Row ListType="HaraldCivics" Item="CIVIC_MERCENARIES" Favored="true"/>
+		<Row ListType="HoJoCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="HoJoCivics" Item="CIVIC_THEOLOGY" Favored="true"/>
+		<Row ListType="HoJoCivics" Item="CIVIC_HUMANISM" Favored="true"/>
+		<Row ListType="MvembaCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="MvembaCivics" Item="CIVIC_GUILDS" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_MYSTICISM" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_GAMES_RECREATION" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_GUILDS" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_HUMANISM" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_NATIONALISM" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_OPERA_BALLET" Favored="true"/>
+		<Row ListType="PedroCivics" Item="CIVIC_CAPITALISM" Favored="true"/>
+		<Row ListType="PericlesCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="PericlesCivics" Item="CIVIC_MILITARY_TRAINING" Favored="true"/>
+		<Row ListType="PericlesCivics" Item="CIVIC_POLITICAL_PHILOSOPHY" Favored="true"/>
+		<Row ListType="PericlesCivics" Item="CIVIC_NAVAL_TRADITIION" Favored="true"/>
+		<Row ListType="PericlesCivics" Item="CIVIC_MEDIEVAL_FAIRES" Favored="true"/>
+		<Row ListType="PericlesCivics" Item="CIVIC_MERCENARIES" Favored="true"/>
+		<Row ListType="PeterCivics" Item="CIVIC_FEUDALISM" Favored="true"/>
+		<Row ListType="PhilipCivics" Item="CIVIC_EXPLORATION" Favored="true"/>
+		<Row ListType="PhilipCivics" Item="CIVIC_COLONIALISM" Favored="true"/>
+		<Row ListType="PhilipCivics" Item="CIVIC_CULTURAL_HERITAGE" Favored="true"/>
+		<Row ListType="QinCivics" Item="CIVIC_STATE_WORKFORCE" Favored="true"/>
+		<Row ListType="QinCivics" Item="CIVIC_DIVINE_RIGHT" Favored="true"/>
+		<Row ListType="QinCivics" Item="CIVIC_CIVIL_ENGINEERING" Favored="true"/>
+		<Row ListType="RooseveltCivics" Item="CIVIC_POLITICAL_PHILOSOPHY" Favored="true"/>
+		<Row ListType="RooseveltCivics" Item="CIVIC_DIVINE_RIGHT" Favored="true"/>
+		<Row ListType="RooseveltCivics" Item="CIVIC_CONSERVATION" Favored="true"/>
+		<Row ListType="RooseveltCivics" Item="CIVIC_SUFFRAGE" Favored="true"/>
+		<Row ListType="SaladinCivics" Item="CIVIC_THEOLOGY" Favored="true"/>
+		<Row ListType="SaladinCivics" Item="CIVIC_REFORMED_CHURCH" Favored="true"/>
+		<Row ListType="TomyrisCivics" Item="CIVIC_MILITARY_TRADITION" Favored="true"/>
+		<Row ListType="TomyrisCivics" Item="CIVIC_GUILDS" Favored="true"/>
+		<Row ListType="TomyrisCivics" Item="CIVIC_DIVINE_RIGHT" Favored="true"/>
+		<Row ListType="TomyrisCivics" Item="CIVIC_CAPITALISM" Favored="true"/>
+		<Row ListType="TomyrisCivics" Item="CIVIC_TOTALITARIANISM" Favored="true"/>
+		<Row ListType="TrajanCivics" Item="CIVIC_CRAFTSMANSHIP" Favored="true"/>
+		<Row ListType="TrajanCivics" Item="CIVIC_EARLY_EMPIRE" Favored="true"/>
+		<Row ListType="TrajanCivics" Item="CIVIC_SCORCHED_EARTH" Favored="true"/>
+		<Row ListType="VictoriaCivics" Item="CIVIC_EXPLORATION" Favored="true"/>
+		<Row ListType="VictoriaCivics" Item="CIVIC_COLONIALISM" Favored="true"/>
+		<Row ListType="VictoriaCivics" Item="CIVIC_MERCANTILISM" Favored="true"/>
+		<Row ListType="BarbarossaTechs" Item="TECH_APPRENTICESHIP" Favored="true"/>
+		<Row ListType="BarbarossaTechs" Item="TECH_ELECTRICITY" Favored="true"/>
+		<Row ListType="CatherineTechs" Item="TECH_CASTLES" Favored="true"/>
+		<Row ListType="CatherineTechs" Item="TECH_PRINTING" Favored="true"/>
+		<Row ListType="CatherineTechs" Item="TECH_FLIGHT" Favored="true"/>
+		<Row ListType="CatherineTechs" Item="TECH_COMPUTERS" Favored="true"/>
+		<Row ListType="CleopatraTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="CleopatraTechs" Item="TECH_FLIGHT" Favored="true"/>
+		<Row ListType="GandhiTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="GandhiTechs" Item="TECH_IRRIGATION" Favored="true"/>
+		<Row ListType="GandhiTechs" Item="TECH_HORSEBACK_RIDING" Favored="true"/>
+		<Row ListType="GandhiTechs" Item="TECH_ELECTRICITY" Favored="true"/>
+		<Row ListType="GorgoTechs" Item="TECH_BRONZE_WORKING" Favored="true"/>
+		<Row ListType="HaraldTechs" Item="TECH_SAILING" Favored="true"/>
+		<Row ListType="HaraldTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="HaraldTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
+		<Row ListType="HaraldTechs" Item="TECH_MILITARY_TACTICS" Favored="true"/>
+		<Row ListType="HoJoTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="HoJoTechs" Item="TECH_BRONZE_WORKING" Favored="true"/>
+		<Row ListType="HoJoTechs" Item="TECH_MILITARY_TACTICS" Favored="true"/>
+		<Row ListType="MvembaTechs" Item="TECH_IRON_WORKING" Favored="true"/>
+		<Row ListType="MvembaTechs" Item="TECH_CURRENCY" Favored="true"/>
+		<Row ListType="PedroTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="PedroTechs" Item="TECH_CURRENCY" Favored="true"/>
+		<Row ListType="PericlesTechs" Item="TECH_BRONZE_WORKING" Favored="true"/>
+		<Row ListType="PeterTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="PeterTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="PeterTechs" Item="TECH_MILITARY_SCIENCE" Favored="true"/>
+		<Row ListType="PhilipTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="PhilipTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="PhilipTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
+		<Row ListType="PhilipTechs" Item="TECH_CARTOGRAPHY" Favored="true"/>
+		<Row ListType="PhilipTechs" Item="TECH_GUNPOWDER" Favored="true"/>
+		<Row ListType="QinTechs" Item="TECH_MASONRY" Favored="true"/>
+		<Row ListType="QinTechs" Item="TECH_CASTLES" Favored="true"/>
+		<Row ListType="QinTechs" Item="TECH_FLIGHT" Favored="true"/>
+		<Row ListType="RooseveltTechs" Item="TECH_RIFLING" Favored="true"/>
+		<Row ListType="RooseveltTechs" Item="TECH_RADIO" Favored="true"/>
+		<Row ListType="SaladinTechs" Item="TECH_STIRRUPS" Favored="true"/>
+		<Row ListType="TomyrisTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="TomyrisTechs" Item="TECH_HORSEBACK_RIDING" Favored="true"/>
+		<Row ListType="TrajanTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="TrajanTechs" Item="TECH_ENGINEERING" Favored="true"/>
+		<Row ListType="TrajanTechs" Item="TECH_IRON_WORKING" Favored="true"/>
+		<Row ListType="TrajanTechs" Item="TECH_MILITARY_ENGINEERING" Favored="true"/>
+		<Row ListType="TrajanTechs" Item="TECH_INDUSTRIALIZATION" Favored="true"/>
+		<Row ListType="TrajanTechs" Item="TECH_COMBUSTION" Favored="true"/>
+		<Row ListType="VictoriaTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
+		<Row ListType="VictoriaTechs" Item="TECH_MILITARY_SCIENCE" Favored="true"/>
 		<Row ListType="GandhiUnitBuilds" Item="PROMOTION_CLASS_INQUISITOR" Value="-1"/>
 		<Row ListType="TomyrisiUnitBuilds" Item="PROMOTION_CLASS_LIGHT_CAVALRY" Value="1"/>
-		<Row ListType="TomyrisCitySettlement" Item="Specific Resource" Favored="true" Value="12" StringVal="RESOURCE_HORSES"/>
+		<Row ListType="CavalryLoverCitySettlement" Item="Specific Resource" Favored="true" Value="12" StringVal="RESOURCE_HORSES"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_FOR_FOOD"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_FOR_PRODUCTION"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_FOR_GOLD"/>
@@ -783,6 +785,8 @@
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_IMPROVEMENT" StringVal="Build City Improvement"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_DISTRICT" StringVal="Build City District"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_UNDER_THREAT" StringVal="City Defense"/>
+		<Row ListType="MinorCivTriggeredTrees" Item="TRIGGER_TECH_UPGRADE"/>
+		<Row ListType="MinorCivTriggeredTrees" Item="TRIGGER_CIVIC_UPGRADE"/>
 		<Row ListType="DefaultSavings" Item="SAVING_PLOTS" Value="1"/>
 		<Row ListType="DefaultSavings" Item="SAVING_UNITS" Value="4"/>
 		<Row ListType="DefaultSavings" Item="SAVING_GREAT_PEOPLE" Value="1"/>
@@ -2722,12 +2726,7 @@
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_DEFENSIVE_PACT</ModifierId>
 			<Name>ReductionTurns</Name>
-			<Value>10</Value>
-		</Row>
-		<Row>
-			<ModifierId>STANDARD_DIPLOMATIC_DEFENSIVE_PACT</ModifierId>
-			<Name>ReductionValue</Name>
-			<Value>1</Value>
+			<Value>-1</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_DEFENSIVE_PACT</ModifierId>
@@ -2838,6 +2837,16 @@
 			<ModifierId>STANDARD_DIPLOMATIC_GOVERNMENT_DIFFERENT</ModifierId>
 			<Name>SimpleModifierDescription</Name>
 			<Value>LOC_TOOLTIP_SAMPLE_DIPLOMACY_GOVERNMENT_DIFFERENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_GOVERNMENT_DIFFERENT</ModifierId>
+			<Name>IncrementTurns</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_GOVERNMENT_DIFFERENT</ModifierId>
+			<Name>IncrementValue</Name>
+			<Value>-1</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_HAD_FRIENDLY_MEETING</ModifierId>
@@ -3008,6 +3017,11 @@
 			<ModifierId>STANDARD_DIPLOMATIC_OCCUPIED_CITY</ModifierId>
 			<Name>SimpleModifierDescription</Name>
 			<Value>LOC_DIPLO_MODIFIER_CITY_OCCUPIED</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_OCCUPIED_CITY</ModifierId>
+			<Name>OnlyOwnersCity</Name>
+			<Value>true</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_OCCUPIED_FRIENDLY_CITY</ModifierId>
@@ -5508,7 +5522,7 @@
 		<Row>
 			<RequirementSetId>PLAYER_HAS_CASTLES_TECHNOLOGY_AND_CAPITAL</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
-		</Row>		
+		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_IS_AT_PEACE_WITH_ALL_MAJORS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
@@ -5953,7 +5967,7 @@
 		</Row>
 		<Row>
 			<RequirementSetId>WARMONGER_TRIGGERS</RequirementSetId>
-			<RequirementId>REQUIRES_PLAYER_DECLARED_WAR</RequirementId>
+			<RequirementId>REQUIRES_PLAYER_DECLARED_WAR_EXCLUDE_SHARED_EMERGENCIES</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>WARMONGER_TRIGGERS</RequirementSetId>
@@ -6078,7 +6092,7 @@
 		<Row>
 			<RequirementSetId>PLAYER_HAS_CASTLES_TECHNOLOGY_AND_CAPITAL</RequirementSetId>
 			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
-		</Row>		
+		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_IS_AT_PEACE_WITH_ALL_MAJORS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_AT_PEACE_WITH_ALL_MAJORS</RequirementId>
@@ -6283,6 +6297,11 @@
 			<RequirementType>REQUIREMENT_PLAYER_IS_AT_PEACE</RequirementType>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_PLAYER_DECLARED_WAR_EXCLUDE_SHARED_EMERGENCIES</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_DECLARED_WAR</RequirementType>
+			<Triggered>True</Triggered>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_PLAYER_DECLARED_WAR</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_DECLARED_WAR</RequirementType>
 			<Triggered>True</Triggered>
@@ -6475,7 +6494,7 @@
 		<Row>
 			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
 			<RequirementType>REQUIREMENT_COLLECTION_COUNT_ATLEAST</RequirementType>
-		</Row>		
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_AT_PEACE_WITH_ALL_MAJORS</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_IS_AT_PEACE_WITH_ALL_MAJORS</RequirementType>
@@ -6616,6 +6635,16 @@
 			<Value>False</Value>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_PLAYER_DECLARED_WAR_EXCLUDE_SHARED_EMERGENCIES</RequirementId>
+			<Name>WhileMet</Name>
+			<Value>True</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_DECLARED_WAR_EXCLUDE_SHARED_EMERGENCIES</RequirementId>
+			<Name>ExcludeEmergencies</Name>
+			<Value>True</Value>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_PLAYER_NO_OPEN_BORDERS</RequirementId>
 			<Name>GracePeriod</Name>
 			<Value>2</Value>
@@ -6679,7 +6708,7 @@
 			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
 			<Name>Count</Name>
 			<Value>1</Value>
-		</Row>		
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_NO_ALUMINUM</RequirementId>
 			<Name>ResourceType</Name>

@@ -73,9 +73,11 @@ function GenerateMap()
 	TerrainBuilder.StampContinents();
 	
 	resourcesConfig = MapConfiguration.GetValue("resources");
+	local startConfig = MapConfiguration.GetValue("start");-- Get the start config
 	local args = {
 		iWaterLux = 2,
 		resources = resourcesConfig,
+		START_CONFIG = startConfig,
 	}
 	local resGen = ResourceGenerator.Create(args);
 
@@ -86,7 +88,6 @@ function GenerateMap()
 
 	print("Creating start plot database.");
 	-- START_MIN_Y and START_MAX_Y is the percent of the map ignored for major civs' starting positions.
-	local startConfig = MapConfiguration.GetValue("start");-- Get the start config
 	local args = {
 		MIN_MAJOR_CIV_FERTILITY = 300,
 		MIN_MINOR_CIV_FERTILITY = 50, 

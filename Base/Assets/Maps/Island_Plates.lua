@@ -79,14 +79,15 @@ function GenerateMap()
 --	end
 
 	local resourcesConfig = MapConfiguration.GetValue("resources");
+	local startConfig = MapConfiguration.GetValue("start");-- Get the start config
 	local args = {
 		iWaterLux = 4,
 		resources = resourcesConfig,
+		START_CONFIG = startConfig,
 	};
 	local resGen = ResourceGenerator.Create(args);
 	print("Creating start plot database.");
 	-- START_MIN_Y and START_MAX_Y is the percent of the map ignored for major civs' starting positions.
-	local startConfig = MapConfiguration.GetValue("start");-- Get the start config
 	local args = {
 		MIN_MAJOR_CIV_FERTILITY = 85,
 		MIN_MINOR_CIV_FERTILITY = 5, 
