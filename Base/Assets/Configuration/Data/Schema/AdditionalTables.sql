@@ -116,6 +116,16 @@ CREATE TABLE 'MapSizes' (
 	PRIMARY KEY('Domain','MapSizeType')
 );
 
+CREATE TABLE 'NaturalWonders' (
+	'Domain' TEXT NOT NULL DEFAULT 'StandardNaturalWonders',
+	'FeatureType' TEXT NOT NULL,
+	'Name' TEXT NOT NULL,
+	'Description' TEXT,
+	'Icon' TEXT,
+	'SortIndex' INTEGER NOT NULL DEFAULT 0,
+	PRIMARY KEY ('Domain','FeatureType')
+);
+
 CREATE TABLE 'Rulesets' (
 	'RulesetType' TEXT NOT NULL,
  	'Name' TEXT NOT NULL,

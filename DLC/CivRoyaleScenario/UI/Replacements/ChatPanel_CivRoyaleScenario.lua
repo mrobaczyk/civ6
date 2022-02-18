@@ -179,7 +179,8 @@ function OnChat( fromPlayer, toPlayer, text, eTargetType, playSounds :boolean )
 	-- Ensure text parsed properly
 	text = ParseChatText(text);
 
-	chatString			= chatString .. ": [ENDCOLOR]" .. chatColor .. text .. "[ENDCOLOR]"; 
+		-- Add a space before the [ENDCOLOR] tag to prevent the user from accidentally escaping it
+	chatString			= chatString .. ": [ENDCOLOR]" .. chatColor .. text .. " [ENDCOLOR]";
 
 	AddChatEntry( chatString, Controls.ChatEntryStack, m_ChatInstances, Controls.ChatLogPanel);
 	AddChatEntry( chatString, Controls.ExpandedChatEntryStack, m_expandedChatInstances, Controls.ExpandedChatLogPanel);

@@ -71,6 +71,11 @@
 		<Row Map="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" LeaderType="LEADER_SEONDEOK"/>
 		<Row Map="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" LeaderType="LEADER_TOMYRIS"/>
 	</MapLeaders>
+	<NaturalWonders>
+		<Row Domain="StandardNaturalWonders" FeatureType="FEATURE_HA_LONG_BAY" Name="LOC_FEATURE_HA_LONG_BAY_NAME" Description="LOC_FEATURE_HA_LONG_BAY_DESCRIPTION" Icon="ICON_FEATURE_HA_LONG_BAY"/>
+		<Row Domain="Expansion1NaturalWonders" FeatureType="FEATURE_HA_LONG_BAY" Name="LOC_FEATURE_HA_LONG_BAY_NAME" Description="LOC_FEATURE_HA_LONG_BAY_DESCRIPTION" Icon="ICON_FEATURE_HA_LONG_BAY"/>
+		<Row Domain="Expansion2NaturalWonders" FeatureType="FEATURE_HA_LONG_BAY" Name="LOC_FEATURE_HA_LONG_BAY_NAME" Description="LOC_FEATURE_HA_LONG_BAY_DESCRIPTION" Icon="ICON_FEATURE_HA_LONG_BAY"/>
+	</NaturalWonders>	
 	<ParameterDependencies>
 		<Row ParameterId="Resources" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map"/>
 		<Row ParameterId="StartPosition" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map"/>

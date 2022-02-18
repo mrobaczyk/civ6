@@ -289,16 +289,16 @@
 	</Feature_ValidTerrains>
 	<RandomEvents>
 		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" Name="LOC_RANDOM_EVENT_METEOR_SHOWER_NAME" Description="LOC_RANDOM_EVENT_METEOR_SHOWER_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_METEOR_SHOWER_EFFECT_DESCRIPTION" EffectOperatorType="METEOR_SHOWER" Severity="1" Hexes="1" IconLarge="ClimateEvent_MeteorShowers" IconSmall="ClimateEventStat_MeteorShowers" AvoidTerritory="true"/>
-		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="7" ChanceIncreasePerDegree="50" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
-		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="7" ChanceIncreasePerDegree="50" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="9" ChanceIncreasePerDegree="50" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" Name="LOC_RANDOM_EVENT_FOREST_FIRE_NAME" Description="LOC_RANDOM_EVENT_FOREST_FIRE_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_FIRE_EFFECT_DESCRIPTION" EffectOperatorType="FIRE" Severity="1" Hexes="1" Duration="9" ChanceIncreasePerDegree="50" IconLarge="ClimateEvent_ForestFire" IconSmall="ClimateEventStat_ForestFire"/>
 	</RandomEvents>
 	<RandomEvent_Notifications>
 		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" NotificationType="NOTIFICATION_FIRE_STARTS" Title="LOC_FIRE_STARTED" Summary="LOC_FIRE_STARTED_DESC" MaxTurn="0" CompilationRadius="4"/>
 		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" NotificationType="NOTIFICATION_FIRE_ENDS" Title="LOC_FIRE_CONTINUED" Summary="LOC_FIRE_CONTINUED_DESC" MinTurn="2" MaxTurn="2" CompilationRadius="4"/>
-		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" NotificationType="NOTIFICATION_JUNGLE_REGROWS" Title="LOC_FIRE_JUNGLE_OVER" Summary="LOC_FIRE_JUNGLE_OVER_DESC" MinTurn="6" MaxTurn="6" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_JUNGLE_FIRE" NotificationType="NOTIFICATION_JUNGLE_REGROWS" Title="LOC_FIRE_JUNGLE_OVER" Summary="LOC_FIRE_JUNGLE_OVER_DESC" MinTurn="8" MaxTurn="8" CompilationRadius="4"/>
 		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" NotificationType="NOTIFICATION_FIRE_STARTS" Title="LOC_FIRE_STARTED" Summary="LOC_FIRE_STARTED_DESC" MaxTurn="0" CompilationRadius="4"/>
 		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" NotificationType="NOTIFICATION_FIRE_ENDS" Title="LOC_FIRE_CONTINUED" Summary="LOC_FIRE_CONTINUED_DESC" MinTurn="2" MaxTurn="2" CompilationRadius="4"/>
-		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" NotificationType="NOTIFICATION_FOREST_REGROWS" Title="LOC_FIRE_FOREST_OVER" Summary="LOC_FIRE_FOREST_OVER_DESC" MinTurn="6" MaxTurn="6" CompilationRadius="4"/>
+		<Row RandomEventType="RANDOM_EVENT_FOREST_FIRE" NotificationType="NOTIFICATION_FOREST_REGROWS" Title="LOC_FIRE_FOREST_OVER" Summary="LOC_FIRE_FOREST_OVER_DESC" MinTurn="8" MaxTurn="8" CompilationRadius="4"/>
 		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" NotificationType="NOTIFICATION_METEOR_STRIKES" Title="LOC_METEOR_HAPPENED" Summary="LOC_METEOR_HAPPENED_DESC"/>
 	</RandomEvent_Notifications>
 	<RandomEvent_Features>

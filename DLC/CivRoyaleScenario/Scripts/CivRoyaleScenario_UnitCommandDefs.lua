@@ -91,9 +91,11 @@ m_ScenarioUnitCommands.ROAD_VISION.Properties = {};
 m_ScenarioUnitCommands.ROAD_VISION.EventName				= "ScenarioCommand_RoadVision";
 m_ScenarioUnitCommands.ROAD_VISION.CategoryInUI				= "SPECIFIC";
 m_ScenarioUnitCommands.ROAD_VISION.Icon						= "ICON_WANDERERS_ROAD_VISION";
+m_ScenarioUnitCommands.ROAD_VISION.Name						= "LOC_ROAD_VISION_NAME";
 m_ScenarioUnitCommands.ROAD_VISION.ToolTipString			= "LOC_ROAD_VISION_TT";
 m_ScenarioUnitCommands.ROAD_VISION.VisibleInUI				= true;
 m_ScenarioUnitCommands.ROAD_VISION.Sound					= "RoadVision_Activate";
+m_ScenarioUnitCommands.ROAD_VISION.IsGlobal					= true;
 
 -- ===========================================================================
 function m_ScenarioUnitCommands.ROAD_VISION.CanUse(pUnit : object)
@@ -143,6 +145,14 @@ function m_ScenarioUnitCommands.ROAD_VISION.GetDisabledTTString(pUnit :object)
 		return Locale.Lookup("LOC_ROAD_VISION_RECHARGING_TT", abilityTimerStatus.TurnsRemaining);
 	end
 	return nil;
+end
+
+function m_ScenarioUnitCommands.ROAD_VISION.IsActive()
+	local abilityTimerStatus = GetPlayerAbilityTimerStatus(Game.GetLocalPlayer(), g_playerPropertyKeys.RoadVisionTurn, WANDERER_ROAD_VISION_DURATION, WANDERER_ROAD_VISION_DEBOUNCE);
+	if(abilityTimerStatus.Status == AbilityTimerStatusTypes.Status_Active) then
+		return true;
+	end
+	return false;
 end
 
 --[[ =======================================================================
@@ -234,8 +244,11 @@ m_ScenarioUnitCommands.GRIEVING_GIFT.Properties = {};
 m_ScenarioUnitCommands.GRIEVING_GIFT.EventName			= nil;
 m_ScenarioUnitCommands.GRIEVING_GIFT.CategoryInUI		= "SPECIFIC";
 m_ScenarioUnitCommands.GRIEVING_GIFT.Icon				= "ICON_BORDERLORDS_GRIEVING_GIFT";
+m_ScenarioUnitCommands.GRIEVING_GIFT.Name				= "LOC_GRIEVING_GIFT_NAME";
+m_ScenarioUnitCommands.GRIEVING_GIFT.ToolTipString		= "LOC_GRIEVING_GIFT_TT";
 m_ScenarioUnitCommands.GRIEVING_GIFT.VisibleInUI		= true;
 m_ScenarioUnitCommands.GRIEVING_GIFT.InterfaceMode		= InterfaceModeTypes.GRIEVING_GIFT;
+m_ScenarioUnitCommands.GRIEVING_GIFT.IsGlobal			= true;
 
 
 -- ===========================================================================
@@ -394,9 +407,11 @@ m_ScenarioUnitCommands.BURN_TREASURE_MAP.Properties = {};
 m_ScenarioUnitCommands.BURN_TREASURE_MAP.EventName				= "ScenarioCommand_BurnTreasureMap";
 m_ScenarioUnitCommands.BURN_TREASURE_MAP.CategoryInUI			= "SPECIFIC";
 m_ScenarioUnitCommands.BURN_TREASURE_MAP.Icon					= "ICON_PIRATES_BURN_TREASURE_MAP";
+m_ScenarioUnitCommands.BURN_TREASURE_MAP.Name					= "LOC_BURN_TREASURE_MAP_NAME";
 m_ScenarioUnitCommands.BURN_TREASURE_MAP.ToolTipString			= "LOC_BURN_TREASURE_MAP_TT";
 m_ScenarioUnitCommands.BURN_TREASURE_MAP.VisibleInUI			= true;
 m_ScenarioUnitCommands.BURN_TREASURE_MAP.Sound					= "TreasureMapBurn";
+m_ScenarioUnitCommands.BURN_TREASURE_MAP.IsGlobal				= true;
 
 -- ===========================================================================
 function m_ScenarioUnitCommands.BURN_TREASURE_MAP.CanUse(pUnit : object)

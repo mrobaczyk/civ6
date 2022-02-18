@@ -9,6 +9,7 @@
     <Row OperationType="UNITOPERATION_SOOTHSAYER_SACRIFICE" VisibleInUI="true" HoldCycling="true" CategoryInUI="SPECIFIC" Icon="ICON_UNITCOMMAND_SOOTHSAYER_SACRIFICE" Description="LOC_UNITOPERATION_SACRIFICE_UNIT_DESCRIPTION" InterfaceMode="INTERFACEMODE_SACRIFICE_SELECTION"/>
   </UnitOperations>
   <UnitOperations_XP2>
-    <Row OperationType="UNITOPERATION_SOOTHSAYER_SACRIFICE" IsDisabled="true"/>
+    <Row OperationType="UNITOPERATION_SOOTHSAYER_SACRIFICE" IsDisabled="true" CO2Production="30000"/>
+    <Row OperationType="UNITOPERATION_CAUSE_DISASTER" CO2Production="50000"/>
   </UnitOperations_XP2>
 </GameInfo>

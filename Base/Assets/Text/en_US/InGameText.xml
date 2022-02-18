@@ -3454,6 +3454,9 @@
 		<Row Tag="LOC_TYPE_TRAIT_AIRSLOTS">
 			<Text>Aircraft Capacity: {1_Amount}</Text>
 		</Row>
+    <Row Tag="LOC_TYPE_TRAIT_APPEAL">
+      <Text>Appeal to Adjacent Tiles: {1_Amount}</Text>
+    </Row>
 		<Row Tag="LOC_TYPE_TRAIT_ENVOYS">
 			<Text>Awards {1_Count} [ICON_Envoy] {1_Count : plural 1?Envoy; other?Envoys;}</Text>
 		</Row>
@@ -6396,6 +6399,18 @@
 		</Row>
 		<Row Tag="LOC_UNIT_PANEL_ABILITIES_HEADER">
 			<Text>Abilities:</Text>
+		</Row>
+		<Row Tag="LOC_CIVICS_TREE_NOT_REVEALED_CIVIC">
+			<Text>Unrevealed</Text>
+		</Row>
+		<Row Tag="LOC_CIVICS_TREE_NOT_REVEALED_TOOLTIP">
+			<Text>Research prior civics to reveal this civic and its unlocks.</Text>
+		</Row>
+		<Row Tag="LOC_TECH_TREE_NOT_REVEALED_TECH">
+			<Text>Unrevealed</Text>
+		</Row>
+		<Row Tag="LOC_TECH_TREE_NOT_REVEALED_TOOLTIP">
+			<Text>Research prior techs to reveal this tech and its unlocks.</Text>
 		</Row>
 	</BaseGameText>
 </GameData>

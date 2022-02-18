@@ -36,9 +36,7 @@ function AssignStartingPlots.Create(args)
 		__StartBiasRivers					= AssignStartingPlots.__StartBiasRivers,
 		__StartBiasPlotRemoval				= AssignStartingPlots.__StartBiasPlotRemoval,
 		__SortByArray						= AssignStartingPlots.__SortByArray,
-		__ArraySize							= AssignStartingPlots.__ArraySize,				
-		__PreFertilitySort					= AssignStartingPlots.__PreFertilitySort,			
-		__SortByFertilityArray				= AssignStartingPlots.__SortByFertilityArray,	
+		__ArraySize							= AssignStartingPlots.__ArraySize,			
 		__AddResourcesBalanced				= AssignStartingPlots.__AddResourcesBalanced,
 		__AddResourcesLegendary				= AssignStartingPlots.__AddResourcesLegendary,
 		__BalancedStrategic					= AssignStartingPlots.__BalancedStrategic,
@@ -329,150 +327,131 @@ function AssignStartingPlots:__SetStartMajor(plots, iMajorIndex)
 		table.insert (sortedPlots, row);
 	end
 
-	if(self.uiStartConfig > 1 ) then
-		table.sort (sortedPlots, function(a, b) return a.Fertility > b.Fertility; end);
-	else
-		self.sortedFertilityArray = {};
-		sortedPlotsFertility = {};
-		sortedPlotsFertility = self:__PreFertilitySort(sortedPlots);
-		self:__SortByFertilityArray(sortedPlots, sortedPlotsFertility);
-		for k, v in pairs(sortedPlots) do
-			sortedPlots[k] = nil;
-		end
-		for i, newPlot in ipairs(self.sortedFertilityArray) do
-			row = {};
-			row.Plot = newPlot.Plot;
-			row.Fertility = newPlot.Fertility;
-			table.insert (sortedPlots, row);
-		end
-	end
+	table.sort (sortedPlots, function(a, b) return a.Fertility > b.Fertility; end);
 
-	local bValid = false;
 	local pFallback:table = Map.GetPlotByIndex(sortedPlots[1].Plot);
 	local iFallBackScore = -1;
-	while bValid == false and iSize >= iContinentIndex do
-		bValid = true;
-		local NWMajor = 0;
-		pTempPlot = Map.GetPlotByIndex(sortedPlots[iContinentIndex].Plot);
-		iContinentIndex = iContinentIndex + 1;
-		--print("Fertility: ", sortedPlots[iContinentIndex].Fertility)
+	while iSize >= iContinentIndex do
+		-- Wrap the function in a repeat so that we can break out of it
+		repeat
+			local NWMajor = 0;
+			pTempPlot = Map.GetPlotByIndex(sortedPlots[iContinentIndex].Plot);
+			iContinentIndex = iContinentIndex + 1;
+			--print("Fertility: ", sortedPlots[iContinentIndex].Fertility)
 
-		-- Checks to see if the plot is impassable
-		if(pTempPlot:IsImpassable() == true) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 0;
-			if (iFallBackScore < iFallBackScoreTemp) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
-			end
-		end
-
-		-- Checks to see if the plot is water
-		if(pTempPlot:IsWater() == true) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 1;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
-			end
-		end
-		
-		-- Checks to see if there are any major civs in the given distance
-		local bMajorCivCheck = self:__MajorCivBuffer(pTempPlot); 
-		if(bMajorCivCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 2;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
-			end
-		end	
-
-		-- Checks to see if there are luxuries
-		if (math.ceil(self.iDefaultNumberMajor * 1.25) + self.iDefaultNumberMinor > self.iNumMinorCivs + self.iNumMajorCivs) then
-			local bLuxuryCheck = self:__LuxuryBuffer(pTempPlot); 
-			if(bLuxuryCheck  == false) then
-				bValid = false;
+			-- Checks to see if the plot is impassable
+			if(pTempPlot:IsImpassable() == true) then
+				break
 			else
-				local iFallBackScoreTemp = 3;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+				local iFallBackScoreTemp = 0;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
+
+			-- Checks to see if the plot is water
+			if(pTempPlot:IsWater() == true) then
+				break
+			else
+				local iFallBackScoreTemp = 1;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
+		
+			-- Checks to see if there are any major civs in the given distance
+			local bMajorCivCheck = self:__MajorCivBuffer(pTempPlot); 
+			if(bMajorCivCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 2;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
+			end	
+
+			-- Checks to see if there are luxuries
+			if (math.ceil(self.iDefaultNumberMajor * 1.25) + self.iDefaultNumberMinor > self.iNumMinorCivs + self.iNumMajorCivs) then
+				local bLuxuryCheck = self:__LuxuryBuffer(pTempPlot); 
+				if(bLuxuryCheck  == false) then
+					break
+				else
+					local iFallBackScoreTemp = 3;
+					if (iFallBackScore < iFallBackScoreTemp) then
+						pFallback = pTempPlot;
+						iFallBackScore = iFallBackScoreTemp;
+					end
+				end
+			end
 		
 
-		--Checks to see if there are strategics
-		-- local bStrategicCheck = self:__StrategicBuffer(pTempPlot); 
-		-- if(bStrategicCheck  == false) then
-		-- 	bValid = false;
-		-- end
+			--Checks to see if there are strategics
+			-- local bStrategicCheck = self:__StrategicBuffer(pTempPlot); 
+			-- if(bStrategicCheck  == false) then
+			-- 	bValid = false;
+			-- end
 
-		-- Checks to see if there is fresh water or coast
-		local bWaterCheck = self:__GetWaterCheck(pTempPlot); 
-		if(bWaterCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 4;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+			-- Checks to see if there is fresh water or coast
+			local bWaterCheck = self:__GetWaterCheck(pTempPlot); 
+			if(bWaterCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 4;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
 
-		local bValidAdjacentCheck = self:__GetValidAdjacent(pTempPlot, 0); 
-		if(bValidAdjacentCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 5;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+			local bValidAdjacentCheck = self:__GetValidAdjacent(pTempPlot, 0); 
+			if(bValidAdjacentCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 5;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
 
-		-- Checks to see if there are natural wonders in the given distance
-		local bNaturalWonderCheck = self:__NaturalWonderBuffer(pTempPlot, false); 
-		if(bNaturalWonderCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 6;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+			-- Checks to see if there are natural wonders in the given distance
+			local bNaturalWonderCheck = self:__NaturalWonderBuffer(pTempPlot, false); 
+			if(bNaturalWonderCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 6;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
 		
-		-- Checks to see if there are resources
-		if(pTempPlot:GetResourceCount() > 0) then
-		   local bValidResource = self:__BonusResource(pTempPlot);
-		    if(bValidResource == false) then
-		       bValid = false;
+			-- Checks to see if there is a resource blocking our placement
+			if(pTempPlot:GetResourceCount() > 0 and not self:__BonusResource(pTempPlot)) then
+				break
+			else
+				local iFallBackScoreTemp = 7;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		else
-			local iFallBackScoreTemp = 7;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+
+			-- Checks to see if there is an Oasis
+			local featureType = pTempPlot:GetFeatureType();
+			if(featureType == g_FEATURE_OASIS) then
+				break
 			end
-		end
 
-		-- Checks to see if there is an Oasis
-		local featureType = pTempPlot:GetFeatureType();
-		if(featureType == g_FEATURE_OASIS) then
-			bValid = false;
-		end
-
-		-- If the plots passes all the checks then the plot equals the temp plot
-		if(bValid == true) then
+			-- If the plots passes all the checks then the plot equals the temp plot
 			self:__TryToRemoveBonusResource(pTempPlot);
 			self:__AddBonusFoodProduction(pTempPlot);
 			return pTempPlot;
-		end
+		-- End of the block: all our breaks send us here, instead of breaking the outer for loop
+		until true
 	end
  
 	return pFallback;
@@ -510,112 +489,109 @@ function AssignStartingPlots:__SetStartMinor(plots)
 	end
 
 	table.sort (sortedPlots, function(a, b) return a.Fertility > b.Fertility; end);
-
-	local bValid = false;
+	
 	local pFallback:table = Map.GetPlotByIndex(sortedPlots[1].Plot);
 	local iFallBackScore = -1;
-	while bValid == false and iSize >= iContinentIndex do
-		bValid = true;
-		local NWMinor = 2;
-		pTempPlot = Map.GetPlotByIndex(sortedPlots[iContinentIndex].Plot);
-		iContinentIndex = iContinentIndex + 1;
-		--print("Fertility: ", sortedPlots[iContinentIndex].Fertility)
+	while iSize >= iContinentIndex do
+		-- Wrap the function in a repeat so that we can break out of it
+		repeat
+			local NWMinor = 2;
+			pTempPlot = Map.GetPlotByIndex(sortedPlots[iContinentIndex].Plot);
+			iContinentIndex = iContinentIndex + 1;
+			--print("Fertility: ", sortedPlots[iContinentIndex].Fertility)
 
-		-- Checks to see if the plot is impassable
-		if(pTempPlot:IsImpassable() == true) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 0;
-			if (iFallBackScore < iFallBackScoreTemp) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+			-- Checks to see if the plot is impassable
+			if(pTempPlot:IsImpassable() == true) then
+				break
+			else
+				local iFallBackScoreTemp = 0;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
 
-		-- Checks to see if the plot is water
-		if(pTempPlot:IsWater() == true) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 1;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+			-- Checks to see if the plot is water
+			if(pTempPlot:IsWater() == true) then
+				break
+			else
+				local iFallBackScoreTemp = 1;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
 		
-		-- Checks to see if there are any minor civs in the given distance
-		local bMinorCivCheck = self:__MinorMajorCivBuffer(pTempPlot); 
-		if(bMinorCivCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 2;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
-			end
-		end		
+			-- Checks to see if there are any minor civs in the given distance
+			local bMinorCivCheck = self:__MinorMajorCivBuffer(pTempPlot); 
+			if(bMinorCivCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 2;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
+			end		
 
-		-- Checks to see if there are any minor civs in the given distance
-		local bMinorCivCheck = self:__MinorMinorCivBuffer(pTempPlot); 
-		if(bMinorCivCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 3;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
-			end
-		end		
+			-- Checks to see if there are any minor civs in the given distance
+			local bMinorCivCheck = self:__MinorMinorCivBuffer(pTempPlot); 
+			if(bMinorCivCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 3;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
+			end		
 
-		local bValidAdjacentCheck = self:__GetValidAdjacent(pTempPlot, 2); 
-		if(bValidAdjacentCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 4;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+			local bValidAdjacentCheck = self:__GetValidAdjacent(pTempPlot, 2); 
+			if(bValidAdjacentCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 4;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
 
-		-- Checks to see if there are natural wonders in the given distance
-		local bNaturalWonderCheck = self:__NaturalWonderBuffer(pTempPlot, true); 
-		if(bNaturalWonderCheck == false) then
-			bValid = false;
-		else
-			local iFallBackScoreTemp = 5;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+			-- Checks to see if there are natural wonders in the given distance
+			local bNaturalWonderCheck = self:__NaturalWonderBuffer(pTempPlot, true); 
+			if(bNaturalWonderCheck == false) then
+				break
+			else
+				local iFallBackScoreTemp = 5;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		end
 
-		-- Checks to see if there are resources
-		if(pTempPlot:GetResourceCount() > 0) then
-			local bValidResource = self:__BonusResource(pTempPlot);
-			if(bValidResource == false) then
-				bValid = false;
+			-- Checks to see if there are resources
+			if(pTempPlot:GetResourceCount() > 0 and not self:__BonusResource(pTempPlot)) then
+				break
+			else
+				local iFallBackScoreTemp = 6;
+				if (iFallBackScore < iFallBackScoreTemp) then
+					pFallback = pTempPlot;
+					iFallBackScore = iFallBackScoreTemp;
+				end
 			end
-		else
-			local iFallBackScoreTemp = 6;
-			if (iFallBackScore < iFallBackScoreTemp and bValid == true) then
-				pFallback = pTempPlot;
-				iFallBackScore = iFallBackScoreTemp;
+
+			-- Checks to see if there is an Oasis
+			local featureType = pTempPlot:GetFeatureType();
+			if(featureType == g_FEATURE_OASIS) then
+				break
 			end
-		end
 
-		-- Checks to see if there is an Oasis
-		local featureType = pTempPlot:GetFeatureType();
-		if(featureType == g_FEATURE_OASIS) then
-			bValid = false;
-		end
-
-		-- If the plots passes all the checks then the plot equals the temp plot
-		if(bValid == true) then
+			-- If the plots passes all the checks then the plot equals the temp plot
 			self:__TryToRemoveBonusResource(pTempPlot);
 			return pTempPlot;
-		end
+		until true
 	end
+ 
  
 	return pFallback;
 end
@@ -1979,61 +1955,6 @@ function AssignStartingPlots:__ArraySize(array, index)
 	end
 
  	return count;
-end
-
-------------------------------------------------------------------------------
-function AssignStartingPlots:__PreFertilitySort(sortedPlots)
-	--Only used for balanced start
-	local iFirstFertility = sortedPlots[1].Fertility;
-	if(iFirstFertility < 0) then
-		iFirstFertility = 0;
-	end
-
-	local score = {};
-
-	for i, plot in ipairs(sortedPlots) do
-		local value = plot.Fertility;
-
-		if(value < 0) then
-			value = 0
-		end
-
-		if(iFirstFertility - value < 0) then
-			value = iFirstFertility - value;
-		end
-
-		table.insert(score, value);
-	end
-
-	return score;
-end
-------------------------------------------------------------------------------
-function AssignStartingPlots:__SortByFertilityArray(sorted, keyArray)
-	--Only used for balanced start
-	local greatestValue = math.huge * -1;
-	local index  = -1;
-
-	for k, key in ipairs(keyArray) do
-		if(key ~= nil and key > greatestValue) then
-			index = k;
-			greatestValue = key;
-		end
-	end
-
-	if(index > 0 and sorted[index] ~= nil) then
-		row = {};
-		row.Plot = sorted[index].Plot;
-		row.Fertility = sorted[index].Fertility;
-		table.insert(self.sortedFertilityArray,row);
-		table.remove(sorted,index);
-		table.remove(keyArray,index);
-	else
-		--print("Nil");
-	end 
-
-	if(#keyArray > 0) then
-		self:__SortByFertilityArray(sorted, keyArray);
-	end
 end
 
 ------------------------------------------------------------------------------

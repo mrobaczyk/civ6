@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Use like this: <Include File="WorldTrackerCivic"/>-->
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\..\CivTech\Libs\ForgeUI\ForgeUI_Assets\Controls.xsd">
+
+	<Instance						Name="GlobalAbilityInstance">
+		<Grid							ID="MainPanel"																Offset="0,0"		Size="296,80"					Texture="RedDeathPanel" SliceSize="1,1" SliceTextureSize="296,80" ConsumeMouseOver="1">
+			<Box																													Offset="0,25"		Size="228,2" 			Color="0,0,0,100"/>
+			<Box						ID="Divider"																	Offset="0,55"		Size="228,2" 			Color="0,0,0,100">
+				<Box Anchor="C'C" Offset="0,-1" Size="parent,1" Color="0,0,0,200"/>
+			</Box>
+			<Container																										Offset="-5,0"		Size="parent,parent" >
+				<TextButton		ID="TitleButton"								Anchor="C,T"	Offset="-28,7"	Size="200,40"					Style="PanelHeaderText" String="ResearchName" />
+				<Image																				Anchor="R,C"	Offset="-6,0"																			Texture="CivicPanel_MeterFrame">
+					<Button			ID="IconButton"									Anchor="C,C"									Size="44,44"					Texture="CivicPanel_Button"		>
+						<Image		ID="Icon"												Anchor="C,C"									Size="38,38"					Texture="Tech38" />
+					</Button>
+					<Meter			ID="CooldownMeter"							Anchor="C,C"	Offset="1,0"		Size="64,64"					Texture="RedDeathPanel_Meter"				Percent=".1"	Speed="1.0" Follow="0"/>
+				</Image>
+
+				<Label				ID="AbilityStatusLabel"					Anchor="C,C"	Offset="-28,0" 	Style="FontNormal12"	String="LOC_CIV_ROYALE_GLOBAL_ABILITY_AVAILABLE" WrapWidth ="140"/>
+				<Label				ID="AbilityChargesLabel"				Anchor="C,C"	Offset="-28,26" 		Style="FontNormal12"	String="Charges: "/>
+			</Container>
+		</Grid>
+	</Instance>
+
+</Root>

@@ -1,4 +1,4 @@
--- Copyright 2019, Firaxis Games
+﻿-- Copyright 2019, Firaxis Games
 
 -- ===========================================================================
 -- Base File
@@ -220,6 +220,7 @@ function ResetOverlays()
 	ResetPirateTreasureOverlay();
 	ResetImprovisedTrapsOverlay();
 	ResetGiftsOverlay();
+	ResetZombieHungerWaves();
 end
 
 function ClearScenarioOverlays()
@@ -972,8 +973,12 @@ function OnImprovementVisibilityChanged( locX :number, locY :number, eImprovemen
 end
 
 -- ===========================================================================
-function OnLocalPlayerChanged()
-	m_overlayDataDirty = true;  -- Next step is an refresh in OnGameCoreEventPlaybackComplete
+-- Note, there is an OnLocalPlayerChanged in the base minimap panel and it
+-- is subscribed to in the minimappanel init, which we still call, so
+-- we are using a different name here, else we would just end up double-subscribing
+-- to the same function.
+function CivRoyale_OnLocalPlayerChanged()	
+	ResetOverlays();	-- Handle hotseat players changing.
 end
 
 -- ===========================================================================
@@ -1148,7 +1153,7 @@ function LateInitialize( isReload:boolean )
 	Events.ImprovementRemovedFromMap.Add( OnImprovementRemovedFromMap );
 	Events.ImprovementVisibilityChanged.Add( OnImprovementVisibilityChanged );
 	Events.LoadScreenClose.Add(OnLoadScreenClose);
-	Events.LocalPlayerChanged.Add( OnLocalPlayerChanged );
+	Events.LocalPlayerChanged.Add( CivRoyale_OnLocalPlayerChanged );
 	Events.PlayerDefeat.Add( OnPlayerDefeat );
 	Events.TeamVictory.Add( OnTeamVictory );
 	Events.TurnBegin.Add( OnTurnBegin );

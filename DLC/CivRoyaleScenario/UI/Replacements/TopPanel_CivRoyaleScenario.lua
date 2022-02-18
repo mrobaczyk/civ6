@@ -113,12 +113,14 @@ function RefreshRoyaleUnit()
 	local pPlayerConfig:table = PlayerConfigurations[localPlayerID];
 	local pPlayerUnits:table = pPlayer:GetUnits();
 	local isHidingFalloutWarning:boolean = true;
+	local pUnitInFallout:table = nil;
 
 	for i, pUnit in pPlayerUnits:Members() do
 		local unitTypeName = UnitManager.GetTypeName(pUnit)
 		if (unitTypeName == "UNIT_SETTLER") then
 			local pUnitPlot = Map.GetPlot(pUnit:GetX(),pUnit:GetY());
 			if(not CheckUnitFalloutStatus(pUnitPlot, pPlayerConfig)) then
+				pUnitInFallout = pUnit;
 				isHidingFalloutWarning = false;
 				break;
 			end
@@ -126,6 +128,13 @@ function RefreshRoyaleUnit()
 	end
 
 	Controls.RunningUnit:SetHide(isHidingFalloutWarning);
+	if(not isHidingFalloutWarning) then
+		Controls.RunningUnit:RegisterCallback(Mouse.eLClick, function ()
+			UI.SelectUnit(pUnitInFallout);
+			local plot : table = Map.GetPlot( pUnitInFallout:GetX(), pUnitInFallout:GetY() );
+			UI.LookAtPlot( plot );
+		end);
+	end
 end
 
 function CheckUnitFalloutStatus(pUnitPlot :object, localPlayerConfig :object)

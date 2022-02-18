@@ -119,10 +119,15 @@ function GetUnitActionsTable(pUnit : object)
 	--	to the selected unit's table.
 	for sCommandKey, pCommandTable in pairs(m_ScenarioUnitCommands) do
 		local bVisible : boolean = true;
+		local bGlobal : boolean = false;
+		if(pCommandTable.IsGlobal ~= nil and pCommandTable.IsGlobal)then
+			--Global abilities (Grieving Gift, Road Vision, etc.) should not be shown in the unit panel
+			bGlobal = true;
+		end
 		if (pCommandTable.IsVisible ~= nil) then
 			bVisible = pCommandTable.IsVisible(pUnit);
 		end
-		if (bVisible) then
+		if (bVisible and not bGlobal) then
 
 			if (pCommandTable.CanUse ~= nil and pCommandTable.CanUse(pUnit) == true) then
 

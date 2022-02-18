@@ -19,7 +19,7 @@
 
 	<Stack StackGrowth="Right" Padding="4">
     <Container Size="26,26">
-      <Image	ID="RunningUnit" Icon="ICON_CIVROYALE_UNIT" Anchor="L,C" Size="26,26" Color="255,0,0,255" Offset="0,-1" Alpha="0.9" Hidden="1" ToolTip="LOC_CIV_ROYALE_HUD_CIVILIAN_WARNING"/>
+			<Button	ID="RunningUnit" Icon="ICON_CIVROYALE_UNIT" Anchor="L,C" Size="26,26" Color="255,0,0,255" Offset="0,-1" Alpha="0.9" Hidden="1" ToolTip="LOC_CIV_ROYALE_HUD_CIVILIAN_WARNING" NoStateChange="1"/>
     </Container>
 		<Stack	ID="RingStackAndTurns"	Anchor="C,C" StackGrowth="Right" Padding="4">
       <Stack	ID="RingStack" StackGrowth="Left"/>

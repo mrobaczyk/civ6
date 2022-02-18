@@ -571,6 +571,13 @@ CREATE TABLE "Civics" (
 		FOREIGN KEY (EraType) REFERENCES Eras(EraType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (CivicType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "Civics_XP2" (
+		"CivicType" TEXT NOT NULL,
+		"RandomPrereqs" BOOLEAN NOT NULL CHECK (RandomPrereqs IN (0,1)) DEFAULT 0,
+		"HiddenUntilPrereqComplete" BOOLEAN NOT NULL CHECK (HiddenUntilPrereqComplete IN (0,1)) DEFAULT 0,
+		PRIMARY KEY(CivicType),
+		FOREIGN KEY (CivicType) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "CivicModifiers" (
 		"CivicType" TEXT NOT NULL,
 		"ModifierId" TEXT NOT NULL,
@@ -590,6 +597,12 @@ CREATE TABLE "CivicQuotes" (
 		"Quote" TEXT NOT NULL,
 		"QuoteAudio" TEXT,
 		PRIMARY KEY(CivicType, Quote),
+		FOREIGN KEY (CivicType) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "CivicRandomCosts" (
+		"CivicType" TEXT NOT NULL,
+		"Cost" INTEGER NOT NULL,
+		PRIMARY KEY(CivicType, Cost),
 		FOREIGN KEY (CivicType) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Civilizations" (
@@ -2505,6 +2518,13 @@ CREATE TABLE "Technologies" (
 		FOREIGN KEY (EmbarkUnitType) REFERENCES Units(UnitType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (TechnologyType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "Technologies_XP2" (
+		"TechnologyType" TEXT NOT NULL,
+		"RandomPrereqs" BOOLEAN NOT NULL CHECK (RandomPrereqs IN (0,1)) DEFAULT 0,
+		"HiddenUntilPrereqComplete" BOOLEAN NOT NULL CHECK (HiddenUntilPrereqComplete IN (0,1)) DEFAULT 0,
+		PRIMARY KEY(TechnologyType),
+		FOREIGN KEY (TechnologyType) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "TechnologyModifiers" (
 		"TechnologyType" TEXT NOT NULL,
 		"ModifierId" TEXT NOT NULL,
@@ -2523,6 +2543,12 @@ CREATE TABLE "TechnologyQuotes" (
 		"Quote" TEXT NOT NULL,
 		"QuoteAudio" TEXT,
 		PRIMARY KEY(TechnologyType, Quote),
+		FOREIGN KEY (TechnologyType) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "TechnologyRandomCosts" (
+		"TechnologyType" TEXT NOT NULL,
+		"Cost" INTEGER NOT NULL,
+		PRIMARY KEY(TechnologyType, Cost),
 		FOREIGN KEY (TechnologyType) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Terrains" (
@@ -3048,6 +3074,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Civics", "UnitCollection", "Units", 1,"SELECT T1.rowid from Units as T1 inner join Civics as T2 on T2.CivicType = T1.PrereqCivic where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("CivicPrereqs", "CivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join CivicPrereqs as T2 on T2.Civic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("CivicPrereqs", "PrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join CivicPrereqs as T2 on T2.PrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("CivicRandomCosts", "CivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join CivicRandomCosts as T2 on T2.CivicType = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Civilizations", "CitizenNameCollection", "CivilizationCitizenNames", 1,"SELECT T1.rowid from CivilizationCitizenNames as T1 inner join Civilizations as T2 on T2.CivilizationType = T1.CivilizationType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Civilizations", "CityNameCollection", "CityNames", 1,"SELECT T1.rowid from CityNames as T1 inner join Civilizations as T2 on T2.CivilizationType = T1.CivilizationType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Civilizations", "ReligionCollection", "Religions", 1,"SELECT T1.rowid from Religions as T1 inner join FavoredReligions as T2 on T2.ReligionType = T1.ReligionType inner join Civilizations as T3 on T3.CivilizationType = T2.CivilizationType where T3.rowid = ? ORDER BY T1.rowid ASC");
@@ -3322,6 +3349,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Technologies", "UnitCollection", "Units", 1,"SELECT T1.rowid from Units as T1 inner join Technologies as T2 on T2.TechnologyType = T1.PrereqTech where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("TechnologyPrereqs", "PrereqTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join TechnologyPrereqs as T2 on T2.PrereqTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("TechnologyPrereqs", "TechnologyReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join TechnologyPrereqs as T2 on T2.Technology = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("TechnologyRandomCosts", "TechnologyReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join TechnologyRandomCosts as T2 on T2.TechnologyType = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "ImprovementAdjacentTerrainCollection", "Improvement_ValidAdjacentTerrains", 1,"SELECT T1.rowid from Improvement_ValidAdjacentTerrains as T1 inner join Terrains as T2 on T2.TerrainType = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "ImprovementCollection", "Improvement_ValidTerrains", 1,"SELECT T1.rowid from Improvement_ValidTerrains as T1 inner join Terrains as T2 on T2.TerrainType = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Terrains", "StartBiasTerrainCollection", "StartBiasTerrains", 1,"SELECT T1.rowid from StartBiasTerrains as T1 inner join Terrains as T2 on T2.TerrainType = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC");

@@ -31,6 +31,7 @@ CREATE TABLE 'ParameterQueries'(
 	'DescriptionField' TEXT NOT NULL DEFAULT 'Description',
 	'DomainField' TEXT NOT NULL DEFAULT 'Domain',
 	'HashField' TEXT NOT NULL DEFAULT 'Hash',
+	'ArrayField' TEXT NOT NULL DEFAULT 'Array',
 	'DefaultValueField' TEXT NOT NULL DEFAULT 'DefaultValue',
 	'ConfigurationGroupField' TEXT NOT NULL DEFAULT 'ConfigurationGroup',
 	'ConfigurationIdField' TEXT NOT NULL DEFAULT 'ConfigurationId',
@@ -49,6 +50,7 @@ CREATE TABLE 'ParameterQueries'(
 	'SupportsPlayByCloudField' TEXT NOT NULL DEFAULT 'SupportsPlayByCloud',
 	'ChangeableAfterGameStartField' TEXT NOT NULL DEFAULT 'ChangeableAfterGameStart',
 	'ChangeableAfterPlayByCloudMatchCreateField' TEXT NOT NULL DEFAULT 'ChangeableAfterPlayByCloudMatchCreate',
+	'UxHintField' TEXT NOT NULL DEFAULT 'UxHint',
 	'SortIndexField' TEXT NOT NULL DEFAULT 'SortIndex',
 	PRIMARY KEY('ParameterQueryId'),
 	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
@@ -78,6 +80,7 @@ CREATE TABLE 'Parameters'(
 	'Description' TEXT,											-- The description of the parameter (used for UI purposes, typically a tooltip).
 	'Domain' TEXT NOT NULL,										-- The domain of values to use
 	'Hash' BOOLEAN NOT NULL DEFAULT 0,							-- Whether or not to hash the value when writing to the config.  Only applies to the value, not other config entries.
+	'Array' BOOLEAN NOT NULL DEFAULT 0,							-- Whether or not the value of the parameter is an array of 0-N values.
 	'DefaultValue',												-- The default value to use, null allowed.
 	'ConfigurationGroup' TEXT NOT NULL,							-- The map used to write all of the configuration values (e.g Game, Map, Player[id])
 	'ConfigurationId' TEXT NOT NULL,							-- The key used to write out the value of the parameter.
@@ -96,7 +99,7 @@ CREATE TABLE 'Parameters'(
 	'SupportsPlayByCloud' BOOLEAN NOT NULL DEFAULT 1,			-- This parameter is supported by the PlayByCloud mode.
 	'ChangeableAfterGameStart' BOOLEAN NOT NULL DEFAULT 0,
 	'ChangeableAfterPlayByCloudMatchCreate' BOOLEAN NOT NULL DEFAULT 1,	-- Is this a parameter that can be changed after a PlayByCloud match is created.
-	
+	'UxHint' TEXT,												-- This column 'suggests' what kind of Ux should be used to display it. (e.x. 'SimpleSelectPanel', 'MultiSelectPanel').
 	'SortIndex' INTEGER NOT NULL DEFAULT 100
 );
 
@@ -168,6 +171,7 @@ CREATE TABLE 'DomainValueQueries'(
 	'ValueField' TEXT NOT NULL DEFAULT 'Value',
 	'NameField' TEXT NOT NULL DEFAULT 'Name',
 	'DescriptionField' TEXT NOT NULL DEFAULT 'Description',
+	'IconField' TEXT NOT NULL DEFAULT 'Icon',
 	'SortIndexField' TEXT NOT NULL DEFAULT 'SortIndex',
 	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
 );
@@ -179,6 +183,7 @@ CREATE TABLE 'DomainValues'(
 	'Value' NOT NULL,
 	'Name' TEXT NOT NULL,
 	'Description' TEXT,
+	'Icon' TEXT,
 	'SortIndex' INTEGER NOT NULL DEFAULT 100,
 	PRIMARY KEY('Key1','Key2','Domain','Value')
 );
