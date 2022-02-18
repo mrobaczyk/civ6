@@ -7423,7 +7423,7 @@
       <Text>{1_CivAdjective} Каперский патент|каперского патента|каперскому патенту|каперский патент|каперским патентом|каперском патенте</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_LETTER_OF_MARQUE_SUMMARY" Language="ru_RU">
-      <Text>Королевское величество соизволили выдать нам каперский патент. Теперь мы грабим суда во имя {1_CivShortName}.</Text>
+      <Text>Королевское величество соизволили выдать нам каперский патент. Теперь мы грабим суда во имя {1_CivShortName[2]}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_NEW_RELIC_MESSAGE" Language="ru_RU">
       <Text>Получено: {1_relicName}</Text>
@@ -7441,10 +7441,10 @@
       <Text>За ход: {1_usagePerTurn}</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS" Language="ru_RU">
-      <Text>Мятеж через {1_Turns : plural 1?{1_turns} ход; 2?{1_Turns}  хода; other?{1_Turns} ход.;}!</Text>
+      <Text>{1_Turns : plural 1?Ходов до мятежа; other?Ходов до мятежа;}: {1_turns}!</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS" Language="ru_RU">
-      <Text>Разгар мятежа через {1_Turns : plural 1?{1_turns} ход; 2?{1_Turns} хода; other?{1_Turns} ход.;}!</Text>
+      <Text>{1_Turns : plural 1?Ходов до разгара мятежа; other?Ходов до разгара мятежа;}: {1_turns}!</Text>
     </Replace>
     <Replace Tag="LOC_PIRATES_PLOT_TOOLTIP_TREASURE_OWNER" Language="ru_RU">
       <Text>Сокровище ({1_OwnerName})</Text>

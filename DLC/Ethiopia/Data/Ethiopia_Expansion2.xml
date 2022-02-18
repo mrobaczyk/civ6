@@ -43,6 +43,12 @@
 				<Description>LOC_UNIT_ETHIOPIAN_OROMO_CAVALRY_EXPANSION2_DESCRIPTION</Description>
 			</Set>
 		</Update>
+    <Update>
+      <Where UnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY"/>
+      <Set>
+        <StrategicResource>RESOURCE_HORSES</StrategicResource>
+      </Set>
+    </Update>
 	</Units>
 	<UnitReplaces>
 		<Row CivUniqueUnitType="UNIT_ETHIOPIAN_OROMO_CAVALRY" ReplacesUnitType="UNIT_COURSER"/>

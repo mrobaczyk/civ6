@@ -21,9 +21,12 @@
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_CIV_ROYALE" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="0" Hash="0" />
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_CIV_ROYALE" TargetGroup="Game" TargetId="TURN_TIMER_TYPE" TargetValue="TURNTIMER_DYNAMIC" Hash="1" />		
 	</ConfigurationUpdates>
-	<ParameterCriteria>
+	<ParameterDependencies>
 		<Row ParameterId="CityStateCount" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_CIV_ROYALE" />
-	</ParameterCriteria>
+		<Row ParameterId="Resources" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_CIV_ROYALE" />
+		<Row ParameterId="StartPosition" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_CIV_ROYALE" />
+		<Row ParameterId="Temperature" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_CIV_ROYALE" />
+	</ParameterDependencies>
 	<Victories>
 		<Row Domain="CivRoyaleScenario_Victories" VictoryType="VICTORY_DEFAULT" Name="LOC_CIV_ROYALE_VICTORY_TITLE" Description="LOC_CIV_ROYALE_VICTORY_DESC" ReadOnly="true" />
 	</Victories>
@@ -31,7 +34,12 @@
 		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardEras" Value="ERA_INFORMATION"/>
 		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardTurnLimits" Value="TURNLIMIT_NONE"/>
 		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardGameSpeeds" Value="GAMESPEED_ONLINE"/>
-	</RulesetSupportedValues>	
+	</RulesetSupportedValues>
+  <!-- Disable random leader pool players which are inaccessible -->
+  <RulesetUnsupportedValues>
+    <Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="Players:*" Value="RANDOM_POOL1" />
+    <Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="Players:*" Value="RANDOM_POOL2" />
+  </RulesetUnsupportedValues>
 	<Parameters>
 		<!-- Using a different ParameterId to override the default values for these standard advanced settings. -->
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_CIV_ROYALE" ParameterId="CivRoyal_NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="LOC_GAME_NO_GOODY_HUTS" Domain="bool" DefaultValue="0" Visible="false" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>

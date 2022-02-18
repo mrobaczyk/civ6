@@ -36,6 +36,18 @@ function OnScenarioCommand_VisitTavern(eOwner : number, iUnitID : number)
 	local sLog = "Executing VISIT_TAVERN Command for " .. pUnit:GetName();
 	print(sLog);
 
+	local pCity :object = FindAdjacentCity(pUnit);
+	if(pCity == nil) then
+		print("ERROR: Missing city for VISIT_TAVERN Command");
+		return false;
+	end
+
+	local timerStatus :table = GetPropertyTimerStatus(pCity, g_cityPlayerSpecificKeys.LastTavernTurn, eOwner, VISIT_TAVERN_DURATION, VISIT_TAVERN_DEBOUNCE);
+	if(timerStatus.Status ~= g_PropertyTimerStatusTypes.Status_Ready) then
+		print("ERROR: Tavern cooldown status not ready. timerStatus=" .. tostring(timerStatus.Status));
+		return false;
+	end
+
 	SelectNewQuest(eOwner);
 
 	RevealNearestPort(eOwner, pUnit:GetX(), pUnit:GetY());
@@ -59,24 +71,20 @@ function OnScenarioCommand_VisitTavern(eOwner : number, iUnitID : number)
 	Game.AddWorldViewText(crewMessageData);
 	UnitManager.ReportActivation(pUnit, "VISIT_TAVERN");
 
-	local pCity :object = FindAdjacentCity(pUnit);
-	if(pCity == nil) then
-		print("ERROR: Missing city for VISIT_TAVERN Command");
-	else
-		-- Update unique tavern visits property.
-		local lastTavernTurnKey :string = GetPlayerSpecificPropKey(g_cityPlayerSpecificKeys.LastTavernTurn, eOwner);
-		local lastTavernProp :number = pCity:GetProperty(lastTavernTurnKey);
-		if(lastTavernProp == nil) then
-			local tavernVisitCount :number = pPlayer:GetProperty(g_playerPropertyKeys.TavernsVisited);
-			if(tavernVisitCount == nil) then
-				tavernVisitCount = 0;
-			end
-			tavernVisitCount = tavernVisitCount + 1;
-			pPlayer:SetProperty(g_playerPropertyKeys.TavernsVisited, tavernVisitCount);
+	-- Update unique tavern visits property.
+	local lastTavernTurnKey :string = GetPlayerSpecificPropKey(g_cityPlayerSpecificKeys.LastTavernTurn, eOwner);
+	local lastTavernProp :number = pCity:GetProperty(lastTavernTurnKey);
+	if(lastTavernProp == nil) then
+		-- If the g_cityPlayerSpecificKeys.LastTavernTurn is nil, this player hasn't visited this tavern yet.
+		local tavernVisitCount :number = pPlayer:GetProperty(g_playerPropertyKeys.TavernsVisited);
+		if(tavernVisitCount == nil) then
+			tavernVisitCount = 0;
 		end
-
-		StartPropertyTimer(pCity, g_cityPlayerSpecificKeys.LastTavernTurn, eOwner);
+		tavernVisitCount = tavernVisitCount + 1;
+		pPlayer:SetProperty(g_playerPropertyKeys.TavernsVisited, tavernVisitCount);
 	end
+
+	StartPropertyTimer(pCity, g_cityPlayerSpecificKeys.LastTavernTurn, eOwner);
 
 	return true;
 end

@@ -162,8 +162,9 @@
 		<Row FeatureType="FEATURE_BARRIER_REEF" YieldType="YIELD_FOOD" YieldChange="3"/>
 		<Row FeatureType="FEATURE_BARRIER_REEF" YieldType="YIELD_SCIENCE" YieldChange="2"/>
 		<Row FeatureType="FEATURE_CLIFFS_DOVER" YieldType="YIELD_CULTURE" YieldChange="3"/>
-		<Row FeatureType="FEATURE_CLIFFS_DOVER" YieldType="YIELD_GOLD" YieldChange="2"/>
-		<Row FeatureType="FEATURE_CRATER_LAKE" YieldType="YIELD_FAITH" YieldChange="4"/>
+		<Row FeatureType="FEATURE_CLIFFS_DOVER" YieldType="YIELD_GOLD" YieldChange="3"/>
+		<Row FeatureType="FEATURE_CLIFFS_DOVER" YieldType="YIELD_FOOD" YieldChange="2"/>
+		<Row FeatureType="FEATURE_CRATER_LAKE" YieldType="YIELD_FAITH" YieldChange="5"/>
 		<Row FeatureType="FEATURE_CRATER_LAKE" YieldType="YIELD_SCIENCE" YieldChange="1"/>
 		<Row FeatureType="FEATURE_DEAD_SEA" YieldType="YIELD_CULTURE" YieldChange="2"/>
 		<Row FeatureType="FEATURE_DEAD_SEA" YieldType="YIELD_FAITH" YieldChange="2"/>
@@ -317,4 +318,10 @@
 		<Row ModifierId="DEAD_SEA_ADJACENT_UNITS_ADJUST_HEAL_PER_TURN"/>
 		<Row ModifierId="EVEREST_ADJACENT_UNITS_GRANT_ABILITY"/>
 	</GameModifiers>
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_CAMPUS" YieldChangeId="GBR_Science"/>
+	</District_Adjacencies>
+	<Adjacency_YieldChanges>
+		<Row ID="GBR_Science" Description="LOC_FEATURE_BARRIER_REEF_SCIENCE" YieldType="YIELD_SCIENCE" YieldChange="2" TilesRequired="1" AdjacentFeature="FEATURE_BARRIER_REEF"/>
+	</Adjacency_YieldChanges>
 </GameInfo>

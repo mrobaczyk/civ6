@@ -15,9 +15,11 @@
 		<Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="StandardTurnLimits" Value="TURNLIMIT_NONE"/>
 	</RulesetSupportedValues>
 	
-	<!-- Mvemba is not allowed due to the inability to create a religion-->
+	<!-- Mvemba is not allowed due to the inability to create a religion and random leader pool players which are inaccessible -->
 	<RulesetUnsupportedValues>
 		<Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="Players:StandardPlayers" Value="LEADER_MVEMBA" />
+    <Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="Players:StandardPlayers" Value="RANDOM_POOL1" />
+    <Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="Players:StandardPlayers" Value="RANDOM_POOL2" />
 	</RulesetUnsupportedValues>
 	
 	<Victories>

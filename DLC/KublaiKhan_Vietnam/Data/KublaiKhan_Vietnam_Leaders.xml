@@ -287,7 +287,15 @@
       <SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
     </Row>
   </Modifiers>
-  <ModifierStrings>
+  <ModifierArguments>
+    <Row>
+      <ModifierId>AGENDA_KUBLAI_PAX</ModifierId>
+      <Name>StatementKey</Name>
+      <!-- Note: Value not actually used, just has to have something so we know this is a kudo/warning -->
+      <Value>AGENDA_KUBLAI_PAX_KUDO_AND_WARNING</Value>
+    </Row>
+  </ModifierArguments>
+    <ModifierStrings>
     <Row ModifierId="AGENDA_TRIEU_DEFENDER" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
     <Row ModifierId="AGENDA_KUBLAI_PAX" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
   </ModifierStrings>

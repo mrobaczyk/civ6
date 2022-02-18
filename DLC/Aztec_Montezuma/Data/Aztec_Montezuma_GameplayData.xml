@@ -5,10 +5,9 @@
 		<Row Type="CIVILIZATION_AZTEC" Kind="KIND_CIVILIZATION"/>
 		<Row Type="LEADER_MONTEZUMA" Kind="KIND_LEADER"/>
 		<Row Type="UNIT_AZTEC_EAGLE_WARRIOR" Kind="KIND_UNIT"/>
-
-		<Row Type="TRAIT_CIVILIZATION_LEGEND_FIVE_SUNS" Kind="KIND_TRAIT" />
-		<Row Type="TRAIT_CIVILIZATION_BUILDING_TLACHTLI" Kind="KIND_TRAIT" />
-		<Row Type="TRAIT_CIVILIZATION_UNIT_AZTEC_EAGLE_WARRIOR" Kind="KIND_TRAIT" />
+		<Row Type="TRAIT_CIVILIZATION_LEGEND_FIVE_SUNS" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_BUILDING_TLACHTLI" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_UNIT_AZTEC_EAGLE_WARRIOR" Kind="KIND_TRAIT"/>
 	</Types>
 	<TypeTags>
 		<Row Type="UNIT_AZTEC_EAGLE_WARRIOR" Tag="CLASS_MELEE"/>
@@ -42,10 +41,10 @@
 		<Row CivilizationType="CIVILIZATION_AZTEC" Name="LOC_CIVILIZATION_AZTEC_NAME" Description="LOC_CIVILIZATION_AZTEC_DESCRIPTION" Adjective="LOC_CIVILIZATION_AZTEC_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_FULL_CIV" RandomCityNameDepth="10"/>
 	</Civilizations>
 	<CivilizationInfo>
-		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_AZTEC_LOCATION" SortIndex="10" />
-		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_AZTEC_SIZE" SortIndex="20" />
-		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_AZTEC_POPULATION" SortIndex="30" />
-		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_CAPITAL" Caption="LOC_CIVINFO_AZTEC_CAPITAL" SortIndex="40" />
+		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_AZTEC_LOCATION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_AZTEC_SIZE" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_AZTEC_POPULATION" SortIndex="30"/>
+		<Row CivilizationType="CIVILIZATION_AZTEC" Header="LOC_CIVINFO_CAPITAL" Caption="LOC_CIVINFO_AZTEC_CAPITAL" SortIndex="40"/>
 	</CivilizationInfo>
 	<CivilizationLeaders>
 		<Row CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" CapitalName="LOC_CITY_NAME_TENOCHTITLAN"/>
@@ -81,7 +80,6 @@
 		<Row CivilizationType="CIVILIZATION_AZTEC" CityName="LOC_CITY_NAME_TLALMANALCO"/>
 		<Row CivilizationType="CIVILIZATION_AZTEC" CityName="LOC_CITY_NAME_HUAXYACAC"/>
 		<Row CivilizationType="CIVILIZATION_AZTEC" CityName="LOC_CITY_NAME_ACATITLAN"/>
-
 	</CityNames>
 	<CivilizationCitizenNames>
 		<Row CivilizationType="CIVILIZATION_AZTEC" CitizenName="LOC_CITIZEN_AZTEC_MALE_1"/>
@@ -165,7 +163,7 @@
 		<Row ListType="MontezumaTechs" Item="TECH_APPRENTICESHIP"/>
 	</AiFavoredItems>
 	<Buildings>
-		<Row BuildingType="BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" PrereqCivic="CIVIC_GAMES_RECREATION" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="135" Maintenance="1" Entertainment="1" TraitType="TRAIT_CIVILIZATION_BUILDING_TLACHTLI"/>
+		<Row BuildingType="BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" PrereqCivic="CIVIC_GAMES_RECREATION" PrereqDistrict="DISTRICT_ENTERTAINMENT_COMPLEX" PurchaseYield="YIELD_GOLD" Cost="135" Maintenance="1" Entertainment="2" TraitType="TRAIT_CIVILIZATION_BUILDING_TLACHTLI"/>
 	</Buildings>
 	<BuildingReplaces>
 		<Row CivUniqueBuildingType="BUILDING_TLACHTLI" ReplacesBuildingType="BUILDING_ARENA"/>

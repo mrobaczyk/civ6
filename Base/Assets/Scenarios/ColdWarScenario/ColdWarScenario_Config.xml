@@ -13,7 +13,12 @@
 	<RulesetSupportedValues>
 		<Row Ruleset="RULESET_SCENARIO_COLDWAR" Domain="StandardEras" Value="ERA_ATOMIC"/>
 		<Row Ruleset="RULESET_SCENARIO_COLDWAR" Domain="StandardTurnLimits" Value="TURNLIMIT_CUSTOM"/>
-	</RulesetSupportedValues>	
+	</RulesetSupportedValues>
+  <!-- Disable random leader pool players which are inaccessible -->
+  <RulesetUnsupportedValues>
+    <Row Ruleset="RULESET_SCENARIO_COLDWAR" Domain="Players:StandardPlayers" Value="RANDOM_POOL1" />
+    <Row Ruleset="RULESET_SCENARIO_COLDWAR" Domain="Players:StandardPlayers" Value="RANDOM_POOL2" />
+  </RulesetUnsupportedValues>
 	<Victories>
 		<Row Domain="ColdWarScenario_Victories" VictoryType="VICTORY_PROXYWAR" Name="LOC_COLDWAR_PROXYWAR_VICTORY_TITLE" Description="LOC_COLDWAR_PROXYWAR_VICTORY_DESC"/>
 		<Row Domain="ColdWarScenario_Victories" VictoryType="VICTORY_ARMAGEDDON" Name="LOC_COLDWAR_ARMAGEDDON_VICTORY_TITLE" Description="LOC_COLDWAR_ARMAGEDDON_VICTORY_DESC"/>

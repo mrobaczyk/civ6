@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Kinds>
+		<Row Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<Row Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+	</Kinds>
+	<Types>
+		<Row Type="CAPABILITY_BARBARIAN_CLANS" Kind="KIND_CAPABILITY" />
+		<!--Unit Commands-->
+		<Row Type="UNITCOMMAND_TREAT_WITH_CLAN_DISPERSE"	Kind="KIND_UNITCOMMAND"/>
+		<Row Type="UNITCOMMAND_TREAT_WITH_CLAN_RAID"		Kind="KIND_UNITCOMMAND"/>
+		<!--Tribe Types-->
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Kind="KIND_BARBARIAN_TRIBE_TYPE"/>
+		<!--Melee Clans-->
+		<Row Type="BARBARIAN_CLAN_MELEE_OPEN_1" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_OPEN_2" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_OPEN_3" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_OPEN_4" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_OPEN_5" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_OPEN_6" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_FOREST_1" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_FOREST_2" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_FOREST_3" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_FOREST_4" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_FOREST_5" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_FOREST_6" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_HILLS_1" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_HILLS_2" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_HILLS_3" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_HILLS_4" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_HILLS_5" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_MELEE_HILLS_6" Kind="KIND_BARBARIAN_TRIBE"/>
+		<!--Cavalry Clans-->
+		<Row Type="BARBARIAN_CLAN_CAVALRY_OPEN_1" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_OPEN_2" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_OPEN_3" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_OPEN_4" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_OPEN_5" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_OPEN_6" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_JUNGLE_1" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_JUNGLE_2" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_JUNGLE_3" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_JUNGLE_4" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_JUNGLE_5" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_JUNGLE_6" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_CHARIOT_1" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_CHARIOT_2" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_CHARIOT_3" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_CHARIOT_4" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_CHARIOT_5" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_CAVALRY_CHARIOT_6" Kind="KIND_BARBARIAN_TRIBE"/>
+		<!-- Naval Clans-->
+		<Row Type="BARBARIAN_CLAN_NAVAL_1" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_NAVAL_2" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_NAVAL_3" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_NAVAL_4" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_NAVAL_5" Kind="KIND_BARBARIAN_TRIBE"/>
+		<Row Type="BARBARIAN_CLAN_NAVAL_6" Kind="KIND_BARBARIAN_TRIBE"/>
+		<!--Settings-->
+		<Row Type="TRIBE_CONDITION_SET_MELEE_OPEN_GRASS"  Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_OPEN_PLAINS" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_OPEN_DESERT" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_OPEN_TUNDRA" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_OPEN_SNOW"	Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_FOREST" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_GRASS_HILLS" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_PLAINS_HILLS" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_DESERT_HILLS" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_TUNDRA_HILLS" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_MELEE_SNOW_HILLS" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_CAVALRY_OPEN" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_CAVALRY_JUNGLE" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<Row Type="TRIBE_CONDITION_SET_CAVALRY_CHARIOT" Kind="KIND_TRIBE_MAP_CONDITION_SET"/>
+		<!--UI-->
+		<Row Type="NOTIFICATION_CLAN_CONVERTED_TO_CITY_STATE"	Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_CLAN_HIRED"						Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_CLAN_RANSOM_PAID"				Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_CLAN_BRIBED"					Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_CLAN_BRIBE_EXPIRED"				Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_CLAN_INCITED"					Kind="KIND_NOTIFICATION"/>
+	</Types>
+	<GameCapabilities>
+		<Row GameCapability="CAPABILITY_BARBARIAN_CLANS"/>
+	</GameCapabilities>
+	<GlobalParameters>
+		<Replace Name="BARBARIAN_CLANS_CIV_CONVERSION_POINTS_STANDARD" Value="120" />
+		<Replace Name="BARBARIAN_CLANS_CIV_CONVERSION_INCREMENT_CHANCE" Value="50" />
+		<Replace Name="BARBARIAN_CLANS_UNIQUE_UNIT_CLAIM_INTERVAL_STANDARD" Value="5" />
+		<Replace Name="BARBARIAN_CLANS_UNIQUE_UNIT_STRENGTH_RANGE" Value="10" />
+		<Replace Name="BARBARIAN_CLANS_TECH_STEAL_INTERVAL_STANDARD" Value="20" />
+		<Replace Name="BARBARIAN_CLANS_TECH_STEAL_VARIANCE_STANDARD" Value="10" />
+		<Replace Name="BARBARIAN_CLANS_BRIBE_COST_PER_CITY" Value="50" />
+		<Replace Name="BARBARIAN_CLANS_HIRE_COST_SCALAR" Value="0.6" />
+		<Replace Name="BARBARIAN_CLANS_RANSOM_COST_SCALAR" Value="0.75" />
+	</GlobalParameters>
+	<Improvements>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_BARBARIAN_CAMP"/>
+			<Set>
+				<RemoveOnEntry>false</RemoveOnEntry>
+			</Set>
+		</Update>
+	</Improvements>
+	<BarbarianTribes>
+		<!--Melee Clans-->
+		<Row TribeType="TRIBE_CLAN_MELEE_OPEN"		ScoutTag="CLASS_RECON" MeleeTag="CLASS_MELEE" RangedTag="CLASS_RANGED" SiegeTag="CLASS_SIEGE" DefenderTag="CLASS_ANTI_CAVALRY" SupportTag="CLASS_LIGHT_CAVALRY"	PercentRangedUnits="25" TurnsToWarriorSpawn="10" RaidingBoldness="15" CityAttackBoldness="25" ScoutingBehaviorTree="Barbarian Found City" RaidingBehaviorTree="Barbarian Attack" CityAttackOperation="Barbarian City Assault"/>
+		<Row TribeType="TRIBE_CLAN_MELEE_FOREST"	ScoutTag="CLASS_RECON" MeleeTag="CLASS_MELEE" RangedTag="CLASS_RANGED" SiegeTag="CLASS_SIEGE" DefenderTag="CLASS_RANGED" SupportTag="CLASS_BATTERING_RAM"		PercentRangedUnits="50" TurnsToWarriorSpawn="15" RaidingBoldness="15" CityAttackBoldness="20" ScoutingBehaviorTree="Barbarian Found City" RaidingBehaviorTree="Barbarian Attack" CityAttackOperation="Barbarian City Assault"/>
+		<Row TribeType="TRIBE_CLAN_MELEE_HILLS"		ScoutTag="CLASS_RECON" MeleeTag="CLASS_MELEE" RangedTag="CLASS_ANTI_CAVALRY" SiegeTag="CLASS_SIEGE" DefenderTag="CLASS_MELEE" SupportTag="CLASS_RANGED"		PercentRangedUnits="15" TurnsToWarriorSpawn="15" RaidingBoldness="20" CityAttackBoldness="30" ScoutingBehaviorTree="Barbarian Found City" RaidingBehaviorTree="Barbarian Attack" CityAttackOperation="Barbarian City Assault"/>
+		<!--Cavalry Clans-->
+		<Row TribeType="TRIBE_CLAN_CAVALRY_OPEN"	ScoutTag="CLASS_RECON" MeleeTag="CLASS_LIGHT_CAVALRY" RangedTag="CLASS_MOBILE_RANGED" SiegeTag="CLASS_HEAVY_CAVALRY" DefenderTag="CLASS_ANTI_CAVALRY" SupportTag="CLASS_BATTERING_RAM"	PercentRangedUnits="25" TurnsToWarriorSpawn="25" RaidingBoldness="20" CityAttackBoldness="25" ScoutingBehaviorTree="Barbarian Found City" RaidingBehaviorTree="Barbarian Attack" CityAttackOperation="Barbarian City Assault"/>
+		<Row TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"	ScoutTag="CLASS_RECON" MeleeTag="CLASS_LIGHT_CAVALRY" RangedTag="CLASS_RANGED"	SiegeTag="CLASS_HEAVY_CAVALRY" DefenderTag="CLASS_MELEE" SupportTag="CLASS_BATTERING_RAM"				PercentRangedUnits="20" TurnsToWarriorSpawn="25" RaidingBoldness="15" CityAttackBoldness="25" ScoutingBehaviorTree="Barbarian Found City" RaidingBehaviorTree="Barbarian Attack" CityAttackOperation="Barbarian City Assault"/>
+		<Row TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"	ScoutTag="CLASS_RECON" MeleeTag="CLASS_LIGHT_CAVALRY" RangedTag="CLASS_HEAVY_CHARIOT" SiegeTag="CLASS_HEAVY_CHARIOT" DefenderTag="CLASS_RANGED" SupportTag="CLASS_BATTERING_RAM"		PercentRangedUnits="35" TurnsToWarriorSpawn="25" RaidingBoldness="15" CityAttackBoldness="25" ScoutingBehaviorTree="Barbarian Found City" RaidingBehaviorTree="Barbarian Attack" CityAttackOperation="Barbarian City Assault"/>
+		<!--Naval Clans-->
+		<Row TribeType="TRIBE_CLAN_NAVAL"				ScoutTag="CLASS_NAVAL_MELEE" MeleeTag="CLASS_NAVAL_MELEE" RangedTag="CLASS_NAVAL_RANGED" SiegeTag="CLASS_NAVAL_RANGED" DefenderTag="CLASS_ANTI_CAVALRY" IsCoastal="true"		PercentRangedUnits="35" TurnsToWarriorSpawn="10" ScoutingBehaviorTree="Barbarian Found City" RaidingBehaviorTree="Barbarian Attack" RaidingBoldness="10" CityAttackOperation="Barbarian City Assault" CityAttackBoldness="25"/>
+	</BarbarianTribes>
+	<UnitCommands>
+		<Row CommandType="UNITCOMMAND_TREAT_WITH_CLAN_DISPERSE" VisibleInUI="true"	HoldCycling="true" CategoryInUI="BUILD" Icon="ICON_UNITCOMMAND_TREAT_WITH_CLAN_DISPERSE" Description="LOC_UNITCOMMAND_TREAT_WITH_CLAN_DISPERSE_DESCRIPTION" Help="LOC_UNITCOMMAND_TREAT_WITH_CLAN_DISPERSE_HELP"/>
+		<Row CommandType="UNITCOMMAND_TREAT_WITH_CLAN_RAID"		VisibleInUI="true"	HoldCycling="true" CategoryInUI="BUILD" Icon="ICON_UNITCOMMAND_TREAT_WITH_CLAN_RAID" Description="LOC_UNITCOMMAND_TREAT_WITH_CLAN_RAID_DESCRIPTION" Help="LOC_UNITCOMMAND_TREAT_WITH_CLAN_RAID_HELP"/>
+	</UnitCommands>
+	<TypeProperties>
+		<Row Type="UNITCOMMAND_TREAT_WITH_CLAN_DISPERSE" Name="XP_EARNED" Value="10"/>
+		<!--Other operation params are defined per tribe type-->
+		<!--Melee Open-->
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="RAID_CONVERSION_POINTS_CHANGE" Value="-10"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="RAID_INTERVAL_STANDARD" Value="10"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="HIRE_CONVERSION_POINTS_CHANGE" Value="5"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="HIRE_INTERVAL_STANDARD" Value="15"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="BRIBE_BASE_COST" Value="50"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="BRIBE_CONVERSION_POINTS_CHANGE" Value="8"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="BRIBE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="RANSOM_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="INCITE_BASE_COST" Value="160"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="INCITE_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_MELEE_OPEN" Name="INCITE_INTERVAL_STANDARD" Value="15"/>
+		<!--Melee Forest-->
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="RAID_CONVERSION_POINTS_CHANGE" Value="-10"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="RAID_INTERVAL_STANDARD" Value="10"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="HIRE_CONVERSION_POINTS_CHANGE" Value="5"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="HIRE_INTERVAL_STANDARD" Value="15"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="BRIBE_BASE_COST" Value="50"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="BRIBE_CONVERSION_POINTS_CHANGE" Value="8"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="BRIBE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="RANSOM_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="INCITE_BASE_COST" Value="160"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="INCITE_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_MELEE_FOREST" Name="INCITE_INTERVAL_STANDARD" Value="15"/>
+		<!--Melee Hills-->
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="RAID_CONVERSION_POINTS_CHANGE" Value="-10"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="RAID_INTERVAL_STANDARD" Value="10"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="HIRE_CONVERSION_POINTS_CHANGE" Value="5"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="HIRE_INTERVAL_STANDARD" Value="15"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="BRIBE_BASE_COST" Value="50"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="BRIBE_CONVERSION_POINTS_CHANGE" Value="8"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="BRIBE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="RANSOM_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="INCITE_BASE_COST" Value="160"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="INCITE_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_MELEE_HILLS" Name="INCITE_INTERVAL_STANDARD" Value="15"/>
+		<!--Cavalry Open-->
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="RAID_CONVERSION_POINTS_CHANGE" Value="-10"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="RAID_INTERVAL_STANDARD" Value="10"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="HIRE_CONVERSION_POINTS_CHANGE" Value="5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="HIRE_INTERVAL_STANDARD" Value="15"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="BRIBE_BASE_COST" Value="50"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="BRIBE_CONVERSION_POINTS_CHANGE" Value="8"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="BRIBE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="RANSOM_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="INCITE_BASE_COST" Value="200"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="INCITE_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_OPEN" Name="INCITE_INTERVAL_STANDARD" Value="15"/>
+		<!--Cavalry Open-->
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="RAID_CONVERSION_POINTS_CHANGE" Value="-10"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="RAID_INTERVAL_STANDARD" Value="10"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="HIRE_CONVERSION_POINTS_CHANGE" Value="5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="HIRE_INTERVAL_STANDARD" Value="15"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="BRIBE_BASE_COST" Value="50"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="BRIBE_CONVERSION_POINTS_CHANGE" Value="8"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="BRIBE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="RANSOM_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="INCITE_BASE_COST" Value="200"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="INCITE_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_JUNGLE" Name="INCITE_INTERVAL_STANDARD" Value="15"/>
+		<!--Cavalry Open-->
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="RAID_CONVERSION_POINTS_CHANGE" Value="-10"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="RAID_INTERVAL_STANDARD" Value="10"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="HIRE_CONVERSION_POINTS_CHANGE" Value="5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="HIRE_INTERVAL_STANDARD" Value="15"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="BRIBE_BASE_COST" Value="50"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="BRIBE_CONVERSION_POINTS_CHANGE" Value="8"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="BRIBE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="RANSOM_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="INCITE_BASE_COST" Value="200"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="INCITE_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_CAVALRY_CHARIOT" Name="INCITE_INTERVAL_STANDARD" Value="15"/>
+		<!--Naval-->
+		<Row Type="TRIBE_CLAN_NAVAL" Name="RAID_CONVERSION_POINTS_CHANGE" Value="-10"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="RAID_INTERVAL_STANDARD" Value="10"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="HIRE_CONVERSION_POINTS_CHANGE" Value="5"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="HIRE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="BRIBE_BASE_COST" Value="30"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="BRIBE_CONVERSION_POINTS_CHANGE" Value="8"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="BRIBE_INTERVAL_STANDARD" Value="20"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="RANSOM_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="INCITE_BASE_COST" Value="120"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="INCITE_CONVERSION_POINTS_CHANGE" Value="-5"/>
+		<Row Type="TRIBE_CLAN_NAVAL" Name="INCITE_INTERVAL_STANDARD" Value="15"/>
+	</TypeProperties>
+	<!--====================================================-->
+	<!--CLANS DATA											-->
+	<!--====================================================-->
+	<BarbarianTribe_MapConditionSets>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_OPEN"			TribeType="TRIBE_CLAN_CAVALRY_OPEN" Test="ALL" Priority="5"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_JUNGLE"		TribeType="TRIBE_CLAN_CAVALRY_JUNGLE" Test="ALL" Priority="5"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_CHARIOT"		TribeType="TRIBE_CLAN_CAVALRY_CHARIOT" Test="ALL" Priority="5"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_FOREST"			TribeType="TRIBE_CLAN_MELEE_FOREST" Test="ALL" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_GRASS_HILLS"	TribeType="TRIBE_CLAN_MELEE_HILLS" Test="ANY" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_PLAINS_HILLS"	TribeType="TRIBE_CLAN_MELEE_HILLS" Test="ANY" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_DESERT_HILLS"	TribeType="TRIBE_CLAN_MELEE_HILLS" Test="ANY" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_TUNDRA_HILLS"	TribeType="TRIBE_CLAN_MELEE_HILLS" Test="ANY" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_SNOW_HILLS"		TribeType="TRIBE_CLAN_MELEE_HILLS" Test="ANY" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_GRASS"		TribeType="TRIBE_CLAN_MELEE_OPEN" Test="ALL" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_PLAINS"	TribeType="TRIBE_CLAN_MELEE_OPEN" Test="ALL" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_DESERT"	TribeType="TRIBE_CLAN_MELEE_OPEN" Test="ALL" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_TUNDRA"	TribeType="TRIBE_CLAN_MELEE_OPEN" Test="ALL" Priority="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_SNOW"		TribeType="TRIBE_CLAN_MELEE_OPEN" Test="ALL" Priority="1"/>
+	</BarbarianTribe_MapConditionSets>
+	<BarbarianTribe_MapConditions>
+		<!--Melee-->
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_GRASS" TerrainType="TERRAIN_GRASS_HILLS" Range="1" Invert="true"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_PLAINS" TerrainType="TERRAIN_PLAINS_HILLS" Range="1" Invert="true"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_DESERT" TerrainType="TERRAIN_DESERT_HILLS" Range="1" Invert="true"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_TUNDRA" TerrainType="TERRAIN_TUNDRA_HILLS" Range="1" Invert="true"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_OPEN_SNOW" TerrainType="TERRAIN_SNOW_HILLS" Range="1" Invert="true"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_FOREST" FeatureType="FEATURE_FOREST" Range="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_GRASS_HILLS" TerrainType="TERRAIN_GRASS_HILLS" Range="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_PLAINS_HILLS" TerrainType="TERRAIN_PLAINS_HILLS" Range="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_DESERT_HILLS" TerrainType="TERRAIN_DESERT_HILLS" Range="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_TUNDRA_HILLS" TerrainType="TERRAIN_TUNDRA_HILLS" Range="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_MELEE_SNOW_HILLS" TerrainType="TERRAIN_SNOW_HILLS" Range="1"/>
+		<!--Cavalry-->
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_OPEN" ResourceType="RESOURCE_HORSES" Range="3"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_OPEN" FeatureType="FEATURE_FOREST" Range="0" Invert="true"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_OPEN" FeatureType="FEATURE_JUNGLE" Range="1" Invert="true"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_JUNGLE" ResourceType="RESOURCE_IVORY" Range="3"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_JUNGLE" FeatureType="FEATURE_JUNGLE" Range="1"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_CHARIOT" ResourceType="RESOURCE_HORSES" Range="3"/>
+		<Row MapConditionSetType="TRIBE_CONDITION_SET_CAVALRY_CHARIOT" TerrainType="TERRAIN_DESERT" Range="1"/>
+	</BarbarianTribe_MapConditions>
+	<!--====================================================-->
+	<!--END CLANS MODE DATA									-->
+	<!--====================================================-->
+	<BarbarianTribeNames>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_OPEN_1"		TribeType="TRIBE_CLAN_MELEE_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_OPEN_1"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_OPEN_2"		TribeType="TRIBE_CLAN_MELEE_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_OPEN_2"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_OPEN_3"		TribeType="TRIBE_CLAN_MELEE_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_OPEN_3"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_OPEN_4"		TribeType="TRIBE_CLAN_MELEE_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_OPEN_4"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_OPEN_5"		TribeType="TRIBE_CLAN_MELEE_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_OPEN_5"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_OPEN_6"		TribeType="TRIBE_CLAN_MELEE_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_OPEN_6"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_FOREST_1"		TribeType="TRIBE_CLAN_MELEE_FOREST"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_FOREST_1"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_FOREST_2"		TribeType="TRIBE_CLAN_MELEE_FOREST"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_FOREST_2"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_FOREST_3"		TribeType="TRIBE_CLAN_MELEE_FOREST"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_FOREST_3"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_FOREST_4"		TribeType="TRIBE_CLAN_MELEE_FOREST"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_FOREST_4"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_FOREST_5"		TribeType="TRIBE_CLAN_MELEE_FOREST"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_FOREST_5"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_FOREST_6"		TribeType="TRIBE_CLAN_MELEE_FOREST"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_FOREST_6"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_HILLS_1"		TribeType="TRIBE_CLAN_MELEE_HILLS"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_HILLS_1"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_HILLS_2"		TribeType="TRIBE_CLAN_MELEE_HILLS"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_HILLS_2"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_HILLS_3"		TribeType="TRIBE_CLAN_MELEE_HILLS"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_HILLS_3"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_HILLS_4"		TribeType="TRIBE_CLAN_MELEE_HILLS"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_HILLS_4"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_HILLS_5"		TribeType="TRIBE_CLAN_MELEE_HILLS"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_HILLS_5"/>
+		<Row TribeNameType="BARBARIAN_CLAN_MELEE_HILLS_6"		TribeType="TRIBE_CLAN_MELEE_HILLS"		TribeDisplayName="LOC_BARBARIAN_CLAN_MELEE_HILLS_6"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_OPEN_1"		TribeType="TRIBE_CLAN_CAVALRY_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_OPEN_1"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_OPEN_2"		TribeType="TRIBE_CLAN_CAVALRY_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_OPEN_2"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_OPEN_3"		TribeType="TRIBE_CLAN_CAVALRY_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_OPEN_3"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_OPEN_4"		TribeType="TRIBE_CLAN_CAVALRY_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_OPEN_4"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_OPEN_5"		TribeType="TRIBE_CLAN_CAVALRY_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_OPEN_5"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_OPEN_6"		TribeType="TRIBE_CLAN_CAVALRY_OPEN"		TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_OPEN_6"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_JUNGLE_1"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_JUNGLE_1"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_JUNGLE_2"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_JUNGLE_2"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_JUNGLE_3"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_JUNGLE_3"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_JUNGLE_4"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_JUNGLE_4"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_JUNGLE_5"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_JUNGLE_5"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_JUNGLE_6"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_JUNGLE_6"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_CHARIOT_1"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_CHARIOT_1"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_CHARIOT_2"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_CHARIOT_2"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_CHARIOT_3"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_CHARIOT_3"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_CHARIOT_4"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_CHARIOT_4"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_CHARIOT_5"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_CHARIOT_5"/>
+		<Row TribeNameType="BARBARIAN_CLAN_CAVALRY_CHARIOT_6"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"	TribeDisplayName="LOC_BARBARIAN_CLAN_CAVALRY_CHARIOT_6"/>
+		<Row TribeNameType="BARBARIAN_CLAN_NAVAL_1"				TribeType="TRIBE_CLAN_NAVAL"			TribeDisplayName="LOC_BARBARIAN_CLAN_NAVAL_1"/>
+		<Row TribeNameType="BARBARIAN_CLAN_NAVAL_2"				TribeType="TRIBE_CLAN_NAVAL"			TribeDisplayName="LOC_BARBARIAN_CLAN_NAVAL_2"/>
+		<Row TribeNameType="BARBARIAN_CLAN_NAVAL_3"				TribeType="TRIBE_CLAN_NAVAL"			TribeDisplayName="LOC_BARBARIAN_CLAN_NAVAL_3"/>
+		<Row TribeNameType="BARBARIAN_CLAN_NAVAL_4"				TribeType="TRIBE_CLAN_NAVAL"			TribeDisplayName="LOC_BARBARIAN_CLAN_NAVAL_4"/>
+		<Row TribeNameType="BARBARIAN_CLAN_NAVAL_5"				TribeType="TRIBE_CLAN_NAVAL"			TribeDisplayName="LOC_BARBARIAN_CLAN_NAVAL_5"/>
+		<Row TribeNameType="BARBARIAN_CLAN_NAVAL_6"				TribeType="TRIBE_CLAN_NAVAL"			TribeDisplayName="LOC_BARBARIAN_CLAN_NAVAL_6"/>
+	</BarbarianTribeNames>
+	<BarbarianAttackForces>
+		<Row AttackForceType="LowDifficultyStandardRaid" MaxTargetDifficulty="DIFFICULTY_CHIEFTAIN" SpawnRate="2" MeleeTag="CLASS_MELEE" NumMeleeUnits="1" RaidingForce="true"/>
+		<Row AttackForceType="StandardRaid" MinTargetDifficulty="DIFFICULTY_WARLORD" MaxTargetDifficulty="DIFFICULTY_EMPEROR" SpawnRate="2" MeleeTag="CLASS_MELEE" NumMeleeUnits="2" RangeTag="CLASS_RANGED" NumRangeUnits="1" RaidingForce="true"/>
+		<Row AttackForceType="HighDifficultyStandardRaid" MinTargetDifficulty="DIFFICULTY_IMMORTAL" SpawnRate="1" MeleeTag="CLASS_MELEE" NumMeleeUnits="3" RangeTag="CLASS_RANGED" NumRangeUnits="2" RaidingForce="true"/>
+		<Row AttackForceType="LowDifficultyStandardAttack" MaxTargetDifficulty="DIFFICULTY_CHIEFTAIN" SpawnRate="2" MeleeTag="CLASS_MELEE" NumMeleeUnits="2" RangeTag="CLASS_RANGED" NumRangeUnits="1" SiegeTag="CLASS_SIEGE" NumSiegeUnits="1"/>
+		<Row AttackForceType="StandardAttack" MinTargetDifficulty="DIFFICULTY_WARLORD" MaxTargetDifficulty="DIFFICULTY_EMPEROR" SpawnRate="2" MeleeTag="CLASS_MELEE" NumMeleeUnits="3" RangeTag="CLASS_RANGED" NumRangeUnits="2" SiegeTag="CLASS_SIEGE" NumSiegeUnits="1" SupportTag="CLASS_BATTERING_RAM" NumSupportUnits="1"/>
+		<Row AttackForceType="HighDifficultyStandardAttack" MinTargetDifficulty="DIFFICULTY_IMMORTAL" SpawnRate="1" MeleeTag="CLASS_MELEE" NumMeleeUnits="4" RangeTag="CLASS_RANGED" NumRangeUnits="3" SiegeTag="CLASS_SIEGE" NumSiegeUnits="2" SupportTag="CLASS_BATTERING_RAM" NumSupportUnits="1"/>
+		<Row AttackForceType="LowDifficultyCavalryRaid" MaxTargetDifficulty="DIFFICULTY_CHIEFTAIN" SpawnRate="2" MeleeTag="CLASS_LIGHT_CAVALRY" NumMeleeUnits="1" RaidingForce="true"/>
+		<Row AttackForceType="CavalryRaid" MinTargetDifficulty="DIFFICULTY_WARLORD" MaxTargetDifficulty="DIFFICULTY_EMPEROR" SpawnRate="2" MeleeTag="CLASS_LIGHT_CAVALRY" NumMeleeUnits="2" RangeTag="CLASS_MOBILE_RANGED" NumRangeUnits="1" RaidingForce="true"/>
+		<Row AttackForceType="HighDifficultyCavalryRaid" MinTargetDifficulty="DIFFICULTY_IMMORTAL" SpawnRate="1" MeleeTag="CLASS_LIGHT_CAVALRY" NumMeleeUnits="3" RangeTag="CLASS_MOBILE_RANGED" NumRangeUnits="2" RaidingForce="true"/>
+		<Row AttackForceType="LowDifficultyCavalryAttack" MaxTargetDifficulty="DIFFICULTY_CHIEFTAIN" SpawnRate="2" MeleeTag="CLASS_LIGHT_CAVALRY" NumMeleeUnits="2" RangeTag="CLASS_MOBILE_RANGED" NumRangeUnits="1" SiegeTag="CLASS_HEAVY_CAVALRY" NumSiegeUnits="1"/>
+		<Row AttackForceType="CavalryAttack" MinTargetDifficulty="DIFFICULTY_WARLORD" MaxTargetDifficulty="DIFFICULTY_EMPEROR" SpawnRate="2" MeleeTag="CLASS_LIGHT_CAVALRY" NumMeleeUnits="3" RangeTag="CLASS_MOBILE_RANGED" NumRangeUnits="2" SiegeTag="CLASS_HEAVY_CAVALRY" NumSiegeUnits="1"/>
+		<Row AttackForceType="HighDifficultyCavalryAttack" MinTargetDifficulty="DIFFICULTY_IMMORTAL" SpawnRate="1" MeleeTag="CLASS_LIGHT_CAVALRY" NumMeleeUnits="4" RangeTag="CLASS_MOBILE_RANGED" NumRangeUnits="3" SiegeTag="CLASS_HORSE_ARCHER" NumSiegeUnits="2"/>
+		<Row AttackForceType="LowDifficultyNavalRaid" MaxTargetDifficulty="DIFFICULTY_CHIEFTAIN" SpawnRate="2" MeleeTag="CLASS_NAVAL_MELEE" NumMeleeUnits="1" RaidingForce="true"/>
+		<Row AttackForceType="NavalRaid" MinTargetDifficulty="DIFFICULTY_WARLORD" MaxTargetDifficulty="DIFFICULTY_EMPEROR" SpawnRate="2" MeleeTag="CLASS_NAVAL_MELEE" NumMeleeUnits="2" RangeTag="CLASS_NAVAL_RANGED" NumRangeUnits="1" RaidingForce="true"/>
+		<Row AttackForceType="HighDifficultyNavalRaid" MinTargetDifficulty="DIFFICULTY_IMMORTAL" SpawnRate="1" MeleeTag="CLASS_NAVAL_MELEE" NumMeleeUnits="3" RangeTag="CLASS_NAVAL_RANGED" NumRangeUnits="2" RaidingForce="true"/>
+		<Row AttackForceType="LowDifficultyNavalAttack" MaxTargetDifficulty="DIFFICULTY_CHIEFTAIN" SpawnRate="2" MeleeTag="CLASS_NAVAL_MELEE" NumMeleeUnits="2" RangeTag="CLASS_NAVAL_RANGED" NumRangeUnits="1" SiegeTag="CLASS_NAVAL_RANGED" NumSiegeUnits="1"/>
+		<Row AttackForceType="NavalAttack" MinTargetDifficulty="DIFFICULTY_WARLORD" MaxTargetDifficulty="DIFFICULTY_EMPEROR" SpawnRate="2" MeleeTag="CLASS_NAVAL_MELEE" NumMeleeUnits="3" RangeTag="CLASS_NAVAL_RANGED" NumRangeUnits="2" SiegeTag="CLASS_NAVAL_RANGED" NumSiegeUnits="1"/>
+		<Row AttackForceType="HighDifficultyNavalAttack" MinTargetDifficulty="DIFFICULTY_IMMORTAL" SpawnRate="1" MeleeTag="CLASS_NAVAL_MELEE" NumMeleeUnits="4" RangeTag="CLASS_NAVAL_RANGED" NumRangeUnits="3" SiegeTag="CLASS_NAVAL_RANGED" NumSiegeUnits="2"/>
+	</BarbarianAttackForces>
+	<BarbarianTribeForces>
+		<Row AttackForceType="LowDifficultyStandardRaid"	TribeType="TRIBE_CLAN_MELEE_OPEN"/>
+		<Row AttackForceType="StandardRaid"					TribeType="TRIBE_CLAN_MELEE_OPEN"/>
+		<Row AttackForceType="HighDifficultyStandardRaid"	TribeType="TRIBE_CLAN_MELEE_OPEN"/>
+		<Row AttackForceType="LowDifficultyStandardAttack"	TribeType="TRIBE_CLAN_MELEE_OPEN"/>
+		<Row AttackForceType="StandardAttack"				TribeType="TRIBE_CLAN_MELEE_OPEN"/>
+		<Row AttackForceType="HighDifficultyStandardAttack" TribeType="TRIBE_CLAN_MELEE_OPEN"/>
+		<Row AttackForceType="LowDifficultyStandardRaid"	TribeType="TRIBE_CLAN_MELEE_FOREST"/>
+		<Row AttackForceType="StandardRaid"					TribeType="TRIBE_CLAN_MELEE_FOREST"/>
+		<Row AttackForceType="HighDifficultyStandardRaid"	TribeType="TRIBE_CLAN_MELEE_FOREST"/>
+		<Row AttackForceType="LowDifficultyStandardAttack"	TribeType="TRIBE_CLAN_MELEE_FOREST"/>
+		<Row AttackForceType="StandardAttack"				TribeType="TRIBE_CLAN_MELEE_FOREST"/>
+		<Row AttackForceType="HighDifficultyStandardAttack" TribeType="TRIBE_CLAN_MELEE_FOREST"/>
+		<Row AttackForceType="LowDifficultyStandardRaid"	TribeType="TRIBE_CLAN_MELEE_HILLS"/>
+		<Row AttackForceType="StandardRaid"					TribeType="TRIBE_CLAN_MELEE_HILLS"/>
+		<Row AttackForceType="HighDifficultyStandardRaid"	TribeType="TRIBE_CLAN_MELEE_HILLS"/>
+		<Row AttackForceType="LowDifficultyStandardAttack"	TribeType="TRIBE_CLAN_MELEE_HILLS"/>
+		<Row AttackForceType="StandardAttack"				TribeType="TRIBE_CLAN_MELEE_HILLS"/>
+		<Row AttackForceType="HighDifficultyStandardAttack" TribeType="TRIBE_CLAN_MELEE_HILLS"/>
+		<Row AttackForceType="LowDifficultyCavalryRaid"		TribeType="TRIBE_CLAN_CAVALRY_OPEN"/>
+		<Row AttackForceType="CavalryRaid"					TribeType="TRIBE_CLAN_CAVALRY_OPEN"/>
+		<Row AttackForceType="HighDifficultyCavalryRaid"	TribeType="TRIBE_CLAN_CAVALRY_OPEN"/>
+		<Row AttackForceType="LowDifficultyCavalryAttack"	TribeType="TRIBE_CLAN_CAVALRY_OPEN"/>
+		<Row AttackForceType="CavalryAttack"				TribeType="TRIBE_CLAN_CAVALRY_OPEN"/>
+		<Row AttackForceType="HighDifficultyCavalryAttack"	TribeType="TRIBE_CLAN_CAVALRY_OPEN"/>
+		<Row AttackForceType="LowDifficultyCavalryRaid"		TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"/>
+		<Row AttackForceType="CavalryRaid"					TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"/>
+		<Row AttackForceType="HighDifficultyCavalryRaid"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"/>
+		<Row AttackForceType="LowDifficultyCavalryAttack"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"/>
+		<Row AttackForceType="CavalryAttack"				TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"/>
+		<Row AttackForceType="HighDifficultyCavalryAttack"	TribeType="TRIBE_CLAN_CAVALRY_JUNGLE"/>
+		<Row AttackForceType="LowDifficultyCavalryRaid"		TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"/>
+		<Row AttackForceType="CavalryRaid"					TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"/>
+		<Row AttackForceType="HighDifficultyCavalryRaid"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"/>
+		<Row AttackForceType="LowDifficultyCavalryAttack"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"/>
+		<Row AttackForceType="CavalryAttack"				TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"/>
+		<Row AttackForceType="HighDifficultyCavalryAttack"	TribeType="TRIBE_CLAN_CAVALRY_CHARIOT"/>
+		<Row AttackForceType="LowDifficultyNavalRaid"		TribeType="TRIBE_CLAN_NAVAL"/>
+		<Row AttackForceType="NavalRaid"					TribeType="TRIBE_CLAN_NAVAL"/>
+		<Row AttackForceType="HighDifficultyNavalRaid"		TribeType="TRIBE_CLAN_NAVAL"/>
+		<Row AttackForceType="LowDifficultyNavalAttack"		TribeType="TRIBE_CLAN_NAVAL"/>
+		<Row AttackForceType="NavalAttack"					TribeType="TRIBE_CLAN_NAVAL"/>
+		<Row AttackForceType="HighDifficultyNavalAttack"	TribeType="TRIBE_CLAN_NAVAL"/>
+	</BarbarianTribeForces>
+	<Notifications>
+		<Row NotificationType="NOTIFICATION_CLAN_CONVERTED_TO_CITY_STATE" SeverityType="HIGH" ExpiresEndOfTurn="True" AutoNotify="False"/>
+		<Row NotificationType="NOTIFICATION_CLAN_HIRED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+		<Row NotificationType="NOTIFICATION_CLAN_RANSOM_PAID" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+		<Row NotificationType="NOTIFICATION_CLAN_BRIBED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+		<Row NotificationType="NOTIFICATION_CLAN_BRIBE_EXPIRED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+		<Row NotificationType="NOTIFICATION_CLAN_INCITED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+	</Notifications>
+	<!--CIVILOPEDIA-->
+	<CivilopediaPageLayouts>
+		<Row PageLayoutId="BarbarianClans" ScriptTemplate="Simple" />
+		<Row PageLayoutId="BarbarianClanType" ScriptTemplate="Simple" />
+	</CivilopediaPageLayouts>
+	<CivilopediaPages>
+		<Row SectionId="CONCEPTS" PageId="CLANS" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClans" Name="LOC_PEDIA_CONCEPTS_PAGE_CLANS_CHAPTER_CONTENT_TITLE" Tooltip="" SortIndex="100"/>
+		<Row SectionId="CONCEPTS" PageId="CLANTYPE_MELEE_OPEN" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClanType" Name="LOC_BARBARIAN_CLAN_TYPE_MELEE_OPEN" Tooltip="" SortIndex="101"/>
+		<Row SectionId="CONCEPTS" PageId="CLANTYPE_MELEE_FOREST" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClanType" Name="LOC_BARBARIAN_CLAN_TYPE_MELEE_FOREST" Tooltip="" SortIndex="102"/>
+		<Row SectionId="CONCEPTS" PageId="CLANTYPE_MELEE_HILLS" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClanType" Name="LOC_BARBARIAN_CLAN_TYPE_MELEE_HILLS" Tooltip="" SortIndex="103"/>
+		<Row SectionId="CONCEPTS" PageId="CLANTYPE_CAVALRY_OPEN" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClanType" Name="LOC_BARBARIAN_CLAN_TYPE_CAVALRY_OPEN" Tooltip="" SortIndex="104"/>
+		<Row SectionId="CONCEPTS" PageId="CLANTYPE_CAVALRY_JUNGLE" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClanType" Name="LOC_BARBARIAN_CLAN_TYPE_CAVALRY_JUNGLE" Tooltip="" SortIndex="105"/>
+		<Row SectionId="CONCEPTS" PageId="CLANTYPE_CAVALRY_CHARIOT" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClanType" Name="LOC_BARBARIAN_CLAN_TYPE_CAVALRY_CHARIOT" Tooltip="" SortIndex="106"/>
+		<Row SectionId="CONCEPTS" PageId="CLANTYPE_NAVAL" PageGroupId="GAME_MODES" PageLayoutId="BarbarianClanType" Name="LOC_BARBARIAN_CLAN_TYPE_NAVAL" Tooltip="" SortIndex="107"/>
+	</CivilopediaPages>
+	<CivilopediaPageLayoutChapters>
+		<Row PageLayoutId="BarbarianClans" ChapterId="WELCOME" SortIndex="10"/>
+		<Row PageLayoutId="BarbarianClans" ChapterId="TYPES" SortIndex="20"/>
+		<Row PageLayoutId="BarbarianClans" ChapterId="UNITS" SortIndex="30"/>
+		<Row PageLayoutId="BarbarianClans" ChapterId="CITYCONVERSION" SortIndex="40"/>
+		<Row PageLayoutId="BarbarianClans" ChapterId="UNITCOMMANDS" SortIndex="50"/>
+		<Row PageLayoutId="BarbarianClans" ChapterId="PLAYEROPS" SortIndex="60"/>
+		<Row PageLayoutId="BarbarianClans" ChapterId="HISTORY" SortIndex="70"/>
+		<Row PageLayoutId="BarbarianClanType" ChapterId="CONTENT" SortIndex="10"/>
+		<Row PageLayoutId="BarbarianClanType" ChapterId="HISTORY" SortIndex="20"/>
+	</CivilopediaPageLayoutChapters>
+</GameData>

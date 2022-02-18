@@ -29,6 +29,10 @@
 		<!-- City-State Picker -->
 		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="CityStates" Name="LOC_EXCLUDE_CITY_STATES_NAME" Description="LOC_EXCLUDE_CITY_STATES_DESC" Domain="StandardCityStates" Hash="0" Array="1" ConfigurationGroup="Game" ConfigurationId="EXCLUDE_CITY_STATES" GroupId="MapOptions" UxHint="InvertSelection"  SortIndex="230"/>
 
+    <!-- Leader Picker -->
+    <Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="LeaderPool1" Name="LOC_LEADER_POOL_1_NAME" Description="LOC_LEADER_POOL_1_DESC" Domain="Players:StandardPlayers" Hash="0" Array="1" ConfigurationGroup="Game" ConfigurationId="LEADER_POOL_1" GroupId="MapOptions" UxHint="InvertSelection"  SortIndex="221"/>
+    <Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="LeaderPool2" Name="LOC_LEADER_POOL_2_NAME" Description="LOC_LEADER_POOL_2_DESC" Domain="Players:StandardPlayers" Hash="0" Array="1" ConfigurationGroup="Game" ConfigurationId="LEADER_POOL_2" GroupId="MapOptions" UxHint="InvertSelection"  SortIndex="222"/>
+    
 		<!-- Two mutually exclusive map start position parameters.  The MP version defaults to "balanced", while the SP version defaults to "standard". -->	
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="240"/>
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsSinglePlayer="0" SortIndex="240"/>
@@ -200,6 +204,8 @@
 
 	<DomainValues>
 		<Row Domain="Players:*" Value="RANDOM" Name="LOC_RANDOM_LEADER" Description="LOC_RANDOM_LEADER" SortIndex="1"/>
+    <Row Domain="Players:*" Value="RANDOM_POOL1" Name="LOC_RANDOM_LEADER_POOL_1" Description="LOC_RANDOM_LEADER_POOL_1" SortIndex="2"/>
+    <Row Domain="Players:*" Value="RANDOM_POOL2" Name="LOC_RANDOM_LEADER_POOL_2" Description="LOC_RANDOM_LEADER_POOL_2" SortIndex="3"/>
 
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_NONE" Name="LOC_TURNLIMIT_NONE_NAME" Description="LOC_TURNLIMIT_NONE_DESCRIPTION" SortIndex="1"/>
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_GAMESPEED" Name="LOC_TURNLIMIT_GAMESPEED_NAME" Description="LOC_TURNLIMIT_GAMESPEED_DESCRIPTION" SortIndex="1"/>

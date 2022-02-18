@@ -15,6 +15,12 @@
 		<Row Ruleset="RULESET_SCENARIO_NAPOLEON" Domain="StandardEras" Value="ERA_INDUSTRIAL"/>
 	</RulesetSupportedValues>
 
+  <!-- Disable random leader pool players which are inaccessible -->
+  <RulesetUnsupportedValues>
+    <Row Ruleset="RULESET_SCENARIO_NAPOLEON" Domain="Players:StandardPlayers" Value="RANDOM_POOL1" />
+    <Row Ruleset="RULESET_SCENARIO_NAPOLEON" Domain="Players:StandardPlayers" Value="RANDOM_POOL2" />
+  </RulesetUnsupportedValues>
+
 	<Victories>
 		<Row Domain="NapoleonScenario_Victories" VictoryType="VICTORY_NAPOLEON" Name="LOC_NAPOLEON_VICTORY_TITLE" Description="LOC_NAPOLEON_VICTORY_DESC"/>
 	</Victories>

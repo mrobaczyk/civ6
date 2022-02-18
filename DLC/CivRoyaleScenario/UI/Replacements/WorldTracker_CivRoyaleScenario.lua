@@ -7,6 +7,7 @@ include("CivRoyaleScenario_UnitCommandDefs");
 BASE_LateInitialize = LateInitialize;
 BASE_Refresh = Refresh;
 BASE_Unsubscribe = Unsubscribe;
+BASE_UpdateUnitIcon = UpdateUnitIcon;
 
 -- ===========================================================================
 local m_uiGlobalAbilityInstance : table = {};
@@ -184,6 +185,19 @@ end
 -- ===========================================================================
 function GetMinimapPadding()
 	return MINIMAP_PADDING;
+end
+
+-- ===========================================================================
+function UpdateUnitIcon(pUnit:table, uiUnitEntry:table)
+	local unit:table = GameInfo.Units[pUnit:GetUnitType()];
+	local unitIcon = "ICON_" .. unit.UnitType;
+	unitIcon = unitIcon .. "_" .. PlayerConfigurations[pUnit:GetOwner()]:GetCivilizationTypeName();
+	local textureOffsetX : number, textureOffsetY : number, textureSheet : string = IconManager:FindIconAtlas(unitIcon, iconSize);
+	if (textureSheet == nil) then
+		BASE_UpdateUnitIcon(pUnit, uiUnitEntry);
+	else
+		uiUnitEntry.UnitTypeIcon:SetTexture( textureOffsetX, textureOffsetY, textureSheet );
+	end
 end
 
 

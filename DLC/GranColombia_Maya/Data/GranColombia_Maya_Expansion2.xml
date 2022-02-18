@@ -94,7 +94,6 @@
 	<District_Adjacencies>
 		<Row DistrictType="DISTRICT_OBSERVATORY" YieldChangeId="Government_Science"/>
 		<Row DistrictType="DISTRICT_OBSERVATORY" YieldChangeId="Pamukkale_Science"/>
-		<Row DistrictType="DISTRICT_SUGUBA" YieldChangeId="Paititi_Gold"/>
 	</District_Adjacencies>
 	<Units_XP2>
 		<Row UnitType="UNIT_COMANDANTE_GENERAL" CanEarnExperience="false" CanFormMilitaryFormation="false"/>
@@ -384,6 +383,14 @@
 	<Units_XP2>
 		<Row UnitType="UNIT_COLOMBIAN_LLANERO" ResourceCost="20"/>
 	</Units_XP2>
+  <Units>
+    <Update>
+      <Where UnitType="UNIT_COLOMBIAN_LLANERO"/>
+      <Set>
+        <StrategicResource>RESOURCE_HORSES</StrategicResource>
+      </Set>
+    </Update>
+  </Units>
 	<Traits>
 		<Update>
 			<Where TraitType="TRAIT_LEADER_CAMPANA_ADMIRABLE"/>

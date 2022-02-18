@@ -14,7 +14,12 @@
 	<RulesetSupportedValues>
 		<Row Ruleset="RULESET_SCENARIO_ANCIENT_RIVALS" Domain="StandardEras" Value="ERA_ANCIENT"/>
 		<Row Ruleset="RULESET_SCENARIO_ANCIENT_RIVALS" Domain="StandardTurnLimits" Value="TURNLIMIT_CUSTOM"/>
-	</RulesetSupportedValues>	
+	</RulesetSupportedValues>
+  <!-- Disable random leader pool players which are inaccessible -->
+  <RulesetUnsupportedValues>
+    <Row Ruleset="RULESET_SCENARIO_ANCIENT_RIVALS" Domain="Players:StandardPlayers" Value="RANDOM_POOL1" />
+    <Row Ruleset="RULESET_SCENARIO_ANCIENT_RIVALS" Domain="Players:StandardPlayers" Value="RANDOM_POOL2" />
+  </RulesetUnsupportedValues>
 	<Victories>
 		<Row Domain="AncientRivalsScenario_Victories" VictoryType="VICTORY_ANCIENTRIVALS" Name="LOC_ANCIENT_RIVALS_VICTORY_TITLE" Description="LOC_ANCIENT_RIVALS_VICTORY_DESC"/>
 	</Victories>

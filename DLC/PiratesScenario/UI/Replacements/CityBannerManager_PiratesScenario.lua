@@ -19,6 +19,7 @@ local ms_visitTavernHash :number = DB.MakeHash(g_unitCommandSubTypeNames.VISIT_T
 -- ===========================================================================
 local BASE_CityBannerUpdateStats = CityBanner.UpdateStats;
 local BASE_LateInitialize = LateInitialize;
+local BASE_OnDistrictDamageChanged = OnDistrictDamageChanged;
 
 
 -- ===========================================================================
@@ -28,42 +29,40 @@ function CityBanner:UpdateStats()
 
 	BASE_CityBannerUpdateStats(self);
 
-	if self.m_Type == 0 then
-		local localPlayerID : number = Game.GetLocalPlayer();
-		if(localPlayerID ~= -1)then
-			local pCity : object = self:GetCity();
-			if(pCity:GetName() ~= "NONE")then
-				local kTavernCooldown = GetPropertyTimerStatus(pCity, g_cityPlayerSpecificKeys.LastTavernTurn, localPlayerID, VISIT_TAVERN_DURATION, VISIT_TAVERN_DEBOUNCE)
-				self.m_Instance.TavernIndicator:SetHide(false);
-				if(kTavernCooldown.TurnsRemaining <= 0)then
-					self.m_Instance.VisitTavernIcon:SetAlpha(1);
-					self.m_Instance.VisitTavernIcon:SetToolTipString(Locale.Lookup("LOC_TAVERN_AVAILABLE"));
-				else
-					self.m_Instance.VisitTavernIcon:SetAlpha(0.3);
-					self.m_Instance.VisitTavernIcon:SetToolTipString(Locale.Lookup("LOC_TAVERN_COOLDOWN", kTavernCooldown.TurnsRemaining));
-				end
+	local localPlayerID : number = Game.GetLocalPlayer();
+	if(localPlayerID ~= -1)then
+		local pCity : object = self:GetCity();
+		if(pCity:GetName() ~= "NONE")then
+			local kTavernCooldown = GetPropertyTimerStatus(pCity, g_cityPlayerSpecificKeys.LastTavernTurn, localPlayerID, VISIT_TAVERN_DURATION, VISIT_TAVERN_DEBOUNCE)
+			self.m_Instance.TavernIndicator:SetHide(false);
+			if(kTavernCooldown.TurnsRemaining <= 0)then
+				self.m_Instance.VisitTavernIcon:SetAlpha(1);
+				self.m_Instance.VisitTavernIcon:SetToolTipString(Locale.Lookup("LOC_TAVERN_AVAILABLE"));
+			else
+				self.m_Instance.VisitTavernIcon:SetAlpha(0.3);
+				self.m_Instance.VisitTavernIcon:SetToolTipString(Locale.Lookup("LOC_TAVERN_COOLDOWN", kTavernCooldown.TurnsRemaining));
+			end
 
-				self.m_Instance.SackedIndicator:SetHide(false);
+			self.m_Instance.SackedIndicator:SetHide(false);
 
-				local pPlayerConfig : table = PlayerConfigurations[localPlayerID];
-				if(pPlayerConfig:GetCivilizationTypeName() == g_CivTypeNames.Privateer)then
-					local pCity	: table = self:GetCity();
-					local ownerID : number = pCity:GetOwner();
-					local pLocalPlayer : table = Players[localPlayerID]
-					local patronID : number = pLocalPlayer:GetProperty(g_playerPropertyKeys.PrivateerPatron);
-					if(ownerID == patronID)then
-						self.m_Instance.SackedIndicator:SetHide(true);
-						return;
-					end
+			local pPlayerConfig : table = PlayerConfigurations[localPlayerID];
+			if(pPlayerConfig:GetCivilizationTypeName() == g_CivTypeNames.Privateer)then
+				local pCity	: table = self:GetCity();
+				local ownerID : number = pCity:GetOwner();
+				local pLocalPlayer : table = Players[localPlayerID]
+				local patronID : number = pLocalPlayer:GetProperty(g_playerPropertyKeys.PrivateerPatron);
+				if(ownerID == patronID)then
+					self.m_Instance.SackedIndicator:SetHide(true);
+					return;
 				end
-				local lastSackedTurn :number = pCity:GetProperty(g_cityPropertyKeys.LastSackedTurn);
-				if(lastSackedTurn ~= nil and Game.GetCurrentGameTurn() < (lastSackedTurn + CITY_SACKED_DEBOUNCE)) then
-					self.m_Instance.SackedIcon:SetAlpha(0.3);
-					self.m_Instance.SackedIcon:SetToolTipString(Locale.Lookup("LOC_PIRATES_CITY_SACKED", lastSackedTurn + CITY_SACKED_DEBOUNCE - Game.GetCurrentGameTurn()));
-				else
-					self.m_Instance.SackedIcon:SetAlpha(1);
-					self.m_Instance.SackedIcon:SetToolTipString(Locale.Lookup("LOC_PIRATES_CITY_NOT_SACKED"));
-				end
+			end
+			local lastSackedTurn :number = pCity:GetProperty(g_cityPropertyKeys.LastSackedTurn);
+			if(lastSackedTurn ~= nil and Game.GetCurrentGameTurn() < (lastSackedTurn + CITY_SACKED_DEBOUNCE)) then
+				self.m_Instance.SackedIcon:SetAlpha(0.3);
+				self.m_Instance.SackedIcon:SetToolTipString(Locale.Lookup("LOC_PIRATES_CITY_SACKED", lastSackedTurn + CITY_SACKED_DEBOUNCE - Game.GetCurrentGameTurn()));
+			else
+				self.m_Instance.SackedIcon:SetAlpha(1);
+				self.m_Instance.SackedIcon:SetToolTipString(Locale.Lookup("LOC_PIRATES_CITY_NOT_SACKED"));
 			end
 		end
 	end
@@ -88,6 +87,24 @@ function OnUnitCommandStarted(player :number, unitId :number, hCommand :number, 
 
 		--Update the banner next frame so the visit tavern has time to update
 		MarkCityForUpdate(pCity:GetOwner(), pCity:GetID());
+	end
+end
+
+function OnDistrictDamageChanged(playerID:number, districtID:number, damageType:number, newDamage:number, oldDamage:number)
+	BASE_OnDistrictDamageChanged(playerID, districtID, damageType, newDamage, oldDamage);
+
+	local pPlayer = Players[ playerID ];
+	if (pPlayer ~= nil) then
+		local pDistrict = pPlayer:GetDistricts():FindID(districtID);
+		if (pDistrict ~= nil) then
+			local wallHitpoints	: number = pDistrict:GetMaxDamage(DefenseTypes.DISTRICT_OUTER);
+			if(newDamage >= wallHitpoints)then
+				local pCity = pDistrict:GetCity();
+				if(pCity ~= nil)then
+					MarkCityForUpdate(playerID, pCity:GetID());
+				end
+			end
+		end
 	end
 end
 
