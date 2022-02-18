@@ -51,11 +51,11 @@
 		<Row ImprovementType="IMPROVEMENT_BEACH_RESORT" Name="LOC_IMPROVEMENT_BEACH_RESORT_NAME" Description="LOC_IMPROVEMENT_BEACH_RESORT_DESCRIPTION" Icon="ICON_IMPROVEMENT_BEACH_RESORT" PlunderType="PLUNDER_GOLD" PlunderAmount="50" Buildable="true" PrereqTech="TECH_RADIO" MinimumAppeal="4" Coast="true" YieldFromAppeal="YIELD_GOLD"/>
 		<Row ImprovementType="IMPROVEMENT_MISSILE_SILO" Name="LOC_IMPROVEMENT_MISSILE_SILO" Description="LOC_IMPROVEMENT_MISSILE_SILO_DESCRIPTION" Icon="ICON_IMPROVEMENT_MISSILE_SILO" PlunderType="NO_PLUNDER" Buildable="true" CanBuildOutsideTerritory="false" PrereqTech="TECH_ROCKETRY" WeaponSlots="1"/>
 		<!--Unique Improvements -->
-		<Row ImprovementType="IMPROVEMENT_CHATEAU" Name="LOC_IMPROVEMENT_CHATEAU_NAME" Description="LOC_IMPROVEMENT_CHATEAU_DESCRIPTION" Icon="ICON_IMPROVEMENT_CHATEAU" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqCivic="CIVIC_HUMANISM" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_CHATEAU" RequiresRiver="true" Appeal="1"/>
+		<Row ImprovementType="IMPROVEMENT_CHATEAU" Name="LOC_IMPROVEMENT_CHATEAU_NAME" Description="LOC_IMPROVEMENT_CHATEAU_DESCRIPTION" Icon="ICON_IMPROVEMENT_CHATEAU" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqCivic="CIVIC_HUMANISM" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_CHATEAU" SameAdjacentValid="false" RequiresAdjacentBonusOrLuxury="true" Appeal="1"/>
 		<Row ImprovementType="IMPROVEMENT_COLOSSAL_HEAD" Name="LOC_IMPROVEMENT_COLOSSAL_HEAD_NAME" Description="LOC_IMPROVEMENT_COLOSSAL_HEAD_DESCRIPTION" Icon="ICON_IMPROVEMENT_COLOSSAL_HEAD" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" TraitType="MINOR_CIV_LA_VENTA_TRAIT"/>
 		<Row ImprovementType="IMPROVEMENT_GREAT_WALL" Name="LOC_IMPROVEMENT_GREAT_WALL_NAME" Description="LOC_IMPROVEMENT_GREAT_WALL_DESCRIPTION" Icon="ICON_IMPROVEMENT_GREAT_WALL" PlunderType="PLUNDER_GOLD" PlunderAmount="50" Buildable="true" PrereqTech="TECH_MASONRY" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_GREAT_WALL" BuildInLine="true" BuildOnFrontier="true" DefenseModifier="4" GrantFortification="2"/>
 		<Row ImprovementType="IMPROVEMENT_KURGAN" Name="LOC_IMPROVEMENT_KURGAN_NAME" Description="LOC_IMPROVEMENT_KURGAN_DESCRIPTION" Icon="ICON_IMPROVEMENT_KURGAN" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqTech="TECH_ANIMAL_HUSBANDRY" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_KURGAN"/>
-		<Row ImprovementType="IMPROVEMENT_MISSION" Name="LOC_IMPROVEMENT_MISSION_NAME" Description="LOC_IMPROVEMENT_MISSION_DESCRIPTION" Icon="ICON_IMPROVEMENT_MISSION" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqCivic="CIVIC_EXPLORATION" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_MISSION"/>
+		<Row ImprovementType="IMPROVEMENT_MISSION" Name="LOC_IMPROVEMENT_MISSION_NAME" Description="LOC_IMPROVEMENT_MISSION_DESCRIPTION" Icon="ICON_IMPROVEMENT_MISSION" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqTech="TECH_EDUCATION" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_MISSION"/>
 		<Row ImprovementType="IMPROVEMENT_ROMAN_FORT" Name="LOC_IMPROVEMENT_ROMAN_FORT_NAME" Description="LOC_IMPROVEMENT_ROMAN_FORT_DESCRIPTION" Icon="ICON_IMPROVEMENT_FORT" PlunderType="NO_PLUNDER" Buildable="true" CanBuildOutsideTerritory="true" DefenseModifier="4" GrantFortification="2"/>
 		<Row ImprovementType="IMPROVEMENT_SPHINX" Name="LOC_IMPROVEMENT_SPHINX_NAME" Description="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Icon="ICON_IMPROVEMENT_SPHINX" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqCivic="CIVIC_CRAFTSMANSHIP" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_SPHINX" Appeal="1" SameAdjacentValid="false"/>
 		<Row ImprovementType="IMPROVEMENT_STEPWELL" Name="LOC_IMPROVEMENT_STEPWELL_NAME" Description="LOC_IMPROVEMENT_STEPWELL_DESCRIPTION" Icon="ICON_IMPROVEMENT_STEPWELL" PlunderType="PLUNDER_HEAL" PlunderAmount="50" Buildable="true" PrereqTech="TECH_IRRIGATION" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_STEPWELL" SameAdjacentValid="false" Housing="2" TilesRequired="2"/>
@@ -67,8 +67,14 @@
 		<Row ImprovementType="IMPROVEMENT_GREAT_WALL" YieldChangeId="GreatWall_Gold"/>
 		<Row ImprovementType="IMPROVEMENT_GREAT_WALL" YieldChangeId="GreatWall_Culture"/>
 		<Row ImprovementType="IMPROVEMENT_KURGAN" YieldChangeId="Kurgan_Faith"/>
+		<Row ImprovementType="IMPROVEMENT_KURGAN" YieldChangeId="Kurgan_Faith_Stirrups"/>
 		<Row ImprovementType="IMPROVEMENT_COLOSSAL_HEAD" YieldChangeId="ColossalHead_FaithForest"/>
 		<Row ImprovementType="IMPROVEMENT_COLOSSAL_HEAD" YieldChangeId="ColossalHead_FaithJungle"/>
+		<Row ImprovementType="IMPROVEMENT_MISSION" YieldChangeId="Mission_Science_HolySite"/>
+		<Row ImprovementType="IMPROVEMENT_MISSION" YieldChangeId="Mission_Science_Campus"/>
+		<Row ImprovementType="IMPROVEMENT_CHATEAU" YieldChangeId="Chateau_WonderEarly"/>
+		<Row ImprovementType="IMPROVEMENT_CHATEAU" YieldChangeId="Chateau_WonderLate"/>
+		<Row ImprovementType="IMPROVEMENT_CHATEAU" YieldChangeId="Chateau_River"/>
 	</Improvement_Adjacencies>
 	<Improvement_ValidFeatures>
 		<Row ImprovementType="IMPROVEMENT_BARBARIAN_CAMP" FeatureType="FEATURE_FOREST"/>
@@ -302,6 +308,7 @@
 	<Improvement_YieldChanges>
 		<!--If the yield change is zero, the value will be changed later.-->
 		<Row ImprovementType="IMPROVEMENT_FARM" YieldType="YIELD_FOOD" YieldChange="1"/>
+		<Row ImprovementType="IMPROVEMENT_FARM" YieldType="YIELD_PRODUCTION" YieldChange="0"/>
 		<Row ImprovementType="IMPROVEMENT_MINE" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
 		<Row ImprovementType="IMPROVEMENT_QUARRY" YieldType="YIELD_GOLD" YieldChange="0"/>
 		<Row ImprovementType="IMPROVEMENT_QUARRY" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
@@ -319,14 +326,17 @@
 		<Row ImprovementType="IMPROVEMENT_OFFSHORE_OIL_RIG" YieldType="YIELD_PRODUCTION" YieldChange="2"/>
 		<!--Unique Improvements -->
 		<Row ImprovementType="IMPROVEMENT_CHATEAU" YieldType="YIELD_CULTURE" YieldChange="2"/>
+		<Row ImprovementType="IMPROVEMENT_CHATEAU" YieldType="YIELD_GOLD" YieldChange="1"/>
 		<Row ImprovementType="IMPROVEMENT_COLOSSAL_HEAD" YieldType="YIELD_FAITH" YieldChange="2"/>
 		<Row ImprovementType="IMPROVEMENT_COLOSSAL_HEAD" YieldType="YIELD_CULTURE" YieldChange="0"/>
 		<Row ImprovementType="IMPROVEMENT_GREAT_WALL" YieldType="YIELD_GOLD" YieldChange="0"/>
 		<Row ImprovementType="IMPROVEMENT_GREAT_WALL" YieldType="YIELD_CULTURE" YieldChange="0"/>
-		<Row ImprovementType="IMPROVEMENT_KURGAN" YieldType="YIELD_GOLD" YieldChange="1"/>
+		<Row ImprovementType="IMPROVEMENT_KURGAN" YieldType="YIELD_GOLD" YieldChange="3"/>
 		<Row ImprovementType="IMPROVEMENT_KURGAN" YieldType="YIELD_FAITH" YieldChange="1"/>
 		<Row ImprovementType="IMPROVEMENT_MISSION" YieldType="YIELD_FAITH" YieldChange="2"/>
 		<Row ImprovementType="IMPROVEMENT_MISSION" YieldType="YIELD_SCIENCE" YieldChange="0"/>
+		<Row ImprovementType="IMPROVEMENT_MISSION" YieldType="YIELD_FOOD" YieldChange="0"/>
+		<Row ImprovementType="IMPROVEMENT_MISSION" YieldType="YIELD_PRODUCTION" YieldChange="0"/>
 		<Row ImprovementType="IMPROVEMENT_SPHINX" YieldType="YIELD_CULTURE" YieldChange="1"/>
 		<Row ImprovementType="IMPROVEMENT_SPHINX" YieldType="YIELD_FAITH" YieldChange="1"/>
 		<Row ImprovementType="IMPROVEMENT_STEPWELL" YieldType="YIELD_FOOD" YieldChange="1"/>
@@ -350,8 +360,6 @@
 		<Row Id="13" ImprovementType="IMPROVEMENT_QUARRY" YieldType="YIELD_PRODUCTION" BonusYieldChange="1" PrereqTech="TECH_ROCKETRY"/>
 		<!--Unique Improvements -->
 		<Row Id="14" ImprovementType="IMPROVEMENT_COLOSSAL_HEAD" YieldType="YIELD_CULTURE" BonusYieldChange="1" PrereqCivic="CIVIC_HUMANISM"/>
-		<Row Id="15" ImprovementType="IMPROVEMENT_KURGAN" YieldType="YIELD_GOLD" BonusYieldChange="1" PrereqCivic="CIVIC_GUILDS"/>
-		<Row Id="16" ImprovementType="IMPROVEMENT_KURGAN" YieldType="YIELD_GOLD" BonusYieldChange="1" PrereqCivic="CIVIC_CAPITALISM"/>
 		<Row Id="17" ImprovementType="IMPROVEMENT_MISSION" YieldType="YIELD_SCIENCE" BonusYieldChange="2" PrereqCivic="CIVIC_CULTURAL_HERITAGE"/>
 		<Row Id="18" ImprovementType="IMPROVEMENT_SPHINX" YieldType="YIELD_CULTURE" BonusYieldChange="1" PrereqCivic="CIVIC_NATURAL_HISTORY"/>
 		<Row Id="19" ImprovementType="IMPROVEMENT_STEPWELL" YieldType="YIELD_FAITH" BonusYieldChange="1" PrereqCivic="CIVIC_FEUDALISM"/>
@@ -367,6 +375,7 @@
 		<Row ImprovementType="IMPROVEMENT_PLANTATION" TourismSource="TOURISMSOURCE_CULTURE" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
 		<Row ImprovementType="IMPROVEMENT_SPHINX" TourismSource="TOURISMSOURCE_CULTURE" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
 		<Row ImprovementType="IMPROVEMENT_ZIGGURAT" TourismSource="TOURISMSOURCE_CULTURE" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
+		<Row ImprovementType="IMPROVEMENT_KURGAN" TourismSource="TOURISMSOURCE_FAITH" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
 		<Row ImprovementType="IMPROVEMENT_BEACH_RESORT" TourismSource="TOURISMSOURCE_APPEAL" ScalingFactor="100"/>
 	</Improvement_Tourism>
 	<Adjacency_YieldChanges>
@@ -374,9 +383,15 @@
 		<Row ID="Farms_MechanizedAdjacency" Description="Placeholder" YieldType="YIELD_FOOD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_FARM" PrereqTech="TECH_REPLACEABLE_PARTS"/>
 		<Row ID="GreatWall_Gold" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_GREAT_WALL" PrereqTech="TECH_MASONRY"/>
 		<Row ID="GreatWall_Culture" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_GREAT_WALL" PrereqTech="TECH_CASTLES"/>
-		<Row ID="Kurgan_Faith" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_PASTURE"/>
+		<Row ID="Kurgan_Faith" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_PASTURE" ObsoleteTech="TECH_STIRRUPS"/>
+		<Row ID="Kurgan_Faith_Stirrups" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="2" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_PASTURE" PrereqTech="TECH_STIRRUPS"/>
 		<Row ID="ColossalHead_FaithForest" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="2" AdjacentFeature="FEATURE_FOREST"/>
 		<Row ID="ColossalHead_FaithJungle" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="2" AdjacentFeature="FEATURE_JUNGLE"/>
+		<Row ID="Mission_Science_HolySite" Description="Placeholder" YieldType="YIELD_SCIENCE" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_HOLY_SITE"/>
+		<Row ID="Mission_Science_Campus" Description="Placeholder" YieldType="YIELD_SCIENCE" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_CAMPUS"/>
+		<Row ID="Chateau_WonderEarly" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="1" TilesRequired="1" AdjacentWonder="true" ObsoleteTech="TECH_FLIGHT"/>
+		<Row ID="Chateau_WonderLate" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="2" TilesRequired="1" AdjacentWonder="true" PrereqTech="TECH_FLIGHT"/>
+		<Row ID="Chateau_River" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentRiver="true"/>
 	</Adjacency_YieldChanges>
 	<Modifiers>
 		<Row>
@@ -393,6 +408,16 @@
 			<ModifierId>MISSION_CAMPUSADJACENCY_SCIENCE</ModifierId>
 			<ModifierType>MODIFIER_SINGLE_PLOT_ADJUST_PLOT_YIELDS</ModifierType>
 			<SubjectRequirementSetId>PLOT_ADJACENT_TO_CAMPUS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MISSION_NEWCONTINENT_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_PLOT_ADJUST_PLOT_YIELDS</ModifierType>
+			<SubjectRequirementSetId>PLOT_NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MISSION_NEWCONTINENT_FOOD</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_PLOT_ADJUST_PLOT_YIELDS</ModifierType>
+			<SubjectRequirementSetId>PLOT_NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>MISSION_NEWCONTINENT_FAITH</ModifierId>
@@ -472,6 +497,26 @@
 			<Value>2</Value>
 		</Row>
 		<Row>
+			<ModifierId>MISSION_NEWCONTINENT_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>MISSION_NEWCONTINENT_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MISSION_NEWCONTINENT_FOOD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>MISSION_NEWCONTINENT_FOOD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
 			<ModifierId>SPHINX_WONDERADJACENCY_FAITH</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_FAITH</Value>
@@ -529,20 +574,16 @@
 	</ModifierArguments>
 	<ImprovementModifiers>
 		<Row>
-			<ImprovementType>IMPROVEMENT_CHATEAU</ImprovementType>
-			<ModifierId>CHATEAU_LUXURYADJACENCY_GOLD</ModifierId>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_CHATEAU</ImprovementType>
-			<ModifierId>CHATEAU_WONDERADJACENCY_CULTURE</ModifierId>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_MISSION</ImprovementType>
-			<ModifierId>MISSION_CAMPUSADJACENCY_SCIENCE</ModifierId>
-		</Row>
-		<Row>
 			<ImprovementType>IMPROVEMENT_MISSION</ImprovementType>
 			<ModifierId>MISSION_NEWCONTINENT_FAITH</ModifierId>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MISSION</ImprovementType>
+			<ModifierId>MISSION_NEWCONTINENT_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MISSION</ImprovementType>
+			<ModifierId>MISSION_NEWCONTINENT_FOOD</ModifierId>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_SPHINX</ImprovementType>

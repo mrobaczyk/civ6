@@ -34,54 +34,92 @@
 	</Parameters>
 	<ParameterCriteria>
 		<Row ParameterId="Realism" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_APOCALYPSE" Operator="NotEquals" ConfigurationValue="1"/>
-    <Row ParameterId="GameMode_Apocalypse" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_RANDOM" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="GameMode_Apocalypse" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_RANDOM" Operator="NotEquals" ConfigurationValue="1"/>
 	</ParameterCriteria>
 	<ParameterDependencies>
 		<Row ParameterId="GameMode_Apocalypse" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2"/>
-    <Row ParameterID="GameMode_Apocalypse" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
+		<Row ParameterID="GameMode_Apocalypse" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
 	</ParameterDependencies>
 	<ConfigurationUpdates>
 		<Row SourceGroup="Game" SourceId="GAMEMODE_APOCALYPSE" SourceValue="1" TargetGroup="Game" TargetId="GAME_REALISM" TargetValue="4" Hash="0" Static="1"/>
 	</ConfigurationUpdates>
 	<GameModeItems>
-		<Row GameModeType="GAMEMODE_APOCALYPSE" Name="LOC_GAMEMODE_APOCALYPSE_NAME" Description="LOC_GAMEMODE_APOCALYPSE_DESCRIPTION" Portrait="GAMEMODE_APOCALYPSE_NEUTRAL" Background="GAMEMODE_APOCALYPSE_BACKGROUND" Icon="ICON_GAMEMODE_APOCALYPSE" UnitIcon="ICON_UNIT_SOOTHSAYER" UnitDescription="LOC_UNIT_SOOTHSAYER_DESCRIPTION" UnitName="LOC_UNIT_SOOTHSAYER_NAME" SortIndex="10" />
+		<Row GameModeType="GAMEMODE_APOCALYPSE" Name="LOC_GAMEMODE_APOCALYPSE_NAME" Description="LOC_GAMEMODE_APOCALYPSE_DESCRIPTION" Portrait="GAMEMODE_APOCALYPSE_NEUTRAL" Background="GAMEMODE_APOCALYPSE_BACKGROUND" Icon="ICON_GAMEMODE_APOCALYPSE" UnitIcon="ICON_UNIT_SOOTHSAYER" UnitDescription="LOC_UNIT_SOOTHSAYER_DESCRIPTION" UnitName="LOC_UNIT_SOOTHSAYER_NAME" SortIndex="10"/>
 	</GameModeItems>
-
 	<NaturalWonders>
-		<Row Domain="StandardNaturalWonders" FeatureType="FEATURE_BERMUDA_TRIANGLE" Name="LOC_FEATURE_BERMUDA_TRIANGLE_NAME" Description="LOC_FEATURE_BERMUDA_TRIANGLE_DESCRIPTION" Icon="ICON_FEATURE_BERMUDA_TRIANGLE" />
-		<Row Domain="StandardNaturalWonders" FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" Name="LOC_FEATURE_FOUNTAIN_OF_YOUTH_NAME" Description="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Icon="ICON_FEATURE_FOUNTAIN_OF_YOUTH" />
+		<Row Domain="StandardNaturalWonders" FeatureType="FEATURE_BERMUDA_TRIANGLE" Name="LOC_FEATURE_BERMUDA_TRIANGLE_NAME" Description="LOC_FEATURE_BERMUDA_TRIANGLE_DESCRIPTION" Icon="ICON_FEATURE_BERMUDA_TRIANGLE"/>
+		<Row Domain="StandardNaturalWonders" FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" Name="LOC_FEATURE_FOUNTAIN_OF_YOUTH_NAME" Description="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Icon="ICON_FEATURE_FOUNTAIN_OF_YOUTH"/>
 		<Row Domain="StandardNaturalWonders" FeatureType="FEATURE_PAITITI" Name="LOC_FEATURE_PAITITI_NAME" Description="LOC_FEATURE_PAITITI_DESCRIPTION" Icon="ICON_FEATURE_PAITITI"/>
-
-		<Row Domain="Expansion1NaturalWonders" FeatureType="FEATURE_BERMUDA_TRIANGLE" Name="LOC_FEATURE_BERMUDA_TRIANGLE_NAME" Description="LOC_FEATURE_BERMUDA_TRIANGLE_DESCRIPTION" Icon="ICON_FEATURE_BERMUDA_TRIANGLE" />
-		<Row Domain="Expansion1NaturalWonders" FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" Name="LOC_FEATURE_FOUNTAIN_OF_YOUTH_NAME" Description="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Icon="ICON_FEATURE_FOUNTAIN_OF_YOUTH" />
+		<Row Domain="Expansion1NaturalWonders" FeatureType="FEATURE_BERMUDA_TRIANGLE" Name="LOC_FEATURE_BERMUDA_TRIANGLE_NAME" Description="LOC_FEATURE_BERMUDA_TRIANGLE_DESCRIPTION" Icon="ICON_FEATURE_BERMUDA_TRIANGLE"/>
+		<Row Domain="Expansion1NaturalWonders" FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" Name="LOC_FEATURE_FOUNTAIN_OF_YOUTH_NAME" Description="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Icon="ICON_FEATURE_FOUNTAIN_OF_YOUTH"/>
 		<Row Domain="Expansion1NaturalWonders" FeatureType="FEATURE_PAITITI" Name="LOC_FEATURE_PAITITI_NAME" Description="LOC_FEATURE_PAITITI_DESCRIPTION" Icon="ICON_FEATURE_PAITITI"/>
-
-		<Row Domain="Expansion2NaturalWonders" FeatureType="FEATURE_BERMUDA_TRIANGLE" Name="LOC_FEATURE_BERMUDA_TRIANGLE_NAME" Description="LOC_FEATURE_BERMUDA_TRIANGLE_DESCRIPTION" Icon="ICON_FEATURE_BERMUDA_TRIANGLE" />
-		<Row Domain="Expansion2NaturalWonders" FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" Name="LOC_FEATURE_FOUNTAIN_OF_YOUTH_NAME" Description="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Icon="ICON_FEATURE_FOUNTAIN_OF_YOUTH" />
+		<Row Domain="Expansion2NaturalWonders" FeatureType="FEATURE_BERMUDA_TRIANGLE" Name="LOC_FEATURE_BERMUDA_TRIANGLE_NAME" Description="LOC_FEATURE_BERMUDA_TRIANGLE_DESCRIPTION" Icon="ICON_FEATURE_BERMUDA_TRIANGLE"/>
+		<Row Domain="Expansion2NaturalWonders" FeatureType="FEATURE_FOUNTAIN_OF_YOUTH" Name="LOC_FEATURE_FOUNTAIN_OF_YOUTH_NAME" Description="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Icon="ICON_FEATURE_FOUNTAIN_OF_YOUTH"/>
 		<Row Domain="Expansion2NaturalWonders" FeatureType="FEATURE_PAITITI" Name="LOC_FEATURE_PAITITI_NAME" Description="LOC_FEATURE_PAITITI_DESCRIPTION" Icon="ICON_FEATURE_PAITITI"/>
 	</NaturalWonders>
-
-  <!-- City-States -->
-  <CityStates>
-    <Row CivilizationType="CIVILIZATION_CAGUANA" CityStateCategory="CULTURAL" Name="LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_CAGUANA" Bonus="LOC_CIVILIZATION_CAGUANA_BONUS"/>
-    <Row CivilizationType="CIVILIZATION_HUNZA" CityStateCategory="TRADE" Name="LOC_CIVILIZATION_HUNZA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_HUNZA" Bonus="LOC_CIVILIZATION_HUNZA_BONUS"/>
-    <Row CivilizationType="CIVILIZATION_LAHORE" CityStateCategory="MILITARISTIC" Name="LOC_CIVILIZATION_LAHORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_LAHORE" Bonus="LOC_CIVILIZATION_LAHORE_BONUS"/>
-    <Row CivilizationType="CIVILIZATION_SINGAPORE" CityStateCategory="INDUSTRIAL" Name="LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_SINGAPORE" Bonus="LOC_CIVILIZATION_SINGAPORE_BONUS"/>
-    <Row CivilizationType="CIVILIZATION_TARUGA" CityStateCategory="SCIENTIFIC" Name="LOC_CIVILIZATION_TARUGA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_TARUGA" Bonus="LOC_CIVILIZATION_TARUGA_BONUS"/>
-    <Row CivilizationType="CIVILIZATION_VATICAN_CITY" CityStateCategory="RELIGIOUS" Name="LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME" Icon="ICON_CIVILIZATION_VATICAN_CITY" Bonus="LOC_CIVILIZATION_VATICAN_CITY_BONUS"/>
-
-    <Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_CAGUANA" CityStateCategory="CULTURAL" Name="LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_CAGUANA" Bonus="LOC_CIVILIZATION_CAGUANA_BONUS"/>
-    <Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_HUNZA" CityStateCategory="TRADE" Name="LOC_CIVILIZATION_HUNZA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_HUNZA" Bonus="LOC_CIVILIZATION_HUNZA_BONUS"/>
-    <Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_LAHORE" CityStateCategory="MILITARISTIC" Name="LOC_CIVILIZATION_LAHORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_LAHORE" Bonus="LOC_CIVILIZATION_LAHORE_BONUS"/>
-    <Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_SINGAPORE" CityStateCategory="INDUSTRIAL" Name="LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_SINGAPORE" Bonus="LOC_CIVILIZATION_SINGAPORE_BONUS"/>
-    <Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_TARUGA" CityStateCategory="SCIENTIFIC" Name="LOC_CIVILIZATION_TARUGA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_TARUGA" Bonus="LOC_CIVILIZATION_TARUGA_BONUS"/>
-    <Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_VATICAN_CITY" CityStateCategory="RELIGIOUS" Name="LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME" Icon="ICON_CIVILIZATION_VATICAN_CITY" Bonus="LOC_CIVILIZATION_VATICAN_CITY_BONUS"/>
-
-    <Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_CAGUANA" CityStateCategory="CULTURAL" Name="LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_CAGUANA" Bonus="LOC_CIVILIZATION_CAGUANA_BONUS"/>
-    <Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_HUNZA" CityStateCategory="TRADE" Name="LOC_CIVILIZATION_HUNZA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_HUNZA" Bonus="LOC_CIVILIZATION_HUNZA_BONUS"/>
-    <Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_LAHORE" CityStateCategory="MILITARISTIC" Name="LOC_CIVILIZATION_LAHORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_LAHORE" Bonus="LOC_CIVILIZATION_LAHORE_BONUS"/>
-    <Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_SINGAPORE" CityStateCategory="INDUSTRIAL" Name="LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_SINGAPORE" Bonus="LOC_CIVILIZATION_SINGAPORE_BONUS"/>
-    <Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_TARUGA" CityStateCategory="SCIENTIFIC" Name="LOC_CIVILIZATION_TARUGA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_TARUGA" Bonus="LOC_CIVILIZATION_TARUGA_BONUS"/>
-    <Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_VATICAN_CITY" CityStateCategory="RELIGIOUS" Name="LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME" Icon="ICON_CIVILIZATION_VATICAN_CITY" Bonus="LOC_CIVILIZATION_VATICAN_CITY_BONUS"/>
-  </CityStates>
+	<!-- City-States -->
+	<CityStates>
+		<Row CivilizationType="CIVILIZATION_CAGUANA" CityStateCategory="CULTURAL" Name="LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_CAGUANA" Bonus="LOC_CIVILIZATION_CAGUANA_BONUS"/>
+		<Row CivilizationType="CIVILIZATION_HUNZA" CityStateCategory="TRADE" Name="LOC_CIVILIZATION_HUNZA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_HUNZA" Bonus="LOC_CIVILIZATION_HUNZA_BONUS"/>
+		<Row CivilizationType="CIVILIZATION_LAHORE" CityStateCategory="MILITARISTIC" Name="LOC_CIVILIZATION_LAHORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_LAHORE" Bonus="LOC_CIVILIZATION_LAHORE_BONUS"/>
+		<Row CivilizationType="CIVILIZATION_SINGAPORE" CityStateCategory="INDUSTRIAL" Name="LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_SINGAPORE" Bonus="LOC_CIVILIZATION_SINGAPORE_BONUS"/>
+		<Row CivilizationType="CIVILIZATION_TARUGA" CityStateCategory="SCIENTIFIC" Name="LOC_CIVILIZATION_TARUGA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_TARUGA" Bonus="LOC_CIVILIZATION_TARUGA_BONUS"/>
+		<Row CivilizationType="CIVILIZATION_VATICAN_CITY" CityStateCategory="RELIGIOUS" Name="LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME" Icon="ICON_CIVILIZATION_VATICAN_CITY" Bonus="LOC_CIVILIZATION_VATICAN_CITY_BONUS"/>
+		<Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_CAGUANA" CityStateCategory="CULTURAL" Name="LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_CAGUANA" Bonus="LOC_CIVILIZATION_CAGUANA_BONUS"/>
+		<Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_HUNZA" CityStateCategory="TRADE" Name="LOC_CIVILIZATION_HUNZA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_HUNZA" Bonus="LOC_CIVILIZATION_HUNZA_BONUS"/>
+		<Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_LAHORE" CityStateCategory="MILITARISTIC" Name="LOC_CIVILIZATION_LAHORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_LAHORE" Bonus="LOC_CIVILIZATION_LAHORE_BONUS"/>
+		<Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_SINGAPORE" CityStateCategory="INDUSTRIAL" Name="LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_SINGAPORE" Bonus="LOC_CIVILIZATION_SINGAPORE_BONUS"/>
+		<Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_TARUGA" CityStateCategory="SCIENTIFIC" Name="LOC_CIVILIZATION_TARUGA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_TARUGA" Bonus="LOC_CIVILIZATION_TARUGA_BONUS"/>
+		<Row Domain="Expansion1CityStates" CivilizationType="CIVILIZATION_VATICAN_CITY" CityStateCategory="RELIGIOUS" Name="LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME" Icon="ICON_CIVILIZATION_VATICAN_CITY" Bonus="LOC_CIVILIZATION_VATICAN_CITY_BONUS"/>
+		<Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_CAGUANA" CityStateCategory="CULTURAL" Name="LOC_CIVILIZATION_CAGUANA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_CAGUANA" Bonus="LOC_CIVILIZATION_CAGUANA_BONUS"/>
+		<Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_HUNZA" CityStateCategory="TRADE" Name="LOC_CIVILIZATION_HUNZA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_HUNZA" Bonus="LOC_CIVILIZATION_HUNZA_BONUS"/>
+		<Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_LAHORE" CityStateCategory="MILITARISTIC" Name="LOC_CIVILIZATION_LAHORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_LAHORE" Bonus="LOC_CIVILIZATION_LAHORE_BONUS"/>
+		<Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_SINGAPORE" CityStateCategory="INDUSTRIAL" Name="LOC_CIVILIZATION_SINGAPORE_FRONTEND_NAME" Icon="ICON_CIVILIZATION_SINGAPORE" Bonus="LOC_CIVILIZATION_SINGAPORE_BONUS"/>
+		<Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_TARUGA" CityStateCategory="SCIENTIFIC" Name="LOC_CIVILIZATION_TARUGA_FRONTEND_NAME" Icon="ICON_CIVILIZATION_TARUGA" Bonus="LOC_CIVILIZATION_TARUGA_BONUS"/>
+		<Row Domain="Expansion2CityStates" CivilizationType="CIVILIZATION_VATICAN_CITY" CityStateCategory="RELIGIOUS" Name="LOC_CIVILIZATION_VATICAN_CITY_FRONTEND_NAME" Icon="ICON_CIVILIZATION_VATICAN_CITY" Bonus="LOC_CIVILIZATION_VATICAN_CITY_BONUS"/>
+	</CityStates>
+	<MapLeaders>
+		<!-- Major -->
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_LADY_SIX_SKY"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_LADY_SIX_SKY"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_SIMON_BOLIVAR"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_SIMON_BOLIVAR"/>
+		<!-- City-States -->
+		<Row Map="../../Assets/Maps/EarthMaps/TSLMediterraneanLarge.Civ6Map" LeaderType="LEADER_MINOR_CIV_VATICAN_CITY"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLMediterraneanLarge_XP2.Civ6Map" LeaderType="LEADER_MINOR_CIV_VATICAN_CITY"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MINOR_CIV_CAGUANA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MINOR_CIV_HUNZA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MINOR_CIV_LAHORE"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MINOR_CIV_SINGAPORE"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MINOR_CIV_TARUGA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MINOR_CIV_VATICAN_CITY"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MINOR_CIV_CAGUANA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MINOR_CIV_HUNZA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MINOR_CIV_LAHORE"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MINOR_CIV_SINGAPORE"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MINOR_CIV_TARUGA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MINOR_CIV_VATICAN_CITY"/>
+	</MapLeaders>
+	<MapStartPositions>
+		<!-- Major -->
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="4578" Type="LEADER" Value="LEADER_LADY_SIX_SKY"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="3934" Type="LEADER" Value="LEADER_SIMON_BOLIVAR"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="4578" Type="LEADER" Value="LEADER_LADY_SIX_SKY"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="3934" Type="LEADER" Value="LEADER_SIMON_BOLIVAR"/>
+		<!-- City-States -->
+		<Row Map="../../Assets/Maps/EarthMaps/TSLMediterraneanLarge.Civ6Map" Plot="3305" Type="LEADER" Value="LEADER_MINOR_CIV_VATICAN_CITY"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLMediterraneanLarge_XP2.Civ6Map" Plot="3305" Type="LEADER" Value="LEADER_MINOR_CIV_VATICAN_CITY"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="4456" Type="LEADER" Value="LEADER_MINOR_CIV_CAGUANA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="3935" Type="LEADER" Value="LEADER_MINOR_CIV_HUNZA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="5289" Type="LEADER" Value="LEADER_MINOR_CIV_LAHORE"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="3869" Type="LEADER" Value="LEADER_MINOR_CIV_SINGAPORE"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="4094" Type="LEADER" Value="LEADER_MINOR_CIV_TARUGA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="5786" Type="LEADER" Value="LEADER_MINOR_CIV_VATICAN_CITY"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="4456" Type="LEADER" Value="LEADER_MINOR_CIV_CAGUANA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="3935" Type="LEADER" Value="LEADER_MINOR_CIV_HUNZA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="5289" Type="LEADER" Value="LEADER_MINOR_CIV_LAHORE"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="3869" Type="LEADER" Value="LEADER_MINOR_CIV_SINGAPORE"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="4094" Type="LEADER" Value="LEADER_MINOR_CIV_TARUGA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="5786" Type="LEADER" Value="LEADER_MINOR_CIV_VATICAN_CITY"/>
+	</MapStartPositions>
 </GameInfo>

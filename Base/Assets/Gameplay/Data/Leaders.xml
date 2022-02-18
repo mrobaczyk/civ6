@@ -92,8 +92,8 @@
 		<Row Type="TRAIT_LEADER_SURROUNDED_BY_GLORY" Kind="KIND_TRAIT"/>
 		<!-- NOTE: This trait is used by the AI. It's intent is to go on a civilization, but it can also go on a leader or agenda if desired. -->
 		<!--   But be warned, in that case it can double or even triple up. -->
-    <Row Type="TRAIT_LEADER_AGGRESSIVE_MILITARY" Kind="KIND_TRAIT"/>
-    <Row Type="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_AGGRESSIVE_MILITARY" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_DEFAULT_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_SCIENTIFIC_TRAIT" Kind="KIND_TRAIT"/>
@@ -376,9 +376,9 @@
 		<Row TriggerType="TRIGGER_CAPTURE_BARBARIAN" TreeName="Escort Worker To Camp" OperationName="Barbarian Builder Capture" AIEvent="AI_EVENT_UNIT_CAPTURED" Priority="2"/>
 	</TriggeredBehaviorTrees>
 	<AiListTypes>
-    <Row ListType="AgressiveDiplomacy"/>
-    <Row ListType="AggressivePseudoYields"/>
-    <Row ListType="BarbarianTriggeredTrees"/>
+		<Row ListType="AgressiveDiplomacy"/>
+		<Row ListType="AggressivePseudoYields"/>
+		<Row ListType="BarbarianTriggeredTrees"/>
 		<Row ListType="BarbarossaCivics"/>
 		<Row ListType="BarbarossaTechs"/>
 		<Row ListType="BarbarossaWonders"/>
@@ -604,7 +604,7 @@
 		<Row ListType="PedroWonders" Item="BUILDING_CHICHEN_ITZA" Favored="true"/>
 		<Row ListType="PedroWonders" Item="BUILDING_ORACLE" Favored="true"/>
 		<Row ListType="PericlesWonders" Item="BUILDING_POTALA_PALACE" Favored="true"/>
-		<Row ListType="PericlesEnvoys"  Item="PSEUDOYIELD_INFLUENCE"  Value="30"/>
+		<Row ListType="PericlesEnvoys" Item="PSEUDOYIELD_INFLUENCE" Value="30"/>
 		<Row ListType="PeterWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
@@ -811,13 +811,13 @@
 		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_PRIMARY_REGION" Value="100"/>
 		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_SECONDARY_REGION" Value="50"/>
 		<Row ListType="DefaultScoutUse" Item="NAVAL_SCOUTS_FOR_WORLD_EXPLORATION" Value="300"/>
-    <Row ListType="AgressiveDiplomacy" Item="DIPLOACTION_DENOUNCE" Favored="True"/>
-    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_COMBAT" Value="25"/>
-    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="25"/>
-    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_AIR_COMBAT" Value="25"/>
-    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_CITY_BASE" Value="40"/>
-    <Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_CITY_DEFENDING_UNITS" Value="-10"/>
-    <Row ListType="LowReligiousPreferencePseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="-75"/>
+		<Row ListType="AgressiveDiplomacy" Item="DIPLOACTION_DENOUNCE" Favored="True"/>
+		<Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_COMBAT" Value="25"/>
+		<Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="25"/>
+		<Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_UNIT_AIR_COMBAT" Value="25"/>
+		<Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_CITY_BASE" Value="40"/>
+		<Row ListType="AggressivePseudoYields" Item="PSEUDOYIELD_CITY_DEFENDING_UNITS" Value="-10"/>
+		<Row ListType="LowReligiousPreferencePseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="-75"/>
 		<Row ListType="LowReligiousPreferenceYields" Item="YIELD_FAITH" Value="-50"/>
 		<Row ListType="LowCityStatePreferenceWarDiploActions" Item="DIPLOACTION_DECLARE_WAR_MINOR_CIV" Favored="false"/>
 		<Row ListType="BarbarianTriggeredTrees" Item="TRIGGER_CAPTURE_BARBARIAN"/>
@@ -916,14 +916,14 @@
 	</AiBuildSpecializations>
 	<Traits>
 		<!-- Base Leader Traits -->
-		<Row TraitType="TRAIT_LEADER_BARBARIAN"  InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_BARBARIAN" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" InternalOnly="true"/>
 		<!-- Leader preferences that come from civilization traits -->
 		<Row TraitType="TRAIT_LEADER_EXPANSIONIST" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV" InternalOnly="true"/>
-    <Row TraitType="TRAIT_LEADER_SCIENCE_MAJOR_CIV" InternalOnly="true"/>
+		<Row TraitType="TRAIT_LEADER_SCIENCE_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_AGGRESSIVE_MILITARY" InternalOnly="true"/>
 		<Row TraitType="CULTURE_KILLS_TRAIT" Name="LOC_TRAIT_LEADER_THERMOPYLAE_NAME" Description="LOC_TRAIT_LEADER_THERMOPYLAE_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU" Name="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_NAME" Description="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION"/>
@@ -1040,6 +1040,7 @@
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="HIGH_DIFFICULTY_FREE_CIVIC_BOOSTS"/>
 		<!-- Specific leader traits -->
 		<Row TraitType="CULTURE_KILLS_TRAIT" ModifierId="UNIQUE_LEADER_CULTURE_KILLS"/>
+		<Row TraitType="CULTURE_KILLS_TRAIT" ModifierId="UNIQUE_LEADER_CULTURE_KILLS_GRANT_ABILITY"/>
 		<Row TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU" ModifierId="TRAIT_ADJUST_ALLIED_WAR_DISCOUNT"/>
 		<Row TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU" ModifierId="TRAIT_ADJUST_JOINTWAR_EXPERIENCE"/>
 		<Row TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU" ModifierId="TRAIT_ADJUST_JOINTWAR_PLUNDER"/>
@@ -1719,6 +1720,10 @@
 		<Row>
 			<ModifierId>UNIQUE_LEADER_CULTURE_KILLS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_POST_COMBAT_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_CULTURE_KILLS_GRANT_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>MINOR_CIV_PRODUCTION_PENALTY</ModifierId>
@@ -4052,6 +4057,11 @@
 			<ModifierId>UNIQUE_LEADER_CULTURE_KILLS</ModifierId>
 			<Name>PercentDefeatedStrength</Name>
 			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>UNIQUE_LEADER_CULTURE_KILLS_GRANT_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_GORGO_POLICY_SLOT_COMBAT_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>MINOR_CIV_PRODUCTION_PENALTY</ModifierId>

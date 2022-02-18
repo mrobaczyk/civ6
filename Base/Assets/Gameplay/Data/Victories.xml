@@ -118,8 +118,9 @@
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementBoost"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementPreferences"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionUnitPreferences"/>
-		<Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ListType="ClassicalYields"/>
 		<Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ListType="ClassicalPseudoYields"/>
+		<Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ListType="ClassicalYields"/>
+		<Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ListType="ClassicalDistricts"/>
 		<Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" ListType="MedievalYields"/>
 		<Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" ListType="MedievalPseudoYields"/>
 		<Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ListType="RenaissanceYields"/>
@@ -148,6 +149,7 @@
 		<Row ListType="ClassicalPseudoYields"/>
 		<Row ListType="ClassicalYields"/>
 		<Row ListType="CultureVictoryPseudoYields" />
+		<Row ListType="ClassicalDistricts"/>
 		<Row ListType="CultureVictoryYields" />
 		<Row ListType="EarlyExplorationBoost" />
 		<Row ListType="ExpansionSettlementBoost" />
@@ -184,6 +186,7 @@
 		<Row ListType="ClassicalPseudoYields" System="PseudoYields"/>
 		<Row ListType="ClassicalYields" System="Yields"/>
 		<Row ListType="CultureVictoryPseudoYields" System="PseudoYields"/>
+		<Row ListType="ClassicalDistricts" System="Districts"/>
 		<Row ListType="CultureVictoryYields" System="Yields"/>
 		<Row ListType="EarlyExplorationBoost" System="AiScoutUses"/>
 		<Row ListType="ExpansionSettlementBoost" System="SettlementPreferences"/>
@@ -222,6 +225,8 @@
 		<Row ListType="ClassicalYields" Item="YIELD_FOOD" Value="15"/>
 		<Row ListType="ClassicalYields" Item="YIELD_GOLD" Value="20"/>
 		<Row ListType="ClassicalYields" Item="YIELD_SCIENCE" Value="150"/>
+		<Row ListType="ClassicalDistricts" Item="DISTRICT_CAMPUS" Favored="true"/>
+		<Row ListType="ClassicalDistricts" Item="DISTRICT_THEATER" Favored="true"/>
 		<Row ListType="MedievalSettlements" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-10"/>
 		<Row ListType="MedievalSettlements" Item="SETTLEMENT_DECAY_TURNS" Value="-3"/>
 		<Row ListType="MedievalSettlements" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>

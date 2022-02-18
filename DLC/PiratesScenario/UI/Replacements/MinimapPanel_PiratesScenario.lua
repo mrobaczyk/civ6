@@ -336,6 +336,11 @@ function OnLocalPlayerChanged()
 end
 
 -- ===========================================================================
+function OnLocalPlayerTurnBegin()
+	ResetPirateTreasureOverlay();
+end
+
+-- ===========================================================================
 --	EVENT
 --	Gamecore is done processing events; this may fire multiple times as a
 --	turn begins, as well as after player actions.
@@ -517,6 +522,7 @@ function LateInitialize( isReload:boolean )
 	Events.ImprovementChanged.Remove( OnImprovementChanged );
 	Events.LoadScreenClose.Add(OnLoadScreenClose);
 	Events.LocalPlayerChanged.Add( OnLocalPlayerChanged );
+	Events.LocalPlayerTurnBegin.Add( OnLocalPlayerTurnBegin );
 	Events.ImprovementChanged.Add(		OnImprovementChanged );
 	Events.NotificationAdded.Add( OnNotificationAdded );
 	Events.TurnBegin.Add( OnTurnBegin );

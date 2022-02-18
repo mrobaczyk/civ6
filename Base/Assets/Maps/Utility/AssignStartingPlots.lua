@@ -1945,7 +1945,7 @@ end
 function AssignStartingPlots:__ArraySize(array, index)
 	local count = 0;
 	
-	if( array ~= nil) then
+	if( array ~= nil and array[index] ~= nil) then
 		for v in pairs(array[index]) do 
 			if(v~=nil) then
 				count = count + 1;

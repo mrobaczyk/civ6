@@ -9,22 +9,22 @@
 		<Row Type="MODIFIER_SINGLE_CITY_ADJUST_IMPROVEMENT_HOUSING_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
 		<!-- District.xml Modifiers-->
 		<Row Type="MODIFIER_SINGLE_CITY_GRANT_YIELD_PER_BUILDING_COST_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
-    <!-- Features.xml Modifiers-->
-    <Row Type="MODIFIER_ALL_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL" Kind="KIND_MODIFIER"/>
-    <Row Type="MODIFIER_UNIT_TELEPORT" Kind="KIND_MODIFIER"/>
-    <!-- Leaders.xml Modifiers-->
+		<!-- Features.xml Modifiers-->
+		<Row Type="MODIFIER_ALL_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_UNIT_TELEPORT" Kind="KIND_MODIFIER"/>
+		<!-- Leaders.xml Modifiers-->
 		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
 		<Row Type="MODIFIER_PLAYER_GRANT_RELIGIOUS_PRESSURE_GREAT_PERSON_ACTIVATED" Kind="KIND_MODIFIER"/>
 		<Row Type="MODIFIER_PLAYER_UNITS_GRANT_ABILITY_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
-    <Row Type="MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_PATH_TILE" Kind="KIND_MODIFIER"/>
-    <Row Type="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER" Kind="KIND_MODIFIER"/>
-    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR" Kind="KIND_MODIFIER"/>
-    
-    <Row Type="MODIFIER_MAJOR_PLAYERS_GRANT_BASE_PROMOTION" Kind="KIND_MODIFIER"/>
-  </Types>
-  <TypeTags>
-    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR" Tag="DIPLOMACY_MODIFIER"/>
-  </TypeTags>
+		<Row Type="MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_PATH_TILE" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_MAJOR_PLAYERS_GRANT_BASE_PROMOTION" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_GRANT_UNIT_IN_CITY_GRANCOLOMBIA_MAYA" Kind="KIND_MODIFIER"/>
+	</Types>
+	<TypeTags>
+		<Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR" Tag="DIPLOMACY_MODIFIER"/>
+	</TypeTags>
 	<DynamicModifiers>
 		<!-- Civilization.xml Modifiers -->
 		<Row>
@@ -58,12 +58,12 @@
 			<CollectionType>COLLECTION_OWNER</CollectionType>
 			<EffectType>EFFECT_GRANT_CITY_YIELD_PERCENT_BUILDING_CREATED_COST</EffectType>
 		</Row>
-    <!-- Features.xml Modifiers-->
-    <Row>
-      <ModifierType>MODIFIER_ALL_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
-      <CollectionType>COLLECTION_ALL_CITIES</CollectionType>
-      <EffectType>EFFECT_ADJUST_CITY_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</EffectType>
-    </Row>
+		<!-- Features.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_ALL_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
+			<CollectionType>COLLECTION_ALL_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</EffectType>
+		</Row>
 		<!-- Leaders.xml Modifiers-->
 		<Row>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER_GRANCOLOMBIA_MAYA</ModifierType>
@@ -80,31 +80,35 @@
 			<CollectionType>COLLECTION_PLAYER_UNITS</CollectionType>
 			<EffectType>EFFECT_GRANT_ABILITY</EffectType>
 		</Row>
-    <Row>
-      <ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_PATH_TILE</ModifierType>
-      <CollectionType>COLLECTION_OWNER</CollectionType>
-      <EffectType>EFFECT_ADJUST_PLAYER_TRADE_ROUTE_YIELD_PER_PATH_TILE</EffectType>
-    </Row>
-    <Row>
-      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER</ModifierType>
-      <CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
-      <EffectType>EFFECT_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER</EffectType>
-    </Row>
-    <Row>
-      <ModifierType>MODIFIER_UNIT_TELEPORT</ModifierType>
-      <CollectionType>COLLECTION_ALL_UNITS</CollectionType>
-      <EffectType>EFFECT_UNIT_TELEPORT</EffectType>
-    </Row>
-    <Row>
-      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR</ModifierType>
-      <CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
-      <EffectType>EFFECT_DIPLOMACY_AGENDA_SIMON_BOLIVAR</EffectType>
-    </Row>
-
-    <Row>
-      <ModifierType>MODIFIER_MAJOR_PLAYERS_GRANT_BASE_PROMOTION</ModifierType>
-      <CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
-      <EffectType>EFFECT_GRANT_RANDOM_BASE_PROMOTION</EffectType>
-    </Row>
-  </DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_PATH_TILE</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLAYER_TRADE_ROUTE_YIELD_PER_PATH_TILE</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_YIELD_PER_MAJOR_TRADE_PARTNER</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_UNIT_TELEPORT</ModifierType>
+			<CollectionType>COLLECTION_ALL_UNITS</CollectionType>
+			<EffectType>EFFECT_UNIT_TELEPORT</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_SIMON_BOLIVAR</ModifierType>
+			<CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
+			<EffectType>EFFECT_DIPLOMACY_AGENDA_SIMON_BOLIVAR</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_MAJOR_PLAYERS_GRANT_BASE_PROMOTION</ModifierType>
+			<CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
+			<EffectType>EFFECT_GRANT_RANDOM_BASE_PROMOTION</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_UNIT_IN_CITY_GRANCOLOMBIA_MAYA</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_GRANT_UNIT_IN_CITY</EffectType>
+		</Row>
+	</DynamicModifiers>
 </GameInfo>

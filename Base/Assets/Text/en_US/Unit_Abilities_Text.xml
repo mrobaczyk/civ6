@@ -284,7 +284,7 @@
 			<Text>+10 [ICON_Strength] Combat Strength when defending against ranged units.[NEWLINE][ICON_Bullet]Can see through features[NEWLINE][ICON_Bullet]Can move through Woods and Rainforest without [ICON_Movement] Movement penalty.</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_CONQUISTADOR_DESCRIPTION">
-			<Text>+10 [ICON_Strength] Combat Strength when there is a religious unit in the same hex.[NEWLINE][ICON_Bullet]If this unit captures a city or is adjacent to a city when it's captured, the city will automatically convert to the Conquistador player's majority Religion.</Text>
+			<Text>+10 [ICON_Strength] Combat Strength when there is a religious unit within one hex.[NEWLINE][ICON_Bullet]If this unit captures a city or is adjacent to a city when it's captured, the city will automatically convert to the Conquistador player's majority Religion.</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_GARDE_DESCRIPTION">
 			<Text>+10 [ICON_Strength] Combat Strength when on the same continent as the [ICON_Capital] Capital.[NEWLINE][ICON_Bullet]+10 [ICON_GreatGeneral] Great General points for kills.</Text>
@@ -365,7 +365,7 @@
 			<Text>+{1_Amount} [ICON_Strength] Combat Strength from Luxuries. (Montezuma)</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_PHILIP_II_COMBAT_BONUS_OTHER_RELIGION_DESCRIPTION">
-			<Text>+4 [ICON_Strength] Combat Strength vs. units of an other religion. (Philip II)</Text>
+			<Text>+5 [ICON_Strength] Combat Strength vs. units of an other religion. (Philip II)</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_BARBAROSSA_COMBAT_BONUS_VS_CITY_STATES_DESCRIPTION">
 			<Text>+7 [ICON_Strength] Combat Strength vs. City-States. (Barbarossa)</Text>
@@ -421,6 +421,9 @@
 		</Row>
 		<Row Tag="LOC_ABILITY_MONTEZUMA_COMBAT_BONUS_PER_LUXURY_DESCRIPTION">
 			<Text>+1 [ICON_Strength] Combat Strength for each unique luxury owned.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_GORGO_POLICY_SLOT_COMBAT_BONUS_DESCRIPTION">
+			<Text>+1 [ICON_Strength] Combat Strength for each Military policy slotted in the current government.</Text>
 		</Row>
 		<!-- Combat preview description -->
 		<Row Tag="LOC_COMBAT_DIFFICULTY_SCALING">
@@ -487,7 +490,7 @@
 			<Text>+4 Defense [ICON_Strength] Combat Strength from Communism</Text>
 		</Row>
 		<Row Tag="LOC_PROMOTION_COMBAT_OTHER_RELIGION_DESCRIPTION">
-			<Text>+4 [ICON_Strength] Combat Strength vs. civilizations following another Religion.</Text>
+			<Text>+5 [ICON_Strength] Combat Strength vs. civilizations following another Religion.</Text>
 		</Row>
 		<Row Tag="LOC_PROMOTION_COMBAT_WARS_OF_RELIGION">
 			<Text>Wars of Religion: +4 [ICON_Strength] Combat Strength vs. civilizations following another Religion.</Text>
@@ -535,7 +538,7 @@
 			<Text>+{1_Amount} [ICON_Strength] Combat Strength when defending Ranged</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_CONQUISTADOR_SPECIFIC_UNIT_COMBAT_MODIFIER_DESCRIPTION">
-			<Text>+{1_Amount} [ICON_Strength] Combat Strength when there is a religious unit in the same hex</Text>
+			<Text>+{1_Amount} [ICON_Strength] Combat Strength when there is a religious unit within one hex</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_GARDE_CONTINENT_COMBAT_MODIFIER_DESCRIPTION">
 			<Text>+{1_Amount} [ICON_Strength] Combat Strength on the same continent as your capital</Text>

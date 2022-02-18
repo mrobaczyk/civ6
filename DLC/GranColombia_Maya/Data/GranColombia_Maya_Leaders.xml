@@ -117,6 +117,10 @@
 		</Row>
 		<Row>
 			<TraitType>TRAIT_LEADER_MUTAL</TraitType>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_BUILDER</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_MUTAL</TraitType>
 			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS</ModifierId>
 		</Row>
 		<Row>
@@ -165,6 +169,12 @@
 		<Row>
 			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INFORMATION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_BUILDER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_UNIT_IN_CITY_GRANCOLOMBIA_MAYA</ModifierType>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>OBJECT_IS_FOUNDED_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_YIELDS</ModifierId>
@@ -372,6 +382,16 @@
 			<ModifierId>TRAIT_LEADER_COMANDANTE_GENERAL_GUARANTEE_INFORMATION</ModifierId>
 			<Name>EraType</Name>
 			<Value>ERA_INFORMATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_BUILDER</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_BUILDER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_BUILDER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_LEADER_NEARBY_CITIES_GAIN_YIELDS</ModifierId>
@@ -584,6 +604,10 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
+			<RequirementSetId>OBJECT_IS_FOUNDED_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -669,6 +693,10 @@
 			<RequirementId>REQUIRES_CITY_HAS_IMPROVED_URANIUM</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_HAS_RESOURCE_TYPE_IMPROVED</RequirementType>
 		</Row>
+		<Row>
+			<RequirementId>CITY_IS_ORIGINAL_OWNER_REQUIREMENTS_MAYA</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_IS_ORIGINAL_OWNER</RequirementType>
+		</Row>
 	</Requirements>
 	<RequirementArguments>
 		<Row>
@@ -745,6 +773,14 @@
 		<Row>
 			<RequirementSetId>OBJECT_IS_10_OR_MORE_TILES_FROM_CAPITAL_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_OBJECT_10_OR_MORE_TILES_FROM_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_FOUNDED_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OBJECT_6_TILES_FROM_CAPITAL_NOT_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OBJECT_IS_FOUNDED_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>CITY_IS_ORIGINAL_OWNER_REQUIREMENTS_MAYA</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>OBJECT_IS_6_TILES_FROM_CAPITAL_NOT_CAPITAL_REQUIREMENTS</RequirementSetId>

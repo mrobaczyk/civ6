@@ -12,9 +12,17 @@
 		<Row CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" Type="BUILDING_TLACHTLI" Icon="ICON_BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" Description="LOC_BUILDING_TLACHTLI_DESCRIPTION" SortIndex="20"/>
 		<!-- Expansion 1 Support -->
 		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" Type="UNIT_AZTEC_EAGLE_WARRIOR" Icon="ICON_UNIT_AZTEC_EAGLE_WARRIOR" Name="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Description="LOC_UNIT_AZTEC_EAGLE_WARRIOR_DESCRIPTION" SortIndex="10"/>
-		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" Type="BUILDING_TLACHTLI" Icon="ICON_BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" Description="LOC_BUILDING_TLACHTLI_DESCRIPTION" SortIndex="20"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" Type="BUILDING_TLACHTLI" Icon="ICON_BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" Description="LOC_BUILDING_TLACHTLI_XP1_DESCRIPTION" SortIndex="20"/>
 		<!-- Expansion 2 Support -->
 		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" Type="UNIT_AZTEC_EAGLE_WARRIOR" Icon="ICON_UNIT_AZTEC_EAGLE_WARRIOR" Name="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Description="LOC_UNIT_AZTEC_EAGLE_WARRIOR_DESCRIPTION" SortIndex="10"/>
-		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" Type="BUILDING_TLACHTLI" Icon="ICON_BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" Description="LOC_BUILDING_TLACHTLI_DESCRIPTION" SortIndex="20"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_AZTEC" LeaderType="LEADER_MONTEZUMA" Type="BUILDING_TLACHTLI" Icon="ICON_BUILDING_TLACHTLI" Name="LOC_BUILDING_TLACHTLI_NAME" Description="LOC_BUILDING_TLACHTLI_XP1_DESCRIPTION" SortIndex="20"/>
 	</PlayerItems>
+	<MapLeaders>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MONTEZUMA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MONTEZUMA"/>
+	</MapLeaders>
+	<MapStartPositions>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="4574" Type="LEADER" Value="LEADER_MONTEZUMA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="4574" Type="LEADER" Value="LEADER_MONTEZUMA"/>
+	</MapStartPositions>
 </GameInfo>

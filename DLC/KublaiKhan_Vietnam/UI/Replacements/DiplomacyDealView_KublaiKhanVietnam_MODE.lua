@@ -5,10 +5,10 @@ local KUBLAIKHANVIETNAM_MODE_Initialize = Initialize;
 local m_ResourceTypeMap    	:table  = {};
 
 -- ===========================================================================
-function GetGreatWorkIcon( kGreatWorkDesc : table)
+function GetGreatWorkIcon(kGreatWorkDesc : table, GreatWorkBackupString : string)
 	-- we only handle products here
 	if kGreatWorkDesc.GreatWorkObjectType ~= "GREATWORKOBJECT_PRODUCT" then
-		return KUBLAIKHANVIETNAM_MODE_GetGreatWorkIcon(kGreatWorkDesc);
+		return KUBLAIKHANVIETNAM_MODE_GetGreatWorkIcon(kGreatWorkDesc, GreatWorkBackupString);
 	end
 
 	local greatWorkType:string = kGreatWorkDesc.GreatWorkType:gsub("GREATWORK_PRODUCT_", "");

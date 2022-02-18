@@ -120,30 +120,33 @@
 			<Text>A tile's Appeal can be viewed in its tooltip and is affected by the following:</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_9">
-			<Text>+2: Each adjacent Natural Wonder</Text>
+			<Text>+4: if the tile is on a Mountain.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_10">
-			<Text>+1: Each adjacent Holy Site, Theater Square, Entertainment Complex, or wonder</Text>
+			<Text>+2: Each adjacent Natural Wonder</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_11">
-			<Text>+1: Each adjacent Mountain, Coast, Woods or Oasis</Text>
+			<Text>+1: Each adjacent Holy Site, Theater Square, Entertainment Complex, or wonder</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_12">
-			<Text>+1: If the tile is on a River or Lake</Text>
+			<Text>+1: Each adjacent Mountain, Coast, Woods or Oasis</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_13">
-			<Text>+1: Each Château and Sphinx.</Text>
+			<Text>+1: If the tile is on a River or Lake</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_14">
-			<Text>-1: Each adjacent Industrial Zone, Encampment, Airport or Spaceport</Text>
+			<Text>+1: Each Château and Sphinx.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_15">
-			<Text>-1: Each adjacent Rainforest, Marsh or Floodplain</Text>
+			<Text>-1: Each adjacent Industrial Zone, Encampment, Airport or Spaceport</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_16">
-			<Text>-1: Each adjacent pillaged tile</Text>
+			<Text>-1: Each adjacent Rainforest, Marsh or Floodplain</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_17">
+			<Text>-1: Each adjacent pillaged tile</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_18">
 			<Text>-1: Each adjacent Mine, Quarry, Oil Well, Offshore Oil Rig, and Airstrip</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_5_CHAPTER_CONTENT_TITLE">
@@ -750,7 +753,7 @@
 			<Text>Casus Belli</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_3_CHAPTER_CONTENT_PARA_1">
-			<Text>Casus Belli represent reasons to go to war where the normal Warmonger penalty for a declaration of war or capturing cities are reduced or eliminated.  Once you reach the Renaissance era civic Diplomatic Service, you may accumulate Casus Belli against other powers. You must Denounce the other power in order to use a Casus Belli against them. See the table below for the conditions for each Casus Belli, the civic that unlocks them, and the percentage of the usual warmonger penalty that is applied.[NEWLINE][NEWLINE]Holy War: If one of your cities is converted to the enemy's religion[NEWLINE](Diplomatic Service, 50% warmongering)[NEWLINE][NEWLINE]War of Liberation: If a friend or ally had cities conquered[NEWLINE](Diplomatic Service, no warmongering penalty when liberating cities that have been conquered)[NEWLINE][NEWLINE]War of Reconquest: If you had cities conquered in a previous war[NEWLINE](Diplomatic Service, no warmongering penalty when retaking your previous cities)[NEWLINE][NEWLINE]Protectorate War: if a city-state you are Suzerain of is attacked[NEWLINE](Diplomatic Service, no warmongering penalty when liberating a city-state target)[NEWLINE][NEWLINE]Colonial War: if target civilization is two eras behind you in technology[NEWLINE](Nationalism, 50% warmongering)[NEWLINE][NEWLINE]War of Territorial Expansion: if target civilization borders your nation[NEWLINE](Mobilization, 75% warmongering)</Text>
+			<Text>Casus Belli represent reasons to go to war where the normal Warmonger penalty for a declaration of war or capturing cities are reduced or eliminated.  Once you reach the Renaissance-era civic Diplomatic Service, you may accumulate Casus Belli against other powers. You must Denounce the other power in order to use a Casus Belli against them. See the table below for the conditions for each Casus Belli, the civic that unlocks them, and the percentage of the usual warmonger penalty that is applied.[NEWLINE][NEWLINE]Holy War: If one of your cities is converted to the enemy's religion[NEWLINE](Diplomatic Service, 50% warmongering)[NEWLINE][NEWLINE]War of Liberation: If a friend or ally had cities conquered[NEWLINE](Diplomatic Service, no warmongering penalty when liberating cities that have been conquered)[NEWLINE][NEWLINE]War of Reconquest: If you had cities conquered in a previous war[NEWLINE](Defensive Tactics, no warmongering penalty when retaking your previous cities)[NEWLINE][NEWLINE]Protectorate War: if a city-state you are Suzerain of is attacked[NEWLINE](Defensive Tactics, no warmongering penalty when liberating a city-state target)[NEWLINE][NEWLINE]Colonial War: if target civilization is two eras behind you in technology[NEWLINE](Nationalism, 50% warmongering)[NEWLINE][NEWLINE]War of Territorial Expansion: if target civilization borders your nation[NEWLINE](Mobilization, 75% warmongering)</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_13_CHAPTER_CONTENT_TITLE">
 			<Text>Agendas</Text>
@@ -1111,6 +1114,12 @@
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_4_CHAPTER_CONTENT_PARA_5">
 			<Text>A National Park's [ICON_Tourism] Tourism output is equal to the total Appeal of all the tiles included in the park. Additionally, the city that owns the park receives 2 [ICON_Amenities] Amenities, and the four closest cities in your civilization receive 1 [ICON_Amenities] Amenity.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_6_CHAPTER_CONTENT_TITLE">
+			<Text>Cultural Dominance</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_6_CHAPTER_CONTENT_PARA_1">
+			<Text>If your civilization attracts more visiting tourists from another civilization than they have domestic tourists, you are culturally dominant over that civilization. A Culture Victory is awarded to the first player to become culturally dominant over all other civilizations.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_5_CHAPTER_CONTENT_TITLE">
 			<Text>Themes and Theming</Text>

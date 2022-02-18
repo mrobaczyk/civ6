@@ -3,4 +3,15 @@
 	<MomentIllustrations>
 		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_AMERICAN_ROUGH_RIDER" Texture="Moment_UniqueUnit_America_Roughrider.dds"/>
 	</MomentIllustrations>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_AMERICAN_ROUGH_RIDER" ReplacesUnitType="UNIT_CUIRASSIER"/>
+	</UnitReplaces>
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_AMERICAN_ROUGH_RIDER"/>
+			<Set>
+				<Description>LOC_UNIT_AMERICAN_ROUGH_RIDER_EXPANSION2_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Units>
 </GameInfo>

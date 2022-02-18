@@ -50,10 +50,10 @@ INSERT INTO "SteamLanguages" VALUES('tchinese','zh_Hant_HK');
 INSERT INTO "SteamLanguages" VALUES('schinese','zh_Hans_CN');
 INSERT INTO "SteamLanguages" VALUES('brazilian','pt_BR');
 
-INSERT INTO "EpicLanguages" VALUES('en','en_US');
+INSERT INTO "EpicLanguages" VALUES('en-US','en_US');
 INSERT INTO "EpicLanguages" VALUES('fr','fr_FR');
 INSERT INTO "EpicLanguages" VALUES('de','de_DE');
-INSERT INTO "EpicLanguages" VALUES('es','es_ES');
+INSERT INTO "EpicLanguages" VALUES('es-ES','es_ES');
 INSERT INTO "EpicLanguages" VALUES('it','it_IT');
 INSERT INTO "EpicLanguages" VALUES('ru','ru_RU');
 INSERT INTO "EpicLanguages" VALUES('ja','ja_JP');
@@ -61,12 +61,12 @@ INSERT INTO "EpicLanguages" VALUES('pl','pl_PL');
 INSERT INTO "EpicLanguages" VALUES('ko','ko_KR');
 INSERT INTO "EpicLanguages" VALUES('zh-Hant','zh_Hant_HK');
 INSERT INTO "EpicLanguages" VALUES('zh-Hans','zh_Hans_CN');
-INSERT INTO "EpicLanguages" VALUES('pt','pt_BR');
+INSERT INTO "EpicLanguages" VALUES('pt-BR','pt_BR');
 
-INSERT INTO "EpicLanguages" VALUES('en-US','en_US');
+INSERT INTO "EpicLanguages" VALUES('en','en_US');
 INSERT INTO "EpicLanguages" VALUES('fr-FR','fr_FR');
 INSERT INTO "EpicLanguages" VALUES('de-DE','de_DE');
-INSERT INTO "EpicLanguages" VALUES('es-ES','es_ES');
+INSERT INTO "EpicLanguages" VALUES('es','es_ES');
 INSERT INTO "EpicLanguages" VALUES('it-IT','it_IT');
 INSERT INTO "EpicLanguages" VALUES('ru-RU','ru_RU');
 INSERT INTO "EpicLanguages" VALUES('ja-JP','ja_JP');
@@ -74,7 +74,7 @@ INSERT INTO "EpicLanguages" VALUES('pl-PL','pl_PL');
 INSERT INTO "EpicLanguages" VALUES('ko-KR','ko_KR');
 INSERT INTO "EpicLanguages" VALUES('zh-Hant_HK','zh_Hant_HK');
 INSERT INTO "EpicLanguages" VALUES('zh-Hans_CN','zh_Hans_CN');
-INSERT INTO "EpicLanguages" VALUES('pt-BR','pt_BR');
+INSERT INTO "EpicLanguages" VALUES('pt','pt_BR');
 
 INSERT INTO "EpicLanguages" VALUES('zh-HK','zh_Hant_HK');
 INSERT INTO "EpicLanguages" VALUES('zh-CN','zh_Hans_CN');

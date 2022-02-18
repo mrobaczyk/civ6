@@ -48,13 +48,13 @@
 	</UnitReplaces>
 	<Units>
 		<Row UnitType="UNIT_BYZANTINE_DROMON" Cost="120" Maintenance="2" BaseMoves="3" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_SEA" Combat="20" RangedCombat="25" Range="2" FormationClass="FORMATION_CLASS_NAVAL" PromotionClass="PROMOTION_CLASS_NAVAL_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_BYZANTINE_DROMON_NAME" Description="LOC_UNIT_BYZANTINE_DROMON_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" MandatoryObsoleteTech="TECH_STEEL" PrereqTech="TECH_SHIPBUILDING" TraitType="TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON"/>
-		<Row UnitType="UNIT_BYZANTINE_TAGMA" Cost="180" Maintenance="3" BaseMoves="4" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="48" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_BYZANTINE_TAGMA_NAME" Description="LOC_UNIT_BYZANTINE_TAGMA_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_COMPOSITES" PrereqCivic="CIVIC_DIVINE_RIGHT" TraitType="TRAIT_LEADER_UNIT_BYZANTINE_TAGMA"/>
+		<Row UnitType="UNIT_BYZANTINE_TAGMA" Cost="180" Maintenance="3" BaseMoves="4" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="50" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_BYZANTINE_TAGMA_NAME" Description="LOC_UNIT_BYZANTINE_TAGMA_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_COMPOSITES" PrereqCivic="CIVIC_DIVINE_RIGHT" TraitType="TRAIT_LEADER_UNIT_BYZANTINE_TAGMA"/>
 		<Row UnitType="UNIT_GAUL_GAESATAE" BaseMoves="2" Cost="60" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_GAUL_GAESATAE_NAME" Description="LOC_UNIT_GAUL_GAESATAE_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Combat="20" TraitType="TRAIT_CIVILIZATION_UNIT_GAUL_GAESATAE" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
 	</Units>
 	<UnitUpgrades>
 		<Row Unit="UNIT_BYZANTINE_DROMON" UpgradeUnit="UNIT_FRIGATE"/>
 		<Row Unit="UNIT_BYZANTINE_TAGMA" UpgradeUnit="UNIT_TANK"/>
-		<Row Unit="UNIT_GAUL_GAESATAE" UpgradeUnit="UNIT_MUSKETMAN"/>
+		<Row Unit="UNIT_GAUL_GAESATAE" UpgradeUnit="UNIT_MAN_AT_ARMS"/>
 	</UnitUpgrades>
 	<UnitAbilities>
 		<Row UnitAbilityType="ABILITY_DROMON" Name="LOC_ABILITY_DROMON_NAME" Description="LOC_ABILITY_DROMON_DESCRIPTION"/>

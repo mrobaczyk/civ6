@@ -77,10 +77,10 @@
 		<Row Tag="LOC_WORLD_FAITH_INCREASE_FLOATER">
 			<Text>+{1_Num} [ICON_Faith]</Text>
 		</Row>
-    <Row Tag="LOC_WORLD_FAITH_DECREASE_FLOATER">
-      <Text>{1_Num} [ICON_Faith] [COLOR_RED]LOST[ENDCOLOR]</Text>
-    </Row>
-    <!-- Damage Message -->
+		<Row Tag="LOC_WORLD_FAITH_DECREASE_FLOATER">
+			<Text>{1_Num} [ICON_Faith] [COLOR_RED]LOST[ENDCOLOR]</Text>
+		</Row>
+		<!-- Damage Message -->
 		<Row Tag="LOC_WORLD_UNIT_DAMAGE_DECREASE_FLOATER">
 			<Text>[COLOR_GREEN]+{1_Num}[ENDCOLOR]</Text>
 		</Row>
@@ -106,30 +106,30 @@
 			<Text>[COLOR_FLOAT_FOOD]+{1_Num} [ICON_Food][ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_FOOD_DECREASE_FLOATER">
-      <Text>[COLOR_FLOAT_FOOD]{1_Num} [ICON_Food][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
-    </Row>
+			<Text>[COLOR_FLOAT_FOOD]{1_Num} [ICON_Food][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
+		</Row>
 		<!-- Gold Yield Message -->
 		<Row Tag="LOC_WORLD_GOLD_INCREASE_FLOATER">
 			<Text>[COLOR_FLOAT_GOLD]+{1_Num} [ICON_Gold][ENDCOLOR]</Text>
 		</Row>
-    <Row Tag="LOC_WORLD_GOLD_DECREASE_FLOATER">
-      <Text>[COLOR_FLOAT_GOLD]{1_Num} [ICON_Gold][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
-    </Row>
-    <!-- Science Yield Message -->
-    <Row Tag="LOC_WORLD_SCIENCE_INCREASE_FLOATER">
-      <Text>[COLOR_FLOAT_SCIENCE]+{1_Num} [ICON_Science][ENDCOLOR]</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_SCIENCE_DECREASE_FLOATER">
-      <Text>[COLOR_FLOAT_SCIENCE]{1_Num} [ICON_Science][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
-    </Row>
-    <!-- Culture Yield Message -->
-    <Row Tag="LOC_WORLD_CULTURE_INCREASE_FLOATER">
-      <Text>[COLOR_FLOAT_CULTURE]+{1_Num} [ICON_Culture][ENDCOLOR]</Text>
-    </Row>
-    <Row Tag="LOC_WORLD_CULTURE_DECREASE_FLOATER">
-      <Text>[COLOR_FLOAT_CULTURE]{1_Num} [ICON_Culture][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
-    </Row>
-    <!-- Civilian-->
+		<Row Tag="LOC_WORLD_GOLD_DECREASE_FLOATER">
+			<Text>[COLOR_FLOAT_GOLD]{1_Num} [ICON_Gold][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
+		</Row>
+		<!-- Science Yield Message -->
+		<Row Tag="LOC_WORLD_SCIENCE_INCREASE_FLOATER">
+			<Text>[COLOR_FLOAT_SCIENCE]+{1_Num} [ICON_Science][ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_SCIENCE_DECREASE_FLOATER">
+			<Text>[COLOR_FLOAT_SCIENCE]{1_Num} [ICON_Science][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
+		</Row>
+		<!-- Culture Yield Message -->
+		<Row Tag="LOC_WORLD_CULTURE_INCREASE_FLOATER">
+			<Text>[COLOR_FLOAT_CULTURE]+{1_Num} [ICON_Culture][ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_WORLD_CULTURE_DECREASE_FLOATER">
+			<Text>[COLOR_FLOAT_CULTURE]{1_Num} [ICON_Culture][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
+		</Row>
+		<!-- Civilian-->
 		<Row Tag="LOC_UNIT_SETTLER_DESCRIPTION">
 			<Text>May create new cities. Reduces city's [ICON_Citizen] Population by 1 when completed.</Text>
 		</Row>
@@ -254,16 +254,16 @@
 		</Row>
 		<!-- Siege-->
 		<Row Tag="LOC_UNIT_CATAPULT_DESCRIPTION">
-			<Text>Classical era bombard unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
+			<Text>Classical era siege unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_BOMBARD_DESCRIPTION">
-			<Text>Renaissance era bombard unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
+			<Text>Renaissance era siege unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ARTILLERY_DESCRIPTION">
-			<Text>Modern era bombard unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
+			<Text>Modern era siege unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION">
-			<Text>Information era bombard unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
+			<Text>Information era siege unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
 		</Row>
 		<!-- Support-->
 		<Row Tag="LOC_UNIT_BATTERING_RAM_DESCRIPTION">
@@ -353,6 +353,15 @@
 		<Row Tag="LOC_UNIT_JET_BOMBER_DESCRIPTION">
 			<Text>Information era Bomber upgrade.</Text>
 		</Row>
+		<Row Tag="LOC_UNIT_MAN_AT_ARMS_DESCRIPTION">
+			<Text>Medieval Era melee unit.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_LINE_INFANTRY_DESCRIPTION">
+			<Text>Industrial Era melee unit.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_TREBUCHET_DESCRIPTION">
+			<Text>Medieval era siege unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
+		</Row>
 		<!-- Unique Units-->
 		<Row Tag="LOC_UNIT_BARBARIAN_HORSEMAN_DESCRIPTION">
 			<Text>Ancient era primitive horseback warrior.</Text>
@@ -360,14 +369,11 @@
 		<Row Tag="LOC_UNIT_BARBARIAN_HORSE_ARCHER_DESCRIPTION">
 			<Text>Ancient era primitive horseback archer.</Text>
 		</Row>
-		<Row Tag="LOC_UNIT_BARBARIAN_GALLEY_DESCRIPTION">
-			<Text>Ancient era primitive naval melee combat unit.</Text>
-		</Row>
 		<Row Tag="LOC_UNIT_EGYPTIAN_CHARIOT_ARCHER_DESCRIPTION">
 			<Text>Egyptian unique Ancient era ranged unit that replaces the Heavy Chariot. 4 [ICON_Movement] Movement when starting in open terrain.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_GREEK_HOPLITE_DESCRIPTION">
-			<Text>Greek unique Ancient era melee unit that replaces the Spearman. +10 [ICON_Strength] Combat Strength if there is at least one adjacent Hoplite unit.</Text>
+			<Text>Greek unique Ancient era anti-cavalry unit that replaces the Spearman. +10 [ICON_Strength] Combat Strength if there is at least one adjacent Hoplite unit.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_SCYTHIAN_HORSE_ARCHER_DESCRIPTION">
 			<Text>Scythian unique Classical era unit. Ranged unit with 4 [ICON_Movement] Movement with a [ICON_Range] Range of 1.</Text>
@@ -376,7 +382,7 @@
 			<Text>Sumerian unique Ancient era unit. Stronger than all other starting units. No penalties against anti-cavalry units. 4 [ICON_Movement] Movement if this unit starts in open terrain.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ENGLISH_REDCOAT_DESCRIPTION">
-			<Text>English unique Industrial era unit when Victoria is their leader. +10 [ICON_Strength] Combat Strength when fighting on a continent other than that of your capital's. No disembark cost.</Text>
+			<Text>English unique Industrial era unit when Victoria is their leader that replaces the Line Infantry. +10 [ICON_Strength] Combat Strength when fighting on a continent other than that of your capital's. No disembark cost.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_AMERICAN_ROUGH_RIDER_DESCRIPTION">
 			<Text>American unique Industrial era unit when Teddy Roosevelt is their leader. [ICON_Culture] Culture is earned from kills on their [ICON_Capital] Capital's continent. +10 [ICON_Strength] Combat Strength when fighting on Hills. Lower maintenance cost.</Text>
@@ -385,10 +391,10 @@
 			<Text>Roman unique Classical era melee unit that replaces the Swordsman. Can build a Roman Fort.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_JAPANESE_SAMURAI_DESCRIPTION">
-			<Text>Japanese unique Medieval era melee unit. Does not suffer combat penalties when damaged.</Text>
+			<Text>Japanese unique Medieval era melee unit that replaces the Man-At-Arms. Does not suffer combat penalties when damaged.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_NORWEGIAN_BERSERKER_DESCRIPTION">
-			<Text>Norwegian unique Medieval era melee unit. 4 [ICON_Movement] Movement if this unit starts in enemy territory. +10 [ICON_Strength] Combat Strength when attacking and -5 [ICON_Strength] Combat Strength when defending.</Text>
+			<Text>Norwegian unique Medieval era melee unit that replaces the Man-At-Arms. 4 [ICON_Movement] Movement if this unit starts in enemy territory. +10 [ICON_Strength] Combat Strength when attacking and -5 [ICON_Strength] Combat Strength when defending against melee attacks.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_NORWEGIAN_LONGSHIP_DESCRIPTION">
 			<Text>Norwegian unique Ancient era naval unit that replaces the Galley. Can pillage enemy coastal lands and capture civilians if adjacent using its coastal raiding ability. 4 [ICON_Movement] Movement while in coastal waters.</Text>
@@ -397,7 +403,7 @@
 			<Text>Chinese unique Medieval era unit. Ranged unit with a [ICON_Range] Range of 1 and high combat strength.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_SPANISH_CONQUISTADOR_DESCRIPTION">
-			<Text>Spanish unique Renaissance era unit that replaces the Musketman. +10 [ICON_Strength] Combat Strength when there is a religious unit in the same hex. If this unit captures a city or is adjacent to a city when it is captured, the city will automatically adopt the Conquistador player's Religion as the dominant Religion.</Text>
+			<Text>Spanish unique Renaissance era unit that replaces the Musketman. +10 [ICON_Strength] Combat Strength when there is a religious unit within one hex. If this unit captures a city or is adjacent to a city when it is captured, the city will automatically adopt the Conquistador player's Religion as the dominant Religion.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_RUSSIAN_COSSACK_DESCRIPTION">
 			<Text>Russian unique Industrial era unit that replaces Cavalry. Stronger than Cavalry, and gains +5 [ICON_Strength] Combat Strength when fighting in or adjacent to its home territory. Can move after attacking if [ICON_Movement] Movement points remain.</Text>
@@ -415,7 +421,7 @@
 			<Text>English unique Renaissance era naval unit that replaces the Privateer. Has a chance to capture defeated enemy ships. Can only be seen by other Naval Raiders unless adjacent to it. Reveals Naval Raiders within sight range.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_FRENCH_GARDE_IMPERIALE_DESCRIPTION">
-			<Text>French unique Industrial era melee unit. +10 [ICON_Strength] Combat Strength when fighting on your capital's continent. [ICON_GreatGeneral] Great General points for killing units.</Text>
+			<Text>French unique Industrial era melee unit that replaces the Line Infantry. +10 [ICON_Strength] Combat Strength when fighting on your capital's continent. [ICON_GreatGeneral] Great General points for killing units.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_GERMAN_UBOAT_DESCRIPTION">
 			<Text>German unique Modern era naval unit that replaces the Submarine. Cheaper to produce, +1 Sight, and +10 [ICON_Strength] Combat Strength when fighting on Ocean tiles. Able to reveal other stealthed units.</Text>
@@ -426,8 +432,8 @@
 		<Row Tag="LOC_UNIT_BRAZILIAN_MINAS_GERAES_DESCRIPTION">
 			<Text>Brazilian unique Industrial era unit that replaces the Battleship. Stronger than the Battleship. Unlocked by Nationalism.</Text>
 		</Row>
-    <Row Tag="LOC_UNIT_UNIT_TYPE_NAME_SUFFIX">
-      <Text> ({1_UnitTypeName})</Text>
-    </Row>
+		<Row Tag="LOC_UNIT_UNIT_TYPE_NAME_SUFFIX">
+			<Text> ({1_UnitTypeName})</Text>
+		</Row>
 	</BaseGameText>
 </GameData>

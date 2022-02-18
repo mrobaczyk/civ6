@@ -412,6 +412,13 @@ function NewGamePirateFaction(iPlayerID :number)
 
 	-- All the pirate factions have a custom government so they can use the policies system for their pirate relics.
 	local pPlayerCulture:table = pPlayer:GetCulture();
+	pPlayerCulture:Reset();
+	for row in GameInfo.Governments() do
+		--Cycle through all other governments so the AI does not try to switch governments later (AI won't switch to previous govt's to avoid anarchy)
+		if(row.PrimaryKey ~= "GOVERNMENT_PIRATE_KING")then
+			pPlayerCulture:SetCurrentGovernment(row.Index);
+		end
+	end
 	pPlayerCulture:SetCurrentGovernment(GameInfo.Governments["GOVERNMENT_PIRATE_KING"].Index);
 end
 

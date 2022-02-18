@@ -51,6 +51,7 @@
 		<Row Type="CIVILIZATION_YEREVAN" Kind="KIND_CIVILIZATION"/>
 		<Row Type="CIVILIZATION_ZANZIBAR" Kind="KIND_CIVILIZATION"/>
 		<Row Type="TRAIT_BARBARIAN" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_BARBARIAN_BUT_SHOWS_UP_IN_PEDIA" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_CIVILIZATION_FOUNDING_FATHERS" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_CIVILIZATION_BUILDING_FILM_STUDIO" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_CIVILIZATION_LAST_PROPHET" Kind="KIND_TRAIT"/>
@@ -279,6 +280,14 @@
 			<ModifierType>MODIFIER_PLAYER_ADJUST_TECHNOLOGY_BOOST</ModifierType>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_CIVIC_BOOST_WONDER_ERA</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FREE_CIVIC_BOOST_WONDER_ERA</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TECHNOLOGY_BOOST_WONDER_ERA</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FREE_TECH_BOOST_WONDER_ERA</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_DOUBLE_ARCHAEOLOGY_SLOTS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_EXTRA_GREAT_WORK_SLOTS</ModifierType>
 		</Row>
@@ -384,7 +393,7 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_DISTRICTS</ModifierType>
 		</Row>
 		<Row>
-		<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_VALID_FEATURES_DISTRICTS</ModifierType>
 		</Row>
 		<Row>
@@ -394,6 +403,10 @@
 		<Row>
 			<ModifierId>TRAIT_GUARANTEE_ONE_PROPHET</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_GUARANTEE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_SCULPTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_GREAT_WORK_FOOD_SCULPTURE</ModifierId>
@@ -408,6 +421,10 @@
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_ARTIFACT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_GREAT_WORK_FOOD_ARTIFACT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
 		</Row>
@@ -417,6 +434,10 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_GREAT_WORK_GOLD_ARTIFACT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_RELIC</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
 		</Row>
 		<Row>
@@ -485,6 +506,21 @@
 			<SubjectRequirementSetId>REQUIREMENTS_CITY_HAS_LAVRA</SubjectRequirementSetId>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_SHRINE_WRITING_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_CITY_HAS_SHRINE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TEMPLE_ARTIST_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_CITY_HAS_TEMPLE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TIER3_MUSICIAN_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</SubjectRequirementSetId>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_WILDCARD_GOVERNMENT_SLOT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CULTURE_ADJUST_GOVERNMENT_SLOTS_MODIFIER</ModifierType>
 		</Row>
@@ -497,16 +533,63 @@
 			<ModifierType>MODIFIER_PLAYER_CORPS_ARMY_PREREQ</ModifierType>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_GOLD</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FOOD</ModifierId>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_GOLD</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_INTERNATIONAL</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DISTRICT_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_ALL_DISTRICTS_PRODUCTION</ModifierType>
+			<SubjectRequirementSetId>CITY_NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_BUILDER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_UNIT_IN_CITY</ModifierType>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>CITY_NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_AUTOCRACY_BONUS_RATE</ModifierId>
@@ -734,6 +817,16 @@
 			<Name>Amount</Name>
 			<Value>10</Value>
 			<Extra>-1</Extra>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVIC_BOOST_WONDER_ERA</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TECHNOLOGY_BOOST_WONDER_ERA</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_DOUBLE_ARCHAEOLOGY_SLOTS</ModifierId>
@@ -1006,7 +1099,7 @@
 			<Value>FEATURE_FLOODPLAINS</Value>
 		</Row>
 		<Row>
-		<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
+			<ModifierId>TRAIT_FLOODPLAINS_VALID_AQUEDUCT</ModifierId>
 			<Name>DistrictType</Name>
 			<Value>DISTRICT_AQUEDUCT</Value>
 		</Row>
@@ -1026,6 +1119,21 @@
 			<Value>GREAT_PERSON_CLASS_PROPHET</Value>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_SCULPTURE</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_SCULPTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_SCULPTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_SCULPTURE</ModifierId>
+			<Name>YieldChange</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_GREAT_WORK_FOOD_SCULPTURE</ModifierId>
 			<Name>GreatWorkObjectType</Name>
 			<Value>GREATWORKOBJECT_SCULPTURE</Value>
@@ -1071,6 +1179,21 @@
 			<Value>4</Value>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_ARTIFACT</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_ARTIFACT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_ARTIFACT</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_ARTIFACT</ModifierId>
+			<Name>YieldChange</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_GREAT_WORK_FOOD_ARTIFACT</ModifierId>
 			<Name>GreatWorkObjectType</Name>
 			<Value>GREATWORKOBJECT_ARTIFACT</Value>
@@ -1114,6 +1237,21 @@
 			<ModifierId>TRAIT_GREAT_WORK_GOLD_ARTIFACT</ModifierId>
 			<Name>YieldChange</Name>
 			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_RELIC</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_RELIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_RELIC</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_RELIC</ModifierId>
+			<Name>YieldChange</Name>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_GREAT_WORK_FOOD_RELIC</ModifierId>
@@ -1323,10 +1461,40 @@
 		<Row>
 			<ModifierId>TRAIT_INCREASED_TILES</ModifierId>
 			<Name>Amount</Name>
-			<Value>8</Value>
+			<Value>5</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_EXPENDED_GREAT_PERSON_TILES</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SHRINE_WRITING_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_WRITER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SHRINE_WRITING_POINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TEMPLE_ARTIST_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_ARTIST</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TEMPLE_ARTIST_POINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TIER3_MUSICIAN_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_MUSICIAN</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TIER3_MUSICIAN_POINTS</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
 		</Row>
@@ -1366,6 +1534,101 @@
 			<Value>CIVIC_MERCANTILISM</Value>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERNATIONAL_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_DOMESTIC_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_FAITH</ModifierId>
+			<Name>Intercontinental</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FAITH</ModifierId>
+			<Name>Intercontinental</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_GOLD</ModifierId>
+			<Name>Intercontinental</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_GOLD</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_GOLD</Value>
@@ -1376,22 +1639,37 @@
 			<Value>6</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_GOLD</ModifierId>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_GOLD</ModifierId>
 			<Name>Intercontinental</Name>
 			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FOOD</ModifierId>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_GOLD</ModifierId>
 			<Name>YieldType</Name>
-			<Value>YIELD_FOOD</Value>
+			<Value>YIELD_GOLD</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FOOD</ModifierId>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_GOLD</ModifierId>
 			<Name>Amount</Name>
-			<Value>1</Value>
+			<Value>6</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FOOD</ModifierId>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_PRODUCTION</ModifierId>
+			<Name>Intercontinental</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_PRODUCTION</ModifierId>
 			<Name>Intercontinental</Name>
 			<Value>true</Value>
 		</Row>
@@ -1403,12 +1681,22 @@
 		<Row>
 			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
-			<Value>1</Value>
+			<Value>2</Value>
 		</Row>
 		<Row>
-			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_PRODUCTION</ModifierId>
-			<Name>Intercontinental</Name>
-			<Value>true</Value>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DISTRICT_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_BUILDER</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_BUILDER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_INTERCONTINENTAL_BUILDER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_AUTOCRACY_BONUS_RATE</ModifierId>
@@ -1600,6 +1888,18 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_SHRINE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TEMPLE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>PLOT_HAS_TUNDRA_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -1630,6 +1930,50 @@
 			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SHRINE_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_TEMPLE_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_CATHEDRAL_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_DAR_E_MEHR_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_GURDWARA_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_MEETING_HOUSE_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_MOSQUE_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_PAGODA_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_STUPA_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SYNAGOGUE_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_WAT_BASE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_PLOT_HAS_TUNDRA</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
 		</Row>
@@ -1656,6 +2000,61 @@
 			<RequirementId>REQUIRES_CITY_HAS_LAVRA</RequirementId>
 			<Name>DistrictType</Name>
 			<Value>DISTRICT_LAVRA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SHRINE_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_SHRINE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_TEMPLE_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_TEMPLE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_CATHEDRAL_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_CATHEDRAL</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_DAR_E_MEHR_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_DAR_E_MEHR</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_GURDWARA_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_GURDWARA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_MEETING_HOUSE_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_MEETING_HOUSE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_MOSQUE_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_MOSQUE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_PAGODA_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_PAGODA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_STUPA_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_STUPA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SYNAGOGUE_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_SYNAGOGUE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_WAT_BASE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_WAT</Value>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLOT_HAS_TUNDRA</RequirementId>
@@ -1692,6 +2091,50 @@
 			<RequirementId>REQUIRES_CITY_HAS_LAVRA</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_SHRINE</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_SHRINE_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TEMPLE</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_TEMPLE_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_CATHEDRAL_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_DAR_E_MEHR_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_GURDWARA_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_MEETING_HOUSE_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_MOSQUE_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_PAGODA_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_STUPA_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_SYNAGOGUE_BASE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CITY_HAS_TIER3RELIGIOUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_WAT_BASE</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>PLOT_HAS_TUNDRA_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_PLOT_HAS_TUNDRA</RequirementId>
 		</Row>
@@ -1710,6 +2153,7 @@
 	</RequirementSetRequirements>
 	<Traits>
 		<Row TraitType="TRAIT_BARBARIAN" InternalOnly="true"/>
+		<Row TraitType="TRAIT_BARBARIAN_BUT_SHOWS_UP_IN_PEDIA" InternalOnly="true"/>
 		<Row TraitType="TRAIT_CIVILIZATION_FOUNDING_FATHERS" Name="LOC_TRAIT_CIVILIZATION_FOUNDING_FATHERS_NAME" Description="LOC_TRAIT_CIVILIZATION_FOUNDING_FATHERS_DESCRIPTION"/>
 		<Row TraitType="TRAIT_CIVILIZATION_BUILDING_FILM_STUDIO" Name="LOC_TRAIT_CIVILIZATION_BUILDING_FILM_STUDIO_NAME" Description="LOC_TRAIT_CIVILIZATION_BUILDING_FILM_STUDIO_DESCRIPTION"/>
 		<Row TraitType="TRAIT_CIVILIZATION_LAST_PROPHET" Name="LOC_TRAIT_CIVILIZATION_LAST_PROPHET_NAME" Description="LOC_TRAIT_CIVILIZATION_LAST_PROPHET_DESCRIPTION"/>
@@ -1856,6 +2300,14 @@
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_DYNASTIC_CYCLE</TraitType>
 			<ModifierId>TRAIT_TECHNOLOGY_BOOST</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_DYNASTIC_CYCLE</TraitType>
+			<ModifierId>TRAIT_CIVIC_BOOST_WONDER_ERA</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_DYNASTIC_CYCLE</TraitType>
+			<ModifierId>TRAIT_TECHNOLOGY_BOOST_WONDER_ERA</ModifierId>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION</TraitType>
@@ -2026,8 +2478,16 @@
 			<ModifierId>TRAIT_INCREASED_TILES</ModifierId>
 		</Row>
 		<Row>
-			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
-			<ModifierId>TRAIT_DOUBLE_WRITER_POINTS</ModifierId>
+			<TraitType>TRAIT_CIVILIZATION_DISTRICT_LAVRA</TraitType>
+			<ModifierId>TRAIT_SHRINE_WRITING_POINTS</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_DISTRICT_LAVRA</TraitType>
+			<ModifierId>TRAIT_TEMPLE_ARTIST_POINTS</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_DISTRICT_LAVRA</TraitType>
+			<ModifierId>TRAIT_TIER3_MUSICIAN_POINTS</ModifierId>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
@@ -2043,6 +2503,10 @@
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_SCULPTURE</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
 			<ModifierId>TRAIT_GREAT_WORK_FOOD_SCULPTURE</ModifierId>
 		</Row>
 		<Row>
@@ -2055,6 +2519,10 @@
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_ARTIFACT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
 			<ModifierId>TRAIT_GREAT_WORK_FOOD_ARTIFACT</ModifierId>
 		</Row>
 		<Row>
@@ -2064,6 +2532,10 @@
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
 			<ModifierId>TRAIT_GREAT_WORK_GOLD_ARTIFACT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
+			<ModifierId>TRAIT_GREAT_WORK_FAITH_RELIC</ModifierId>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_NKISI</TraitType>
@@ -2095,15 +2567,59 @@
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERNATIONAL_FAITH</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_DOMESTIC_FAITH</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERNATIONAL_GOLD</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_DOMESTIC_GOLD</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERNATIONAL_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_DOMESTIC_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_FAITH</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FAITH</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
 			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_GOLD</ModifierId>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
-			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_FOOD</ModifierId>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_GOLD</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERCONTINENTAL_INTERNATIONAL_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
 			<ModifierId>TRAIT_INTERCONTINENTAL_DOMESTIC_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERCONTINENTAL_DISTRICT_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_TREASURE_FLEET</TraitType>
+			<ModifierId>TRAIT_INTERCONTINENTAL_BUILDER</ModifierId>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_CIVILIZATION_WONDER_TOURISM</TraitType>
@@ -2116,6 +2632,7 @@
 	</TraitModifiers>
 	<CivilizationTraits>
 		<Row CivilizationType="CIVILIZATION_BARBARIAN" TraitType="TRAIT_BARBARIAN"/>
+		<Row CivilizationType="CIVILIZATION_BARBARIAN" TraitType="TRAIT_BARBARIAN_BUT_SHOWS_UP_IN_PEDIA"/>
 		<Row CivilizationType="CIVILIZATION_AMERICA" TraitType="TRAIT_CIVILIZATION_FOUNDING_FATHERS"/>
 		<Row CivilizationType="CIVILIZATION_AMERICA" TraitType="TRAIT_CIVILIZATION_BUILDING_FILM_STUDIO"/>
 		<Row CivilizationType="CIVILIZATION_AMERICA" TraitType="TRAIT_CIVILIZATION_UNIT_AMERICAN_P51"/>
@@ -2171,18 +2688,18 @@
 		<Row CivilizationType="CIVILIZATION_SUMERIA" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_ZIGGURAT"/>
 		<Row CivilizationType="CIVILIZATION_SUMERIA" TraitType="TRAIT_CIVILIZATION_UNIT_SUMERIAN_WAR_CART"/>
 	</CivilizationTraits>
-  <AiListTypes>
-    <Row ListType="GreeceCivics"/>
-    <Row ListType="GreeceYields"/>
-  </AiListTypes>
-  <AiLists>
-    <Row ListType="GreeceCivics" LeaderType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS" System="Civics"/>
-    <Row ListType="GreeceYields" LeaderType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS" System="Yields"/>
-  </AiLists>
-  <AiFavoredItems>
-    <Row ListType="GreeceCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
-    <Row ListType="GreeceYields" Item="YIELD_CULTURE" Value="20"/>
-  </AiFavoredItems>
+	<AiListTypes>
+		<Row ListType="GreeceCivics"/>
+		<Row ListType="GreeceYields"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="GreeceCivics" LeaderType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS" System="Civics"/>
+		<Row ListType="GreeceYields" LeaderType="TRAIT_CIVILIZATION_DISTRICT_ACROPOLIS" System="Yields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="GreeceCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="GreeceYields" Item="YIELD_CULTURE" Value="20"/>
+	</AiFavoredItems>
 	<CityNames>
 		<!--America -->
 		<Row CivilizationType="CIVILIZATION_AMERICA" CityName="LOC_CITY_NAME_WASHINGTON"/>
@@ -2829,17 +3346,18 @@
 		<Row CivilizationType="CIVILIZATION_GREECE" TerrainType="TERRAIN_GRASS_HILLS" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_GREECE" TerrainType="TERRAIN_PLAINS_HILLS" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_GREECE" TerrainType="TERRAIN_TUNDRA_HILLS" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_JAPAN" TerrainType="TERRAIN_COAST" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_NORWAY" TerrainType="TERRAIN_COAST" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_RUSSIA" TerrainType="TERRAIN_TUNDRA" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_RUSSIA" TerrainType="TERRAIN_TUNDRA_HILLS" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_SCYTHIA" TerrainType="TERRAIN_GRASS" Tier="5"/>
 		<Row CivilizationType="CIVILIZATION_SCYTHIA" TerrainType="TERRAIN_PLAINS" Tier="5"/>
-		<Row CivilizationType="CIVILIZATION_SPAIN" TerrainType="TERRAIN_COAST" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_LISBON" TerrainType="TERRAIN_COAST" Tier="1"/>
 		<Row CivilizationType="CIVILIZATION_NAN_MADOL" TerrainType="TERRAIN_COAST" Tier="1"/>
 	</StartBiasTerrains>
 	<StartBiasRivers>
 		<Row CivilizationType="CIVILIZATION_EGYPT" Tier="5"/>
+		<Row CivilizationType="CIVILIZATION_GERMANY" Tier="5"/>
 		<Row CivilizationType="CIVILIZATION_FRANCE" Tier="3"/>
 		<Row CivilizationType="CIVILIZATION_SUMERIA" Tier="3"/>
 	</StartBiasRivers>

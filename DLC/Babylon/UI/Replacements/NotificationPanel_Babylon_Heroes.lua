@@ -21,6 +21,17 @@ function OnActivateHeroDiscovered( notificationEntry, notificationID:number, act
 end
 
 -- ===========================================================================
+function OnActivateHeroExpired( notificationEntry, notificationID:number, activatedByUser:boolean )
+	if (notificationEntry ~= nil and notificationEntry.m_PlayerID == Game.GetLocalPlayer()) then
+
+		local pNotification :table = GetActiveNotificationFromEntry(notificationEntry, notificationID);
+		if pNotification ~= nil then
+			LuaEvents.NotificationPanel_HeroExpired(pNotification);
+		end
+	end
+end
+
+-- ===========================================================================
 function RegisterHandlers()
 
 	BASE_RegisterHandlers();
@@ -28,19 +39,24 @@ function RegisterHandlers()
 	g_notificationHandlers[NotificationTypes.HERO_DISCOVERED]						= MakeDefaultHandlers();
 	g_notificationHandlers[NotificationTypes.HERO_CREATED]							= MakeDefaultHandlers();
 	g_notificationHandlers[NotificationTypes.HERO_KILLED]							= MakeDefaultHandlers();
+	g_notificationHandlers[NotificationTypes.HERO_KILLED_OTHER]						= MakeDefaultHandlers();
 	g_notificationHandlers[NotificationTypes.HERO_RECALLED]							= MakeDefaultHandlers();
 	g_notificationHandlers[NotificationTypes.HERO_EXPIRED]							= MakeDefaultHandlers();
+	g_notificationHandlers[NotificationTypes.HERO_EXPIRED_OTHER]					= MakeDefaultHandlers();
 	g_notificationHandlers[NotificationTypes.HERO_LOW_LIFESPAN]						= MakeDefaultHandlers();
 	g_notificationHandlers[NotificationTypes.HERO_CAN_PURCHASE_WITH_FAITH]			= MakeDefaultHandlers();
 	g_notificationHandlers[NotificationTypes.HERO_CLAIM_FAILED]						= MakeDefaultHandlers();
 
 	g_notificationHandlers[NotificationTypes.HERO_DISCOVERED].Activate				= OnActivateHeroDiscovered;
+	g_notificationHandlers[NotificationTypes.HERO_EXPIRED].Activate					= OnActivateHeroExpired;
 
 	g_notificationHandlers[NotificationTypes.HERO_DISCOVERED].AddSound				= "ALERT_POSITIVE";
 	g_notificationHandlers[NotificationTypes.HERO_CREATED].AddSound					= "ALERT_NEUTRAL";
 	g_notificationHandlers[NotificationTypes.HERO_RECALLED].AddSound				= "ALERT_NEUTRAL";
 	g_notificationHandlers[NotificationTypes.HERO_KILLED].AddSound					= "ALERT_NEGATIVE";
+	g_notificationHandlers[NotificationTypes.HERO_KILLED_OTHER].AddSound			= "ALERT_NEGATIVE";
 	g_notificationHandlers[NotificationTypes.HERO_EXPIRED].AddSound					= "ALERT_NEGATIVE";
+	g_notificationHandlers[NotificationTypes.HERO_EXPIRED_OTHER].AddSound			= "ALERT_NEGATIVE";
 	g_notificationHandlers[NotificationTypes.HERO_LOW_LIFESPAN].AddSound			= "ALERT_NEUTRAL";
 	g_notificationHandlers[NotificationTypes.HERO_CAN_PURCHASE_WITH_FAITH].AddSound	= "ALERT_POSITIVE";
 	g_notificationHandlers[NotificationTypes.HERO_CLAIM_FAILED].AddSound			= "ALERT_NEGATIVE";

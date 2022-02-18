@@ -75,9 +75,9 @@
 		<Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_OPPORTUNIST" Tag="DIPLOMACY_MODIFIER"/>
 	</TypeTags>
 	<Units>
-		<Row UnitType="UNIT_MACEDONIAN_HYPASPIST" BaseMoves="2" Cost="100" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_MACEDONIAN_HYPASPIST_NAME" Description="LOC_UNIT_MACEDONIAN_HYPASPIST_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_IRON_WORKING" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="2" Combat="36" TraitType="TRAIT_CIVILIZATION_UNIT_HYPASPIST" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
+		<Row UnitType="UNIT_MACEDONIAN_HYPASPIST" BaseMoves="2" Cost="100" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_MACEDONIAN_HYPASPIST_NAME" Description="LOC_UNIT_MACEDONIAN_HYPASPIST_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_IRON_WORKING" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="2" Combat="38" TraitType="TRAIT_CIVILIZATION_UNIT_HYPASPIST" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
 		<Row UnitType="UNIT_MACEDONIAN_HETAIROI" BaseMoves="4" Cost="100" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_MACEDONIAN_HETAIROI_NAME" Description="LOC_UNIT_MACEDONIAN_HETAIROI_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_HORSEBACK_RIDING" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" Maintenance="2" Combat="36" TraitType="TRAIT_LEADER_UNIT_HETAIROI" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
-		<Row UnitType="UNIT_PERSIAN_IMMORTAL" BaseMoves="2" Cost="100" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_PERSIAN_IMMORTAL_NAME" Description="LOC_UNIT_PERSIAN_IMMORTAL_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_IRON_WORKING" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="2" Combat="30" RangedCombat="25" Range="2" TraitType="TRAIT_CIVILIZATION_UNIT_IMMORTAL" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
+		<Row UnitType="UNIT_PERSIAN_IMMORTAL" BaseMoves="2" Cost="100" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_PERSIAN_IMMORTAL_NAME" Description="LOC_UNIT_PERSIAN_IMMORTAL_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_IRON_WORKING" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="2" Combat="35" RangedCombat="25" Range="2" TraitType="TRAIT_CIVILIZATION_UNIT_IMMORTAL" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
 	</Units>
 	<UnitAbilities>
 		<Row UnitAbilityType="ABILITY_HYPASPIST" Name="LOC_ABILITY_HYPASPIST_NAME" Description="LOC_ABILITY_HYPASPIST_DESCRIPTION"/>
@@ -135,7 +135,7 @@
 		</Row>
 		<Row>
 			<ModifierId>BASILIKOI_TRAINED_UNIT_XP</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 	</Modifiers>
@@ -224,9 +224,9 @@
 		<Row UnitType="UNIT_PERSIAN_IMMORTAL" AiType="UNITTYPE_RANGED"/>
 	</UnitAiInfos>
 	<UnitUpgrades>
-		<Row Unit="UNIT_MACEDONIAN_HYPASPIST" UpgradeUnit="UNIT_MUSKETMAN"/>
+		<Row Unit="UNIT_MACEDONIAN_HYPASPIST" UpgradeUnit="UNIT_MAN_AT_ARMS"/>
 		<Row Unit="UNIT_MACEDONIAN_HETAIROI" UpgradeUnit="UNIT_KNIGHT"/>
-		<Row Unit="UNIT_PERSIAN_IMMORTAL" UpgradeUnit="UNIT_MUSKETMAN"/>
+		<Row Unit="UNIT_PERSIAN_IMMORTAL" UpgradeUnit="UNIT_MAN_AT_ARMS"/>
 	</UnitUpgrades>
 	<UnitReplaces>
 		<Row CivUniqueUnitType="UNIT_MACEDONIAN_HYPASPIST" ReplacesUnitType="UNIT_SWORDSMAN"/>
@@ -328,7 +328,7 @@
 		<Row LeaderType="LEADER_CYRUS" ReligionType="RELIGION_ZOROASTRIANISM"/>
 	</FavoredReligions>
 	<Improvements>
-		<Row ImprovementType="IMPROVEMENT_PAIRIDAEZA" Name="LOC_IMPROVEMENT_PAIRIDAEZA_NAME" Description="LOC_IMPROVEMENT_PAIRIDAEZA_DESCRIPTION" Icon="ICON_IMPROVEMENT_PAIRIDAEZA" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqCivic="CIVIC_EARLY_EMPIRE" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_PAIRIDAEZA" Appeal="2" SameAdjacentValid="false"/>
+		<Row ImprovementType="IMPROVEMENT_PAIRIDAEZA" Name="LOC_IMPROVEMENT_PAIRIDAEZA_NAME" Description="LOC_IMPROVEMENT_PAIRIDAEZA_DESCRIPTION" Icon="ICON_IMPROVEMENT_PAIRIDAEZA" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqCivic="CIVIC_EARLY_EMPIRE" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_PAIRIDAEZA" Appeal="1" SameAdjacentValid="false"/>
 	</Improvements>
 	<Improvement_Adjacencies>
 		<Row ImprovementType="IMPROVEMENT_PAIRIDAEZA" YieldChangeId="Pairidaeza_CityCenterAdjacency"/>

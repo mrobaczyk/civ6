@@ -80,11 +80,15 @@
 			<Where UnitType="UNIT_POLISH_HUSSAR"/>
 			<Set>
 				<StrategicResource>RESOURCE_IRON</StrategicResource>
-				<Maintenance>4</Maintenance>
+				<Description>LOC_UNIT_POLISH_HUSSAR_EXPANSION2_DESCRIPTION</Description>
 			</Set>
 		</Update>
+		
 	</Units>
 	<Units_XP2>
 		<Row UnitType="UNIT_POLISH_HUSSAR" ResourceCost="10"/>
 	</Units_XP2>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_POLISH_HUSSAR" ReplacesUnitType="UNIT_CUIRASSIER"/>
+	</UnitReplaces>
 </GameInfo>

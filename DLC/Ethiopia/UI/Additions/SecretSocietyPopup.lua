@@ -57,16 +57,13 @@ function OnSecretSocietyDiscovered( pNotification:table )
 		return;
 	end
 
-	local ePlayer:number = pNotification:GetValue( "PARAM_DATA0" );
-	local eSociety:number = pNotification:GetValue( "PARAM_DATA1" );
-	local bIsFirstDiscovery:boolean = pNotification:GetValue( "PARAM_DATA2" );
-
-	ShowDiscovery(ePlayer, eSociety, bIsFirstDiscovery);
+	ShowDiscovery(pNotification);
 end
 
 -- ===========================================================================
-function ShowDiscovery(ePlayer:number, eSociety:number, bIsFirstDiscovery:boolean)
+function ShowDiscovery(pNotification:table)
 
+	local ePlayer:number = pNotification:GetValue( "PARAM_DATA0" );
 	if ePlayer ~= Game.GetLocalPlayer() then
 		return;
 	end
@@ -78,10 +75,14 @@ function ShowDiscovery(ePlayer:number, eSociety:number, bIsFirstDiscovery:boolea
 	if kPlayerGovernors == nil then
 		return;
 	end
+
+	local eSociety:number = pNotification:GetValue( "PARAM_DATA1" );
 	local kSocietyDef:table = GameInfo.SecretSocieties[eSociety];
 	if kSocietyDef == nil then
 		return;
 	end
+
+	local bIsFirstDiscovery:boolean = pNotification:GetValue( "PARAM_DATA2" );
 
 	Controls.EventTitle:SetText(Locale.ToUpper(Locale.Lookup("LOC_DISCOVERED_SOCIETY", kSocietyDef.Name)));
 
@@ -101,6 +102,9 @@ function ShowDiscovery(ePlayer:number, eSociety:number, bIsFirstDiscovery:boolea
 	end
 
 	Open();
+
+	--Dismiss the notification right away so that the notification manager does not see others as duplicates
+	NotificationManager.Dismiss(pNotification:GetPlayerID(), pNotification:GetID());
 end
 
 -- ===========================================================================

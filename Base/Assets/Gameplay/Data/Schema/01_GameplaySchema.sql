@@ -252,6 +252,7 @@ CREATE TABLE "BarbarianTribes" (
 		"RaidingBoldness" INTEGER NOT NULL DEFAULT 20,
 		"CityAttackOperation" TEXT NOT NULL,
 		"CityAttackBoldness" INTEGER NOT NULL DEFAULT 25,
+		"Name" TEXT,
 		PRIMARY KEY(TribeType),
 		FOREIGN KEY (RequiredResource) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -829,6 +830,12 @@ CREATE TABLE "CivilopediaSections" (
 CREATE TABLE "CivilopediaSectionExcludes" (
 		"SectionId" TEXT NOT NULL,
 		PRIMARY KEY(SectionId));
+
+CREATE TABLE "CivilopediaTranslateCharacters" (
+		"RowID" INTEGER,
+		"Character" TEXT NOT NULL,
+		"TranslateCharacter" TEXT NOT NULL,
+		PRIMARY KEY(RowID));
 
 CREATE TABLE "Continents" (
 		"ContinentType" TEXT NOT NULL,

@@ -20,6 +20,7 @@ BASE_ReadUnitData					= ReadUnitData;
 BASE_AddActionToTable				= AddActionToTable;
 BASE_AddActionButton				= AddActionButton;
 BASE_AddTargetUnitStat				= AddTargetUnitStat;
+BASE_UpdateUnitIcon					= UpdateUnitIcon;
 
 
 -- ===========================================================================
@@ -392,81 +393,6 @@ function AddTargetUnitStat(statData:table, relativeSizeX:number)
 end
 
 -- ===========================================================================
---	OVERRIDE
--- ===========================================================================
-function AddUnitToUnitList(pUnit:table)
-	-- Create entry
-	local unitEntry:table = {};
-	Controls.UnitListPopup:BuildEntry( "UnitListEntry", unitEntry );
-
-	local formation = pUnit:GetMilitaryFormation();
-	local suffix:string = "";
-	local unitInfo:table = GameInfo.Units[pUnit:GetUnitType()];
-	if (unitInfo.Domain == "DOMAIN_SEA") then
-		if (formation == MilitaryFormationTypes.CORPS_FORMATION) then
-			suffix = " " .. Locale.Lookup("LOC_HUD_UNIT_PANEL_FLEET_SUFFIX");
-		elseif (formation == MilitaryFormationTypes.ARMY_FORMATION) then
-			suffix = " " .. Locale.Lookup("LOC_HUD_UNIT_PANEL_ARMADA_SUFFIX");
-		end
-	else
-		if (formation == MilitaryFormationTypes.CORPS_FORMATION) then
-			suffix = " " .. Locale.Lookup("LOC_HUD_UNIT_PANEL_CORPS_SUFFIX");
-		elseif (formation == MilitaryFormationTypes.ARMY_FORMATION) then
-			suffix = " " .. Locale.Lookup("LOC_HUD_UNIT_PANEL_ARMY_SUFFIX");
-		end
-	end
-
-	local name:string = pUnit:GetName();
-	local uniqueName = Locale.Lookup( name ) .. suffix;
-
-	local tooltip:string = "";
-	local pUnitDef = GameInfo.Units[pUnit:GetUnitType()];
-	if pUnitDef then
-		local unitTypeName:string = pUnitDef.Name;
-		if name ~= unitTypeName then
-			tooltip = uniqueName .. " " .. Locale.Lookup("LOC_UNIT_UNIT_TYPE_NAME_SUFFIX", unitTypeName);
-		end
-	end
-	unitEntry.Button:SetToolTipString(tooltip);
-
-	unitEntry.Button:SetText( Locale.ToUpper(uniqueName) );
-	unitEntry.Button:SetVoids(i, pUnit:GetID());
-
-	-- Update unit icon
-	local pUnitInfo : table = GameInfo.Units[pUnit:GetUnitType()];
-	local unitIcon : string = "ICON_" .. pUnitInfo.UnitType;
-	if(pUnitInfo.UnitType == "UNIT_WARRIOR")then
-		unitEntry.UnitTypeIcon:SetTexture( 0, 0, "RedDeath_Zombies22.dds");
-	else
-		local iconInfo:table, iconShadowInfo:table = GetUnitIcon(pUnit, 22, true);
-		if iconInfo.textureSheet then
-				unitEntry.UnitTypeIcon:SetTexture( iconInfo.textureOffsetX, iconInfo.textureOffsetY, iconInfo.textureSheet );
-		end
-	end
-
-	-- Update status icon
-	local activityType:number = UnitManager.GetActivityType(pUnit);
-	if activityType == ActivityTypes.ACTIVITY_SLEEP then
-		SetUnitEntryStatusIcon(unitEntry, "ICON_STATS_SLEEP");
-	elseif activityType == ActivityTypes.ACTIVITY_HOLD then
-		SetUnitEntryStatusIcon(unitEntry, "ICON_STATS_SKIP");
-	elseif activityType ~= ActivityTypes.ACTIVITY_AWAKE and pUnit:GetFortifyTurns() > 0 then
-		SetUnitEntryStatusIcon(unitEntry, "ICON_DEFENSE");
-	else
-		unitEntry.UnitStatusIcon:SetHide(true);
-	end
-
-	-- Update entry color if unit cannot take any action
-	if pUnit:IsReadyToMove() then
-		unitEntry.Button:GetTextControl():SetColorByName("UnitPanelTextCS");
-		unitEntry.UnitTypeIcon:SetColorByName("UnitPanelTextCS");
-	else
-		unitEntry.Button:GetTextControl():SetColorByName("UnitPanelTextDisabledCS");
-		unitEntry.UnitTypeIcon:SetColorByName("UnitPanelTextDisabledCS");
-	end
-end
-
--- ===========================================================================
 function PopulateLinkedUnitPanelStats(kUnit:table, unitList:table)
 	for i, pUnit in ipairs(unitList) do
 		if pUnit:GetName() ~= kUnit:GetName() and pUnit:GetFormationUnitCount() > 1 then
@@ -695,6 +621,19 @@ function IsActionLimited(actionType : string, pUnit : table)
 		end
 	end
 	return false;
+end
+
+-- ===========================================================================
+function UpdateUnitIcon(pUnit:table, uiUnitEntry:table)
+	local unit:table = GameInfo.Units[pUnit:GetUnitType()];
+	local unitIcon = "ICON_" .. unit.UnitType;
+	unitIcon = unitIcon .. "_" .. PlayerConfigurations[pUnit:GetOwner()]:GetCivilizationTypeName();
+	local textureOffsetX : number, textureOffsetY : number, textureSheet : string = IconManager:FindIconAtlas(unitIcon, iconSize);
+	if (textureSheet == nil) then
+		BASE_UpdateUnitIcon(pUnit, uiUnitEntry);
+	else
+		uiUnitEntry.UnitTypeIcon:SetTexture( textureOffsetX, textureOffsetY, textureSheet );
+	end
 end
 
 -------------------------------------------------

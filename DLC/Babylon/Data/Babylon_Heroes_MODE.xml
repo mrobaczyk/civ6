@@ -105,7 +105,9 @@
 		<Row Type="NOTIFICATION_HERO_CREATED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_HERO_RECALLED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_HERO_KILLED" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_HERO_KILLED_OTHER" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_HERO_EXPIRED" Kind="KIND_NOTIFICATION"/>
+    <Row Type="NOTIFICATION_HERO_EXPIRED_OTHER" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_HERO_LOW_LIFESPAN" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_HERO_CAN_PURCHASE_WITH_FAITH" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_HERO_CLAIM_FAILED" Kind="KIND_NOTIFICATION"/>
@@ -130,89 +132,89 @@
 		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_MEDIEVAL"	CombatStrength="36" RangedCombatStrength="48"/>
 		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_RENAISSANCE" CombatStrength="48" RangedCombatStrength="60"/>
 		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_INDUSTRIAL"	CombatStrength="60" RangedCombatStrength="72"/>
-		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_MODERN"		CombatStrength="70" RangedCombatStrength="82"/>
-		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_ATOMIC"		CombatStrength="78" RangedCombatStrength="90"/>
-		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_INFORMATION" CombatStrength="84" RangedCombatStrength="100"/>
+		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_MODERN"		CombatStrength="72" RangedCombatStrength="88"/>
+		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_ATOMIC"		CombatStrength="84" RangedCombatStrength="102"/>
+		<Row HeroClassType="HEROCLASS_ANANSI" EraType="ERA_INFORMATION" CombatStrength="88" RangedCombatStrength="106"/>
 		<!--Arthur-->
-		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_CLASSICAL"	CombatStrength="48"/>
-		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_MEDIEVAL"	CombatStrength="60"/>
-		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_RENAISSANCE" CombatStrength="70"/>
+		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_CLASSICAL"	CombatStrength="50"/>
+		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_MEDIEVAL"	CombatStrength="64"/>
+		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_RENAISSANCE" CombatStrength="72"/>
 		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_INDUSTRIAL"	CombatStrength="80"/>
-		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_MODERN"		CombatStrength="90"/>
-		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_ATOMIC"		CombatStrength="100"/>
-		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_INFORMATION" CombatStrength="116"/>
+		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_MODERN"		CombatStrength="94"/>
+		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_ATOMIC"		CombatStrength="108"/>
+		<Row HeroClassType="HEROCLASS_ARTHUR" EraType="ERA_INFORMATION" CombatStrength="120"/>
 		<!--Beowulf-->
-		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_CLASSICAL"		CombatStrength="48"/>
+		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_CLASSICAL"		CombatStrength="46"/>
 		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_MEDIEVAL"		CombatStrength="60"/>
 		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_RENAISSANCE"	CombatStrength="72"/>
-		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_INDUSTRIAL"		CombatStrength="82"/>
-		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_MODERN"			CombatStrength="92"/>
-		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_ATOMIC"			CombatStrength="104"/>
+		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_INDUSTRIAL"		CombatStrength="86"/>
+		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_MODERN"			CombatStrength="98"/>
+		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_ATOMIC"			CombatStrength="108"/>
 		<Row HeroClassType="HEROCLASS_BEOWULF" EraType="ERA_INFORMATION"	CombatStrength="118"/>
 		<!--Hercules-->
-		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_CLASSICAL"		CombatStrength="52"/>
-		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_MEDIEVAL"		CombatStrength="64"/>
-		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_RENAISSANCE"	CombatStrength="78"/>
+		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_CLASSICAL"		CombatStrength="48"/>
+		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_MEDIEVAL"		CombatStrength="62"/>
+		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_RENAISSANCE"	CombatStrength="76"/>
 		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_INDUSTRIAL"	CombatStrength="88"/>
-		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_MODERN"		CombatStrength="98"/>
+		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_MODERN"		CombatStrength="102"/>
 		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_ATOMIC"		CombatStrength="112"/>
-		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_INFORMATION"	CombatStrength="126"/>
+		<Row HeroClassType="HEROCLASS_HERCULES" EraType="ERA_INFORMATION"	CombatStrength="122"/>
 		<!--Hippolyta-->
-		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_CLASSICAL"	CombatStrength="46"/>
+		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_CLASSICAL"	CombatStrength="44"/>
 		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_MEDIEVAL"		CombatStrength="58"/>
 		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_RENAISSANCE"	CombatStrength="70"/>
-		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_INDUSTRIAL"	CombatStrength="80"/>
-		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_MODERN"		CombatStrength="88"/>
-		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_ATOMIC"		CombatStrength="100"/>
+		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_INDUSTRIAL"	CombatStrength="82"/>
+		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_MODERN"		CombatStrength="94"/>
+		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_ATOMIC"		CombatStrength="104"/>
 		<Row HeroClassType="HEROCLASS_HIPPOLYTA" EraType="ERA_INFORMATION"	CombatStrength="114"/>
 		<!--Hunahpu-->
 		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_CLASSICAL"		CombatStrength="42"/>
 		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_MEDIEVAL"		CombatStrength="54"/>
 		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_RENAISSANCE"	CombatStrength="64"/>
-		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_INDUSTRIAL"		CombatStrength="74"/>
-		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_MODERN"			CombatStrength="82"/>
-		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_ATOMIC"			CombatStrength="94"/>
+		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_INDUSTRIAL"		CombatStrength="76"/>
+		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_MODERN"			CombatStrength="88"/>
+		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_ATOMIC"			CombatStrength="96"/>
 		<Row HeroClassType="HEROCLASS_HUNAHPU" EraType="ERA_INFORMATION"	CombatStrength="106"/>
 		<!--Maui-->
-		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_CLASSICAL"		CombatStrength="44"/>
-		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_MEDIEVAL"		CombatStrength="56"/>
+		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_CLASSICAL"		CombatStrength="42"/>
+		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_MEDIEVAL"		CombatStrength="54"/>
 		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_RENAISSANCE"	CombatStrength="66"/>
-		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_INDUSTRIAL"	CombatStrength="76"/>
-		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_MODERN"		CombatStrength="84"/>
-		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_ATOMIC"		CombatStrength="96"/>
+		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_INDUSTRIAL"	CombatStrength="78"/>
+		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_MODERN"		CombatStrength="90"/>
+		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_ATOMIC"		CombatStrength="100"/>
 		<Row HeroClassType="HEROCLASS_MAUI" EraType="ERA_INFORMATION"	CombatStrength="108"/>
 		<!--Mulan-->
 		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_CLASSICAL"	CombatStrength="24" RangedCombatStrength="36"/>
 		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_MEDIEVAL"		CombatStrength="32" RangedCombatStrength="44"/>
-		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_RENAISSANCE"	CombatStrength="42" RangedCombatStrength="56"/>
+		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_RENAISSANCE"	CombatStrength="42" RangedCombatStrength="54"/>
 		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_INDUSTRIAL"	CombatStrength="54" RangedCombatStrength="66"/>
-		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_MODERN"		CombatStrength="62" RangedCombatStrength="76"/>
-		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_ATOMIC"		CombatStrength="70" RangedCombatStrength="84"/>
-		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_INFORMATION"	CombatStrength="74" RangedCombatStrength="92"/>
+		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_MODERN"		CombatStrength="64" RangedCombatStrength="80"/>
+		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_ATOMIC"		CombatStrength="74" RangedCombatStrength="92"/>
+		<Row HeroClassType="HEROCLASS_MULAN" EraType="ERA_INFORMATION"	CombatStrength="78" RangedCombatStrength="96"/>
 		<!--Oya-->
-		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_CLASSICAL"		CombatStrength="44"/>
+		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_CLASSICAL"		CombatStrength="42"/>
 		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_MEDIEVAL"		CombatStrength="54"/>
 		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_RENAISSANCE"	CombatStrength="66"/>
-		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_INDUSTRIAL"		CombatStrength="74"/>
-		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_MODERN"			CombatStrength="84"/>
-		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_ATOMIC"			CombatStrength="96"/>
+		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_INDUSTRIAL"		CombatStrength="78"/>
+		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_MODERN"			CombatStrength="90"/>
+		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_ATOMIC"			CombatStrength="98"/>
 		<Row HeroClassType="HEROCLASS_OYA" EraType="ERA_INFORMATION"	CombatStrength="108"/>
 		<!--Sinbad-->
 		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_CLASSICAL"	CombatStrength="42"/>
 		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_MEDIEVAL"	CombatStrength="52"/>
 		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_RENAISSANCE"	CombatStrength="60"/>
 		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_INDUSTRIAL"	CombatStrength="72"/>
-		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_MODERN"		CombatStrength="84"/>
-		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_ATOMIC"		CombatStrength="96"/>
-		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_INFORMATION"	CombatStrength="112"/>
+		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_MODERN"		CombatStrength="88"/>
+		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_ATOMIC"		CombatStrength="102"/>
+		<Row HeroClassType="HEROCLASS_SINBAD" EraType="ERA_INFORMATION"	CombatStrength="114"/>
 		<!--Sun Wukong-->
-		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_CLASSICAL"	CombatStrength="46"/>
-		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_MEDIEVAL"	CombatStrength="58"/>
-		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_RENAISSANCE"	CombatStrength="70"/>
+		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_CLASSICAL"	CombatStrength="44"/>
+		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_MEDIEVAL"	CombatStrength="56"/>
+		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_RENAISSANCE"	CombatStrength="68"/>
 		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_INDUSTRIAL"	CombatStrength="80"/>
-		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_MODERN"		CombatStrength="88"/>
-		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_ATOMIC"		CombatStrength="100"/>
-		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_INFORMATION"	CombatStrength="114"/>
+		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_MODERN"		CombatStrength="92"/>
+		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_ATOMIC"		CombatStrength="102"/>
+		<Row HeroClassType="HEROCLASS_WUKONG" EraType="ERA_INFORMATION"	CombatStrength="110"/>
 	</HeroClassProgressions>
 	<Tags>
 		<Row Tag="CLASS_HERO_ANANSI"			Vocabulary="ABILITY_CLASS"/>
@@ -530,7 +532,7 @@
 		<Row Type="UNITCOMMAND_GRANT_ENVOY" Name="GRANT_ENVOY_SUZERAIN_FAITH" Value="50"/>
 		<Row Type="UNITCOMMAND_GRANT_ENVOY" Name="COST_PROGRESSION_TYPE" Value="COST_PROGRESSION_ERA_FLAT"/>
 		<Row Type="UNITCOMMAND_GRANT_ENVOY" Name="PROGRESSION_PARAM1" Value="25"/>
-		<Row Type="UNITCOMMAND_NAVAL_GOLD_RAID" Name="NAVAL_GOLD_RAID_YIELD" Value="300"/>
+		<Row Type="UNITCOMMAND_NAVAL_GOLD_RAID" Name="NAVAL_GOLD_RAID_YIELD" Value="200"/>
 		<Row Type="UNITCOMMAND_NAVAL_GOLD_RAID" Name="COST_PROGRESSION_TYPE" Value="COST_PROGRESSION_ERA_FLAT"/>
 		<Row Type="UNITCOMMAND_NAVAL_GOLD_RAID" Name="PROGRESSION_PARAM1" Value="100"/>
 		<Row Type="UNITCOMMAND_RESOURCE_INSPIRE" Name="RESOURCE_INSPIRE_SCIENCE" Value="60"/>
@@ -795,6 +797,7 @@
 		<Row TraitType="TRAIT_LEADER_GILGAMESH_HEROES" ModifierId="MODIFIER_TRAIT_SUMERIA_HEROES_FASTER_CLAIM_WUKONG"/>
 		<Row TraitType="TRAIT_CIVILIZATION_NKISI" ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_GOLD"/>
 		<Row TraitType="TRAIT_CIVILIZATION_NKISI" ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FOOD"/>
+		<Row TraitType="TRAIT_CIVILIZATION_NKISI" ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FAITH"/>
 		<Row TraitType="TRAIT_CIVILIZATION_NKISI" ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_PRODUCTION"/>
 	</TraitModifiers>
 	<Beliefs>
@@ -818,7 +821,9 @@
 		<Row NotificationType="NOTIFICATION_HERO_CREATED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
 		<Row NotificationType="NOTIFICATION_HERO_RECALLED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
 		<Row NotificationType="NOTIFICATION_HERO_KILLED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+    <Row NotificationType="NOTIFICATION_HERO_KILLED_OTHER" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
 		<Row NotificationType="NOTIFICATION_HERO_EXPIRED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+    <Row NotificationType="NOTIFICATION_HERO_EXPIRED_OTHER" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
 		<Row NotificationType="NOTIFICATION_HERO_LOW_LIFESPAN" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
 		<Row NotificationType="NOTIFICATION_HERO_CAN_PURCHASE_WITH_FAITH" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
 		<Row NotificationType="NOTIFICATION_HERO_CLAIM_FAILED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
@@ -941,6 +946,7 @@
 		<Row ModifierID="MODIFIER_TRAIT_SUMERIA_HEROES_FASTER_CLAIM_WUKONG"		ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_PROJECT_PRODUCTION"/>
 		<Row ModifierID="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_GOLD"		ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD"/>
 		<Row ModifierID="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FOOD"		ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD"/>
+		<Row ModifierID="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FAITH"		ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD"/>
 		<Row ModifierID="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_PRODUCTION"	ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD"/>
 		<!--Belief Modifiers-->
 		<Row ModifierID="MODIFIER_BELIEF_RELIQUARIES_ATTACH_HEROIC_RELIC_FAITH"		ModifierType="MODIFIER_ALL_CITIES_ATTACH_MODIFIER" SubjectRequirementSetId="CITY_FOLLOWS_RELIGION_REQUIREMENTS"/>
@@ -1003,17 +1009,17 @@
 		<Row ModifierId="MODIFIER_DISCOVER_RANDOM_HERO"	 Name="RandomHero" Value="true"/>
 		<!--Questing Knight strength-->
 		<!--These values are deltas above base strength -->
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="ClassicalEraAmount"	Value="10"/>
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="MedievalEraAmount"	Value="22"/>
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="ClassicalEraAmount"	Value="12"/>
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="MedievalEraAmount"	Value="24"/>
 		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="RenaissanceEraAmount" Value="32"/>
 		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="IndustrialEraAmount"	Value="40"/>
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="ModernEraAmount"		Value="50"/>
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="AtomicEraAmount"		Value="58"/>
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="InformationEraAmount" Value="74"/>
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="ModernEraAmount"		Value="52"/>
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="AtomicEraAmount"		Value="64"/>
+		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="InformationEraAmount" Value="76"/>
 		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ERA_STRENGTH" Name="FutureEraAmount"		Value="88"/>
 		<!--Hero Passive Ability modifier args-->
 		<Row ModifierId="HERO_COMBAT_STRENGTH_AOE" Name="AbilityType" Value="ABILITY_HERO_COMBAT_STRENGTH_UNIT"/>
-		<Row ModifierId="HERO_COMBAT_STRENGTH_UNIT" Name="Amount" Value="10"/>
+		<Row ModifierId="HERO_COMBAT_STRENGTH_UNIT" Name="Amount" Value="5"/>
 		<Row ModifierId="MODIFIER_HIPPOLYTA_HEAL_PER_TURN" Name="Type" Value="ALL"/>
 		<Row ModifierId="MODIFIER_HIPPOLYTA_HEAL_PER_TURN" Name="Amount" Value="20"/>
 		<Row ModifierId="MODIFIER_HUNAHPU_RESURRECT_KILL" Name="Key" Value="HeroResurrectKill"/>
@@ -1024,9 +1030,9 @@
 		<Row ModifierId="MODIFIER_MULAN_FORTIFY" Name="Amount" Value="1"/>
 		<Row ModifierId="MODIFIER_WUKONG_STEALTH" Name="Hidden" Value="true"/>
 		<Row ModifierId="MODIFIER_SINBAD_GOLD_FOR_DISCOVER_CONTINENT" Name="Key" Value="HeroGoldOnFindNewContinent"/>
-		<Row ModifierId="MODIFIER_SINBAD_GOLD_FOR_DISCOVER_CONTINENT" Name="Amount" Value="500" Type="ScaleByGameSpeed"/>
+		<Row ModifierId="MODIFIER_SINBAD_GOLD_FOR_DISCOVER_CONTINENT" Name="Amount" Value="400" Type="ScaleByGameSpeed"/>
 		<Row ModifierId="MODIFIER_SINBAD_GOLD_FOR_DISCOVER_WONDER" Name="Key" Value="HeroGoldOnFindWonder"/>
-		<Row ModifierId="MODIFIER_SINBAD_GOLD_FOR_DISCOVER_WONDER" Name="Amount" Value="500" Type="ScaleByGameSpeed"/>
+		<Row ModifierId="MODIFIER_SINBAD_GOLD_FOR_DISCOVER_WONDER" Name="Amount" Value="400" Type="ScaleByGameSpeed"/>
 		<Row ModifierId="MODIFIER_SINBAD_OCEAN_VALID_TERRAIN" Name="TerrainType" Value="TERRAIN_OCEAN"/>
 		<Row ModifierId="MODIFIER_SINBAD_OCEAN_VALID_TERRAIN" Name="Valid" Value="true"/>
 		<Row ModifierId="MODIFIER_HERO_IGNORE_FOREST_TERRAIN_COST" Name="Ignore" Value="true"/>
@@ -1068,6 +1074,9 @@
 		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FOOD" Name="GreatWorkObjectType" Value="GREATWORKOBJECT_HERO"/>
 		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FOOD" Name="YieldType" Value="YIELD_FOOD"/>
 		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FOOD" Name="YieldChange" Value="2"/>
+		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FAITH" Name="GreatWorkObjectType" Value="GREATWORKOBJECT_HERO"/>
+		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FAITH" Name="YieldType" Value="YIELD_FAITH"/>
+		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_FAITH" Name="YieldChange" Value="1"/>
 		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_PRODUCTION" Name="GreatWorkObjectType" Value="GREATWORKOBJECT_HERO"/>
 		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_PRODUCTION" Name="YieldType" Value="YIELD_PRODUCTION"/>
 		<Row ModifierId="MODIFIER_TRAIT_NKISI_HEROIC_RELIC_PRODUCTION" Name="YieldChange" Value="2"/>

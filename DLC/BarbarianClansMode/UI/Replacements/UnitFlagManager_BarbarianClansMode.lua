@@ -97,26 +97,28 @@ function UnitFlag.UpdateName( self )
 					local pBarbTribe : table = GameInfo.BarbarianTribeNames[barbType];
 					nameString = nameString .. "[NEWLINE]" .. Locale.Lookup(pBarbTribe.TribeDisplayName);
 
-					--Add any Barbarian Tribe specific statuses (bribed, incited) to the unit tooltip
+					--Add any Barbarian Tribe specific statuses to the unit tooltip
+					-- Bribed?
 					if(bribedTurnsRemaining > 0)then
 						--Add bribe turns remaining to the unit tooltip
 						nameString = nameString .. "[NEWLINE]" .. Locale.Lookup("LOC_BARBARIAN_STATUS_BRIBED", bribedTurnsRemaining);
-					else
-						local inciteTargetID : number = pBarbarianTribeManager:GetTribeInciteTargetPlayer(tribeIndex);
-						if (inciteTargetID >= 0) then
-							if(inciteTargetID == localPlayerID)then
-								--Add incited against us to the unit tooltip
-								local inciteSourcePlayer : table = PlayerConfigurations[pBarbarianTribeManager:GetTribeInciteSourcePlayer(tribeIndex)];
-								local inciteSourcePlayerName : string = inciteSourcePlayer:GetPlayerName();
-								nameString = nameString .. "[NEWLINE]" .. Locale.Lookup("LOC_BARBARIAN_STATUS_INCITED_AGAINST_YOU", inciteSourcePlayerName);
-							else
-								local inciteSourceID : number = pBarbarianTribeManager:GetTribeInciteSourcePlayer(tribeIndex);
-								if(inciteSourceID == localPlayerID)then
-									--Add incited by us to the unit tooltip
-									local inciteTargetPlayer : table = PlayerConfigurations[pBarbarianTribeManager:GetTribeInciteTargetPlayer(tribeIndex)];
-									local inciteTargetPlayerName : string = inciteTargetPlayer:GetPlayerName();
-									nameString = nameString .. "[NEWLINE]" .. Locale.Lookup("LOC_BARBARIAN_STATUS_INCITED_BY_YOU", inciteTargetPlayerName);
-								end
+					end
+
+					-- Incited?
+					local inciteTargetID : number = pBarbarianTribeManager:GetTribeInciteTargetPlayer(tribeIndex);
+					if (inciteTargetID >= 0) then
+						if(inciteTargetID == localPlayerID)then
+							--Add incited against us to the unit tooltip
+							local inciteSourcePlayer : table = PlayerConfigurations[pBarbarianTribeManager:GetTribeInciteSourcePlayer(tribeIndex)];
+							local inciteSourcePlayerName : string = inciteSourcePlayer:GetPlayerName();
+							nameString = nameString .. "[NEWLINE]" .. Locale.Lookup("LOC_BARBARIAN_STATUS_INCITED_AGAINST_YOU", inciteSourcePlayerName);
+						else
+							local inciteSourceID : number = pBarbarianTribeManager:GetTribeInciteSourcePlayer(tribeIndex);
+							if(inciteSourceID == localPlayerID)then
+								--Add incited by us to the unit tooltip
+								local inciteTargetPlayer : table = PlayerConfigurations[pBarbarianTribeManager:GetTribeInciteTargetPlayer(tribeIndex)];
+								local inciteTargetPlayerName : string = inciteTargetPlayer:GetPlayerName();
+								nameString = nameString .. "[NEWLINE]" .. Locale.Lookup("LOC_BARBARIAN_STATUS_INCITED_BY_YOU", inciteTargetPlayerName);
 							end
 						end
 					end
@@ -136,8 +138,10 @@ function OnPlayerOperationComplete(playerID : number, operation : number)
 		local pBarbarianUnits:table = pBarbarianPlayer:GetUnits();
 		for i, pUnit in pBarbarianUnits:Members() do
 			local flag:table = GetUnitFlag(PlayerTypes.BARBARIAN, pUnit:GetID());
-			flag:UpdateName();
-			flag:UpdatePromotions();
+			if(flag ~= nil)then
+				flag:UpdateName();
+				flag:UpdatePromotions();
+			end
 		end
 	end
 end
@@ -148,7 +152,7 @@ function OnLocalPlayerTurnBegin()
 	local pBarbarianUnits:table = pBarbarianPlayer:GetUnits();
 	for i, pUnit in pBarbarianUnits:Members() do
 		local flag:table = GetUnitFlag(PlayerTypes.BARBARIAN, pUnit:GetID());
-		if(not flag.m_Instance.TribeStatusFlag:IsHidden())then
+		if(flag ~= nil and not flag.m_Instance.TribeStatusFlag:IsHidden())then
 			flag:UpdateName();
 			flag:UpdatePromotions();
 		end

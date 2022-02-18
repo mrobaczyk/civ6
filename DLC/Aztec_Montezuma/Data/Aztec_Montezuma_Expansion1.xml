@@ -9,12 +9,17 @@
 		<Update>
 			<Where BuildingType="BUILDING_TLACHTLI"/>
 			<Set>
-				<Description>LOC_BUILDING_TLACHTLI_EXPANSION1_DESCRIPTION</Description>
+				<Description>LOC_BUILDING_TLACHTLI_XP1_DESCRIPTION</Description>
 			</Set>
 		</Update>
 	</Buildings>
 	<Building_YieldChanges>
-		<Row BuildingType="BUILDING_TLACHTLI" YieldType="YIELD_CULTURE" YieldChange="1"/>
+		<Update>
+			<Where BuildingType="BUILDING_TLACHTLI" YieldType="YIELD_CULTURE"/>
+			<Set>
+				<YieldChange>2</YieldChange>
+			</Set>
+		</Update>
 	</Building_YieldChanges>
 	<LeaderTraits>
 		<Row LeaderType="LEADER_MONTEZUMA" TraitType="TRAIT_LEADER_AGGRESSIVE_MILITARY"/>

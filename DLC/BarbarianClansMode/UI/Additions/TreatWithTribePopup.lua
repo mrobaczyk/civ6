@@ -233,9 +233,17 @@ end
 function ComposeTribeInfoString(tribeIndex:number)
 	
 	local strInfos = {};
+	local pBarbarianManager : table = Game.GetBarbarianManager();
+
+	-- Clan type
+	local eTribeType = pBarbarianManager:GetTribeType(tribeIndex);
+	local pBarbTribe = GameInfo.BarbarianTribes[eTribeType];
+	if (pBarbTribe ~= nil and pBarbTribe.Name ~= nil) then
+		local strClanType : string = Locale.Lookup(pBarbTribe.Name);
+		table.insert(strInfos, strClanType);
+	end
 
 	-- Conversion tip given only in chunky increments as a hint
-	local pBarbarianManager : table = Game.GetBarbarianManager();
 	local iCurrentPoints : number = pBarbarianManager:GetTribeConversionPoints(tribeIndex);
 	local iPointsToConvert : number = pBarbarianManager:GetTribeConversionPointsRequired(tribeIndex);
 	local iPointsRemaining = iPointsToConvert - iCurrentPoints;
@@ -259,7 +267,7 @@ function ComposeTribeInfoString(tribeIndex:number)
 		end
 	end
 
-	return FormatTableAsString(strInfos);
+	return FormatTableAsString(strInfos, ".");
 end
 
 -- ===========================================================================

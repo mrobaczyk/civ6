@@ -156,11 +156,13 @@ function OnImprovementAddedToMap(locX : number, locY : number, eImprovementType 
 	local pBarbarianManager : table = Game.GetBarbarianManager();
 
 	local tribeIndex : number = pBarbarianManager:GetTribeIndexAtLocation(locX,locY);
-	local barbType : number = pBarbarianManager:GetTribeNameType(tribeIndex);
-	local pBarbTribe : table = GameInfo.BarbarianTribeNames[barbType];
-	if(pBarbTribe ~= nil)then
-		local pPlot : table = Map.GetPlot(locX, locY);
-		CreateBarbarianTribeBanner(pPlot, pBarbTribe);
+	if (tribeIndex >= 0) then
+		local barbType : number = pBarbarianManager:GetTribeNameType(tribeIndex);
+		local pBarbTribe : table = GameInfo.BarbarianTribeNames[barbType];
+		if(pBarbTribe ~= nil)then
+			local pPlot : table = Map.GetPlot(locX, locY);
+			CreateBarbarianTribeBanner(pPlot, pBarbTribe);
+		end
 	end
 end
 
@@ -240,6 +242,12 @@ function CityBanner:Initialize( playerID: number, cityID : number, districtID : 
 	-- This was also a problem with WorldBuilder Advanced Mode so these exposures already existed.
 	UI.RefreshColorSet();
 	UI.RebuildColorDB();
+
+	local borderOverlay:object = UILens.GetOverlay("CultureBorders");
+	if borderOverlay ~= nil then
+		local backColor : number, frontColor : number = UI.GetPlayerColors(playerID);
+		borderOverlay:SetBorderColors(playerID, backColor, frontColor);
+	end
 
 	BASE_CBInitialize(self, playerID, cityID, districtID, bannerType, bannerStyle);
 end

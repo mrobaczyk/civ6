@@ -183,7 +183,21 @@ function OnPlayerDiscoveredHero( ePlayer:number, eClass:number, eSourceType:numb
 end
 
 -- ===========================================================================
-function OnUnitKilledLifespanExpired(iPlayerID : number, iUnitID : number)
+function NotificationHeroLifespanExpired(pNotification:table)
+	if (pNotification == nil) then
+		return;
+	end
+
+	local ePlayer:number = pNotification:GetPlayerID();
+	local x = pNotification:GetValue("PARAM_X0");
+	local y = pNotification:GetValue("PARAM_Y0");
+	local eHeroClass:number = pNotification:GetValue("PARAM_TARGET0");
+
+	OnUnitKilledLifespanExpired(ePlayer, eHeroClass, x, y);
+end
+
+-- ===========================================================================
+function OnUnitKilledLifespanExpired(iPlayerID : number, eHeroClass : number, x : number, y : number)
 
 	if (iPlayerID ~= Game.GetLocalPlayer()) then
 		return;
@@ -193,12 +207,6 @@ function OnUnitKilledLifespanExpired(iPlayerID : number, iUnitID : number)
 		return;
 	end
 	
-	local pUnit = pPlayer:GetUnits():FindID(iUnitID);
-	if (pUnit == nil) then
-		return;
-	end
-	
-	local eHeroClass:number = pUnit:GetHeroClassType();
 	local pGameHeroes:object = Game.GetHeroesManager();
 	local eOriginBuildingType:number = pGameHeroes:GetPlayerHeroOriginBuildingType(iPlayerID);
 	local pOriginBuildingInfo = GameInfo.Buildings[eOriginBuildingType];
@@ -225,11 +233,9 @@ function OnUnitKilledLifespanExpired(iPlayerID : number, iUnitID : number)
 		end
 	end
 
-	if pUnit then
-		Controls.LookAtHeroButton:RegisterCallback(Mouse.eLClick, function() 
-			OnLookAtHeroButton(pUnit:GetX(), pUnit:GetY()); 
-		end);
-	end
+	Controls.LookAtHeroButton:RegisterCallback(Mouse.eLClick, function() 
+		OnLookAtHeroButton(x, y); 
+	end);
 
 	UpdateEffectsContainerSize();
 
@@ -318,15 +324,15 @@ end
 
 -- ===========================================================================
 function Subscribe()
-	Events.UnitKilledLifespanExpired.Add(OnUnitKilledLifespanExpired);
 	Events.UnitDamageChanged.Add(OnUnitDamageChanged);
+	LuaEvents.NotificationPanel_HeroExpired.Add(NotificationHeroLifespanExpired);
 	LuaEvents.NotificationPanel_HeroDiscovered.Add(NotificationPlayerDiscoveredHero);
 end
 
 -- ===========================================================================
 function Unsubscribe()
-	Events.UnitKilledLifespanExpired.Remove(OnUnitKilledLifespanExpired);
 	Events.UnitDamageChanged.Remove(OnUnitDamageChanged);
+	LuaEvents.NotificationPanel_HeroExpired.Remove(NotificationHeroLifespanExpired);
 	LuaEvents.NotificationPanel_HeroDiscovered.Remove(NotificationPlayerDiscoveredHero);
 end
 

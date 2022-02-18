@@ -10,7 +10,7 @@
 		<Row Type="TRAIT_CIVILIZATION_HULCHE" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_CIVILIZATION_EJERCITO_PATRIOTA" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_CIVILIZATION_IMPROVEMENT_HACIENDA" Kind="KIND_TRAIT"/>
-    <Row Type="TRAIT_CIVILIZATION_COMANDANTE_GENERAL" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_COMANDANTE_GENERAL" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_CIVILIZATION_LLANERO" Kind="KIND_TRAIT"/>
 		<!-- Ability -->
 		<Row Type="ABILITY_EJERCITO_PATRIOTA_EXTRA_MOVEMENT" Kind="KIND_ABILITY"/>
@@ -69,7 +69,7 @@
 		<!--Gran Colombia-->
 		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_EJERCITO_PATRIOTA"/>
 		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_HACIENDA"/>
-    <Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_COMANDANTE_GENERAL"/>
+		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_COMANDANTE_GENERAL"/>
 		<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_CIVILIZATION_LLANERO"/>
 		<!--Maya-->
 		<Row CivilizationType="CIVILIZATION_MAYA" TraitType="TRAIT_CIVILIZATION_MAYAB"/>
@@ -252,11 +252,6 @@
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_COCOA" Tier="2"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_COTTON" Tier="2"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_DYES" Tier="2"/>
-		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_GYPSUM" Tier="2"/>
-		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_JADE" Tier="2"/>
-		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_MARBLE" Tier="2"/>
-		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_MERCURY" Tier="2"/>
-		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SALT" Tier="2"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SILK" Tier="2"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SPICES" Tier="2"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_SUGAR" Tier="2"/>
@@ -264,17 +259,27 @@
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_TOBACCO" Tier="2"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_WINE" Tier="2"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_INCENSE" Tier="2"/>
-		<Row CivilizationType="CIVILIZATION_MAYA" ResourceType="RESOURCE_IVORY" Tier="2"/>
 	</StartBiasResources>
 	<StartBiasTerrains>
 		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_GRASS" Tier="1"/>
 		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_PLAINS" Tier="1"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_GRASS_HILLS" Tier="1"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_PLAINS_HILLS" Tier="1"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_DESERT" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_SNOW" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_TUNDRA" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_DESERT_HILLS" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_SNOW_HILLS" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_TUNDRA_HILLS" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_DESERT_MOUNTAIN" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_SNOW_MOUNTAIN" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_MAYA" TerrainType="TERRAIN_TUNDRA_MOUNTAIN" Tier="3"/>
 	</StartBiasTerrains>
 	<Traits>
 		<!--Gran Colombia-->
 		<Row TraitType="TRAIT_CIVILIZATION_EJERCITO_PATRIOTA" Name="LOC_TRAIT_CIVILIZATION_EJERCITO_PATRIOTA_NAME" Description="LOC_TRAIT_CIVILIZATION_EJERCITO_PATRIOTA_DESCRIPTION"/>
 		<Row TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_HACIENDA" Name="LOC_IMPROVEMENT_HACIENDA_NAME"/>
-    <Row TraitType="TRAIT_CIVILIZATION_COMANDANTE_GENERAL" Name="LOC_UNIT_COMANDANTE_GENERAL_NAME"/>
+		<Row TraitType="TRAIT_CIVILIZATION_COMANDANTE_GENERAL" Name="LOC_UNIT_COMANDANTE_GENERAL_NAME"/>
 		<Row TraitType="TRAIT_CIVILIZATION_LLANERO" Name="LOC_TRAIT_CIVILIZATION_LLANERO_NAME"/>
 		<!--Maya-->
 		<Row TraitType="TRAIT_CIVILIZATION_MAYAB" Name="LOC_TRAIT_CIVILIZATION_MAYAB_NAME" Description="LOC_TRAIT_CIVILIZATION_MAYAB_DESCRIPTION"/>
@@ -389,12 +394,20 @@
 			<RequirementSetId>PLOT_HAS_FARMS_GRANCOLOMBIA_MAYA_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>PLOT_ADJACENT_TO_FARM_AND_OBSERVATORY_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
 	<Requirements>
 		<Row RequirementId="PLAYER_IS_MAYA" RequirementType="REQUIREMENT_PLAYER_TYPE_MATCHES"/>
 		<Row>
 			<RequirementId>REQUIRES_PLOT_HAS_FARM_GRANCOLOMBIA_MAYA</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_IMPROVEMENT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_TO_OBSERVATORY</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_DISTRICT_TYPE_MATCHES</RequirementType>
 		</Row>
 	</Requirements>
 	<RequirementArguments>
@@ -404,12 +417,25 @@
 			<Name>ImprovementType</Name>
 			<Value>IMPROVEMENT_FARM</Value>
 		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_TO_OBSERVATORY</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_OBSERVATORY</Value>
+		</Row>
 	</RequirementArguments>
 	<RequirementSetRequirements>
 		<Row RequirementSetId="MAYA_REQUIREMENTS" RequirementId="PLAYER_IS_MAYA"/>
 		<Row>
 			<RequirementSetId>PLOT_HAS_FARMS_GRANCOLOMBIA_MAYA_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_PLOT_HAS_FARM_GRANCOLOMBIA_MAYA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_ADJACENT_TO_FARM_AND_OBSERVATORY_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_FARM_GRANCOLOMBIA_MAYA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_ADJACENT_TO_FARM_AND_OBSERVATORY_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_ADJACENT_TO_OBSERVATORY</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<UnitAbilities>
@@ -424,7 +450,7 @@
 	<!-- AI Adjustments for Civs -->
 	<AiListTypes>
 		<Row ListType="MayanEmpire"/>
-    <Row ListType="MayanObservatory"/>
+		<Row ListType="MayanObservatory"/>
 	</AiListTypes>
 	<AiLists>
 		<Row ListType="MayanEmpire" LeaderType="TRAIT_CIVILIZATION_MAYAB" System="PlotEvaluations"/>
@@ -435,4 +461,10 @@
 		<Row ListType="MayanEmpire" Item="Resource Class" Favored="false" Value="3" StringVal="RESOURCECLASS_LUXURY" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES"/>
 		<Row ListType="MayanObservatory" Item="YIELD_SCIENCE" Favored="false" Value="25"/>
 	</AiFavoredItems>
+	<Improvement_Adjacencies>
+		<Row ImprovementType="IMPROVEMENT_FARM" YieldChangeId="Farm_FoodObservatoryAdjacency"/>
+	</Improvement_Adjacencies>
+	<Adjacency_YieldChanges>
+		<Row ID="Farm_FoodObservatoryAdjacency" Description="Placeholder" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_OBSERVATORY"/>
+	</Adjacency_YieldChanges>
 </GameInfo>

@@ -5,7 +5,7 @@
 -- DO NOT include any GreatWorksOverview files here or it will cause problems
 -- include("GreatWorksOverview");
 
-g_DEFAULT_GREAT_WORKS_ICONS["GREATWORKSLOT_PRODUCT"] = "ICON_GREATWORKOBJECT_RELIC";
+g_DEFAULT_GREAT_WORKS_ICONS["GREATWORKSLOT_PRODUCT"] = "ICON_GREATWORKOBJECT_PRODUCT";
 
 local SIZE_GREAT_WORK_ICON:number = 64;
 

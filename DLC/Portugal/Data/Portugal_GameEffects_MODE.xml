@@ -17,6 +17,7 @@
 		<Row Type="MODIFIER_ALL_UNIT_DEATHS_ADJUST_GAME_PROPERTY" Kind="KIND_MODIFIER"/>
 		<Row Type="MODIFIER_ALL_COMBAT_RESULTS_SPAWN_UNIT" Kind="KIND_MODIFIER"/>
 		<Row Type="MODIFIER_ALL_COMBAT_RESULTS_ADJUST_POPULATION" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_ALL_COMBAT_RESULTS_STEAL_POPULATION_AND_SPAWN_UNIT" Kind="KIND_MODIFIER"/>
 	</Types>
 	<DynamicModifiers>
 		<Row>
@@ -44,6 +45,11 @@
 			<CollectionType>COLLECTION_COMBAT_RESULTS</CollectionType>
 			<EffectType>EFFECT_ADJUST_POPULATION_FROM_PLOT</EffectType>
 		</Row>
+		<Row>
+			<ModifierType>MODIFIER_ALL_COMBAT_RESULTS_STEAL_POPULATION_AND_SPAWN_UNIT</ModifierType>
+			<CollectionType>COLLECTION_COMBAT_RESULTS</CollectionType>
+			<EffectType>EFFECT_STEAL_POP_ON_PLOT_TO_CREATE_UNIT</EffectType>
+		</Row>
 	</DynamicModifiers>
 	<GameModifiers>
 		<Row ModifierId="TOWERDEFENSE_ATTACH_ZOMBIES_TO_BARB"/>
@@ -56,7 +62,6 @@
 		<Row ModifierId="TOWERDEFENSE_ATTACH_ZOMBIE_COMBAT_STRENGTH_REDUCTION_FOR_AI_TO_ZOMBIES"/>
 		<Row ModifierId="TOWERDEFENSE_ATTACH_ZOMBIES_ARTIFACT_SPAWNS_TO_BARB"/>
 		<Row ModifierId="TOWERDEFENSE_ATTACH_DISTRICT_ATTACKS_TO_BARB"/>
-		<Row ModifierId="TOWERDEFENSE_KILL_POP_ON_DISTRICT_ATTACKS"/>
 	</GameModifiers>
 	<Modifiers>
 		<Row>
@@ -159,6 +164,11 @@
 		<Row>
 			<ModifierId>TOWERDEFENSE_KILL_POP_ON_DISTRICT_ATTACKS</ModifierId>
 			<ModifierType>MODIFIER_ALL_COMBAT_RESULTS_ADJUST_POPULATION</ModifierType>
+			<SubjectRequirementSetId>SHOULD_DISTRICT_ATTACK_SPAWN_ZOMBIE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TOWERDEFENSE_KILL_POP_AND_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
+			<ModifierType>MODIFIER_ALL_COMBAT_RESULTS_STEAL_POPULATION_AND_SPAWN_UNIT</ModifierType>
 			<SubjectRequirementSetId>SHOULD_DISTRICT_ATTACK_SPAWN_ZOMBIE</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
@@ -331,27 +341,27 @@
 		<Row>
 			<ModifierId>TOWERDEFENSE_ATTACH_DISTRICT_ATTACKS_TO_BARB</ModifierId>
 			<Name>ModifierId</Name>
-			<Value>TOWERDEFENSE_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</Value>
+			<Value>TOWERDEFENSE_KILL_POP_AND_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</Value>
 		</Row>
 		<Row>
-			<ModifierId>TOWERDEFENSE_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
+			<ModifierId>TOWERDEFENSE_KILL_POP_AND_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
 			<Name>UnitType</Name>
 			<Value>UNIT_MODE_ZOMBIE</Value>
 		</Row>
 		<Row>
-			<ModifierId>TOWERDEFENSE_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
+			<ModifierId>TOWERDEFENSE_KILL_POP_AND_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
 			<Name>AllowUniqueOverride</Name>
 			<Value>false</Value>
 		</Row>
 		<Row>
-			<ModifierId>TOWERDEFENSE_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
+			<ModifierId>TOWERDEFENSE_KILL_POP_AND_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
 			<Name>AllowAlternativeLocation</Name>
 			<Value>true</Value>
 		</Row>
 		<Row>
-			<ModifierId>TOWERDEFENSE_KILL_POP_ON_DISTRICT_ATTACKS</ModifierId>
+			<ModifierId>TOWERDEFENSE_KILL_POP_AND_SPAWN_ZOMBIE_ON_DISTRICT_ATTACKS</ModifierId>
 			<Name>Amount</Name>
-			<Value>-1</Value>
+			<Value>1</Value>
 		</Row>
 	</ModifierArguments>
   <RequirementSets>
@@ -671,7 +681,7 @@
     <Row>
       <RequirementId>REQUIREMENT_ZOMBIE_PERCENT_CHANCE_3</RequirementId>
       <Name>Index</Name>
-      <Value>2</Value>
+      <Value>1</Value>
     </Row>
     <Row>
       <RequirementId>REQUIREMENT_ZOMBIE_ARTIFACT_PERCENT_CHANCE</RequirementId>
@@ -717,6 +727,11 @@
 			<RequirementId>REQUIREMENT_DISTRICT_ZOMBIE_EFFECT_PERCENT_CHANCE</RequirementId>
 			<Name>Index</Name>
 			<Value>0</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIREMENT_DISTRICT_ZOMBIE_EFFECT_PERCENT_CHANCE</RequirementId>
+			<Name>PopulationScaling</Name>
+			<Value>true</Value>
 		</Row>
   </RequirementArguments>
 	<ModifierStrings>

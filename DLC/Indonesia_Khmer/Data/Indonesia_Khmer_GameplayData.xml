@@ -473,13 +473,14 @@
 	</UnitAiInfos>
 	<UnitReplaces>
 		<Row CivUniqueUnitType="UNIT_INDONESIAN_JONG" ReplacesUnitType="UNIT_FRIGATE"/>
+		<Row CivUniqueUnitType="UNIT_KHMER_DOMREY" ReplacesUnitType="UNIT_TREBUCHET"/>
 	</UnitReplaces>
 	<Units>
 		<Row UnitType="UNIT_INDONESIAN_JONG" BaseMoves="5" Cost="300" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_SEA" FormationClass="FORMATION_CLASS_NAVAL" Name="LOC_UNIT_INDONESIAN_JONG_NAME" Description="LOC_UNIT_INDONESIAN_JONG_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" PromotionClass="PROMOTION_CLASS_NAVAL_RANGED" Maintenance="5" Combat="45" MandatoryObsoleteTech="TECH_LASERS" RangedCombat="55" Range="2" PrereqCivic="CIVIC_MERCENARIES" TraitType="TRAIT_CIVILIZATION_UNIT_INDONESIAN_JONG"/>
-		<Row UnitType="UNIT_KHMER_DOMREY" BaseMoves="2" Cost="220" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_KHMER_DOMREY_NAME" Description="LOC_UNIT_KHMER_DOMREY_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_SIEGE" Maintenance="3" Combat="33" MandatoryObsoleteTech="TECH_GUIDANCE_SYSTEMS" Range="2" PrereqTech="TECH_MILITARY_ENGINEERING" Bombard="45" TraitType="TRAIT_CIVILIZATION_UNIT_KHMER_DOMREY"/>
+		<Row UnitType="UNIT_KHMER_DOMREY" BaseMoves="2" Cost="200" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_KHMER_DOMREY_NAME" Description="LOC_UNIT_KHMER_DOMREY_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_SIEGE" Maintenance="3" Combat="40" MandatoryObsoleteTech="TECH_GUIDANCE_SYSTEMS" Range="2" PrereqTech="TECH_MILITARY_ENGINEERING" Bombard="50" TraitType="TRAIT_CIVILIZATION_UNIT_KHMER_DOMREY"/>
 	</Units>
 	<UnitUpgrades>
-		<Row Unit="UNIT_KHMER_DOMREY" UpgradeUnit="UNIT_ARTILLERY"/>
+		<Row Unit="UNIT_KHMER_DOMREY" UpgradeUnit="UNIT_BOMBARD"/>
 		<Row Unit="UNIT_INDONESIAN_JONG" UpgradeUnit="UNIT_BATTLESHIP"/>
 	</UnitUpgrades>
 	<Unit_BuildingPrereqs>

@@ -17,17 +17,25 @@
 		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_ETHIOPIA" LeaderType="LEADER_MENELIK" Type="UNIT_ETHIOPIAN_OROMO_CAVALRY" Icon="ICON_UNIT_ETHIOPIAN_OROMO_CAVALRY" Name="LOC_UNIT_ETHIOPIAN_OROMO_CAVALRY_NAME" Description="LOC_UNIT_ETHIOPIAN_OROMO_CAVALRY_EXPANSION2_DESCRIPTION" SortIndex="10"/>
 		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_ETHIOPIA" LeaderType="LEADER_MENELIK" Type="IMPROVEMENT_ROCK_HEWN_CHURCH" Icon="ICON_IMPROVEMENT_ROCK_HEWN_CHURCH" Name="LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_NAME" Description="LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_EXPANSION2_DESCRIPTION" SortIndex="20"/>
 	</PlayerItems>
-  <Parameters>
-    <Row ParameterId="GameMode_SecretSocieties" Name="LOC_GAMEMODE_SECRETSOCIETIES_NAME" Description="LOC_GAMEMODE_SECRETSOCIETIES_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_SECRETSOCIETIES" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
-  </Parameters>
-  <ParameterCriteria>
-    <Row ParameterId="GameMode_SecretSocieties" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_RANDOM" Operator="NotEquals" ConfigurationValue="1" />
-  </ParameterCriteria>
-  <ParameterDependencies>
-    <Row ParameterId="GameMode_SecretSocieties" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Exists" ConfigurationValue="RULESET_EXPANSION_1,RULESET_EXPANSION_2"/>
-    <Row ParameterId="GameMode_SecretSocieties" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
-  </ParameterDependencies>
-  <GameModeItems>
-    <Row GameModeType="GAMEMODE_SECRETSOCIETIES" Name="LOC_GAMEMODE_SECRETSOCIETIES_NAME" Description="LOC_GAMEMODE_SECRETSOCIETIES_DESCRIPTION" Portrait="GAMEMODE_SECRETSOCIETIES_NEUTRAL" Background="GAMEMODE_SECRETSOCIETIES_BACKGROUND" Icon="ICON_GAMEMODE_SECRETSOCIETIES" SortIndex="10" />
-  </GameModeItems>
+	<Parameters>
+		<Row ParameterId="GameMode_SecretSocieties" Name="LOC_GAMEMODE_SECRETSOCIETIES_NAME" Description="LOC_GAMEMODE_SECRETSOCIETIES_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_SECRETSOCIETIES" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
+	</Parameters>
+	<ParameterCriteria>
+		<Row ParameterId="GameMode_SecretSocieties" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_RANDOM" Operator="NotEquals" ConfigurationValue="1"/>
+	</ParameterCriteria>
+	<ParameterDependencies>
+		<Row ParameterId="GameMode_SecretSocieties" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Exists" ConfigurationValue="RULESET_EXPANSION_1,RULESET_EXPANSION_2"/>
+		<Row ParameterId="GameMode_SecretSocieties" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
+	</ParameterDependencies>
+	<GameModeItems>
+		<Row GameModeType="GAMEMODE_SECRETSOCIETIES" Name="LOC_GAMEMODE_SECRETSOCIETIES_NAME" Description="LOC_GAMEMODE_SECRETSOCIETIES_DESCRIPTION" Portrait="GAMEMODE_SECRETSOCIETIES_NEUTRAL" Background="GAMEMODE_SECRETSOCIETIES_BACKGROUND" Icon="ICON_GAMEMODE_SECRETSOCIETIES" SortIndex="10"/>
+	</GameModeItems>
+	<MapLeaders>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_MENELIK"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_MENELIK"/>
+	</MapLeaders>
+	<MapStartPositions>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="4104" Type="LEADER" Value="LEADER_MENELIK"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="4104" Type="LEADER" Value="LEADER_MENELIK"/>
+	</MapStartPositions>
 </GameInfo>
