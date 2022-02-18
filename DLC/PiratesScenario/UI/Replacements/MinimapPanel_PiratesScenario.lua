@@ -37,6 +37,7 @@ local m_eBarbGoodyHutHash				:number = DB.MakeHash("BARB_GOODIES");
 --	Variables
 -- ===========================================================================
 local m_overlayDataDirty			:boolean = false; -- Has the data we are overlaying been changed and needs to be refreshed?
+local m_unitWaveDataDirty			:boolean = false; -- Has the data we use for the unit waves changed and needs to be refreshed?
 local m_treasureSearchZone			:boolean = false; -- Are we currently displaying an overlay for a treasure search zone?
 local m_infamousPirateSearchZone	:boolean = false; -- Are we currently displaying an overlay for an infamous pirate search zone?
 
@@ -76,6 +77,7 @@ function ResetOverlays()
 	end
 	
 	ResetPirateTreasureOverlay();
+	ResetAllUnitWaves();
 end
 
 function ClearScenarioOverlays()
@@ -260,6 +262,11 @@ function AddUnitWaves(waves :table, pUnit :object, waveColor :number, findTarget
 	return waves;
 end
 
+function ResetAllUnitWaves()
+	ResetUnitWaves(ENGLISH_POINTER_WAVES_OVERLAY_NAME, ms_EnglishPointerPolicy, UI.GetColorValueFromHexLiteral(0xFFFFFFFF), FindClosestUnseenEnemyUnitPlot);
+	ResetUnitWaves(DOWSING_ROD_WAVES_OVERLAY_NAME, ms_DowsingRodPolicy, UI.GetColorValueFromHexLiteral(0xFFFFFFFF), FindClosestTreasurePlot);
+end
+
 -- Currently hard coded for the English Pointer Relic's range.
 function FindClosestUnseenEnemyUnitPlot(pUnit :object)
 	local retPlotIndex :number = NO_PLOT;
@@ -324,6 +331,7 @@ end
 -- ===========================================================================
 function OnLocalPlayerChanged()
 	m_overlayDataDirty = true;  -- Next step is an refresh in OnGameCoreEventPlaybackComplete
+	m_unitWaveDataDirty = true;
 end
 
 -- ===========================================================================
@@ -334,7 +342,10 @@ end
 function OnGameCoreEventPlaybackComplete()	
 	if m_overlayDataDirty then
 		m_overlayDataDirty = false;
-		ContextPtr:RequestRefresh();			
+		ContextPtr:RequestRefresh();
+	elseif(m_unitWaveDataDirty == true) then
+		m_unitWaveDataDirty = false;
+		ResetAllUnitWaves();
 	end
 end
 
@@ -347,8 +358,7 @@ function OnTurnBegin(turn :number)
 		return;
 	end
 
-	ResetUnitWaves(ENGLISH_POINTER_WAVES_OVERLAY_NAME, ms_EnglishPointerPolicy, UI.GetColorValueFromHexLiteral(0xFFFFFFFF), FindClosestUnseenEnemyUnitPlot);
-	ResetUnitWaves(DOWSING_ROD_WAVES_OVERLAY_NAME, ms_DowsingRodPolicy, UI.GetColorValueFromHexLiteral(0xFFFFFFFF), FindClosestTreasurePlot);
+	m_unitWaveDataDirty = true;
 end
 
 -- ===========================================================================
@@ -424,6 +434,7 @@ end
 -- ===========================================================================
 function OnRefresh()
 	ResetPirateTreasureOverlay();
+	ResetAllUnitWaves();
 end
 
 -- ===========================================================================

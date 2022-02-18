@@ -10,7 +10,7 @@
 		<Row Type="TRAIT_LEADER_UNIT_BYZANTINE_TAGMA" Kind="KIND_TRAIT"/>
 		<!-- Ability -->
 		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Kind="KIND_ABILITY"/>
-    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Kind="KIND_ABILITY"/>
 		<!-- Agendas -->
 		<Row Type="TRAIT_AGENDA_BASIL_ZEALOT" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_AGENDA_AMBIORIX_ARMY" Kind="KIND_TRAIT"/>
@@ -19,9 +19,8 @@
 		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Tag="CLASS_MELEE"/>
 		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Tag="CLASS_RANGED"/>
 		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Tag="CLASS_ANTI_CAVALRY"/>
-    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_LIGHT_CAVALRY"/>
-    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_HEAVY_CAVALRY"/>
-    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_HEAVY_CAVALRY"/>
 	</TypeTags>
 	<Leaders>
 		<Row LeaderType="LEADER_AMBIORIX" Name="LOC_LEADER_AMBIORIX_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
@@ -59,7 +58,7 @@
 		<Row ListType="BasilFavoredBuildings" Item="BUILDING_STAR_FORT" Favored="true"/>
 		<Row ListType="GaulFavoredTechs" Item="TECH_APPRENTICESHIP" Favored="false"/>
 	</AiFavoredItems>
-	<TraitModifiers>	
+	<TraitModifiers>
 		<Row>
 			<TraitType>TRAIT_LEADER_AMBIORIX</TraitType>
 			<ModifierId>TRAIT_GRANT_CULTURE_UNIT_TRAINED</ModifierId>
@@ -68,10 +67,18 @@
 			<TraitType>TRAIT_LEADER_AMBIORIX</TraitType>
 			<ModifierId>TRAIT_NEIGHBOR_COMBAT</ModifierId>
 		</Row>
-    <Row>
-      <TraitType>TRAIT_LEADER_BASIL</TraitType>
-      <ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
-    </Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_BASIL</TraitType>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_BASIL</TraitType>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_LIGHT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_BASIL</TraitType>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_HEAVY</ModifierId>
+		</Row>
 	</TraitModifiers>
 	<Modifiers>
 		<Row>
@@ -87,15 +94,23 @@
 			<ModifierId>AMBIORIX_NEIGHBOR_COMBAT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_COMBAT_FOR_NUMBER_NEIGHBORS</ModifierType>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
-      <Permanent>true</Permanent>
-    </Row>
-    <Row>
-      <ModifierId>TRAIT_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_ADJUST_ENABLE_WALL_ATTACK_WHOLE_GAME_SAME_RELIGION</ModifierType>
-    </Row>
+		<Row>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_ENABLE_WALL_ATTACK_WHOLE_GAME_SAME_RELIGION</ModifierType>
+		</Row>
+			<Row>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_LIGHT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_ENABLE_WALL_ATTACK_WHOLE_GAME_SAME_RELIGION_PROMOTION_CLASS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_HEAVY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_ENABLE_WALL_ATTACK_WHOLE_GAME_SAME_RELIGION_PROMOTION_CLASS</ModifierType>
+		</Row>
 	</Modifiers>
 	<ModifierArguments>
 		<Row>
@@ -118,25 +133,31 @@
 			<Name>Amount</Name>
 			<Value>2</Value>
 		</Row>
-    <Row>
-      <ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
-      <Name>AbilityType</Name>
-      <Value>ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</Value>
-    </Row>
+		<Row>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_LIGHT</ModifierId>
+			<Name>PromotionClass</Name>
+			<Value>PROMOTION_CLASS_LIGHT_CAVALRY</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_ENABLE_WALL_ATTACK_HEAVY</ModifierId>
+			<Name>PromotionClass</Name>
+			<Value>PROMOTION_CLASS_HEAVY_CAVALRY</Value>
+		</Row>
 	</ModifierArguments>
 	<UnitAbilities>
 		<Row UnitAbilityType="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Name="LOC_ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS_NAME" Description="LOC_ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS_DESCRIPTION" Inactive="true"/>
-    <Row UnitAbilityType="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Name="LOC_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION_NAME" Description="LOC_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Name="LOC_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION_NAME" Description="LOC_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION_DESCRIPTION" Inactive="true"/>
 	</UnitAbilities>
 	<UnitAbilityModifiers>
 		<Row>
 			<UnitAbilityType>ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS</UnitAbilityType>
 			<ModifierId>AMBIORIX_NEIGHBOR_COMBAT</ModifierId>
 		</Row>
-    <Row>
-      <UnitAbilityType>ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</UnitAbilityType>
-      <ModifierId>TRAIT_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
-    </Row>
 	</UnitAbilityModifiers>
 	<FavoredReligions>
 		<Row LeaderType="LEADER_BASIL" ReligionType="RELIGION_ORTHODOXY"/>
@@ -150,9 +171,9 @@
 		<Row LeaderType="LEADER_BASIL" AgendaType="AGENDA_BASIL_ZEALOT"/>
 		<Row LeaderType="LEADER_AMBIORIX" AgendaType="AGENDA_AMBIORIX_ARMY"/>
 	</HistoricalAgendas>
-  <ExclusiveAgendas>
-    <Row AgendaOne="AGENDA_AMBIORIX_ARMY" AgendaTwo="AGENDA_STANDING_ARMY"/>
-  </ExclusiveAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_AMBIORIX_ARMY" AgendaTwo="AGENDA_STANDING_ARMY"/>
+	</ExclusiveAgendas>
 	<AgendaTraits>
 		<Row AgendaType="AGENDA_BASIL_ZEALOT" TraitType="TRAIT_AGENDA_BASIL_ZEALOT"/>
 		<Row AgendaType="AGENDA_AMBIORIX_ARMY" TraitType="TRAIT_AGENDA_AMBIORIX_ARMY"/>

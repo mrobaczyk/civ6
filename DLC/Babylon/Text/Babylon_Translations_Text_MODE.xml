@@ -282,7 +282,7 @@
       <Text>Embora os gêmeos tenham vencido todas as partidas, no momento da vitória eles pareceram ter sido vítimas de uma armadilha final, entrando em um forno que incinerou ambos. Mal sabiam os senhores de Xibalbá que os heróis gêmeos haviam dominado a arte da ressurreição. Apesar de virarem cinzas, eles renasceram em Xibalbá e viveram entre os moradores de lá, escondidos à vista de todos. Eles fingiram ser mágicos que podiam trazer de volta os mortos, e se dispuseram a demonstrar o truque para os senhores das trevas matando-os e trazendo-os de volta. Mas esse foi outro truque: quando os heróis gêmeos mataram os maiores deuses do submundo, revelaram suas identidades e alegremente se recusaram a ressuscitar os assassinos do pai.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HUNAHPU_CHAPTER_HISTORY_PARA_4" Language="pt_BR">
-      <Text>Como o jogo de bola, as histórias dos heróis gêmeos correram mundo. Elas podem ser encontradas em mitologias dos povos maia, navajo, mississipiano e ho-chunk.</Text>
+      <Text>Como o jogo de bola, as histórias dos heróis gêmeos correram o mundo. Elas podem ser encontradas em mitologias dos povos maia, navajo, mississipiano e ho-chunk.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_MAUI_CHAPTER_HISTORY_PARA_1" Language="pt_BR">
       <Text>O termo "Polinésia" é bem geral, abrangendo regiões da Aotearoa (Nova Zelândia), dos maori, até o Havaí e regiões entre eles. Embora chamar essa área simplesmente de "Polinésia" seja uma vasta simplificação, há mitos e lendas compartilhados nessa ampla região, conceitos que chegaram ao nosso idioma, como as palavras "tabu" e "mana". Um desses mitos em comum é o de Maui.</Text>
@@ -349,9 +349,6 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="pt_BR">
       <Text>Os cavaleiros mais famosos incluam Galahad, o Puro; Lancelot, o Bravo; Gawain, o Poderoso; e Percival, "o que era puro antes do Galahad entrar na jogada"; porém, há centenas de outros cavaleiros, incluindo Kay, Bedivere, Bors, e, claro, "Sir Que Não Aparece Neste Jogo".</Text>
-    </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="pt_BR">
-      <Text>Modos</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="pt_BR">
       <Text>Além de suas próprias habilidades, os Heróis também são potentes representantes da sua civilização. Ao final de cada turno, unidades de Herói adicionam +1 de Lealdade a todas as cidades dentro de 2 painéis de distância.</Text>
@@ -752,6 +749,9 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="pt_BR">
       <Text>Não pode ser usado em um painel melhorado.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="pt_BR">
+      <Text>Não pode ser usado em uma Maravilha.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="pt_BR">
       <Text>Nenhum recurso válido neste local.</Text>
     </Replace>
@@ -762,7 +762,7 @@
       <Text>Os Heróis só podem aparecer uma vez a cada Era.</Text>
     </Replace>
     <Replace Tag="LOC_HERO_EXPIRED_MESSAGE" Language="pt_BR">
-      <Text>[ICON_Lifespan] Expectativa de vida do Herói expirada</Text>
+      <Text>[ICON_Lifespan] A vida útil do herói expirou</Text>
     </Replace>
     <Replace Tag="LOC_HERO_KILLED_MESSAGE" Language="pt_BR">
       <Text>Herói morto</Text>
@@ -926,7 +926,7 @@
       <Text>Nossa susarania sobre {2_SourcePlayerName} revelou mais de seus mitos e suas lendas. Descobrimos {1_HeroName: plural 2?{1_HeroName: gender m?os Heróis; f?as Heroínas;}; 1?{1_HeroName: gender m?o Herói; f?a Heroína;};} [COLOR_LIGHTBLUE]{1_HeroName}![ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_HERO_DISCOVERED_DESC_NEW_CONTINENT" Language="pt_BR">
-      <Text>Descobrimos o continente de {2_ContinentName} e, com ele, muitos novos mitos e lendas. Descobrimos {1_HeroName: plural 2?{1_HeroName: gender m?os Heróis; f?as Heroínas;}; 1?{1_HeroName: gender m?o Herói; f?a Heroína;};} [COLOR_LIGHTBLUE]{1_HeroName}![ENDCOLOR]</Text>
+      <Text>Descobrimos um continente chamado {2_ContinentName} e, com ele, muitos novos mitos e lendas. Descobrimos {1_HeroName: plural 2?{1_HeroName: gender m?os Heróis; f?as Heroínas;}; 1?{1_HeroName: gender m?o Herói; f?a Heroína;};} [COLOR_LIGHTBLUE]{1_HeroName}![ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_HERO_DISCOVERED_DESC_NATURAL_WONDER" Language="pt_BR">
       <Text>A visão incrível {2_FeatureName: gender m?do; f?da; other?de;} {2_FeatureName} inspirou mitos e lendas locais. Descobrimos {1_HeroName: plural 2?{1_HeroName: gender m?os Heróis; f?as Heroínas;}; 1?{1_HeroName: gender m?o Herói; f?a Heroína;};} [COLOR_LIGHTBLUE]{1_HeroName}![ENDCOLOR]</Text>
@@ -958,7 +958,7 @@
       <Text>Você descobriu {1_HeroName: plural 2?{1_HeroName: gender m?os Heróis; f?as Heroínas;}; 1?{1_HeroName: gender m?o Herói; f?a Heroína;};} {1_HeroName}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_LOW_LIFESPAN_SUMMARY" Language="pt_BR">
-      <Text>Menos de {2_NumTurns} turnos restantes em [ICON_Lifespan] expectativa de vida para {HeroClassName}.</Text>
+      <Text>A [ICON_Lifespan]expectativa de vida de {1_HeroClassName} é de menos de {2_NumTurns} turnos.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_LOST_LIFESPAN_EXPIRED_SUMMARY" Language="pt_BR">
       <Text>{1_HeroClassName: plural 2?{1_HeroClassName: gender m?Nossos Heróis; f?Nossas Heroínas;}; 1?{1_HeroClassName: gender m?Nosso Herói; f?Nossa Heroína;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?atingiu; other?atingiram;} o fim da [ICON_Lifespan] expectativa de vida. {1_HeroClassName: plural 1?Pertence; other?Pertencem;} às páginas da história até conseguirmos reunir [ICON_Faith] fé suficiente para reconvocá-{1_HeroClassName: plural 1?lo; other?los;}.</Text>
@@ -1380,9 +1380,6 @@
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="fr_FR">
       <Text>Si les chevaliers les plus renommés incluent Galaad le pur, Lancelot le courageux, Gauvain le puissant et Perceval le "pur, mais moins pur que Galaad", ils étaient en réalité des centaines, dont Keu, Bedivere, Bohort, et bien sûr, "Sir Non-représenté-dans-ce-jeu".</Text>
     </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="fr_FR">
-      <Text>Modes</Text>
-    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="fr_FR">
       <Text>En plus de leurs propres compétences, les héros sont aussi de puissants représentants de votre civilisation. À la fin de chaque tour, ils font gagner un point de loyauté à toutes les villes dans un rayon de deux cases.</Text>
     </Replace>
@@ -1780,6 +1777,9 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="fr_FR">
       <Text>Utilisation impossible sur une case aménagée.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="fr_FR">
+      <Text>Ne peut pas être utilisé sur une merveille.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="fr_FR">
       <Text>Aucune ressource valide sur cette case.</Text>
     </Replace>
@@ -2164,72 +2164,72 @@
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_HIPPOLYTA_NAME" Language="de_DE">
-      <Text>Stadt Hippolyta widmen</Text>
+      <Text>Hingabe für Hippolyta</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_HIPPOLYTA_SHORT_NAME" Language="de_DE">
-      <Text>Hippolyta widmen</Text>
+      <Text>Hingabe für Hippolyta</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_HUNAHPU_NAME" Language="de_DE">
-      <Text>Stadt Hunahpú &amp; Xbalanqué widmen</Text>
+      <Text>Hingabe für Hunahpú &amp; Xbalanqué</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_HUNAHPU_SHORT_NAME" Language="de_DE">
-      <Text>Hunahpú &amp; Xbalanqué widmen</Text>
+      <Text>Hingabe für Hunahpú &amp; Xbalanqué</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_OYA_NAME" Language="de_DE">
-      <Text>Stadt Oyá widmen</Text>
+      <Text>Hingabe für Oyá</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_OYA_SHORT_NAME" Language="de_DE">
-      <Text>Oyá widmen</Text>
+      <Text>Hingabe für Oyá</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_MAUI_NAME" Language="de_DE">
-      <Text>Stadt Maui widmen</Text>
+      <Text>Hingabe für Maui</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_MAUI_SHORT_NAME" Language="de_DE">
-      <Text>Maui widmen</Text>
+      <Text>Hingabe für Maui</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_MULAN_NAME" Language="de_DE">
-      <Text>Stadt Mulan widmen</Text>
+      <Text>Hingabe für Mulan</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_MULAN_SHORT_NAME" Language="de_DE">
-      <Text>Mulan widmen</Text>
+      <Text>Hingabe für Mulan</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_SINBAD_NAME" Language="de_DE">
-      <Text>Stadt Sindbad widmen</Text>
+      <Text>Hingabe für Sindbad</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_SINBAD_SHORT_NAME" Language="de_DE">
-      <Text>Sindbad widmen</Text>
+      <Text>Hingabe für Sindbad</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_WUKONG_NAME" Language="de_DE">
-      <Text>Stadt Sun Wukong widmen</Text>
+      <Text>Hingabe für Sun Wukong</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
     <Replace Tag="LOC_PROJECT_CREATE_HERO_WUKONG_SHORT_NAME" Language="de_DE">
-      <Text>Sun Wukong widmen</Text>
+      <Text>Hingabe für Sun Wukong</Text>
       <Gender>neuter:no_article</Gender>
       <Plurality>1</Plurality>
     </Replace>
@@ -2451,9 +2451,6 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="de_DE">
       <Text>Zu den berühmtesten Rittern gehören Galahad, der Makellose, Lancelot, der Tapfere; Gawain, der Starke, und Parzival, der "Makellose-bevor-Galahad-erschien", doch es gibt noch Hunderte anderer Figuren, darunter Kay, Bedivere, Bors und natürlich "Sir Not-Appearing-in-this-Game".</Text>
-    </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="de_DE">
-      <Text>Modi</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="de_DE">
       <Text>Zusätzlich zu ihren eigenen Fähigkeiten sind Helden auch mächtige Vertreter Eurer Zivilisation. Am Ende jeder Runde fügen Heldeneinheiten allen Städten im Umkreis von 2 Geländefeldern +1 Loyalität hinzu.</Text>
@@ -2806,6 +2803,9 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="de_DE">
       <Text>Kann nicht bei einem modernisierten Geländefeld eingesetzt werden. </Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="de_DE">
+      <Text>Kann nicht auf einem Wunder benutzt werden.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="de_DE">
       <Text>Keine gültige Ressource an dieser Position.</Text>
     </Replace>
@@ -2816,7 +2816,7 @@
       <Text>Helden können nur einmal pro Zeitalter auftauchen.</Text>
     </Replace>
     <Replace Tag="LOC_HERO_EXPIRED_MESSAGE" Language="de_DE">
-      <Text>[ICON_Lifespan] Lebensdauer des Helden abgelaufen</Text>
+      <Text>[ICON_Lifespan] Lebensdauer abgelaufen</Text>
     </Replace>
     <Replace Tag="LOC_HERO_KILLED_MESSAGE" Language="de_DE">
       <Text>Held getötet</Text>
@@ -3426,9 +3426,6 @@
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="it_IT">
       <Text>I cavalieri più famosi sono Galahad, il puro; Lancillotto, il prode; Galvano, il possente; Percival, il "Più-puro-di-tutti-finché-non-è-arrivato-Galahad". Oltre a questo, però, ce ne sono centinaia di altri, tra cui Kay, Bedivere, Bors e, naturalmente, "Sir Non-Compare-in-questo-Gioco".</Text>
     </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="it_IT">
-      <Text>Modalità</Text>
-    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="it_IT">
       <Text>Oltre a possedere abilità speciali, gli Eroi rappresentano in modo potente la tua civiltà. Alla fine di ogni turno un Eroe aggiunge +1 Lealtà a tutte le città in un raggio di 2 caselle.</Text>
     </Replace>
@@ -3779,6 +3776,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="it_IT">
       <Text>Impossibile usare l'azione in una casella migliorata.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="it_IT">
+      <Text>Impossibile usare l'azione su una Meraviglia.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="it_IT">
       <Text>Non ci sono risorse valide in questa posizione.</Text>
@@ -4400,9 +4400,6 @@
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="ja_JP">
       <Text>とりわけ有名な騎士としては、純粋なるギャラハッド、勇敢なランスロット、力強きガウェイン、「ギャラハッドが登場するまでは誰よりも純粋だった」パーシバルなどが挙げられるが、他にもケイ、ベディヴィア、ボールスなど、このゲームには登場しない多数の騎士が名を連ねている。</Text>
     </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="ja_JP">
-      <Text>モード</Text>
-    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="ja_JP">
       <Text>英雄は強力な能力の持ち主であると同時に文明を導く存在でもあります。ターン終了時、英雄ユニットは2タイル以内にあるすべての都市の忠誠心を+1します。</Text>
     </Replace>
@@ -4482,7 +4479,7 @@
       <Text>英雄と偉人</Text>
     </Replace>
     <Replace Tag="LOC_HUD_GREATPEOPLE_TOOLTIP" Language="ja_JP">
-      <Text>英雄と偉人[NEWLINE][NEWLINE]利用可能な [ICON_GreatPerson] 偉人と [ICON_GreatPerson] 偉人獲得までの進捗を確認できます[NEWLINE]発見した英雄については、現在のステータスと能力を確認できます。</Text>
+      <Text>英雄と偉人[NEWLINE][NEWLINE]利用可能な [ICON_GreatPerson] 偉人と [ICON_GreatPerson] 偉人獲得までの進捗を確認できます。[NEWLINE]発見した英雄については、現在のステータスと能力を確認できます。</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_ORACLE_DESCRIPTION" Language="ja_JP">
       <Text>英雄の召喚に必要な [ICON_Faith] 信仰力-15%。偉人の後援に必要な [ICON_Faith] 信仰力-25%。この都市の区域は、該当するタイプの [ICON_GreatPerson] 偉人ポイント+2 (たとえば劇場広場なら [ICON_GreatWriter] 大著述家ポイント) 。丘陵にのみ建設可能。</Text>
@@ -4754,6 +4751,9 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="ja_JP">
       <Text>活用済みタイルでは使用できない。</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="ja_JP">
+      <Text>遺産には使用できない。</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="ja_JP">
       <Text>この場所に適した資源が存在しない。</Text>
     </Replace>
@@ -4941,7 +4941,7 @@
       <Text>[COLOR:Civ6Yellow]{1_OriginBuilding}[ENDCOLOR]があり、かつ海洋ユニットを訓練できる都市で「英雄の社」プロジェクトを完成させると、この英雄を獲得できます。1つの都市に複数の英雄を祀ることはできません。</Text>
     </Replace>
     <Replace Tag="LOC_DISCOVER_CLAIMED_HERO_HELP" Language="ja_JP">
-      <Text>この英雄は{1_PlayerName}がすでに獲得しています。</Text>
+      <Text>この英雄は{1_PlayerName}がすでに獲得している。</Text>
     </Replace>
     <Replace Tag="LOC_HERO_EXPIRED_DESC" Language="ja_JP">
       <Text>英雄[COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR]の [ICON_Lifespan] 寿命が尽き、文明から去りました。</Text>
@@ -5307,7 +5307,7 @@
       <Text>폭풍이 카리브해와 서아프리카해에 들이닥칠 때, 토네이도가 마을을 해칠 때, 요루바와 신세계 아프리카 종교 추종자들은 이것이 오야의 힘이라 믿습니다. 서아프리카의 요루바인은 401가지 신이 존재하는 종교 전통을 가졌습니다. 요루바가 노예가 되어 카리브해의 식민지에 끌려갔을 때, 그 풍습은 기독교과 결합되어 아이티 부두교 같은 새로운 종교를 탄생시켰습니다. 아프리카에서 오야는 한때 인간(또는 살갗을 얻은 영혼)이었던 여신인 오리샤입니다. 그 이름은 말 그대로 '그녀가 찢었다'는 뜻이며, 오야는 변화, 바람, 폭풍의 여신이자 니제르강의 지배자입니다. 아이티에서 오야는 아일랜드의 로아(아이티의 오리샤)인 마망 브리기테이자 가톨릭교에서 킬데어의 성 브리짓이라 부르는 인물로 변신했습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_OYA_CHAPTER_HISTORY_PARA_2" Language="ko_KR">
-      <Text>오야는 천둥 신 샹고의 남매이자 아내로, 목소리 큰 신의 곁에 머무른 아내들 중 한 명이었습니다. 그들이 함께 전쟁에 나섰을 때, 오야가 먼저 바람을 부르고 샹고가 잇따라 번개를 소환했습니다.</Text>
+      <Text>오야는 천둥 신 샹고의 누이이자 아내로, 목소리 큰 신의 곁에 머무른 아내들 중 한 명이었습니다. 그들이 함께 전쟁에 나섰을 때, 오야가 먼저 바람을 부르고 샹고가 잇따라 번개를 소환했습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_OYA_CHAPTER_HISTORY_PARA_3" Language="ko_KR">
       <Text>둘은 때때로 서로 싸웠습니다. 한때 오야는 전투 중에 머리에 버팔로 뿔 2개를 달고는 샹고를 찌르기 위해 달려들었습니다. 샹고는 맞서 싸우지 않았습니다. 그 대신 좋아하는 음식인 아카라(콩케이크)를 선물했죠. 오야는 기쁜 나머지 샹고에게 뿔을 넘겼습니다. 이제 샹고가 곤경에 처했을 때, 뿔을 쨍그랑대기만 하면 바람의 분노와 함께 오야가 등장합니다.</Text>
@@ -5347,9 +5347,6 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="ko_KR">
       <Text>가장 유명한 기사들로는 순수의 갤러해드, 용기의 랜슬롯, 힘의 가웨인, 그리고 '갤러해드가 등장하기 전까지 순수를 담당했던' 퍼시벌 등이 있고, 케이, 베디비어, 보어스, 그리고 물론 '이 게임에 등장하지 않는 경' 등 수백 명의 기사가 더 있습니다.</Text>
-    </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="ko_KR">
-      <Text>모드</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="ko_KR">
       <Text>영웅은 고유한 능력을 가진 것 외에도 문명의 강력한 대표자이기도 합니다. 매 턴이 끝날 때 영웅 유닛은 2타일 이내의 모든 도시에 충성심 +1을 부여합니다.</Text>
@@ -5701,6 +5698,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="ko_KR">
       <Text>향상된 타일에 사용할 수 없습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="ko_KR">
+      <Text>불가사의에 사용할 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="ko_KR">
       <Text>이 위치에 자원이 없습니다.</Text>
@@ -6348,9 +6348,6 @@
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="pl_PL">
       <Text>Wśród najsłynniejszych rycerzy Okrągłego Stołu wymienić można Galahada zwanego czystym, Lancelota słynącego z odwagi, potężnego Gawaina czy Parsifala, który był „Najczystszy-Nim-Pojawił-Się-Galahad”. Oprócz nich do zakonu należały setki innych wojowników, w tym Kay, Bedivere, Bors i – oczywiście – „Sir Nie-Pojawiającego-Się-W-Tej-Grze”.</Text>
     </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="pl_PL">
-      <Text>Tryby</Text>
-    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="pl_PL">
       <Text>Bohaterowie są również potężnymi reprezentantami twojej cywilizacji. Na zakończenie każdej tury jednostki bohaterów zapewniają +1 lojalności wszystkim miastom znajdującym się w promieniu 2 pól.</Text>
     </Replace>
@@ -6750,6 +6747,9 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="pl_PL">
       <Text>Nie można użyć na nieulepszonym polu.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="pl_PL">
+      <Text>Nie można użyć na cudzie.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="pl_PL">
       <Text>We wskazanej lokalizacji brak odpowiednich zasobów.</Text>
     </Replace>
@@ -6955,7 +6955,7 @@
       <Text>[ICON_Lifespan] Kres życia {1_HeroClassName[2]} nastąpi za mniej niż {2_NumTurns} {2_NumTurns: plural 1?turę; 2?tury; other?tur;}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_LOST_LIFESPAN_EXPIRED_SUMMARY" Language="pl_PL">
-      <Text>{1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?Nasz bohater; feminine?Nasza bohaterka; other?Nasz bohater;}; 2?{1_HeroClassName: gender masculine?Nasi bohaterowie; other?Nasze bohaterki;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?osiągnął; feminine?osiągnęła; other?osiągnął;}; 2?{1_HeroClassName: gender masculine?osiągnęli; other?osiągnęły;};} [ICON_Lifespan] kres swego życia. {1_HeroClassName: plural 1?{HeroClassName: gender masculine?Przeszedł; feminine?Przeszła; other?Przeszedł;}; 2?{1_HeroClassName: gender masculine?Przeszli; other?Przeszły;};} do historii, ale {1_HeroClassName: plural 1?powróci; other?powrócą;}, gdy uda nam się zgromadzić dość [ICON_Faith] wiary, by ponownie {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?go; feminine?ją; other?go;}; 2?{1_HeroClassName: gender masculine?ich; other?je;};} przywołać.</Text>
+      <Text>{1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?Nasz bohater; feminine?Nasza bohaterka; other?Nasz bohater;}; 2?{1_HeroClassName: gender masculine?Nasi bohaterowie; other?Nasze bohaterki;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?osiągnął; feminine?osiągnęła; other?osiągnął;}; 2?{1_HeroClassName: gender masculine?osiągnęli; other?osiągnęły;};} [ICON_Lifespan] kres swego życia. {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?Przeszedł; feminine?Przeszła; other?Przeszedł;}; 2?{1_HeroClassName: gender masculine?Przeszli; other?Przeszły;};} do historii, ale {1_HeroClassName: plural 1?powróci; other?powrócą;}, gdy uda nam się zgromadzić dość [ICON_Faith] wiary, by ponownie {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?go; feminine?ją; other?go;}; 2?{1_HeroClassName: gender masculine?ich; other?je;};} przywołać.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CAN_PURCHASE_WITH_FAITH_SUMMARY" Language="pl_PL">
       <Text>Zgromadziliśmy dość [ICON_Faith] wiary, aby przyzwać ponownie {1_HeroClassName[4]} w mieście {2_CityName}.</Text>
@@ -6964,7 +6964,7 @@
       <Text>{1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?Bohater; feminine?Bohaterka; other?Bohater;}; 2?{1_HeroClassName: gender masculine?Bohaterowie; other?Bohaterki;};}, {1_HeroClassName}, {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?poległ; feminine?poległa; other?poległ;}; 2?{1_HeroClassName: gender masculine?polegli; other?poległy;};} w walce.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_EXPIRED_OTHER_SUMMARY" Language="pl_PL">
-      <Text>{1_HeroClassName: plural 1?{HeroClassName: gender masculine?Bohater; feminine?Bohaterka; other?Bohater;}; 2?{1_HeroClassName: gender masculine?Bohaterowie; other?Bohaterki;};} {1_HeroClassName} {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?osiągnął; feminine?osiągnęła; other?osiągnął;}; 2?{1_HeroClassName: gender masculine?osiągnęli; other?osiągnęły;};} [ICON_Lifespan] kres swego życia.</Text>
+      <Text>{1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?Bohater; feminine?Bohaterka; other?Bohater;}; 2?{1_HeroClassName: gender masculine?Bohaterowie; other?Bohaterki;};} {1_HeroClassName} {1_HeroClassName: plural 1?{1_HeroClassName: gender masculine?osiągnął; feminine?osiągnęła; other?osiągnął;}; 2?{1_HeroClassName: gender masculine?osiągnęli; other?osiągnęły;};} [ICON_Lifespan] kres swego życia.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CLAIMED_OTHER_SUMMARY" Language="pl_PL">
       <Text>Cywilizacja {1_CivName[2]} pozyskała {2_HeroName[4]}!</Text>
@@ -7261,7 +7261,7 @@
       <Text>Срок жизни героя</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_LIFESPAN_PARA_1" Language="ru_RU">
-      <Text>Герои появляются в игре на ограниченное количество ходов. Оно отображается на панели информации в виде особой характеристики: [ICON_Lifespan] «Срок жизни». Если в течение этого срока героя не убивают, он покидает игру автоматически. Выберите героя, чтобы [ICON_Lifespan] срок его жизни отобразился интерфейсом.</Text>
+      <Text>Герои появляются в игре на ограниченное количество ходов. Оно отображается на панели информации в виде особой характеристики: [ICON_Lifespan] «Срок жизни». Если в течение этого срока героя не убивают, он покидает игру автоматически. Выберите героя, чтобы отобразить [ICON_Lifespan] срок его жизни в интерфейсе.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_RECALLING_TITLE" Language="ru_RU">
       <Text>Повторный призыв героя</Text>
@@ -7321,7 +7321,7 @@
       <Text>В детоубийстве была виновата Гера, которая в очередной раз прокляла героя. Искупая грехи, Геракл и совершил свои знаменитые подвиги: убил чудовищного льва (и стал носить его шкуру); победил гидру — многоголовую змею с ядовитой кровью, отращивавшую по две новые головы на месте каждой отрубленной; украл пояс королевы амазонок Ипполиты и совершил еще ряд деяний, включавших убийство чудовищ, кражу скотины и уборку конюшен.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HERCULES_CHAPTER_HISTORY_PARA_3" Language="ru_RU">
-      <Text>Финал истории Геракла трагичен. Когда кентавр попытался украсть его жену, Геракл поразил его стрелой, смоченной в ядовитой крови гидры. Перед смертью кентавр нашептал жене героя, что нужно пропитать его кровью тунику Геракла — якобы кровь похотливого кентавра заставит супруга еще сильнее полюбить ее. Женщина последовала этому совету, и Геракл, пораженный ядом, скончался в страшных мучениях. Эта история вновь подтвердила древнюю истину: тому, кто сложен как греческий бог, лучше ходить без рубашки.</Text>
+      <Text>Финал истории Геракла трагичен. Когда кентавр попытался украсть его жену, Геракл поразил того стрелой, смоченной в ядовитой крови гидры. Перед смертью кентавр нашептал жене героя, что нужно пропитать его кровью тунику Геракла — якобы кровь похотливого кентавра заставит супруга еще сильнее полюбить ее. Женщина последовала этому совету, и Геракл, пораженный ядом, скончался в страшных мучениях. Эта история вновь подтвердила древнюю истину: тому, кто сложен как греческий бог, лучше ходить без рубашки.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HERCULES_CHAPTER_HISTORY_PARA_4" Language="ru_RU">
       <Text>После смерти Геракла легенды о нем не стерлись из людской памяти. Сказание о трагически погибшем герое, сыне верховного бога, было широко известно во всем Средиземноморье во времена Римской империи — там его называли Геркулесом. Даже скульпторы индийского царства Гандхара, вдохновленные греческим эпосом, изваяли защитника Будды Ваджрапани в виде Геракла в львиной шкуре и с характерной палицей.</Text>
@@ -7330,7 +7330,7 @@
       <Text>Хотя в наши дни королеву Химико можно причислить к легендарным фигурам, скорее всего, она была реальным человеком. Химико правила страной Яматай на островах, которые китайцы называли Ва и которые в наши дни называют Японией. Китайские летописи гласят, что Химико отправила дары в королевство Цао Вэй: самое северное из трех государств, правивших Китаем в III веке нашей эры. В хрониках император Китая называет Химико «Королевой Ва (Японии) и другом Вэй».</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HIMIKO_CHAPTER_HISTORY_PARA_2" Language="ru_RU">
-      <Text>Куда более захватывающими легенды о Химико становятся, когда в них появляется колдовство. Китайские летописцы утверждают, что королева подчинила всех жителей Ва ворожбой, что жила она в огромном замке, где в прислугу и в стражи брали только женщин, и лишь один мужчина мог переступать его порог — он поставлял в замок продовольствие. Эту загадочность подтверждают и японские летописи, где Химико отождествляется с несколькими божественными сущностями: верховной шаманкой богини Солнца Аматерасу или женой-шаманкой священного змея. В последней истории Химико (под именем Ямато-тото-хи-момо-со-бимэ но Микото) живет в счастливом браке с божественным существом, которое появляется в доме только по ночам. Она умоляет супруга остаться до утра, чтобы поглядеть на него при солнечном свете, но он сомневается. В конце концов муж обещает показаться ей в сумочке, но просит не удивляться. На следующее утро она заглядывает в сумочку и видит свернувшегося в ней прекрасного белого змея. Химико в ужасе вскрикивает, и божественный змей принимает человеческое обличье. Он зол, что она нарушила обещание не удивляться, и покидает ее, после чего охваченная горем Химико убивает себя.</Text>
+      <Text>Куда более захватывающими легенды о Химико становятся тогда, когда в них появляется колдовство. Китайские летописцы утверждают, что королева подчинила всех жителей Ва ворожбой, что жила она в огромном замке, где в прислугу и в стражи брали только женщин, и лишь один мужчина мог переступать его порог — он поставлял в замок продовольствие. Эту загадочность подтверждают и японские летописи, где Химико отождествляется с несколькими божественными сущностями: верховной шаманкой богини Солнца Аматерасу или женой-шаманкой священного змея. В последней истории Химико (под именем Ямато-тото-хи-момо-со-бимэ но Микото) живет в счастливом браке с божественным существом, которое появляется в доме только по ночам. Она умоляет супруга остаться до утра, чтобы поглядеть на него при солнечном свете, но он сомневается. В конце концов муж обещает показаться ей в сумочке, но просит не удивляться. На следующее утро она заглядывает в сумочку и видит свернувшегося в ней прекрасного белого змея. Химико в ужасе вскрикивает, и божественный змей принимает человеческое обличье. Он зол из-за того, что она нарушила обещание не удивляться, и покидает ее, после чего охваченная горем Химико убивает себя.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_HIMIKO_CHAPTER_HISTORY_PARA_3" Language="ru_RU">
       <Text>Химико окружена множеством легенд, рисующих нам образ выдающейся женщины. Она сочетала в себе черты правительницы и шамана, что, несомненно, смущало патриархальных летописцев того времени. Ее история повествует о почти божественной власти, какой порой обладают харизматичные люди. В популярной японской культуре ее рисуют то как соблазнительницу, то как старую мудрую правительницу, и образ ее пользуется неизменной любовью.</Text>
@@ -7421,9 +7421,6 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="ru_RU">
       <Text>Среди наиболее известных рыцарей — Галахад Непорочный, Ланселот Отважный, Гавейн Могучий и Персиваль «Бывший-непорочным-до-появления-Галахада». Но помимо них за Столом сидели и сотни других, в том числе Кей, Бедивер, Борс и, конечно же, сэр «Не-упомянутый-в-нашей-игре».</Text>
-    </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="ru_RU">
-      <Text>Режимы</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="ru_RU">
       <Text>Помимо собственных способностей герои также представляют вашу цивилизацию. В конце каждого хода герои дают +1 к лояльности во всех городах в пределах 2 клеток.</Text>
@@ -7823,6 +7820,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="ru_RU">
       <Text>Нельзя использовать на улучшенной клетке.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="ru_RU">
+      <Text>Нельзя использовать на чуде.</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="ru_RU">
       <Text>В этой местности нет подходящих ресурсов.</Text>
@@ -8325,7 +8325,7 @@
       <Text>据当地传说，亚瑟死后长眠于阿瓦隆，如果不列颠再次受到威胁，他便会重回人间力挽狂澜。流传的种种民间故事，让亚瑟王的形象丰满而富有戏剧性。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_BEOWULF_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
-      <Text>贝奥武夫的故事在公元一千年左右以古英语著成，它也是最早流传下来的古英语作品之一。贝奥武夫是耶阿特人的英雄，这个人群聚居在现代瑞典的国土中。贝奥武夫来到古丹麦国王赫罗斯加的宫廷效力，此时国王的土地正遭到一个名叫格伦戴尔的怪物不断侵袭。格伦戴尔是一种食人怪物，在主题上可能与斯堪的纳维亚神话中的巨魔有关，但史诗中将他描述为该隐（源自圣经）遭到诅咒的后裔。</Text>
+      <Text>贝奥武夫的故事在公元一千年左右以古英语著成，也是最早流传下来的古英语作品之一。贝奥武夫是耶阿特人的英雄，这个人群聚居在现代瑞典的国土中。贝奥武夫来到古丹麦国王赫罗斯加的宫廷效力，此时国王的土地正遭到一个名叫格伦戴尔的怪物不断侵袭。格伦戴尔是一种食人怪物，在主题上可能与斯堪的纳维亚神话中的巨魔有关，但史诗中将他描述为该隐（源自圣经）遭到诅咒的后裔。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_BEOWULF_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
       <Text>贝奥武夫为格伦戴尔设下了陷阱。他在大厅里装睡，假扮受害者。夜里，刺骨的雾蹿了进来，一同进来的还有怪物。贝奥武夫没有使用武器，而是想和野兽公平地进行力量较量。二者手臂纠缠、激烈搏斗。贝奥武夫赤手空拳扯掉了格伦戴尔的一只胳膊。这只巨魔受到致命伤害，一瘸一拐地逃回了家。格伦戴尔的女巫母亲发现儿子奄奄一息之后勃然大怒，贝奥武夫也只能再次面对苦战。</Text>
@@ -8382,7 +8382,7 @@
       <Text>“波利尼西亚”一词含义较广，包括从毛利奥特亚罗瓦（新西兰）到夏威夷以及它们之间的地区。仅用“波利尼西亚”一词来指代这一地区是巨大的简化，一些神话和传说也在大范围之内流传，这些概念使它成为其他语言中类似于禁忌和魔力的东西。其中流传的便有毛伊的神话。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_MAUI_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
-      <Text>在毛利神话中，毛伊的早期生活颇为艰辛。他被自己的生母扔进海里，在天父朗伊的哺育下才侥幸存活。回家之后，面对着四个满心狐疑兄弟的刁难，他展示出自己学习到的魔法，一一轻松化解。然后他便着手创造我们熟知的世界。他的兄弟拒绝提供任何鱼饵，他便制作了一个魔法颚骨、并以自己的血为诱饵捕捉到巨大的鱼，使之成为新西兰的北岛。当他离开，去寻找祭司（毛利纹面师）进行必要的仪式时，他的兄弟们便开始动手切鱼。这便是为何奥特亚罗瓦拥有山脉和山谷，而不像鱼的侧腹一样平整。他继续改变着世界：为人类寻找火种、创造第一只狗，等等。</Text>
+      <Text>在毛利神话中，毛伊的早期生活颇为艰辛。他被自己的生母扔进海里，在天父朗伊的哺育下才侥幸存活。回家乡之后，面对着四个满心狐疑兄弟的刁难，他展示出自己学习到的魔法，并一一轻松化解。然后他便着手创造我们熟知的世界。他的兄弟拒绝提供任何鱼饵，他便制作了一个魔法颚骨、并以自己的血为诱饵捕捉到巨大的鱼，使之成为新西兰的北岛。当他离开，去寻找祭司（毛利纹面师）进行必要的仪式时，他的兄弟们便开始动手切鱼。这便是为何奥特亚罗瓦拥有山脉和山谷，而不像鱼的侧腹一样平整。他继续改变着世界：为人类寻找火种、创造第一只狗，等等。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_MAUI_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
       <Text>他的最后一个任务是为人类赢得永生，而要做到这点，他必须爬过一个斜躺女神的身体。故事说，他必须这样做，并且不能有人嘲笑他。如果他顺利通过，女神将死去，人类将获得永生。他的朋友，也就是各种各样的鸟群，虽然竭尽最大努力，但仍忍不住哈哈大笑。于是毛伊死了，人类也无法得到永生。</Text>
@@ -8418,7 +8418,7 @@
       <Text>在一次航行中，辛巴达发现自己被抛弃在一座岛上，而这座岛居然是一只鲸鱼。之后，他被一只巨鹰带走，这只巨鹰生活在一个布满钻石的山谷里，以巨蟒为食。在其他航行中，辛巴达还有以下故事：与国王斗智、与独眼巨人斗勇，并尝试在村民对有毒植物上瘾的岛上保持清醒头脑。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_SINBAD_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
-      <Text>这些故事听起来似乎有些耳熟，的确如此。辛巴达的一些故事取材于奥德修斯的航行（例如独眼巨人和食莲者的故事）。在西欧陷入黑暗时代的混乱时，中东成为了智慧库，以及向希腊和罗马学习的宝库，并与丝绸之路的辉煌联系在一起。而丝绸之路也是故事的来源之一：巨鹰和巨蛇的传说与印度神鸟迦楼罗和蛇神那伽的传说非常相似。辛巴达的航行反映出了世界核心帝国的无尽财富与想象力。</Text>
+      <Text>这些故事听起来似乎有些耳熟，的确如此。辛巴达的一些故事取材于奥德修斯的航行（好比如独眼巨人以及食莲者的故事）。在西欧陷入黑暗时代的混乱时，中东成为了智慧库，以及向希腊和罗马学习的宝库，并与丝绸之路的辉煌联系在一起。而丝绸之路也是故事的来源之一：巨鹰和巨蛇的传说与印度神鸟迦楼罗和蛇神那伽的传说非常相似。辛巴达的航行反映出了世界核心帝国的无尽财富与想象力。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_WUKONG_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
       <Text>孙悟空是中国传说中最为著名、最受喜爱的人物之一。围绕他有着无数的故事和传说。这个形象的创作灵感拥有各种来源。公元150年左右，中国汉朝从印度引进了佛教，同时也带回了大量印度传说，其中便有史诗《罗摩衍那》。而这当中最好的配角是猴王哈奴曼，他是英雄罗摩的忠实助手。在之前的中国历朝历代中，猴子便已经被视为吉祥的动物，所以“神奇猴王”的概念非常流行，进而获得了自己的艺术生命。</Text>
@@ -8443,9 +8443,6 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
       <Text>圆桌骑士中最著名的有“至纯之人”加拉哈德、“勇敢之人”兰斯洛特、“大力之人”高文、“纯洁之人”珀西瓦里和其他数百位骑士。例如凯、贝德维尔、鲍斯，以及影片《巨蟒与圣杯》中的“查无此人爵士”。</Text>
-    </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="zh_Hans_CN">
-      <Text>模式</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="zh_Hans_CN">
       <Text>除自身拥有能力外，英雄还是文明强大的代表人物。每回合结束时，英雄单位将为2个单元格内的所有城市+1忠诚度。</Text>
@@ -8798,6 +8795,9 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="zh_Hans_CN">
       <Text>无法在已改良的单元格上使用。</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="zh_Hans_CN">
+      <Text>无法用于奇观。</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="zh_Hans_CN">
       <Text>此位置无有效资源。</Text>
     </Replace>
@@ -8994,7 +8994,7 @@
       <Text>我们的英雄[COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR]在战斗中倒下了。</Text>
     </Replace>
     <Replace Tag="LOC_HEROES_HELP_RECALL_DESC" Language="zh_Hans_CN">
-      <Text>英雄寿命耗尽或被杀之后，可以在其[COLOR:Civ6Yellow]{1_OriginBuilding}[ENDCOLOR]所在的城市中使用信仰值进行购买，以将其召回。[NEWLINE][NEWLINE]英雄召回后将恢复全部 [ICON_Lifespan] 寿命和行动次数，但召回所需的 [ICON_Faith] 信仰值会随着召回次数而递增。每个时代仅限召回英雄一次。</Text>
+      <Text>英雄在寿命耗尽或被杀之后，可以在其[COLOR:Civ6Yellow]{1_OriginBuilding}[ENDCOLOR]所在的城市中使用信仰值进行购买，以将其召回。[NEWLINE][NEWLINE]英雄召回后将恢复全部 [ICON_Lifespan] 寿命和行动次数，但召回所需的 [ICON_Faith] 信仰值会随着召回次数而递增。每个时代仅限召回英雄一次。</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_DISCOVERED_SUMMARY" Language="zh_Hans_CN">
       <Text>您发现了英雄{1_HeroName}。</Text>
@@ -9444,9 +9444,6 @@
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="es_ES">
       <Text>Aunque los caballeros más famosos son Galahad el puro, Lancelot el valiente, Gawain el poderoso y Perceval "el que era puro antes de que llegase Galahad", había otros cientos, como Kay, Bedivere, Bors y, por supuesto, "el llamado Sir... que no figura en este juego".</Text>
     </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="es_ES">
-      <Text>Modos</Text>
-    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="es_ES">
       <Text>Además de sus propias habilidades, los Héroes son también representantes poderosos de tu civilización. Al final de cada turno, las unidades de Héroes suman +1 a la Lealtad de todas las ciudades que se encuentren dentro de 2 casillas.</Text>
     </Replace>
@@ -9846,6 +9843,9 @@
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="es_ES">
       <Text>No se puede usar en una casilla mejorada.</Text>
     </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="es_ES">
+      <Text>No se puede usar en una Maravilla.</Text>
+    </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="es_ES">
       <Text>No hay recursos válidos en esta ubicación.</Text>
     </Replace>
@@ -10036,7 +10036,7 @@
       <Text>Este Héroe ya ha sido reclutado por {1_PlayerName}.</Text>
     </Replace>
     <Replace Tag="LOC_HERO_EXPIRED_DESC" Language="es_ES">
-      <Text>{1: plural 1?{1: gender masculine?El héroe {1_UnitName} ha; feminine?La heroína {1_UnitName} ha;}; other?Los héroes {1_UnitName} han;};} [COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR] llegado al final de su Esperanza de vida y se {1: plural 1?ha; other?han;} ido del país.</Text>
+      <Text>{1: plural 1?{1: gender masculine?El héroe [COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR] ha; feminine?La heroína [COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR] ha;}; other?Los héroes [COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR] han;} llegado al final de su Esperanza de vida y se {1: plural 1?ha; other?han;} ido del país.</Text>
     </Replace>
     <Replace Tag="LOC_HERO_KILLED_DESC" Language="es_ES">
       <Text>{1: plural 1?{1: gender masculine?El héroe {1_UnitName} ha; feminine?La heroína {1_UnitName} ha;}; other?Los héroes {1_UnitName} han;};} [COLOR_LIGHTBLUE]{1_UnitName}[ENDCOLOR] caído en combate.</Text>
@@ -10048,7 +10048,7 @@
       <Text>Has descubierto {1: plural 1?{1: gender masculine?al héroe; feminine?a la heroína;}; other?a los héroes;} {1_HeroName}.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_LOW_LIFESPAN_SUMMARY" Language="es_ES">
-      <Text>{1_HeroClassName: plural 1?{1: gender masculine?A nuestro héroe le quedan; feminine?A nuestra heroína le quedan;}; other?A nuestros héroes les quedan;} {1_HeroClassName} menos de {2_NumTurns} {2: plural 1?turno; other?turnos;} de Esperanza de vida [ICON_Lifespan].</Text>
+      <Text>A {1_HeroClassName} {1_HeroClassName: plural 1?{1: gender masculine?le quedan; feminine?le quedan;}; other?les quedan;} menos de {2_NumTurns} {2: plural 1?turno; other?turnos;} de Esperanza de vida [ICON_Lifespan].</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_LOST_LIFESPAN_EXPIRED_SUMMARY" Language="es_ES">
       <Text>{1_HeroClassName: plural 1?{1: gender masculine?Nuestro héroe ; feminine?Nuestra heroína ;}; other?Nuestros héroes ;}{1_HeroClassName} {1_HeroClassName: plural 1?ha; other?han;} llegado al final de su Esperanza de vida [ICON_Lifespan]. Ahora {1_HeroClassName: plural 1?forma; other?forman;} parte de la historia hasta que reunamos la Fe [ICON_Faith] suficiente para volver a {1_HeroClassName: plural 1?{1: gender masculine?llamarlo; feminine?llamarla;}; other?llamarlos;}</Text>
@@ -10063,7 +10063,7 @@
       <Text>{1_HeroClassName: plural 1?{1: gender masculine?El héroe ; feminine?La heroína ;}; other?Los héroes ;}{1_HeroClassName} {1_HeroClassName: plural 1?ha; other?han;} llegado al final de su Esperanza de vida [ICON_Lifespan].</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CLAIMED_OTHER_SUMMARY" Language="es_ES">
-      <Text>¡{1:plural 2?{1:gender masculine?Los {1_CivName} han;feminine?Las {1_CivName} han;}; other?{1:gender *:la?La {1_CivName} ha;*:el?El {1_CivName} ha;other?{1_CivName} ha;};} incorporado {2: plural 1?{1: gender masculine?al héroe; feminine?a la heroína;}; other?a los héroes;} {2_HeroName}!</Text>
+      <Text>¡{1:plural 2?{1:gender masculine?Los {1_CivName} han;feminine?Las {1_CivName} han;}; other?{1:gender *:la?La {1_CivName} ha;*:el?El {1_CivName} ha;other?{1_CivName} ha;};} incorporado {2: plural 1?{2: gender masculine?al héroe; feminine?a la heroína;}; other?a los héroes;} {2_HeroName}!</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_HERO_CLAIMED_OTHER_UNMET_SUMMARY" Language="es_ES">
       <Text>¡Un jugador anónimo ha incorporado {1: plural 1?{1: gender masculine?al héroe; feminine?a la heroína;}; other?a los héroes;} {1_HeroName}!</Text>
@@ -10466,9 +10466,6 @@
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_QUESTING_KNIGHT_CHAPTER_HISTORY_PARA_3" Language="zh_Hant_HK">
       <Text>其它最負盛名的武士包含了「純潔」的加拉哈德，「勇敢」的蘭斯洛特，「全能」的高文，還有「加拉哈德登場以前是純潔」的珀西瓦爾；其餘還有上百個，包括凱爵士、貝德維爾、鮑斯、以及理所當然的「未於本作登場」爵士。</Text>
     </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="zh_Hant_HK">
-      <Text>模式</Text>
-    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_UNITS_PARA_21" Language="zh_Hant_HK">
       <Text>除了自身的能力，英雄也是屬於你文明的強大代表。在每回合結束時，英雄單位可使2單元格內所有城市+1忠誠度。</Text>
     </Replace>
@@ -10819,6 +10816,9 @@
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_IMPROVEMENT" Language="zh_Hant_HK">
       <Text>無法使用在已有改良設施的單元格上。</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_ON_WONDER" Language="zh_Hant_HK">
+      <Text>無法在奇觀上使用。</Text>
     </Replace>
     <Replace Tag="LOC_UNITCOMMAND_FAILURE_HERO_NO_VALID_RESOURCES" Language="zh_Hant_HK">
       <Text>沒有資源在此地點上有效。</Text>

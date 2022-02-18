@@ -1,4 +1,12 @@
 <GameInfo>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_PRASAT"/>
+			<Set>
+				<Description>LOC_BUILDING_PRASAT_HEROES_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Buildings>
 	<BuildingModifiers>
 		<!--Prasat replaces Temple: include Hero faith cost mods-->
 		<Row BuildingType="BUILDING_PRASAT" ModifierId="MODIFIER_TEMPLE_RECALL_FAITH_COST_DISCOUNT_ANANSI"/>

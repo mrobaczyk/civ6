@@ -3,7 +3,6 @@
 --	Pirates Scenario
 -- ===========================================================================
 
-include "CityBannerManager"
 include "PiratesScenario_Shared_Script"
 
 
@@ -18,8 +17,8 @@ local ms_visitTavernHash :number = DB.MakeHash(g_unitCommandSubTypeNames.VISIT_T
 -- ===========================================================================
 --	CACHE BASE FUNCTIONS
 -- ===========================================================================
-BASE_CityBannerUpdateStats = CityBanner.UpdateStats;
-BASE_LateInitialize = LateInitialize;
+local BASE_CityBannerUpdateStats = CityBanner.UpdateStats;
+local BASE_LateInitialize = LateInitialize;
 
 
 -- ===========================================================================

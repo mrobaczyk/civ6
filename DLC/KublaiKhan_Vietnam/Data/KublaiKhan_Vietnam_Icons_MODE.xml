@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <IconTextureAtlases>
+    <Row Name="ICON_ATLAS_MONOPOLIES_AND_CORPS" IconSize="64"	 IconsPerRow="1" IconsPerColumn="1" Filename="Monopolies.dds"/>
+
+	<Row Name="ICON_ATLAS_MONOPOLIES_FONT_ICON" Baseline="4" IconSize="22" IconsPerRow="1" IconsPerColumn="1" Filename="Monopolies_Products22.dds"/>
+
+	<Row Name="ICON_ATLAS_MONOPOLIES_NOTIFICATIONS" IconSize="100" IconsPerRow="4" IconsPerColumn="4" Filename="Monopolies_Notifications100.dds"/>
+	<Row Name="ICON_ATLAS_MONOPOLIES_NOTIFICATIONS" IconSize="40" IconsPerRow="4" IconsPerColumn="4" Filename="Monopolies_Notifications40.dds"/>
+
+    <Row Name="ICON_ATLAS_MONOPOLIES_UNIT_ACTIONS" IconSize="256" IconsPerRow="4" IconsPerColumn="1" Filename="Monopolies_UnitActions256.dds"/>
+    <Row Name="ICON_ATLAS_MONOPOLIES_UNIT_ACTIONS" IconSize="80" IconsPerRow="4" IconsPerColumn="1" Filename="Monopolies_UnitActions80.dds"/>
+    <Row Name="ICON_ATLAS_MONOPOLIES_UNIT_ACTIONS" IconSize="50" IconsPerRow="4" IconsPerColumn="1" Filename="Monopolies_UnitActions50.dds"/>
+    <Row Name="ICON_ATLAS_MONOPOLIES_UNIT_ACTIONS" IconSize="38" IconsPerRow="4" IconsPerColumn="1" Filename="Monopolies_UnitActions38.dds"/>
+  </IconTextureAtlases>
+
+  <IconDefinitions>
+	<Row Name="ICON_GAMEMODE_MONOPOLIES"         Atlas="ICON_ATLAS_MONOPOLIES_AND_CORPS" Index="0"/>
+	<Row Name="GreatWork_Product" Atlas="ICON_ATLAS_MONOPOLIES_FONT_ICON" Index="0"/>
+	<Row Name="ICON_NOTIFICATION_INDUSTRY_OPPORTUNITY"  	   Atlas="ICON_ATLAS_MONOPOLIES_NOTIFICATIONS" Index="0"/>
+    <Row Name="ICON_NOTIFICATION_CORPORATION_OPPORTUNITY"      Atlas="ICON_ATLAS_MONOPOLIES_NOTIFICATIONS" Index="1"/>
+    <Row Name="ICON_NOTIFICATION_PRODUCT_OPPORTUNITY"          Atlas="ICON_ATLAS_MONOPOLIES_NOTIFICATIONS" Index="2"/>
+    <Row Name="ICON_NOTIFICATION_CORPORATION_PRODUCT_CREATED"  Atlas="ICON_ATLAS_MONOPOLIES_NOTIFICATIONS" Index="3"/> 
+
+	<Row Name="ICON_IMPROVEMENT_INDUSTRY"		Atlas="ICON_ATLAS_MONOPOLIES_UNIT_ACTIONS" Index="0"/>
+	<Row Name="ICON_IMPROVEMENT_CORPORATION"	Atlas="ICON_ATLAS_MONOPOLIES_UNIT_ACTIONS" Index="1"/>
+  </IconDefinitions>
+</GameInfo>
+
+

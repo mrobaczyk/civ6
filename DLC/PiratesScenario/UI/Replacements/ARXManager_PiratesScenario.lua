@@ -19,6 +19,7 @@ local m_LocalPlayer:table;
 local m_LocalPlayerID:number;
 local fullStr:string = "";
 local m_bIsPortrait:boolean = false;
+local startYear : number = 1620;
 m_kEras = nil;	-- Table of all era names sorted properly.
 
 
@@ -265,96 +266,6 @@ function IsCustomVictoryType(victoryType:string)
 	return true;
 end
 
-function DrawVictoryProgress()
-    local strDate = Calendar.MakeYearStr(Game.GetCurrentGameTurn());
-    local playerConfig:table = PlayerConfigurations[Game.GetLocalPlayer()];
-    local name:string = Locale.Lookup(playerConfig:GetPlayerName());
-    local bShownAType = false;
-
-    fullStr = fullStr.."<p><span class=title>" .. Locale.Lookup("LOC_ARX_VICTORY_PROGRESS", name) .."</span><br><br>";
-
-	if(Game.IsVictoryEnabled("VICTORY_TECHNOLOGY")) then
-		PopulateVictoryType("VICTORY_TECHNOLOGY", "<img src=Victory_Science.png align=left>" .. Locale.Lookup("LOC_WORLD_RANKINGS_SCIENCE_TAB").."<br>");
-        bShownAType = true;
-	end
-	if(Game.IsVictoryEnabled("VICTORY_CULTURE")) then
-		PopulateVictoryType("VICTORY_CULTURE", "<img src=Victory_Culture.png align=left>" .. Locale.Lookup("LOC_WORLD_RANKINGS_CULTURE_TAB").."<br>");
-        bShownAType = true;
-	end
-	if(Game.IsVictoryEnabled("VICTORY_CONQUEST")) then
-		PopulateVictoryType("VICTORY_CONQUEST", "<img src=Victory_Domination.png align=left>" .. Locale.Lookup("LOC_WORLD_RANKINGS_DOMINATION_TAB").."<br>");
-        bShownAType = true;
-	end
-	if(Game.IsVictoryEnabled("VICTORY_RELIGIOUS")) then
-		PopulateVictoryType("VICTORY_RELIGIOUS", "<img src=Victory_Religion.png align=left>" .. Locale.Lookup("LOC_WORLD_RANKINGS_RELIGION_TAB").."<br>");
-        bShownAType = true;
-	end
-
-	-- Add custom (modded) victory types
-	for row in GameInfo.Victories() do
-		local victoryType:string = row.VictoryType;
-		if IsCustomVictoryType(victoryType) and Game.IsVictoryEnabled(victoryType) and not bShownAType then
-            fullStr = fullStr .. Locale.Lookup("LOC_HUD_CITY_NOT_APPLICABLE");
-            bShownAType = true;
-		end
-	end
-
-    if not bShownAType then
-        fullStr = fullStr .. Locale.Lookup("LOC_HUD_CITY_NOT_APPLICABLE"); 
-    end
-
-    UI.SetARXTagContentByID("Content", fullStr);
-end
-
--- ===========================================================================
--- Draw the Gossip Log screen
--- ===========================================================================
-function DrawGossipLog()
-    local strDate = Calendar.MakeYearStr(Game.GetCurrentGameTurn());
-    local iNumAdded:number = 0;
-    local iMaxAdded:number;
-    local playerConfig:table = PlayerConfigurations[Game.GetLocalPlayer()];
-    local name:string = Locale.Lookup(playerConfig:GetPlayerName());
-
-    if m_bIsPortrait then
-        iMaxAdded = 35;
-    else
-        iMaxAdded = 22;
-    end
-
-    fullStr = fullStr.."<p><span class=title>"..name.." "..Locale.Lookup("LOC_DIPLOMACY_INTEL_GOSSIP_COLON").."</span><br>";
-
-    --Only show the gossip generated in the last 100 turns.  Otherwise we can end up with a TON of gossip, and everything bogs down.
-    for iPlayer = 0, PlayerManager.GetWasEverAliveCount() - 1 do
-        if PlayerManager.IsAlive(iPlayer) then
-        	local gossipManager = Game.GetGossipManager();
-        	local iCurrentTurn = Game.GetCurrentGameTurn();
-        	local earliestTurn = iCurrentTurn - 100;
-        	local gossipStringTable = gossipManager:GetRecentVisibleGossipStrings(earliestTurn, m_LocalPlayerID, iPlayer);
-        	for i, currTable:table in pairs(gossipStringTable) do
-
-        		local gossipString = currTable[1];
-        		local gossipTurn = currTable[2];
-
-        		if (gossipString ~= nil) then
-                    if iNumAdded < iMaxAdded then
-                        fullStr = fullStr..gossipString.."</br>";
-                        iNumAdded = iNumAdded + 1;
-                    end
-        		else
-        			break;
-        		end
-        	end
-        end
-    end
-
-    if iNumAdded == 0 then
-        fullStr = fullStr..Locale.Lookup("LOC_DIPLOMACY_GOSSIP_ITEM_NONE_THIS_TURN").."</p>";
-    end
-
-    UI.SetARXTagContentByID("Content", fullStr);
-end
-
 -- ===========================================================================
 -- Clear ARX if exiting to main menu
 -- ===========================================================================
@@ -411,11 +322,13 @@ function RefreshARX()
 			end
 		end
 
+		local startTurn : number = GameConfiguration.GetStartTurn();
+		local currentYear : number = Game.GetCurrentGameTurn() + startYear - startTurn + 1;
+        local strDate:string = tostring(currentYear).." AD";
+
         fullStr = "<span class=title>".. playerName .."</span>";
         -- and turn and date
 		fullStr = fullStr.."<br><span class=content>" .. Locale.Lookup("LOC_TOP_PANEL_CURRENT_TURN").." "..tostring(turn);
-
-        local strDate:string = Calendar.MakeYearStr(turn);
 
         if m_bIsPortrait then
             fullStr = fullStr..", "..strDate;
@@ -425,15 +338,7 @@ function RefreshARX()
                        
 		fullStr = fullStr.."</span>";
 
-        if m_ScreenMode == 0 then
-            DrawTop4();
-        end
-        if m_ScreenMode == 1 then
-            DrawVictoryProgress();
-        end
-        if m_ScreenMode == 2 then
-            DrawGossipLog();
-        end
+		DrawTop4();
     end
 end
 
@@ -448,17 +353,6 @@ end
 -- Handle ARX taps
 -- ===========================================================================
 function OnARXTap(szButtonID:string)
-    if szButtonID == "top5" then
-        m_ScreenMode = 0;
-	end
-    if szButtonID == "victory" then
-        m_ScreenMode = 1;
-	end
-    if szButtonID == "gossip" then
-        m_ScreenMode = 2;
-    end
-
-    RefreshARX();
 end
 
 -- ===========================================================================

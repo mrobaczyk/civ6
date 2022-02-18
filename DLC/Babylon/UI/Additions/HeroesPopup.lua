@@ -177,6 +177,8 @@ function OnPlayerDiscoveredHero( ePlayer:number, eClass:number, eSourceType:numb
 		end);
 	end
 
+	UpdateEffectsContainerSize();
+
 	Open();
 end
 
@@ -228,6 +230,8 @@ function OnUnitKilledLifespanExpired(iPlayerID : number, iUnitID : number)
 			OnLookAtHeroButton(pUnit:GetX(), pUnit:GetY()); 
 		end);
 	end
+
+	UpdateEffectsContainerSize();
 
 	Open();
 end
@@ -286,6 +290,8 @@ function OnUnitDamageChanged(iPlayerID:number, iUnitID:number, iDamage:number)
 		end);
 	end
 
+	UpdateEffectsContainerSize();
+
 	Open();
 end
 
@@ -305,8 +311,13 @@ function NotificationPlayerDiscoveredHero(pNotification:table)
 end
 
 -- ===========================================================================
+function UpdateEffectsContainerSize()
+	local newSizeY:number = Controls.ImageDescStack:GetSizeY();
+	Controls.EventEffectsContainer:SetSizeY(Controls.MainContainer:GetSizeY() - newSizeY - 10);
+end
+
+-- ===========================================================================
 function Subscribe()
-	Events.PlayerDiscoveredHero.Add(OnPlayerDiscoveredHero);
 	Events.UnitKilledLifespanExpired.Add(OnUnitKilledLifespanExpired);
 	Events.UnitDamageChanged.Add(OnUnitDamageChanged);
 	LuaEvents.NotificationPanel_HeroDiscovered.Add(NotificationPlayerDiscoveredHero);
@@ -314,7 +325,6 @@ end
 
 -- ===========================================================================
 function Unsubscribe()
-	Events.PlayerDiscoveredHero.Remove(OnPlayerDiscoveredHero);
 	Events.UnitKilledLifespanExpired.Remove(OnUnitKilledLifespanExpired);
 	Events.UnitDamageChanged.Remove(OnUnitDamageChanged);
 	LuaEvents.NotificationPanel_HeroDiscovered.Remove(NotificationPlayerDiscoveredHero);
@@ -338,5 +348,6 @@ function Initialize()
 
 	Controls.ContinueButton:RegisterCallback( Mouse.eLClick, OnContinueButton );
 	Controls.ScreenConsumer:RegisterCallback( Mouse.eRClick, Close );
+	Controls.ImageDescStack:RegisterSizeChanged( UpdateEffectsContainerSize );
 end
 Initialize();

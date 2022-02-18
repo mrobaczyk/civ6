@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_VIETNAMESE_VOI_CHIEN" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_VOI_CHIEN" Kind="KIND_ABILITY"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_VOI_CHIEN" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<TypeTags>
+		<Row Type="UNIT_VIETNAMESE_VOI_CHIEN" Tag="CLASS_RANGED"/>
+		<Row Type="UNIT_VIETNAMESE_VOI_CHIEN" Tag="CLASS_VOI_CHIEN"/>
+		<Row Type="ABILITY_VOI_CHIEN" Tag="CLASS_VOI_CHIEN"/>
+	</TypeTags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_VIETNAMESE_VOI_CHIEN" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_VIETNAMESE_VOI_CHIEN" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_VIETNAMESE_VOI_CHIEN" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_VIETNAMESE_VOI_CHIEN" ReplacesUnitType="UNIT_CROSSBOWMAN"/>
+	</UnitReplaces>
+	<Units>
+		<Row UnitType="UNIT_VIETNAMESE_VOI_CHIEN" Cost="200" Maintenance="3" BaseMoves="3" BaseSightRange="3" ZoneOfControl="false" Domain="DOMAIN_LAND" Combat="35" RangedCombat="40" Range="2" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_VIETNAMESE_VOI_CHIEN_NAME" Description="LOC_UNIT_VIETNAMESE_VOI_CHIEN_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_ADVANCED_BALLISTICS" PrereqTech="TECH_MACHINERY" TraitType="TRAIT_CIVILIZATION_UNIT_VIETNAMESE_VOI_CHIEN"/>
+	</Units>
+  <Units_Presentation>
+    <Row UnitType="UNIT_VIETNAMESE_VOI_CHIEN" UIFlagOffset="6"/>
+  </Units_Presentation>
+	<UnitUpgrades>
+		<Row Unit="UNIT_VIETNAMESE_VOI_CHIEN" UpgradeUnit="UNIT_FIELD_CANNON"/>
+	</UnitUpgrades>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_VOI_CHIEN" Name="LOC_ABILITY_VOI_CHIEN_NAME" Description="LOC_ABILITY_VOI_CHIEN_DESCRIPTION"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_VOI_CHIEN</UnitAbilityType>
+			<ModifierId>VOI_CHIEN_MOVE_AND_ATTACK</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>VOI_CHIEN_MOVE_AND_ATTACK</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ATTACK_AND_MOVE</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>VOI_CHIEN_MOVE_AND_ATTACK</ModifierId>
+			<Name>CanMove</Name>
+			<Value>true</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

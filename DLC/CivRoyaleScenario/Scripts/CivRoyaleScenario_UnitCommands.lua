@@ -361,6 +361,10 @@ function OnScenarioCommand_UnitSacrifice(eOwner : number, iUnitID : number)
 
 	-- Flyover text
 	local message :string  = Locale.Lookup("LOC_UNIT_SACRIFICE_WORLDTEXT");
+	local pOwnerConfig = PlayerConfigurations[eOwner];
+	if(pOwnerConfig ~= nil and pOwnerConfig:GetCivilizationTypeName() == g_CivTypeNames.Pirates) then
+		message = Locale.Lookup("LOC_UNIT_SACRIFICE_WORLDTEXT_PIRATE");
+	end
 
 	local messageData :table = {
 		MessageType = 0;

@@ -43,14 +43,27 @@
 		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_POLAND" LeaderType="LEADER_JADWIGA" LeaderAbilityDescription="LOC_TRAIT_LEADER_LITHUANIAN_UNION_HEROES_DESCRIPTION"/>
 		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_POLAND" LeaderType="LEADER_JADWIGA" LeaderAbilityDescription="LOC_TRAIT_LEADER_LITHUANIAN_UNION_HEROES_DESCRIPTION"/>
 	</GameModePlayerInfoOverrides>
+	<GameModePlayerItemOverrides>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:StandardPlayers" CivilizationType="CIVILIZATION_NORWAY" LeaderType="LEADER_HARDRADA" Type="BUILDING_STAVE_CHURCH" Description="LOC_BUILDING_STAVE_CHURCH_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_NORWAY" LeaderType="LEADER_HARDRADA" Type="BUILDING_STAVE_CHURCH" Description="LOC_BUILDING_STAVE_CHURCH_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_NORWAY" LeaderType="LEADER_HARDRADA" Type="BUILDING_STAVE_CHURCH" Description="LOC_BUILDING_STAVE_CHURCH_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:StandardPlayers" CivilizationType="CIVILIZATION_KHMER" LeaderType="LEADER_JAYAVARMAN" Type="BUILDING_PRASAT" Description="LOC_BUILDING_PRASAT_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_KHMER" LeaderType="LEADER_JAYAVARMAN" Type="BUILDING_PRASAT" Description="LOC_BUILDING_PRASAT_HEROES_DESCRIPTION"/>
+		<Row GameModeType="GAMEMODE_HEROES" Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_KHMER" LeaderType="LEADER_JAYAVARMAN" Type="BUILDING_PRASAT" Description="LOC_BUILDING_PRASAT_HEROES_DESCRIPTION"/>
+	</GameModePlayerItemOverrides>
 	<PlayerInfoOverrideQueries>
 		<Row QueryId="HeroesModePlayerInfoOverrides"/>
 	</PlayerInfoOverrideQueries>
+	<PlayerItemOverrideQueries>
+		<Row QueryId="HeroesModePlayerItemOverrides"/>
+	</PlayerItemOverrideQueries>
 	<Queries>
 		<Row QueryId="HeroesModePlayerInfoOverrides" SQL="SELECT * FROM GameModePlayerInfoOverrides WHERE GameModeType = 'GAMEMODE_HEROES'"/>
+		<Row QueryId="HeroesModePlayerItemOverrides" SQL="SELECT * FROM GameModePlayerItemOverrides WHERE GameModeType = 'GAMEMODE_HEROES'"/>
 	</Queries>
 	<QueryCriteria>
 		<Row QueryId="HeroesModePlayerInfoOverrides" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HEROES" Operator="Equals" ConfigurationValue="1"/>
+		<Row QueryId="HeroesModePlayerItemOverrides" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HEROES" Operator="Equals" ConfigurationValue="1"/>
 	</QueryCriteria>
 	<MapLeaders>
 		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_HAMMURABI"/>

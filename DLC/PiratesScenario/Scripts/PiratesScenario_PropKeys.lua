@@ -49,6 +49,7 @@ g_unitPropertyKeys = {
 	LastChainShotHit				= "LastChainShotHit",		-- Last turn this unit was hit by the chain shot ability.
 	CapturePlayerID					= "CapturePlayerID",		-- If set, indicates the playerID of the player that captured this unit (before it gets deleted)
 	CaptureUnitID					= "CaptureUnitID",			-- If set, indicates the unitID of the unit that captured this unit (before it gets deleted)
+	InfamousPirateID				= "InfamousPirateID",		-- g_InfamousPirates index for infamous pirate units.
 }
 
 -- Plot Dynamic Property Keys
@@ -232,6 +233,7 @@ TREASURE_FLEET_MIN_TURNS			= 5;		-- Min number of turns between starting new tre
 TREASURE_FLEET_MAX_TURNS			= 10;		-- Max number of turns between starting new treasure fleets.
 TREASURE_FLEET_GOLD_BOATS			= 2;		-- Number of gold ships per treasure fleet.
 TREASURE_FLEET_GUARD_BOATS			= 3;		-- Number of guard ships (brigs) per treasure fleet.
+TREASURE_FLEET_MIN_DISTANCE			= 10;		-- [Hex Distance] Treasure fleets must start from cities that are this many hexes away from any pirate player units.
 
 TREASURE_POINTS_TREASURE_GOLD_BOAT	= 20;		-- Treasure Points rewarded for sinking a treasure fleet gold ship.
 TREASURE_POINTS_PLUNDER_TREASURE	= 5;		-- Treasure Points rewarded for plundering a treasure chest.

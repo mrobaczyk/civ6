@@ -938,6 +938,51 @@
 		<Row Tag="LOC_HUD_UNIT_ACTION_AUTOEXPLORE_PROMOTION_AVAILABLE">
 			<Text>Promotion available</Text>
 		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_GREAT_PERSON_WILL_RETIRE">
+			<Text>[COLOR_RED]This will consume the Great Person.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_GREAT_PERSON_WILL_INVALIDATE_BUILDS">
+			<Text>[COLOR_RED]After this, the Great Person will not be able to build any tile improvements.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_REQUIRES_NO_GREAT_PERSON_ACTIVATION">
+			<Text>This Great Person has already used one of its Action Charges, so they cannot build anything</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_INDUSTRY_INVALID_ALREADY_HAVE_RESOURCE_INDUSTRY">
+			<Text>You already have an Industry for this resource.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_INDUSTRY_INVALID_ALREADY_HAVE_RESOURCE_CORPORATION">
+			<Text>You already have a Corporation for this resource.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_INDUSTRY_INVALID_RESOURCE_AMOUNT">
+			<Text>You need to control at least {1_AmountNeeded} improved tiles of a Luxury Resource to form an Industry. You currently control {2_AmountControlled} of this resource.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_INDUSTRY_INVALID_RESOURCE_CLASS">
+			<Text>Industries can only be created on a Luxury Resource.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_INDUSTRY_INVALID_ALREADY_HAVE_CITY_INDUSTRY">
+			<Text>This city already has an Industry, so it cannot support another.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_CORPORATION_INVALID_ALREADY_HAVE_RESOURCE_CORPORATION">
+			<Text>You already have a Corporation for this resource.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_CORPORATION_INVALID_RESOURCE_AMOUNT_TO_STEAL">
+			<Text>Another player already owns this Corporation with {1_OtherPlayerAmountControlled} of the resource. To steal it and form your own, you need more of the resource than them. You currently control {2_AmountControlled} improved tiles of this resource.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_CORPORATION_INVALID_NEED_RESOURCE_INDUSTRY">
+			<Text>You must create an Industry for this resource, with a Builder unit, before a Corporation is possible.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_CORPORATION_INVALID_RESOURCE_AMOUNT">
+			<Text>You need to control at least {1_AmountNeeded} improved tiles of a Luxury Resource to form a Corporation. You currently control {2_AmountControlled} of this resource.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_UNIT_ACTION_CORPORATION_INVALID_NEED_INDUSTRY_TILE">
+			<Text>You can only create a Corporation on a tile that already has an Industry improvement.</Text>
+		</Row>
+    <Row Tag="LOC_PROJECT_FAILURE_NO_BUILDING_FOR_PRODUCT">
+      <Text>No available building space to sell this Product.</Text>
+    </Row>
+    <Row Tag="LOC_PROJECT_FAILURE_MAX_PRODUCTS_REACHED">
+      <Text>Maximum amount of Products reached for this resource.</Text>
+    </Row>
 		<!-- ==================== City Banner ==================== -->
 		<Row Tag="LOC_CITY_BANNER_AERODROME_AIRCRAFT_STATIONED">
 			<Text>{1_Aircraft} / {2_Slots} aircraft stationed here.</Text>
@@ -1207,6 +1252,9 @@
 		<Row Tag="LOC_HUD_CITY_HOUSING_FROM_STARTING_ERA">
 			<Text>Housing from Starting Era:</Text>
 		</Row>
+    <Row Tag="LOC_HUD_CITY_HOUSING_FROM_GREATWORKS">
+      <Text>Housing from Great Works:</Text>
+    </Row>
 		<Row Tag="LOC_HUD_CITY_HOUSING_MULTIPLIER">
 			<Text>Housing multiplier</Text>
 		</Row>
@@ -2208,7 +2256,7 @@
 			<Text>You have gained new scientific knowledge from the capture of this city.</Text>
 		</Row>
     <Row Tag="LOC_TECH_BOOST_TRADING_POST">
-      <Text>Your merchants bring new ideas from distant lands.</Text>
+      <Text>Your merchants bring new scientific ideas from distant lands.</Text>
     </Row>
 		<Row Tag="LOC_TECH_BOOST_COMPLETE">
 			<Text>Your research in {1_techString} is now complete!</Text>
@@ -2232,6 +2280,9 @@
 		<Row Tag="LOC_CIVIC_BOOST_GREAT_PERSON">
 			<Text>The ingenuity of your great person has unlocked new ideas for your society.</Text>
 		</Row>
+    <Row Tag="LOC_CIVIC_BOOST_TRADING_POST">
+      <Text>Your merchants bring new cultural ideas from distant lands.</Text>
+    </Row>
 		<Row Tag="LOC_CIVIC_BOOST_COMPLETE">
 			<Text>Your development of {1_techString} is now complete!</Text>
 		</Row>
@@ -3541,7 +3592,10 @@
 		<Row Tag="LOC_TYPE_TRAIT_GREAT_WORKS_PALACE_SLOTS">
 			<Text>{1_Amount: number +#,###;-#,###} Great Work {1_Amount : plural 1?slot; other?slots;} (holds any type)</Text>
 		</Row>
-		<Row Tag="LOC_TYPE_TRAIT_BUILDING_DISTRICT_COPY">
+    <Row Tag="LOC_TYPE_TRAIT_GREAT_WORKS_PRODUCT_SLOTS">
+      <Text>{1_Amount: number +#,###;-#,###} [ICON_GreatWork_Product] Product {1_Amount : plural 1?slot; other?slots;}</Text>
+    </Row>
+    <Row Tag="LOC_TYPE_TRAIT_BUILDING_DISTRICT_COPY">
 			<Text>Bonus {1_ToYieldIcon} {2_ToYieldName} equal to the adjacency {3_FromYieldIcon} {4_FromYieldName} bonus of its district.</Text>
 		</Row>
     <Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_ONCE">
@@ -5163,6 +5217,11 @@
 		<Row Tag="LOC_DENOUNCE_POPUP_BODY">
 			<Text>Are you sure you want to denounce {1_PlayerName}?</Text>
 		</Row>
+		<!-- ==================== StopAskingPopup ==================== -->
+		<Row Tag="LOC_STOP_ASKING_POPUP_BODY">
+			<Text>Are you sure you want {1_PlayerName} to stop asking for friendship?</Text>
+		</Row>
+		
 		<!-- ==================== Victory Status Text ==================== -->
 		<Row Tag="LOC_VICTORYSTATUS_PANEL_HEADER">
 			<Text>Victory Status</Text>

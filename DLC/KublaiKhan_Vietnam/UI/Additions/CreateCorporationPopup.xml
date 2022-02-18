@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Context Hidden="0">
+
+	<Container ID="CorpNamePopup" Anchor="R,B" Size="460,200" Offset="250,0">
+		<Image ID="ModalBG" Size="460,200" Offset="0,0" Texture="Parchment_Pattern" StretchMode="Tile" ConsumeMouse="1"/>
+		<Grid	Size="parent,40" Texture="Controls_SubHeader2" ConsumeMouse="1" SliceCorner="20,2" SliceTextureSize="40,40">
+		  <Label ID="ModalScreenTitle" String="LOC_NAME_CORPORATION_TITLE" Anchor="C,C" Style="FontFlair26" FontStyle="glow" ColorSet="ShellHeader" />
+		</Grid>
+		<Grid	Offset="-8,-8"	Size="parent+16,parent+16"	Style="ScreenFrame"/>
+
+		<Image ID="ResIcon" Anchor="C,T" Offset="0,50" Size="48,48" Texture="AdvisorRec22" />
+
+        <GridButton	ID="NameCorpButton" Offset="20,100" Size="428,24" Texture="Controls_TextEntry" SliceCorner="30,0" SliceTextureSize="44,26" StateOffsetIncrement="0,26">
+			<EditBox ID="NameEdit" Anchor="L,C" Offset="28,0" Size="parent-32,parent" EditMode="1" Style="FontNormalMedium16" MaxLength="40" HighlightColor="25,120,154,200"/>
+		</GridButton>
+
+		<GridButton ID="CorpConfirmButton" Size="170,48" Offset="17,8" String="LOC_CONTINUE" Style="ButtonConfirm" Anchor="R,B"/>
+		<GridButton ID="CorpGenerateButton" Size="190,48" Offset="20,8" String="LOC_NAME_CORPORATION_GENERATE" Style="MainButton" Anchor="L,B"/>
+	</Container>
+
+</Context>

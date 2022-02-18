@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Civilization.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_ADJUST_FEAUTE_REQUIRED_FOR_SPECIALTY_DISTRICTS" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_FEATURE_UNLOCK" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_FEATURE_YIELD_CHANGE" Kind="KIND_MODIFIER"/>
+		<!-- District.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_DISTRICT_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER" Kind="KIND_MODIFIER"/>
+		<!-- Leaders.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_ADJUST_FREE_CIVIC_BOOST_FIRST_TRADING_POST_EACH_CIV" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_FREE_TECH_BOOST_FIRST_TRADING_POST_EACH_CIV" Kind="KIND_MODIFIER"/>
+    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_KUBLAI_PAX" Kind="KIND_MODIFIER"/>
+    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_TRIEU_DEFENDER" Kind="KIND_MODIFIER"/>
+  </Types>
+	<TypeTags>
+    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_TRIEU_DEFENDER" Tag="DIPLOMACY_MODIFIER"/>
+    <Row Type="MODIFIER_PLAYER_DIPLOMACY_AGENDA_KUBLAI_PAX" Tag="DIPLOMACY_MODIFIER"/>
+	</TypeTags>
+	<DynamicModifiers>
+		<!-- Civilization.xml Modifiers -->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FEAUTE_REQUIRED_FOR_SPECIALTY_DISTRICTS</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLAYER_FEAUTE_REQUIRED_FOR_SPECIALTY_DISTRICTS</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_FEATURE_YIELD_CHANGE</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_BUILDING_FEATURE_YIELD_CHANGE</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FEATURE_UNLOCK</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_FEATURE_PREREQ</EffectType>
+		</Row>
+		<!-- District.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_DISTRICT_TOURISM_ADJACENCY_YIELD_MOFIFIER</EffectType>
+		</Row>
+		<!-- Leaders.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FREE_CIVIC_BOOST_FIRST_TRADING_POST_EACH_CIV</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_FREE_CIVIC_BOOST_FIRST_TRADING_POST_EACH_CIV</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FREE_TECH_BOOST_FIRST_TRADING_POST_EACH_CIV</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_FREE_TECH_BOOST_FIRST_TRADING_POST_EACH_CIV</EffectType>
+		</Row>
+    <Row>
+      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_TRIEU_DEFENDER</ModifierType>
+      <CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
+      <EffectType>EFFECT_DIPLOMACY_AGENDA_TRIEU_DEFENDER</EffectType>
+    </Row>
+    <Row>
+      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_KUBLAI_PAX</ModifierType>
+      <CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
+      <EffectType>EFFECT_DIPLOMACY_AGENDA_KUBLAI_PAX</EffectType>
+    </Row>
+	</DynamicModifiers>
+</GameInfo>

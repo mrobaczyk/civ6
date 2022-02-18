@@ -22,6 +22,8 @@ local NO_BUILDING :number = -1;
 
 local NUM_CITIES :number = 6; 	-- How many cities should each player start with?
 
+local FISHING_BOAT_CHANCE : number = 34;
+
 
 ----------------------------------------------------------------  
 -- Statics
@@ -35,6 +37,7 @@ local ms_piratesUnitType :number		= GameInfo.Units["UNIT_PIRATES"].Index;
 local ms_BuriedTreasureImprov :number	= GameInfo.Improvements[BURY_TREASURE_IMPROVEMENT].Index;
 local ms_FloatingTreasureImprov :number	= GameInfo.Improvements["IMPROVEMENT_FLOATING_TREASURE"].Index;
 local ms_BarbCampImprov :number			= GameInfo.Improvements["IMPROVEMENT_BARBARIAN_CAMP"].Index;
+local ms_FishingBoatImprov :number		= GameInfo.Improvements["IMPROVEMENT_FISHING_BOATS"].Index;
 local ms_BlackbeardFusePolicy : number	= GameInfo.Policies["POLICY_RELIC_BLACKBEARD_FUSE"].Index;
 local ms_JollyRogersPolicy :number		= GameInfo.Policies["POLICY_RELIC_JOLLY_ROGERS"].Index;
 local ms_cityCenterDistrict :number		= GameInfo.Districts["DISTRICT_CITY_CENTER"].Index;
@@ -203,7 +206,39 @@ function SpawnInfamousPirate( )
 		return;
 	end
 
+	-- IMPORTANT:  openInfamousPirates uses a non-sequential table and is only network safe because all filtering is deterministic and non-order dependant!
+	local openInfamousPirates = {};
+	for infamousID, pirateData in ipairs(g_InfamousPirates) do
+		openInfamousPirates[infamousID] = pirateData;
+		openInfamousPirates[infamousID].Index = infamousID;
+	end
+
+	-- Remove active infamous pirates from openInfamousPirates 
 	local infamousPlayerUnits :object = infamousPlayer:GetUnits();
+	for i, pBarbUnit in infamousPlayerUnits:Members() do
+		local infamousID :number = pBarbUnit:GetProperty(g_unitPropertyKeys.InfamousPirateID);
+		if(infamousID ~= nil) then
+			openInfamousPirates[infamousID] = nil;
+		end
+	end
+
+	-- Convert openInfamousPirates into spawnablePirates, which is deterministic and ipair safe 
+	local spawnablePirates :table = {};
+	for infamousID = 1, #g_InfamousPirates, 1 do
+		if(openInfamousPirates[infamousID] ~= nil) then
+			table.insert(spawnablePirates, openInfamousPirates[infamousID]);
+		end
+	end
+
+	if(#spawnablePirates < 1) then
+		print("No infamous pirates available to spawn.");
+		return;
+	end
+
+	print("Available Infamous Pirates=" ..tostring(#spawnablePirates));
+	for _, pirateData in ipairs(spawnablePirates) do
+		print("FamousID=" .. tostring(pirateData.Index) .. ", Name=" .. tostring(pirateData.Name));
+	end
 
 	-- IMPORTANT:  The following filtering uses a non-sequential table and is only network safe because all filtering are deterministic and non-order dependant!
 	local unsortedPlots :table = {};
@@ -247,8 +282,8 @@ function SpawnInfamousPirate( )
 		end
 	end
 
-	local pirateRand :number = RandRange(1, #g_InfamousPirates, "Picking Infamous Pirate Pick");
-	local curPirate = g_InfamousPirates[pirateRand];
+	local pirateRand :number = RandRange(1, #spawnablePirates, "Picking Infamous Pirate Pick");
+	local curPirate = spawnablePirates[pirateRand];
 	local spawnPlotIndex: number = RandRange(1, #pirateSpawnPlots, "Selecting spawn plot for infamous pirate");
 	local spawnPlot :object = pirateSpawnPlots[spawnPlotIndex];
 
@@ -270,6 +305,7 @@ function SpawnInfamousPirate( )
 	if(curPirate.MaxHitPoints ~= nil and curPirate.MaxHitPoints > 0) then
 		pPirateUnit:SetProperty(g_unitPropertyKeys.MaxHitPoints, curPirate.MaxHitPoints);
 	end
+	pPirateUnit:SetProperty(g_unitPropertyKeys.InfamousPirateID, curPirate.Index);
 
 	-- Create Search Zone
 	local searchZones :table = Game:GetProperty(g_gamePropertyKeys.InfamousPirateSearchZones);
@@ -464,19 +500,20 @@ function InitializeNewGame()
 	local numColonyCivs = GetNumColonyCivilizations();
 	local tradersPerCity = (GetNumColonyCivilizations()-1) * NUM_CITIES;
 	for loop, pPlayer in ipairs(aPlayers) do
-		if(IsColonyPlayer(pPlayer:GetID())) then
+		local playerID : number = pPlayer:GetID();
+		if(IsColonyPlayer(playerID)) then
 
 			-- Colony Civs see the entire map
-			local pCurPlayerVisibility = PlayersVisibility[pPlayer:GetID()];
+			local pCurPlayerVisibility = PlayersVisibility[playerID];
 			if(pCurPlayerVisibility ~= nil) then
 				pCurPlayerVisibility:RevealAllPlots();
 			end
 
 			local pPlayerCities:table = pPlayer:GetCities();
 			if(pPlayerCities:GetCount() > 0) then
-				print("Colonial player " .. tostring(pPlayer:GetID()) .. " already has cities, skipping city creation.");
+				print("Colonial player " .. tostring(playerID) .. " already has cities, skipping city creation.");
 			else
-				print("Creating colony cities for player " .. tostring(pPlayer:GetID()));
+				print("Creating colony cities for player " .. tostring(playerID));
 				local pPlayerUnits : object = pPlayer:GetUnits();
 				for cityNum = 1, NUM_CITIES, 1 do
 					local pCity = nil;
@@ -489,6 +526,7 @@ function InitializeNewGame()
 							pCity = pPlayerCities:Create(settlePlot:GetX(), settlePlot:GetY());
 							if(pCity ~= nil) then				
 								print("Creating colony city at (" .. tostring(settlePlot:GetX()) .. ", " .. tostring(settlePlot:GetY()) .. tostring(")."));
+								RandomlySeedFishingBoats(pCity, playerID);
 							end
 
 							table.remove(colonyPlots, colonyPlotIndex);
@@ -503,10 +541,11 @@ function InitializeNewGame()
 	SpawnPirateFlagships();
 
 	for _, pPlayer in ipairs(aPlayers) do
-		if(IsPiratePlayer(pPlayer:GetID())) then
-			NewGamePirateFaction(pPlayer:GetID());
-		elseif(IsColonyPlayer(pPlayer:GetID())) then
-			NewGameColonyFaction(pPlayer:GetID());
+		local playerID : number = pPlayer:GetID();
+		if(IsPiratePlayer(playerID)) then
+			NewGamePirateFaction(playerID);
+		elseif(IsColonyPlayer(playerID)) then
+			NewGameColonyFaction(playerID);
 		end
 	end
 
@@ -1003,13 +1042,33 @@ function IsValidTreasureFleetCity(pCity :object)
 
 	-- Is the city connected to the treasure fleet exit plot's area?
 	local adjPlots = Map.GetAdjacentPlots(pCity:GetX(), pCity:GetY());
+	local isConnected :boolean = false;
 	for _, pLoopPlot : object in ipairs(adjPlots) do	
 		if(pLoopPlot:GetAreaID() == exitAreaID) then
-			return true;
+			isConnected = true;
 		end
 	end	
+	if(isConnected == false) then
+		print("TreasureFleetCity Player=" .. tostring(pCity:GetOwner()) .. ", CityID=" .. tostring(pCity:GetID()) .. " is not connected to treasure fleet ocean.");
+		return false;
+	end
 
-	return false;
+	-- Don't spawn treasure fleets in cities that are too close to pirate player units.
+	local kPiratePlayers :object = GetAlivePiratePlayers();
+
+	for _, pPiratePlayer in ipairs(kPiratePlayers) do
+		local pPirateUnits :object = pPiratePlayer:GetUnits();
+		for i, pUnit in pPirateUnits:Members() do
+			local unitDistance :number = Map.GetPlotDistance(pCity:GetX(), pCity:GetY(), pUnit:GetX(), pUnit:GetY());
+			if(unitDistance <= TREASURE_FLEET_MIN_DISTANCE) then
+				-- pirate unit is too close.
+				print("TreasureFleetCity Player=" .. tostring(pCity:GetOwner()) .. ", CityID=" .. tostring(pCity:GetID()) .. " is too close to pirate unit Player=" .. tostring(pPiratePlayer:GetID()) .. ", UnitID=" .. tostring(pUnit:GetID()));
+				return false;
+			end
+		end
+	end
+
+	return true;
 end
 
 function CalcNextTreasureFleet(turn :number)
@@ -1312,7 +1371,7 @@ function CheckCitySacked(pDefendingDistrict :object, pAttackingUnit :object)
 end
 
 function IsBarbCampGoody(goodyHutType :number)
-	local barbCampGoodyData = GameInfo.GoodyHutSubTypes["BARB_GOODIES"];
+	local barbCampGoodyData = GameInfo.GoodyHutSubTypes["BARB_GRANT_GOLD"];
 	if(barbCampGoodyData ~= nil and goodyHutType == barbCampGoodyData.Index) then
 		return true;
 	end
@@ -1386,7 +1445,8 @@ function OnPillage(iUnitPlayerID :number, iUnitID :number, eImprovement :number,
 		-- Score for plundering a district or building.
 		ChangeScore(iUnitPlayerID, g_scoreTypes.Treasure, TREASURE_POINTS_PLUNDER_DISTRICT, pUnit:GetX(), pUnit:GetY());
 	elseif(eImprovement ~= ms_BarbCampImprov) then
-		-- Score for plundering non-treasure improvements.
+		-- Score for plundering non-treasure, non-barb camp improvements.
+		-- Barb camp score is handled in the goody hut popped event.
 		ChangeScore(iUnitPlayerID, g_scoreTypes.Treasure, TREASURE_POINTS_PLUNDER_IMPROVE, pUnit:GetX(), pUnit:GetY());
 	end
 end
@@ -1522,12 +1582,27 @@ function OnPiratesScenario_DeleteUnitsAtGoal(targetInfo :table)
 	return true;
 end
 
+-- =============================================================
+-- Seed fishing boats in newly settled cities
+-- ============================================================= 
+function RandomlySeedFishingBoats(pCity : table, ownerID : number)
+	local pCityPlots:table = pCity:GetOwnedPlots();
+	for k, pPlot in ipairs(pCityPlots)do
+		if(pPlot:IsWater())then
+			local fishingBoatChance : number = RandRange(1, 100);
+			if(fishingBoatChance <= FISHING_BOAT_CHANCE)then
+				ImprovementBuilder.SetImprovementType(pPlot, ms_FishingBoatImprov, ownerID);
+			end
+		end
+	end
+end
+
 
 ----------------------------------------------------------------  
 -- Context Functions
 ----------------------------------------------------------------  
 function Initialize()
-	print("Pirates Scenario Start Script initializing");		
+	print("Pirates Scenario Start Script initializing");
 	LuaEvents.NewGameInitialized.Add(InitializeNewGame);
 	GameEvents.OnGameTurnStarted.Add(OnGameTurnStarted);
 	GameEvents.OnUnitMoved.Add(OnUnitMoved);

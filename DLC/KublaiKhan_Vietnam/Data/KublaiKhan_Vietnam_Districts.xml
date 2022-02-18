@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="DISTRICT_THANH" Kind="KIND_DISTRICT"/>
+		<Row Type="DISTRICT_PRESERVE" Kind="KIND_DISTRICT"/>
+		<Row Type="BUILDING_GROVE" Kind="KIND_BUILDING"/>
+		<Row Type="BUILDING_SANCTUARY" Kind="KIND_BUILDING"/>
+		<Row Type="MODIFIER_ALL_PLAYERS_ADD_CULTURE_BOMB_TRIGGER" Kind="KIND_MODIFIER"/>
+	</Types>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ADD_CULTURE_BOMB_TRIGGER</ModifierType>
+			<CollectionType>COLLECTION_MAJOR_PLAYERS</CollectionType>
+			<EffectType>EFFECT_ADD_CULTURE_BOMB_TRIGGER</EffectType>
+		</Row>
+	</DynamicModifiers>
+	<GameModifiers>
+		<Row ModifierId="MAJOR_PLAYERS_ACTIVATE_PRESERVE_CULTURE_BOMB"/>
+	</GameModifiers>
+	<DistrictReplaces>
+		<Row CivUniqueDistrictType="DISTRICT_THANH" ReplacesDistrictType="DISTRICT_ENCAMPMENT"/>
+	</DistrictReplaces>
+	<Districts>
+		<Row DistrictType="DISTRICT_THANH" Name="LOC_DISTRICT_THANH_NAME" Description="LOC_DISTRICT_THANH_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PlunderType="NO_PLUNDER" AdvisorType="ADVISOR_CONQUEST" Cost="27" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="false" Aqueduct="false" NoAdjacentCity="true" InternalOnly="false" ZOC="true" HitPoints="100" CaptureRemovesBuildings="true" CaptureRemovesCityDefenses="false" MilitaryDomain="DOMAIN_LAND" Appeal="-1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_THANH"/>
+		<Row DistrictType="DISTRICT_PRESERVE" Name="LOC_DISTRICT_PRESERVE_NAME" Description="LOC_DISTRICT_PRESERVE_DESCRIPTION" PrereqCivic="CIVIC_MYSTICISM" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="54" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1000" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="true" InternalOnly="false" ZOC="true" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Housing="1" Appeal="1"/>
+	</Districts>
+	<!-- Forbid minor civs from making the preserve -->
+	<AiFavoredItems>
+		<Row ListType="MinorCivDistricts" Item="DISTRICT_PRESERVE" Favored="false"/>
+	</AiFavoredItems>
+	<Buildings>
+		<!-- Preserve Buildings-->
+		<Row BuildingType="BUILDING_GROVE" Name="LOC_BUILDING_GROVE_NAME" Description="LOC_BUILDING_GROVE_DESCRIPTION" PrereqCivic="CIVIC_MYSTICISM" PrereqDistrict="DISTRICT_PRESERVE" PurchaseYield="YIELD_GOLD" Cost="150" AdvisorType="ADVISOR_CULTURE"/>
+		<Row BuildingType="BUILDING_SANCTUARY" Name="LOC_BUILDING_SANCTUARY_NAME" Description="LOC_BUILDING_SANCTUARY_DESCRIPTION" PrereqCivic="CIVIC_CONSERVATION" PrereqDistrict="DISTRICT_PRESERVE" PurchaseYield="YIELD_GOLD" Cost="440" AdvisorType="ADVISOR_CULTURE"/>
+	</Buildings>
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_THANH" YieldChangeId="District_Culture_Major"/>
+	</District_Adjacencies>
+	<Adjacency_YieldChanges>
+		<Row ID="District_Culture_Major" Description="LOC_DISTRICT_DISTRICT_CULTURE_MAJOR" YieldType="YIELD_CULTURE" YieldChange="2" TilesRequired="1" OtherDistrictAdjacent="true"/>
+	</Adjacency_YieldChanges>
+	<Adjacent_AppealYieldChanges>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="4" MaximumValue="100" YieldChange="2" YieldType="YIELD_FAITH" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_BREATHTAKING" BuildingType="BUILDING_GROVE"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="2" MaximumValue="3" YieldChange="1" YieldType="YIELD_FAITH" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_CHARMING" BuildingType="BUILDING_GROVE"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="4" MaximumValue="100" YieldChange="2" YieldType="YIELD_FOOD" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_BREATHTAKING" BuildingType="BUILDING_GROVE"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="2" MaximumValue="3" YieldChange="1" YieldType="YIELD_FOOD" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_CHARMING" BuildingType="BUILDING_GROVE"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="4" MaximumValue="100" YieldChange="2" YieldType="YIELD_CULTURE" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_BREATHTAKING" BuildingType="BUILDING_GROVE"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="4" MaximumValue="100" YieldChange="2" YieldType="YIELD_GOLD" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_BREATHTAKING" BuildingType="BUILDING_SANCTUARY"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="2" MaximumValue="3" YieldChange="1" YieldType="YIELD_GOLD" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_CHARMING" BuildingType="BUILDING_SANCTUARY"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="4" MaximumValue="100" YieldChange="2" YieldType="YIELD_SCIENCE" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_BREATHTAKING" BuildingType="BUILDING_SANCTUARY"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="2" MaximumValue="3" YieldChange="1" YieldType="YIELD_SCIENCE" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_CHARMING" BuildingType="BUILDING_SANCTUARY"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="4" MaximumValue="100" YieldChange="2" YieldType="YIELD_PRODUCTION" Unimproved="true" Description="LOC_TOOLTIP_APPEAL_BREATHTAKING" BuildingType="BUILDING_SANCTUARY"/>
+	</Adjacent_AppealYieldChanges>
+	<AppealHousingChanges>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="4" AppealChange="2" Description="LOC_TOOLTIP_APPEAL_BREATHTAKING"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="2" AppealChange="1" Description="LOC_TOOLTIP_APPEAL_CHARMING"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="-1" AppealChange="0" Description="LOC_TOOLTIP_APPEAL_AVERAGE"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="-3" AppealChange="-1" Description="LOC_TOOLTIP_APPEAL_UNINVITING"/>
+		<Row DistrictType="DISTRICT_PRESERVE" MinimumValue="-100" AppealChange="-1" Description="LOC_TOOLTIP_APPEAL_DISGUSTING"/>
+	</AppealHousingChanges>
+	<StartingBuildings>
+		<Row Era="ERA_RENAISSANCE" Building="BUILDING_GROVE" District="DISTRICT_PRESERVE"/>
+	</StartingBuildings>
+	<District_TradeRouteYields>
+		<Row DistrictType="DISTRICT_THANH" YieldType="YIELD_PRODUCTION" YieldChangeAsOrigin="0" YieldChangeAsDomesticDestination="1" YieldChangeAsInternationalDestination="1"/>
+	</District_TradeRouteYields>
+	<District_CitizenYieldChanges>
+		<Row DistrictType="DISTRICT_THANH" YieldType="YIELD_GOLD" YieldChange="2"/>
+		<Row DistrictType="DISTRICT_THANH" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+	</District_CitizenYieldChanges>
+	<District_GreatPersonPoints>
+		<Row DistrictType="DISTRICT_THANH" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" PointsPerTurn="1"/>
+	</District_GreatPersonPoints>
+	<DistrictModifiers>
+		<Row>
+			<DistrictType>DISTRICT_THANH</DistrictType>
+			<ModifierId>THANH_TOURISM_CULTURE</ModifierId>
+		</Row>
+	</DistrictModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>THANH_TOURISM_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<SubjectRequirementSetId>THANH_PLAYER_HAS_FLIGHT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MAJOR_PLAYERS_ACTIVATE_PRESERVE_CULTURE_BOMB</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ADD_CULTURE_BOMB_TRIGGER</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>THANH_TOURISM_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>THANH_TOURISM_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAJOR_PLAYERS_ACTIVATE_PRESERVE_CULTURE_BOMB</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_PRESERVE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAJOR_PLAYERS_ACTIVATE_PRESERVE_CULTURE_BOMB</ModifierId>
+			<Name>CaptureOwnedTerritory</Name>
+			<Value>False</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>THANH_PLAYER_HAS_FLIGHT_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>THANH_PLAYER_HAS_FLIGHT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+</GameInfo>

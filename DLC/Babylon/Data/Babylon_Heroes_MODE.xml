@@ -628,6 +628,14 @@
 		<Row ProjectType="PROJECT_CREATE_HERO_WUKONG"		ModifierId="MODIFIER_CREATE_HERO_WUKONG"/>
 		<Row ProjectType="PROJECT_DISCOVER_NEXT_HERO"		ModifierId="MODIFIER_DISCOVER_RANDOM_HERO"/>
 	</ProjectCompletionModifiers>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_STAVE_CHURCH"/>
+			<Set>
+				<Description>LOC_BUILDING_STAVE_CHURCH_HEROES_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Buildings>
 	<GreatWorkSlotTypes>
 		<Row GreatWorkSlotType="GREATWORKSLOT_HERO"/>
 	</GreatWorkSlotTypes>
@@ -827,9 +835,6 @@
 		<Row PageLayoutId="Heroes" ChapterId="RECALLING" SortIndex="60"/>
 		<Row PageLayoutId="Heroes" ChapterId="GREATWORKS" SortIndex="70"/>
 	</CivilopediaPageLayoutChapters>
-	<CivilopediaPageGroups>
-		<Replace SectionID="CONCEPTS" PageGroupId="GAME_MODES" Name="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Tooltip="" VisibleIfEmpty="false" SortIndex="4"/>
-	</CivilopediaPageGroups>
 	<CivilopediaPages>
 		<Row SectionId="CONCEPTS" PageId="HEROES" PageGroupId="GAME_MODES" PageLayoutId="Heroes" Name="LOC_PEDIA_CONCEPTS_PAGE_HEROES_CHAPTER_CONTENT_TITLE" Tooltip="" SortIndex="2"/>
 	</CivilopediaPages>

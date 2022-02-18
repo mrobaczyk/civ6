@@ -661,6 +661,13 @@ CREATE TABLE "Civilizations" (
 		FOREIGN KEY (StartingCivilizationLevelType) REFERENCES CivilizationLevels(CivilizationLevelType) ON DELETE SET DEFAULT ON UPDATE CASCADE,
 		FOREIGN KEY (CivilizationType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
+-- Allows us to change the background and leader images on the diplomacy screen.
+CREATE TABLE "CivilizationAudioTags" (
+		"CivilizationType" TEXT NOT NULL,
+		"MusicOverride" BOOLEAN NOT NULL CHECK (MusicOverride IN (0,1)),
+		PRIMARY KEY(CivilizationType),
+		FOREIGN KEY (CivilizationType) REFERENCES Civilizations(CivilizationType) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "CivilizationCitizenNames" (
 		"CivilizationType" TEXT NOT NULL,
 		"CitizenName" TEXT NOT NULL,
@@ -821,6 +828,12 @@ CREATE TABLE "Continents" (
 		"ContinentType" TEXT NOT NULL,
 		"Description" TEXT,
 		PRIMARY KEY(ContinentType));
+
+CREATE TABLE "CorporationNames" (
+		"ID" INTEGER NOT NULL,
+		"NameType" TEXT NOT NULL,
+		"TextKey" TEXT NOT NULL,
+		PRIMARY KEY(ID));
 
 CREATE TABLE "DataTypes" (
 		"TypeName" TEXT NOT NULL UNIQUE,
@@ -1595,6 +1608,12 @@ CREATE TABLE "GreatWork_YieldChanges" (
 		PRIMARY KEY(GreatWorkType, YieldType),
 		FOREIGN KEY (GreatWorkType) REFERENCES GreatWorks(GreatWorkType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "GreatWorkModifiers" (
+		"GreatWorkType" TEXT NOT NULL,
+		"ModifierID" TEXT NOT NULL,
+		PRIMARY KEY(GreatWorkType, ModifierID),
+		FOREIGN KEY (GreatWorkType) REFERENCES GreatWorks(GreatWorkType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "GreatWorkObjectTypes" (
 		"GreatWorkObjectType" TEXT NOT NULL,
@@ -2384,6 +2403,13 @@ CREATE TABLE "Resource_YieldChanges" (
 		PRIMARY KEY(ResourceType, YieldType),
 		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "ResourceCorporations" (
+		"ResourceType" TEXT NOT NULL,
+		"ResourceEffect" TEXT,
+		"ResourceEffectTExt" TEXT,
+		PRIMARY KEY(ResourceType),
+		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "ResourceIndustries" (
 		"ResourceType" TEXT NOT NULL,

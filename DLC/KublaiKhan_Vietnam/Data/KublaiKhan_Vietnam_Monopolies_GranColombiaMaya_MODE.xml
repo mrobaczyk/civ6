@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="PROJECT_CREATE_CORPORATION_PRODUCT_HONEY" Kind="KIND_PROJECT"/>
+	</Types>
+  <GreatWorks>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_1" GreatWorkObjectType="GREATWORKOBJECT_PRODUCT" Name="LOC_GREATWORK_PRODUCT_HONEY_1_NAME"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_2" GreatWorkObjectType="GREATWORKOBJECT_PRODUCT" Name="LOC_GREATWORK_PRODUCT_HONEY_2_NAME"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_3" GreatWorkObjectType="GREATWORKOBJECT_PRODUCT" Name="LOC_GREATWORK_PRODUCT_HONEY_3_NAME"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_4" GreatWorkObjectType="GREATWORKOBJECT_PRODUCT" Name="LOC_GREATWORK_PRODUCT_HONEY_4_NAME"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_5" GreatWorkObjectType="GREATWORKOBJECT_PRODUCT" Name="LOC_GREATWORK_PRODUCT_HONEY_5_NAME"/>
+  </GreatWorks>
+	<GreatWorks_ImprovementType>
+		<Row GreatWorkType="GREATWORK_PRODUCT_HONEY_1" ResourceType="RESOURCE_HONEY"/>
+		<Row GreatWorkType="GREATWORK_PRODUCT_HONEY_2" ResourceType="RESOURCE_HONEY"/>
+		<Row GreatWorkType="GREATWORK_PRODUCT_HONEY_3" ResourceType="RESOURCE_HONEY"/>
+		<Row GreatWorkType="GREATWORK_PRODUCT_HONEY_4" ResourceType="RESOURCE_HONEY"/>
+		<Row GreatWorkType="GREATWORK_PRODUCT_HONEY_5" ResourceType="RESOURCE_HONEY"/>
+	</GreatWorks_ImprovementType>
+  <GreatWork_YieldChanges>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_1" YieldType="YIELD_FOOD" YieldChange="3"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_2" YieldType="YIELD_FOOD" YieldChange="3"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_3" YieldType="YIELD_FOOD" YieldChange="3"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_4" YieldType="YIELD_FOOD" YieldChange="3"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_5" YieldType="YIELD_FOOD" YieldChange="3"/>
+  </GreatWork_YieldChanges>
+  <Projects>
+		<Row ProjectType="PROJECT_CREATE_CORPORATION_PRODUCT_HONEY" Name="LOC_PROJECT_CREATE_CORPORATION_PRODUCT_HONEY_NAME" ShortName="LOC_PROJECT_CREATE_CORPORATION_PRODUCT_HONEY_SHORT_NAME" Description="LOC_PROJECT_CREATE_CORPORATION_PRODUCT_HONEY_DESCRIPTION" Cost="500" AdvisorType="ADVISOR_GENERIC"/>
+	</Projects>
+	<Projects_MODE>
+    <Row ProjectType="PROJECT_CREATE_CORPORATION_PRODUCT_HONEY" ResourceType="RESOURCE_HONEY"/>
+	</Projects_MODE>
+	<ProjectCompletionModifiers>
+		<Row ProjectType="PROJECT_CREATE_CORPORATION_PRODUCT_HONEY" ModifierId="PROJECT_COMPLETION_CREATE_CORPORATION_PRODUCT_HONEY"/>
+	</ProjectCompletionModifiers>
+  <GreatWorkModifiers>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_1" ModifierId="PRODUCT_CITY_GROWTH_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_2" ModifierId="PRODUCT_CITY_GROWTH_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_3" ModifierId="PRODUCT_CITY_GROWTH_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_4" ModifierId="PRODUCT_CITY_GROWTH_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_5" ModifierId="PRODUCT_CITY_GROWTH_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_1" ModifierId="PRODUCT_CITY_GROWTH_HOUSING_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_2" ModifierId="PRODUCT_CITY_GROWTH_HOUSING_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_3" ModifierId="PRODUCT_CITY_GROWTH_HOUSING_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_4" ModifierId="PRODUCT_CITY_GROWTH_HOUSING_HONEY"/>
+    <Row GreatWorkType="GREATWORK_PRODUCT_HONEY_5" ModifierId="PRODUCT_CITY_GROWTH_HOUSING_HONEY"/>
+  </GreatWorkModifiers>
+	<Improvement_ValidResources>
+    <Row ImprovementType="IMPROVEMENT_INDUSTRY" ResourceType="RESOURCE_HONEY"/>
+    <Row ImprovementType="IMPROVEMENT_CORPORATION" ResourceType="RESOURCE_HONEY"/>
+	</Improvement_ValidResources>
+	<ResourceIndustries>
+		<Row ResourceType="RESOURCE_HONEY" ResourceEffect="INDUSTRY_CITY_GROWTH" ResourceEffectText="LOC_INDUSTRY_CITY_GROWTH_DISCOUNT_DESCRIPTION"/>
+	</ResourceIndustries>
+  <ResourceCorporations>
+    <Row ResourceType="RESOURCE_HONEY" ResourceEffect="CORPORATION_CITY_GROWTH" ResourceEffectText="LOC_CORPORATION_CITY_GROWTH_DISCOUNT_DESCRIPTION"/>
+  </ResourceCorporations>
+	<Modifiers>
+    <Row ModifierId="PROJECT_COMPLETION_CREATE_CORPORATION_PRODUCT_HONEY" ModifierType="MODIFIER_PLAYER_GRANT_RANDOM_RESOURCE_PRODUCT"/>
+    <Row ModifierId="PRODUCT_CITY_GROWTH_HONEY" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_GROWTH" SubjectStackLimit="1"/>
+    <Row ModifierId="PRODUCT_CITY_GROWTH_HOUSING_HONEY" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_HOUSING_FROM_GREAT_WORKS" SubjectStackLimit="1"/>
+  </Modifiers>
+	<ModifierArguments>
+    <Row ModifierId="PROJECT_COMPLETION_CREATE_CORPORATION_PRODUCT_HONEY" Name="ResourceType" Value="RESOURCE_HONEY"/>
+    <Row ModifierId="PRODUCT_CITY_GROWTH_HONEY" Name="Amount" Value="20"/>
+    <Row ModifierId="PRODUCT_CITY_GROWTH_HOUSING_HONEY" Name="Amount" Value="3"/>
+	</ModifierArguments>
+  <ModifierStrings>
+    <Row ModifierId="PRODUCT_CITY_GROWTH_HONEY" Context="Summary" Text="LOC_INDUSTRY_CITY_GROWTH_DISCOUNT_DESCRIPTION"/>
+  </ModifierStrings>
+</GameInfo>

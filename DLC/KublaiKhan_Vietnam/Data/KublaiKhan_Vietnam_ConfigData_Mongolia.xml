@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Players>
+		<!-- Expansion 1 Support -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_MONGOLIA" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" CivilizationName="LOC_CIVILIZATION_MONGOLIA_NAME" CivilizationIcon="ICON_CIVILIZATION_MONGOLIA" LeaderName="LOC_LEADER_KUBLAI_KHAN_NAME" LeaderIcon="ICON_LEADER_KUBLAI_KHAN_MONGOLIA" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_MONGOLIAN_ORTOO_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_MONGOLIAN_ORTOO_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_MONGOLIAN_ORTOO" LeaderAbilityName="LOC_TRAIT_LEADER_KUBLAI_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_KUBLAI_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_KUBLAI" Portrait="LEADER_KUBLAI_KHAN_MONGOLIA_NEUTRAL" PortraitBackground="LEADER_KUBLAI_KHAN_MONGOLIA_BACKGROUND"/>
+		<!-- Expansion 2 Support -->
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_MONGOLIA" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" CivilizationName="LOC_CIVILIZATION_MONGOLIA_NAME" CivilizationIcon="ICON_CIVILIZATION_MONGOLIA" LeaderName="LOC_LEADER_KUBLAI_KHAN_NAME" LeaderIcon="ICON_LEADER_KUBLAI_KHAN_MONGOLIA" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_MONGOLIAN_ORTOO_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_MONGOLIAN_ORTOO_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_MONGOLIAN_ORTOO" LeaderAbilityName="LOC_TRAIT_LEADER_KUBLAI_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_KUBLAI_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_KUBLAI" Portrait="LEADER_KUBLAI_KHAN_MONGOLIA_NEUTRAL" PortraitBackground="LEADER_KUBLAI_KHAN_MONGOLIA_BACKGROUND"/>
+	</Players>
+	<DuplicateLeaders>
+		<Row Domain="Players:Expansion1_Players" LeaderType="LEADER_KUBLAI_KHAN_CHINA" OtherLeaderType="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+		<Row Domain="Players:Expansion2_Players" LeaderType="LEADER_KUBLAI_KHAN_CHINA" OtherLeaderType="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+	</DuplicateLeaders>
+	<PlayerItems>
+		<!-- Kublai -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_MONGOLIA" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" Type="UNIT_MONGOLIAN_KESHIG" Icon="ICON_UNIT_MONGOLIAN_KESHIG" Name="LOC_UNIT_MONGOLIAN_KESHIG_NAME" Description="LOC_UNIT_MONGOLIAN_KESHIG_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_MONGOLIA" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" Type="BUILDING_ORDU" Icon="ICON_BUILDING_ORDU" Name="LOC_BUILDING_ORDU_NAME" Description="LOC_BUILDING_ORDU_DESCRIPTION" SortIndex="20"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_MONGOLIA" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" Type="UNIT_MONGOLIAN_KESHIG" Icon="ICON_UNIT_MONGOLIAN_KESHIG" Name="LOC_UNIT_MONGOLIAN_KESHIG_NAME" Description="LOC_UNIT_MONGOLIAN_KESHIG_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_MONGOLIA" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" Type="BUILDING_ORDU" Icon="ICON_BUILDING_ORDU" Name="LOC_BUILDING_ORDU_NAME" Description="LOC_BUILDING_ORDU_EXPANSION2_DESCRIPTION" SortIndex="20"/>
+	</PlayerItems>
+	<MapLeaders>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+		<Row Map="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard.Civ6Map" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+		<Row Map="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+	</MapLeaders>
+	<MapStartPositions>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" Plot="3676" Type="LEADER" Value="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" Plot="3676" Type="LEADER" Value="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+		<Row Map="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard.Civ6Map" Plot="4153" Type="LEADER" Value="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+		<Row Map="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" Plot="4153" Type="LEADER" Value="LEADER_KUBLAI_KHAN_MONGOLIA"/>
+	</MapStartPositions>
+</GameInfo>

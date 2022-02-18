@@ -19,7 +19,7 @@ local PADDING_BANNER:number = 120;
 local SIZE_BANNER_MIN:number = 506;
 
 -- ===========================================================================
-function HandleCustomGreatWorkTypes( greatWorkType:string )
+function HandleCustomGreatWorkTypes( greatWorkType:string, greatWorkIndex:number )
 
 	local kGreatWorkInfo:table = GameInfo.GreatWorks[greatWorkType];
 	local greatWorkType:string = kGreatWorkInfo.GreatWorkType;
@@ -39,6 +39,11 @@ function HandleCustomGreatWorkTypes( greatWorkType:string )
 	local bannerSize:number = math.max(nameSize, SIZE_BANNER_MIN);
 	Controls.GreatWorkBanner:SetSizeX(bannerSize);
 	Controls.GreatWorkBanner:SetHide(false);
+
+	local tInstInfo:table = Game.GetGreatWorkDataFromIndex(greatWorkIndex);
+	if (tInstInfo ~= nil) then
+		Controls.CreatedBy:SetText(Locale.Lookup("LOC_GREAT_WORKS_CREATED_BY", tInstInfo.CreatorName));
+	end
 
 	return true;
 end

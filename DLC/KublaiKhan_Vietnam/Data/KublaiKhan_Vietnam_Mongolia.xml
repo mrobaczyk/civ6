@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="LEADER_KUBLAI_KHAN_MONGOLIA" Kind="KIND_LEADER"/>
+	</Types>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" OtherLeaderType="LEADER_KUBLAI_KHAN_CHINA"/>
+	</DuplicateLeaders>
+	<Leaders>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" Name="LOC_LEADER_KUBLAI_KHAN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" TraitType="TRAIT_LEADER_KUBLAI"/>
+	</LeaderTraits>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_MONGOLIA" LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" CapitalName="LOC_CITY_NAME_XANADU"/>
+	</CivilizationLeaders>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" ReligionType="RELIGION_BUDDHISM"/>
+	</FavoredReligions>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_KUBLAI_KHAN_CHINA_QUOTE" QuoteAudio="KUBLAIKHAN_MA_MISC_PEP_TALK_B_01"/>
+	</LeaderQuotes>
+  <!-- Kublai Khan has the same historical agenda whether from China or Mongolia. Mostly defined in the China version, just add the info here too -->
+  <HistoricalAgendas>
+    <Row LeaderType="LEADER_KUBLAI_KHAN_MONGOLIA" AgendaType="AGENDA_KUBLAI_PAX"/>
+  </HistoricalAgendas>
+</GameInfo>

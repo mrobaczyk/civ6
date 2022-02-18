@@ -93,6 +93,7 @@ local m_PirateTreasureDrops =
 
 local g_MutantUniqueAbilityEnabled = true;
 local m_eCrippledGDRTypeHash	:number = GameInfo.Units["UNIT_CRIPPLED_GDR"].Hash;
+local m_eZombieTypeHash			:number = GameInfo.Units[ZOMBIES_ZOMBIE_COMBAT_UNIT].Hash;
 
 --------------------------------------------------
 function GetMargin(size: number, isWrap :boolean)
@@ -1156,7 +1157,9 @@ function UpdateZombiesUniqueAbility(turn :number)
 	local pAllPlayerIDs : table = PlayerManager.GetAliveIDs();	
 	for k, iPlayerID in ipairs(pAllPlayerIDs) do
 		local pPlayerConfig : table = PlayerConfigurations[iPlayerID];
-		if (pPlayerConfig ~= nil and pPlayerConfig:GetCivilizationTypeName() == g_CivTypeNames.Zombies) then
+		if (pPlayerConfig ~= nil 
+			-- Only Zombie players and barbarians can have zombies.
+			and (pPlayerConfig:GetCivilizationTypeName() == g_CivTypeNames.Zombies or pPlayerConfig:GetCivilizationLevelTypeID() ~= CivilizationLevelTypes.CIVILIZATION_LEVEL_FULL_CIV) ) then
 			local pPlayer = Players[iPlayerID];
 			local pPlayerUnits : object = pPlayer:GetUnits();
 			for i, pUnit in pPlayerUnits:Members() do
@@ -1488,7 +1491,6 @@ function OnCombatOccurred(attackerPlayerID :number, attackerUnitID :number, defe
 		return;
 	end
 
-	local pAttackerPlayerConfig :object = PlayerConfigurations[attackerPlayerID];
 	local pAttackerPlayer :object = Players[attackerPlayerID];
 	local pAttackingUnit :object = pAttackerPlayer:GetUnits():FindID(attackerUnitID);
 
@@ -1515,26 +1517,21 @@ function OnCombatOccurred(attackerPlayerID :number, attackerUnitID :number, defe
 		return;
 	end
 
-	local pDefenderPlayerConfig = PlayerConfigurations[defenderPlayerID];
 	local pDefenderPlayer = Players[defenderPlayerID];
 	local pDefendingUnit = pDefenderPlayer:GetUnits():FindID(defenderUnitID);
 
 	-- Zombie factions get additional Zombie Hordes when they kill a unit in combat.
 	-- Non-Zombie Attacker died to Zombie Defender.
 	if((pAttackingUnit:IsDead() or pAttackingUnit:IsDelayedDeath())
-		and pAttackerPlayerConfig ~= nil
-		and pAttackerPlayerConfig:GetCivilizationTypeName() ~= g_CivTypeNames.Zombies 
-		and pDefenderPlayerConfig ~= nil 
-		and pDefenderPlayerConfig:GetCivilizationTypeName() == g_CivTypeNames.Zombies) then
+		and pAttackingUnit:GetTypeHash() ~= m_eZombieTypeHash
+		and pDefendingUnit:GetTypeHash() == m_eZombieTypeHash) then
 		GrantZombieCombatDeath(defenderPlayerID, pDefendingUnit);
 	end
 
 	-- Non-Zombie Defender died to Zombie Attacker
 	if((pDefendingUnit:IsDead() or pDefendingUnit:IsDelayedDeath()) 
-		and pDefenderPlayerConfig ~= nil 
-		and pDefenderPlayerConfig:GetCivilizationTypeName() ~= g_CivTypeNames.Zombies
-		and pAttackerPlayerConfig ~= nil 
-		and pAttackerPlayerConfig:GetCivilizationTypeName() == g_CivTypeNames.Zombies) then
+		and pDefendingUnit:GetTypeHash() ~= m_eZombieTypeHash
+		and pAttackingUnit:GetTypeHash() == m_eZombieTypeHash) then
 		GrantZombieCombatDeath(attackerPlayerID, pAttackingUnit);
 	end
 end

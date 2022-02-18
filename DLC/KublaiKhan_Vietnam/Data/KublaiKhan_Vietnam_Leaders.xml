@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_KUBLAI_KHAN_CHINA" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_LADY_TRIEU" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_KUBLAI" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_TRIEU" Kind="KIND_TRAIT"/>
+		<!-- Abilities -->
+		<Row Type="ABILITY_TRIEU_FEATURES" Kind="KIND_ABILITY"/>
+    <!--Agendas-->
+    <Row Type="TRAIT_AGENDA_TRIEU_DEFENDER" Kind="KIND_TRAIT"/>
+    <Row Type="TRAIT_AGENDA_KUBLAI_PAX" Kind="KIND_TRAIT"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_RECON"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_HEAVY_CHARIOT"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_LIGHT_CHARIOT"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_WARRIOR_MONK"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_SUPPORT"/>
+		<Row Type="ABILITY_TRIEU_FEATURES" Tag="CLASS_LANDCIVILIAN"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_CHINA" Name="LOC_LEADER_KUBLAI_KHAN_C_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_LADY_TRIEU" Name="LOC_LEADER_LADY_TRIEU_NAME" Sex="Female" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_CHINA" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_KUBLAI_KHAN_CHINA_QUOTE" QuoteAudio="KUBLAIKHAN_MA_MISC_PEP_TALK_B_01"/>
+		<Row LeaderType="LEADER_LADY_TRIEU" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_LADY_TRIEU_QUOTE" QuoteAudio="LADYTRIEU_MA_MISC_PEP_TALK_B_03"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_CHINA" TraitType="TRAIT_LEADER_KUBLAI"/>
+		<Row LeaderType="LEADER_LADY_TRIEU" TraitType="TRAIT_LEADER_TRIEU"/>
+	</LeaderTraits>
+	<AiListTypes>
+		<Row ListType="KublaiKhanPseudoYieldPreferences"/>
+		<Row ListType="KublaiKhanYieldPreferences"/>
+		<Row ListType="VietnamSettlePreferences"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="KublaiKhanPseudoYieldPreferences" LeaderType="TRAIT_LEADER_KUBLAI" System="PseudoYields"/>
+		<Row ListType="KublaiKhanYieldPreferences" LeaderType="TRAIT_LEADER_KUBLAI" System="Yields"/>
+		<Row ListType="VietnamSettlePreferences" LeaderType="TRAIT_CIVILIZATION_VIETNAM" System="PlotEvaluations"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="KublaiKhanPseudoYieldPreferences" Item="PSEUDOYIELD_UNIT_TRADE" Value="50"/>
+		<Row ListType="KublaiKhanYieldPreferences" Item="YIELD_GOLD" Value="20"/>
+		<Row ListType="VietnamSettlePreferences" Item="Specific Feature" Favored="false" Value="2" StringVal="FEATURE_FOREST" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FEATURES"/>
+		<Row ListType="VietnamSettlePreferences" Item="Specific Feature" Favored="false" Value="2" StringVal="FEATURE_JUNGLE" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FEATURES"/>
+		<Row ListType="VietnamSettlePreferences" Item="Specific Feature" Favored="false" Value="2" StringVal="FEATURE_MARSH" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FEATURES"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_KUBLAI" Name="LOC_TRAIT_LEADER_KUBLAI_NAME" Description="LOC_TRAIT_LEADER_KUBLAI_DESCRIPTION"/>
+		<Row TraitType="TRAIT_LEADER_TRIEU" Name="LOC_TRAIT_LEADER_TRIEU_NAME" Description="LOC_TRAIT_LEADER_TRIEU_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_KUBLAI_PAX"/>
+		<Row TraitType="TRAIT_AGENDA_TRIEU_DEFENDER" />
+	</Traits>
+	<TraitModifiers>
+		<!-- Kublai -->
+		<Row>
+			<TraitType>TRAIT_LEADER_KUBLAI</TraitType>
+			<ModifierId>TRAIT_ECONOMIC_GOVERNMENT_SLOT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_KUBLAI</TraitType>
+			<ModifierId>TRAIT_TRADING_POST_CIVIC_BOOST</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_KUBLAI</TraitType>
+			<ModifierId>TRAIT_TRADING_POST_TECH_BOOST</ModifierId>
+		</Row>
+		<!-- Vietnam -->
+		<Row>
+			<TraitType>TRAIT_LEADER_TRIEU</TraitType>
+			<ModifierId>TRAIT_TRIEU_ABILITY</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_ECONOMIC_GOVERNMENT_SLOT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CULTURE_ADJUST_GOVERNMENT_SLOTS_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TRADING_POST_CIVIC_BOOST</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FREE_CIVIC_BOOST_FIRST_TRADING_POST_EACH_CIV</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TRADING_POST_TECH_BOOST</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FREE_TECH_BOOST_FIRST_TRADING_POST_EACH_CIV</ModifierType>
+		</Row>
+		<!-- Vietnam -->
+		<Row>
+			<ModifierId>TRAIT_TRIEU_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_FRIENDLY_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_UNIT_IS_FRIENDLY_TRIEU_FEATURES</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_FRIENDLY_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_UNIT_IS_FRIENDLY_TRIEU_FEATURES</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_UNFRIENDLY_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_UNIT_IS_UNFRIENDLY_TRIEU_FEATURES</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_UNFRIENDLY_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_UNIT_IS_UNFRIENDLY_TRIEU_FEATURES</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_ECONOMIC_GOVERNMENT_SLOT</ModifierId>
+			<Name>GovernmentSlotType</Name>
+			<Value>SLOT_ECONOMIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TRADING_POST_CIVIC_BOOST</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_TRADING_POST_TECH_BOOST</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<!-- Vietnam -->
+		<Row>
+			<ModifierId>TRAIT_TRIEU_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_TRIEU_FEATURES</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_FRIENDLY_MOVEMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_FRIENDLY_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_UNFRIENDLY_MOVEMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRIEU_UNFRIENDLY_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_FRIENDLY_TRIEU_FEATURES</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_UNFRIENDLY_TRIEU_FEATURES</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>TRIEU_FEATURE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>TRIEU_REQUIRES_FEATURE_REQUIREMENTS</RequirementId>
+			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>UNIT_IN_NOT_OWNER_TERRITORY_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_UNIT_IN_OWNER_TERRITORY</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>TRIEU_REQUIRES_FEATURE_REQUIREMENTS</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>TRIEU_FEATURE_REQUIREMENTS</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>TRIEU_FEATURE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_MARSH</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>TRIEU_FEATURE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLOT_IS_FOREST_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>TRIEU_FEATURE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_JUNGLE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_FRIENDLY_TRIEU_FEATURES</RequirementSetId>
+			<RequirementId>TRIEU_REQUIRES_FEATURE_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_FRIENDLY_TRIEU_FEATURES</RequirementSetId>
+			<RequirementId>UNIT_IN_OWNER_TERRITORY_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_UNFRIENDLY_TRIEU_FEATURES</RequirementSetId>
+			<RequirementId>TRIEU_REQUIRES_FEATURE_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_UNIT_IS_UNFRIENDLY_TRIEU_FEATURES</RequirementSetId>
+			<RequirementId>UNIT_IN_NOT_OWNER_TERRITORY_REQUIREMENT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_TRIEU_FEATURES" Name="LOC_ABILITY_TRIEU_FEATURES_NAME" Description="LOC_ABILITY_TRIEU_FEATURES_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_TRIEU_FEATURES</UnitAbilityType>
+			<ModifierId>TRIEU_FRIENDLY_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_TRIEU_FEATURES</UnitAbilityType>
+			<ModifierId>TRIEU_FRIENDLY_COMBAT</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_TRIEU_FEATURES</UnitAbilityType>
+			<ModifierId>TRIEU_UNFRIENDLY_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_TRIEU_FEATURES</UnitAbilityType>
+			<ModifierId>TRIEU_UNFRIENDLY_COMBAT</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<ModifierStrings>
+		<Row ModifierId="TRIEU_FRIENDLY_COMBAT" Context="Preview" Text="LOC_ABILITY_TRIEU_FRIENDLY_COMBAT_DESCRIPTION"/>
+		<Row ModifierId="TRIEU_UNFRIENDLY_COMBAT" Context="Preview" Text="LOC_ABILITY_TRIEU_UNFRIENDLY_COMBAT_DESCRIPTION"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_KUBLAI_KHAN_CHINA" ReligionType="RELIGION_BUDDHISM"/>
+	</FavoredReligions>
+  <!--Agenda Definitions-->
+  <Agendas>
+    <Row AgendaType="AGENDA_TRIEU_DEFENDER" Name="LOC_AGENDA_TRIEU_DEFENDER_NAME" Description="LOC_AGENDA_TRIEU_DEFENDER_DESCRIPTION"/>
+    <Row AgendaType="AGENDA_KUBLAI_PAX" Name="LOC_AGENDA_KUBLAI_PAX_NAME" Description="LOC_AGENDA_KUBLAI_PAX_DESCRIPTION"/>
+  </Agendas>
+  <HistoricalAgendas>
+    <Row LeaderType="LEADER_LADY_TRIEU" AgendaType="AGENDA_TRIEU_DEFENDER"/>
+    <Row LeaderType="LEADER_KUBLAI_KHAN_CHINA" AgendaType="AGENDA_KUBLAI_PAX"/>
+  </HistoricalAgendas>
+  <AgendaTraits>
+    <Row AgendaType="AGENDA_TRIEU_DEFENDER" TraitType="TRAIT_AGENDA_TRIEU_DEFENDER"/>
+    <Row AgendaType="AGENDA_KUBLAI_PAX" TraitType="TRAIT_AGENDA_KUBLAI_PAX"/>
+  </AgendaTraits>
+  <TraitModifiers>
+    <Row TraitType="TRAIT_AGENDA_TRIEU_DEFENDER" ModifierId="AGENDA_TRIEU_DEFENDER"/>
+    <Row TraitType="TRAIT_AGENDA_KUBLAI_PAX" ModifierId="AGENDA_KUBLAI_PAX"/>
+  </TraitModifiers>
+  <Modifiers>
+    <Row>
+      <ModifierId>AGENDA_TRIEU_DEFENDER</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_TRIEU_DEFENDER</ModifierType>
+      <OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+      <SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_10_TURNS</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>AGENDA_KUBLAI_PAX</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_KUBLAI_PAX</ModifierType>
+      <OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+      <SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
+    </Row>
+  </Modifiers>
+  <ModifierStrings>
+    <Row ModifierId="AGENDA_TRIEU_DEFENDER" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+    <Row ModifierId="AGENDA_KUBLAI_PAX" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+  </ModifierStrings>
+  </GameInfo>

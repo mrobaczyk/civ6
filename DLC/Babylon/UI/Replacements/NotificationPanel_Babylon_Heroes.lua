@@ -10,10 +10,10 @@
 local BASE_RegisterHandlers = RegisterHandlers;
 
 -- ===========================================================================
-function OnActivateHeroDiscovered( notificationEntry )
+function OnActivateHeroDiscovered( notificationEntry, notificationID:number, activatedByUser:boolean )
 	if (notificationEntry ~= nil and notificationEntry.m_PlayerID == Game.GetLocalPlayer()) then
 
-		local pNotification :table = GetActiveNotificationFromEntry(notificationEntry);
+		local pNotification :table = GetActiveNotificationFromEntry(notificationEntry, notificationID);
 		if pNotification ~= nil then
 			LuaEvents.NotificationPanel_HeroDiscovered(pNotification);
 		end

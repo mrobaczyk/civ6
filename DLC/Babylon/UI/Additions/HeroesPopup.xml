@@ -11,24 +11,27 @@
         <Label ID="EventTitle" Style="EventPopupTitle" Offset="0,2" Align="Center" WrapWidth="420" Anchor="C,C"/>
       </Grid>
       
-      <Container Size="parent-32,100" Offset="0,80" Anchor="C,T">
-        <Label ID="EventDescription" Style="EventPopupDescription" Align="Center" WrapWidth="parent-20" Anchor="C,C"/>
-        <Line Start="1,0" End="parent-2,0" Width="2" Color="35,66,92,150" Anchor="C,B"/>
-      </Container>
-      
-      <Image ID="HeroImage" Size="400,256" Texture="Heroes_Anansi" Anchor="C,T" Offset="0,190"/>
+      <Container ID="MainContainer" Size="parent-32,570" Offset="0,90" Anchor="C,T">
+        <Stack ID="ImageDescStack" Size="parent,auto" Anchor="C,T" StackGrowth="Down" StackPadding="10">
+          <Container Size="parent,auto" MinSize="0,60">
+            <Label ID="EventDescription" Style="EventPopupDescription" Align="Center" WrapWidth="parent-20" Anchor="C,C"/>
+          </Container>
+          <Line Start="1,0" End="parent,0" Width="2" Color="35,66,92,150" Anchor="C,B"/>
+          <Image ID="HeroImage" Size="400,256" Texture="Heroes_Anansi" Anchor="C,T"/>
+        </Stack>
 
-      <Grid Style="EventPopupEffectsDeco" Anchor="C,B" Offset="0,120" Size="parent-50,200" AutoSizePadding="0,10">
-        <ScrollPanel Size="parent-25,parent-20" Anchor="C,C" Vertical="1" AutoScrollBar="1">  
-          <ScrollBar Size="11,100" Anchor="R,C"  Offset="0,0" Style="ScrollVerticalBar" />
-          <Stack Anchor="C,C" StackPadding="5">
-            <Label ID="HeroDescription" Style="EventPopupEffects" Align="Center" WrapWidth="parent-50" Anchor="C,T"/>
-            <Stack ID="AbilityStack" StackGrowth="Down" StackPadding="5"/>
-            <Stack ID="CommandStack" StackGrowth="Down" StackPadding="5"/>
-            <Label ID="ClaimText" Style="EventPopupEffects" Align="Center" WrapWidth="parent-50" Anchor="C,T"/>
-          </Stack>
-        </ScrollPanel>
-      </Grid>
+        <Grid ID="EventEffectsContainer" Style="EventPopupEffectsDeco" Anchor="C,B" Size="parent-30,200" AutoSizePadding="0,10">
+          <ScrollPanel Size="parent-25,parent-20" Anchor="C,C" Vertical="1" AutoScrollBar="1">
+            <ScrollBar Size="11,100" Anchor="R,C"  Offset="0,0" Style="ScrollVerticalBar" />
+            <Stack Anchor="C,C" StackPadding="5">
+              <Label ID="HeroDescription" Style="EventPopupEffects" Align="Center" WrapWidth="parent-50" Anchor="C,T"/>
+              <Stack ID="AbilityStack" StackGrowth="Down" StackPadding="5"/>
+              <Stack ID="CommandStack" StackGrowth="Down" StackPadding="5"/>
+              <Label ID="ClaimText" Style="EventPopupEffects" Align="Center" WrapWidth="parent-50" Anchor="C,T"/>
+            </Stack>
+          </ScrollPanel>
+        </Grid>
+      </Container>
 
       <Stack ID="ButtonStack" Anchor="C,B" Offset="0,26" StackPadding="4" StackGrowth="Down">
         <GridButton ID="LookAtHeroButton" Style="MainButton" Size="270,40" Anchor="C,T" Offset="0,0" String="LOC_LOOK_AT_HERO"/>
