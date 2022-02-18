@@ -1,4 +1,8 @@
--- Copyright 2019, Firaxis Games
+-- Copyright 2020, Firaxis Games
+
+BASE_UpdateButtonStates = UpdateButtonStates;
+BASE_LateInitialize = LateInitialize;
+BASE_OnShow = OnShow;
 
 -- Add the new victory type
 Styles = {
@@ -34,4 +38,56 @@ function IsValidGraphDataSetToShow( dataSetName:string )
 	if dataSetName=="REPLAYDATASET_TOTALPLAYERUNITSDESTROYED" then return true; end
 	if dataSetName=="REPLAYDATASET_TOTALUNITSDESTROYED" then return true; end
 	return false;
+end
+
+-- ===========================================================================
+-- OVERRIDE
+-- ===========================================================================
+function UpdateButtonStates(data:table)
+	BASE_UpdateButtonStates(data);
+	Controls.ObserveButton:SetShow(CanObserve());
+end
+
+-- ===========================================================================
+function OnObserve()
+	local kParameters:table = {};
+	UI.RequestPlayerOperation(Game.GetLocalPlayer(), PlayerOperations.START_OBSERVER_MODE, kParameters);
+	LuaEvents.EndGameMenu_StartObserverMode();
+	Close();
+end
+
+-- ===========================================================================
+-- OVERRIDE
+-- ===========================================================================
+function OnShow()
+	local localObserverID = Game.GetLocalObserver();
+	if localObserverID ~= PlayerTypes.OBSERVER then
+		BASE_OnShow();
+	else
+		OnShowEndGame();
+	end
+end
+
+-- =============================================================
+function OnEndObserverMode()
+	OnShowEndGame();
+end
+
+-- ===========================================================================
+function CanObserve()
+	return(GameConfiguration.IsAnyMultiplayer() and 
+	(PlayerManager.GetAliveMajorsCount() > 1) and 
+	(not GameConfiguration.IsHotseat()) and 
+	(not GameConfiguration.IsPlayByCloud()));
+end
+
+-- ===========================================================================
+-- OVERRIDE
+-- ===========================================================================
+function LateInitialize()
+	BASE_LateInitialize();
+	LuaEvents.ActionPanel_EndObserverMode.Add(OnShowEndGame);
+	TruncateStringWithTooltip(Controls.ObserveButton, MAX_BUTTON_SIZE, Locale.Lookup("LOC_END_GAME_MENU_OBSERVE"));
+	Controls.ObserveButton:RegisterCallback(Mouse.eLClick, OnObserve);
+	Controls.ObserveButton:RegisterCallback( Mouse.eMouseEnter, function() UI.PlaySound("Main_Menu_Mouse_Over"); end);
 end

@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameInfo>
+	<Types>
+		<Row Type="UNIT_GIANT_DEATH_ROBOT" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_CRIPPLED_GDR" Kind="KIND_UNIT"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_GIANT_DEATH_ROBOT" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_CRIPPLED_GDR" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_ZOMBIE" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<TypeTags>
+		<Row Type="UNIT_GIANT_DEATH_ROBOT" Tag="CLASS_GIANT_DEATH_ROBOT"/>
+		<Row Type="UNIT_CRIPPLED_GDR" Tag="CLASS_GIANT_DEATH_ROBOT"/>
+		<Row Type="UNIT_CRIPPLED_GDR" Tag="CLASS_CRIPPLED_GDR"/>
+
+		<Row Type="UNIT_WARRIOR" Tag="CLASS_ZOMBIE"/>
+	</TypeTags>
 	<Units>
 		<!-- Removing ranged attack from barb rangers and slightly boosting their attack ability instead. -->
 		<Update>
@@ -15,7 +31,7 @@
 		</Update>
 		<Update>
 			<Where UnitType="UNIT_HELICOPTER"/>
-			<Set Combat="75" BaseMoves="3"/>
+			<Set Combat="71" BaseMoves="3"/>
 		</Update>
 		<Update>
 			<Where UnitType="UNIT_TANK"/>
@@ -29,7 +45,20 @@
 			<Where UnitType="UNIT_ROCKET_ARTILLERY"/>
 			<Set Combat="65"/>
 		</Update>
+		<!-- Using UNIT_WARRIOR as a Zombie Combat Unit until we can do gfx hookup on a new unit type. -->
+		<Update>
+			<Where UnitType="UNIT_WARRIOR"/>
+			<Set Name="LOC_UNIT_ZOMBIE_NAME" Description="LOC_UNIT_ZOMBIE_DESCRIPTION" Combat="70" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
+		</Update>		
+		
+		<!-- Base GDR -->
+		<Row UnitType="UNIT_GIANT_DEATH_ROBOT" Cost="1500" Maintenance="0" BaseMoves="5" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="130" RangedCombat="120" Range="3" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_GIANT_DEATH_ROBOT" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_GIANT_DEATH_ROBOT_NAME" Description="LOC_UNIT_GIANT_DEATH_ROBOT_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_ROBOTICS"/>
+		<!-- Special Crippled GDR used for the Cultists' unique ability -->
+		<Row UnitType="UNIT_CRIPPLED_GDR" Cost="1500" Maintenance="0" BaseMoves="3" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="74" RangedCombat="76" Range="2" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_CRIPPLED_GDR_NAME" Description="LOC_UNIT_CRIPPLED_GDR_DESCRIPTION"/>
 	</Units>
+	<UnitUpgrades>
+		<Delete Unit="UNIT_WARRIOR" />
+	</UnitUpgrades>
 	<BarbarianTribes>
 		<!-- Remove naval barbarians because player units can't fight back while embarked. -->
 		<Delete TribeType="TRIBE_NAVAL" />
@@ -46,4 +75,21 @@
 			<Set NumMilitary="3"/>
 		</Update>	
 	</BarbarianTribeNames>
+	<UnitAiTypes>
+		<Row AiType="UNITTYPE_MAJOR_CIV_ONLY"/>
+	</UnitAiTypes>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_GIANT_DEATH_ROBOT" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_GIANT_DEATH_ROBOT" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_GIANT_DEATH_ROBOT" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_GIANT_DEATH_ROBOT" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_GIANT_DEATH_ROBOT" AiType="UNITTYPE_SIEGE_ALL"/>
+		<Row UnitType="UNIT_GIANT_DEATH_ROBOT" AiType="UNITTYPE_MAJOR_CIV_ONLY"/>
+		<Row UnitType="UNIT_CRIPPLED_GDR" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_CRIPPLED_GDR" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_CRIPPLED_GDR" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_CRIPPLED_GDR" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_CRIPPLED_GDR" AiType="UNITTYPE_SIEGE_ALL"/>
+		<Row UnitType="UNIT_CRIPPLED_GDR" AiType="UNITTYPE_MAJOR_CIV_ONLY"/>
+	</UnitAiInfos>
 </GameInfo>

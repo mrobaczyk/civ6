@@ -174,7 +174,7 @@
     <Replace Tag="LOC_DISTRICT_OBSERVATORY_NAME" Language="fr_FR">
       <Text>Observatoire|Observatoires</Text>
       <Gender>masculine:vowel</Gender>
-      <Plurality>1</Plurality>
+      <Plurality>1|2</Plurality>
     </Replace>
     <Replace Tag="LOC_CIVILIZATION_GRAN_COLOMBIA_NAME" Language="fr_FR">
       <Text>Grande Colombie</Text>
@@ -250,7 +250,7 @@
       <Text>Obtenez un Comandante General quand le jeu entre dans une nouvelle ère.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COMANDANTE_GENERAL_DESCRIPTION" Language="fr_FR">
-      <Text>Personnage illustre spécial exclusif à Simón Bolívar. Chaque  personnage illustre a ses propres compétences, notamment un effet passif et un effet de retraite.</Text>
+      <Text>Personnage illustre spécial exclusif à Simón Bolívar. Chaque personnage illustre a ses propres compétences, notamment un effet passif et un effet de retraite.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COLOMBIAN_LLANERO_DESCRIPTION" Language="fr_FR">
       <Text>Unité exclusive à l'ère industrielle de la Grande Colombie remplaçant la cavalerie. Coût d'entretien réduit. [ICON_Strength] Puissance de combat +4 pour chaque llanero adjacent. Se soigne entièrement si elle est proche d'un Comandante General qui active sa compétence de retraite.</Text>
@@ -595,7 +595,7 @@
       <Text>Bonus per la posizione: grande bonus alla [ICON_Science] Scienza per ogni Piantagione adiacente. Bonus minore alla [ICON_Science] Scienza per ogni Fattoria o distretto adiacente.</Text>
     </Replace>
     <Replace Tag="LOC_LOADING_INFO_LEADER_LADY_SIX_SKY" Language="it_IT">
-      <Text>Wac-Chanil-Ahau, madre guerriera di Dos Pilas e Wak Kab'nal, conduci il tuo popolo in una nuova dinastia. Che la portata del tuo potere si estenda, così potrai sbaragliare nemici vicini e lontani. Gli dèi ti guideranno e tu porterai i tuoi leali cittadini alla vittoria.</Text>
+      <Text>Wac-Chanil-Ahau, madre guerriera di Dos Pilas e Wak Kab'nal, conduci il tuo popolo in una nuova dinastia. Che la portata del tuo potere si estenda, così potrai sbaragliare nemici vicini e lontani. Gli dèi ti guideranno e tu porterai i tuoi fedeli cittadini alla vittoria.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_MUTAL_NAME" Language="it_IT">
       <Text>Ix Mutal Ajaw</Text>
@@ -854,13 +854,13 @@
       <Text>새 시대에 진입하면 사령관을 얻습니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_CAMPANA_ADMIRABLE_DESCRIPTION_XP1" Language="ko_KR">
-      <Text>게임이 새 시대에 진입하면 사령관을 얻습니다.</Text>
+      <Text>문명이 새 시대에 진입하면 사령관을 얻습니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COMANDANTE_GENERAL_DESCRIPTION" Language="ko_KR">
       <Text>시몬 볼리바르만 이용할 수 있는 특별 유형의 위인입니다. 각각 패시브 효과, 퇴장 효과 같은 특유의 능력을 보유합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COLOMBIAN_LLANERO_DESCRIPTION" Language="ko_KR">
-      <Text>기병대를 대체하는 그란 콜롬비아 특유의 산업 시대 유닛입니다. 유지 비용이 낮습니다. 인접한 각 야네로에게서 [ICON_Strength] 전투력 +4를 얻습니다. 퇴각 능력을 활성화하는 사령관의 범위 내에 있으면 체력을 모두 회복합니다.</Text>
+      <Text>기병대를 대체하는 그란 콜롬비아 특유의 산업 시대 유닛입니다. 유지 비용이 낮습니다. 인접한 각 야네로에게서 [ICON_Strength] 전투력 +4를 얻습니다. 사령관이 퇴각 능력을 활성화할 때, 범위 내에 있으면 체력을 모두 회복합니다.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_MAYAB_NAME" Language="ko_KR">
       <Text>마야브</Text>
@@ -1318,10 +1318,10 @@
       <Text>游戏进入新时代后获得1名总指挥。</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COMANDANTE_GENERAL_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>仅限西蒙·玻利瓦尔使用的特殊伟人。每个皆拥有特色能力，包括被动效果和“退役”技能。</Text>
+      <Text>仅限西蒙·玻利瓦尔使用的特殊伟人。每个皆拥有特色能力，包括被动效果和“隐退”技能。</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COLOMBIAN_LLANERO_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>大哥伦比亚工业时代特色骑兵单位，替代骑兵。维护花费较低。每与1个牛仔骑兵相邻，则+4 [ICON_Strength] 战斗力。总指挥发动“退役”技能时，若处于有效范围内，将完全回复生命值。</Text>
+      <Text>大哥伦比亚工业时代特色骑兵单位，替代骑兵。维护花费较低。每与1个牛仔骑兵相邻，则+4 [ICON_Strength] 战斗力。总指挥发动“隐退”技能时，若处于有效范围内，将完全回复生命值。</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_MAYAB_NAME" Language="zh_Hans_CN">
       <Text>玛雅布</Text>
@@ -1461,7 +1461,7 @@
       <Text>Desbloquea la habilidad del Constructor de erigir una Hacienda, exclusiva de la Gran Colombia.[NEWLINE][NEWLINE]+2 a Oro [ICON_GOLD], +1 a Producción [ICON_PRODUCTION] y +1 a Alojamiento [Icon_Housing]. +1 a Alimentos [ICON_Food] por cada dos Plantaciones adyacentes (aumentado en cada Plantación con Repuestos). Las Plantaciones y Haciendas reciben un +1 a Producción [ICON_Production] por cada dos Haciendas adyacentes (aumentado en cada Hacienda con Despliegue rápido). Solo se puede construir en Llanuras, Colinas de llanuras, Praderas y Colinas de praderas.</Text>
     </Replace>
     <Replace Tag="LOC_LOADING_INFO_LEADER_SIMON_BOLIVAR" Language="es_ES">
-      <Text>Podrías haber seguido los antojos de tus compañeros, Simón Bolívar, pero en vez de ello has decidido convertirte en el Libertador. Las penurias nunca te han disuadido, así que aferra tus ideales y conduce a la república a una nueva era de prosperidad.</Text>
+      <Text>Podrías haber seguido los antojos de tus compañeros, Simón Bolívar, pero has decidido convertirte en el Libertador. Las penurias nunca te han disuadido, así que aferra tus ideales y lleva a la república a una nueva era de prosperidad.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_CAMPANA_ADMIRABLE_NAME" Language="es_ES">
       <Text>Campaña admirable</Text>
@@ -1491,7 +1491,7 @@
       <Text>Adyacencia: bonificación importante a Ciencia [ICON_Science] por cada Plantación adyacente. Bonificación menor a Ciencia [ICON_Science] por casillas de Granja o distrito adyacentes.</Text>
     </Replace>
     <Replace Tag="LOC_LOADING_INFO_LEADER_LADY_SIX_SKY" Language="es_ES">
-      <Text>Señora Seis Cielo, gran madre guerrera de Dos Pilas y Wak Kab'nal, conduce a tu pueblo a una nueva dinastía. Que tu brazo se alargue tanto que alcance a los enemigos que están cerca y a los que están lejos. Los dioses te guiarán y tú a tu vez guiarás a tus leales ciudadanos a la victoria.</Text>
+      <Text>Señora Seis Cielo, gran madre guerrera de Dos Pilas y Wak Kab'nal, lleva a tu pueblo a una nueva dinastía. Que tu brazo se alargue tanto que alcance a los enemigos cercanos y lejanos. Los dioses te guiarán y tú guiarás a tus leales ciudadanos a la victoria.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_MUTAL_NAME" Language="es_ES">
       <Text>Ix Mutal Ajaw</Text>
@@ -1618,10 +1618,10 @@
       <Text>遊戲進入新時代時可獲得一名總指揮官。</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COMANDANTE_GENERAL_DESCRIPTION" Language="zh_Hant_HK">
-      <Text>僅供西蒙‧玻利瓦使用的特殊偉人類型。每人都有獨特的能力，包含一種被動效果，以及一種退役效果。</Text>
+      <Text>僅供西蒙‧玻利瓦使用的特殊偉人類型。每人都有獨特的能力，包含一種被動效果，以及一種隱退效果。</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_COLOMBIAN_LLANERO_DESCRIPTION" Language="zh_Hant_HK">
-      <Text>大哥倫比亞工業時代的特色騎兵單位，替代騎兵。維護費用低廉。每個相鄰的平原牧人+4 [ICON_Strength] 戰鬥力。總指揮官啟動退役能力時，所有位於其範圍內的平原牧人皆可完全治癒。</Text>
+      <Text>大哥倫比亞工業時代的特色騎兵單位，替代騎兵。維護費用低廉。每個相鄰的平原牧人+4 [ICON_Strength] 戰鬥力。總指揮官啟動隱退能力時，所有位於其範圍內的平原牧人皆可完全治癒。</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_CIVILIZATION_MAYAB_NAME" Language="zh_Hant_HK">
       <Text>人煙稀少之處</Text>

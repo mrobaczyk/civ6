@@ -14,15 +14,816 @@
 			<IncludedEvents>
 				<Event Id="2441891522" Name="Royale_Lander_In" GUID="{E7111B86-B21A-4C7C-A961-F9FC463D2E21}"/>
 				<Event Id="3973812221" Name="Royale_Lander_Out" GUID="{652470DC-80A9-425F-AEA8-628DCC2B6DFE}"/>
+				<Event Id="74596345" Name="UFOAttackLong" GUID="{ADD85D7D-F165-4BBE-91FE-F1C459264893}"/>
+				<Event Id="4015416207" Name="UFOAttackShort" GUID="{4C6E68F8-2B59-4123-9C06-E4EF4D5236F1}"/>
+				<Event Id="1688972575" Name="UFODeath" GUID="{83E5D1F8-B713-46F8-903D-6FCFA301287A}"/>
+				<Event Id="2893299456" Name="UFODeathCrash" GUID="{071481B9-3189-4FA4-A347-33B1595345C0}"/>
+				<Event Id="2995472524" Name="UFODeathShootDown" GUID="{397CDB6E-96E5-47CE-A9B0-7251F1C95F99}"/>
+				<Event Id="1741335417" Name="UFOFlyby" GUID="{AB062009-5C6A-4CD2-BA74-532522907486}"/>
+				<Event Id="2928400812" Name="UFOFlyby_Quiet" GUID="{537BEBA4-E44A-42DB-B51C-FE3EA8AFABAE}"/>
+				<Event Id="3170624095" Name="UFOFlybyOut" GUID="{F133F40E-2697-4C45-ABE7-9A8D44AB6849}"/>
+				<Event Id="2012379630" Name="UFOFlybyOut_Quiet" GUID="{84A27ED5-4D5C-4BFA-9B9C-B5AE85C548AD}"/>
+				<Event Id="3796675895" Name="Zombie_Foley__Sweetener" GUID="{B44406E1-7D1B-4B10-8E52-1054CF8F1847}"/>
+				<Event Id="2897868098" Name="Zombie_Foley_Dirt_Big" GUID="{D3F1EDAE-499F-417B-AF08-30C859A9DE9B}"/>
+				<Event Id="3874365461" Name="Zombie_Foley_Dirt_Small" GUID="{470296F4-EAA7-4F8A-AC71-306ED4A2A741}"/>
+				<Event Id="2885433876" Name="Zombie_Foley_Long" GUID="{0A7FA221-8343-45BA-A92C-12A6D51E05DE}"/>
+				<Event Id="3042715483" Name="Zombie_Foley_Medium" GUID="{18757CC0-4BDF-469C-A209-4C566FA2AA04}"/>
+				<Event Id="2018652892" Name="Zombie_Foley_Short" GUID="{2F9DFDE7-35D1-4296-8B29-44F3D7B7E436}"/>
+				<Event Id="776966224" Name="Zombie_Foley_VeryShort" GUID="{8F1ED35D-97D8-4777-BC38-BBC761A7D242}"/>
+				<Event Id="2955412932" Name="Zombie_Footstep_Crunch" GUID="{16D403DE-A7C2-4CD0-BB9F-FCB6BCAAB1E5}"/>
+				<Event Id="465132071" Name="Zombie_Impacts" GUID="{B28772DC-51E7-42BB-BACD-F1E2D55E81A3}"/>
+				<Event Id="45474322" Name="Zombie_Vox_Breathing" GUID="{B8E278A5-B13A-42AF-815B-7C3FEF2F92AE}"/>
+				<Event Id="634633198" Name="Zombie_Vox_Death" GUID="{B5DA9D68-1F69-4952-90E1-556908095EA5}"/>
+				<Event Id="3076106311" Name="Zombie_Vox_Generic" GUID="{9A844D13-3275-4A63-9D2E-DC0598026A02}"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="21797345" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_02.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_02_10F921B3.wem</Path>
+				</File>
+				<File Id="39322785" Language="SFX">
+					<ShortName>UFO_Flyby_06.wav</ShortName>
+					<Path>SFX\UFO_Flyby_06_10F921B3.wem</Path>
+				</File>
+				<File Id="41597514" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_07.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_07_10F921B3.wem</Path>
+				</File>
+				<File Id="48743745" Language="SFX">
+					<ShortName>Beam_Weapon_Viper.wav</ShortName>
+					<Path>SFX\Beam_Weapon_Viper_7BA9ACDE.wem</Path>
+				</File>
+				<File Id="52689605" Language="SFX">
+					<ShortName>LostFoley_VeryShort_14.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_14_10F921B3.wem</Path>
+				</File>
+				<File Id="64904993" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_29.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_29_10F921B3.wem</Path>
+				</File>
+				<File Id="71861208" Language="SFX">
+					<ShortName>UFO_Flyby_05.wav</ShortName>
+					<Path>SFX\UFO_Flyby_05_CDC24634.wem</Path>
+				</File>
+				<File Id="82704644" Language="SFX">
+					<ShortName>Debris_Large_Dirt-09.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-09_F24CF131.wem</Path>
+				</File>
+				<File Id="84214592" Language="SFX">
+					<ShortName>TheLost_GutTear_09.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_09_10F921B3.wem</Path>
+				</File>
+				<File Id="91893151" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_03.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_03_10F921B3.wem</Path>
+				</File>
+				<File Id="96309704" Language="SFX">
+					<ShortName>LostFoley_VeryShort_01.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_01_10F921B3.wem</Path>
+				</File>
+				<File Id="103193520" Language="SFX">
+					<ShortName>LostFoley_Long_02.wav</ShortName>
+					<Path>SFX\LostFoley_Long_02_10F921B3.wem</Path>
+				</File>
+				<File Id="105500285" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_27.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_27_10F921B3.wem</Path>
+				</File>
+				<File Id="106593878" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_05.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_05_10F921B3.wem</Path>
+				</File>
+				<File Id="110086889" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_35.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_35_10F921B3.wem</Path>
+				</File>
+				<File Id="111079080" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_01.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_01_10F921B3.wem</Path>
+				</File>
+				<File Id="116812769" Language="SFX">
+					<ShortName>Debris_Small_Dirt-07.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-07_24FE89A0.wem</Path>
+				</File>
+				<File Id="120894982" Language="SFX">
+					<ShortName>LostFoley_Long_03.wav</ShortName>
+					<Path>SFX\LostFoley_Long_03_10F921B3.wem</Path>
+				</File>
+				<File Id="126819612" Language="SFX">
+					<ShortName>LostFoley_Long_14.wav</ShortName>
+					<Path>SFX\LostFoley_Long_14_10F921B3.wem</Path>
+				</File>
+				<File Id="128930797" Language="SFX">
+					<ShortName>TheLost_GutTear_06.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_06_10F921B3.wem</Path>
+				</File>
+				<File Id="130326330" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_32.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_32_10F921B3.wem</Path>
+				</File>
+				<File Id="134041397" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_13.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_13_10F921B3.wem</Path>
+				</File>
+				<File Id="134795151" Language="SFX">
+					<ShortName>LostFoley_Short_06.wav</ShortName>
+					<Path>SFX\LostFoley_Short_06_10F921B3.wem</Path>
+				</File>
+				<File Id="141472361" Language="SFX">
+					<ShortName>UFO_Flyby_03.wav</ShortName>
+					<Path>SFX\UFO_Flyby_03_10F921B3.wem</Path>
+				</File>
+				<File Id="150336945" Language="SFX">
+					<ShortName>Debris_Small_Dirt-09.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-09_C4FFA626.wem</Path>
+				</File>
+				<File Id="158376973" Language="SFX">
+					<ShortName>PropFighterDeathCrash-02.wav</ShortName>
+					<Path>SFX\PropFighterDeathCrash-02_10F921B3.wem</Path>
+				</File>
+				<File Id="161439207" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_04.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_04_10F921B3.wem</Path>
+				</File>
+				<File Id="168163140" Language="SFX">
+					<ShortName>LostFoley_Long_01.wav</ShortName>
+					<Path>SFX\LostFoley_Long_01_10F921B3.wem</Path>
+				</File>
+				<File Id="169006845" Language="SFX">
+					<ShortName>Beam_Weapon_Andromedon.wav</ShortName>
+					<Path>SFX\Beam_Weapon_Andromedon_E1E65BF4.wem</Path>
+				</File>
+				<File Id="178524178" Language="SFX">
+					<ShortName>TheLost_Death_09.wav</ShortName>
+					<Path>SFX\TheLost_Death_09_10F921B3.wem</Path>
+				</File>
+				<File Id="184397670" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_18.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_18_10F921B3.wem</Path>
+				</File>
+				<File Id="189828301" Language="SFX">
+					<ShortName>LostFoley_VeryShort_11.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_11_10F921B3.wem</Path>
+				</File>
+				<File Id="195503459" Language="SFX">
+					<ShortName>LostFoley_VeryShort_03.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_03_10F921B3.wem</Path>
+				</File>
+				<File Id="199674806" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_12.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_12_10F921B3.wem</Path>
+				</File>
+				<File Id="201348306" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_06.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_06_10F921B3.wem</Path>
+				</File>
+				<File Id="220339833" Language="SFX">
+					<ShortName>LostFoley_VeryShort_10.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_10_10F921B3.wem</Path>
+				</File>
+				<File Id="228414237" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_14.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_14_10F921B3.wem</Path>
+				</File>
+				<File Id="234643964" Language="SFX">
+					<ShortName>LostFoley_VeryShort_02.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_02_10F921B3.wem</Path>
+				</File>
+				<File Id="245365265" Language="SFX">
+					<ShortName>Beam_Weapon_Viper.wav</ShortName>
+					<Path>SFX\Beam_Weapon_Viper_47D8C4D3.wem</Path>
+				</File>
+				<File Id="257937068" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_06.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_06_10F921B3.wem</Path>
+				</File>
+				<File Id="258810614" Language="SFX">
+					<ShortName>PropFighterDeathShootDown-01.wav</ShortName>
+					<Path>SFX\PropFighterDeathShootDown-01_10F921B3.wem</Path>
+				</File>
+				<File Id="264230890" Language="SFX">
+					<ShortName>TheLost_Death_03.wav</ShortName>
+					<Path>SFX\TheLost_Death_03_10F921B3.wem</Path>
+				</File>
+				<File Id="265484607" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_25.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_25_10F921B3.wem</Path>
+				</File>
+				<File Id="266234201" Language="SFX">
+					<ShortName>LostFoley_Short_12.wav</ShortName>
+					<Path>SFX\LostFoley_Short_12_10F921B3.wem</Path>
+				</File>
+				<File Id="294679328" Language="SFX">
+					<ShortName>Debris_Small_Dirt-02.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-02_F75C1F41.wem</Path>
+				</File>
+				<File Id="305919955" Language="SFX">
+					<ShortName>TheLost_GutTear_01.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_01_10F921B3.wem</Path>
+				</File>
+				<File Id="306052094" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_22.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_22_10F921B3.wem</Path>
+				</File>
+				<File Id="319239407" Language="SFX">
+					<ShortName>TheLost_Death_04.wav</ShortName>
+					<Path>SFX\TheLost_Death_04_10F921B3.wem</Path>
+				</File>
+				<File Id="325888376" Language="SFX">
+					<ShortName>PropFighterDeathCrash-01.wav</ShortName>
+					<Path>SFX\PropFighterDeathCrash-01_10F921B3.wem</Path>
+				</File>
+				<File Id="328054638" Language="SFX">
+					<ShortName>LostFoley_Long_11.wav</ShortName>
+					<Path>SFX\LostFoley_Long_11_10F921B3.wem</Path>
+				</File>
+				<File Id="328063973" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_30.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_30_10F921B3.wem</Path>
+				</File>
+				<File Id="332219883" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_13.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_13_10F921B3.wem</Path>
+				</File>
+				<File Id="332221325" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_08.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_08_10F921B3.wem</Path>
+				</File>
+				<File Id="336222450" Language="SFX">
+					<ShortName>LostFoley_Short_01.wav</ShortName>
+					<Path>SFX\LostFoley_Short_01_10F921B3.wem</Path>
+				</File>
+				<File Id="341540923" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_01.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_01_10F921B3.wem</Path>
+				</File>
+				<File Id="342387951" Language="SFX">
+					<ShortName>LostFoley_Short_11.wav</ShortName>
+					<Path>SFX\LostFoley_Short_11_10F921B3.wem</Path>
+				</File>
+				<File Id="352705376" Language="SFX">
+					<ShortName>Debris_Large_Dirt-10.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-10_28B34475.wem</Path>
+				</File>
+				<File Id="354080256" Language="SFX">
+					<ShortName>LostFoley_Medium_11.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_11_10F921B3.wem</Path>
+				</File>
+				<File Id="357339443" Language="SFX">
+					<ShortName>TheLost_Death_07.wav</ShortName>
+					<Path>SFX\TheLost_Death_07_10F921B3.wem</Path>
+				</File>
+				<File Id="362453310" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_10.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_10_10F921B3.wem</Path>
+				</File>
+				<File Id="363333747" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_10.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_10_10F921B3.wem</Path>
+				</File>
+				<File Id="363362619" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_21.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_21_10F921B3.wem</Path>
+				</File>
+				<File Id="372006576" Language="SFX">
+					<ShortName>TheLost_Death_02.wav</ShortName>
+					<Path>SFX\TheLost_Death_02_10F921B3.wem</Path>
+				</File>
+				<File Id="379603931" Language="SFX">
+					<ShortName>LostFoley_VeryShort_09.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_09_10F921B3.wem</Path>
+				</File>
+				<File Id="384710684" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_02.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_02_10F921B3.wem</Path>
+				</File>
+				<File Id="391842706" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_06.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_06_10F921B3.wem</Path>
+				</File>
+				<File Id="407313773" Language="SFX">
+					<ShortName>TheLost_Death_01.wav</ShortName>
+					<Path>SFX\TheLost_Death_01_10F921B3.wem</Path>
+				</File>
+				<File Id="410403753" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_39.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_39_10F921B3.wem</Path>
+				</File>
+				<File Id="412954144" Language="SFX">
+					<ShortName>UFO_Flyby_04.wav</ShortName>
+					<Path>SFX\UFO_Flyby_04_EEBE87B7.wem</Path>
+				</File>
+				<File Id="414965042" Language="SFX">
+					<ShortName>Beam_Weapon_Viper.wav</ShortName>
+					<Path>SFX\Beam_Weapon_Viper_A7D68BB3.wem</Path>
+				</File>
+				<File Id="426450582" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_04.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_04_10F921B3.wem</Path>
+				</File>
+				<File Id="428269009" Language="SFX">
+					<ShortName>Debris_Large_Dirt-03.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-03_71248A01.wem</Path>
+				</File>
+				<File Id="435406056" Language="SFX">
+					<ShortName>LostFoley_Medium_14.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_14_10F921B3.wem</Path>
+				</File>
+				<File Id="436303686" Language="SFX">
+					<ShortName>LostFoley_Medium_07.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_07_10F921B3.wem</Path>
+				</File>
+				<File Id="437119649" Language="SFX">
+					<ShortName>LostFoley_Short_10.wav</ShortName>
+					<Path>SFX\LostFoley_Short_10_10F921B3.wem</Path>
+				</File>
+				<File Id="444873513" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_37.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_37_10F921B3.wem</Path>
+				</File>
+				<File Id="445992072" Language="SFX">
+					<ShortName>PropFighterDeathShootDown-02.wav</ShortName>
+					<Path>SFX\PropFighterDeathShootDown-02_10F921B3.wem</Path>
+				</File>
+				<File Id="449517424" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_14.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_14_10F921B3.wem</Path>
+				</File>
+				<File Id="454857751" Language="SFX">
+					<ShortName>LostFoley_VeryShort_07.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_07_10F921B3.wem</Path>
+				</File>
+				<File Id="455148656" Language="SFX">
+					<ShortName>LostFoley_Medium_15.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_15_10F921B3.wem</Path>
+				</File>
+				<File Id="455154467" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_02.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_02_10F921B3.wem</Path>
+				</File>
+				<File Id="467458955" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_41.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_41_10F921B3.wem</Path>
+				</File>
+				<File Id="471630362" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_11.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_11_10F921B3.wem</Path>
+				</File>
+				<File Id="475868557" Language="SFX">
+					<ShortName>TheLost_GutTear_08.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_08_10F921B3.wem</Path>
+				</File>
+				<File Id="477850287" Language="SFX">
+					<ShortName>TheLost_Death_06.wav</ShortName>
+					<Path>SFX\TheLost_Death_06_10F921B3.wem</Path>
+				</File>
+				<File Id="483995209" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_40.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_40_10F921B3.wem</Path>
+				</File>
+				<File Id="485034476" Language="SFX">
+					<ShortName>LostFoley_Long_06.wav</ShortName>
+					<Path>SFX\LostFoley_Long_06_10F921B3.wem</Path>
+				</File>
+				<File Id="490526749" Language="SFX">
+					<ShortName>LostFoley_Medium_13.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_13_10F921B3.wem</Path>
+				</File>
+				<File Id="497435063" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_07.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_07_10F921B3.wem</Path>
+				</File>
+				<File Id="501251202" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_07.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_07_10F921B3.wem</Path>
+				</File>
+				<File Id="507128395" Language="SFX">
+					<ShortName>LostFoley_VeryShort_12.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_12_10F921B3.wem</Path>
+				</File>
+				<File Id="510915884" Language="SFX">
+					<ShortName>LostFoley_Short_09.wav</ShortName>
+					<Path>SFX\LostFoley_Short_09_10F921B3.wem</Path>
+				</File>
+				<File Id="525922532" Language="SFX">
+					<ShortName>Debris_Small_Dirt-10.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-10_08EF1EF5.wem</Path>
+				</File>
+				<File Id="543079104" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_09.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_09_10F921B3.wem</Path>
+				</File>
 				<File Id="544300999" Language="SFX">
 					<ShortName>Royale_Lander_In_02.wav</ShortName>
 					<Path>SFX\Royale_Lander_In_02_10F921B3.wem</Path>
 				</File>
+				<File Id="549402851" Language="SFX">
+					<ShortName>UFO_Flyby_05.wav</ShortName>
+					<Path>SFX\UFO_Flyby_05_10F921B3.wem</Path>
+				</File>
+				<File Id="553621108" Language="SFX">
+					<ShortName>LostFoley_Short_05.wav</ShortName>
+					<Path>SFX\LostFoley_Short_05_10F921B3.wem</Path>
+				</File>
+				<File Id="557999383" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_05.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_05_10F921B3.wem</Path>
+				</File>
+				<File Id="559707482" Language="SFX">
+					<ShortName>LostFoley_Long_12.wav</ShortName>
+					<Path>SFX\LostFoley_Long_12_10F921B3.wem</Path>
+				</File>
+				<File Id="564376775" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_07.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_07_10F921B3.wem</Path>
+				</File>
+				<File Id="567103557" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_34.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_34_10F921B3.wem</Path>
+				</File>
+				<File Id="577056723" Language="SFX">
+					<ShortName>UFO_Flyby_06.wav</ShortName>
+					<Path>SFX\UFO_Flyby_06_9B63BF7E.wem</Path>
+				</File>
+				<File Id="577987746" Language="SFX">
+					<ShortName>LostFoley_VeryShort_06.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_06_10F921B3.wem</Path>
+				</File>
+				<File Id="581678897" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_06.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_06_10F921B3.wem</Path>
+				</File>
+				<File Id="582130018" Language="SFX">
+					<ShortName>PropFighterDeathShootDown-03.wav</ShortName>
+					<Path>SFX\PropFighterDeathShootDown-03_10F921B3.wem</Path>
+				</File>
+				<File Id="585613609" Language="SFX">
+					<ShortName>LostFoley_Short_15.wav</ShortName>
+					<Path>SFX\LostFoley_Short_15_10F921B3.wem</Path>
+				</File>
+				<File Id="588104034" Language="SFX">
+					<ShortName>LostFoley_Long_15.wav</ShortName>
+					<Path>SFX\LostFoley_Long_15_10F921B3.wem</Path>
+				</File>
+				<File Id="590528586" Language="SFX">
+					<ShortName>LostFoley_Long_07.wav</ShortName>
+					<Path>SFX\LostFoley_Long_07_10F921B3.wem</Path>
+				</File>
+				<File Id="596728147" Language="SFX">
+					<ShortName>LostFoley_VeryShort_04.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_04_10F921B3.wem</Path>
+				</File>
+				<File Id="601522801" Language="SFX">
+					<ShortName>LostFoley_Medium_04.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_04_10F921B3.wem</Path>
+				</File>
+				<File Id="606588115" Language="SFX">
+					<ShortName>PropFighterDeathCrash-03.wav</ShortName>
+					<Path>SFX\PropFighterDeathCrash-03_10F921B3.wem</Path>
+				</File>
+				<File Id="614548602" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_03.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_03_10F921B3.wem</Path>
+				</File>
+				<File Id="625439487" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_38.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_38_10F921B3.wem</Path>
+				</File>
+				<File Id="629776261" Language="SFX">
+					<ShortName>TheLost_GutTear_02.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_02_10F921B3.wem</Path>
+				</File>
+				<File Id="632265516" Language="SFX">
+					<ShortName>LostFoley_VeryShort_13.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_13_10F921B3.wem</Path>
+				</File>
+				<File Id="646749099" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_09.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_09_10F921B3.wem</Path>
+				</File>
+				<File Id="650164794" Language="SFX">
+					<ShortName>LostFoley_Medium_09.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_09_10F921B3.wem</Path>
+				</File>
+				<File Id="656367245" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_15.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_15_10F921B3.wem</Path>
+				</File>
+				<File Id="656681400" Language="SFX">
+					<ShortName>UFO_Flyby_03.wav</ShortName>
+					<Path>SFX\UFO_Flyby_03_312E5036.wem</Path>
+				</File>
+				<File Id="658904658" Language="SFX">
+					<ShortName>LostFoley_Medium_12.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_12_10F921B3.wem</Path>
+				</File>
+				<File Id="664450251" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_04.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_04_10F921B3.wem</Path>
+				</File>
+				<File Id="671666209" Language="SFX">
+					<ShortName>Beam_Weapon_Andromedon.wav</ShortName>
+					<Path>SFX\Beam_Weapon_Andromedon_F3AAC460.wem</Path>
+				</File>
+				<File Id="684305069" Language="SFX">
+					<ShortName>LostFoley_Long_10.wav</ShortName>
+					<Path>SFX\LostFoley_Long_10_10F921B3.wem</Path>
+				</File>
+				<File Id="699072454" Language="SFX">
+					<ShortName>LostFoley_Short_04.wav</ShortName>
+					<Path>SFX\LostFoley_Short_04_10F921B3.wem</Path>
+				</File>
+				<File Id="699589200" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_02.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_02_10F921B3.wem</Path>
+				</File>
+				<File Id="702704281" Language="SFX">
+					<ShortName>LostFoley_Short_08.wav</ShortName>
+					<Path>SFX\LostFoley_Short_08_10F921B3.wem</Path>
+				</File>
+				<File Id="712059614" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_04.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_04_10F921B3.wem</Path>
+				</File>
+				<File Id="722722271" Language="SFX">
+					<ShortName>Beam_Weapon_Viper.wav</ShortName>
+					<Path>SFX\Beam_Weapon_Viper_F6E37871.wem</Path>
+				</File>
+				<File Id="753217887" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_17.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_17_10F921B3.wem</Path>
+				</File>
+				<File Id="755501275" Language="SFX">
+					<ShortName>LostFoley_VeryShort_16.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_16_10F921B3.wem</Path>
+				</File>
+				<File Id="756740262" Language="SFX">
+					<ShortName>LostFoley_Short_13.wav</ShortName>
+					<Path>SFX\LostFoley_Short_13_10F921B3.wem</Path>
+				</File>
 				<File Id="762092002" Language="SFX">
 					<ShortName>Royale_Lander_Out_02.wav</ShortName>
 					<Path>SFX\Royale_Lander_Out_02_10F921B3.wem</Path>
+				</File>
+				<File Id="764209935" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_03.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_03_10F921B3.wem</Path>
+				</File>
+				<File Id="768617726" Language="SFX">
+					<ShortName>TheLost_GutTear_04.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_04_10F921B3.wem</Path>
+				</File>
+				<File Id="771438147" Language="SFX">
+					<ShortName>LostFoley_Medium_02.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_02_10F921B3.wem</Path>
+				</File>
+				<File Id="774709980" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_10.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_10_10F921B3.wem</Path>
+				</File>
+				<File Id="775097723" Language="SFX">
+					<ShortName>UFO_Flyby_07.wav</ShortName>
+					<Path>SFX\UFO_Flyby_07_10F921B3.wem</Path>
+				</File>
+				<File Id="777695571" Language="SFX">
+					<ShortName>LostFoley_Long_09.wav</ShortName>
+					<Path>SFX\LostFoley_Long_09_10F921B3.wem</Path>
+				</File>
+				<File Id="786538406" Language="SFX">
+					<ShortName>Debris_Small_Dirt-04.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-04_F2AAB9D0.wem</Path>
+				</File>
+				<File Id="800533389" Language="SFX">
+					<ShortName>Debris_Small_Dirt-06.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-06_3B6D9D1D.wem</Path>
+				</File>
+				<File Id="801878496" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_28.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_28_10F921B3.wem</Path>
+				</File>
+				<File Id="806953597" Language="SFX">
+					<ShortName>UFO_Flyby_04.wav</ShortName>
+					<Path>SFX\UFO_Flyby_04_10F921B3.wem</Path>
+				</File>
+				<File Id="815255026" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_10.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_10_10F921B3.wem</Path>
+				</File>
+				<File Id="816045366" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_08.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_08_10F921B3.wem</Path>
+				</File>
+				<File Id="816224316" Language="SFX">
+					<ShortName>TheLost_GutTear_07.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_07_10F921B3.wem</Path>
+				</File>
+				<File Id="818784957" Language="SFX">
+					<ShortName>LostFoley_Short_14.wav</ShortName>
+					<Path>SFX\LostFoley_Short_14_10F921B3.wem</Path>
+				</File>
+				<File Id="819722332" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_08.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_08_10F921B3.wem</Path>
+				</File>
+				<File Id="824275876" Language="SFX">
+					<ShortName>TheLost_Death_05.wav</ShortName>
+					<Path>SFX\TheLost_Death_05_10F921B3.wem</Path>
+				</File>
+				<File Id="826728246" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_19.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_19_10F921B3.wem</Path>
+				</File>
+				<File Id="826969168" Language="SFX">
+					<ShortName>LostFoley_Medium_03.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_03_10F921B3.wem</Path>
+				</File>
+				<File Id="829469758" Language="SFX">
+					<ShortName>Debris_Large_Dirt-02.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-02_88CF06D9.wem</Path>
+				</File>
+				<File Id="833896166" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_05.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_05_10F921B3.wem</Path>
+				</File>
+				<File Id="837469644" Language="SFX">
+					<ShortName>Debris_Small_Dirt-03.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-03_24D8129A.wem</Path>
+				</File>
+				<File Id="840590169" Language="SFX">
+					<ShortName>Debris_Large_Dirt-08.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-08_72F4A991.wem</Path>
+				</File>
+				<File Id="841680763" Language="SFX">
+					<ShortName>LostFoley_Medium_05.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_05_10F921B3.wem</Path>
+				</File>
+				<File Id="851845451" Language="SFX">
+					<ShortName>Debris_Large_Dirt-01.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-01_FF6BAF3C.wem</Path>
+				</File>
+				<File Id="858117009" Language="SFX">
+					<ShortName>LostFoley_VeryShort_08.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_08_10F921B3.wem</Path>
+				</File>
+				<File Id="858413339" Language="SFX">
+					<ShortName>TheLost_GutTear_10.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_10_10F921B3.wem</Path>
+				</File>
+				<File Id="862151410" Language="SFX">
+					<ShortName>LostFoley_Medium_01.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_01_10F921B3.wem</Path>
+				</File>
+				<File Id="867532018" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_33.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_33_10F921B3.wem</Path>
+				</File>
+				<File Id="884482196" Language="SFX">
+					<ShortName>LostFoley_Short_03.wav</ShortName>
+					<Path>SFX\LostFoley_Short_03_10F921B3.wem</Path>
+				</File>
+				<File Id="896224447" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_36.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_36_10F921B3.wem</Path>
+				</File>
+				<File Id="898175444" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_01.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_01_10F921B3.wem</Path>
+				</File>
+				<File Id="904724374" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_08.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_08_10F921B3.wem</Path>
+				</File>
+				<File Id="905626213" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_09.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_09_10F921B3.wem</Path>
+				</File>
+				<File Id="909095760" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_05.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_05_10F921B3.wem</Path>
+				</File>
+				<File Id="913014150" Language="SFX">
+					<ShortName>TheLost_Idle_Generic_VOX_01.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Generic_VOX_01_10F921B3.wem</Path>
+				</File>
+				<File Id="913429989" Language="SFX">
+					<ShortName>LostFoley_Long_08.wav</ShortName>
+					<Path>SFX\LostFoley_Long_08_10F921B3.wem</Path>
+				</File>
+				<File Id="915681171" Language="SFX">
+					<ShortName>TheLost_Movemet_Sweetener_11.wav</ShortName>
+					<Path>SFX\TheLost_Movemet_Sweetener_11_10F921B3.wem</Path>
+				</File>
+				<File Id="924978400" Language="SFX">
+					<ShortName>Debris_Large_Dirt-05.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-05_6CBA429E.wem</Path>
+				</File>
+				<File Id="931089164" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_24.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_24_10F921B3.wem</Path>
+				</File>
+				<File Id="941877401" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_03.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_03_10F921B3.wem</Path>
+				</File>
+				<File Id="948379170" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_20.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_20_10F921B3.wem</Path>
+				</File>
+				<File Id="948753037" Language="SFX">
+					<ShortName>TheLost_Death_10.wav</ShortName>
+					<Path>SFX\TheLost_Death_10_10F921B3.wem</Path>
+				</File>
+				<File Id="955748674" Language="SFX">
+					<ShortName>LostFoley_Medium_10.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_10_10F921B3.wem</Path>
+				</File>
+				<File Id="961680247" Language="SFX">
+					<ShortName>TheLost_Death_08.wav</ShortName>
+					<Path>SFX\TheLost_Death_08_10F921B3.wem</Path>
+				</File>
+				<File Id="971703928" Language="SFX">
+					<ShortName>LostFoley_Long_05.wav</ShortName>
+					<Path>SFX\LostFoley_Long_05_10F921B3.wem</Path>
+				</File>
+				<File Id="976375265" Language="SFX">
+					<ShortName>LostFoley_VeryShort_15.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_15_10F921B3.wem</Path>
+				</File>
+				<File Id="981924010" Language="SFX">
+					<ShortName>TheLost_GutTear_05.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_05_10F921B3.wem</Path>
+				</File>
+				<File Id="983044296" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_23.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_23_10F921B3.wem</Path>
+				</File>
+				<File Id="985284367" Language="SFX">
+					<ShortName>TheLost_Footstep_Crunch_09.wav</ShortName>
+					<Path>SFX\TheLost_Footstep_Crunch_09_10F921B3.wem</Path>
+				</File>
+				<File Id="992947734" Language="SFX">
+					<ShortName>LostFoley_Medium_08.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_08_10F921B3.wem</Path>
+				</File>
+				<File Id="996344999" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_31.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_31_10F921B3.wem</Path>
+				</File>
+				<File Id="1006795628" Language="SFX">
+					<ShortName>Debris_Small_Dirt-05.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-05_0011A12B.wem</Path>
+				</File>
+				<File Id="1009593781" Language="SFX">
+					<ShortName>LostFoley_VeryShort_05.wav</ShortName>
+					<Path>SFX\LostFoley_VeryShort_05_10F921B3.wem</Path>
+				</File>
+				<File Id="1015944537" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_12.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_12_10F921B3.wem</Path>
+				</File>
+				<File Id="1016674899" Language="SFX">
+					<ShortName>Debris_Small_Dirt-01.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-01_685A6077.wem</Path>
+				</File>
+				<File Id="1020188189" Language="SFX">
+					<ShortName>LostFoley_Short_07.wav</ShortName>
+					<Path>SFX\LostFoley_Short_07_10F921B3.wem</Path>
+				</File>
+				<File Id="1027898322" Language="SFX">
+					<ShortName>LostFoley_Long_04.wav</ShortName>
+					<Path>SFX\LostFoley_Long_04_10F921B3.wem</Path>
+				</File>
+				<File Id="1031940414" Language="SFX">
+					<ShortName>TheLost_GutTear_03.wav</ShortName>
+					<Path>SFX\TheLost_GutTear_03_10F921B3.wem</Path>
+				</File>
+				<File Id="1032171104" Language="SFX">
+					<ShortName>LostFoley_Medium_06.wav</ShortName>
+					<Path>SFX\LostFoley_Medium_06_10F921B3.wem</Path>
+				</File>
+				<File Id="1043876589" Language="SFX">
+					<ShortName>Debris_Small_Dirt-08.wav</ShortName>
+					<Path>SFX\Debris_Small_Dirt-08_8D257A81.wem</Path>
+				</File>
+				<File Id="1046861912" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_26.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_26_10F921B3.wem</Path>
+				</File>
+				<File Id="1054297831" Language="SFX">
+					<ShortName>TheLost_Idle_Breathing_16.wav</ShortName>
+					<Path>SFX\TheLost_Idle_Breathing_16_10F921B3.wem</Path>
+				</File>
+				<File Id="1060574418" Language="SFX">
+					<ShortName>LostFoley_Short_02.wav</ShortName>
+					<Path>SFX\LostFoley_Short_02_10F921B3.wem</Path>
+				</File>
+				<File Id="1066624124" Language="SFX">
+					<ShortName>LostFoley_Long_13.wav</ShortName>
+					<Path>SFX\LostFoley_Long_13_10F921B3.wem</Path>
+				</File>
+				<File Id="1070422163" Language="SFX">
+					<ShortName>Debris_Large_Dirt-04.wav</ShortName>
+					<Path>SFX\Debris_Large_Dirt-04_D7D87113.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

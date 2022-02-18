@@ -9,17 +9,6 @@
 			</AlphaAnim>
 		</Container>
 	</Instance>
-
-	<Instance		Name="ParticleInstance">
-		<Container ID="ParticleTop" Size="auto,auto">
-			<AlphaAnim ID="Flash1" Size="auto,auto" Speed="5">
-				<Box ID="Image1" Anchor="C,C" Size="2,2" Color="255,0,0,200" />
-			</AlphaAnim>
-			<AlphaAnim ID="Flash2" Size="auto,auto" Speed="2">
-				<Box ID="Image2" Anchor="C,C" Size="2,2" Color="255,255,0,200" />
-			</AlphaAnim>
-		</Container>
-	</Instance>
 	
 	<Grid						ID="Backing"				Anchor="C,T" Size="parent+100,29" Texture="TopBar_Bar" SliceCorner="28,8" SliceTextureSize="57,29">
 		<Image Texture="Controls_GradientSmall" Color="0,0,0,255" AnchorSide="I,O" Size="parent,21" Anchor="L,B"/>
@@ -29,11 +18,11 @@
   <Image					ID="Backing2"				Style="DropShadow3" Size="300,120" Offset="-50,-80" Anchor="R,T"/>
 
 	<Stack StackGrowth="Right" Padding="4">
-		<Container Size="auto,auto">
-			<Stack	ID="RingStack" StackGrowth="Left" Offset="27,0" />
-			<Image	ID="RunningUnit" Icon="ICON_CIVROYALE_UNIT" Anchor="L,C" Size="26,26" Color="255,0,0,255" Offset="0,-1" Alpha="0.9" Hidden="1" ToolTip="LOC_CIV_ROYALE_HUD_CIVILIAN_WARNING"/>
-		</Container>
-		<Stack		Anchor="C,C" StackGrowth="Right" Padding="4">
+    <Container Size="26,26">
+      <Image	ID="RunningUnit" Icon="ICON_CIVROYALE_UNIT" Anchor="L,C" Size="26,26" Color="255,0,0,255" Offset="0,-1" Alpha="0.9" Hidden="1" ToolTip="LOC_CIV_ROYALE_HUD_CIVILIAN_WARNING"/>
+    </Container>
+		<Stack	ID="RingStackAndTurns"	Anchor="C,C" StackGrowth="Right" Padding="4">
+      <Stack	ID="RingStack" StackGrowth="Left"/>
 			<Label	ID="RingTurns"	Anchor="L,C" Style="FontFlair22" Offset="0,-2" Color="255,20,20,255" Color1="0,0,0,120" FontStyle="Stroke" String="?" ToolTip="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS" />
 			<Label	ID="RingTurnsLabel"	Anchor="L,C" Style="FontFlair12" SmallCaps="18" SmallCapsType="EveryWord" Color="255,20,20,255" Color1="0,0,0,120" FontStyle="Stroke" String="?" ToolTip="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS" />
 		</Stack>

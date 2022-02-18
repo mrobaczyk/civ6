@@ -30,28 +30,53 @@
 	<RulesetSupportedValues>
 		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardEras" Value="ERA_INFORMATION"/>
 		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardTurnLimits" Value="TURNLIMIT_NONE"/>
+		<Row Ruleset="RULESET_SCENARIO_CIV_ROYALE" Domain="StandardGameSpeeds" Value="GAMESPEED_ONLINE"/>
 	</RulesetSupportedValues>	
 	<Parameters>
 		<!-- Using a different ParameterId to override the default values for these standard advanced settings. -->
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_CIV_ROYALE" ParameterId="CivRoyal_NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="LOC_GAME_NO_GOODY_HUTS" Domain="bool" DefaultValue="0" Visible="false" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_CIV_ROYALE" ParameterId="CivRoyal_NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="LOC_GAME_NO_BARBARIANS" Domain="bool" DefaultValue="0" Visible="false" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
+		
+		<!-- Set the maximum number of players allowed if either no duplicate civs or no duplicate leaders is checked.-->
+		<!-- NOTE: This is defined as a parameter rather than a configuration update so that the destination value gets cleared if the parameter gets removed. -->
+		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_CIV_ROYALE" ParameterId="CivRoyal_MaxUniquePlayers" Name="LOC_EMPTY" Description="" Domain="int" DefaultValue="10" Visible="false" ReadOnly="true" ConfigurationGroup="Game" ConfigurationId="MAX_UNIQUE_PLAYERS" GroupId="AdvancedOptions" />	
 	</Parameters>
 	<Maps>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Continents.lua" Name="LOC_MAP_CONTINENTS" Description="LOC_MAP_CONTINENTS_DESCRIPTION" SortIndex="10"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Fractal.lua" Name="LOC_MAP_FRACTAL" Description="LOC_MAP_FRACTAL_DESCRIPTION" SortIndex="20"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="InlandSea.lua" Name="LOC_MAP_INLANDSEA" Description="LOC_MAP_INLANDSEA_DESCRIPTION" DisableWorldWrap="1" SortIndex="25"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Island_Plates.lua" Name="LOC_MAP_ISLAND_PLATES" Description="LOC_MAP_ISLAND_PLATES_DESCRIPTION" SortIndex="30"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Lakes.lua" Name="LOC_MAP_LAKES" Description="LOC_MAP_LAKES_DESCRIPTION" SortIndex="35"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Pangaea.lua" Name="LOC_MAP_PANGAEA" Description="LOC_MAP_PANGAEA_DESCRIPTION" SortIndex="40"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Seven_Seas.lua" Name="LOC_MAP_SEVEN_SEAS" Description="LOC_MAP_SEVEN_SEAS_DESCRIPTION" SortIndex="45"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Shuffle.lua" Name="LOC_MAP_SHUFFLE" Description="LOC_MAP_SHUFFLE_DESCRIPTION" SortIndex="50"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Small_Continents.lua" Name="LOC_MAP_SMALL_CONTINENTS" Description="LOC_MAP_SMALL_CONTINENTS_DESCRIPTION" SortIndex="55"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="Terra.lua" Name="LOC_MAP_TERRA" Description="LOC_MAP_TERRA_DESCRIPTION" SortIndex="60"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" Name="LOC_EARTH_MAP_STANDARD_NAME" Description="LOC_EARTH_MAP_STANDARD_DESCRIPTION" StaticMap="1" SortIndex="80"/>
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION1_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION1_DESCRIPTION" StaticMap="1" SortIndex="70" />
-		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION2_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION2_DESCRIPTION" StaticMap="1" SortIndex="70" />
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Continents.lua" Name="LOC_MAP_CONTINENTS" Description="LOC_MAP_CONTINENTS_DESCRIPTION" Image="Map_Continents" SortIndex="10"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Fractal.lua" Name="LOC_MAP_FRACTAL" Description="LOC_MAP_FRACTAL_DESCRIPTION" Image="Map_Fractal" SortIndex="20"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="InlandSea.lua" Name="LOC_MAP_INLANDSEA" Description="LOC_MAP_INLANDSEA_DESCRIPTION" DisableWorldWrap="1" Image="Map_InlandSea" SortIndex="25"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Island_Plates.lua" Name="LOC_MAP_ISLAND_PLATES" Description="LOC_MAP_ISLAND_PLATES_DESCRIPTION" Image="Map_IslandPlates" SortIndex="30"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Lakes.lua" Name="LOC_MAP_LAKES" Description="LOC_MAP_LAKES_DESCRIPTION" Image="Map_Lakes" SortIndex="35"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Pangaea.lua" Name="LOC_MAP_PANGAEA" Description="LOC_MAP_PANGAEA_DESCRIPTION" Image="Map_Pangaea" SortIndex="40"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Seven_Seas.lua" Name="LOC_MAP_SEVEN_SEAS" Description="LOC_MAP_SEVEN_SEAS_DESCRIPTION" Image="Map_SevenSeas" SortIndex="45"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Shuffle.lua" Name="LOC_MAP_SHUFFLE" Description="LOC_MAP_SHUFFLE_DESCRIPTION" Image="Map_Shuffle" SortIndex="50"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Small_Continents.lua" Name="LOC_MAP_SMALL_CONTINENTS" Description="LOC_MAP_SMALL_CONTINENTS_DESCRIPTION" Image="Map_SmallContinents" SortIndex="55"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="Terra.lua" Name="LOC_MAP_TERRA" Description="LOC_MAP_TERRA_DESCRIPTION" Image="Map_Terra" SortIndex="60"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/BalanceMaps/Mirror.lua" Name="LOC_MAP_MIRROR" Description="LOC_MAP_MIRROR_DESCRIPTION" Image="Map_MirrorMap" SortIndex="70"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" Name="LOC_EARTH_MAP_STANDARD_NAME" Description="LOC_EARTH_MAP_STANDARD_DESCRIPTION" StaticMap="1" Image="Map_Earth" SortIndex="80"/>
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION1_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION1_DESCRIPTION" StaticMap="1" Image="Map_4LeafClover" SortIndex="70" />
+		<Row Domain="Maps:CivRoyalScenarioMaps" File="../../Assets/Maps/BalanceMaps/Balanced6.Civ6Map" Name="LOC_BALANCEDMAPS_MAP_OPTION2_NAME" Description="LOC_BALANCEDMAPS_MAP_OPTION2_DESCRIPTION" StaticMap="1" Image="Map_6ArmedSnowflake" SortIndex="70" />
 	</Maps>
 	<Players>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_ALIENS</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_ALIENS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_ALIENS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_ALIENS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_ALIENS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_ALIENS</CivilizationIcon>
+			<LeaderAbilityName>LOC_ALIENS_XENO_STEALTH_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_ALIENS_XENO_STEALTH_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_ALIENS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_ALIENS_XENO_REGENERATION_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_ALIENS_XENO_REGENERATION_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_ALIENS_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_ALIENS</Portrait>
+			<PortraitBackground>LEADER_ALIENS_BACKGROUND</PortraitBackground>
+		</Row>
 		<Row>
 			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
 			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS</CivilizationType>
@@ -61,11 +86,11 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_CULTISTS</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS</CivilizationIcon>
-			<LeaderAbilityName>NONE</LeaderAbilityName>
-			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
-			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
-			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_ABILITY_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<LeaderAbilityName>LOC_CULTISTS_UNDYING_EYE_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CULTISTS_UNDYING_EYE_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CULTISTS_SIGHT_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CULTISTS_SIGHT_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_CULTISTS_ABILITY</CivilizationAbilityIcon>
 			<!-- ART -->
 			<Portrait>LEADER_CULTISTS</Portrait>
@@ -80,11 +105,11 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_EDGELORDS</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS</CivilizationIcon>
-			<LeaderAbilityName>NONE</LeaderAbilityName>
-			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
-			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
-			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_ABILITY_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<LeaderAbilityName>LOC_EDGELORDS_GRIEVING_GIFT_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_EDGELORDS_GRIEVING_GIFT_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_EDGELORDS_EDGENESS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_EDGENESS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_EDGELORDS_ABILITY</CivilizationAbilityIcon>
 			<!-- ART -->
 			<Portrait>LEADER_EDGELORDS</Portrait>
@@ -99,11 +124,11 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_JOCKS</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS</CivilizationIcon>
-			<LeaderAbilityName>NONE</LeaderAbilityName>
-			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
-			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
-			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_ABILITY_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<LeaderAbilityName>LOC_JOCK_HAIL_MARY_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_JOCK_HAIL_MARY_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_JOCK_COMBAT_BONUS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_JOCK_COMBAT_BONUS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_JOCKS_ABILITY</CivilizationAbilityIcon>
 			<!-- ART -->
 			<Portrait>LEADER_JOCKS</Portrait>
@@ -118,8 +143,8 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_MUTANTS</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS</CivilizationIcon>
-			<LeaderAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_WMD_RESIST_ABILITY_NAME</LeaderAbilityName>
-			<LeaderAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_WMD_RESIST_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_FALLOUT_SPREAD_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_FALLOUT_SPREAD_ABILITY_DESCRIPTION</LeaderAbilityDescription>
 			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_ABILITY</LeaderAbilityIcon>
 			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_FALLOUT_MOVE_ABILITY_NAME</CivilizationAbilityName>
 			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_MUTANTS_FALLOUT_MOVE_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
@@ -137,11 +162,11 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_PIRATES</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES</CivilizationIcon>
-			<LeaderAbilityName>NONE</LeaderAbilityName>
-			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
-			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
-			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_ABILITY_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_CIV_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<LeaderAbilityName>LOC_PIRATES_BURIED_TREASURE_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_PIRATES_BURIED_TREASURE_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_PIRATES_WATER_LOGGED_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_PIRATES_WATER_LOGGED_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PIRATES_ABILITY</CivilizationAbilityIcon>
 			<!-- ART -->
 			<Portrait>LEADER_PIRATES</Portrait>
@@ -156,11 +181,11 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_PREPPERS</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS</CivilizationIcon>
-			<LeaderAbilityName>NONE</LeaderAbilityName>
-			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
-			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
-			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_ABILITY_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<LeaderAbilityName>LOC_PREPPERS_IMPROVISED_TRAPS_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_PREPPERS_IMPROVISED_TRAPS_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_PREPPERS_EXPERIENCE_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_PREPPERS_EXPERIENCE_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_PREPPERS_ABILITY</CivilizationAbilityIcon>
 			<!-- ART -->
 			<Portrait>LEADER_PREPPERS</Portrait>
@@ -175,11 +200,11 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_SCIENTISTS</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS</CivilizationIcon>
-			<LeaderAbilityName>NONE</LeaderAbilityName>
-			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
-			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
-			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_ABILITY_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<LeaderAbilityName>LOC_SCIENTISTS_UNIT_SHIELDS_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_SCIENTISTS_UNIT_SHIELDS_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_LEADER_CIVROYALE_SCENARIO_SCIENTISTS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_SCIENTISTS_HEAL_FASTER_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_SCIENTISTS_HEAL_FASTER_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_SCIENTISTS_ABILITY</CivilizationAbilityIcon>
 			<!-- ART -->
 			<Portrait>LEADER_SCIENTISTS</Portrait>
@@ -194,15 +219,60 @@
 			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_WANDERERS</LeaderIcon>
 			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS</CivilizationIcon>
-			<LeaderAbilityName>NONE</LeaderAbilityName>
-			<LeaderAbilityDescription>NONE</LeaderAbilityDescription>
-			<LeaderAbilityIcon>NONE</LeaderAbilityIcon>
-			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_ABILITY_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<LeaderAbilityName>LOC_WANDERERS_ROAD_VISION_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_WANDERERS_ROAD_VISION_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_WANDERERS_MOVE_BONUS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_WANDERERS_MOVE_BONUS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_WANDERERS_ABILITY</CivilizationAbilityIcon>
 			<!-- ART -->
 			<Portrait>LEADER_WANDERERS</Portrait>
 			<PortraitBackground>LEADER_WANDERERS_BACKGROUND</PortraitBackground>
 		</Row>
+		<Row>
+			<Domain>Players:CivRoyaleScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES</CivilizationType>
+			<LeaderType>LEADER_CIVROYALE_SCENARIO_ZOMBIES</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_CIVROYALE_SCENARIO_ZOMBIES_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_CIVROYALE_SCENARIO_ZOMBIES</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES</CivilizationIcon>
+			<LeaderAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES_WEAPONIZED_ZOMBIES_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES_WEAPONIZED_ZOMBIES_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES_BRAINS_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES_BRAINS_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_CIVROYALE_SCENARIO_ZOMBIES_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_ZOMBIES</Portrait>
+			<PortraitBackground>LEADER_ZOMBIES_BACKGROUND</PortraitBackground>
+		</Row>
 	</Players>
+	
+	<!-- Hall of Fame - Hide irrelevant items -->
+	<StatisticRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" DataPoint="WarsDeclared" Name="LOC_HOF_STAT_WARS_DECLARED" Category="CATEGORY_DIPLOMACY" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" DataPoint="WarsReceived" Name="LOC_HOF_STAT_WARS_RECEIVED" Category="CATEGORY_DIPLOMACY" Visible="0"/>		
+	</StatisticRulesetOverrides>
+	<GraphRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerGold" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_GOLD" Query="GameDataSetsByType" Dataset="Gold" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerScore" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_SCORE" Query="GameDataSetsByType" Dataset="Score" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerCivicsAcquired" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_CIVICS" Query="GameDataSetsByType" Dataset="CivicsAcquired" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerTechsAcquired" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_TECHS" Query="GameDataSetsByType" Dataset="TechsAcquired" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerWarsReceived" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_WARS_RECEIVED" Query="GameDeltaDataSetsByType" Dataset="WarsReceived" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerWarsDeclared" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_WARS_DECLARED" Query="GameDeltaDataSetsByType" Dataset="WarsDeclared" XUnit="GameTurn" ExtraData="Player" Visible="0"/>		
+	</GraphRulesetOverrides>
+
+	<!-- Hall of Fame - Adjust Terminology -->
+	<StatisticRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" DataPoint="GoodyHutsPopped" Name="LOC_HOF_STAT_PLAYER_CITY_RUINS" Category="CATEGORY_DISCOVERY" />
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" DataPoint="BarbariansKilled" Name="LOC_HOF_STAT_RAIDERS_KILLED" Category="CATEGORY_COMBAT"/>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" DataPoint="BarbarianCampsCleared" Name="LOC_HOF_STAT_RAIDER_CAMPS" Category="CATEGORY_DISCOVERY"/>
+	</StatisticRulesetOverrides>	
+	<GraphRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerBarbariansKilled" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_RAIDER_KILLS" Query="GameDataSetsByType" Dataset="BarbariansKilled" XUnit="GameTurn" ExtraData="Player" />
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerBarbarianCampsCleared" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_RAIDER_CAMPS" Query="GameDataSetsByType" Dataset="BarbarianCampsCleared" XUnit="GameTurn" ExtraData="Player" />
+		<Row RulesetType="RULESET_SCENARIO_CIV_ROYALE" Graph="PlayerGoodyHutsPopped" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_CITY_RUINS" Query="GameDeltaDataSetsByType" Dataset="GoodyHutsPopped" XUnit="GameTurn" ExtraData="Player" />
+	</GraphRulesetOverrides>
 </GameInfo>

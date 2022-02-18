@@ -150,6 +150,9 @@
 		<Row Tag="LOC_SAVE_CONFIG">
 			<Text>Save Configuration</Text>
 		</Row>
+    <Row Tag="LOC_SAVE_OBSERVER_MODE_TT">
+      <Text>Unable to save while in Observer mode.</Text>
+    </Row>
 		<Row Tag="LOC_SAVE_AT_MAXIMUM_CLOUD_SAVES_TOOLTIP">
 			<Text>You've reached the maximum number of Cloud saves. Overwrite or delete a save.</Text>
 		</Row>
@@ -766,6 +769,12 @@
 		<Row Tag="LOC_SLOTTYPE_HUMANREQ_TT">
 			<Text>Open slots require a human player before the game can start.</Text>
 		</Row>
+		<Row Tag="LOC_SLOTTYPE_OBSERVER">
+			<Text>Observer</Text>
+		</Row>
+		<Row Tag="LOC_SLOTTYPE_OBSERVER_TT">
+			<Text>Observe the game rather than directly participating.</Text>
+		</Row>		
 		<Row Tag="LOC_SLOTLABEL_HOST">
 			<Text>[ICON_Host] Host</Text>
 		</Row>
@@ -777,6 +786,12 @@
 		</Row>
 		<Row Tag="LOC_SLOTLABEL_OPEN">
 			<Text>Open</Text>
+		</Row>
+		<Row Tag="LOC_SLOTLABEL_OBSERVER">
+			<Text>Observer</Text>
+		</Row>
+		<Row Tag="LOC_SLOTLABEL_OBSERVER_HOST">
+			<Text>[ICON_Host] Observer</Text>
 		</Row>
 		<Row Tag="LOC_SLOTTYPE_AI">
 			<Text>AI</Text>
@@ -1204,7 +1219,7 @@
 			<Text>Awaiting Additional Players</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_HUMANS_REQUIRED_TT">
-			<Text>Cannot start game. All Open player slots must be occuped before the game can begin.</Text>
+			<Text>Cannot start game. All Open player slots must be occupied before the game can begin.</Text>
 		</Row>
 		<Row Tag="LOC_READY_BLOCKED_READY_COUNTDOWN_TT">
 			<Text>Cannot start game. Waiting for Ready Countdown or full, readied up game.</Text>
@@ -1244,7 +1259,7 @@
 			<Text>Private Game</Text>
 		</Row>
 		<Row Tag="LOC_PRIVATE_GAME_DESC">
-			<Text>Private games are not shown in the multiplayer lobby.  A private game is only accessable thru a game invite or the Steam friends list.  This setting does not apply to Local Network games.</Text>
+			<Text>Private games are not shown in the multiplayer lobby.  A private game is only accessible through a game invite or the Steam friends list.  This setting does not apply to Local Network games.</Text>
 		</Row>
 		<Row Tag="LOC_GAME_VICTORY_TIME">
 			<Text>Time</Text>
@@ -1585,9 +1600,12 @@
     <Row Tag="LOC_GAME_START_ERA">
 			<Text>Start Era</Text>
 		</Row>
-	<Row Tag="LOC_KICK_VOTE">
-		<Text>Kick Voting</Text>
-	</Row>
+    <Row Tag="LOC_KICK_VOTE">
+      <Text>Kick Voting</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_TT">
+      <Text>Kick Voting requires a majority vote to successfully kick a player from the game.</Text>
+    </Row>
 		<Row Tag="LOC_MAP_SCRIPT">
 			<Text>Map</Text>
 		</Row>

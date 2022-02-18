@@ -8,6 +8,15 @@ CREATE TABLE 'StatisticCategories' (
 	PRIMARY KEY('Category')
 );
 
+CREATE TABLE 'StatisticCategoryRulesetOverrides' (
+	'RulesetType' TEXT NOT NULL,
+	'Category'	TEXT NOT NULL,
+	'Name'	TEXT,
+	'IsHidden' BOOLEAN NOT NULL DEFAULT 0,
+	'SortOrder'	INTEGER NOT NULL DEFAULT 100,
+	PRIMARY KEY('RulesetType','Category')
+);
+
 -- Definition of various statistics shown.
 CREATE TABLE 'Statistics' (
 	'DataPoint'	TEXT NOT NULL,
@@ -19,6 +28,24 @@ CREATE TABLE 'Statistics' (
 	'Direction'	INTEGER NOT NULL DEFAULT 0,
 	'Category'	TEXT NOT NULL,
 	'Importance'	INTEGER NOT NULL DEFAULT 0,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
+	PRIMARY KEY ('DataPoint'),
+	FOREIGN KEY('Category') REFERENCES 'StatisticCategories'('Category') ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE 'StatisticRulesetOverrides' (
+	'RulesetType' TEXT NOT NULL,
+	'DataPoint'	TEXT NOT NULL,
+	'Name'	TEXT,
+	'Icon'	TEXT,
+	'ValueIconDefault' TEXT,
+	'ValueIconOverride' TEXT,
+	'Annotation'	TEXT,
+	'Direction'	INTEGER NOT NULL DEFAULT 0,
+	'Category'	TEXT NOT NULL,
+	'Importance'	INTEGER NOT NULL DEFAULT 0,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
+	PRIMARY KEY ('RulesetType', 'DataPoint'),
 	FOREIGN KEY('Category') REFERENCES 'StatisticCategories'('Category') ON DELETE SET NULL ON UPDATE SET NULL
 );
 
@@ -115,7 +142,29 @@ CREATE TABLE 'Graphs' (
 	'DataSet'	TEXT,
 	'ExtraData' TEXT,
 	'UxHint' TEXT,
-	'Importance'	INTEGER NOT NULL DEFAULT 0
+	'Importance'	INTEGER NOT NULL DEFAULT 0,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
+	PRIMARY KEY ('Graph', 'Scope')
+);
+
+CREATE TABLE 'GraphRulesetOverrides' (
+	'RulesetType' TEXT NOT NULL,
+	'Graph' TEXT NOT NULL,
+	'Scope'	TEXT NOT NULL,
+	'Name'	TEXT NOT NULL,
+	'Description'	TEXT,
+	'Direction'	INTEGER NOT NULL DEFAULT 0,
+	'XLabel'	TEXT,
+	'YLabel'	TEXT,
+	'XUnit'	TEXT,
+	'YUnit' TEXT,
+	'Query'	TEXT NOT NULL,
+	'DataSet'	TEXT,
+	'ExtraData' TEXT,
+	'UxHint' TEXT,
+	'Importance'	INTEGER NOT NULL DEFAULT 0,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
+	PRIMARY KEY ('RulesetType', 'Graph', 'Scope')
 );
 
 -- These are named SQL queries for defining sets used by reports.
@@ -150,7 +199,28 @@ CREATE TABLE 'Reports' (
 	'Query'	TEXT NOT NULL,
 	'ExtraData' TEXT,
 	'Importance'	INTEGER NOT NULL DEFAULT 0,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
 	PRIMARY KEY('Report'),
+	FOREIGN KEY('Query') REFERENCES 'ReportQueries'('Query') ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE 'ReportRulesetOverrides' (
+	'RulesetType' TEXT NOT NULL,
+	'Report'	TEXT NOT NULL,
+	'Scope'	TEXT NOT NULL,
+	'Name'	TEXT NOT NULL,
+	'Description'	TEXT,
+	'InitialColumnName' TEXT,
+	'InitialColumnDescription' TEXT,
+	'InitialColumnUxHint' TEXT,
+	'InitialColumnValueIconDefault' TEXT,
+	'InitialColumnValueIconOverride' TEXT,
+	'ShowEmptyRows' BOOLEAN NOT NULL DEFAULT 0,	
+	'Query'	TEXT NOT NULL,
+	'ExtraData' TEXT,
+	'Importance'	INTEGER NOT NULL DEFAULT 0,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
+	PRIMARY KEY('RulesetType','Report'),
 	FOREIGN KEY('Query') REFERENCES 'ReportQueries'('Query') ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -169,6 +239,27 @@ CREATE TABLE 'ReportColumns' (
 	'DefaultValue' TEXT,
 	'ValueIconDefault' TEXT,
 	'ValueIconOverride' TEXT,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
 	PRIMARY KEY('Report','Name'),
 	FOREIGN KEY('Report') REFERENCES 'Reports'('Report') ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE 'ReportColumnRulesetOverrides' (
+	'RulesetType' TEXT NOT NULL,
+	'Report'	TEXT NOT NULL,
+	'Name'	TEXT NOT NULL,
+	'Description'	TEXT,
+	'SortOrder'	INTEGER NOT NULL DEFAULT 100,
+	'DataPoint'	TEXT NOT NULL,
+	'UxHint'	TEXT,
+	'Minor' BOOLEAN NOT NULL DEFAULT 0,
+	'AlwaysShow' BOOLEAN NOT NULL DEFAULT 0,
+	'EmptyValue' TEXT,
+	'DefaultValue' TEXT,
+	'ValueIconDefault' TEXT,
+	'ValueIconOverride' TEXT,
+	'Visible' BOOLEAN NOT NULL DEFAULT 1,
+	PRIMARY KEY('RulesetType','Report','Name'),
+	FOREIGN KEY('Report') REFERENCES 'Reports'('Report') ON DELETE CASCADE ON UPDATE CASCADE
+);
+

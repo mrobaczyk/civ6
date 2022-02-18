@@ -16,6 +16,8 @@
 		</Update>
 		<Row GoodyHutType="SUPPLY_DROP_GOODY" ImprovementType="IMPROVEMENT_SUPPLY_DROP" Weight="100"/>
 		<Row GoodyHutType="BARB_GOODIES" ImprovementType="IMPROVEMENT_BARBARIAN_CAMP" Weight="100"/>
+		<Row GoodyHutType="IMPROVISED_TRAP_GOODIES" ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" Weight="100"/>
+		<Row GoodyHutType="GRIEVING_GIFT_GOODIES" ImprovementType="IMPROVEMENT_GRIEVING_GIFT" Weight="100"/>
 	</GoodyHuts>
 	<GoodyHutSubTypes>
 		<!-- By default, set all to never happen. -->
@@ -44,6 +46,12 @@
 		<Row GoodyHut="SUPPLY_DROP_GOODY" 	SubTypeGoodyHut="SUPPLY_DROP_GRANT_TANK"			Description="LOC_GOODYHUT_MILITARY_GRANT_TANK_DESCRIPTION"			Weight="42" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_TANK"/>
 		<Row GoodyHut="SUPPLY_DROP_GOODY" 	SubTypeGoodyHut="SUPPLY_DROP_GRANT_ARTILLERY"		Description="LOC_GOODYHUT_MILITARY_GRANT_ARTILLERY_DESCRIPTION"		Weight="42" MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_ARTILLERY"/>
 		<Row GoodyHut="SUPPLY_DROP_GOODY" 	SubTypeGoodyHut="SUPPLY_DROP_GRANT_SUB_STRIKE"		Description="LOC_GOODYHUT_MILITARY_GRANT_NUKE_STRIKE_DESCRIPTION"	Weight="15"	MinOneCity="false" RequiresUnit="true" ModifierID="GOODY_MILITARY_GRANT_WMD"/>
+
+		<!-- Outcomes for stepping on an Improvised Trap -->
+		<Row GoodyHut="IMPROVISED_TRAP_GOODIES" SubTypeGoodyHut="TRAP_DAMAGE"					Description="LOC_GOODYHUT_IMPROVISED_TRAP_GOODIES"					Weight="100" MinOneCity="false" RequiresUnit="true" ModifierID="TRAP_DEAL_DAMAGE"/>
+
+		<!-- Outcomes for stepping on an Improvised Trap -->
+		<Row GoodyHut="GRIEVING_GIFT_GOODIES"	SubTypeGoodyHut="GIFT_DAMAGE"					Description="LOC_GOODYHUT_GRIEVING_GIFT_GOODIES"							Weight="100" MinOneCity="false" RequiresUnit="true" ModifierID="TRAP_DEAL_DAMAGE"/>
 	</GoodyHutSubTypes>
 	<Modifiers>
 		<Row>
@@ -91,6 +99,12 @@
 		<Row>
 			<ModifierId>GOODY_MILITARY_GRANT_ARTILLERY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>TRAP_DEAL_DAMAGE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_DAMAGE</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -175,6 +189,11 @@
 			<ModifierId>GOODY_MILITARY_GRANT_ARTILLERY</ModifierId>
 			<Name>Experience</Name>
 			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAP_DEAL_DAMAGE</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
 		</Row>
 	</ModifierArguments>
 </GameInfo>

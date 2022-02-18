@@ -113,10 +113,10 @@
     <Row ActionId="MoveCursor" Name="LOC_OPTIONS_HOTKEY_MOVE_CURSOR" Description="LOC_OPTIONS_HOTKEY_MOVE_CURSOR_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="PC"/>
     <Row ActionId="LeftClickCursor" Name="LOC_OPTIONS_HOTKEY_LEFT_CLICK_CURSOR" Description="LOC_OPTIONS_HOTKEY_LEFT_CLICK_CURSOR_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="PC"/>
 
-    <Row ActionId="CameraPanUp" Name="LOC_OPTIONS_CAMERA_PAN_UP" Description="LOC_OPTIONS_CAMERA_PAN_UP_HELP" CategoryId="GLOBAL" ContextId="World" LayoutType="PC"/>
-    <Row ActionId="CameraPanDown" Name="LOC_OPTIONS_CAMERA_PAN_DOWN" Description="LOC_OPTIONS_CAMERA_PAN_DOWN_HELP" CategoryId="GLOBAL" ContextId="World" LayoutType="PC"/>
-    <Row ActionId="CameraPanLeft" Name="LOC_OPTIONS_CAMERA_PAN_LEFT" Description="LOC_OPTIONS_CAMERA_PAN_LEFT_HELP" CategoryId="GLOBAL" ContextId="World" LayoutType="PC"/>
-    <Row ActionId="CameraPanRight" Name="LOC_OPTIONS_CAMERA_PAN_RIGHT" Description="LOC_OPTIONS_CAMERA_PAN_RIGHT_HELP" CategoryId="GLOBAL" ContextId="World" LayoutType="PC"/>
+    <Row ActionId="CameraPanUp" Name="LOC_OPTIONS_CAMERA_PAN_UP" Description="LOC_OPTIONS_CAMERA_PAN_UP_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="PC"/>
+    <Row ActionId="CameraPanDown" Name="LOC_OPTIONS_CAMERA_PAN_DOWN" Description="LOC_OPTIONS_CAMERA_PAN_DOWN_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="PC"/>
+    <Row ActionId="CameraPanLeft" Name="LOC_OPTIONS_CAMERA_PAN_LEFT" Description="LOC_OPTIONS_CAMERA_PAN_LEFT_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="PC"/>
+    <Row ActionId="CameraPanRight" Name="LOC_OPTIONS_CAMERA_PAN_RIGHT" Description="LOC_OPTIONS_CAMERA_PAN_RIGHT_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="PC"/>
 
     <!-- Console Actions -->
     <Row ActionId="FocusNext" Name="LOC_OPTIONS_FOCUS_NEXT" Description="LOC_OPTIONS_FOCUS_NEXT_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="Console"/>
@@ -140,6 +140,7 @@
     <Row ActionId="MenuDown" Name="LOC_OPTIONS_MENU_DOWN" Description="LOC_OPTIONS_MENU_DOWN_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="Console"/>
     <Row ActionId="MenuLeft" Name="LOC_OPTIONS_MENU_LEFT" Description="LOC_OPTIONS_MENU_LEFT_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="Console"/>
     <Row ActionId="MenuRight" Name="LOC_OPTIONS_MENU_RIGHT" Description="LOC_OPTIONS_MENU_RIGHT_HELP" CategoryId="GLOBAL" ContextId="Universal" LayoutType="Console"/>
+    <!-- End Console Actions -->
   </InputActions>
 
   <InputActionDefaultGestures>
@@ -350,10 +351,6 @@
     <Row KeyId="KEY_RCONTROL" KeyString="LOC_OPTIONS_KEY_RCONTROL" KeyIcon="ICON_KEY_RCONTROL" KeyType="KBMouse"/>
     <Row KeyId="KEY_RALT" KeyString="LOC_OPTIONS_KEY_RALT" KeyIcon="ICON_KEY_RALT" KeyType="KBMouse"/>
 
-    <Row KeyId="KEY_LBUTTON" KeyString="LOC_OPTIONS_KEY_LBUTTON" KeyIcon="ICON_KEY_LBUTTON" KeyType="KBMouse"/>
-    <Row KeyId="KEY_RBUTTON" KeyString="LOC_OPTIONS_KEY_RBUTTON" KeyIcon="ICON_KEY_RBUTTON" KeyType="KBMouse"/>
-    <Row KeyId="KEY_MBUTTON" KeyString="LOC_OPTIONS_KEY_MBUTTON" KeyIcon="ICON_KEY_MBUTTON" KeyType="KBMouse"/>
-
     <Row KeyId="KEY_CAPSLOCK" KeyString="LOC_OPTIONS_KEY_CAPSLOCK" KeyIcon="ICON_KEY_CAPSLOCK" KeyType="KBMouse"/>
     <Row KeyId="KEY_NUMLOCK" KeyString="LOC_OPTIONS_KEY_NUMLOCK" KeyIcon="ICON_KEY_NUMLOCK" KeyType="KBMouse"/>
     <Row KeyId="KEY_SCROLLLOCK" KeyString="LOC_OPTIONS_KEY_SCROLLLOCK" KeyIcon="ICON_KEY_SCROLLLOCK" KeyType="KBMouse"/>
@@ -365,12 +362,13 @@
     <Row KeyId="KEY_DANOMITE" KeyString="LOC_OPTIONS_KEY_DANOMITE" KeyIcon="ICON_KEY_DANOMITE" KeyType="KBMouse"/>
     <Row KeyId="KEY_IGNORE" KeyString="LOC_OPTIONS_KEY_IGNORE" KeyIcon="ICON_KEY_IGNORE" KeyType="KBMouse"/>
 
-    <Row KeyId="MOUSE_L" KeyString="LOC_OPTIONS_MOUSE_L" KeyIcon="ICON_MOUSE_L" KeyType="KBMouse"/>
-    <Row KeyId="MOUSE_R" KeyString="LOC_OPTIONS_MOUSE_R" KeyIcon="ICON_MOUSE_R" KeyType="KBMouse"/>
-    <Row KeyId="MOUSE_M" KeyString="LOC_OPTIONS_MOUSE_M" KeyIcon="ICON_MOUSE_M" KeyType="KBMouse"/>
-    <Row KeyId="MOUSE_X" KeyString="LOC_OPTIONS_MOUSE_X" KeyIcon="ICON_MOUSE_X" KeyType="KBMouse"/>
+    <Row KeyId="MOUSE_L"	KeyString="LOC_OPTIONS_MOUSE_L" KeyIcon="ICON_MOUSE_L" KeyType="KBMouse"/>
+    <Row KeyId="MOUSE_R"	KeyString="LOC_OPTIONS_MOUSE_R" KeyIcon="ICON_MOUSE_R" KeyType="KBMouse"/>
+    <Row KeyId="MOUSE_M"	KeyString="LOC_OPTIONS_MOUSE_M" KeyIcon="ICON_MOUSE_M" KeyType="KBMouse"/>
+		<Row KeyId="MOUSE_X1" KeyString="LOC_OPTIONS_MOUSE_X1" KeyIcon="ICON_MOUSE_X1" KeyType="KBMouse"/>
+		<Row KeyId="MOUSE_X2" KeyString="LOC_OPTIONS_MOUSE_X2" KeyIcon="ICON_MOUSE_X2" KeyType="KBMouse"/>
 
-    <Row KeyId="PAD_A" KeyString="LOC_OPTIONS_PAD_A" KeyIcon="ICON_PAD_A" KeyType="Controller"/>
+		<Row KeyId="PAD_A" KeyString="LOC_OPTIONS_PAD_A" KeyIcon="ICON_PAD_A" KeyType="Controller"/>
     <Row KeyId="PAD_B" KeyString="LOC_OPTIONS_PAD_B" KeyIcon="ICON_PAD_B" KeyType="Controller"/>
     <Row KeyId="PAD_X" KeyString="LOC_OPTIONS_PAD_X" KeyIcon="ICON_PAD_X" KeyType="Controller"/>
     <Row KeyId="PAD_Y" KeyString="LOC_OPTIONS_PAD_Y" KeyIcon="ICON_PAD_Y" KeyType="Controller"/>

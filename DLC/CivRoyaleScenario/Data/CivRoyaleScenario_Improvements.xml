@@ -4,6 +4,8 @@
 	<Types>
 		<Row Type="IMPROVEMENT_SUPPLY_DROP" Kind="KIND_IMPROVEMENT"/>
 		<Row Type="IMPROVEMENT_POPPED_GOODY" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="IMPROVEMENT_IMPROVISED_TRAP" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="IMPROVEMENT_GRIEVING_GIFT" Kind="KIND_IMPROVEMENT"/>
 	</Types>
 	<Improvements>
 		<!-- Popping any improvement should not result in plunder. -->
@@ -20,8 +22,10 @@
 			<Where ImprovementType="IMPROVEMENT_GOODY_HUT"/>
 			<Set TilesPerGoody="64" Name="LOC_CIV_ROYALE_IMPROVEMENT_GOODY_HUT_NAME" ImprovementOnRemove="IMPROVEMENT_POPPED_GOODY"/>
 		</Update>
-		<Row ImprovementType="IMPROVEMENT_SUPPLY_DROP" Name="LOC_IMPROVEMENT_SUPPLY_DROP_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="true" Goody="True"/>
-		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" Name="LOC_IMPROVEMENT_POPPED_GOODY_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="false"  Goody="false"/>
+		<Row ImprovementType="IMPROVEMENT_SUPPLY_DROP" Name="LOC_IMPROVEMENT_SUPPLY_DROP_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="true" Goody="True" GoodyNotify="False"/>
+		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" Name="LOC_IMPROVEMENT_POPPED_GOODY_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="false" Goody="false" GoodyNotify="False"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" Name="LOC_IMPROVEMENT_IMPROVISED_TRAP" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="true" Goody="true" GoodyNotify="False" CanBuildOutsideTerritory="true"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" Name="LOC_IMPROVEMENT_SUPPLY_DROP_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="true" Goody="true" GoodyNotify="False" CanBuildOutsideTerritory="true"/>
 	</Improvements>
 	<Improvement_ValidFeatures>
 		<Row ImprovementType="IMPROVEMENT_SUPPLY_DROP" FeatureType="FEATURE_FOREST"/>
@@ -30,6 +34,12 @@
 		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" FeatureType="FEATURE_FOREST"/>
 		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" FeatureType="FEATURE_JUNGLE"/>
 		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" FeatureType="FEATURE_MARSH"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" FeatureType="FEATURE_FOREST"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" FeatureType="FEATURE_JUNGLE"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" FeatureType="FEATURE_MARSH"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" FeatureType="FEATURE_FOREST"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" FeatureType="FEATURE_JUNGLE"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" FeatureType="FEATURE_MARSH"/>
 	</Improvement_ValidFeatures>
 	<Improvement_ValidTerrains>
 		<Row ImprovementType="IMPROVEMENT_SUPPLY_DROP" TerrainType="TERRAIN_DESERT"/>
@@ -52,5 +62,25 @@
 		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" TerrainType="TERRAIN_PLAINS_HILLS"/>
 		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" TerrainType="TERRAIN_GRASS_HILLS"/>
 		<Row ImprovementType="IMPROVEMENT_POPPED_GOODY" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_IMPROVISED_TRAP" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_GRIEVING_GIFT" TerrainType="TERRAIN_SNOW_HILLS"/>
 	</Improvement_ValidTerrains>
 </GameInfo>

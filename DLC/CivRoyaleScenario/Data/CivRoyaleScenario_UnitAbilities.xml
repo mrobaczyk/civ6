@@ -1,10 +1,38 @@
 <GameInfo>
 	<Types>
+		<!-- Removing Text-Only Ability that doesn't apply to CivRoyale.  -->
+		<Delete Type="ABILITY_RANGED_ATTACK_DISTRICT_DEBUFF"/>
+
+		<Row Type="ABILITY_ALIENS_MOVE_HEAL" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_ALIENS_CLOAK" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_BORDERLORD_EDGENESS_COMBAT_BONUS" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_CULTISTS_SIGHT" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_JOCKS_COMBAT_BONUS" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_UNIT_BASE_WMD_RESISTANCE" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_WMD_STRIKE" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_PIRATES_WATER_RESIST" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_PREPPERS_UNIT_EXPERIENCE" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_MUTANTS_SPREAD_FALLOUT_IMMUNE" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_MUTANTS_FALLOUT_SPEED" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_MUTANTS_FALLOUT_RESISTANCE" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_MAD_SCIENTISTS_HEAL_FASTER" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_MAD_SCIENTISTS_UNIT_SHIELD" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_CRIPPLED_GDR_NO_HEAL" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_ZOMBIES_NO_HEAL" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_ZOMBIES_COMBAT_SPAWN" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_ZOMBIES_RANGED_RESISTANCE" Kind="KIND_ABILITY"/>
 	</Types>
 	<TypeTags>
+		<Row Type="ABILITY_ALIENS_MOVE_HEAL" Tag="CLASS_ALL_UNITS"/>
+		<Row Type="ABILITY_ALIENS_CLOAK" Tag="CLASS_ALL_UNITS"/>
+		
+		<Row Type="ABILITY_BORDERLORD_EDGENESS_COMBAT_BONUS" Tag="CLASS_ALL_COMBAT_UNITS"/>
+
+		<Row Type="ABILITY_CULTISTS_SIGHT" Tag="CLASS_ALL_UNITS"/>
+		
+		<Row Type="ABILITY_JOCKS_COMBAT_BONUS" Tag="CLASS_ALL_COMBAT_UNITS"/>
+
 		<!-- All units have a base level of resistance to WMD blasts. -->
 		<Row Type="ABILITY_UNIT_BASE_WMD_RESISTANCE" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="ABILITY_UNIT_BASE_WMD_RESISTANCE" Tag="CLASS_MELEE"/>
@@ -14,33 +42,232 @@
 		<Row Type="ABILITY_UNIT_BASE_WMD_RESISTANCE" Tag="CLASS_ANTI_CAVALRY"/>
 		<Row Type="ABILITY_UNIT_BASE_WMD_RESISTANCE" Tag="CLASS_NAVAL_RANGED"/>
 		<Row Type="ABILITY_UNIT_BASE_WMD_RESISTANCE" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_UNIT_BASE_WMD_RESISTANCE" Tag="CLASS_GIANT_DEATH_ROBOT"/>
+		
 		<Row Type="ABILITY_WMD_STRIKE" Tag="CLASS_ALL_UNITS"/>
+
+		<Row Type="ABILITY_PIRATES_WATER_RESIST" Tag="CLASS_ALL_COMBAT_UNITS"/>
+		<Row Type="ABILITY_PIRATES_WATER_RESIST" Tag="CLASS_LANDCIVILIAN"/>
+		<Row Type="ABILITY_PIRATES_WATER_RESIST" Tag="CLASS_SUPPORT"/>
 		<Row Type="ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST" Tag="CLASS_ALL_COMBAT_UNITS"/>
 		<Row Type="ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST" Tag="CLASS_SUPPORT"/>
+
+		<Row Type="ABILITY_MUTANTS_SPREAD_FALLOUT_IMMUNE" Tag="CLASS_ALL_UNITS"/>
+		<Row Type="ABILITY_MUTANTS_FALLOUT_SPEED" Tag="CLASS_ALL_UNITS"/>
+		<Row Type="ABILITY_MUTANTS_FALLOUT_RESISTANCE" Tag="CLASS_ALL_UNITS"/>
+
+		<Row Type="ABILITY_MAD_SCIENTISTS_HEAL_FASTER" Tag="CLASS_ALL_UNITS"/>
+		<Row Type="ABILITY_MAD_SCIENTISTS_UNIT_SHIELD" Tag="CLASS_ALL_UNITS"/>
+
+		<Row Type="ABILITY_PREPPERS_UNIT_EXPERIENCE" Tag="CLASS_ALL_COMBAT_UNITS"/>
+
+		<Row Type="ABILITY_CRIPPLED_GDR_NO_HEAL" Tag="CLASS_CRIPPLED_GDR"/>
+
+		<Row Type="ABILITY_ZOMBIES_NO_HEAL" Tag="CLASS_ZOMBIE"/>
+		<Row Type="ABILITY_ZOMBIES_RANGED_RESISTANCE" Tag="CLASS_ZOMBIE"/>
+		<Row Type="ABILITY_ZOMBIES_COMBAT_SPAWN" Tag="CLASS_ZOMBIE"/>
+		<Row Type="ABILITY_SAMURAI" Tag="CLASS_ZOMBIE"/>	<!-- Applied to zombies so they always fight at full strength -->
 	</TypeTags>
 	<UnitAbilities>
+		
+		<Row UnitAbilityType="ABILITY_ALIENS_MOVE_HEAL" Name="LOC_ABILITY_ALIENS_HEAL_MOVE_NAME" Description="LOC_ABILITY_ALIENS_HEAL_MOVE_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_ALIENS_CLOAK" Name="LOC_ABILITY_ALIENS_XENO_STEALTH_NAME" Description="LOC_ABILITY_ALIENS_XENO_STEALTH_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_BORDERLORD_EDGENESS_COMBAT_BONUS" Name="LOC_EDGELORDS_EDGENESS_ABILITY_NAME" Description="LOC_EDGENESS_ABILITY_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_CULTISTS_SIGHT" Name="LOC_ABILITY_CULTISTS_UNIT_SIGHT_NAME" Description="LOC_ABILITY_CULTISTS_UNIT_SIGHT_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_JOCKS_COMBAT_BONUS" Name="LOC_JOCK_COMBAT_BONUS_ABILITY_NAME" Description="LOC_JOCK_COMBAT_BONUS_ABILITY_DESCRIPTION" Inactive="true"/>
 		<Row UnitAbilityType="ABILITY_UNIT_BASE_WMD_RESISTANCE" Name="LOC_ABILITY_UNIT_BASE_WMD_RESISTANCE_NAME" Description="LOC_ABILITY_UNIT_BASE_WMD_RESISTANCE_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_WMD_STRIKE" Name="LOC_ABILITY_ABILITY_WMD_STRIKE_NAME" Description="LOC_ABILITY_WMD_STRIKE_DESCRIPTION" Inactive="true"/>
-		<Row UnitAbilityType="ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST" Name="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_NAME" Description="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_MUTANTS_SPREAD_FALLOUT_IMMUNE" Name="LOC_MUTANTS_SPREAD_FALLOUT_IMMUNE_NAME" Description="LOC_MUTANTS_SPREAD_FALLOUT_IMMUNE_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_MUTANTS_FALLOUT_SPEED" Name="LOC_MUTANTS_FALLOUT_SPEED_NAME" Description="LOC_MUTANTS_FALLOUT_SPEED_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_MUTANTS_FALLOUT_RESISTANCE" Name="LOC_MUTANTS_FALLOUT_RESISTANCE_NAME" Description="LOC_MUTANTS_FALLOUT_RESISTANCE_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_PIRATES_WATER_RESIST" Name="LOC_PIRATES_WATER_LOGGED_ABILITY_NAME" Description="LOC_PIRATES_WATER_LOGGED_ABILITY_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST" Name="" Description="" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_PREPPERS_UNIT_EXPERIENCE" Name="LOC_PREPPERS_EXPERIENCE_ABILITY_NAME" Description="LOC_PREPPERS_EXPERIENCE_ABILITY_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_MAD_SCIENTISTS_HEAL_FASTER" Name="LOC_SCIENTISTS_HEAL_FASTER_ABILITY_NAME" Description="LOC_SCIENTISTS_HEAL_FASTER_ABILITY_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_MAD_SCIENTISTS_UNIT_SHIELD" Name="LOC_ABILITY_MAD_SCIENTISTS_UNIT_SHIELD_NAME" Description="LOC_ABILITY_MAD_SCIENTISTS_UNIT_SHIELD_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_CRIPPLED_GDR_NO_HEAL" Name="LOC_ABILITY_CRIPPLED_GDR_NO_HEAL_NAME" Description="LOC_ABILITY_CRIPPLED_GDR_NO_HEAL_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_ZOMBIES_NO_HEAL" Name="LOC_ABILITY_ZOMBIES_NO_HEAL_NAME" Description="LOC_ABILITY_ZOMBIES_NO_HEAL_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_ZOMBIES_COMBAT_SPAWN" Name="LOC_ABILITY_ZOMBIES_COMBAT_SPAWN_NAME" Description="LOC_ABILITY_ZOMBIES_COMBAT_SPAWN_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_ZOMBIES_RANGED_RESISTANCE" Name="LOC_ABILITY_ZOMBIES_RANGED_RESISTANCE_NAME" Description="LOC_ABILITY_ZOMBIES_RANGED_RESISTANCE_DESCRIPTION"/>
 	</UnitAbilities>
 	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_ALIENS_MOVE_HEAL</UnitAbilityType>
+			<ModifierId>UNIT_ALIENS_MOVE_HEAL</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_ALIENS_CLOAK</UnitAbilityType>
+			<ModifierId>UNIT_ALIENS_CLOAK</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_BORDERLORD_EDGENESS_COMBAT_BONUS</UnitAbilityType>
+			<ModifierId>BORDERLORD_EDGENESS_COMBAT_BONUS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_CULTISTS_SIGHT</UnitAbilityType>
+			<ModifierId>CULTISTS_SIGHT</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_JOCKS_COMBAT_BONUS</UnitAbilityType>
+			<ModifierId>JOCKS_COMBAT_BONUS</ModifierId>
+		</Row>
 		<Row>
 			<UnitAbilityType>ABILITY_UNIT_BASE_WMD_RESISTANCE</UnitAbilityType>
 			<ModifierId>UNIT_BASE_WMD_RESISTANCE</ModifierId>
 		</Row>
 		<Row>
+			<UnitAbilityType>ABILITY_MUTANTS_SPREAD_FALLOUT_IMMUNE</UnitAbilityType>
+			<ModifierId>MUTANTS_SPREAD_FALLOUT_IMMUNE</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_MUTANTS_FALLOUT_SPEED</UnitAbilityType>
+			<ModifierId>MUTANTS_FALLOUT_MOVE</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_MUTANTS_FALLOUT_RESISTANCE</UnitAbilityType>
+			<ModifierId>MUTANTS_WMD_RESIST</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_PIRATES_WATER_RESIST</UnitAbilityType>
+			<ModifierId>PIRATES_WATER_RESIST</ModifierId>
+		</Row>
+		<Row>
 			<UnitAbilityType>ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST</UnitAbilityType>
 			<ModifierId>KNARR_IGNORE_EMBARK_DISEMBARK_COST</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_PREPPERS_UNIT_EXPERIENCE</UnitAbilityType>
+			<ModifierId>PREPPERS_UNIT_EXPERIENCE</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_MAD_SCIENTISTS_HEAL_FASTER</UnitAbilityType>
+			<ModifierId>MAD_SCIENTISTS_UNIT_HEAL_FASTER</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_MAD_SCIENTISTS_UNIT_SHIELD</UnitAbilityType>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_MAD_SCIENTISTS_UNIT_SHIELD</UnitAbilityType>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD_FALLOUT_IMMUNE</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_MAD_SCIENTISTS_UNIT_SHIELD</UnitAbilityType>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD_WATER_IMMUNE</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_CRIPPLED_GDR_NO_HEAL</UnitAbilityType>
+			<ModifierId>MODIFIER_CRIPPLED_GDR_NO_HEAL</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_ZOMBIES_NO_HEAL</UnitAbilityType>
+			<ModifierId>MODIFIER_ZOMBIES_NO_HEAL</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_ZOMBIES_RANGED_RESISTANCE</UnitAbilityType>
+			<ModifierId>ZOMBIES_DEFENSE_BONUS_VS_RANGED_COMBAT</ModifierId>
 		</Row>
 	</UnitAbilityModifiers>
 	<Modifiers>
 		<Row>
+			<ModifierId>UNIT_ALIENS_MOVE_HEAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_HEAL_AFTER_ACTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>UNIT_ALIENS_CLOAK</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_HIDDEN_VISIBILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BORDERLORD_EDGENESS_COMBAT_BONUS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>CULTISTS_SIGHT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_SIGHT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>JOCKS_COMBAT_BONUS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>UNIT_BASE_WMD_RESISTANCE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_WMD_RESISTANCE</ModifierType>
 		</Row>
+		<Row>
+			<ModifierId>MUTANTS_FALLOUT_MOVE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+			<SubjectRequirementSetId>UNIT_IN_FALLOUT_PLOT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MUTANTS_WMD_RESIST</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_WMD_RESISTANCE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>PIRATES_WATER_RESIST</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_WATER_DAMAGE_RESISTANCE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MUTANTS_SPREAD_FALLOUT_IMMUNE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_WMD_RESISTANCE</ModifierType>
+			<SubjectRequirementSetId>UNIT_IN_MUTANT_SPREAD_FALLOUT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>PREPPERS_UNIT_EXPERIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_HEAL_FASTER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_HEAL_PER_TURN</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>MAD_SCIENTISTS_UNIT_SHIELD_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD_FALLOUT_IMMUNE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_WMD_RESISTANCE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD_WATER_IMMUNE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_WATER_DAMAGE_RESISTANCE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_CRIPPLED_GDR_NO_HEAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_HEAL_PER_TURN</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_ZOMBIES_NO_HEAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_HEAL_PER_TURN</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ZOMBIES_DEFENSE_BONUS_VS_RANGED_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>ZOMBIE_RANGED_DEFENDER_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
 	</Modifiers>
 	<ModifierArguments>
+		<Row>
+			<ModifierId>UNIT_ALIENS_CLOAK</ModifierId>
+			<Name>Hidden</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>BORDERLORD_EDGENESS_COMBAT_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>CULTISTS_SIGHT</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>JOCKS_COMBAT_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
 		<Row>
 			<ModifierId>UNIT_BASE_WMD_RESISTANCE</ModifierId>
 			<Name>Blast</Name>
@@ -51,5 +278,161 @@
 			<Name>Fallout</Name>
 			<Value>0</Value>
 		</Row>
+		<Row>
+			<ModifierId>MUTANTS_FALLOUT_MOVE</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>MUTANTS_WMD_RESIST</ModifierId>
+			<Name>Fallout</Name>
+			<Value>50</Value>
+		</Row>
+		<!-- Adds up with base resistance to be 100% -->
+		<Row>
+			<ModifierId>MUTANTS_SPREAD_FALLOUT_IMMUNE</ModifierId>
+			<Name>Blast</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>MUTANTS_SPREAD_FALLOUT_IMMUNE</ModifierId>
+			<Name>Fallout</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>PIRATES_WATER_RESIST</ModifierId>
+			<Name>WaterDamage</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>PREPPERS_UNIT_EXPERIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_HEAL_FASTER</ModifierId>
+			<Name>Type</Name>
+			<Value>ALL</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_HEAL_FASTER</ModifierId>
+			<Name>Amount</Name>
+			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD_FALLOUT_IMMUNE</ModifierId>
+			<Name>Blast</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD_FALLOUT_IMMUNE</ModifierId>
+			<Name>Fallout</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>MAD_SCIENTISTS_UNIT_SHIELD_WATER_IMMUNE</ModifierId>
+			<Name>WaterDamage</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_CRIPPLED_GDR_NO_HEAL</ModifierId>
+			<Name>Type</Name>
+			<Value>ALL</Value>
+		</Row>
+		<!-- This needs to be the negative of COMBAT_HEAL_LAND_NEUTRAL so the unit just doesn't heal normally. -->
+		<Row>
+			<ModifierId>MODIFIER_CRIPPLED_GDR_NO_HEAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>-20</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_ZOMBIES_NO_HEAL</ModifierId>
+			<Name>Type</Name>
+			<Value>ALL</Value>
+		</Row>
+		<!-- This needs to be the negative of COMBAT_HEAL_LAND_NEUTRAL so the unit just doesn't heal normally. -->
+		<Row>
+			<ModifierId>MODIFIER_ZOMBIES_NO_HEAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>-20</Value>
+		</Row>
+		<Row>
+			<ModifierId>ZOMBIES_DEFENSE_BONUS_VS_RANGED_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
 	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>MAD_SCIENTISTS_UNIT_SHIELD_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>UNIT_IN_FALLOUT_PLOT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>UNIT_IN_MUTANT_SPREAD_FALLOUT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>ZOMBIE_RANGED_DEFENDER_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>MAD_SCIENTISTS_UNIT_SHIELD_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLAYER_IS_DEFENDER_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>UNIT_IN_FALLOUT_PLOT</RequirementSetId>
+			<RequirementId>PLOT_IN_FALLOUT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>UNIT_IN_MUTANT_SPREAD_FALLOUT</RequirementSetId>
+			<RequirementId>PLOT_MUTANT_SPREAD_FALLOUT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>ZOMBIE_RANGED_DEFENDER_REQUIREMENTS</RequirementSetId>
+			<RequirementId>RANGED_COMBAT_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>ZOMBIE_RANGED_DEFENDER_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLAYER_IS_DEFENDER_REQUIREMENTS</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>PLOT_IN_FALLOUT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_HAS_FALLOUT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_MUTANT_SPREAD_FALLOUT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_PROPERTY_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>PLOT_MUTANT_SPREAD_FALLOUT</RequirementId>
+			<Name>PropertyName</Name>
+			<Value>MutantDropped</Value>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_MUTANT_SPREAD_FALLOUT</RequirementId>
+			<Name>PropertyMinimum</Name>
+			<Value>1</Value>
+		</Row>
+	</RequirementArguments>
+	<ModifierStrings>
+		<Row ModifierId="JOCKS_COMBAT_BONUS" Context="Preview" Text="LOC_TRAIT_JOCKS_COMBAT_BONUS_DESC"/>
+		<Row ModifierId="MAD_SCIENTISTS_UNIT_SHIELD" Context="Preview" Text="LOC_MAD_SCIENTISTS_UNIT_SHIELD_MODIFIER"/>
+		<Row ModifierId="BORDERLORD_EDGENESS_COMBAT_BONUS" Context="Preview" Text="LOC_BORDERLORD_EDGENESS_COMBAT_BONUS_MODIFIER"/>
+		<Row ModifierId="ZOMBIES_DEFENSE_BONUS_VS_RANGED_COMBAT" Context="Preview" Text="LOC_ZOMBIES_DEFENSE_BONUS_VS_RANGED_COMBAT_MODIFIER"/>
+	</ModifierStrings>
 </GameInfo>

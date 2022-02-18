@@ -231,6 +231,9 @@
     <Row NodeType="Operation Military Formation" NodeId="71" ShapeId="1">
       <Description>Within an operation, attempt to combine units into corps and armies</Description>
     </Row>
+    <Row NodeType="Use Scripted Command" NodeId="72" ShapeId="1">
+      <Description>If they have an available scripted command, try to use it</Description>
+    </Row>
   </NodeDefinitions>
   <NodeDataDefinitions>
     <Row DataName="Max Failures" DefnId="0" DataType="int" NodeType="Concurrent" Required="False" UserData="True" />
@@ -427,6 +430,7 @@
     <Row DataName="Range" DefnId="0" DataType="int" NodeType="Is Near Fallout" UserData="True" />
     <Row DataName="Script Function" DefnId="0" DataType="string" NodeType="LUA Script Condition" UserData="True" />
     <Row DataName="Unused" DefnId="0" DataType="string" NodeType="Operation Military Formation" Required="False" UserData="True" />
+    <Row DataName="Unused" DefnId="0" DataType="string" NodeType="Use Scripted Command" Required="False" UserData="True" />
   </NodeDataDefinitions>
   <DataTypes>
     <Row TypeName="UnitTypesList" DataId="0" />
@@ -627,27 +631,30 @@
     <Row NodeType="Add Goal Tech" NodeId="3" TreeName="Build Trigger Unit" />
     <Row NodeType="Contract Manager Decorator" NodeId="4" TreeName="Build Trigger Unit" JumpTo="6" />
     <Row NodeType="Build Unit" NodeId="5" TreeName="Build Trigger Unit" />
-    <Row NodeType="Concurrent" NodeId="0" TreeName="Civ Royale Behavior" JumpTo="21" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Civ Royale Behavior" JumpTo="24" />
     <Row NodeType="Operation Change Target" NodeId="1" TreeName="Civ Royale Behavior" />
     <Row NodeType="Recruit Units" NodeId="2" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Priority" NodeId="3" TreeName="Civ Royale Behavior" JumpTo="21" />
-    <Row NodeType="Sequence" NodeId="4" TreeName="Civ Royale Behavior" JumpTo="11" />
+    <Row NodeType="Priority" NodeId="3" TreeName="Civ Royale Behavior" JumpTo="24" />
+    <Row NodeType="Sequence" NodeId="4" TreeName="Civ Royale Behavior" JumpTo="12" />
     <Row NodeType="LUA Script Condition" NodeId="5" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Concurrent" NodeId="6" TreeName="Civ Royale Behavior" JumpTo="11" />
+    <Row NodeType="Concurrent" NodeId="6" TreeName="Civ Royale Behavior" JumpTo="12" />
     <Row NodeType="Operation Defend Units" NodeId="7" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Launch nuke" NodeId="8" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Attack Units" NodeId="9" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Move" NodeId="10" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Concurrent" NodeId="11" TreeName="Civ Royale Behavior" JumpTo="21" />
-    <Row NodeType="Operation Pillage" NodeId="12" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Priority" NodeId="13" TreeName="Civ Royale Behavior" JumpTo="17" />
-    <Row NodeType="Not" NodeId="14" TreeName="Civ Royale Behavior" JumpTo="16" />
-    <Row NodeType="Is Near Fallout" NodeId="15" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Defend Units" NodeId="16" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Make Formation" NodeId="17" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Pillage" NodeId="18" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Attack Units" NodeId="19" TreeName="Civ Royale Behavior" />
-    <Row NodeType="Operation Move" NodeId="20" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Use Scripted Command" NodeId="8" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Launch nuke" NodeId="9" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Attack Units" NodeId="10" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Move" NodeId="11" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Concurrent" NodeId="12" TreeName="Civ Royale Behavior" JumpTo="24" />
+    <Row NodeType="Operation Pillage" NodeId="13" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Priority" NodeId="14" TreeName="Civ Royale Behavior" JumpTo="18" />
+    <Row NodeType="Not" NodeId="15" TreeName="Civ Royale Behavior" JumpTo="17" />
+    <Row NodeType="Is Near Fallout" NodeId="16" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Defend Units" NodeId="17" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Make Formation" NodeId="18" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Use Scripted Command" NodeId="19" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Launch nuke" NodeId="20" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Pillage" NodeId="21" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Attack Units" NodeId="22" TreeName="Civ Royale Behavior" />
+    <Row NodeType="Operation Move" NodeId="23" TreeName="Civ Royale Behavior" />
     <Row NodeType="Concurrent" NodeId="0" TreeName="Early City Assault" JumpTo="55" />
     <Row NodeType="Decode Trigger" NodeId="1" TreeName="Early City Assault" />
     <Row NodeType="Priority" NodeId="2" TreeName="Early City Assault" JumpTo="5" />
@@ -1497,33 +1504,35 @@
     <Row DefnId="0" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="0" />
     <Row DefnId="1" NodeId="7" TreeName="Civ Royale Behavior" DefaultData="false" />
     <Row DefnId="0" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="1" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="2" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="3" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="4" NodeId="9" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="1" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="4" />
-    <Row DefnId="3" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="6" />
-    <Row DefnId="4" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
-    <Row DefnId="5" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="6" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="1" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="2" NodeId="12" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="0" NodeId="15" TreeName="Civ Royale Behavior" DefaultData="4" />
-    <Row DefnId="0" NodeId="16" TreeName="Civ Royale Behavior" DefaultData="50" />
-    <Row DefnId="1" NodeId="16" TreeName="Civ Royale Behavior" DefaultData="-1" />
-    <Row DefnId="1" NodeId="17" TreeName="Civ Royale Behavior" DefaultData="UNITAI_COMBAT" />
-    <Row DefnId="2" NodeId="17" TreeName="Civ Royale Behavior" DefaultData="UNITTYPE_CIVILIAN" />
-    <Row DefnId="3" NodeId="17" TreeName="Civ Royale Behavior" />
-    <Row DefnId="4" NodeId="17" TreeName="Civ Royale Behavior" />
-    <Row DefnId="1" NodeId="18" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="0" NodeId="19" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="1" NodeId="19" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="2" NodeId="19" TreeName="Civ Royale Behavior" DefaultData="false" />
-    <Row DefnId="1" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="4" />
-    <Row DefnId="3" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="0" />
-    <Row DefnId="4" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
-    <Row DefnId="5" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="true" />
-    <Row DefnId="6" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="2" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="3" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="4" NodeId="10" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="3" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="6" />
+    <Row DefnId="4" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
+    <Row DefnId="5" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="6" NodeId="11" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="1" NodeId="12" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="2" NodeId="13" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="16" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="0" NodeId="17" TreeName="Civ Royale Behavior" DefaultData="50" />
+    <Row DefnId="1" NodeId="17" TreeName="Civ Royale Behavior" DefaultData="-1" />
+    <Row DefnId="1" NodeId="18" TreeName="Civ Royale Behavior" DefaultData="UNITAI_COMBAT" />
+    <Row DefnId="2" NodeId="18" TreeName="Civ Royale Behavior" DefaultData="UNITTYPE_CIVILIAN" />
+    <Row DefnId="3" NodeId="18" TreeName="Civ Royale Behavior" />
+    <Row DefnId="4" NodeId="18" TreeName="Civ Royale Behavior" />
+    <Row DefnId="0" NodeId="20" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="21" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="0" NodeId="22" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="22" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="2" NodeId="22" TreeName="Civ Royale Behavior" DefaultData="false" />
+    <Row DefnId="1" NodeId="23" TreeName="Civ Royale Behavior" DefaultData="4" />
+    <Row DefnId="3" NodeId="23" TreeName="Civ Royale Behavior" DefaultData="0" />
+    <Row DefnId="4" NodeId="23" TreeName="Civ Royale Behavior" DefaultData="UNITAI_CIVILIAN" />
+    <Row DefnId="5" NodeId="23" TreeName="Civ Royale Behavior" DefaultData="true" />
+    <Row DefnId="6" NodeId="23" TreeName="Civ Royale Behavior" DefaultData="true" />
     <Row DefnId="0" NodeId="1" TreeName="Early City Assault" Tag="Unused" />
     <Row DefnId="1" NodeId="1" TreeName="Early City Assault" />
     <Row DefnId="2" NodeId="1" TreeName="Early City Assault" />

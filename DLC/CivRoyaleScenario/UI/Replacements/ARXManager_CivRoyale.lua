@@ -116,7 +116,12 @@ function RefreshARX()
 
         fullStr = "<span class=title><p></p></span> <span class=title>";
 		if turnsLeft ~= nil then
-			fullStr = fullStr..tostring(turnsLeft-turn).." "..Locale.Lookup("LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS").."<p></p>";
+			-- When the turns left is zero, the new count is in turnsStart
+			if turnsLeft == turn then
+				fullStr = fullStr..tostring(turnsStart).." "..Locale.Lookup("LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS").."<p></p>";
+			else
+				fullStr = fullStr..tostring(turnsLeft-turn).." "..Locale.Lookup("LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS").."<p></p>";
+			end
 		else
 			fullStr = fullStr.."<p></p>";
 		end

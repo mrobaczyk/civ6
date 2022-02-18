@@ -2,6 +2,7 @@
 
 include( "InstanceManager" );
 include( "SupportFunctions" ); 
+include( "CivRoyaleScenario_PropKeys" );
 
 
 -- ===========================================================================
@@ -12,14 +13,13 @@ local DANGER_ZONE_SPEED		:number = -1;	-- Value set by game script
 local DANGER_ZONE_DELAY		:number = -1;	-- Value set by game script
 local MAX_PARTICLES			:number = 300;
 local INVALID_TURNS			:number = -1;	-- This is the value used by "NextSafeZoneTurn" before initialization or when the safe zone will no longer shrink due to being at minimum size.
+local START_TURN			:number = 208;
 
 
 -- ===========================================================================
 --	MEMBERS
 -- ===========================================================================
 local m_kBracketIM :table = InstanceManager:new( "BracketInstance", "BracketTop", Controls.RingStack );
-local m_kParticleIM :table = InstanceManager:new( "ParticleInstance", "ParticleTop", ContextPtr );
-local m_kParticles	:table;
 
 
 -- ===========================================================================
@@ -110,15 +110,15 @@ function RefreshRoyaleUnit()
 	end
 
 	local pPlayer:table = Players[localPlayerID];
+	local pPlayerConfig:table = PlayerConfigurations[localPlayerID];
 	local pPlayerUnits:table = pPlayer:GetUnits();
-	local pFalloutManager:table = Game.GetFalloutManager();
 	local isHidingFalloutWarning:boolean = true;
 
 	for i, pUnit in pPlayerUnits:Members() do
 		local unitTypeName = UnitManager.GetTypeName(pUnit)
 		if (unitTypeName == "UNIT_SETTLER") then
-			local iPlotIndex:number = Map.GetPlot(pUnit:GetX(),pUnit:GetY()):GetIndex();
-			if (pFalloutManager:HasFallout(iPlotIndex)) then
+			local pUnitPlot = Map.GetPlot(pUnit:GetX(),pUnit:GetY());
+			if(not CheckUnitFalloutStatus(pUnitPlot, pPlayerConfig)) then
 				isHidingFalloutWarning = false;
 				break;
 			end
@@ -126,6 +126,25 @@ function RefreshRoyaleUnit()
 	end
 
 	Controls.RunningUnit:SetHide(isHidingFalloutWarning);
+end
+
+function CheckUnitFalloutStatus(pUnitPlot :object, localPlayerConfig :object)
+	-- Check for not being in fallout
+	local pFalloutManager:table = Game.GetFalloutManager();
+	if (not pFalloutManager:HasFallout(pUnitPlot:GetIndex()) ) then
+		return true;
+	end
+
+	-- We are in fallout, are we a mutant sitting in mutant spread fallout?
+	if(localPlayerConfig ~= nil and localPlayerConfig:GetCivilizationTypeName() == g_CivTypeNames.Mutants) then	
+		local mutantDropProp = pUnitPlot:GetProperty(g_plotStateKeys.MutantDropped);
+		if(mutantDropProp ~= nil and mutantDropProp > 0) then
+			return true;
+		end
+	end
+
+	-- We are in "bad" fallout that we should show the Red Death unit warning.
+	return false;
 end
 
 -- ===========================================================================
@@ -145,6 +164,11 @@ function OnLocalPlayerTurnBegin()
 end
 
 -- ===========================================================================
+function OnPlayerChangeClose()
+	RefreshAll();
+end
+
+-- ===========================================================================
 --	Game Engine Event
 -- ===========================================================================
 function OnUpdateUI( type:number, tag:string, iData1:number, iData2:number, strData1:string)
@@ -155,6 +179,7 @@ end
 -- ===========================================================================
 function OnRefresh()
 	ContextPtr:ClearRequestRefresh();
+	--RefreshAll();
 end
 
 
@@ -199,7 +224,9 @@ function RefreshRoyaleRing()
 		Controls.RingTurns:SetHide(false);
 		Controls.RingTurnsLabel:SetHide(false);
 		Controls.RingTurns:SetText( turnsLeft - turn);
+
 		Controls.RingTurnsLabel:SetText( Locale.ToUpper( Locale.Lookup("LOC_CIV_ROYALE_HUD_TURNS",turnsLeft-turn)));
+		Controls.RingTurnsLabel:SetToolTipString( tostring(turnsLeft-turn) .. " " .. Locale.Lookup("LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS"));
 	end
 	
 	local tt:string = Locale.Lookup("LOC_CIV_ROYALE_HUD_CATEGORY_TOOLTIP",falloutDamage,safeZonePhase);
@@ -214,20 +241,27 @@ function RefreshRoyaleRing()
 	m_kBracketIM:ReleaseInstance(uiBracket); 
 
 	if(turnsLeft == INVALID_TURNS) then
-		-- Safe Zone is not shrinking anymore.  Just flash and spark like crazy!
+		-- Safe Zone is not shrinking anymore.
 		local num		:number = turnsStart;
+		local flasherToolTipString :string = Locale.Lookup("LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS_MIN_SIZE_C");
 		for i=1,num,1 do
 			uiBracket = m_kBracketIM:GetInstance();
 			uiBracket.Flasher:SetToBeginning();
 			uiBracket.Flasher:SetProgress(progress);
 			uiBracket.Flasher:Play();
+			uiBracket.Flasher:SetToolTipString(flasherToolTipString);
 		end
 
 		Controls.RightFlasher:SetToBeginning();
 		Controls.RightFlasher:SetProgress(uiBracket.Flasher:GetProgress());
 		Controls.RightFlasher:Play();
 
-		Spark();
+		-- Spark on the turn the safe zone shrunk to minimum.
+		
+		local lastSafeZoneTurn :number = Game:GetProperty("LastSafeZoneTurn");
+		if(lastSafeZoneTurn ~= nil and lastSafeZoneTurn == Game.GetCurrentGameTurn()) then
+			Spark();
+		end
 	else
 		-- Safe Zone will continue to shrink.
 		local MIN_FLASH_SPEED:number = 0.4;
@@ -247,7 +281,7 @@ function RefreshRoyaleRing()
 				uiBracket.Flasher:Stop();
 			end
 		
-			uiBracket.Flasher:SetToolTipString( tostring(i) );
+			uiBracket.Flasher:SetToolTipString( tostring(turnsLeft-turn) .. " " .. Locale.Lookup("LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS"));
 		end
 		if((turnsLeft - turn) == 1) then
 			Controls.RightFlasher:SetToBeginning();
@@ -261,6 +295,10 @@ function RefreshRoyaleRing()
 		if( turnsStart - (turnsLeft - turn) == 0) then
 			Spark();
 		end
+		if(turn == START_TURN)then
+			-- For fun, spark when screen first starts
+			Spark();
+		end
 	end
 end
 
@@ -270,6 +308,10 @@ end
 -- ===========================================================================
 function RealizeNukes()
 	local localPlayer	:number = Game.GetLocalPlayer();
+	if localPlayer==PlayerTypes.NONE or localPlayer==PlayerTypes.OBSERVER then
+		return;
+	end		
+
 	local pPlayer		:table = Players[localPlayer];
 	local pPlayerWMDs	:table = pPlayer:GetWMDs();
 	local numNuclear	:number = 0;
@@ -325,85 +367,21 @@ function OnWMDUpdate( owner:number, WMDtype:number )
 	end
 end
 
-
--- ===========================================================================
---	In UI particle system... not super efficient!
--- ===========================================================================
-function AllocateParticles()	
-	m_kParticleIM:ResetInstances();
-	m_kParticles = {}	
-	local ui:table;
-	for i=1,MAX_PARTICLES,1 do
-		m_kParticles[i] = m_kParticleIM:GetInstance();
-	end	 
-end
-
 -- ===========================================================================
 function Spark()
-	local startX	:number = 30;
-	local width		:number = Controls.RingStack:GetSizeX() + 100;
-	local height	:number = 30;		-- height to initially emit
-	local pushup	:number = -45;		-- Most a particle will "push up" to the sky when emitted
-	local minlife	:number = 40;		-- Shortest life of a particle
-	local maxlife	:number = 90;		-- Longest life of a particle
-	for i=1,MAX_PARTICLES,1 do
-		local ui:table = m_kParticles[i];
-		ui.Flash1:SetProgress( math.random()  );
-		ui.Flash2:SetProgress( math.random()  );
-		local size = 1 + (math.random() * 2);
-		ui.Image1:SetSizeVal( size,size );
-		ui.Image2:SetSizeVal( size,size );
-		ui.x = startX + (math.random() * width);-- x position
-		ui.y = math.random() * height;			-- y position
-		ui.vx = (math.random() * 30) - 15;		-- velocity x
-		ui.vy = math.random() * pushup;			-- velocity y
-		ui.b = 0;								-- bounces (b=0 none, b=1 has hit top panel frame.)
-		ui.l = minlife + (math.random() * maxlife);		-- life in frames
-		ui.ParticleTop:SetOffsetVal( x, y );
-		ui.ParticleTop:SetHide( false );
-	end	 	
-
-	-- WARNING: Expensive to wire up per-frame callbacks so only have active
-	-- while the system is playing out.
-	ContextPtr:SetUpdate( OnUpdate );				
-end
-
--- ===========================================================================
-function UpdateParticles( delta:number )
-	gravity = 40 * delta;
-	local isDone:boolean = true;
-	for i=1,MAX_PARTICLES,1 do
-		local ui:table = m_kParticles[i];
-		if ui.l > 0 then
-			isDone = false;
-			ui.l = ui.l - 1;						-- reduce life
-			ui.vy = ui.vy + gravity;
-			ui.x = ui.x + ui.vx * delta;
-			ui.y = ui.y + ui.vy * delta;			
-			if ui.b == 0 and ui.y > 30 then			-- bounce?
-				ui.b = 1;
-				ui.vy = -(ui.vy * 0.3);				-- flip velocity y
-				ui.y = ui.y + ui.vy;
-			end
-			ui.ParticleTop:SetOffsetVal( ui.x, ui.y );		
-		elseif ui.l ~= -1 then						-- dying
-			ui.l = -1;								-- dead
-			ui.ParticleTop:SetHide(true);
-		end
-	end
-	if isDone then
-		ContextPtr:ClearUpdate();
-	end
-end
-
--- ===========================================================================
-function OnUpdate( delta )	
-	UpdateParticles( delta );
+	local uiEndGameMenu :object = ContextPtr:LookUpControl( "/InGame/EndGame/EndGameMenu" );
+	if(uiEndGameMenu ~= nil and not uiEndGameMenu:IsHidden())then return; end
+	UIManager:PlayEffectOneTime(Controls.RingStackAndTurns, "FireFX_CounterSpark");
 end
 
 -- ===========================================================================
 function OnUnitMoveComplete(player, unitId, x, y)
 	RefreshRoyaleUnit();
+end
+
+-- ===========================================================================
+function OnObserverModeTurnBegin()
+	RefreshAll();
 end
 
 -- ===========================================================================
@@ -421,8 +399,6 @@ end
 -- ===========================================================================
 function LateInitialize()	
 
-	AllocateParticles();
-
 	-- Read values set by game script.
 	DANGER_ZONE_INTERVAL = Game:GetProperty("DANGER_ZONE_INTERVAL");
 	DANGER_ZONE_SPEED = Game:GetProperty("DANGER_ZONE_SPEED");
@@ -433,17 +409,21 @@ function LateInitialize()
 	Controls.TimeCallback:RegisterEndCallback( OnRefreshTimeTick );
 
 	-- Game Events
-	Events.LoadGameViewStateDone.Add(	OnLoadGameViewStateDone );	
 	Events.LocalPlayerChanged.Add(		OnLocalPlayerChanged );
-	Events.LocalPlayerTurnBegin.Add(	OnLocalPlayerTurnBegin );
 	Events.SystemUpdateUI.Add(			OnUpdateUI );
 	Events.TurnBegin.Add(				OnTurnBegin );
 	Events.UnitMoveComplete.Add(		OnUnitMoveComplete );
 	Events.VisualStateRestored.Add(		OnLocalPlayerTurnBegin );
-	Events.WMDCountChanged.Add(			OnWMDUpdate );	
+	Events.WMDCountChanged.Add(			OnWMDUpdate );
 	
-	RefreshAll();
-	Spark();			-- For fun, spark when screen first starts
+	if(GameConfiguration.IsHotseat())then
+		LuaEvents.PlayerChange_Close.Add( OnPlayerChangeClose );
+	else
+		Events.LocalPlayerTurnBegin.Add(	OnLocalPlayerTurnBegin );
+		Events.LoadGameViewStateDone.Add(	OnLoadGameViewStateDone );
+	end	
+
+	LuaEvents.ActionPanel_ObserverModeTurnBegin.Add(OnObserverModeTurnBegin);
 end
 
 -- ===========================================================================

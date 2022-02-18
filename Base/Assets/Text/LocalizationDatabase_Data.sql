@@ -73,8 +73,11 @@ INSERT INTO "EpicLanguages" VALUES('ja-JP','ja_JP');
 INSERT INTO "EpicLanguages" VALUES('pl-PL','pl_PL');
 INSERT INTO "EpicLanguages" VALUES('ko-KR','ko_KR');
 INSERT INTO "EpicLanguages" VALUES('zh-Hant_HK','zh_Hant_HK');
-INSERT INTO "EpicLanguages" VALUES('zh-Hant_CN','zh_Hans_CN');
+INSERT INTO "EpicLanguages" VALUES('zh-Hans_CN','zh_Hans_CN');
 INSERT INTO "EpicLanguages" VALUES('pt-BR','pt_BR');
+
+INSERT INTO "EpicLanguages" VALUES('zh-HK','zh_Hant_HK');
+INSERT INTO "EpicLanguages" VALUES('zh-CN','zh_Hans_CN');
 
 INSERT INTO "LanguagePriorities" VALUES('en_US','en_US',100);
 INSERT INTO "LanguagePriorities" VALUES('fr_FR','fr_FR',100);

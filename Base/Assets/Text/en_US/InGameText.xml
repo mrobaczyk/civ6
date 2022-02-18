@@ -344,6 +344,15 @@
 		<Row Tag="LOC_COMMON_DIALOG_NO_BUTTON_CAPTION">
 			<Text>NO</Text>
 		</Row>
+    <Row Tag="LOC_END_GAME_MENU_OBSERVE">
+      <Text>Observe</Text>
+    </Row>
+    <Row Tag="LOC_ACTION_PANEL_OBSERVING">
+      <Text>OBSERVING</Text>
+    </Row>
+    <Row Tag="LOC_ACTION_PANEL_END_OBSERVER_MODE">
+      <Text>End Observer Mode</Text>
+    </Row>
 		<!-- ==================== Game Settings Panel ==================== -->
 		<Row Tag="LOC_GAME_SETTINGS_TITLE">
 			<Text>Game Settings</Text>
@@ -4706,6 +4715,49 @@
 		<Row Tag="PLAYERACTION_FRIENDREQUEST_TOOLTIP">
 			<Text>Add this player as a friend on Steam.</Text>
 		</Row>
+    <!-- Kick Vote -->
+    <Row Tag="LOC_PLAYERACTION_STARTKICKVOTE">
+      <Text>Start Kick Vote</Text>
+    </Row>
+    <Row Tag="LOC_PLAYERACTION_STARTKICKVOTE_TOOLTIP">
+      <Text>Start a vote to kick this player from the game.</Text>
+    </Row>
+    <Row Tag="LOC_CONFIRM_START_KICK_VOTE_DESC">
+      <Text>Are you sure you wish to start a vote to kick {1_player} from the game?</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_STARTED_CHAT_ENTRY">
+      <Text>[COLOR:ChatMessage_Help]A kick vote has been initiated against {1_player}.[NEWLINE]Reason: {2_reason}.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_SUCCEEDED_CHAT_ENTRY">
+      <Text>[COLOR:ChatMessage_Help]Kick vote succeeded.[NEWLINE]{1_player} has been kicked from the game.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_FAILED_CHAT_ENTRY">
+      <Text>[COLOR:ChatMessage_Help]Kick vote against {1_player} failed.[ENDCOLOR]</Text>
+    </Row>
+	<Row Tag="LOC_KICK_VOTE_TIME_ELAPSED_CHAT_ENTRY">
+		<Text>[COLOR:ChatMessage_Help]Kick vote against {1_player} expired.[ENDCOLOR]</Text>
+	</Row>
+	<Row Tag="LOC_KICK_VOTE_NOT_ENOUGH_PLAYERS_CHAT_ENTRY">
+		<Text>[COLOR:ChatMessage_Help]Kick vote against {1_player} cancelled. Not enough players to perform kick vote.[ENDCOLOR]</Text>
+	</Row>
+	<Row Tag="LOC_KICK_VOTE_REASON_AFK">
+      <Text>AFK</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_REASON_CHEATING">
+      <Text>Cheating</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_REASON_GRIEFING">
+      <Text>Griefing</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_LABEL">
+      <Text>Kick {1_player}?</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_YES_BUTTON_TOOLTIP">
+      <Text>Vote to kick {1_player}.</Text>
+    </Row>
+    <Row Tag="LOC_KICK_VOTE_NO_BUTTON_TOOLTIP">
+      <Text>Vote to not kick {1_player}.</Text>
+    </Row>
 		<!-- ==================== Map Pin List Panel Text ==================== -->
 		<Row Tag="LOC_MAP_PIN_DEFAULT_NAME">
 			<Text>Unnamed Pin {1_number}</Text>

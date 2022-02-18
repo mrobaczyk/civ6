@@ -37,10 +37,37 @@
 		<Row Tag="LOC_GOODYHUT_MILITARY_GRANT_NUKE_STRIKE_DESCRIPTION">
 			<Text>[COLOR_FLOAT_MILITARY]You've discovered a functional Thermonuclear Device.[ENDCOLOR]</Text>
 		</Row>
+		<Row Tag="LOC_GOODYHUT_MILITARY_GRANT_ZOMBIES_DESCRIPTION">
+			<Text>[COLOR_FLOAT_MILITARY]Your zombies claim another victim.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_GOODYHUT_MILITARY_GRANT_ZOMBIES_DESCRIPTION_B">
+			<Text>[COLOR_FLOAT_MILITARY]More bodies for the horde.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_GOODYHUT_MILITARY_GRANT_ZOMBIES_DESCRIPTION_C">
+			<Text>[COLOR_FLOAT_MILITARY]You've discovered a zombie horde.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_GOODYHUT_IMPROVISED_TRAP_GOODIES">
+			<Text>You tripped a trap!</Text>
+		</Row>
+		<Row Tag="LOC_GOODYHUT_GRIEVING_GIFT_GOODIES">
+			<Text>It was a trap!</Text>
+		</Row>
 
 		<!-- HUD UI -->
 		<Row Tag="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS">
 			<Text>Turns until Safe Zone shrinks.</Text>
+		</Row>
+		<Row Tag="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS_B">
+			<Text>{1_Turns} Turns until Safe Zone shrinks.</Text>
+		</Row>
+		<Row Tag="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS_MIN_SIZE">
+			<Text>Safe Zone is at minimum size.</Text>
+		</Row>
+		<Row Tag="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS_MIN_SIZE_B">
+			<Text>Safe Zone has stabilized. [COLOR_RED]Evacuation is blocked by other surviving factions.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CIV_ROYALE_HUD_TURNS_UNTIL_RING_SHRINKS_MIN_SIZE_C">
+			<Text>Safe Zone has stabilized. [COLOR_RED]Remote lander signal is still being jammed by the other factions![ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_CIV_ROYALE_HUD_STORM_STRENGTH">
 			<Text>Fallout: Category {1_safeZonePhase} (Damage {2_dangerZoneDamage})</Text>
@@ -66,6 +93,9 @@
     <Row Tag="LOC_CIV_ROYALE_HUD_CIVILIAN_WARNING">
       <Text>Your Civilian is in the fallout!</Text>
     </Row>
+		<Row Tag="LOC_CIV_ROYALE_HUD_PLAYER_NAME_LABEL">
+			<Text>Player Name:</Text>
+		</Row>
 
 
 		<!-- Notifications -->
@@ -93,6 +123,24 @@
 		<Row Tag="LOC_CIVROYALE_NOTIFICATION_SAFE_ZONE_CHANGED_SUMMARY">
 			<Text>The Red Death is getting worse. The Safe Zone has shifted and became smaller.</Text>
 		</Row>
+		<Row Tag="LOC_CIVROYALE_NOTIFICATION_NEW_TREASURE_MAP_MESSAGE">
+			<Text>New Treasure Map</Text>
+		</Row>
+		<Row Tag="LOC_CIVROYALE_NOTIFICATION_NEW_TREASURE_MAP_SUMMARY">
+			<Text>You have discovered a new buried treasure map.</Text>
+		</Row>
+		<Row Tag="LOC_CIVROYALE_NOTIFICATION_HAIL_MARY_READY_MESSAGE">
+			<Text>Hail Mary Ready</Text>
+		</Row>
+		<Row Tag="LOC_CIVROYALE_NOTIFICATION_HAIL_MARY_READY_SUMMARY">
+			<Text>Hail Mary ready for deployment.</Text>
+		</Row>
+		<Row Tag="LOC_CIVROYALE_NOTIFICATION_ZOMBIE_DECAYED_MESSAGE">
+			<Text>Zombie Horde Decayed</Text>
+		</Row>
+		<Row Tag="LOC_CIVROYALE_NOTIFICATION_ZOMBIE_DECAYED_SUMMARY">
+			<Text>Your Zombie Horde was killed due to decay.</Text>
+		</Row>
 		
 		<!-- Supply Drop Improvement -->
 		<Row Tag="LOC_IMPROVEMENT_SUPPLY_DROP_NAME">
@@ -105,6 +153,11 @@
 		</Row>		
 		<Row Tag="LOC_IMPROVEMENT_POPPED_GOODY_NAME">
 			<Text>Explored City Ruins</Text>
+		</Row>
+
+		<!--Improvised Trap Improvement-->
+		<Row Tag="LOC_IMPROVEMENT_IMPROVISED_TRAP">
+			<Text>Improvised Trap</Text>
 		</Row>
 		
 		<!-- Destroyed City Feature -->
@@ -119,8 +172,7 @@
 		<Row Tag="LOC_MINIMAP_SAFE_ZONE_TOOLTIP">
 			<Text>Safe Zone</Text>
 		</Row>
-		
-		
+        	
 		<!-- Promotions -->
 		<Row Tag="LOC_PROMOTION_SCOUTING_REGIMENT_NAME">
 			<Text>Scout Regiment</Text>
@@ -149,8 +201,107 @@
 		<Row Tag="LOC_CIVROYALE_PROMOTION_CHOKE_POINTS_DESCRIPTION">
 			<Text>+7 [ICON_Strength] Combat Strength when defending in Woods, Jungle, Hills, or Marsh.</Text>
 		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_RANGE_NAME">
+			<Text>Replace Launcher Tubes</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_RANGE_DESC">
+			<Text>+1 [ICON_Range] Attack Range</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_MOVE_NAME">
+			<Text>Replace Leg Actuators</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_MOVE_DESC">
+			<Text>+2 [ICON_Movement] Movement</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_LIMITED_HEAL_NAME">
+			<Text>Refill Repair Nanites</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_LIMITED_HEAL_DESC">
+			<Text>+10 heal rate</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_1_NAME">
+			<Text>Replace Rifle Barrels</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_1_DESC">
+			<Text>+8 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_2_NAME">
+			<Text>Replace Targeting Computer</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_2_DESC">
+			<Text>+8 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_3_NAME">
+			<Text>Fresh Ammo</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_GDR_ATTACK_3_DESC">
+			<Text>+8 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_ATTACK_1_NAME">
+			<Text>Brains!</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_ATTACK_1_DESC">
+			<Text>+5 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_ATTACK_2_NAME">
+			<Text>Brains!!</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_ATTACK_2_DESC">
+			<Text>+5 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_ATTACK_3_NAME">
+			<Text>Brains!!!</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_ATTACK_3_DESC">
+			<Text>+5 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_LESS_DECAY_NAME">
+			<Text>Ugh!</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_LESS_DECAY_DESC">
+			<Text>No Decay Damage</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_MOVE_1_NAME">
+			<Text>Grah!</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_MOVE_1_DESC">
+			<Text>+1 [ICON_Movement] Movement</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_MOVE_2_NAME">
+			<Text>Grah!!</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_MOVE_2_DESC">
+			<Text>+1 [ICON_Movement] Movement</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_MOVE_3_NAME">
+			<Text>Grah!!!</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ZOMBIE_MOVE_3_DESC">
+			<Text>+1 [ICON_Movement] Movement</Text>
+		</Row>
 
 		<!-- Unit Abilities -->
+		<Row Tag="LOC_ABILITY_ALIENS_HEAL_MOVE_NAME">
+			<Text>Xenological Regeneration</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ALIENS_HEAL_MOVE_DESCRIPTION">
+			<Text>Unit heals every turn outside of water or fallout. Heals at 50% the standard rate.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ALIENS_HEAL_MOVE_UNITPANEL_DESCRIPTION">
+			<Text>Heals every turn outside of water or fallout. Heals at 50% the standard rate.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ALIENS_XENO_STEALTH_NAME">
+			<Text>Xenological Camouflage</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ALIENS_XENO_STEALTH_DESCRIPTION">
+			<Text>Invisible to enemy units unless adjacent.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_CULTISTS_UNIT_SIGHT_NAME">
+			<Text>Observing The End</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_CULTISTS_UNIT_SIGHT_DESCRIPTION">
+			<Text>+3 sight.</Text>
+		</Row>
 		<Row Tag="LOC_ABILITY_UNIT_BASE_WMD_RESISTANCE_NAME">
 			<Text>Used to Disaster</Text>
 		</Row>
@@ -164,7 +315,169 @@
 			<Text>Can launch WMDs.</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_PIRATES_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION">
-			<Text>Ignores additional movement cost from embarking and disembarking.</Text>
+			<Text>Ignores additional [ICON_Movement] Movement cost from embarking and disembarking.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_MAD_SCIENTISTS_UNIT_SHIELD_NAME">
+			<Text>Defensive Inertial Shielding</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_MAD_SCIENTISTS_UNIT_SHIELD_DESCRIPTION">
+			<Text>+10 [ICON_Strength] Combat Strength while defending. Fully immune to water, Red Death and WMD damage.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_CRIPPLED_GDR_NO_HEAL_NAME">
+			<Text>No Spare Parts</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_CRIPPLED_GDR_NO_HEAL_DESCRIPTION">
+			<Text>Unit does not heal per turn.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ZOMBIES_NO_HEAL_NAME">
+			<Text>Zombie Decay</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ZOMBIES_NO_HEAL_DESCRIPTION">
+			<Text>Takes decay damage per turn and only heals with promotions or by killing non-zombie units.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ZOMBIES_COMBAT_SPAWN_NAME">
+			<Text>Zombie Combat Spawn</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ZOMBIES_COMBAT_SPAWN_DESCRIPTION">
+			<Text>Spawns a zombie horde when killing a non-zombie unit.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ZOMBIES_RANGED_RESISTANCE_NAME">
+			<Text>No Pain</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ZOMBIES_RANGED_RESISTANCE_DESCRIPTION">
+			<Text>+5 [ICON_Strength] Combat Strength when defending against ranged attacks.</Text>
+		</Row>
+		<Row Tag="LOC_MUTANTS_SPREAD_FALLOUT_IMMUNE_NAME">
+			<Text>Mutant Spread Fallout Immunity</Text>
+		</Row>
+		<Row Tag="LOC_MUTANTS_SPREAD_FALLOUT_IMMUNE_DESCRIPTION">
+			<Text>Immune to damage from Mutant spread Red Death.</Text>
+		</Row>
+		<Row Tag="LOC_MUTANTS_FALLOUT_SPEED_NAME">
+			<Text>Radioactive Movement</Text>
+		</Row>
+		<Row Tag="LOC_MUTANTS_FALLOUT_SPEED_DESCRIPTION">
+			<Text>+3 [ICON_Movement] Movement in the Red Death.</Text>
+		</Row>
+		<Row Tag="LOC_MUTANTS_FALLOUT_RESISTANCE_NAME">
+			<Text>Radioactive Resistance</Text>
+		</Row>
+		<Row Tag="LOC_MUTANTS_FALLOUT_RESISTANCE_DESCRIPTION">
+			<Text>-50% Red Death damage.</Text>
+		</Row>
+		<Row Tag="LOC_MAD_SCIENTISTS_UNIT_SHIELD_MODIFIER">
+			<Text>+{1_Amount} Inertial Shielding</Text>
+		</Row>
+		<Row Tag="LOC_BORDERLORD_EDGENESS_COMBAT_BONUS_MODIFIER">
+			<Text>+{1_Amount} Edgeness</Text>
+		</Row>
+		<Row Tag="LOC_ZOMBIES_DEFENSE_BONUS_VS_RANGED_COMBAT_MODIFIER">
+			<Text>+{1_Amount} Zombie Ranged Resist</Text>
+		</Row>
+		<Row Tag="LOC_SHIELDS_DEPLETED">
+			<Text>Shields Depleted</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SHIELD_TT">
+			<Text>Defensive Inertial Shielding[NEWLINE][NEWLINE]Deplay Defensive Inertial Shielding that provides +10 [ICON_Strength] Combat Strength while defending. Shielding also provides full immunity to water, Red Death, and WMD blast damage. Defensive Inertial Shielding lasts for 4 turns and takes 6 turns to recharge.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SHIELD_ACTIVE_TT">
+			<Text>Shield is Active. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SHIELD_ACTIVE_WORLDTEXT">
+			<Text>Shields Up!</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SHIELD_RECHARGING_TT">
+			<Text>Shield is Recharging. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_ROAD_VISION_TT">
+			<Text>Road Vision[NEWLINE][NEWLINE]Reveals all previously explored territory.</Text>
+		</Row>
+		<Row Tag="LOC_ROAD_VISION_ACTIVE_TT">
+			<Text>Road Vision is Active. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_ROAD_VISION_ACTIVE_WORLDTEXT">
+			<Text>I Remember That!</Text>
+		</Row>
+		<Row Tag="LOC_ROAD_VISION_RECHARGING_TT">
+			<Text>Road Vision is Recharging. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_PLACE_TRAP_TT">
+			<Text>Build Improvised Trap[NEWLINE][NEWLINE]Place a Improvised Trap on the current hex.</Text>
+		</Row>
+		<Row Tag="LOC_PLACE_TRAP_OUT_OF_TRAPS_TT">
+			<Text>Out of Traps.</Text>
+		</Row>
+		<Row Tag="LOC_PLACE_TRAP_FAILED_WORLDTEXT">
+			<Text>Unable to Place Trap Here</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PANEL_TRAPS">
+			<Text>Traps</Text>
+		</Row>
+		<Row Tag="LOC_GRIEVING_GIFT_TT">
+			<Text>Send Grieving Gift[NEWLINE][NEWLINE]Select a hex to deploy a booby trapped Grieving Gift on the next turn. The Grieving Gift will look like a normal Supply Drop to all other players. You can store up to two Grieving Gifts and they take 5 turns to recharge.</Text>
+		</Row>
+		<Row Tag="LOC_GRIEVING_GIFT_ACTIVE_WORLDTEXT">
+			<Text>Unable to Place Gift Here</Text>
+		</Row>
+		<Row Tag="LOC_GRIEVING_GIFT_COUNT_TT">
+			<Text>Ready Gifts: {1_giftCount}</Text>
+		</Row>
+		<Row Tag="LOC_GRIEVING_GIFT_RECHARGING_TT">
+			<Text>Wrapping New Gifts. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_GRIEVING_GIFT_EMPTY_TT">
+			<Text>Out of Grieving Gifts.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_CLOAK_TT">
+			<Text>Xenological Camouflage[NEWLINE][NEWLINE]Become mostly invisible.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_CLOAK_ACTIVE_TT">
+			<Text>Cloak is Active. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_CLOAK_RECHARGING_TT">
+			<Text>Cloak is Recharging. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_BURN_TREASURE_MAP_TT">
+			<Text>Burn Treasure Map[NEWLINE][NEWLINE]Burn your buried treasure map and get a new one.[NEWLINE]&quot;They will never find me treasure now!&quot;</Text>
+		</Row>
+		<Row Tag="LOC_BURN_TREASURE_MAP_ACTIVE_WORLDTEXT">
+			<Text>It be burnin'!</Text>
+		</Row>
+		<Row Tag="LOC_BURN_TREASURE_MAP_RECHARGING_TT">
+			<Text>Burn Treasure Map is Recharging. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_TT">
+			<Text>Sacrifice Unit[NEWLINE][NEWLINE]Sacrifice this unit to grant a promotion to the Undying Eye.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_TT_B">
+			<Text>Sacrifice Unit[NEWLINE][NEWLINE]Sacrifice this unit to grant a promotion to the {1_UnitName}.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_TT_C">
+			<Text>Walk the Plank[NEWLINE][NEWLINE]Destroy this unit to entertain the GDRRRrrrr's crew and grant it a promotion.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_WORLDTEXT">
+			<Text>I die to serve!</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_NOT_ADJACENT_TT">
+			<Text>The Undying Eye only accepts sacrifices from adjacent hexes.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_NOT_ADJACENT_TT_B">
+			<Text>The {1_UnitName} only accepts sacrifices from adjacent hexes.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_NOT_ADJACENT_TT_C">
+			<Text>You can only make units walk the plank while adjacent to the GDRRRrrrr.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_MAX_PROMOTIONS_TT">
+			<Text>The Undying Eye is fully manifested and no longer requires sacrifices.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_MAX_PROMOTIONS_TT_B">
+			<Text>The {1_UnitName} is fully manifested and no longer requires sacrifices.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_SACRIFICE_MAX_PROMOTIONS_TT_C">
+			<Text>The GDRRRrrrr's crew is bored of watching units walk the plank.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_RAD_SPREAD_TT">
+			<Text>Toggle Radiant Personalities[NEWLINE][NEWLINE]Toggle this unit's ability to spread Red Death radiation when moving.</Text>
 		</Row>
 
 		<!-- Terrain Replacements -->
@@ -264,6 +577,81 @@
 		<!-- Overlays -->
 		<Row Tag="LOC_EDGELORD_COMBAT_BONUS_OVERLAY_TT">
 			<Text>Edgelord Combat Bonus Zone</Text>
-		</Row>	
+		</Row>
+		
+		<!-- Zombie Combat Unit -->
+		<Row Tag="LOC_UNIT_ZOMBIE_NAME">
+			<Text>Zombie Horde</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ZOMBIE_DESCRIPTION">
+			<Text>Barely Weaponized Zombie Horde</Text>
+		</Row>
+		
+		<!-- Crippled GDR -->
+		<Row Tag="LOC_UNIT_CRIPPLED_GDR_NAME">
+			<Text>Crippled GDR</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_CRIPPLED_GDR_DESCRIPTION">
+			<Text>This Giant Death Robot has seen better days. It will never be the same but it is still a force to be reckoned with.</Text>
+		</Row>
+
+		<!-- Faction Specific Unit Naming -->
+		<Row Tag="LOC_UNIT_UNDYING_EYE_NAME">
+			<Text>Undying Eye</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PIRATE_TREASURE_TANK_NAME">
+			<Text>Treasure Tank</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PIRATE_TREASURE_CRIPPLED_GDR_NAME">
+			<Text>GDRRRrrrr</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PIRATE_TREASURE_INFANTRY_NAME">
+			<Text>Landlubber</Text>
+		</Row>
+
+		<!-- Combat Modifier Strings -->
+		<Row Tag="LOC_TRAIT_JOCKS_COMBAT_BONUS_DESC">
+			<Text>+{1_Amount} Witness Perfection</Text>
+		</Row>
+						
+		<!-- WMDs -->
+		<Row Tag="LOC_WMD_HAIL_MARY_NAME">
+			<Text>Hail Mary</Text>
+		</Row>
+		<Row Tag="LOC_WMD_HAIL_MARY_DISABLED_COOLDOWN">
+			<Text>[COLOR:Red]{1_turns} turns until next Hail Mary warhead.[ENDCOLOR]</Text>
+		</Row>
+		
+		<!-- Treasure Locations -->
+		<Row Tag="LOC_TREASURE_UNIT_INFANTRY_RECRUITED">
+			<Text>We found some new recruits!</Text>
+		</Row>
+		<Row Tag="LOC_TREASURE_UNIT_TANK_RECRUITED">
+			<Text>It be a tank!</Text>
+		</Row>
+		<Row Tag="LOC_TREASURE_UNIT_CRIPPLED_GDR_RECRUITED">
+			<Text>GDRRRRrrrr!</Text>
+		</Row>
+				
+		<!-- UFO Unit Names -->
+		<Row Tag="LOC_UFO_UNIT_NAME1">
+			<Text>"Swamp Gas"</Text>
+		</Row>
+		<Row Tag="LOC_UFO_UNIT_NAME2">
+			<Text>"Rare Clouds"</Text>
+		</Row>
+		<Row Tag="LOC_UFO_UNIT_NAME3">
+			<Text>"Drunk Witness"</Text>
+		</Row>
+		<Row Tag="LOC_UFO_UNIT_NAME4">
+			<Text>"Sleeping Meds"</Text>
+		</Row>
+		<Row Tag="LOC_UFO_UNIT_NAME5">
+			<Text>"Untracked Meteorite"</Text>
+		</Row>
+		<Row Tag="LOC_UFO_UNIT_NAME6">
+			<Text>"Secret Weapon Test"</Text>
+		</Row>
+		
 	</EnglishText>
 </GameData>

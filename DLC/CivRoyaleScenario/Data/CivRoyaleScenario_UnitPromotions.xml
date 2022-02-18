@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameInfo>
-	<Types>	
+	<Types>
+		<!-- Base GDR Promotions with the ones that don't apply to CivRoyale removed. -->
+		<Row Type="PROMOTION_CLASS_GIANT_DEATH_ROBOT" Kind="KIND_PROMOTION_CLASS"/>
+		<!-- Crippled GDR levels over time into a effectively fully functional GDR -->
+		<Row Type="PROMOTION_CLASS_CRIPPLED_GDR" Kind="KIND_PROMOTION_CLASS"/>
+		<Row Type="PROMOTION_CLASS_ZOMBIE" Kind="KIND_PROMOTION_CLASS"/>
 		
 		<!-- PROMOTION_CLASS_MELEE -->
 		<Delete Type="PROMOTION_ZWEIHANDER"/>
@@ -34,7 +39,33 @@
 		<!-- PROMOTION_CLASS_ANTI_CAVALRY -->
 		<Delete Type="PROMOTION_SQUARE"/>
 		<Row Type="PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY" Kind="KIND_PROMOTION"/>
+
+		<!-- PROMOTION_CLASS_GIANT_DEATH_ROBOT -->
+		<Row Type="PROMOTION_GDR_BONUS_MOVEMENT"	Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_GDR_ARMOR_UPGRADE"		Kind="KIND_PROMOTION"/>
+		
+		<!-- PROMOTION_CLASS_CRIPPLED_GDR -->
+		<Row Type="PROMOTION_GDR_ATTACK_RANGE"		Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_GDR_MOVE"				Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_GDR_LIMITED_HEAL"		Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_GDR_ATTACK_1"			Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_GDR_ATTACK_2"			Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_GDR_ATTACK_3"			Kind="KIND_PROMOTION"/>
+
+		<!-- PROMOTION_CLASS_ZOMBIE -->
+		<Row Type="PROMOTION_ZOMBIE_ATTACK_1"		Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_ZOMBIE_ATTACK_2"		Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_ZOMBIE_ATTACK_3"		Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_ZOMBIE_LESS_DECAY"		Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_ZOMBIE_MOVE_1"			Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_ZOMBIE_MOVE_2"			Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_ZOMBIE_MOVE_3"			Kind="KIND_PROMOTION"/>
 	</Types>
+	<UnitPromotionClasses>
+		<Row PromotionClassType="PROMOTION_CLASS_GIANT_DEATH_ROBOT" Name="LOC_PROMOTION_CLASS_GIANT_DEATH_ROBOT_NAME"/>
+		<Row PromotionClassType="PROMOTION_CLASS_CRIPPLED_GDR" Name="LOC_UNIT_CRIPPLED_GDR_NAME"/>
+		<Row PromotionClassType="PROMOTION_CLASS_ZOMBIE" Name="LOC_UNIT_ZOMBIE_NAME"/>
+	</UnitPromotionClasses>
 	<UnitPromotions>
 		<!-- Reposition remaining PROMOTION_CLASS_MELEE promotions and inherit some scout promotions --> 
 		<Update>
@@ -142,7 +173,28 @@
 		<Update>
 			<Where UnitPromotionType="PROMOTION_FORWARD_OBSERVERS"/>
 			<Set Level="2" Column="5" />
-		</Update>		
+		</Update>
+
+		<!-- PROMOTION_CLASS_GIANT_DEATH_ROBOT -->
+		<Row UnitPromotionType="PROMOTION_GDR_BONUS_MOVEMENT" Name="LOC_PROMOTION_GDR_BONUS_MOVEMENT_NAME" Description="LOC_PROMOTION_GDR_BONUS_MOVEMENT_DESCRIPTION" Level="1" Column="1" PromotionClass="PROMOTION_CLASS_GIANT_DEATH_ROBOT"/>
+		<Row UnitPromotionType="PROMOTION_GDR_ARMOR_UPGRADE" Name="LOC_PROMOTION_GDR_ARMOR_UPGRADE_NAME" Description="LOC_PROMOTION_GDR_ARMOR_UPGRADE_DESCRIPTION" Level="1" Column="3" PromotionClass="PROMOTION_CLASS_GIANT_DEATH_ROBOT"/>
+
+		<!-- PROMOTION_CLASS_CRIPPLED_GDR -->
+		<Row UnitPromotionType="PROMOTION_GDR_ATTACK_RANGE" Name="LOC_PROMOTION_GDR_ATTACK_RANGE_NAME"	Description="LOC_PROMOTION_GDR_ATTACK_RANGE_DESC"	Level="1" Column="5" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR"/>
+		<Row UnitPromotionType="PROMOTION_GDR_MOVE"			Name="LOC_PROMOTION_GDR_MOVE_NAME"			Description="LOC_PROMOTION_GDR_MOVE_DESC"			Level="2" Column="4" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR"/>
+		<Row UnitPromotionType="PROMOTION_GDR_LIMITED_HEAL" Name="LOC_PROMOTION_GDR_LIMITED_HEAL_NAME"	Description="LOC_PROMOTION_GDR_LIMITED_HEAL_DESC"	Level="1" Column="3" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR"/>
+		<Row UnitPromotionType="PROMOTION_GDR_ATTACK_1"		Name="LOC_PROMOTION_GDR_ATTACK_1_NAME"		Description="LOC_PROMOTION_GDR_ATTACK_1_DESC"		Level="1" Column="1" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR"/>
+		<Row UnitPromotionType="PROMOTION_GDR_ATTACK_2"		Name="LOC_PROMOTION_GDR_ATTACK_2_NAME"		Description="LOC_PROMOTION_GDR_ATTACK_2_DESC"		Level="2" Column="1" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR"/>
+		<Row UnitPromotionType="PROMOTION_GDR_ATTACK_3"		Name="LOC_PROMOTION_GDR_ATTACK_3_NAME"		Description="LOC_PROMOTION_GDR_ATTACK_3_DESC"		Level="3" Column="1" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR"/>
+
+		<!-- PROMOTION_CLASS_ZOMBIE -->
+		<Row UnitPromotionType="PROMOTION_ZOMBIE_ATTACK_1"		Name="LOC_PROMOTION_ZOMBIE_ATTACK_1_NAME"	Description="LOC_PROMOTION_ZOMBIE_ATTACK_1_DESC"	Level="1" Column="1" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
+		<Row UnitPromotionType="PROMOTION_ZOMBIE_ATTACK_2"		Name="LOC_PROMOTION_ZOMBIE_ATTACK_2_NAME"	Description="LOC_PROMOTION_ZOMBIE_ATTACK_2_DESC"	Level="2" Column="1" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
+		<Row UnitPromotionType="PROMOTION_ZOMBIE_ATTACK_3"		Name="LOC_PROMOTION_ZOMBIE_ATTACK_3_NAME"	Description="LOC_PROMOTION_ZOMBIE_ATTACK_3_DESC"	Level="3" Column="1" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
+		<Row UnitPromotionType="PROMOTION_ZOMBIE_LESS_DECAY"	Name="LOC_PROMOTION_ZOMBIE_LESS_DECAY_NAME"	Description="LOC_PROMOTION_ZOMBIE_LESS_DECAY_DESC"	Level="1" Column="3" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
+		<Row UnitPromotionType="PROMOTION_ZOMBIE_MOVE_1"		Name="LOC_PROMOTION_ZOMBIE_MOVE_1_NAME"		Description="LOC_PROMOTION_ZOMBIE_MOVE_1_DESC"		Level="1" Column="5" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
+		<Row UnitPromotionType="PROMOTION_ZOMBIE_MOVE_2"		Name="LOC_PROMOTION_ZOMBIE_MOVE_2_NAME"		Description="LOC_PROMOTION_ZOMBIE_MOVE_2_DESC"		Level="2" Column="5" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
+		<Row UnitPromotionType="PROMOTION_ZOMBIE_MOVE_3"		Name="LOC_PROMOTION_ZOMBIE_MOVE_3_NAME"		Description="LOC_PROMOTION_ZOMBIE_MOVE_3_DESC"		Level="3" Column="5" PromotionClass="PROMOTION_CLASS_ZOMBIE"/>
 	</UnitPromotions>
 	<UnitPromotionPrereqs>
 		<!-- Completely redefine PROMOTION_CLASS_MELEE prereqs -->
@@ -215,6 +267,18 @@
 		
 		<Row UnitPromotion="PROMOTION_SHRAPNEL"				PrereqUnitPromotion="PROMOTION_GRAPE_SHOT"/>
 		<Row UnitPromotion="PROMOTION_FORWARD_OBSERVERS"	PrereqUnitPromotion="PROMOTION_EXPERT_CREW"/>
+
+		<!-- PROMOTION_CLASS_CRIPPLED_GDR -->
+		<Row UnitPromotion="PROMOTION_GDR_ATTACK_2"		PrereqUnitPromotion="PROMOTION_GDR_ATTACK_1"/>
+		<Row UnitPromotion="PROMOTION_GDR_ATTACK_3"		PrereqUnitPromotion="PROMOTION_GDR_ATTACK_2"/>
+		<Row UnitPromotion="PROMOTION_GDR_MOVE"			PrereqUnitPromotion="PROMOTION_GDR_ATTACK_RANGE"/>
+		<Row UnitPromotion="PROMOTION_GDR_MOVE"			PrereqUnitPromotion="PROMOTION_GDR_LIMITED_HEAL"/>
+		
+		<!-- PROMOTION_CLASS_ZOMBIE -->
+		<Row UnitPromotion="PROMOTION_ZOMBIE_ATTACK_2"		PrereqUnitPromotion="PROMOTION_ZOMBIE_ATTACK_1"/>
+		<Row UnitPromotion="PROMOTION_ZOMBIE_ATTACK_3"		PrereqUnitPromotion="PROMOTION_ZOMBIE_ATTACK_2"/>
+		<Row UnitPromotion="PROMOTION_ZOMBIE_MOVE_2"		PrereqUnitPromotion="PROMOTION_ZOMBIE_MOVE_1"/>
+		<Row UnitPromotion="PROMOTION_ZOMBIE_MOVE_3"		PrereqUnitPromotion="PROMOTION_ZOMBIE_MOVE_2"/>
 	</UnitPromotionPrereqs>
 	<UnitPromotionModifiers>
 		<!--PROMOTION_CLASS_MELEE Scout Promotion Modifiers -->
@@ -264,5 +328,255 @@
 			<UnitPromotionType>PROMOTION_SCOUTING_REGIMENT_ANTI_CAVALRY</UnitPromotionType>
 			<ModifierId>ESCORT_MOBILITY_SHARED_MOVEMENT</ModifierId>
 		</Row>
+		
+		<!-- PROMOTION_CLASS_GIANT_DEATH_ROBOT -->
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_BONUS_MOVEMENT</UnitPromotionType>
+			<ModifierId>GDR_BONUS_MOVEMENT</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_BONUS_MOVEMENT</UnitPromotionType>
+			<ModifierId>GDR_JUMP_ABILITY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_ARMOR_UPGRADE</UnitPromotionType>
+			<ModifierId>GDR_ARMOR_DEFENSES</ModifierId>
+		</Row>
+
+		<!-- PROMOTION_CLASS_CRIPPLED_GDR -->
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_ATTACK_RANGE</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_RANGE</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_MOVE</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_GDR_MOVE</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_LIMITED_HEAL</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_GDR_LIMITED_HEAL</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_ATTACK_1</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_1</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_ATTACK_2</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_2</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_GDR_ATTACK_3</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_3</ModifierId>
+		</Row>
+		
+		<!-- PROMOTION_CLASS_ZOMBIE -->
+		<Row>
+			<UnitPromotionType>PROMOTION_ZOMBIE_ATTACK_1</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_1</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ZOMBIE_ATTACK_2</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_2</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ZOMBIE_ATTACK_3</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_3</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ZOMBIE_MOVE_1</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_1</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ZOMBIE_MOVE_2</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_2</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ZOMBIE_MOVE_3</UnitPromotionType>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_3</ModifierId>
+		</Row>
 	</UnitPromotionModifiers>
+	<Modifiers>
+		<!-- PROMOTION_CLASS_GIANT_DEATH_ROBOT -->
+		<Row>
+			<ModifierId>GDR_BONUS_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GDR_JUMP_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_UNIT_ADJUST_JUMP_DISTANCE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GDR_ARMOR_DEFENSES</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>GDR_DEFENSE_UPGRADE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+
+		<!-- PROMOTION_CLASS_CRIPPLED_GDR -->
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_RANGE</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_ATTACK_RANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_MOVE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_LIMITED_HEAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_HEAL_PER_TURN</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_1</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_2</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_3</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		
+		<!-- PROMOTION_CLASS_ZOMBIE -->
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_1</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_2</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_3</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_1</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_2</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_3</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!-- PROMOTION_CLASS_GIANT_DEATH_ROBOT -->
+		<Row>
+			<ModifierId>GDR_BONUS_MOVEMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>GDR_JUMP_ABILITY</ModifierId>
+			<Name>Range</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>GDR_ARMOR_DEFENSES</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+
+		<!-- PROMOTION_CLASS_CRIPPLED_GDR -->
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_RANGE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_MOVE</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_LIMITED_HEAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_LIMITED_HEAL</ModifierId>
+			<Name>Type</Name>
+			<Value>ALL</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_1</ModifierId>
+			<Name>Amount</Name>
+			<Value>8</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_2</ModifierId>
+			<Name>Amount</Name>
+			<Value>8</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_GDR_ATTACK_3</ModifierId>
+			<Name>Amount</Name>
+			<Value>8</Value>
+		</Row>
+		
+		<!-- PROMOTION_CLASS_ZOMBIE -->
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_1</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_2</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_ATTACK_3</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_1</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_2</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_PROMOTION_ZOMBIE_MOVE_3</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<!-- PROMOTION_CLASS_GIANT_DEATH_ROBOT -->
+		<Row>
+			<RequirementSetId>GDR_DEFENSE_UPGRADE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<!-- PROMOTION_CLASS_GIANT_DEATH_ROBOT -->
+		<Row>
+			<RequirementSetId>GDR_DEFENSE_UPGRADE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLAYER_IS_DEFENDER_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>GDR_DEFENSE_UPGRADE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>OPPONENT_IS_NOT_AIR_UNIT_REQUIREMENTS</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<ModifierStrings>
+		<Row ModifierId="GDR_ARMOR_DEFENSES" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_GDR_ARMOR_UPGRADE_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+
+		<Row ModifierId="MODIFIER_PROMOTION_GDR_ATTACK_1" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_GDR_ATTACK_1_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+		<Row ModifierId="MODIFIER_PROMOTION_GDR_ATTACK_2" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_GDR_ATTACK_2_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+		<Row ModifierId="MODIFIER_PROMOTION_GDR_ATTACK_3" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_GDR_ATTACK_3_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+
+		<Row ModifierId="MODIFIER_PROMOTION_ZOMBIE_ATTACK_1" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_ZOMBIE_ATTACK_1_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+		<Row ModifierId="MODIFIER_PROMOTION_ZOMBIE_ATTACK_2" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_ZOMBIE_ATTACK_2_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+		<Row ModifierId="MODIFIER_PROMOTION_ZOMBIE_ATTACK_3" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_ZOMBIE_ATTACK_3_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}"/>
+	</ModifierStrings>
 </GameInfo>
