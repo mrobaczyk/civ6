@@ -12,6 +12,7 @@
 		<Row Type="GAMESPEED_QUICK" Kind="KIND_GAMESPEED"/>
 		<Row Type="GAMESPEED_ONLINE" Kind="KIND_GAMESPEED"/>
     <Row Type="SCALING_HALF" Kind="KIND_GAMESPEED_SCALING"/>
+    <Row Type="SCALING_SLIGHT" Kind="KIND_GAMESPEED_SCALING"/>
 	</Types>
 	<GameSpeeds>
 		<Row>
@@ -282,6 +283,30 @@
       <ScalingType>SCALING_HALF</ScalingType>
       <DefaultCostMultiplier>66</DefaultCostMultiplier>
     </Row>
+    <Row>
+      <GameSpeedScalingType>MARATHON_SLIGHT</GameSpeedScalingType>
+      <GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>
+      <ScalingType>SCALING_SLIGHT</ScalingType>
+      <DefaultCostMultiplier>120</DefaultCostMultiplier>
+    </Row>
+    <Row>
+      <GameSpeedScalingType>EPIC_SLIGHT</GameSpeedScalingType>
+      <GameSpeedType>GAMESPEED_EPIC</GameSpeedType>
+      <ScalingType>SCALING_SLIGHT</ScalingType>
+      <DefaultCostMultiplier>110</DefaultCostMultiplier>
+    </Row>
+    <Row>
+      <GameSpeedScalingType>QUICK_SLIGHT</GameSpeedScalingType>
+      <GameSpeedType>GAMESPEED_QUICK</GameSpeedType>
+      <ScalingType>SCALING_SLIGHT</ScalingType>
+      <DefaultCostMultiplier>90</DefaultCostMultiplier>
+    </Row>
+    <Row>
+      <GameSpeedScalingType>ONLINE_SLIGHT</GameSpeedScalingType>
+      <GameSpeedType>GAMESPEED_ONLINE</GameSpeedType>
+      <ScalingType>SCALING_SLIGHT</ScalingType>
+      <DefaultCostMultiplier>80</DefaultCostMultiplier>
+    </Row>
   </GameSpeed_Scalings>
   <GameSpeed_Durations>
     <Row>
@@ -298,6 +323,11 @@
       <GameSpeedScalingType>ONLINE_HALF</GameSpeedScalingType>
       <NumberOfTurnsOnStandard>15</NumberOfTurnsOnStandard>
       <NumberOfTurnsScaled>10</NumberOfTurnsScaled>
+    </Row>
+    <Row>
+      <GameSpeedScalingType>ONLINE_HALF</GameSpeedScalingType>
+      <NumberOfTurnsOnStandard>29</NumberOfTurnsOnStandard>
+      <NumberOfTurnsScaled>19</NumberOfTurnsScaled>
     </Row>
     <Row>
       <GameSpeedScalingType>ONLINE_HALF</GameSpeedScalingType>
@@ -327,6 +357,11 @@
     </Row>
     <Row>
       <GameSpeedScalingType>QUICK_HALF</GameSpeedScalingType>
+      <NumberOfTurnsOnStandard>29</NumberOfTurnsOnStandard>
+      <NumberOfTurnsScaled>24</NumberOfTurnsScaled>
+    </Row>
+    <Row>
+      <GameSpeedScalingType>QUICK_HALF</GameSpeedScalingType>
       <NumberOfTurnsOnStandard>30</NumberOfTurnsOnStandard>
       <NumberOfTurnsScaled>25</NumberOfTurnsScaled>
     </Row>
@@ -353,6 +388,11 @@
     </Row>
     <Row>
       <GameSpeedScalingType>EPIC_HALF</GameSpeedScalingType>
+      <NumberOfTurnsOnStandard>29</NumberOfTurnsOnStandard>
+      <NumberOfTurnsScaled>39</NumberOfTurnsScaled>
+    </Row>
+    <Row>
+      <GameSpeedScalingType>EPIC_HALF</GameSpeedScalingType>
       <NumberOfTurnsOnStandard>30</NumberOfTurnsOnStandard>
       <NumberOfTurnsScaled>40</NumberOfTurnsScaled>
     </Row>
@@ -376,6 +416,11 @@
       <GameSpeedScalingType>MARATHON_HALF</GameSpeedScalingType>
       <NumberOfTurnsOnStandard>15</NumberOfTurnsOnStandard>
       <NumberOfTurnsScaled>30</NumberOfTurnsScaled>
+    </Row>
+    <Row>
+      <GameSpeedScalingType>MARATHON_HALF</GameSpeedScalingType>
+      <NumberOfTurnsOnStandard>29</NumberOfTurnsOnStandard>
+      <NumberOfTurnsScaled>59</NumberOfTurnsScaled>
     </Row>
     <Row>
       <GameSpeedScalingType>MARATHON_HALF</GameSpeedScalingType>

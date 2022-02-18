@@ -22,6 +22,7 @@ function GenerateMap()
     WorldBuilder.MapManager():LoadPlotsFromTiled();
 
 	AreaBuilder.Recalculate();
-	TerrainBuilder.AnalyzeChokepoints();
+-- this hangs on some test imported maps
+--	TerrainBuilder.AnalyzeChokepoints();
 end
 

@@ -5975,7 +5975,7 @@
       <Text>Specialisti</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_1" Language="it_IT">
-      <Text>Gli specialisti sono [ICON_Citizen] cittadini che hanno ricevuto una mansione particolare: anziché lavorare in una casella normale, sono assegnati a un distretto. Come regola generale, gli specialisti sono un'ottima soluzione per ottenere rese che sarebbero difficili da acquisire nelle normali caselle, ma la città deve disporre di solide entrate di [ICON_Food] Cibo per poterli supportare a lungo termine. Gli specialisti sono particolarmente utili nelle fasi avanzate del gioco, quando le città raggiungono grandi dimensioni e hanno una [ICON_Citizen] popolazione superiore al numero di caselle da sfruttare. Ci sono diversi tipi di specialisti, ognuno con diversi effetti. Il numero degli specialisti di ciascun tipo (eccetto il generico [ICON_Citizen] "cittadino") che possono essere presenti in una città è limitato: tale limite è determinato dal numero di edifici nel distretto associati a quel particolare tipo di specialista.</Text>
+      <Text>Gli specialisti sono [ICON_Citizen] cittadini che hanno ricevuto una mansione particolare: anziché lavorare in una casella normale, sono assegnati a un distretto. Come regola generale, gli specialisti sono un'ottima soluzione per ottenere rese che sarebbero difficili da acquisire nelle normali caselle, ma la città deve disporre di solide entrate di [ICON_Food] Cibo per poterli supportare a lungo termine. Gli specialisti sono particolarmente utili nelle fasi avanzate del gioco, quando le città raggiungono grandi dimensioni e hanno una [ICON_Citizen] popolazione superiore al numero di caselle da sfruttare. Ci sono diversi tipi di specialisti, ognuno con diversi effetti. Il numero degli specialisti di ciascun tipo (eccetto il generico [ICON_Citizen] "cittadino") che possono essere presenti in una città è limitato: tale limite è determinato dal numero di edifici nel distretto associati a quel particolare tipo di specialista. Consulta la pagina dei vari edifici per verificare se forniscono un bonus alle rese dei [ICON_Citizen] cittadini nel loro distretto.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_2" Language="it_IT">
       <Text>Gli Scienziati al lavoro nel Campus forniscono +2 [ICON_Science] Scienza.</Text>
@@ -5984,10 +5984,10 @@
       <Text>I Preti al lavoro nel Luogo Santo forniscono +2 [ICON_Faith] Fede.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_4" Language="it_IT">
-      <Text>I Comandanti al lavoro nell'Accampamento forniscono +1 [ICON_Production] Produzione e +1 [ICON_Culture] Cultura.</Text>
+      <Text>I Comandanti al lavoro nell'Accampamento forniscono +1 [ICON_Production] Produzione e +2 [ICON_Gold] Oro.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_5" Language="it_IT">
-      <Text>I Capitani al lavoro nel Porto forniscono +1 [ICON_Science] Scienza e +2 [ICON_Gold] Oro.</Text>
+      <Text>I Capitani al lavoro nel Porto forniscono +1 [ICON_Food] Cibo e +2 [ICON_Gold] Oro.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_6" Language="it_IT">
       <Text>I Mercanti al lavoro nello Snodo commerciale forniscono +4 [ICON_Gold] Oro.</Text>
@@ -16668,6 +16668,7 @@
 [3]QA Senior Testers
 [4]Matt Finck
 [4]Ian Bennett
+[4]Tyler Redmann
 
 [3]QA Testers
 [4]Kristian Garcia
@@ -18300,6 +18301,11 @@
     </Replace>
     <Replace Tag="LOC_LEADER_MONTEZUMA_NAME" Language="it_IT">
       <Text>Montezuma|di Montezuma|a Montezuma|Montezuma|da Montezuma</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_LEADER_FREE_CITIES_NAME" Language="it_IT">
+      <Text>Leader di una città libera|di un Leader di una città libera|a un Leader di una città libera|un Leader di una città libera|da un Leader di una città libera</Text>
       <Gender>masculine</Gender>
       <Plurality>1</Plurality>
     </Replace>
@@ -30577,6 +30583,15 @@
     <Replace Tag="LOC_WORLD_BUILDER_IMPORT" Language="it_IT">
       <Text>Importa mappa dall'Editor</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_START_NEW_TOOLTIP" Language="it_IT">
+      <Text>Crea una nuova mappa vuota o generata dal World Builder da modificare.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_LOAD_TOOLTIP" Language="it_IT">
+      <Text>Carica una mappa del World Builder precedentemente salvata.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_IMPORT_TOOLTIP" Language="it_IT">
+      <Text>Converte un file mappa .TMX strutturato in una mappa del Generatore del mondo.</Text>
+    </Replace>
     <Replace Tag="LOC_RANDOM_LEADER" Language="it_IT">
       <Text>Leader casuale</Text>
     </Replace>
@@ -30600,6 +30615,9 @@
     </Replace>
     <Replace Tag="LOC_SETUP_ERROR_LEADER_NOT_OWNED" Language="it_IT">
       <Text>Non installato</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_PARAMETER_ERROR" Language="it_IT">
+      <Text>Una o più opzioni non valide.</Text>
     </Replace>
     <Replace Tag="LOC_SETUP_PLAYER_PARAMETER_ERROR" Language="it_IT">
       <Text>Opzioni giocatore invalide.</Text>
@@ -31436,7 +31454,7 @@
       <Text>Sei pronto in questa partita. Quando sarà il tuo turno riceverai una notifica nel menu principale e nella lobby Play By Cloud. Puoi uscire da questa partita e partecipare ad altre partite a giocatore singolo o multigiocatore.</Text>
     </Replace>
     <Replace Tag="LOC_PLAYBYCLOUD_REMOTE_READY_POPUP_OK" Language="it_IT">
-      <Text>OK</Text>
+      <Text>NON FARE NULLA</Text>
     </Replace>
     <Replace Tag="LOC_PLAYBYCLOUD_REMOTE_READY_POPUP_LOBBY_EXIT" Language="it_IT">
       <Text>TORNA ALLA LOBBY</Text>
@@ -32180,6 +32198,12 @@
     <Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER" Language="it_IT">
       <Text>Bonus +5 [ICON_Strength] al combattimento dal Grande Ammiraglio.</Text>
     </Replace>
+    <Replace Tag="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_DESCRIPTION" Language="it_IT">
+      <Text>+1 al [ICON_Movement] movimento dal Grande Generale.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_DESCRIPTION" Language="it_IT">
+      <Text>+1 al [ICON_Movement] movimento dal Grande Ammiraglio.</Text>
+    </Replace>
     <Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND" Language="it_IT">
       <Text>+5 alla [ICON_Strength] Forza di combattimento e +1 [ICON_Movement] movimento alle unità terrestri di epoca classica e medievale in un raggio di 2 caselle.</Text>
     </Replace>
@@ -32367,7 +32391,7 @@
       <Text>+1 slot Politica economica con qualsiasi governo.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_JOHN_ROCKEFELLER_ACTIVE" Language="it_IT">
-      <Text>Fornisce 1 [ICON_RESOURCE_OIL] Petrolio, una risorsa strategica. Le [ICON_TradeRoute] Rotte commerciali rendono +2 [ICON_Gold] Oro per ogni risorsa strategica migliorata alla destinazione.</Text>
+      <Text>Fornisce 1 [ICON_RESOURCE_OIL] Petrolio, una risorsa strategica. Le [ICON_TradeRoute] Rotte commerciali rendono +2 [ICON_Gold] Oro per ogni risorsa strategica nella città di destinazione.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_EUCLID_ACTIVE" Language="it_IT">
       <Text>Attiva il momento [ICON_TechBoosted] Eureka per la Matematica e 1 tecnologia casuale di epoca medievale.</Text>
@@ -33641,6 +33665,33 @@
     <Replace Tag="LOC_HUD_CITY_WILL_NOT_COMPLETE" Language="it_IT">
       <Text>La produzione per turno è troppo bassa per il completamento.</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="it_IT">
+      <Text>Punteggio globale (usato alla fine della partita)</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_STRENGTH" Language="it_IT">
+      <Text>Forza militare</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_SCIENCE" Language="it_IT">
+      <Text>Scienza per turno</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_CULTURE" Language="it_IT">
+      <Text>Cultura per turno</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_GOLD" Language="it_IT">
+      <Text>Bilancio Oro</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_FAITH" Language="it_IT">
+      <Text>Bilancio Fede</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_HIDE" Language="it_IT">
+      <Text>Nascondi sempre le statistiche</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_HIDE" Language="it_IT">
+      <Text>Nascondi statistiche</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_SHOW" Language="it_IT">
+      <Text>Mostra sempre le statistiche</Text>
+    </Replace>
     <Replace Tag="LOC_BUILDING_CONSTRUCT_NO_SUITABLE_LOCATION" Language="it_IT">
       <Text>Nessuna casella adeguata.</Text>
     </Replace>
@@ -33962,6 +34013,9 @@
     <Replace Tag="LOC_HUD_EMPIRE_LENS" Language="it_IT">
       <Text>Impero</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_POWER_LENS" Language="it_IT">
+      <Text>Energia</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_RELIGION_LENS_TOOLTIP" Language="it_IT">
       <Text>Mostra la religione di maggioranza e la distribuzione dei seguaci in tutta la mappa.</Text>
     </Replace>
@@ -33985,6 +34039,9 @@
     </Replace>
     <Replace Tag="LOC_HUD_EMPIRE_LENS_TOOLTIP" Language="it_IT">
       <Text>Visualizza i confini della tua città, la posizione dei distretti e i bonus per la posizione.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_POWER_LENS_TOOLTIP" Language="it_IT">
+      <Text>Mostra le fonti di Energia nelle tue città, con l'indicazione del raggio d'azione regionale.</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_OPTIONS" Language="it_IT">
       <Text>Opzioni mappa</Text>
@@ -34907,6 +34964,9 @@
     <Replace Tag="LOC_TOOLTIP_UNLOCKS" Language="it_IT">
       <Text>Sblocca:</Text>
     </Replace>
+    <Replace Tag="LOC_TOOLTIP_BUILDING_CITIZEN_YIELDS_HEADER" Language="it_IT">
+      <Text>Rese cittadini (per cittadino in questo distretto):</Text>
+    </Replace>
     <Replace Tag="LOC_TOOLTIP_DISTRICT_CITIZEN_YIELDS_HEADER" Language="it_IT">
       <Text>Rese cittadini (per cittadino):</Text>
     </Replace>
@@ -35033,6 +35093,9 @@
     <Replace Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE" Language="it_IT">
       <Text>Risorsa Manufatto</Text>
     </Replace>
+    <Replace Tag="LOC_TOOLTIP_BONUS_STRATEGIC" Language="it_IT">
+      <Text>Risorsa strategica</Text>
+    </Replace>
     <Replace Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE_DETAILS" Language="it_IT">
       <Text>Invia qui un'unità Archeologo per scavare ed estrarre un [ICON_GreatWork_Artifact] Manufatto, che una volta riportato nella tua città ti fornirà [ICON_Culture] Cultura e [ICON_Tourism] Turismo.</Text>
     </Replace>
@@ -35071,6 +35134,9 @@
     </Replace>
     <Replace Tag="LOC_TOOLTIP_APPEAL_DISGUSTING" Language="it_IT">
       <Text>Disgustoso</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_BONUS" Language="it_IT">
+      <Text></Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING" Language="it_IT">
       <Text>Cura</Text>
@@ -36194,6 +36260,12 @@
     <Replace Tag="LOC_PARTIALSCREEN_REPORTS_CITY_STATUS" Language="it_IT">
       <Text>Stato Città</Text>
     </Replace>
+    <Replace Tag="LOC_PARTIALSCREEN_REPORTS_NOTIFICATIONS" Language="it_IT">
+      <Text>Segnalazioni</Text>
+    </Replace>
+    <Replace Tag="LOC_PARTIALSCREEN_REPORTS_GOSSIP" Language="it_IT">
+      <Text>Gossip</Text>
+    </Replace>
     <Replace Tag="LOC_PARTIALSCREEN_REPORTS_YIELDS" Language="it_IT">
       <Text>Rese</Text>
     </Replace>
@@ -36229,6 +36301,69 @@
     </Replace>
     <Replace Tag="LOC_REPORTS_LIST_EMPIRE" Language="it_IT">
       <Text>Impero:</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_PRIORITY" Language="it_IT">
+      <Text>Priorità</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_PLAYER_FILTER_ALL" Language="it_IT">
+      <Text>Tutti</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_ALL" Language="it_IT">
+      <Text>[ICON_GOSSIP_ALL] Tutte le voci</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_DIPLOMACY" Language="it_IT">
+      <Text>[ICON_GOSSIP_DIPLOMACY] Diplomazia</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_MILITARY" Language="it_IT">
+      <Text>[ICON_GOSSIP_MILITARY] Militare</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_DISCOVER" Language="it_IT">
+      <Text>[ICON_GOSSIP_DISCOVER] Scoperte</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_ESPIONAGE" Language="it_IT">
+      <Text>[ICON_GOSSIP_ESPIONAGE] Spionaggio</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_SCIENCE" Language="it_IT">
+      <Text>[ICON_GOSSIP_SCIENCE] Scienza</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_RELIGION" Language="it_IT">
+      <Text>[ICON_GOSSIP_RELIGION] Religione</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_CULTURE" Language="it_IT">
+      <Text>[ICON_GOSSIP_CULTURE] Cultura</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_GREATPERSON" Language="it_IT">
+      <Text>[ICON_GOSSIP_GREATPERSON] Grandi Personaggi</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_VICTORY" Language="it_IT">
+      <Text>[ICON_GOSSIP_VICTORY] Vittoria</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_SETTLEMENT" Language="it_IT">
+      <Text>[ICON_GOSSIP_SETTLEMENT] Insediamenti</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_CITY" Language="it_IT">
+      <Text>[ICON_GOSSIP_CITY] Città</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_BARBARIAN" Language="it_IT">
+      <Text>[ICON_GOSSIP_BARBARIAN] Barbari</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_DATE" Language="it_IT">
+      <Text>Data</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TURN" Language="it_IT">
+      <Text>Turno</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_LEADER" Language="it_IT">
+      <Text>Leader</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_GOSSIP_TYPE" Language="it_IT">
+      <Text>Tipo</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_NOTIFICATION_ICON" Language="it_IT">
+      <Text>Segnalazione</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_NOTIFICATION_DESCRIPTION" Language="it_IT">
+      <Text>Descrizione</Text>
     </Replace>
     <Replace Tag="LOC_REPORTS_LIST_GLOBAL" Language="it_IT">
       <Text>Globale:</Text>
@@ -36412,6 +36547,12 @@
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TAB_CITY_STATUS" Language="it_IT">
       <Text>Stato Città</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TAB_NOTIFICATIONS" Language="it_IT">
+      <Text>Segnalazioni</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TAB_GOSSIP" Language="it_IT">
+      <Text>Gossip</Text>
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TAB_RESOURCES" Language="it_IT">
       <Text>Risorse</Text>
@@ -36749,6 +36890,105 @@
     <Replace Tag="LOC_WORLDBUILDER_TEXT_TAG" Language="it_IT">
       <Text>Etichetta di testo</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_ADVISOR_SAYS" Language="it_IT">
+      <Text>Il consigliere dice</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD" Language="it_IT">
+      <Text>RESA REGIONALE</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD" Language="it_IT">
+      <Text>RESE DELL'ANELLO INTERNO</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FRESH_WATER" Language="it_IT">
+      <Text>ACQUA DOLCE</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_NEW_RESOURCES" Language="it_IT">
+      <Text>NUOVE RISORSE</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_COAST" Language="it_IT">
+      <Text>COSTA</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_RESOURCES" Language="it_IT">
+      <Text>RISORSE DI INIZIO PARTITA</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES" Language="it_IT">
+      <Text>inutilizzato</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_STRATEGIC_RESOURCES" Language="it_IT">
+      <Text>RISORSE</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FEATURES" Language="it_IT">
+      <Text>CARATTERISTICHE SPECIFICHE</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FOREIGN_CONTINENT" Language="it_IT">
+      <Text>CONTINENTE STRANIERO</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_NEAREST_CITY" Language="it_IT">
+      <Text>CITTÀ PIÙ VICINA</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_DANGER" Language="it_IT">
+      <Text>inutilizzato</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_TOTAL_YIELD" Language="it_IT">
+      <Text>Rese limitata entro 3 caselle</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_INNER_YIELD" Language="it_IT">
+      <Text>Rese limitate nelle caselle adiacenti</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FRESH_WATER" Language="it_IT">
+      <Text>Assenza di acqua fresca nella posizione</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEW_RESOURCES" Language="it_IT">
+      <Text>Poche risorse nuove in questa posizione</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_COAST" Language="it_IT">
+      <Text>La posizione è nell'entroterra</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_RESOURCES" Language="it_IT">
+      <Text>Limitata disponibilità di Cavalli, Ferro e Salnitro</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_STRATEGIC_RESOURCES" Language="it_IT">
+      <Text>Poche risorse di lusso o strategiche nelle vicinanze</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FEATURES" Language="it_IT">
+      <Text>Nessuna caratteristica notevole nelle vicinanze</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FOREIGN_CONTINENT" Language="it_IT">
+      <Text>Nessun beneficio dal nuovo continente</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEAREST_CITY" Language="it_IT">
+      <Text>Lontana dalle città amiche</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_TOTAL_YIELD" Language="it_IT">
+      <Text>Alte rese entro 3 caselle</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_INNER_YIELD" Language="it_IT">
+      <Text>Alte rese adiacenti alla posizione</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FRESH_WATER" Language="it_IT">
+      <Text>La posizione dispone di acqua dolce</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEW_RESOURCES" Language="it_IT">
+      <Text>Probabilmente otterrà nuove risorse</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_COAST" Language="it_IT">
+      <Text>La posizione è sulla costa</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_RESOURCES" Language="it_IT">
+      <Text>Cavalli, Ferro o Salnitro nelle vicinanze</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_STRATEGIC_RESOURCES" Language="it_IT">
+      <Text>Nuove risorse di lusso e strategiche nelle vicinanze</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FEATURES" Language="it_IT">
+      <Text>Ci sono caratteristiche utili nelle vicinanze</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FOREIGN_CONTINENT" Language="it_IT">
+      <Text>Desiderio di colonizzare un nuovo continente</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEAREST_CITY" Language="it_IT">
+      <Text>Vicina a una posizione amica</Text>
+    </Replace>
     <Replace Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE" Language="it_IT">
       <Text>Blocca la coda per mostrarla sempre.</Text>
     </Replace>
@@ -36823,6 +37063,21 @@
     </Replace>
     <Replace Tag="LOC_HUD_GOSSIP_CLOSE" Language="it_IT">
       <Text>Chiudi</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_COLLAPSE_LIST" Language="it_IT">
+      <Text>Clicca per chiudere la lista</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_EXPAND_LIST" Language="it_IT">
+      <Text>Clicca per espandere la lista</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_GOSSIP_DISMISS_DETAILS" Language="it_IT">
+      <Text>Clicca su una voce di gossip per chiuderla.[NEWLINE]Il registro cronologico del gossip può essere visualizzato nei rapporti.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_STATUSMESSAGE_DISMISS_DETAILS" Language="it_IT">
+      <Text>Clicca sul messaggio per chiuderlo.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNIT_PANEL_ABILITIES_HEADER" Language="it_IT">
+      <Text>Abilità:</Text>
     </Replace>
     <Replace Tag="LOC_ACTION_PANEL_CLOUD_TURN_UPLOADING" Language="it_IT">
       <Text>TRASMISSIONE TURNO</Text>
@@ -37452,10 +37707,10 @@
       <Text>Account 2K</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_SIGN_UP_TITLE" Language="it_IT">
-      <Text>Iscriviti e ottieni un account 2K</Text>
+      <Text>Iscriviti e ottieni un Account 2K</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_CREATE_NEW_USER_MESSAGE" Language="it_IT">
-      <Text>Per ottenere un account 2K inserisci un indirizzo email valido nel campo qui sotto. Un'email di verifica sarà inviata a questo indirizzo per conferma.</Text>
+      <Text>Per ottenere un Account 2K inserisci un indirizzo email valido nel campo qui sotto. Un'email di verifica sarà inviata a questo indirizzo per conferma.</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_LOGOUT_TITLE" Language="it_IT">
       <Text>Logout</Text>
@@ -37506,7 +37761,7 @@
       <Text>Notifica silenziosa del login</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_SILENT_LOGIN_FAILURE_MESSAGE" Language="it_IT">
-      <Text>Devi accedere manualmente al tuo account 2K.</Text>
+      <Text>Devi accedere manualmente al tuo Account 2K.</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_CONNECTION_RESTORED" Language="it_IT">
       <Text>Collegamento ripristinato</Text>
@@ -37515,10 +37770,10 @@
       <Text>Collega un account esistente</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_ALREADY_LINKED" Language="it_IT">
-      <Text>L'account della piattaforma è già collegato a un account 2K.</Text>
+      <Text>L'account della piattaforma è già collegato a un Account 2K.</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_UNABLE_TO_LINK_ACCOUNT" Language="it_IT">
-      <Text>Impossibile collegare l'account della piattaforma a un account 2K.</Text>
+      <Text>Impossibile collegare l'account della piattaforma a un Account 2K.</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_UNLINK_ACCOUNT_TITLE" Language="it_IT">
       <Text>Scollega Account</Text>
@@ -37527,7 +37782,7 @@
       <Text>Collega Account</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_UNLINK_ACCOUNT" Language="it_IT">
-      <Text>Confermi di voler scollegare il tuo account 2K? Puoi gestire il tuo account o consultare le normative legali e sulla privacy all'indirizzo www.2k.com.</Text>
+      <Text>Confermi di voler scollegare il tuo Account 2K? Puoi gestire il tuo account o consultare le normative legali e sulla privacy all'indirizzo www.2k.com.</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_ANONYMOUS" Language="it_IT">
       <Text>Offline</Text>
@@ -37539,7 +37794,7 @@
       <Text>Collegato - offline</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_UNLINKED_TOOLTIP" Language="it_IT">
-      <Text>Iscriviti e ottieni un account 2K per sbloccare la ricompensa Gatti Scout (richiede di riavviare il gioco). Così facendo attiverai il salvataggio cross-platform sul cloud, che ti permetterà di iniziare una partita su Steam e portarla avanti su altre piattaforme. Inoltre riceverai le ultime notizie su Sid Meier's Civilization!</Text>
+      <Text>Iscriviti e ottieni un Account 2K per sbloccare la ricompensa Gatti Scout (richiede di riavviare il gioco). Così facendo attiverai il salvataggio cross-platform sul cloud, che ti permetterà di iniziare una partita su Steam e portarla avanti su altre piattaforme. Inoltre riceverai le ultime notizie su Sid Meier's Civilization!</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_LINKED_TOOLTIP" Language="it_IT">
       <Text>Account 2K collegato. Salvataggio cross-platform sul cloud attivato. Ricompensa Gatti Scout sbloccata (cercala sotto "Contenuti aggiuntivi").</Text>
@@ -37930,6 +38185,12 @@
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_BARBARIANS_SIGHTED_MESSAGE" Language="it_IT">
       <Text>I barbari si avvicinano</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_MESSAGE" Language="it_IT">
+      <Text>Nuovo Avamposto barbarico</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_SUMMARY" Language="it_IT">
+      <Text>Abbiamo ricevuto la notizia che una nuova tribù di barbari si è installata in una regione vicina.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_MY_DOMINANT_CULTURE_MESSAGE" Language="it_IT">
       <Text>La tua Cultura è dominante</Text>
@@ -40898,11 +41159,17 @@
     <Replace Tag="LOC_UI_PEDIA_CREATED_BY" Language="it_IT">
       <Text>Creato da</Text>
     </Replace>
+    <Replace Tag="LOC_UI_PEDIA_ESPIONAGE_MISSIONS" Language="it_IT">
+      <Text>Missioni di spionaggio</Text>
+    </Replace>
     <Replace Tag="LOC_UI_PEDIA_IMPROVED_BY" Language="it_IT">
       <Text>Migliorata da</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_HARVEST" Language="it_IT">
       <Text>Raccolta</Text>
+    </Replace>
+    <Replace Tag="LOC_UI_PEDIA_VALID_RESOURCES" Language="it_IT">
+      <Text>Risorse valide</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_GREAT_WORKS" Language="it_IT">
       <Text>Capolavori</Text>
@@ -41960,6 +42227,15 @@
     <Replace Tag="LOC_OPTIONS_INTERFACE_EDGE_SCROLL" Language="it_IT">
       <Text>Scorri mappa con il mouse al bordo</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_OPEN_TO_PROD_QUEUE" Language="it_IT">
+      <Text>Apri sempre la Coda di produzione:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG" Language="it_IT">
+      <Text>Sostituisci il trascinamento con clic del mouse:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG_TT" Language="it_IT">
+      <Text>Quest'opzione sostituisce il trascinamento degli elementi dell'IU con una serie di clic per prenderli e lasciarli andare.</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_CLOCK_FORMAT" Language="it_IT">
       <Text>Formato orologio</Text>
     </Replace>
@@ -41984,8 +42260,20 @@
     <Replace Tag="LOC_OPTIONS_SCROLL_SPEED" Language="it_IT">
       <Text>Velocità rotellina mouse:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_LABEL" Language="it_IT">
+      <Text>Mostra le rese sul nastro nell'HUD:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_HIDE" Language="it_IT">
+      <Text>Nascondi sempre (disattivato)</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_MOUSE_OVER" Language="it_IT">
+      <Text>Mostra sotto il cursore del mouse</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_SHOW" Language="it_IT">
+      <Text>Mostra sempre</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_END_TURN_BEHAVIOR" Language="it_IT">
-      <Text>Comportamento di fine turno PlayByCloud:</Text>
+      <Text>Comportamento Play By Cloud a fine turno:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_ASK_ME" Language="it_IT">
       <Text>Chiedi a me</Text>
@@ -41997,7 +42285,7 @@
       <Text>Esci al Menu Principale</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_READY_BEHAVIOR" Language="it_IT">
-      <Text>Comportamento PlayByCloud pronto:</Text>
+      <Text>Comportamento Play By Cloud quando pronto:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_ASK_ME" Language="it_IT">
       <Text>Chiedi a me</Text>
@@ -42009,7 +42297,7 @@
       <Text>Torna alla lobby</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR" Language="it_IT">
-      <Text>Comportamento client PlayByCloud pronto:</Text>
+      <Text>Comportamento Play By Cloud quando Client pronto:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR_ASK_ME" Language="it_IT">
       <Text>Chiedi a me</Text>
@@ -42034,6 +42322,12 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA" Language="it_IT">
       <Text>Tritanopia con insensibilità al blu</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_LIGHTING" Language="it_IT">
+      <Text>Sfrutta illuminazione hardware compatibile RGB</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_LIGHTING_TOOLTIP" Language="it_IT">
+      <Text>Permette a Civilization VI di controllare l'illuminazione di computer e periferiche compatibili con Logitech Gaming Software o Alienware AlienFX.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_QUEUE_DISPLAY" Language="it_IT">
       <Text>Coda di produzione:</Text>
@@ -42173,6 +42467,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY" Language="it_IT">
       <Text>Fortifica Unità</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL" Language="it_IT">
+      <Text>Fortifica finché guarita</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE" Language="it_IT">
       <Text>Elimina Unità</Text>
     </Replace>
@@ -42194,6 +42491,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_ALERT" Language="it_IT">
       <Text>Vigila</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_ALL_AUTOSAVES" Language="it_IT">
+      <Text>Tutti</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" Language="it_IT">
       <Text>Esegui l'azione Fonda città se l'unità selezionata è un Colono.</Text>
     </Replace>
@@ -42202,6 +42502,9 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HELP" Language="it_IT">
       <Text>Ordina all'unità selezionata di fortificarsi.</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL_HELP" Language="it_IT">
+      <Text>Fortifica l'unità selezionata finché non è completamente guarita.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE_HELP" Language="it_IT">
       <Text>Elimina l'unità selezionata.</Text>
@@ -43143,7 +43446,7 @@
       <Text>Unità navale esclusiva tedesca di epoca moderna che sostituisce il Sottomarino. Più economico da produrre, +1 al raggio visivo, +10 alla [ICON_Strength] Forza di combattimento nelle caselle di oceano. È in grado di rivelare le altre unità invisibili.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AMERICAN_P51_DESCRIPTION" Language="it_IT">
-      <Text>Unità esclusiva americana di epoca atomica che sostituisce il Caccia. Ha +5 alla Forza di combattimento contro gli altri caccia, +2 al raggio d'azione e guadagna il 50% di esperienza in più.</Text>
+      <Text>Unità esclusiva americana di epoca atomica che sostituisce il Caccia. Ha +5 alla [ICON_Strength] Forza di combattimento contro gli altri caccia, +2 al raggio d'azione e guadagna il +50% di esperienza in più.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_BRAZILIAN_MINAS_GERAES_DESCRIPTION" Language="it_IT">
       <Text>Unità esclusiva brasiliana di epoca industriale che sostituisce la Corazzata, rispetto alla quale è più forte. Sbloccata dal progresso civico Nazionalismo.</Text>
@@ -43317,7 +43620,7 @@
       <Text>+1 [ICON_Movement] movimento se parte da una casella di deserto, pianura, prateria o tundra.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_RELIGIOUS_IGNORE_TERRAIN_COST_DESCRIPTION" Language="it_IT">
-      <Text>Le caselle di foresta, giungla, collina e palude costano solo 1 punto [ICON_Movement] movimento. L'abilità è sbloccata dalla credenza religiosa Zelo missionario.</Text>
+      <Text>Le caselle di foresta, giungla, collina e palude costano solo 1 punto [ICON_Movement] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_IGNORE_ZOC_DESCRIPTION" Language="it_IT">
       <Text>Non è influenzata dalla Zona di Controllo dei nemici.</Text>
@@ -43377,7 +43680,7 @@
       <Text>Rivela le unità invisibili sulla mappa presenti nelle caselle adiacenti.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COASTAL_RAID_DESCRIPTION" Language="it_IT">
-      <Text>Le unità navali da mischia di Harald Hardrada possono saccheggiare gli edifici e i miglioramenti e catturare le unità civili sulle coste.</Text>
+      <Text>Può saccheggiare gli edifici e i miglioramenti e catturare le unità civili sulle coste.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BYPASS_COMBAT_UNIT_DESCRIPTION" Language="it_IT">
       <Text>Può attaccare direttamente le unità di supporto, anche se sono in formazione con un'unità militare.</Text>
@@ -43389,7 +43692,7 @@
       <Text>Quando si trova sull'acqua, la sua [ICON_TradeRoute] Rotta commerciale non può essere saccheggiata dalle unità nemiche. Abilità ottenuta dal Sovrano della città-stato di Lisbona.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BERSERKER_RAGE_DESCRIPTION" Language="it_IT">
-      <Text>+7 [ICON_Strength] Forza di combattimento quando attacca e -7 [ICON_Strength] Forza di combattimento quando si difende.</Text>
+      <Text>+10 alla [ICON_Strength] Forza di combattimento quando attacca.[NEWLINE][ICON_Bullet]-5 alla [ICON_Strength] Forza di combattimento quando si difende.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BERSERKER_MOVEMENT_DESCRIPTION" Language="it_IT">
       <Text>+2 al [ICON_Movement] movimento se l'unità comincia la mossa in territorio nemico.</Text>
@@ -43410,22 +43713,22 @@
       <Text>Missionari, Inquisitori e Apostoli possono muoversi più velocemente in collina dopo essere entrati in una casella adiacente alla Meraviglia naturale Monte Everest.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COSSACK_DESCRIPTION" Language="it_IT">
-      <Text>Può muoversi dopo aver attaccato. +5 [ICON_Strength] Forza di combattimento quando si trova nel tuo territorio o adiacente al tuo territorio.</Text>
+      <Text>Può muoversi dopo aver attaccato.[NEWLINE][ICON_Bullet]+5 alla [ICON_Strength] Forza di combattimento quando si trova nel tuo territorio o adiacente al tuo territorio.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_REDCOAT_DESCRIPTION" Language="it_IT">
-      <Text>+10 alla [ICON_Strength] Forza di combattimento quando si trova su un continente diverso da quello che contiene la tua [ICON_Capital] capitale. Nessun costo per lo sbarco.</Text>
+      <Text>+10 alla [ICON_Strength] Forza di combattimento quando si trova su un continente diverso da quello che contiene la tua [ICON_Capital] capitale.[NEWLINE][ICON_Bullet]Nessun costo di [ICON_Movement] movimento per lo sbarco.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_VARU_DESCRIPTION" Language="it_IT">
       <Text>-5 [ICON_Strength] Forza di combattimento delle unità nemiche adiacenti.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_NAGAO_DESCRIPTION" Language="it_IT">
-      <Text>+10 [ICON_Strength] Forza di combattimento quando si difende da attacchi a distanza, può vedere attraverso le caratteristiche del terreno e può attraversare caselle di bosco e foresta pluviale senza penalità al [ICON_Movement] movimento.</Text>
+      <Text>+10 [ICON_Strength] Forza di combattimento quando si difende da attacchi a distanza.[NEWLINE][ICON_Bullet]Può vedere attraverso le caratteristiche del terreno.[NEWLINE][ICON_Bullet]Può attraversare caselle di bosco e foresta pluviale senza penalità al [ICON_Movement] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_CONQUISTADOR_DESCRIPTION" Language="it_IT">
-      <Text>+10 alla [ICON_Strength] Forza di combattimento quando nella stessa casella è presente un'unità religiosa. Se quest'unità cattura una città o è adiacente a essa nel momento in cui viene catturata, la città si converte immediatamente alla religione di maggioranza del Conquistador.</Text>
+      <Text>+10 alla [ICON_Strength] Forza di combattimento quando nella stessa casella è presente un'unità religiosa.[NEWLINE][ICON_Bullet]Se quest'unità cattura una città o è adiacente a essa nel momento in cui viene catturata, la città si converte immediatamente alla religione di maggioranza del Conquistador.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_GARDE_DESCRIPTION" Language="it_IT">
-      <Text>+10 [ICON_Strength] Forza di combattimento quando si trova sullo stesso continente della sua [ICON_Capital] capitale. +10 punti Grande Generale per le uccisioni.</Text>
+      <Text>+10 [ICON_Strength] Forza di combattimento quando si trova sullo stesso continente della sua [ICON_Capital] capitale.[NEWLINE][ICON_Bullet]+10 punti [ICON_GreatGeneral] Grande Generale per le uccisioni.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_HOPLITE_DESCRIPTION" Language="it_IT">
       <Text>+10 [ICON_Strength] Forza di combattimento se c'è almeno un Oplita adiacente.</Text>
@@ -43434,16 +43737,49 @@
       <Text>+10 [ICON_Strength] Forza di combattimento negli oceani.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_DESCRIPTION" Language="it_IT">
-      <Text>Quando combatte sul continente che contiene la tua [ICON_Capital] capitale e sconfigge un'unità nemica, guadagni [ICON_Culture] Cultura pari al 50% della [ICON_Strength] Forza di combattimento base dell'unità sconfitta. +10 alla [ICON_Strength] Forza di combattimento quando combatte in collina.</Text>
+      <Text>Quando combatte sul continente che contiene la tua [ICON_Capital] capitale e sconfigge un'unità nemica, guadagni [ICON_Culture] Cultura pari al 50% della [ICON_Strength] Forza di combattimento base dell'unità sconfitta.[NEWLINE][ICON_Bullet]+10 alla [ICON_Strength] Forza di combattimento quando combatte in collina.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MUSTANG_DESCRIPTION" Language="it_IT">
-      <Text>Riceve un bonus in combattimento contro i Caccia, ha un raggio d'azione esteso e guadagna più esperienza dal combattimento.</Text>
+      <Text>Bonus +5 alla [ICON_Strength] Forza di combattimento contro i Caccia.[NEWLINE][ICON_Bullet]+50% all'esperienza ottenuta in combattimento.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MAMLUK_DESCRIPTION" Language="it_IT">
       <Text>Quest'unità si cura ogni turno, anche dopo aver mosso o combattuto.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_SAMURAI_DESCRIPTION" Language="it_IT">
       <Text>Quest'unità non subisce alcuna penalità al combattimento quando è ferita.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_BARRACKS_TRAINED_UNIT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dalla Caserma</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_STABLE_TRAINED_UNIT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dalla Scuderia</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ARMORY_TRAINED_UNIT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dall'Armeria</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_MILITARY_ACADEMY_TRAINED_UNIT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dall'Accademia militare</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_LIGHTHOUSE_TRAINED_UNIT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dal Faro</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SHIPYARD_TRAINED_UNIT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dal Cantiere</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SEAPORT_TRAINED_UNIT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dal Porto internazionale</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_HANGAR_TRAINED_AIRCRAFT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+25% all'esperienza guadagnata dall'Hangar</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_AIRPORT_TRAINED_AIRCRAFT_XP_DESCRIPTION" Language="it_IT">
+      <Text>+50% all'esperienza guadagnata dall'Aeroporto</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ROYAL_NAVY_DOCKYARD_MOVEMENT_BONUS_DESCRIPTION" Language="it_IT">
+      <Text>+1 Movimento dal Cantiere della Marina Reale.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ROMAN_LEGION_BUILD_DESCRIPTION" Language="it_IT">
+      <Text>Può costruire il miglioramento esclusivo Forte romano.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_ANTI_CAVALRY_MODIFIER_DESCRIPTION" Language="it_IT">
       <Text>+10 contro cavalleria</Text>
@@ -43671,7 +44007,7 @@
       <Text>Caratteristica</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_FEATURE_DIRECTION" Language="it_IT">
-      <Text>Direzione della caratteristica</Text>
+      <Text>Direzione caratteristica</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_RESOURCE" Language="it_IT">
       <Text>Risorsa</Text>
@@ -43805,6 +44141,9 @@
     <Replace Tag="LOC_WORLDBUILDER_NO_LOWLAND" Language="it_IT">
       <Text>Non bassopiano costiero</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_CITY" Language="it_IT">
+      <Text>Nessuna città</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_NO_DIRECTION" Language="it_IT">
       <Text>Nessuna direzione</Text>
     </Replace>
@@ -43865,6 +44204,12 @@
     <Replace Tag="LOC_WORLDBUILDER_DEFAULT" Language="it_IT">
       <Text>Predefinito</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ADVANCED" Language="it_IT">
+      <Text>Avanzata</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BASIC" Language="it_IT">
+      <Text>Base</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV" Language="it_IT">
       <Text>Passa alla modalità avanzata</Text>
     </Replace>
@@ -43876,6 +44221,12 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT" Language="it_IT">
       <Text>La modalità avanzata è ancora in fase di sviluppo e totalmente non supportata. Abbiamo deciso di renderla disponibile ai modder esperti, che potranno fare esperimenti con alcune funzionalità complesse per la creazione di scenari. I mod creati in questa modalità potrebbero causare l'instabilità del gioco una volta caricati in Civilization VI.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IMPORT_UNSUPPORTED_TEXT" Language="it_IT">
+      <Text>Attenzione! Importare un mappa creata con un generatore esterno non è ufficialmente consigliato e potrebbe causare incompatibilità con il Generatore del mondo.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_BASIC_TOOLTIP" Language="it_IT">
+      <Text>Riporta il WorldBuilder alla modalità base. Questa mappa sarà ancora salvata in modalità avanzata e tutte le modifiche apportate in modalità avanzata rimarranno intatte.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE" Language="it_IT">
       <Text>Tribù</Text>
@@ -43892,8 +44243,8 @@
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_OK" Language="it_IT">
       <Text>Piazzamento riuscito</Text>
     </Replace>
-    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="it_IT">
-      <Text>piazzamento riuscito</Text>
+    <Replace Tag="LOC_WORLDBUILDER_CITY_NEEDED" Language="it_IT">
+      <Text>Deve trovarsi in una città</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_IN_PROGRESS" Language="it_IT">
       <Text>Già in corso</Text>
@@ -43920,13 +44271,25 @@
       <Text>Impossibile posizionare quest'oggetto e impossibile determinare la ragione</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_FAILURE_FEATURE" Language="it_IT">
-      <Text>Impossibile posizionare la caratteristica per una ragione sconosciuta</Text>
+      <Text>Impossibile piazzare una caratteristica qui</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_STATUS_STARTUP" Language="it_IT">
       <Text>Benvenuto nel World Builder!</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_UNIT_PLACED" Language="it_IT">
       <Text>Unità posizionata con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_RIVER_PLACED" Language="it_IT">
+      <Text>Fiume posizionato con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_RIVER_ERROR" Language="it_IT">
+      <Text>Non è stato possibile posizionare qui un fiume</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLIFF_PLACED" Language="it_IT">
+      <Text>Scogliera posizionata con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLIFF_ERROR" Language="it_IT">
+      <Text>Non è stato possibile posizionare qui una scogliera </Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_OWNERSHIP_SET" Language="it_IT">
       <Text>Proprietario della casella impostato con successo</Text>
@@ -43936,6 +44299,12 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES" Language="it_IT">
       <Text>Elimina tutte le risorse</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES_HELP" Language="it_IT">
+      <Text>Rimuove tutte le risorse dalla mappa</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ADVANCED_TOOLS" Language="it_IT">
+      <Text>Avanzata:</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES" Language="it_IT">
       <Text>Spargi risorse</Text>
@@ -43962,16 +44331,37 @@
       <Text>Azione annullata con successo</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_LABEL" Language="it_IT">
-      <Text>Dimensioni pennello</Text>
+      <Text>Dim. pennello</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL" Language="it_IT">
-      <Text>Piccolo</Text>
+      <Text>Pennello piccolo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL_HELP" Language="it_IT">
+      <Text>Seleziona il pennello piccolo (1 casella)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM" Language="it_IT">
-      <Text>Medio</Text>
+      <Text>Pennello medio</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM_HELP" Language="it_IT">
+      <Text>Seleziona il pennello medio (7 caselle)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE" Language="it_IT">
-      <Text>Grande</Text>
+      <Text>Pennello grande</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE_HELP" Language="it_IT">
+      <Text>Seleziona il pennello grande (19 caselle)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDO" Language="it_IT">
+      <Text>Annulla azione</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDO_TOOLTIP" Language="it_IT">
+      <Text>Clicca per annullare l'ultima azione</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_REDO" Language="it_IT">
+      <Text>Ripristina azione</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_REDO_TOOLTIP" Language="it_IT">
+      <Text>Clicca per ripristinare l'ultima azione annullata</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT" Language="it_IT">
       <Text>Posiziona casella</Text>
@@ -44030,11 +44420,26 @@
     <Replace Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER" Language="it_IT">
       <Text>Torna alla mappa</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MENU_NAME" Language="it_IT">
+      <Text>Menu</Text>
+    </Replace>
     <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY" Language="it_IT">
       <Text>Svuota la mappa</Text>
     </Replace>
     <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION" Language="it_IT">
       <Text>Una tela bianca.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_AI" Language="it_IT">
+      <Text>IA</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HUMAN" Language="it_IT">
+      <Text>Umano</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDEFINED" Language="it_IT">
+      <Text>INDEFINITO</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TITLE" Language="it_IT">
+      <Text>Generatore del mondo</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="it_IT">
       <Text>Alba della Civiltà</Text>
@@ -46139,6 +46544,12 @@
     <Replace Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_THREE_BUILDINGS" Language="it_IT">
       <Text>Quest'edificio richiede un edificio {1_Building}, {2_BuildingTheSecond} o {3_BuildingTheThird}.</Text>
     </Replace>
+    <Replace Tag="LOC_BUILDING_CONSTRUCT_REQUIRE_WALL_REPAIR" Language="it_IT">
+      <Text>L'edificio {1_Building} dev'essere riparato.</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_CONSTRUCT_TURNS_UNTIL_CAN_BE_REPAIRED" Language="it_IT">
+      <Text>L'edificio {1_Building} può essere riparato in {2_Turns} [ICON_Turn] {2_Turns : plural 1?turno; other?turni;}.</Text>
+    </Replace>
     <Replace Tag="LOC_DISTRICT_ZONE_POPULATION_TOO_LOW_SHORT" Language="it_IT">
       <Text>Richiede una [ICON_Citizen] popolazione di {1_Population} o superiore.</Text>
     </Replace>
@@ -47456,6 +47867,9 @@
     <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_TO_RADIATION_POISONING" Language="it_IT">
       <Text>Hai perso {1_UnitName[2]} per avvelenamento da radiazioni.</Text>
     </Replace>
+    <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_TO_WATER_DAMAGE" Language="it_IT">
+      <Text>Hai perso {1_UnitName[2]} per l'avvelenamento dell'acqua.</Text>
+    </Replace>
     <Replace Tag="LOC_NOTIFICATION_DECLARE_WAR_SUMMARY" Language="it_IT">
       <Text>{1_leader[4]} ha dichiarato guerra {2_leader[3]}.</Text>
     </Replace>
@@ -47870,6 +48284,15 @@
     <Replace Tag="LOC_UI_PEDIA_BASE_COST" Language="it_IT">
       <Text>Costo base: {1_Amount : number #} {2_YieldIcon} {3_YieldName}</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_TURNS" Language="it_IT">
+      <Text>Turni: {1_Name} (a velocità standard)</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_BASE_PROBABILITY" Language="it_IT">
+      <Text>Probabilità base: {1_Name}%</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_TARGET_DISTRICT" Language="it_IT">
+      <Text>Distretto bersaglio: {1_Name}</Text>
+    </Replace>
     <Replace Tag="LOC_UI_PEDIA_REQUIRES" Language="it_IT">
       <Text>Richiede: {1_Name}</Text>
     </Replace>
@@ -48038,8 +48461,44 @@
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION" Language="it_IT">
       <Text>+{1_Amount} al combattimento in collina</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="it_IT">
+      <Text>{1_Name} posizionamento riuscito</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_ERROR" Language="it_IT">
+      <Text>{1_Name} posizionamento fallito</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_SET_OK" Language="it_IT">
+      <Text>Rendi quest'area visibile a {1_CivName}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_CLEAR_OK" Language="it_IT">
+      <Text>Rendi quest'area non visibile a {1_CivName}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_ERROR" Language="it_IT">
+      <Text>Impossibile rivelare quest'area a {1_CivName}</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED" Language="it_IT">
       <Text>Deve trovarsi in un distretto {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CREATE_DISTRICT" Language="it_IT">
+      <Text>Per posizionare quest'oggetto devi creare un distretto {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HIGHER_TECH" Language="it_IT">
+      <Text>Per posizionare quest'oggetto la civiltà deve avere la tecnologia {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HIGHER_CIVIC" Language="it_IT">
+      <Text>Per posizionare quest'oggetto la civiltà deve avere il Progresso civico {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_ERROR" Language="it_IT">
+      <Text>Impossibile piazzare un oggetto {1_Name} in questa posizione</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_ERROR_DISTRICT" Language="it_IT">
+      <Text>L'oggetto {1_Name} dev'essere posizionato in un distretto</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CONTINENT_PLACED" Language="it_IT">
+      <Text>Questa casella fa ora parte di {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CONTINENT_ERROR" Language="it_IT">
+      <Text>Questa casella non può fare parte di {1_Name}</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE" Language="it_IT">
       <Text>Mappa: {1_MapName}</Text>

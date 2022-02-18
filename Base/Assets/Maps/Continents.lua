@@ -184,6 +184,7 @@ function GeneratePlotTypes()
 		InitFractal{continent_grain = grain_dice, rift_grain = rift_dice};
 		iWaterThreshold = g_continentsFrac:GetHeight(water_percent);
 		local iBuffer = math.floor(g_iH/13.0);
+		local iBuffer2 = math.floor(g_iH/13.0/2.0);
 
 		iNumTotalLandTiles = 0;
 		for x = 0, g_iW - 1 do
@@ -197,9 +198,33 @@ function GeneratePlotTypes()
 					TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_OCEAN);  -- temporary setting so can calculate areas
 				else
 					if(val >= iWaterThreshold) then
-						plotTypes[i] = g_PLOT_TYPE_LAND;
-						TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
-						iNumTotalLandTiles = iNumTotalLandTiles + 1;
+						if(y <= iBuffer + iBuffer2) then
+							local iRandomRoll = y - iBuffer + 1;
+							local iRandom = TerrainBuilder.GetRandomNumber(iRandomRoll, "Random Region Edges");
+							if(iRandom == 0 and iRandomRoll > 0) then
+								plotTypes[i] = g_PLOT_TYPE_LAND;
+								TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
+								iNumTotalLandTiles = iNumTotalLandTiles + 1;
+							else 
+								plotTypes[i] = g_PLOT_TYPE_OCEAN;
+								TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_OCEAN);  -- temporary setting so can calculate areas
+							end
+						elseif (y >= g_iH - iBuffer - iBuffer2 - 1) then
+							local iRandomRoll = g_iH - y - iBuffer;
+							local iRandom = TerrainBuilder.GetRandomNumber(iRandomRoll, "Random Region Edges");
+							if(iRandom == 0 and iRandomRoll > 0) then
+								plotTypes[i] = g_PLOT_TYPE_LAND;
+								TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
+								iNumTotalLandTiles = iNumTotalLandTiles + 1;
+							else
+								plotTypes[i] = g_PLOT_TYPE_OCEAN;
+								TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_OCEAN);  -- temporary setting so can calculate areas
+							end
+						else
+							plotTypes[i] = g_PLOT_TYPE_LAND;
+							TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
+							iNumTotalLandTiles = iNumTotalLandTiles + 1;
+						end
 					else
 						plotTypes[i] = g_PLOT_TYPE_OCEAN;
 						TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_OCEAN);  -- temporary setting so can calculate areas

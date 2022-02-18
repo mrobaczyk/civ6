@@ -1428,7 +1428,7 @@
 		</Row>
 		<Row Tag="LOC_HUD_MINIMAP_OWNER_TOOLTIP">
 			<Text>Owner: {1_PlayerName}</Text>
-		</Row>LOC_MINIMAP_UNCLAIMED_TOOLTIP
+		</Row>
 		<Row Tag="LOC_MINIMAP_UNCLAIMED_TOOLTIP">
 			<Text>Unclaimed Territory</Text>
 		</Row>
@@ -1453,6 +1453,34 @@
 		<Row Tag="LOC_HUD_CITY_WILL_NOT_COMPLETE">
 			<Text>Production per turn too low to complete.</Text>
 		</Row>
+		<Row Tag="LOC_HUD_RIBBON_SCORE">
+			<Text>Overall score (used in a tie at end game)</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_STRENGTH">
+			<Text>Military Strength</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_SCIENCE">
+			<Text>Science per turn</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_CULTURE">
+			<Text>Culture per turn</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_GOLD">
+			<Text>Gold balance</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_FAITH">
+			<Text>Faith balance</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_HIDE">
+			<Text>Always hide stats</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_MODE_STATS_HIDE">
+			<Text>Hide stats</Text>
+		</Row>
+		<Row Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_SHOW">
+			<Text>Always show stats</Text>
+		</Row>
+
 		<!-- ==================== Production Menu (for cities) ==================== -->
 		<Row Tag="LOC_BUILDING_CONSTRUCT_NO_SUITABLE_LOCATION">
 			<Text>No suitable location to construct this.</Text>
@@ -1468,6 +1496,12 @@
 		</Row>
 		<Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_THREE_BUILDINGS">
 			<Text>This building requires {LOC_GRAMMAR_A_AN &lt;&lt; {1_Building}}, {2_BuildingTheSecond}, or {3_BuildingTheThird} building.</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_CONSTRUCT_REQUIRE_WALL_REPAIR">
+			<Text>{1_Building} must be repaired.</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_CONSTRUCT_TURNS_UNTIL_CAN_BE_REPAIRED">
+			<Text>{1_Building} are repairable in {2_Turns} [ICON_Turn] {2_Turns : plural 1?turn; other?turns;}.</Text>
 		</Row>
 		<Row Tag="LOC_BUILDING_CONSTRUCT_IS_OCCUPIED">
 			<Text>The district is occupied by an enemy.</Text>
@@ -1908,6 +1942,9 @@
     <Row Tag="LOC_HUD_EMPIRE_LENS">
       <Text>Empire</Text>
     </Row>
+    <Row Tag="LOC_HUD_POWER_LENS">
+      <Text>Power</Text>
+    </Row>
 		<Row Tag="LOC_HUD_RELIGION_LENS_TOOLTIP">
 			<Text>Show majority religion and follower distribution across the map.</Text>
 		</Row>
@@ -1931,6 +1968,9 @@
 		</Row>
     <Row Tag="LOC_HUD_EMPIRE_LENS_TOOLTIP">
       <Text>Show your city borders, district locations, and adjacencies.</Text>
+    </Row>
+    <Row Tag="LOC_HUD_POWER_LENS_TOOLTIP">
+      <Text>Show power sources in your cities along with the regional power range.</Text>
     </Row>
 		<Row Tag="LOC_HUD_MAP_OPTIONS">
 			<Text>Map Options</Text>
@@ -3109,6 +3149,9 @@
 		<Row Tag="LOC_TOOLTIP_UNLOCKS">
 			<Text>Unlocks:</Text>
 		</Row>
+    <Row Tag="LOC_TOOLTIP_BUILDING_CITIZEN_YIELDS_HEADER">
+      <Text>Citizen Yields (per citizen in this district):</Text>
+    </Row>
 		<Row Tag="LOC_TOOLTIP_DISTRICT_CITIZEN_YIELDS_HEADER">
 			<Text>Citizen Yields (per citizen):</Text>
 		</Row>
@@ -3268,6 +3311,9 @@
 		<Row Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE">
 			<Text>Artifact Resource</Text>
 		</Row>
+    <Row Tag="LOC_TOOLTIP_BONUS_STRATEGIC">
+      <Text>Strategic Resource</Text>
+    </Row>
 		<Row Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE_DETAILS">
 			<Text>Send an Archaeologist unit here to excavate an [ICON_GreatWork_Artifact] Artifact, which will provide [ICON_Culture] Culture and [ICON_Tourism] Tourism when brought back to your city.</Text>
 		</Row>
@@ -3461,6 +3507,9 @@
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_NATURAL_WONDER">
 			<Text>natural wonder</Text>
 		</Row>
+    <Row Tag="LOC_TOOLTIP_BONUS">
+      <Text>stra</Text>
+    </Row>
     <Row Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD">
       <Text>Pillage Award: {1_AwardIcon} {2_AwardText}</Text>
     </Row>
@@ -5057,6 +5106,12 @@
 		<Row Tag="LOC_PARTIALSCREEN_REPORTS_CITY_STATUS">
 			<Text>City Status</Text>
 		</Row>
+    <Row Tag="LOC_PARTIALSCREEN_REPORTS_NOTIFICATIONS">
+      <Text>Notifications</Text>
+    </Row>
+    <Row Tag="LOC_PARTIALSCREEN_REPORTS_GOSSIP">
+      <Text>Gossip</Text>
+    </Row>
     <Row Tag="LOC_PARTIALSCREEN_REPORTS_YIELDS">
       <Text>Yields</Text>
     </Row>
@@ -5094,6 +5149,69 @@
 		<Row Tag="LOC_REPORTS_LIST_EMPIRE">
 			<Text>Empire:</Text>
 		</Row>
+    <Row Tag="LOC_HUD_REPORTS_PRIORITY">
+      <Text>Priority</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_PLAYER_FILTER_ALL">
+      <Text>All</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_ALL">
+      <Text>[ICON_GOSSIP_ALL] All</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_DIPLOMACY">
+      <Text>[ICON_GOSSIP_DIPLOMACY] Diplomacy</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_MILITARY">
+      <Text>[ICON_GOSSIP_MILITARY] Military</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_DISCOVER">
+      <Text>[ICON_GOSSIP_DISCOVER] Discovery</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_ESPIONAGE">
+      <Text>[ICON_GOSSIP_ESPIONAGE] Espionage</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_SCIENCE">
+      <Text>[ICON_GOSSIP_SCIENCE] Science</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_RELIGION">
+      <Text>[ICON_GOSSIP_RELIGION] Religion</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_CULTURE">
+      <Text>[ICON_GOSSIP_CULTURE] Culture</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_GREATPERSON">
+      <Text>[ICON_GOSSIP_GREATPERSON] Great Person</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_VICTORY">
+      <Text>[ICON_GOSSIP_VICTORY] Victory</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_SETTLEMENT">
+      <Text>[ICON_GOSSIP_SETTLEMENT] Settlement</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_CITY">
+      <Text>[ICON_GOSSIP_CITY] City</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_FILTER_BARBARIAN">
+      <Text>[ICON_GOSSIP_BARBARIAN] Barbarian</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_DATE">
+      <Text>Date</Text>
+    </Row>
+	<Row Tag="LOC_HUD_REPORTS_TURN">
+      <Text>Turn</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_LEADER">
+      <Text>Leader</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_GOSSIP_TYPE">
+      <Text>Type</Text>
+    </Row>
+    <Row Tag="LOC_REPORTS_NOTIFICATION_ICON">
+      <Text>Notification</Text>
+    </Row>
+    <Row Tag="LOC_REPORTS_NOTIFICATION_DESCRIPTION">
+      <Text>Description</Text>
+    </Row>
 		<Row Tag="LOC_REPORTS_LIST_GLOBAL">
 			<Text>Global:</Text>
 		</Row>
@@ -5301,6 +5419,12 @@
 		<Row Tag="LOC_HUD_REPORTS_TAB_CITY_STATUS">
 			<Text>City Status</Text>
 		</Row>
+    <Row Tag="LOC_HUD_REPORTS_TAB_NOTIFICATIONS">
+      <Text>Notifications</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_TAB_GOSSIP">
+      <Text>Gossip</Text>
+    </Row>
 		<Row Tag="LOC_HUD_REPORTS_TAB_RESOURCES">
 			<Text>Resources</Text>
 		</Row>
@@ -5960,6 +6084,109 @@
 		<Row Tag="LOC_WORLDBUILDER_TEXT_TAG">
 			<Text>Text Tag</Text>
 		</Row>
+		<!-- Settlement recommendations-->
+		<Row Tag="LOC_HUD_ADVISOR_SAYS">
+			<Text>Advisor says</Text>
+		</Row>
+		<!-- Settlement recommendations tooltips (old unused)-->
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD">
+			<Text>REGIONAL YIELD</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD">
+			<Text>INNER RING YIELD</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_FRESH_WATER">
+			<Text>FRESH WATER</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_NEW_RESOURCES">
+			<Text>NEW RESOURCES</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_COAST">
+			<Text>COAST</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_RESOURCES">
+			<Text>EARLY-GAME RESOURCES</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES">
+			<Text>unused</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_STRATEGIC_RESOURCES">
+			<Text>RESOURCES</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_FEATURES">
+			<Text>SPECIFIC FEATURES</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_FOREIGN_CONTINENT">
+			<Text>FOREIGN CONTINENT</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_NEAREST_CITY">
+			<Text>NEAREST CITY</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_DANGER">
+			<Text>unused</Text>
+		</Row>
+		<!-- Settlement recommendations tooltips - POOR-->
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_TOTAL_YIELD">
+			<Text>Poor yields within 3 tiles</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_INNER_YIELD">
+			<Text>Poor yields adjacent to this site</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FRESH_WATER">
+			<Text>No fresh water at site</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEW_RESOURCES">
+			<Text>Few new resources here</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_COAST">
+			<Text>Site is inland</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_RESOURCES">
+			<Text>Limited Horses, Iron, Niter seen here</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_STRATEGIC_RESOURCES">
+			<Text>Few luxuries or strategics nearby</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FEATURES">
+			<Text>No significant features nearby</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FOREIGN_CONTINENT">
+			<Text>No benefit for new continent</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEAREST_CITY">
+			<Text>Far other friendly cities</Text>
+		</Row>
+		<!-- Settlement recommendations tooltips - GOOD-->
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_TOTAL_YIELD">
+			<Text>Strong yields within 3 tiles</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_INNER_YIELD">
+			<Text>Strong yields adjacent to this site</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FRESH_WATER">
+			<Text>This site has fresh water</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEW_RESOURCES">
+			<Text>Likely to gain new resources</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_COAST">
+			<Text>Site is on coast</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_RESOURCES">
+			<Text>Horses, Iron, or Niter nearby</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_STRATEGIC_RESOURCES">
+			<Text>New luxuries and strategics nearby</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FEATURES">
+			<Text>Beneficial features nearby</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FOREIGN_CONTINENT">
+			<Text>Desire settling a new continent</Text>
+		</Row>
+		<Row Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEAREST_CITY">
+			<Text>Close to a friendly site</Text>
+		</Row>
     <!-- Production Queue -->
     <Row Tag="LOC_PRODUCTION_PANEL_SHOW_QUEUE">
       <Text>Show Queue ({1_QueueSize})</Text>
@@ -6044,6 +6271,21 @@
 		</Row>
 		<Row Tag="LOC_HUD_GOSSIP_CLOSE">
 			<Text>Close</Text>
+		</Row>
+		<Row Tag="LOC_HUD_COLLAPSE_LIST">
+			<Text>Click to collapse list</Text>
+		</Row>
+		<Row Tag="LOC_HUD_EXPAND_LIST">
+			<Text>Click to expand list</Text>
+		</Row>
+		<Row Tag="LOC_HUD_GOSSIP_DISMISS_DETAILS">
+			<Text>Click on the gossip to dismiss it.[NEWLINE]The gossip history can be viewed in reports.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_STATUSMESSAGE_DISMISS_DETAILS">
+			<Text>Click on the message to dismiss it.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PANEL_ABILITIES_HEADER">
+			<Text>Abilities:</Text>
 		</Row>
 	</BaseGameText>
 </GameData>

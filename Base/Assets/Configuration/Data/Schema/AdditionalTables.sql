@@ -57,8 +57,10 @@ CREATE TABLE 'Maps' (
 	'File' TEXT NOT NULL,
 	'Name' TEXT NOT NULL,
 	'Description' TEXT,
+	'StaticMap' BOOLEAN NOT NULL DEFAULT 0,
 	'WorldBuilderOnly' BOOLEAN NOT NULL DEFAULT 0,
 	'RequiresUniqueLeaders' BOOLEAN NOT NULL DEFAULT 0,
+	'DisableWorldWrap' BOOLEAN NOT NULL DEFAULT 0,
 	'SortIndex' INTEGER NOT NULL DEFAULT 10,
 	PRIMARY KEY ('Domain', 'File')
 );
@@ -68,6 +70,14 @@ CREATE TABLE 'MapLeaders' (
 	'Map' TEXT NOT NULL,		-- A reference to Maps::File
 	'LeaderType' TEXT NOT NULL,	-- A leader type (ignoring domain)
 	PRIMARY KEY ('Map', 'LeaderType')
+);
+
+CREATE TABLE 'MapStartPositions' (
+	'Map' TEXT NOT NULL,		-- A reference to Maps::File
+	'Plot' INTEGER NOT NULL,
+	'Type' TEXT NOT NULL,
+	'Value' TEXT,
+	PRIMARY KEY('Map','Plot')
 );
 
 CREATE TABLE 'MapSizes' (

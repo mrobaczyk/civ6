@@ -521,51 +521,43 @@
 		<!--Adjust Unit Experience Modifier-->
 		<Row>
 			<ModifierId>BARRACKS_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
-			<SubjectRequirementSetId>BARRACKS_UNIT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>STABLE_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
-			<SubjectRequirementSetId>STABLE_UNIT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>ARMORY_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
-			<SubjectRequirementSetId>ARMORY_LAND_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>MILITARY_ACADEMY_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
-			<SubjectRequirementSetId>MILITARYACADEMY_XP_LAND_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
 			<ModifierId>LIGHTHOUSE_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
-			<SubjectRequirementSetId>LIGHTHOUSE_SEA_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
 			<ModifierId>SHIPYARD_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
-			<SubjectRequirementSetId>SHIPYARD_SEA_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
 			<ModifierId>SEAPORT_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
-			<SubjectRequirementSetId>SEAPORT_SEA_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
 			<ModifierId>HANGAR_TRAINED_AIRCRAFT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
-			<SubjectRequirementSetId>HANGAR_UNIT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>HANGAR_BONUS_AIR_SLOTS</ModifierId>
@@ -574,9 +566,8 @@
 		</Row>
 		<Row>
 			<ModifierId>AIRPORT_TRAINED_AIRCRAFT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
-			<SubjectRequirementSetId>AIRPORT_UNIT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>AIRPORT_BONUS_AIR_SLOTS</ModifierId>
@@ -912,23 +903,23 @@
 		<!--Adjust Unit Experience Modifier-->
 		<Row>
 			<ModifierId>BARRACKS_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_BARRACKS_TRAINED_UNIT_XP</Value>
 		</Row>
 		<Row>
 			<ModifierId>STABLE_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_STABLE_TRAINED_UNIT_XP</Value>
 		</Row>
 		<Row>
 			<ModifierId>ARMORY_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_ARMORY_TRAINED_UNIT_XP</Value>
 		</Row>
 		<Row>
 			<ModifierId>MILITARY_ACADEMY_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_MILITARY_ACADEMY_TRAINED_UNIT_XP</Value>
 		</Row>
 		<Row>
 			<ModifierId>MILITARY_ACADEMY_TRAINED_CORPS_ARMY_DISCOUNT</ModifierId>
@@ -942,28 +933,33 @@
 		</Row>
 		<Row>
 			<ModifierId>LIGHTHOUSE_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_LIGHTHOUSE_TRAINED_UNIT_XP</Value>
 		</Row>
 		<Row>
 			<ModifierId>SHIPYARD_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SHIPYARD_TRAINED_UNIT_XP</Value>
+		</Row>
+		<Row>
+			<ModifierId>SEAPORT_TRAINED_UNIT_XP_MODIFIER</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SEAPORT_TRAINED_UNIT_XP</Value>
 		</Row>
 		<Row>
 			<ModifierId>HANGAR_TRAINED_AIRCRAFT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_HANGAR_TRAINED_AIRCRAFT_XP</Value>
+		</Row>
+		<Row>
+			<ModifierId>AIRPORT_TRAINED_AIRCRAFT_XP_MODIFIER</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_AIRPORT_TRAINED_AIRCRAFT_XP</Value>
 		</Row>
 		<Row>
 			<ModifierId>HANGAR_BONUS_AIR_SLOTS</ModifierId>
 			<Name>Amount</Name>
 			<Value>2</Value>
-		</Row>
-		<Row>
-			<ModifierId>AIRPORT_TRAINED_AIRCRAFT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>50</Value>
 		</Row>
 		<Row>
 			<ModifierId>AIRPORT_BONUS_AIR_SLOTS</ModifierId>
@@ -977,11 +973,6 @@
 		</Row>
 		<Row>
 			<ModifierId>SEAPORT_TRAINED_CORPS_ARMY_DISCOUNT</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
-		</Row>
-		<Row>
-			<ModifierId>SEAPORT_TRAINED_UNIT_XP_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>25</Value>
 		</Row>

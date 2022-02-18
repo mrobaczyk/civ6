@@ -186,10 +186,10 @@
 	<District_CitizenYieldChanges>
 		<Row DistrictType="DISTRICT_HOLY_SITE" YieldType="YIELD_FAITH" YieldChange="2"/>
 		<Row DistrictType="DISTRICT_CAMPUS" YieldType="YIELD_SCIENCE" YieldChange="2"/>
-		<Row DistrictType="DISTRICT_ENCAMPMENT" YieldType="YIELD_CULTURE" YieldChange="1"/>
+		<Row DistrictType="DISTRICT_ENCAMPMENT" YieldType="YIELD_GOLD" YieldChange="2"/>
 		<Row DistrictType="DISTRICT_ENCAMPMENT" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
 		<Row DistrictType="DISTRICT_HARBOR" YieldType="YIELD_GOLD" YieldChange="2"/>
-		<Row DistrictType="DISTRICT_HARBOR" YieldType="YIELD_SCIENCE" YieldChange="1"/>
+		<Row DistrictType="DISTRICT_HARBOR" YieldType="YIELD_FOOD" YieldChange="1"/>
 		<Row DistrictType="DISTRICT_COMMERCIAL_HUB" YieldType="YIELD_GOLD" YieldChange="4"/>
 		<Row DistrictType="DISTRICT_THEATER" YieldType="YIELD_CULTURE" YieldChange="2"/>
 		<Row DistrictType="DISTRICT_INDUSTRIAL_ZONE" YieldType="YIELD_PRODUCTION" YieldChange="2"/>
@@ -197,7 +197,7 @@
 		<Row DistrictType="DISTRICT_HANSA" YieldType="YIELD_PRODUCTION" YieldChange="2"/>
 		<Row DistrictType="DISTRICT_LAVRA" YieldType="YIELD_FAITH" YieldChange="2"/>
 		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" YieldType="YIELD_GOLD" YieldChange="2"/>
-		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" YieldType="YIELD_SCIENCE" YieldChange="1"/>
+		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" YieldType="YIELD_FOOD" YieldChange="1"/>
 	</District_CitizenYieldChanges>
 	<District_CitizenGreatPersonPoints/>
 	<AppealHousingChanges>
@@ -290,8 +290,7 @@
 		</Row>
 		<Row>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GRANT_MOVEMENT_BONUS</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_MOVEMENT</ModifierType>
-			<SubjectRequirementSetId>DOCKYARD_SEA_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
 		</Row>
 		<Row>
@@ -326,8 +325,8 @@
 		</Row>
 		<Row>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GRANT_MOVEMENT_BONUS</ModifierId>
-			<Name>Amount</Name>
-			<Value>1</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_ROYAL_NAVY_DOCKYARD_MOVEMENT_BONUS</Value>
 		</Row>
 		<Row>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GOLD_FROM_FOREIGN_CONTINENT</ModifierId>

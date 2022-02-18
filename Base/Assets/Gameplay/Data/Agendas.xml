@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Edward Beach (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<InsertOrIgnore Kind="KIND_TRAIT"/>
@@ -51,17 +51,17 @@
 		<Row Type="TRAIT_AGENDA_WONDER_ADVOCATE" Kind="KIND_TRAIT"/>
 	</Types>
 	<PlotEvalConditions>
-		<Row ConditionType="Nearest Enemy City" Value="0"/>
-		<Row ConditionType="Nearest Friendly City" Value="1"/>
-		<Row ConditionType="New Resources" Value="2"/>
-		<Row ConditionType="Inner Ring Yield" Value="3"/>
-		<Row ConditionType="Total Yield" Value="4"/>
-		<Row ConditionType="Coastal" Value="5"/>
-		<Row ConditionType="Fresh Water" Value="6"/>
-		<Row ConditionType="Specific Resource" Value="7"/>
-		<Row ConditionType="Specific Feature" Value="8"/>
-		<Row ConditionType="Resource Class" Value="9"/>
-		<Row ConditionType="Foreign Continent" Value="10"/>
+		<Row ConditionType="Nearest Enemy City" Value="0" PoorTooltipString="LOC_PLACEHOLDER_BAD" GoodTooltipString="LOC_PLACEHOLDER_GOOD"/>
+		<Row ConditionType="Nearest Friendly City" Value="1" PoorValue="-50" GoodValue="-20" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEAREST_CITY" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEAREST_CITY"/>
+		<Row ConditionType="New Resources" Value="2" PoorValue="0" GoodValue="4" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEW_RESOURCES" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEW_RESOURCES"/>
+		<Row ConditionType="Inner Ring Yield" Value="3" PoorValue="18" GoodValue="26" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_INNER_YIELD" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_INNER_YIELD"/>
+		<Row ConditionType="Total Yield" Value="4" PoorValue="30" GoodValue="50" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_TOTAL_YIELD" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_TOTAL_YIELD"/>
+		<Row ConditionType="Coastal" Value="5" PoorValue="-1" GoodValue="12" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_COAST" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_COAST"/>
+		<Row ConditionType="Fresh Water" Value="6" PoorValue="0" GoodValue="20" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_FRESH_WATER" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FRESH_WATER"/>
+		<Row ConditionType="Specific Resource" Value="7" PoorValue="-1" GoodValue="6" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_RESOURCES" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_RESOURCES"/>
+		<Row ConditionType="Specific Feature" Value="8" PoorValue="-5" GoodValue="5" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_FEATURES" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FEATURES"/>
+		<Row ConditionType="Resource Class" Value="9" PoorValue="2" GoodValue="6" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_STRATEGIC_RESOURCES" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_STRATEGIC_RESOURCES"/>
+		<Row ConditionType="Foreign Continent" Value="10" PoorValue="-2" GoodValue="50" PoorTooltipString="LOC_SETTLEMENT_RECOMMENDATION_POOR_FOREIGN_CONTINENT" GoodTooltipString="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FOREIGN_CONTINENT"/>
 	</PlotEvalConditions>
 	<AiListTypes>
 		<Row ListType="BlackQueenDiplomacyPreference"/>
@@ -84,7 +84,7 @@
 		<Row ListType="PeacekeeperWarLimits"/>
 		<Row ListType="ScienceLoverSciencePreference"/>
 		<Row ListType="StandardSettlePlot"/>
-    <Row ListType="StandingArmyPseudoYields"/>
+		<Row ListType="StandingArmyPseudoYields"/>
 		<Row ListType="SettleAllContinents"/>
 		<Row ListType="WithShieldDiplomacy"/>
 		<Row ListType="WonderObsessedWonders"/>
@@ -167,23 +167,32 @@
 		<Row ListType="ExploitationLoverExploitationPreference" Item="PSEUDOYIELD_IMPROVEMENT" Value="5"/>
 		<Row ListType="EnvironmentLoverEnvironmentPreference" Item="PSEUDOYIELD_ENVIRONMENT" Value="5"/>
 		<Row ListType="ExplorationObsessedExplorers" Item="PSEUDOYIELD_UNIT_EXPLORER" Value="50"/>
-		<Row ListType="StandardSettlePlot" Item="Total Yield" Favored="false" Value="1" StringVal="YIELD_PRODUCTION"/>
-		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Favored="false" Value="1" StringVal="YIELD_FOOD"/>
-		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Favored="false" Value="1" StringVal="YIELD_PRODUCTION"/>
-		<Row ListType="StandardSettlePlot" Item="Fresh Water" Favored="false" Value="20"/>
-		<Row ListType="StandardSettlePlot" Item="New Resources" Favored="false" Value="4"/>
-		<Row ListType="StandardSettlePlot" Item="Coastal" Favored="false" Value="12"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Resource" Favored="false" Value="3" StringVal="RESOURCE_HORSES"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Resource" Favored="false" Value="5" StringVal="RESOURCE_IRON"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Resource" Favored="false" Value="2" StringVal="RESOURCE_NITER"/>
-		<Row ListType="StandardSettlePlot" Item="Resource Class" Favored="false" Value="2" StringVal="RESOURCECLASS_LUXURY"/>
-		<Row ListType="StandardSettlePlot" Item="Resource Class" Favored="false" Value="2" StringVal="RESOURCECLASS_STRATEGIC"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Feature" Favored="false" Value="-3" StringVal="FEATURE_ICE"/>
-		<Row ListType="StandardSettlePlot" Item="Specific Feature" Favored="false" Value="2" StringVal="FEATURE_DEAD_SEA"/>
-		<Row ListType="StandardSettlePlot" Item="Foreign Continent" Favored="true" Value="-2"/>
-		<Row ListType="StandardSettlePlot" Item="Nearest Friendly City" Favored="false" Value="-10"/>
-    <Row ListType="StandingArmyPseudoYields" Item="PSEUDOYIELD_STANDING_ARMY_NUMBER" Value="33"/>
-    <Row ListType="StandingArmyPseudoYields" Item="PSEUDOYIELD_STANDING_ARMY_VALUE" Value="50"/>
+		<!-- Note: Tooltips for items with sub-yields only show the last tooltip. Use the same tooltip for all such entries for now. -->
+		<Row ListType="StandardSettlePlot" Item="Total Yield" Favored="false" Value="2" StringVal="YIELD_PRODUCTION" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Total Yield" Favored="false" Value="1" StringVal="YIELD_FOOD" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Total Yield" Favored="false" Value="1" StringVal="YIELD_SCIENCE" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Total Yield" Favored="false" Value="1" StringVal="YIELD_CULTURE" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Total Yield" Favored="false" Value="1" StringVal="YIELD_FAITH" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Favored="false" Value="2" StringVal="YIELD_FOOD" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Favored="false" Value="2" StringVal="YIELD_PRODUCTION" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Favored="false" Value="1" StringVal="YIELD_SCIENCE" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Favored="false" Value="1" StringVal="YIELD_CULTURE" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Inner Ring Yield" Favored="false" Value="1" StringVal="YIELD_FAITH" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD"/>
+		<Row ListType="StandardSettlePlot" Item="Fresh Water" Favored="false" Value="20" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FRESH_WATER"/>
+		<Row ListType="StandardSettlePlot" Item="New Resources" Favored="false" Value="4" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_NEW_RESOURCES"/>
+		<Row ListType="StandardSettlePlot" Item="Coastal" Favored="false" Value="12" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_COAST"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Resource" Favored="false" Value="3" StringVal="RESOURCE_HORSES" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_RESOURCES"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Resource" Favored="false" Value="5" StringVal="RESOURCE_IRON" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_RESOURCES"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Resource" Favored="false" Value="2" StringVal="RESOURCE_NITER" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_RESOURCES"/>
+		<Row ListType="StandardSettlePlot" Item="Resource Class" Favored="false" Value="2" StringVal="RESOURCECLASS_LUXURY" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES"/>
+		<Row ListType="StandardSettlePlot" Item="Resource Class" Favored="false" Value="2" StringVal="RESOURCECLASS_STRATEGIC" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_STRATEGIC_RESOURCES"/>
+		<Row ListType="StandardSettlePlot" Item="Specific Feature" Favored="false" Value="-3" StringVal="FEATURE_ICE" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FEATURES"/>
+    <!-- HACK NOTE: If the specific feature is a natural wonder, that value will apply to all natural wonders. When we break them out individually, we'll fix this, but this is our starting point - AWG -->
+		<Row ListType="StandardSettlePlot" Item="Specific Feature" Favored="false" Value="6" StringVal="FEATURE_DEAD_SEA" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FEATURES"/>
+		<Row ListType="StandardSettlePlot" Item="Foreign Continent" Favored="true" Value="-2" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_FOREIGN_CONTINENT"/>
+		<Row ListType="StandardSettlePlot" Item="Nearest Friendly City" Favored="false" Value="-10" TooltipString="LOC_SETTLEMENT_RECOMMENDATION_NEAREST_CITY"/>
+		<Row ListType="StandingArmyPseudoYields" Item="PSEUDOYIELD_STANDING_ARMY_NUMBER" Value="33"/>
+		<Row ListType="StandingArmyPseudoYields" Item="PSEUDOYIELD_STANDING_ARMY_VALUE" Value="50"/>
 		<Row ListType="SettleAllContinents" Item="Foreign Continent" Favored="true" Value="120"/>
 		<Row ListType="WithShieldDiplomacy" Item="DIPLOACTION_MAKE_PEACE" Favored="false"/>
 		<Row ListType="WonderObsessedWonders" Item="PSEUDOYIELD_WONDER" Value="25"/>
@@ -192,50 +201,50 @@
 		<Row TriggerType="TRIGGER_RELIGION_FOUNDED" TreeName="Launch Inquisition" AIEvent="AI_EVENT_FOUNDED_RELIGION" Priority="3"/>
 	</TriggeredBehaviorTrees>
 	<Traits>
-		<Row TraitType="TRAIT_AGENDA_ALLY_OF_ENKIDU" />
-		<Row TraitType="TRAIT_AGENDA_AYYUBID_DYNASTY" />
-		<Row TraitType="TRAIT_AGENDA_BACKSTAB_AVERSE" />
-		<Row TraitType="TRAIT_AGENDA_BIG_STICK_POLICY" />
-		<Row TraitType="TRAIT_AGENDA_BLACK_QUEEN" />
-		<Row TraitType="TRAIT_AGENDA_BUSHIDO" />
-		<Row TraitType="TRAIT_AGENDA_CITY_STATE_ALLY" />
-		<Row TraitType="TRAIT_AGENDA_COUNTER_REFORMER" />
-		<Row TraitType="TRAIT_AGENDA_DELIAN_LEAGUE" />
-		<Row TraitType="TRAIT_AGENDA_ENTHUSIASTIC_DISCIPLE" />
-		<Row TraitType="TRAIT_AGENDA_GREAT_PERSON_OBSESSED" />
-		<Row TraitType="TRAIT_AGENDA_IRON_CROWN" />
-		<Row TraitType="TRAIT_AGENDA_LAST_VIKING_KING" />
-		<Row TraitType="TRAIT_AGENDA_OPTIMUS_PRINCEPS" />
-		<Row TraitType="TRAIT_AGENDA_PEACEKEEPER" />
-		<Row TraitType="TRAIT_AGENDA_QUEEN_OF_NILE" />
-		<Row TraitType="TRAIT_AGENDA_SUN_NEVER_SETS" />
-		<Row TraitType="TRAIT_AGENDA_TLATOANI" />
-		<Row TraitType="TRAIT_AGENDA_WESTERNIZER" />
-		<Row TraitType="TRAIT_AGENDA_WITH_SHIELD" />
-		<Row TraitType="TRAIT_AGENDA_WONDER_OBSESSED" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_CLEAR_BANDIT_CAMPS" />
-		<Row TraitType="TRAIT_AGENDA_BARBARIAN_LOVER" />
-		<Row TraitType="TRAIT_AGENDA_ENJOYS_WAR" />
-		<Row TraitType="TRAIT_AGENDA_IGNORE_WARMONGERING" />
-		<Row TraitType="TRAIT_AGENDA_NATURALIST" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_NUKES" />
-		<Row TraitType="TRAIT_AGENDA_PARANOID" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_CULTURE" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_HAPPINESS" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_INCOME" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_INDUSTRY" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_POPULATION" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_SCIENCE" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_STANDING_ARMY" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_AIRPOWER" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_CITY_STATE_PROTECTOR" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_EXPLOITATION" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_ENVIRONMENT" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_SAME_GOVERNMENT" />
-		<Row TraitType="TRAIT_AGENDA_PREFER_FAITH" />
-		<Row TraitType="TRAIT_AGENDA_EXPLORATION_OBSESSED" />
-		<Row TraitType="TRAIT_AGENDA_GREAT_PERSON_ADVOCATE" />
-		<Row TraitType="TRAIT_AGENDA_WONDER_ADVOCATE" />
+		<Row TraitType="TRAIT_AGENDA_ALLY_OF_ENKIDU"/>
+		<Row TraitType="TRAIT_AGENDA_AYYUBID_DYNASTY"/>
+		<Row TraitType="TRAIT_AGENDA_BACKSTAB_AVERSE"/>
+		<Row TraitType="TRAIT_AGENDA_BIG_STICK_POLICY"/>
+		<Row TraitType="TRAIT_AGENDA_BLACK_QUEEN"/>
+		<Row TraitType="TRAIT_AGENDA_BUSHIDO"/>
+		<Row TraitType="TRAIT_AGENDA_CITY_STATE_ALLY"/>
+		<Row TraitType="TRAIT_AGENDA_COUNTER_REFORMER"/>
+		<Row TraitType="TRAIT_AGENDA_DELIAN_LEAGUE"/>
+		<Row TraitType="TRAIT_AGENDA_ENTHUSIASTIC_DISCIPLE"/>
+		<Row TraitType="TRAIT_AGENDA_GREAT_PERSON_OBSESSED"/>
+		<Row TraitType="TRAIT_AGENDA_IRON_CROWN"/>
+		<Row TraitType="TRAIT_AGENDA_LAST_VIKING_KING"/>
+		<Row TraitType="TRAIT_AGENDA_OPTIMUS_PRINCEPS"/>
+		<Row TraitType="TRAIT_AGENDA_PEACEKEEPER"/>
+		<Row TraitType="TRAIT_AGENDA_QUEEN_OF_NILE"/>
+		<Row TraitType="TRAIT_AGENDA_SUN_NEVER_SETS"/>
+		<Row TraitType="TRAIT_AGENDA_TLATOANI"/>
+		<Row TraitType="TRAIT_AGENDA_WESTERNIZER"/>
+		<Row TraitType="TRAIT_AGENDA_WITH_SHIELD"/>
+		<Row TraitType="TRAIT_AGENDA_WONDER_OBSESSED"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_CLEAR_BANDIT_CAMPS"/>
+		<Row TraitType="TRAIT_AGENDA_BARBARIAN_LOVER"/>
+		<Row TraitType="TRAIT_AGENDA_ENJOYS_WAR"/>
+		<Row TraitType="TRAIT_AGENDA_IGNORE_WARMONGERING"/>
+		<Row TraitType="TRAIT_AGENDA_NATURALIST"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_NUKES"/>
+		<Row TraitType="TRAIT_AGENDA_PARANOID"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_CULTURE"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_HAPPINESS"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_INCOME"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_INDUSTRY"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_POPULATION"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_SCIENCE"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_STANDING_ARMY"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_AIRPOWER"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_CITY_STATE_PROTECTOR"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_EXPLOITATION"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_ENVIRONMENT"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_SAME_GOVERNMENT"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_FAITH"/>
+		<Row TraitType="TRAIT_AGENDA_EXPLORATION_OBSESSED"/>
+		<Row TraitType="TRAIT_AGENDA_GREAT_PERSON_ADVOCATE"/>
+		<Row TraitType="TRAIT_AGENDA_WONDER_ADVOCATE"/>
 	</Traits>
 	<!-- Note: The traditional Historical agendas are listed in leaders.xml. These are intended as random agendas tele-->
 	<Agendas>
@@ -310,8 +319,8 @@
 		<Row AgendaOne="AGENDA_BUSHIDO" AgendaTwo="AGENDA_PARANOID"/>
 		<Row AgendaOne="AGENDA_WESTERNIZER" AgendaTwo="AGENDA_CULTURED"/>
 		<Row AgendaOne="AGENDA_WESTERNIZER" AgendaTwo="AGENDA_TECHNOPHILE"/>
-    <Row AgendaOne="AGENDA_ENTHUSIASTIC_DISCIPLE" AgendaTwo="AGENDA_DEVOUT"/>
-  </ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_ENTHUSIASTIC_DISCIPLE" AgendaTwo="AGENDA_DEVOUT"/>
+	</ExclusiveAgendas>
 	<AgendaTraits>
 		<Row AgendaType="AGENDA_ALLY_OF_ENKIDU" TraitType="TRAIT_AGENDA_ALLY_OF_ENKIDU"/>
 		<Row AgendaType="AGENDA_AYYUBID_DYNASTY" TraitType="TRAIT_AGENDA_AYYUBID_DYNASTY"/>
@@ -3038,11 +3047,11 @@
 			<RequirementSetId>PLAYER_HAS_LOW_AIRPOWER</RequirementSetId>
 			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
 		</Row>
-    <Row>
-      <RequirementSetId>PLAYER_HAS_LOW_AIRPOWER</RequirementSetId>
-      <RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
-    </Row>
-    <Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_LOW_AIRPOWER</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_HAS_LOW_AIRPOWER</RequirementSetId>
 			<RequirementId>REQUIRES_HAS_LOW_AIRPOWER</RequirementId>
 		</Row>
@@ -3937,12 +3946,12 @@
 			<Name>DomainType</Name>
 			<Value>DOMAIN_AIR</Value>
 		</Row>
-    <Row>
-      <RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
-      <Name>TechnologyType</Name>
-      <Value>TECH_FLIGHT</Value>
-    </Row>
-    <Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+			<Name>TechnologyType</Name>
+			<Value>TECH_FLIGHT</Value>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_HIGH_NUKE_LOVE</RequirementId>
 			<Name>UsedNukeValue</Name>
 			<Value>1</Value>

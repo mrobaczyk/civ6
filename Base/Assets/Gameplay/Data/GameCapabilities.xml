@@ -89,13 +89,31 @@
 		<!-- Do these policy filters show up on the government screen -->
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER" Kind="KIND_CAPABILITY" />
+    <Row Type="CAPABILITY_GOSSIP_REPORT" Kind="KIND_CAPABILITY" />
 
-		<!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
+    <!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
 		<Row Type="CAPABILITY_DISPLAY_NORMALIZED_TURN" Kind="KIND_CAPABILITY" />
+    
+    <!--Display of Top Panel Yields. ONLY the display.-->
+    <Row Type="CAPABILITY_DISPLAY_TOP_PANEL_YIELDS" Kind="KIND_CAPABILITY"/>
+
+    <!--Display of Top Panel Resources. ONLY the display.-->
+    <Row Type="CAPABILITY_DISPLAY_TOP_PANEL_RESOURCES" Kind="KIND_CAPABILITY"/>
+
+    <!--Display of Map Yields. ONLY the display.-->
+    <Row Type="CAPABILITY_DISPLAY_MINIMAP_YIELDS" Kind="KIND_CAPABILITY"/>
+
+    <!--Display of Map Resources. ONLY the display.-->
+    <Row Type="CAPABILITY_DISPLAY_MINIMAP_RESOURCES" Kind="KIND_CAPABILITY"/>
+
+    <!--Display of Top Panel Civpedia button. ONLY the display.-->
+    <Row Type="CAPABILITY_DISPLAY_TOP_PANEL_CIVPEDIA" Kind="KIND_CAPABILITY"/>
+
+		<Row Type="CAPABILITY_DISPLAY_PLOT_YIELDS" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_DISPLAY_HUD_RIBBON_RELATIONSHIPS" Kind="KIND_CAPABILITY"/>
 
 		<!-- TODO: Disabling these capabilities is not yet supported:
-		<Row Type="CAPABILITY_ARCHEOLOGY" Kind="KIND_CAPABILITY" />
-		
+		<Row Type="CAPABILITY_ARCHEOLOGY" Kind="KIND_CAPABILITY" />		
 		<Row Type="CAPABILITY_CIVIC_BOOSTS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_CIVIC_BOOST_POPUP" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENT_POLICIES" Kind="KIND_CAPABILITY" />
@@ -224,8 +242,10 @@
 		<Row GameCapability="CAPABILITY_CITY_HUD_RELIGION_TAB" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_WONDERS" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_TRADING_POSTS" />
+    <Row GameCapability="CAPABILITY_GOSSIP_REPORT" />
 
-		<!-- Can the user purchase using faith -->
+
+    <!-- Can the user purchase using faith -->
 		<Row GameCapability="CAPABILITY_FAITH_PURCHASE" />
 		<!-- Can the user open city states panel -->
 		<Row GameCapability="CAPABILITY_CITY_STATES_VIEW" />
@@ -234,7 +254,25 @@
 		<!-- Do these policy filters show up on the government screen -->
 		<Row GameCapability="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER"/>
 		<Row GameCapability="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER"/>
-		
+
+    <!--Display of Top Panel Yields. ONLY the display.-->
+    <Row GameCapability="CAPABILITY_DISPLAY_TOP_PANEL_YIELDS"/>
+
+    <!--Display of Top Panel Resources. ONLY the display.-->
+    <Row GameCapability="CAPABILITY_DISPLAY_TOP_PANEL_RESOURCES"/>
+
+    <!--Display of Top Panel Civpedia Button. ONLY the display.-->
+    <Row GameCapability="CAPABILITY_DISPLAY_TOP_PANEL_CIVPEDIA"/>
+
+    <!--Display of Map Yields. ONLY the display.-->
+    <Row GameCapability="CAPABILITY_DISPLAY_MINIMAP_YIELDS"/>
+
+    <!--Display of Map Resources. ONLY the display.-->
+    <Row GameCapability="CAPABILITY_DISPLAY_MINIMAP_RESOURCES"/>
+
+		<Row GameCapability="CAPABILITY_DISPLAY_PLOT_YIELDS"/>
+		<Row GameCapability="CAPABILITY_DISPLAY_HUD_RIBBON_RELATIONSHIPS"/>		
+
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY"/>
 		<Row GameCapability="CAPABILITY_CIVIC_BOOSTS"/>
@@ -292,8 +330,8 @@
 		<Row GameCapability="CAPABILITY_CITY_HUD_RELIGION_TAB" DependsOnCapability="CAPABILITY_RELIGION"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_TRADING_POSTS" DependsOnCapability="CAPABILITY_TRADE"/>
 		<Row GameCapability="CAPABILITY_FAITH_PURCHASE" DependsOnCapability="CAPABILITY_FAITH"/>
-		
-		<!-- TODO: Disabling these capabilities is not yet supported:
+
+    <!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY" DependsOnCapability="CAPABILITY_TOURISM" />
 		<Row GameCapability="CAPABILITY_CIVIC_BOOSTS" DependsOnCapability="CAPABILITY_CIVICS" />
 		<Row GameCapability="CAPABILITY_CIVIC_BOOST_POPUP" DependsOnCapability="CAPABILITY_CIVIC_BOOSTS" />

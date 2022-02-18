@@ -496,6 +496,15 @@
 		<Row Tag="LOC_OPTIONS_INTERFACE_EDGE_SCROLL">
 			<Text>Scroll when Mouse at Edge:</Text>
 		</Row>
+    <Row Tag="LOC_OPTIONS_INTERFACE_OPEN_TO_PROD_QUEUE">
+      <Text>Always Open Production Queue:</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG">
+      <Text>Replace Hold-to-Drag with Clicks:</Text>
+    </Row>
+    <Row Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG_TT">
+      <Text>This option replaces the Hold-to-Drag behavior of draggable UI elements with simple clicks to pick up and drop them.</Text>
+    </Row>
 		<Row Tag="LOC_OPTIONS_INTERFACE_CLOCK_FORMAT">
 			<Text>Clock Format:</Text>
 		</Row>
@@ -522,12 +531,24 @@
     </Row>
     <Row Tag="LOC_OPTIONS_SCROLL_SPEED">
       <Text>Mouse Wheel Speed:</Text>
-    </Row>
+    </Row>		
     <Row Tag="LOC_OPTIONS_SCROLL_SPEED_VALUE">
       <Text>{1_Value : number #.##}</Text>
     </Row>
+		<Row Tag="LOC_OPTIONS_RIBBON_STATS_LABEL">
+			<Text>Show Yields in HUD Ribbon:</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_HIDE">
+			<Text>Always Hide (off)</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_RIBBON_STATS_MOUSE_OVER">
+			<Text>Show on Mouse-over</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_SHOW">
+			<Text>Always Show</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_END_TURN_BEHAVIOR">
-			<Text>PlayByCloud End Turn Behavior:</Text>
+			<Text>Play By Cloud End Turn Behavior:</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_ASK_ME">
 			<Text>Ask Me</Text>
@@ -539,7 +560,7 @@
 			<Text>Exit to Main Menu</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_READY_BEHAVIOR">
-			<Text>PlayByCloud Ready Behavior:</Text>
+			<Text>Play By Cloud Ready Behavior:</Text>
 		</Row>	
 		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_ASK_ME">
 			<Text>Ask Me</Text>
@@ -551,7 +572,7 @@
 			<Text>Exit to Lobby</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR">
-			<Text>PlayByCloud Client Ready Behavior:</Text>
+			<Text>Play By Cloud Client Ready Behavior:</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR_ASK_ME">
 			<Text>Ask Me</Text>
@@ -577,6 +598,12 @@
     <Row Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA">
         <Text>Blue-blind Tritanopia</Text>
     </Row>
+	<Row Tag="LOC_OPTIONS_INTERFACE_LIGHTING">
+		<Text>Use compatible RGB lighting hardware</Text>
+	</Row>
+	<Row Tag="LOC_OPTIONS_INTERFACE_LIGHTING_TOOLTIP">
+		<Text>Allows Civilization VI to control lighting on computers and peripherals that are compatible with Logitech Gaming Software or Alienware AlienFX.</Text>
+	</Row>
 		<Row Tag="LOC_OPTIONS_QUEUE_DISPLAY">
 			<Text>Production Queue:</Text>
 		</Row>
@@ -714,7 +741,6 @@
 			<Text>Toggles visibility of the Full Screen Map</Text>
 		</Row>
 
-
 		<Row Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UNIT">
 			<Text>Unit Actions:</Text>
 		</Row>
@@ -727,6 +753,9 @@
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY">
 			<Text>Fortify</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL">
+			<Text>Fortified Heal</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE">
 			<Text>Delete Unit</Text>
@@ -749,7 +778,9 @@
 		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_ALERT">
 			<Text>Alert</Text>
 		</Row>
-
+		<Row Tag="LOC_OPTIONS_ALL_AUTOSAVES">
+			<Text>All</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP">
 			<Text>Performs the Found City action if the selected unit is a Settler.</Text>
 		</Row>
@@ -758,6 +789,9 @@
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HELP">
 			<Text>Fortifies the selected unit.</Text>
+		</Row>
+		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL_HELP">
+			<Text>Fortifies the selected unit until it is fully healed.</Text>
 		</Row>
 		<Row Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE_HELP">
 			<Text>Deletes the selected unit.</Text>

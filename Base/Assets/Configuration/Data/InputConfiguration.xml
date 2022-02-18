@@ -57,10 +57,13 @@
 		<Row ActionId="ToggleTradeRoutes" Name="LOC_OPTIONS_HOTKEY_UI_TRADEROUTES" Description="LOC_OPTIONS_HOTKEY_UI_TRADEROUTES_HELP" CategoryId="UI" ContextId="World" />
 		<Row ActionId="OpenCivilopedia" Name="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA" Description="LOC_OPTIONS_HOTKEY_UI_CIVILOPEDIA_HELP" CategoryId="UI" ContextId="World" />
 		<Row ActionId="ToggleFSMap" Name="LOC_OPTIONS_HOTKEY_UI_FSMAP" Description="LOC_OPTIONS_HOTKEY_UI_FSMAP_HELP" CategoryId="UI" ContextId="WorldOrFullScreenMap" />
+		<!--Row ActionId="OpenMapSearch" Name="LOC_OPTIONS_HOTKEY_UI_MAPSEARCH" Description="LOC_OPTIONS_HOTKEY_UI_MAPSEARCH_HELP" CategoryId="UI" ContextId="World" /-->
+		<!-- TODO use better LOC keys above --><Row ActionId="OpenMapSearch" Name="LOC_HUD_MAP_SEARCH" Description="LOC_HUD_MAP_SEARCH" CategoryId="UI" ContextId="World" />
 
     <Row ActionId="FoundCity" Name="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY" Description="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="MoveTo" Name="LOC_OPTIONS_HOTKEY_UNIT_MOVETO" Description="LOC_OPTIONS_HOTKEY_UNIT_MOVETO_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="Fortify" Name="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY" Description="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HELP" CategoryId="UNIT" ContextId="World" />
+		<Row ActionId="FortifyUntilHeal" Name="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL" Description="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="DeleteUnit" Name="LOC_OPTIONS_HOTKEY_UNIT_DELETE" Description="LOC_OPTIONS_HOTKEY_UNIT_DELETE_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="Attack" Name="LOC_OPTIONS_HOTKEY_UNIT_ATTACK" Description="LOC_OPTIONS_HOTKEY_UNIT_ATTACK_HELP" CategoryId="UNIT" ContextId="World" />
 		<Row ActionId="RangedAttack" Name="LOC_OPTIONS_HOTKEY_UNIT_RANGED" Description="LOC_OPTIONS_HOTKEY_UNIT_RANGED_HELP" CategoryId="UNIT" ContextId="World" />
@@ -118,7 +121,7 @@
 		<Row ActionId="ToggleTradeRoutes" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F4"/>
 		<Row ActionId="OpenCivilopedia" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_F9"/>
 		<Row ActionId="ToggleFSMap" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_END"/>
-
+		<Row ActionId="OpenMapSearch" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_CONTROL+LOC_OPTIONS_KEY_F"/>
 
     <Row ActionId="FoundCity" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_B"/>
 		<Row ActionId="MoveTo" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_M"/>
@@ -127,6 +130,7 @@
 		<Row ActionId="Attack" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_A"/>
 		<Row ActionId="RangedAttack" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_R"/>
 		<Row ActionId="AutoExplore" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_E"/>
+		<Row ActionId="FortifyUntilHeal" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_H"/>
 		<Row ActionId="SkipTurn" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_SPACE"/>
 		<Row ActionId="Sleep" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_Z"/>
 		<Row ActionId="Alert" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_V"/>

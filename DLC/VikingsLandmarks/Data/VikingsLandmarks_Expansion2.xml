@@ -14,6 +14,10 @@
 		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" Name="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC_NAME" Description="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_FERTILITY" EffectOperatorType="FEATURE" Severity="1" NaturalWonder="FEATURE_EYJAFJALLAJOKULL" IconLarge="ClimateEvent_VolcanoActive" IconSmall="ClimateEventStat_Volcanoes"/>
 		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" Name="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL_NAME" Description="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_FERTILITY" EffectOperatorType="FEATURE" Severity="2" NaturalWonder="FEATURE_EYJAFJALLAJOKULL" IconLarge="ClimateEvent_VolcanoActive" IconSmall="ClimateEventStat_Volcanoes"/>
 	</RandomEvents>
+	<RandomEvent_Presentation>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" Animation="REVEAL_ERUPTION_CATASTROPHIC" Sound="Play_Disaster_Volcano_Movie_Loop" Callback="GetAffectedPlots_NaturalWonder"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" Animation="REVEAL_ERUPTION_MEGACOLOSSAL" Sound="Play_Disaster_Volcano_Movie_Loop" Callback="GetAffectedPlots_NaturalWonder"/>
+	</RandomEvent_Presentation>
 	<Features>
 		<Update>
 			<Where FeatureType="FEATURE_EYJAFJALLAJOKULL"/>

@@ -23,6 +23,7 @@
 		<Row Type="ABILITY_HYPASPIST" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_HETAIROI" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_IMMORTAL" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_BASILIKOI_TRAINED_UNIT_XP" Kind="KIND_ABILITY"/>
 		<Row Type="UNIT_MACEDONIAN_HYPASPIST" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_MACEDONIAN_HETAIROI" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_PERSIAN_IMMORTAL" Kind="KIND_UNIT"/>
@@ -59,6 +60,11 @@
 		<Row Type="ABILITY_HYPASPIST" Tag="CLASS_HYPASPIST"/>
 		<Row Type="ABILITY_HETAIROI" Tag="CLASS_HETAIROI"/>
 		<Row Type="ABILITY_IMMORTAL" Tag="CLASS_IMMORTAL"/>
+		<Row Type="ABILITY_BASILIKOI_TRAINED_UNIT_XP" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_BASILIKOI_TRAINED_UNIT_XP" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_BASILIKOI_TRAINED_UNIT_XP" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_BASILIKOI_TRAINED_UNIT_XP" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_BASILIKOI_TRAINED_UNIT_XP" Tag="CLASS_HETAIROI"/>
 		<Row Type="UNIT_MACEDONIAN_HYPASPIST" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_MACEDONIAN_HYPASPIST" Tag="CLASS_HYPASPIST"/>
 		<Row Type="UNIT_MACEDONIAN_HETAIROI" Tag="CLASS_HEAVY_CAVALRY"/>
@@ -76,6 +82,7 @@
 	<UnitAbilities>
 		<Row UnitAbilityType="ABILITY_HYPASPIST" Name="LOC_ABILITY_HYPASPIST_NAME" Description="LOC_ABILITY_HYPASPIST_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_HETAIROI" Name="LOC_ABILITY_HETAIROI_NAME" Description="LOC_ABILITY_HETAIROI_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_BASILIKOI_TRAINED_UNIT_XP" Name="LOC_ABILITY_BASILIKOI_TRAINED_UNIT_XP_NAME" Description="LOC_ABILITY_BASILIKOI_TRAINED_UNIT_XP_DESCRIPTION" Inactive="true"/>
 	</UnitAbilities>
 	<UnitAbilityModifiers>
 		<Row>
@@ -97,6 +104,10 @@
 		<Row>
 			<UnitAbilityType>ABILITY_HETAIROI</UnitAbilityType>
 			<ModifierId>HETAIROI_GREAT_GENERAL_POINTS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_BASILIKOI_TRAINED_UNIT_XP</UnitAbilityType>
+			<ModifierId>BASILIKOI_TRAINED_UNIT_XP</ModifierId>
 		</Row>
 	</UnitAbilityModifiers>
 	<Modifiers>
@@ -121,6 +132,11 @@
 		<Row>
 			<ModifierId>HETAIROI_GREAT_GENERAL_POINTS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_GREAT_PEOPLE_POINTS_PER_KILL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BASILIKOI_TRAINED_UNIT_XP</ModifierId>
+			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<Permanent>true</Permanent>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -153,6 +169,11 @@
 			<ModifierId>HETAIROI_GREAT_GENERAL_POINTS</ModifierId>
 			<Name>GreatPersonClassType</Name>
 			<Value>GREAT_PERSON_CLASS_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>BASILIKOI_TRAINED_UNIT_XP</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
 		</Row>
 	</ModifierArguments>
 	<RequirementSets>
@@ -618,9 +639,8 @@
 		<!--Adjust Unit Experience Modifier-->
 		<Row>
 			<ModifierId>BASILIKOI_PAIDES_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_CITY_TRAINED_UNITS_ADJUST_XP_BONUS</ModifierType>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS</ModifierType>
 			<Permanent>true</Permanent>
-			<SubjectRequirementSetId>BASILIKOI_PAIDES_UNIT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<!--Grant Envoy-->
 		<Row>
@@ -856,8 +876,8 @@
 		<!--Adjust Unit Experience Modifier-->
 		<Row>
 			<ModifierId>BASILIKOI_PAIDES_TRAINED_UNIT_XP_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>25</Value>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_BASILIKOI_TRAINED_UNIT_XP</Value>
 		</Row>
 		<!--Grant Envoy-->
 		<Row>

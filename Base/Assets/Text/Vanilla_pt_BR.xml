@@ -7535,7 +7535,7 @@
       <Text>+1: cada Mina, Pedreira, Poço de Petróleo, Plataforma Petrolífera em alto-mar e Pista de Pouso adjacente.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_5_CHAPTER_CONTENT_TITLE" Language="pt_BR">
-      <Text>Construindo edificações</Text>
+      <Text>Edificações</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_5_CHAPTER_CONTENT_PARA_1" Language="pt_BR">
       <Text>Após seu distrito ser construído, você poderá preenchê-lo com edificações. Essas edificações podem ser construídas através do menu de produção, similar a como você constrói os distritos. Algumas edificações possuem pré-requisitos, como ter outras edificações e tecnologias específicas; essas edificações não estarão disponíveis no menu de produção. Você observará que algumas edificações estarão disponíveis antes de você ter construído qualquer distrito, como o Monumento. Essas edificações ficam dentro do Centro da Cidade.</Text>
@@ -7583,7 +7583,7 @@
       <Text>Especialistas</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_1" Language="pt_BR">
-      <Text>Especialistas são os [ICON_Citizen] cidadãos com tarefas alternativas que envolvem trabalhar um painel de distrito em vez de um painel normal. Como regra geral, uma boa maneira de conseguir produções que são difíceis de achar em painéis normais é atraves dos especialistas, mas a cidade precisa de uma boa base de [ICON_Food] alimentos para sustentá-la em longo prazo. Especialistas também são particularmente úteis quando uma cidade fica maior ao longo do jogo e tem mais [ICON_Citizen] população do que painéis normais para trabalhar. Existem diferentes tipos de especialistas, cada um com diferentes efeitos. Todos os tipos de especialistas, exceto o cidadão padrão, possuem um limite no número de tarefas que podem ter em uma cidade. Esse limite é determinado pelo número de edificações no distrito associado ao tipo do especialista.</Text>
+      <Text>Especialistas são os [ICON_Citizen] cidadãos com tarefas alternativas que envolvem trabalhar um painel de distrito em vez de um painel normal. Como regra geral, uma boa maneira de conseguir produções que são difíceis de achar em painéis normais é através dos especialistas, mas a cidade precisa de uma boa base de [ICON_Food] comida para sustentá-la em longo prazo. Especialistas também são particularmente úteis quando uma cidade fica maior ao longo do jogo e tem mais [ICON_Citizen] população do que painéis normais para trabalhar. Existem diferentes tipos de especialistas, cada um com diferentes efeitos. Todos os tipos de especialistas, exceto o [ICON_Citizen] cidadão padrão, possuem um limite no número de tarefas que podem ter em uma cidade. Esse limite é determinado pelo número de edificações no distrito associado ao tipo do especialista. Confira a página da edificação para ver se ela adiciona ao distrito produção extra de [ICON_Citizen]cidadãos.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_2" Language="pt_BR">
       <Text>Cientistas trabalham no Campus e fornecem +2 de [ICON_Science] ciência.</Text>
@@ -7592,10 +7592,10 @@
       <Text>Sacerdotes trabalham no Local Sagrado e fornecem +2 de [ICON_Faith] fé.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_4" Language="pt_BR">
-      <Text>Comandantes trabalham no Acampamento e fornecem +1 de [ICON_Production] produção e +1 de [ICON_Culture] cultura.</Text>
+      <Text>Comandantes trabalham no Acampamento e fornecem +1 de [ICON_Production] produção e +2 de [ICON_Gold] de ouro.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_5" Language="pt_BR">
-      <Text>Capitães trabalham no Porto e fornecem +1 de [ICON_Science] ciência e +2 de [ICON_Gold] ouro.</Text>
+      <Text>Capitães trabalham no Porto e fornecem +1 de [ICON_Food] comida e +2 de [ICON_Gold] ouro.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_6" Language="pt_BR">
       <Text>Mercadores trabalham no Centro Comercial e fornecem +4 de [ICON_Gold] ouro.</Text>
@@ -18276,6 +18276,7 @@
 [3]QA Senior Testers
 [4]Matt Finck
 [4]Ian Bennett
+[4]Tyler Redmann
 
 [3]QA Testers
 [4]Kristian Garcia
@@ -20338,6 +20339,11 @@
     </Replace>
     <Replace Tag="LOC_LEADER_MONTEZUMA_NAME" Language="pt_BR">
       <Text>Montezuma</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_LEADER_FREE_CITIES_NAME" Language="pt_BR">
+      <Text>Líder das Cidades Livres</Text>
       <Gender>masculine</Gender>
       <Plurality>1</Plurality>
     </Replace>
@@ -34720,7 +34726,7 @@
       <Text>[COLOR:ConnectionStatus_Connected]Multijogador (mesmo dispositivo)[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_PRESENCE_IN_GAME_PLAYBYCLOUD" Language="pt_BR">
-      <Text>[COLOR:ConnectionStatus_Connected]Multijogador (Play By Cloud)[ENDCOLOR]</Text>
+      <Text>[COLOR:ConnectionStatus_Connected]Multijogador (partida na nuvem)[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_PRESENCE_INVITED_ONLINE" Language="pt_BR">
       <Text>[COLOR:ConnectionStatus_Connected]Convidado[ENDCOLOR]</Text>
@@ -34833,6 +34839,15 @@
     <Replace Tag="LOC_WORLD_BUILDER_IMPORT" Language="pt_BR">
       <Text>Importar mapa do editor</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_START_NEW_TOOLTIP" Language="pt_BR">
+      <Text>Cria um mapa do zero ou gera um mapa do Construtor de Mundo para que se possa editar.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_LOAD_TOOLTIP" Language="pt_BR">
+      <Text>Carrega um mapa do Construtor de Mundo salvo anteriormente.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_IMPORT_TOOLTIP" Language="pt_BR">
+      <Text>Converte um arquivo de mapa .TMX em um mapa do Construtor de Mundo.</Text>
+    </Replace>
     <Replace Tag="LOC_RANDOM_LEADER" Language="pt_BR">
       <Text>Líder aleatório</Text>
     </Replace>
@@ -34856,6 +34871,9 @@
     </Replace>
     <Replace Tag="LOC_SETUP_ERROR_LEADER_NOT_OWNED" Language="pt_BR">
       <Text>Sem dono</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_PARAMETER_ERROR" Language="pt_BR">
+      <Text>Uma ou mais opções inválidas.</Text>
     </Replace>
     <Replace Tag="LOC_SETUP_PLAYER_PARAMETER_ERROR" Language="pt_BR">
       <Text>Opções do jogador inválidas</Text>
@@ -35656,7 +35674,7 @@
       <Text>[ICON_Exclamation] Multijogador</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME" Language="pt_BR">
-      <Text>Partida na núvem</Text>
+      <Text>Partida na nuvem</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_CLOUD_NOTIFY" Language="pt_BR">
       <Text>[ICON_Exclamation] Partida na nuvem</Text>
@@ -35689,16 +35707,16 @@
       <Text>Pronto para jogar</Text>
     </Replace>
     <Replace Tag="LOC_PLAYBYCLOUD_REMOTE_READY_POPUP_TEXT" Language="pt_BR">
-      <Text>Esta partida já está pronta. Você será notificado no menu principal e no lobby da partida na núvem quando for seu turno. Você pode sair do jogo de forma segura e jogar partidas solo ou multijogador adicionais.</Text>
+      <Text>Esta partida já está pronta. Você será notificado no menu principal e no lobby da partida na nuvem quando for seu turno. Você pode sair do jogo de forma segura e jogar partidas solo ou multijogador adicionais.</Text>
     </Replace>
     <Replace Tag="LOC_PLAYBYCLOUD_REMOTE_READY_POPUP_OK" Language="pt_BR">
-      <Text>OK</Text>
+      <Text>NÃO FAZER NADA</Text>
     </Replace>
     <Replace Tag="LOC_PLAYBYCLOUD_REMOTE_READY_POPUP_LOBBY_EXIT" Language="pt_BR">
       <Text>SAIR PARA O LOBBY</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_LOBBY" Language="pt_BR">
-      <Text>Partida na núvem</Text>
+      <Text>Partida na nuvem</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_LIST" Language="pt_BR">
       <Text>Lista</Text>
@@ -35785,7 +35803,7 @@
       <Text>Jogar uma partida multijogador onde um servidor dedicado controla a partida por um longo período de tempo.</Text>
     </Replace>
     <Replace Tag="LOC_MP_ROOM_TOO_MANY_MATCHES" Language="pt_BR">
-      <Text>Impossível entrar na partida. Você já alcançou o máximo permitido de partidas na núvem ativas.</Text>
+      <Text>Impossível entrar na partida. Você já alcançou o máximo permitido de partidas na nuvem ativas.</Text>
     </Replace>
     <Replace Tag="LOC_MP_ROOM_TOO_MANY_MATCHES_TITLE" Language="pt_BR">
       <Text>Partidas demais</Text>
@@ -35848,13 +35866,13 @@
       <Text>Tem certeza de que deseja excluir essa partida multijogador? Isso vai finalizar a partida para todos os jogadores.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_WEBHOOK_URL" Language="pt_BR">
-      <Text>URL webhook partida na nuvem:</Text>
+      <Text>URL webhook de partida na nuvem:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_WEBHOOK_FREQ" Language="pt_BR">
-      <Text>Frequência webhook partida na nuvem:</Text>
+      <Text>Frequência webhook de partida na nuvem:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE" Language="pt_BR">
-      <Text>Modo Play By Cloud:</Text>
+      <Text>Modo partida na nuvem:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE_TOOLTIP" Language="pt_BR">
       <Text>Modo A - Compatível com IFTTT[NEWLINE]Variáveis de Payload JSON[NEWLINE][ICON_Bullet]"value1" = Nome do jogo[NEWLINE][ICON_Bullet]"value2" = Nome do jogador[NEWLINE][ICON_Bullet]"value3" = Turno do jogo[NEWLINE]Modo B - Compatível com Discord[NEWLINE]Variáveis de Payload JSON[NEWLINE][ICON_Bullet]"content" = Mensagem de notificação</Text>
@@ -35875,7 +35893,7 @@
       <Text>Configure suas notificações!</Text>
     </Replace>
     <Replace Tag="LOC_PBC_OVERVIEW_DESC" Language="pt_BR">
-      <Text>Partida na nuvem é um formato multijogador assíncrono onde todos os jogadores jogam seus turnos em um jogo salvo em comum, que é armazenado em um servidor hospedado. Esta é uma versão mais moderna da prática ancestral de "repassar o jogo salvo", que consistia em compartilhar um disquete com um jogo salvo entre amigos (se você não conhece o conceito de "disquete", pergunte a um adulto de idade respeitável).[NEWLINE][NEWLINE]Uma partida na nuvem pode durar muito tempo (dias ou semanas), pois cada jogador joga o seu turno na hora que for mais conveniente para ele. Você receberá uma notificação quando for a sua vez de jogar. Você pode ver uma notificação do Steam, se ele estiver ativo, ou pode usar webhooks. Webhooks são um formato de mensagem genérico que pode ser integrado a outros serviços de mensagens, e-mails ou dispositivos conectados à internet.[NEWLINE][NEWLINE]Em uma partida de multijogador assíncrono, é considerado cortês jogar seu turno assim que for possível para manter o jogo em andamento. Nos tempos antigos, os jogadores tinham a obrigação moral de proteger o disquete de danos, com jogadores inescrupulosos recorrendo a "perda" do jogo salvo quando em uma situação desfavorável no jogo. A partida na nuvem evita este comportamento malandro.
+      <Text>"Partida na nuvem" é um formato multijogador assíncrono onde todos os jogadores jogam seus turnos em um jogo salvo em comum, que é armazenado em um servidor hospedado. Esta é uma versão mais moderna da prática ancestral de "repassar o jogo salvo", que consistia em compartilhar um disquete com um jogo salvo entre amigos (se você não conhece o conceito de "disquete", pergunte a um adulto de idade respeitável).[NEWLINE][NEWLINE]Uma partida na nuvem pode durar muito tempo (dias ou semanas), pois cada jogador joga o seu turno na hora que for mais conveniente para ele. Você receberá uma notificação quando for a sua vez de jogar. Você pode ver uma notificação do Steam, se ele estiver ativo, ou pode usar webhooks. Webhooks são um formato de mensagem genérico que pode ser integrado a outros serviços de mensagens, e-mails ou dispositivos conectados à internet.[NEWLINE][NEWLINE]Em uma partida de multijogador assíncrono, é considerado cortês jogar seu turno assim que for possível para manter o jogo em andamento. Nos tempos antigos, os jogadores tinham a obrigação moral de proteger o disquete de danos, com jogadores inescrupulosos recorrendo a "perda" do jogo salvo quando em uma situação desfavorável no jogo. A partida na nuvem evita este comportamento malandro.
 			</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_REMINDER_DESC" Language="pt_BR">
@@ -36433,6 +36451,12 @@
     <Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER" Language="pt_BR">
       <Text>+5 de [ICON_Strength] bônus de combate de Grande Almirante.</Text>
     </Replace>
+    <Replace Tag="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_DESCRIPTION" Language="pt_BR">
+      <Text>+1 de [ICON_Movement] movimento de Grande General.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_DESCRIPTION" Language="pt_BR">
+      <Text>+1 de [ICON_Movement] movimento de Grande Almirante.</Text>
+    </Replace>
     <Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND" Language="pt_BR">
       <Text>+5 de [ICON_Strength] força de combate e +1 de [ICON_Movement] movimento para unidades terrestres das Eras Clássica e Medieval dentro de 2 painéis.</Text>
     </Replace>
@@ -36620,7 +36644,7 @@
       <Text>+1 espaço de política econômica para qualquer governo.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_JOHN_ROCKEFELLER_ACTIVE" Language="pt_BR">
-      <Text>Concede 1 de [ICON_RESOURCE_OIL] petróleo, um recurso estratégico. Suas [ICON_TradeRoute] rotas comerciais recebem +2 de [ICON_Gold] ouro por cada recurso estratégico melhorado na cidade de destino.</Text>
+      <Text>Dá 1 de [ICON_RESOURCE_OIL] de petróleo, um recurso estratégico. Suas [ICON_TradeRoute] rotas comerciais ganham +2 de [ICON_Gold] ouro por cada recurso estratégico na cidade de destino.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_EUCLID_ACTIVE" Language="pt_BR">
       <Text>Ativa o momento [ICON_TechBoosted] Eureca para Matemática e 1 tecnologia aleatória da Era Medieval.</Text>
@@ -37894,6 +37918,33 @@
     <Replace Tag="LOC_HUD_CITY_WILL_NOT_COMPLETE" Language="pt_BR">
       <Text>Produção por turno baixa demais para concluir.</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="pt_BR">
+      <Text>Pontuação geral (usada quando a partida empata).</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_STRENGTH" Language="pt_BR">
+      <Text>Poder Militar</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_SCIENCE" Language="pt_BR">
+      <Text>Ciência por turno</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_CULTURE" Language="pt_BR">
+      <Text>Cultura por turno</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_GOLD" Language="pt_BR">
+      <Text>Saldo de ouro</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_FAITH" Language="pt_BR">
+      <Text>Saldo de fé</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_HIDE" Language="pt_BR">
+      <Text>Sempre esconder estatísticas</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_HIDE" Language="pt_BR">
+      <Text>Esconder estatísticas</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_SHOW" Language="pt_BR">
+      <Text>Sempre mostrar estatísticas</Text>
+    </Replace>
     <Replace Tag="LOC_BUILDING_CONSTRUCT_NO_SUITABLE_LOCATION" Language="pt_BR">
       <Text>Não há local adequado para construir isso.</Text>
     </Replace>
@@ -38215,6 +38266,9 @@
     <Replace Tag="LOC_HUD_EMPIRE_LENS" Language="pt_BR">
       <Text>Império</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_POWER_LENS" Language="pt_BR">
+      <Text>Energia</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_RELIGION_LENS_TOOLTIP" Language="pt_BR">
       <Text>Mostra a religião da maioria e a distribuição de seguidores no mapa.</Text>
     </Replace>
@@ -38238,6 +38292,9 @@
     </Replace>
     <Replace Tag="LOC_HUD_EMPIRE_LENS_TOOLTIP" Language="pt_BR">
       <Text>Mostra as fronteiras da sua cidade, locais dos distritos e adjacências.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_POWER_LENS_TOOLTIP" Language="pt_BR">
+      <Text>Mostra as fontes de energia nas suas cidades e o alcance de energia regional.</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_OPTIONS" Language="pt_BR">
       <Text>Opções do mapa</Text>
@@ -39160,6 +39217,9 @@
     <Replace Tag="LOC_TOOLTIP_UNLOCKS" Language="pt_BR">
       <Text>Desbloqueia:</Text>
     </Replace>
+    <Replace Tag="LOC_TOOLTIP_BUILDING_CITIZEN_YIELDS_HEADER" Language="pt_BR">
+      <Text>Produção de cidadãos (por cidadão neste distrito):</Text>
+    </Replace>
     <Replace Tag="LOC_TOOLTIP_DISTRICT_CITIZEN_YIELDS_HEADER" Language="pt_BR">
       <Text>Produção de cidadãos (por cidadão):</Text>
     </Replace>
@@ -39286,6 +39346,9 @@
     <Replace Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE" Language="pt_BR">
       <Text>Recurso de artefato</Text>
     </Replace>
+    <Replace Tag="LOC_TOOLTIP_BONUS_STRATEGIC" Language="pt_BR">
+      <Text>Recurso estratégico</Text>
+    </Replace>
     <Replace Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE_DETAILS" Language="pt_BR">
       <Text>Envie para cá uma unidade de Arqueólogo para escavar um [ICON_GreatWork_Artifact] artefato que fornecerá [ICON_Culture] cultura e [ICON_Tourism] turismo quando for levado à sua cidade.</Text>
     </Replace>
@@ -39324,6 +39387,9 @@
     </Replace>
     <Replace Tag="LOC_TOOLTIP_APPEAL_DISGUSTING" Language="pt_BR">
       <Text>Nojento</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_BONUS" Language="pt_BR">
+      <Text></Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING" Language="pt_BR">
       <Text>Curando</Text>
@@ -40447,6 +40513,12 @@
     <Replace Tag="LOC_PARTIALSCREEN_REPORTS_CITY_STATUS" Language="pt_BR">
       <Text>Estado das cidades</Text>
     </Replace>
+    <Replace Tag="LOC_PARTIALSCREEN_REPORTS_NOTIFICATIONS" Language="pt_BR">
+      <Text>Notificações</Text>
+    </Replace>
+    <Replace Tag="LOC_PARTIALSCREEN_REPORTS_GOSSIP" Language="pt_BR">
+      <Text>Rumores</Text>
+    </Replace>
     <Replace Tag="LOC_PARTIALSCREEN_REPORTS_YIELDS" Language="pt_BR">
       <Text>Ganhos</Text>
     </Replace>
@@ -40482,6 +40554,69 @@
     </Replace>
     <Replace Tag="LOC_REPORTS_LIST_EMPIRE" Language="pt_BR">
       <Text>Império:</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_PRIORITY" Language="pt_BR">
+      <Text>Prioridade</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_PLAYER_FILTER_ALL" Language="pt_BR">
+      <Text>Todos</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_ALL" Language="pt_BR">
+      <Text>[ICON_GOSSIP_ALL] Todos</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_DIPLOMACY" Language="pt_BR">
+      <Text>[ICON_GOSSIP_DIPLOMACY] Diplomacia</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_MILITARY" Language="pt_BR">
+      <Text>[ICON_GOSSIP_MILITARY] Militar</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_DISCOVER" Language="pt_BR">
+      <Text>[ICON_GOSSIP_DISCOVER] Descoberta</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_ESPIONAGE" Language="pt_BR">
+      <Text>[ICON_GOSSIP_ESPIONAGE] Espionagem</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_SCIENCE" Language="pt_BR">
+      <Text>[ICON_GOSSIP_SCIENCE] Ciência</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_RELIGION" Language="pt_BR">
+      <Text>[ICON_GOSSIP_RELIGION] Religião</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_CULTURE" Language="pt_BR">
+      <Text>[ICON_GOSSIP_CULTURE] Cultura</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_GREATPERSON" Language="pt_BR">
+      <Text>[ICON_GOSSIP_GREATPERSON] Grande Personalidade</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_VICTORY" Language="pt_BR">
+      <Text>[ICON_GOSSIP_VICTORY] Vitória</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_SETTLEMENT" Language="pt_BR">
+      <Text>[ICON_GOSSIP_SETTLEMENT] Assentamento</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_CITY" Language="pt_BR">
+      <Text>[ICON_GOSSIP_CITY] Cidade</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_BARBARIAN" Language="pt_BR">
+      <Text>[ICON_GOSSIP_BARBARIAN] Bárbaro</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_DATE" Language="pt_BR">
+      <Text>Data</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TURN" Language="pt_BR">
+      <Text>Turno</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_LEADER" Language="pt_BR">
+      <Text>Líder</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_GOSSIP_TYPE" Language="pt_BR">
+      <Text>Tipo</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_NOTIFICATION_ICON" Language="pt_BR">
+      <Text>Notificação</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_NOTIFICATION_DESCRIPTION" Language="pt_BR">
+      <Text>Descrição</Text>
     </Replace>
     <Replace Tag="LOC_REPORTS_LIST_GLOBAL" Language="pt_BR">
       <Text>Global:</Text>
@@ -40665,6 +40800,12 @@
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TAB_CITY_STATUS" Language="pt_BR">
       <Text>Estado das cidades</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TAB_NOTIFICATIONS" Language="pt_BR">
+      <Text>Notificações</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TAB_GOSSIP" Language="pt_BR">
+      <Text>Rumores</Text>
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TAB_RESOURCES" Language="pt_BR">
       <Text>Recursos</Text>
@@ -41002,6 +41143,105 @@
     <Replace Tag="LOC_WORLDBUILDER_TEXT_TAG" Language="pt_BR">
       <Text>Marcador de texto</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_ADVISOR_SAYS" Language="pt_BR">
+      <Text>A Conselheira diz</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD" Language="pt_BR">
+      <Text>PRODUÇÃO REGIONAL</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD" Language="pt_BR">
+      <Text>PRODUÇÃO NO CÍRCULO INTERNO</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FRESH_WATER" Language="pt_BR">
+      <Text>ÁGUA DOCE</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_NEW_RESOURCES" Language="pt_BR">
+      <Text>NOVOS RECURSOS</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_COAST" Language="pt_BR">
+      <Text>COSTA</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_RESOURCES" Language="pt_BR">
+      <Text>RECURSOS DO INÍCIO DO JOGO</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES" Language="pt_BR">
+      <Text>não usado</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_STRATEGIC_RESOURCES" Language="pt_BR">
+      <Text>RECURSOS</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FEATURES" Language="pt_BR">
+      <Text>CARACTERÍSTICAS ESPECÍFICAS</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FOREIGN_CONTINENT" Language="pt_BR">
+      <Text>CONTINENTE ESTRANGEIRO</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_NEAREST_CITY" Language="pt_BR">
+      <Text>CIDADE MAIS PRÓXIMA</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_DANGER" Language="pt_BR">
+      <Text>não usado</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_TOTAL_YIELD" Language="pt_BR">
+      <Text>Produções ruins dentro de 3 painéis</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_INNER_YIELD" Language="pt_BR">
+      <Text>Produções ruins adjacentes a este local</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FRESH_WATER" Language="pt_BR">
+      <Text>Sem água doce no local</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEW_RESOURCES" Language="pt_BR">
+      <Text>Poucos recursos novos aqui</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_COAST" Language="pt_BR">
+      <Text>O local está no interior</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_RESOURCES" Language="pt_BR">
+      <Text>Cavalos, Ferro e Nitro limitados aqui</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_STRATEGIC_RESOURCES" Language="pt_BR">
+      <Text>Poucos luxos ou estratégicos próximos</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FEATURES" Language="pt_BR">
+      <Text>Nenhuma característica importante próxima</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FOREIGN_CONTINENT" Language="pt_BR">
+      <Text>Sem benefício para continente novo</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEAREST_CITY" Language="pt_BR">
+      <Text>Longe de outras cidades amistosas</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_TOTAL_YIELD" Language="pt_BR">
+      <Text>Fortes produções dentro de 3 painéis</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_INNER_YIELD" Language="pt_BR">
+      <Text>Produções boas adjacentes a este local</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FRESH_WATER" Language="pt_BR">
+      <Text>Este local tem água doce</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEW_RESOURCES" Language="pt_BR">
+      <Text>Probabilidade de ganhar novos recursos</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_COAST" Language="pt_BR">
+      <Text>O local está na costa</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_RESOURCES" Language="pt_BR">
+      <Text>Cavalos, Ferro ou Nitro próximos</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_STRATEGIC_RESOURCES" Language="pt_BR">
+      <Text>Novos luxos e estratégicos próximos</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FEATURES" Language="pt_BR">
+      <Text>Características benéficas próximas</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FOREIGN_CONTINENT" Language="pt_BR">
+      <Text>Desejo de estabelecer um novo continente</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEAREST_CITY" Language="pt_BR">
+      <Text>Próximo a um local amistoso</Text>
+    </Replace>
     <Replace Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE" Language="pt_BR">
       <Text>Travar fila para mostrá-la sempre.</Text>
     </Replace>
@@ -41077,6 +41317,21 @@
     <Replace Tag="LOC_HUD_GOSSIP_CLOSE" Language="pt_BR">
       <Text>Fechar</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_COLLAPSE_LIST" Language="pt_BR">
+      <Text>Clique para ocultar a lista</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_EXPAND_LIST" Language="pt_BR">
+      <Text>Clique para expandir a lista</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_GOSSIP_DISMISS_DETAILS" Language="pt_BR">
+      <Text>Clique nos rumores para dispensá-los.[NEWLINE]O histórico dos rumores pode ser visto nos relatórios.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_STATUSMESSAGE_DISMISS_DETAILS" Language="pt_BR">
+      <Text>Clique na mensagem para dispensá-la.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNIT_PANEL_ABILITIES_HEADER" Language="pt_BR">
+      <Text>Habilidades:</Text>
+    </Replace>
     <Replace Tag="LOC_ACTION_PANEL_CLOUD_TURN_UPLOADING" Language="pt_BR">
       <Text>ENVIANDO TURNO</Text>
     </Replace>
@@ -41099,13 +41354,13 @@
       <Text>Lembrar minha escolha</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_TITLE" Language="pt_BR">
-      <Text>Seu turno no Play By Cloud</Text>
+      <Text>Seu turno na partida na nuvem</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_JOIN_MATCH" Language="pt_BR">
       <Text>Entrar na partida</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_TITLE" Language="pt_BR">
-      <Text>Fim da partida Play By Cloud</Text>
+      <Text>Fim da partida na nuvem</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_VIEW_RESULTS" Language="pt_BR">
       <Text>Ver resultados</Text>
@@ -42183,6 +42438,12 @@
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_BARBARIANS_SIGHTED_MESSAGE" Language="pt_BR">
       <Text>Bárbaros se aproximam</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_MESSAGE" Language="pt_BR">
+      <Text>Novo acampamento bárbaro</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_SUMMARY" Language="pt_BR">
+      <Text>Há rumores de que uma nova tribo bárbara se estabeleceu em uma região próxima.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_MY_DOMINANT_CULTURE_MESSAGE" Language="pt_BR">
       <Text>Sua cultura dominante</Text>
@@ -45151,11 +45412,17 @@
     <Replace Tag="LOC_UI_PEDIA_CREATED_BY" Language="pt_BR">
       <Text>Criado por</Text>
     </Replace>
+    <Replace Tag="LOC_UI_PEDIA_ESPIONAGE_MISSIONS" Language="pt_BR">
+      <Text>Missões de espionagem</Text>
+    </Replace>
     <Replace Tag="LOC_UI_PEDIA_IMPROVED_BY" Language="pt_BR">
       <Text>Melhorado por</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_HARVEST" Language="pt_BR">
       <Text>Colheita</Text>
+    </Replace>
+    <Replace Tag="LOC_UI_PEDIA_VALID_RESOURCES" Language="pt_BR">
+      <Text>Recursos válidos</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_GREAT_WORKS" Language="pt_BR">
       <Text>Grandes obras</Text>
@@ -46213,6 +46480,15 @@
     <Replace Tag="LOC_OPTIONS_INTERFACE_EDGE_SCROLL" Language="pt_BR">
       <Text>Mover tela com o mouse na borda:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_OPEN_TO_PROD_QUEUE" Language="pt_BR">
+      <Text>Sempre abrir fila de produção:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG" Language="pt_BR">
+      <Text>Substituir "segurar para arrastar" por cliques:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG_TT" Language="pt_BR">
+      <Text>Esta opção substitui o comportamento "segurar para arrastar" dos elementos de interface que podem ser arrastados por simples cliques para pegar e soltar.</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_CLOCK_FORMAT" Language="pt_BR">
       <Text>Formato do relógio:</Text>
     </Replace>
@@ -46237,8 +46513,20 @@
     <Replace Tag="LOC_OPTIONS_SCROLL_SPEED" Language="pt_BR">
       <Text>Velocidade da roda do mouse:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_LABEL" Language="pt_BR">
+      <Text>Mostrar produção na faixa da tela:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_HIDE" Language="pt_BR">
+      <Text>Sempre esconder (desligado)</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_MOUSE_OVER" Language="pt_BR">
+      <Text>Mostrar com o cursor por cima</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_SHOW" Language="pt_BR">
+      <Text>Sempre mostrar</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_END_TURN_BEHAVIOR" Language="pt_BR">
-      <Text>Comportamento de final de turno em partida na nuvem:</Text>
+      <Text>Comportamento de final de turno na partida na nuvem:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_ASK_ME" Language="pt_BR">
       <Text>Pergunte-me</Text>
@@ -46250,7 +46538,7 @@
       <Text>Sair para o Menu principal</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_READY_BEHAVIOR" Language="pt_BR">
-      <Text>Comportamento pronto em Play by Cloud:</Text>
+      <Text>Comportamento pronto na partida na nuvem:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_ASK_ME" Language="pt_BR">
       <Text>Pergunte-me</Text>
@@ -46262,7 +46550,7 @@
       <Text>Sair para o lobby</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR" Language="pt_BR">
-      <Text>Comportamento de cliente pronto em Play by Cloud:</Text>
+      <Text>Comportamento de cliente pronto na partida na nuvem:</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR_ASK_ME" Language="pt_BR">
       <Text>Pergunte-me</Text>
@@ -46287,6 +46575,12 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA" Language="pt_BR">
       <Text>Tritanopia (daltonismo para azul)</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_LIGHTING" Language="pt_BR">
+      <Text>Usar equipamento compatível com iluminação RGB:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_LIGHTING_TOOLTIP" Language="pt_BR">
+      <Text>Permite ao Civilization VI controlar a iluminação em computadores com periféricos compatíveis com Logitech Gaming Software ou Alienware AlienFX.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_QUEUE_DISPLAY" Language="pt_BR">
       <Text>Fila de produção:</Text>
@@ -46426,6 +46720,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY" Language="pt_BR">
       <Text>Fortificar:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL" Language="pt_BR">
+      <Text>Cura Fortificada</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE" Language="pt_BR">
       <Text>Excluir unidade:</Text>
     </Replace>
@@ -46447,6 +46744,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_ALERT" Language="pt_BR">
       <Text>Alerta:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_ALL_AUTOSAVES" Language="pt_BR">
+      <Text>Todos</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" Language="pt_BR">
       <Text>Executa a ação de "fundar cidade" se a unidade selecionada for um Colono.</Text>
     </Replace>
@@ -46455,6 +46755,9 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HELP" Language="pt_BR">
       <Text>Fortifica a unidade selecionada.</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL_HELP" Language="pt_BR">
+      <Text>Fortifica a unidade selecionada até que esteja totalmente curada.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE_HELP" Language="pt_BR">
       <Text>Exclui a unidade selecionada.</Text>
@@ -47396,7 +47699,7 @@
       <Text>Unidade naval exclusiva alemã da Era Moderna que substitui o Submarino. Mais barato para produzir, +1 de visão e +10 de [ICON_Strength] força de combate quando lutar em painéis de oceano. Pode revelar outras unidades furtivas.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AMERICAN_P51_DESCRIPTION" Language="pt_BR">
-      <Text>Unidade aérea exclusiva americana da Era Atômica que substitui o Caça. Ganha +5 de força de combate contra aviões de caça, tem +2 de alcance e ganha +50% de experiência.</Text>
+      <Text>Unidade aérea exclusiva americana da Era Atômica que substitui o Caça. Ganha +5 de [ICON_Strength] força de combate contra aviões de caça, tem +2 de alcance e ganha +50% de experiência.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_BRAZILIAN_MINAS_GERAES_DESCRIPTION" Language="pt_BR">
       <Text>Unidade exclusiva brasileira da Era Industrial que substitui o Navio de Guerra. Mais forte que o Navio de Guerra. Desbloqueado pelo cívico nacionalismo.</Text>
@@ -47570,7 +47873,7 @@
       <Text>+1 de [ICON_Movement] movimento se começar em deserto, planície, pradaria ou tundra.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_RELIGIOUS_IGNORE_TERRAIN_COST_DESCRIPTION" Language="pt_BR">
-      <Text>Bosque, selva, colina e pântano custam apenas um de [ICON_Movement] movimento. Desbloqueado pela crença Zelo dos Missionários.</Text>
+      <Text>Bosque, selva, colina e pântano custam apenas um [ICON_Movement] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_IGNORE_ZOC_DESCRIPTION" Language="pt_BR">
       <Text>Não é afetado pela zona de controle inimiga.</Text>
@@ -47630,7 +47933,7 @@
       <Text>Revela unidades furtivas no mapa quando esta unidade estiver em um painel adjacente.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COASTAL_RAID_DESCRIPTION" Language="pt_BR">
-      <Text>As unidades navais corpo a corpo de Haroldo Hardrada podem saquear edificações e melhorias, além de capturar unidades civis em terras costeiras.</Text>
+      <Text>Pode saquear edificações e melhorias, além de capturar unidades civis em terras costeiras.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BYPASS_COMBAT_UNIT_DESCRIPTION" Language="pt_BR">
       <Text>Ataca unidades de suporte diretamente mesmo em formação com uma unidade de combate.</Text>
@@ -47642,7 +47945,7 @@
       <Text>Enquanto em um painel de água, sua [ICON_TradeRoute] rota comercial não pode ser saqueada por unidades inimigas. Obtida ao ser suserano da cidade-estado de Lisboa.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BERSERKER_RAGE_DESCRIPTION" Language="pt_BR">
-      <Text>+7 de [ICON_Strength] força de combate quando atacando e -7 de [ICON_Strength] força de combate quando defendendo.</Text>
+      <Text>+10 de [ICON_Strength] força de combate quando atacando.[NEWLINE][ICON_Bullet]-5 de [ICON_Strength] força de combate quando defendendo.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BERSERKER_MOVEMENT_DESCRIPTION" Language="pt_BR">
       <Text>+2 de [ICON_Movement] movimento se esta unidade começar em território inimigo.</Text>
@@ -47663,22 +47966,22 @@
       <Text>Missionários, Inquisidores e Apóstolos podem se mover mais rapidamente por cima de colinas depois de se mover adjacente à maravilha da natureza Monte Everest.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COSSACK_DESCRIPTION" Language="pt_BR">
-      <Text>Pode se mover depois de atacar. +5 de [ICON_Strength] força de combate em seu território ou adjacente ao seu território.</Text>
+      <Text>Pode se mover depois de atacar.[NEWLINE][ICON_Bullet]+5 de [ICON_Strength] força de combate em seu território ou adjacente a ele.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_REDCOAT_DESCRIPTION" Language="pt_BR">
-      <Text>+10 de [ICON_Strength] força de combate quando lutar em um continente que não seja o da sua [ICON_Capital] capital. Sem custo de desembarque.</Text>
+      <Text>+10 de [ICON_Strength] força de combate quando lutar em um continente que não seja o da sua [ICON_Capital] capital.[NEWLINE][ICON_Bullet]Sem custo de [ICON_Movement] movimento para desembarcar.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_VARU_DESCRIPTION" Language="pt_BR">
       <Text>-5 de [ICON_Strength] força de combate para unidades inimigas adjacentes.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_NAGAO_DESCRIPTION" Language="pt_BR">
-      <Text>+10 de [ICON_Strength] força de combate quando defendendo contra unidades a distância; pode ver através de acidentes geográficos e pode atravessar bosques e florestas tropicais sem penalidade de [ICON_Movement] movimento.</Text>
+      <Text>+10 de [ICON_Strength] força de combate quando defendendo contra unidades a distância.[NEWLINE][ICON_Bullet]Pode ver através de acidentes geográficos.[NEWLINE][ICON_Bullet]Pode atravessar bosques e florestas tropicais sem penalidade de [ICON_Movement] movimento.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_CONQUISTADOR_DESCRIPTION" Language="pt_BR">
-      <Text>+10 de [ICON_Strength] força de combate quando existe uma unidade religiosa no mesmo hexágono. Se esta unidade captura uma cidade ou está adjacente a uma cidade quando for capturada, a cidade automaticamente se converte à religião dominante do jogador Conquistador.</Text>
+      <Text>+10 de [ICON_Strength] força de combate quando existe uma unidade religiosa no mesmo hexágono.[NEWLINE][ICON_Bullet]Se esta unidade captura uma cidade ou está adjacente a uma cidade quando for capturada, a cidade automaticamente se converte à religião dominante do jogador Conquistador.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_GARDE_DESCRIPTION" Language="pt_BR">
-      <Text>+10 de [ICON_Strength] força de combate quando no mesmo continente que a [ICON_Capital] capital. +10 pontos de Grande General por mortes.</Text>
+      <Text>+10 de [ICON_Strength] força de combate quando no mesmo continente que a [ICON_Capital] capital.[NEWLINE][ICON_Bullet]+10 pontos de [ICON_GreatGeneral] Grande General por mortes.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_HOPLITE_DESCRIPTION" Language="pt_BR">
       <Text>+10 de [ICON_Strength] força de combate se houver ao menos um Hoplita adjacente.</Text>
@@ -47687,16 +47990,49 @@
       <Text>+10 de [ICON_Strength] força de combate em combate no oceano.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_DESCRIPTION" Language="pt_BR">
-      <Text>Ao derrotar uma unidade inimiga, ganhe [ICON_Culture] cultura igual a 50% da [ICON_Strength] força de combate daquela unidade quando lutar no continente de sua [ICON_Capital] Capital.</Text>
+      <Text>Ao derrotar uma unidade inimiga na [ICON_Capital] capital do seu continente, ganhe [ICON_Culture] Cultura igual a 50% da [ICON_Strength] força de combate base daquela unidade.[NEWLINE][ICON_Bullet]+10 de [ICON_Strength] força de combate ao lutar em colinas.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MUSTANG_DESCRIPTION" Language="pt_BR">
-      <Text>Recebe um bônus de combate contra lutadores, tem um alcance de ataque estendido e ganha mais experiência de combate.</Text>
+      <Text>Bônus de +5 [ICON_Strength] de força de combate contra Caças.[NEWLINE][ICON_Bullet]+50% de experiência de combate.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MAMLUK_DESCRIPTION" Language="pt_BR">
       <Text>Essa unidade se cura todo turno, mesmo depois de se mover ou combater.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_SAMURAI_DESCRIPTION" Language="pt_BR">
       <Text>Essa unidade não sofre penalidades de combate quando danificada.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_BARRACKS_TRAINED_UNIT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Caserna</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_STABLE_TRAINED_UNIT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Estábulo</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ARMORY_TRAINED_UNIT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Arsenal</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_MILITARY_ACADEMY_TRAINED_UNIT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Academia Militar</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_LIGHTHOUSE_TRAINED_UNIT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Farol</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SHIPYARD_TRAINED_UNIT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Estaleiro</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SEAPORT_TRAINED_UNIT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Porto Marítimo</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_HANGAR_TRAINED_AIRCRAFT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+25% de experiência recebida de Hangar</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_AIRPORT_TRAINED_AIRCRAFT_XP_DESCRIPTION" Language="pt_BR">
+      <Text>+50% de experiência recebida de Aeroporto</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ROYAL_NAVY_DOCKYARD_MOVEMENT_BONUS_DESCRIPTION" Language="pt_BR">
+      <Text>+1 de movimento de Estaleiro da Marinha Real</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ROMAN_LEGION_BUILD_DESCRIPTION" Language="pt_BR">
+      <Text>Pode construir a melhoria exclusiva Forte Romano.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_ANTI_CAVALRY_MODIFIER_DESCRIPTION" Language="pt_BR">
       <Text>+10 contra cavalaria.</Text>
@@ -47876,7 +48212,7 @@
       <Text>Distritos</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_TAB_BUILDINGS" Language="pt_BR">
-      <Text>Construindo edificações</Text>
+      <Text>Edificações</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_TAB_MOD" Language="pt_BR">
       <Text>Dependências</Text>
@@ -47975,7 +48311,7 @@
       <Text>Distritos</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_BUILDINGS" Language="pt_BR">
-      <Text>Construindo edificações</Text>
+      <Text>Edificações</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_UNITS" Language="pt_BR">
       <Text>Unidades</Text>
@@ -47996,7 +48332,7 @@
       <Text>Visibilidade de terreno</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_GOODY_HUTS" Language="pt_BR">
-      <Text>Cabanas de tesouros</Text>
+      <Text>Vilas Tribais</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT" Language="pt_BR">
       <Text>Detalhes de mapa e texto</Text>
@@ -48005,7 +48341,7 @@
       <Text>Editor de jogador</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLACEMENT_HELP" Language="pt_BR">
-      <Text>Use o botão esquerdo para posicionar e o direito para excluir. Arraste com o botão direito para pintar. Use CTRL+Z para desfazer e CTRL+Y para refazer.</Text>
+      <Text>Botão esquerdo do mouse posiciona e o direito exclui. Arraste com o botão direito para pintar. Use CTRL+Z para desfazer e CTRL+Y para refazer.</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP" Language="pt_BR">
       <Text>Nenhum local selecionado</Text>
@@ -48057,6 +48393,9 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_NO_LOWLAND" Language="pt_BR">
       <Text>Sem planície costeira</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_CITY" Language="pt_BR">
+      <Text>Sem cidade</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_NO_DIRECTION" Language="pt_BR">
       <Text>Nenhuma direção</Text>
@@ -48118,6 +48457,12 @@
     <Replace Tag="LOC_WORLDBUILDER_DEFAULT" Language="pt_BR">
       <Text>Padrão</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ADVANCED" Language="pt_BR">
+      <Text>Avançado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BASIC" Language="pt_BR">
+      <Text>Básico</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV" Language="pt_BR">
       <Text>Mudar para o modo avançado</Text>
     </Replace>
@@ -48129,6 +48474,12 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT" Language="pt_BR">
       <Text>O modo avançado ainda está em desenvolvimento e não há suporte a ele. Nós o disponibilizamos para modificadores avançados que queiram experimentar funcionalidades avançadas de mapa. Mods criados neste modo e carregados no jogo podem deixar o Civilization VI instável.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IMPORT_UNSUPPORTED_TEXT" Language="pt_BR">
+      <Text>Atenção! A importação de um mapa criado em um editor externo não é oficialmente compatível e pode causar problemas dentro do Construtor de Mundo.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_BASIC_TOOLTIP" Language="pt_BR">
+      <Text>Reverte o Construtor de Mundo para o modo básico. Este mapa continuará salvo como modo avançado e as edições feitas no modo avançado permanecerão intactas.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE" Language="pt_BR">
       <Text>Tribo</Text>
@@ -48143,10 +48494,10 @@
       <Text>Cidade livre</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_OK" Language="pt_BR">
-      <Text>Posicionado</Text>
+      <Text>Posicionamento realizado</Text>
     </Replace>
-    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="pt_BR">
-      <Text>posicionado</Text>
+    <Replace Tag="LOC_WORLDBUILDER_CITY_NEEDED" Language="pt_BR">
+      <Text>Deve ser colocado em uma cidade</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_IN_PROGRESS" Language="pt_BR">
       <Text>Um destes já está em andamento</Text>
@@ -48173,13 +48524,25 @@
       <Text>Não foi possível posicionar isto, nem determinar o motivo</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_FAILURE_FEATURE" Language="pt_BR">
-      <Text>Impossível posicionar característica por razão desconhecida</Text>
+      <Text>Não foi possível posicionar uma característica aqui</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_STATUS_STARTUP" Language="pt_BR">
       <Text>Boas-vindas ao Construtor de Mundo!</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_UNIT_PLACED" Language="pt_BR">
       <Text>Unidade posicionada</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_RIVER_PLACED" Language="pt_BR">
+      <Text>Rio posicionado com sucesso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_RIVER_ERROR" Language="pt_BR">
+      <Text>Não foi possível posicionar um rio neste local</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLIFF_PLACED" Language="pt_BR">
+      <Text>Penhasco posicionado com sucesso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLIFF_ERROR" Language="pt_BR">
+      <Text>Não foi possível posicionar um penhasco neste local</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_OWNERSHIP_SET" Language="pt_BR">
       <Text>Dono de terreno definido</Text>
@@ -48189,6 +48552,12 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES" Language="pt_BR">
       <Text>Excluir recursos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES_HELP" Language="pt_BR">
+      <Text>Remove todos os recursos do mapa</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ADVANCED_TOOLS" Language="pt_BR">
+      <Text>Avançado:</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES" Language="pt_BR">
       <Text>Regenerar recursos</Text>
@@ -48215,16 +48584,37 @@
       <Text>Desfeito com sucesso</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_LABEL" Language="pt_BR">
-      <Text>Tamanho do pincel</Text>
+      <Text>Pincel</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL" Language="pt_BR">
-      <Text>Pequeno</Text>
+      <Text>Pincel pequeno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL_HELP" Language="pt_BR">
+      <Text>Seleciona o pincel pequeno (1 hexágono)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM" Language="pt_BR">
-      <Text>Médio</Text>
+      <Text>Pincel médio</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM_HELP" Language="pt_BR">
+      <Text>Seleciona o pincel médio (7 hexágonos)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE" Language="pt_BR">
-      <Text>Grande</Text>
+      <Text>Pincel grande</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE_HELP" Language="pt_BR">
+      <Text>Seleciona o pincel grande (19 hexágonos)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDO" Language="pt_BR">
+      <Text>Desfazer</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDO_TOOLTIP" Language="pt_BR">
+      <Text>Clique para desfazer a última ação</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_REDO" Language="pt_BR">
+      <Text>Refazer</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_REDO_TOOLTIP" Language="pt_BR">
+      <Text>Clique para refazer a última ação que foi desfeita</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT" Language="pt_BR">
       <Text>Posicionar terreno</Text>
@@ -48233,7 +48623,7 @@
       <Text>Terreno selecionado:</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_START_POSITION" Language="pt_BR">
-      <Text>Posição inicial:</Text>
+      <Text>Posição inicial</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACE" Language="pt_BR">
       <Text>Posicionar</Text>
@@ -48248,13 +48638,13 @@
       <Text>Nome do mod (obrigatório)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODDESC" Language="pt_BR">
-      <Text>Descrição do mod (obrigatório)</Text>
+      <Text>Descrição do mod (obrigatória)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPTITLE" Language="pt_BR">
       <Text>Nome do mapa (obrigatório)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPDESC" Language="pt_BR">
-      <Text>Descrição do mapa (obrigatório)</Text>
+      <Text>Descrição do mapa (obrigatória)</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_ADDLDATA" Language="pt_BR">
       <Text>Para uso do criador do mod (opcional)</Text>
@@ -48283,11 +48673,26 @@
     <Replace Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER" Language="pt_BR">
       <Text>Voltar para o mapa</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MENU_NAME" Language="pt_BR">
+      <Text>Menu</Text>
+    </Replace>
     <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY" Language="pt_BR">
       <Text>Mapa vazio</Text>
     </Replace>
     <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION" Language="pt_BR">
       <Text>Uma tela em branco.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_AI" Language="pt_BR">
+      <Text>IA</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HUMAN" Language="pt_BR">
+      <Text>Humano</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDEFINED" Language="pt_BR">
+      <Text>INDEFINIDO</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TITLE" Language="pt_BR">
+      <Text>Construtor de Mundo</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="pt_BR">
       <Text>Aurora da Civilização</Text>
@@ -49778,7 +50183,7 @@
       <Text>{1_CivName} {1_CivName: plural 2?acabaram; 1?acabou;} de encontrar a maravilha da natureza {2_NWName}.</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_FOUND_CITY" Language="pt_BR">
-      <Text>{1_CivName: plural 2?{1: gender m?os {1_CivName} estão; feminine?as {1_CivName} estão;}; other?{1: gender feminine?a {1_CivName} está; masculine?o {1_CivName} está; other?{1_CivName} está;};} em expansão, adicionando a cidade {2_CityName: gender masculine?do; feminine?de; neutral?de;} {2_CityName}.</Text>
+      <Text>{1_CivName: plural 2?{1: gender m?os {1_CivName} estão; feminine?as {1_CivName} estão;}; other?{1: gender feminine?a {1_CivName} está; masculine?o {1_CivName} está; other?{1_CivName} está;};} em expansão, adicionando a cidade {2_CityName: gender masculine?do; feminine?de; other?de;} {2_CityName}.</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_FOUND_RELIGION" Language="pt_BR">
       <Text>{1_CivName} {1_CivName: plural 2?fundaram; 1?fundou;} uma nova religião: {2_ReligionName}.</Text>
@@ -49808,7 +50213,7 @@
       <Text>{1_CivName: plural 2?{1: gender m?os; f?as;}; 1?{1: gender m?o; f?a; *:neutral?;};} {1_CivName} {1_CivName: plural 1?tem; 2?têm;} uma unidade {2_UnitName} que acabou de receber a seguinte promoção: {3_PromotionName}.</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_NEW_RELIGIOUS_MAJORITY" Language="pt_BR">
-      <Text>a maior parte das cidades {1_CivName: plural 2?{1: gender m?dos; f?das;}; 1?{1: gender m?do; f?da; other?de;};} está agora seguindo a seguinte religião: {2_ReligionName}.</Text>
+      <Text>a maior parte das cidades {1_CivName: plural 2?{1: gender m?dos; f?das;}; 1?{1: gender m?do; f?da; other?de;};} {1_CivName} está agora seguindo a seguinte religião: {2_ReligionName}.</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_PILLAGE" Language="pt_BR">
       <Text>{1_CivName: plural 2?{1: gender masculine?os {1} pilharam; feminine?as {1} pilharam;}; 1?{1: gender masculine?o {1} pilhou; feminine?a {1} pilhou; other?{1} pilhou;};} {2_TargetName: gender masculine?um {2} inimigo; feminine?uma {2} inimiga; other?{2} inimigo;} com uma unidade de {3_UnitName}.</Text>
@@ -50529,6 +50934,12 @@
     </Replace>
     <Replace Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_THREE_BUILDINGS" Language="pt_BR">
       <Text>Este edifício requer uma edificação de {1_Building}, de {2_BuildingTheSecond} ou de {3_BuildingTheThird}.</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_CONSTRUCT_REQUIRE_WALL_REPAIR" Language="pt_BR">
+      <Text>É preciso reformar {1_Building}.</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_CONSTRUCT_TURNS_UNTIL_CAN_BE_REPAIRED" Language="pt_BR">
+      <Text>Você pode reformar {1_Building} em {2_Turns} [ICON_Turn] {2_Turns : plural 1?turno; other?turnos;}.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_ZONE_POPULATION_TOO_LOW_SHORT" Language="pt_BR">
       <Text>Requer uma [ICON_Citizen] população de {1_Population} ou maior.</Text>
@@ -51794,10 +52205,10 @@
       <Text>Ordenar por: {1_SortType}</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_BODY" Language="pt_BR">
-      <Text>É o seu turno na partida Play By Cloud:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se você entrar na partida agora, o progresso não salvo será perdido.</Text>
+      <Text>É o seu turno na partida na nuvem:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se você entrar na partida agora, o progresso não salvo será perdido.</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_BODY" Language="pt_BR">
-      <Text>Seu jogo terminou na partida Play By Cloud:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se você ver os resultados agora, o progresso não salvo será perdido.</Text>
+      <Text>Seu jogo terminou na partida na nuvem:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se você ver os resultados agora, o progresso não salvo será perdido.</Text>
     </Replace>
     <Replace Tag="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION" Language="pt_BR">
       <Text>{LOC_MINOR_CIV_SMALL_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_SMALL_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_MEDIUM_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_MEDIUM_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_LARGE_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_LARGE_INFLUENCE_BONUS}</Text>
@@ -51846,6 +52257,9 @@
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_TO_RADIATION_POISONING" Language="pt_BR">
       <Text>Você perdeu {1_Name: gender m?um {1_UnitName}; f?uma {1_UnitName};} por envenenamento radioativo.</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_TO_WATER_DAMAGE" Language="pt_BR">
+      <Text>Você perdeu {1_Name: gender m?um {1_UnitName}; f?uma {1_UnitName};} devido a envenenamento de água.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_DECLARE_WAR_SUMMARY" Language="pt_BR">
       <Text>Guerra declarada: {1_leader} contra {2_leader}.</Text>
@@ -52261,6 +52675,15 @@
     <Replace Tag="LOC_UI_PEDIA_BASE_COST" Language="pt_BR">
       <Text>Custo base: {1_Amount : number #} de {2_YieldIcon} {3_YieldName}</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_TURNS" Language="pt_BR">
+      <Text>Turnos: {1_Name} (velocidade padrão)</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_BASE_PROBABILITY" Language="pt_BR">
+      <Text>Probabilidade básica: {1_Name}%</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_TARGET_DISTRICT" Language="pt_BR">
+      <Text>Distrito alvo: {1_Name}</Text>
+    </Replace>
     <Replace Tag="LOC_UI_PEDIA_REQUIRES" Language="pt_BR">
       <Text>Requer: {1_Name}</Text>
     </Replace>
@@ -52429,8 +52852,44 @@
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION" Language="pt_BR">
       <Text>+{1_Amount} para combate em terreno de colina.</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="pt_BR">
+      <Text>{1_Name}: posicionamento bem-sucedido</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_ERROR" Language="pt_BR">
+      <Text>{1_Name}: falha no posicionamento</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_SET_OK" Language="pt_BR">
+      <Text>Determine que este local seja visível para a seguinte civilização: {1_CivName} </Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_CLEAR_OK" Language="pt_BR">
+      <Text>Determine que este local não seja visível para a seguinte civilização: {1_CivName} </Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_ERROR" Language="pt_BR">
+      <Text>Não foi possível determinar que este local ficasse visível para a seguinte civilizaçã: {1_CivName}</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED" Language="pt_BR">
       <Text>Deve estar em um distrito de {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CREATE_DISTRICT" Language="pt_BR">
+      <Text>Você deve criar um distrito {1_Name} para posicionar isso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HIGHER_TECH" Language="pt_BR">
+      <Text>A civilização precisa da tecnologia {1_Name} para posicionar isso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HIGHER_CIVIC" Language="pt_BR">
+      <Text>A civilização precisa do cívico {1_Name} para posicionar isso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_ERROR" Language="pt_BR">
+      <Text>Não foi possível posicionar {1_Name} nesta localização</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_ERROR_DISTRICT" Language="pt_BR">
+      <Text>É preciso posicionar {1_Name} em um distrito</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CONTINENT_PLACED" Language="pt_BR">
+      <Text>Fez este terreno fazer parte do seguinte com sucesso: {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CONTINENT_ERROR" Language="pt_BR">
+      <Text>Não foi possível trocar este terreno para ser parte do seguinte: {1_Name}</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE" Language="pt_BR">
       <Text>Mapa: {1_MapName}</Text>

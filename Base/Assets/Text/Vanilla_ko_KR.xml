@@ -5333,7 +5333,7 @@
       <Text>전문가</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_1" Language="ko_KR">
-      <Text>전문가는 [ICON_Citizen] 시민을 대신하여 배치되며 일반 타일이 아닌 특수지구 타일에서 일합니다. 일반적으로 전문가를 사용하면 일반 타일에서 찾기 힘든 생산 품목을 얻을 수 있지만 도시에는 전문가를 장기간에 걸쳐 지원하기 위한 안정적인 [ICON_Food] 식량 기지가 필요합니다. 또한 전문가는 나중에 게임에서 도시가 규모를 더하고 일반 타일에서 일할 수 있는 [ICON_Citizen] 인구가 초과되는 경우에 특히 유용합니다. 각기 다른 효과를 가진 여러 유형의 전문가가 존재합니다. [ICON_Citizen] 일반 시민을 제외한 모든 전문가 유형은 도시에 배치 가능한 횟수가 제한됩니다. 이러한 한도는 전문가 유형과 관련된 특수지구의 건물 수에 따라 결정됩니다.</Text>
+      <Text>전문가는 [ICON_Citizen] 시민을 대신하여 배치되며 일반 타일이 아닌 특수지구 타일에서 일합니다. 일반적으로 전문가를 사용하면 일반 타일에서 찾기 힘든 생산 품목을 얻을 수 있지만 도시에는 전문가를 장기간에 걸쳐 지원하기 위한 안정적인 [ICON_Food] 식량 기지가 필요합니다. 또한 전문가는 나중에 게임에서 도시가 규모를 더하고 일반 타일에서 일할 수 있는 [ICON_Citizen] 인구가 초과되는 경우에 특히 유용합니다. 각기 다른 효과를 가진 여러 유형의 전문가가 존재합니다. [ICON_Citizen] 일반 시민을 제외한 모든 전문가 유형은 도시에 배치 가능한 횟수가 제한됩니다. 이러한 한도는 전문가 유형과 관련된 특수지구의 건물 수에 따라 결정됩니다. 건물 페이지에서 특수지구의 추가적인 [ICON_Citizen] 시민 생산량에 합산되는지 확인하십시오.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_2" Language="ko_KR">
       <Text>과학자는 캠퍼스에서 일하며 [ICON_Science] 과학 +2를 제공합니다.</Text>
@@ -5342,10 +5342,10 @@
       <Text>성직자는 성지에서 일하며 [ICON_Faith] 신앙 +2를 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_4" Language="ko_KR">
-      <Text>사령관은 주둔지에서 일하며 [ICON_Production] 생산력 +1과 [ICON_Culture] 문화 +1을 제공합니다.</Text>
+      <Text>사령관은 주둔지에서 일하며 [ICON_Production] 생산력 +1과 [ICON_Gold] 금 +2를 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_5" Language="ko_KR">
-      <Text>선장은 항만에서 일하며 [ICON_Science] 과학 +1과 [ICON_Gold] 금 +2를 제공합니다.</Text>
+      <Text>선장은 항만에서 일하며 [ICON_Food] 식량 +1과 [ICON_Gold] 금 +2를 제공합니다.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_6" Language="ko_KR">
       <Text>상인은 상업 중심지에서 일하며 [ICON_Gold] 금 +4를 제공합니다.</Text>
@@ -16026,6 +16026,7 @@
 [3]QA Senior Testers
 [4]Matt Finck
 [4]Ian Bennett
+[4]Tyler Redmann
 
 [3]QA Testers
 [4]Kristian Garcia
@@ -17620,6 +17621,9 @@
     </Replace>
     <Replace Tag="LOC_LEADER_MONTEZUMA_NAME" Language="ko_KR">
       <Text>몬테수마</Text>
+    </Replace>
+    <Replace Tag="LOC_LEADER_FREE_CITIES_NAME" Language="ko_KR">
+      <Text>자유 도시 지도자</Text>
     </Replace>
     <Replace Tag="LOC_FEATURE_FLOODPLAINS_NAME" Language="ko_KR">
       <Text>범람원</Text>
@@ -23331,7 +23335,7 @@
       <Text>보상으로 [ICON_Envoy] 사절 +1.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_FEUDALISM_DESCRIPTION" Language="ko_KR">
-      <Text>이제 인접한 농장 시설 2개마다 농장 시설에 [ICON_Food] 식량 +1</Text>
+      <Text>이제 인접한 농장 시설 2개마다 농장 시설에 [ICON_Food] 식량 +1.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_CIVIL_SERVICE_DESCRIPTION" Language="ko_KR">
       <Text>동맹을 맺을 수 있게 됩니다.</Text>
@@ -29789,6 +29793,15 @@
     <Replace Tag="LOC_WORLD_BUILDER_IMPORT" Language="ko_KR">
       <Text>편집기에서 지도 가져오기</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_START_NEW_TOOLTIP" Language="ko_KR">
+      <Text>편집할 비어 있는 새 월드 빌더 지도 또는 생성된 월드 빌더 지도를 만듭니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_LOAD_TOOLTIP" Language="ko_KR">
+      <Text>이전에 저장한 월드 빌더 지도를 로드합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_IMPORT_TOOLTIP" Language="ko_KR">
+      <Text>제대로 구조화된 .TMX 지도 파일을 타일 지도에서 월드 빌더 지도로 변환합니다.</Text>
+    </Replace>
     <Replace Tag="LOC_RANDOM_LEADER" Language="ko_KR">
       <Text>무작위 지도자</Text>
     </Replace>
@@ -29812,6 +29825,9 @@
     </Replace>
     <Replace Tag="LOC_SETUP_ERROR_LEADER_NOT_OWNED" Language="ko_KR">
       <Text>소유하지 않음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_PARAMETER_ERROR" Language="ko_KR">
+      <Text>1개 이상의 옵션이 잘못되었습니다.</Text>
     </Replace>
     <Replace Tag="LOC_SETUP_PLAYER_PARAMETER_ERROR" Language="ko_KR">
       <Text>플레이어 옵션 부적합</Text>
@@ -30648,7 +30664,7 @@
       <Text>이 게임에서 준비를 완료했습니다. 턴이 되면 주 메뉴와 클라우드 플레이 로비에 알림이 표시됩니다. 이 게임을 안전하게 종료하고 싱글 플레이 또는 멀티 플레이를 추가로 즐길 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_PLAYBYCLOUD_REMOTE_READY_POPUP_OK" Language="ko_KR">
-      <Text>확인</Text>
+      <Text>아무것도 안 하기</Text>
     </Replace>
     <Replace Tag="LOC_PLAYBYCLOUD_REMOTE_READY_POPUP_LOBBY_EXIT" Language="ko_KR">
       <Text>로비로 나가기</Text>
@@ -31388,6 +31404,12 @@
     <Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_SEA_MODIFIER" Language="ko_KR">
       <Text>위대한 제독으로부터 [ICON_Strength] 전투력 보너스 +5.</Text>
     </Replace>
+    <Replace Tag="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_DESCRIPTION" Language="ko_KR">
+      <Text>위대한 장군에서 [ICON_Movement] 이동력 +1.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_DESCRIPTION" Language="ko_KR">
+      <Text>위대한 제독에서 [ICON_Movement] 이동력 +1.</Text>
+    </Replace>
     <Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND" Language="ko_KR">
       <Text>2타일 이내에 있는 고전 및 중세 시대 지상 유닛에게 [ICON_Strength] 전투력 +5 및 [ICON_Movement] 이동력 +1을 부여합니다.</Text>
     </Replace>
@@ -31575,7 +31597,7 @@
       <Text>모든 정부에 경제 정책 슬롯 1개가 추가됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_JOHN_ROCKEFELLER_ACTIVE" Language="ko_KR">
-      <Text>전략 자원인 [ICON_RESOURCE_OIL] 석유 +1을 부여합니다. [ICON_TradeRoute] 교역로는 목적지 도시의 개발된 전략 자원마다 [ICON_Gold] 금 +2를 획득합니다.</Text>
+      <Text>전략 자원인 [ICON_RESOURCE_OIL] 석유 +1을 부여합니다. [ICON_TradeRoute] 교역로는 목적지 도시의 전략 자원마다 [ICON_Gold] 금 +2를 획득합니다.</Text>
     </Replace>
     <Replace Tag="LOC_GREATPERSON_EUCLID_ACTIVE" Language="ko_KR">
       <Text>수학 기술 및 중세 시대의 무작위 기술 1개와 관련하여 [ICON_TechBoosted] 유레카를 촉발합니다.</Text>
@@ -32849,6 +32871,33 @@
     <Replace Tag="LOC_HUD_CITY_WILL_NOT_COMPLETE" Language="ko_KR">
       <Text>턴당 생산력이 너무 낮아 완료할 수 없습니다.</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_SCORE" Language="ko_KR">
+      <Text>전체 점수(게임 종료 시 동점일 경우 사용)</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_STRENGTH" Language="ko_KR">
+      <Text>군사력</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_SCIENCE" Language="ko_KR">
+      <Text>턴당 과학</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_CULTURE" Language="ko_KR">
+      <Text>턴당 문화</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_GOLD" Language="ko_KR">
+      <Text>금 보유량</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_FAITH" Language="ko_KR">
+      <Text>신앙 보유량</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_HIDE" Language="ko_KR">
+      <Text>특성치 항상 숨김</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_HIDE" Language="ko_KR">
+      <Text>특성치 숨김</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RIBBON_MODE_STATS_ALWAYS_SHOW" Language="ko_KR">
+      <Text>특성치 항상 표시</Text>
+    </Replace>
     <Replace Tag="LOC_BUILDING_CONSTRUCT_NO_SUITABLE_LOCATION" Language="ko_KR">
       <Text>이를 짓기에 적합한 장소가 없습니다.</Text>
     </Replace>
@@ -33170,6 +33219,9 @@
     <Replace Tag="LOC_HUD_EMPIRE_LENS" Language="ko_KR">
       <Text>제국</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_POWER_LENS" Language="ko_KR">
+      <Text>전력</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_RELIGION_LENS_TOOLTIP" Language="ko_KR">
       <Text>지도 전체에서 대중 종교 및 신자 분포를 나타냅니다.</Text>
     </Replace>
@@ -33193,6 +33245,9 @@
     </Replace>
     <Replace Tag="LOC_HUD_EMPIRE_LENS_TOOLTIP" Language="ko_KR">
       <Text>도시 경계, 특수지구 위치 및 인접지를 나타냅니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_POWER_LENS_TOOLTIP" Language="ko_KR">
+      <Text>도시의 전력원과 지역의 전력 영역을 표시합니다.</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_OPTIONS" Language="ko_KR">
       <Text>지도 설정</Text>
@@ -34115,6 +34170,9 @@
     <Replace Tag="LOC_TOOLTIP_UNLOCKS" Language="ko_KR">
       <Text>잠금 해제:</Text>
     </Replace>
+    <Replace Tag="LOC_TOOLTIP_BUILDING_CITIZEN_YIELDS_HEADER" Language="ko_KR">
+      <Text>시민 생산량(이 특수지구의 시민당):</Text>
+    </Replace>
     <Replace Tag="LOC_TOOLTIP_DISTRICT_CITIZEN_YIELDS_HEADER" Language="ko_KR">
       <Text>시민 생산량 (시민당):</Text>
     </Replace>
@@ -34241,6 +34299,9 @@
     <Replace Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE" Language="ko_KR">
       <Text>유물 자원</Text>
     </Replace>
+    <Replace Tag="LOC_TOOLTIP_BONUS_STRATEGIC" Language="ko_KR">
+      <Text>전략 자원</Text>
+    </Replace>
     <Replace Tag="LOC_TOOLTIP_ARTIFACT_RESOURCE_DETAILS" Language="ko_KR">
       <Text>이곳에 고고학자 유닛을 보내 [ICON_GreatWork_Artifact] 유물을 발굴합니다. 유물이 플레이어 도시로 반환되면 [ICON_Culture] 문화 및 [ICON_Tourism] 관광을 제공합니다.</Text>
     </Replace>
@@ -34279,6 +34340,9 @@
     </Replace>
     <Replace Tag="LOC_TOOLTIP_APPEAL_DISGUSTING" Language="ko_KR">
       <Text>혐오스러운 매력도</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_BONUS" Language="ko_KR">
+      <Text></Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING" Language="ko_KR">
       <Text>체력 회복</Text>
@@ -35402,6 +35466,12 @@
     <Replace Tag="LOC_PARTIALSCREEN_REPORTS_CITY_STATUS" Language="ko_KR">
       <Text>도시 상태</Text>
     </Replace>
+    <Replace Tag="LOC_PARTIALSCREEN_REPORTS_NOTIFICATIONS" Language="ko_KR">
+      <Text>알림</Text>
+    </Replace>
+    <Replace Tag="LOC_PARTIALSCREEN_REPORTS_GOSSIP" Language="ko_KR">
+      <Text>동향</Text>
+    </Replace>
     <Replace Tag="LOC_PARTIALSCREEN_REPORTS_YIELDS" Language="ko_KR">
       <Text>생산량</Text>
     </Replace>
@@ -35437,6 +35507,69 @@
     </Replace>
     <Replace Tag="LOC_REPORTS_LIST_EMPIRE" Language="ko_KR">
       <Text>제국:</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_PRIORITY" Language="ko_KR">
+      <Text>우선순위</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_PLAYER_FILTER_ALL" Language="ko_KR">
+      <Text>전체</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_ALL" Language="ko_KR">
+      <Text>[ICON_GOSSIP_ALL] 모두</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_DIPLOMACY" Language="ko_KR">
+      <Text>[ICON_GOSSIP_DIPLOMACY] 외교</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_MILITARY" Language="ko_KR">
+      <Text>[ICON_GOSSIP_MILITARY] 군사</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_DISCOVER" Language="ko_KR">
+      <Text>[ICON_GOSSIP_DISCOVER] 발견</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_ESPIONAGE" Language="ko_KR">
+      <Text>[ICON_GOSSIP_ESPIONAGE] 첩보</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_SCIENCE" Language="ko_KR">
+      <Text>[ICON_GOSSIP_SCIENCE] 과학</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_RELIGION" Language="ko_KR">
+      <Text>[ICON_GOSSIP_RELIGION] 종교</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_CULTURE" Language="ko_KR">
+      <Text>[ICON_GOSSIP_CULTURE] 문화</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_GREATPERSON" Language="ko_KR">
+      <Text>[ICON_GOSSIP_GREATPERSON] 위인</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_VICTORY" Language="ko_KR">
+      <Text>[ICON_GOSSIP_VICTORY] 승리</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_SETTLEMENT" Language="ko_KR">
+      <Text>[ICON_GOSSIP_SETTLEMENT] 정착지</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_CITY" Language="ko_KR">
+      <Text>[ICON_GOSSIP_CITY] 도시</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_FILTER_BARBARIAN" Language="ko_KR">
+      <Text>[ICON_GOSSIP_BARBARIAN] 야만인</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_DATE" Language="ko_KR">
+      <Text>날짜</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TURN" Language="ko_KR">
+      <Text>턴</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_LEADER" Language="ko_KR">
+      <Text>지도자</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_GOSSIP_TYPE" Language="ko_KR">
+      <Text>유형</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_NOTIFICATION_ICON" Language="ko_KR">
+      <Text>알림</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_NOTIFICATION_DESCRIPTION" Language="ko_KR">
+      <Text>설명</Text>
     </Replace>
     <Replace Tag="LOC_REPORTS_LIST_GLOBAL" Language="ko_KR">
       <Text>세계:</Text>
@@ -35620,6 +35753,12 @@
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TAB_CITY_STATUS" Language="ko_KR">
       <Text>도시 상태</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TAB_NOTIFICATIONS" Language="ko_KR">
+      <Text>알림</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_TAB_GOSSIP" Language="ko_KR">
+      <Text>동향</Text>
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TAB_RESOURCES" Language="ko_KR">
       <Text>자원</Text>
@@ -35957,6 +36096,105 @@
     <Replace Tag="LOC_WORLDBUILDER_TEXT_TAG" Language="ko_KR">
       <Text>텍스트 태그</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_ADVISOR_SAYS" Language="ko_KR">
+      <Text>보좌관의 조언:</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_TOTAL_YIELD" Language="ko_KR">
+      <Text>지역 생산량</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_INNER_YIELD" Language="ko_KR">
+      <Text>내부 고리 생산량</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FRESH_WATER" Language="ko_KR">
+      <Text>담수</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_NEW_RESOURCES" Language="ko_KR">
+      <Text>새로운 자원</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_COAST" Language="ko_KR">
+      <Text>해안</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_RESOURCES" Language="ko_KR">
+      <Text>게임 초반 자원</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_LUXURY_RESOURCES" Language="ko_KR">
+      <Text>미사용</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_STRATEGIC_RESOURCES" Language="ko_KR">
+      <Text>자원</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FEATURES" Language="ko_KR">
+      <Text>특정 지형 특성</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_FOREIGN_CONTINENT" Language="ko_KR">
+      <Text>타 대륙</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_NEAREST_CITY" Language="ko_KR">
+      <Text>가장 가까운 도시</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_DANGER" Language="ko_KR">
+      <Text>미사용</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_TOTAL_YIELD" Language="ko_KR">
+      <Text>3타일 이내에 생산량 적음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_INNER_YIELD" Language="ko_KR">
+      <Text>이 부지 인접한 곳이 생산량 적음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FRESH_WATER" Language="ko_KR">
+      <Text>부지에 담수 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEW_RESOURCES" Language="ko_KR">
+      <Text>이곳에 새로운 자원이 적음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_COAST" Language="ko_KR">
+      <Text>부지가 내륙에 있음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_RESOURCES" Language="ko_KR">
+      <Text>이곳에 말, 철, 질산칼륨이 제한적으로 있음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_STRATEGIC_RESOURCES" Language="ko_KR">
+      <Text>근처에 사치품 및 전략 자원 적음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FEATURES" Language="ko_KR">
+      <Text>근처에 중요한 지형 특성 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_FOREIGN_CONTINENT" Language="ko_KR">
+      <Text>새로운 대륙에 대한 혜택 없음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_POOR_NEAREST_CITY" Language="ko_KR">
+      <Text>다른 우호적 도시가 멀리 있음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_TOTAL_YIELD" Language="ko_KR">
+      <Text>3타일 이내에 생산량 많음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_INNER_YIELD" Language="ko_KR">
+      <Text>이 부지 인접한 곳이 생산량 많음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FRESH_WATER" Language="ko_KR">
+      <Text>이 부지에 담수가 있음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEW_RESOURCES" Language="ko_KR">
+      <Text>새 자원을 얻을 가능성이 있음</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_COAST" Language="ko_KR">
+      <Text>부지가 해안에 위치함</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_RESOURCES" Language="ko_KR">
+      <Text>근처에 말, 철 또는 질산칼륨</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_STRATEGIC_RESOURCES" Language="ko_KR">
+      <Text>근처에 새 사치품 및 전략</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FEATURES" Language="ko_KR">
+      <Text>근처에 유익한 지형 특성</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_FOREIGN_CONTINENT" Language="ko_KR">
+      <Text>새로운 대륙 정착 열망</Text>
+    </Replace>
+    <Replace Tag="LOC_SETTLEMENT_RECOMMENDATION_GOOD_NEAREST_CITY" Language="ko_KR">
+      <Text>우호적 부지와 가까움</Text>
+    </Replace>
     <Replace Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE" Language="ko_KR">
       <Text>대기열을 항상 표시하도록 잠급니다.</Text>
     </Replace>
@@ -36031,6 +36269,21 @@
     </Replace>
     <Replace Tag="LOC_HUD_GOSSIP_CLOSE" Language="ko_KR">
       <Text>닫기</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_COLLAPSE_LIST" Language="ko_KR">
+      <Text>목록을 축소하려면 클릭</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_EXPAND_LIST" Language="ko_KR">
+      <Text>목록을 확대하려면 클릭</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_GOSSIP_DISMISS_DETAILS" Language="ko_KR">
+      <Text>닫으려면 동향을 클릭하십시오.[NEWLINE]동향 기록은 보고서에서 볼 수 있습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_STATUSMESSAGE_DISMISS_DETAILS" Language="ko_KR">
+      <Text>닫으려면 메시지를 클릭하십시오.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNIT_PANEL_ABILITIES_HEADER" Language="ko_KR">
+      <Text>능력:</Text>
     </Replace>
     <Replace Tag="LOC_ACTION_PANEL_CLOUD_TURN_UPLOADING" Language="ko_KR">
       <Text>턴 시도 중</Text>
@@ -37138,6 +37391,12 @@
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_BARBARIANS_SIGHTED_MESSAGE" Language="ko_KR">
       <Text>야만인 접근 중</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_MESSAGE" Language="ko_KR">
+      <Text>새로운 야만인 주둔지</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_SUMMARY" Language="ko_KR">
+      <Text>새로운 야만인 부족이 인접 지역에 침범했다는 소문을 들었습니다.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_MY_DOMINANT_CULTURE_MESSAGE" Language="ko_KR">
       <Text>플레이어 문화가 대중적</Text>
@@ -40106,11 +40365,17 @@
     <Replace Tag="LOC_UI_PEDIA_CREATED_BY" Language="ko_KR">
       <Text>제작자</Text>
     </Replace>
+    <Replace Tag="LOC_UI_PEDIA_ESPIONAGE_MISSIONS" Language="ko_KR">
+      <Text>첩보 임무</Text>
+    </Replace>
     <Replace Tag="LOC_UI_PEDIA_IMPROVED_BY" Language="ko_KR">
       <Text>다음 시설에 의해 개발</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_HARVEST" Language="ko_KR">
       <Text>수확</Text>
+    </Replace>
+    <Replace Tag="LOC_UI_PEDIA_VALID_RESOURCES" Language="ko_KR">
+      <Text>유효 자원</Text>
     </Replace>
     <Replace Tag="LOC_UI_PEDIA_GREAT_WORKS" Language="ko_KR">
       <Text>걸작</Text>
@@ -41168,6 +41433,15 @@
     <Replace Tag="LOC_OPTIONS_INTERFACE_EDGE_SCROLL" Language="ko_KR">
       <Text>마우스를 화면 가장자리로 이동 시 스크롤:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_OPEN_TO_PROD_QUEUE" Language="ko_KR">
+      <Text>생산 대기열 항상 열기:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG" Language="ko_KR">
+      <Text>길게 눌러 드래그를 클릭으로 교체:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_FORCE_CLICK_TO_DRAG_TT" Language="ko_KR">
+      <Text>이 옵션을 선택하면 드래그 가능한 UI 요소의 길게 눌러 드래그 동작이 요소를 픽업하여 드롭하는 단순한 클릭 형태로 대체됩니다.</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_CLOCK_FORMAT" Language="ko_KR">
       <Text>시계 형식:</Text>
     </Replace>
@@ -41191,6 +41465,18 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_SCROLL_SPEED" Language="ko_KR">
       <Text>마우스 휠 속도:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_LABEL" Language="ko_KR">
+      <Text>HUD 리본에 생산량 표시:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_HIDE" Language="ko_KR">
+      <Text>항상 숨김(끄기)</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_MOUSE_OVER" Language="ko_KR">
+      <Text>마우스를 올리면 표시</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_RIBBON_STATS_ALWAYS_SHOW" Language="ko_KR">
+      <Text>항상 표시</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_END_TURN_BEHAVIOR" Language="ko_KR">
       <Text>클라우드 플레이 턴 종료 동작:</Text>
@@ -41242,6 +41528,12 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA" Language="ko_KR">
       <Text>청색맹</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_LIGHTING" Language="ko_KR">
+      <Text>호환되는 RGB 조명 하드웨어 사용</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_LIGHTING_TOOLTIP" Language="ko_KR">
+      <Text>문명 VI에서 컴퓨터 조명, 그리고 Logitech Gaming Software 또는 Alienware AlienFX와 호환되는 주변장치를 제어할 수 있게 허용합니다.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_QUEUE_DISPLAY" Language="ko_KR">
       <Text>생산 대기열:</Text>
@@ -41381,6 +41673,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY" Language="ko_KR">
       <Text>요새화</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL" Language="ko_KR">
+      <Text>회복할 때까지 요새화</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE" Language="ko_KR">
       <Text>유닛 삭제</Text>
     </Replace>
@@ -41402,6 +41697,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_ALERT" Language="ko_KR">
       <Text>경계</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_ALL_AUTOSAVES" Language="ko_KR">
+      <Text>전체</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" Language="ko_KR">
       <Text>선택한 유닛이 개척자면 도시 건설 행동을 수행합니다.</Text>
     </Replace>
@@ -41410,6 +41708,9 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HELP" Language="ko_KR">
       <Text>선택한 유닛을 요새화합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FORTIFY_HEAL_HELP" Language="ko_KR">
+      <Text>선택한 유닛이 완전히 회복할 때까지 요새화합니다.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_DELETE_HELP" Language="ko_KR">
       <Text>선택한 유닛을 삭제합니다.</Text>
@@ -42351,7 +42652,7 @@
       <Text>잠수함을 대체하는 독일 특유의 현대 시대 해상 유닛입니다. 더 저렴하게 생산 가능하며, 해양 지형에서 전투 시, 시야 +1과 [ICON_Strength] 전투력 +10을 획득합니다. 다른 스텔스 유닛을 드러냅니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AMERICAN_P51_DESCRIPTION" Language="ko_KR">
-      <Text>전투기를 대체하는 미국 특유의 원자 시대 공중 유닛입니다. 전투기와 대항 시, 전투력 +5, 비행 범위 +2 및 경험치 +50%를 획득합니다.</Text>
+      <Text>전투기를 대체하는 미국 특유의 원자력 시대 공중 유닛입니다. 전투기와 대항 시, [ICON_Strength] 전투력 +5, 비행 범위 +2 및 경험치 +50%를 획득합니다.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_BRAZILIAN_MINAS_GERAES_DESCRIPTION" Language="ko_KR">
       <Text>전함을 대체하는 브라질 특유의 산업 시대 유닛입니다. 전함보다 강력하며, 민족주의 사회 제도로 잠금 해제됩니다.</Text>
@@ -42525,7 +42826,7 @@
       <Text>사막, 평원, 초원, 또는 툰드라에서 출발하는 경우 [ICON_Movement] 이동력 +1.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_RELIGIOUS_IGNORE_TERRAIN_COST_DESCRIPTION" Language="ko_KR">
-      <Text>숲, 정글, 언덕과 습지를 이동할 때 [ICON_Movement] 이동력이 1만 요구됩니다. 선교 열정 교리에 의해 잠금 해제됩니다.</Text>
+      <Text>숲, 정글, 언덕과 습지를 이동할 때 [ICON_Movement] 이동력이 1만 요구됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_IGNORE_ZOC_DESCRIPTION" Language="ko_KR">
       <Text>적 통제 지역의 영향을 받지 않습니다.</Text>
@@ -42585,7 +42886,7 @@
       <Text>이 유닛이 옆 타일에 있는 경우 지도에 스텔스 유닛을 드러냅니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COASTAL_RAID_DESCRIPTION" Language="ko_KR">
-      <Text>하랄드 하르드라다의 해상 근접 유닛은 해안가 땅의 건물과 시설을 약탈할 수 있고, 민간인 유닛을 생포할 수 있습니다.</Text>
+      <Text>해안가 땅의 건물과 시설을 약탈할 수 있고, 민간인 유닛을 생포할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BYPASS_COMBAT_UNIT_DESCRIPTION" Language="ko_KR">
       <Text>지원 유닛이 전투 유닛과 대형을 이루고 있더라도 지원 유닛을 직접 공격할 수 있습니다.</Text>
@@ -42597,7 +42898,7 @@
       <Text>물 타일에 있으면 적 유닛이 해당 [ICON_TradeRoute] 교역로를 약탈할 수 없습니다. 리스본 도시 국가의 종주국일 때 획득합니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BERSERKER_RAGE_DESCRIPTION" Language="ko_KR">
-      <Text>공격 시 [ICON_Strength] 전투력 +7, 방어 시 [ICON_Strength] 전투력 -7.</Text>
+      <Text>공격 시 [ICON_Strength] 전투력 +10.[NEWLINE][ICON_Bullet]방어 시 [ICON_Strength] 전투력 -5.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_BERSERKER_MOVEMENT_DESCRIPTION" Language="ko_KR">
       <Text>이 유닛이 적 영토에서 턴을 시작하는 경우 [ICON_Movement] 이동력 +2.</Text>
@@ -42618,22 +42919,22 @@
       <Text>선교사, 이단심문관과 사도 유닛들은 자연경관인 에베레스트 산 옆으로 이동 후에 언덕 위로 더 빠르게 이동할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_COSSACK_DESCRIPTION" Language="ko_KR">
-      <Text>자국 영토 안이나 근처에 있으면 [ICON_Strength] 전투력 +5 및 공격 후 이동 가능합니다.</Text>
+      <Text>공격 후 이동 가능,[NEWLINE][ICON_Bullet]자국 영토 안이나 근처에 있으면 [ICON_Strength] 전투력 +5</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_REDCOAT_DESCRIPTION" Language="ko_KR">
-      <Text>[ICON_Capital] 수도가 위치하지 않은 대륙에서 전투 시 [ICON_Strength] 전투력 +10 및 별도의 하선 비용 없음.</Text>
+      <Text>[ICON_Capital] 수도가 위치하지 않은 대륙에서 전투 시 [ICON_Strength] 전투력 +10[NEWLINE][ICON_Bullet]하선 시 [ICON_Movement] 이동 비용 없음</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_VARU_DESCRIPTION" Language="ko_KR">
       <Text>인접한 적 유닛의 [ICON_Strength] 전투력 -5.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_NAGAO_DESCRIPTION" Language="ko_KR">
-      <Text>원거리 공격 방어 시 [ICON_Strength] 전투력 +10, 특성을 통해 볼 수 있고, 숲과 열대우림을 이동할 때 [ICON_Movement] 이동력 페널티를 받지 않습니다.</Text>
+      <Text>원거리 공격 방어 시 [ICON_Strength] 전투력 +10,[NEWLINE][ICON_Bullet]특성을 통해 볼 수 있고[NEWLINE][ICON_Bullet]숲과 열대우림을 이동할 때 [ICON_Movement] 이동력 페널티 없음</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_CONQUISTADOR_DESCRIPTION" Language="ko_KR">
-      <Text>종교 유닛이 같은 타일에 있으면 [ICON_Strength] 전투력 +10, 이 유닛이 도시를 점령하거나 도시를 점령할 때 바로 옆에 있으면 도시가 자동으로 콩키스타도르 플레이어의 대중 종교로 개종 됩니다.</Text>
+      <Text>종교 유닛이 같은 타일에 있으면 [ICON_Strength] 전투력 +10[NEWLINE][ICON_Bullet]이 유닛이 도시를 점령하거나 도시를 점령할 때 바로 옆에 있으면 도시가 자동으로 콩키스타도르 플레이어의 대중 종교로 개종됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_GARDE_DESCRIPTION" Language="ko_KR">
-      <Text>[ICON_Capital] 수도가 있는 대륙에 있으면 [ICON_Strength] 전투력 +10. 처치한 적마다 위대한 장군 점수 +10.</Text>
+      <Text>[ICON_Capital] 수도가 있는 대륙에 있으면 [ICON_Strength] 전투력 +10.[NEWLINE][ICON_Bullet]처치한 적마다 [ICON_GreatGeneral] 위대한 장군 점수 +10.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_HOPLITE_DESCRIPTION" Language="ko_KR">
       <Text>옆에 1개 이상의 장갑보병이 있으면 [ICON_Strength] 전투력 +10.</Text>
@@ -42642,16 +42943,49 @@
       <Text>해양 전투에서 [ICON_Strength] 전투력 +10.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_DESCRIPTION" Language="ko_KR">
-      <Text>플레이어의 [ICON_Capital] 수도가 있는 대륙에서 적 유닛을 처치할 때마다 처치한 유닛 기본 [ICON_Strength] 전투력의 50%에 준하는 [ICON_Culture] 문화를 획득합니다. 언덕에서 전투 시 [ICON_Strength] 전투력 +10을 획득합니다.</Text>
+      <Text>플레이어의 [ICON_Capital] 수도가 있는 대륙에서 적 유닛을 처치하면 처치한 유닛 기본 [ICON_Strength] 전투력의 50%에 준하는 [ICON_Culture] 문화 획득[NEWLINE][ICON_Bullet]언덕에서 전투 시 [ICON_Strength] 전투력 +10</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MUSTANG_DESCRIPTION" Language="ko_KR">
-      <Text>전투기 유닛 대항 전투력 보너스를 부여받습니다. 공격 범위가 연장되어 있고 전투로 획득하는 경험치가 증가합니다.</Text>
+      <Text>전사를 상대로 [ICON_Strength] 전투력 +5,[NEWLINE][ICON_Bullet]전투 경험치 +50%</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MAMLUK_DESCRIPTION" Language="ko_KR">
       <Text>이 유닛은 매 턴 체력을 회복합니다. 이동이나 전투 후에도 체력을 회복합니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_SAMURAI_DESCRIPTION" Language="ko_KR">
       <Text>이 유닛은 부상을 당해도 전투 페널티를 받지 않습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_BARRACKS_TRAINED_UNIT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>병영에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_STABLE_TRAINED_UNIT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>마구간에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ARMORY_TRAINED_UNIT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>무기고에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_MILITARY_ACADEMY_TRAINED_UNIT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>사관 학교에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_LIGHTHOUSE_TRAINED_UNIT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>등대에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SHIPYARD_TRAINED_UNIT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>조선소에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SEAPORT_TRAINED_UNIT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>항구에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_HANGAR_TRAINED_AIRCRAFT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>격납고에서 경험치 +25% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_AIRPORT_TRAINED_AIRCRAFT_XP_DESCRIPTION" Language="ko_KR">
+      <Text>공항에서 경험치 +50% 획득</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ROYAL_NAVY_DOCKYARD_MOVEMENT_BONUS_DESCRIPTION" Language="ko_KR">
+      <Text>영국 해군 기지창에서 이동력 +1</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_ROMAN_LEGION_BUILD_DESCRIPTION" Language="ko_KR">
+      <Text>로마 요새 특유 시설을 건설할 수 있습니다.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_ANTI_CAVALRY_MODIFIER_DESCRIPTION" Language="ko_KR">
       <Text>기병대 상대 시 +10</Text>
@@ -42951,7 +43285,7 @@
       <Text>지형 가시성</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_GOODY_HUTS" Language="ko_KR">
-      <Text>보너스 마을</Text>
+      <Text>부족 마을</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT" Language="ko_KR">
       <Text>지도 세부 정보 및 텍스트</Text>
@@ -43013,6 +43347,9 @@
     <Replace Tag="LOC_WORLDBUILDER_NO_LOWLAND" Language="ko_KR">
       <Text>해안 저지대 제외</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_NO_CITY" Language="ko_KR">
+      <Text>도시 없음</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_NO_DIRECTION" Language="ko_KR">
       <Text>방향 없음</Text>
     </Replace>
@@ -43073,6 +43410,12 @@
     <Replace Tag="LOC_WORLDBUILDER_DEFAULT" Language="ko_KR">
       <Text>기본</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ADVANCED" Language="ko_KR">
+      <Text>고급</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BASIC" Language="ko_KR">
+      <Text>기본</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV" Language="ko_KR">
       <Text>고급 모드로 변경</Text>
     </Replace>
@@ -43084,6 +43427,12 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT" Language="ko_KR">
       <Text>고급 모드는 아직 개발 중이며 완전히 지원되지 않습니다. 고급 시나리오 기능을 실험하려는 고급 모드 사용자에게 이 기능을 제공합니다. 이 고급 모드에서 모드를 생성해서 게임으로 로드하면 문명 VI이 불안정해질 수 있습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IMPORT_UNSUPPORTED_TEXT" Language="ko_KR">
+      <Text>경고! 외부 편집자를 통해 만들어진 지도를 불러올 경우 공식적인 지원을 받지 못할 수 있으며, 또한 월드 빌더를 사용하시는 데 문제가 발생할 수 있습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_BASIC_TOOLTIP" Language="ko_KR">
+      <Text>월드 빌더를 기본 모드로 다시 변경합니다.  이 지도는 여전히 고급 모드로 저장되며 고급 모드에서 수정한 내용은 그대로 유지됩니다.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE" Language="ko_KR">
       <Text>부족</Text>
@@ -43100,8 +43449,8 @@
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_OK" Language="ko_KR">
       <Text>배치 성공</Text>
     </Replace>
-    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="ko_KR">
-      <Text>배치 성공</Text>
+    <Replace Tag="LOC_WORLDBUILDER_CITY_NEEDED" Language="ko_KR">
+      <Text>도시에 배치해야 함</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_IN_PROGRESS" Language="ko_KR">
       <Text>다음 중 하나가 이미 진행 중입니다</Text>
@@ -43128,13 +43477,25 @@
       <Text>알 수 없는 이유로 해당 요소를 배치할 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_FAILURE_FEATURE" Language="ko_KR">
-      <Text>알 수 없는 이유로 지형 특성을 배치할 수 없습니다.</Text>
+      <Text>여기에 지형 특성을 배치할 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_STATUS_STARTUP" Language="ko_KR">
       <Text>월드 빌더에 오신 것을 환영합니다!</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_UNIT_PLACED" Language="ko_KR">
       <Text>유닛 배치 성공</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_RIVER_PLACED" Language="ko_KR">
+      <Text>강이 성공적으로 배치되었습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_RIVER_ERROR" Language="ko_KR">
+      <Text>이 위치에는 강을 배치할 수 없습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLIFF_PLACED" Language="ko_KR">
+      <Text>절벽이 성공적으로 배치되었습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLIFF_ERROR" Language="ko_KR">
+      <Text>이 위치에는 절벽을 배치할 수 없습니다.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_OWNERSHIP_SET" Language="ko_KR">
       <Text>타일 소유자 설정 성공</Text>
@@ -43144,6 +43505,12 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES" Language="ko_KR">
       <Text>자원 지우기</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES_HELP" Language="ko_KR">
+      <Text>지도에서 모든 자원을 제거합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ADVANCED_TOOLS" Language="ko_KR">
+      <Text>고급:</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES" Language="ko_KR">
       <Text>자원 퍼뜨리기</Text>
@@ -43173,13 +43540,34 @@
       <Text>브러시 크기</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL" Language="ko_KR">
-      <Text>소형</Text>
+      <Text>소형 브러시</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL_HELP" Language="ko_KR">
+      <Text>소형(1타일) 브러시를 선택합니다.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM" Language="ko_KR">
-      <Text>중간</Text>
+      <Text>중간 브러시</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM_HELP" Language="ko_KR">
+      <Text>중간(7타일) 브러시를 선택합니다.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE" Language="ko_KR">
-      <Text>대형</Text>
+      <Text>대형 브러시</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE_HELP" Language="ko_KR">
+      <Text>대형(19타일) 브러시를 선택합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDO" Language="ko_KR">
+      <Text>실행 취소</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDO_TOOLTIP" Language="ko_KR">
+      <Text>마지막 작업을 실행 취소하려면 클릭</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_REDO" Language="ko_KR">
+      <Text>다시 실행</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_REDO_TOOLTIP" Language="ko_KR">
+      <Text>취소된 마지막 작업을 다시 실행하려면 클릭</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT" Language="ko_KR">
       <Text>타일 위치 지정</Text>
@@ -43238,11 +43626,26 @@
     <Replace Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER" Language="ko_KR">
       <Text>지도로 돌아가기</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MENU_NAME" Language="ko_KR">
+      <Text>메뉴</Text>
+    </Replace>
     <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY" Language="ko_KR">
       <Text>빈 지도</Text>
     </Replace>
     <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION" Language="ko_KR">
       <Text>빈 캔버스입니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_AI" Language="ko_KR">
+      <Text>AI</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HUMAN" Language="ko_KR">
+      <Text>인간</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNDEFINED" Language="ko_KR">
+      <Text>정의되지 않음</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TITLE" Language="ko_KR">
+      <Text>월드 빌더</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="ko_KR">
       <Text>문명의 여명</Text>
@@ -45347,6 +45750,12 @@
     <Replace Tag="LOC_BUILDING_CONSTRUCT_REQUIRES_THREE_BUILDINGS" Language="ko_KR">
       <Text>{1_Building}, {2_BuildingTheSecond}, 또는 {3_BuildingTheThird} 건물이 필요합니다.</Text>
     </Replace>
+    <Replace Tag="LOC_BUILDING_CONSTRUCT_REQUIRE_WALL_REPAIR" Language="ko_KR">
+      <Text>{1_Building}에 수리 필요</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_CONSTRUCT_TURNS_UNTIL_CAN_BE_REPAIRED" Language="ko_KR">
+      <Text>[ICON_Turn] {2_Turns}턴 안에 {1_Building} 수리 가능</Text>
+    </Replace>
     <Replace Tag="LOC_DISTRICT_ZONE_POPULATION_TOO_LOW_SHORT" Language="ko_KR">
       <Text>[ICON_Citizen] 인구 {1_Population} 이상이 요구됩니다.</Text>
     </Replace>
@@ -46664,6 +47073,9 @@
     <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_TO_RADIATION_POISONING" Language="ko_KR">
       <Text>방사능 중독으로 {1_UnitName}을(를) 잃었습니다.</Text>
     </Replace>
+    <Replace Tag="LOC_NOTIFICATION_UNIT_LOST_TO_WATER_DAMAGE" Language="ko_KR">
+      <Text>물 중독으로 {1_UnitName}을(를) 잃었습니다.</Text>
+    </Replace>
     <Replace Tag="LOC_NOTIFICATION_DECLARE_WAR_SUMMARY" Language="ko_KR">
       <Text>{1_leader}이(가) {2_leader}에게 전쟁을 선포했습니다.</Text>
     </Replace>
@@ -47078,6 +47490,15 @@
     <Replace Tag="LOC_UI_PEDIA_BASE_COST" Language="ko_KR">
       <Text>기본 비용: {1_Amount : number #} {2_YieldIcon} {3_YieldName}</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_TURNS" Language="ko_KR">
+      <Text>턴: {1_Name}(일반 속도)</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_BASE_PROBABILITY" Language="ko_KR">
+      <Text>기본 확률: {1_Name}%</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_TARGET_DISTRICT" Language="ko_KR">
+      <Text>대상 특수지구: {1_Name}</Text>
+    </Replace>
     <Replace Tag="LOC_UI_PEDIA_REQUIRES" Language="ko_KR">
       <Text>요구: {1_Name}</Text>
     </Replace>
@@ -47246,8 +47667,44 @@
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION" Language="ko_KR">
       <Text>언덕 지형에서 전투하는 경우 전투력 +{1_Amount}</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="ko_KR">
+      <Text>{1_Name} 배치 성공</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_ERROR" Language="ko_KR">
+      <Text>{1_Name} 배치 실패</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_SET_OK" Language="ko_KR">
+      <Text>이 위치를 {1_CivName}에게 보이도록 설정합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_CLEAR_OK" Language="ko_KR">
+      <Text>이 위치를 {1_CivName}에게 보이지 않도록 설정합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_VIS_ERROR" Language="ko_KR">
+      <Text>{1_CivName}를 위한 이 위치의 시야 범위를 설정할 수 없습니다.</Text>
+    </Replace>
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED" Language="ko_KR">
       <Text>{1_Name} 특수지구에 있어야 합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CREATE_DISTRICT" Language="ko_KR">
+      <Text>배치하려면 {1_Name} 특수지구를 건설해야 합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HIGHER_TECH" Language="ko_KR">
+      <Text>배치하려면 문명에 {1_Name} 기술이 필요합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_HIGHER_CIVIC" Language="ko_KR">
+      <Text>배치하려면 문명에 {1_Name} 사회 제도가 필요합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_ERROR" Language="ko_KR">
+      <Text>이 위치에는 {1_Name}을(를) 배치할 수 없습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_ERROR_DISTRICT" Language="ko_KR">
+      <Text>{1_Name}은(는) 특수지구에 배치해야 합니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CONTINENT_PLACED" Language="ko_KR">
+      <Text>이 타일을 {1_Name}의 일부분으로 변경하는데 성공했습니다.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CONTINENT_ERROR" Language="ko_KR">
+      <Text>이 타일을 {1_Name}의 일부분으로 변경할 수 없었습니다.</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE" Language="ko_KR">
       <Text>지도: {1_MapName}</Text>

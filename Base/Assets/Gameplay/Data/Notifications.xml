@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Edward Beach (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_NOTIFICATION"/>
 	</Kinds>
 	<Types>
 		<Row Type="NOTIFICATION_BARBARIANS_SIGHTED" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_NEW_BARBARIAN_CAMP" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_CAPITAL_LOST" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_CAPITAL_CAPTURED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_CAPITAL_RECLAIMED" Kind="KIND_NOTIFICATION"/>
@@ -48,15 +49,15 @@
 		<Row Type="NOTIFICATION_CIVIC_BOOST" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_TECH_DISCOVERED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_CIVIC_DISCOVERED" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_1" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_2" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_3" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_4" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_5" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_6" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_7" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_8" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_USER_DEFINED_9" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_1" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_2" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_3" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_4" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_5" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_6" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_7" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_8" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_USER_DEFINED_9" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_SPY_HEIST_GREAT_WORK" Kind="KIND_NOTIFICATION"/>
@@ -110,8 +111,8 @@
 		<Row Type="NOTIFICATION_BORDERS_NOW_ENFORCED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_TILE_PILLAGED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_WONDER_COMPLETED" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_WONDER_FAILED" Kind="KIND_NOTIFICATION"/>
-    <Row Type="NOTIFICATION_ROADS_UPGRADED" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_WONDER_FAILED" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_ROADS_UPGRADED" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_MY_DOMINANT_CULTURE" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_OTHER_DOMINANT_CULTURE" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_MY_CULTURE_VICTORY_SOON" Kind="KIND_NOTIFICATION"/>
@@ -124,7 +125,7 @@
 		<Row Type="NOTIFICATION_MAKE_PEACE_CITY_STATE" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_AIRCRAFT_FORCED_REBASE" Kind="KIND_NOTIFICATION"/>
 		<Row Type="NOTIFICATION_AIRCRAFT_BASE_OVERRUN" Kind="KIND_NOTIFICATION"/>
-  </Types>
+	</Types>
 	<Notifications>
 		<Row NotificationType="NOTIFICATION_CHOOSE_ARTIFACT_PLAYER" SeverityType="HIGH" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_CHOOSE_ARTIFACT_PLAYER_MESSAGE" Summary="LOC_NOTIFICATION_CHOOSE_ARTIFACT_PLAYER_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_CHOOSE_BELIEF" SeverityType="HIGH" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_CHOOSE_BELIEF_MESSAGE" Summary="LOC_NOTIFICATION_CHOOSE_BELIEF_SUMMARY"/>
@@ -161,15 +162,15 @@
 		<Row NotificationType="NOTIFICATION_CIVIC_BOOST" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True" GroupType="CIVIC_BOOST"/>
 		<Row NotificationType="NOTIFICATION_TECH_DISCOVERED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="False" ShowIconSinglePlayer="False" GroupType="NOTIFICATION_TECH_DISCOVERED"/>
 		<Row NotificationType="NOTIFICATION_CIVIC_DISCOVERED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="False" ShowIconSinglePlayer="False" GroupType="NOTIFICATION_CIVIC_DISCOVERED"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_1" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_2" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_3" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_4" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_5" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_6" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_7" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_8" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
-    <Row NotificationType="NOTIFICATION_USER_DEFINED_9" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_1" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_2" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_3" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_4" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_5" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_6" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_7" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_8" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
+		<Row NotificationType="NOTIFICATION_USER_DEFINED_9" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="USER"/>
 		<Row NotificationType="NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE" SeverityType="HIGH" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE_MESSAGE" Summary="LOC_NOTIFICATION_SPY_CHOOSE_ESCAPE_ROUTE_SUMMARY" GroupType="ESPIONAGE"/>
 		<Row NotificationType="NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY" SeverityType="HIGH" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY_MESSAGE" Summary="LOC_NOTIFICATION_SPY_CHOOSE_DRAGNET_PRIORITY_SUMMARY" GroupType="ESPIONAGE"/>
 		<Row NotificationType="NOTIFICATION_SPY_HEIST_GREAT_WORK" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="ESPIONAGE"/>
@@ -215,6 +216,7 @@
 		<Row NotificationType="NOTIFICATION_CITY_FOOD_FOCUS" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_CITY_FOOD_FOCUS_MESSAGE" Summary="LOC_NOTIFICATION_CITY_FOOD_FOCUS_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_TREASURY_BANKRUPT" SeverityType="HIGH" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_TREASURY_BANKRUPT_MESSAGE" Summary="LOC_NOTIFICATION_TREASURY_BANKRUPT_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_BARBARIANS_SIGHTED" SeverityType="LOW" ExpiresEndOfTurn="False" ExpiresEndOfNextTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_BARBARIANS_SIGHTED_MESSAGE" Summary="LOC_NOTIFICATION_BARBARIANS_SIGHTED_SUMMARY"/>
+		<Row NotificationType="NOTIFICATION_NEW_BARBARIAN_CAMP" SeverityType="LOW" ExpiresEndOfTurn="False" ExpiresEndOfNextTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_MESSAGE" Summary="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_DISCOVER_CONTINENT" SeverityType="LOW" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_DISCOVER_CONTINENT_MESSAGE" Summary="LOC_NOTIFICATION_DISCOVER_CONTINENT_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_DISCOVER_GOODY_HUT" SeverityType="LOW" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_DISCOVER_GOODY_HUT_MESSAGE" Summary="LOC_NOTIFICATION_DISCOVER_GOODY_HUT_SUMMARY" GroupType="DISCOVER"/>
 		<Row NotificationType="NOTIFICATION_DISCOVER_NATURAL_WONDER" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_DISCOVER_NATURAL_WONDER_MESSAGE" Summary="LOC_NOTIFICATION_DISCOVER_NATURAL_WONDER_SUMMARY" GroupType="DISCOVER"/>
@@ -229,7 +231,7 @@
 		<Row NotificationType="NOTIFICATION_BORDERS_NOW_ENFORCED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_BORDERS_NOW_ENFORCED_MESSAGE" Summary="LOC_NOTIFICATION_BORDERS_NOW_ENFORCED_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_TILE_PILLAGED" SeverityType="HIGH" ExpiresEndOfTurn="False" ExpiresEndOfNextTurn="True" AutoNotify="False"/>
 		<Row NotificationType="NOTIFICATION_WONDER_COMPLETED" SeverityType="MID" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_WONDER_COMPLETED_MESSAGE" Summary="LOC_NOTIFICATION_WONDER_COMPLETED_SUMMARY"/>
-    <Row NotificationType="NOTIFICATION_WONDER_FAILED" SeverityType="MID" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_WONDER_FAILED_MESSAGE" Summary="LOC_NOTIFICATION_WONDER_FAILED_SUMMARY"/>
+		<Row NotificationType="NOTIFICATION_WONDER_FAILED" SeverityType="MID" ExpiresEndOfTurn="False" AutoNotify="False" Message="LOC_NOTIFICATION_WONDER_FAILED_MESSAGE" Summary="LOC_NOTIFICATION_WONDER_FAILED_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_CAPITAL_LOST" SeverityType="MID" ExpiresEndOfTurn="False" ExpiresEndOfNextTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_CAPITAL_LOST_MESSAGE" Summary="LOC_NOTIFICATION_CAPITAL_LOST_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_CAPITAL_CAPTURED" SeverityType="MID" ExpiresEndOfTurn="False" ExpiresEndOfNextTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_CAPITAL_LOST_MESSAGE" Summary="LOC_NOTIFICATION_CAPITAL_LOST_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_CAPITAL_RECLAIMED" SeverityType="MID" ExpiresEndOfTurn="False" ExpiresEndOfNextTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_CAPITAL_RECLAIMED_MESSAGE" Summary="LOC_NOTIFICATION_CAPITAL_RECLAIMED_SUMMARY"/>
@@ -246,5 +248,5 @@
 		<Row NotificationType="NOTIFICATION_MAKE_PEACE_CITY_STATE" SeverityType="HIGH" ExpiresEndOfTurn="True" AutoNotify="False"/>
 		<Row NotificationType="NOTIFICATION_AIRCRAFT_FORCED_REBASE" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_AIRCRAFT_FORCED_REBASE_MESSAGE" Summary="LOC_NOTIFICATION_AIRCRAFT_FORCED_REBASE_SUMMARY"/>
 		<Row NotificationType="NOTIFICATION_AIRCRAFT_BASE_OVERRUN" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" Message="LOC_NOTIFICATION_AIRCRAFT_BASE_OVERRUN_MESSAGE" Summary="LOC_NOTIFICATION_AIRCRAFT_BASE_OVERRUN_SUMMARY"/>
-  </Notifications>
+	</Notifications>
 </GameInfo>

@@ -248,24 +248,25 @@
 		<Row PolicyType="POLICY_MARITIME_INDUSTRIES" ObsoletePolicy="POLICY_INTERNATIONAL_WATERS"/>
 		<Row PolicyType="POLICY_MANEUVER" ObsoletePolicy="POLICY_CHIVALRY"/>
 		<Row PolicyType="POLICY_MANEUVER" ObsoletePolicy="POLICY_LIGHTNING_WARFARE"/>
-		<Row PolicyType="POLICY_STRATEGOS" ObsoletePolicy="POLICY_MILITARY_ORGANIZATION"/>
+		<Row PolicyType="POLICY_STRATEGOS" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_GENERAL" ObsoletePolicy="POLICY_MILITARY_ORGANIZATION"/>
 		<Row PolicyType="POLICY_CORVEE" ObsoletePolicy="POLICY_GOTHIC_ARCHITECTURE"/>
 		<Row PolicyType="POLICY_CORVEE" ObsoletePolicy="POLICY_SKYSCRAPERS"/>
 		<Row PolicyType="POLICY_CONSCRIPTION" ObsoletePolicy="POLICY_LEVEE_EN_MASSE"/>
 		<Row PolicyType="POLICY_LAND_SURVEYORS" ObsoletePolicy="POLICY_EXPROPRIATION"/>
 		<Row PolicyType="POLICY_COLONIZATION" ObsoletePolicy="POLICY_EXPROPRIATION"/>
-		<Row PolicyType="POLICY_INSPIRATION" ObsoletePolicy="POLICY_NOBEL_PRIZE"/>
+		<Row PolicyType="POLICY_INSPIRATION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_SCIENTIST" ObsoletePolicy="POLICY_NOBEL_PRIZE"/>
 		<Row PolicyType="POLICY_REVELATION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_PROPHET" ObsoletePolicy="POLICY_INVENTION"/>
 		<!--Classical Era-->
 		<Row PolicyType="POLICY_INSULAE" ObsoletePolicy="POLICY_MEDINA_QUARTER"/>
-    <Row PolicyType="POLICY_LITERARY_TRADITION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_WRITER"/>
-    <Row PolicyType="POLICY_CHARISMATIC_LEADER" ObsoletePolicy="POLICY_GUNBOAT_DIPLOMACY"/>
+		<Row PolicyType="POLICY_LITERARY_TRADITION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_WRITER"/>
+		<Row PolicyType="POLICY_CHARISMATIC_LEADER" ObsoletePolicy="POLICY_GUNBOAT_DIPLOMACY"/>
 		<Row PolicyType="POLICY_RAID" ObsoletePolicy="POLICY_TOTAL_WAR"/>
 		<Row PolicyType="POLICY_BASTIONS" ObsoletePolicy="POLICY_PUBLIC_WORKS"/>
 		<Row PolicyType="POLICY_LIMES" ObsoletePolicy="POLICY_PUBLIC_WORKS"/>
 		<Row PolicyType="POLICY_NATURAL_PHILOSOPHY" ObsoletePolicy="POLICY_FIVE_YEAR_PLAN"/>
 		<!-- Medieval Era-->
 		<Row PolicyType="POLICY_NAVAL_INFRASTRUCTURE" ObsoletePolicy="POLICY_ECONOMIC_UNION"/>
+    <Row PolicyType="POLICY_NAVIGATION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_ADMIRAL"/>
 		<Row PolicyType="POLICY_FEUDAL_CONTRACT" ObsoletePolicy="POLICY_GRANDE_ARMEE"/>
 		<Row PolicyType="POLICY_SERFDOM" ObsoletePolicy="POLICY_PUBLIC_WORKS"/>
 		<Row PolicyType="POLICY_RETAINERS" ObsoletePolicy="POLICY_PROPAGANDA"/>
@@ -275,17 +276,23 @@
 		<Row PolicyType="POLICY_MEDINA_QUARTER" ObsoletePolicy="POLICY_NEW_DEAL"/>
 		<Row PolicyType="POLICY_CRAFTSMEN" ObsoletePolicy="POLICY_FIVE_YEAR_PLAN"/>
 		<Row PolicyType="POLICY_TOWN_CHARTERS" ObsoletePolicy="POLICY_ECONOMIC_UNION"/>
-		<Row PolicyType="POLICY_TRAVELING_MERCHANTS" ObsoletePolicy="POLICY_LAISSEZ_FAIRE"/>
+		<Row PolicyType="POLICY_TRAVELING_MERCHANTS" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_MERCHANT" ObsoletePolicy="POLICY_LAISSEZ_FAIRE"/>
 		<Row PolicyType="POLICY_GOTHIC_ARCHITECTURE" ObsoletePolicy="POLICY_SKYSCRAPERS"/>
 		<Row PolicyType="POLICY_CHIVALRY" ObsoletePolicy="POLICY_LIGHTNING_WARFARE"/>
 		<!-- Renaissance Era-->
+    <Row PolicyType="POLICY_INVENTION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_ENGINEER"/>
+    <Row PolicyType="POLICY_FRESCOES" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_ARTIST"/>
 		<Row PolicyType="POLICY_TRIANGULAR_TRADE" ObsoletePolicy="POLICY_ECOMMERCE"/>
 		<Row PolicyType="POLICY_LIBERALISM" ObsoletePolicy="POLICY_NEW_DEAL"/>
 		<!--Industrial Era-->
 		<Row PolicyType="POLICY_GRANDE_ARMEE" ObsoletePolicy="POLICY_MILITARY_FIRST"/>
 		<Row PolicyType="POLICY_PRESS_GANGS" ObsoletePolicy="POLICY_INTERNATIONAL_WATERS"/>
+    <Row PolicyType="POLICY_SYMPHONIES" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_MUSICIAN"/>
+    <Row PolicyType="POLICY_MILITARY_ORGANIZATION" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_GENERAL"/>
 		<Row PolicyType="POLICY_MILITARY_RESEARCH" ObsoletePolicy="POLICY_INTEGRATED_SPACE_CELL"/>
 		<!--Modern Era-->
+    <Row PolicyType="POLICY_LAISSEZ_FAIRE" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_MERCHANT"/>
+    <Row PolicyType="POLICY_NOBEL_PRIZE" RequiresAvailableGreatPersonClass="GREAT_PERSON_CLASS_SCIENTIST"/>
 		<Row PolicyType="POLICY_FINEST_HOUR" ObsoletePolicy="POLICY_STRATEGIC_AIR_FORCE"/>
 		<!--Atomic Era-->
 	</ObsoletePolicies>
@@ -957,6 +964,18 @@
 		</Row>
 		<Row>
 			<ModifierId>PRESSGANGS_INDUSTRIAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_TAG_ERA_PRODUCTION</ModifierType>
 		</Row>
 		<Row>
@@ -3239,6 +3258,51 @@
 			<Extra>-1</Extra>
 		</Row>
 		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MEDIEVAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_RANGED</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MEDIEVAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_NAVAL_RAIDER</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+			<Name>EraType</Name>
+			<Value>ERA_MEDIEVAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
 			<ModifierId>PROPAGANDA_OVERALLWARWEARINESS</ModifierId>
 			<Name>Amount</Name>
 			<Value>-25</Value>
@@ -4505,6 +4569,18 @@
 			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INTERNATIONAL_WATERS</PolicyType>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_INVENTION</PolicyType>
 			<ModifierId>INVENTION_GREATENGINEERPOINTS</ModifierId>
 		</Row>
@@ -4835,6 +4911,18 @@
 		<Row>
 			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
 			<ModifierId>MARITIMIEINDUSTRIES_CLASSICAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_MELEE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RANGED_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PRESS_GANGS</PolicyType>
+			<ModifierId>PRESSGANGS_MEDIEVAL_NAVAL_RAIDER_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>

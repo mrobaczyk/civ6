@@ -28,18 +28,18 @@
 		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_KHMER" LeaderType="LEADER_JAYAVARMAN" Type="BUILDING_PRASAT" Icon="ICON_BUILDING_PRASAT" Name="LOC_BUILDING_PRASAT_NAME" Description="LOC_BUILDING_PRASAT_DESCRIPTION" SortIndex="20"/>
 	</PlayerItems>
 	<Maps>
-		<Row File="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map" Name="LOC_MAP_EAST_ASIA_STANDARD_NAME" Description="LOC_MAP_EAST_ASIA_STANDARD_DESCRIPTION" SortIndex="610"/>
-		<Row File="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard.Civ6Map" Name="LOC_MAP_TSLEAST_ASIA_STANDARD_NAME" Description="LOC_MAP_TSLEAST_ASIA_STANDARD_DESCRIPTION" RequiresUniqueLeaders="1" SortIndex="620"/>
+		<Row File="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map" Name="LOC_MAP_EAST_ASIA_STANDARD_NAME" Description="LOC_MAP_EAST_ASIA_STANDARD_DESCRIPTION" StaticMap="1" SortIndex="610"/>
+		<Row File="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard.Civ6Map" Name="LOC_MAP_TSLEAST_ASIA_STANDARD_NAME" Description="LOC_MAP_TSLEAST_ASIA_STANDARD_DESCRIPTION" StaticMap="1" RequiresUniqueLeaders="1" SortIndex="620"/>
 	
 		<!-- Expansion 2 Support -->
-		<Row Domain="Maps:Expansion2Maps" File="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard_XP2.Civ6Map" Name="LOC_MAP_EAST_ASIA_STANDARD_NAME" Description="LOC_MAP_EAST_ASIA_STANDARD_DESCRIPTION" SortIndex="610"/>
-		<Row Domain="Maps:Expansion2Maps" File="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" Name="LOC_MAP_TSLEAST_ASIA_STANDARD_NAME" Description="LOC_MAP_TSLEAST_ASIA_STANDARD_DESCRIPTION" RequiresUniqueLeaders="1" SortIndex="620"/>
+		<Row Domain="Maps:Expansion2Maps" File="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard_XP2.Civ6Map" Name="LOC_MAP_EAST_ASIA_STANDARD_NAME" Description="LOC_MAP_EAST_ASIA_STANDARD_DESCRIPTION" StaticMap="1" SortIndex="610"/>
+		<Row Domain="Maps:Expansion2Maps" File="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" Name="LOC_MAP_TSLEAST_ASIA_STANDARD_NAME" Description="LOC_MAP_TSLEAST_ASIA_STANDARD_DESCRIPTION" StaticMap="1" RequiresUniqueLeaders="1" SortIndex="620"/>
 	</Maps>
 	<MapSizes>
-		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="8" DefaultPlayers="8" MinCityStates="12" MaxCityStates="12" DefaultCityStates="12" SortIndex="10"/>
-		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="7" MaxCityStates="7" DefaultCityStates="7" SortIndex="10"/>
-		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard_XP2.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="8" DefaultPlayers="8" MinCityStates="12" MaxCityStates="12" DefaultCityStates="12" SortIndex="10"/>
-		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="7" MaxCityStates="7" DefaultCityStates="7" SortIndex="10"/>
+		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="8" DefaultPlayers="8" MinCityStates="0" MaxCityStates="12" DefaultCityStates="12" SortIndex="10"/>
+		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="6" DefaultCityStates="6" SortIndex="10"/>
+		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard_XP2.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="8" DefaultPlayers="8" MinCityStates="0" MaxCityStates="12" DefaultCityStates="12" SortIndex="10"/>
+		<Row Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/TSLEastAsiaStandard_XP2.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="6" DefaultCityStates="6" SortIndex="10"/>
 	</MapSizes>
 	<MapDomainOverrides>
 		<Row Map="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map" ParameterId="MapSize" Domain="{1F367231-A040-4793-BDBB-088816853683}Maps/EastAsiaStandard.Civ6Map"/>

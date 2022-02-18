@@ -69,7 +69,7 @@
 
 	<ParameterCriteria>
 
-		<!-- Disable Teams Share Visibiility -->
+		<!-- Disable Teams Share Visibility -->
 		<Row ParameterId="AlliesShareVisibility" ConfigurationGroup="Game" ConfigurationId="NO_TEAMS" Operator="NotEquals" ConfigurationValue="1" />
 		
 		<!-- Score victory cannot be enabled when there is no turn limit.-->
@@ -81,6 +81,8 @@
 	<ParameterDependencyQueries>
 		<!-- Basic query -->
 		<Row QueryId="ParameterDependencies" />
+		<Row QueryId="MapWorldWrapDependencies" />
+		<Row QueryId="MapResourcesDependencies" />
 
 	</ParameterDependencyQueries>
 
@@ -243,6 +245,12 @@
 
 		<!-- Parameter Dependency Queries -->
 		<Row QueryId="ParameterDependencies" SQL="SELECT * FROM ParameterDependencies ORDER BY ParameterId" />
+		
+		<!-- Disable 'World Wrap' if map is fixed since the fixed map already includes this option or if the map script explicitly disables it. -->
+		<Row QueryId="MapWorldWrapDependencies" SQL="SELECT 'WorldWrap' AS ParameterId, 'Map' AS ConfigurationGroup, 'MAP_SCRIPT' AS ConfigurationId, 'NotEquals' AS Operator, File AS ConfigurationValue FROM Maps WHERE DisableWorldWrap = 1 OR StaticMap = 1" />
+		
+		<!-- Disable 'Resources' drop-down if map is fixed map, e.g pre-populated with resources. -->
+		<Row QueryId="MapResourcesDependencies" SQL="SELECT 'Resources' AS ParameterId, 'Map' AS ConfigurationGroup, 'MAP_SCRIPT' AS ConfigurationId, 'NotEquals' AS Operator, File AS ConfigurationValue FROM Maps WHERE StaticMap = 1" />
 
 		<!-- Value Queries -->
 		<Row QueryId="DomainValues" SQL="SELECT * FROM DomainValues WHERE Key1 IS NULL AND Key2 IS NULL"/>
@@ -272,6 +280,7 @@
 		<Row QueryId="MapDomainOverrides" SQL="SELECT ParameterId, Domain FROM MapDomainOverrides WHERE Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
 		<Row QueryId="MapSupportedValues" SQL="SELECT Domain, Value, 'intersect' AS Filter FROM MapSupportedValues WHERE Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
 		<Row QueryId="MapUnSupportedValues" SQL="SELECT Domain, Value, 'difference' AS Filter FROM MapUnSupportedValues WHERE Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
+		
 
 		<!-- Ruleset Specific queries -->
 		<!-- These queries adjust the domain values based on the selected ruleset. -->
