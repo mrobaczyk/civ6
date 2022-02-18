@@ -96,7 +96,7 @@ DROP TABLE IF EXISTS "RevealedPlots";
 CREATE TABLE "RevealedPlots" (
 		"ID" INTEGER NOT NULL,
 		"Player" INTEGER,
-		PRIMARY KEY(ID));
+		PRIMARY KEY(ID, Player));
 
 DROP TABLE IF EXISTS "StartPositions";
 CREATE TABLE "StartPositions" (
@@ -117,9 +117,10 @@ CREATE TABLE "Units" (
 DROP TABLE IF EXISTS "UnitAttributes";
 CREATE TABLE "UnitAttributes" (
 		"ID" INTEGER NOT NULL,
+		"Type" TEXT NOT NULL,
 		"Name" TEXT NOT NULL,
 		"Value" TEXT,
-		PRIMARY KEY(ID, Name));
+		PRIMARY KEY(ID, Type, Name));
 
 DROP TABLE IF EXISTS "Cities";
 CREATE TABLE "Cities" (
@@ -131,9 +132,10 @@ CREATE TABLE "Cities" (
 DROP TABLE IF EXISTS "CityAttributes";
 CREATE TABLE "CityAttributes" (
 		"ID" INTEGER NOT NULL,
+		"Type" TEXT NOT NULL,
 		"Name" TEXT NOT NULL,
 		"Value" TEXT,
-		PRIMARY KEY(ID, Name));
+		PRIMARY KEY(ID, Type, Name));
 
 DROP TABLE IF EXISTS "Districts";
 CREATE TABLE "Districts" (
@@ -145,9 +147,10 @@ CREATE TABLE "Districts" (
 DROP TABLE IF EXISTS "DistrictAttributes";
 CREATE TABLE "DistrictAttributes" (
 		"ID" INTEGER NOT NULL,
+		"Type" TEXT NOT NULL,
 		"Name" TEXT NOT NULL,
 		"Value" TEXT,
-		PRIMARY KEY(ID, Name));
+		PRIMARY KEY(ID, Type, Name));
 
 DROP TABLE IF EXISTS "Buildings";
 CREATE TABLE "Buildings" (

@@ -966,6 +966,9 @@
 		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_LUXURIES">
 			<Text>Amenities from Luxury resources:</Text>
 		</Row>
+		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_CITY_STATES">
+			<Text>Amenities from City-States:</Text>
+		</Row>
 		<Row Tag="LOC_HUD_CITY_AMENITIES_FROM_RELIGION">
 			<Text>Amenities from Religion:</Text>
 		</Row>
@@ -2005,7 +2008,7 @@
 			<Text>None</Text>
 		</Row>
 		<Row Tag="LOC_TECH_FILTER_RECOMMENDED">
-			<Text>Recommend</Text>
+			<Text>Recommended</Text>
 		</Row>
 		<Row Tag="LOC_TECH_FILTER_FOOD">
 			<Text>Food</Text>
@@ -2544,8 +2547,8 @@
 		<Row Tag="LOC_UNITOPERATION_FORTIFY_DESCRIPTION">
 			<Text>Fortify</Text>
 		</Row>
-		<Row Tag="LOC_UNITOPERATION_ALERT">
-			<Text>Order the unit to fortify and sleep until it sees an enemy.</Text>
+		<Row Tag="LOC_UNITOPERATION_ALERT_DESCRIPTION">
+			<Text>Alert</Text>
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_HEAL_DESCRIPTION">
 			<Text>Fortify Until Healed</Text>
@@ -3000,7 +3003,7 @@
 			<Text>Requires</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_MAKES_OBSOLETE">
-			<Text>Makes Obsolete</Text>
+			<Text>Makes Obsolete:</Text>
 		</Row>
 		<Row Tag="LOC_TOOLTIP_LAKE">
 			<Text>Lake</Text>
@@ -3727,7 +3730,7 @@
 			<Text>Has original [ICON_Capital] Capital.</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_DOMINATION_DETAILS">
-			<Text>To achieve a [COLOR:ResMilitaryLabelCS]DOMINATION[ENDCOLOR] victory, you must conquer the [ICON_Capital] Capital of every other civilization.[NEWLINE][NEWLINE]A strong military is highly recommended.</Text>
+			<Text>To achieve a [COLOR:ResMilitaryLabelCS]DOMINATION[ENDCOLOR] victory, you must conquer the original [ICON_Capital] Capital of every other civilization.[NEWLINE][NEWLINE]A strong military is highly recommended.</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_DOMINATION_SUMMARY">
 			<Text>{1_NumCaptured : plural 1?{1_NumCaptured} Capital; other?{1_NumCaptured} Capitals;} Captured</Text>
@@ -4706,6 +4709,12 @@
 		<Row Tag="LOC_HUD_REPORTS_HEADER_FOOD">
 			<Text>Food</Text>
 		</Row>
+    <Row Tag="LOC_HUD_REPORTS_HEADER_UNITNAME">
+      <Text>Unit Name</Text>
+    </Row>
+    <Row Tag="LOC_HUD_REPORTS_HEADER_UNITCOUNT">
+      <Text>Number of Units</Text>
+    </Row>
 		<Row Tag="LOC_HUD_REPORTS_HEADER_GOLD">
 			<Text>Gold</Text>
 		</Row>
@@ -4929,6 +4938,9 @@
 		<Row Tag="LOC_PLAYER_YIELD_SCIENCE_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
+    <Row Tag="LOC_PLAYER_YIELD_SCIENCE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+    </Row>
 		<Row Tag="LOC_PLAYER_YIELD_CULTURE_FROM_ANARCHY">
 			<Text>No culture due to anarchy.</Text>
 		</Row>
@@ -4953,6 +4965,9 @@
 		<Row Tag="LOC_PLAYER_YIELD_CULTURE_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
+    <Row Tag="LOC_PLAYER_YIELD_CULTURE_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+    </Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_ANARCHY">
 			<Text>No gold due to anarchy.</Text>
 		</Row>
@@ -4989,6 +5004,9 @@
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
+    <Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+    </Row>
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_MAINTENANCE_FROM_BUILDINGS">
 			<Text>{Value : number -#.#;+#.#} from Buildings</Text>
 		</Row>
@@ -5046,6 +5064,9 @@
 		<Row Tag="LOC_PLAYER_YIELD_FAITH_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
+    <Row Tag="LOC_PLAYER_YIELD_FAITH_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
+      <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
+    </Row>
 		<!-- City Yields ToolTips -->
 		<Row Tag="LOC_CITY_YIELD_FROM_BUILDINGS_TOOLTIP">
 			<Text>{Value : number +#.#;-#.#} from {1_BuildingName}</Text>
@@ -5204,7 +5225,7 @@
 			<Text>The worth of a culture is not measured by its accomplishments, but in how those accomplishments last, and how they are remembered. The beauty that you have inspired our people to create will ensure that our culture stands for all time.</Text>
 		</Row>
 		<Row Tag="LOC_VICTORY_DOMINATION_TEXT">
-			<Text>There are those who quibble whether power necessitates the will to use it. Whether violence begets only more violence. These questions are irrelevant. You, Great Leader, made it so.</Text>
+			<Text>Though its face my change throughout the ages, history is written from the hand of the victor. By your actions this day, you ensure our people are glorious tomorrow.</Text>
 		</Row>
 		<Row Tag="LOC_VICTORY_DEFAULT_TEXT">
 			<Text>Everyone else has lost... Therefore you've won!</Text>

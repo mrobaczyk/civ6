@@ -64,6 +64,7 @@
 		<Row ConditionType="Foreign Continent" Value="10"/>
 	</PlotEvalConditions>
 	<AiListTypes>
+		<Row ListType="BlackQueenDiplomacyPreference"/>
 		<Row ListType="CityStateAllyInfluencePreference"/>
 		<Row ListType="CityStateAllyNoWarPreference"/>
 		<Row ListType="ClearingBarbCampLoverClearingBarbCampPreference"/>
@@ -94,6 +95,7 @@
 		<Row ListType="ExplorationObsessedExplorers"/>
 	</AiListTypes>
 	<AiLists>
+		<Row ListType="BlackQueenDiplomacyPreference" AgendaType="TRAIT_AGENDA_BLACK_QUEEN" System="DiplomaticActions"/>
 		<Row ListType="CityStateAllyInfluencePreference" AgendaType="TRAIT_AGENDA_CITY_STATE_ALLY" System="PseudoYields"/>
 		<Row ListType="CityStateAllyNoWarPreference" AgendaType="TRAIT_AGENDA_CITY_STATE_ALLY" System="DiplomaticActions"/>
 		<Row ListType="CityStateAllyInfluencePreference" AgendaType="TRAIT_AGENDA_DELIAN_LEAGUE" System="PseudoYields"/>
@@ -128,6 +130,7 @@
 		<Row ListTYpe="ExplorationObsessedExplorers" AgendaType="TRAIT_AGENDA_EXPLORATION_OBSESSED" System="PseudoYields"/>
 	</AiLists>
 	<AiFavoredItems>
+		<Row ListType="BlackQueenDiplomacyPreference" Item="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Favored="false"/>
 		<Row ListType="CityStateAllyInfluencePreference" Item="PSEUDOYIELD_INFLUENCE" Value="25"/>
 		<Row ListType="CityStateAllyNoWarPreference" Item="DIPLOACTION_DECLARE_WAR_MINOR_CIV" Favored="false"/>
 		<Row ListType="CitySateProtectionLoverCityStateProtectionPreference" Item="DIPLOACTION_DECLARE_PROTECTORATE_WAR" Favored="true"/>
@@ -285,8 +288,10 @@
 		<Row AgendaOne="AGENDA_PEACEKEEPER" AgendaTwo="AGENDA_DARWINIST"/>
 		<Row AgendaOne="AGENDA_IRON_CROWN" AgendaTwo="AGENDA_CITY_STATE_ALLY"/>
 		<Row AgendaOne="AGENDA_IRON_CROWN" AgendaTwo="AGENDA_CITY_STATE_PROTECTOR"/>
+    <Row AgendaOne="AGENDA_LAST_VIKING_KING" AgendaTwo="AGENDA_PARANOID" />
 		<Row AgendaOne="AGENDA_GREAT_PERSON_OBSESSED" AgendaTwo="AGENDA_GREAT_PERSON_ADVOCATE"/>
 		<Row AgendaOne="AGENDA_WONDER_OBSESSED" AgendaTwo="AGENDA_WONDER_ADVOCATE"/>
+		<Row AgendaOne="AGENDA_BIG_STICK_POLICY" AgendaTwo="AGENDA_DARWINIST"/>
 		<Row AgendaOne="AGENDA_BIG_STICK_POLICY" AgendaTwo="AGENDA_EXPLOITATIVE"/>
 		<Row AgendaOne="AGENDA_BUSHIDO" AgendaTwo="AGENDA_CULTURED"/>
 		<Row AgendaOne="AGENDA_BUSHIDO" AgendaTwo="AGENDA_STANDING_ARMY"/>
@@ -2145,6 +2150,11 @@
 			<Value>LOC_DIPLO_MODIFIER_GREAT_PEOPLE_ADVOCATE_LAGGING</Value>
 		</Row>
 		<Row>
+			<ModifierId>AGENDA_MODIFIER_GREAT_PERSON_ADVOCATE_LAG</ModifierId>
+			<Name>HiddenAgenda</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
 			<ModifierId>AGENDA_MODIFIER_GREAT_PERSON_ADVOCATE_LEAD</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>-6</Value>
@@ -2159,7 +2169,12 @@
 			<Name>SimpleModifierDescription</Name>
 			<Value>LOC_DIPLO_MODIFIER_GREAT_PEOPLE_ADVOCATE_LEADING</Value>
 		</Row>
-		<Row>
+    <Row>
+      <ModifierId>AGENDA_MODIFIER_GREAT_PERSON_ADVOCATE_LEAD</ModifierId>
+      <Name>HiddenAgenda</Name>
+      <Value>true</Value>
+    </Row>
+    <Row>
 			<ModifierId>AGENDA_MODIFIER_WONDER_ADVOCATE_LAG</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>6</Value>
@@ -2174,7 +2189,12 @@
 			<Name>SimpleModifierDescription</Name>
 			<Value>LOC_DIPLO_MODIFIER_WONDER_ADVOCATE_LAGGING</Value>
 		</Row>
-		<Row>
+    <Row>
+      <ModifierId>AGENDA_MODIFIER_WONDER_ADVOCATE_LAG</ModifierId>
+      <Name>HiddenAgenda</Name>
+      <Value>true</Value>
+    </Row>
+    <Row>
 			<ModifierId>AGENDA_MODIFIER_WONDER_ADVOCATE_LEAD</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>-6</Value>
@@ -2189,7 +2209,12 @@
 			<Name>SimpleModifierDescription</Name>
 			<Value>LOC_DIPLO_MODIFIER_WONDER_ADVOCATE_LEADING</Value>
 		</Row>
-		<Row>
+    <Row>
+      <ModifierId>AGENDA_MODIFIER_WONDER_ADVOCATE_LEAD</ModifierId>
+      <Name>HiddenAgenda</Name>
+      <Value>true</Value>
+    </Row>
+    <Row>
 			<ModifierId>AGENDA_SAME_GOVERNMENT</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>6</Value>
@@ -2797,10 +2822,6 @@
 		<Row>
 			<RequirementSetId>PLAYER_CLEARS_BARBARIAN_CAMPS</RequirementSetId>
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
-		</Row>
-		<Row>
-			<RequirementSetId>PLAYER_CLEARS_BARBARIAN_CAMPS</RequirementSetId>
-			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_CLEARS_BARBARIAN_CAMPS</RequirementSetId>
@@ -3496,6 +3517,11 @@
 			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
 			<Name>TurnsAgo</Name>
 			<Value>30</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_RELIGION_NOT_RECEIVED</RequirementId>
+			<Name>FoundingDelay</Name>
+			<Value>10</Value>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_LAGS_GREAT_PEOPLE</RequirementId>

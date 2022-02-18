@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Kind="KIND_ABILITY"/>
+	</Types>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_SPEAR_OF_FIONN" Name="LOC_ABILITY_SPEAR_OF_FIONN_NAME" Description="LOC_ABILITY_SPEAR_OF_FIONN_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<TypeTags>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Tag="CLASS_RECON"/>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_SPEAR_OF_FIONN" Tag="CLASS_ANTI_CAVALRY"/>
+	</TypeTags>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_SPEAR_OF_FIONN</UnitAbilityType>
+			<ModifierId>SPEAR_OF_FIONN_ADJUST_COMBAT_STRENGTH</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>SPEAR_OF_FIONN_ADJUST_COMBAT_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>SPEAR_OF_FIONN_ADJUST_COMBAT_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="SPEAR_OF_FIONN_ADJUST_COMBAT_STRENGTH" Context="Preview" Text="LOC_ABILITY_SPEAR_OF_FIONN_DESCRIPTION"/>
+	</ModifierStrings>
+</GameInfo>

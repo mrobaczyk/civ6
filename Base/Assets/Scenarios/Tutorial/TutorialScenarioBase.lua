@@ -529,6 +529,7 @@ function TutorialItemBank1()
 	item:SetIsDoneEvents("LocalPlayerTurnEnd");
 	item:SetUITriggers("ActionPanel", "TutorialSelectEndTurn");
 	item:SetEnabledControls(UITutorialManager:GetHash("ActionPanel"));
+	item:SetDisabledControls(UITutorialManager:GetHash("ChangeProductionCheck"));
 
 	-- =============================== SELECT_RESEARCH_8 =====================================
 	local item_selectResearch8:TutorialItem = TutorialItem:new("SELECT_RESEARCH_8");
@@ -2336,6 +2337,18 @@ end
 			UI.PlaySound("Stop_ADVISOR_LINE_FTUE_261")
 			LuaEvents.AdvisorPopup_ClearActive( advisorInfo );
 		end );
+	item:SetOpenFunction(
+		function()
+			local localPlayer = Game.GetLocalPlayer();
+			local player = Players[localPlayer];
+			local playerUnits = player:GetUnits();
+			for i, unit in playerUnits:Members() do
+				local unitTypeName = UnitManager.GetTypeName(unit);
+				if "UNIT_WARRIOR" == unitTypeName then
+					LockUnit(unit:GetID());
+				end
+			end
+		end );
 	item:SetIsDoneFunction(
 		function()
 			return false;
@@ -2640,10 +2653,12 @@ end
 			DisableUnitAction( "UNITOPERATION_SLEEP", "UNIT_SETTLER");		
 			DisableUnitAction( "UNITCOMMAND_EXIT_FORMATION");
 			AddMapUnitMoveRestriction( "UNIT_SETTLER" );
+			LuaEvents.Tutorial_DisableMapSelect( true );
 		end );
 	item_settlerFormation:SetCleanupFunction(
 		function( )
 			LuaEvents.Tutorial_DisableMapDrag( false );
+			LuaEvents.Tutorial_DisableMapSelect( false );
 		end );
 	item_settlerFormation:SetUITriggers("UnitFlagManager", "WorldInput", "UnitPanel", "TutorialFormationAction");
 	item_settlerFormation:SetEnabledControls(UITutorialManager:GetHash("UnitFlagManager"), UnitCommandTypes.ENTER_FORMATION);
@@ -3204,6 +3219,7 @@ end
 		function()
 			RemoveMapUnitMoveRestriction( "UNIT_SETTLER" );
 			RemoveMapUnitMoveRestriction( "UNIT_WARRIOR" );
+			UnlockUnit();
 		end );
 	-- ================================ DISTRICTS_9 =====================================
 	local item_districts9:TutorialItem = TutorialItem:new("DISTRICTS_9");

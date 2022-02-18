@@ -61,7 +61,7 @@
 		<Row DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR" Name="LOC_DIPLOACTION_DECLARE_SURPRISE_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_SURPRISE_WAR_DESCRIPTION" Cost="0" WarmongerPercent="150"/>
 		<Row DiplomaticActionType="DIPLOACTION_MAKE_PEACE" Name="LOC_DIPLOACTION_MAKE_PEACE_NAME" Description="LOC_DIPLOACTION_MAKE_PEACE_DESCRIPTION" Cost="0" Agreement="true" Duration="20"/>
 		<Row DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Name="LOC_DIPLOACTION_DIPLOMATIC_DELEGATION_NAME" Description="LOC_DIPLOACTION_DIPLOMATIC_DELEGATION_DESCRIPTION" InitiatorObsoleteCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="25" RequiresCapitalPath="true" NoCurrentDelegation="true"/>
-		<Row DiplomaticActionType="DIPLOACTION_ALLIANCE" Name="LOC_DIPLOACTION_ALLIANCE_NAME" Description="LOC_DIPLOACTION_ALLIANCE_DESCRIPTION" CivilopediaKey="DIPLO_7" InitiatorPrereqCivic="CIVIC_CIVIL_SERVICE" TargetPrereqCivic="CIVIC_CIVIL_SERVICE" Cost="0" Agreement="true" Duration="30"/>
+		<Row DiplomaticActionType="DIPLOACTION_ALLIANCE" Name="LOC_DIPLOACTION_ALLIANCE_NAME" Description="LOC_DIPLOACTION_ALLIANCE_DESCRIPTION" CivilopediaKey="DIPLO_12" InitiatorPrereqCivic="CIVIC_CIVIL_SERVICE" TargetPrereqCivic="CIVIC_CIVIL_SERVICE" Cost="0" Agreement="true" Duration="30"/>
 		<Row DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Name="LOC_DIPLOACTION_DECLARE_FRIENDSHIP_NAME" Description="LOC_DIPLOACTION_DECLARE_FRIENDSHIP_DESCRIPTION" Cost="0" NoCurrentDOF="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_GRANT_INFLUENCE_TOKEN" Name="LOC_DIPLOACTION_GRANT_INFLUENCE_TOKEN_NAME" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_GIFT_UNIT" Name="LOC_DIPLOACTION_GIFT_UNIT_NAME" Cost="0"/>
@@ -80,9 +80,9 @@
 		<Row DiplomaticActionType="DIPLOACTION_VIEW_DEMAND_TRIBUTE" Name="LOC_DIPLOACTION_VIEW_DEMAND_TRIBUTE_NAME"/>
 		<!-- A placeholder action that allows us to set it favored or disfavored on a general or per-opponent basis, but will never return actual value -->
 		<Row DiplomaticActionType="DIPLOACTION_USE_NUCLEAR_WEAPON" Name="LOC_DIPLOACTION_USE_NUCLEAR_WEAPON"/>
-		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_SPY_NAME" UIGroup="DISCUSS" Cost="0"/>
+		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_SPY_NAME" UIGroup="DISCUSS" Cost="10"/>
 		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_CONVERT_NAME" UIGroup="DISCUSS" Cost="0"/>
-		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS_NAME" UIGroup="DISCUSS" Cost="0"/>
+		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS_NAME" UIGroup="DISCUSS" Cost="5"/>
 		<Row DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Name="LOC_DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR_NAME" UIGroup="DISCUSS" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_PROPOSE_PEACE_DEAL" Name="LOC_DIPLOACTION_PROPOSE_PEACE_DEAL" Description="LOC_DIPLOACTION_PROPOSE_PEACE_DEAL_DESCRIPTION"/>
 	</DiplomaticActions>
@@ -134,8 +134,10 @@
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_DEFENSIVE_PACT" Worth="-10" Cost="10"/>
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_RESEARCH_AGREEMENT" Worth="20" Cost="-20"/>
-    <Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="0"/>
-    <Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="0"/>
+    <Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="-30"/>
+    <Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="-5"/>
+		<Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="-10"/>
+    <Row StateType="DIPLO_STATE_ALLIED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="-50"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_ALLIANCE" Worth="-10" Cost="-10"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="75" Cost="0"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="20" Cost="0"/>
@@ -145,27 +147,28 @@
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DEFENSIVE_PACT" Worth="-20" Cost="20"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_RESEARCH_AGREEMENT" Worth="10" Cost="-10"/>
-    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="0"/>
+    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="-30"/>
     <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="0"/>
-    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="0"/>
+		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="-5"/>
+    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="-30"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="50" Cost="25"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="10" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_REQUEST_ASSISTANCE" Worth="-90" Cost="90"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="25" Cost="5"/>
-		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="5" Cost="10"/>
+		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="5" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DENOUNCE" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="0"/>
-		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="0"/>
+		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="-10"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="25" Cost="50"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="0" Cost="10" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="15" Cost="10"/>
-		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="-10" AiAllowed="false"/>
+		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="-10" Cost="10" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DENOUNCE" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
@@ -177,14 +180,14 @@
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DEMAND_TRIBUTE" Worth="5"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="0" Cost="75"/>
-		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="-40" AiAllowed="false"/>
+		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="-40" Cost="30" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DENOUNCE"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="0" Cost="10" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
-		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="0"/>
-		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="0"/>
-		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="0"/>
-		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="0"/>
+		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="5"/>
+		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="5"/>
+		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="5"/>
+		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="10"/>
 		<Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_DEMAND_TRIBUTE" Worth="30"/>
 		<Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="-50" Cost="100"/>
 		<Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
@@ -195,10 +198,10 @@
 		<Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_DECLARE_PROTECTORATE_WAR"/>
 		<Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_DECLARE_COLONIAL_WAR"/>
 		<Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_DECLARE_TERRITORIAL_WAR"/>
-    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="0"/>
-    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="0"/>
-    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="0"/>
-    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="0"/>
+    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SPY" Worth="0" Cost="20"/>
+    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="20"/>
+    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="20"/>
+    <Row StateType="DIPLO_STATE_DENOUNCED" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="50"/>
 		<Row StateType="DIPLO_STATE_WAR" DiplomaticActionType="DIPLOACTION_MAKE_PEACE"/>
 		<Row StateType="DIPLO_STATE_WAR" DiplomaticActionType="DIPLOACTION_PROPOSE_PEACE_DEAL"/>
 		<!-- Major civ / Minor Civ -->
@@ -218,11 +221,11 @@
 	</DiplomaticStateActions>
 	<DiplomaticStateTransitions>
 		<Row BaseState="DIPLO_STATE_FRIENDLY" TransitionState="DIPLO_STATE_DECLARED_FRIEND" AllowTransitionMin="15" RequireTransitionMax="25" AllowTransitionCheck="CanDeclareFriendship" OnTransitionAction="OnDeclareFriendship"/>
-		<Row BaseState="DIPLO_STATE_FRIENDLY" TransitionState="DIPLO_STATE_NEUTRAL" RequireTransitionMin="0" AllowTransitionMax="10"/>
+		<Row BaseState="DIPLO_STATE_FRIENDLY" TransitionState="DIPLO_STATE_NEUTRAL" RequireTransitionMin="5" AllowTransitionMax="10"/>
 		<Row BaseState="DIPLO_STATE_NEUTRAL" TransitionState="DIPLO_STATE_FRIENDLY" RequireTransitionMax="15" AllowTransitionMin="0"/>
 		<Row BaseState="DIPLO_STATE_NEUTRAL" TransitionState="DIPLO_STATE_UNFRIENDLY" RequireTransitionMin="-5" AllowTransitionMax="5"/>
-		<Row BaseState="DIPLO_STATE_UNFRIENDLY" TransitionState="DIPLO_STATE_NEUTRAL" RequireTransitionMax="10" AllowTransitionMin="-5"/>
-		<Row BaseState="DIPLO_STATE_UNFRIENDLY" TransitionState="DIPLO_STATE_DENOUNCED" AllowTransitionCheck="CanDenounce" RequireTransitionMin="-15" AllowTransitionMax="0" OnTransitionAction="OnDenouncePlayer"/>
+		<Row BaseState="DIPLO_STATE_UNFRIENDLY" TransitionState="DIPLO_STATE_NEUTRAL" RequireTransitionMax="5" AllowTransitionMin="-5"/>
+		<Row BaseState="DIPLO_STATE_UNFRIENDLY" TransitionState="DIPLO_STATE_DENOUNCED" AllowTransitionCheck="CanDenounce" RequireTransitionMin="-15" AllowTransitionMax="-5" OnTransitionAction="OnDenouncePlayer"/>
 		<Row BaseState="DIPLO_STATE_DENOUNCED" TransitionState="DIPLO_STATE_WAR" AllowTransitionCheck="CanGoToWar" RequireTransitionMin="-25" OnTransitionAction="GoToWar"/>
 		<!-- Major / Minor transitions -->
 		<Row BaseState="DIPLO_STATE_NO_INFLUENCE" TransitionState="DIPLO_STATE_INFLUENTIAL" RequireTransitionMax="1"/>

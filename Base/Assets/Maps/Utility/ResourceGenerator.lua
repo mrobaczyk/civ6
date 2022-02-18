@@ -101,7 +101,7 @@ function ResourceGenerator:__InitResourceData()
 			self.resources = -5;
 	elseif self.resources == 3 then
 			self.resources = 5;	
-	elseif self.resources == 5 then
+	elseif self.resources == 4 then
 		self.resources = TerrainBuilder.GetRandomNumber(13, "Random Resources - Lua") - 6;
 	else 
 		self.resources = 0;

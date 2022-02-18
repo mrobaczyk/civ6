@@ -114,6 +114,7 @@ CREATE TABLE "AiOperationDefs" (
 		"OperationName" TEXT NOT NULL,
 		"TargetType" TEXT NOT NULL,
 		"TargetParameter" INTEGER NOT NULL DEFAULT 0,
+		"EnemyType" TEXT NOT NULL DEFAULT "NONE",
 		"BehaviorTree" TEXT,
 		"Priority" INTEGER NOT NULL DEFAULT 3,
 		"MaxTargetDistInRegion" INTEGER NOT NULL DEFAULT 10,
@@ -129,7 +130,7 @@ CREATE TABLE "AiOperationDefs" (
 		"AllowTargetUpdate" BOOLEAN NOT NULL CHECK (AllowTargetUpdate IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(OperationName),
 		FOREIGN KEY (BehaviorTree) REFERENCES BehaviorTrees(TreeName) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (TargetType) REFERENCES TargetTypes(TargetName) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (TargetType) REFERENCES TargetTypes(TargetType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (OperationType) REFERENCES AiOperationTypes(OperationType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "AiOperationLimits" (
@@ -164,6 +165,10 @@ CREATE TABLE "AiOperationTypes" (
 		"Value" INTEGER NOT NULL,
 		PRIMARY KEY(OperationType));
 
+CREATE TABLE "AiScoutUses" (
+		"ScoutUseType" TEXT NOT NULL UNIQUE,
+		PRIMARY KEY(ScoutUseType));
+
 CREATE TABLE "AiTeams" (
 		"TeamName" TEXT,
 		PRIMARY KEY(TeamName));
@@ -191,6 +196,24 @@ CREATE TABLE "AppealHousingChanges" (
 		PRIMARY KEY(DistrictType, MinimumValue),
 		FOREIGN KEY (DistrictType) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "BarbarianAttackForces" (
+		"AttackForceType" TEXT NOT NULL,
+		"MinTargetDifficulty" TEXT,
+		"MaxTargetDifficulty" TEXT,
+		"SpawnRate" INTEGER NOT NULL DEFAULT 2,
+		"MeleeTag" TEXT,
+		"NumMeleeUnits" INTEGER NOT NULL DEFAULT 0,
+		"RangeTag" TEXT,
+		"NumRangeUnits" INTEGER NOT NULL DEFAULT 0,
+		"SiegeTag" TEXT,
+		"NumSiegeUnits" INTEGER NOT NULL DEFAULT 0,
+		"SupportTag" TEXT,
+		"NumSupportUnits" INTEGER NOT NULL DEFAULT 0,
+		"RaidingForce" BOOLEAN NOT NULL CHECK (RaidingForce IN (0,1)) DEFAULT 0,
+		PRIMARY KEY(AttackForceType),
+		FOREIGN KEY (MinTargetDifficulty) REFERENCES Difficulties(DifficultyType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (MaxTargetDifficulty) REFERENCES Difficulties(DifficultyType) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "BarbarianTribes" (
 		"TribeType" TEXT NOT NULL UNIQUE,
 		"IsCoastal" BOOLEAN NOT NULL CHECK (IsCoastal IN (0,1)) DEFAULT 0,
@@ -211,6 +234,15 @@ CREATE TABLE "BarbarianTribes" (
 		"CityAttackBoldness" INTEGER NOT NULL DEFAULT 25,
 		PRIMARY KEY(TribeType),
 		FOREIGN KEY (RequiredResource) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "BarbarianTribeForces" (
+		"AttackForceType" TEXT NOT NULL,
+		"TribeType" TEXT,
+		"SpecificTribeType" TEXT,
+		PRIMARY KEY(AttackForceType, TribeType, SpecificTribeType),
+		FOREIGN KEY (AttackForceType) REFERENCES BarbarianAttackForces(AttackForceType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (TribeType) REFERENCES BarbarianTribes(TribeType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (SpecificTribeType) REFERENCES BarbarianTribeNames(TribeNameType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "BarbarianTribeNames" (
 		"TribeNameType" TEXT NOT NULL,
@@ -246,7 +278,8 @@ CREATE TABLE "Beliefs" (
 		"Description" TEXT NOT NULL,
 		"BeliefClassType" TEXT NOT NULL,
 		PRIMARY KEY(BeliefType),
-		FOREIGN KEY (BeliefClassType) REFERENCES BeliefClasses(BeliefClassType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (BeliefClassType) REFERENCES BeliefClasses(BeliefClassType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (BeliefType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "BeliefClasses" (
 		"BeliefClassType" TEXT NOT NULL UNIQUE,
@@ -457,6 +490,12 @@ CREATE TABLE "BuildingReplaces" (
 		FOREIGN KEY (CivUniqueBuildingType) REFERENCES Buildings(BuildingType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (ReplacesBuildingType) REFERENCES Buildings(BuildingType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+-- Calendar types
+CREATE TABLE "Calendars" (
+		"CalendarType" TEXT NOT NULL,
+		"Description" TEXT,
+		PRIMARY KEY(CalendarType));
+
 CREATE TABLE "CityEvents" (
 		"EventType" TEXT NOT NULL,
 		PRIMARY KEY(EventType));
@@ -665,6 +704,12 @@ CREATE TABLE "DifficultyTraits" (
 		PRIMARY KEY(DifficultyType, TraitType),
 		FOREIGN KEY (TraitType) REFERENCES Traits(TraitType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (DifficultyType) REFERENCES Difficulties(DifficultyType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+-- Allows us to change the background and leader images on the diplomacy screen.
+CREATE TABLE "DiplomacyInfo" (
+		"Type" TEXT NOT NULL,
+		"BackgroundImage" TEXT,
+		PRIMARY KEY(Type));
 
 CREATE TABLE "DiplomaticActions" (
 		"DiplomaticActionType" TEXT NOT NULL,
@@ -996,7 +1041,8 @@ CREATE TABLE "Features" (
 		"Settlement" BOOLEAN NOT NULL CHECK (Settlement IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(FeatureType),
 		FOREIGN KEY (RemoveTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
-		FOREIGN KEY (AddCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT);
+		FOREIGN KEY (AddCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
+		FOREIGN KEY (FeatureType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Feature_AdjacentFeatures" (
 		"FeatureType" TEXT NOT NULL,
@@ -1118,7 +1164,8 @@ CREATE TABLE "Gossips" (
 		"Description" TEXT,
 		"Message" TEXT NOT NULL,
 		"Filter" BOOLEAN NOT NULL CHECK (Filter IN (0,1)) DEFAULT 1,
-		PRIMARY KEY(GossipType));
+		PRIMARY KEY(GossipType),
+		FOREIGN KEY (GossipType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Governments" (
 		"GovernmentType" TEXT NOT NULL,
@@ -1174,7 +1221,8 @@ CREATE TABLE "GreatPersonClasses" (
 		PRIMARY KEY(GreatPersonClassType),
 		FOREIGN KEY (UnitType) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (DistrictType) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (PseudoYieldType) REFERENCES PseudoYields(PseudoYieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (PseudoYieldType) REFERENCES PseudoYields(PseudoYieldType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (GreatPersonClassType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "GreatPersonIndividuals" (
 		"GreatPersonIndividualType" TEXT NOT NULL,
@@ -1213,7 +1261,8 @@ CREATE TABLE "GreatPersonIndividuals" (
 		FOREIGN KEY (ActionRequiresCompletedDistrictType) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (ActionRequiresOnOrAdjacentFeatureType) REFERENCES Features(FeatureType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (ActionRequiresCityGreatWorkObjectType) REFERENCES GreatWorkObjectTypes(GreatWorkObjectType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (ActionRequiresMissingBuildingType) REFERENCES Buildings(BuildingType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (ActionRequiresMissingBuildingType) REFERENCES Buildings(BuildingType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (GreatPersonIndividualType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "GreatPersonIndividualActionModifiers" (
 		"GreatPersonIndividualType" TEXT NOT NULL,
@@ -1326,6 +1375,7 @@ CREATE TABLE "Improvements" (
 		"Coast" BOOLEAN NOT NULL CHECK (Coast IN (0,1)) DEFAULT 0,
 		"YieldFromAppeal" TEXT,
 		"WeaponSlots" INTEGER NOT NULL DEFAULT 0,
+		"ReligiousUnitHealRate" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(ImprovementType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -1461,6 +1511,17 @@ CREATE TABLE "LeaderTraits" (
 		FOREIGN KEY (TraitType) REFERENCES Traits(TraitType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (LeaderType) REFERENCES Leaders(LeaderType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+-- Allows us to change the background in the loading screen based on which leader the player selected.
+CREATE TABLE "LoadingInfo" (
+		"LeaderType" TEXT NOT NULL,
+		"ForegroundImage" TEXT,
+		"BackgroundImage" TEXT,
+		"EraText" TEXT,
+		"LeaderText" TEXT,
+		"PlayDawnOfManAudio" BOOLEAN NOT NULL CHECK (PlayDawnOfManAudio IN (0,1)) DEFAULT 1,
+		PRIMARY KEY(LeaderType),
+		FOREIGN KEY (LeaderType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "MajorStartingUnits" (
 		"Unit" TEXT NOT NULL,
 		"Era" TEXT NOT NULL,
@@ -1524,6 +1585,7 @@ CREATE TABLE "ModifierArguments" (
 		"Type" TEXT NOT NULL DEFAULT "ARGTYPE_IDENTITY",
 		"Value" TEXT NOT NULL,
 		"Extra" TEXT,
+		"SecondExtra" TEXT,
 		PRIMARY KEY(ModifierId, Name),
 		FOREIGN KEY (ModifierId) REFERENCES Modifiers(ModifierId) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1733,6 +1795,7 @@ CREATE TABLE "RequirementArguments" (
 		"Type" TEXT NOT NULL DEFAULT "ARGTYPE_IDENTITY",
 		"Value" TEXT NOT NULL,
 		"Extra" TEXT,
+		"SecondExtra" TEXT,
 		PRIMARY KEY(RequirementId, Name),
 		FOREIGN KEY (RequirementId) REFERENCES Requirements(RequirementId) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1770,7 +1833,8 @@ CREATE TABLE "Resources" (
 		"RevealedEra" INTEGER NOT NULL DEFAULT 1,
 		PRIMARY KEY(ResourceType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
-		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT);
+		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
+		FOREIGN KEY (ResourceType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Resource_Distribution" (
 		"Continents" INTEGER NOT NULL,
@@ -2011,6 +2075,7 @@ CREATE TABLE "Strategy_YieldPriorities" (
 CREATE TABLE "StrategyConditions" (
 		"StrategyType" TEXT,
 		"ConditionFunction" TEXT,
+		"StringValue" TEXT,
 		"ThresholdValue" INTEGER NOT NULL DEFAULT 0,
 		"Disqualifier" BOOLEAN NOT NULL CHECK (Disqualifier IN (0,1)) DEFAULT 0,
 		"Exclusive" BOOLEAN NOT NULL CHECK (Exclusive IN (0,1)) DEFAULT 0,
@@ -2024,9 +2089,8 @@ CREATE TABLE "Tags" (
 		FOREIGN KEY (Vocabulary) REFERENCES Vocabularies(Vocabulary) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "TargetTypes" (
-		"TargetName" TEXT NOT NULL,
-		"TargetValue" INTEGER NOT NULL UNIQUE,
-		PRIMARY KEY(TargetName));
+		"TargetType" TEXT NOT NULL,
+		PRIMARY KEY(TargetType));
 
 CREATE TABLE "Technologies" (
 		"TechnologyType" TEXT NOT NULL,
@@ -2466,8 +2530,12 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("AiFavoredItems", "MinDifficultyReference", "Difficulties", 0,"SELECT T1.rowid from Difficulties as T1 inner join AiFavoredItems as T2 on T2.MinDifficulty = T1.DifficultyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("AiLists", "MaxDifficultyReference", "Difficulties", 0,"SELECT T1.rowid from Difficulties as T1 inner join AiLists as T2 on T2.MaxDifficulty = T1.DifficultyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("AiLists", "MinDifficultyReference", "Difficulties", 0,"SELECT T1.rowid from Difficulties as T1 inner join AiLists as T2 on T2.MinDifficulty = T1.DifficultyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianAttackForces", "MaxDifficultyReference", "Difficulties", 0,"SELECT T1.rowid from Difficulties as T1 inner join BarbarianAttackForces as T2 on T2.MaxTargetDifficulty = T1.DifficultyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianAttackForces", "MinDifficultyReference", "Difficulties", 0,"SELECT T1.rowid from Difficulties as T1 inner join BarbarianAttackForces as T2 on T2.MinTargetDifficulty = T1.DifficultyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribes", "AttackCollection", "BarbarianAttackForces", 1,"SELECT T1.rowid from BarbarianAttackForces as T1 inner join BarbarianTribeForces as T2 on T2.AttackForceType = T1.AttackForceType inner join BarbarianTribes as T3 on T3.TribeType = T2.TribeType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribes", "RequiredResourceReference", "Resources", 0,"SELECT T1.rowid from Resources as T1 inner join BarbarianTribes as T2 on T2.RequiredResource = T1.ResourceType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribes", "TribeNames", "BarbarianTribeNames", 1,"SELECT T1.rowid from BarbarianTribeNames as T1 inner join BarbarianTribes as T2 on T2.TribeType = T1.TribeType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribeNames", "AttackCollection", "BarbarianAttackForces", 1,"SELECT T1.rowid from BarbarianAttackForces as T1 inner join BarbarianTribeForces as T2 on T2.AttackForceType = T1.AttackForceType inner join BarbarianTribeNames as T3 on T3.TribeNameType = T2.SpecificTribeType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribeNames", "TribeTypeReference", "BarbarianTribes", 0,"SELECT T1.rowid from BarbarianTribes as T1 inner join BarbarianTribeNames as T2 on T2.TribeType = T1.TribeType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BehaviorTrees", "TriggerCollection", "TriggeredBehaviorTrees", 1,"SELECT T1.rowid from TriggeredBehaviorTrees as T1 inner join BehaviorTrees as T2 on T2.TreeName = T1.TreeName where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Beliefs", "BeliefClassTypeReference", "BeliefClasses", 0,"SELECT T1.rowid from BeliefClasses as T1 inner join Beliefs as T2 on T2.BeliefClassType = T1.BeliefClassType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");

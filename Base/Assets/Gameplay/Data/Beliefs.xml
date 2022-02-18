@@ -399,8 +399,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GODDESS_OF_THE_HARVEST_HARVEST</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GODDESS_OF_THE_HARVEST_HARVEST_MODIFIER</ModifierId>
@@ -408,8 +408,8 @@
 		</Row>
 		<Row>
 			<ModifierId>GODDESS_OF_THE_HARVEST_REMOVE_FEATURE</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>GODDESS_OF_THE_HARVEST_REMOVE_FEATURE_MODIFIER</ModifierId>
@@ -440,15 +440,6 @@
 		</Row>
 		<Row>
 			<ModifierId>FEED_THE_WORLD_TEMPLE_FOOD_MODIFIER</ModifierId>
-			<ModifierType>MODIFIER_BUILDING_YIELD_CHANGE</ModifierType>
-		</Row>
-		<Row>
-			<ModifierId>FEED_THE_WORLD_STAVE_FOOD</ModifierId>
-			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>CITY_FOLLOWS_RELIGION_REQUIREMENTS</SubjectRequirementSetId>
-		</Row>
-		<Row>
-			<ModifierId>FEED_THE_WORLD_STAVE_FOOD_MODIFIER</ModifierId>
 			<ModifierType>MODIFIER_BUILDING_YIELD_CHANGE</ModifierType>
 		</Row>
 		<Row>
@@ -1277,26 +1268,6 @@
 			<Value>4</Value>
 		</Row>
 		<Row>
-			<ModifierId>FEED_THE_WORLD_STAVE_FOOD</ModifierId>
-			<Name>ModifierId</Name>
-			<Value>FEED_THE_WORLD_STAVE_FOOD_MODIFIER</Value>
-		</Row>
-		<Row>
-			<ModifierId>FEED_THE_WORLD_STAVE_FOOD_MODIFIER</ModifierId>
-			<Name>BuildingType</Name>
-			<Value>BUILDING_STAVE_CHURCH</Value>
-		</Row>
-		<Row>
-			<ModifierId>FEED_THE_WORLD_STAVE_FOOD_MODIFIER</ModifierId>
-			<Name>YieldType</Name>
-			<Value>YIELD_FOOD</Value>
-		</Row>
-		<Row>
-			<ModifierId>FEED_THE_WORLD_STAVE_FOOD_MODIFIER</ModifierId>
-			<Name>Amount</Name>
-			<Value>4</Value>
-		</Row>
-		<Row>
 			<ModifierId>JESUIT_EDUCATION_SCIENCE_BUILDINGS</ModifierId>
 			<Name>ModifierId</Name>
 			<Value>JESUIT_EDUCATION_SCIENCE_BUILDINGS_MODIFIER</Value>
@@ -1870,9 +1841,6 @@
 		</Row>
 		<Row BeliefType="BELIEF_FEED_THE_WORLD">
 			<ModifierId>FEED_THE_WORLD_TEMPLE_FOOD</ModifierId>
-		</Row>
-		<Row BeliefType="BELIEF_FEED_THE_WORLD">
-			<ModifierId>FEED_THE_WORLD_STAVE_FOOD</ModifierId>
 		</Row>
 		<Row BeliefType="BELIEF_JESUIT_EDUCATION">
 			<ModifierId>JESUIT_EDUCATION_SCIENCE_BUILDINGS</ModifierId>

@@ -30,4 +30,8 @@
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_NAPOLEON" ParameterId="Napoleon_NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="LOC_GAME_NO_GOODY_HUTS" Domain="bool" DefaultValue="1" Visible="true" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_NAPOLEON" ParameterId="Napoleon_NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="LOC_GAME_NO_BARBARIANS" Domain="bool" DefaultValue="1" Visible="true" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
 	</Parameters>
+
+	<ConfigurationUpdates>
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_NAPOLEON" TargetGroup="Map" TargetId="MAP_SCRIPT" TargetValue="../../Assets/Maps/BalanceMaps/Balanced4.Civ6Map" Hash="0" />
+	</ConfigurationUpdates>		
 </GameInfo>

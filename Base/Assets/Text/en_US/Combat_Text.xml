@@ -189,16 +189,22 @@
 		<Row Tag="LOC_RAZE_CITY_KEEP_EXPLANATION_TRADED">
 			<Text>Keep this city in your empire.</Text>
 		</Row>
-		<Row Tag="LOC_RAZE_CITY_KEEP_WARMONGER_EXPLANATION">
-			<Text>Warmonger penalty for keeping this city now is: {1_WarmongerLevel}[NEWLINE][NEWLINE]Penalty will be either refunded or doubled at the end of the war depending on whether or not you keep the city.</Text>
-		</Row>
-		<Row Tag="LOC_RAZE_CITY_RAZE_EXPLANATION">
+    <Row Tag="LOC_RAZE_CITY_KEEP_WARMONGER_EXPLANATION">
+      <Text>Warmonger penalty for keeping this city now is: {1_WarmongerLevel}[NEWLINE][NEWLINE]Penalty will be either refunded or doubled at the end of the war depending on whether or not you keep the city.</Text>
+    </Row>
+    <Row Tag="LOC_RAZE_CITY_KEEP_LAST_CITY_EXPLANATION">
+      <Text>Warmonger penalty for keeping a player's final city is based on the Surprise War penalty for this era. This value is [COLOR_RED]DOUBLED[ENDCOLOR] if capturing this city eliminates a major civilization (not a city state).</Text>
+    </Row>
+    <Row Tag="LOC_RAZE_CITY_RAZE_EXPLANATION">
 			<Text>Raze city clearing it and all its districts and buildings from the map. This option must be chosen the turn the city is conquered.[NEWLINE][NEWLINE]{1_WarmongerInfo}</Text>
 		</Row>
 		<Row Tag="LOC_RAZE_CITY_RAZE_WARMONGER_EXPLANATION">
 			<Text>Warmonger penalty is [COLOR_RED]TRIPLED[ENDCOLOR] for razing a city.[NEWLINE][NEWLINE]Warmonger penalty for razing this city now is: {1_WarmongerLevel}</Text>
 		</Row>
-		<Row Tag="LOC_RAZE_CITY_RAZE_DISABLED_EXPLANATION">
+    <Row Tag="LOC_RAZE_CITY_RAZE_LAST_CITY_EXPLANATION">
+      <Text>Warmonger penalty is [COLOR_RED]TRIPLE[ENDCOLOR] the Formal War penalty for this era when you raze a player's final city.</Text>
+    </Row>
+    <Row Tag="LOC_RAZE_CITY_RAZE_DISABLED_EXPLANATION">
 			<Text>You cannot raze a major civilization's original capital or a city that you or an ally founded or owned at the start of this war.</Text>
 		</Row>
 		<Row Tag="LOC_RAZE_CITY_LIBERATE_FOUNDER_BUTTON_LABEL">

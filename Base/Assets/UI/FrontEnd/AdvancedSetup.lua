@@ -327,7 +327,7 @@ end
 -- ===========================================================================
 function OnStartButton()
 	-- Is WorldBuilder active?
-	if (GameConfiguration.IsWorldBuilder()) then
+	if (GameConfiguration.IsWorldBuilderEditor()) then
 		UI.SetWorldRenderView( WorldRenderView.VIEW_2D );
 		UI.PlaySound("Set_View_2D");
 		Network.HostGame(ServerType.SERVER_TYPE_NONE);

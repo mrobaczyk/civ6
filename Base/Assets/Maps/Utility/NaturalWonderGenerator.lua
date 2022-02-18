@@ -255,7 +255,6 @@ function CustomGetMultiTileFeaturePlotList(pPlot, eFeatureType, aPlots)
 		local pSEPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_SOUTHEAST);
 		local pEPlot  = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_EAST);
 
-
 		-- W and SW are water, see if SE works
 		local pSecondPlot;
 		if (pWPlot ~= nil and pSWPlot ~= nil and pWPlot:IsWater() and pWPlot:IsLake() == false and pSWPlot:IsWater() and pWPlot:IsLake() == false) then
@@ -278,6 +277,50 @@ function CustomGetMultiTileFeaturePlotList(pPlot, eFeatureType, aPlots)
 			return true;
 		end
 
+	-- 2 tiles, one on coastal land and one in water, try to face camera if possible
+	elseif (customPlacement == "PLACEMENT_GIANTS_CAUSEWAY") then
+
+		-- Assume first tile a land tile without hills, check around it in a preferred order for water
+		if (pPlot:IsWater() or pPlot:IsHills()) then
+			return false;
+		end
+
+		local pSWPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_SOUTHWEST);
+		if (pSWPlot ~= nil and pSWPlot:IsWater()) then
+			table.insert(aPlots, pSWPlot:GetIndex());
+			return true;
+		end
+
+		local pSEPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_SOUTHEAST);
+		if (pSEPlot ~= nil and pSEPlot:IsWater()) then
+			table.insert(aPlots, pSEPlot:GetIndex());
+			return true;
+		end
+
+		local pWPlot  = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_WEST);
+		if (pWPlot ~= nil and pWPlot:IsWater()) then
+			table.insert(aPlots, pWPlot:GetIndex());
+			return true;
+		end
+
+		local pEPlot  = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_EAST);
+		if (pEPlot ~= nil and pEPlot:IsWater()) then
+			table.insert(aPlots, pEPlot:GetIndex());
+			return true;
+		end
+
+		local pNWPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_NORTHWEST);
+		if (pNWPlot ~= nil and pNWPlot:IsWater()) then
+			table.insert(aPlots, pNWPlot:GetIndex());
+			return true;
+		end
+
+		local pNEPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), DirectionTypes.DIRECTION_NORTHEAST);
+		if (pNEPlot ~= nil and pNEPlot:IsWater()) then
+			table.insert(aPlots, pNEPlot:GetIndex());
+			return true;
+		end
+		
 	-- 3 tiles in triangle coast on front edge, land behind (with any rotation)
 	elseif (customPlacement == "PLACEMENT_PIOPIOTAHI") then
 

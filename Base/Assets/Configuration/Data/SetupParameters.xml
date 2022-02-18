@@ -29,23 +29,33 @@
 		<Row ParameterId="MaxTurns" Name="LOC_MAX_TURNS_NAME" Description="LOC_MAX_TURNS_DESCRIPTION" Domain="int" Hash="0" DefaultValue="500" ConfigurationGroup="Game" ConfigurationId="GAME_MAX_TURNS" GroupId="AdvancedOptions" SortIndex="2000"/>
 		<Row ParameterId="GameRandomSeed" Name="LOC_GAME_SYNC_RANDOM_SEED" Description="" Domain="int" Hash="0" ConfigurationGroup="Game" ConfigurationId="GAME_SYNC_RANDOM_SEED" GroupId="AdvancedOptions" SortIndex="3000"/>
 		<Row ParameterId="MapRandomSeed" Name="LOC_MAP_RANDOM_SEED" Description="" Domain="int" Hash="0" ConfigurationGroup="Map" ConfigurationId="RANDOM_SEED" GroupId="AdvancedOptions" SortIndex="3010"/>
-		<!-- Standard Game Options -->
+		<Row ParameterId="GameCalendar" Name="Calendar" Description="" Domain="StandardCalendars" Hash="1" DefaultValue="CALENDAR_STANDARD" ConfigurationGroup="Game" ConfigurationId="CALENDAR_TYPE" GroupId="AdvancedOptions" Visible="0" />
+    
+    <!-- Standard Game Options -->
 		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
 		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
 		<!-- Player Parameters -->
 		<Row ParameterId="PlayerLeader" Name="LOC_LEADER_TYPE" Description="" Domain="StandardPlayers" Hash="0" ConfigurationGroup="Player" ConfigurationId="LEADER_TYPE_ID" DomainConfigurationId="LEADER_DOMAIN" DomainValuesConfigurationId="LEADER_VALUES" ValueDomainConfigurationId="LEADER_VALUE_DOMAIN" GroupId="PlayerOptions"/>
 		<!--<Row ParameterId="PlayerTeam" Name="LOC_PLAYER_TEAM" Description="The player team." Domain="StandardTeams" Hash="0" ConfigurationGroup="Player" ConfigurationId="TEAM" GroupId="PlayerOptions"/>-->
 		<Row ParameterId="PlayerDifficulty" Name="LOC_PLAYER_DIFFICULTY" Description="" Domain="StandardDifficulties" Hash="1" ConfigurationGroup="Player" ConfigurationId="HANDICAP_TYPE_ID" GroupId="PlayerOptions" SortIndex="3020"/>
-	</Parameters>
+  </Parameters>
 	
+	<ParameterCriteriaQueries>
+		<!-- Basic query -->
+		<Row QueryId="ParameterCriteria" />
+	</ParameterCriteriaQueries>	
+
 	<ParameterCriteria>	
 		<!-- Score victory cannot be enabled when there is no turn limit.-->
 		<!-- Mark as criteria so that it can still be visible. -->
 		<Row ParameterId="VICTORY_SCORE" ConfigurationGroup="Game" ConfigurationId="GAME_TURN_LIMIT" Operator="NotEquals" ConfigurationValue="TURNLIMIT_NONE" />
-
-		<!-- If Predefined start positions is set to true, disable no duplicate leaders. -->
-		<Row ParameterId="NoDupeLeaders" ConfigurationGroup="Map" ConfigurationId="PREDEFINED_START_POSITIONS" Operator="NotEquals" ConfigurationValue="1" />
 	</ParameterCriteria>
+	
+	<ParameterDependencyQueries>
+		<!-- Basic query -->
+		<Row QueryId="ParameterDependencies" />
+		
+	</ParameterDependencyQueries>
 	
 	<ParameterDependencies>
 		<!-- Turn Timer Time should only be set when the turn timer is set to standard. -->
@@ -95,6 +105,8 @@
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_NONE" Name="LOC_TURNLIMIT_NONE_NAME" Description="LOC_TURNLIMIT_NONE_DESCRIPTION" SortIndex="1"/>
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_GAMESPEED" Name="LOC_TURNLIMIT_GAMESPEED_NAME" Description="LOC_TURNLIMIT_GAMESPEED_DESCRIPTION" SortIndex="1"/>
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_CUSTOM" Name="LOC_TURNLIMIT_CUSTOM_NAME" Description="LOC_TURNLIMIT_CUSTOM_DESCRIPTION" SortIndex="1"/>
+
+		<Row Domain="StandardCalendars" Value="CALENDAR_STANDARD" Name="Standard Calendar" Description="" SortIndex="1"/>
 	</DomainValues>
 	
 	<ConfigurationUpdateQueries>
@@ -108,7 +120,6 @@
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1" />
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_GAMESPEED" Hash="1" />
 		<Row SourceGroup="Game" SourceId="GAME_TURN_LIMIT" SourceValue="TURNLIMIT_NONE" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
-		<Row SourceGroup="Map" SourceId="PREDEFINED_START_POSITIONS" SourceValue="1" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="1" />
 	</ConfigurationUpdates>
 	
 	<Queries>
@@ -119,9 +130,15 @@
 		<Row QueryId="Defeats" SQL="SELECT DefeatType as ParameterId, D.Name as Name, D.Description as Description, Visible, ReadOnly, 1 as SupportsSinglePlayer, 1 as SupportsLANMultiplayer, 1 as SupportsInternetMultiplayer, 1 as SupportsHotSeat, 0 as ChangeableAfterGameStart, 'bool' as Domain, 0 as Hash, 1 as DefaultValue, 'Game' as ConfigurationGroup, DefeatType as ConfigurationId, 'Victories' as GroupId, 10 as SortIndex from Defeats D, Rulesets where RulesetType = ?1 and D.Domain = Rulesets.DefeatDomain"/>
 		<Row QueryId="Victories" SQL="SELECT VictoryType as ParameterId, V.Name as Name, V.Description as Description, Visible, ReadOnly, 1 as SupportsSinglePlayer, 1 as SupportsLANMultiplayer, 1 as SupportsInternetMultiplayer, 1 as SupportsHotSeat, 0 as ChangeableAfterGameStart, 'bool' as Domain, 0 as Hash, 1 as DefaultValue, 'Game' as ConfigurationGroup, VictoryType as ConfigurationId, 'Victories' as GroupId, 20 as SortIndex from Victories V, Rulesets where RulesetType =?1 and V.Domain = Rulesets.VictoryDomain"/>
 		
+		<!-- Parameter Criteria Queries -->
+		<Row QueryId="ParameterCriteria" SQL="SELECT * FROM ParameterCriteria ORDER BY ParameterId" />
+		
+		<!-- Parameter Dependency Queries -->
+		<Row QueryId="ParameterDependencies" SQL="SELECT * FROM ParameterDependencies ORDER BY ParameterId" />
+		
 		<!-- Value Queries -->
 		<Row QueryId="DomainValues" SQL="SELECT * from DomainValues where Key1 IS NULL AND Key2 IS NULL"/>
-		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' as Domain, Name, Description, RulesetType as Value, 100 as SortIndex from Rulesets where ((?1 = -379035929 and SupportsSinglePlayer = 1) or (?1 &lt;&gt; -379035929 and SupportsMultiplayer = 1))"/>
+		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' as Domain, Name, Description, RulesetType as Value, SortIndex from Rulesets where ((?1 = -379035929 and SupportsSinglePlayer = 1) or (?1 &lt;&gt; -379035929 and SupportsMultiplayer = 1))"/>
 		<Row QueryId="Difficulties" SQL="SELECT Domain, Name, Name as Description, DifficultyType as Value, SortIndex from Difficulties"/>
 		<Row QueryId="Eras" SQL="SELECT Domain, Name, Description, EraType as Value, SortIndex from Eras"/>
 		<Row QueryId="GameSpeeds" SQL="SELECT Domain, Name, Description, GameSpeedType as Value, SortIndex from GameSpeeds"/>
@@ -147,7 +164,7 @@
 		<Row QueryId="ConfigurationUpdates" SQL="SELECT * from ConfigurationUpdates" />
 		<Row QueryId="RulesetTurnLimitNoneUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_TURN_LIMIT' as TargetId, 'TURNLIMIT_NONE' as TargetValue, 1 as 'Hash' from Rulesets where MaxTurns = 0" />
 		<Row QueryId="RulesetTurnLimitCustomUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_TURN_LIMIT' as TargetId, 'TURNLIMIT_CUSTOM' as TargetValue, 1 as 'Hash' from Rulesets where MaxTurns > 0" />
-		<Row QueryId="RulesetMaxTurnUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_MAX_TURNS' as TargetId, MaxTurns as TargetValue from Rulesets where MaxTurns IS NOT NULL" />		
+		<Row QueryId="RulesetMaxTurnUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_MAX_TURNS' as TargetId, MaxTurns as TargetValue from Rulesets where MaxTurns IS NOT NULL" />
 	</Queries>
 
 	<QueryParameters>

@@ -93,12 +93,30 @@ CREATE TABLE 'Parameters'(
 	'SortIndex' INTEGER NOT NULL DEFAULT 100
 );
 
+CREATE TABLE 'ParameterCriteriaQueries'(
+	'QueryId' TEXT NOT NULL,
+	'ParameterIdField' TEXT NOT NULL DEFAULT 'ParameterId',
+	'ConfigurationGroupField' TEXT NOT NULL DEFAULT 'ConfigurationGroup',
+	'ConfigurationIdField' TEXT NOT NULL DEFAULT 'ConfigurationId',
+	'OperatorField' TEXT NOT NULL DEFAULT 'Operator',
+	'ConfigurationValueField' TEXT NOT NULL DEFAULT 'ConfigurationValue'
+);
+
 CREATE TABLE 'ParameterCriteria'(
 	'ParameterId' TEXT NOT NULL,
 	'ConfigurationGroup' TEXT NOT NULL,
 	'ConfigurationId' TEXT NOT NULL,
 	'Operator' TEXT NOT NULL DEFAULT 'Equals',
 	'ConfigurationValue'
+);
+
+CREATE TABLE 'ParameterDependencyQueries'(
+	'QueryId' TEXT NOT NULL,
+	'ParameterIdField' TEXT NOT NULL DEFAULT 'ParameterId',
+	'ConfigurationGroupField' TEXT NOT NULL DEFAULT 'ConfigurationGroup',
+	'ConfigurationIdField' TEXT NOT NULL DEFAULT 'ConfigurationId',
+	'OperatorField' TEXT NOT NULL DEFAULT 'Operator',
+	'ConfigurationValueField' TEXT NOT NULL DEFAULT 'ConfigurationValue'
 );
 
 CREATE TABLE 'ParameterDependencies'(

@@ -1,3 +1,5 @@
+print("Running Tutorial Script");
+
 local lastLocalTurnNumber = 0
 
 local function AssignStartingTech()

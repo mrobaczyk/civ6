@@ -39,7 +39,7 @@
 			<Text>Your city will grow, or add more [ICON_Citizen] Citizens, with surplus [ICON_Food] Food. Any amount of [ICON_Food] Food over the total consumption of a city's [ICON_Citizen] Citizens, 2 per, is considered surplus, and is added as progress towards a new [ICON_Citizen] Citizen.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_12_CHAPTER_CONTENT_PARA_2">
-			<Text>A city will add all surplus [ICON_Food] Food towards growth if its current [ICON_Citizen] Population is 2 or more below the city's [ICON_Housing] Housing limit. If the city is 1 [ICON_Citizen] Population below its [ICON_Housing] Housing limit, its growth will slow to 50%. When the [ICON_Citizen] Population is at the [ICON_Housing] Housing limit, it will grow only at 75% the normal rate. A city can grow to 5 [ICON_Citizen] Citizens over its [ICON_Housing] Housing limit at this rate, and then it will stop growing entirely.</Text>
+			<Text>A city will add all surplus [ICON_Food] Food towards growth if its current [ICON_Citizen] Population is 2 or more below the city's [ICON_Housing] Housing limit. If the city is 1 [ICON_Citizen] Population below its [ICON_Housing] Housing limit, its growth will slow to 50%. When the [ICON_Citizen] Population is at the [ICON_Housing] Housing limit, it will grow only at 25% the normal rate. A city can grow to 5 [ICON_Citizen] Citizens over its [ICON_Housing] Housing limit at this rate, and then it will stop growing entirely.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_12_CHAPTER_CONTENT_PARA_3">
 			<Text>A city will stagnate and not grow if it does not have surplus [ICON_Food] Food. If it makes less [ICON_Food] Food than its [ICON_Citizen] Citizens consume, the city will starve and slowly lose [ICON_Citizen] Population until it is able to support itself again.</Text>
@@ -177,7 +177,7 @@
 			<Text>Amenity Sources</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_17_CHAPTER_CONTENT_PARA_1">
-			<Text>[ICON_Amenities] Amenities can come from a wide variety of sources. Each Luxury resource can contribute up to 4 [ICON_Amenities] Amenities to your empire (1 per city) to the 4 cities that need them most. Distribution happens automatically, as long as the Luxury resource is improved (a Plantation improvement built on Spices, for example). The Arena, built in the Entertainment Complex, provides [ICON_Amenities] Amenities to its local city. The Zoo and Stadium also provide [ICON_Amenities] Amenities, but regionally. Some wonders also provide [ICON_Amenities] Amenities. Furthermore, there are a few Religious Beliefs and policies that provide [ICON_Amenities] Amenities.</Text>
+			<Text>[ICON_Amenities] Amenities can come from a wide variety of sources. Each Luxury resource can contribute up to 4 [ICON_Amenities] Amenities to your empire (1 per city) to the 4 cities that need them most. Distribution happens automatically, as long as the Luxury resource is improved (a Plantation improvement built on Spices, for example). The Arena, built in the Entertainment Complex, provides [ICON_Amenities] Amenities to its local city. The Zoo and Stadium also provide [ICON_Amenities] Amenities, but regionally. Some wonders also provide [ICON_Amenities] Amenities. Furthermore, there are a few Religious Beliefs and policies that provide [ICON_Amenities] Amenities. Some [ICON_GreatPerson] Great People also provide [ICON_Amenities] Amenities.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_17_CHAPTER_CONTENT_PARA_2">
 			<Text>War weariness and bankruptcy will lower the [ICON_Amenities] Amenities in a city.</Text>
@@ -187,6 +187,27 @@
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_1">
 			<Text>Specialists are alternative assignments for [ICON_Citizen] Citizens, which involve working a district tile instead of a normal tile. As a general rule, specialists are a good way to get yields otherwise hard to find on normal tiles, but the city needs a solid support base of [ICON_Food] Food to support them in the long term. Specialists are also particularly useful when a city grows large later in the game, and has more [ICON_Citizen] Population than there are normal tiles to work. There are different types of specialists, each with different effects. All specialist types except the generic [ICON_Citizen] Citizen have a limit on how many assignments there can be in a city. This limit is determined by the number of buildings in the district associated with that specialist type.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_2">
+			<Text>Scientists work in the Campus and provide +2 [ICON_Science] Science.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_3">
+			<Text>Priests work in the Holy Site and provide +2 [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_4">
+			<Text>Commanders work in the Encampment and provide +1 [ICON_Production] Production and +1 [ICON_Culture] Culture.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_5">
+			<Text>Captains work in the Harbor and provide +1 [ICON_Science] Science and +2 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_6">
+			<Text>Merchants work in the Commercial Hub and provide +4 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_7">
+			<Text>Engineers work in the Industrial Zone and provide +2 [ICON_Production] Production.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_9_CHAPTER_CONTENT_PARA_8">
+			<Text>Artists work in the Theater and provide +2 [ICON_Culture] Culture.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_WORLD_NAME">
 			<Text>The World</Text>
@@ -255,7 +276,7 @@
 			<Text>Lenses are a tool you can use to change your view of the world. Each lens will overlay important information that will help you make strategic decisions in the game. Some lenses are activated automatically, like when you choose to place a district from a city's Production Menu. Others can be activated manually from the Lenses button on the mini-map. These are the lenses you can use in game and what they do:</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_WORLD_7_CHAPTER_CONTENT_PARA_2">
-			<Text>Appeal. Shows the appeal level of each tile.[NEWLINE][NEWLINE]Continent. Shows the geographic extent of each continent.[NEWLINE][NEWLINE]District Placement. Shows valid placement locations for wonders and districts, as well as any adjacency bonuses available for districts. This will only appear when attempting to build a district or wonder.[NEWLINE][NEWLINE]Government. Shows the distribution of governments across the map.[NEWLINE][NEWLINE]Political. Shows the owner of each tile.[NEWLINE][NEWLINE]Religion. Shows the majority religion and religious follower distribution across the map. This appears whenever a Religious unit is selected.[NEWLINE][NEWLINE]Settler. Shows recommended city sites and water availability at each tile.</Text>
+			<Text>Appeal. Shows the appeal level of each tile.[NEWLINE][NEWLINE]Continent. Shows the geographic extent of each continent.[NEWLINE][NEWLINE]District Placement. Shows valid placement locations for wonders and districts, as well as any adjacency bonuses available for districts. This will only appear when attempting to build a district or wonder.[NEWLINE][NEWLINE]Government. Shows the distribution of governments across the map.[NEWLINE][NEWLINE]Political. Shows the owner of each tile.[NEWLINE][NEWLINE]Religion. Shows the majority religion and religious follower distribution across the map. This appears whenever a Religious unit is selected.[NEWLINE][NEWLINE]Settler. Shows recommended city sites and water availability at each tile.[NEWLINE][NEWLINE]Tourism. Shows the number of [ICON_Tourism] Tourists a tile is attracting.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_COMBAT_NAME">
 			<Text>Combat</Text>
@@ -366,7 +387,7 @@
 			<Text>Conquering a City</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_10_CHAPTER_CONTENT_PARA_1">
-			<Text>When your unit enters an enemy city, you have two choices: you can destroy the city (if it was not a [ICON_Capital] Capital) or you can annex it and make it part of your empire.</Text>
+			<Text>When your unit enters an enemy city, you have two choices: you can destroy the city (if it was not a [ICON_Capital] Capital) or you can annex it and make it part of your empire. If that city once belonged to another civilization, you may also chose to liberate it to its original owner.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_12_CHAPTER_CONTENT_TITLE">
 			<Text>Formations</Text>
@@ -414,7 +435,7 @@
 			<Text>Zone of Control</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_3_CHAPTER_CONTENT_PARA_1">
-			<Text>Many combat units exert a "Zone of Control" (ZOC) over the tiles around them. When a unit moves into an enemy's ZOC with [ICON_Movement] Movement leftover, its [ICON_Movement] Movement is stopped or it may attack.</Text>
+			<Text>Many combat units exert a "Zone of Control" (ZOC) over the tiles around them. When a unit moves into an enemy's ZOC with [ICON_Movement] Movement leftover, its [ICON_Movement] Movement is stopped or it may attack. Ranged unit do not exercise a ZOC.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_4_CHAPTER_CONTENT_TITLE">
 			<Text>Naval Movement</Text>
@@ -481,6 +502,15 @@
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_4_CHAPTER_CONTENT_PARA_1">
 			<Text>To see how all of this works in the game, check out the amazing Civics Tree. It displays all of the civics and shows how they are intertwined. You can click on a civic to order your civilization to study it – if your civilization doesn't know the prerequisite civic it will research them as well. The Civics Tree will plot the quickest route to the requested civic, and you will study the necessary precursors in the order it displays. </Text>
+		</Row>		
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_TITLE">
+			<Text>Culture Bombs</Text>
+		</Row>		
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_PARA_1">
+			<Text>A Culture Bomb is an action that allows you to wrest control of adjacent tiles from another player and add them to your own empire. Tiles gained in this way must be within 3 spaces of your city that is expanding. Tiles that already contain a completed district or wonder do not switch ownership from Culture Bombs. Incomplete district or wonder tiles will switch ownership, but the partially-built contents of those tiles will be destroyed.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_PARA_2">
+			<Text>To initiate a Culture Bomb, play as Poland and complete an Encampment or Fort in friendly territory.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_GOLD_NAME">
 			<Text>Gold and the Economy</Text>
@@ -693,7 +723,7 @@
 			<Text>You must accumulate Diplomatic Visibility levels individually for each civilization. Levels may be gained by accumulating various sources of Gossip, including:</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_4_CHAPTER_CONTENT_PARA_3">
-			<Text>Traders. Establish a [ICON_TradeRoute] Trade Route to a civilization to increase visibility by one level.[NEWLINE][NEWLINE]Send a Delegation. Send a Delegation to a civilization to increase visibility by one level. Once Embassies are available, establishing an Embassy will replace this.[NEWLINE][NEWLINE]Spying or forming an Alliance. Establish a spy in another civilization's city to increase visibility by one level, or you can form an alliance with a friendly civilization. These two actions do not add separate Diplomatic Visibility levels - it does no good to spy on your allies![NEWLINE][NEWLINE]Send a spy on a Listening Post Mission. Performing the Listening Post mission in another civilization's city increases visibility by one level.[NEWLINE][NEWLINE]Research the Printing Press technology. This will increase your visibility with ALL civilizations by one level.[NEWLINE][NEWLINE]Play as Catherine de Medici. She gives France one level of access above normal at all times with civilizations she has met.</Text>
+			<Text>Traders. Establish a [ICON_TradeRoute] Trade Route to a civilization to increase visibility by one level.[NEWLINE][NEWLINE]Send a Delegation. Send a Delegation to a civilization to increase visibility by one level. Once Embassies are available, establishing an Embassy will replace this.[NEWLINE][NEWLINE]Send a spy on a Listening Post Mission. Performing the Listening Post mission in another civilization's city increases visibility by one level.[NEWLINE][NEWLINE]Forming an Alliance. Alternatively to spying, you can form an alliance with a friendly civilization. These two actions do not add separate Diplomatic Visibility levels - it does no good to spy on your allies![NEWLINE][NEWLINE]Research the Printing Press technology. This will increase your visibility with ALL civilizations by one level.[NEWLINE][NEWLINE]Play as Catherine de Medici. She gives France one level of access above normal at all times with civilizations she has met.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_5_CHAPTER_CONTENT_TITLE">
 			<Text>Spies and Espionage</Text>
@@ -903,7 +933,7 @@
 			<Text>Moving Great People</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_4_CHAPTER_CONTENT_PARA_1">
-			<Text>[ICON_GreatPerson] Great People can move about the board like any other units. They are non-combat units, which means that they cannot stack in a tile with other non-combat units (Workers, Settlers), but they can stack with one military unit. If an enemy unit enters a [ICON_GreatPerson] Great Person's tile, that [ICON_GreatPerson] Great Person automatically retreats to a nearby city if able (the enemy doesn't capture it.)</Text>
+			<Text>[ICON_GreatPerson] Great People can move about the board like any other units. They are non-combat units, which means that they cannot stack in a tile with other non-combat units (Workers, Settlers), but they can stack with one military unit. If an enemy unit enters a [ICON_GreatPerson] Great Person's tile, that [ICON_GreatPerson] Great Person automatically retreats to a nearby city if able (the enemy doesn't capture it.) These units may also be transferred to another city when in a city center.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_AIRCOMBAT_NAME">
 			<Text>Air Combat</Text>
@@ -1005,7 +1035,7 @@
 			<Text>National Parks can be built on a cluster of any four tiles that meet the following requirements:</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_4_CHAPTER_CONTENT_PARA_3">
-			<Text>1. The tiles must be natural wonders, mountains, or a tile with an Appeal of Charming or better.[NEWLINE]2. All four of the tiles must be owned by the same city.[NEWLINE]3. The tiles must be contiguous and form a diamond shape.[NEWLINE]4. No tile can have an improvement or district.</Text>
+			<Text>1. The tiles must be natural wonders, mountains, or a tile with an Appeal of Charming or better.[NEWLINE]2. All four of the tiles must be owned by the same city.[NEWLINE]3. The tiles must be contiguous and form a vertical diamond shape.[NEWLINE]4. No tile can have an improvement or district.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_4_CHAPTER_CONTENT_PARA_4">
 			<Text>You can select a Naturalist to reveal any valid locations on the map. Sending the Naturalist to any highlighted tile will reveal the Designate National Park action button. Clicking on this button designates the National Park and consumes the Naturalist.</Text>

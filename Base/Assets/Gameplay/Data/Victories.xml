@@ -16,6 +16,9 @@
 		<Row Type="VICTORY_SCORE" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_TECHNOLOGY" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Kind="KIND_VICTORY_STRATEGY"/>
+    <Row Type="STRATEGY_EARLY_EXPLORATION" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_RAPID_EXPANSION" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_NAVAL" Kind="KIND_VICTORY_STRATEGY" />
 	</Types>
 	<Defeats>
 		<Row DefeatType="DEFEAT_DEFAULT" Name="LOC_DEFEAT_DEFAULT_NAME" Blurb="LOC_DEFEAT_DEFAULT_TEXT" RequirementSetId="DEFAULT_DEFEAT_REQUIREMENTS"/>
@@ -36,6 +39,7 @@
 		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" VictoryType="VICTORY_RELIGIOUS" NumConditionsNeeded="2"/>
 		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" VictoryType="VICTORY_TECHNOLOGY" NumConditionsNeeded="3"/>
 		<!-- This isn't really a victory strategy, but I don't have a separate table for these. If it works well, I'll separate the two -->
+    <Row StrategyType ="STRATEGY_EARLY_EXPLORATION" NumConditionsNeeded="1"/>
     <Row StrategyType ="STRATEGY_RAPID_EXPANSION" NumConditionsNeeded="3"/>
 		<Row StrategyType="STRATEGY_NAVAL" NumConditionsNeeded="1"/>
 	</Strategies>
@@ -70,6 +74,8 @@
 		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Finished Space Project" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Finished Space Project" ThresholdValue="2" Exclusive="true"/>
 		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="STRATEGY_EARLY_EXPLORATION" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="STRATEGY_EARLY_EXPLORATION" ConditionFunction="Fewer Cities" ThresholdValue="1"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Has Settle Spot" ThresholdValue="0"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Cities Under Threat" ThresholdValue="1"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Major Civ Wars" ThresholdValue="1"/>
@@ -83,6 +89,7 @@
 		<Row StrategyType="STRATEGY_NAVAL" ListType="NavalSettlementPreferences"/>
 		<Row StrategyType="STRATEGY_NAVAL" ListType="NavalSettlementBoost"/>
 		<Row StrategyType="STRATEGY_NAVAL" ListType="NavalPreferredTechs"/>
+		<Row StrategyType="STRATEGY_EARLY_EXPLORATION" ListType="EarlyExplorationBoost"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementBoost"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionUnitPreferences"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryPseudoYields"/>
@@ -91,6 +98,7 @@
     <Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryYields"/>
     <Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryOperations"/>
     <Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ListType="ReligiousVictoryBehaviors"/>
+    <Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ListType="ReligiousVictoryDiplomacy"/>
 		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ListType="ReligiousVictoryPseudoYields"/>
 		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ListType="ReligiousVictoryYields"/>
 		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryDistricts"/>
@@ -102,6 +110,7 @@
 	<AiListTypes>
 		<Row ListType="CultureVictoryPseudoYields" />
 		<Row ListType="CultureVictoryYields" />
+		<Row ListType="EarlyExplorationBoost" />
     <Row ListType="ExpansionSettlementBoost" />
     <Row ListType="ExpansionUnitPreferences" />
 		<Row ListType="MilitaryVictoryOperations" />
@@ -112,6 +121,7 @@
 		<Row ListType="NavalSettlementBoost" />
 		<Row ListType="NavalPreferredTechs" />
 		<Row ListType="ReligiousVictoryBehaviors" />
+    <Row ListType="ReligiousVictoryDiplomacy" />
 		<Row ListType="ReligiousVictoryPseudoYields" />
 		<Row ListType="ReligiousVictoryYields" />
 		<Row ListType="ScienceVictoryDistricts" />
@@ -123,6 +133,7 @@
 	<AiLists>
 		<Row ListType="CultureVictoryPseudoYields" System="PseudoYields"/>
 		<Row ListType="CultureVictoryYields" System="Yields"/>
+		<Row ListType="EarlyExplorationBoost" System="AiScoutUses"/>
 		<Row ListType="ExpansionSettlementBoost" System="SettlementPreferences"/>
 		<Row ListType="ExpansionUnitPreferences" System="PseudoYields"/>
 		<Row ListType="MilitaryVictoryOperations" System="AiOperationTypes"/>
@@ -133,6 +144,7 @@
 		<Row ListType="NavalSettlementBoost" System="SettlementPreferences"/>
 		<Row ListType="NavalPreferredTechs" System="Technologies"/>
 		<Row ListType="ReligiousVictoryBehaviors" System="TriggeredTrees"/>
+		<Row ListType="ReligiousVictoryDiplomacy" System="DiplomaticActions"/>
 		<Row ListType="ReligiousVictoryPseudoYields" System="PseudoYields"/>
 		<Row ListType="ReligiousVictoryYields" System="Yields"/>
 		<Row ListType="ScienceVictoryDistricts" System="Districts"/>
@@ -154,6 +166,7 @@
 		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_WRITING" Value="10"/>
 		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_MUSIC" Value="10"/>
 		<Row ListType="CultureVictoryYields" Item="YIELD_CULTURE" Value="25"/>
+    <Row ListType="EarlyExplorationBoost" Item="DEFAULT_LAND_SCOUTS" Value="200"/>
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-15"/>
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_DECAY_TURNS" Value="-3"/>
     <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
@@ -180,6 +193,7 @@
 		<Row ListType="NavalPreferredTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
 		<Row ListType="NavalPreferredTechs" Item="TECH_CARTOGRAPHY" Favored="true"/>
 		<Row ListType="ReligiousVictoryBehaviors" Item="TRIGGER_RELIGIOUS_CITY_CONVERTED"/>
+		<Row ListType="ReligiousVictoryDiplomacy" Item="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Favored="false" />
 		<Row ListType="ReligiousVictoryPseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="25"/>
 		<Row ListType="ReligiousVictoryYields" Item="YIELD_FAITH" Value="50"/>
 		<Row ListType="ScienceVictoryDistricts" Item="DISTRICT_SPACEPORT" Favored="true"/>

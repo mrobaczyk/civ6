@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<GameInfo>
+	<Types>
+		<Row Type="FEATURE_EYJAFJALLAJOKULL" Kind="KIND_FEATURE"/>
+		<Row Type="FEATURE_LYSEFJORDEN" Kind="KIND_FEATURE"/>
+		<Row Type="FEATURE_GIANTS_CAUSEWAY" Kind="KIND_FEATURE"/>
+	</Types>
+	<Features>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" Name="LOC_FEATURE_EYJAFJALLAJOKULL_NAME" Description="LOC_FEATURE_EYJAFJALLAJOKULL_DESCRIPTION" Quote="LOC_FEATURE_EYJAFJALLAJOKULL_QUOTE" NaturalWonder="true" Appeal="2" Tiles="2" NoRiver="true" Settlement="false" NoCoast="true" Impassable="true" SightThroughModifier="2" MinDistanceNW="8" CustomPlacement="PLACEMENT_YOSEMITE"/>
+		<Row FeatureType="FEATURE_LYSEFJORDEN" Name="LOC_FEATURE_LYSEFJORDEN_NAME" Description="LOC_FEATURE_LYSEFJORDEN_DESCRIPTION" Quote="LOC_FEATURE_LYSEFJORDEN_QUOTE" NaturalWonder="true" Appeal="2" Tiles="3" NoAdjacentFeatures="true" NoRiver="true" Settlement="false" Impassable="true" SightThroughModifier="1" MinDistanceNW="8" CustomPlacement="PLACEMENT_PIOPIOTAHI"/>
+		<Row FeatureType="FEATURE_GIANTS_CAUSEWAY" Name="LOC_FEATURE_GIANTS_CAUSEWAY_NAME" Description="LOC_FEATURE_GIANTS_CAUSEWAY_DESCRIPTION" Quote="LOC_FEATURE_GIANTS_CAUSEWAY_QUOTE" NaturalWonder="true" Appeal="2" Tiles="2" NoRiver="true" Settlement="false" Impassable="true" MinDistanceNW="8" CustomPlacement="PLACEMENT_GIANTS_CAUSEWAY"/>
+	</Features>
+	<Feature_ValidTerrains>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_SNOW"/>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row FeatureType="FEATURE_LYSEFJORDEN" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_LYSEFJORDEN" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row FeatureType="FEATURE_LYSEFJORDEN" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_LYSEFJORDEN" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row FeatureType="FEATURE_GIANTS_CAUSEWAY" TerrainType="TERRAIN_GRASS"/>
+		<Row FeatureType="FEATURE_GIANTS_CAUSEWAY" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_GIANTS_CAUSEWAY" TerrainType="TERRAIN_COAST"/>
+	</Feature_ValidTerrains>
+	<Feature_AdjacentTerrains>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_SNOW"/>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+	</Feature_AdjacentTerrains>
+	<Feature_AdjacentYields>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" YieldType="YIELD_CULTURE" YieldChange="1"/>
+		<Row FeatureType="FEATURE_EYJAFJALLAJOKULL" YieldType="YIELD_FOOD" YieldChange="2"/>
+	</Feature_AdjacentYields>
+	<GameModifiers>
+		<Row ModifierId="LYSEFJORDEN_GRANT_NAVAL_UNIT_EXPERIENCE"/>
+		<Row ModifierId="GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY"/>
+	</GameModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>LYSEFJORDEN_GRANT_NAVAL_UNIT_EXPERIENCE</ModifierId>
+			<ModifierType>MODIFIER_UNITS_ADJUST_GRANT_EXPERIENCE</ModifierType>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>LYSEFJORDEN_GRANT_EXPERIENCE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_ALL_UNITS_GRANT_ABILITY</ModifierType>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>LYSEFJORDEN_GRANT_NAVAL_UNIT_EXPERIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SPEAR_OF_FIONN</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>LYSEFJORDEN_GRANT_EXPERIENCE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>LYSEFJORDEN_GRANT_EXPERIENCE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLOT_ADJACENT_TO_LYSEFJORDEN_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>LYSEFJORDEN_GRANT_EXPERIENCE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>UNIT_IS_NAVAL_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLOT_ADJACENT_TO_GIANTS_CAUSEWAY_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>GIANTS_CAUSEWAY_GRANT_UNIT_ABILITY_REQUIREMENTS</RequirementSetId>
+			<RequirementId>UNIT_IS_LAND_REQUIREMENT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_TO_LYSEFJORDEN_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>UNIT_IS_NAVAL_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_UNIT_DOMAIN_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_TO_GIANTS_CAUSEWAY_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>UNIT_IS_LAND_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_UNIT_DOMAIN_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_TO_LYSEFJORDEN_REQUIREMENT</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_LYSEFJORDEN</Value>
+		</Row>
+		<Row>
+			<RequirementId>UNIT_IS_NAVAL_REQUIREMENT</RequirementId>
+			<Name>UnitDomain</Name>
+			<Value>DOMAIN_SEA</Value>
+		</Row>
+		<Row>
+			<RequirementId>PLOT_ADJACENT_TO_GIANTS_CAUSEWAY_REQUIREMENT</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_GIANTS_CAUSEWAY</Value>
+		</Row>
+		<Row>
+			<RequirementId>UNIT_IS_LAND_REQUIREMENT</RequirementId>
+			<Name>UnitDomain</Name>
+			<Value>DOMAIN_LAND</Value>
+		</Row>
+	</RequirementArguments>
+	-->
+</GameInfo>

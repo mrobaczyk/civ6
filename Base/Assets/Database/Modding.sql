@@ -1,6 +1,10 @@
 -- Modding Framework Schema
 -- 
 -- Revision History
+-- Version 15:
+-- * Added Icons setting and component types.
+-- Version 14:
+-- * Added ModArt setting type.
 -- Version 13:
 -- * Added UpdateARX component type.
 -- Version 12: 
@@ -298,25 +302,15 @@ INSERT INTO ComponentTypes('Name') VALUES ('UserInterface');
 INSERT INTO ComponentTypes('Name') VALUES ('LocalizedText');
 INSERT INTO ComponentTypes('Name') VALUES ('GameplayScripts');
 INSERT INTO ComponentTypes('Name') VALUES ('ImportFiles');
-
--- INSERT INTO ComponentTypes('Name') VALUES ('ImportFile');
--- INSERT INTO ComponentTypes('Name') VALUES ('Leader');
--- INSERT INTO ComponentTypes('Name') VALUES ('Unit');
--- INSERT INTO ComponentTypes('Name') VALUES ('Building');
--- INSERT INTO ComponentTypes('Name') VALUES ('Technology');
--- INSERT INTO ComponentTypes('Name') VALUES ('Religion');
--- INSERT INTO ComponentTypes('Name') VALUES ('Belief');
+INSERT INTO ComponentTypes('Name') VALUES ('Icons');
 
 INSERT INTO SettingTypes('Name') VALUES('Custom');
 INSERT INTO SettingTypes('Name') VALUES('LocalizedText');
 INSERT INTO SettingTypes('Name') VALUES('Map');
 INSERT INTO SettingTypes('Name') VALUES('WorldBuilder');
--- INSERT INTO SettingTypes('Name') VALUES('RuleSet');
--- INSERT INTO SettingTypes('Name') VALUES('PlayerEntry');
--- INSERT INTO SettingTypes('Name') VALUES('GameOption');
--- INSERT INTO SettingTypes('Name') VALUES('MapScript');
--- INSERT INTO SettingTypes('Name') VALUES('Map');
--- INSERT INTO SettingTypes('Name') VALUES('Victory');
+INSERT INTO SettingTypes('Name') VALUES('ModArt');
+INSERT INTO SettingTypes('Name') VALUES('Icons');
+
 
 -- Stored procedures used by framework
 -- Some rough naming conventions.
@@ -385,4 +379,4 @@ INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod',
 INSERT INTO StoredProcedures('Context', 'Name', 'SQL') VALUES('Modding_LoadMod', 'AddComponentProperty', 'INSERT INTO ComponentProperties(ComponentRowId, Name, Value) VALUES(?, ?, ?)');
 
 -- User version is written at the end.
-PRAGMA user_version(13);
+PRAGMA user_version(15);

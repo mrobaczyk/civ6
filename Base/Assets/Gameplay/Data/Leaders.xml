@@ -344,6 +344,13 @@
 		<Row PreferenceType="SETTLEMENT_CITY_MINIMUM_VALUE"/>
 		<Row PreferenceType="SETTLEMENT_CITY_VALUE_MULTIPLIER"/>
 	</SettlementPreferences>
+	<AiScoutUses>
+		<Row ScoutUseType="DEFAULT_LAND_SCOUTS"/>
+		<Row ScoutUseType="DEFAULT_NAVAL_SCOUTS"/>
+		<Row ScoutUseType="LAND_SCOUTS_PER_PRIMARY_REGION"/>
+		<Row ScoutUseType="LAND_SCOUTS_PER_SECONDARY_REGION"/>
+		<Row ScoutUseType="NAVAL_SCOUTS_FOR_WORLD_EXPLORATION"/>
+	</AiScoutUses>
 	<AiEvents>
 		<Row EventType="AI_EVENT_GAIN_TECH"/>
 		<Row EventType="AI_EVENT_GAIN_CIVIC"/>
@@ -382,6 +389,7 @@
 		<Row ListType="DefaultCitySpecialization"/>
 		<Row ListType="DefaultFlavorList"/>
 		<Row ListType="DefaultSavings"/>
+		<Row ListType="DefaultScoutUse"/>
 		<Row ListType="DefaultTechBoostSupportList"/>
 		<Row ListType="DefaultTriggeredTrees"/>
 		<Row ListType="ExpansionistCitySettlement"/>
@@ -516,6 +524,7 @@
 		<Row ListType="UnitPriorityBoosts" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="Units"/>
 		<Row ListType="DefaultCityBuilds" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="CityEvents"/>
 		<Row ListType="DefaultSavings" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="SavingTypes"/>
+		<Row ListType="DefaultScoutUse" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="AiScoutUses"/>
 		<Row ListType="ExpansionistCitySettlement" LeaderType="TRAIT_LEADER_EXPANSIONIST" System="SettlementPreferences"/>
 		<Row ListType="TomyrisCitySettlement" LeaderType="TRAIT_LEADER_KILLER_OF_CYRUS" System="PlotEvaluations"/>
 		<!-- Minor Civ Lists -->
@@ -772,6 +781,12 @@
 		<Row ListType="DefaultSavings" Item="SAVING_UNITS" Value="4"/>
 		<Row ListType="DefaultSavings" Item="SAVING_GREAT_PEOPLE" Value="1"/>
 		<Row ListType="DefaultSavings" Item="SAVING_SLUSH_FUND" Value="3"/>
+		<!-- Note: Scouting values are read in as percentages, so multiply desired numbers by 100 -->
+		<Row ListType="DefaultScoutUse" Item="DEFAULT_LAND_SCOUTS" Value="100"/>
+		<Row ListType="DefaultScoutUse" Item="DEFAULT_NAVAL_SCOUTS" Value="100"/>
+		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_PRIMARY_REGION" Value="100"/>
+		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_SECONDARY_REGION" Value="50"/>
+		<Row ListType="DefaultScoutUse" Item="NAVAL_SCOUTS_FOR_WORLD_EXPLORATION" Value="300"/>
 		<Row ListType="BarbarianTriggeredTrees" Item="TRIGGER_CAPTURE_BARBARIAN"/>
 	</AiFavoredItems>
 	<LeaderTraits>
@@ -921,6 +936,7 @@
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_ARCHAEOLOGY"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_BROKEN_PROMISE"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_CONVERTED_CITY"/>
+		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_CULTURE_BOMBED"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_DECLARED_FRIEND"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_DEFENSIVE_PACT"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="STANDARD_DIPLOMATIC_DELEGATION"/>
@@ -1017,9 +1033,9 @@
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_PENALTY"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_BUILDERS"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_HARBORS"/>
-    <Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_MILITARY"/>
-    <Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_GOLD_MILITARY_UPGRADE"/>
-    <Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION"/>
+		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_PRODUCTION_MILITARY"/>
+		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" ModifierId="MINOR_CIV_GOLD_MILITARY_UPGRADE"/>
+		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_SEND_TRADE_ROUTE_BONUS"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_SMALL_INFLUENCE_BONUS"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" ModifierId="MINOR_CIV_SCIENTIFIC_MEDIUM_INFLUENCE_BONUS"/>
@@ -1155,6 +1171,11 @@
 			<ModifierId>STANDARD_DIPLOMATIC_CONVERTED_CITY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
 			<SubjectRequirementSetId>PLAYER_CITY_CONVERTED</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_CULTURE_BOMBED</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_DECLARED_FRIEND</ModifierId>
@@ -1619,15 +1640,15 @@
 			<ModifierId>MINOR_CIV_PRODUCTION_HARBORS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
 		</Row>
-    <Row>
-      <ModifierId>MINOR_CIV_PRODUCTION_MILITARY</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MILITARY_UNITS_PRODUCTION</ModifierType>
-      <SubjectRequirementSetId>PLAYER_HAS_SMALL_MILITARY</SubjectRequirementSetId>
-    </Row>
-    <Row>
-      <ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
-      <ModifierType>MODIFIER_PLAYER_ADJUST_UNIT_UPGRADE_DISCOUNT_PERCENT</ModifierType>
-    </Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PRODUCTION_MILITARY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MILITARY_UNITS_PRODUCTION</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_SMALL_MILITARY</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_UNIT_UPGRADE_DISCOUNT_PERCENT</ModifierType>
+		</Row>
 		<Row>
 			<ModifierId>MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
@@ -2546,6 +2567,26 @@
 			<Value>LOC_DIPLO_MODIFIER_CITY_CONVERTED</Value>
 		</Row>
 		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-10</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
+			<Name>ReductionTurns</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
+			<Name>ReductionValue</Name>
+			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_CULTURE_BOMBED</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_CULTURE_BOMBED</Value>
+		</Row>
+		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_DECLARED_FRIEND</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>9</Value>
@@ -2741,6 +2782,16 @@
 			<Value>LOC_DIPLO_MODIFIER_KEPT_PROMISE</Value>
 		</Row>
 		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_KEPT_PROMISE</ModifierId>
+			<Name>ReductionValue</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_KEPT_PROMISE</ModifierId>
+			<Name>ReductionTurns</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_LIBERATED_CITY</ModifierId>
 			<Name>InitialValue</Name>
 			<Value>5</Value>
@@ -2819,6 +2870,16 @@
 			<ModifierId>STANDARD_DIPLOMATIC_NO_PROMISE</ModifierId>
 			<Name>IncrementValue</Name>
 			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_NO_PROMISE</ModifierId>
+			<Name>ReductionValue</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_NO_PROMISE</ModifierId>
+			<Name>ReductionTurns</Name>
+			<Value>10</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_NO_PROMISE</ModifierId>
@@ -3334,6 +3395,7 @@
 			<Type>LinearScaleFromDefaultHandicap</Type>
 			<Value>0</Value>
 			<Extra>-5</Extra>
+			<SecondExtra>DIFFICULTY_PRINCE</SecondExtra>
 		</Row>
 		<Row>
 			<ModifierId>BARBARIAN_CAMP_GOLD_SCALING</ModifierId>
@@ -3353,6 +3415,7 @@
 			<Type>LinearScaleFromDefaultHandicap</Type>
 			<Value>0</Value>
 			<Extra>-1</Extra>
+			<SecondExtra>DIFFICULTY_PRINCE</SecondExtra>
 		</Row>
 		<Row>
 			<ModifierId>HIGH_DIFFICULTY_UNIT_XP_SCALING</ModifierId>
@@ -3367,6 +3430,7 @@
 			<Type>LinearScaleFromDefaultHandicap</Type>
 			<Value>0</Value>
 			<Extra>-15</Extra>
+			<SecondExtra>DIFFICULTY_PRINCE</SecondExtra>
 		</Row>
 		<Row>
 			<ModifierId>HIGH_DIFFICULTY_FREE_TECH_BOOSTS</ModifierId>
@@ -3752,16 +3816,16 @@
 			<Name>Amount</Name>
 			<Value>500</Value>
 		</Row>
-    <Row>
-      <ModifierId>MINOR_CIV_PRODUCTION_MILITARY</ModifierId>
-      <Name>Amount</Name>
-      <Value>200</Value>
-    </Row>
-    <Row>
-      <ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
-      <Name>Amount</Name>
-      <Value>100</Value>
-    </Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PRODUCTION_MILITARY</ModifierId>
+			<Name>Amount</Name>
+			<Value>200</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_GOLD_MILITARY_UPGRADE</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
 		<Row>
 			<ModifierId>MINOR_CIV_SCIENTIFIC_CAMPUS_PRODUCTION</ModifierId>
 			<Name>DistrictType</Name>
@@ -4934,6 +4998,7 @@
 		<Row ModifierId="STANDARD_DIPLOMATIC_ARCHAEOLOGY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_BROKEN_PROMISE" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_CONVERTED_CITY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="STANDARD_DIPLOMATIC_CULTURE_BOMBED" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_DECLARED_FRIEND" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_DEFENSIVE_PACT" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
 		<Row ModifierId="STANDARD_DIPLOMATIC_DELEGATION" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
@@ -5062,6 +5127,10 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_CULTURE_BOMBED</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_OPEN_BORDERS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -5133,10 +5202,10 @@
 			<RequirementSetId>PLAYER_HAS_DIFFERENT_GOVERNMENT</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
-    <Row>
-      <RequirementSetId>PLAYER_HAS_SMALL_MILITARY</RequirementSetId>
-      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
-    </Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_SMALL_MILITARY</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_HAS_SMALL_INFLUENCE</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
@@ -5432,6 +5501,10 @@
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_ACCEPT_CONVERSION</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_CITY_CONVERTED</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_CITY_CONVERTED</RequirementId>
 		</Row>
@@ -5477,6 +5550,14 @@
 		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_MY_CITY_RAZED</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_CULTURE_BOMBED</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_CULTURE_BOMBED</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_CULTURE_BOMBED</RequirementSetId>
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
 		</Row>
 		<Row>
@@ -5587,10 +5668,10 @@
 			<RequirementSetId>PLAYER_HAS_DIFFERENT_GOVERNMENT</RequirementSetId>
 			<RequirementId>REQUIRES_DIFFERENT_GOVERNMENT</RequirementId>
 		</Row>
-    <Row>
-      <RequirementSetId>PLAYER_HAS_SMALL_MILITARY</RequirementSetId>
-      <RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
-    </Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_SMALL_MILITARY</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
+		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_HAS_SMALL_INFLUENCE</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_INFLUENCE</RequirementId>
@@ -5895,6 +5976,11 @@
 			<Triggered>True</Triggered>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_PLAYER_CULTURE_BOMBED</RequirementId>
+			<RequirementType>REQUIREMENT_CULTURE_BOMBED</RequirementType>
+			<Triggered>True</Triggered>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_PLAYER_CITY_OCCUPIED</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_OCCUPIED</RequirementType>
 		</Row>
@@ -5999,11 +6085,11 @@
 			<RequirementType>REQUIREMENT_ESPIONAGE_DETECTED</RequirementType>
 			<Triggered>true</Triggered>
 		</Row>
-    <Row>
-      <RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
-      <RequirementType>REQUIREMENT_PLAYER_HAS_AT_LEAST_NUM_MILITARY_UNITS</RequirementType>
-      <Inverse>True</Inverse>
-    </Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_AT_LEAST_NUM_MILITARY_UNITS</RequirementType>
+			<Inverse>True</Inverse>
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_INFLUENCE</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_HAS_GIVEN_INFLUENCE_TOKENS</RequirementType>
@@ -6245,11 +6331,11 @@
 			<Name>OnlyOwnersCity</Name>
 			<Value>True</Value>
 		</Row>
-    <Row>
-      <RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
-      <Name>Amount</Name>
-      <Value>10</Value>
-    </Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_MILITARY</RequirementId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_SMALL_INFLUENCE</RequirementId>
 			<Name>MinimumTokens</Name>

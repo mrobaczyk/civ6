@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <Maps>
+    <Row File="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" Name="LOC_EARTH_MAP_STANDARD_NAME" Description="LOC_EARTH_MAP_STANDARD_DESCRIPTION" HasPreDefinedStarts="1" SortIndex="80" />
+  </Maps>
+
+  <MapSizes>
+    <Row Domain="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="2" MaxPlayers="8" DefaultPlayers="8" MinCityStates="0" MaxCityStates="12" DefaultCityStates="12" SortIndex="10" />
+  </MapSizes>
+
+  <MapDomainOverrides>
+    <Row Map="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" ParameterId="MapSize" Domain="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" />
+  </MapDomainOverrides>
+
+  <ParameterCriteria>
+	<Row ParameterId="NoGoodyHuts" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" />
+  </ParameterCritera>
+  
+  <ParameterDependencies>
+    <Row ParameterId="Resources" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" Operator="NotEquals" ConfigurationValue="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" />
+  </ParameterDependencies>
+  
+  <ConfigurationUpdates>
+	<Row SourceGroup="Map" SourceId="MAP_SCRIPT" SourceValue="../../Assets/Maps/EarthMaps/EarthStandard.Civ6Map" TargetGroup="Game" TargetId="GAME_NO_GOODY_HUTS" TargetValue="1" Hash="0" />
+  </ConfigurationUpdates>
+  
+</GameInfo>

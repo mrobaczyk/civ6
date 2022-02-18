@@ -31,8 +31,11 @@
     <Row AllowedMoveType="Air Deploy" Value="27" isTactical="true" />
     <Row AllowedMoveType="Air Rebase" Value="28" isTactical="true" />
     <Row AllowedMoveType="Air Assault" Value="29" isTactical="true" />
+    <Row AllowedMoveType="Builder Outside Ring" Value="30" isHomeland="true" />
+    <Row AllowedMoveType="Leader Formation" Value="31" isTactical="true" />
    </AllowedMoves>
 	<AiFavoredItems>
+		<Row ListType="Default Tactical" Item="Leader Formation" />
     <Row ListType="Default Tactical" Item="Attack High Priority"/>
     <Row ListType="Default Tactical" Item="Attack Camps"/>
 		<Row ListType="Default Tactical" Item="Move to Safety"/>
@@ -61,6 +64,7 @@
     <Row ListType="Default Homeland" Item="Religious Combat" />
     <Row ListType="Default Homeland" Item="Missionary Move" />
     <Row ListType="Default Homeland" Item="Attack Civilians" />
+    <Row ListType="Default Homeland" Item="Builder Outside Ring" />
     <Row ListType="Default Homeland" Item="Explore Land" />
 		<Row ListType="Default Homeland" Item="End Turn" />
 		<Row ListType="Default Barbarian" Item="Attack High Priority" />

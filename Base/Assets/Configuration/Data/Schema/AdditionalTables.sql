@@ -44,8 +44,16 @@ CREATE TABLE 'Maps' (
 	'Name' TEXT NOT NULL,
 	'Description' TEXT,
 	'WorldBuilderOnly' BOOLEAN NOT NULL DEFAULT 0,
+	'HasPreDefinedStarts' BOOLEAN NOT NULL DEFAULT 0,
+	'RequiresPreDefinedStarts' BOOLEAN NOT NULL DEFAULT 0,
 	'SortIndex' INTEGER NOT NULL DEFAULT 10,
 	PRIMARY KEY ('Domain', 'File')
+);
+
+CREATE TABLE 'MapPreDefinedStartingLeaders' (
+	'Map' TEXT NOT NULL,
+	'LeaderType' TEXT NOT NULL,
+	PRIMARY KEY ('Map', 'LeaderType')
 );
 
 CREATE TABLE 'MapSizes' (
@@ -67,11 +75,16 @@ CREATE TABLE 'Rulesets' (
 	'RulesetType' TEXT NOT NULL,
  	'Name' TEXT NOT NULL,
 	'Description' TEXT,
+	'LongDescription' TEXT,
 	'DefeatDomain' TEXT NOT NULL DEFAULT 'StandardDefeats',
 	'VictoryDomain' TEXT NOT NULL DEFAULT 'StandardVictories',
 	'MaxTurns' INTEGER,
 	'SupportsSinglePlayer' BOOLEAN NOT NULL DEFAULT 1,
 	'SupportsMultiPlayer' BOOLEAN NOT NULL DEFAULT 1,
+	'SortIndex' INTEGER NOT NULL DEFAULT 100,
+	'IsScenario' BOOLEAN NOT NULL DEFAULT 0,
+	'ScenarioSetupPotrait' TEXT,
+	'ScenarioSetupPotraitBackground' TEXT,
 	PRIMARY KEY('RulesetType')
 );
 
@@ -89,6 +102,8 @@ CREATE TABLE 'Players' (
 	'CivilizationAbilityName' TEXT NOT NULL,
 	'CivilizationAbilityDescription' TEXT NOT NULL,
 	'CivilizationAbilityIcon' TEXT NOT NULL,
+	'Portrait' TEXT,
+	'PortraitBackground' TEXT,
 	PRIMARY KEY('Domain', 'CivilizationType', 'LeaderType')
 );
 

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<GameInfo>
+	<Types>
+		<Row Type="CIVILIZATION_AUCKLAND" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_ANTANANARIVO" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_ARMAGH" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_GRANADA" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_MUSCAT" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_PALENQUE" Kind="KIND_CIVILIZATION"/>
+		<Row Type="LEADER_MINOR_CIV_AUCKLAND" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_ANTANANARIVO" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_ARMAGH" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_GRANADA" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_MUSCAT" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_MINOR_CIV_PALENQUE" Kind="KIND_LEADER"/>
+		<Row Type="MINOR_CIV_AUCKLAND_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_ANTANANARIVO_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_ARMAGH_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_GRANADA_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_MUSCAT_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="MINOR_CIV_PALENQUE_TRAIT" Kind="KIND_TRAIT"/>
+		<Row Type="IMPROVEMENT_ALCAZAR" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="IMPROVEMENT_MONASTERY" Kind="KIND_IMPROVEMENT"/>
+	</Types>
+	<TypeProperties>
+		<Row Type="CIVILIZATION_AUCKLAND" Name="CityStateCategory" Value="INDUSTRIAL"/>
+		<Row Type="CIVILIZATION_ANTANANARIVO" Name="CityStateCategory" Value="CULTURAL"/>
+		<Row Type="CIVILIZATION_ARMAGH" Name="CityStateCategory" Value="RELIGIOUS"/>
+		<Row Type="CIVILIZATION_GRANADA" Name="CityStateCategory" Value="MILITARISTIC"/>
+		<Row Type="CIVILIZATION_MUSCAT" Name="CityStateCategory" Value="TRADE"/>
+		<Row Type="CIVILIZATION_PALENQUE" Name="CityStateCategory" Value="SCIENTIFIC"/>
+	</TypeProperties>
+	<Civilizations>
+		<Row CivilizationType="CIVILIZATION_AUCKLAND" Name="LOC_CIVILIZATION_AUCKLAND_NAME" Description="LOC_CIVILIZATION_AUCKLAND_DESCRIPTION" Adjective="LOC_CIVILIZATION_AUCKLAND_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_ANTANANARIVO" Name="LOC_CIVILIZATION_ANTANANARIVO_NAME" Description="LOC_CIVILIZATION_ANTANANARIVO_DESCRIPTION" Adjective="LOC_CIVILIZATION_ANTANANARIVO_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_ARMAGH" Name="LOC_CIVILIZATION_ARMAGH_NAME" Description="LOC_CIVILIZATION_ARMAGH_DESCRIPTION" Adjective="LOC_CIVILIZATION_ARMAGH_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_GRANADA" Name="LOC_CIVILIZATION_GRANADA_NAME" Description="LOC_CIVILIZATION_GRANADA_DESCRIPTION" Adjective="LOC_CIVILIZATION_GRANADA_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_MUSCAT" Name="LOC_CIVILIZATION_MUSCAT_NAME" Description="LOC_CIVILIZATION_MUSCAT_DESCRIPTION" Adjective="LOC_CIVILIZATION_MUSCAT_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+		<Row CivilizationType="CIVILIZATION_PALENQUE" Name="LOC_CIVILIZATION_PALENQUE_NAME" Description="LOC_CIVILIZATION_PALENQUE_DESCRIPTION" Adjective="LOC_CIVILIZATION_PALENQUE_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_CITY_STATE" RandomCityNameDepth="1"/>
+	</Civilizations>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_AUCKLAND" LeaderType="LEADER_MINOR_CIV_AUCKLAND" CapitalName="LOC_CITY_NAME_AUCKLAND"/>
+		<Row CivilizationType="CIVILIZATION_ANTANANARIVO" LeaderType="LEADER_MINOR_CIV_ANTANANARIVO" CapitalName="LOC_CITY_NAME_ANTANANARIVO"/>
+		<Row CivilizationType="CIVILIZATION_ARMAGH" LeaderType="LEADER_MINOR_CIV_ARMAGH" CapitalName="LOC_CITY_NAME_ARMAGH"/>
+		<Row CivilizationType="CIVILIZATION_GRANADA" LeaderType="LEADER_MINOR_CIV_GRANADA" CapitalName="LOC_CITY_NAME_GRANADA"/>
+		<Row CivilizationType="CIVILIZATION_MUSCAT" LeaderType="LEADER_MINOR_CIV_MUSCAT" CapitalName="LOC_CITY_NAME_MUSCAT"/>
+		<Row CivilizationType="CIVILIZATION_PALENQUE" LeaderType="LEADER_MINOR_CIV_PALENQUE" CapitalName="LOC_CITY_NAME_PALENQUE"/>
+	</CivilizationLeaders>
+	<CityNames>
+		<Row CivilizationType="CIVILIZATION_AUCKLAND" CityName="LOC_CITY_NAME_AUCKLAND"/>
+		<Row CivilizationType="CIVILIZATION_ANTANANARIVO" CityName="LOC_CITY_NAME_ANTANANARIVO"/>
+		<Row CivilizationType="CIVILIZATION_ARMAGH" CityName="LOC_CITY_NAME_ARMAGH"/>
+		<Row CivilizationType="CIVILIZATION_GRANADA" CityName="LOC_CITY_NAME_GRANADA"/>
+		<Row CivilizationType="CIVILIZATION_MUSCAT" CityName="LOC_CITY_NAME_MUSCAT"/>
+		<Row CivilizationType="CIVILIZATION_PALENQUE" CityName="LOC_CITY_NAME_PALENQUE"/>
+	</CityNames>
+	<PlayerColors>
+		<Row>
+			<Type>CIVILIZATION_AUCKLAND</Type>
+			<Usage>Minor</Usage>
+			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
+			<SecondaryColor>COLOR_PLAYER_CITY_STATE_INDUSTRIAL_SECONDARY</SecondaryColor>
+			<TextColor>COLOR_PLAYER_CITY_STATE_INDUSTRIAL_SECONDARY</TextColor>
+		</Row>
+		<Row>
+			<Type>CIVILIZATION_ANTANANARIVO</Type>
+			<Usage>Minor</Usage>
+			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
+			<SecondaryColor>COLOR_PLAYER_CITY_STATE_CULTURAL_SECONDARY</SecondaryColor>
+			<TextColor>COLOR_PLAYER_CITY_STATE_CULTURAL_SECONDARY</TextColor>
+		</Row>
+		<Row>
+			<Type>CIVILIZATION_ARMAGH</Type>
+			<Usage>Minor</Usage>
+			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
+			<SecondaryColor>COLOR_PLAYER_CITY_STATE_RELIGIOUS_SECONDARY</SecondaryColor>
+			<TextColor>COLOR_PLAYER_CITY_STATE_RELIGIOUS_SECONDARY</TextColor>
+		</Row>
+		<Row>
+			<Type>CIVILIZATION_GRANADA</Type>
+			<Usage>Minor</Usage>
+			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
+			<SecondaryColor>COLOR_PLAYER_CITY_STATE_MILITARISTIC_SECONDARY</SecondaryColor>
+			<TextColor>COLOR_PLAYER_CITY_STATE_MILITARISTIC_SECONDARY</TextColor>
+		</Row>
+		<Row>
+			<Type>CIVILIZATION_MUSCAT</Type>
+			<Usage>Minor</Usage>
+			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
+			<SecondaryColor>COLOR_PLAYER_CITY_STATE_TRADE_SECONDARY</SecondaryColor>
+			<TextColor>COLOR_PLAYER_CITY_STATE_TRADE_SECONDARY</TextColor>
+		</Row>
+		<Row>
+			<Type>CIVILIZATION_PALENQUE</Type>
+			<Usage>Minor</Usage>
+			<PrimaryColor>COLOR_PLAYER_CITY_STATE_PRIMARY</PrimaryColor>
+			<SecondaryColor>COLOR_PLAYER_CITY_STATE_SCIENCE_SECONDARY</SecondaryColor>
+			<TextColor>COLOR_PLAYER_CITY_STATE_SCIENCE_SECONDARY</TextColor>
+		</Row>
+	</PlayerColors>
+	<Leaders>
+		<Row LeaderType="LEADER_MINOR_CIV_AUCKLAND" Name="LOC_CIVILIZATION_AUCKLAND_NAME" InheritFrom="LEADER_MINOR_CIV_INDUSTRIAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_ANTANANARIVO" Name="LOC_CIVILIZATION_ANTANANARIVO_NAME" InheritFrom="LEADER_MINOR_CIV_CULTURAL"/>
+		<Row LeaderType="LEADER_MINOR_CIV_ARMAGH" Name="LOC_CIVILIZATION_ARMAGH_NAME" InheritFrom="LEADER_MINOR_CIV_RELIGIOUS"/>
+		<Row LeaderType="LEADER_MINOR_CIV_GRANADA" Name="LOC_CIVILIZATION_GRANADA_NAME" InheritFrom="LEADER_MINOR_CIV_MILITARISTIC"/>
+		<Row LeaderType="LEADER_MINOR_CIV_MUSCAT" Name="LOC_CIVILIZATION_MUSCAT_NAME" InheritFrom="LEADER_MINOR_CIV_TRADE"/>
+		<Row LeaderType="LEADER_MINOR_CIV_PALENQUE" Name="LOC_CIVILIZATION_PALENQUE_NAME" InheritFrom="LEADER_MINOR_CIV_SCIENTIFIC"/>
+	</Leaders>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_MINOR_CIV_AUCKLAND" TraitType="MINOR_CIV_AUCKLAND_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_ANTANANARIVO" TraitType="MINOR_CIV_ANTANANARIVO_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_ARMAGH" TraitType="MINOR_CIV_ARMAGH_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_GRANADA" TraitType="MINOR_CIV_GRANADA_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_MUSCAT" TraitType="MINOR_CIV_MUSCAT_TRAIT"/>
+		<Row LeaderType="LEADER_MINOR_CIV_PALENQUE" TraitType="MINOR_CIV_PALENQUE_TRAIT"/>
+	</LeaderTraits>
+	<Traits>
+		<Row TraitType="MINOR_CIV_AUCKLAND_TRAIT" Name="LOC_LEADER_TRAIT_AUCKLAND_NAME" Description="LOC_LEADER_TRAIT_AUCKLAND_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_ANTANANARIVO_TRAIT" Name="LOC_LEADER_TRAIT_ANTANANARIVO_NAME" Description="LOC_LEADER_TRAIT_ANTANANARIVO_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_ARMAGH_TRAIT" Name="LOC_LEADER_TRAIT_ARMAGH_NAME" Description="LOC_LEADER_TRAIT_ARMAGH_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_GRANADA_TRAIT" Name="LOC_LEADER_TRAIT_GRANADA_NAME" Description="LOC_LEADER_TRAIT_GRANADA_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_MUSCAT_TRAIT" Name="LOC_LEADER_TRAIT_MUSCAT_NAME" Description="LOC_LEADER_TRAIT_MUSCAT_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_PALENQUE_TRAIT" Name="LOC_LEADER_TRAIT_PALENQUE_NAME" Description="LOC_LEADER_TRAIT_PALENQUE_DESCRIPTION"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="MINOR_CIV_AUCKLAND_TRAIT" ModifierId="MINOR_CIV_AUCKLAND_UNIQUE_INFLUENCE_BONUS_BASE"/>
+		<Row TraitType="MINOR_CIV_AUCKLAND_TRAIT" ModifierId="MINOR_CIV_AUCKLAND_UNIQUE_INFLUENCE_BONUS_INDUSTRIAL"/>
+		<Row TraitType="MINOR_CIV_ANTANANARIVO_TRAIT" ModifierId="MINOR_CIV_ANTANANARIVO_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_ARMAGH_TRAIT" ModifierId="MINOR_CIV_ARMAGH_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_GRANADA_TRAIT" ModifierId="MINOR_CIV_GRANADA_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_MUSCAT_TRAIT" ModifierId="MINOR_CIV_MUSCAT_UNIQUE_INFLUENCE_BONUS"/>
+		<Row TraitType="MINOR_CIV_PALENQUE_TRAIT" ModifierId="MINOR_CIV_PALENQUE_UNIQUE_INFLUENCE_BONUS"/>
+	</TraitModifiers>
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" Name="LOC_IMPROVEMENT_ALCAZAR_NAME" Description="LOC_IMPROVEMENT_ALCAZAR_DESCRIPTION" Icon="ICON_IMPROVEMENT_ALCAZAR" PlunderType="PLUNDER_CULTURE" PlunderAmount="25" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_GRANADA_TRAIT" DefenseModifier="4" GrantFortification="2"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" Name="LOC_IMPROVEMENT_MONASTERY_NAME" Description="LOC_IMPROVEMENT_MONASTERY_DESCRIPTION" Icon="ICON_IMPROVEMENT_MONASTERY" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" SameAdjacentValid="false" TraitType="MINOR_CIV_ARMAGH_TRAIT" ReligiousUnitHealRate="15"/>
+	</Improvements>
+	<Improvement_ValidTerrains>
+		<!--Unique Improvements -->
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" TerrainType="TERRAIN_SNOW_HILLS"/>
+	</Improvement_ValidTerrains>
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" UnitType="UNIT_BUILDER"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" UnitType="UNIT_BUILDER"/>
+	</Improvement_ValidBuildUnits>
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" YieldType="YIELD_CULTURE" YieldChange="2"/>
+		<Row ImprovementType="IMPROVEMENT_MONASTERY" YieldType="YIELD_FAITH" YieldChange="2"/>
+	</Improvement_YieldChanges>
+	<Modifiers>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_UNIQUE_INFLUENCE_BONUS_BASE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_UNIQUE_INFLUENCE_BONUS_INDUSTRIAL</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ANTANANARIVO_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ARMAGH_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_GRANADA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_MUSCAT_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PALENQUE_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_SUZERAIN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_BASE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_SHALLOW_WATER</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_INDUSTRIAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_SHALLOW_WATER_AND_INDUSTRIAL</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ANTANANARIVO_CULTURE_FROM_EARNED_GREAT_PEOPLE_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_YIELD_MODIFIER_PER_EARNED_GREAT_PERSON</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ARMAGH_UNLOCK_MONASTERY_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_VALID_IMPROVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_GRANADA_UNLOCK_ALCAZAR_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_VALID_IMPROVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_MUSCAT_COMMERCIAL_HUB_AMENITY_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_AMENITIES_FROM_CITY_STATES</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_COMMERCIAL_HUB</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PALENQUE_CAMPUS_GROWTH_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_GROWTH</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_CAMPUS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_UNIQUE_INFLUENCE_BONUS_BASE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_BASE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_UNIQUE_INFLUENCE_BONUS_INDUSTRIAL</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_INDUSTRIAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ANTANANARIVO_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_ANTANANARIVO_CULTURE_FROM_EARNED_GREAT_PEOPLE_BONUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ARMAGH_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_ARMAGH_UNLOCK_MONASTERY_BONUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_GRANADA_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_GRANADA_UNLOCK_ALCAZAR_BONUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_MUSCAT_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_MUSCAT_COMMERCIAL_HUB_AMENITY_BONUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PALENQUE_UNIQUE_INFLUENCE_BONUS</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>MINOR_CIV_PALENQUE_CAMPUS_GROWTH_BONUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_BASE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_BASE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_INDUSTRIAL</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_INDUSTRIAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ANTANANARIVO_CULTURE_FROM_EARNED_GREAT_PEOPLE_BONUS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ANTANANARIVO_CULTURE_FROM_EARNED_GREAT_PEOPLE_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_ARMAGH_UNLOCK_MONASTERY_BONUS</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MONASTERY</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_GRANADA_UNLOCK_ALCAZAR_BONUS</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_ALCAZAR</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_MUSCAT_COMMERCIAL_HUB_AMENITY_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINOR_CIV_PALENQUE_CAMPUS_GROWTH_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+	</ModifierArguments>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_IS_INDUSTRIAL_ERA</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_ERA_AT_LEAST</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_SHALLOW_WATER</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_COMMERCIAL_HUB</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_CAMPUS</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_IS_INDUSTRIAL_ERA</RequirementId>
+			<Name>EraType</Name>
+			<Value>ERA_INDUSTRIAL</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_SHALLOW_WATER</RequirementId>
+			<Name>TerrainType</Name>
+			<Value>TERRAIN_COAST</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_COMMERCIAL_HUB</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_COMMERCIAL_HUB</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_CAMPUS</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_CAMPUS</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLOT_HAS_SHALLOW_WATER</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_SHALLOW_WATER_AND_INDUSTRIAL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_COMMERCIAL_HUB</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_CAMPUS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLOT_HAS_SHALLOW_WATER</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_SHALLOW_WATER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_SHALLOW_WATER_AND_INDUSTRIAL</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_SHALLOW_WATER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_SHALLOW_WATER_AND_INDUSTRIAL</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_IS_INDUSTRIAL_ERA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_COMMERCIAL_HUB</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_COMMERCIAL_HUB</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_CAMPUS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_CAMPUS</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+</GameInfo>
