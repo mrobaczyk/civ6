@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Expansion 1 specific data -->
+	<!-- ========== -->
+	<Types>
+		<Delete Type="DIPLOACTION_DECLARE_GOLDEN_AGE_WAR"/>
+	</Types>
+	<Policies_XP1>
+		<Row PolicyType="POLICY_HEARTBEAT_OF_STEAM" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_INFORMATION" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_TO_ARMS" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_INFORMATION" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_WISH_YOU_WERE_HERE" MinimumGameEra="ERA_ATOMIC" MaximumGameEra="ERA_INFORMATION" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_SKY_AND_STARS" MinimumGameEra="ERA_ATOMIC" MaximumGameEra="ERA_INFORMATION" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_SOLDARITY" MinimumGameEra="ERA_ATOMIC" MaximumGameEra="ERA_INFORMATION" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_SOFT_TARGETS" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_INFORMATION" RequiresDarkAge="true"/>
+		<Row PolicyType="POLICY_DESPOTIC_PATERNALISM" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_INFORMATION" RequiresDarkAge="true"/>
+	</Policies_XP1>
+	<!-- Traits (of Civs of Leaders) -->
+	<!-- ========== -->
+	<TraitModifiers>
+	</TraitModifiers>
+	<Modifiers>
+	</Modifiers>
+	<ModifierArguments>
+	</ModifierArguments>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SPACEPORT</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SPACEPORT</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_SPACEPORT</Value>
+		</Row>
+	</RequirementArguments>
+</GameInfo>

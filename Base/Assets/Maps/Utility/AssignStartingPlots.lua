@@ -905,7 +905,7 @@ end
 function AssignStartingPlots:__MinorMajorCivBuffer(plot)
 	-- Checks to see if there are najors in the given distance for this minor civ
 
-	local iMaxStart = GlobalParameters.START_DISTANCE_MINOR_MAJOR_CIVILIZATION or 7;
+	local iMaxStart = GlobalParameters.START_DISTANCE_MINOR_MAJOR_CIVILIZATION or 6;
 
 	local iSourceIndex = plot:GetIndex();
 	
@@ -926,8 +926,7 @@ end
 function AssignStartingPlots:__MinorMinorCivBuffer(plot)
 	-- Checks to see if there are minors in the given distance for this minor civ
 
-	local iMaxStart = GlobalParameters.START_DISTANCE_MINOR_CIVILIZATION_START or 7;
-	iMaxStart = iMaxStart - GlobalParameters.START_DISTANCE_RANGE_MINOR or 4;
+	local iMaxStart = GlobalParameters.START_DISTANCE_MINOR_CIVILIZATION_START or 5;
 
 	local iSourceIndex = plot:GetIndex();
 

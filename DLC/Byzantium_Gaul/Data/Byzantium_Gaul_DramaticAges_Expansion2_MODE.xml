@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Expansion 2 specific data -->
+	<Types>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Kind="KIND_ABILITY"/>
+		<Delete Type="DIPLOACTION_DECLARE_GOLDEN_AGE_WAR"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH" Tag="CLASS_ALL_COMBAT_UNITS"/>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Tag="CLASS_GIANT_DEATH_ROBOT"/>
+	</TypeTags>
+	<Eras_XP2>
+		<Update>
+			<Where EraType="ERA_ANCIENT"/>
+			<Set>
+				<EraScoreThresholdShift>0</EraScoreThresholdShift>
+			</Set>
+		</Update>
+	</Eras_XP2>
+	<Policies>
+		<Row PolicyType="POLICY_POPULAR_FRONT" Name="LOC_POLICY_POPULAR_FRONT_NAME" Description="LOC_POLICY_POPULAR_FRONT_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_MILITARY_INDUSTRIAL_COMPLEX" Name="LOC_POLICY_MILITARY_INDUSTRIAL_COMPLEX_NAME" Description="LOC_POLICY_MILITARY_INDUSTRIAL_COMPLEX_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+	</Policies>
+	<Policies_XP1>
+		<Row PolicyType="POLICY_HEARTBEAT_OF_STEAM" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_ATOMIC" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_TO_ARMS" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_ATOMIC" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_WISH_YOU_WERE_HERE" MinimumGameEra="ERA_ATOMIC" MaximumGameEra="ERA_FUTURE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_SKY_AND_STARS" MinimumGameEra="ERA_ATOMIC" MaximumGameEra="ERA_FUTURE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" MinimumGameEra="ERA_INFORMATION" MaximumGameEra="ERA_FUTURE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_SOLDARITY" MinimumGameEra="ERA_ATOMIC" MaximumGameEra="ERA_FUTURE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_MILITARY_INDUSTRIAL_COMPLEX" MinimumGameEra="ERA_INFORMATION" MaximumGameEra="ERA_FUTURE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_SOFT_TARGETS" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_MODERN" RequiresDarkAge="true"/>
+		<Row PolicyType="POLICY_DESPOTIC_PATERNALISM" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_ATOMIC" RequiresDarkAge="true"/>
+	</Policies_XP1>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH" Name="LOC_ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH_NAME" Description="LOC_ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" Name="LOC_ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE_NAME" Description="LOC_ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<PolicyModifiers>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_ALLIANCE_FAVOR"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_SUZERAIN_FAVOR"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_CITY_STATE_GOLD"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_CITY_STATE_FAITH"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_CITY_STATE_PRODUCTION"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_CITY_STATE_SCIENCE"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_CITY_STATE_CULTURE"/>
+		<Row PolicyType="POLICY_POPULAR_FRONT" ModifierId="POLICY_POPULAR_FRONT_CITY_STATE_FOOD"/>
+		<Row PolicyType="POLICY_MILITARY_INDUSTRIAL_COMPLEX" ModifierId="POLICY_MILITARY_INDUSTRIAL_COMPLEX_ALUMINUM"/>
+		<Row PolicyType="POLICY_MILITARY_INDUSTRIAL_COMPLEX" ModifierId="POLICY_MILITARY_INDUSTRIAL_COMPLEX_OIL"/>
+		<Row PolicyType="POLICY_MILITARY_INDUSTRIAL_COMPLEX" ModifierId="POLICY_MILITARY_INDUSTRIAL_COMPLEX_URANIUM"/>
+		<Row PolicyType="POLICY_MILITARY_INDUSTRIAL_COMPLEX" ModifierId="POLICY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH"/>
+		<Row PolicyType="POLICY_MILITARY_INDUSTRIAL_COMPLEX" ModifierId="POLICY_MILITARY_INDUSTRIAL_COMPLEX_RANGE"/>
+	</PolicyModifiers>
+	<UnitAbilityModifiers>
+		<Row UnitAbilityType="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH" ModifierId="MILITARYINDUSTRIALCOMPLEX_COMBAT_STENGTH"/>
+		<Row UnitAbilityType="ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE" ModifierId="MILITARYINDUSTRIALCOMPLEX_RANGE"/>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_ALLIANCE_FAVOR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_ALLIANCE_FAVOR_MULTIPLIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_SUZERAIN_FAVOR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_SUZERAIN_FAVOR_MULTIPLIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTES_CITY_STATE_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTES_CITY_STATE_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTES_CITY_STATE_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTES_CITY_STATE_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTES_CITY_STATE_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_FOOD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTES_CITY_STATE_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_ALUMINUM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_RESOURCE_ACCUMULATION_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_OIL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_RESOURCE_ACCUMULATION_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_URANIUM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_RESOURCE_ACCUMULATION_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_RANGE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYINDUSTRIALCOMPLEX_COMBAT_STENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYINDUSTRIALCOMPLEX_RANGE</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_ATTACK_RANGE</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_ALLIANCE_FAVOR</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_SUZERAIN_FAVOR</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>		
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_FOOD</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_POPULAR_FRONT_CITY_STATE_FOOD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_ALUMINUM</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_ALUMINUM</ModifierId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_ALUMINUM</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_OIL</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_OIL</ModifierId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_OIL</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_URANIUM</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_URANIUM</ModifierId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_URANIUM</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MILITARY_INDUSTRIAL_COMPLEX_RANGE</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_MILITARY_INDUSTRIAL_COMPLEX_RANGE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYINDUSTRIALCOMPLEX_COMBAT_STENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MILITARYINDUSTRIALCOMPLEX_RANGE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="MILITARYINDUSTRIALCOMPLEX_COMBAT_STENGTH" Context="Preview" Text="LOC_ABILITY_MILITARY_INDUSTRIAL_COMPLEX_COMBAT_STRENGTH_PREVIEW_DESCRIPTION"/>
+	</ModifierStrings>
+</GameInfo>

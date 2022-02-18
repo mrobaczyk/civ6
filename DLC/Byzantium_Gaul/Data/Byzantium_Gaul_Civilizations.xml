@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Civs -->
+		<Row Type="CIVILIZATION_BYZANTIUM" Kind="KIND_CIVILIZATION"/>
+		<Row Type="CIVILIZATION_GAUL" Kind="KIND_CIVILIZATION"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_CIVILIZATION_BYZANTIUM" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_DISTRICT_HIPPODROME" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_GAUL" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_DISTRICT_OPPIDUM" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_UNIT_GAUL_GAESATAE" Kind="KIND_TRAIT"/>
+		<!-- Ability -->
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_BYZANTIUM_RELIGIOUS_UNITS" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_RECON"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_SIEGE"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_RANGED_CAVALRY"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_HEAVY_CHARIOT"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_LIGHT_CHARIOT"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="ABILITY_BYZANTIUM_COMBAT_UNITS" Tag="CLASS_WARRIOR_MONK"/>
+		<Row Type="ABILITY_BYZANTIUM_RELIGIOUS_UNITS" Tag="CLASS_RELIGIOUS_ALL"/>
+	</TypeTags>
+	<Civilizations>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" Name="LOC_CIVILIZATION_BYZANTIUM_NAME" Description="LOC_CIVILIZATION_BYZANTIUM_DESCRIPTION" Adjective="LOC_CIVILIZATION_BYZANTIUM_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_FULL_CIV" RandomCityNameDepth="10" Ethnicity="ETHNICITY_EURO"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" Name="LOC_CIVILIZATION_GAUL_NAME" Description="LOC_CIVILIZATION_GAUL_DESCRIPTION" Adjective="LOC_CIVILIZATION_GAUL_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_FULL_CIV" RandomCityNameDepth="10" Ethnicity="ETHNICITY_EURO"/>
+	</Civilizations>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_BASIL" CapitalName="LOC_CITY_NAME_CONSTANTINOPLE"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" LeaderType="LEADER_AMBIORIX" CapitalName="LOC_CITY_NAME_ADUATUCA"/>
+	</CivilizationLeaders>
+	<CivilizationInfo>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_BYZANTIUM_LOCATION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_BYZANTIUM_SIZE" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_BYZANTIUM_POPULATION" SortIndex="30"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" Header="LOC_CIVINFO_CAPITAL" Caption="LOC_CIVINFO_BYZANTIUM_CAPITAL" SortIndex="40"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_GAUL_LOCATION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_GAUL_SIZE" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_GAUL_POPULATION" SortIndex="30"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" Header="LOC_CIVINFO_CAPITAL" Caption="LOC_CIVINFO_GAUL_CAPITAL" SortIndex="40"/>
+	</CivilizationInfo>
+	<CivilizationTraits>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" TraitType="TRAIT_CIVILIZATION_BYZANTIUM"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" TraitType="TRAIT_CIVILIZATION_DISTRICT_HIPPODROME"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" TraitType="TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" TraitType="TRAIT_CIVILIZATION_GAUL"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" TraitType="TRAIT_CIVILIZATION_DISTRICT_OPPIDUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" TraitType="TRAIT_CIVILIZATION_UNIT_GAUL_GAESATAE"/>
+	</CivilizationTraits>
+	<CityNames>
+		<!-- Byzantium -->
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_CONSTANTINOPLE"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_THESSALONICA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_ADRIANOPLE"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_NICAEA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_ANTIOCH_BYZANTIUM"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_NICOMEDIA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_TREBIZOND"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_ANCYRA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_EDESSA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_SINOPE"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_AMASEIA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_CHERSON"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_DYRRACHIUM"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_NICOPOLIS"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_SELEUCIA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_ICONIUM"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_MELITENE"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_BARI"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_DORYLAEUM"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_AMORIUM"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_KOLONEIA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_TYANA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_ATTALEA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_SEBASTEIA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_THEODOSIOPOLIS"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_MESEMBRIA"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_ARCADIOPOLIS"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_MOUNT_ATHOS"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_DORYSTOLON"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CityName="LOC_CITY_NAME_ZARA"/>
+		<!-- Gaul -->
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_ADUATUCA"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_BIBRAX"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_NOVIODUNUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_SAMAROBRIVA"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_DUROCORTERON"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_RATUMACOS"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_TERVANNA"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_BAGACUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_DIVODURUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_ALESIA"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_AVARICUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_LISIEUX"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_LUTETIA"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_LUGUDUNON"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_CENABUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_MELEDUNUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_TURONES"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_AUTRICUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_BIBRACTE"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_DARIORITUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_UXELLODUNUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_GERGOVIA"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_VESONTIO"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_BRENODURUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_CROCIATONUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_AGEDINCUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_LIMONUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_ANDEMATUNNUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_CONDATE"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_AREGENUA"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_ANICIUM"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CityName="LOC_CITY_NAME_RUSCINO"/>
+	</CityNames>
+	<CivilizationCitizenNames>
+		<!-- Byzantium -->
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_1"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_2"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_3"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_4"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_5"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_6"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_7"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_8"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_9"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MALE_10"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_1" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_2" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_3" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_4" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_5" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_6" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_7" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_8" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_9" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_FEMALE_10" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_1" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_2" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_3" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_4" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_5" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_6" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_7" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_8" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_9" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_MALE_10" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_1" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_2" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_3" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_4" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_5" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_6" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_7" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_8" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_9" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" CitizenName="LOC_CITIZEN_BYZ_MODERN_FEMALE_10" Female="true" Modern="true"/>
+		<!-- Gaul -->
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_1"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_2"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_3"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_4"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_5"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_6"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_7"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_8"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_9"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MALE_10"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_1" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_2" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_3" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_4" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_5" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_6" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_7" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_8" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_9" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_FEMALE_10" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_1" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_2" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_3" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_4" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_5" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_6" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_7" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_8" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_9" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_MALE_10" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_1" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_2" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_3" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_4" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_5" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_6" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_7" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_8" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_9" Female="true" Modern="true"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" CitizenName="LOC_CITIZEN_GAUL_MODERN_FEMALE_10" Female="true" Modern="true"/>
+	</CivilizationCitizenNames>
+	<StartBiasResources>
+		<Row CivilizationType="CIVILIZATION_GAUL" ResourceType="RESOURCE_COPPER" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" ResourceType="RESOURCE_DIAMONDS" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" ResourceType="RESOURCE_JADE" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" ResourceType="RESOURCE_MERCURY" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" ResourceType="RESOURCE_SALT" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" ResourceType="RESOURCE_SILVER" Tier="2"/>
+		<Row CivilizationType="CIVILIZATION_GAUL" ResourceType="RESOURCE_IRON" Tier="2"/>
+	</StartBiasResources>
+	<Traits>
+		<Row TraitType="TRAIT_CIVILIZATION_BYZANTIUM" Name="LOC_TRAIT_CIVILIZATION_BYZANTIUM_NAME" Description="LOC_TRAIT_CIVILIZATION_BYZANTIUM_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_DISTRICT_HIPPODROME" Name="LOC_DISTRICT_HIPPODROME_NAME"/>
+		<Row TraitType="TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON" Name="LOC_UNIT_BYZANTINE_DROMON_NAME"/>
+		<Row TraitType="TRAIT_CIVILIZATION_GAUL" Name="LOC_TRAIT_CIVILIZATION_GAUL_NAME" Description="LOC_TRAIT_CIVILIZATION_GAUL_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_DISTRICT_OPPIDUM" Name="LOC_DISTRICT_OPPIDUM_NAME"/>
+		<Row TraitType="TRAIT_CIVILIZATION_UNIT_GAUL_GAESATAE" Name="LOC_UNIT_GAUL_GAESATAE_NAME"/>
+	</Traits>
+	<TraitModifiers>
+		<!-- Byzantium-->
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_BYZANTIUM</TraitType>
+			<ModifierId>TRAIT_HOLY_CITIES_COMBAT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_BYZANTIUM</TraitType>
+			<ModifierId>TRAIT_HOLY_CITIES_RELIGIOUS_COMBAT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_BYZANTIUM</TraitType>
+			<ModifierId>BYZANTIUM_GREATPROPHETPOINTS</ModifierId>
+		</Row>
+		<!-- Gaul-->
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>GAUL_MINE_CULTURE</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>GAUL_MINE_CULTURE_BOMB</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GAUL</TraitType>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CITY_NO_ADJACENT_DISTRICT</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<!-- Byzantium-->
+		<Row>
+			<ModifierId>TRAIT_HOLY_CITIES_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_HOLY_CITIES_RELIGIOUS_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_PRESSURE_KILLS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_LAND_VICTORY_SPREAD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_COMBAT_HOLY_CITIES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_COMBAT_FOR_NUMBER_HOLY_CITIES</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_RELIGIOUS_COMBAT_HOLY_CITIES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_COMBAT_FOR_NUMBER_HOLY_CITIES</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_GREATPROPHETPOINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_GREAT_PERSON_POINTS</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_HOLY_SITE</SubjectRequirementSetId>
+		</Row>
+		<!-- Gaul-->
+		<Row>
+			<ModifierId>GAUL_MINE_CULTURE_BOMB</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADD_CULTURE_BOMB_TRIGGER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>GAUL_MINE_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_MINE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CITY_NO_ADJACENT_DISTRICT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_SPECIALTY_DISTRICT_CANNOT_BE_BUILT_ADJACENT_TO_CITY</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!-- Byzantium-->
+		<Row>
+			<ModifierId>BYZANTIUM_PRESSURE_KILLS</ModifierId>
+			<Name>LandVictorySpread</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_COMBAT_HOLY_CITIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_RELIGIOUS_COMBAT_HOLY_CITIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_HOLY_CITIES_COMBAT</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_BYZANTIUM_COMBAT_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_HOLY_CITIES_RELIGIOUS_COMBAT</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_BYZANTIUM_RELIGIOUS_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_GREATPROPHETPOINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_PROPHET</Value>
+		</Row>
+		<Row>
+			<ModifierId>BYZANTIUM_GREATPROPHETPOINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<!-- Gaul-->
+		<Row>
+			<ModifierId>GAUL_MINE_CULTURE_BOMB</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GAUL_MINE_CULTURE_BOMB</ModifierId>
+			<Name>CaptureOwnedTerritory</Name>
+			<Value>False</Value>
+		</Row>
+		<Row>
+			<ModifierId>GAUL_MINE_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>GAUL_MINE_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HOLY_SITE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+			<Name>TilesRequired</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HOLYSITE_ADJACENCYFAITH</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_MINE_1_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_CAMPUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+			<Name>TilesRequired</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_CAMPUS_ADJACENCYSCIENCE</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_MINE_1_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HARBOR</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+			<Name>TilesRequired</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_HARBOR_ADJACENCYGOLD</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_MINE_1_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_COMMERCIAL_HUB</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+			<Name>TilesRequired</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_COMMERCIALHUB_ADJACENCYGOLD</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_MINE_1_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_THEATER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+			<Name>TilesRequired</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_THEATER_ADJACENCYCULTURE</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_MINE_1_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_OPPIDUM</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_MINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+			<Name>TilesRequired</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CIVILIZATION_GAUL_OPPIDUM_ADJACENCYPRODUCTION</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_MINE_1_PRODUCTION</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="BYZANTIUM_COMBAT_HOLY_CITIES" Context="Preview" Text="LOC_ABILITY_BYZANTIUM_COMBAT_HOLY_CITIES_DESCRIPTION"/>
+		<Row ModifierId="BYZANTIUM_RELIGIOUS_COMBAT_HOLY_CITIES" Context="Preview" Text="LOC_ABILITY_BYZANTIUM_RELIGIOUS_COMBAT_HOLY_CITIES_DESCRIPTION"/>
+	</ModifierStrings>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_BYZANTIUM_COMBAT_UNITS" Name="LOC_ABILITY_BYZANTIUM_COMBAT_UNITS_NAME" Description="LOC_ABILITY_BYZANTIUM_COMBAT_UNITS_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_BYZANTIUM_RELIGIOUS_UNITS" Name="LOC_ABILITY_BYZANTIUM_RELIGIOUS_UNITS_NAME" Description="LOC_ABILITY_BYZANTIUM_RELIGIOUS_UNITS_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_BYZANTIUM_COMBAT_UNITS</UnitAbilityType>
+			<ModifierId>BYZANTIUM_COMBAT_HOLY_CITIES</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_BYZANTIUM_COMBAT_UNITS</UnitAbilityType>
+			<ModifierId>BYZANTIUM_PRESSURE_KILLS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_BYZANTIUM_RELIGIOUS_UNITS</UnitAbilityType>
+			<ModifierId>BYZANTIUM_RELIGIOUS_COMBAT_HOLY_CITIES</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+</GameInfo>

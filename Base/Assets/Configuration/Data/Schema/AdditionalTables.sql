@@ -64,6 +64,46 @@ CREATE TABLE 'GameModeItems' (
 	'SortIndex' INTEGER DEFAULT 0
 );
 
+
+-- This table can be used to provide simple overrides to players for when certain game modes are active.
+-- This table is not referenced directly but rather by a 'Query'.  For more complex overrides (such as when multiple modes are active but another mode is inactive)
+-- an additional query can be created that has the additional necessary criteria.
+-- These are applied by sorting the final set ascending by priority and overriding values with any non-null value.
+CREATE TABLE 'GameModePlayerInfoOverrides' (
+	'GameModeType' TEXT NOT NULL,
+	'Domain' TEXT NOT NULL DEFAULT 'Players:StandardPlayers',
+	'CivilizationType' TEXT NOT NULL,
+	'LeaderType' TEXT NOT NULL,
+	'LeaderAbilityName' TEXT,
+	'LeaderAbilityDescription' TEXT,
+	'LeaderAbilityIcon' TEXT,
+	'CivilizationAbilityName' TEXT,
+	'CivilizationAbilityDescription' TEXT,
+	'CivilizationAbilityIcon' TEXT,
+	'Priority' INTEGER DEFAULT 0,
+	PRIMARY KEY('GameModeType', 'Domain', 'CivilizationType', 'LeaderType')
+);
+
+-- This table can be used to provide simple overrides to player items for when certain game modes are active.
+-- This table is not referenced directly but rather by a 'Query'.  For more complex overrides (such as when multiple modes are active but another mode is inactive)
+-- an additional query can be created that has the additional necessary criteria.
+-- These are applied by sorting the final set ascending by priority and overriding values with any non-null value.
+-- A special value 'ShouldRemove' is initialized to false.  If after going through the set, 'ShouldRemove' is true, then the row is deleted.
+CREATE TABLE 'GameModePlayerItemOverrides' (
+	'GameModeType' TEXT NOT NULL,
+	'Domain' TEXT NOT NULL DEFAULT 'Players:StandardPlayers',
+	'CivilizationType' TEXT NOT NULL,
+	'LeaderType' TEXT NOT NULL,
+	'Type' TEXT NOT NULL,
+	'Name' TEXT,
+	'Description' TEXT,
+	'Icon' TEXT,
+	'SortIndex' INTEGER,
+	'ShouldRemove' BOOLEAN NOT NULL DEFAULT 0,
+	'Priority' INTEGER DEFAULT 0,
+	PRIMARY KEY('GameModeType', 'Domain', 'CivilizationType', 'LeaderType', 'Type')
+);
+
 CREATE TABLE 'GameSpeeds' (
 	'Domain' TEXT NOT NULL DEFAULT 'StandardGameSpeeds',
 	'GameSpeedType' TEXT NOT NULL,
@@ -183,6 +223,11 @@ CREATE TABLE 'Players' (
 	PRIMARY KEY('Domain', 'CivilizationType', 'LeaderType')
 );
 
+CREATE TABLE 'PlayerInfoOverrideQueries'(
+	'QueryId' TEXT NOT NULL,
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
+);
+
 CREATE TABLE 'PlayerItems' (
 	'Domain' TEXT DEFAULT 'Players:StandardPlayers',
 	'CivilizationType' TEXT NOT NULL,
@@ -193,6 +238,11 @@ CREATE TABLE 'PlayerItems' (
 	'Icon' TEXT NOT NULL,
 	'SortIndex' INTEGER DEFAULT 0,
 	PRIMARY KEY('Domain', 'CivilizationType', 'LeaderType', 'Type')
+);
+
+CREATE TABLE 'PlayerItemOverrideQueries' (
+	'QueryId' TEXT NOT NULL,
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
 );
 
 CREATE TABLE 'DuplicateLeaders' (

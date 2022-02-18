@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_AMBIORIX" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_BASIL" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_AMBIORIX" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_BASIL" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_UNIT_BYZANTINE_TAGMA" Kind="KIND_TRAIT"/>
+		<!-- Ability -->
+		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Kind="KIND_ABILITY"/>
+    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Kind="KIND_ABILITY"/>
+		<!-- Agendas -->
+		<Row Type="TRAIT_AGENDA_BASIL_ZEALOT" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_AMBIORIX_ARMY" Kind="KIND_TRAIT"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Tag="CLASS_RANGED"/>
+		<Row Type="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Tag="CLASS_ANTI_CAVALRY"/>
+    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_LIGHT_CAVALRY"/>
+    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_HEAVY_CAVALRY"/>
+    <Row Type="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Tag="CLASS_RANGED_CAVALRY"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_AMBIORIX" Name="LOC_LEADER_AMBIORIX_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_BASIL" Name="LOC_LEADER_BASIL_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_AMBIORIX" TraitType="TRAIT_LEADER_AMBIORIX"/>
+		<Row LeaderType="LEADER_AMBIORIX" TraitType="TRAIT_LEADER_AGGRESSIVE_MILITARY"/>
+		<Row LeaderType="LEADER_BASIL" TraitType="TRAIT_LEADER_BASIL"/>
+		<Row LeaderType="LEADER_BASIL" TraitType="TRAIT_LEADER_UNIT_BYZANTINE_TAGMA"/>
+	</LeaderTraits>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_AMBIORIX" Name="LOC_TRAIT_LEADER_AMBIORIX_NAME" Description="LOC_TRAIT_LEADER_AMBIORIX_DESCRIPTION"/>
+		<Row TraitType="TRAIT_LEADER_BASIL" Name="LOC_TRAIT_LEADER_BASIL_NAME" Description="LOC_TRAIT_LEADER_BASIL_DESCRIPTION"/>
+		<Row TraitType="TRAIT_LEADER_UNIT_BYZANTINE_TAGMA" Name="LOC_UNIT_BYZANTINE_TAGMA_NAME"/>
+		<Row TraitType="TRAIT_AGENDA_BASIL_ZEALOT"/>
+		<Row TraitType="TRAIT_AGENDA_AMBIORIX_ARMY"/>
+	</Traits>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_AMBIORIX" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_AMBIORIX_QUOTE" QuoteAudio="AMBIORIX_MA_MISC_PEP_TALK_B_05"/>
+		<Row LeaderType="LEADER_BASIL" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_BASIL_QUOTE" QuoteAudio="BASIL_MA_MISC_PEP_TALK_A_05"/>
+	</LeaderQuotes>
+	<!-- AI Modifiers for leaders -->
+	<AiListTypes>
+		<Row ListType="BasilFavoredBuildings"/>
+		<Row ListType="GaulFavoredTechs"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="BasilFavoredBuildings" LeaderType="TRAIT_LEADER_BASIL" System="Buildings"/>
+		<Row ListType="GaulFavoredTechs" LeaderType="TRAIT_CIVILIZATION_DISTRICT_OPPIDUM" System="Technologies"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="BasilFavoredBuildings" Item="BUILDING_WALLS" Favored="true"/>
+		<Row ListType="BasilFavoredBuildings" Item="BUILDING_CASTLE" Favored="true"/>
+		<Row ListType="BasilFavoredBuildings" Item="BUILDING_STAR_FORT" Favored="true"/>
+		<Row ListType="GaulFavoredTechs" Item="TECH_APPRENTICESHIP" Favored="false"/>
+	</AiFavoredItems>
+	<TraitModifiers>	
+		<Row>
+			<TraitType>TRAIT_LEADER_AMBIORIX</TraitType>
+			<ModifierId>TRAIT_GRANT_CULTURE_UNIT_TRAINED</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_AMBIORIX</TraitType>
+			<ModifierId>TRAIT_NEIGHBOR_COMBAT</ModifierId>
+		</Row>
+    <Row>
+      <TraitType>TRAIT_LEADER_BASIL</TraitType>
+      <ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+    </Row>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_GRANT_CULTURE_UNIT_TRAINED</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_YIELD_PER_UNIT_COST</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_NEIGHBOR_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>AMBIORIX_NEIGHBOR_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_COMBAT_FOR_NUMBER_NEIGHBORS</ModifierType>
+		</Row>
+    <Row>
+      <ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+      <Permanent>true</Permanent>
+    </Row>
+    <Row>
+      <ModifierId>TRAIT_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_ADJUST_ENABLE_WALL_ATTACK_WHOLE_GAME_SAME_RELIGION</ModifierType>
+    </Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_GRANT_CULTURE_UNIT_TRAINED</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GRANT_CULTURE_UNIT_TRAINED</ModifierId>
+			<Name>UnitProductionPercent</Name>
+			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_NEIGHBOR_COMBAT</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMBIORIX_NEIGHBOR_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+    <Row>
+      <ModifierId>TRAIT_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+      <Name>AbilityType</Name>
+      <Value>ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</Value>
+    </Row>
+	</ModifierArguments>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS" Name="LOC_ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS_NAME" Description="LOC_ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS_DESCRIPTION" Inactive="true"/>
+    <Row UnitAbilityType="ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION" Name="LOC_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION_NAME" Description="LOC_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS</UnitAbilityType>
+			<ModifierId>AMBIORIX_NEIGHBOR_COMBAT</ModifierId>
+		</Row>
+    <Row>
+      <UnitAbilityType>ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</UnitAbilityType>
+      <ModifierId>TRAIT_ABILITY_ENABLE_WALL_ATTACK_SAME_RELIGION</ModifierId>
+    </Row>
+	</UnitAbilityModifiers>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_BASIL" ReligionType="RELIGION_ORTHODOXY"/>
+	</FavoredReligions>
+	<!-- Agenda Definitions -->
+	<Agendas>
+		<Row AgendaType="AGENDA_BASIL_ZEALOT" Name="LOC_AGENDA_BASIL_ZEALOT_NAME" Description="LOC_AGENDA_BASIL_ZEALOT_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_AMBIORIX_ARMY" Name="LOC_AGENDA_AMBIORIX_ARMY_NAME" Description="LOC_AGENDA_AMBIORIX_ARMY_DESCRIPTION"/>
+	</Agendas>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_BASIL" AgendaType="AGENDA_BASIL_ZEALOT"/>
+		<Row LeaderType="LEADER_AMBIORIX" AgendaType="AGENDA_AMBIORIX_ARMY"/>
+	</HistoricalAgendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_BASIL_ZEALOT" TraitType="TRAIT_AGENDA_BASIL_ZEALOT"/>
+		<Row AgendaType="AGENDA_AMBIORIX_ARMY" TraitType="TRAIT_AGENDA_AMBIORIX_ARMY"/>
+		<!-- This takes care of the behavior modification for this agenda. Do not add the trait to Ambiorix directly, or it'll count twice -->
+		<Row AgendaType="AGENDA_AMBIORIX_ARMY" TraitType="TRAIT_LEADER_AGGRESSIVE_MILITARY"/>
+	</AgendaTraits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_AGENDA_BASIL_ZEALOT" ModifierId="AGENDA_BASIL_ZEALOT"/>
+		<Row TraitType="TRAIT_AGENDA_AMBIORIX_ARMY" ModifierId="AGENDA_AMBIORIX_ARMY"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>AGENDA_BASIL_ZEALOT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_ZEALOT</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_AMBIORIX_ARMY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_AMBIORIX_ARMY</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>AGENDA_BASIL_ZEALOT</ModifierId>
+			<Name>StatementKey</Name>
+			<!-- Note: Value not actually used, just has to have something so we know this is a kudo/warning -->
+			<Value>AGENDA_ZEALOT_WARNING</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_BASIL_ZEALOT</ModifierId>
+			<Name>TopRankingDiploMod</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_BASIL_ZEALOT</ModifierId>
+			<Name>BottomRankingDiploMod</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_AMBIORIX_ARMY</ModifierId>
+			<Name>StatementKey</Name>
+			<!-- Note: Value not actually used, just has to have something so we know this is a kudo/warning -->
+			<Value>AGENDA_AMBIORIX</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_AMBIORIX_ARMY</ModifierId>
+			<Name>MinUnitsNeeded</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_AMBIORIX_ARMY</ModifierId>
+			<Name>DeltaUnits</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_AMBIORIX_ARMY</ModifierId>
+			<Name>MaxSteps</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_AMBIORIX_ARMY</ModifierId>
+			<Name>AdjustPerStep</Name>
+			<Value>4</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_BASIL_ZEALOT" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_AMBIORIX_ARMY" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<AiListTypes>
+		<Row ListType="BasilFavoredResolutions"/>
+		<Row ListType="BasilFavoredYields"/>
+		<!-- Ambiorix is already taken care of by the aggressive military trait. No further modifications needed -->
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="BasilFavoredResolutions" AgendaType="TRAIT_AGENDA_BASIL_ZEALOT" System="Resolutions"/>
+		<Row ListType="BasilFavoredYields" AgendaType="TRAIT_AGENDA_BASIL_ZEALOT" System="Yields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="BasilFavoredResolutions" Item="WC_RES_WORLD_RELIGION" Favored="true"/>
+		<Row ListType="BasilFavoredYields" Item="YIELD_FAITH" Value="33"/>
+	</AiFavoredItems>
+</GameInfo>

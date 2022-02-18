@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="DISTRICT_HIPPODROME" Kind="KIND_DISTRICT"/>
+		<Row Type="DISTRICT_OPPIDUM" Kind="KIND_DISTRICT"/>
+	</Types>
+	<DistrictReplaces>
+		<Row CivUniqueDistrictType="DISTRICT_HIPPODROME" ReplacesDistrictType="DISTRICT_ENTERTAINMENT_COMPLEX"/>
+		<Row CivUniqueDistrictType="DISTRICT_OPPIDUM" ReplacesDistrictType="DISTRICT_INDUSTRIAL_ZONE"/>
+	</DistrictReplaces>
+	<Districts>
+		<Row DistrictType="DISTRICT_HIPPODROME" Name="LOC_DISTRICT_HIPPODROME_NAME" Description="LOC_DISTRICT_HIPPODROME_DESCRIPTION" PrereqCivic="CIVIC_GAMES_RECREATION" PlunderType="PLUNDER_HEAL" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="27" Entertainment="3" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_HIPPODROME"/>
+		<Row DistrictType="DISTRICT_OPPIDUM" Name="LOC_DISTRICT_OPPIDUM_NAME" Description="LOC_DISTRICT_OPPIDUM_DESCRIPTION" PrereqTech="TECH_IRON_WORKING" PlunderType="NO_PLUNDER" AdvisorType="ADVISOR_GENERIC" Cost="27" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" Maintenance="1" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="true" HitPoints="100" CaptureRemovesBuildings="true" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" Appeal="-1" CityStrengthModifier="2" TraitType="TRAIT_CIVILIZATION_DISTRICT_OPPIDUM"/>
+	</Districts>
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_OPPIDUM" YieldChangeId="Quarry_Production2"/>
+		<Row DistrictType="DISTRICT_OPPIDUM" YieldChangeId="Strategic_Production2"/>
+	</District_Adjacencies>
+	<ExcludedAdjacencies>
+		<Row YieldChangeId="District_Science" TraitType="TRAIT_CIVILIZATION_GAUL"/>
+		<Row YieldChangeId="District_Faith" TraitType="TRAIT_CIVILIZATION_GAUL"/>
+		<Row YieldChangeId="District_Gold" TraitType="TRAIT_CIVILIZATION_GAUL"/>
+		<Row YieldChangeId="District_Culture" TraitType="TRAIT_CIVILIZATION_GAUL"/>
+		<Row YieldChangeId="District_Production" TraitType="TRAIT_CIVILIZATION_GAUL"/>
+	</ExcludedAdjacencies>
+	<District_GreatPersonPoints>
+		<Row DistrictType="DISTRICT_OPPIDUM" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" PointsPerTurn="1"/>
+	</District_GreatPersonPoints>
+	<District_TradeRouteYields>
+		<Row DistrictType="DISTRICT_HIPPODROME" YieldType="YIELD_FOOD" YieldChangeAsOrigin="0" YieldChangeAsDomesticDestination="1" YieldChangeAsInternationalDestination="1"/>
+		<Row DistrictType="DISTRICT_OPPIDUM" YieldType="YIELD_PRODUCTION" YieldChangeAsOrigin="0" YieldChangeAsDomesticDestination="1" YieldChangeAsInternationalDestination="1"/>
+	</District_TradeRouteYields>
+	<District_CitizenYieldChanges>
+		<Row DistrictType="DISTRICT_OPPIDUM" YieldType="YIELD_PRODUCTION" YieldChange="2"/>
+	</District_CitizenYieldChanges>
+	<Adjacency_YieldChanges>
+		<Row ID="Quarry_Production2" Description="LOC_DISTRICT_QUARRY_PRODUCTION" YieldType="YIELD_PRODUCTION" YieldChange="2" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_QUARRY"/>
+		<Row ID="Strategic_Production2" Description="LOC_DISTRICT_STRATEGIC2_PRODUCTION" YieldType="YIELD_PRODUCTION" YieldChange="2" TilesRequired="1" AdjacentResourceClass="RESOURCECLASS_STRATEGIC"/>
+	</Adjacency_YieldChanges>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_DISTRICT_HIPPODROME</TraitType>
+			<ModifierId>TRAIT_CREATE_HIPPODROME_HEAVY_CAVALRY</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<DistrictModifiers>
+		<Row>
+			<DistrictType>DISTRICT_OPPIDUM</DistrictType>
+			<ModifierId>OPPIDUM_GRANT_TECH_APPRENTICESHIP</ModifierId>
+		</Row>
+	</DistrictModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>OPPIDUM_GRANT_TECH_APPRENTICESHIP</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY_GAUL</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CREATE_HIPPODROME_HEAVY_CAVALRY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_PLAYER_DISTRICT_AND_BUILDINGS_CREATE_UNIT_WITH_ABILITY_BY_CLASS</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>OPPIDUM_GRANT_TECH_APPRENTICESHIP</ModifierId>
+			<Name>TechType</Name>
+			<Value>TECH_APPRENTICESHIP</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CREATE_HIPPODROME_HEAVY_CAVALRY</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HIPPODROME</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CREATE_HIPPODROME_HEAVY_CAVALRY</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_HEAVY_CAVALRY</Value>
+		</Row>
+		<!-- NOTE: there is an additional argument in XP2.XML -->
+	</ModifierArguments>
+</GameInfo>

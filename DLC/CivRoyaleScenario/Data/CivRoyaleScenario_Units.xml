@@ -56,6 +56,9 @@
 		<!-- Special Crippled GDR used for the Cultists' unique ability -->
 		<Row UnitType="UNIT_CRIPPLED_GDR" Cost="1500" Maintenance="0" BaseMoves="3" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="74" RangedCombat="76" Range="2" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_CRIPPLED_GDR" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_CRIPPLED_GDR_NAME" Description="LOC_UNIT_CRIPPLED_GDR_DESCRIPTION"/>
 	</Units>
+  <Units_Presentation>
+    <Row UnitType="UNIT_GIANT_DEATH_ROBOT" UIFlagOffset="20"/>
+  </Units_Presentation>
 	<UnitUpgrades>
 		<Delete Unit="UNIT_WARRIOR" />
 	</UnitUpgrades>

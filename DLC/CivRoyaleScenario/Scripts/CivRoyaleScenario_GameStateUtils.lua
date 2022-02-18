@@ -225,7 +225,9 @@ function SelectNewPirateTreasureLocation(iPlayerID :number)
 			pPlayerVisibility:ChangeVisibilityCount(treasurePlot:GetIndex(), 0);
 		end
 
-		SendNotification_Plot(g_NotificationsData.NewBuriedTreasure, treasurePlot, iPlayerID);
+		local notificationData = {};
+		notificationData[NotificationParameterTypes.CanUserDismiss] = false;
+		SendNotification_Plot(g_NotificationsData.NewBuriedTreasure, treasurePlot, iPlayerID, notificationData);
 	end
 end
 

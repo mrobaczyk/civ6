@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <Replace Tag="LOC_ABILITY_CULTIST_ENTER_FOREIGN_LANDS_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_ABILITY_CULTIST_ENTER_FOREIGN_LANDS_DESCRIPTION]Can enter foreign lands when not at war.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_CULTIST_RELIC_ON_DEATH_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_ABILITY_CULTIST_RELIC_ON_DEATH_DESCRIPTION]Once it dies or loses all charges, owner is given a [ICON_GreatWork_Relic] Relic of the Void.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_CULTIST_RELIC_ON_DEATH_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_ABILITY_CULTIST_RELIC_ON_DEATH_NAME]Sacrifice</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SPREAD_DISSENT_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_ABILITY_SPREAD_DISSENT_DESCRIPTION]Can Recruit Followers in an adjacent enemy city, causing it to lose 10 Loyalty. Once the Dark Summoning city project is unlocked, this action deals 2 more Loyalty damage per project completed, up to a maximum total of 30.</Text>
+    </Replace>
+    <Replace Tag="LOC_ABILITY_SPREAD_DISSENT_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_ABILITY_SPREAD_DISSENT_NAME]Recruit Followers</Text>
+    </Replace>
+    <Replace Tag="LOC_ALLIANCE_POINTS_FROM_SOCIETIES" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_ALLIANCE_POINTS_FROM_SOCIETIES][NEWLINE]{1_Amount} Points from being members of the same secret society</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_ALCHEMICAL_SOCIETY_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_BUILDING_ALCHEMICAL_SOCIETY_DESCRIPTION]Unique to the Hermetic Order, replaces the University. This Campus district generates [ICON_Gold] Gold equal to its [ICON_Science] Science adjacency bonus.</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_ALCHEMICAL_SOCIETY_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_BUILDING_ALCHEMICAL_SOCIETY_NAME]Alchemical Society</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_GILDED_VAULT_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_BUILDING_GILDED_VAULT_DESCRIPTION]Unique to the Owls of Minerva, replaces the Bank. This Commercial Hub generates [ICON_CULTURE] Culture equal to its [ICON_Gold] Gold adjacency bonus.  Having a Harbor in this city provides you with +1 [ICON_TradeRoute] Trade Route capacity.</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_GILDED_VAULT_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_BUILDING_GILDED_VAULT_NAME]Gilded Vault</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_OLD_GOD_OBELISK_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_BUILDING_OLD_GOD_OBELISK_DESCRIPTION]Unique to the Voidsingers, replaces the Monument. Contains 1 Great Work slot that can hold any type of Great Work. Provides +1 Loyalty per turn in this city. If the city already has maximum Loyalty, also provides an additional +1 [ICON_Culture] Culture.</Text>
+    </Replace>
+    <Replace Tag="LOC_BUILDING_OLD_GOD_OBELISK_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_BUILDING_OLD_GOD_OBELISK_NAME]Old God Obelisk</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_DIFFERENT_SECRET_SOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_DIFFERENT_SECRET_SOCIETY](You belong to different secret societies.)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_KUDO_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_SAME_SECRET_SOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DIPLO_KUDO_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_SAME_SECRET_SOCIETY]I see you by your signs, and I am glad to know that we are kin.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_DIFFERENT_SECRET_SOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DIPLO_WARNING_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_DIFFERENT_SECRET_SOCIETY]On you, I see the mark of evil. Those who know will see your Society for what it is.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISCOVERED_SOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY]Discovered a Society!</Text>
+    </Replace>
+    <Replace Tag="LOC_DISCOVERED_SOCIETY_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY_DESC]You have discovered a mysterious society called the {1_SocietyName}, and earned 1 [Icon_Governor] Governor Title.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISCOVERED_SOCIETY_WHILE_MEMBER_OF_ANOTHER" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISCOVERED_SOCIETY_WHILE_MEMBER_OF_ANOTHER]The man in the shadows beckons to you, offering to show you the wonders of the {1_SocietyName}. Too late, he sees your knowing grin, and recognizes you as a member of the {2_MemberSocietyName}. In his folly, he had let slip the secret signs by which his group knows its members, and you can recognize them on sight.[NEWLINE][NEWLINE]The {2_MemberSocietyName} rewards your loyalty, and you can use the [Icon_Governor] Governor Title as you see fit.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_LEY_LINE_CULTURE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISTRICT_LEY_LINE_CULTURE]+{1_num} [ICON_Culture] Culture from the adjacent Ley Line resources.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_LEY_LINE_FAITH" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISTRICT_LEY_LINE_FAITH]+{1_num} [ICON_Faith] Faith from the adjacent Ley Line resources.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_LEY_LINE_GOLD" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISTRICT_LEY_LINE_GOLD]+{1_num} [ICON_Gold] Gold from the adjacent Ley Line resources.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_LEY_LINE_PRODUCTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISTRICT_LEY_LINE_PRODUCTION]+{1_num} [ICON_PRODUCTION] Production from the adjacent Ley Line resources.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_LEY_LINE_SCIENCE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_DISTRICT_LEY_LINE_SCIENCE]+{1_num} [ICON_Science] Science from the adjacent Ley Line resources.</Text>
+    </Replace>
+    <Replace Tag="LOC_GO_TO_GOVERNORS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GO_TO_GOVERNORS]Go To Governors Screen</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_DESCRIPTION]Unlocked by discovering a Natural Wonder. Reveals the Ley Line resource on the map. Ley Lines give a standard adjacency bonus to all specialty districts.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_1_NAME]Initiation</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_DESCRIPTION]Unlocked in Medieval Era. Allows you to construct the Alchemical Society building, a powerful replacement of the University.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_2_NAME]Ritual</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_DESCRIPTION]Unlocked in Industrial Era. For every [ICON_GreatPerson] Great Person earned Ley Lines receive +1 yield equal to that [ICON_GreatPerson] Great Person's district type. [ICON_GreatAdmiral] Great Admirals and [ICON_GreatGeneral] Great Generals earn +1 [ICON_Science] Science.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_3_NAME]Indoctrination</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_DESCRIPTION]Unlocked in Atomic Era. Unlocks Occult Research, a city project that provides [ICON_GOLD] Gold while active. When completed, it grants [ICON_GreatPerson] Great People points, and [ICON_SCIENCE] Science for every Ley Line in the city.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_HERMETIC_ORDER_4_NAME]Master Plan</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_DESCRIPTION]Unlocked by sending an [ICON_Envoy] Envoy to a City-State. +1 Economic policy slot. Each [ICON_TradeRoute] Trade Route sent to a City-State awards 1 [ICON_Envoy] Envoy there.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_1_NAME]Initiation</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_2_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_2_DESCRIPTION]Unlocked in Medieval Era. Allows you to construct the Gilded Vault building, a powerful replacement of the Bank.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_2_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_2_NAME]Ritual</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_3_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_3_DESCRIPTION]Unlocked in Industrial Era. +1 Wildcard policy slot. +2 Spy capacity. Your cities gain +4 Loyalty per turn and +1 [ICON_Amenities] Amenity when your Spy is in their territory.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_3_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_3_NAME]Indoctrination</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_4_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_4_DESCRIPTION]Unlocked in Atomic Era. Every turn, you earn 3% of the [ICON_Gold] Gold in your treasury as income. Whenever an offensive spy mission is successful, you also gain half of the [ICON_Science] Science, [ICON_Culture] Culture, [ICON_Gold] Gold, and [ICON_Faith] Faith that the targeted city earned that turn.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_4_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_OWLS_OF_MINERVA_4_NAME]Master Plan</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_DESCRIPTION]Unlocked by destroying a Barbarian Camp. Grants a Vampire unit in your [ICON_Capital] Capital.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_1_NAME]Initiation</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_DESCRIPTION]Unlocked in Medieval Era. Grants a Vampire unit in your [ICON_Capital] Capital, and allows your Vampires to construct Vampire Castles (maximum two per empire).</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_2_NAME]Ritual</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_DESCRIPTION]Unlocked in Industrial Era. Grants a Vampire unit in your [ICON_Capital] Capital. Increases maximum Vampire Castle builds to three. Your Vampires now Intimidate adjacent enemy units, reducing their [ICON_Strength] Combat Strength by 5. Pillaging now costs Vampires 1 [ICON_Movement] Movement.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_3_NAME]Indoctrination</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_DESCRIPTION]Unlocked in Atomic Era. Grants a Vampire unit in your [ICON_Capital] Capital. Increases maximum Vampire Castle builds to four. Units within one tile of your Vampire Castles may now Airlift to any other tile near one of your Vampire Castles.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_SANGUINE_PACT_4_NAME]Master Plan</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_UNKNOWN_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_UNKNOWN_DESCRIPTION]The deeper mysteries have not yet been revealed. We must first demonstrate our commitment.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_UNKNOWN_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_UNKNOWN_NAME]???</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_DESCRIPTION]Unlocked by discovering a Tribal Village. Allows you to construct the Old God Obelisk building, a powerful replacement of the Monument.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_1_NAME]Initiation</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_DESCRIPTION]Unlocked in Medieval Era. Cities earn [ICON_Gold] Gold, [ICON_Science] Science, and [ICON_Culture] Culture per turn equal to 20% of their [ICON_Faith] Faith per turn rate.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_2_NAME]Ritual</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_DESCRIPTION]Unlocked in Industrial Era. Unlocks the Cultist unit. This unit is purchased with [ICON_Faith] Faith, and uses charges to reduce Loyalty in foreign cities and generate [ICON_GreatWork_Relic] Relics of the Void.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_3_NAME]Indoctrination</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_DESCRIPTION]Unlocked in Atomic Era. Unlocks Dark Summoning, a city project that provides lots of [ICON_Faith] Faith while active, and upon completion raises the amount of Loyalty damage done by Cultists.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GOVERNOR_PROMOTION_VOIDSINGERS_4_NAME]Master Plan</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_1_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_1_NAME]Relic of the Devouring Angel</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_10_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_10_NAME]Vessel of Nyarlathotep</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_11_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_11_NAME]Rangda's Chalice</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_12_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_12_NAME]Cup of the Star-Spawn</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_13_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_13_NAME]The Singing Worm</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_14_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_14_NAME]The Dream-Eater</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_15_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_15_NAME]The Shrieking Flowers</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_16_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_16_NAME]The Loveless Ones</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_17_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_17_NAME]The Tome of Dagon</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_18_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_18_NAME]The Book of Dead Names</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_19_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_19_NAME]The Left-Hand Sutra</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_2_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_2_NAME]Fungal Spore</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_20_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_20_NAME]Instructions for the Kumanthong</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_21_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_21_NAME]Teachings of the Worm</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_22_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_22_NAME]Memoirs of a Blind Astronomer</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_23_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_23_NAME]A Journal of Next Year's Dreams</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_24_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_24_NAME]Chronicle of Descent</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_25_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_25_NAME]Hint Guide: Civilization II</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_3_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_3_NAME]Fragment of Akkorokamui</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_4_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_4_NAME]Black Goat's Horn</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_5_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_5_NAME]Foundation Stone</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_6_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_6_NAME]Relic of the Sightless Worm</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_7_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_7_NAME]Shard of Yog-Sothoth</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_8_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_8_NAME]Child of Azathoth</Text>
+    </Replace>
+    <Replace Tag="LOC_GREATWORK_VOIDSIGNERS_RELIC_9_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_GREATWORK_VOIDSIGNERS_RELIC_9_NAME]Chorus of the Drowned</Text>
+    </Replace>
+    <Replace Tag="LOC_IMPROVEMENT_VAMPIRE_CASTLE_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_IMPROVEMENT_VAMPIRE_CASTLE_DESCRIPTION]Can be built in player-owned and neutral territory by a Vampire. Provides Fortification to units on the tile. Duplicates yields from adjacent tiles when built, adds them to the Vampire Castle's tile, and grants the tile's yield to the [ICON_Capital] Capital city.</Text>
+    </Replace>
+    <Replace Tag="LOC_IMPROVEMENT_VAMPIRE_CASTLE_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_IMPROVEMENT_VAMPIRE_CASTLE_NAME]Vampire Castle</Text>
+    </Replace>
+    <Replace Tag="LOC_JOINED_SOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_JOINED_SOCIETY]Joined a Society!</Text>
+    </Replace>
+    <Replace Tag="LOC_JOINED_SOCIETY_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_JOINED_SOCIETY_DESC]You have joined a society called the {1_SocietyName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_RELIC_CREATED_SUMMARY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_RELIC_CREATED_SUMMARY]The [ICON_GreatWork_Relic] Relic {1_RelicName} has been placed in the {2_BuildingName} in {3_CityName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_SECRETSOCIETY_LEADER_JOINED_MESSAGE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_SECRETSOCIETY_LEADER_JOINED_MESSAGE]{1_LeaderOrScreenName} joins {2_SecretSocietyName}</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_SECRETSOCIETY_LEADER_JOINED_SUMMARY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_SECRETSOCIETY_LEADER_JOINED_SUMMARY]{1_LeaderOrScreenName} has become a member of the {2_SecretSocietyName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_SECRETSOCIETY_LEVEL_UP_MESSAGE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_SECRETSOCIETY_LEVEL_UP_MESSAGE]Secret Society Advances</Text>
+    </Replace>
+    <Replace Tag="LOC_NOTIFICATION_SECRETSOCIETY_LEVEL_UP_SUMMARY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_NOTIFICATION_SECRETSOCIETY_LEVEL_UP_SUMMARY]The plan of the {1_SecretSocietyName} advances to its next phase, opening up a more advanced promotion for your Governor contact.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_ALCHEMICAL_SOCIETY_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_BUILDINGS_PAGE_BUILDING_ALCHEMICAL_SOCIETY_CHAPTER_HISTORY_PARA_1]Alchemy and chemistry, magic and science, are not as far removed as they might initially seem. For anthropologists of magic (such as Marcel Mauss), each seeks to manipulate the world in order to produce an effect. With the case of alchemy and chemistry, each involves the transformation of one substance into another, a transformation that looked to medieval observers as though one was changing its essence. For medieval alchemists, the potential that this change could have was dramatic – one might change lead into gold or transform an old body into a young one. While the Alchemy Society here is based upon the medieval and Renaissance European tradition, elsewhere, Chinese, Indian, and other parts of the world developed their own alchemical traditions and practices.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_ALCHEMICAL_SOCIETY_CHAPTER_HISTORY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_BUILDINGS_PAGE_BUILDING_ALCHEMICAL_SOCIETY_CHAPTER_HISTORY_PARA_2]In the middle ages, Islamic science spread throughout medieval Europe, as Muslim scholars had preserved Latin texts, developed their own universities and institutions of learning, and brought in insights from Asia. For Europeans, these new bodies of knowledge presented a dizzying array of languages, propositions, ideas, and possibilities – scientific, political, religious, and, of course, magical. For this latter end, Europeans put together societies to put what they were reading into practice, and – at least in their hopes – unlock the key to the universe.  Alchemy was focused on understanding the ancient truths that were embedded in these texts. For this reason, as 18th and 19th century scientific schools focused on experimentation rather than translation, new knowledge rather than old, alchemical societies went further underground and out of the mainstream of Western thought.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_GILDED_VAULT_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_BUILDINGS_PAGE_BUILDING_GILDED_VAULT_CHAPTER_HISTORY_PARA_1]The secret societies of the 18th and 19th centuries always had a secret base – a place where the members could gather in robes and masks for clandestine ceremonies (or, more likely, gather in funny hats for watered-down beer). Here, around a sumptuous table, decisions were alleged to be made about what countries rose and fell, and who would hold the reins of power. This is an image cribbed from popular culture, but certain societies did and still do play upon such tropes for fun or to expand their own mystique. Yale’s secret societies, for instance, still meet in elaborate, Orientalist-themed vaults for what outsiders would have you believe to be world-defining meetings (but which are more likely the wearing of funny hats and drinking of watered-down beer). In these “gilded vaults,” money and power, noble titles and authority, are traded freely. Or so they say.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_OLD_GOD_OBELISK_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_BUILDINGS_PAGE_BUILDING_OLD_GOD_OBELISK_CHAPTER_HISTORY_PARA_1]In the “weird fiction” of and inspired by H.P. Lovecraft and others, the gods are thankfully forgotten. Lovecraft’s Old Ones are fundamentally unconcerned with humanity and contact inevitably results in madness or death. But not everyone has forgotten – weird fiction is full of examples of hidden cults having rediscovered markers of the Old Gods and turned them into objects of worship.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_OLD_GOD_OBELISK_CHAPTER_HISTORY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_BUILDINGS_PAGE_BUILDING_OLD_GOD_OBELISK_CHAPTER_HISTORY_PARA_2]We have always recycled the religious detritus of older beliefs, especially ones that we do not understand completely. European magic of the middle ages and later often drew upon Greek or Egyptian symbols not because they actually contained some kind of esoteric knowledge, but because they seemed to hold in their very incomprehensibility the promise of some extra power. And it is not just Europeans who make appeals to the incomprehensible. The Mien people of highland Southeast Asia carry elaborate documents written in Chinese characters (which few of them can read) by a divine emperor guaranteeing them a right to live on mountaintops without harassment. Villagers in Tanzania seeking healing will prefer to go to a healer from a distant village, rather than from one who lives next door. And teenage wizards in popular fantasy books rarely call out their magical spells in English. The appeal of the unknown is that it might contain a source of power beyond our comprehension. Might as well put up an obelisk to it.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_CONTENT_TITLE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_CONTENT_TITLE]Secret Societies</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DEEPER_MYSTERIES_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DEEPER_MYSTERIES_PARA_1]Each [ICON_Governor] Governor has four promotions, unlocked sequentially. Unlike normal Governor promotions, a promotion's effect is not revealed until the previous promotion is earned. (If you prefer not to be surprised, keep reading the Civilopedia.)</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DEEPER_MYSTERIES_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DEEPER_MYSTERIES_PARA_2]Secret Societies need generations of time to lay their plans, so not all promotions are available right away. The second promotion is available when the game enters the Medieval Era. The third is available in the Industrial Era. The final one is available in the Atomic Era.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DEEPER_MYSTERIES_TITLE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DEEPER_MYSTERIES_TITLE]Deeper Mysteries</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_1]There are four Secret Societies operating in the shadows around the world. To make contact, seek out a Society where its influence might hide: Barbarian Outposts, Tribal Villages, Natural Wonders, or City-States. Discovery is not guaranteed, but you are more likely to find a Society that other players have not discovered, or on continents where no Society has yet been discovered.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_2][ICON_SECRETSOCIETY_OWLS] {LOC_SECRETSOCIETY_OWLS_OF_MINERVA_DESCRIPTION} Attempt contact by sending [ICON_Envoy] Envoys to City-States where you currently have no [ICON_Envoy] Envoys.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_3" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_3][ICON_SECRETSOCIETY_HERMETIC] {LOC_SECRETSOCIETY_HERMETIC_ORDER_DESCRIPTION} Attempt contact by discovering Natural Wonders.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_4" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_4][ICON_SECRETSOCIETY_VOIDSINGERS] {LOC_SECRETSOCIETY_VOIDSINGERS_DESCRIPTION} Attempt contact by investigating Tribal Villages.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_5" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_5][ICON_SECRETSOCIETY_SANGUINE] {LOC_SECRETSOCIETY_SANGUINE_PACT_DESCRIPTION} Attempt contact by capturing Barbarian Camps.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_6" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_PARA_6]Alternatively, reaching the [ICON_VisSecret] Secret level of diplomatic visibility on another player will automatically make contact with that player's Society. Once you do make contact with a Society, you will be able to see which other leaders are members by visiting the Diplomacy screen, even if you do not join it.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_TITLE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DISCOVERY_TITLE]Make Contact</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_INITIATION_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_INITIATION_PARA_1]Making contact with a Secret Society is only the first step. It unlocks a unique [ICON_Governor] Governor with powerful bonuses, which you do not need to assign to a city. To become a full-fledged member of the Society, appoint the corresponding Governor. Once you become a member of a Society, you are locked into that Society for the rest of the game.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_INITIATION_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_INITIATION_PARA_2]Alliances with players who are members of the same Society generate Alliance Points more quickly, and those players will have an improved opinion of you in diplomacy. Players who are members of a different Society, however, will dislike you once they are aware of your affiliation.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_INITIATION_TITLE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_INITIATION_TITLE]Initiation</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_WELCOME_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_WELCOME_PARA_1]In game setup, players can turn on the Secret Societies game mode, introducing powerful and mysterious new forces to the world.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_WELCOME_TITLE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_WELCOME_TITLE]Welcome</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME]Modes</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_IMPROVEMENTS_PAGE_IMPROVEMENT_VAMPIRE_CASTLE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_IMPROVEMENTS_PAGE_IMPROVEMENT_VAMPIRE_CASTLE_CHAPTER_HISTORY_PARA_1]Stoker’s Dracula lived alone – undead brides aside - in a castle in the Carpathian mountains of Transylvania. When Jonathan Harker comes to conduct his business with the Count, Dracula must dress up as his own coachman, cook Harker’s meals, and, of course, make sure Harker stays locked in his room. From the balcony overlooking the Transylvanian forests, the Count broods over his past and future conquests. The inspiration for Dracula’s castle is today popularly attributed to Bran Castle in Romania, although neither Stoker nor Dracula’s supposedly real-world counterpart Vlad Tepes had anything to do with the place, instead, the castle was selected by the Romanian government as the place most evocative of the Count’s home. It remains, though, the quintessential vampire’s castle: a brooding structure on a cliff overlooking a dark forest where wolves still prowl. </Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_HERMETIC_ORDER_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_HERMETIC_ORDER_CHAPTER_HISTORY_PARA_1]Especially in times of great social change, when new knowledge and new ways of being show great potential to change the way that we live, societies often arise based around the cultivation and protection of this secret, world-transforming knowledge. While they might at first look like scientific societies, these orders were different in that they focused on the collection of secret knowledge, not its application. We can see examples of such societies in medieval Europe, Southeast Asia (especially as concerns tantric Buddhism), and East Asia; from ancient times to the present day. Here, the Hermetic Order seeks to model a late medieval alchemical society, as well as mystical/religious organizations that grew up in the later 19th century.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_HERMETIC_ORDER_CHAPTER_HISTORY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_HERMETIC_ORDER_CHAPTER_HISTORY_PARA_2]The Hermetic Order of the Golden Dawn was an English group concerned with cultivating esoteric knowledge around the early 20th century. For inspiration, the Order drew upon a variety of sources: medieval European (“hermetic”) magic, Kabbalah (Jewish mysticism), Egyptian and Greek myth, and individual revelation. Devotees – most famously the English occultist Aleister Crowley - focused on expanding their mystical knowledge via astral travel, clairvoyance, and other magical practices, and the movement attracted a body of individuals seeking a greater truth that they felt was lacking in an increasingly rational and disenchanted society. The Order drew in a wide body of influential people, including Arthur Conan Doyle (creator of Sherlock Holmes), the English horror author Algernon Blackwood, the Irish author Bram Stoker (creator of Dracula), and others. Chapters of the Order exist today, and the Order’s practices have been influential on the development of many New Age religions, as people still seek a greater truth.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_HERMETIC_ORDER_TAB_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_HERMETIC_ORDER_TAB_NAME]Hermetic Order Titles</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_CHAPTER_HISTORY_PARA_1]Politics often looks like chaos. Bumbling leaders can make stupid mistakes that risk the safety and security of entire nations, and too often choices seem to be made based upon the most short-term goals. There is little wonder, then, that people might dream about a world where this is not so. Rumors of shadowy organizations that pull the strings of power for good or (more often) ill have persisted for centuries. We are drawn to such beliefs as they give us a sense that there is structure underlying seeming chaos (and, for the conspiracy theorist, a feeling of importance in being let in on the secret), even if that secret truth can seem hostile. Like someone solving a puzzle, there is a sense of pleasure in putting together pieces that seem to fit… even if, in truth, the pieces never quite fit just the way we would like them.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_CHAPTER_HISTORY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_CHAPTER_HISTORY_PARA_2]Many of these conspiracy theories arose around the time of the Enlightenment. As new ways of thinking swept over Europe, they clashed with church and royal authorities. New groups of people (men, almost always) formed with the stated goals of applying rational thought to what had been unquestionable before. These groups – the Freemasons, the Illuminati (a Bavarian group), and others – were often made up of powerful but non-noble men: merchants, landowners, and others. They were often victims of repression by reactionary forces, as church and crown both found themselves less than thrilled about having their legitimacy questioned by a bunch of “free thinkers.” After the French Revolution – when a king was not only deposed, but executed, the panic over secular political/philosophical societies grew profound, and in the course of the 19th century, reached a fever pitch, especially when combined with the rise of Communist and Socialist groups. It was a tension that was to persist, with these societies  challenging traditional authority and in turn facing accusations of treason, impiety, and the like. The Owls of Minerva here – named after the Bavarian Illuminati – seek to represent not the historical intellectual societies, but its popular culture referent: this feared cabal of powerful men lurking behind the scenes of temporal politics.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_TAB_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_OWLS_OF_MINERVA_TAB_NAME]Owls of Minerva Titles</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_CHAPTER_HISTORY_PARA_1]It is difficult to imagine horror fiction without invoking Dracula. Bram Stoker, on writing his tale of the lonely bloodsucking Count trapped in his Transylvanian castle, drew upon Irish fairy legend, Romanian folktales, and a host of Northern European anxiety surrounding the Continent. In writing about vampires, he also drew upon a body of literature and folklore from closer to home, following Gothic authors such as Le Fanu, Lord Byron, and James Rymer, whose vampires were cautionary tales about unhealthy friendships and obsessions. In these, vampires are a kind of pinnacle of Gothic literature, bringing together moral decay, dark castles, and a decadent and corrupted elite. Here, the Sanguine Pact seeks to represent the kind of dark brother- and sister-hood inspired by Stoker.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_CHAPTER_HISTORY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_CHAPTER_HISTORY_PARA_2]Vampire myth in Greece, Turkey and Romania is in its origins about the return of a dead relative – especially the victim of a suicide or epidemic - to bother living family members. Unlike the Romantic (and romantic) Gothic vampire, the folkloristic vampire looks more like a fresh corpse of a loved one rather than a mysterious nocturnal nobleman. It is more a reflection on grief and mourning, and the ways that a dead loved one can still haunt us, especially when taken from us too quickly. However, like the Count, one got rid of such a being via the traditional method of stakes and crosses. While our modern-day vampire draws from southeastern Europe, other regions have their own bloodsucking revenants: the Chinese jiangshi, the Thai phi pop, the Norse draugur, or the myth of Lilith in Jewish folklore.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_TAB_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_SANGUINE_PACT_TAB_NAME]Sanguine Pact Titles</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_VOIDSINGERS_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_VOIDSINGERS_CHAPTER_HISTORY_PARA_1]In the early 20th century, a new genre of science fiction and fantasy began to take hold, especially in the United States and UK. The horrors of World War I had proven that a new, scientific age could potentially be an inhuman one, and the universe revealed by exploration and scientific inquiry could be just as profoundly uncaring about humanity and its hopes and dreams. In addition, for citizens in colonizing countries, a growing awareness that the colonized world could in fact return to haunt the colonizers lent itself to a kind of isolationism – something helped along by that era’s virulent racism. The speculative worlds that emerged in the fiction of authors such as Arthur Machen, H.P. Lovecraft, and others were neither the morally-tinged Gothic nor the heroic tales of exploration of the 19th century, but something more disturbing, a new, “weird” fiction.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_VOIDSINGERS_CHAPTER_HISTORY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_VOIDSINGERS_CHAPTER_HISTORY_PARA_2]A weird reality is one where the powers that shape the world are fundamentally uncaring and even hostile to humanity. While their inattention allows us to exist in the world today, traces of them might persist in forgotten places, drowned cities, or in the spaces between the stars, and might be revealed by science’s forward progress. In weird fiction, the world is one where we do not belong, and only the mad would actually seek out the things that make the world work.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_VOIDSINGERS_TAB_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_PAGE_GOVERNOR_VOIDSINGERS_TAB_NAME]Voidsingers Titles</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_RESOURCES_PAGE_RESOURCE_LEY_LINE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_RESOURCES_PAGE_RESOURCE_LEY_LINE_CHAPTER_HISTORY_PARA_1]It is a geometrical truth that between two points exist a straight line. This, plus a map of the English countryside, gave rise to the notion of ley lines crisscrossing England in the 19th and early 20th centuries. A British antiquarian, Alfred Watkins, proposed that dead-straight ancient highways linking sacred sites in the British countryside could be found if one looked hard enough. While his theory was dismissed by archaeologists, who noted that true ancient highways were often rambling, it was taken up again by New Age devotees in the 1960s. Instead of ancient highways, these “ley lines” that linked sacred sites were veins in which the Earth’s mystical energies flowed. Where lines crossed would be sites of great spiritual and chthonic power, places that, if harnessed, could unleash the potential in the landscape and in the individual. There was never any evidence for ley lines’ reality, either as an archaeological feature or as a mystical energy source, and the theory slowly died out as new trends in New Age and mystical belief took over.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_CULTIST_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_UNITS_PAGE_UNIT_CULTIST_CHAPTER_HISTORY_PARA_1]In weird fiction, those that catch a glimpse of ultimate truths go mad. But this madness is of a strange variety, one that does not fragment, but oddly brings together. In H.P. Lovecraft’s “Call of Cthulhu” (1928), a series of horrific dreams links artists with tribal peoples, dreamers and outlaws, all dreaming the same syllables from a dead language. Here, then, madness is not psychopathy, rather, it is a connection with something more fundamental underlying the world, and to become a cultist is to live one’s life according to these, and not society’s, principles.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_CULTIST_CHAPTER_HISTORY_PARA_2" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_UNITS_PAGE_UNIT_CULTIST_CHAPTER_HISTORY_PARA_2]For scholars of religion, “cult” simply means a religious group focused around one object of worship. We can speak of Catholic “cults” devoted to a particular saint, or Buddhist “cults” that choose a particular teacher, without all of the negative implications that the word has here. Cults can often claim to have a body of knowledge that is particular to that group, and new discoveries often give rise to new cults: the publishing of the Dead Sea Scrolls, for instance, provoked a boom in groups claiming to have privileged access to the knowledge in these texts. The followers of Heaven’s Gate believed that they were receiving messages from a UFO hiding in the tail of a passing comet. The cult Aum Shinrikyo, that released sarin gas into the Tokyo subway, believed itself to be in possession of supreme truth about the nature of the world. In these last two examples, the result was tragedy.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_VAMPIRE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PEDIA_UNITS_PAGE_UNIT_VAMPIRE_CHAPTER_HISTORY_PARA_1]The myth of the vampire is one that has a particular resonance in a world where hereditary aristocracy is largely a thing of the past. Cruel masters, obsessed with eternal youth, who prey upon a populace to whom they imagine themselves to be superior, full of decadent but decayed culture, hold a fascination as monarchies worldwide have fallen one by one. They emerge as sometimes tragic, sometimes horrific villains or antiheroes to a population confined to normalcy. Of these, the quintessential real-life vampire would be the Countess Elizabeth Báthory de Ecsed, a Hungarian noblewoman who, according to legend, believed that she could preserve her youth and beauty through the blood of her victims – over 600 of them.</Text>
+    </Replace>
+    <Replace Tag="LOC_PROJECT_DARK_SUMMONING_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PROJECT_DARK_SUMMONING_DESCRIPTION]Project that provides lots of [ICON_Faith] Faith every turn. Upon completion it increases the amount of Loyalty damage done by Cultists by 2 (up to a maximum of 30). This project Requires an Old God Obelisk building.</Text>
+    </Replace>
+    <Replace Tag="LOC_PROJECT_DARK_SUMMONING_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PROJECT_DARK_SUMMONING_NAME]Dark Summoning</Text>
+    </Replace>
+    <Replace Tag="LOC_PROJECT_DARK_SUMMONING_SHORT_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PROJECT_DARK_SUMMONING_SHORT_NAME]Dark Summoning</Text>
+    </Replace>
+    <Replace Tag="LOC_PROJECT_OCCULT_RESEARCH_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PROJECT_OCCULT_RESEARCH_DESCRIPTION]Project that provides [ICON_Gold] Gold every turn. Receive [ICON_SCIENCE] Science per Ley Line in this city and [ICON_GreatScientist] Great Scientist, [ICON_GreatMerchant] Great Merchant, and  [ICON_GreatEngineer] Great Engineer points once finished. This project requires a Campus district.</Text>
+    </Replace>
+    <Replace Tag="LOC_PROJECT_OCCULT_RESEARCH_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PROJECT_OCCULT_RESEARCH_NAME]Occult Research</Text>
+    </Replace>
+    <Replace Tag="LOC_PROJECT_OCCULT_RESEARCH_SHORT_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_PROJECT_OCCULT_RESEARCH_SHORT_NAME]Occult Research</Text>
+    </Replace>
+    <Replace Tag="LOC_RESOURCE_LEY_LINE_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_RESOURCE_LEY_LINE_NAME]Ley Line</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY]Secret Society</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_DIPLO_NONE_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_DIPLO_NONE_NAME]None</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_DIPLO_UNKNOWN_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_DIPLO_UNKNOWN_DESCRIPTION]This leader is a member of a Secret Society we have not discovered yet. Once we make contact with it, its members will be revealed.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_DIPLO_UNKNOWN_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_DIPLO_UNKNOWN_NAME]Unknown</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_HERMETIC_ORDER_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_HERMETIC_ORDER_DESCRIPTION]The Hermetic Order is a society of unorthodox scientists and alchemists. Their work focuses on science, great people, and resources.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_HERMETIC_ORDER_DISCOVERY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_HERMETIC_ORDER_DISCOVERY]A wandering mystic appears at your palace. His body is covered in writing of a kind that you have never seen before; the symbols even seem to shine of their own accord. He begins to lecture your courtiers about the hidden alchemical properties of matter: about how mercury can be induced to flow towards the sound of birdsong, how elemental sulfur can be rendered out of sacred texts, and about the hidden resonance of certain stones in moonlight. He asks you, "do you, too, seek to know the true nature of things?"</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_HERMETIC_ORDER_MEMBERSHIP" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_HERMETIC_ORDER_MEMBERSHIP]Much that was hidden to you is now revealed. Matter is vibrant: metal and stone thrum with secret influences, starlight can be focused to illuminate essential fluids, and the earth itself pulses with energy and light. An entire wing of the palace is a bustle of alchemical activity, and you have learned to live with the occasional explosion.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_HERMETIC_ORDER_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_HERMETIC_ORDER_NAME]Hermetic Order</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_OWLS_OF_MINERVA_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_OWLS_OF_MINERVA_DESCRIPTION]The Owls of Minerva are a secret group of high-placed and wealthy individuals. They focus on government, trade, and espionage.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_OWLS_OF_MINERVA_DISCOVERY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_OWLS_OF_MINERVA_DISCOVERY]A conversation with a new acquaintance turns to symbols: an eye in a pyramid, a two-headed owl, a serpent biting its own tail. "These are the signs by which we know each other," he says to you. Later, he invites you down through the tunnels below the city to a velvet-draped room filled with figures in cloaks and animal masks, and who you think you recognize as some of the richest and most important people in your empire - and beyond. "Join us," offers a woman in an elaborate moth mask, her voice dripping with wealth and privilege.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_OWLS_OF_MINERVA_MEMBERSHIP" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_OWLS_OF_MINERVA_MEMBERSHIP]The rites have been performed. You have recited the names of the founders and their lineages and memorized the signs of the Owls. It is astounding how many there were, all around you, all this time. Your finance minister hides a tattoo of a two-headed owl on his ankle; a silk merchant idly draws an eye on his open palm. Now you are of the Owls.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_OWLS_OF_MINERVA_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_OWLS_OF_MINERVA_NAME]Owls of Minerva</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_SANGUINE_PACT_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_SANGUINE_PACT_DESCRIPTION]The Sanguine Pact share an unhealthy appetite for blood. They focus on building a strong military.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_SANGUINE_PACT_DISCOVERY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_SANGUINE_PACT_DISCOVERY]The girl shows up at the gates of the city, white-faced and mumbling about a dark stranger she met on the road, a rush of wind and wings, and the sweetest pain that she ever felt. Your doctors treat her, but she seems to be fading fast. As night falls, a foreign noblewoman (she seems like a noblewoman, at least, just as she seems foreign) appears at your gates. "The girl is with me," she says, her smile revealing astonishingly white – and prominent - teeth. "Perhaps you could invite me in?"</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_SANGUINE_PACT_MEMBERSHIP" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_SANGUINE_PACT_MEMBERSHIP]You have drunk of the red cup and felt new life course through your veins. The night seems alive with new possibilities, and appetites. Your palace stands shuttered and quiet during the day, and but after sunset new courtiers pace the halls, their feet making no sound as they go.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_SANGUINE_PACT_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_SANGUINE_PACT_NAME]Sanguine Pact</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_VOIDSINGERS_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_VOIDSINGERS_DESCRIPTION]The Voidsingers are a nihilistic cult of dark elder gods. They focus on religion, relics, and (dis)loyalty.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_VOIDSINGERS_DISCOVERY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_VOIDSINGERS_DISCOVERY]It started with a dream of the sea. The waves surged towards the shore but refused to break upon the sand, the water’s surface having been turned to something more like skin. A vast dark shape moved underneath, its form constantly growing new limbs and resorbing old ones. On the wind, there was a song that whispered to you its name, a set of syllables not designed for human tongues. The next day, in the market, you overhear a young urchin with a hollow stare mutter something in this same language.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_VOIDSINGERS_MEMBERSHIP" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_VOIDSINGERS_MEMBERSHIP]Our world is shallow - theirs is deep. You have opened your mind to the song of the void and accepted its truth. The Old Ones are sleeping, but we can hear their dreams. What seems to be madness is a higher truth. We wait and watch the sea and sing their praises.</Text>
+    </Replace>
+    <Replace Tag="LOC_SECRETSOCIETY_VOIDSINGERS_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_SECRETSOCIETY_VOIDSINGERS_NAME]Voidsingers</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_DIFFERENT_SECRET_SOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_TOOLTIP_SAMPLE_DIPLOMACY_DIFFERENT_SECRET_SOCIETY]Member of rival Secret Society</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_SAMPLE_DIPLOMACY_SAME_SECRET_SOCIETY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_TOOLTIP_SAMPLE_DIPLOMACY_SAME_SECRET_SOCIETY]Member of same Secret Society</Text>
+    </Replace>
+    <Replace Tag="LOC_UNIT_CULTIST_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNIT_CULTIST_DESCRIPTION]Support unit unique to the Voidsingers. Once it dies or loses all charges, its devoted sacrifice awards the player a [ICON_GreatWork_Relic] Relic of the Void. Can move into foreign lands when not at war, and use a charge to Recruit Followers in an adjacent foreign city, causing it to lose 10 Loyalty.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNIT_CULTIST_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNIT_CULTIST_NAME]Cultist</Text>
+    </Replace>
+    <Replace Tag="LOC_UNIT_VAMPIRE_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNIT_VAMPIRE_DESCRIPTION]Combat unit unique to the Sanguine Pact. Has base [ICON_Strength] Combat Strength equal to the strongest unit your cities have produced. Gains permanent [ICON_Strength] Combat Strength when units die in adjacent tiles.  Strength from Barbarian deaths is capped at +10. When killed, retreats with 1 HP to the [ICON_Capital] Capital or nearest Vampire Castle. Heals an additional 50 HP from pillaging enemy tiles, but receives reduced passive healing.</Text>
+    </Replace>
+    <Replace Tag="LOC_UNIT_VAMPIRE_NAME" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNIT_VAMPIRE_NAME]Vampire</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_SPREAD_DISSENT_DESCRIPTION" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_SPREAD_DISSENT_DESCRIPTION]Recruit Followers</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITCOMMAND_SPREAD_DISSENT_FAILURE_REQUIRES_ENEMY_CITY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITCOMMAND_SPREAD_DISSENT_FAILURE_REQUIRES_ENEMY_CITY]Must be adjacent to an enemy City Center</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_BARON" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_BARON]Baron</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_BARONESS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_BARONESS]Baroness</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_BOYAR" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_BOYAR]Boyar</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_CARMILLA" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_CARMILLA]Carmilla</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_CHRISTABEL" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_CHRISTABEL]Christabel</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_COUNT" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_COUNT]Count</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_COUNTESS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_COUNTESS]Countess</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_DOM" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_DOM]Dom</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_DUCHESS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_DUCHESS]Duchess</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_DUKE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_DUKE]Duke</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_GRAF" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_GRAF]Graf</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_LADY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_LADY]Lady</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_LENORE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_LENORE]Lenore</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_LODIN" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_LODIN]Lodin</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_LORD" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_LORD]Lord</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_LUDMILLA" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_LUDMILLA]Ludmilla</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_MARQUIS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_MARQUIS]Marquis</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_MASTER" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_MASTER]Master</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_ONEIZA" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_ONEIZA]Oneiza</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_PETAR" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_PETAR]Petar</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_SAVA" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_SAVA]Sava</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_SHERIDAN" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_SHERIDAN]Sheridan</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_VLAD" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_VLAD]Vlad</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_VOIVODE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_VOIVODE]Voivode</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_PREFIX_WOLFGANG" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_PREFIX_WOLFGANG]Wolfgang</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_ALLATIUS" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_ALLATIUS]Allatius</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_BATHORY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_BATHORY]Bathory</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_BLAGOJEVIC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_BLAGOJEVIC]Blagojevic</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_BYRON" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_BYRON]Byron</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_COLERIDGE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_COLERIDGE]Coleridge</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_DAVOVICH" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_DAVOVICH]Davovich</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_HARKER" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_HARKER]Harker</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_KIKUCHI" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_KIKUCHI]Kikuchi</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_KRASEU" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_KRASEU]Kraseu</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_KROV" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_KROV]Krov</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_LAMORTE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_LAMORTE]Lamorte</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_LANOCHE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_LANOCHE]Lanoche</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_LE_FANU" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_LE_FANU]Le Fanu</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_ORLOK" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_ORLOK]Orlok</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_PEUCHEN" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_PEUCHEN]Peuchen</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_RUTHVEN" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_RUTHVEN]Ruthven</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_SAVANOVIK" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_SAVANOVIK]Savanovik</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_SHELLEY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_SHELLEY]Shelley</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_STOKER" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_STOKER]Stoker</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_TEPES" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_TEPES]Tepes</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_VARNEY" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_VARNEY]Varney</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_VOLTAIRE" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_VOLTAIRE]Voltaire</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_VON_TOD" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_VON_TOD]Von Tod</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_WESTERNA" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_WESTERNA]Westenra</Text>
+    </Replace>
+    <Replace Tag="LOC_UNITNAME_SUFFIX_ZAROVICH" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][LOC_UNITNAME_SUFFIX_ZAROVICH]Zarovich</Text>
+    </Replace>
+    <Replace Tag="SANGUINE_PACT_VAMPIRE_BARB_COMBAT_STRENGTH_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][SANGUINE_PACT_VAMPIRE_BARB_COMBAT_STRENGTH_DESC]+{Property} from barbarians that have died near the Vampire</Text>
+    </Replace>
+    <Replace Tag="SANGUINE_PACT_VAMPIRE_COMBAT_STRENGTH_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][SANGUINE_PACT_VAMPIRE_COMBAT_STRENGTH_DESC]+{Property} from units that have died near the Vampire</Text>
+    </Replace>
+    <Replace Tag="SANGUINE_PACT_VAMPIRE_INIMIDATE_DESC" Language="zh_Hans">
+      <Text>[COLOR_RED]TRANSLATION MISSING[ENDCOLOR][SANGUINE_PACT_VAMPIRE_INIMIDATE_DESC]{1_Amount} from a nearby Vampire</Text>
+    </Replace>
+  </LocalizedText>
+</GameData>

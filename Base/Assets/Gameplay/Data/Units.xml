@@ -818,6 +818,9 @@
 		<Row UnitType="UNIT_MODERN_AT" Cost="580" Maintenance="8" BaseMoves="3" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="80" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_ANTI_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_MODERN_AT_NAME" Description="LOC_UNIT_MODERN_AT_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_COMPOSITES"/>
 		<Row UnitType="UNIT_MODERN_ARMOR" Cost="680" Maintenance="8" BaseMoves="4" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="90" StrategicResource="RESOURCE_URANIUM" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_MODERN_ARMOR_NAME" Description="LOC_UNIT_MODERN_ARMOR_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqTech="TECH_COMPOSITES"/>
 	</Units>
+  <Units_Presentation>
+    <Row UnitType="UNIT_INDIAN_VARU" UIFlagOffset="10"/>
+  </Units_Presentation>
 	<UnitUpgrades>
 		<!--Recon-->
 		<Row Unit="UNIT_SCOUT" UpgradeUnit="UNIT_RANGER"/>

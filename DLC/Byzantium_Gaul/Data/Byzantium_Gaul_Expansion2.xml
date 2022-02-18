@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Expansion 1 specific data -->
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_OPPIDUM" YieldChangeId="Government_Production"/>
+		<Row DistrictType="DISTRICT_THEATER" YieldChangeId="Hippodrome_Culture"/>
+	</District_Adjacencies>
+	<Adjacency_YieldChanges>
+		<Row ID="Hippodrome_Culture" Description="LOC_DISTRICT_HIPPODROME_CULTURE" YieldType="YIELD_CULTURE" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_HIPPODROME"/>
+	</Adjacency_YieldChanges>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_BYZANTINE_DROMON" Texture="MomentSTK_DromonShip.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_BYZANTINE_TAGMA" Texture="MomentSTK_Tagma.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_GAUL_GAESATAE" Texture="MomentSTK_Gaestae.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_HIPPODROME" Texture="MomentSTK_Hippodrome.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_OPPIDUM" Texture="MomentSTK_Oppidum.dds"/>
+	</MomentIllustrations>
+	<!-- Expansion 2 specific data -->
+	<Types>
+		<Row Type="ABILITY_FREE_RESOURCE_MAITENANCE_HIPPODROME" Kind="KIND_ABILITY"/>
+		<!-- Named Places-->
+		<Row Type="NAMED_RIVER_MEANDER_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_PRUT_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_RIVER_AISNE_RIVER" Kind="KIND_NAMED_RIVER"/>
+		<Row Type="NAMED_MOUNTAIN_CEVENNES" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_MOUNTAIN_EIFEL_MOUNTAINS" Kind="KIND_NAMED_MOUNTAIN"/>
+		<Row Type="NAMED_LAKE_LAKE_NEUCHATEL" Kind="KIND_NAMED_LAKE"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_GREEN_ENERGY_TOURISM_MODIFIER" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_CITIES_ADJUST_MODIFIED_FREE_POWER_MODIFIER" Kind="KIND_MODIFIER"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_FREE_RESOURCE_MAITENANCE_HIPPODROME" Tag="CLASS_HEAVY_CAVALRY"/>
+	</TypeTags>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREEN_ENERGY_TOURISM_MODIFIER</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_GREEN_ENERGY_TOURISM</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MODIFIED_FREE_POWER_MODIFIER</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_CITIES</CollectionType>
+			<EffectType>EFFECT_ADJUST_MODIFIED_FREE_POWER_IN_CITY</EffectType>
+		</Row>
+	</DynamicModifiers>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_BIOSPHERE"/>
+			<Set Description="LOC_BUILDING_BIOSPHERE_EXPANSION2_DESCRIPTION"/>
+		</Update>
+	</Buildings>
+	<BuildingModifiers>
+		<Row>
+			<BuildingType>BUILDING_BIOSPHERE</BuildingType>
+			<ModifierId>BIOSPHERE_MODIFIED_FREE_POWER</ModifierId>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BIOSPHERE</BuildingType>
+			<ModifierId>BIOSPHERE_GREEN_ENERGY_TOURISM</ModifierId>
+		</Row>
+	</BuildingModifiers>
+	<Districts>
+		<Update>
+			<Where DistrictType="DISTRICT_HIPPODROME"/>
+			<Set Description="LOC_DISTRICT_HIPPODROME_EXPANSION2_DESCRIPTION"/>
+		</Update>
+	</Districts>
+	<Districts_XP2>
+		<Row DistrictType="DISTRICT_OPPIDUM" AttackRange="2"/>
+	</Districts_XP2>
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_BYZANTINE_TAGMA"/>
+			<Set>
+				<StrategicResource>RESOURCE_IRON</StrategicResource>
+				<Cost>220</Cost>
+				<Maintenance>4</Maintenance>
+			</Set>
+		</Update>
+	</Units>
+	<UnitUpgrades>
+		<Update>
+			<Where Unit="UNIT_BYZANTINE_TAGMA"/>
+			<Set>
+				<UpgradeUnit>UNIT_CUIRASSIER</UpgradeUnit>
+			</Set>
+		</Update>
+	</UnitUpgrades>
+	<Units_XP2>
+		<Row UnitType="UNIT_BYZANTINE_TAGMA" ResourceCost="10"/>
+	</Units_XP2>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_FREE_RESOURCE_MAITENANCE_HIPPODROME" Name="LOC_ABILITY_FREE_RESOURCE_MAITENANCE_HIPPODROME_NAME" Description="LOC_ABILITY_FREE_RESOURCE_MAITENANCE_HIPPODROME_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_FREE_RESOURCE_MAITENANCE_HIPPODROME</UnitAbilityType>
+			<ModifierId>HIPPODROME_RESOURCE_FREE</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<UnitPromotionModifiers>
+		<Row>
+			<UnitPromotionType>PROMOTION_ARENA_ROCK</UnitPromotionType>
+			<ModifierId>ROCKBAND_ARENA_ROCK_HIPPODROME</ModifierId>
+		</Row>
+	</UnitPromotionModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>ROCKBAND_ARENA_ROCK_HIPPODROME</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>HIPPODROME_RESOURCE_FREE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_IGNORE_RESOURCE_MAINTENANCE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BIOSPHERE_MODIFIED_FREE_POWER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MODIFIED_FREE_POWER_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BIOSPHERE_GREEN_ENERGY_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREEN_ENERGY_TOURISM_MODIFIER</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>ROCKBAND_ARENA_ROCK_HIPPODROME</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HIPPODROME</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROCKBAND_ARENA_ROCK_HIPPODROME</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CREATE_HIPPODROME_HEAVY_CAVALRY</ModifierId>
+			<Name>UnitAbilityType</Name>
+			<Value>ABILITY_FREE_RESOURCE_MAITENANCE_HIPPODROME</Value>
+		</Row>
+		<Row>
+			<ModifierId>HIPPODROME_RESOURCE_FREE</ModifierId>
+			<Name>Ignore</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>BIOSPHERE_MODIFIED_FREE_POWER</ModifierId>
+			<Name>Amount</Name>
+			<Value>200</Value>
+		</Row>
+		<Row>
+			<ModifierId>BIOSPHERE_GREEN_ENERGY_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+	</ModifierArguments>
+	<NamedRivers>
+		<Row NamedRiverType="NAMED_RIVER_MEANDER_RIVER" Name="LOC_NAMED_RIVER_MEANDER_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_PRUT_RIVER" Name="LOC_NAMED_RIVER_PRUT_RIVER_NAME"/>
+		<Row NamedRiverType="NAMED_RIVER_AISNE_RIVER" Name="LOC_NAMED_RIVER_AISNE_RIVER_NAME"/>
+	</NamedRivers>
+	<NamedMountains>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CEVENNES" Name="LOC_NAMED_MOUNTAIN_EIFEL_MOUNTAINS_NAME"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_EIFEL_MOUNTAINS" Name="LOC_NAMED_MOUNTAIN_CEVENNES_NAME"/>
+	</NamedMountains>
+	<NamedLakes>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_NEUCHATEL" Name="LOC_NAMED_LAKE_LAKE_NEUCHATEL_NAME"/>
+	</NamedLakes>
+	<NamedRiverCivilizations>
+		<Row NamedRiverType="NAMED_RIVER_MEANDER_RIVER" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedRiverType="NAMED_RIVER_PRUT_RIVER" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedRiverType="NAMED_RIVER_KIZILIRMAK" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedRiverType="NAMED_RIVER_SAKARYA_RIVER" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedRiverType="NAMED_RIVER_MARITSA_RIVER" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedRiverType="NAMED_RIVER_AISNE_RIVER" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedRiverType="NAMED_RIVER_SCHELDT_RIVER" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedRiverType="NAMED_RIVER_RHINE" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedRiverType="NAMED_RIVER_RHONE" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedRiverType="NAMED_RIVER_MEUSE" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedRiverType="NAMED_RIVER_LOIRE" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedRiverType="NAMED_RIVER_SEINE" CivilizationType="CIVILIZATION_GAUL"/>
+	</NamedRiverCivilizations>
+	<NamedVolcanoCivilizations>
+		<Row NamedVolcanoType="NAMED_VOLCANO_AGRI_DAGI" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_ERCIYES" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_MOUNT_HASAN" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_NEMRUT" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row NamedMountainType="NAMED_MOUNTAIN_BALKANS" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CAUCASUS" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_KACKAR_MOUNTAINS" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_NUR_MOUNTAINS" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_PONTIC_ALPS" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_TAURUS" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_CEVENNES" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_EIFEL_MOUNTAINS" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_ALPS" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_PYRENEES" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_JURA_MOUNTAINS" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_VOSGES" CivilizationType="CIVILIZATION_GAUL"/>
+	</NamedMountainCivilizations>
+	<NamedDesertCivilizations>
+		<Row NamedDesertType="NAMED_DESERT_KARAPINAR_DESERT" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+	</NamedDesertCivilizations>
+	<NamedLakeCivilizations>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_EGIRDIR" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_BURDUR" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_BEYSEHIR" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_IZNIK" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_VAN" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_TUZ" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_GENEVA" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedLakeType="NAMED_LAKE_LAKE_NEUCHATEL" CivilizationType="CIVILIZATION_GAUL"/>
+	</NamedLakeCivilizations>
+	<NamedSeaCivilizations>
+		<Row NamedSeaType="NAMED_SEA_MEDITERRANEAN_SEA" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedSeaType="NAMED_SEA_AEGEAN_SEA" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedSeaType="NAMED_SEA_BLACK_SEA" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_IZMIR" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedSeaType="NAMED_SEA_LEVANTINE_SEA" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedSeaType="NAMED_SEA_SEA_OF_MARMARA" CivilizationType="CIVILIZATION_BYZANTIUM"/>
+		<Row NamedSeaType="NAMED_SEA_BAY_OF_BISCAY" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedSeaType="NAMED_SEA_MEDITERRANEAN_SEA" CivilizationType="CIVILIZATION_GAUL"/>
+		<Row NamedSeaType="NAMED_SEA_ENGLISH_CHANNEL" CivilizationType="CIVILIZATION_GAUL"/>
+	</NamedSeaCivilizations>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_BASIL_ZEALOT" AgendaTwo="AGENDA_ZEALOT"/>
+	</ExclusiveAgendas>
+</GameInfo>

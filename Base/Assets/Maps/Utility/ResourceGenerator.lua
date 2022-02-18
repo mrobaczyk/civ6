@@ -216,6 +216,7 @@ function ResourceGenerator:__ValidLuxuryPlots(eContinent)
 	self.iTotalValidPlots = 0;
 
 	plots = Map.GetContinentPlots(eContinent);
+	local iNumPlots = #plots;
 	for i, plot in ipairs(plots) do
 
 		local bCanHaveSomeResource = false;
@@ -250,8 +251,13 @@ function ResourceGenerator:__ValidLuxuryPlots(eContinent)
 
 		-- Compute how many of each resource to place
 	end
+	
+	--This is a fix to make land heavy maps have a more equal amount of luxuries to other maps. Unless it is a legendary start.
+	if(self.iWaterLux == 1 and self.uiStartConfig ~= 3) then
+		iNumPlots = iNumPlots / 2;
+	end
 
-	self.iOccurencesPerFrequency = self.iTargetPercentage / 100 * #plots * self.iLuxuryPercentage / 100 / self.iLuxuriesPerRegion;
+	self.iOccurencesPerFrequency = self.iTargetPercentage / 100 * iNumPlots * self.iLuxuryPercentage / 100 / self.iLuxuriesPerRegion;
 end
 
 ------------------------------------------------------------------------------

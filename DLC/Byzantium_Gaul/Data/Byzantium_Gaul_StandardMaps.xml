@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Maps>
+		<!-- This map will show up in Base, XP1, and XP2  -->
+		<Row Domain="StandardMaps"  File="Highlands.lua" Name="LOC_MAP_HIGHLANDS_NAME" Description="LOC_MAP_HIGHLANDS_DESCRIPTION" Image="Map_Highlands" SortIndex="110"/>
+		<!-- This one is only for XP2. -->
+		<Row Domain="Maps:Expansion2Maps" File="Highlands_XP2.lua" Name="LOC_MAP_HIGHLANDS_NAME" Description="LOC_MAP_HIGHLANDS_DESCRIPTION" Image="Map_Highlands" SortIndex="110"/>
+	</Maps>
+	<DomainValueFilters>
+		<Row Domain="Maps:Expansion2Maps" Value="Highlands.lua" Filter="difference"/>
+	</DomainValueFilters>
+	<Parameters>
+		<Row Key1="Map" Key2="Highlands.lua" ParameterId="Temperature" Name="LOC_MAP_TEMPERATURE_NAME" Description="LOC_MAP_TEMPERATURE_DESCRIPTION" Domain="Temperature" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="temperature" GroupId="MapOptions" Hash="0" SortIndex="240"/>
+		<Row Key1="Map" Key2="Highlands.lua" ParameterId="Rainfall" Name="LOC_MAP_RAINFALL_NAME" Description="LOC_MAP_RAINFALL_DESCRIPTION" Domain="Rainfall" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="rainfall" GroupId="MapOptions" Hash="0" SortIndex="250"/>
+		<Row Key1="Map" Key2="Highlands_XP2.lua" ParameterId="Temperature" Name="LOC_MAP_TEMPERATURE_NAME" Description="LOC_MAP_TEMPERATURE_DESCRIPTION" Domain="Temperature" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="temperature" GroupId="MapOptions" Hash="0" SortIndex="240"/>
+		<Row Key1="Map" Key2="Highlands_XP2.lua" ParameterId="Rainfall" Name="LOC_MAP_RAINFALL_NAME" Description="LOC_MAP_RAINFALL_DESCRIPTION" Domain="Rainfall" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="rainfall" GroupId="MapOptions" Hash="0" SortIndex="250"/>
+	</Parameters>
+</GameInfo>

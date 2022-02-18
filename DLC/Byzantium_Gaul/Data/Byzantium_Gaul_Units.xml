@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_BYZANTINE_DROMON" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_BYZANTINE_TAGMA" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_GAUL_GAESATAE" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_DROMON" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_TAGMA" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_TAGMA_RELIGIOUS_COMBAT" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_TAGMA_NONRELIGIOUS_COMBAT" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_GAESATAE" Kind="KIND_ABILITY"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_DROMON" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_TAGMA" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_GAESATAE" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<TypeTags>
+		<Row Type="UNIT_BYZANTINE_DROMON" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="UNIT_BYZANTINE_DROMON" Tag="CLASS_DROMON"/>
+		<Row Type="ABILITY_DROMON" Tag="CLASS_DROMON"/>
+		<Row Type="UNIT_BYZANTINE_TAGMA" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="UNIT_BYZANTINE_TAGMA" Tag="CLASS_TAGMA"/>
+		<Row Type="ABILITY_TAGMA" Tag="CLASS_TAGMA"/>
+		<Row Type="ABILITY_TAGMA_RELIGIOUS_COMBAT" Tag="CLASS_RELIGIOUS_ALL"/>
+		<Row Type="ABILITY_TAGMA_NONRELIGIOUS_COMBAT" Tag="CLASS_ALL_COMBAT_UNITS"/>
+		<Row Type="UNIT_GAUL_GAESATAE" Tag="CLASS_MELEE"/>
+		<Row Type="UNIT_GAUL_GAESATAE" Tag="CLASS_GAESATAE"/>
+		<Row Type="ABILITY_GAESATAE" Tag="CLASS_GAESATAE"/>
+	</TypeTags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_BYZANTINE_TAGMA" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_BYZANTINE_TAGMA" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_BYZANTINE_TAGMA" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_BYZANTINE_TAGMA" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_BYZANTINE_DROMON" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_BYZANTINE_DROMON" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_BYZANTINE_DROMON" AiType="UNITTYPE_NAVAL"/>
+		<Row UnitType="UNIT_GAUL_GAESATAE" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_GAUL_GAESATAE" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_GAUL_GAESATAE" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_GAUL_GAESATAE" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_BYZANTINE_DROMON" ReplacesUnitType="UNIT_QUADRIREME"/>
+		<Row CivUniqueUnitType="UNIT_BYZANTINE_TAGMA" ReplacesUnitType="UNIT_KNIGHT"/>
+		<Row CivUniqueUnitType="UNIT_GAUL_GAESATAE" ReplacesUnitType="UNIT_WARRIOR"/>
+	</UnitReplaces>
+	<Units>
+		<Row UnitType="UNIT_BYZANTINE_DROMON" Cost="120" Maintenance="2" BaseMoves="3" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_SEA" Combat="20" RangedCombat="25" Range="2" FormationClass="FORMATION_CLASS_NAVAL" PromotionClass="PROMOTION_CLASS_NAVAL_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_BYZANTINE_DROMON_NAME" Description="LOC_UNIT_BYZANTINE_DROMON_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" MandatoryObsoleteTech="TECH_STEEL" PrereqTech="TECH_SHIPBUILDING" TraitType="TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON"/>
+		<Row UnitType="UNIT_BYZANTINE_TAGMA" Cost="180" Maintenance="3" BaseMoves="4" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="48" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_BYZANTINE_TAGMA_NAME" Description="LOC_UNIT_BYZANTINE_TAGMA_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_COMPOSITES" PrereqCivic="CIVIC_DIVINE_RIGHT" TraitType="TRAIT_LEADER_UNIT_BYZANTINE_TAGMA"/>
+		<Row UnitType="UNIT_GAUL_GAESATAE" BaseMoves="2" Cost="60" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_GAUL_GAESATAE_NAME" Description="LOC_UNIT_GAUL_GAESATAE_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Combat="20" TraitType="TRAIT_CIVILIZATION_UNIT_GAUL_GAESATAE" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
+	</Units>
+	<UnitUpgrades>
+		<Row Unit="UNIT_BYZANTINE_DROMON" UpgradeUnit="UNIT_FRIGATE"/>
+		<Row Unit="UNIT_BYZANTINE_TAGMA" UpgradeUnit="UNIT_TANK"/>
+		<Row Unit="UNIT_GAUL_GAESATAE" UpgradeUnit="UNIT_MUSKETMAN"/>
+	</UnitUpgrades>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_DROMON" Name="LOC_ABILITY_DROMON_NAME" Description="LOC_ABILITY_DROMON_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_TAGMA" Name="LOC_ABILITY_TAGMA_NAME" Description="LOC_ABILITY_TAGMA_DESCRIPTION"/>
+		<Row UnitAbilityType="ABILITY_TAGMA_RELIGIOUS_COMBAT" Name="LOC_ABILITY_TAGMA_RELIGIOUS_COMBAT_NAME" Description="LOC_ABILITY_TAGMA_RELIGIOUS_COMBAT_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_TAGMA_NONRELIGIOUS_COMBAT" Name="LOC_ABILITY_TAGMA_NONRELIGIOUS_COMBAT_NAME" Description="LOC_ABILITY_TAGMA_NONRELIGIOUS_COMBAT_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_GAESATAE" Name="LOC_ABILITY_GAESATAE_NAME" Description="LOC_ABILITY_GAESATAE_DESCRIPTION"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_DROMON</UnitAbilityType>
+			<ModifierId>DROMON_COMBAT_STRENGTH_AGAINST_UNITS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_TAGMA</UnitAbilityType>
+			<ModifierId>TAGMA_GRANT_RELIGIOUS_AOE_STRENGTH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_TAGMA</UnitAbilityType>
+			<ModifierId>TAGMA_GRANT_NONRELIGIOUS_AOE_STRENGTH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_TAGMA_RELIGIOUS_COMBAT</UnitAbilityType>
+			<ModifierId>TAGMA_RELIGIOUS_COMBAT</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_TAGMA_NONRELIGIOUS_COMBAT</UnitAbilityType>
+			<ModifierId>TAGMA_COMBAT_STRENGTH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_GAESATAE</UnitAbilityType>
+			<ModifierId>GAESATAE_STRONG_AGAINST_STRONGER_UNITS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_GAESATAE</UnitAbilityType>
+			<ModifierId>GAESATAE_STRONG_AGAINST_DISTRICTS</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>DROMON_COMBAT_STRENGTH_AGAINST_UNITS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>COMBAT_AGAINST_UNITS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_GRANT_RELIGIOUS_AOE_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<SubjectRequirementSetId>AOE_TAGMA_RELIGIOUS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_GRANT_NONRELIGIOUS_AOE_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<SubjectRequirementSetId>AOE_TAGMA_NONRELIGIOUS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_RELIGIOUS_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>AOE_TAGMA_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_COMBAT_STRENGTH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>AOE_TAGMA_NOTCENTER_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>GAESATAE_STRONG_AGAINST_STRONGER_UNITS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>COMBAT_AGAINST_STRONGER_UNIT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>GAESATAE_STRONG_AGAINST_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>SHELLS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>DROMON_COMBAT_STRENGTH_AGAINST_UNITS</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_GRANT_RELIGIOUS_AOE_STRENGTH</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_TAGMA_RELIGIOUS_COMBAT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_GRANT_NONRELIGIOUS_AOE_STRENGTH</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_TAGMA_NONRELIGIOUS_COMBAT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_RELIGIOUS_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>TAGMA_COMBAT_STRENGTH</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>GAESATAE_STRONG_AGAINST_STRONGER_UNITS</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>GAESATAE_STRONG_AGAINST_DISTRICTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="DROMON_COMBAT_STRENGTH_AGAINST_UNITS" Context="Preview" Text="LOC_ABILITY_DROMON_COMBAT_STRENGTH_AGAINST_UNITS_DESCRIPTION"/>
+		<Row ModifierId="TAGMA_RELIGIOUS_COMBAT" Context="Preview" Text="LOC_ABILITY_TAGMA_RELIGIOUS_DESCRIPTION"/>
+		<Row ModifierId="TAGMA_COMBAT_STRENGTH" Context="Preview" Text="LOC_ABILITY_TAGMA_COMBAT_STRENGTH_DESCRIPTION"/>
+		<Row ModifierId="GAESATAE_STRONG_AGAINST_STRONGER_UNITS" Context="Preview" Text="LOC_ABILITY_GAESATAE_COMBAT_STRENGTH_DESCRIPTION"/>
+		<Row ModifierId="GAESATAE_STRONG_AGAINST_DISTRICTS" Context="Preview" Text="LOC_ABILITY_GAESATAE_COMBAT_DISTRICTS_DESCRIPTION"/>
+	</ModifierStrings>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>COMBAT_AGAINST_UNITS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_NONRELIGIOUS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_RELIGIOUS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_NOTCENTER_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>COMBAT_AGAINST_STRONGER_UNIT_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>OPPONENT_IS_NOT_DISTRICT</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_DISTRICT</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_ADJACENT_RELIGIOUS_ALL_TAG_BYZANTIUMGAUL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FRIENDLY_UNIT_TAG_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_ADJACENT_TAGMA</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FRIENDLY_UNIT_TAG_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_NOTCENTER_ADJACENT_TAGMA</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_ADJACENT_FRIENDLY_UNIT_TAG_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_COMBAT_AGAINST_STRONGER_UNIT</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_STRONGER</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_ADJACENT_RELIGIOUS_ALL_TAG_BYZANTIUMGAUL</RequirementId>
+			<Name>Tag</Name>
+			<Value>CLASS_RELIGIOUS_ALL</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_ADJACENT_TAGMA</RequirementId>
+			<Name>Tag</Name>
+			<Value>CLASS_TAGMA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_ADJACENT_TAGMA</RequirementId>
+			<Name>IncludeCenter</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_NOTCENTER_ADJACENT_TAGMA</RequirementId>
+			<Name>Tag</Name>
+			<Value>CLASS_TAGMA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_NOTCENTER_ADJACENT_TAGMA</RequirementId>
+			<Name>IncludeCenter</Name>
+			<Value>false</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>COMBAT_AGAINST_UNITS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>OPPONENT_IS_NOT_DISTRICT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_RELIGIOUS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_UNIT_IS_ADJACENT_RELIGIOUS_ALL_TAG_BYZANTIUMGAUL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_NONRELIGIOUS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>AOE_REQUIRES_LAND_DOMAIN</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_NONRELIGIOUS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>AOE_REQUIRES_OWNER_ADJACENCY</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_UNIT_IS_ADJACENT_TAGMA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>AOE_TAGMA_NOTCENTER_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_UNIT_IS_NOTCENTER_ADJACENT_TAGMA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>COMBAT_AGAINST_STRONGER_UNIT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_COMBAT_AGAINST_STRONGER_UNIT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+</GameInfo>

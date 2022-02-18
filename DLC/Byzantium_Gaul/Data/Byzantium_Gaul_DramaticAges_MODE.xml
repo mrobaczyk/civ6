@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<!-- ========== -->
+	<!-- Global Parameters -->
+	<!-- ========== -->
+	<GlobalParameters>
+		<Update>
+			<Where Name="COMMEMORATE_BASE_CHOICES_ALLOWED"/>
+			<Set>
+				<Value>0</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="COMMEMORATE_OPTIONS_MAX"/>
+			<Set>
+				<Value>0</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="DARK_AGE_SCORE_BASE_THRESHOLD"/>
+			<Set>
+				<Value>25</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="GOLDEN_AGE_SCORE_BASE_THRESHOLD"/>
+			<Set>
+				<Value>25</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="LOYALTY_FROM_EXCESS_SCORE_MULTIPLIER"/>
+			<Set>
+				<Value>.05</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="THRESHOLD_SHIFT_PER_CITY"/>
+			<Set>
+				<Value>3</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="THRESHOLD_SHIFT_PER_PAST_DARK_AGE"/>
+			<Set>
+				<Value>-10</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="THRESHOLD_SHIFT_PER_PAST_GOLDEN_AGE"/>
+			<Set>
+				<Value>5</Value>
+			</Set>
+		</Update>
+	</GlobalParameters>
+	<!-- ========== -->
+	<!-- Civilopedia Game Concepts -->
+	<!-- ========== -->
+	<CivilopediaPageLayouts>
+		<Row PageLayoutId="DramaticAges" ScriptTemplate="Simple"/>
+	</CivilopediaPageLayouts>
+	<CivilopediaPageLayoutChapters>
+		<Row PageLayoutId="DramaticAges" ChapterId="WELCOME" SortIndex="10"/>
+		<Row PageLayoutId="DramaticAges" ChapterId="ERASCORE" SortIndex="20"/>
+		<Row PageLayoutId="DramaticAges" ChapterId="GOLDENAGES" SortIndex="30"/>
+		<Row PageLayoutId="DramaticAges" ChapterId="DARKAGES" SortIndex="40"/>
+		<Row PageLayoutId="DramaticAges" ChapterId="FREECITIES" SortIndex="50"/>
+	</CivilopediaPageLayoutChapters>
+	<CivilopediaPageGroups>
+		<Replace SectionID="CONCEPTS" PageGroupId="GAME_MODES" Name="LOC_PEDIA_CONCEPTS_PAGEGROUP_MODES_NAME" Tooltip="" VisibleIfEmpty="false" SortIndex="4"/>
+		<Row SectionID="GOVERNMENTS" PageGroupId="GOLDEN_POLICIES" Name="LOC_PEDIA_GOVERNMENTS_PAGEGROUP_GOLDENAGE_POLICIES_NAME" Tooltip="" VisibleIfEmpty="false" SortIndex="54"/>
+	</CivilopediaPageGroups>
+	<CivilopediaPageQueries>
+		<Delete SectionId="GOVERNMENTS"/>
+		<Row SectionId="GOVERNMENTS" PageGroupIdColumn="PageGroupId" TooltipColumn="Tooltip" SortIndex="11">
+			<SQL>SELECT GovernmentType as PageId, "Government" as PageGroupId, "Government" as PageLayoutId, Name, null as Tooltip FROM Governments</SQL>
+		</Row>
+		<Row SectionId="GOVERNMENTS" PageGroupIdColumn="PageGroupId" TooltipColumn="Tooltip" SortIndex="11">
+			<SQL>SELECT Policies.PolicyType as PageId, GovernmentSlotType as PageGroupId, "Policy" as PageLayoutId, Name, null as Tooltip FROM Policies LEFT OUTER JOIN Policies_XP1 on Policies.PolicyType = Policies_XP1.PolicyType WHERE Policies_XP1.RequiresDarkAge IS NULL or Policies_XP1.RequiresGoldenAge IS NULL or Policies_XP1.RequiresDarkAge &lt;&gt; 1 and Policies_XP1.RequiresGoldenAge &lt;&gt; 1</SQL>
+		</Row>
+		<Row SectionId="GOVERNMENTS" PageGroupIdColumn="PageGroupId" TooltipColumn="Tooltip" SortIndex="11">
+			<SQL>SELECT Policies.PolicyType as PageId, "DARK_POLICIES" as PageGroupId, "Policy" as PageLayoutId, Name, null as Tooltip FROM Policies LEFT OUTER JOIN Policies_XP1 on Policies.PolicyType = Policies_XP1.PolicyType WHERE Policies_XP1.RequiresDarkAge = 1</SQL>
+		</Row>
+		<Row SectionId="GOVERNMENTS" PageGroupIdColumn="PageGroupId" TooltipColumn="Tooltip" SortIndex="10">
+			<SQL>SELECT Policies.PolicyType as PageId, "GOLDEN_POLICIES" as PageGroupId, "Policy" as PageLayoutId, Name, null as Tooltip FROM Policies LEFT OUTER JOIN Policies_XP1 on Policies.PolicyType = Policies_XP1.PolicyType WHERE Policies_XP1.RequiresGoldenAge = 1</SQL>
+		</Row>
+	</CivilopediaPageQueries>
+	<CivilopediaPages>
+		<Row SectionId="CONCEPTS" PageId="DRAMATICAGES" PageGroupId="GAME_MODES" PageLayoutId="DramaticAges" Name="LOC_PEDIA_CONCEPTS_PAGE_DRAMATICAGES_CHAPTER_CONTENT_TITLE" Tooltip="" SortIndex="4"/>
+	</CivilopediaPages>
+	<CivilopediaPageSearchTerms>
+		<Row SectionId="CONCEPTS" PageId="DRAMATICAGES" Term="LOC_PEDIA_CONCEPTS_PAGE_DRAMATICAGES_CHAPTER_CONTENT_TITLE"/>
+	</CivilopediaPageSearchTerms>
+	<!-- ========== -->
+	<!-- Game-wide Modifiers -->
+	<!-- ========== -->
+	<GameModifiers>
+		<Row ModifierId="DRAMATIC_AGES_ERA_SCORE_PER_CURRENT_CIVIC_COMPLETIONS"/>
+		<Row ModifierId="DRAMATIC_AGES_ERA_SCORE_PER_CURRENT_TECH_COMPLETIONS"/>
+		<Row ModifierId="DRAMATIC_AGES_ERA_SCORE_PER_UNIT_PROMOTION_EARNED"/>
+	</GameModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>DRAMATIC_AGES_ERA_SCORE_PER_CURRENT_CIVIC_COMPLETIONS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ADJUST_ERA_SCORE_PER_CURRENT_CIVIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DRAMATIC_AGES_ERA_SCORE_PER_CURRENT_TECH_COMPLETIONS</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ADJUST_ERA_SCORE_PER_CURRENT_TECH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DRAMATIC_AGES_ERA_SCORE_PER_UNIT_PROMOTION_EARNED</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ADJUST_ERA_SCORE_PER_UNIT_PROMOTION_EARNED</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>DRAMATIC_AGES_ERA_SCORE_PER_CURRENT_CIVIC_COMPLETIONS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>DRAMATIC_AGES_ERA_SCORE_PER_CURRENT_TECH_COMPLETIONS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>DRAMATIC_AGES_ERA_SCORE_PER_UNIT_PROMOTION_EARNED</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<!-- ========== -->
+	<!-- Notifications -->
+	<!-- ========== -->
+	<Types>
+		<Row Type="NOTIFICATION_COMMEMORATION_WITHOUT_CHOICE" Kind="KIND_NOTIFICATION"/>
+	</Types>
+	<Notifications>
+		<Row NotificationType="NOTIFICATION_COMMEMORATION_WITHOUT_CHOICE" SeverityType="VERY_HIGH" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True" Message="LOC_NOTIFICATION_COMMERATION_REPLACEMENT_MESSAGE" Summary="LOC_NOTIFICATION_COMMERATION_REPLACEMENT_SUMMARY"/>
+	</Notifications>
+	<!-- ========== -->
+	<!-- Social Policies -->
+	<!-- ========== -->
+	<Types>
+		<Row Type="POLICY_FREE_ENQUIRY" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_PRAETORIAN_GUARD" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_EXODUS_OF_THE_EVANGELISTS" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_MONUMENTALITY" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_REFORM_THE_COINAGE" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_CULTURE_INDUSTRY" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_HEARTBEAT_OF_STEAM" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_TO_ARMS" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_WISH_YOU_WERE_HERE" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_SKY_AND_STARS" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_MANDALA_STATE" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_SAKDINA" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_POPULAR_FRONT" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_SOLDARITY" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_MILITARY_INDUSTRIAL_COMPLEX" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_DECENTRALIZATION" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_SOFT_TARGETS" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_DESPOTIC_PATERNALISM" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_SAMODERZHAVIYE" Kind="KIND_POLICY"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_IDENTITY_PER_TURN_FROM_NEARBY_WONDERS" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_NEUTRALIZE_INDEFINITELY" Kind="KIND_MODIFIER"/>
+		<Row Type="ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_SOFT_TARGETS_ATTACKING_UNITS" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE" Tag="CLASS_ALL_COMBAT_UNITS"/>
+		<Row Type="ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS" Tag="CLASS_ALL_COMBAT_UNITS"/>
+		<Row Type="ABILITY_SOFT_TARGETS_ATTACKING_UNITS" Tag="CLASS_ALL_COMBAT_UNITS"/>
+	</TypeTags>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_IDENTITY_PER_TURN_FROM_NEARBY_WONDERS</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_IDENTITY_PER_TURN_FROM_NEARBY_WONDERS</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_NEUTRALIZE_INDEFINITELY</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_NEUTRALIZE_INDEFINITELY</EffectType>
+		</Row>
+	</DynamicModifiers>
+	<Policies>
+		<Row PolicyType="POLICY_FREE_ENQUIRY" Name="LOC_POLICY_FREE_ENQUIRY_NAME" Description="LOC_POLICY_FREE_ENQUIRY_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" Name="LOC_POLICY_PRAETORIAN_GUARD_NAME" Description="LOC_POLICY_PRAETORIAN_GUARD_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_EXODUS_OF_THE_EVANGELISTS" Name="LOC_POLICY_EXODUS_OF_THE_EVANGELISTS_NAME" Description="LOC_POLICY_EXODUS_OF_THE_EVANGELISTS_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_MONUMENTALITY" Name="LOC_POLICY_MONUMENTALITY_NAME" Description="LOC_POLICY_MONUMENTALITY_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_REFORM_THE_COINAGE" Name="LOC_POLICY_REFORM_THE_COINAGE_NAME" Description="LOC_POLICY_REFORM_THE_COINAGE_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_CULTURE_INDUSTRY" Name="LOC_POLICY_CULTURE_INDUSTRY_NAME" Description="LOC_POLICY_CULTURE_INDUSTRY_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_HEARTBEAT_OF_STEAM" Name="LOC_POLICY_HEARTBEAT_OF_STEAM_NAME" Description="LOC_POLICY_HEARTBEAT_OF_STEAM_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_TO_ARMS" Name="LOC_POLICY_TO_ARMS_NAME" Description="LOC_POLICY_TO_ARMS_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_WISH_YOU_WERE_HERE" Name="LOC_POLICY_WISH_YOU_WERE_HERE_NAME" Description="LOC_POLICY_WISH_YOU_WERE_HERE_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_SKY_AND_STARS" Name="LOC_POLICY_SKY_AND_STARS_NAME" Description="LOC_POLICY_SKY_AND_STARS_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_MANDALA_STATE" Name="LOC_POLICY_MANDALA_STATE_NAME" Description="LOC_POLICY_MANDALA_STATE_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_SAKDINA" Name="LOC_POLICY_SAKDINA_NAME" Description="LOC_POLICY_SAKDINA_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_SOLDARITY" Name="LOC_POLICY_SOLIDARITY_NAME" Description="LOC_POLICY_SOLIDARITY_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<!-- Dark Age Social Policies -->
+		<Row PolicyType="POLICY_DECENTRALIZATION" Name="LOC_POLICY_DECENTRALIZATION_NAME" Description="LOC_POLICY_DECENTRALIZATION_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_SOFT_TARGETS" Name="LOC_POLICY_SOFT_TARGETS_NAME" Description="LOC_POLICY_SOFT_TARGETS_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_DESPOTIC_PATERNALISM" Name="LOC_POLICY_DESPOTIC_PATERNALISM_NAME" Description="LOC_POLICY_DESPOTIC_PATERNALISM_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_SAMODERZHAVIYE" Name="LOC_POLICY_SAMODERZHAVIYE_NAME" Description="LOC_POLICY_SAMODERZHAVIYE_DESCRIPTION" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Update>
+			<Where Description="LOC_POLICY_MONASTICISM_DESCRIPTION"/>
+			<Set Description="LOC_POLICY_MONASTICISM_DA_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where Description="LOC_POLICY_ELITE_FORCES_DESCRIPTION"/>
+			<Set Description="LOC_POLICY_ELITE_FORCES_DA_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where Description="LOC_POLICY_INQUISITION_DESCRIPTION"/>
+			<Set Description="LOC_POLICY_INQUISITION_DA_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where Description="LOC_POLICY_ISOLATIONISM_DESCRIPTION"/>
+			<Set Description="LOC_POLICY_ISOLATIONISM_DA_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where Description="LOC_POLICY_ROBBER_BARONS_DESCRIPTION"/>
+			<Set Description="LOC_POLICY_ROBBER_BARONS_DA_DESCRIPTION"/>
+		</Update>
+		<Update>
+			<Where Description="LOC_POLICY_COLLECTIVISM_DESCRIPTION"/>
+			<Set Description="LOC_POLICY_COLLECTIVISM_DA_DESCRIPTION"/>
+		</Update>
+	</Policies>
+	<Policies_XP1>
+		<Row PolicyType="POLICY_FREE_ENQUIRY" MinimumGameEra="ERA_CLASSICAL" MaximumGameEra="ERA_MEDIEVAL" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" MinimumGameEra="ERA_CLASSICAL" MaximumGameEra="ERA_RENAISSANCE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_EXODUS_OF_THE_EVANGELISTS" MinimumGameEra="ERA_CLASSICAL" MaximumGameEra="ERA_RENAISSANCE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_MONUMENTALITY" MinimumGameEra="ERA_CLASSICAL" MaximumGameEra="ERA_RENAISSANCE" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_REFORM_THE_COINAGE" MinimumGameEra="ERA_RENAISSANCE" MaximumGameEra="ERA_MODERN" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_MANDALA_STATE" MinimumGameEra="ERA_CLASSICAL" MaximumGameEra="ERA_MEDIEVAL" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_SAKDINA" MinimumGameEra="ERA_RENAISSANCE" MaximumGameEra="ERA_MODERN" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_CULTURE_INDUSTRY" MinimumGameEra="ERA_INDUSTRIAL" MaximumGameEra="ERA_MODERN" RequiresGoldenAge="true"/>
+		<Row PolicyType="POLICY_DECENTRALIZATION" MinimumGameEra="ERA_CLASSICAL" MaximumGameEra="ERA_RENAISSANCE" RequiresDarkAge="true"/>
+		<Row PolicyType="POLICY_SAMODERZHAVIYE" MinimumGameEra="ERA_RENAISSANCE" MaximumGameEra="ERA_MODERN" RequiresDarkAge="true"/>
+		<Update>
+			<Where PolicyType="POLICY_ELITE_FORCES"/>
+			<Set>
+				<MinimumGameEra>ERA_CLASSICAL</MinimumGameEra>
+				<MaximumGameEra>ERA_RENAISSANCE</MaximumGameEra>
+			</Set>
+		</Update>
+	</Policies_XP1>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE" Name="LOC_ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE_NAME" Description="LOC_ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS" Name="LOC_ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS_NAME" Description="LOC_ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_SOFT_TARGETS_ATTACKING_UNITS" Name="LOC_ABILITY_SOFT_TARGETS_ATTACKING_UNITS_NAME" Description="LOC_ABILITY_SOFT_TARGETS_ATTACKING_UNITS_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row UnitAbilityType="ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE" ModifierId="SOFTTARGETS_COMBAT_STENGTH_DEFENDING_CITIES"/>
+		<Row UnitAbilityType="ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS" ModifierId="SOFTTARGETS_COMBAT_STENGTH_ATTACKING_DISTRICTS"/>
+		<Row UnitAbilityType="ABILITY_SOFT_TARGETS_ATTACKING_UNITS" ModifierId="SOFTTARGETS_COMBAT_STENGTH_ATTACKING_UNITS"/>
+	</UnitAbilityModifiers>
+	<PolicyModifiers>
+		<Row PolicyType="POLICY_FREE_ENQUIRY" ModifierId="POLICY_FREE_ENQUIRY_GA_HARBOR"/>
+		<Row PolicyType="POLICY_FREE_ENQUIRY" ModifierId="POLICY_FREE_ENQUIRY_GA_COMMERCIAL_HUB"/>
+		<Row PolicyType="POLICY_FREE_ENQUIRY" ModifierId="POLICY_FREE_ENQUIRY_GA_CAMPUS"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" ModifierId="POLICY_PRAETORIAN_GUARD_GA_HEALING"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" ModifierId="POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ENCAMPMENT"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" ModifierId="POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_BARRACKS"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" ModifierId="POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_STABLE"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" ModifierId="POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ARMORY"/>
+		<Row PolicyType="POLICY_PRAETORIAN_GUARD" ModifierId="POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_MILITARY_ACADEMY"/>
+		<Row PolicyType="POLICY_EXODUS_OF_THE_EVANGELISTS" ModifierId="POLICY_EXODUS_OF_THE_EVANGELISTS_GA_CHARGES"/>
+		<Row PolicyType="POLICY_EXODUS_OF_THE_EVANGELISTS" ModifierId="POLICY_EXODUS_OF_THE_EVANGELISTS_GA_MOVEMENT"/>
+		<Row PolicyType="POLICY_EXODUS_OF_THE_EVANGELISTS" ModifierId="POLICY_EXODUS_OF_THE_EVANGELISTS_GA_GREAT_PROPHET_POINTS"/>
+		<Row PolicyType="POLICY_MONUMENTALITY" ModifierId="POLICY_MONUMENTALITY_INFRASTRUCTURE_GA_PURCHASE_CIVILIAN"/>
+		<Row PolicyType="POLICY_MONUMENTALITY" ModifierId="POLICY_MONUMENTALITY_INFRASTRUCTURE_GA_MOVEMENT_BUILDER"/>
+		<Row PolicyType="POLICY_MONUMENTALITY" ModifierId="POLICY_MONUMENTALITY_GA_MOVEMENT_SETTLER"/>
+		<Row PolicyType="POLICY_MONUMENTALITY" ModifierId="POLICY_MONUMENTALITY_GA_BUILDER_DISCOUNT_MODIFIER"/>
+		<Row PolicyType="POLICY_REFORM_THE_COINAGE" ModifierId="POLICY_REFORM_THE_COINAGE_GA_TRADE_ROUTE_YIELDS"/>
+		<Row PolicyType="POLICY_REFORM_THE_COINAGE" ModifierId="POLICY_REFORM_THE_COINAGE_GA_PLUNDER_IMMUNITY_MODIFIER"/>
+		<Row PolicyType="POLICY_CULTURE_INDUSTRY" ModifierId="POLICY_CULTURE_INDUSTRY_GA_CULTURE_DISTRICT"/>
+		<Row PolicyType="POLICY_CULTURE_INDUSTRY" ModifierId="POLICY_CULTURE_INDUSTRY_GA_PRODUCTION_DISTRICT"/>
+		<Row PolicyType="POLICY_CULTURE_INDUSTRY" ModifierId="POLICY_CULTURE_INDUSTRY_GA_PURCHASE_ENTERTAINMENT_COMPLEX"/>
+		<Row PolicyType="POLICY_CULTURE_INDUSTRY" ModifierId="POLICY_CULTURE_INDUSTRY_GA_PURCHASE_WATER_PARK"/>
+		<Row PolicyType="POLICY_HEARTBEAT_OF_STEAM" ModifierId="POLICY_HEARTBEAT_OF_STEAM_GA_INDUSTRIALINFORMATION"/>
+		<Row PolicyType="POLICY_HEARTBEAT_OF_STEAM" ModifierId="POLICY_HEARTBEAT_OF_STEAM_GA_CAMPUS"/>
+		<Row PolicyType="POLICY_TO_ARMS" ModifierId="POLICY_TO_ARMS_GA_XP"/>
+		<Row PolicyType="POLICY_TO_ARMS" ModifierId="POLICY_TO_ARMS_GA_PRODUCTION"/>
+		<Row PolicyType="POLICY_WISH_YOU_WERE_HERE" ModifierId="POLICY_WISH_YOU_WERE_HERE_GA_NATIONAL_PARKS"/>
+		<Row PolicyType="POLICY_WISH_YOU_WERE_HERE" ModifierId="POLICY_WISH_YOU_WERE_HERE_GA_WONDERS"/>
+		<Row PolicyType="POLICY_SKY_AND_STARS" ModifierId="POLICY_PRODUCTION_TO_SPACEPORTS"/>
+		<Row PolicyType="POLICY_SKY_AND_STARS" ModifierId="POLICY_PRODUCTION_TO_AERODROMES"/>
+		<Row PolicyType="POLICY_SKY_AND_STARS" ModifierId="POLICY_PRODUCTION_FROM_AERODROMES_AND_SPACEPORTS"/>
+		<Row PolicyType="POLICY_SKY_AND_STARS" ModifierId="POLICY_SCIENCE_FROM_AERODROMES_AND_SPACEPORTS"/>
+		<Row PolicyType="POLICY_MANDALA_STATE" ModifierId="POLICY_MANDALA_STATE_WONDER_CULTURE"/>
+		<Row PolicyType="POLICY_MANDALA_STATE" ModifierId="POLICY_MANDALA_STATE_WONDER_IDENTITY"/>
+		<Row PolicyType="POLICY_SAKDINA" ModifierId="POLICY_SAKDINA_PROJECT_LOYALTY"/>
+		<Row PolicyType="POLICY_SAKDINA" ModifierId="POLICY_SAKDINA_PROJECT_POINTS_MULTIPLIER"/>
+		<Row PolicyType="POLICY_SOLDARITY" ModifierId="POLICY_SOLIDARITY_GOVERNOR_LOYALTY"/>
+		<Row PolicyType="POLICY_SOLDARITY" ModifierId="POLICY_SOLIDARITY_GOVERNOR_FAITH"/>
+		<Row PolicyType="POLICY_SOLDARITY" ModifierId="POLICY_SOLIDARITY_GOVERNOR_GOLD"/>
+		<!-- Dark Age Social Policies -->
+		<Row PolicyType="POLICY_MONASTICISM" ModifierId="MONASTICISM_CULTURE_MODIFIER"/>
+		<Row PolicyType="POLICY_ELITE_FORCES" ModifierId="ELITEFORCES_EXTRA_MAINTENANCE"/>
+		<Row PolicyType="POLICY_INQUISITION" ModifierId="INQUISITION_SCIENCE_MODIFIER"/>
+		<Row PolicyType="POLICY_ISOLATIONISM" ModifierId="ISOLATIONISM_DOMESTIC_TRADE_ROUTE_FOOD"/>
+		<Row PolicyType="POLICY_ISOLATIONISM" ModifierId="ISOLATIONISM_DOMESTIC_TRADE_ROUTE_PRODUCTION"/>
+		<Row PolicyType="POLICY_ROBBER_BARONS" ModifierId="ROBBERBARONS_BANK_OR_SHIPYARD_GOLD"/>
+		<Row PolicyType="POLICY_ROBBER_BARONS" ModifierId="ROBBERBARONS_BANK_OR_SHIPYARD_PRODUCTION"/>
+		<Row PolicyType="POLICY_ISOLATIONISM" ModifierId="ISOLATIONISM_DOMESTIC_TRADE_ROUTE_GOLD"/>
+		<Row PolicyType="POLICY_COLLECTIVISM" ModifierId="COLLECTIVISM_FARM_PRODUCTION"/>
+		<Row PolicyType="POLICY_COLLECTIVISM" ModifierId="COLLECTIVISM_FOOD_INDUSTRIAL_ADJACENCY"/>
+		<Row PolicyType="POLICY_DECENTRALIZATION" ModifierId="DECENTRALIZATION_LOWPOP_LOYALTY"/>
+		<Row PolicyType="POLICY_DECENTRALIZATION" ModifierId="DECENTRALIZATION_HIGHPOP_GOLD"/>
+		<Row PolicyType="POLICY_SOFT_TARGETS" ModifierId="SOFT_TARGETS_DEFENDING_CITY_RANGE"/>
+		<Row PolicyType="POLICY_SOFT_TARGETS" ModifierId="SOFT_TARGETS_ATTACKING_DISTRICTS"/>
+		<Row PolicyType="POLICY_SOFT_TARGETS" ModifierId="SOFT_TARGETS_ATTACKING_UNITS"/>
+		<Row PolicyType="POLICY_DESPOTIC_PATERNALISM" ModifierId="DESPOTIC_PATERNALISM_LOYALTY"/>
+		<Row PolicyType="POLICY_DESPOTIC_PATERNALISM" ModifierId="DESPOTIC_PATERNALISM_SCIENCE"/>
+		<Row PolicyType="POLICY_DESPOTIC_PATERNALISM" ModifierId="DESPOTIC_PATERNALISM_CULTURE"/>
+		<Row PolicyType="POLICY_SAMODERZHAVIYE" ModifierId="SAMODERZHAVIYE_CAPITAL_PRODUCTION"/>
+		<Row PolicyType="POLICY_SAMODERZHAVIYE" ModifierId="SAMODERZHAVIYE_GOVERNOR_NEUTRALIZE"/>
+	</PolicyModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_HARBOR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_YIELD_BASED_ON_ADJACENCY_BONUS</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_HARBOR</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_COMMERCIAL_HUB</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_YIELD_BASED_ON_ADJACENCY_BONUS</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_COMMERCIAL_HUB</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_CAMPUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_YIELD_BASED_ON_ADJACENCY_BONUS</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_CAMPUS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_HEALING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_HEAL_PER_TURN</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ENCAMPMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_YIELD_CHANGE</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_ENCAMPMENT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_BARRACKS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_STABLE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ARMORY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_MILITARY_ACADEMY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_EXODUS_OF_THE_EVANGELISTS_GA_CHARGES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_TRAINED_UNITS_ADJUST_RELIGIOUS_CHARGES</ModifierType>
+			<Permanent>true</Permanent>
+			<SubjectRequirementSetId>UNIT_IS_RELIGIOUS_ALL_DRAMATIC_AGES</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_EXODUS_OF_THE_EVANGELISTS_GA_MOVEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT</ModifierType>
+			<SubjectRequirementSetId>UNIT_IS_RELIGIOUS_ALL_DRAMATIC_AGES</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_EXODUS_OF_THE_EVANGELISTS_GA_GREAT_PROPHET_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_INFRASTRUCTURE_GA_PURCHASE_CIVILIAN</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ENABLE_UNIT_FAITH_PURCHASE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_GA_BUILDER_DISCOUNT_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_UNIT_PURCHASE_COST</ModifierType>
+			<SubjectStackLimit>1</SubjectStackLimit>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_GA_MOVEMENT_SETTLER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT</ModifierType>
+			<SubjectRequirementSetId>UNIT_IS_SETTLER</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_INFRASTRUCTURE_GA_MOVEMENT_BUILDER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT</ModifierType>
+			<SubjectRequirementSetId>UNIT_IS_BUILDER</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_REFORM_THE_COINAGE_GA_TRADE_ROUTE_YIELDS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_SPECIALTY_DISTRICT_FOR_INTERNATIONAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_REFORM_THE_COINAGE_GA_PLUNDER_IMMUNITY_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_CULTURE_DISTRICT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_PRODUCTION_DISTRICT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_ALL_DISTRICTS_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_PURCHASE_ENTERTAINMENT_COMPLEX</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ENABLE_BUILDING_FAITH_PURCHASE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_PURCHASE_WATER_PARK</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ENABLE_BUILDING_FAITH_PURCHASE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_INDUSTRIALINFORMATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_ERA_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_CAMPUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_YIELD_BASED_ON_ADJACENCY_BONUS</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_CAMPUS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_TO_ARMS_GA_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MILITARY_UNITS_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_TO_ARMS_GA_XP</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_WISH_YOU_WERE_HERE_GA_NATIONAL_PARKS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TOURISM_FROM_NATIONAL_PARKS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_WISH_YOU_WERE_HERE_GA_WONDERS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+			<SubjectStackLimit>1</SubjectStackLimit>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_TO_SPACEPORTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_TO_AERODROMES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_FROM_AERODROMES_AND_SPACEPORTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_AERODROME_OR_SPACEPORT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SCIENCE_FROM_AERODROMES_AND_SPACEPORTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_AERODROME_OR_SPACEPORT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MANDALA_STATE_WONDER_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_YIELD_CHANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MANDALA_STATE_WONDER_IDENTITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_IDENTITY_PER_TURN_FROM_NEARBY_WONDERS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SAKDINA_PROJECT_LOYALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_IDENTITY_PER_CITIZEN</ModifierType>
+			<SubjectRequirementSetId>CITY_IS_PRODUCING_PROJECT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SAKDINA_PROJECT_POINTS_MULTIPLIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PROPERTY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_LOYALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GOVERNORS_ADJUST_GOVERNOR_IDENTITY_PRESSURE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_GOVERNOR</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_GOVERNOR</SubjectRequirementSetId>
+		</Row>
+		<!-- Dark Age Social Policies -->
+		<Row>
+			<ModifierId>MONASTICISM_CULTURE_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>NOT_CITY_HAS_HOLY_SITE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>INQUISITION_SCIENCE_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ELITEFORCES_EXTRA_MAINTENANCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_UNIT_MAINTENANCE_DISCOUNT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_FOOD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ROBBERBARONS_BANK_OR_SHIPYARD_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_BANK_OR_SHIPYARD</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>ROBBERBARONS_BANK_OR_SHIPYARD_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_BANK_OR_SHIPYARD</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>COLLECTIVISM_FARM_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_FARM_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>COLLECTIVISM_FOOD_INDUSTRIAL_ADJACENCY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_YIELD_BASED_ON_ADJACENCY_BONUS</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_INDUSTRIAL_ZONE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>DECENTRALIZATION_LOWPOP_LOYALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_IDENTITY_PER_TURN</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_6_OR_LESS_POP_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>DECENTRALIZATION_HIGHPOP_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_7_OR_MORE_POP_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SOFT_TARGETS_DEFENDING_CITY_RANGE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SOFT_TARGETS_ATTACKING_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SOFT_TARGETS_ATTACKING_UNITS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SOFTTARGETS_COMBAT_STENGTH_DEFENDING_CITIES</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>EMPLACEMENT_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SOFTTARGETS_COMBAT_STENGTH_ATTACKING_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>SHELLS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SOFTTARGETS_COMBAT_STENGTH_ATTACKING_UNITS</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>ATTACK_AGAINST_UNITS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_LOYALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_IDENTITY_PER_TURN</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_ASSIGNED_GOVERNOR</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_NO_GOVERNOR_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_NO_GOVERNOR_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SAMODERZHAVIYE_CAPITAL_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_PALACE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SAMODERZHAVIYE_GOVERNOR_NEUTRALIZE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_NEUTRALIZE_INDEFINITELY</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_HARBOR</ModifierId>
+			<Name>YieldTypeToMirror</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_HARBOR</ModifierId>
+			<Name>YieldTypeToGrant</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_COMMERCIAL_HUB</ModifierId>
+			<Name>YieldTypeToMirror</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_COMMERCIAL_HUB</ModifierId>
+			<Name>YieldTypeToGrant</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_CAMPUS</ModifierId>
+			<Name>YieldTypeToMirror</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_FREE_ENQUIRY_GA_CAMPUS</ModifierId>
+			<Name>YieldTypeToGrant</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_HEALING</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_HEALING</ModifierId>
+			<Name>Type</Name>
+			<Value>ALL</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ENCAMPMENT</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ENCAMPMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_BARRACKS</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_BARRACKS</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_BARRACKS</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_BARRACKS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_STABLE</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_STABLE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_STABLE</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_STABLE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ARMORY</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_ARMORY</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ARMORY</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_ARMORY</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_MILITARY_ACADEMY</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_MILITARY_ACADEMY</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_MILITARY_ACADEMY</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRAETORIAN_GUARD_GA_PRODUCTION_MILITARY_ACADEMY</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_EXODUS_OF_THE_EVANGELISTS_GA_CHARGES</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_EXODUS_OF_THE_EVANGELISTS_GA_MOVEMENT</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_EXODUS_OF_THE_EVANGELISTS_GA_GREAT_PROPHET_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_PROPHET</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_EXODUS_OF_THE_EVANGELISTS_GA_GREAT_PROPHET_POINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_INFRASTRUCTURE_GA_PURCHASE_CIVILIAN</ModifierId>
+			<Name>Tag</Name>
+			<Value>CLASS_LANDCIVILIAN</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_INFRASTRUCTURE_GA_MOVEMENT_BUILDER</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_GA_MOVEMENT_SETTLER</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_GA_BUILDER_DISCOUNT_MODIFIER</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_BUILDER</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MONUMENTALITY_GA_BUILDER_DISCOUNT_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>30</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_REFORM_THE_COINAGE_GA_TRADE_ROUTE_YIELDS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_REFORM_THE_COINAGE_GA_TRADE_ROUTE_YIELDS</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_REFORM_THE_COINAGE_GA_PLUNDER_IMMUNITY_MODIFIER</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_ECONOMIC_GOLDEN_AGE_PLUNDER_IMMUNITY</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_CULTURE_DISTRICT</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_CULTURE_DISTRICT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_PRODUCTION_DISTRICT</ModifierId>
+			<Name>NotSpecialty</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_PRODUCTION_DISTRICT</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_PURCHASE_ENTERTAINMENT_COMPLEX</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_ENTERTAINMENT_COMPLEX</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_CULTURE_INDUSTRY_GA_PURCHASE_WATER_PARK</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_WATER_ENTERTAINMENT_COMPLEX</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_INDUSTRIALINFORMATION</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_INDUSTRIALINFORMATION</ModifierId>
+			<Name>IsWonder</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_INDUSTRIALINFORMATION</ModifierId>
+			<Name>StartEra</Name>
+			<Value>ERA_INDUSTRIAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_INDUSTRIALINFORMATION</ModifierId>
+			<Name>EndEra</Name>
+			<Value>ERA_INFORMATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_CAMPUS</ModifierId>
+			<Name>YieldTypeToMirror</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_HEARTBEAT_OF_STEAM_GA_CAMPUS</ModifierId>
+			<Name>YieldTypeToGrant</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_TO_ARMS_GA_XP</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_TO_ARMS_GA_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_WISH_YOU_WERE_HERE_GA_NATIONAL_PARKS</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_WISH_YOU_WERE_HERE_GA_WONDERS</ModifierId>
+			<Name>BoostsWonders</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_WISH_YOU_WERE_HERE_GA_WONDERS</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>150</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_TO_SPACEPORTS</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_SPACEPORT</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_TO_SPACEPORTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>30</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_TO_AERODROMES</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_AERODROME</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_TO_AERODROMES</ModifierId>
+			<Name>Amount</Name>
+			<Value>30</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_FROM_AERODROMES_AND_SPACEPORTS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_PRODUCTION_FROM_AERODROMES_AND_SPACEPORTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SCIENCE_FROM_AERODROMES_AND_SPACEPORTS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SCIENCE_FROM_AERODROMES_AND_SPACEPORTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MANDALA_STATE_WONDER_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MANDALA_STATE_WONDER_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MANDALA_STATE_WONDER_IDENTITY</ModifierId>
+			<Name>ForeignCities</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_MANDALA_STATE_WONDER_IDENTITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SAKDINA_PROJECT_LOYALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>.5</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SAKDINA_PROJECT_POINTS_MULTIPLIER</ModifierId>
+			<Name>Key</Name>
+			<Value>PROJECT_POINTS_MULTIPLIER_PER_BUILDING</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SAKDINA_PROJECT_POINTS_MULTIPLIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_LOYALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_LOYALTY</ModifierId>
+			<Name>ForeignCities</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>POLICY_SOLIDARITY_GOVERNOR_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<!-- Dark Age Social Policies -->
+		<Row>
+			<ModifierId>MONASTICISM_CULTURE_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>MONASTICISM_CULTURE_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>-25</Value>
+		</Row>
+		<Row>
+			<ModifierId>INQUISITION_SCIENCE_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>INQUISITION_SCIENCE_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>-15</Value>
+		</Row>
+		<Row>
+			<ModifierId>ELITEFORCES_EXTRA_MAINTENANCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_FOOD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_FOOD</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_FOOD</ModifierId>
+			<Name>Intercontinental</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_PRODUCTION</ModifierId>
+			<Name>Intercontinental</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>ISOLATIONISM_DOMESTIC_TRADE_ROUTE_GOLD</ModifierId>
+			<Name>Intercontinental</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROBBERBARONS_BANK_OR_SHIPYARD_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROBBERBARONS_BANK_OR_SHIPYARD_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROBBERBARONS_BANK_OR_SHIPYARD_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROBBERBARONS_BANK_OR_SHIPYARD_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>COLLECTIVISM_FOOD_INDUSTRIAL_ADJACENCY</ModifierId>
+			<Name>YieldTypeToMirror</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>COLLECTIVISM_FOOD_INDUSTRIAL_ADJACENCY</ModifierId>
+			<Name>YieldTypeToGrant</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>COLLECTIVISM_FARM_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>COLLECTIVISM_FARM_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>DECENTRALIZATION_LOWPOP_LOYALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>DECENTRALIZATION_HIGHPOP_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>DECENTRALIZATION_HIGHPOP_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>-15</Value>
+		</Row>
+		<Row>
+			<ModifierId>SOFT_TARGETS_DEFENDING_CITY_RANGE</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE</Value>
+		</Row>
+		<Row>
+			<ModifierId>SOFT_TARGETS_ATTACKING_DISTRICTS</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS</Value>
+		</Row>
+		<Row>
+			<ModifierId>SOFT_TARGETS_ATTACKING_UNITS</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SOFT_TARGETS_ATTACKING_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>SOFTTARGETS_COMBAT_STENGTH_DEFENDING_CITIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>SOFTTARGETS_COMBAT_STENGTH_ATTACKING_DISTRICTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>SOFTTARGETS_COMBAT_STENGTH_ATTACKING_UNITS</ModifierId>
+			<Name>Amount</Name>
+			<Value>-3</Value>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_LOYALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>-15</Value>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>DESPOTIC_PATERNALISM_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>-15</Value>
+		</Row>
+		<Row>
+			<ModifierId>SAMODERZHAVIYE_CAPITAL_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>SAMODERZHAVIYE_CAPITAL_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>SAMODERZHAVIYE_GOVERNOR_NEUTRALIZE</ModifierId>
+			<Name>Neutralize</Name>
+			<Value>true</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="SOFTTARGETS_COMBAT_STENGTH_DEFENDING_CITIES" Context="Preview" Text="LOC_ABILITY_ABILITY_SOFT_TARGETS_DEFENDING_CITY_RANGE_COMPLEX_COMBAT_STRENGTH_PREVIEW_DESCRIPTION"/>
+		<Row ModifierId="SOFTTARGETS_COMBAT_STENGTH_ATTACKING_DISTRICTS" Context="Preview" Text="LOC_ABILITY_SOFT_TARGETS_ATTACKING_DISTRICTS_COMBAT_STRENGTH_PREVIEW_DESCRIPTION"/>
+		<Row ModifierId="SOFTTARGETS_COMBAT_STENGTH_ATTACKING_UNITS" Context="Preview" Text="LOC_ABILITY_SOFT_TARGETS_ATTACKING_UNITS_COMBAT_STRENGTH_PREVIEW_DESCRIPTION"/>
+	</ModifierStrings>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>UNIT_IS_RELIGIOUS_ALL_DRAMATIC_AGES</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>UNIT_IS_SETTLER</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_IS_PRODUCING_PROJECT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_AERODROME_OR_SPACEPORT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>NOT_CITY_HAS_HOLY_SITE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>BUILDING_IS_BANK_OR_SHIPYARD</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_6_OR_LESS_POP_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_7_OR_MORE_POP_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>ATTACK_AGAINST_UNITS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>UNIT_IS_RELIGIOUS_ALL_DRAMATIC_AGES</RequirementSetId>
+			<RequirementId>REQUIRES_UNIT_IS_RELIGIOUS_ALL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>UNIT_IS_SETTLER</RequirementSetId>
+			<RequirementId>REQUIRES_UNIT_IS_SETTLER</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_AERODROME_OR_SPACEPORT</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_AERODROME</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_IS_PRODUCING_PROJECT</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_IS_PRODUCING_PROJECT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_AERODROME_OR_SPACEPORT</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_SPACEPORT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>NOT_CITY_HAS_HOLY_SITE</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_NO_HOLY_SITE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>BUILDING_IS_BANK_OR_SHIPYARD</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_BANK_DRAMATIC</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>BUILDING_IS_BANK_OR_SHIPYARD</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_SHIPYARD_DRAMATIC</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_6_OR_LESS_POP_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_7_POP_INVERSE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_7_OR_MORE_POP_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_7_POP</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>ATTACK_AGAINST_UNITS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>COMBAT_IS_NOT_DISTRICT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_SETTLER</RequirementId>
+			<RequirementType>REQUIREMENT_UNIT_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_AERODROME</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_IS_PRODUCING_PROJECT</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_IS_PRODUCING_PROJECT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_NO_HOLY_SITE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_BANK_DRAMATIC</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SHIPYARD_DRAMATIC</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_7_POP_INVERSE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_X_POPULATION</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_7_POP</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_X_POPULATION</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>COMBAT_IS_NOT_DISTRICT</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_DISTRICT</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_UNIT_IS_SETTLER</RequirementId>
+			<Name>UnitType</Name>
+			<Value>UNIT_SETTLER</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_AERODROME</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_AERODROME</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_NO_HOLY_SITE</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HOLY_SITE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_BANK_DRAMATIC</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_BANK</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_SHIPYARD_DRAMATIC</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_SHIPYARD</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_7_POP_INVERSE</RequirementId>
+			<Name>Amount</Name>
+			<Value>7</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_7_POP</RequirementId>
+			<Name>Amount</Name>
+			<Value>7</Value>
+		</Row>
+	</RequirementArguments>
+	<!-- ========== -->
+	<!-- Age City Flipping -->
+	<!-- ========== -->
+	<TypeProperties>
+		<Row Type="DIFFICULTY_SETTLER" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="5"/>
+		<Row Type="DIFFICULTY_CHIEFTAIN" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="10"/>
+		<Row Type="DIFFICULTY_WARLORD" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="15"/>
+		<Row Type="DIFFICULTY_PRINCE" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="20"/>
+		<Row Type="DIFFICULTY_KING" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="25"/>
+		<Row Type="DIFFICULTY_EMPEROR" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="30"/>
+		<Row Type="DIFFICULTY_IMMORTAL" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="35"/>
+		<Row Type="DIFFICULTY_DEITY" Name="DARK_AGE_CITIES_LOST_PLAYER" Value="40"/>
+		<Row Type="DIFFICULTY_SETTLER" Name="DARK_AGE_CITIES_LOST_AI" Value="30"/>
+		<Row Type="DIFFICULTY_CHIEFTAIN" Name="DARK_AGE_CITIES_LOST_AI" Value="30"/>
+		<Row Type="DIFFICULTY_WARLORD" Name="DARK_AGE_CITIES_LOST_AI" Value="25"/>
+		<Row Type="DIFFICULTY_PRINCE" Name="DARK_AGE_CITIES_LOST_AI" Value="20"/>
+		<Row Type="DIFFICULTY_KING" Name="DARK_AGE_CITIES_LOST_AI" Value="15"/>
+		<Row Type="DIFFICULTY_EMPEROR" Name="DARK_AGE_CITIES_LOST_AI" Value="15"/>
+		<Row Type="DIFFICULTY_IMMORTAL" Name="DARK_AGE_CITIES_LOST_AI" Value="10"/>
+		<Row Type="DIFFICULTY_DEITY" Name="DARK_AGE_CITIES_LOST_AI" Value="10"/>
+		<Row Type="DIFFICULTY_SETTLER" Name="FREE_CITY_INFLUENCE" Value="1"/>
+		<Row Type="DIFFICULTY_CHIEFTAIN" Name="FREE_CITY_INFLUENCE" Value="2"/>
+		<Row Type="DIFFICULTY_WARLORD" Name="FREE_CITY_INFLUENCE" Value="2.5"/>
+		<Row Type="DIFFICULTY_PRINCE" Name="FREE_CITY_INFLUENCE" Value="3"/>
+		<Row Type="DIFFICULTY_KING" Name="FREE_CITY_INFLUENCE" Value="3.5"/>
+		<Row Type="DIFFICULTY_EMPEROR" Name="FREE_CITY_INFLUENCE" Value="4"/>
+		<Row Type="DIFFICULTY_IMMORTAL" Name="FREE_CITY_INFLUENCE" Value="4.5"/>
+		<Row Type="DIFFICULTY_DEITY" Name="FREE_CITY_INFLUENCE" Value="5"/>
+	</TypeProperties>
+	<!-- ========== -->
+	<Improvement_YieldChanges>
+		<!--If the yield change is zero, the value will be changed later.-->
+		<Row ImprovementType="IMPROVEMENT_FARM" YieldType="YIELD_PRODUCTION" YieldChange="0"/>
+	</Improvement_YieldChanges>
+</GameInfo>

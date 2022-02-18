@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Expansion 2 Remove data -->
+	<BuildingModifiers>
+		<Delete BuildingType="BUILDING_BIOSPHERE" ModifierId="BIOSPHERE_GRANT_SCIENCE_PER_RAINFOREST"/>
+		<Delete BuildingType="BUILDING_BIOSPHERE" ModifierId="BIOSPHERE_GRANT_SCIENCE_PER_WOODS"/>
+		<Delete BuildingType="BUILDING_BIOSPHERE" ModifierId="BIOSPHERE_GRANT_SCIENCE_PER_MARSH"/>
+	</BuildingModifiers>
+	<Modifiers>
+		<Delete ModifierId="BIOSPHERE_GRANT_SCIENCE_PER_RAINFOREST"/>
+		<Delete ModifierId="BIOSPHERE_GRANT_SCIENCE_PER_WOODS"/>
+		<Delete ModifierId="BIOSPHERE_GRANT_SCIENCE_PER_MARSH"/>
+	</Modifiers>
+	<Building_YieldChanges>
+		<Delete BuildingType="BUILDING_BIOSPHERE" YieldType="YIELD_SCIENCE"/>
+	</Building_YieldChanges>
+</GameInfo>

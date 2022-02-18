@@ -13,6 +13,9 @@
 	<Units>
     <Row UnitType="UNIT_SOOTHSAYER" Cost="50" Maintenance="4" DisasterCharges="2" BaseMoves="2" BaseSightRange="3" ZoneOfControl="false" CanCapture="False" MustPurchase="TRUE" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_SUPPORT"  PromotionClass="PROMOTION_CLASS_SOOTHSAYER" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_SOOTHSAYER_NAME" Description="LOC_UNIT_SOOTHSAYER_DESCRIPTION" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="50"/>
 	</Units>
+  <Units_Presentation>
+    <Row UnitType="UNIT_SOOTHSAYER" UIFlagOffset="20"/>
+  </Units_Presentation>
   <Units_XP2>
     <Row UnitType="UNIT_SOOTHSAYER" CanEarnExperience="false" CanFormMilitaryFormation="false" MajorCivOnly="true" CanCauseDisasters="true" CanSacrificeUnits="true"/>
   </Units_XP2>

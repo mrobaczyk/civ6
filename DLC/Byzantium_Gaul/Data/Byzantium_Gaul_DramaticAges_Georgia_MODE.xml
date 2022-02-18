@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- Georgia Updated-->
+	<Types>
+		<Row Type="TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW" Kind="KIND_TRAIT"/>
+	</Types>
+	<Traits>
+		<Delete TraitType="TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS"/>
+		<Row TraitType="TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW" Name="LOC_TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NAME" Description="LOC_TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_DESCRIPTION"/>
+	</Traits>
+	<CivilizationTraits>
+		<Row CivilizationType="CIVILIZATION_GEORGIA" TraitType="TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW"/>
+	</CivilizationTraits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW</TraitType>
+			<ModifierId>TRAIT_WALLS_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW</TraitType>
+			<ModifierId>TRAIT_CASTLE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW</TraitType>
+			<ModifierId>TRAIT_TSIKHE_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW</TraitType>
+			<ModifierId>TRAIT_STAR_FORT_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW</TraitType>
+			<ModifierId>TRAIT_GOLDEN_AGE_WILDCARD_SLOT</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_GOLDEN_AGE_QUESTS_NEW</TraitType>
+			<ModifierId>TRAIT_GOLDEN_AGE_UNLOCK_DARK_POLICIES</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_GOLDEN_AGE_WILDCARD_SLOT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CULTURE_ADJUST_GOVERNMENT_SLOTS_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_GOLDEN_AGE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GOLDEN_AGE_UNLOCK_DARK_POLICIES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PROPERTY</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_GOLDEN_AGE</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_GOLDEN_AGE_WILDCARD_SLOT</ModifierId>
+			<Name>GovernmentSlotType</Name>
+			<Value>SLOT_WILDCARD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GOLDEN_AGE_UNLOCK_DARK_POLICIES</ModifierId>
+			<Name>Key</Name>
+			<Value>CanSlotDarkPolicies</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_GOLDEN_AGE_UNLOCK_DARK_POLICIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>
