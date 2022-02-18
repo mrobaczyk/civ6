@@ -52,7 +52,6 @@ function AssignStartingPlots.Create(args)
 		iNumRegions		= 0,
 		iDefaultNumberMajor = 0,
 		iDefaultNumberMinor = 0,
-		iFirstFertility = 0,
 		uiMinMajorCivFertility = args.MIN_MAJOR_CIV_FERTILITY or 0,
 		uiMinMinorCivFertility = args.MIN_MINOR_CIV_FERTILITY or 0,
 		uiMinBarbarianFertility = args.MIN_BARBARIAN_FERTILITY or 0,
@@ -1893,18 +1892,22 @@ end
 ------------------------------------------------------------------------------
 function AssignStartingPlots:__PreFertilitySort(sortedPlots)
 	--Only used for balanced start
-	if(#self.majorStartPlots == 1) then
-		self.iFirstFertility = self:__WeightedFertility(self.majorStartPlots[1]:GetIndex())
+	local iFirstFertility = sortedPlots[1].Fertility;
+	if(iFirstFertility < 0) then
+		iFirstFertility = 0;
 	end
 
 	local score = {};
 
 	for i, plot in ipairs(sortedPlots) do
 		local value = plot.Fertility;
-		if(#self.majorStartPlots > 1) then
-			if(self.iFirstFertility - plot.Fertility < 0) then
-				value = self.iFirstFertility - plot.Fertility;
-			end
+
+		if(value < 0) then
+			value = 0
+		end
+
+		if(iFirstFertility - value < 0) then
+			value = iFirstFertility - value;
 		end
 
 		table.insert(score, value);

@@ -9,11 +9,11 @@
 			<SupportsSinglePlayer>0</SupportsSinglePlayer>
 			<MaxTurns>50</MaxTurns>
       <FixedMaxTurns>1</FixedMaxTurns>
-      <RequiresNoTeams>1</RequiresNoTeams>
 		</Row>
 	</RuleSets>
 	<RulesetSupportedValues>
 		<Row Ruleset="RULESET_SCENARIO_ANCIENT_RIVALS" Domain="StandardEras" Value="ERA_ANCIENT"/>
+		<Row Ruleset="RULESET_SCENARIO_ANCIENT_RIVALS" Domain="StandardTurnLimits" Value="TURNLIMIT_CUSTOM"/>
 	</RulesetSupportedValues>	
 	<Victories>
 		<Row Domain="AncientRivalsScenario_Victories" VictoryType="VICTORY_ANCIENTRIVALS" Name="LOC_ANCIENT_RIVALS_VICTORY_TITLE" Description="LOC_ANCIENT_RIVALS_VICTORY_DESC"/>

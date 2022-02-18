@@ -3,7 +3,7 @@
 	<Parameters>
 		<!-- Game Options -->
 		<Row ParameterId="Ruleset" Name="LOC_RULESET" Description="" Domain="Rulesets" Hash="0" DefaultValue="RULESET_STANDARD" ConfigurationGroup="Game" ConfigurationId="RULESET" ValueNameConfigurationId="RULESET_NAME" GroupId="GameOptions" SortIndex="1"/>
-		<Row ParameterId="GameName" Name="LOC_GAME_NAME" Description="" Domain="text" Hash="0" ConfigurationGroup="Game" ConfigurationId="GAME_NAME" GroupId="GameOptions" SupportsSinglePlayer="0" SortIndex="2"/>
+		<Row ParameterId="GameName" Name="LOC_GAME_NAME" Description="" Domain="text" Hash="0" ConfigurationGroup="Game" ConfigurationId="GAME_NAME" GroupId="GameOptions" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="2"/>
 		<Row ParameterId="PrivateGame" Name="LOC_PRIVATE_GAME" Description="" Domain="bool" Hash="0" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="PRIVATE_GAME" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="1" SupportsHotSeat="0" SupportsSinglePlayer="0" ChangeableAfterGameStart="1" SortIndex="3"/>
 		<Row ParameterId="GameDifficulty" Name="LOC_GAME_HANDICAP" Description="" Domain="StandardDifficulties" DefaultValue="DIFFICULTY_PRINCE" ConfigurationGroup="Game" ConfigurationId="GAME_HANDICAP" Hash="1" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="50"/>
 		<Row ParameterId="GameStartEra" Name="LOC_GAME_START_ERA" Description="" Domain="StandardEras" DefaultValue="ERA_ANCIENT" ConfigurationGroup="Game" ConfigurationId="GAME_START_ERA" ValueNameConfigurationId="GAME_START_ERA_NAME" Hash="1" GroupId="GameOptions" SortIndex="60"/>
@@ -135,6 +135,7 @@
 
 	<ConfigurationUpdateQueries>
 		<Row QueryId="ConfigurationUpdates" />
+		<Row QueryId="RulesetConfigurationUpdates" />
 		<Row QueryId="RulesetTurnLimitNoneUpdates" />
 		<Row QueryId="RulesetTurnLimitCustomUpdates" />
 		<Row QueryId="RulesetMaxTurnUpdates" />
@@ -196,7 +197,8 @@
 		<Row QueryId="RulesetUnSupportedValues" SQL="SELECT Domain, Value from RulesetUnSupportedValues where Ruleset = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
 
 		<!-- Configuration Update queries -->
-		<Row QueryId="ConfigurationUpdates" SQL="SELECT * from ConfigurationUpdates" />
+		<Row QueryId="ConfigurationUpdates" SQL="SELECT * from ConfigurationUpdates WHERE Key1 IS NULL AND Key2 IS NULL" />
+		<Row QueryId="RulesetConfigurationUpdates" SQL="SELECT * from ConfigurationUpdates WHERE Key1='Ruleset' AND Key2 = ?1" />
 		<Row QueryId="RulesetTurnLimitNoneUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_TURN_LIMIT' as TargetId, 'TURNLIMIT_NONE' as TargetValue, 1 as 'Hash' from Rulesets where MaxTurns = 0" />
 		<Row QueryId="RulesetTurnLimitCustomUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_TURN_LIMIT' as TargetId, 'TURNLIMIT_CUSTOM' as TargetValue, 1 as 'Hash' from Rulesets where MaxTurns > 0" />
 		<Row QueryId="RulesetMaxTurnUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RulesetType as SourceValue, 'Game' as TargetGroup, 'GAME_MAX_TURNS' as TargetId, MaxTurns as TargetValue from Rulesets where MaxTurns IS NOT NULL" />
@@ -233,6 +235,8 @@
 		<Row QueryId="RulesetSupportedValues" Index="2" ConfigurationGroup="Player" ConfigurationId="PLAYER_ID"/>
 		<Row QueryId="RulesetUnSupportedValues" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
 		<Row QueryId="RulesetUnSupportedValues" Index="2" ConfigurationGroup="Player" ConfigurationId="PLAYER_ID"/>
+		
+		<Row QueryId="RulesetConfigurationUpdates" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
 	</QueryParameters>
 </GameInfo>
 	

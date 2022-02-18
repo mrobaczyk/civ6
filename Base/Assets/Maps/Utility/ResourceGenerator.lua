@@ -746,7 +746,7 @@ function ResourceGenerator:__RemoveOtherDuplicateResources()
 					local index = self.aIndex[row];
 					
 					if (self.eResourceClassType[index] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[index] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[index] ~= "RESOURCECLASS_ARTIFACT") then
-						if(self.eResourceType[index]  == pPlot:GetResourceType()) then
+						if(self.eResourceType[index]  == pPlot:GetResourceTypeHash()) then
 							local bRemove = self:__RemoveDuplicateResources(pPlot, self.eResourceType[index]);
 							if(bRemove == true) then
 								ResourceBuilder.SetResourceType(pPlot, -1);
@@ -766,7 +766,7 @@ function ResourceGenerator:__RemoveDuplicateResources(plot, eResourceType)
 		local adjacentPlot = Map.GetAdjacentPlot(plot:GetX(), plot:GetY(), direction);
 		if (adjacentPlot ~= nil) then
 			if(adjacentPlot:GetResourceCount() > 0) then
-				if(adjacentPlot:GetResourceType() == eResourceType) then
+				if(adjacentPlot:GetResourceTypeHash() == eResourceType) then
 					iCount = iCount + 1;
 				end
 			end

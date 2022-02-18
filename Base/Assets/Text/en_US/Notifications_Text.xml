@@ -433,6 +433,12 @@
 		<Row Tag="LOC_NOTIFICATION_PLAYER_KICKED_TT">
 			<Text>{1_playerName} has been kicked from the game.</Text>
 		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYER_MOD_STATUS">
+			<Text>{1_playerName} Downloading Mods</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_PLAYER_MOD_STATUS_TT">
+			<Text>{1_playerName} is downloading mods required to play in this game. ({2 : number} of {3 : number} total)</Text>
+		</Row>
 		<Row Tag="LOC_NOTIFCATION_HOST_MIGRATION">
 			<Text>Host Migration</Text>
 		</Row>
@@ -612,7 +618,7 @@
 			<Text>Capital Captured</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_CAPITAL_LOST_SUMMARY">
-			<Text>The capital of {1_CivName} has been captured by {2_CivName}!</Text>
+			<Text>The [ICON_Capital] Capital of {1_CivName} has been captured by {2_CivName}!</Text>
 		</Row>
 		<Row Tag="LOC_NOTIFICATION_CAPITAL_RECLAIMED_MESSAGE">
 			<Text>Capital Reclaimed</Text>

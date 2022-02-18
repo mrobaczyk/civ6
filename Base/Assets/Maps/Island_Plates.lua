@@ -122,11 +122,11 @@ function GeneratePlotTypes()
 	--	local sea_level
     local sea_level = MapConfiguration.GetValue("sea_level");
 	if sea_level == 1 then -- Low Sea Level
-		water_percent_modifier = 4
+		water_percent_modifier = -4
 	elseif sea_level == 2 then -- Normal Sea Level
 		water_percent_modifier = 0;
 	elseif sea_level == 3 then -- High Sea Level
-		water_percent_modifier = -4;
+		water_percent_modifier = 4;
 	else
 		water_percent_modifier = TerrainBuilder.GetRandomNumber(9, "Random Sea Level - Lua") - 4;
 	end

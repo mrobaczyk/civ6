@@ -25,8 +25,8 @@
 	</Eras>
 	<StartEras>
 		<Row EraType="ERA_ANCIENT" Gold="10" StartingMeleeStrengthMajor="20" StartingMeleeStrengthMinor="20" Tiles="0" Year="-4000"/>
-		<Row EraType="ERA_CLASSICAL" Gold="110" Faith="10" FirstTurnCivicChange="true" StartingPopulationCapital="4" StartingAmenitiesCapital="1" StartingHousingCapital="2" GrowthRate="10" DistrictProductionRate="20" StartingMeleeStrengthMajor="30" StartingMeleeStrengthMinor="30" Tiles="1" Year="-1000" IgnoreGoodyHutTurn="true"/>
-		<Row EraType="ERA_MEDIEVAL" Gold="210" Faith="20" FirstTurnCivicChange="true" StartingPopulationCapital="4" StartingPopulationOtherCities="2" StartingAmenitiesCapital="1" StartingHousingCapital="2" StartingHousingOtherCities="1" GrowthRate="10" ProductionRate="10" DistrictProductionRate="40" StartingMeleeStrengthMajor="30" StartingMeleeStrengthMinor="30" StartingRangedStrengthMajor="25" StartingRangedStrengthMinor="25" Tiles="2" Year="500" IgnoreGoodyHutTurn="true"/>
+		<Row EraType="ERA_CLASSICAL" Gold="110" Faith="10" FirstTurnCivicChange="true" StartingPopulationCapital="4" StartingAmenitiesCapital="1" StartingHousingCapital="2" GrowthRate="10" DistrictProductionRate="20" StartingMeleeStrengthMajor="35" StartingMeleeStrengthMinor="35" Tiles="1" Year="-1000" IgnoreGoodyHutTurn="true"/>
+		<Row EraType="ERA_MEDIEVAL" Gold="210" Faith="20" FirstTurnCivicChange="true" StartingPopulationCapital="4" StartingPopulationOtherCities="2" StartingAmenitiesCapital="1" StartingHousingCapital="2" StartingHousingOtherCities="1" GrowthRate="10" ProductionRate="10" DistrictProductionRate="40" StartingMeleeStrengthMajor="35" StartingMeleeStrengthMinor="35" StartingRangedStrengthMajor="25" StartingRangedStrengthMinor="25" Tiles="2" Year="500" IgnoreGoodyHutTurn="true"/>
 		<Row EraType="ERA_RENAISSANCE" Gold="250" Faith="20" FirstTurnCivicChange="true" StartingPopulationCapital="7" StartingPopulationOtherCities="2" StartingAmenitiesCapital="3" StartingHousingCapital="5" StartingHousingOtherCities="1" GrowthRate="20" ProductionRate="10" DistrictProductionRate="60" StartingMeleeStrengthMajor="50" StartingMeleeStrengthMinor="50" StartingRangedStrengthMajor="40" StartingRangedStrengthMinor="40" Tiles="3" Year="1350" IgnoreGoodyHutTurn="true"/>
 		<Row EraType="ERA_INDUSTRIAL" Gold="360" FirstTurnCivicChange="true" StartingPopulationCapital="7" StartingPopulationOtherCities="4" StartingAmenitiesCapital="3" StartingAmenitiesOtherCities="1" StartingHousingCapital="5" StartingHousingOtherCities="2" GrowthRate="20" ProductionRate="20" DistrictProductionRate="80" StartingMeleeStrengthMajor="50" StartingMeleeStrengthMinor="50" StartingRangedStrengthMajor="40" StartingRangedStrengthMinor="40" ObsoleteReligion="true" Tiles="4" Year="1725" IgnoreGoodyHutTurn="true"/>
 		<Row EraType="ERA_MODERN" Gold="485" FirstTurnCivicChange="true" StartingPopulationCapital="10" StartingPopulationOtherCities="4" StartingAmenitiesCapital="4" StartingAmenitiesOtherCities="0" StartingHousingCapital="8" StartingHousingOtherCities="2" GrowthRate="30" ProductionRate="20" DistrictProductionRate="100" StartingMeleeStrengthMajor="50" StartingMeleeStrengthMinor="50" StartingRangedStrengthMajor="60" StartingRangedStrengthMinor="60" ObsoleteReligion="true" Tiles="5" Year="1890" IgnoreGoodyHutTurn="true"/>
@@ -118,19 +118,19 @@
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_PIKEMAN"/>
 		<Row Era="ERA_RENAISSANCE" Unit="UNIT_CROSSBOWMAN"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_BUILDER"/>
-		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_TRADER"/>
+		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_TRADER" OnDistrictCreated="true"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_PIKEMAN"/>
 		<Row Era="ERA_INDUSTRIAL" Unit="UNIT_CROSSBOWMAN"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_BUILDER"/>
-		<Row Era="ERA_MODERN" Unit="UNIT_TRADER"/>
+		<Row Era="ERA_MODERN" Unit="UNIT_TRADER" OnDistrictCreated="true"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_PIKEMAN"/>
 		<Row Era="ERA_MODERN" Unit="UNIT_FIELD_CANNON"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_BUILDER"/>
-		<Row Era="ERA_ATOMIC" Unit="UNIT_TRADER"/>
+		<Row Era="ERA_ATOMIC" Unit="UNIT_TRADER" OnDistrictCreated="true"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_INFANTRY"/>
 		<Row Era="ERA_ATOMIC" Unit="UNIT_FIELD_CANNON"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_BUILDER"/>
-		<Row Era="ERA_INFORMATION" Unit="UNIT_TRADER"/>
+		<Row Era="ERA_INFORMATION" Unit="UNIT_TRADER" OnDistrictCreated="true"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_INFANTRY"/>
 		<Row Era="ERA_INFORMATION" Unit="UNIT_MACHINE_GUN"/>
 	</BonusMinorStartingUnits>

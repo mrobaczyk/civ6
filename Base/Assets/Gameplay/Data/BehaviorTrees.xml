@@ -860,13 +860,14 @@
     <Row NodeType="Operation Attack Units" NodeId="44" TreeName="Siege City Assault" />
     <Row NodeType="Operation Pillage" NodeId="45" TreeName="Siege City Assault" />
     <Row NodeType="Operation Move" NodeId="46" TreeName="Siege City Assault" />
-    <Row NodeType="Concurrent" NodeId="0" TreeName="Simple City Defense" JumpTo="7" />
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Simple City Defense" JumpTo="8" />
     <Row NodeType="Is City Threatened" NodeId="1" TreeName="Simple City Defense" />
-    <Row NodeType="Concurrent" NodeId="2" TreeName="Simple City Defense" JumpTo="7" />
+    <Row NodeType="Concurrent" NodeId="2" TreeName="Simple City Defense" JumpTo="8" />
     <Row NodeType="Recruit Units" NodeId="3" TreeName="Simple City Defense" />
     <Row NodeType="Garrison City" NodeId="4" TreeName="Simple City Defense" />
-    <Row NodeType="Operation Attack Units" NodeId="5" TreeName="Simple City Defense" />
-    <Row NodeType="Operation Move" NodeId="6" TreeName="Simple City Defense" />
+    <Row NodeType="Operation Attack City" NodeId="5" TreeName="Simple City Defense" />
+    <Row NodeType="Operation Attack Units" NodeId="6" TreeName="Simple City Defense" />
+    <Row NodeType="Operation Move" NodeId="7" TreeName="Simple City Defense" />
     <Row NodeType="Concurrent" NodeId="0" TreeName="Simple City Tree" JumpTo="2" />
     <Row NodeType="City Attack" NodeId="1" TreeName="Simple City Tree" />
     <Row NodeType="Concurrent" NodeId="0" TreeName="Simple Operation Attack" JumpTo="20" />
@@ -1955,11 +1956,11 @@
     <Row DefnId="3" NodeId="46" TreeName="Siege City Assault" DefaultData="2" />
     <Row DefnId="0" NodeId="3" TreeName="Simple City Defense" DefaultData="1" />
     <Row DefnId="6" NodeId="3" TreeName="Simple City Defense" DefaultData="true" />
-    <Row DefnId="0" NodeId="5" TreeName="Simple City Defense" DefaultData="1" />
-    <Row DefnId="1" NodeId="5" TreeName="Simple City Defense" DefaultData="false" />
-    <Row DefnId="2" NodeId="5" TreeName="Simple City Defense" DefaultData="true" />
     <Row DefnId="0" NodeId="6" TreeName="Simple City Defense" DefaultData="1" />
-    <Row DefnId="1" NodeId="6" TreeName="Simple City Defense" DefaultData="0" />
+    <Row DefnId="1" NodeId="6" TreeName="Simple City Defense" DefaultData="false" />
+    <Row DefnId="2" NodeId="6" TreeName="Simple City Defense" DefaultData="true" />
+    <Row DefnId="0" NodeId="7" TreeName="Simple City Defense" DefaultData="1" />
+    <Row DefnId="1" NodeId="7" TreeName="Simple City Defense" DefaultData="0" />
     <Row DefnId="0" NodeId="0" TreeName="Simple City Tree" DefaultData="3" />
     <Row DefnId="0" NodeId="1" TreeName="Simple City Tree" DefaultData="UNITTYPE_SIEGE" />
     <Row DefnId="0" NodeId="1" TreeName="Simple Operation Attack" DefaultData="50" />

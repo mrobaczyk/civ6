@@ -2,10 +2,11 @@
 <GameData>
 	<Table name="Colors">
 		<Column name="Type" type="text" notnull="true" primarykey="true"/>
-		<Column name="Red" type="float" notnull="true" default="1.0" />
-		<Column name="Green" type="float" notnull="true" default="1.0" />
-		<Column name="Blue" type="float" notnull="true" default="1.0" />
-		<Column name="Alpha" type="float" notnull="true" default="1.0" />
+		<Column name="Color" type="text"/>
+		<Column name="Red" type="float"/>
+		<Column name="Green" type="float"/>
+		<Column name="Blue" type="float"/>
+		<Column name="Alpha" type="float"/>
 	</Table>
 		
     <Table name="PlayerColors">

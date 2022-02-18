@@ -7,7 +7,6 @@
 			<Description>LOC_RELIGIOUS_COMBAT_RULESET_TEASER</Description>
 			<VictoryDomain>ReligiousCombatScenario_Victories</VictoryDomain>
 			<SupportsSinglePlayer>0</SupportsSinglePlayer>
-			<MaxTurns>50</MaxTurns>
 		</Row>
 	</RuleSets>
 	
@@ -17,6 +16,7 @@
 	
 	<RulesetSupportedValues>
 		<Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="StandardEras" Value="ERA_MEDIEVAL"/>
+		<Row Ruleset="RULESET_SCENARIO_RELIGIOUS_COMBAT" Domain="StandardTurnLimits" Value="TURNLIMIT_NONE"/>
 	</RulesetSupportedValues>
 	
 	<!-- Mvemba is not allowed due to the inability to create a religion-->

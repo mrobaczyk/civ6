@@ -836,6 +836,11 @@
 			<SubjectRequirementSetId>PLOT_HAS_JUNGLE_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
+			<ModifierId>LIGHTHOUSE_COAST_FOOD</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_COAST_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
 			<ModifierId>PETRA_DESERT_FOOD</ModifierId>
 			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
 			<SubjectRequirementSetId>CITY_HAS_PETRA_REQUIREMENTS</SubjectRequirementSetId>
@@ -915,6 +920,11 @@
 			<ModifierId>RUHR_VALLEY_QUARRY_PRODUCTION_MODIFIER</ModifierId>
 			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
 			<SubjectRequirementSetId>PLOT_HAS_QUARRY_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SEAPORT_COAST_GOLD</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_COAST_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -1481,6 +1491,16 @@
 			<Value>1</Value>
 		</Row>
 		<Row>
+			<ModifierId>LIGHTHOUSE_COAST_FOOD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>LIGHTHOUSE_COAST_FOOD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
 			<ModifierId>PETRA_DESERT_FOOD</ModifierId>
 			<Name>ModifierId</Name>
 			<Value>PETRA_DESERT_FOOD_MODIFIER</Value>
@@ -1599,6 +1619,16 @@
 			<ModifierId>RUHR_VALLEY_QUARRY_PRODUCTION_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>SEAPORT_COAST_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>SEAPORT_COAST_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
 		</Row>
 	</ModifierArguments>
 	<BuildingModifiers>
@@ -1886,6 +1916,10 @@
 			<ModifierId>CHICHEN_ITZA_JUNGLE_PRODUCTION</ModifierId>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
+			<ModifierId>LIGHTHOUSE_COAST_FOOD</ModifierId>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_PETRA</BuildingType>
 			<ModifierId>PETRA_DESERT_FOOD</ModifierId>
 		</Row>
@@ -1916,6 +1950,10 @@
 		<Row>
 			<BuildingType>BUILDING_RUHR_VALLEY</BuildingType>
 			<ModifierId>RUHR_VALLEY_QUARRY_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SEAPORT</BuildingType>
+			<ModifierId>SEAPORT_COAST_GOLD</ModifierId>
 		</Row>
 		<!--Random Civic Boost-->
 		<Row>
@@ -1952,6 +1990,14 @@
 		<Row>
 			<RequirementId>REQUIRES_PLOT_IS_LAKE</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_IS_LAKE</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_LIGHTHOUSE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_PETRA</RequirementId>
@@ -2053,6 +2099,16 @@
 			<RequirementId>REQUIRES_PLOT_HAS_JUNGLE</RequirementId>
 			<Name>FeatureType</Name>
 			<Value>FEATURE_JUNGLE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_LIGHTHOUSE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_LIGHTHOUSE</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
+			<Name>TerrainType</Name>
+			<Value>TERRAIN_COAST</Value>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_PETRA</RequirementId>
@@ -2163,6 +2219,14 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
+			<RequirementSetId>CITY_HAS_LIGHTHOUSE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_COAST_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>CITY_HAS_PETRA_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -2200,6 +2264,10 @@
 		</Row>
 		<Row>
 			<RequirementSetId>PLOT_HAS_MINE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_SEAPORT_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
@@ -2273,6 +2341,14 @@
 			<RequirementId>REQUIRES_PLOT_HAS_JUNGLE</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>CITY_HAS_LIGHTHOUSE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_LIGHTHOUSE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_COAST_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>CITY_HAS_PETRA_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_HAS_PETRA</RequirementId>
 		</Row>
@@ -2331,6 +2407,10 @@
 		<Row>
 			<RequirementSetId>PLOT_HAS_MINE_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_PLOT_HAS_MINE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_SEAPORT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_SEAPORT</RequirementId>
 		</Row>
 		<!--Barracks Unit Requirements-->
 		<Row>

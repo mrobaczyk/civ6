@@ -33,7 +33,7 @@
 			<Text>A district for naval activity in your city. Also removes the [ICON_Movement] Movement penalty for embarking and disembarking to and from this tile. Must be built on Coast or Lake Terrain adjacent to land.[NEWLINE][NEWLINE]+1 [ICON_TradeRoute] Trade Route capacity, if this city does not yet have a Commercial Hub district.</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_HARBOR_DESCRIPTION_ADJACENCY">
-			<Text>Adjacency: Standard [ICON_Gold] Gold bonus for each adjacent coastal resource. Minor [ICON_Gold] Gold bonus for adjacent district tiles.</Text>
+			<Text>Adjacency: Major [ICON_Gold] Gold bonus for each adjacent City Center. Standard [ICON_Gold] Gold bonus for each adjacent coastal resource. Minor [ICON_Gold] Gold bonus for adjacent district tiles.</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_NEIGHBORHOOD_DESCRIPTION">
 			<Text>A district in your city that provides housing based on the Appeal of the tile:[NEWLINE]Breathtaking: +6 [ICON_Housing] Housing.[NEWLINE]Charming: +5 [ICON_Housing] Housing.[NEWLINE]Average: +4 [ICON_Housing] Housing.[NEWLINE]Uninviting: +3 [ICON_Housing] Housing.[NEWLINE]Disgusting: +2 [ICON_Housing] Housing.</Text>
@@ -84,10 +84,10 @@
 			<Text>A district unique to Brazil. Replaces the Entertainment Complex district, and provides +2 [ICON_Amenities] Amenities. Also unlocks the Carnival project, which grants an additional +1 [ICON_Amenities] Amenity when underway and a variety of [ICON_GreatPerson] Great People points once completed.</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION">
-			<Text>A district unique to England for naval activity in your city. Replaces the Harbor district. Also removes the [ICON_Movement] Movement penalty for embarking and disembarking to and from this tile. Must be built on Coast or Lake Terrain adjacent to land.[NEWLINE][NEWLINE]+1 [ICON_Movement] Movement for all naval units built in Dockyard[NEWLINE]+2 [ICON_Gold] Gold when built on a foreign continent[NEWLINE]+1 [ICON_TradeRoute] Trade Route capacity, if this city does not yet have a Commercial Hub district.</Text>
+			<Text>A district unique to England for naval activity in your city. Replaces the Harbor district. Also removes the [ICON_Movement] Movement penalty for embarking and disembarking to and from this tile. Must be built on Coast or Lake Terrain adjacent to land.[NEWLINE][NEWLINE]+1 [ICON_Movement] Movement for all naval units built in Dockyard[NEWLINE]+2 [ICON_Gold] Gold when built on a foreign continent[NEWLINE]+1 [ICON_TradeRoute] Trade Route capacity.</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION_ADJACENCY">
-			<Text>Adjacency: Standard [ICON_Gold] Gold bonus for each adjacent coastal resource. Minor [ICON_Gold] Gold bonus for adjacent district tiles.</Text>
+			<Text>Adjacency: Major [ICON_Gold] Gold bonus for each adjacent City Center. Standard [ICON_Gold] Gold bonus for each adjacent coastal resource. Minor [ICON_Gold] Gold bonus for adjacent district tiles.</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_REQUIRE_DISTRICT_Adjacency">
 			<Text>Must be adjacent to an existing district or City Center.</Text>
@@ -113,7 +113,7 @@
 		<Row Tag="LOC_DISTRICT_JUNGLE_SCIENCE">
 			<Text>+{1_num} [ICON_Science] Science from the adjacent Rainforest {1_Num : plural 1?tile; other?tiles;}.</Text>
 		</Row>
-    <Row Tag="LOC_DISTRICT_JUNGLE_2_GOLD">
+		<Row Tag="LOC_DISTRICT_JUNGLE_2_GOLD">
 			<Text>+{1_num} [ICON_Gold] Gold from the adjacent Rainforest {1_Num : plural 1?tile; other?tiles;}.</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_JUNGLE_2_FAITH">
@@ -182,6 +182,9 @@
 		<Row Tag="LOC_DISTRICT_DISTRICT_GOLD">
 			<Text>+{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.</Text>
 		</Row>
+		<Row Tag="LOC_DISTRICT_CITY_CENTER_GOLD">
+			<Text>+{1_num} [ICON_Gold] Gold from the adjacent City Center district.</Text>
+		</Row>
 		<Row Tag="LOC_DISTRICT_DISTRICT_1_GOLD">
 			<Text>+{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.</Text>
 		</Row>
@@ -221,22 +224,22 @@
 		<Row Tag="LOC_DISTRICT_RESOURCE_PRODUCTION">
 			<Text>+{1_num} [ICON_Production] Production from the adjacent {1_Num : plural 1?resource; other?resources;}.</Text>
 		</Row>
-    <Row Tag="LOC_DISTRICT_APPEAL_SCIENCE">
-      <Text>+{1_num} [ICON_Science] Science from the tile's Appeal.</Text>
-    </Row>
-    <Row Tag="LOC_DISTRICT_APPEAL_CULTURE">
-      <Text>+{1_num} [ICON_Culture] Culture from the tile's Appeal.</Text>
-    </Row>
-    <Row Tag="LOC_DISTRICT_APPEAL_PRODUCTION">
-      <Text>+{1_num} [ICON_Production] Production from the tile's Appeal.</Text>
-    </Row>
-    <Row Tag="LOC_DISTRICT_APPEAL_GOLD">
-      <Text>+{1_num} [ICON_Gold] Gold from the tile's Appeal.</Text>
-    </Row>
-    <Row Tag="LOC_DISTRICT_APPEAL_FAITH">
-      <Text>+{1_num} [ICON_Faith] Faith from the tile's Appeal.</Text>
-    </Row>
-    <Row Tag="LOC_DISTRICT_BLOCKED_IMPROVEMENT">
+		<Row Tag="LOC_DISTRICT_APPEAL_SCIENCE">
+			<Text>+{1_num} [ICON_Science] Science from the tile's Appeal.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_APPEAL_CULTURE">
+			<Text>+{1_num} [ICON_Culture] Culture from the tile's Appeal.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_APPEAL_PRODUCTION">
+			<Text>+{1_num} [ICON_Production] Production from the tile's Appeal.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_APPEAL_GOLD">
+			<Text>+{1_num} [ICON_Gold] Gold from the tile's Appeal.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_APPEAL_FAITH">
+			<Text>+{1_num} [ICON_Faith] Faith from the tile's Appeal.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_BLOCKED_IMPROVEMENT">
 			<Text>[COLOR_RED]The improvement will be removed when building the district. [ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_DISTRICT_BLOCKED_FEATURE_TECH">

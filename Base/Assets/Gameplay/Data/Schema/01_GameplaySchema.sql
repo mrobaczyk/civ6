@@ -298,6 +298,8 @@ CREATE TABLE "BonusMinorStartingUnits" (
 		"Unit" TEXT NOT NULL,
 		"Era" TEXT NOT NULL,
 		"Quantity" INTEGER NOT NULL DEFAULT 1,
+		"OnDistrictCreated" BOOLEAN NOT NULL CHECK (OnDistrictCreated IN (0,1)) DEFAULT 0,
+		"District" TEXT NOT NULL DEFAULT "DISTRICT_CITY_CENTER",
 		PRIMARY KEY(Unit, Era),
 		FOREIGN KEY (Era) REFERENCES Eras(EraType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (Unit) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE);
@@ -760,6 +762,7 @@ CREATE TABLE "DiplomaticActions" (
 		"Duration" INTEGER NOT NULL DEFAULT 0,
 		"WarmongerPercent" INTEGER NOT NULL DEFAULT 0,
 		"UIGroup" TEXT,
+		"DenouncementTurnsRequired" INTEGER NOT NULL DEFAULT -1,
 		PRIMARY KEY(DiplomaticActionType),
 		FOREIGN KEY (InitiatorPrereqCivic) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (TargetPrereqCivic) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1138,6 +1141,19 @@ CREATE TABLE "Flavors" (
 		"FlavorType" TEXT NOT NULL UNIQUE,
 		PRIMARY KEY(FlavorType));
 
+CREATE TABLE "GameCapabilities" (
+		"GameCapability" TEXT,
+		PRIMARY KEY(GameCapability),
+		FOREIGN KEY (GameCapability) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "GameCapabilityDependencies" (
+		"ID" INTEGER,
+		"GameCapability" INTEGER,
+		"DependsOnCapability" TEXT,
+		PRIMARY KEY(ID),
+		FOREIGN KEY (GameCapability) REFERENCES GameCapabilities(GameCapability) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (DependsOnCapability) REFERENCES GameCapabilities(GameCapability) ON DELETE CASCADE ON UPDATE CASCADE);
+
 -- A Set of modifiers that are attached to the game upon start-up.
 CREATE TABLE "GameModifiers" (
 		"ModifierId" TEXT NOT NULL,
@@ -1307,6 +1323,11 @@ CREATE TABLE "GreatPersonIndividualBirthModifiers" (
 		"ModifierId" TEXT NOT NULL,
 		PRIMARY KEY(GreatPersonIndividualType, ModifierId),
 		FOREIGN KEY (GreatPersonIndividualType) REFERENCES GreatPersonIndividuals(GreatPersonIndividualType) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "GreatPersonIndividualIconModifiers" (
+		"GreatPersonIndividualType" TEXT NOT NULL UNIQUE,
+		"OverrideUnitIcon" TEXT NOT NULL,
+		PRIMARY KEY(GreatPersonIndividualType));
 
 CREATE TABLE "GreatWorks" (
 		"GreatWorkType" TEXT NOT NULL,
@@ -1808,10 +1829,10 @@ CREATE TABLE "RandomAgendas" (
 CREATE TABLE "Religions" (
 		"ReligionType" TEXT NOT NULL UNIQUE,
 		"Name" TEXT NOT NULL,
-		"IconString" TEXT NOT NULL UNIQUE,
+		"IconString" TEXT NOT NULL,
 		"Pantheon" BOOLEAN NOT NULL CHECK (Pantheon IN (0,1)) DEFAULT 0,
 		"RequiresCustomName" BOOLEAN NOT NULL CHECK (RequiresCustomName IN (0,1)) DEFAULT 0,
-		"Color" TEXT NOT NULL UNIQUE,
+		"Color" TEXT NOT NULL,
 		PRIMARY KEY(ReligionType),
 		FOREIGN KEY (ReligionType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1819,7 +1840,11 @@ CREATE TABLE "Requirements" (
 		"RequirementId" TEXT NOT NULL,
 		"RequirementType" TEXT NOT NULL,
 		"Likeliness" INTEGER NOT NULL DEFAULT 0,
+		"Impact" INTEGER NOT NULL DEFAULT 0,
 		"Inverse" BOOLEAN NOT NULL CHECK (Inverse IN (0,1)) DEFAULT 0,
+		"Reverse" BOOLEAN NOT NULL CHECK (Reverse IN (0,1)) DEFAULT 0,
+		"Persistent" BOOLEAN NOT NULL CHECK (Persistent IN (0,1)) DEFAULT 0,
+		"ProgressWeight" INTEGER NOT NULL DEFAULT 1,
 		"Triggered" BOOLEAN NOT NULL CHECK (Triggered IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(RequirementId));
 
@@ -2375,6 +2400,7 @@ CREATE TABLE "UnitAbilities" (
 		"Name" TEXT NOT NULL,
 		"Description" TEXT NOT NULL,
 		"Inactive" BOOLEAN NOT NULL CHECK (Inactive IN (0,1)) DEFAULT 0,
+		"ShowFloatTextWhenEarned" BOOLEAN NOT NULL CHECK (ShowFloatTextWhenEarned IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(UnitAbilityType));
 
 CREATE TABLE "UnitAbilityModifiers" (

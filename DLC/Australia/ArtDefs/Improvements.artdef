@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<AssetObjects::ArtDefSet>
+<AssetObjects:ArtDefSet>
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>243</build>
-		<revision>870</revision>
+		<build>251</build>
+		<revision>114</revision>
 	</m_Version>
 	<m_TemplateName text="Improvements"/>
 	<m_RootCollections>
@@ -26,7 +26,7 @@
 						<Element>
 							<m_Fields>
 								<m_Values>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="OutbackStation"/>
 										<m_RootCollectionName text="Improvements"/>
 										<m_ArtDefPath text="StrategicView.artdef"/>
@@ -34,7 +34,7 @@
 										<m_TemplateName text="StrategicView"/>
 										<m_ParamName text="XrefName"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Completed"/>
 										<m_RootCollectionName text="BuildStates"/>
 										<m_ArtDefPath text="Improvements.artdef"/>
@@ -51,7 +51,7 @@
 						<Element>
 							<m_Fields>
 								<m_Values>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="OutbackStation_Pillaged"/>
 										<m_RootCollectionName text="Improvements"/>
 										<m_ArtDefPath text="StrategicView.artdef"/>
@@ -59,7 +59,7 @@
 										<m_TemplateName text="StrategicView"/>
 										<m_ParamName text="XrefName"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Pillaged"/>
 										<m_RootCollectionName text="BuildStates"/>
 										<m_ArtDefPath text="Improvements.artdef"/>
@@ -84,11 +84,11 @@
 						<Element>
 							<m_Fields>
 								<m_Values>
-									<Element class="AssetObjects::BoolValue">
+									<Element class="AssetObjects:BoolValue">
 										<m_bValue>true</m_bValue>
 										<m_ParamName text="SuppressResource"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="LM_OUTBACK_STATION"/>
 										<m_RootCollectionName text="Landmarks"/>
 										<m_ArtDefPath text="Landmarks.artdef"/>
@@ -96,7 +96,7 @@
 										<m_TemplateName text="Landmarks"/>
 										<m_ParamName text="Xref"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="ANYTHING"/>
 										<m_RootCollectionName text=""/>
 										<m_ArtDefPath text=""/>
@@ -104,7 +104,7 @@
 										<m_TemplateName text=""/>
 										<m_ParamName text="WhenAdjacentTo"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Outback_Station_Fence"/>
 										<m_RootCollectionName text="WallSet"/>
 										<m_ArtDefPath text="Walls.artdef"/>
@@ -112,12 +112,33 @@
 										<m_TemplateName text="DynamicGeo"/>
 										<m_ParamName text="Fence"/>
 									</Element>
+									<Element class="AssetObjects:IntValue">
+										<m_nValue>0</m_nValue>
+										<m_ParamName text="Priority"/>
+									</Element>
 								</m_Values>
 							</m_Fields>
 							<m_ChildCollections>
 								<Element>
 									<m_CollectionName text="WhenAffectedBy"/>
 									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects:ArtDefReferenceValue">
+													<m_ElementName text="OUTBACK_ADJACENCY"/>
+													<m_RootCollectionName text="BuffType"/>
+													<m_ArtDefPath text="buffs.artdef"/>
+													<m_CollectionIsLocked>true</m_CollectionIsLocked>
+													<m_TemplateName text="Buffs"/>
+													<m_ParamName text="Buff"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WhenAffectedBy"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
 								</Element>
 							</m_ChildCollections>
 							<m_Name text="Landmark1"/>
@@ -155,7 +176,7 @@
 						<Element>
 							<m_Fields>
 								<m_Values>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Pasture"/>
 										<m_RootCollectionName text="Improvements"/>
 										<m_ArtDefPath text="StrategicView.artdef"/>
@@ -163,7 +184,7 @@
 										<m_TemplateName text="StrategicView"/>
 										<m_ParamName text="XrefName"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Completed"/>
 										<m_RootCollectionName text="BuildStates"/>
 										<m_ArtDefPath text="Improvements.artdef"/>
@@ -180,7 +201,7 @@
 						<Element>
 							<m_Fields>
 								<m_Values>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Pasture_Pillaged"/>
 										<m_RootCollectionName text="Improvements"/>
 										<m_ArtDefPath text="StrategicView.artdef"/>
@@ -188,7 +209,7 @@
 										<m_TemplateName text="StrategicView"/>
 										<m_ParamName text="XrefName"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Pillaged"/>
 										<m_RootCollectionName text="BuildStates"/>
 										<m_ArtDefPath text="Improvements.artdef"/>
@@ -213,11 +234,11 @@
 						<Element>
 							<m_Fields>
 								<m_Values>
-									<Element class="AssetObjects::BoolValue">
+									<Element class="AssetObjects:BoolValue">
 										<m_bValue>true</m_bValue>
 										<m_ParamName text="SuppressResource"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="LM_OUTBACK_PASTURE"/>
 										<m_RootCollectionName text="Landmarks"/>
 										<m_ArtDefPath text="Landmarks.artdef"/>
@@ -225,7 +246,7 @@
 										<m_TemplateName text="Landmarks"/>
 										<m_ParamName text="Xref"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="IMPROVEMENT_OUTBACK_STATION"/>
 										<m_RootCollectionName text="Improvement"/>
 										<m_ArtDefPath text="Improvements.artdef"/>
@@ -233,7 +254,7 @@
 										<m_TemplateName text="Improvements"/>
 										<m_ParamName text="WhenAdjacentTo"/>
 									</Element>
-									<Element class="AssetObjects::ArtDefReferenceValue">
+									<Element class="AssetObjects:ArtDefReferenceValue">
 										<m_ElementName text="Outback_Station_Fence"/>
 										<m_RootCollectionName text="WallSet"/>
 										<m_ArtDefPath text="Walls.artdef"/>
@@ -241,12 +262,33 @@
 										<m_TemplateName text="DynamicGeo"/>
 										<m_ParamName text="Fence"/>
 									</Element>
+									<Element class="AssetObjects:IntValue">
+										<m_nValue>0</m_nValue>
+										<m_ParamName text="Priority"/>
+									</Element>
 								</m_Values>
 							</m_Fields>
 							<m_ChildCollections>
 								<Element>
 									<m_CollectionName text="WhenAffectedBy"/>
 									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects:ArtDefReferenceValue">
+													<m_ElementName text="PASTURE_ADJACENCY"/>
+													<m_RootCollectionName text="BuffType"/>
+													<m_ArtDefPath text="buffs.artdef"/>
+													<m_CollectionIsLocked>true</m_CollectionIsLocked>
+													<m_TemplateName text="Buffs"/>
+													<m_ParamName text="Buff"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="WhenAffectedBy"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
 								</Element>
 							</m_ChildCollections>
 							<m_Name text="Landmark"/>
@@ -275,5 +317,5 @@
 			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 		</Element>
 	</m_RootCollections>
-</AssetObjects::ArtDefSet>
+</AssetObjects:ArtDefSet>
 

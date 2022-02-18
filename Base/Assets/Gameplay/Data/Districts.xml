@@ -84,6 +84,7 @@
 		<Row DistrictType="DISTRICT_COMMERCIAL_HUB" YieldChangeId="District_Gold"/>
 		<Row DistrictType="DISTRICT_HARBOR" YieldChangeId="SeaResource_Gold"/>
 		<Row DistrictType="DISTRICT_HARBOR" YieldChangeId="District_Gold"/>
+		<Row DistrictType="DISTRICT_HARBOR" YieldChangeId="Harbor_City_Gold"/>
 		<Row DistrictType="DISTRICT_THEATER" YieldChangeId="Wonder_Culture"/>
 		<Row DistrictType="DISTRICT_THEATER" YieldChangeId="District_Culture"/>
 		<Row DistrictType="DISTRICT_INDUSTRIAL_ZONE" YieldChangeId="Mine_Production"/>
@@ -105,6 +106,7 @@
 		<Row DistrictType="DISTRICT_LAVRA" YieldChangeId="District_Faith"/>
 		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" YieldChangeId="SeaResource_Gold"/>
 		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" YieldChangeId="District_Gold"/>
+		<Row DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" YieldChangeId="RoyalDock_City_Gold"/>
 	</District_Adjacencies>
 	<ExcludedAdjacencies>
 		<Row YieldChangeId="District_Science" TraitType="TRAIT_CIVILIZATION_ADJACENT_DISTRICTS"/>
@@ -235,6 +237,8 @@
 		<Row ID="District_Production" Description="LOC_DISTRICT_DISTRICT_PRODUCTION" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="2" OtherDistrictAdjacent="true"/>
 		<Row ID="Commerical_Hub_Production" Description="LOC_DISTRICT_COMMERCIAL_HUB_PRODUCTION" YieldType="YIELD_PRODUCTION" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_COMMERCIAL_HUB"/>
 		<Row ID="Resource_Production" Description="LOC_DISTRICT_RESOURCE_PRODUCTION" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="1" AdjacentResource="true"/>
+		<Row ID="Harbor_City_Gold" Description="LOC_DISTRICT_CITY_CENTER_GOLD" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_CITY_CENTER"/>
+		<Row ID="RoyalDock_City_Gold" Description="LOC_DISTRICT_CITY_CENTER_GOLD" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_CITY_CENTER"/>
 	</Adjacency_YieldChanges>
 	<DistrictModifiers>
     <Row>
@@ -247,7 +251,7 @@
     </Row>
     <Row>
       <DistrictType>DISTRICT_ROYAL_NAVY_DOCKYARD</DistrictType>
-      <ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
+      <ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
     </Row>
 		<Row>
 			<DistrictType>DISTRICT_ROYAL_NAVY_DOCKYARD</DistrictType>
@@ -275,6 +279,10 @@
       <ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
       <ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
       <SubjectRequirementSetId>HARBOR_TRADE_ROUTE_CAPACITY_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
     </Row>
 		<Row>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GRANT_MOVEMENT_BONUS</ModifierId>
@@ -304,6 +312,11 @@
     </Row>
     <Row>
       <ModifierId>HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
+      <Name>Amount</Name>
+      <Value>1</Value>
+    </Row>
+    <Row>
+      <ModifierId>ROYAL_NAVY_DOCKYARD_TRADE_ROUTE_CAPACITY</ModifierId>
       <Name>Amount</Name>
       <Value>1</Value>
     </Row>
@@ -343,25 +356,25 @@
 			<Value>YIELD_GOLD</Value>
 		</Row>
 	</ModifierArguments>
-  <Requirements>
-    <Row>
-      <RequirementId>REQUIRES_NO_COMMERCIAL_HUB</RequirementId>
-      <RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
-      <Inverse>true</Inverse>
-    </Row>
-  </Requirements>
-  <RequirementArguments>
-    <Row>
-      <RequirementId>REQUIRES_NO_COMMERCIAL_HUB</RequirementId>
-      <Name>DistrictType</Name>
-      <Value>DISTRICT_COMMERCIAL_HUB</Value>
-    </Row>
-  </RequirementArguments>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_NO_COMMERCIAL_HUB</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_NO_COMMERCIAL_HUB</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_COMMERCIAL_HUB</Value>
+		</Row>
+	</RequirementArguments>
 	<RequirementSets>
-    <Row>
-      <RequirementSetId>HARBOR_TRADE_ROUTE_CAPACITY_REQUIREMENTS</RequirementSetId>
-      <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
-    </Row>
+		<Row>
+			<RequirementSetId>HARBOR_TRADE_ROUTE_CAPACITY_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 		<Row>
 			<RequirementSetId>DOCKYARD_SEA_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
@@ -372,10 +385,10 @@
 		</Row>
 	</RequirementSets>
 	<RequirementSetRequirements>
-    <Row>
-      <RequirementSetId>HARBOR_TRADE_ROUTE_CAPACITY_REQUIREMENTS</RequirementSetId>
-      <RequirementId>REQUIRES_NO_COMMERCIAL_HUB</RequirementId>
-    </Row>
+		<Row>
+			<RequirementSetId>HARBOR_TRADE_ROUTE_CAPACITY_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_NO_COMMERCIAL_HUB</RequirementId>
+		</Row>
 		<Row>
 			<RequirementSetId>DOCKYARD_SEA_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_SEA_DOMAIN</RequirementId>

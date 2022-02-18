@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameInfo>
 	<Types>
 		<Row Type="CIVILIZATION_AUCKLAND" Kind="KIND_CIVILIZATION"/>
@@ -167,6 +167,9 @@
 		<Row ImprovementType="IMPROVEMENT_ALCAZAR" YieldType="YIELD_CULTURE" YieldChange="2"/>
 		<Row ImprovementType="IMPROVEMENT_MONASTERY" YieldType="YIELD_FAITH" YieldChange="2"/>
 	</Improvement_YieldChanges>
+	<Improvement_Tourism>
+		<Row ImprovementType="IMPROVEMENT_ALCAZAR" TourismSource="TOURISMSOURCE_CULTURE" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
+	</Improvement_Tourism>
 	<Modifiers>
 		<Row>
 			<ModifierId>MINOR_CIV_AUCKLAND_UNIQUE_INFLUENCE_BONUS_BASE</ModifierId>

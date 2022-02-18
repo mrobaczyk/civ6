@@ -86,8 +86,8 @@ CREATE TABLE 'Rulesets' (
 	'IsScenario' BOOLEAN NOT NULL DEFAULT 0,
 	'RequiresNoTeams' BOOLEAN NOT NULL DEFAULT 0,
 	'RequiresUniqueLeaders' BOOLEAN NOT NULL DEFAULT 0,
-	'ScenarioSetupPotrait' TEXT,
-	'ScenarioSetupPotraitBackground' TEXT,
+	'ScenarioSetupPortrait' TEXT,
+	'ScenarioSetupPortraitBackground' TEXT,
 	PRIMARY KEY('RulesetType')
 );
 

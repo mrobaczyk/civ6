@@ -187,17 +187,21 @@ CREATE TABLE 'ConfigurationUpdateQueries'(
 	'TargetIdField' TEXT NOT NULL DEFAULT 'TargetId',
 	'TargetValueField' TEXT NOT NULL DEFAULT 'TargetValue',
 	'HashField' TEXT NOT NULL DEFAULT 'Hash',
+	'StaticField' TEXT NOT NULL DEFAULT 'Static',
 	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
 );
 
 -- When a setup parameter writes to the configuration..
 -- Recursively match to the source rows and write the target values.
 CREATE TABLE 'ConfigurationUpdates'(
+	'Key1' TEXT,
+	'Key2' TEXT,
 	'SourceGroup' TEXT NOT NULL,
 	'SourceId' TEXT NOT NULL,
 	'SourceValue' NOT NULL,
 	'TargetGroup' TEXT NOT NULL,
 	'TargetId' TEXT NOT NULL,
 	'TargetValue',
-	'Hash' BOOLEAN NOT NULL DEFAULT 0
+	'Hash' BOOLEAN NOT NULL DEFAULT 0,
+	'Static' BOOLEAN NOT NULL DEFAULT 0
 );

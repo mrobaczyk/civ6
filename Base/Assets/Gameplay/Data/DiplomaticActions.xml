@@ -73,13 +73,13 @@
 		<Row DiplomaticActionType="DIPLOACTION_GIFT_UNIT" Name="LOC_DIPLOACTION_GIFT_UNIT_NAME" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_MILITARY_REQUEST" Name="LOC_DIPLOACTION_MILITARY_REQUEST_NAME" Cost="0"/>
 		<Row DiplomaticActionType="DIPLOACTION_DECLARE_WAR_MINOR_CIV" Name="LOC_DIPLOACTION_DECLARE_WAR_MINOR_CIV_NAME" CivilopediaKey="DIPLO_3" Cost="0"/>
-		<Row DiplomaticActionType="DIPLOACTION_DECLARE_FORMAL_WAR" Name="LOC_DIPLOACTION_DECLARE_FORMAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_FORMAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" Cost="0" WarmongerPercent="100"/>
-		<Row DiplomaticActionType="DIPLOACTION_DECLARE_HOLY_WAR" Name="LOC_DIPLOACTION_DECLARE_HOLY_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_HOLY_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="50" RequiresConvertedCity="true"/>
-		<Row DiplomaticActionType="DIPLOACTION_DECLARE_LIBERATION_WAR" Name="LOC_DIPLOACTION_DECLARE_LIBERATION_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_LIBERATION_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="0" RequiresOccupiedFriendlyCity="true"/>
-		<Row DiplomaticActionType="DIPLOACTION_DECLARE_RECONQUEST_WAR" Name="LOC_DIPLOACTION_DECLARE_RECONQUEST_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_RECONQUEST_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="0" RequiresOccupiedCity="true"/>
-		<Row DiplomaticActionType="DIPLOACTION_DECLARE_PROTECTORATE_WAR" Name="LOC_DIPLOACTION_DECLARE_PROTECTORATE_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_PROTECTORATE_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="0" RequiresWarOnAlliedCityState="true"/>
-		<Row DiplomaticActionType="DIPLOACTION_DECLARE_COLONIAL_WAR" Name="LOC_DIPLOACTION_DECLARE_COLONIAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_COLONIAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" InitiatorPrereqCivic="CIVIC_NATIONALISM" Cost="0" WarmongerPercent="50" RequiresLeadXEras="2"/>
-		<Row DiplomaticActionType="DIPLOACTION_DECLARE_TERRITORIAL_WAR" Name="LOC_DIPLOACTION_DECLARE_TERRITORIAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_TERRITORIAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" InitiatorPrereqCivic="CIVIC_MOBILIZATION" Cost="0" WarmongerPercent="75" RequiresAdjacentEmpires="true"/>
+		<Row DiplomaticActionType="DIPLOACTION_DECLARE_FORMAL_WAR" Name="LOC_DIPLOACTION_DECLARE_FORMAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_FORMAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" Cost="0" WarmongerPercent="100"/>
+		<Row DiplomaticActionType="DIPLOACTION_DECLARE_HOLY_WAR" Name="LOC_DIPLOACTION_DECLARE_HOLY_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_HOLY_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="50" RequiresConvertedCity="true"/>
+		<Row DiplomaticActionType="DIPLOACTION_DECLARE_LIBERATION_WAR" Name="LOC_DIPLOACTION_DECLARE_LIBERATION_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_LIBERATION_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="0" RequiresOccupiedFriendlyCity="true"/>
+		<Row DiplomaticActionType="DIPLOACTION_DECLARE_RECONQUEST_WAR" Name="LOC_DIPLOACTION_DECLARE_RECONQUEST_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_RECONQUEST_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="0" RequiresOccupiedCity="true"/>
+		<Row DiplomaticActionType="DIPLOACTION_DECLARE_PROTECTORATE_WAR" Name="LOC_DIPLOACTION_DECLARE_PROTECTORATE_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_PROTECTORATE_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="0" InitiatorPrereqCivic="CIVIC_DIPLOMATIC_SERVICE" Cost="0" WarmongerPercent="0" RequiresWarOnAlliedCityState="true"/>
+		<Row DiplomaticActionType="DIPLOACTION_DECLARE_COLONIAL_WAR" Name="LOC_DIPLOACTION_DECLARE_COLONIAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_COLONIAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" InitiatorPrereqCivic="CIVIC_NATIONALISM" Cost="0" WarmongerPercent="50" RequiresLeadXEras="2"/>
+		<Row DiplomaticActionType="DIPLOACTION_DECLARE_TERRITORIAL_WAR" Name="LOC_DIPLOACTION_DECLARE_TERRITORIAL_WAR_NAME" Description="LOC_DIPLOACTION_DECLARE_TERRITORIAL_WAR_DESCRIPTION" CivilopediaKey="DIPLO_3" UIGroup="FORMALWAR" DenouncementTurnsRequired="5" InitiatorPrereqCivic="CIVIC_MOBILIZATION" Cost="0" WarmongerPercent="75" RequiresAdjacentEmpires="true"/>
 		<Row DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Name="LOC_DIPLOACTION_PROPOSE_TRADE_NAME" Description="LOC_DIPLOACTION_PROPOSE_TRADE_DESCRIPTION"/>
 		<!-- DIPLOACTION_VIEW_TRADE and DIPLOACTION_VIEW_DEMAND_TRIBUTE are helper actions that the human uses to view trade/demand that is pending. -->
 		<Row DiplomaticActionType="DIPLOACTION_VIEW_TRADE" Name="LOC_DIPLOACTION_VIEW_TRADE_NAME"/>
@@ -170,7 +170,7 @@
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="-10"/>
-		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="25" Cost="50"/>
+		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="25" Cost="30"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="0" Cost="10" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="15" Cost="10"/>
@@ -182,7 +182,7 @@
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_DIG_ARTIFACTS" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_NEUTRAL" DiplomaticActionType="DIPLOACTION_KEEP_PROMISE_DONT_SETTLE_TOO_NEAR" Worth="0" Cost="0"/>
-		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="0" Cost="30"/>
+		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_RESIDENT_EMBASSY" Worth="0" Cost="50"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DEMAND_TRIBUTE" Worth="5"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_UNFRIENDLY" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="0" Cost="75"/>
