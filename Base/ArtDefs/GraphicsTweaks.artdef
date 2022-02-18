@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <AssetObjects..ArtDefSet>
 	<m_Version>
-		<major>3</major>
+		<major>4</major>
 		<minor>0</minor>
-		<build>156</build>
-		<revision>496</revision>
+		<build>296</build>
+		<revision>884</revision>
 	</m_Version>
 	<m_TemplateName text="GraphicsTweaks"/>
 	<m_RootCollections>
@@ -55,6 +55,23 @@
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="Bounce Lighting Tweaks001"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+		<Element>
+			<m_CollectionName text="Terrain Lighting"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..FloatValue">
+							<m_fValue>0.200000</m_fValue>
+							<m_ParamName text="Global Fuzz"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="Terrain Lighting"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

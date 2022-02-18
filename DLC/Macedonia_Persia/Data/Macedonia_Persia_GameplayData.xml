@@ -349,6 +349,7 @@
 	<LeaderTraits>
 		<Row LeaderType="LEADER_ALEXANDER" TraitType="TRAIT_LEADER_TO_WORLDS_END"/>
 		<Row LeaderType="LEADER_ALEXANDER" TraitType="TRAIT_LEADER_UNIT_HETAIROI"/>
+		<Row LeaderType="LEADER_ALEXANDER" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_CYRUS" TraitType="TRAIT_LEADER_FALL_BABYLON"/>
 	</LeaderTraits>
 	<Traits>
@@ -462,7 +463,7 @@
 		<Row>
 			<ModifierId>TRAIT_HELLENISTIC_FUSION_ENCAMPMENT_EUREKA</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CAPTURED_CITY_ATTACH_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>CITY_HAS_ENCAMPMENT</SubjectRequirementSetId>
+			<SubjectRequirementSetId>CITY_HAS_ENCAMPMENT_MACEDON</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_HELLENISTIC_FUSION_ENCAMPMENT_EUREKA_MODIFIER</ModifierId>
@@ -484,7 +485,7 @@
 		<Row>
 			<ModifierId>TRAIT_HELLENISTIC_FUSION_HOLY_SITE_INSPIRATION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CAPTURED_CITY_ATTACH_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>CITY_HAS_HOLY_SITE</SubjectRequirementSetId>
+			<SubjectRequirementSetId>CITY_HAS_HOLY_SITE_MACEDON</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_HELLENISTIC_FUSION_HOLY_SITE_INSPIRATION_MODIFIER</ModifierId>
@@ -495,7 +496,7 @@
 		<Row>
 			<ModifierId>TRAIT_HELLENISTIC_FUSION_THEATER_INSPIRATION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CAPTURED_CITY_ATTACH_MODIFIER</ModifierType>
-			<SubjectRequirementSetId>CITY_HAS_THEATER_DISTRICT</SubjectRequirementSetId>
+			<SubjectRequirementSetId>CITY_HAS_THEATER_DISTRICT_MACEDON</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_HELLENISTIC_FUSION_THEATER_INSPIRATION_MODIFIER</ModifierId>
@@ -976,15 +977,15 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_ENCAMPMENT</RequirementSetId>
+			<RequirementSetId>CITY_HAS_ENCAMPMENT_MACEDON</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_HOLY_SITE</RequirementSetId>
+			<RequirementSetId>CITY_HAS_HOLY_SITE_MACEDON</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_THEATER_DISTRICT</RequirementSetId>
+			<RequirementSetId>CITY_HAS_THEATER_DISTRICT_MACEDON</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
@@ -1017,22 +1018,7 @@
 			<RequirementId>REQUIRES_CITY_HAS_WONDER</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_HAS_ANY_WONDER</RequirementType>
 		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_ENCAMPMENT</RequirementId>
-			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_HOLY_SITE</RequirementId>
-			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_THEATER_DISTRICT</RequirementId>
-			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_CAMPUS_MACEDON</RequirementId>
-			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
-		</Row>
+
 		<Row>
 			<RequirementId>REQUIREMENT_UNIT_IS_ADMIRAL</RequirementId>
 			<RequirementType>REQUIREMENT_GREAT_PERSON_TYPE_MATCHES</RequirementType>
@@ -1077,20 +1063,20 @@
 			<RequirementId>REQUIRES_CITY_HAS_WONDER</RequirementId>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_ENCAMPMENT</RequirementSetId>
+			<RequirementSetId>CITY_HAS_ENCAMPMENT_MACEDON</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_HAS_ENCAMPMENT</RequirementId>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_HOLY_SITE</RequirementSetId>
+			<RequirementSetId>CITY_HAS_HOLY_SITE_MACEDON</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_HAS_HOLY_SITE</RequirementId>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_THEATER_DISTRICT</RequirementSetId>
+			<RequirementSetId>CITY_HAS_THEATER_DISTRICT_MACEDON</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_HAS_THEATER_DISTRICT</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>CITY_HAS_CAMPUS_MACEDON</RequirementSetId>
-			<RequirementId>REQUIRES_CITY_HAS_CAMPUS_MACEDON</RequirementId>
+			<RequirementId>REQUIRES_CITY_HAS_CAMPUS</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>UNIT_IS_ADMIRAL</RequirementSetId>
@@ -1110,26 +1096,6 @@
 			<RequirementId>REQUIRES_CITY_HAS_APADANA</RequirementId>
 			<Name>BuildingType</Name>
 			<Value>BUILDING_APADANA</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_ENCAMPMENT</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_ENCAMPMENT</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_HOLY_SITE</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_HOLY_SITE</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_THEATER_DISTRICT</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_THEATER</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_CAMPUS_MACEDON</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_CAMPUS</Value>
 		</Row>
 		<Row>
 			<RequirementId>REQUIREMENT_UNIT_IS_ADMIRAL</RequirementId>

@@ -6,7 +6,8 @@
 	
 	<Types>
 		<Row Type="CAPABILITY_CIVICS" Kind="KIND_CAPABILITY" />
-		<Row Type="CAPABILITY_CIVICS_CHOOSER" Kind="KIND_CAPABILITY" />
+    <Row Type="CAPABILITY_MILITARY" Kind="KIND_CAPABILITY" />
+    <Row Type="CAPABILITY_CIVICS_CHOOSER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_CIVICS_TREE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_CULTURE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENTS" Kind="KIND_CAPABILITY" />
@@ -25,6 +26,8 @@
 		<Row Type="CAPABILITY_DIPLOMACY" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_DIPLOMACY_DEALS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_DIPLOMACY_VIEW_SELF" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_DIPLOMACY_ACCESS_LEVEL_INFO" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_DIPLOMACY_RELATIONSHIP_INFO" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_RELIGION" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_FOUND_PANTHEONS" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_FOUND_RELIGIONS" Kind="KIND_CAPABILITY" />
@@ -32,30 +35,46 @@
 		<Row Type="CAPABILITY_GREAT_PEOPLE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_CAN_RECRUIT" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" Kind="KIND_CAPABILITY" />
-		<Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" Kind="KIND_CAPABILITY" />
+    <Row Type="CAPABILITY_GOLD" Kind="KIND_CAPABILITY" />
+    <Row Type="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_CAN_REJECT" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GREAT_PEOPLE_VIEW" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_ESPIONAGE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_NEW_ESPIONAGE" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_ESPIONAGE_VIEW" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_FAITH" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_TOURISM" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_WORLD_RANKINGS" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_REPORTS_DIPLOMATIC_DEALS" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_REPORTS_UNIT_EXPENSES" Kind="KIND_CAPABILITY" />
+		<Row Type="CAPABILITY_WORLD_TRACKER" Kind="KIND_CAPABILITY" />
 		<!-- Mini-map panel lenses -->
 		<Row Type="CAPABILITY_LENS_RELIGION" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_APPEAL" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_SETTLER" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_GOVERNMENT" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_LENS_TOURISM" Kind="KIND_CAPABILITY"/>
-		<!-- City HUD "Amenities from" Counters -->
+		<!-- City HUD -->
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_NATIONAL_PARKS" Kind="KIND_CAPABILITY"/>
 		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_CITY_STATES" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_AMENITIES_WAR_WEARINESS" Kind="KIND_CAPABILITY"/>
+    <Row Type="CAPABILITY_CITY_HUD_AMENITIES_BANKRUPTCY" Kind="KIND_CAPABILITY"/>
+    <Row Type="CAPABILITY_CITY_HUD_HOUSING_DISTRICTS" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_HOUSING_GREAT_PEOPLE" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_RELIGION_TAB" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_WONDERS" Kind="KIND_CAPABILITY"/>
+		<Row Type="CAPABILITY_CITY_HUD_TRADING_POSTS" Kind="KIND_CAPABILITY"/>
+		<!-- Can the user purchase using faith -->
+		<Row Type="CAPABILITY_FAITH_PURCHASE" Kind="KIND_CAPABILITY"/>
 		<!-- Can the user open city states panel -->
 		<Row Type="CAPABILITY_CITY_STATES_VIEW" Kind="KIND_CAPABILITY" />
 		<!-- Do envoys show up on the Top Panel -->
 		<Row Type="CAPABILITY_TOP_PANEL_ENVOYS" Kind="KIND_CAPABILITY" />
-		<!-- Does the diplomacy filter show up on the government screen -->
+		<!-- Do these policy filters show up on the government screen -->
+		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER" Kind="KIND_CAPABILITY" />
 		<Row Type="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER" Kind="KIND_CAPABILITY" />
 		
 		<!-- Display turns as always starting from 1, no matter what the start era.  This is NOT enabled by default -->
@@ -78,8 +97,10 @@
 		<Row GameCapability="CAPABILITY_CIVICS"/>
 		<Row GameCapability="CAPABILITY_CIVICS_CHOOSER"/>
 		<Row GameCapability="CAPABILITY_CIVICS_TREE"/>
+    <Row GameCapability="CAPABILITY_MILITARY"/>
 		<Row GameCapability="CAPABILITY_CULTURE"/>
-		<!-- Government functionality in game -->
+    <Row GameCapability="CAPABILITY_GOLD"/>
+    <!-- Government functionality in game -->
 		<Row GameCapability="CAPABILITY_GOVERNMENTS"/>
 		<!-- Separate from government functionality, can you access Governments screen? -->
 		<Row GameCapability="CAPABILITY_GOVERNMENTS_VIEW"/>
@@ -108,6 +129,10 @@
 		<Row GameCapability="CAPABILITY_DIPLOMACY_DEALS"/>
 		<!-- Separate from diplomacy being active, can you view yourself in the diplomacy screen? -->
 		<Row GameCapability="CAPABILITY_DIPLOMACY_VIEW_SELF"/>
+		<!-- 'Next Access Level' and advisor text within Access Level panel of diplomacy screen -->
+		<Row GameCapability="CAPABILITY_DIPLOMACY_ACCESS_LEVEL_INFO"/>
+		<!-- Advisor text within Relationship panel of diplomacy screen -->
+		<Row GameCapability="CAPABILITY_DIPLOMACY_RELATIONSHIP_INFO"/>
 		<!-- Religion in game -->
 		<Row GameCapability="CAPABILITY_RELIGION"/>
 		<!-- Can found new pantheons.  Turn this off if you want to have existing pantheons, but no new ones -->
@@ -136,13 +161,19 @@
 		<Row GameCapability="CAPABILITY_NEW_ESPIONAGE"/>
 		<!-- Can you view the current espionage activity? -->
 		<Row GameCapability="CAPABILITY_ESPIONAGE_VIEW"/>
-
+		<!-- Faith enabled-->
+		<Row GameCapability="CAPABILITY_FAITH"/>
 		<!-- Tourism enabled-->
 		<Row GameCapability="CAPABILITY_TOURISM"/>
-
 		<!-- World Rankings is a thing -->
 		<Row GameCapability="CAPABILITY_WORLD_RANKINGS" />
-
+		<!-- Do diplomatic deals appear in the reports screen -->
+		<Row GameCapability="CAPABILITY_REPORTS_DIPLOMATIC_DEALS" />
+		<!-- Do unit expenses appear in the reports screen -->
+		<Row GameCapability="CAPABILITY_REPORTS_UNIT_EXPENSES" />
+		<!-- Can you view the World Tracker? -->
+		<Row GameCapability="CAPABILITY_WORLD_TRACKER" />
+		
 		<!-- Mini-map panel lenses -->
 		<Row GameCapability="CAPABILITY_LENS_RELIGION" />
 		<Row GameCapability="CAPABILITY_LENS_APPEAL" />
@@ -150,17 +181,28 @@
 		<Row GameCapability="CAPABILITY_LENS_GOVERNMENT" />
 		<Row GameCapability="CAPABILITY_LENS_TOURISM" />
 
-		<!-- City HUD "Amenities from" Counters -->
+		<!-- City HUD -->
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_NATIONAL_PARKS" />
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" />
-		
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CITY_STATES" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_WAR_WEARINESS" />
+    <Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_BANKRUPTCY" />
+    <Row GameCapability="CAPABILITY_CITY_HUD_HOUSING_DISTRICTS" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_HOUSING_GREAT_PEOPLE" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_RELIGION_TAB" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_WONDERS" />
+		<Row GameCapability="CAPABILITY_CITY_HUD_TRADING_POSTS" />
+
+		<!-- Can the user purchase using faith -->
+		<Row GameCapability="CAPABILITY_FAITH_PURCHASE" />
 		<!-- Can the user open city states panel -->
 		<Row GameCapability="CAPABILITY_CITY_STATES_VIEW" />
 		<!-- Do envoys show up on the Top Panel -->
 		<Row GameCapability="CAPABILITY_TOP_PANEL_ENVOYS"/>
-		<!-- Does the diplomacy filter show up on the government screen -->
+		<!-- Do these policy filters show up on the government screen -->
+		<Row GameCapability="CAPABILITY_GOVERNMENT_SCREEN_MILITARY_FILTER"/>
 		<Row GameCapability="CAPABILITY_GOVERNMENT_SCREEN_DIPLOMACY_FILTER"/>
 
 		<!-- TODO: Disabling these capabilities is not yet supported:
@@ -193,7 +235,9 @@
 		<Row GameCapability="CAPABILITY_GREAT_WORKS_VIEW" DependsOnCapability="CAPABILITY_GREAT_WORKS"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_CAN_RECRUIT" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
-		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
+    <Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_GOLD" DependsOnCapability="CAPABILITY_GOLD"/>
+    <Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
+		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_RECRUIT_WITH_FAITH" DependsOnCapability="CAPABILITY_FAITH"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_CAN_REJECT" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_GREAT_PEOPLE_VIEW" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
 		<Row GameCapability="CAPABILITY_NEW_ESPIONAGE" DependsOnCapability="CAPABILITY_ESPIONAGE"/>
@@ -204,6 +248,10 @@
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_CIVICS" DependsOnCapability="CAPABILITY_CIVICS"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_RELIGION" DependsOnCapability="CAPABILITY_RELIGION"/>
 		<Row GameCapability="CAPABILITY_CITY_HUD_AMENITIES_GREAT_PEOPLE" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_HOUSING_GREAT_PEOPLE" DependsOnCapability="CAPABILITY_GREAT_PEOPLE"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_RELIGION_TAB" DependsOnCapability="CAPABILITY_RELIGION"/>
+		<Row GameCapability="CAPABILITY_CITY_HUD_TRADING_POSTS" DependsOnCapability="CAPABILITY_TRADE"/>
+		<Row GameCapability="CAPABILITY_FAITH_PURCHASE" DependsOnCapability="CAPABILITY_FAITH"/>
 
 		<!-- TODO: Disabling these capabilities is not yet supported:
 		<Row GameCapability="CAPABILITY_ARCHEOLOGY" DependsOnCapability="CAPABILITY_TOURISM" />

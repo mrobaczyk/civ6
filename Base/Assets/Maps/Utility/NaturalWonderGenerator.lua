@@ -317,45 +317,6 @@ function CustomGetMultiTileFeaturePlotList(pPlot, eFeatureType, aPlots)
 			return true;
 		end
 		
-	-- 4 tiles (triangle plus a tail)
-	elseif (customPlacement == "PLACEMENT_RORAIMA") then
-
-		-- This one does require three in a row, so let's find that first
-		for i = 0, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
-			local pFirstPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), i);
-			if (pFirstPlot ~= nil and TerrainBuilder.CanHaveFeature(pFirstPlot, eFeatureType, true)) then
-				local pSecondPlot = Map.GetAdjacentPlot(pFirstPlot:GetX(), pFirstPlot:GetY(), i);
-				if (pSecondPlot ~= nil and TerrainBuilder.CanHaveFeature(pSecondPlot, eFeatureType, true)) then
-					local iNewDir = i - 1;
-					if iNewDir == -1 then
-						iNewDir = 5;
-					end
-					local pThirdPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), iNewDir);
-					if (pThirdPlot ~= nil and TerrainBuilder.CanHaveFeature(pThirdPlot, eFeatureType, true)) then
-						table.insert(aPlots, pFirstPlot:GetIndex());
-						table.insert(aPlots, pSecondPlot:GetIndex());
-						table.insert(aPlots, pThirdPlot:GetIndex());
-						return true;
-					end
-				end
-			end
-		end
-
-	-- 3 tiles in a straight line
-	elseif (customPlacement == "PLACEMENT_ZHANGYE_DANXIA") then
-
-		for i = 0, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
-			local pFirstPlot = Map.GetAdjacentPlot(pPlot:GetX(), pPlot:GetY(), i);
-			if (pFirstPlot ~= nil and TerrainBuilder.CanHaveFeature(pFirstPlot, eFeatureType, true)) then
-				local pSecondPlot = Map.GetAdjacentPlot(pFirstPlot:GetX(), pFirstPlot:GetY(), i);
-				if (pSecondPlot ~= nil and TerrainBuilder.CanHaveFeature(pSecondPlot, eFeatureType, true)) then
-					table.insert(aPlots, pFirstPlot:GetIndex());
-					table.insert(aPlots, pSecondPlot:GetIndex());
-					return true;
-				end
-			end
-		end
-
 	-- 3 tiles in triangle coast on front edge, land behind (with any rotation)
 	elseif (customPlacement == "PLACEMENT_PIOPIOTAHI") then
 

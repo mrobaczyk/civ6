@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameInfo>
-  <!-- This table must stay in sync with AiTargetType defined in Targets.h -->
   <TargetTypes>
     <Row TargetType="TARGET_FRIENDLY_CITY" />
     <Row TargetType="TARGET_ENEMY_COMBAT_DISTRICT" />
@@ -19,6 +18,7 @@
     <Row TargetType="TARGET_GOODY_HUT" />
     <Row TargetType="TARGET_ALLY_SUPPORT" />
     <Row TargetType="TARGET_AIR_UNIT" />
+    <Row TargetType="TARGET_NAVAL_SUPERIORITY"/> <!-- Note: 'blank' target intended for use by the naval superiority op. -->
   </TargetTypes>
   <AiOperationTypes>
     <Row OperationType="ATTACK_BARBARIANS" Value="0" />
@@ -27,10 +27,12 @@
     <Row OperationType="OP_SETTLE" Value="3" />
     <Row OperationType="OP_DEFENSE" Value="4" />
     <Row OperationType="OP_NUCLEAR" Value="5" />
+    <Row OperationType="NAVAL_SUPERIORITY" Value="6" />
   </AiOperationTypes>
 	<AiTeams>
 		<Row TeamName="Simple Early Attack Force"/>
 		<Row TeamName="Simple City Attack Force"/>
+    <Row TeamName="City Naval Attack Force"/>
 		<Row TeamName="City Attack Force"/>
 		<Row TeamName="Barbarian Builder Capture"/>
 		<Row TeamName="Civilian Builder Capture"/>
@@ -39,24 +41,28 @@
 		<Row TeamName="Barbarian Raid"/>
     <Row TeamName="Nuclear Attack" />
     <Row TeamName="Aid Ally Attack Force" />
+    <Row TeamName="Naval Superiority Force" />
 	</AiTeams>
   <AiOperationTeams>
     <Row TeamName="Simple Early Attack Force" OperationName="Attack Barb Camp" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0.5" />
     <Row TeamName="Simple Early Attack Force" OperationName="Barb Camp Tech Boost" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="1" />
     <Row TeamName="Simple City Attack Force" OperationName="Attack Enemy City" InitialStrengthAdvantage="1.5" OngoingStrengthAdvantage="3" />
+    <Row TeamName="City Naval Attack Force" OperationName="Attack Enemy City" InitialStrengthAdvantage="-5" OngoingStrengthAdvantage="2" Condition="IsCoastalTarget" />
     <Row TeamName="Simple City Attack Force" OperationName="Wartime Attack Enemy City" InitialStrengthAdvantage="0.5" OngoingStrengthAdvantage="3" />
+    <Row TeamName="City Naval Attack Force" OperationName="Wartime Attack Enemy City" InitialStrengthAdvantage="-5" OngoingStrengthAdvantage="2" Condition="IsCoastalTarget" />
     <Row TeamName="City Attack Force" OperationName="Attack Walled City" InitialStrengthAdvantage="2" OngoingStrengthAdvantage="4" />
+    <Row TeamName="City Naval Attack Force" OperationName="Attack Walled City" InitialStrengthAdvantage="-5" OngoingStrengthAdvantage="3" Condition="IsCoastalTarget" />
     <Row TeamName="City Attack Force" OperationName="Wartime Attack Walled City" InitialStrengthAdvantage="1" OngoingStrengthAdvantage="6" />
+    <Row TeamName="City Naval Attack Force" OperationName="Wartime Attack Walled City" InitialStrengthAdvantage="-5" OngoingStrengthAdvantage="3" Condition="IsCoastalTarget" />
     <Row TeamName="Barbarian Builder Capture" OperationName="Barbarian Builder Capture" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0.5" />
     <Row TeamName="Civilian Builder Capture" OperationName="Civilian Builder Capture" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0.5" />
     <Row TeamName="Settle City Team" OperationName="Settle New City" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="1" SafeRallyPoint="true" />
-    <!--Row TeamName="City Defense" OperationName="Civ Defense" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0" -->
-    <!--Row TeamName="Border Defense" OperationName="Civ Defense" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="0" -->
     <Row TeamName="City Defense" OperationName="City Defense" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="1" />
     <Row TeamName="Barbarian Raid" OperationName="Barbarian Attack" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="-1" />
     <Row TeamName="Barbarian Raid" OperationName="Barbarian City Assault" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="-1" />
     <Row TeamName="Nuclear Attack" OperationName="Nuclear Assault" InitialStrengthAdvantage="-1" OngoingStrengthAdvantage="0" />
     <Row TeamName="Aid Ally Attack Force" OperationName="Aid Ally" InitialStrengthAdvantage="-2" OngoingStrengthAdvantage="0" />
+    <Row TeamName="Naval Superiority Force" OperationName="Naval Superiority" InitialStrengthAdvantage="0" OngoingStrengthAdvantage="3" />
   </AiOperationTeams>
   <OpTeamRequirements>
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_MELEE" MinNumber="1" />
@@ -67,13 +73,19 @@
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_AIR" MaxNumber="0" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_MELEE" MinNumber="2" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_RANGED" MinNumber="0" MaxNumber="3" />
+    <Row TeamName="Simple City Attack Force" AiType="UNITAI_COMBAT" MinNumber="5" MaxNumber="16" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_SIEGE" MaxNumber="3" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
     <Row TeamName="Simple City Attack Force" AiType="UNITTYPE_AIR" MaxNumber="0" />
+    <Row TeamName="City Naval Attack Force" AiType="UNITTYPE_NAVAL" MinPercentage="1" />
+    <Row TeamName="City Naval Attack Force" AiType="UNITTYPE_MELEE" MinNumber="0" />
+    <Row TeamName="City Naval Attack Force" AiType="UNITTYPE_RANGED" MinNumber="0" />
+    <Row TeamName="City Naval Attack Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_MELEE" MinNumber="2" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_RANGED" MinNumber="2" />
+    <Row TeamName="City Attack Force" AiType="UNITAI_COMBAT" MinNumber="5" MaxNumber="16" />
 		<Row TeamName="City Attack Force" AiType="UNITTYPE_SIEGE" MinNumber="1" MaxNumber="3" />
 		<Row TeamName="City Attack Force" AiType="UNITTYPE_AIR_SIEGE" MinNumber="0" MaxNumber="1" />
 		<Row TeamName="City Attack Force" AiType="UNITTYPE_SIEGE_SUPPORT" MinNumber="0" MaxNumber="3" />
@@ -90,6 +102,7 @@
     <Row TeamName="Settle City Team" AiType="UNITAI_SETTLE" MinNumber="1" MaxNumber="1" />
     <Row TeamName="Settle City Team" AiType="UNITAI_COMBAT" MinNumber="1" ReconsiderWhilePreparing="false" />
 		<Row TeamName="Settle City Team" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
+    <Row TeamName="Settle City Team" AiType="UNITTYPE_AIR" MaxNumber="0" />
     <Row TeamName="City Defense" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
     <Row TeamName="City Defense" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="City Defense" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
@@ -106,14 +119,18 @@
     <Row TeamName="Aid Ally Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
     <Row TeamName="Aid Ally Attack Force" AiType="UNITTYPE_SIEGE" MaxNumber="2" />
     <Row TeamName="Aid Ally Attack Force" AiType="UNITTYPE_AIR" MaxNumber="0" />
+    <Row TeamName="Naval Superiority Force" AiType="UNITTYPE_NAVAL" MinPercentage="1" />
+    <Row TeamName="Naval Superiority Force" AiType="UNITTYPE_MELEE" MinNumber="1" />
+    <Row TeamName="Naval Superiority Force" AiType="UNITTYPE_RANGED" MinNumber="0" />
+    <Row TeamName="Naval Superiority Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
   </OpTeamRequirements>
   <AiOperationDefs>
     <Row OperationName="Attack Barb Camp" TargetType="TARGET_BARBARIAN_CAMP" OperationType="ATTACK_BARBARIANS" BehaviorTree="Simple Operation Attack" Priority="3" SelfStart="True" MaxTargetDistInRegion="-1" MaxTargetDistInArea="25" MinOddsOfSuccess="0.5" />
     <Row OperationName="Barb Camp Tech Boost" TargetType="TARGET_BARBARIAN_CAMP" OperationType="ATTACK_BARBARIANS" BehaviorTree="Simple Operation Attack" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" />
-    <Row OperationName="Attack Enemy City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" EnemyType="WAR" OperationType="CITY_ASSAULT" BehaviorTree="Early City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="30" MaxTargetDistInWorld="0" MinOddsOfSuccess="0.5" />
-    <Row OperationName="Wartime Attack Enemy City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" EnemyType="WAR" OperationType="CITY_ASSAULT" BehaviorTree="Early City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.25" MustBeAtWar="true" />
-    <Row OperationName="Attack Walled City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" TargetParameter="1" EnemyType="WAR" OperationType="CITY_ASSAULT" BehaviorTree="Siege City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="30" MaxTargetDistInWorld="0" MinOddsOfSuccess="0.6" />
-    <Row OperationName="Wartime Attack Walled City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" EnemyType="WAR" TargetParameter="1" OperationType="CITY_ASSAULT" BehaviorTree="Siege City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.4" MustBeAtWar="true" />
+    <Row OperationName="Attack Enemy City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" EnemyType="WAR" OperationType="CITY_ASSAULT" BehaviorTree="Early City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="30" MaxTargetDistInWorld="0" MinOddsOfSuccess="0.5" MustHaveUnits="5" />
+    <Row OperationName="Wartime Attack Enemy City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" EnemyType="WAR" OperationType="CITY_ASSAULT" BehaviorTree="Early City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.25" MustBeAtWar="true" MustHaveUnits="3" />
+    <Row OperationName="Attack Walled City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" TargetParameter="1" EnemyType="WAR" OperationType="CITY_ASSAULT" BehaviorTree="Siege City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="30" MaxTargetDistInWorld="0" MinOddsOfSuccess="0.6" MustHaveUnits="10" />
+    <Row OperationName="Wartime Attack Walled City" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" EnemyType="WAR" TargetParameter="1" OperationType="CITY_ASSAULT" BehaviorTree="Siege City Assault" SelfStart="True" Priority="3" MaxTargetDistInRegion="-1" MaxTargetDistInArea="45" MaxTargetDistInWorld="-1" MinOddsOfSuccess="0.4" MustBeAtWar="true" MustHaveUnits="6" />
     <Row OperationName="Barbarian Builder Capture" TargetType="TARGET_BARBARIAN_CAMP" BehaviorTree="Escort Worker To Camp" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="0" />
     <Row OperationName="Civilian Builder Capture" TargetType="TARGET_FRIENDLY_CITY" BehaviorTree="Escort Worker To Camp" Priority="1" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="0" />
     <Row OperationName="Settle New City" TargetType="TARGET_SETTLE_LOCATION" OperationType="OP_SETTLE" BehaviorTree="Settle City Op" Priority="4" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="-1" />
@@ -122,6 +139,7 @@
     <Row OperationName="Barbarian City Assault" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" BehaviorTree="Barbarian City Attack" Priority="4" SelfStart="false" AllowTargetUpdate="false" />
     <Row OperationName="Nuclear Assault" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" TargetParameter="1" EnemyType="WAR" OperationType="OP_NUCLEAR" BehaviorTree="Nuclear Assault" Priority="3" SelfStart="true"  MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MustBeAtWar="true" MustHaveNukes="true"/>
     <Row OperationName="Aid Ally" TargetType="TARGET_ALLY_SUPPORT" EnemyType="ALLY" OperationType="CITY_ASSAULT" BehaviorTree="Reinforce Ally" Priority="3" SelfStart="true"  MaxTargetDistInRegion="-1" MaxTargetDistInArea="45"/>
+    <Row OperationName="Naval Superiority" TargetType="TARGET_NAVAL_SUPERIORITY" EnemyType="NONE" OperationType="NAVAL_SUPERIORITY" BehaviorTree="Naval Superiority Tree" Priority="2" SelfStart="true" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="-1"/>
   </AiOperationDefs>
   <AllowedOperations>
     <Row ListType="Default_List" OperationDef="Attack Barb Camp" />
@@ -135,6 +153,7 @@
     <Row ListType="Default_List" OperationDef="Nuclear Assault" />
     <Row ListType="Default_List" OperationDef="Aid Ally" />
     <Row ListType="Default_List" OperationDef="City Defense" />  
+    <Row ListType="Default_List" OperationDef="Naval Superiority" />  
     <Row ListType="Barbarian Lover" OperationDef="Attack Barb Camp" RemoveRef="True" />
     <Row ListType="Barbarian Ops" OperationDef="Barbarian Builder Capture" />
     <Row ListType="Barbarian Ops" OperationDef="Barbarian Attack" />
@@ -155,6 +174,7 @@
     <Row ListType="BaseOperationsLimits" Item="OP_SETTLE" Value="1" />
     <Row ListType="BaseOperationsLimits" Item="OP_DEFENSE" Value="1" />
     <Row ListType="BaseOperationsLimits" Item="OP_NUCLEAR" Value="2" />
+    <Row ListType="BaseOperationsLimits" Item="NAVAL_SUPERIORITY" Value="1" /> <!-- Don't use this early game, it must be increased by a strategy to be used -->
     <Row ListType="PerWarOperationsLimits" Item="CITY_ASSAULT" Value="1" />
   </AiFavoredItems>
   <AiOperationLists>

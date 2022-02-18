@@ -151,7 +151,8 @@
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_OPEN_BORDERS" Worth="20" Cost="0"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_REQUEST_ASSISTANCE" Worth="-70" Cost="80"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="40" Cost="-10"/>
-		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
+    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="25" Cost="0" AiAllowed="false"/> <!-- Note: This may look silly here, but it predisposes the AI to accepting a new declaration when the old one expires -->
+    <Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_DEFENSIVE_PACT" Worth="-20" Cost="20"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_DECLARED_FRIEND" DiplomaticActionType="DIPLOACTION_RESEARCH_AGREEMENT" Worth="20" Cost="-20"/>
@@ -164,7 +165,7 @@
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_REQUEST_ASSISTANCE" Worth="-90" Cost="90"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_SURPRISE_WAR"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DIPLOMATIC_DELEGATION" Worth="25" Cost="5"/>
-		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="15" Cost="0"/>
+		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DECLARE_FRIENDSHIP" Worth="15" Cost="0" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_DENOUNCE" AiAllowed="false"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_PROPOSE_TRADE" Worth="0" Cost="0"/>
 		<Row StateType="DIPLO_STATE_FRIENDLY" DiplomaticActionType="DIPLOACTION_JOINT_WAR" Worth="0" Cost="0"/>

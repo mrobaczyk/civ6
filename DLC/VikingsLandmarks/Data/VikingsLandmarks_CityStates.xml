@@ -231,12 +231,12 @@
 		<Row>
 			<ModifierId>MINOR_CIV_MUSCAT_COMMERCIAL_HUB_AMENITY_BONUS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_AMENITIES_FROM_CITY_STATES</ModifierType>
-			<SubjectRequirementSetId>CITY_HAS_COMMERCIAL_HUB</SubjectRequirementSetId>
+			<SubjectRequirementSetId>CITY_HAS_COMMERCIAL_HUB_VIKING</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>MINOR_CIV_PALENQUE_CAMPUS_GROWTH_BONUS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_GROWTH</ModifierType>
-			<SubjectRequirementSetId>CITY_HAS_CAMPUS</SubjectRequirementSetId>
+			<SubjectRequirementSetId>CITY_HAS_CAMPUS_VIKING</SubjectRequirementSetId>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -335,14 +335,6 @@
 			<RequirementId>REQUIRES_PLOT_HAS_SHALLOW_WATER</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
 		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_COMMERCIAL_HUB</RequirementId>
-			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_CAMPUS</RequirementId>
-			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
-		</Row>
 	</Requirements>
 	<RequirementArguments>
 		<Row>
@@ -355,16 +347,6 @@
 			<Name>TerrainType</Name>
 			<Value>TERRAIN_COAST</Value>
 		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_COMMERCIAL_HUB</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_COMMERCIAL_HUB</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_CITY_HAS_CAMPUS</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_CAMPUS</Value>
-		</Row>
 	</RequirementArguments>
 	<RequirementSets>
 		<Row>
@@ -376,11 +358,11 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_COMMERCIAL_HUB</RequirementSetId>
+			<RequirementSetId>CITY_HAS_COMMERCIAL_HUB_VIKING</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_CAMPUS</RequirementSetId>
+			<RequirementSetId>CITY_HAS_CAMPUS_VIKING</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 	</RequirementSets>
@@ -398,11 +380,11 @@
 			<RequirementId>REQUIRES_PLAYER_IS_INDUSTRIAL_ERA</RequirementId>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_COMMERCIAL_HUB</RequirementSetId>
+			<RequirementSetId>CITY_HAS_COMMERCIAL_HUB_VIKING</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_HAS_COMMERCIAL_HUB</RequirementId>
 		</Row>
 		<Row>
-			<RequirementSetId>CITY_HAS_CAMPUS</RequirementSetId>
+			<RequirementSetId>CITY_HAS_CAMPUS_VIKING</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_HAS_CAMPUS</RequirementId>
 		</Row>
 	</RequirementSetRequirements>

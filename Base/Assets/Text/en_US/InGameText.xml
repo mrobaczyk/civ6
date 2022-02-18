@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
-<!-- edited with Visual Studio 2015 by Tronster (Firaxis Games) -->
 <GameData>
 	<BaseGameText>
 		<Row Tag="LOC_NOT_IMPLEMENTED">
@@ -502,7 +500,10 @@
 		<Row Tag="LOC_HUD_UNIT_PANEL_SPREADS">
 			<Text>Spreads</Text>
 		</Row>
-		<Row Tag="LOC_HUD_UNIT_PANEL_GREAT_PERSON_ACTIONS">
+    <Row Tag="LOC_HUD_UNIT_PANEL_HEALS">
+      <Text>Heals</Text>
+    </Row>
+    <Row Tag="LOC_HUD_UNIT_PANEL_GREAT_PERSON_ACTIONS">
 			<Text>Actions</Text>
 		</Row>
 		<Row Tag="LOC_HUD_UNIT_PANEL_XP">
@@ -840,36 +841,15 @@
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_TITLE_SUFFIX">
 			<Text>'s Turn</Text>
 		</Row>
-		<Row Tag="LOC_PLAYER_CHANGE_POPUP_TITLE_PLAYBYCLOUD">
-			<Text>Uploading Turn to Cloud</Text>
-		</Row>
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_START_TURN">
 			<Text>Start Turn</Text>
-		</Row>
-		<Row Tag="LOC_PLAYER_CHANGE_POPUP_WAITING_FOR_CLOUD_UPLOAD">
-			<Text>Uploading save game file.  Please wait...</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_SAVE_GAME">
 			<Text>Save Game</Text>
 		</Row>
 		<Row Tag="LOC_PLAYER_CHANGE_POPUP_PASSWORD">
 			<Text>Password</Text>
-		</Row>
-		<Row Tag="LOC_PLAYER_CHANGE_POPUP_CANCEL_UPLOAD">
-			<Text>Cancel</Text>
-		</Row>
-		<Row Tag="LOC_PLAYER_CHANGE_POPUP_CANCEL_UPLOAD_TOOLTIP">
-			<Text>Stop attempting to commit your turn.  You will lose your progress for this turn.</Text>
-		</Row>
-		<Row Tag="LOC_PLAYER_CHANGE_UPLOAD_IN_PROGRESS">
-			<Text>Upload in Progress</Text>
-		</Row>
-		<Row Tag="LOC_PLAYER_CHANGE_UPLOAD_FAILED">
-			<Text>Upload Failed. Try Again.</Text>
-		</Row>
-		<Row Tag="LOC_PLAYER_CHANGE_UPLOAD_SUCCESS">
-			<Text>Upload Completed.  Returning to Main Menu.</Text>
-		</Row>
+		</Row>		
 		<!-- ==================== Unit Action Info ==================== -->
 		<Row Tag="LOC_HUD_UNIT_ACTION_REQUIRES_TECH">
 			<Text>Requires: {1_Tech} technology</Text>
@@ -949,6 +929,18 @@
 		</Row>
 		<Row Tag="LOC_CITY_BANNER_WEAPON_UNAVAILABLE">
 			<Text>Weapon Unavailable</Text>
+		</Row>
+    <Row Tag="LOC_CITY_BANNER_CONVERTS_IN_X_TURNS">
+      <Text>Converts in {1_Turns}</Text>
+    </Row>
+    <Row Tag="LOC_CITY_BANNER_RELIGIOUS_PRESSURE">
+      <Text>+{1_Pressure}</Text>
+    </Row>
+		<Row Tag="LOC_CITY_BANNER_HOUSING_INSUFFICIENT">
+			<Text>Insufficient Housing</Text>
+		</Row>
+		<Row Tag="LOC_CITY_BANNER_AMENITIES_INSUFFICIENT">
+			<Text>Insufficient Amenities</Text>
 		</Row>
 		<!-- ==================== City Panel ==================== -->
 		<Row Tag="LOC_HUD_CITY_OVERVIEW_CITIZENS_TOOLTIP">
@@ -1392,6 +1384,9 @@
 		<Row Tag="LOC_HUD_CHAT_COLLAPSE_TOOLTIP">
 			<Text>Shrink the chat panel.</Text>
 		</Row>
+    <Row Tag="LOC_HUD_CITY_WILL_NOT_COMPLETE">
+      <Text>Production per turn too low to complete.</Text>
+    </Row>
 		<!-- ==================== Production Menu (for cities) ==================== -->
 		<Row Tag="LOC_BUILDING_CONSTRUCT_NO_SUITABLE_LOCATION">
 			<Text>No suitable location to construct this.</Text>
@@ -1522,6 +1517,7 @@
 		<Row Tag="LOC_PROJECT_ADVANCE_LOCATION_OCCUPIED_BY_ENEMY">
 			<Text>Required project location occupied by enemy unit.</Text>
 		</Row>
+    
 		<!-- ==================== Leader Viewer Debug ==================== -->
 		<Row Tag="LOC_LEADER_VIEWER_BACK">
 			<Text>Back To Game</Text>
@@ -2241,7 +2237,7 @@
 			<Text>Edit Policies</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_FILTER_NONE">
-			<Text>None</Text>
+			<Text>All</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_FILTER_MILITARY">
 			<Text>Military</Text>
@@ -2276,7 +2272,10 @@
 		<Row Tag="LOC_GOVT_MY_GOVERNMENT">
 			<Text>My Government</Text>
 		</Row>
-		<Row Tag="LOC_GOVT_NEED_GOLD">
+    <Row Tag="LOC_GOVT_NEED_FAITH">
+      <Text>You Need {1_Faith} [ICON_FaithLarge] Faith</Text>
+    </Row>
+    <Row Tag="LOC_GOVT_NEED_GOLD">
 			<Text>You Need {1_Gold} [ICON_GoldLarge] Gold</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_NEW_POLICY">
@@ -2309,7 +2308,10 @@
 		<Row Tag="LOC_GOVT_SET_POLICIES">
 			<Text>Set Policies</Text>
 		</Row>
-		<Row Tag="LOC_GOVT_UNLOCK_GOLD">
+    <Row Tag="LOC_GOVT_UNLOCK_FAITH">
+      <Text>Unlock for {1_Faith} [ICON_FaithLarge] Faith</Text>
+    </Row>
+    <Row Tag="LOC_GOVT_UNLOCK_GOLD">
 			<Text>Unlock for {1_Gold} [ICON_GoldLarge] Gold</Text>
 		</Row>
 		<Row Tag="LOC_GOVT_VIEW_GOVERNMENTS">
@@ -2481,7 +2483,16 @@
 		<Row Tag="LOC_OPERATION_PLANT_REQUIRES_CIVIC">
 			<Text>Requires Civic: {1_Civic}</Text>
 		</Row>
-		<Row Tag="LOC_UNITOPERATION_MOVE_TO_DESCRIPTION">
+    <Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION">
+			<Text>[NEWLINE]After this action, the city will have {1_NumFollowers} {1_NumFollowers: plural 1?citizen; other?citizens;} following {2_ReligionName}.[NEWLINE]{3_MajorityReligionString}</Text>
+    </Row>
+    <Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION_MAJORITY">
+      <Text>The majority religion of the city will be: {1_MajorityReligionName}</Text>
+    </Row>
+    <Row Tag="LOC_OPERATION_SIMULATE_SPREAD_RELIGION_NO_MAJORITY">
+      <Text>There will not be a majority religion.</Text>
+    </Row>
+    <Row Tag="LOC_UNITOPERATION_MOVE_TO_DESCRIPTION">
 			<Text>Move To</Text>
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_MOVE_TO_UNIT_DESCRIPTION">
@@ -2508,6 +2519,9 @@
 		<Row Tag="LOC_UNITOPERATION_REBASE_DESCRIPTION">
 			<Text>Re-Base</Text>
 		</Row>
+    <Row Tag="LOC_UNITOPERATION_RELIGIOUS_HEAL_DESCRIPTION">
+      <Text>Heal Religious Units</Text>
+    </Row>
 		<Row Tag="LOC_UNITOPERATION_REMOVE_FEATURE_DESCRIPTION">
 			<Text>Remove Feature</Text>
 		</Row>
@@ -2618,6 +2632,9 @@
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_CANNOT_HEAL_IN_ENEMY_TERRITORY">
 			<Text>{LOC_UNITOPERATION_CANNOT_HEAL_OUTSIDE_FRIENDLY_TERRITORY}</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATIONS_CANNOT_REPAIR_RESOURCE_REQUIRED">
+			<Text>{1_Resource} resource required to repair</Text>
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_CANNOT_DESIGNATE_PARK">
 			<Text>Must be on a valid National Park tile.</Text>
@@ -2760,7 +2777,19 @@
 		<Row Tag="LOC_UNITCOMMAND_PLUNDER_TRADE_ROUTE_BLOCKED_BY_IMMUNITY">
 			<Text>A [ICON_TradeRoute] Trade Route in this tile has a special ability preventing it from being plundered.</Text>
 		</Row>
-		<Row Tag="LOC_UNITCOMMAND_NAME_UNIT_DESCRIPTION">
+    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_DESCRIPTION">
+      <Text>Condemn Heretic</Text>
+    </Row>
+    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_REQUIRES_WAR_DECLARATION">
+      <Text>A religious unit in this tile belongs to a player you are not at war with.</Text>
+    </Row>
+    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_STARTED_THIS_RELIGION">
+      <Text>A religious unit in this tile adheres to the religion that you founded.</Text>
+    </Row>
+    <Row Tag="LOC_UNITCOMMAND_CONDEMN_HERETIC_FOLLOWING_THIS_RELIGION">
+      <Text>A religious unit in this tile adheres to the dominant religion in a majority of your cities.</Text>
+    </Row>
+    <Row Tag="LOC_UNITCOMMAND_NAME_UNIT_DESCRIPTION">
 			<Text>Name Unit</Text>
 		</Row>
 		<Row Tag="LOC_UNITCOMMAND_WONDER_PRODUCTION_DESCRIPTION">
@@ -3553,7 +3582,10 @@
 		<Row Tag="LOC_UI_RELIGION_HOW_TO_MAKE_INQUISITOR_TT">
 			<Text>This religion must have spent an Apostle to Launch Inquisition before purchasing Inquisitors. They are then purchased in a city with a Temple.</Text>
 		</Row>
-		<Row Tag="LOC_UI_RELIGION_APOSTLE_TT">
+    <Row Tag="LOC_UI_RELIGION_HOW_TO_MAKE_GURU_TT">
+      <Text>You must have a Temple in a Holy Site district to purchase Gurus.</Text>
+    </Row>
+    <Row Tag="LOC_UI_RELIGION_APOSTLE_TT">
 			<Text>Apostles may convert [ICON_Citizen] Citizens to their Religion and initiate theological combat with units of other Religions.</Text>
 		</Row>
 		<Row Tag="LOC_UI_RELIGION_MISSIONARY_TT">
@@ -3562,7 +3594,10 @@
 		<Row Tag="LOC_UI_RELIGION_INQUISITOR_TT">
 			<Text>Inquisitors may eliminate the presence of other Religions in their territory, and initiate theological combat with units of other Religions.</Text>
 		</Row>
-		<Row Tag="LOC_UI_RELIGION_UNKNOWN_CITY">
+    <Row Tag="LOC_UI_RELIGION_GURU_TT">
+      <Text>Gurus may use a charge to heal themselves and all adjacent friendly religious units. May not initiate theological combat with units of other Religions (but can defend).</Text>
+    </Row>
+    <Row Tag="LOC_UI_RELIGION_UNKNOWN_CITY">
 			<Text>Unknown City</Text>
 		</Row>
 		<!-- ==================== Trade Overview ==================== -->
@@ -4162,6 +4197,9 @@
 		<Row Tag="LOC_CITY_STATES_TURNS_WAR_NO_PEACE">
 			<Text>Currently at war.[NEWLINE](Cannot make peace.)</Text>
 		</Row>
+		<Row Tag="LOC_CITY_STATES_SUZERAIN_WAR_NO_PEACE">
+			<Text>Currently at war with the Suzerain of this City State.[NEWLINE](Cannot make peace.)</Text>
+		</Row>
 		<Row Tag="LOC_CITY_STATES_TURNS_WAR">
 			<Text>Currently at war.[NEWLINE](Peace possible in {1_Turns} {1_Turns:plural 1?turn; other?turns;}.)</Text>
 		</Row>
@@ -4621,6 +4659,9 @@
 		<Row Tag="LOC_ROUTECHOOSER_YIELD_SOURCE_TOTAL">
 			<Text>{1_YieldAmount} {2_YieldIconString} {3_YieldName} total</Text>
 		</Row>
+    <Row Tag="LOC_ROUTECHOOSER_RELIGIOUS_PRESSURE_SOURCE_MAJORITY_RELIGION">
+      <Text>{1_PressureAmount} {2_PressureIconString} religious pressure for {3_ReligionName} from majority religion in {4_CityName}.</Text>
+    </Row>
 		<!-- ==================== DeclareWarPopup ==================== -->
 		<Row Tag="LOC_DECLARE_WAR_HEADER">
 			<Text>DECLARE WAR</Text>
@@ -5249,6 +5290,9 @@
 		<Row Tag="LOC_CITY_YIELD_FROM_DISTRICT_PRODUCTION_BONUS">
 			<Text>{Value : number +#.#;-#.#} towards districts</Text>
 		</Row>
+    <Row Tag="LOC_CITY_GET_DISTRICT_PRODUCTION_MODIFIER">
+      <Text>{Value : number +#.#;-#.#}% towards districts</Text>
+    </Row>
 		<Row Tag="LOC_CITY_YIELD_FROM_GREATWORKS_TOOLTIP">
 			<Text>{Value : number +#.#;-#.#} from GreatWorks</Text>
 		</Row>
@@ -5407,7 +5451,7 @@
 			<Text>{1_TourismInfo}Holy City for the religion of {2_ReligionName} provides +{3_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_TOURISM_LENS_GREAT_PEOPLE_LINE_TOOLTIP">
-			<Text>{1_TourismInfo}Tourism added by Great People: +{2_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
+			<Text>{1_TourismInfo}Tourism added by Walls or Great People: +{2_DistrictTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_TOURISM_LENS_GREAT_WORK_LINE_TOOLTIP">
 			<Text>{1_TourismInfo}Tourism from Great Works in {2_BuildingName}, +{3_GreatWorkTourism} [ICON_Tourism] Tourism[NEWLINE]</Text>

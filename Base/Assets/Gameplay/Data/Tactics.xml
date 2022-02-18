@@ -16,7 +16,7 @@
     <Row AllowedMoveType="Wander" Value="12" IsTactical="true" />
     <Row AllowedMoveType="Pillage Improvement" Value="13" IsTactical="true" />
     <Row AllowedMoveType="Pillage District" Value="14" IsTactical="true" />
-    <Row AllowedMoveType="Gather Goody Hut" Value="15" IsTactical="true" />
+    <Row AllowedMoveType="Gather Goody Hut" Value="15" IsTactical="true" IsHomeland="true" />
     <Row AllowedMoveType="Great Person Move" Value="16" IsHomeland="true" />
     <Row AllowedMoveType="Promotion" Value="17" isTactical="true" isHomeland="true" />
     <Row AllowedMoveType="Missionary Move" Value="18" isHomeland="true" />
@@ -34,6 +34,7 @@
     <Row AllowedMoveType="Builder Outside Ring" Value="30" isHomeland="true" />
     <Row AllowedMoveType="Leader Formation" Value="31" isTactical="true" />
     <Row AllowedMoveType="Barbarian Rampage" Value="32" isTactical="true" />
+    <Row AllowedMoveType="Charge Heal" Value="33" isHomeland="true"/> <!-- At this point, this only applies to the Guru, leaving open to future heal charge units, though -->
    </AllowedMoves>
 	<AiFavoredItems>
 		<Row ListType="Default Tactical" Item="Leader Formation" />
@@ -63,9 +64,11 @@
     <Row ListType="Default Homeland" Item="Promotion" />
     <Row ListType="Default Homeland" Item="Found Park" />
     <Row ListType="Default Homeland" Item="Religious Combat" />
+    <Row ListType="Default Homeland" Item="Charge Heal" />
     <Row ListType="Default Homeland" Item="Missionary Move" />
     <Row ListType="Default Homeland" Item="Attack Civilians" />
     <Row ListType="Default Homeland" Item="Builder Outside Ring" />
+    <Row ListType="Default Homeland" Item="Gather Goody Hut" />
     <Row ListType="Default Homeland" Item="Explore Land" />
 		<Row ListType="Default Homeland" Item="End Turn" />
     <Row ListType="Default Barbarian" Item="Barbarian Rampage" />

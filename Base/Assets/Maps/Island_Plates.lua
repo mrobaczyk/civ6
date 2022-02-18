@@ -36,7 +36,7 @@ function GenerateMap()
 	end
 	
 	plotTypes = GeneratePlotTypes();
-	terrainTypes = GenerateTerrainTypes(plotTypes, g_iW, g_iH, g_iFlags, false, temperature);
+	terrainTypes = GenerateTerrainTypes(plotTypes, g_iW, g_iH, g_iFlags, true, temperature);
 
 
 	for i = 0, (g_iW * g_iH) - 1, 1 do

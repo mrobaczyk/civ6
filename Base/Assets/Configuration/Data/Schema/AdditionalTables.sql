@@ -100,7 +100,7 @@ CREATE TABLE 'Rulesets' (
 );
 
 CREATE TABLE 'Players' (
-	'Domain' TEXT DEFAULT 'StandardPlayers',
+	'Domain' TEXT DEFAULT 'Players:StandardPlayers',
 	'CivilizationType' TEXT NOT NULL,
 	'LeaderType' TEXT NOT NULL,
 	'LeaderName' TEXT NOT NULL,
@@ -119,7 +119,7 @@ CREATE TABLE 'Players' (
 );
 
 CREATE TABLE 'PlayerItems' (
-	'Domain' TEXT DEFAULT 'StandardPlayers',
+	'Domain' TEXT DEFAULT 'Players:StandardPlayers',
 	'CivilizationType' TEXT NOT NULL,
 	'LeaderType' TEXT NOT NULL,
 	'Type' TEXT NOT NULL,
@@ -152,7 +152,8 @@ CREATE TABLE 'Victories'(
 	'Name' TEXT NOT NULL,
 	'Description' TEXT NOT NULL,
 	'Visible' BOOLEAN NOT NULL DEFAULT 1,
-	'ReadOnly' BOOLEAN NOT NULL DEFAULT 0
+	'ReadOnly' BOOLEAN NOT NULL DEFAULT 0,
+	'EnabledByDefault' BOOLEAN NOT NULL DEFAULT 1
 );
 
 -- Rulesets are pretty much the only thing which replaces domains.

@@ -110,7 +110,7 @@
 		<Row TechnologyType="TECH_BANKING" Name="LOC_TECH_BANKING_NAME" Description="LOC_TECH_BANKING_DESCRIPTION" Cost="540" AdvisorType="ADVISOR_GENERIC" EraType="ERA_RENAISSANCE" UITreeRow="0"/>
 		<Row TechnologyType="TECH_GUNPOWDER" Name="LOC_TECH_GUNPOWDER_NAME" Cost="540" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_RENAISSANCE" UITreeRow="1"/>
 		<Row TechnologyType="TECH_PRINTING" Name="LOC_TECH_PRINTING_NAME" Description="LOC_TECH_PRINTING_DESCRIPTION" Cost="540" AdvisorType="ADVISOR_GENERIC" EraType="ERA_RENAISSANCE" UITreeRow="4"/>
-		<Row TechnologyType="TECH_SQUARE_RIGGING" Name="LOC_TECH_SQUARE_RIGGING_NAME" Cost="660" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_RENAISSANCE" UITreeRow="-3"/>
+		<Row TechnologyType="TECH_SQUARE_RIGGING" Name="LOC_TECH_SQUARE_RIGGING_NAME" Description="LOC_TECH_SQUARE_RIGGING_DESCRIPTION" Cost="660" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_RENAISSANCE" UITreeRow="-3"/>
 		<Row TechnologyType="TECH_ASTRONOMY" Name="LOC_TECH_ASTRONOMY_NAME" Cost="660" AdvisorType="ADVISOR_GENERIC" EraType="ERA_RENAISSANCE" UITreeRow="-1"/>
 		<Row TechnologyType="TECH_METAL_CASTING" Name="LOC_TECH_METAL_CASTING_NAME" Cost="660" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_RENAISSANCE" UITreeRow="1"/>
 		<Row TechnologyType="TECH_SIEGE_TACTICS" Name="LOC_TECH_SIEGE_TACTICS_NAME" Cost="660" AdvisorType="ADVISOR_GENERIC" EraType="ERA_RENAISSANCE" UITreeRow="3"/>
@@ -449,9 +449,10 @@
 		<Row BoostType="BOOST_TRIGGER_AIRBASE_FOREIGN_CONTINENT" BoostValue="54"/>
 		<Row BoostType="BOOST_TRIGGER_HAVE_X_GREAT_PEOPLE" BoostValue="55"/>
 		<Row BoostType="BOOST_TRIGGER_HAVE_MAJORITY_RELIGION" BoostValue="56"/>
-    <Row BoostType="BOOST_TRIGGER_TURN_NUMBER" BoostValue="57"/>
-    <Row BoostType="BOOST_TRIGGER_REVEAL_X_OF_RESOURCE" BoostValue="58"/>
-  </BoostNames>
+		<Row BoostType="BOOST_TRIGGER_TURN_NUMBER" BoostValue="57"/>
+		<Row BoostType="BOOST_TRIGGER_REVEAL_X_OF_RESOURCE" BoostValue="58"/>
+		<Row BoostType="BOOST_TRIGGER_SUZERAIN_X_CITY_STATES" BoostValue="59"/>
+	</BoostNames>
 	<Boosts>
 		<!-- Some boosts, like find natural wonder, have an unnecessary unit field - that is an aid for the AI. Please leave it -->
 		<Row TechnologyType="TECH_SAILING" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_SAILING" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_SAILING" BoostClass="BOOST_TRIGGER_SETTLE_COAST"/>
@@ -531,7 +532,7 @@
 		</Row>
 		<!-- Embarked Unit Movement -->
 		<Row>
-			<ModifierId>CARTOGRAPHY_ADJUST_EMBARKED_MOVEMENT</ModifierId>
+			<ModifierId>SQUARE_RIGGING_ADJUST_EMBARKED_MOVEMENT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_EMBARKED_MOVEMENT</ModifierType>
 		</Row>
 		<Row>
@@ -585,7 +586,7 @@
 		</Row>
 		<!-- Embarked Unit Movement -->
 		<Row>
-			<ModifierId>CARTOGRAPHY_ADJUST_EMBARKED_MOVEMENT</ModifierId>
+			<ModifierId>SQUARE_RIGGING_ADJUST_EMBARKED_MOVEMENT</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
 		</Row>
@@ -655,8 +656,8 @@
 		</Row>
 		<!-- Adjust Embarked Movement -->
 		<Row>
-			<TechnologyType>TECH_CARTOGRAPHY</TechnologyType>
-			<ModifierId>CARTOGRAPHY_ADJUST_EMBARKED_MOVEMENT</ModifierId>
+			<TechnologyType>TECH_SQUARE_RIGGING</TechnologyType>
+			<ModifierId>SQUARE_RIGGING_ADJUST_EMBARKED_MOVEMENT</ModifierId>
 		</Row>
 		<Row>
 			<TechnologyType>TECH_STEAM_POWER</TechnologyType>

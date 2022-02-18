@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<BaseGameText>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_INTRO_CHAPTER_INTRO_TITLE">
@@ -128,9 +128,9 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_12">
 			<Text>+1: If the tile is on a River or Lake</Text>
 		</Row>
-    <Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_13">
-      <Text>+1: Each Château and Sphinx.</Text>
-    </Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_13">
+			<Text>+1: Each Château and Sphinx.</Text>
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_14">
 			<Text>-1: Each adjacent Industrial Zone, Encampment, Airport or Spaceport</Text>
 		</Row>
@@ -140,9 +140,9 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_16">
 			<Text>-1: Each adjacent pillaged tile</Text>
 		</Row>
-    <Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_17">
-      <Text>-1: Mines, Quarries, Oil Wells, Offshore Oil Rigs, and Airstrips</Text>
-    </Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_17">
+			<Text>-1: Mines, Quarries, Oil Wells, Offshore Oil Rigs, and Airstrips</Text>
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_5_CHAPTER_CONTENT_TITLE">
 			<Text>Buildings</Text>
 		</Row>
@@ -605,6 +605,9 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_FAITH_6_CHAPTER_CONTENT_PARA_4">
 			<Text>Inquisitors are special units that must be unlocked with the Launch Inquisition action on an Apostle. You only need to use this action once; once you have started an Inquisition, it never ends! You can then purchase Inquisitors in cities that follow the religion of the Apostle that launched the Inquisition with [ICON_Faith] Faith. Inquisitors are not good at spreading a Religion, but instead remove all other Religions from a user owned city. They may also engage in theological combat against other Religious units.</Text>
 		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_FAITH_6_CHAPTER_CONTENT_PARA_5">
+			<Text>Gurus serve as Religious support units, providing healing to the Religious units nearby. When it expends a healing charge, the Guru heals itself and all adjacent units of the same religion.</Text>
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_FAITH_7_CHAPTER_CONTENT_TITLE">
 			<Text>Theological Combat</Text>
 		</Row>
@@ -619,6 +622,9 @@
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_FAITH_7_CHAPTER_CONTENT_PARA_4">
 			<Text>Religious units can heal any damage they have by staying adjacent to or in a Holy Site in the player's territory, regardless of the Religion of that Holy Site.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_FAITH_7_CHAPTER_CONTENT_PARA_5">
+			<Text>Religious units are also vulnerable to attack from combat units. Condemn Heretic is an action that combat units may take against them when on the same tile, and works similarly to plundering a Trade Route.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_DIPLO_NAME">
 			<Text>Diplomacy</Text>
@@ -1056,7 +1062,7 @@
 			<Text>Introduction</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_1_CHAPTER_CONTENT_PARA_1">
-			<Text>[ICON_Tourism] Tourism is needed in order to win a Culture Victory. You can generate [ICON_Tourism] Tourism through Great Works, wonders, Holy Sites, [ICON_GreatWork_Relic] Relics, [ICON_GreatWork_Artifact] Artifacts, Seaside Resorts and National Parks. You can boost your [ICON_Tourism] Tourism through [ICON_TradeRoute] Trade Routes, Open Borders, Great People, policies, and shared (or conflicting) late game governments.[NEWLINE][NEWLINE]Building a wonder will probably be one of the first ways you start earning [ICON_Tourism] Tourism. Each Wonder provides 2 [ICON_Tourism] Tourism per turn, plus 1 for each era you have advanced past the era in which that wonder was first available. So an ancient wonder like Stonehenge can earn you 9 [ICON_Tourism] Tourism per turn by the end of the game.</Text>
+			<Text>[ICON_Tourism] Tourism is needed in order to win a Culture Victory. You can generate [ICON_Tourism] Tourism through Great Works, wonders, Holy Cities, [ICON_GreatWork_Relic] Relics, [ICON_GreatWork_Artifact] Artifacts, Seaside Resorts and National Parks. You can boost your [ICON_Tourism] Tourism through [ICON_TradeRoute] Trade Routes, Open Borders, Great People, policies, and shared (or conflicting) late game governments.[NEWLINE][NEWLINE]Building a wonder will probably be one of the first ways you start earning [ICON_Tourism] Tourism. Each Wonder provides 2 [ICON_Tourism] Tourism per turn, plus 1 for each era you have advanced past the era in which that wonder was first available. So an ancient wonder like Stonehenge can earn you 9 [ICON_Tourism] Tourism per turn by the end of the game.[NEWLINE][NEWLINE]Tourism is divided into Religious Tourism (from creating a Holy City and from Relics) and Non-Religious Tourism. Some Civics (Enlightenment) and Wonders (Cristo Redentor) specifically affect the impact of your Religious Tourism.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_2_CHAPTER_CONTENT_TITLE">
 			<Text>Great Works, Relics, and Artifacts</Text>

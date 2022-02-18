@@ -126,6 +126,7 @@ CREATE TABLE "AiOperationDefs" (
 		"SelfStart" BOOLEAN NOT NULL CHECK (SelfStart IN (0,1)) DEFAULT 0,
 		"MustBeAtWar" BOOLEAN NOT NULL CHECK (MustBeAtWar IN (0,1)) DEFAULT 0,
 		"MustHaveNukes" BOOLEAN NOT NULL CHECK (MustHaveNukes IN (0,1)) DEFAULT 0,
+		"MustHaveUnits" INTEGER NOT NULL DEFAULT -1,
 		"OperationType" TEXT,
 		"AllowTargetUpdate" BOOLEAN NOT NULL CHECK (AllowTargetUpdate IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(OperationName),
@@ -156,6 +157,7 @@ CREATE TABLE "AiOperationTeams" (
 		"InitialStrengthAdvantage" REAL NOT NULL DEFAULT 0,
 		"OngoingStrengthAdvantage" REAL NOT NULL DEFAULT 0,
 		"SafeRallyPoint" BOOLEAN NOT NULL CHECK (SafeRallyPoint IN (0,1)) DEFAULT 0,
+		"Condition" TEXT,
 		PRIMARY KEY(TeamName, OperationName),
 		FOREIGN KEY (OperationName) REFERENCES AiOperationDefs(OperationName) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (TeamName) REFERENCES AiTeams(TeamName) ON DELETE CASCADE ON UPDATE CASCADE);
@@ -402,6 +404,8 @@ CREATE TABLE "Buildings" (
 		"AdjacentCapital" BOOLEAN NOT NULL CHECK (AdjacentCapital IN (0,1)) DEFAULT 0,
 		"AdjacentImprovement" TEXT,
 		"CityAdjacentTerrain" TEXT,
+		"UnlocksGovernmentPolicy" BOOLEAN CHECK (UnlocksGovernmentPolicy IN (0,1)) DEFAULT 0,
+		"GovernmentTierRequirement" TEXT,
 		PRIMARY KEY(BuildingType),
 		FOREIGN KEY (AdjacentDistrict) REFERENCES Districts(DistrictType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqDistrict) REFERENCES Districts(DistrictType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -477,6 +481,14 @@ CREATE TABLE "Building_YieldDistrictCopies" (
 		FOREIGN KEY (OldYieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (NewYieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "Building_YieldsPerEra" (
+		"BuildingType" TEXT NOT NULL,
+		"YieldType" TEXT NOT NULL DEFAULT "NO_YIELD",
+		"YieldChange" INTEGER NOT NULL DEFAULT 0,
+		PRIMARY KEY(BuildingType, YieldType),
+		FOREIGN KEY (BuildingType) REFERENCES Buildings(BuildingType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
+
 CREATE TABLE "BuildingModifiers" (
 		"BuildingType" TEXT NOT NULL,
 		"ModifierId" TEXT NOT NULL,
@@ -529,6 +541,8 @@ CREATE TABLE "Civics" (
 		"BarbarianFree" BOOLEAN NOT NULL CHECK (BarbarianFree IN (0,1)) DEFAULT 0,
 		"UITreeRow" INTEGER DEFAULT 0,
 		"AdvisorType" TEXT,
+		"EmbarkAll" BOOLEAN NOT NULL CHECK (EmbarkAll IN (0,1)) DEFAULT 0,
+		"EmbarkUnitType" TEXT,
 		PRIMARY KEY(CivicType),
 		FOREIGN KEY (EraType) REFERENCES Eras(EraType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (CivicType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
@@ -586,7 +600,7 @@ CREATE TABLE "CivilizationLeaders" (
 		"LeaderType" TEXT NOT NULL,
 		"CivilizationType" TEXT NOT NULL,
 		"CapitalName" TEXT NOT NULL,
-		PRIMARY KEY(LeaderType, CivilizationType),
+		PRIMARY KEY(LeaderType),
 		FOREIGN KEY (LeaderType) REFERENCES Leaders(LeaderType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (CivilizationType) REFERENCES Civilizations(CivilizationType) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1196,6 +1210,7 @@ CREATE TABLE "GameEffects" (
 		"GameCapabilities" TEXT,
 		"ContextInterfaces" TEXT,
 		"SubjectInterfaces" TEXT,
+		"SupportsRemove" BOOLEAN CHECK (SupportsRemove IN (0,1)),
 		PRIMARY KEY(Type),
 		FOREIGN KEY (Type) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1270,6 +1285,8 @@ CREATE TABLE "Gossips" (
 		"Description" TEXT,
 		"Message" TEXT NOT NULL,
 		"Filter" BOOLEAN NOT NULL CHECK (Filter IN (0,1)) DEFAULT 1,
+		"ErasUntilObsolete" INTEGER NOT NULL DEFAULT 0,
+		"LevelRequired" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(GossipType),
 		FOREIGN KEY (GossipType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
@@ -1285,10 +1302,14 @@ CREATE TABLE "Governments" (
 		"InfluencePointsThreshold" INTEGER NOT NULL,
 		"InfluenceTokensPerThreshold" INTEGER NOT NULL,
 		"BonusType" TEXT NOT NULL,
+		"PolicyToUnlock" TEXT,
+		"Tier" TEXT,
 		PRIMARY KEY(GovernmentType),
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (BonusType) REFERENCES GovernmentBonusNames(GovernmentBonusType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
-		FOREIGN KEY (GovernmentType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (GovernmentType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (PolicyToUnlock) REFERENCES Policies(PolicyType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (Tier) REFERENCES GovTiers(TierType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Government_SlotCounts" (
 		"GovernmentType" TEXT NOT NULL,
@@ -1300,7 +1321,6 @@ CREATE TABLE "Government_SlotCounts" (
 
 CREATE TABLE "GovernmentBonusNames" (
 		"GovernmentBonusType" TEXT NOT NULL,
-		"BonusValue" INTEGER NOT NULL UNIQUE,
 		PRIMARY KEY(GovernmentBonusType));
 
 CREATE TABLE "GovernmentModifiers" (
@@ -1314,6 +1334,11 @@ CREATE TABLE "GovernmentSlots" (
 		"Name" TEXT NOT NULL,
 		"AllowsAnyPolicy" BOOLEAN NOT NULL CHECK (AllowsAnyPolicy IN (0,1)),
 		PRIMARY KEY(GovernmentSlotType));
+
+CREATE TABLE "GovTiers" (
+		"TierType" TEXT NOT NULL,
+		"Sorting" INTEGER NOT NULL,
+		PRIMARY KEY(TierType));
 
 CREATE TABLE "GreatPersonClasses" (
 		"GreatPersonClassType" TEXT NOT NULL,
@@ -1492,6 +1517,7 @@ CREATE TABLE "Improvements" (
 		"YieldFromAppealPercent" INTEGER NOT NULL DEFAULT 100,
 		"ValidAdjacentTerrainAmount" INTEGER NOT NULL DEFAULT 0,
 		"Domain" TEXT NOT NULL DEFAULT "DOMAIN_LAND",
+		"AdjacentSeaResource" BOOLEAN NOT NULL CHECK (AdjacentSeaResource IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(ImprovementType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -1815,6 +1841,7 @@ CREATE TABLE "Policies" (
 		"PrereqTech" TEXT,
 		"Name" TEXT NOT NULL,
 		"GovernmentSlotType" TEXT NOT NULL,
+		"RequiresGovernmentUnlock" BOOLEAN CHECK (RequiresGovernmentUnlock IN (0,1)),
 		PRIMARY KEY(PolicyType),
 		FOREIGN KEY (GovernmentSlotType) REFERENCES GovernmentSlots(GovernmentSlotType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -2432,6 +2459,7 @@ CREATE TABLE "Units" (
 		"ReligiousStrength" INTEGER NOT NULL DEFAULT 0,
 		"ReligionEvictPercent" INTEGER NOT NULL DEFAULT 0,
 		"SpreadCharges" INTEGER NOT NULL DEFAULT 0,
+		"ReligiousHealCharges" INTEGER NOT NULL DEFAULT 0,
 		"ExtractsArtifacts" BOOLEAN NOT NULL CHECK (ExtractsArtifacts IN (0,1)) DEFAULT 0,
 		"Description" TEXT,
 		"Flavor" TEXT,
@@ -2470,6 +2498,8 @@ CREATE TABLE "Units" (
 		"MandatoryObsoleteTech" TEXT,
 		"MandatoryObsoleteCivic" TEXT,
 		"AdvisorType" TEXT,
+		"EnabledByReligion" BOOLEAN NOT NULL CHECK (EnabledByReligion IN (0,1)) DEFAULT 0,
+		"TrackReligion" BOOLEAN NOT NULL CHECK (TrackReligion IN (0,1)) DEFAULT 0,
 		PRIMARY KEY(UnitType),
 		FOREIGN KEY (Flavor) REFERENCES Flavors(FlavorType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -2751,6 +2781,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Buildings", "ValidTerrains", "Terrains", 1,"SELECT T1.rowid from Terrains as T1 inner join Building_ValidTerrains as T2 on T2.TerrainType = T1.TerrainType inner join Buildings as T3 on T3.BuildingType = T2.BuildingType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Buildings", "YieldChanges", "Building_YieldChanges", 1,"SELECT T1.rowid from Building_YieldChanges as T1 inner join Buildings as T2 on T2.BuildingType = T1.BuildingType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Buildings", "YieldDistrictCopyReference", "Building_YieldDistrictCopies", 1,"SELECT T1.rowid from Building_YieldDistrictCopies as T1 inner join Buildings as T2 on T2.BuildingType = T1.BuildingType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Buildings", "YieldsPerEra", "Building_YieldsPerEra", 1,"SELECT T1.rowid from Building_YieldsPerEra as T1 inner join Buildings as T2 on T2.BuildingType = T1.BuildingType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Building_GreatPersonPoints", "BuildingReference", "Buildings", 0,"SELECT T1.rowid from Buildings as T1 inner join Building_GreatPersonPoints as T2 on T2.BuildingType = T1.BuildingType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Building_GreatPersonPoints", "GreatPersonClassReference", "GreatPersonClasses", 0,"SELECT T1.rowid from GreatPersonClasses as T1 inner join Building_GreatPersonPoints as T2 on T2.GreatPersonClassType = T1.GreatPersonClassType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Building_GreatWorks", "ValidObjectTypes", "GreatWorkObjectTypes", 1,"SELECT T1.rowid from GreatWorkObjectTypes as T1 inner join GreatWork_ValidSubTypes as T2 on T2.GreatWorkObjectType = T1.GreatWorkObjectType inner join GreatWorkSlotTypes as T3 on T3.GreatWorkSlotType = T2.GreatWorkSlotType inner join Building_GreatWorks as T4 on T4.GreatWorkSlotType = T3.GreatWorkSlotType where T4.rowid = ? ORDER BY T1.rowid ASC");
@@ -2874,10 +2905,12 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("GoodyHuts", "ImprovementReference", "Improvements", 0,"SELECT T1.rowid from Improvements as T1 inner join GoodyHuts as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("GoodyHuts", "SubTypeGoodyHutCollection", "GoodyHutSubTypes", 1,"SELECT T1.rowid from GoodyHutSubTypes as T1 inner join GoodyHuts as T2 on T2.GoodyHutType = T1.GoodyHut where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Governments", "GovernmentSlotsReference", "Government_SlotCounts", 1,"SELECT T1.rowid from Government_SlotCounts as T1 inner join Governments as T2 on T2.GovernmentType = T1.GovernmentType where T2.rowid = ? ORDER BY T1.rowid ASC");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Governments", "PolicyToUnlockReference", "Policies", 0,"SELECT T1.rowid from Policies as T1 inner join Governments as T2 on T2.PolicyToUnlock = T1.PolicyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Governments", "PrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Governments as T2 on T2.PrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Governments", "StartingGovernmentCollection", "StartingGovernments", 1,"SELECT T1.rowid from StartingGovernments as T1 inner join Governments as T2 on T2.GovernmentType = T1.Government where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Government_SlotCounts", "GovernmentReference", "Governments", 0,"SELECT T1.rowid from Governments as T1 inner join Government_SlotCounts as T2 on T2.GovernmentType = T1.GovernmentType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Government_SlotCounts", "SlotReference", "GovernmentSlots", 0,"SELECT T1.rowid from GovernmentSlots as T1 inner join Government_SlotCounts as T2 on T2.GovernmentSlotType = T1.GovernmentSlotType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("GovTiers", "GovernmentsOfTier", "Governments", 1,"SELECT T1.rowid from Governments as T1 inner join GovTiers as T2 on T2.TierType = T1.Tier where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("GreatPersonClasses", "DistrictReference", "Districts", 0,"SELECT T1.rowid from Districts as T1 inner join GreatPersonClasses as T2 on T2.DistrictType = T1.DistrictType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("GreatPersonClasses", "ExclusionReference", "ExcludedGreatPersonClasses", 1,"SELECT T1.rowid from ExcludedGreatPersonClasses as T1 inner join GreatPersonClasses as T2 on T2.GreatPersonClassType = T1.GreatPersonClassType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("GreatPersonClasses", "PseudoYieldReference", "PseudoYields", 0,"SELECT T1.rowid from PseudoYields as T1 inner join GreatPersonClasses as T2 on T2.PseudoYieldType = T1.PseudoYieldType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");

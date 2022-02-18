@@ -66,7 +66,7 @@
 		<Row Type="ABILITY_IGNORE_CROSSING_RIVERS_COST" Tag="CLASS_HELICOPTER"/>
 		<Row Type="ABILITY_ARCHAEOLOGIST_ENTER_FOREIGN_LANDS" Tag="CLASS_ARCHAEOLOGIST"/>
 		<Row Type="ABILITY_RELIGIOUS_ENTER_FOREIGN_LANDS" Tag="CLASS_RELIGIOUS"/>
-		<Row Type="ABILITY_RELIGIOUS_IGNORE_TERRAIN_COST" Tag="CLASS_RELIGIOUS"/>
+		<Row Type="ABILITY_RELIGIOUS_IGNORE_TERRAIN_COST" Tag="CLASS_RELIGIOUS_ALL"/>
 		<Row Type="ABILITY_IGNORE_ZOC" Tag="CLASS_HEAVY_CAVALRY"/>
 		<Row Type="ABILITY_IGNORE_ZOC" Tag="CLASS_NAVAL_RAIDER"/>
 		<Row Type="ABILITY_IGNORE_ZOC" Tag="CLASS_WAR_CART"/>
@@ -85,7 +85,8 @@
 		<Row Type="ABILITY_NO_FOREIGN_SPREAD" Tag="CLASS_INQUISITOR"/>
 		<Row Type="ABILITY_OLIGARCHY_MELEE_BUFF" Tag="CLASS_MELEE"/>
 		<Row Type="ABILITY_OLIGARCHY_MELEE_BUFF" Tag="CLASS_ANTI_CAVALRY"/>
-		<Row Type="ABILITY_THEOCRACY_RELIGIOUS_BUFF" Tag="CLASS_RELIGIOUS"/>
+    		<Row Type="ABILITY_OLIGARCHY_MELEE_BUFF" Tag="CLASS_WARRIOR_MONK"/>
+    		<Row Type="ABILITY_THEOCRACY_RELIGIOUS_BUFF" Tag="CLASS_RELIGIOUS"/>
 		<Row Type="ABILITY_THEOCRACY_RELIGIOUS_BUFF" Tag="CLASS_INQUISITOR"/>
 		<Row Type="ABILITY_RELIGIOUS_ORDERS_BUFF" Tag="CLASS_RELIGIOUS"/>
 		<Row Type="ABILITY_RELIGIOUS_ORDERS_BUFF" Tag="CLASS_INQUISITOR"/>
@@ -128,8 +129,7 @@
 		<Row Type="ABILITY_CAPTIVE_WORKERS" Tag="CLASS_CAPTURE_WORKER"/>
 		<Row Type="ABILITY_BALKAN_CAVALRY" Tag="CLASS_HEAVY_CAVALRY"/>
 		<Row Type="ABILITY_BALKAN_CAVALRY" Tag="CLASS_LIGHT_CAVALRY"/>
-		<Row Type="ABILITY_ALTITUDE_TRAINING" Tag="CLASS_RELIGIOUS"/>
-		<Row Type="ABILITY_ALTITUDE_TRAINING" Tag="CLASS_INQUISITOR"/>
+		<Row Type="ABILITY_ALTITUDE_TRAINING" Tag="CLASS_RELIGIOUS_ALL"/>
 		<Row Type="ABILITY_COSSACK" Tag="CLASS_COSSACK"/>
 		<Row Type="ABILITY_REDCOAT" Tag="CLASS_REDCOAT"/>
 		<Row Type="ABILITY_VARU" Tag="CLASS_VARU"/>
@@ -688,8 +688,12 @@
 		</Row>
 		<Row>
 			<ModifierId>HOPLITE_NEIGHBOR_COMBAT</ModifierId>
-			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<ModifierType>MODIFIER_SINGLE_UNIT_ATTACH_MODIFIER</ModifierType>
 			<SubjectRequirementSetId>HOPLITE_PLOT_IS_HOPLITE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>HOPLITE_NEIGHBOR_COMBAT_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>UBOAT_OCEAN_COMBAT</ModifierId>
@@ -1031,6 +1035,11 @@
 		</Row>
 		<Row>
 			<ModifierId>HOPLITE_NEIGHBOR_COMBAT</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>HOPLITE_NEIGHBOR_COMBAT_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>HOPLITE_NEIGHBOR_COMBAT_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>10</Value>
 		</Row>
@@ -1274,7 +1283,11 @@
 			<RequirementSetId>CONQUISTADOR_SPECIFIC_UNIT_REQUIREMENTS</RequirementSetId>
 			<RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementSetId>CONQUISTADOR_SPECIFIC_UNIT_REQUIREMENTS</RequirementSetId>
+      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+    </Row>
+    <Row>
 			<RequirementSetId>GARDE_PLOT_IS_CAPITAL_CONTINENT_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_UNIT_ON_HOME_CONTINENT</RequirementId>
 		</Row>
@@ -1389,7 +1402,11 @@
 			<RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_UNIT_TYPE_MATCHES</RequirementType>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+      <RequirementType>REQUIREMENT_PLOT_UNIT_TYPE_MATCHES</RequirementType>
+    </Row>
+    <Row>
 			<RequirementId>NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_UNIT_ON_HOME_CONTINENT</RequirementType>
 			<Inverse>true</Inverse>
@@ -1491,17 +1508,42 @@
 			<Name>UnitType</Name>
 			<Value>UNIT_APOSTLE</Value>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementId>PLOT_UNIT_IS_APOSTLE_REQUIREMENTS</RequirementId>
+      <Name>LayerIndex</Name>
+      <Value>3</Value>
+    </Row>
+    <Row>
 			<RequirementId>PLOT_UNIT_IS_INQUISITOR_REQUIREMENTS</RequirementId>
 			<Name>UnitType</Name>
 			<Value>UNIT_INQUISITOR</Value>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementId>PLOT_UNIT_IS_INQUISITOR_REQUIREMENTS</RequirementId>
+      <Name>LayerIndex</Name>
+      <Value>3</Value>
+    </Row>
+    <Row>
 			<RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
 			<Name>UnitType</Name>
 			<Value>UNIT_MISSIONARY</Value>
 		</Row>
-		<Row>
+    <Row>
+      <RequirementId>PLOT_UNIT_IS_MISSIONARY_REQUIREMENTS</RequirementId>
+      <Name>LayerIndex</Name>
+      <Value>3</Value>
+    </Row>
+    <Row>
+      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+      <Name>UnitType</Name>
+      <Value>UNIT_GURU</Value>
+    </Row>
+    <Row>
+      <RequirementId>PLOT_UNIT_IS_GURU_REQUIREMENTS</RequirementId>
+      <Name>LayerIndex</Name>
+      <Value>3</Value>
+    </Row>
+    <Row>
 			<RequirementId>REQUIRES_UNIT_NEXT_TO_HOPLITE</RequirementId>
 			<Name>UnitType</Name>
 			<Value>UNIT_GREEK_HOPLITE</Value>
@@ -1582,7 +1624,7 @@
 		<Row ModifierId="NAGAO_RANGED_DEFENSE" Context="Preview" Text="LOC_ABILITY_NAGAO_RANGED_DEFENSE_MODIFIER_DESCRIPTION"/>
 		<Row ModifierId="CONQUISTADOR_SPECIFIC_UNIT_COMBAT" Context="Preview" Text="LOC_ABILITY_CONQUISTADOR_SPECIFIC_UNIT_COMBAT_MODIFIER_DESCRIPTION"/>
 		<Row ModifierId="GARDE_CONTINENT_COMBAT" Context="Preview" Text="LOC_ABILITY_GARDE_CONTINENT_COMBAT_MODIFIER_DESCRIPTION"/>
-		<Row ModifierId="HOPLITE_NEIGHBOR_COMBAT" Context="Preview" Text="LOC_ABILITY_HOPLITE_NEIGHBOR_COMBAT_MODIFIER_DESCRIPTION"/>
+		<Row ModifierId="HOPLITE_NEIGHBOR_COMBAT_MODIFIER" Context="Preview" Text="LOC_ABILITY_HOPLITE_NEIGHBOR_COMBAT_MODIFIER_DESCRIPTION"/>
 		<Row ModifierId="UBOAT_OCEAN_COMBAT" Context="Preview" Text="LOC_ABILITY_UBOAT_OCEAN_COMBAT_MODIFIER_DESCRIPTION"/>
 		<Row ModifierId="ROUGH_RIDER_BONUS_ON_HILLS" Context="Preview" Text="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION"/>
 		<Row ModifierId="DIGGER_BONUS_ON_COAST" Context="Preview" Text="LOC_ABILITY_DIGGER_BONUS_ON_COAST_DESCRIPTION"/>

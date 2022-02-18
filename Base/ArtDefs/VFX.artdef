@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <AssetObjects..ArtDefSet>
 	<m_Version>
-		<major>3</major>
+		<major>4</major>
 		<minor>0</minor>
-		<build>210</build>
-		<revision>682</revision>
+		<build>307</build>
+		<revision>992</revision>
 	</m_Version>
 	<m_TemplateName text="VFX"/>
 	<m_RootCollections>
@@ -282,6 +282,48 @@
 				</m_Fields>
 				<m_ChildCollections/>
 				<m_Name text="UNIT_CORPS_FORMED"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="FX_Guru_Heal"/>
+							<m_XLPClass text="VFX"/>
+							<m_XLPPath text="VFX.xlp"/>
+							<m_BLPPackage text="VFX"/>
+							<m_LibraryName text="VFX"/>
+							<m_ParamName text="Asset"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text=""/>
+							<m_ParamName text="Audio"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="UNIT_ACCEPT_RELIGIOUS_HEAL"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BLPEntryValue">
+							<m_EntryName text="FX_Guru_Cast"/>
+							<m_XLPClass text="VFX"/>
+							<m_XLPPath text="VFX.xlp"/>
+							<m_BLPPackage text="VFX"/>
+							<m_LibraryName text="VFX"/>
+							<m_ParamName text="Asset"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="Guru_Heal_VFX"/>
+							<m_ParamName text="Audio"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections/>
+				<m_Name text="UNIT_GIVE_RELIGIOUS_HEAL"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

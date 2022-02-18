@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_UNITOPERATION"/>
@@ -59,6 +58,7 @@
 		<Row Type="UNITOPERATION_UPGRADE" Kind="KIND_UNITOPERATION"/>
 		<Row Type="UNITOPERATION_WAIT_FOR" Kind="KIND_UNITOPERATION"/>
 		<Row Type="UNITOPERATION_ALERT" Kind="KIND_UNITOPERATION"/>
+		<Row Type="UNITOPERATION_RELIGIOUS_HEAL" Kind="KIND_UNITOPERATION"/>
 	</Types>
 	<UnitOperations>
 		<Row OperationType="UNITOPERATION_AIR_ATTACK" VisibleInUI="true" HoldCycling="true" CategoryInUI="ATTACK" Icon="ICON_UNITOPERATION_AIR_ATTACK" Description="LOC_UNITOPERATION_AIR_ATTACK_DESCRIPTION" InterfaceMode="INTERFACEMODE_AIR_ATTACK"/>
@@ -115,5 +115,6 @@
 		<Row OperationType="UNITOPERATION_UPGRADE" VisibleInUI="true" HoldCycling="true" CategoryInUI="SPECIFIC" Icon="ICON_UNITOPERATION_UPGRADE" Description="LOC_UNITOPERATION_UPGRADE_DESCRIPTION"/>
 		<Row OperationType="UNITOPERATION_WAIT_FOR" VisibleInUI="false" HoldCycling="false" CategoryInUI="SPECIFIC" Icon="ICON_UNITOPERATION_WAIT_FOR" Description="LOC_UNITOPERATION_WAIT_FOR_DESCRIPTION"/>
 		<Row OperationType="UNITOPERATION_ALERT" Sound="Unit_Alert" VisibleInUI="true" HoldCycling="false" CategoryInUI="INPLACE" Icon="ICON_UNITOPERATION_ALERT" Description="LOC_UNITOPERATION_ALERT_DESCRIPTION" HotkeyId="Alert"/>
+		<Row OperationType="UNITOPERATION_RELIGIOUS_HEAL" VisibleInUI="true" HoldCycling="true" CategoryInUI="SPECIFIC" Icon="ICON_UNITOPERATION_RELIGIOUS_HEAL" Description="LOC_UNITOPERATION_RELIGIOUS_HEAL_DESCRIPTION"/>
 	</UnitOperations>
 </GameInfo>

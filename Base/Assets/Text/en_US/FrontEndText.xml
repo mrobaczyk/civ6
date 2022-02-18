@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by matthew beach (Firaxis Games) -->
 <GameData>
 	<FrontEndText>
 		<!-- Generic -->
@@ -51,9 +50,6 @@
     </Row>
 		<Row Tag="LOC_PLAY_MULTIPLAYER">
 			<Text>Multiplayer</Text>
-		</Row>
-		<Row Tag="LOC_PLAY_MULTIPLAYER_HAVE_CLOUD_TURN">
-			<Text>[ICON_Exclamation] Multiplayer</Text>
 		</Row>
 		<Row Tag="LOC_LOAD_GAME">
 			<Text>Load Game</Text>
@@ -198,6 +194,9 @@
 		<Row Tag="LOC_LOADSAVE_GAME_OPTIONS_HEADER_TITLE">
 			<Text>Game Options</Text>
 		</Row>
+		<Row Tag="LOC_LOADSAVE_GAME_OPTIONS_RULESET_TYPE_TITLE">
+			<Text>Ruleset:</Text>
+		</Row>
 		<Row Tag="LOC_LOADSAVE_GAME_OPTIONS_MAP_TYPE_TITLE">
 			<Text>Map Type:</Text>
 		</Row>
@@ -317,24 +316,6 @@
 		<Row Tag="LOC_MULTIPLAYER_HOTSEAT_GAME_TT">
 			<Text>Play a multiplayer game where players take alternating turns on this machine.</Text>
 		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME">
-			<Text>Cloud Game</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_TURN">
-			<Text>[ICON_Exclamation] Cloud Game</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME_TT">
-			<Text>Play a multiplayer game using FiraxisLive cloud computing technology.  Requires an active connection to FiraxisLive.</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_TURN_TT">
-			<Text>It is your turn in one of your cloud games.[NEWLINE][NEWLINE]Play a multiplayer game using FiraxisLive cloud computing technology.  Requires an active connection to FiraxisLive.</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_PITBOSS_GAME">
-			<Text>Pitboss</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_PITBOSS_GAME_TT">
-			<Text>Play a multiplayer game where a dedicated server controls the game over a long period of time.</Text>
-		</Row>
 		<Row Tag="LOC_MENU_BACK">
 			<Text>Back</Text>
 		</Row>
@@ -451,12 +432,6 @@
 		<Row Tag="LOC_STAGING_ROOM_JOIN_CODE">
 			<Text>Join Code:</Text>
 		</Row>		
-		<Row Tag="LOC_MULTIPLAYER_PITBOSS_LOBBY">
-			<Text>PITBOSS GAMES</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_LOBBY">
-			<Text>CLOUD GAMES</Text>
-		</Row>
 		<Row Tag="LOC_MULTIPLAYER_INTERNET_LOBBY">
 			<Text>INTERNET GAMES</Text>
 		</Row>
@@ -483,40 +458,6 @@
 		</Row>
 		<Row Tag="LOC_MULTIPLAYER_FALSE">
 			<Text>False</Text>
-		</Row>
-		<Row Tag="LOC_LOBBY_GAME_STARTED_TOOLTIP">
-			<Text>Game in progress</Text>
-		</Row>
-		<Row Tag="LOC_LOBBY_GAME_LOADING_SAVE_TOOLTIP">
-			<Text>Game loading save</Text>
-		</Row>
-		<Row Tag="LOC_LOBBY_GAME_YOUR_TURN_TOOLTIP">
-			<Text>It is your turn in this game.</Text>
-		</Row>
-		<Row Tag="LOC_LOBBY_GAME_NAME_YOUR_TURN">
-			<Text>[ICON_Exclamation] {1_gameName}</Text>
-		</Row>
-		<!-- Cloud Game Screen -->
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_LIST">
-			<Text>List</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_TEMPLATE">
-			<Text>Template</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_HOST">
-			<Text>Host</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_JOIN">
-			<Text>Join</Text>
-		</Row>
-		<Row Tag="LOC_MULTIPLAYER_CLOUD_START">
-			<Text>Start</Text>
-		</Row>
-		<Row Tag="LOC_LOBBY_MY_GAMES">
-			<Text>My Games</Text>
-		</Row>
-		<Row Tag="LOC_LOBBY_OPEN_GAMES">
-			<Text>Open Games</Text>
 		</Row>
 		<!-- Options -->
     <Row Tag="LOC_CONFIRM_KEY_BINDING">
@@ -662,6 +603,9 @@
 		<Row Tag="LOC_MULTIPLAYER_CONFIGURING_CONTENT">
 			<Text>Configuring Game Content...</Text>
 		</Row>
+		<Row Tag="LOC_MULTIPLAYER_CONNECTING_TO_PLAYERS">
+			<Text>Connecting to Players...</Text>
+		</Row>
 		<Row Tag="LOC_MP_ROOM_FULL">
 			<Text>Unable to join game. The game has the maximum number of players.</Text>
 		</Row>
@@ -723,10 +667,10 @@
 			<Text>Open slots can be occupied by joining players.</Text>
 		</Row>
 		<Row Tag="LOC_SLOTTYPE_HUMANREQ">
-			<Text>Human Required</Text>
+			<Text>Open</Text>
 		</Row>
 		<Row Tag="LOC_SLOTTYPE_HUMANREQ_TT">
-			<Text>Human Required slots require a human player before the game can start.</Text>
+			<Text>Open slots require a human player before the game can start.</Text>
 		</Row>
 		<Row Tag="LOC_SLOTLABEL_HOST">
 			<Text>[ICON_Host] Host</Text>
@@ -1082,7 +1026,7 @@
 			<Text>No Duplicate Leaders</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_HUMANS_REQUIRED">
-			<Text>More Humans Required</Text>
+			<Text>Awaiting Additional Players</Text>
 		</Row>
 		<Row Tag="LOC_SETUP_ERROR_INVALID_OPTION">
 			<Text>Invalid Option</Text>
@@ -1647,9 +1591,6 @@
 		<Row Tag="LOC_MAINMENU_MULTIPLAYER_TT">
 			<Text>Internet, network, and hot seat matches can be setup or joined here.</Text>
 		</Row>
-		<Row Tag="LOC_MAINMENU_MULTIPLAYER_HAVE_CLOUD_TURN_TT">
-			<Text>It is your turn in one of your cloud games.[NEWLINE][NEWLINE]Internet, network, and hot seat matches can be setup or joined here.</Text>
-		</Row>	
 		<Row Tag="LOC_MAINMENU_GAME_OPTIONS_TT">
 			<Text>Settings for graphics, audio, key bindings, and more.</Text>
 		</Row>

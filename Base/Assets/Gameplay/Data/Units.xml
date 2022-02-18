@@ -13,6 +13,7 @@
 		<Row Type="UNIT_MISSIONARY" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_APOSTLE" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_INQUISITOR" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_GURU" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_ARCHAEOLOGIST" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_SPY" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_NATURALIST" Kind="KIND_UNIT"/>
@@ -33,6 +34,7 @@
 		<Row Type="UNIT_WARRIOR" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_SPEARMAN" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_SWORDSMAN" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_WARRIOR_MONK" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_PIKEMAN" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_MUSKETMAN" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_INFANTRY" Kind="KIND_UNIT"/>
@@ -467,6 +469,7 @@
 	<Tags>
 		<Row Tag="CLASS_LANDCIVILIAN" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_RECON" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_BUILDER" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_MELEE" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_RANGED" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_SIEGE" Vocabulary="ABILITY_CLASS"/>
@@ -487,6 +490,8 @@
 		<Row Tag="CLASS_RELIGIOUS" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_INQUISITOR" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_MISSIONARY" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_RELIGIOUS_ALL" Vocabulary="ABILITY_CLASS"/>
+    		<Row Tag="CLASS_WARRIOR_MONK" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_OBSERVATION" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_FORWARD_OBSERVER" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_AIRCRAFT" Vocabulary="ABILITY_CLASS"/>
@@ -519,9 +524,11 @@
 	<TypeTags>
 		<Row Type="UNIT_SETTLER" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="UNIT_BUILDER" Tag="CLASS_LANDCIVILIAN"/>
+		<Row Type="UNIT_BUILDER" Tag="CLASS_BUILDER"/>
 		<Row Type="UNIT_MISSIONARY" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="UNIT_APOSTLE" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="UNIT_INQUISITOR" Tag="CLASS_LANDCIVILIAN"/>
+		<Row Type="UNIT_GURU" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="UNIT_ARCHAEOLOGIST" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="UNIT_GREAT_GENERAL" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="UNIT_GREAT_MERCHANT" Tag="CLASS_LANDCIVILIAN"/>
@@ -606,10 +613,17 @@
 		<Row Type="UNIT_SPANISH_CONQUISTADOR" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_SPANISH_CONQUISTADOR" Tag="CLASS_CONQUISTADOR"/>
 		<Row Type="UNIT_MISSIONARY" Tag="CLASS_RELIGIOUS"/>
+		<Row Type="UNIT_MISSIONARY" Tag="CLASS_RELIGIOUS_ALL"/>
 		<Row Type="UNIT_MISSIONARY" Tag="CLASS_MISSIONARY"/>
 		<Row Type="UNIT_APOSTLE" Tag="CLASS_RELIGIOUS"/>
+		<Row Type="UNIT_APOSTLE" Tag="CLASS_RELIGIOUS_ALL"/>
 		<Row Type="UNIT_INQUISITOR" Tag="CLASS_INQUISITOR"/>
-		<Row Type="UNIT_OBSERVATION_BALLOON" Tag="CLASS_OBSERVATION"/>
+		<Row Type="UNIT_INQUISITOR" Tag="CLASS_RELIGIOUS_ALL"/>
+		<Row Type="UNIT_GURU" Tag="CLASS_RELIGIOUS"/>
+		<Row Type="UNIT_GURU" Tag="CLASS_RELIGIOUS_ALL"/>
+		<Row Type="UNIT_GURU" Tag="CLASS_MISSIONARY"/>
+    		<Row Type="UNIT_WARRIOR_MONK" Tag="CLASS_WARRIOR_MONK"/>
+    		<Row Type="UNIT_OBSERVATION_BALLOON" Tag="CLASS_OBSERVATION"/>
 		<Row Type="UNIT_ROMAN_LEGION" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_FIGHTER" Tag="CLASS_AIRCRAFT"/>
 		<Row Type="UNIT_BOMBER" Tag="CLASS_AIRCRAFT"/>
@@ -617,6 +631,7 @@
 		<Row Type="UNIT_JET_FIGHTER" Tag="CLASS_AIRCRAFT"/>
 		<Row Type="UNIT_MEDIC" Tag="CLASS_MEDIC"/>
 		<Row Type="UNIT_TRADER" Tag="CLASS_TRADER"/>
+		<Row Type="UNIT_TRADER" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="UNIT_ARCHAEOLOGIST" Tag="CLASS_ARCHAEOLOGIST"/>
 		<Row Type="UNIT_SUBMARINE" Tag="CLASS_NAVAL_RAIDER"/>
 		<Row Type="UNIT_SUBMARINE" Tag="CLASS_NAVAL_RANGED"/>
@@ -663,9 +678,11 @@
 		<Row UnitType="UNIT_SETTLER" BaseMoves="2" Cost="80" AdvisorType="ADVISOR_GENERIC" BaseSightRange="3" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" FoundCity="true" PopulationCost="1" PrereqPopulation="2" Name="LOC_UNIT_SETTLER_NAME" Description="LOC_UNIT_SETTLER_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="30" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_SETTLER"/>
 		<Row UnitType="UNIT_BUILDER" BaseMoves="2" Cost="50" AdvisorType="ADVISOR_GENERIC" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_BUILDER_NAME" Description="LOC_UNIT_BUILDER_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="4" PurchaseYield="YIELD_GOLD" BuildCharges="3"/>
 		<Row UnitType="UNIT_TRADER" BaseMoves="2" Cost="40" AdvisorType="ADVISOR_GENERIC" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_TRADER_NAME" Description="LOC_UNIT_TRADER_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="400" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_TRADE" IgnoreMoves="true" MakeTradeRoute="true" PrereqCivic="CIVIC_FOREIGN_TRADE"/>
-		<Row UnitType="UNIT_MISSIONARY" BaseMoves="4" Cost="75" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_MISSIONARY_NAME" Description="LOC_UNIT_MISSIONARY_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="6" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" ReligiousStrength="100" SpreadCharges="3" MustPurchase="TRUE"/>
-		<Row UnitType="UNIT_APOSTLE" BaseMoves="4" Cost="200" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_APOSTLE_NAME" Description="LOC_UNIT_APOSTLE_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="15" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" ReligiousStrength="110" SpreadCharges="3" MustPurchase="TRUE" ReligionEvictPercent="25" EvangelizeBelief="true" LaunchInquisition="true" PromotionClass="PROMOTION_CLASS_APOSTLE" InitialLevel="2" NumRandomChoices="2"/>
-		<Row UnitType="UNIT_INQUISITOR" BaseMoves="4" Cost="75" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_INQUISITOR_NAME" Description="LOC_UNIT_INQUISITOR_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="6" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" ReligiousStrength="75" SpreadCharges="3" MustPurchase="TRUE" ReligionEvictPercent="100" PromotionClass="PROMOTION_CLASS_INQUISITOR" RequiresInquisition="true"/>
+		<Row UnitType="UNIT_MISSIONARY" BaseMoves="4" Cost="75" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_MISSIONARY_NAME" Description="LOC_UNIT_MISSIONARY_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="6" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" ReligiousStrength="100" SpreadCharges="3" TrackReligion="TRUE" MustPurchase="TRUE" ReligionEvictPercent="10"/>
+		<Row UnitType="UNIT_APOSTLE" BaseMoves="4" Cost="200" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_APOSTLE_NAME" Description="LOC_UNIT_APOSTLE_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="15" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" ReligiousStrength="110" SpreadCharges="3" TrackReligion="TRUE" MustPurchase="TRUE" ReligionEvictPercent="25" EvangelizeBelief="true" LaunchInquisition="true" PromotionClass="PROMOTION_CLASS_APOSTLE" InitialLevel="2" NumRandomChoices="2"/>
+		<Row UnitType="UNIT_INQUISITOR" BaseMoves="4" Cost="75" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_INQUISITOR_NAME" Description="LOC_UNIT_INQUISITOR_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="6" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" ReligiousStrength="75" SpreadCharges="3" TrackReligion="TRUE" MustPurchase="TRUE" ReligionEvictPercent="100" PromotionClass="PROMOTION_CLASS_INQUISITOR" RequiresInquisition="true"/>
+		<Row UnitType="UNIT_GURU" BaseMoves="4" Cost="120" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_GURU_NAME" Description="LOC_UNIT_GURU_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="12" PurchaseYield="YIELD_FAITH" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS" ReligiousStrength="90" ReligiousHealCharges="3" TrackReligion="TRUE" MustPurchase="TRUE"/>
+		<Row UnitType="UNIT_WARRIOR_MONK" BaseMoves="3" Cost="100" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_WARRIOR_MONK_NAME" Description="LOC_UNIT_WARRIOR_MONK_DESCRIPTION" PurchaseYield="YIELD_FAITH" TrackReligion="TRUE" MustPurchase="TRUE" EnabledByReligion="true" Combat="35" PromotionClass="PROMOTION_CLASS_MONK" Maintenance="2"/>
 		<Row UnitType="UNIT_ARCHAEOLOGIST" BaseMoves="4" Cost="400" AdvisorType="ADVISOR_CULTURE" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_ARCHAEOLOGIST_NAME" Description="LOC_UNIT_ARCHAEOLOGIST_DESCRIPTION" CanCapture="False" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_ARCHAEOLOGIST" PrereqCivic="CIVIC_NATURAL_HISTORY" ExtractsArtifacts="true" CanRetreatWhenCaptured="True"/>
 		<Row UnitType="UNIT_GREAT_GENERAL" BaseMoves="4" Cost="1" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_GREAT_GENERAL_NAME" Description="LOC_UNIT_GREAT_GENERAL_DESCRIPTION" CanCapture="False" CanRetreatWhenCaptured="True" CanTrain="False"/>
 		<Row UnitType="UNIT_GREAT_ADMIRAL" BaseMoves="4" Cost="1" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_SEA" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_GREAT_ADMIRAL_NAME" Description="LOC_UNIT_GREAT_ADMIRAL_DESCRIPTION" CanCapture="False" CanRetreatWhenCaptured="True" CanTrain="False"/>
@@ -827,6 +844,10 @@
 		<Row Unit="UNIT_APOSTLE" PrereqBuilding="BUILDING_STAVE_CHURCH"/>
 		<Row Unit="UNIT_INQUISITOR" PrereqBuilding="BUILDING_TEMPLE"/>
 		<Row Unit="UNIT_INQUISITOR" PrereqBuilding="BUILDING_STAVE_CHURCH"/>
+		<Row Unit="UNIT_WARRIOR_MONK" PrereqBuilding="BUILDING_TEMPLE"/>
+		<Row Unit="UNIT_WARRIOR_MONK" PrereqBuilding="BUILDING_STAVE_CHURCH"/>
+		<Row Unit="UNIT_GURU" PrereqBuilding="BUILDING_TEMPLE"/>
+		<Row Unit="UNIT_GURU" PrereqBuilding="BUILDING_STAVE_CHURCH"/>
 		<Row Unit="UNIT_MILITARY_ENGINEER" PrereqBuilding="BUILDING_ARMORY"/>
 		<Row Unit="UNIT_ARCHAEOLOGIST" PrereqBuilding="BUILDING_MUSEUM_ARTIFACT" NumSupported="1"/>
 	</Unit_BuildingPrereqs>

@@ -19,7 +19,10 @@
     <Row Type="STRATEGY_EARLY_EXPLORATION" Kind="KIND_VICTORY_STRATEGY" />
     <Row Type="STRATEGY_RAPID_EXPANSION" Kind="KIND_VICTORY_STRATEGY" />
     <Row Type="STRATEGY_NAVAL" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_CLASSICAL_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_MEDIEVAL_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
     <Row Type="STRATEGY_RENAISSANCE_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_INDUSTRIAL_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
     <Row Type="STRATEGY_MODERN_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
   </Types>
   <Defeats>
@@ -44,7 +47,10 @@
     <Row StrategyType ="STRATEGY_EARLY_EXPLORATION" NumConditionsNeeded="1"/>
     <Row StrategyType ="STRATEGY_RAPID_EXPANSION" NumConditionsNeeded="3"/>
     <Row StrategyType="STRATEGY_NAVAL" NumConditionsNeeded="1"/>
+    <Row StrategyType="STRATEGY_CLASSICAL_CHANGES" NumConditionsNeeded="1"/>
+    <Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" NumConditionsNeeded="1"/>
     <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" NumConditionsNeeded="1"/>
+    <Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" NumConditionsNeeded="1"/>
     <Row StrategyType="STRATEGY_MODERN_CHANGES" NumConditionsNeeded="1"/>
   </Strategies>
   <!-- Reminder: These conditions must be met to START following the strategy - they are not victory conditions themselves -->
@@ -86,8 +92,14 @@
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Handicap at or below" ThresholdValue="2" Disqualifier="true"/>
     <Row StrategyType="STRATEGY_NAVAL" ConditionFunction="Is On Island"/>
     <!-- Timing based strategies (eras, really) -->
+    <Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ConditionFunction="Is Classical"/>
+    <Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
+    <Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" ConditionFunction="Is Classical"/>
+    <Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
     <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ConditionFunction="Is Renaissance"/>
     <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
+    <Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" ConditionFunction="Is Industrial"/>
+    <Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
     <Row StrategyType="STRATEGY_MODERN_CHANGES" ConditionFunction="Is Modern"/>
     <Row StrategyType="STRATEGY_MODERN_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
   </StrategyConditions>
@@ -101,7 +113,10 @@
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementBoost"/>
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementPreferences"/>
     <Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionUnitPreferences"/>
+    <Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ListType="ClassicalYields"/>
+    <Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" ListType="MedievalYields"/>
     <Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" ListType="RenaissanceYields"/>
+    <Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" ListType="IndustrialYields"/>
     <Row StrategyType="STRATEGY_MODERN_CHANGES" ListType="ModernYields"/>
     <Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryPseudoYields"/>
     <Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryYields"/>
@@ -119,12 +134,16 @@
     <Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryYields"/>
   </Strategy_Priorities>
   <AiListTypes>
+    <Row ListType="ClassicalYields"/>
     <Row ListType="CultureVictoryPseudoYields" />
     <Row ListType="CultureVictoryYields" />
     <Row ListType="EarlyExplorationBoost" />
     <Row ListType="ExpansionSettlementBoost" />
     <Row ListType="ExpansionSettlementPreferences" />
     <Row ListType="ExpansionUnitPreferences" />
+    <Row ListType="IndustrialYields" />
+    <Row ListType="MedievalSettlements"/>
+    <Row ListType="MedievalYields"/>
     <Row ListType="MilitaryVictoryOperations" />
     <Row ListType="MilitaryVictoryPseudoYields" />
     <Row ListType="MilitaryVictoryYields" />
@@ -145,12 +164,16 @@
     <Row ListType="ScienceVictoryYields" />
   </AiListTypes>
   <AiLists>
+    <Row ListType="ClassicalYields" System="Yields"/>
     <Row ListType="CultureVictoryPseudoYields" System="PseudoYields"/>
     <Row ListType="CultureVictoryYields" System="Yields"/>
     <Row ListType="EarlyExplorationBoost" System="AiScoutUses"/>
     <Row ListType="ExpansionSettlementBoost" System="SettlementPreferences"/>
     <Row ListType="ExpansionSettlementPreferences" System="PlotEvaluations"/>
     <Row ListType="ExpansionUnitPreferences" System="PseudoYields"/>
+    <Row ListType="IndustrialYields" System="Yields"/>
+    <Row ListType="MedievalSettlements" System="SettlementPreferences"/>
+    <Row ListType="MedievalYields" System="Yields"/>
     <Row ListType="MilitaryVictoryOperations" System="AiOperationTypes"/>
     <Row ListType="MilitaryVictoryPseudoYields" System="PseudoYields"/>
     <Row ListType="MilitaryVictoryYields" System="Yields"/>
@@ -171,6 +194,23 @@
     <Row ListType="ScienceVictoryYields" System="Yields"/>
   </AiLists>
   <AiFavoredItems>
+    <Row ListType="ClassicalYields" Item="YIELD_FAITH" Value="20"/>
+    <Row ListType="ClassicalYields" Item="YIELD_FOOD" Value="15"/>
+    <Row ListType="ClassicalYields" Item="YIELD_GOLD" Value="20"/>
+    <Row ListType="MedievalSettlements" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-10"/>
+    <Row ListType="MedievalSettlements" Item="SETTLEMENT_DECAY_TURNS" Value="-3"/>
+    <Row ListType="MedievalSettlements" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
+    <Row ListType="MedievalYields" Item="YIELD_FAITH" Value="-25"/>
+    <Row ListType="MedievalYields" Item="YIELD_FOOD" Value="25"/>
+    <Row ListType="MedievalYields" Item="YIELD_GOLD" Value="15"/>
+    <Row ListType="MedievalYields" Item="YIELD_PRODUCTION" Value="20"/>
+    <Row ListType="RenaissanceYields" Item="YIELD_FOOD" Value="10"/>
+    <Row ListType="RenaissanceYields" Item="YIELD_GOLD" Value="15"/>
+    <Row ListType="IndustrialYields" Item="YIELD_FAITH" Value="-40"/>
+    <Row ListType="IndustrialYields" Item="YIELD_GOLD" Value="15"/>
+    <Row ListType="ModernYields" Item="YIELD_FOOD" Value="5"/>
+    <Row ListType="ModernYields" Item="YIELD_GOLD" Value="10"/>
+
     <Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_WRITER" Value="50"/>
     <Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_ARTIST" Value="50"/>
     <Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_MUSICIAN" Value="50"/>
@@ -202,8 +242,6 @@
     <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="25"/>
     <Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_AIR_COMBAT" Value="25"/>
     <Row ListType="MilitaryVictoryYields" Item="YIELD_PRODUCTION" Value="25"/>
-    <Row ListType="ModernYields" Item="YIELD_FOOD" Value="5"/>
-    <Row ListType="ModernYields" Item="YIELD_GOLD" Value="10"/>
     <Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="150"/>
     <Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-90" />
     
@@ -223,9 +261,7 @@
     <Row ListType="ReligiousVictoryBehaviors" Item="TRIGGER_RELIGIOUS_CITY_CONVERTED"/>
     <Row ListType="ReligiousVictoryDiplomacy" Item="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Favored="false" />
     <Row ListType="ReligiousVictoryPseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="25"/>
-    <Row ListType="ReligiousVictoryYields" Item="YIELD_FAITH" Value="50"/>
-    <Row ListType="RenaissanceYields" Item="YIELD_FOOD" Value="10"/>
-    <Row ListType="RenaissanceYields" Item="YIELD_GOLD" Value="5"/>
+    <Row ListType="ReligiousVictoryYields" Item="YIELD_FAITH" Value="75"/>
     <Row ListType="ScienceVictoryDistricts" Item="DISTRICT_SPACEPORT" Favored="true"/>
     <Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_EARTH_SATELLITE" Favored="true"/>
     <Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MOON_LANDING" Favored="true"/>

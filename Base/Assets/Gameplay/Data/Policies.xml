@@ -1097,6 +1097,10 @@
 			<ModifierId>SIMULTANEUM_DOUBLECATHEDRAL</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
 		</Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
+    </Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLEGURDWARA</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
@@ -1113,6 +1117,10 @@
 			<ModifierId>SIMULTANEUM_DOUBLEPAGODA</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
 		</Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
+    </Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLESYNAGOGUE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_MODIFIER</ModifierType>
@@ -1585,7 +1593,7 @@
 		<Row>
 			<ModifierId>COLONIALTAXES_FOREIGNGOLD</ModifierId>
 			<Name>Amount</Name>
-			<Value>35</Value>
+			<Value>25</Value>
 		</Row>
 		<Row>
 			<ModifierId>COLONIZATION_SETTLERPRODUCTION</ModifierId>
@@ -3612,6 +3620,21 @@
 			<Name>Amount</Name>
 			<Value>100</Value>
 		</Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+      <Name>BuildingType</Name>
+      <Value>BUILDING_DAR_E_MEHR</Value>
+    </Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+      <Name>YieldType</Name>
+      <Value>YIELD_FAITH</Value>
+    </Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+      <Name>Amount</Name>
+      <Value>100</Value>
+    </Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLEGURDWARA</ModifierId>
 			<Name>BuildingType</Name>
@@ -3672,6 +3695,21 @@
 			<Name>Amount</Name>
 			<Value>100</Value>
 		</Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+      <Name>BuildingType</Name>
+      <Value>BUILDING_STUPA</Value>
+    </Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+      <Name>YieldType</Name>
+      <Value>YIELD_FAITH</Value>
+    </Row>
+    <Row>
+      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+      <Name>Amount</Name>
+      <Value>100</Value>
+    </Row>
 		<Row>
 			<ModifierId>SIMULTANEUM_DOUBLESYNAGOGUE</ModifierId>
 			<Name>BuildingType</Name>
@@ -4946,7 +4984,11 @@
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLECATHEDRAL</ModifierId>
 		</Row>
-		<Row>
+    <Row>
+      <PolicyType>POLICY_SIMULTANEUM</PolicyType>
+      <ModifierId>SIMULTANEUM_DOUBLEDAREMEHR</ModifierId>
+    </Row>
+    <Row>
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLEGURDWARA</ModifierId>
 		</Row>
@@ -4962,6 +5004,10 @@
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLEPAGODA</ModifierId>
 		</Row>
+    <Row>
+      <PolicyType>POLICY_SIMULTANEUM</PolicyType>
+      <ModifierId>SIMULTANEUM_DOUBLESTUPA</ModifierId>
+    </Row>
 		<Row>
 			<PolicyType>POLICY_SIMULTANEUM</PolicyType>
 			<ModifierId>SIMULTANEUM_DOUBLESYNAGOGUE</ModifierId>

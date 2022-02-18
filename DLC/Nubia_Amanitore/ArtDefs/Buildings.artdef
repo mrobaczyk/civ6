@@ -3,8 +3,8 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>288</build>
-		<revision>812</revision>
+		<build>291</build>
+		<revision>558</revision>
 	</m_Version>
 	<m_TemplateName text="Buildings"/>
 	<m_RootCollections>
@@ -14,14 +14,6 @@
 			<Element>
 				<m_Fields>
 					<m_Values>
-						<Element class="AssetObjects..BoolValue">
-							<m_bValue>false</m_bValue>
-							<m_ParamName text="CanAffectDistrict"/>
-						</Element>
-						<Element class="AssetObjects..BoolValue">
-							<m_bValue>false</m_bValue>
-							<m_ParamName text="IsAffectedByDistrict"/>
-						</Element>
 						<Element class="AssetObjects..BoolValue">
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="IsWonderBuilding"/>
@@ -134,6 +126,48 @@
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="BUILDING_JEBEL_BARKAL"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="IsWonderBuilding"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="UsesDistrictState"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="AffectsDistrictBuildingSet"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="AVERAGE"/>
+							<m_ParamName text="TerrainFollowMode"/>
+						</Element>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="COASTAL"/>
+							<m_ParamName text="ProceduralPlacementMode"/>
+						</Element>
+						<Element class="AssetObjects..BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="UsesDecalMaterialOverrides"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Audio"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="StrategicView"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="BUILDING_NILOMETER"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

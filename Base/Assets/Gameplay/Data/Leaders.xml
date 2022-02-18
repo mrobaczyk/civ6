@@ -89,6 +89,9 @@
 		<Row Type="TRAIT_LEADER_KILLER_OF_CYRUS" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_MAGNANIMOUS" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_SURROUNDED_BY_GLORY" Kind="KIND_TRAIT"/>
+		<!-- NOTE: This trait is used by the AI. It's intent is to go on a civilization, but it can also go on a leader or agenda if desired. -->
+		<!--   But be warned, in that case it can double or even triple up. -->
+		<Row Type="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_DEFAULT_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_SCIENTIFIC_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_RELIGIOUS_TRAIT" Kind="KIND_TRAIT"/>
@@ -156,7 +159,7 @@
 		<Row LeaderType="LEADER_MINOR_CIV_GENEVA" Name="LOC_CIVILIZATION_GENEVA_NAME" InheritFrom="LEADER_MINOR_CIV_SCIENTIFIC"/>
 		<Row LeaderType="LEADER_MINOR_CIV_HATTUSA" Name="LOC_CIVILIZATION_HATTUSA_NAME" InheritFrom="LEADER_MINOR_CIV_SCIENTIFIC"/>
 		<Row LeaderType="LEADER_MINOR_CIV_HONG_KONG" Name="LOC_CIVILIZATION_HONG_KONG_NAME" InheritFrom="LEADER_MINOR_CIV_INDUSTRIAL"/>
-		<Row LeaderType="LEADER_MINOR_CIV_JAKARTA" Name="LOC_CIVILIZATION_JAKARTA_NAME" InheritFrom="LEADER_MINOR_CIV_TRADE"/>
+		<Row LeaderType="LEADER_MINOR_CIV_JAKARTA" Name="LOC_CIVILIZATION_BANDAR_BRUNEI_NAME" InheritFrom="LEADER_MINOR_CIV_TRADE"/>
 		<Row LeaderType="LEADER_MINOR_CIV_JERUSALEM" Name="LOC_CIVILIZATION_JERUSALEM_NAME" InheritFrom="LEADER_MINOR_CIV_RELIGIOUS"/>
 		<Row LeaderType="LEADER_MINOR_CIV_KABUL" Name="LOC_CIVILIZATION_KABUL_NAME" InheritFrom="LEADER_MINOR_CIV_MILITARISTIC"/>
 		<Row LeaderType="LEADER_MINOR_CIV_KANDY" Name="LOC_CIVILIZATION_KANDY_NAME" InheritFrom="LEADER_MINOR_CIV_RELIGIOUS"/>
@@ -407,6 +410,8 @@
 		<Row ListType="HoJoCivics"/>
 		<Row ListType="HoJoTechs"/>
 		<Row ListType="HoJoWonders"/>
+		<Row ListType="LowReligiousPreferencePseudoYields"/>
+		<Row ListType="LowReligiousPreferenceYields"/>
 		<Row ListType="MinorCivCityBuilds"/>
 		<Row ListType="MinorCivCultureDistrict"/>
 		<Row ListType="MinorCivDistricts"/>
@@ -525,6 +530,8 @@
 		<Row ListType="DefaultScoutUse" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="AiScoutUses"/>
 		<Row ListType="ExpansionistCitySettlement" LeaderType="TRAIT_LEADER_EXPANSIONIST" System="SettlementPreferences"/>
 		<Row ListType="TomyrisCitySettlement" LeaderType="TRAIT_LEADER_KILLER_OF_CYRUS" System="PlotEvaluations"/>
+		<Row ListType="LowReligiousPreferencePseudoYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="PseudoYields"/>
+		<Row ListType="LowReligiousPreferenceYields" LeaderType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" System="Yields"/>
 		<!-- Minor Civ Lists -->
 		<Row ListType="DefaultCitySpecialization" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="AiBuildSpecializations"/>
 		<Row ListType="MinorCivUnitBuilds" LeaderType="MINOR_CIV_DEFAULT_TRAIT" System="UnitPromotionClasses"/>
@@ -763,6 +770,7 @@
 		<Row ListType="DefaultYieldBias" Item="YEILD_SCIENCE" Value="10"/>
 		<Row ListType="DefaultYieldBias" Item="YEILD_CULTURE" Value="10"/>
 		<Row ListType="DefaultYieldBias" Item="YEILD_GOLD" Value="20"/>
+		<Row ListType="DefaultYieldBias" Item="YEILD_FAITH" Value="-25"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_DEFAULT" StringVal="Simple City Tree"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_UNIT_OR_BUILDING" StringVal="Build City Building"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_DISTRICT" StringVal="Build City District"/>
@@ -785,6 +793,8 @@
 		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_PRIMARY_REGION" Value="100"/>
 		<Row ListType="DefaultScoutUse" Item="LAND_SCOUTS_PER_SECONDARY_REGION" Value="50"/>
 		<Row ListType="DefaultScoutUse" Item="NAVAL_SCOUTS_FOR_WORLD_EXPLORATION" Value="300"/>
+		<Row ListType="LowReligiousPreferencePseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="-75"/>
+		<Row ListType="LowReligiousPreferenceYields" Item="YIELD_FAITH" Value="-50"/>
 		<Row ListType="BarbarianTriggeredTrees" Item="TRIGGER_CAPTURE_BARBARIAN"/>
 	</AiFavoredItems>
 	<LeaderTraits>
@@ -797,8 +807,10 @@
 		<Row LeaderType="LEADER_GANDHI" TraitType="TRAIT_LEADER_SATYAGRAHA"/>
 		<Row LeaderType="LEADER_GANDHI" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU"/>
+		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="CULTURE_KILLS_TRAIT"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_GORGO" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_HARDRADA" TraitType="TRAIT_LEADER_MELEE_COASTAL_RAIDS"/>
 		<Row LeaderType="LEADER_HARDRADA" TraitType="TRAIT_LEADER_UNIT_NORWEGIAN_LONGSHIP"/>
 		<Row LeaderType="LEADER_HOJO" TraitType="TRAIT_LEADER_DIVINE_WIND"/>
@@ -807,21 +819,26 @@
 		<Row LeaderType="LEADER_PEDRO" TraitType="TRAIT_LEADER_MAGNANIMOUS"/>
 		<Row LeaderType="LEADER_PERICLES" TraitType="TRAIT_LEADER_SURROUNDED_BY_GLORY"/>
 		<Row LeaderType="LEADER_PERICLES" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_PERICLES" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_PETER_GREAT" TraitType="TRAIT_LEADER_GRAND_EMBASSY"/>
 		<Row LeaderType="LEADER_PHILIP_II" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_PHILIP_II" TraitType="TRAIT_LEADER_EL_ESCORIAL"/>
 		<Row LeaderType="LEADER_QIN" TraitType="FIRST_EMPEROR_TRAIT"/>
+		<Row LeaderType="LEADER_QIN" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_SALADIN" TraitType="TRAIT_LEADER_RIGHTEOUSNESS_OF_FAITH"/>
 		<Row LeaderType="LEADER_SALADIN" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_TOMYRIS" TraitType="TRAIT_LEADER_KILLER_OF_CYRUS"/>
 		<Row LeaderType="LEADER_TRAJAN" TraitType="TRAJANS_COLUMN_TRAIT"/>
 		<Row LeaderType="LEADER_TRAJAN" TraitType="TRAIT_LEADER_EXPANSIONIST"/>
+		<Row LeaderType="LEADER_TRAJAN" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_ROOSEVELT_COROLLARY"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_UNIT_AMERICAN_ROUGH_RIDER"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_T_ROOSEVELT" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_VICTORIA" TraitType="TRAIT_LEADER_PAX_BRITANNICA"/>
 		<Row LeaderType="LEADER_VICTORIA" TraitType="TRAIT_LEADER_UNIT_ENGLISH_REDCOAT"/>
+		<Row LeaderType="LEADER_VICTORIA" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_MINOR_CIV_DEFAULT" TraitType="MINOR_CIV_DEFAULT_TRAIT"/>
 		<Row LeaderType="LEADER_MINOR_CIV_SCIENTIFIC" TraitType="MINOR_CIV_SCIENTIFIC_TRAIT"/>
 		<Row LeaderType="LEADER_MINOR_CIV_RELIGIOUS" TraitType="MINOR_CIV_RELIGIOUS_TRAIT"/>
@@ -897,6 +914,7 @@
 		<Row TraitType="TRAIT_LEADER_KILLER_OF_CYRUS" Name="LOC_TRAIT_LEADER_KILLER_OF_CYRUS_NAME" Description="LOC_TRAIT_LEADER_KILLER_OF_CYRUS_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_MAGNANIMOUS" Name="LOC_TRAIT_LEADER_MAGNANIMOUS_NAME" Description="LOC_TRAIT_LEADER_MAGNANIMOUS_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_SURROUNDED_BY_GLORY" Name="LOC_TRAIT_LEADER_SURROUNDED_BY_GLORY_NAME" Description="LOC_TRAIT_LEADER_SURROUNDED_BY_GLORY_DESCRIPTION"/>
+		<Row TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
 		<Row TraitType="MINOR_CIV_DEFAULT_TRAIT" Name="LOC_PLACEHOLDER" InternalOnly="true"/>
 		<Row TraitType="MINOR_CIV_SCIENTIFIC_TRAIT" Name="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_NAME" Description="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_RELIGIOUS_TRAIT" Name="LOC_MINOR_CIV_RELIGIOUS_TRAIT_NAME" Description="LOC_MINOR_CIV_RELIGIOUS_TRAIT_DESCRIPTION"/>
@@ -911,7 +929,7 @@
 		<Row TraitType="MINOR_CIV_GENEVA_TRAIT" Name="LOC_LEADER_TRAIT_GENEVA_NAME" Description="LOC_LEADER_TRAIT_GENEVA_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_HATTUSA_TRAIT" Name="LOC_LEADER_TRAIT_HATTUSA_NAME" Description="LOC_LEADER_TRAIT_HATTUSA_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_HONG_KONG_TRAIT" Name="LOC_LEADER_TRAIT_HONG_KONG_NAME" Description="LOC_LEADER_TRAIT_HONG_KONG_DESCRIPTION"/>
-		<Row TraitType="MINOR_CIV_JAKARTA_TRAIT" Name="LOC_LEADER_TRAIT_JAKARTA_NAME" Description="LOC_LEADER_TRAIT_JAKARTA_DESCRIPTION"/>
+		<Row TraitType="MINOR_CIV_JAKARTA_TRAIT" Name="LOC_LEADER_TRAIT_BANDAR_BRUNEI_NAME" Description="LOC_LEADER_TRAIT_JAKARTA_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_JERUSALEM_TRAIT" Name="LOC_LEADER_TRAIT_JERUSALEM_NAME" Description="LOC_LEADER_TRAIT_JERUSALEM_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_KABUL_TRAIT" Name="LOC_LEADER_TRAIT_KABUL_NAME" Description="LOC_LEADER_TRAIT_KABUL_DESCRIPTION"/>
 		<Row TraitType="MINOR_CIV_KANDY_TRAIT" Name="LOC_LEADER_TRAIT_KANDY_NAME" Description="LOC_LEADER_TRAIT_KANDY_DESCRIPTION"/>
@@ -1675,7 +1693,7 @@
 			<ModifierType>MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
-			<OwnerRequirementsetId>PLAYER_HAS_CASTLES_TECHNOLOGY</OwnerRequirementsetId>
+			<OwnerRequirementsetId>PLAYER_HAS_CASTLES_TECHNOLOGY_AND_CAPITAL</OwnerRequirementsetId>
 		</Row>
 		<Row>
 			<ModifierId>UNIQUE_LEADER_SPIES_START_PROMOTED</ModifierId>
@@ -2608,7 +2626,7 @@
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
 			<Name>IncrementTurns</Name>
-			<Value>1</Value>
+			<Value>2</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_CLOSE_TO_VICTORY</ModifierId>
@@ -5488,6 +5506,10 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_HAS_CASTLES_TECHNOLOGY_AND_CAPITAL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>		
+		<Row>
 			<RequirementSetId>PLAYER_IS_AT_PEACE_WITH_ALL_MAJORS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -6050,6 +6072,14 @@
 			<RequirementId>REQUIRES_TECHNOLOGY_CASTLES</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_HAS_CASTLES_TECHNOLOGY_AND_CAPITAL</RequirementSetId>
+			<RequirementId>REQUIRES_TECHNOLOGY_CASTLES</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_CASTLES_TECHNOLOGY_AND_CAPITAL</RequirementSetId>
+			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
+		</Row>		
+		<Row>
 			<RequirementSetId>PLAYER_IS_AT_PEACE_WITH_ALL_MAJORS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_AT_PEACE_WITH_ALL_MAJORS</RequirementId>
 		</Row>
@@ -6421,42 +6451,6 @@
 			<Inverse>true</Inverse>
 		</Row>
 		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_CAMPUS</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_HOLY_SITE</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_COMMERCIAL_HUB</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_HARBOR</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_THEATER</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_ENCAMPMENT</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_INDUSTRIAL_ZONE</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_ENTERTAINMENT_COMPLEX</RequirementId>
-			<RequirementType>REQUIREMENT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_PLOT_HAS_ENCAMPMENT</RequirementId>
-			<RequirementType>REQUIREMENT_PLOT_DISTRICT_TYPE_MATCHES</RequirementType>
-		</Row>
-		<Row>
 			<RequirementId>REQUIRES_UNIT_IS_INQUISITOR</RequirementId>
 			<RequirementType>REQUIREMENT_UNIT_TYPE_MATCHES</RequirementType>
 		</Row>
@@ -6478,6 +6472,10 @@
 			<RequirementId>REQUIRES_TECHNOLOGY_CASTLES</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_HAS_TECHNOLOGY</RequirementType>
 		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
+			<RequirementType>REQUIREMENT_COLLECTION_COUNT_ATLEAST</RequirementType>
+		</Row>		
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_AT_PEACE_WITH_ALL_MAJORS</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_IS_AT_PEACE_WITH_ALL_MAJORS</RequirementType>
@@ -6673,6 +6671,16 @@
 			<Value>TECH_CASTLES</Value>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
+			<Name>CollectionType</Name>
+			<Value>COLLECTION_PLAYER_CAPITAL_CITY</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
+			<Name>Count</Name>
+			<Value>1</Value>
+		</Row>		
+		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_NO_ALUMINUM</RequirementId>
 			<Name>ResourceType</Name>
 			<Value>RESOURCE_ALUMINUM</Value>
@@ -6741,51 +6749,6 @@
 			<RequirementId>REQUIRES_PLAYER_CAN_SEE_URANIUM</RequirementId>
 			<Name>ResourceType</Name>
 			<Value>RESOURCE_URANIUM</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_CAMPUS</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_CAMPUS</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_HOLY_SITE</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_HOLY_SITE</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_COMMERCIAL_HUB</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_COMMERCIAL_HUB</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_HARBOR</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_HARBOR</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_THEATER</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_THEATER</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_ENCAMPMENT</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_ENCAMPMENT</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_INDUSTRIAL_ZONE</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_INDUSTRIAL_ZONE</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_DISTRICT_IS_ENTERTAINMENT_COMPLEX</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_ENTERTAINMENT_COMPLEX</Value>
-		</Row>
-		<Row>
-			<RequirementId>REQUIRES_PLOT_HAS_ENCAMPMENT</RequirementId>
-			<Name>DistrictType</Name>
-			<Value>DISTRICT_ENCAMPMENT</Value>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_UNIT_IS_INQUISITOR</RequirementId>

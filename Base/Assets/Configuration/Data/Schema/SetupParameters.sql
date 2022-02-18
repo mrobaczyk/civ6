@@ -162,7 +162,6 @@ CREATE TABLE 'DomainValueQueries'(
 	'NameField' TEXT NOT NULL DEFAULT 'Name',
 	'DescriptionField' TEXT NOT NULL DEFAULT 'Description',
 	'SortIndexField' TEXT NOT NULL DEFAULT 'SortIndex',
-	'Set' TEXT NOT NULL DEFAULT 'union',
 	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
 );
 
@@ -174,6 +173,39 @@ CREATE TABLE 'DomainValues'(
 	'Name' TEXT NOT NULL,
 	'Description' TEXT,
 	'SortIndex' INTEGER NOT NULL DEFAULT 100,
+	PRIMARY KEY('Key1','Key2','Domain','Value')
+);
+
+-- Include the values of 'OtherDomain' into the values of 'Domain'
+CREATE TABLE 'DomainValueUnionQueries'(
+	'QueryId' TEXT NOT NULL,
+	'DomainField' TEXT NOT NULL DEFAULT 'Domain',
+	'OtherDomainField' TEXT NOT NULL DEFAULT 'OtherDomain',
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
+);
+
+CREATE TABLE 'DomainValueUnions'(
+	'Key1' TEXT,
+	'Key2' TEXT,
+	'Domain' TEXT NOT NULL,
+	'OtherDomain' TEXT NOT NULL,
+	PRIMARY KEY('Key1','Key2','Domain','OtherDomain')
+);
+
+CREATE TABLE 'DomainValueFilterQueries'(
+	'QueryId' TEXT NOT NULL,
+	'DomainField' TEXT NOT NULL DEFAULT 'Domain',
+	'ValueField' TEXT NOT NULL DEFAULT 'Value',
+	'FilterField' TEXT NOT NULL DEFAULT 'Filter',
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
+);
+
+CREATE TABLE 'DomainValueFilters'(
+	'Key1' TEXT,
+	'Key2' TEXT,
+	'Domain' TEXT NOT NULL,
+	'Value' NOT NULL,
+	'Filter' TEXT NOT NULL CHECK ('Filter' IN ('difference','intersect')),
 	PRIMARY KEY('Key1','Key2','Domain','Value')
 );
 

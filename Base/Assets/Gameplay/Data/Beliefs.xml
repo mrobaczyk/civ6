@@ -55,6 +55,16 @@
 		<Row Type="BELIEF_MISSIONARY_ZEAL" Kind="KIND_BELIEF"/>
 		<Row Type="BELIEF_MONASTIC_ISOLATION" Kind="KIND_BELIEF"/>
 		<Row Type="BELIEF_SCRIPTURE" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_CITY_PATRON_GODDESS" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_EARTH_GODDESS" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_CROSS_CULTURAL_DIALOGUE" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_RELIGIOUS_UNITY" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_CHORAL_MUSIC" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_WARRIOR_MONKS" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_BURIAL_GROUNDS" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_RELIGIOUS_COLONIZATION" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_STUPA" Kind="KIND_BELIEF"/>
+		<Row Type="BELIEF_DAR_E_MEHR" Kind="KIND_BELIEF"/>
 	</Types>
 	<BeliefClasses>
 		<!-- This match up to a code defined enumeration. Do not change their order unless you also change BeliefClassTypes enum -->
@@ -95,6 +105,8 @@
 		<Row BeliefType="BELIEF_FERTILITY_RITES" Name="LOC_BELIEF_FERTILITY_RITES_NAME" Description="LOC_BELIEF_FERTILITY_RITES_DESCRIPTION" BeliefClassType="BELIEF_CLASS_PANTHEON"/>
 		<Row BeliefType="BELIEF_RELIGIOUS_SETTLEMENTS" Name="LOC_BELIEF_RELIGIOUS_SETTLEMENTS_NAME" Description="LOC_BELIEF_RELIGIOUS_SETTLEMENTS_DESCRIPTION" BeliefClassType="BELIEF_CLASS_PANTHEON"/>
 		<Row BeliefType="BELIEF_GODDESS_OF_THE_HARVEST" Name="LOC_BELIEF_GODDESS_OF_THE_HARVEST_NAME" Description="LOC_BELIEF_GODDESS_OF_THE_HARVEST_DESCRIPTION" BeliefClassType="BELIEF_CLASS_PANTHEON"/>
+		<Row BeliefType="BELIEF_CITY_PATRON_GODDESS" Name="LOC_BELIEF_CITY_PATRON_GODDESS_NAME" Description="LOC_BELIEF_CITY_PATRON_GODDESS_DESCRIPTION" BeliefClassType="BELIEF_CLASS_PANTHEON"/>
+		<Row BeliefType="BELIEF_EARTH_GODDESS" Name="LOC_BELIEF_EARTH_GODDESS_NAME" Description="LOC_BELIEF_EARTH_GODDESS_DESCRIPTION" BeliefClassType="BELIEF_CLASS_PANTHEON"/>
 		<!--FOLLOWER BELIEFS-->
 		<Row BeliefType="BELIEF_DIVINE_INSPIRATION" Name="LOC_BELIEF_DIVINE_INSPIRATION_NAME" Description="LOC_BELIEF_DIVINE_INSPIRATION_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
 		<Row BeliefType="BELIEF_FEED_THE_WORLD" Name="LOC_BELIEF_FEED_THE_WORLD_NAME" Description="LOC_BELIEF_FEED_THE_WORLD_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
@@ -103,6 +115,8 @@
 		<Row BeliefType="BELIEF_RELIGIOUS_COMMUNITY" Name="LOC_BELIEF_RELIGIOUS_COMMUNITY_NAME" Description="LOC_BELIEF_RELIGIOUS_COMMUNITY_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
 		<Row BeliefType="BELIEF_WORK_ETHIC" Name="LOC_BELIEF_WORK_ETHIC_NAME" Description="LOC_BELIEF_WORK_ETHIC_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
 		<Row BeliefType="BELIEF_ZEN_MEDITATION" Name="LOC_BELIEF_ZEN_MEDITATION_NAME" Description="LOC_BELIEF_ZEN_MEDITATION_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
+		<Row BeliefType="BELIEF_CHORAL_MUSIC" Name="LOC_BELIEF_CHORAL_MUSIC_NAME" Description="LOC_BELIEF_CHORAL_MUSIC_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
+		<Row BeliefType="BELIEF_WARRIOR_MONKS" Name="LOC_BELIEF_WARRIOR_MONKS_NAME" Description="LOC_BELIEF_WARRIOR_MONKS_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
 		<!--WORSHIP BELIEFS-->
 		<Row BeliefType="BELIEF_CATHEDRAL" Name="LOC_BELIEF_CATHEDRAL_NAME" Description="LOC_BELIEF_CATHEDRAL_DESCRIPTION" BeliefClassType="BELIEF_CLASS_WORSHIP"/>
 		<Row BeliefType="BELIEF_GURDWARA" Name="LOC_BELIEF_GURDWARA_NAME" Description="LOC_BELIEF_GURDWARA_DESCRIPTION" BeliefClassType="BELIEF_CLASS_WORSHIP"/>
@@ -111,6 +125,8 @@
 		<Row BeliefType="BELIEF_PAGODA" Name="LOC_BELIEF_PAGODA_NAME" Description="LOC_BELIEF_PAGODA_DESCRIPTION" BeliefClassType="BELIEF_CLASS_WORSHIP"/>
 		<Row BeliefType="BELIEF_SYNAGOGUE" Name="LOC_BELIEF_SYNAGOGUE_NAME" Description="LOC_BELIEF_SYNAGOGUE_DESCRIPTION" BeliefClassType="BELIEF_CLASS_WORSHIP"/>
 		<Row BeliefType="BELIEF_WAT" Name="LOC_BELIEF_WAT_NAME" Description="LOC_BELIEF_WAT_DESCRIPTION" BeliefClassType="BELIEF_CLASS_WORSHIP"/>
+		<Row BeliefType="BELIEF_STUPA" Name="LOC_BELIEF_STUPA_NAME" Description="LOC_BELIEF_STUPA_DESCRIPTION" BeliefClassType="BELIEF_CLASS_WORSHIP"/>
+		<Row BeliefType="BELIEF_DAR_E_MEHR" Name="LOC_BELIEF_DAR_E_MEHR_NAME" Description="LOC_BELIEF_DAR_E_MEHR_DESCRIPTION" BeliefClassType="BELIEF_CLASS_WORSHIP"/>
 		<!--FOUNDER BELIEFS-->
 		<Row BeliefType="BELIEF_CHURCH_PROPERTY" Name="LOC_BELIEF_CHURCH_PROPERTY_NAME" Description="LOC_BELIEF_CHURCH_PROPERTY_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOUNDER"/>
 		<Row BeliefType="BELIEF_LAY_MINISTRY" Name="LOC_BELIEF_LAY_MINISTRY_NAME" Description="LOC_BELIEF_LAY_MINISTRY_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOUNDER"/>
@@ -119,6 +135,8 @@
 		<Row BeliefType="BELIEF_STEWARDSHIP" Name="LOC_BELIEF_STEWARDSHIP_NAME" Description="LOC_BELIEF_STEWARDSHIP_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOUNDER"/>
 		<Row BeliefType="BELIEF_TITHE" Name="LOC_BELIEF_TITHE_NAME" Description="LOC_BELIEF_TITHE_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOUNDER"/>
 		<Row BeliefType="BELIEF_WORLD_CHURCH" Name="LOC_BELIEF_WORLD_CHURCH_NAME" Description="LOC_BELIEF_WORLD_CHURCH_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOUNDER"/>
+		<Row BeliefType="BELIEF_CROSS_CULTURAL_DIALOGUE" Name="LOC_BELIEF_CROSS_CULTURAL_DIALOGUE_NAME" Description="LOC_BELIEF_CROSS_CULTURAL_DIALOGUE_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOUNDER"/>
+		<Row BeliefType="BELIEF_RELIGIOUS_UNITY" Name="LOC_BELIEF_RELIGIOUS_UNITY_NAME" Description="LOC_BELIEF_RELIGIOUS_UNITY_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOUNDER"/>
 		<!--ENHANCER BELIEFS-->
 		<Row BeliefType="BELIEF_DEFENDER_OF_FAITH" Name="LOC_BELIEF_DEFENDER_OF_FAITH_NAME" Description="LOC_BELIEF_DEFENDER_OF_FAITH_DESCRIPTION" BeliefClassType="BELIEF_CLASS_ENHANCER"/>
 		<Row BeliefType="BELIEF_HOLY_ORDER" Name="LOC_BELIEF_HOLY_ORDER_NAME" Description="LOC_BELIEF_HOLY_ORDER_DESCRIPTION" BeliefClassType="BELIEF_CLASS_ENHANCER"/>
@@ -127,6 +145,8 @@
 		<Row BeliefType="BELIEF_MISSIONARY_ZEAL" Name="LOC_BELIEF_MISSIONARY_ZEAL_NAME" Description="LOC_BELIEF_MISSIONARY_ZEAL_DESCRIPTION" BeliefClassType="BELIEF_CLASS_ENHANCER"/>
 		<Row BeliefType="BELIEF_MONASTIC_ISOLATION" Name="LOC_BELIEF_MONASTIC_ISOLATION_NAME" Description="LOC_BELIEF_MONASTIC_ISOLATION_DESCRIPTION" BeliefClassType="BELIEF_CLASS_ENHANCER"/>
 		<Row BeliefType="BELIEF_SCRIPTURE" Name="LOC_BELIEF_SCRIPTURE_NAME" Description="LOC_BELIEF_SCRIPTURE_DESCRIPTION" BeliefClassType="BELIEF_CLASS_ENHANCER"/>
+		<Row BeliefType="BELIEF_BURIAL_GROUNDS" Name="LOC_BELIEF_BURIAL_GROUNDS_NAME" Description="LOC_BELIEF_BURIAL_GROUNDS_DESCRIPTION" BeliefClassType="BELIEF_CLASS_ENHANCER"/>
+		<Row BeliefType="BELIEF_RELIGIOUS_COLONIZATION" Name="LOC_BELIEF_RELIGIOUS_COLONIZATION_NAME" Description="LOC_BELIEF_RELIGIOUS_COLONIZATION_DESCRIPTION" BeliefClassType="BELIEF_CLASS_ENHANCER"/>
 	</Beliefs>
 	<Modifiers>
 		<Row>
@@ -680,6 +700,82 @@
 			<ModifierId>SCRIPTURE_SPEAD_STRENGTH</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_RELIGION_ADJUST_RELIGIOUS_SPREAD_STRENGTH</ModifierType>
 		</Row>
+		<Row>
+			<ModifierId>CITY_PATRON_GODDESS_DISTRICT_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CITY_PATRON_GODDESS_DISTRICT_PRODUCTION_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_DISTRICT_PRODUCTION_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_0_SPECIALTY_DISTRICTS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>EARTH_GODDESS_APPEAL_FAITH</ModifierId>
+			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>EARTH_GODDESS_APPEAL_FAITH_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_CHARMING_APPEAL</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_FOUNDED_RELIGION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>RELIGIOUS_UNITY_ENVOY_ON_ADOPTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ENABLE_AWARDS_ENVOY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_SHRINE_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_FOLLOWS_RELIGION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_SHRINE_CULTURE_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_BUILDING_YIELD_CHANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_TEMPLE_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_FOLLOWS_RELIGION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_TEMPLE_CULTURE_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_BUILDING_YIELD_CHANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ALLOW_WARRIOR_MONKS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_UNIT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BURIAL_GROUNDS_CULTURE_BOMB_TRIGGER_HOLY_SITE</ModifierId>
+			<ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_FOUNDED_RELIGION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>BURIAL_GROUNDS_CULTURE_BOMB_TRIGGER_HOLY_SITE_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADD_CULTURE_BOMB_TRIGGER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>RELIGIOUS_COLONIZATION_AUTO_SPREAD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ENABLE_AUTO_SPREAD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ALLOW_STUPA</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BUILDING</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ALLOW_DAR_E_MEHR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BUILDING</ModifierType>
+		</Row>
 	</Modifiers>
 	<ModifierArguments>
 		<Row>
@@ -1060,7 +1156,7 @@
 		<Row>
 			<ModifierId>RELIGIOUS_IDOLS_BONUS_MINE_FAITH_MODIFIER</ModifierId>
 			<Name>Amount</Name>
-			<Value>1</Value>
+			<Value>2</Value>
 		</Row>
 		<Row>
 			<ModifierId>RELIGIOUS_IDOLS_LUXURY_MINE_FAITH</ModifierId>
@@ -1075,7 +1171,7 @@
 		<Row>
 			<ModifierId>RELIGIOUS_IDOLS_LUXURY_MINE_FAITH_MODIFIER</ModifierId>
 			<Name>Amount</Name>
-			<Value>1</Value>
+			<Value>2</Value>
 		</Row>
 		<Row>
 			<ModifierId>GOD_OF_CRAFTSMEN_STRATEGIC_MINE_PRODUCTION</ModifierId>
@@ -1717,6 +1813,131 @@
 			<Name>TechEnabledSpreadMultiplier</Name>
 			<Value>25</Value>
 		</Row>
+		<Row>
+			<ModifierId>CITY_PATRON_GODDESS_DISTRICT_PRODUCTION</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>CITY_PATRON_GODDESS_DISTRICT_PRODUCTION_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>CITY_PATRON_GODDESS_DISTRICT_PRODUCTION_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>EARTH_GODDESS_APPEAL_FAITH</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>EARTH_GODDESS_APPEAL_FAITH_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>EARTH_GODDESS_APPEAL_FAITH_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>EARTH_GODDESS_APPEAL_FAITH_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER_MODIFIER</ModifierId>
+			<Name>BeliefYieldType</Name>
+			<Value>BELIEF_YIELD_PER_FOREIGN_FOLLOWER</Value>
+		</Row>
+		<Row>
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER_MODIFIER</ModifierId>
+			<Name>PerXItems</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>RELIGIOUS_UNITY_ENVOY_ON_ADOPTION</ModifierId>
+			<Name>Enable</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_SHRINE_CULTURE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>CHORAL_MUSIC_SHRINE_CULTURE_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_SHRINE_CULTURE_MODIFIER</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_SHRINE</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_SHRINE_CULTURE_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_SHRINE_CULTURE_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_TEMPLE_CULTURE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>CHORAL_MUSIC_TEMPLE_CULTURE_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_TEMPLE_CULTURE_MODIFIER</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_TEMPLE</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_TEMPLE_CULTURE_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>CHORAL_MUSIC_TEMPLE_CULTURE_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>ALLOW_WARRIOR_MONKS</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_WARRIOR_MONK</Value>
+		</Row>
+		<Row>
+			<ModifierId>BURIAL_GROUNDS_CULTURE_BOMB_TRIGGER_HOLY_SITE</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>BURIAL_GROUNDS_CULTURE_BOMB_TRIGGER_HOLY_SITE_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>BURIAL_GROUNDS_CULTURE_BOMB_TRIGGER_HOLY_SITE_MODIFIER</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HOLY_SITE</Value>
+		</Row>
+		<Row>
+			<ModifierId>RELIGIOUS_COLONIZATION_AUTO_SPREAD</ModifierId>
+			<Name>Enable</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>ALLOW_STUPA</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_STUPA</Value>
+		</Row>
+		<Row>
+			<ModifierId>ALLOW_DAR_E_MEHR</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_DAR_E_MEHR</Value>
+		</Row>
 	</ModifierArguments>
 	<BeliefModifiers>
 		<Row BeliefType="BELIEF_DANCE_OF_THE_AURORA">
@@ -1938,6 +2159,39 @@
 		<Row BeliefType="BELIEF_SCRIPTURE">
 			<ModifierId>SCRIPTURE_SPEAD_STRENGTH</ModifierId>
 		</Row>
+		<Row BeliefType="BELIEF_CITY_PATRON_GODDESS">
+			<ModifierId>CITY_PATRON_GODDESS_DISTRICT_PRODUCTION</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_EARTH_GODDESS">
+			<ModifierId>EARTH_GODDESS_APPEAL_FAITH</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_CROSS_CULTURAL_DIALOGUE">
+			<ModifierId>CROSS_CULTURAL_DIALOGUE_SCIENCE_FOREIGN_FOLLOWER</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_RELIGIOUS_UNITY">
+			<ModifierId>RELIGIOUS_UNITY_ENVOY_ON_ADOPTION</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_CHORAL_MUSIC">
+			<ModifierId>CHORAL_MUSIC_SHRINE_CULTURE</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_CHORAL_MUSIC">
+			<ModifierId>CHORAL_MUSIC_TEMPLE_CULTURE</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_WARRIOR_MONKS">
+			<ModifierId>ALLOW_WARRIOR_MONKS</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_BURIAL_GROUNDS">
+			<ModifierId>BURIAL_GROUNDS_CULTURE_BOMB_TRIGGER_HOLY_SITE</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_RELIGIOUS_COLONIZATION">
+			<ModifierId>RELIGIOUS_COLONIZATION_AUTO_SPREAD</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_STUPA">
+			<ModifierId>ALLOW_STUPA</ModifierId>
+		</Row>
+		<Row BeliefType="BELIEF_DAR_E_MEHR">
+			<ModifierId>ALLOW_DAR_E_MEHR</ModifierId>
+		</Row>
 	</BeliefModifiers>
 	<RequirementSets>
 		<Row>
@@ -1962,6 +2216,10 @@
 		</Row>
 		<Row>
 			<RequirementSetId>CITY_FOLLOWS_RELIGION_HAS_STAVE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_0_SPECIALTY_DISTRICTS_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
@@ -2032,6 +2290,10 @@
 			<RequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>PLOT_CHARMING_APPEAL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
 	<Requirements>
 		<Row>
@@ -2041,6 +2303,11 @@
 		<Row>
 			<RequirementId>REQUIRES_CITY_FOLLOWS_RELIGION</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_FOLLOWS_RELIGION</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_0_SPECIALTY_DISTRICTS</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_X_SPECIALTY_DISTRICTS</RequirementType>
+			<Inverse>true</Inverse>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_FOUNDED_RELIGION</RequirementId>
@@ -2127,6 +2394,10 @@
 			<RequirementType>REQUIREMENT_PLOT_DISTRICT_TYPE_MATCHES</RequirementType>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_PLOT_CHARMING_APPEAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_IS_APPEAL_BETWEEN</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_SHRINE</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
 		</Row>
@@ -2149,6 +2420,11 @@
 		</Row>
 	</Requirements>
 	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_0_SPECIALTY_DISTRICTS</RequirementId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_UNIT_NEAR_FRIENDLY_RELIGIOUS_CITY</RequirementId>
 			<Name>FriendlyCity</Name>
@@ -2260,6 +2536,11 @@
 			<Value>DISTRICT_HOLY_SITE</Value>
 		</Row>
 		<Row>
+			<RequirementId>REQUIRES_PLOT_CHARMING_APPEAL</RequirementId>
+			<Name>MinimumAppeal</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_SHRINE</RequirementId>
 			<Name>BuildingType</Name>
 			<Value>BUILDING_SHRINE</Value>
@@ -2296,6 +2577,10 @@
 		<Row>
 			<RequirementSetId>CITY_FOLLOWS_RELIGION_WITH_2 DISTRICTS_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_CITY_HAS_2_SPECIALTY_DISTRICTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_HAS_0_SPECIALTY_DISTRICTS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_0_SPECIALTY_DISTRICTS</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>DEFENDER_OF_FAITH_REQUIREMENTS</RequirementSetId>
@@ -2440,6 +2725,10 @@
 		<Row>
 			<RequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_HAS_PANTHEON</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_CHARMING_APPEAL</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_CHARMING_APPEAL</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<ModifierStrings>

@@ -25,9 +25,9 @@
 		<!-- Two mutually exclusive map start position parameters.  The MP version defaults to "balanced", while the SP version defaults to "standard". -->	
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="240"/>
 		<Row ParameterId="StartPosition" Name="LOC_MAP_START_POSITION_NAME" Description="LOC_MAP_START_POSITION_DESCRIPTION" Domain="StartPosition" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="start" GroupId="MapOptions" Hash="0" SupportsSinglePlayer="0" SortIndex="240"/>
-		<!-- Two mutually exclusive map resource parameters.  The MP version defaults to "standard", while the SP version defaults to "abundant". -->
+		<!-- Two mutually exclusive map resource parameters.  The MP version defaults to "standard", while the SP version defaults to "standard". -->
 		<Row ParameterId="Resources" Name="LOC_MAP_RESOURCES_NAME" Description="LOC_MAP_RESOURCES_DESCRIPTION" Domain="Resources" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="resources" GroupId="MapOptions" Hash="0" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SupportsHotSeat="0" SortIndex="230"/>
-		<Row ParameterId="Resources" Name="LOC_MAP_RESOURCES_NAME" Description="LOC_MAP_RESOURCES_DESCRIPTION" Domain="Resources" DefaultValue="3" ConfigurationGroup="Map" ConfigurationId="resources" GroupId="MapOptions" Hash="0" SupportsSinglePlayer="0" SortIndex="230"/>
+		<Row ParameterId="Resources" Name="LOC_MAP_RESOURCES_NAME" Description="LOC_MAP_RESOURCES_DESCRIPTION" Domain="Resources" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="resources" GroupId="MapOptions" Hash="0" SupportsSinglePlayer="0" SortIndex="230"/>
 
 		<!-- Advanced Options -->
 		<Row ParameterId="NoDupeLeaders" Name="LOC_NO_DUPLICATE_LEADERS_NAME" Description="LOC_NO_DUPLICATE_LEADERS_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="NO_DUPLICATE_LEADERS" GroupId="AdvancedOptions" SortIndex="2000" />
@@ -44,7 +44,7 @@
 		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="AlliesShareVisibility" Name="LOC_GAME_ALLIES_SHARE_VISIBILITY" Description="LOC_GAME_ALLIES_SHARE_VISIBILITY_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="GAME_ALLIES_SHARE_VISIBILITY" GroupId="AdvancedOptions" SortIndex="2010"/>
 		
 		<!-- Player Parameters -->
-		<Row ParameterId="PlayerLeader" Name="LOC_LEADER_TYPE" Description="" Domain="StandardPlayers" Hash="0" ConfigurationGroup="Player" ConfigurationId="LEADER_TYPE_ID" DomainConfigurationId="LEADER_DOMAIN" DomainValuesConfigurationId="LEADER_VALUES" ValueDomainConfigurationId="LEADER_VALUE_DOMAIN" GroupId="PlayerOptions"/>
+		<Row ParameterId="PlayerLeader" Name="LOC_LEADER_TYPE" Description="" Domain="Players:StandardPlayers" Hash="0" ConfigurationGroup="Player" ConfigurationId="LEADER_TYPE_ID" DomainConfigurationId="LEADER_DOMAIN" DomainValuesConfigurationId="LEADER_VALUES" ValueDomainConfigurationId="LEADER_VALUE_DOMAIN" GroupId="PlayerOptions"/>
 		<Row ParameterId="PlayerTeam" Name="LOC_PLAYER_TEAM" Description="The player team." Domain="int" Hash="0" ConfigurationGroup="Player" ConfigurationId="TEAM" GroupId="PlayerOptions"/>
 		<Row ParameterId="PlayerDifficulty" Name="LOC_PLAYER_DIFFICULTY" Description="" Domain="StandardDifficulties" Hash="1" ConfigurationGroup="Player" ConfigurationId="HANDICAP_TYPE_ID" GroupId="PlayerOptions" SortIndex="3020"/>
 	</Parameters>
@@ -91,7 +91,7 @@
 		<Row ParameterQueryId="RulesetParameters" QueryId="RulesetParameters"/>
 		<Row ParameterQueryId="MapParameters" QueryId="MapParameters"/>
 	</ParameterQueries>
-
+	
 	<DomainOverrideQueries>
 		<Row QueryId="MapDomainOverrides" />
 		<Row QueryId="RulesetDomainOverrides" />
@@ -116,16 +116,33 @@
 		<Row QueryId="TurnTimers"/>
 		<Row QueryId="TurnPhases"/>
 		<Row QueryId="Players"/>
-
-		<!-- Restrict domains from external supported tables -->
-		<Row QueryId="MapSupportedValues" Set="intersect"/>
-		<Row QueryId="MapUnSupportedValues" Set="difference"/>
-		<Row QueryId="RulesetSupportedValues" Set="intersect"/>
-		<Row QueryId="RulesetUnSupportedValues" Set="difference"/>
 	</DomainValueQueries>
+	
+		<!-- Backwards compatibility before domains were namespaced -->
+	<DomainValueUnions>
+		<Row Domain="Players:StandardPlayers" OtherDomain="StandardPlayers" />
+	</DomainValueUnions>
+	
+	<DomainValueUnionQueries>
+		<!-- Populate standard values -->
+		<Row QueryId="DomainValueUnions" />
+	</DomainValueUnionQueries>
+	
+	<DomainValueFilterQueries>
+		<!-- Populate standard values -->
+		<Row QueryId="DomainValueFilters" />
+	
+		<!-- Restrict domains from external supported tables -->
+		<Row QueryId="MapLeaders" />
+		<Row QueryId="MapSupportedValues" />
+		<Row QueryId="MapUnSupportedValues" />
+		<Row QueryId="RulesetSupportedValues" />
+		<Row QueryId="RulesetUnSupportedValues" />
+		<Row QueryId="RulesetFixedMaxTurns" />
+	</DomainValueFilterQueries>
 
 	<DomainValues>
-		<Row Domain="StandardPlayers" Value="RANDOM" Name="LOC_RANDOM_LEADER" Description="LOC_RANDOM_LEADER" SortIndex="1"/>
+		<Row Domain="Players:*" Value="RANDOM" Name="LOC_RANDOM_LEADER" Description="LOC_RANDOM_LEADER" SortIndex="1"/>
 
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_NONE" Name="LOC_TURNLIMIT_NONE_NAME" Description="LOC_TURNLIMIT_NONE_DESCRIPTION" SortIndex="1"/>
 		<Row Domain="StandardTurnLimits" Value="TURNLIMIT_GAMESPEED" Name="LOC_TURNLIMIT_GAMESPEED_NAME" Description="LOC_TURNLIMIT_GAMESPEED_DESCRIPTION" SortIndex="1"/>
@@ -143,70 +160,83 @@
 		<Row QueryId="RulesetNoTeamsUpdates" />
 		<Row QueryId="RulesetUniqueLeaderUpdates" />
 		<Row QueryId="MapUniqueLeaderUpdates" />
+		<Row QueryId="VictoryUpdates" />
 	</ConfigurationUpdateQueries>
 
 	<ConfigurationUpdates>
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1" />
 		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_STANDARD" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_GAMESPEED" Hash="1" />
 		<Row SourceGroup="Game" SourceId="GAME_TURN_LIMIT" SourceValue="TURNLIMIT_NONE" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
-    <Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
+		<Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
 	</ConfigurationUpdates>
 
 	<Queries>
 		<!-- Parameter Queries -->
-		<Row QueryId="Parameters" SQL="SELECT * from Parameters P WHERE Key1 IS NULL and Key2 IS NULL"/>
-		<Row QueryId="RulesetParameters" SQL="SELECT * from Parameters P WHERE Key1='Ruleset' AND Key2 = ?1"/>
-		<Row QueryId="MapParameters" SQL="SELECT * from Parameters P WHERE Key1='Map' AND Key2 = ?1"/>
-		<Row QueryId="Defeats" SQL="SELECT DefeatType as ParameterId, D.Name as Name, D.Description as Description, Visible, ReadOnly, 1 as SupportsSinglePlayer, 1 as SupportsLANMultiplayer, 1 as SupportsInternetMultiplayer, 1 as SupportsHotSeat, 0 as ChangeableAfterGameStart, 'bool' as Domain, 0 as Hash, 1 as DefaultValue, 'Game' as ConfigurationGroup, DefeatType as ConfigurationId, 'Victories' as GroupId, 10 as SortIndex from Defeats D, Rulesets where RulesetType = ?1 and D.Domain = Rulesets.DefeatDomain"/>
-		<Row QueryId="Victories" SQL="SELECT VictoryType as ParameterId, V.Name as Name, V.Description as Description, Visible, ReadOnly, 1 as SupportsSinglePlayer, 1 as SupportsLANMultiplayer, 1 as SupportsInternetMultiplayer, 1 as SupportsHotSeat, 0 as ChangeableAfterGameStart, 'bool' as Domain, 0 as Hash, 1 as DefaultValue, 'Game' as ConfigurationGroup, VictoryType as ConfigurationId, 'Victories' as GroupId, 20 as SortIndex from Victories V, Rulesets where RulesetType =?1 and V.Domain = Rulesets.VictoryDomain"/>
+		<Row QueryId="Parameters" SQL="SELECT * FROM Parameters P WHERE Key1 IS NULL and Key2 IS NULL"/>
+		<Row QueryId="RulesetParameters" SQL="SELECT * FROM Parameters P WHERE Key1='Ruleset' AND Key2 = ?1"/>
+		<Row QueryId="MapParameters" SQL="SELECT * FROM Parameters P WHERE Key1='Map' AND Key2 = ?1"/>
+		<Row QueryId="Defeats" SQL="SELECT DefeatType AS ParameterId, D.Name AS Name, D.Description AS Description, Visible, ReadOnly, 1 AS SupportsSinglePlayer, 1 AS SupportsLANMultiplayer, 1 AS SupportsInternetMultiplayer, 1 AS SupportsHotSeat, 0 AS ChangeableAfterGameStart, 'bool' AS Domain, 0 AS Hash, 1 AS DefaultValue, 'Game' AS ConfigurationGroup, DefeatType AS ConfigurationId, 'Victories' AS GroupId, 10 AS SortIndex FROM Defeats D, Rulesets WHERE RulesetType = ?1 and D.Domain = Rulesets.DefeatDomain"/>
+		<Row QueryId="Victories" SQL="SELECT VictoryType AS ParameterId, V.Name AS Name, V.Description AS Description, Visible, ReadOnly, 1 AS SupportsSinglePlayer, 1 AS SupportsLANMultiplayer, 1 AS SupportsInternetMultiplayer, 1 AS SupportsHotSeat, 0 AS ChangeableAfterGameStart, 'bool' AS Domain, 0 AS Hash, 1 AS DefaultValue, 'Game' AS ConfigurationGroup, VictoryType AS ConfigurationId, 'Victories' AS GroupId, 20 AS SortIndex FROM Victories V, Rulesets WHERE RulesetType =?1 and V.Domain = Rulesets.VictoryDomain"/>
 
 		<!-- Parameter Criteria Queries -->
 		<Row QueryId="ParameterCriteria" SQL="SELECT * FROM ParameterCriteria ORDER BY ParameterId" />
-		<Row QueryId="RulesetFixedMaxTurnsCriteria" SQL="SELECT 'MaxTurns' as ParameterId, 'Game' as ConfigurationGroup, 'RULESET' as ConfigurationId, 'NotEquals' as Operator, RulesetType as ConfigurationValue from Rulesets where FixedMaxTurns = 1" />/>
-		<Row QueryId="RulesetNoTeamCriteria" SQL="SELECT 'NoTeams' as ParameterId, 'Game' as ConfigurationGroup, 'RULESET' as ConfigurationId, 'NotEquals' as Operator, RulesetType as ConfigurationValue from Rulesets where RequiresNoTeams = 1" />/>
-		<Row QueryId="RulesetUniqueLeaderCriteria" SQL="SELECT 'NoDupeLeaders' as ParameterId, 'Game' as ConfigurationGroup, 'RULESET' as ConfigurationId, 'NotEquals' as Operator, RulesetType as ConfigurationValue from Rulesets where RequiresUniqueLeaders = 1" />
-		<Row QueryId="MapUniqueLeaderCriteria" SQL="SELECT 'NoDupeLeaders' as ParameterId, 'Map' as ConfigurationGroup, 'MAP_SCRIPT' as ConfigurationId, 'NotEquals' as Operator, File as ConfigurationValue from Maps where RequiresUniqueLeaders = 1" />
+		<Row QueryId="RulesetFixedMaxTurnsCriteria" SQL="SELECT 'MaxTurns' AS ParameterId, 'Game' AS ConfigurationGroup, 'RULESET' AS ConfigurationId, 'NotEquals' AS Operator, RulesetType AS ConfigurationValue FROM Rulesets WHERE FixedMaxTurns = 1" />/>
+		<Row QueryId="RulesetNoTeamCriteria" SQL="SELECT 'NoTeams' AS ParameterId, 'Game' AS ConfigurationGroup, 'RULESET' AS ConfigurationId, 'NotEquals' AS Operator, RulesetType AS ConfigurationValue FROM Rulesets WHERE RequiresNoTeams = 1" />/>
+		<Row QueryId="RulesetUniqueLeaderCriteria" SQL="SELECT 'NoDupeLeaders' AS ParameterId, 'Game' AS ConfigurationGroup, 'RULESET' AS ConfigurationId, 'NotEquals' AS Operator, RulesetType AS ConfigurationValue FROM Rulesets WHERE RequiresUniqueLeaders = 1" />
+		<Row QueryId="MapUniqueLeaderCriteria" SQL="SELECT 'NoDupeLeaders' AS ParameterId, 'Map' AS ConfigurationGroup, 'MAP_SCRIPT' AS ConfigurationId, 'NotEquals' AS Operator, File AS ConfigurationValue FROM Maps WHERE RequiresUniqueLeaders = 1" />
 
 		<!-- Parameter Dependency Queries -->
 		<Row QueryId="ParameterDependencies" SQL="SELECT * FROM ParameterDependencies ORDER BY ParameterId" />
 
 		<!-- Value Queries -->
-		<Row QueryId="DomainValues" SQL="SELECT * from DomainValues where Key1 IS NULL AND Key2 IS NULL"/>
-		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' as Domain, Name, Description, RulesetType as Value, SortIndex from Rulesets where ((?1 = -379035929 and SupportsSinglePlayer = 1) or (?1 &lt;&gt; -379035929 and SupportsMultiplayer = 1))"/>
-		<Row QueryId="Difficulties" SQL="SELECT Domain, Name, Name as Description, DifficultyType as Value, SortIndex from Difficulties"/>
-		<Row QueryId="Eras" SQL="SELECT Domain, Name, Description, EraType as Value, SortIndex from Eras"/>
-		<Row QueryId="GameSpeeds" SQL="SELECT Domain, Name, Description, GameSpeedType as Value, SortIndex from GameSpeeds"/>
-		<Row QueryId="Maps" SQL="SELECT Domain, Name, Description, File as Value, SortIndex from Maps where (not WorldBuilderOnly or ?)"/>
-		<Row QueryId="MapSizes" SQL="SELECT Domain, Name, Description, MapSizeType as Value, SortIndex from MapSizes"/>
-		<Row QueryId="TurnTimers" SQL="SELECT Domain, Name, Description, TurnTimerType as Value, SortIndex from TurnTimers"/>
-		<Row QueryId="TurnPhases" SQL="SELECT Domain, Name, Description, TurnPhaseType as Value, SortIndex from TurnPhases"/>
-		<Row QueryId="Players" SQL="SELECT Domain, LeaderName as Name, LeaderAbilityDescription as Description, LeaderType as Value, 100 as SortIndex from Players"/>
+		<Row QueryId="DomainValues" SQL="SELECT * FROM DomainValues WHERE Key1 IS NULL AND Key2 IS NULL"/>
+		<Row QueryId="Rulesets" SQL="SELECT 'Rulesets' AS Domain, Name, Description, RulesetType AS Value, SortIndex FROM Rulesets WHERE ((?1 = -379035929 and SupportsSinglePlayer = 1) or (?1 &lt;&gt; -379035929 and SupportsMultiplayer = 1))"/>
+		<Row QueryId="Difficulties" SQL="SELECT Domain, Name, Name AS Description, DifficultyType AS Value, SortIndex FROM Difficulties"/>
+		<Row QueryId="Eras" SQL="SELECT Domain, Name, Description, EraType AS Value, SortIndex FROM Eras"/>
+		<Row QueryId="GameSpeeds" SQL="SELECT Domain, Name, Description, GameSpeedType AS Value, SortIndex FROM GameSpeeds"/>
+		<Row QueryId="Maps" SQL="SELECT Domain, Name, Description, File AS Value, SortIndex FROM Maps WHERE (not WorldBuilderOnly or ?)"/>
+		<Row QueryId="MapSizes" SQL="SELECT Domain, Name, Description, MapSizeType AS Value, SortIndex FROM MapSizes"/>
+		<Row QueryId="TurnTimers" SQL="SELECT Domain, Name, Description, TurnTimerType AS Value, SortIndex FROM TurnTimers"/>
+		<Row QueryId="TurnPhases" SQL="SELECT Domain, Name, Description, TurnPhaseType AS Value, SortIndex FROM TurnPhases"/>
+		<Row QueryId="Players" SQL="SELECT Domain, LeaderName AS Name, LeaderAbilityDescription AS Description, LeaderType AS Value, 100 AS SortIndex FROM Players"/>
 
+		<!-- Value Filter Queries -->
+		<Row QueryId="DomainValueFilters" SQL="SELECT * FROM DomainValueFilters WHERE Key1 IS NULL AND Key2 IS NULL" />
+		
+		<!-- Value Union Queries -->
+		<Row QueryId="DomainValueUnions" SQL="SELECT * FROM DomainValueUnions WHERE Key1 IS NULL AND Key2 IS NULL" />
+				
 		<!-- Range Queries -->
-		<Row QueryId="DomainRanges" SQL="SELECT * from DomainRanges" />
-		<Row QueryId="CityStateCountRange" SQL="SELECT 'CityStateCountRange' as Domain, ?1 as MinimumValue, ?2 as MaximumValue LIMIT 1" />
+		<Row QueryId="DomainRanges" SQL="SELECT * FROM DomainRanges" />
+		<Row QueryId="CityStateCountRange" SQL="SELECT 'CityStateCountRange' AS Domain, ?1 AS MinimumValue, ?2 AS MaximumValue LIMIT 1" />
 
 		<!-- Map Specific Queries -->
 		<!-- These queries adjust the domain values based on the selected map. -->
-		<Row QueryId="MapDomainOverrides" SQL="SELECT ParameterId, Domain from MapDomainOverrides where Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
-		<Row QueryId="MapSupportedValues" SQL="SELECT Domain, Value from MapSupportedValues where Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
-		<Row QueryId="MapUnSupportedValues" SQL="SELECT Domain, Value from MapUnSupportedValues where Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
+		<Row QueryId="MapLeaders" SQL="SELECT 'Players:*' AS Domain, LeaderType as Value, 'intersect' as Filter FROM MapLeaders WHERE Map = ?1"/> 
+		<Row QueryId="MapDomainOverrides" SQL="SELECT ParameterId, Domain FROM MapDomainOverrides WHERE Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
+		<Row QueryId="MapSupportedValues" SQL="SELECT Domain, Value, 'intersect' AS Filter FROM MapSupportedValues WHERE Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
+		<Row QueryId="MapUnSupportedValues" SQL="SELECT Domain, Value, 'difference' AS Filter FROM MapUnSupportedValues WHERE Map = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
 
 		<!-- Ruleset Specific queries -->
 		<!-- These queries adjust the domain values based on the selected ruleset. -->
-		<Row QueryId="RulesetDomainOverrides" SQL="SELECT ParameterId, Domain from RulesetDomainOverrides where Ruleset = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
-		<Row QueryId="RulesetSupportedValues" SQL="SELECT Domain, Value from RulesetSupportedValues where Ruleset = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
-		<Row QueryId="RulesetUnSupportedValues" SQL="SELECT Domain, Value from RulesetUnSupportedValues where Ruleset = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
+		<Row QueryId="RulesetDomainOverrides" SQL="SELECT ParameterId, Domain FROM RulesetDomainOverrides WHERE Ruleset = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
+		<Row QueryId="RulesetSupportedValues" SQL="SELECT Domain, Value, 'intersect' AS Filter FROM RulesetSupportedValues WHERE Ruleset = ?1 and (PlayerId = ?2 or PlayerId is null)"/>		
+		<Row QueryId="RulesetUnSupportedValues" SQL="SELECT Domain, Value, 'difference' AS Filter FROM RulesetUnSupportedValues WHERE Ruleset = ?1 and (PlayerId = ?2 or PlayerId is null)"/>
+		<!-- If the Ruleset has 'FixedMaxTurns' then restrict the turn limit to custom. -->
+		<Row QueryId="RulesetFixedMaxTurns" SQL="SELECT 'StandardTurnLimits' as Domain, 'TURNLIMIT_CUSTOM' as Value, 'intersect' AS Filter FROM Rulesets WHERE RuleSetType = ?1 AND FixedMaxTurns = 1"/>
+		
 
 		<!-- Configuration Update queries -->
-		<Row QueryId="ConfigurationUpdates" SQL="SELECT * from ConfigurationUpdates WHERE Key1 IS NULL AND Key2 IS NULL" />
-		<Row QueryId="RulesetConfigurationUpdates" SQL="SELECT * from ConfigurationUpdates WHERE Key1='Ruleset' AND Key2 = ?1" />
-		<Row QueryId="RulesetTurnLimitNoneUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_TURN_LIMIT' as TargetId, 'TURNLIMIT_NONE' as TargetValue, 1 as 'Hash' from Rulesets where MaxTurns = 0" />
-		<Row QueryId="RulesetTurnLimitCustomUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RuleSetType as SourceValue, 'Game' as TargetGroup, 'GAME_TURN_LIMIT' as TargetId, 'TURNLIMIT_CUSTOM' as TargetValue, 1 as 'Hash' from Rulesets where MaxTurns > 0" />
-		<Row QueryId="RulesetMaxTurnUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RulesetType as SourceValue, 'Game' as TargetGroup, 'GAME_MAX_TURNS' as TargetId, MaxTurns as TargetValue from Rulesets where MaxTurns IS NOT NULL" />
-		<Row QueryId="RulesetNoTeamsUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RulesetType as SourceValue, 'Game' as TargetGroup, 'NO_TEAMS' as TargetId, 1 as TargetValue from Rulesets where RequiresNoTeams = 1" />
-		<Row QueryId="RulesetUniqueLeaderUpdates" SQL="SELECT 'Game' as SourceGroup, 'RULESET' as SourceId, RulesetType as SourceValue, 'Game' as TargetGroup, 'NO_DUPLICATE_LEADERS' as TargetId, 1 as TargetValue from Rulesets where RequiresUniqueLeaders = 1" />
-		<Row QueryId="MapUniqueLeaderUpdates" SQL="SELECT 'Map' as SourceGroup, 'MAP_SCRIPT' as SourceId, File as SourceValue, 'Game' as TargetGroup, 'NO_DUPLICATE_LEADERS' as TargetId, 1 as TargetValue from Maps where RequiresUniqueLeaders = 1" />
+		<Row QueryId="ConfigurationUpdates" SQL="SELECT * FROM ConfigurationUpdates WHERE Key1 IS NULL AND Key2 IS NULL" />
+		<Row QueryId="RulesetConfigurationUpdates" SQL="SELECT * FROM ConfigurationUpdates WHERE Key1='Ruleset' AND Key2 = ?1" />
+		<Row QueryId="RulesetTurnLimitNoneUpdates" SQL="SELECT 'Game' AS SourceGroup, 'RULESET' AS SourceId, RuleSetType AS SourceValue, 'Game' AS TargetGroup, 'GAME_TURN_LIMIT' AS TargetId, 'TURNLIMIT_NONE' AS TargetValue, 1 AS 'Hash' FROM Rulesets WHERE MaxTurns = 0" />
+		<Row QueryId="RulesetTurnLimitCustomUpdates" SQL="SELECT 'Game' AS SourceGroup, 'RULESET' AS SourceId, RuleSetType AS SourceValue, 'Game' AS TargetGroup, 'GAME_TURN_LIMIT' AS TargetId, 'TURNLIMIT_CUSTOM' AS TargetValue, 1 AS 'Hash' FROM Rulesets WHERE MaxTurns > 0" />
+		<Row QueryId="RulesetMaxTurnUpdates" SQL="SELECT 'Game' AS SourceGroup, 'RULESET' AS SourceId, RulesetType AS SourceValue, 'Game' AS TargetGroup, 'GAME_MAX_TURNS' AS TargetId, MaxTurns AS TargetValue FROM Rulesets WHERE MaxTurns IS NOT NULL" />
+		<Row QueryId="RulesetNoTeamsUpdates" SQL="SELECT 'Game' AS SourceGroup, 'RULESET' AS SourceId, RulesetType AS SourceValue, 'Game' AS TargetGroup, 'NO_TEAMS' AS TargetId, 1 AS TargetValue FROM Rulesets WHERE RequiresNoTeams = 1" />
+		<Row QueryId="RulesetUniqueLeaderUpdates" SQL="SELECT 'Game' AS SourceGroup, 'RULESET' AS SourceId, RulesetType AS SourceValue, 'Game' AS TargetGroup, 'NO_DUPLICATE_LEADERS' AS TargetId, 1 AS TargetValue FROM Rulesets WHERE RequiresUniqueLeaders = 1" />
+		<Row QueryId="MapUniqueLeaderUpdates" SQL="SELECT 'Map' AS SourceGroup, 'MAP_SCRIPT' AS SourceId, File AS SourceValue, 'Game' AS TargetGroup, 'NO_DUPLICATE_LEADERS' AS TargetId, 1 AS TargetValue FROM Maps WHERE RequiresUniqueLeaders = 1" />
+		<Row QueryId="VictoryUpdates" SQL="SELECT 'Game' As SourceGroup, 'RULESET' AS SourceId, RulesetType AS SourceValue, 'Game' AS TargetGroup, VictoryType AS TargetId, 1 AS TargetValue FROM Victories V, Rulesets WHERE V.EnabledByDefault = 1 AND V.Domain = Rulesets.VictoryDomain" />
+	
 	</Queries>
 
 	<QueryParameters>
@@ -225,6 +255,7 @@
 		<Row QueryId="MapDomainOverrides" Index="1" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT" />
 		<Row QueryId="MapDomainOverrides" Index="2" ConfigurationGroup="Player" ConfigurationId="PLAYER_ID" />
 
+		<Row QueryId="MapLeaders" Index="1" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT"/>
 		<Row QueryId="MapSupportedValues" Index="1" ConfigurationGroup="Map" ConfigurationId="MAP_SCRIPT"/>
 		<Row QueryId="MapSupportedValues" Index="2" ConfigurationGroup="Player" ConfigurationId="PLAYER_ID"/>
 		<Row QueryId="MapUnSupportedValues" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
@@ -237,6 +268,7 @@
 		<Row QueryId="RulesetSupportedValues" Index="2" ConfigurationGroup="Player" ConfigurationId="PLAYER_ID"/>
 		<Row QueryId="RulesetUnSupportedValues" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
 		<Row QueryId="RulesetUnSupportedValues" Index="2" ConfigurationGroup="Player" ConfigurationId="PLAYER_ID"/>
+		<Row QueryId="RulesetFixedMaxTurns" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
 		
 		<Row QueryId="RulesetConfigurationUpdates" Index="1" ConfigurationGroup="Game" ConfigurationId="RULESET"/>
 	</QueryParameters>

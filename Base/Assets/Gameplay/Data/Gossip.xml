@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
 <GameInfo>
 	<Kinds>
 		<Row Kind="KIND_GOSSIP"/>
@@ -10,7 +10,7 @@
 		<Row Type="GOSSIP_ALLIED" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_ANARCHY_BEGINS" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_ARTIFACT_EXTRACTED" Kind="KIND_GOSSIP"/>
-    <Row Type="GOSSIP_ATTACK_LAUNCHED" Kind="KIND_GOSSIP" />
+		<Row Type="GOSSIP_ATTACK_LAUNCHED" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_BEACH_RESORT_CREATED" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_BARBARIAN_INVASION_STARTED" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_BARBARIAN_RAID_STARTED" Kind="KIND_GOSSIP"/>
@@ -42,12 +42,12 @@
 		<Row Type="GOSSIP_NEW_RELIGIOUS_MAJORITY" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_PILLAGE" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_POLICY_ENACTED" Kind="KIND_GOSSIP"/>
-    <Row Type="GOSSIP_PROJECT_STARTED" Kind="KIND_GOSSIP" />
+		<Row Type="GOSSIP_PROJECT_STARTED" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_RECEIVE_DOW" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_RELIC_RECEIVED" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_RESEARCH_AGREEMENT" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_RESEARCH_TECH" Kind="KIND_GOSSIP"/>
-    <Row Type="GOSSIP_SPACE_RACE_PROJECT_COMPLETED" Kind="KIND_GOSSIP"/>
+		<Row Type="GOSSIP_SPACE_RACE_PROJECT_COMPLETED" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_SPY_DISRUPT_ROCKETRY" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_SPY_GREAT_WORK_HEIST" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_SPY_RECRUIT_PARTISANS" Kind="KIND_GOSSIP"/>
@@ -59,9 +59,9 @@
 		<Row Type="GOSSIP_TRAIN_SETTLER" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_TRAIN_UNIT" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_WMD_BUILT" Kind="KIND_GOSSIP"/>
-    <Row Type="GOSSIP_VICTORY_STRATEGY_CHANGED" Kind="KIND_GOSSIP"/>
-    <Row Type="GOSSIP_WAR_PREPARATION" Kind="KIND_GOSSIP"/>
- 		<Row Type="GOSSIP_WMD_STRIKE" Kind="KIND_GOSSIP"/>
+		<Row Type="GOSSIP_VICTORY_STRATEGY_CHANGED" Kind="KIND_GOSSIP"/>
+		<Row Type="GOSSIP_WAR_PREPARATION" Kind="KIND_GOSSIP"/>
+		<Row Type="GOSSIP_WMD_STRIKE" Kind="KIND_GOSSIP"/>
 		<Row Type="GOSSIP_WONDER_STARTED" Kind="KIND_GOSSIP"/>
 	</Types>
 	<Visibilities>
@@ -84,22 +84,22 @@
 		<Row GossipType="GOSSIP_CONQUER_CITY" VisibilityLevel="0" Description="LOC_GOSSIPDESC_CONQUER_CITY" Message="LOC_GOSSIP_CONQUER_CITY"/>
 		<Row GossipType="GOSSIP_CREATE_PANTHEON" VisibilityLevel="0" Filter="false" Message="LOC_GOSSIP_CREATE_PANTHEON"/>
 		<Row GossipType="GOSSIP_ERA_CHANGED" VisibilityLevel="0" Message="LOC_GOSSIP_ERA_CHANGED"/>
-		<Row GossipType="GOSSIP_FOUND_RELIGION" VisibilityLevel="0" Description="LOC_GOSSIPDESC_FOUND_RELIGION" Filter="false" Message="LOC_GOSSIP_FOUND_RELIGION"/>
-		<Row GossipType="GOSSIP_MAKE_DOW" VisibilityLevel="0" Description="LOC_GOSSIPDESC_MAKE_DOW" Filter="false" Message="LOC_GOSSIP_MAKE_DOW"/>
+		<Row GossipType="GOSSIP_FOUND_RELIGION" VisibilityLevel="0" Filter="false" Description="LOC_GOSSIPDESC_FOUND_RELIGION" Message="LOC_GOSSIP_FOUND_RELIGION"/>
+		<Row GossipType="GOSSIP_MAKE_DOW" VisibilityLevel="0" Filter="false" Description="LOC_GOSSIPDESC_MAKE_DOW" Message="LOC_GOSSIP_MAKE_DOW"/>
 		<Row GossipType="GOSSIP_RECEIVE_DOW" VisibilityLevel="0" Message="LOC_GOSSIP_RECEIVE_DOW"/>
-		<Row GossipType="GOSSIP_WMD_BUILT" VisibilityLevel="4" Description="LOC_GOSSIPDESC_WMD_BUILT" Filter="false" Message="LOC_GOSSIP_WMD_BUILT"/>
-		<Row GossipType="GOSSIP_WMD_STRIKE" VisibilityLevel="0" Description="LOC_GOSSIPDESC_WMD_STRIKE" Filter="false" Message="LOC_GOSSIP_WMD_STRIKE"/>
-    <Row GossipType="GOSSIP_SPACE_RACE_PROJECT_COMPLETED" VisibilityLevel="0" Description="LOC_GOSSIPDESC_SPACE_RACE_PROJECT_COMPLETED" Filter="false" Message="LOC_GOSSIP_SPACE_RACE_PROJECT_COMPLETED"/>
-		<Row GossipType="GOSSIP_ALLIED" VisibilityLevel="1" Description="LOC_GOSSIPDESC_ALLIED" Filter="false" Message="LOC_GOSSIP_ALLIED"/>
+		<Row GossipType="GOSSIP_WMD_BUILT" VisibilityLevel="4" Filter="false" Description="LOC_GOSSIPDESC_WMD_BUILT" Message="LOC_GOSSIP_WMD_BUILT"/>
+		<Row GossipType="GOSSIP_WMD_STRIKE" VisibilityLevel="0" Filter="false" Description="LOC_GOSSIPDESC_WMD_STRIKE" Message="LOC_GOSSIP_WMD_STRIKE"/>
+		<Row GossipType="GOSSIP_SPACE_RACE_PROJECT_COMPLETED" VisibilityLevel="0" Filter="false" Description="LOC_GOSSIPDESC_SPACE_RACE_PROJECT_COMPLETED" Message="LOC_GOSSIP_SPACE_RACE_PROJECT_COMPLETED"/>
+		<Row GossipType="GOSSIP_ALLIED" VisibilityLevel="1" Filter="false" Description="LOC_GOSSIPDESC_ALLIED" Message="LOC_GOSSIP_ALLIED"/>
 		<Row GossipType="GOSSIP_ANARCHY_BEGINS" VisibilityLevel="1" Filter="false" Message="LOC_GOSSIP_ANARCHY_BEGINS"/>
-		<Row GossipType="GOSSIP_CHANGE_GOVERNMENT" VisibilityLevel="1" Description="LOC_GOSSIPDESC_CHANGE_GOVERNMENT" Filter="false" Message="LOC_GOSSIP_CHANGE_GOVERNMENT"/>
+		<Row GossipType="GOSSIP_CHANGE_GOVERNMENT" VisibilityLevel="1" Filter="false" Description="LOC_GOSSIPDESC_CHANGE_GOVERNMENT" Message="LOC_GOSSIP_CHANGE_GOVERNMENT"/>
 		<Row GossipType="GOSSIP_CITY_BESIEGED" VisibilityLevel="1" Message="LOC_GOSSIP_CITY_BESIEGED"/>
 		<Row GossipType="GOSSIP_CITY_LIBERATED" VisibilityLevel="1" Message="LOC_GOSSIP_CITY_LIBERATED"/>
 		<Row GossipType="GOSSIP_CITY_RAZED" VisibilityLevel="1" Message="LOC_GOSSIP_CITY_RAZED"/>
 		<Row GossipType="GOSSIP_CLEAR_CAMP" VisibilityLevel="1" Message="LOC_GOSSIP_CLEAR_CAMP"/>
 		<Row GossipType="GOSSIP_DECLARED_FRIENDSHIP" VisibilityLevel="1" Filter="false" Message="LOC_GOSSIP_DECLARED_FRIENDSHIP"/>
 		<Row GossipType="GOSSIP_DELEGATION" VisibilityLevel="1" Message="LOC_GOSSIP_DELEGATION"/>
-		<Row GossipType="GOSSIP_DENOUNCED" VisibilityLevel="1" Description="LOC_GOSSIPDESC_DENOUNCED" Filter="false" Message="LOC_GOSSIP_DENOUNCED"/>
+		<Row GossipType="GOSSIP_DENOUNCED" VisibilityLevel="1" Filter="false" Description="LOC_GOSSIPDESC_DENOUNCED" Message="LOC_GOSSIP_DENOUNCED"/>
 		<Row GossipType="GOSSIP_FOUND_CITY" VisibilityLevel="1" Description="LOC_GOSSIPDESC_FOUND_CITY" Message="LOC_GOSSIP_FOUND_CITY"/>
 		<Row GossipType="GOSSIP_PILLAGE" VisibilityLevel="1" Message="LOC_GOSSIP_PILLAGE"/>
 		<Row GossipType="GOSSIP_TRADE_DEAL" VisibilityLevel="1" Description="LOC_GOSSIPDESC_TRADE_DEAL" Message="LOC_GOSSIP_TRADE_DEAL"/>
@@ -111,23 +111,23 @@
 		<Row GossipType="GOSSIP_BARBARIAN_INVASION_STARTED" VisibilityLevel="2" Message="LOC_GOSSIP_BARBARIAN_INVASION_STARTED"/>
 		<Row GossipType="GOSSIP_BARBARIAN_RAID_STARTED" VisibilityLevel="2" Message="LOC_GOSSIP_BARBARIAN_RAID_STARTED"/>
 		<Row GossipType="GOSSIP_BEACH_RESORT_CREATED" VisibilityLevel="2" Message="LOC_GOSSIP_BEACH_RESORT_CREATED"/>
-		<Row GossipType="GOSSIP_CONSTRUCT_BUILDING" VisibilityLevel="2" Message="LOC_GOSSIP_CONSTRUCT_BUILDING"/>
+		<Row GossipType="GOSSIP_CONSTRUCT_BUILDING" VisibilityLevel="2" ErasUntilObsolete="2" Message="LOC_GOSSIP_CONSTRUCT_BUILDING"/>
 		<Row GossipType="GOSSIP_CONSTRUCT_DISTRICT" VisibilityLevel="2" Description="LOC_GOSSIPDESC_CONSTRUCT_DISTRICT" Message="LOC_GOSSIP_CONSTRUCT_DISTRICT"/>
 		<Row GossipType="GOSSIP_EMBASSY" VisibilityLevel="2" Message="LOC_GOSSIP_EMBASSY"/>
 		<Row GossipType="GOSSIP_FIND_NATURAL_WONDER" VisibilityLevel="2" Message="LOC_GOSSIP_FIND_NATURAL_WONDER"/>
 		<Row GossipType="GOSSIP_GREATPERSON_CREATED" VisibilityLevel="2" Description="LOC_GOSSIPDESC_GREATPERSON_CREATED" Message="LOC_GOSSIP_GREATPERSON_CREATED"/>
 		<Row GossipType="GOSSIP_INQUISITION_LAUNCHED" VisibilityLevel="2" Message="LOC_GOSSIP_INQUISITION_LAUNCHED"/>
 		<Row GossipType="GOSSIP_NATIONAL_PARK_CREATED" VisibilityLevel="2" Message="LOC_GOSSIP_NATIONAL_PARK_CREATED"/>
-		<Row GossipType="GOSSIP_POLICY_ENACTED" VisibilityLevel="2" Description="LOC_GOSSIPDESC_POLICY_ENACTED" Message="LOC_GOSSIP_POLICY"/>
+		<Row GossipType="GOSSIP_POLICY_ENACTED" VisibilityLevel="2" ErasUntilObsolete="2" Description="LOC_GOSSIPDESC_POLICY_ENACTED" Message="LOC_GOSSIP_POLICY"/>
 		<Row GossipType="GOSSIP_RELIC_RECEIVED" VisibilityLevel="2" Message="LOC_GOSSIP_RELIC_RECEIVED"/>
 		<Row GossipType="GOSSIP_WONDER_STARTED" VisibilityLevel="2" Description="LOC_GOSSIPDESC_WONDER_STARTED" Message="LOC_GOSSIP_WONDER_STARTED"/>
 		<Row GossipType="GOSSIP_CITY_STATE_INFLUENCE" VisibilityLevel="3" Description="LOC_GOSSIPDESC_CITY_STATE_INFLUENCE" Message="LOC_GOSSIP_CITY_STATE_INFLUENCE"/>
-		<Row GossipType="GOSSIP_CULTUREVATE_CIVIC" VisibilityLevel="3" Description="LOC_GOSSIPDESC_CULTURVATE_CIVIC" Message="LOC_GOSSIP_CULTUREVATE_CIVIC"/>
-		<Row GossipType="GOSSIP_LAND_UNIT_LEVEL" VisibilityLevel="3" Message="LOC_GOSSIP_LAND_UNIT_LEVEL"/>
-		<Row GossipType="GOSSIP_NAVAL_UNIT_LEVEL" VisibilityLevel="3" Message="LOC_GOSSIP_NAVAL_UNIT_LEVEL"/>
+		<Row GossipType="GOSSIP_CULTUREVATE_CIVIC" VisibilityLevel="3" ErasUntilObsolete="1" Description="LOC_GOSSIPDESC_CULTURVATE_CIVIC" Message="LOC_GOSSIP_CULTUREVATE_CIVIC"/>
+		<Row GossipType="GOSSIP_LAND_UNIT_LEVEL" VisibilityLevel="3" LevelRequired="3" Message="LOC_GOSSIP_LAND_UNIT_LEVEL"/>
+		<Row GossipType="GOSSIP_NAVAL_UNIT_LEVEL" VisibilityLevel="3" LevelRequired="3" Message="LOC_GOSSIP_NAVAL_UNIT_LEVEL"/>
 		<Row GossipType="GOSSIP_NEW_RELIGIOUS_MAJORITY" VisibilityLevel="3" Message="LOC_GOSSIP_NEW_RELIGIOUS_MAJORITY"/>
 		<Row GossipType="GOSSIP_RESEARCH_AGREEMENT" VisibilityLevel="3" Message="LOC_GOSSIP_RESEARCH_AGREEMENT"/>
-		<Row GossipType="GOSSIP_RESEARCH_TECH" VisibilityLevel="3" Description="LOC_GOSSIPDESC_RESEARCH_TECH" Message="LOC_GOSSIP_RESEARCH_TECH"/>
+		<Row GossipType="GOSSIP_RESEARCH_TECH" VisibilityLevel="3" ErasUntilObsolete="1" Description="LOC_GOSSIPDESC_RESEARCH_TECH" Message="LOC_GOSSIP_RESEARCH_TECH"/>
 		<Row GossipType="GOSSIP_SPY_DISRUPT_ROCKETRY" VisibilityLevel="3" Message="LOC_GOSSIP_DISRUPT_ROCKETRY"/>
 		<Row GossipType="GOSSIP_SPY_GREAT_WORK_HEIST" VisibilityLevel="3" Message="LOC_GOSSIP_GREAT_WORK_HEIST"/>
 		<Row GossipType="GOSSIP_SPY_SABOTAGE_PRODUCTION" VisibilityLevel="3" Message="LOC_GOSSIP_SABOTAGE_PRODUCTION"/>
