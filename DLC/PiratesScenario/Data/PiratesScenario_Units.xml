@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_SLOOP" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_GALLEON" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_BRIGANTINE" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_PIRATES" Kind="KIND_UNIT"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_SHORE_PARTY" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_GALLEON" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_SLOOP" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_SLOOP" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_SLOOP" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_SLOOP" AiType="UNITTYPE_NAVAL"/>
+		<Row UnitType="UNIT_GALLEON" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_GALLEON" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_GALLEON" AiType="UNITTYPE_NAVAL"/>
+		<Row UnitType="UNIT_BRIGANTINE" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_BRIGANTINE" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_BRIGANTINE" AiType="UNITTYPE_NAVAL"/>
+		<Row UnitType="UNIT_PIRATES" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_PIRATES" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_PIRATES" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+	<TypeTags>
+		<Row Type="UNIT_SLOOP"			Tag="CLASS_NAVAL_RANGED"/>
+		
+		<Row Type="UNIT_GALLEON"		Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="UNIT_GALLEON"		Tag="CLASS_GALLEON"/>
+		
+		<Row Type="UNIT_BRIGANTINE"		Tag="CLASS_NAVAL_RANGED"/>
+		
+		<Row Type="UNIT_PIRATES"		Tag="CLASS_MELEE"/>
+		<Row Type="UNIT_PIRATES"		Tag="CLASS_SHORE_PARTY"/>
+	</TypeTags>
+	
+	<Units>
+		<Row UnitType="UNIT_SLOOP"		Cost="400"		Maintenance="5"		BaseMoves="5" BaseSightRange="2" ZoneOfControl="false"		Domain="DOMAIN_SEA"		Combat="45"	RangedCombat="47" Range="1"	FormationClass="FORMATION_CLASS_NAVAL" PromotionClass="PROMOTION_CLASS_SLOOP"		AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_SLOOP_NAME" Description="LOC_UNIT_CARAVEL_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" MandatoryObsoleteTech="TECH_COMBINED_ARMS" PrereqTech="TECH_CARTOGRAPHY"/>
+		<Row UnitType="UNIT_BRIGANTINE"	Cost="800"		Maintenance="10"	BaseMoves="4" BaseSightRange="2" ZoneOfControl="true"		Domain="DOMAIN_SEA"		Combat="50" RangedCombat="51" Range="2"	FormationClass="FORMATION_CLASS_NAVAL" PromotionClass="PROMOTION_CLASS_BRIGANTINE"		AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_BRIGANTINE_NAME" Description="LOC_UNIT_PRIVATEER_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" PrereqCivic="CIVIC_MERCANTILISM" MandatoryObsoleteTech="TECH_LASERS"/>
+		<Row UnitType="UNIT_GALLEON"	Cost="1600"		Maintenance="15"	BaseMoves="3" BaseSightRange="2" ZoneOfControl="true"		Domain="DOMAIN_SEA"		Combat="52"	FormationClass="FORMATION_CLASS_NAVAL" PromotionClass="PROMOTION_CLASS_GALLEON"		AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_GALLEON_NAME" Description="LOC_UNIT_FRIGATE_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" MandatoryObsoleteTech="TECH_LASERS" PrereqTech="TECH_SQUARE_RIGGING"/>
+		<Row UnitType="UNIT_PIRATES"	Cost="99999"	Maintenance="5"		BaseMoves="2" BaseSightRange="2" ZoneOfControl="true"		Domain="DOMAIN_LAND"	Combat="55"	FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_PIRATES_NAME" Description="LOC_UNIT_PIRATES_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_ADVANCED_BALLISTICS" PrereqTech="TECH_GUNPOWDER"/>
+		
+		<Update>
+			<Where UnitType="UNIT_SWORDSMAN"/>
+			<Set CanTrain="False"/>
+		</Update>
+
+		<Update>
+			<Where UnitType="UNIT_BUILDER"/>
+			<Set CanTrain="False"/>
+		</Update>
+	</Units>
+	<BarbarianTribes>
+		<Delete TribeType="TRIBE_CAVALRY" />
+		
+		<Update>
+			<Where TribeType="TRIBE_MELEE"/>
+			<Set TurnsToWarriorSpawn="10"/>
+		</Update>
+
+		<!-- More barb pirate boats! -->
+		<Update>
+			<Where TribeType="TRIBE_NAVAL"/>
+			<Set TurnsToWarriorSpawn="10"/>
+		</Update>
+	</BarbarianTribes>	
+</GameInfo>

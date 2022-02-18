@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <!-- Pirate Kings AI -->
+  <AiListTypes>
+    <Row ListType="PirateKingSavings"/>
+    <Row ListType="PirateKingAttackTactics"/>
+    <Row ListType="PirateKingTactics"/>
+  </AiListTypes>
+  <AiLists>
+    <Row ListType="PirateKingSavings" LeaderType="TRAIT_SCENARIO_PIRATE_KING_AI" System="SavingTypes"/>
+    <Row ListType="PirateKingAttackTactics" LeaderType="TRAIT_SCENARIO_PIRATE_KING_AI" System="Tactics" />
+    <Row ListType="PirateKingTactics" LeaderType="TRAIT_SCENARIO_PIRATE_KING_AI" System="Homeland" />
+  </AiLists>
+  <AiFavoredItems>
+    <Row ListType="PirateKingSavings" Item="SAVING_SLUSH_FUND" Value="1"/>
+    <Row ListType="PirateKingAttackTactics" Item="Promotion" />
+    <Row ListType="PirateKingAttackTactics" Item="Attack High Priority" />
+    <Row ListType="PirateKingAttackTactics" Item="Attack Civilians" />
+    <Row ListType="PirateKingAttackTactics" Item="Move to Safety"/>
+    <Row ListType="PirateKingAttackTactics" Item="Gather Goody Hut" />
+    <Row ListType="PirateKingAttackTactics" Item="Pillage Improvement"/>
+    <Row ListType="PirateKingAttackTactics" Item="Coastal Raid" />
+    <Row ListType="PirateKingAttackTactics" Item="Attack Medium Priority" />
+    <Row ListType="PirateKingAttackTactics" Item="Attack Low Priority" />
+    <Row ListType="PirateKingTactics" Item="Move to Safety" Value="20" />
+    <Row ListType="PirateKingTactics" Item="Support Formation" Value="30" />
+    <Row ListType="PirateKingTactics" Item="Gather Goody Hut" Value="40" />
+    <Row ListType="PirateKingTactics" Item="Explore Land" Value="100" />
+    <Row ListType="PirateKingTactics" Item="Wander" Value="150" />
+  </AiFavoredItems>
+  <!-- Colonial Powers AI -->
+  <AllowedOperations>
+    <Row ListType="Colonial Power Ops" OperationDef="Naval Superiority"/>
+    <Row ListType="Colonial Power Ops" OperationDef="City Defense"/>
+    <Row ListType="Colonial Power Ops" OperationDef="Treasure Fleet Op"/>
+  </AllowedOperations>
+  <AiOperationLists>
+    <Row ListType="Colonial Power Ops"/>
+  </AiOperationLists>
+  <AiOperationDefs>
+    <Row OperationName="Treasure Fleet Op" TargetType="TARGET_SCRIPT_SUPPLIED" EnemyType="NONE" BehaviorTree="Treasure Fleet Behavior" Priority="3" SelfStart="false"  MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" TargetLuaScript="PirateScenario_TreasureFleetGoal"/>
+  </AiOperationDefs>
+  <AiTeams>
+    <Row TeamName="Treasure Fleet Team"/>
+  </AiTeams>
+  <AiOperationTeams>
+    <Row TeamName="Treasure Fleet Team" OperationName="Treasure Fleet Op" InitialStrengthAdvantage="50" OngoingStrengthAdvantage="50" />
+  </AiOperationTeams>
+  <OpTeamRequirements>
+    <Row TeamName="Treasure Fleet Team" AiType="UNITTYPE_NAVAL" MinNumber="0" />
+  </OpTeamRequirements>
+  <AiListTypes>
+    <Row ListType="ColonialPowerSavings"/>
+  </AiListTypes>
+  <AiLists>
+    <Row ListType="ColonialPowerSavings" LeaderType="TRAIT_SCENARIO_COLONIAL_POWER_AI" System="SavingTypes"/>
+    <Row ListType="Default Tactical" LeaderType="TRAIT_SCENARIO_COLONIAL_POWER_AI" System="Tactics"/>
+    <Row ListType="Default Homeland" LeaderType="TRAIT_SCENARIO_COLONIAL_POWER_AI" System="Homeland"/>
+    <Row ListType="DefaultYieldBias" LeaderType="TRAIT_SCENARIO_COLONIAL_POWER_AI" System="Yields"/>
+    <Row ListType="UnitPriorityBoosts" LeaderType="TRAIT_SCENARIO_COLONIAL_POWER_AI" System="Units"/>
+    <Row ListType="DefaultCityBuilds" LeaderType="TRAIT_SCENARIO_COLONIAL_POWER_AI" System="CityEvents"/>
+    <Row ListType="DefaultScoutUse" LeaderType="TRAIT_SCENARIO_COLONIAL_POWER_AI" System="AiScoutUses"/>
+  </AiLists>
+  <AiFavoredItems>
+    <Row ListType="ColonialPowerSavings" Item="SAVING_SLUSH_FUND" Value="1"/>
+  </AiFavoredItems>
+  <BehaviorTrees>
+    <Row TreeName="Treasure Fleet Behavior" />
+  </BehaviorTrees>
+  <BehaviorTreeNodes>
+    <Row NodeType="Concurrent" NodeId="0" TreeName="Treasure Fleet Behavior" JumpTo="6" />
+    <Row NodeType="Operation Defend Units" NodeId="1" TreeName="Treasure Fleet Behavior" />
+    <Row NodeType="Operation Attack Units" NodeId="2" TreeName="Treasure Fleet Behavior" />
+    <Row NodeType="Operation Military Formation" NodeId="3" TreeName="Treasure Fleet Behavior" />
+    <Row NodeType="Operation Move" NodeId="4" TreeName="Treasure Fleet Behavior" />
+    <Row NodeType="LUA Script Condition" NodeId="5" TreeName="Treasure Fleet Behavior" />
+  </BehaviorTreeNodes>
+  <TreeData>
+    <Row DefnId="0" NodeId="2" TreeName="Treasure Fleet Behavior" DefaultData="true" />
+    <Row DefnId="1" NodeId="2" TreeName="Treasure Fleet Behavior" DefaultData="false" />
+    <Row DefnId="0" NodeId="3" TreeName="Treasure Fleet Behavior" DefaultData="nil" />
+    <Row DefnId="0" NodeId="4" TreeName="Treasure Fleet Behavior" DefaultData="1" />
+    <Row DefnId="1" NodeId="4" TreeName="Treasure Fleet Behavior" DefaultData="0" />
+    <Row DefnId="3" NodeId="4" TreeName="Treasure Fleet Behavior" DefaultData="1" />
+    <Row DefnId="0" NodeId="5" TreeName="Treasure Fleet Behavior" DefaultData="PiratesScenario_DeleteUnitsAtGoal" />
+  </TreeData>
+</GameInfo>

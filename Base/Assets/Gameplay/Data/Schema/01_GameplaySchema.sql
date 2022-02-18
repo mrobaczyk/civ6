@@ -1578,7 +1578,6 @@ CREATE TABLE "HeroClasses" (
 		"HeroClassType" TEXT NOT NULL,
 		"Name" LocalizedText NOT NULL,
 		"Description" LocalizedText NOT NULL,
-		"Lifespan" INTEGER NOT NULL DEFAULT 30,
 		"UnitType" TEXT NOT NULL,
 		"CreationProjectType" TEXT NOT NULL,
 		"ArtifactGreatWorkType" TEXT,

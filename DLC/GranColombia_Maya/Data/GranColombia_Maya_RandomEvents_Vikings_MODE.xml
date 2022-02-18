@@ -1,0 +1,37 @@
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Edward Beach (Firaxis Games) -->
+<GameInfo>
+	<Types>
+		<!--Environmental Effects-->
+		<Row Type="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" Kind="KIND_RANDOM_EVENT"/>
+	</Types>
+	<RandomEvents>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" UnitTriggered="true" Name="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL_NAME" Description="LOC_RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_ALL_DAMAGE_NO_FERTILITY" EffectOperatorType="FEATURE" Severity="2" NaturalWonder="FEATURE_EYJAFJALLAJOKULL" IconLarge="ClimateEvent_VolcanoErupting" IconSmall="ClimateEventStat_Volcanoes"/>
+	</RandomEvents>
+    
+	<RandomEvent_Frequencies>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_CATASTROPHIC" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="4"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="6"/>
+		
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_MEGACOLOSSAL" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+    
+    <!-- We need to have occurences on these, so that they go through for creating with the Soothsayer.  These will not happen randomly-->
+    <Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" RealismSettingType="REALISM_SETTING_MEGADISASTERS" OccurrencesPerGame="1"/>
+    <Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" RealismSettingType="REALISM_SETTING_APOCALYPSE" OccurrencesPerGame="1"/>
+	</RandomEvent_Frequencies>
+  
+	<RandomEvent_Damages>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="IMPROVEMENT_DESTROYED" Percentage="80" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="IMPROVEMENT_PILLAGED" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="DISTRICT_PILLAGED" Percentage="80" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="BUILDING_PILLAGED" Percentage="100" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="POPULATION_LOSS" Percentage="20" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="UNIT_KILLED_CIVILIAN" Percentage="20" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="UNIT_DAMAGE_LAND" Percentage="100" MinHP="40" MaxHP="60" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="CITY_GARRISON" Percentage="100" MinHP="40" MaxHP="60" ExtraRangePercentage="50"/>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" DamageType="CITY_WALLS" Percentage="100" MinHP="40" MaxHP="60" ExtraRangePercentage="50"/>
+	</RandomEvent_Damages>
+  
+	<RandomEvent_Presentation>
+		<Row RandomEventType="RANDOM_EVENT_EYJAFJALLAJOKULL_TRIGGERED" Animation="REVEAL_ERUPTION_MEGACOLOSSAL" Sound="Play_Disaster_Volcano_Movie_Loop" Callback="GetAffectedPlots_NaturalWonder"/>
+	</RandomEvent_Presentation>
+</GameInfo>

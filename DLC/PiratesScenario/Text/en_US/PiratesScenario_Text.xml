@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameData>
+	<EnglishText>
+		<!-- Unit Types -->
+		<Row Tag="LOC_UNIT_SLOOP_NAME">
+			<Text>Sloop</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_BRIGANTINE_NAME">
+			<Text>Brigantine</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_GALLEON_NAME">
+			<Text>Galleon</Text>
+		</Row>
+		
+		<!-- Unit Veteran Names -->
+		<Row Tag="LOC_UNIT_TREASURE_FLEET_GOLD_SHIP_NAME">
+			<Text>Treasure Ship</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_TREASURE_FLEET_GUARD_SHIP_NAME">
+			<Text>Treasure Escort</Text>
+		</Row>
+		
+		<!-- Loading Screen -->
+		<Row Tag="LOC_LOADING_INFO_PIRATES_SCENARIO">
+			<Text>{LOC_PIRATES_MOD_DESCRIPTION_TUTORIAL}</Text>
+		</Row>
+
+		<!-- Victories -->
+		<Row Tag="LOC_PIRATES_VICTORY_WIN_BLURB">
+			<Text>The day is yours!</Text>
+		</Row>
+
+		<!-- Scoring -->
+		<Row Tag="LOC_SCORE_CATEGORY_TREASURE_NAME">
+			<Text>Treasure</Text>
+		</Row>
+		<Row Tag="LOC_SCORE_CATEGORY_INFAMOUS_PIRATES_NAME">
+			<Text>Infamous Pirates</Text>
+		</Row>
+		<Row Tag="LOC_SCORE_CATEGORY_FIGHTING_NAME">
+			<Text>Fightin'</Text>
+		</Row>
+		<Row Tag="LOC_SCORE_CATEGORY_TREASURE_WORLDTEXT">
+			<Text>{1_Points} Treasure</Text>
+		</Row>
+		<Row Tag="LOC_SCORE_CATEGORY_INFAMOUS_PIRATES_WORLDTEXT">
+			<Text>{1_Points} Infamous Pirates</Text>
+		</Row>
+		<Row Tag="LOC_SCORE_CATEGORY_FIGHTING_WORLDTEXT">
+			<Text>{1_Points} Fightin'</Text>
+		</Row>
+
+		<!-- Diplomacy Ribbon -->
+		<Row Tag="LOC_HUD_RIBBON_SCORE">
+			<Text>Overall Score</Text>
+		</Row>
+		
+		<!--Relic Screen Button Tooltip-->
+		<Row Tag="LOC_HUD_GOVT_FREE_CHANGES">
+			<Text>You have new Relics available!</Text>
+		</Row>
+		
+		<!-- Unit Panel -->
+		<Row Tag="LOC_HUD_UNIT_PANEL_CREW">
+			<Text>Crew</Text>
+		</Row>
+		
+		<!-- Unit Promotions -->
+		<Row Tag="LOC_PROMOTION_CLASS_BRIGANTINE_NAME">
+			<Text>Brigantine</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_PIRATES_SILENT_RUNNING_NAME">
+			<Text>Copper-plated Hull</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_PIRATES_WOLFPACK_NAME">
+			<Text>Pirate Code</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_PIRATES_BOARDING_NAME">
+			<Text>Swivel Gun</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_PIRATES_HOMING_TORPEDOES_NAME">
+			<Text>Exploding Shot</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_PIRATES_OBSERVATION_NAME">
+			<Text>Venetian Spyglass</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_PIRATES_LOOT_NAME">
+			<Text>Flintlock Muskets</Text>
+		</Row>
+
+		<!-- Unit Abilities -->
+		<Row Tag="LOC_UNIT_ABILITY_NOT_ENOUGH_MOVEMENT">
+			<Text>[COLOR:Red]Not enough [ICON_Movement] Movement Points available.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_VISIT_TAVERN_TOOLTIP">
+			<Text>Visit Tavern[NEWLINE][NEWLINE]Visit a tavern in the port to recruit crew and discover a new quest. Can only be used adjacent to a Colonial City Center</Text>
+		</Row>
+		<Row Tag="LOC_VISIT_TAVERN_WORLDTEXT">
+			<Text>+1 Crew</Text>
+		</Row>
+		<Row Tag="LOC_VISIT_TAVERN_NOT_ADJACENT_TT">
+			<Text>[COLOR:Red]Not Adjacent to a Colonial City Center.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CAREENING_TOOLTIP">
+			<Text>Careening[NEWLINE][NEWLINE]Deploy emergency repairs in shallow water. Exhaust [ICON_Movement] Movement in exchange for a rapid heal. The heal amount is based on amount of [ICON_Movement] Movement consumed.</Text>
+		</Row>
+		<Row Tag="LOC_CAREENING_WORLDTEXT">
+			<Text>Put ye back into it! We can save her!</Text>
+		</Row>
+		<Row Tag="LOC_CAREENING_NO_DAMAGE_TOOLTIP">
+			<Text>[COLOR:Red]Unable to Careen while undamaged.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CAREENING_NO_MOVEMENT_TOOLTIP">
+			<Text>[COLOR:Red]Careening requires [ICON_Movement] Movement Points.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CAREENING_ENEMY_TERRITORY_TOOLTIP">
+			<Text>[COLOR:Red]Unable to Careen while in enemy territory.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CAREENING_DEEP_WATER_TOOLTIP">
+			<Text>[COLOR:Red]Careening requires Shallow Water.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CAPTURE_BOAT_TOOLTIP">
+			<Text>Capture Boat[NEWLINE][NEWLINE]Consume a Crew to capture a damaged enemy ship and add it to your fleet.</Text>
+		</Row>
+		<Row Tag="LOC_CAPTURE_BOAT_WORLDTEXT">
+			<Text>She's ours!</Text>
+		</Row>
+		<Row Tag="LOC_SHORE_PARTY_TOOLTIP">
+			<Text>Shore Party[NEWLINE][NEWLINE]Disembark a Crew onto land.</Text>
+		</Row>
+		<Row Tag="LOC_SHORE_PARTY_WORLDTEXT">
+			<Text>Get in the boats, ye dirty bilge rats!</Text>
+		</Row>
+		<Row Tag="LOC_SHORE_PARTY_NO_LAND_TOOLTIP">
+			<Text>[COLOR:Red]Not Adjacent to Land.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_SHORE_PARTY_EMBARK_TOOLTIP">
+			<Text>Embark[NEWLINE][NEWLINE]Returns the Shore Party to the Crew on an adjacent naval ship.</Text>
+		</Row>
+		<Row Tag="LOC_SHORE_PARTY_EMBARK_WORLDTEXT">
+			<Text>Ready to depart, sir!</Text>
+		</Row>
+		<Row Tag="LOC_SHORE_PARTY_EMBARK_NO_SHIP_TOOLTIP">
+			<Text>[COLOR:Red]Not adjacent to naval ship.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_BURY_TREASURE_TOOLTIP">
+			<Text>Bury Treasure[NEWLINE][NEWLINE]Bury 600 Gold to gain 30 [ICON_TreasureScore] Treasure Points.</Text>
+		</Row>
+		<Row Tag="LOC_BURY_TREASURE_TREASURE_IN_WAY_TOOLTIP">
+			<Text>[COLOR:Red]Can't bury treasure on top of another treasure chest.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_BURY_TREASURE_NOT_HERE_TOOLTIP">
+			<Text>[COLOR:Red]Can't bury treasure here.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_BURY_TREASURE_WORLDTEXT">
+			<Text>They'll n'ver fin' it here!</Text>
+		</Row>
+		<Row Tag="LOC_NAVAL_FIELD_REPAIRS_NAME">
+			<Text>Field Repairs</Text>
+		</Row>
+		<Row Tag="LOC_NAVAL_FIELD_REPAIRS_DESCRIPTION">
+			<Text>Field repairs constantly heal naval units at sea.</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_PASSIVE_NAME">
+			<Text>Bathed in Blood and Iron</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_PASSIVE_DESCRIPTION">
+			<Text>+10 [ICON_Gold] Gold every time the unit engages in combat.</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_PASSIVE_COMBAT_GOLD">
+			<Text>+{1_Amount} [ICON_Gold]</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_DREAD_PIRATE_UNIT_ACTIVE_NAME">
+			<Text>Walk the Plank</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_DREAD_PIRATE_UNIT_ACTIVE_DESCRIPTION">
+			<Text>Crew is inspired by seeing foes Walk the Plank.[NEWLINE]+3 [ICON_Movement] Movement. +5 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_UNIT_ACTIVE_TOOLTIP">
+			<Text>Walk the Plank[NEWLINE][NEWLINE]Inspire your crew by forcing a capturable ship's crew to walk the plank. Walk the Plank grants +3 [ICON_Movement] Movement and +5 [ICON_Strength] Combat Strength for 5 turns.</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_ACTIVE_ACTIVATED_WORLDTEXT">
+			<Text>To the plank! And onwards to the abyss.</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_ACTIVE_DEACTIVATED_WORLDTEXT">
+			<Text>The crew is looking bored and shifty.</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_ACTIVE_ACTIVATED_TT">
+			<Text>Walk the Plank is active. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_DREAD_PIRATE_ACTIVE_RECHARGING_TT">
+			<Text>[COLOR:Red]Walk the Plank is recharging. Turns Remaining: {1_turnsRemaining}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_PRIVATEER_UNIT_ACTIVE_TOOLTIP">
+			<Text>Bring Her Home[NEWLINE][NEWLINE]Capture an enemy vessel and turn it over to your patron for +5 [ICON_PirateScore] Infamous Pirate Points and +100 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_PRIVATEER_ACTIVE_ACTIVATED_WORLDTEXT">
+			<Text>Another one for the Crown!</Text>
+		</Row>
+		<Row Tag="LOC_PRIVATEER_ACTIVE_ACTIVATED_TT">
+			<Text>Bring Her Home is active. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_PRIVATEER_ACTIVE_RECHARGING_TT">
+			<Text>[COLOR:Red]Bring Her Home is recharging. Turns Remaining: {1_turnsRemaining}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_SWASHBUCKLER_UNIT_ACTIVE_NAME">
+			<Text>Tack into the Wind</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_SWASHBUCKLER_UNIT_ACTIVE_DESCRIPTION">
+			<Text>2x [ICON_Movement] Movement</Text>
+		</Row>
+		<Row Tag="LOC_SWASHBUCKLER_UNIT_ACTIVE_TOOLTIP">
+			<Text>Tack into the Wind[NEWLINE][NEWLINE]2x [ICON_Movement] Movement for the current and next turn.</Text>
+		</Row>
+		<Row Tag="LOC_SWASHBUCKLER_ACTIVE_ACTIVATED_WORLDTEXT">
+			<Text>Comin' about, hard to lee! Brace yourselves!</Text>
+		</Row>
+		<Row Tag="LOC_SWASHBUCKLER_ACTIVE_DEACTIVATED_WORLDTEXT">
+			<Text>Aye, come about. Let's give her a rest for now.</Text>
+		</Row>
+		<Row Tag="LOC_SWASHBUCKLER_ACTIVE_ACTIVATED_TT">
+			<Text>Tacking into the wind. Turns Remaining: {1_turnsRemaining}</Text>
+		</Row>
+		<Row Tag="LOC_SWASHBUCKLER_ACTIVE_RECHARGING_TT">
+			<Text>[COLOR:Red]Tacking into the Wind is recharging. Turns Remaining: {1_turnsRemaining}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_HOARDER_UNIT_ACTIVE_TOOLTIP">
+			<Text>Chain Shot[NEWLINE][NEWLINE]Lock an enemy naval unit into place for one turn.</Text>
+		</Row>
+		<Row Tag="LOC_HOARDER_ACTIVE_RECHARGING_TT">
+			<Text>[COLOR:Red]Chain Shot is recharging. Turns Remaining: {1_turnsRemaining}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_HOARDER_ACTIVE_ACTIVATED_WORLDTEXT">
+			<Text>Target their sails! Fire the chain shot!</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_CHAINSHOT_MOVE_LOCKED_NAME">
+			<Text>Chain Shot Stunned</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_CHAINSHOT_MOVE_LOCKED_DESCRIPTION">
+			<Text>Unable to move due to Chain Shot.</Text>
+		</Row>
+		
+		<Row Tag="LOC_UNITOPERATION_PILLAGE_DESCRIPTION">
+			<Text>Plunder</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_PILLAGE_DISABLED_TT_OWN_TREASURE">
+			<Text>[COLOR:Red]Unable to plunder your own treasure![ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_VISIT_TAVERN_RECHARGING_TT">
+			<Text>[COLOR:Red]Tavern still recoverying from last visit. Turns Remaining: {1_turnsRemaining}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_CAPTURE_BOAT_NO_CREW_TT">
+			<Text>[COLOR:Red]Not Enough Crew Available![ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_CAPTURE_BOAT_NO_DAMAGE_TT">
+			<Text>[COLOR:Red]Enemy ship needs to be more damaged![ENDCOLOR]</Text>s
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_CAPTURE_BOAT_FLAGSHIP_TT">
+			<Text>[COLOR:Red]Flagships and Infamous Pirates cannot be captured.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_SHORE_PARTY_NO_CREW_TT">
+			<Text>[COLOR:Red]Not Enough Crew Available![ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_EMBARK_NO_SHIP_TT">
+			<Text>[COLOR:Red]Not adjacent to ship.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_BURY_TREASURE_NO_GOLD_TT">
+			<Text>[COLOR:Red]Not enough gold.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_BURY_TREASURE_NO_LAND_TT">
+			<Text>[COLOR:Red]Can only Bury Treasure on land.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_UNITOPERATION_BURY_TREASURE_ALREADY_IMPROVED_TT">
+			<Text>[COLOR:Red]Can only Bury Treasure on an empty plot.[ENDCOLOR]</Text>
+		</Row>
+			
+		<Row Tag="LOC_FLAGSHIP_NAME">
+			<Text>Flagship</Text>
+		</Row>
+		<Row Tag="LOC_FLAGSHIP_DESCRIPTION">
+			<Text>This ship is the flagship of your fleet.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PIRATES_NAME">
+			<Text>Shore Party</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PIRATES_DESCRIPTION">
+			<Text>Roving gang of landlocked pirates.</Text>
+		</Row>
+
+		<!-- Combat Modifier Strings -->
+		<Row Tag="LOC_DREAD_PIRATE_UNIT_ACTIVE_COMBAT_BONUS_MODIFIER">
+			<Text>+{1_Amount} Walk the Plank</Text>
+		</Row>
+		<Row Tag="LOC_KRAKANNONS_COMBAT_BONUS_MODIFIER">
+			<Text>+{1_Amount} Krakannons</Text>
+		</Row>
+		<Row Tag="LOC_SKULL_FIRESHOT_MODIFIER">
+			<Text>+{1_Amount} Screaming Skull Fireshot</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_PREVIEW_BONUS_VS_BARBARIANS">
+			<Text>+{1_Value} Advantage vs. Buccaneers</Text>
+		</Row>
+
+		<!-- Infamous Pirates -->
+    <Row Tag="LOC_PIRATE_HENRY_MORGAN">
+      <Text>Henry Morgan</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_BLACKBEARD">
+      <Text>Blackbeard</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_CAPTAIN_KIDD">
+      <Text>Captain Kidd</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_JEAN_LAFITTE">
+      <Text>Jean Lafitte</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_STEDE_BONNET">
+      <Text>Stede Bonnet</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_LOLONNAIS">
+      <Text>l'Olonnais</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_ROC_BRASILIANO">
+      <Text>Roche Braziliano</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_BART_ROBERTS">
+      <Text>Bart Roberts</Text>
+		</Row>
+    <Row Tag="LOC_PIRATE_JACK_RACKHAM">
+      <Text>Jack Rackham</Text>
+	</Row>
+		
+	<!-- Improvements -->
+	<Row Tag="LOC_IMPROVEMENT_BURIED_TREASURE_NAME">
+		<Text>Buried Treasure</Text>
+	</Row>
+	<Row Tag="LOC_IMPROVEMENT_FLOATING_TREASURE_NAME">
+		<Text>Floating Treasure</Text>
+	</Row>
+	<Row Tag="LOC_IMPROVEMENT_BARBARIAN_CAMP_NAME">
+		<Text>Buccaneer Fort</Text>
+	</Row>
+		
+	<!-- Notifications -->
+	<Row Tag="LOC_NOTIFICATION_NEW_BURIED_TREASURE_MESSAGE">
+		<Text>Found {1_playerName}'s Treasure Map</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_BURIED_TREASURE_SUMMARY">
+		<Text>You have discovered a map to {1_playerName}'s treasure.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_TREASURE_LOCATED_MESSAGE">
+		<Text>Treasure Located!</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_TREASURE_LOCATED_SUMMARY">
+		<Text>You have located the treasure.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_INFAMOUS_PIRATE_MESSAGE">
+		<Text>Infamous Pirate Spotted!</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_INFAMOUS_PIRATE_SUMMARY">
+		<Text>You have heard rumors of an infamous pirate sailing in this area.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_INFAMOUS_PIRATE_DEFEATED_MESSAGE">
+		<Text>{1_InfamousPirateName} Sunk!</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_INFAMOUS_PIRATE_DEFEATED_SUMMARY">
+		<Text>Word has spread that {1_InfamousPirateName} has been defeated.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_TREASURE_FLEET_MESSAGE">
+		<Text>New Treasure Fleet</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_TREASURE_FLEET_SUMMARY">
+		<Text>A new treasure fleet has set sail for Europe.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_TREASURE_MAP_PILLAGED_MESSAGE">
+		<Text>Treasure Pillaged!</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_TREASURE_MAP_PILLAGED_SUMMARY">
+		<Text>Someone beat us to this treasure!</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_YOUR_TREASURE_PILLAGED_MESSAGE">
+		<Text>Treasure Stolen!</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_YOUR_TREASURE_PILLAGED_SUMMARY">
+		<Text>Another pirate has unearthed and spirited off your buried treasure!</Text>
+	</Row>		
+	<Row Tag="LOC_NOTIFICATION_TREASURY_BANKRUPT_MESSAGE">
+		<Text>Mutiny Immenent</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_TREASURY_BANKRUPT_SUMMARY">
+		<Text>Your gold has run dry! Your fleet will soon mutiny!</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_DISCOVER_GOODY_HUT_MESSAGE">
+		<Text>New Buccaneer Fort</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_DISCOVER_GOODY_HUT_SUMMARY">
+		<Text>We have received rumors that a new fleet of Buccaneers have moved into a nearby region.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_MESSAGE">
+		<Text>New Buccaneer Fort</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_BARBARIAN_CAMP_SUMMARY">
+		<Text>We have received rumors that a new fleet of Buccaneers have moved into a nearby region.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_LETTER_OF_MARQUE_MESSAGE">
+		<Text>{1_CivAdjective} Letter of Marque</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_LETTER_OF_MARQUE_SUMMARY">
+		<Text>Our Majesty has decided to grant us a letter of marque. We now pillage the seas in the name of {1_CivShortName}.</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_RELIC_MESSAGE">
+		<Text>Acquired {1_relicName}</Text>
+	</Row>
+	<Row Tag="LOC_NOTIFICATION_NEW_RELIC_SUMMARY">
+		<Text>You have discovered a powerful relic during your travels.</Text>
+	</Row>
+		
+	<!-- Governments -->
+	<Row Tag="LOC_GOVERNMENT_PIRATE_KING_NAME">
+		<Text>Pirate King</Text>
+	</Row>
+		
+	<!-- Pirate Relics -->
+		<Row Tag="LOC_GOVERNMENT_MANAGE_GOVERNMENT_AND_POLICIES">
+			<Text>Relics[NEWLINE][NEWLINE]View or manage your Pirate Relics.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNMENT_DOESNT_UNLOCK">
+			<Text>Relics[NEWLINE][NEWLINE]View or manage your Pirate Relics.</Text>
+		</Row>
+		<Row Tag="LOC_GOVT_POPUP_PROMPT_POLICIES_CLOSE">
+			<Text>Are you sure you want to close the menu?[NEWLINE]Relic changes have not been confirmed!</Text>
+		</Row>
+	<Row Tag="LOC_CIVIC_RELIC_SINGING_TOPMEN_NAME">
+		<Text>Singing Topmen</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_SINGING_TOPMEN_DESCRIPTION">
+		<Text>Topmen - men who work high above the decks in the rigging - are known for their songs, and you have hired some excellent singers. Sea chanties dispel the gloom of fogs, ease the anxiety of stormy seas, and make calm days pass more smoothly.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_SINGING_TOPMEN_NAME">
+		<Text>Singing Topmen</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_SINGING_TOPMEN_DESCRIPTION">
+		<Text>Reduces unit maintenance cost by 3 per unit.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_CURSED_PIECES_OF_EIGHT_NAME">
+		<Text>Cursed Lucky Pieces of Eight</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_CURSED_PIECES_OF_EIGHT_DESCRIPTION">
+		<Text>They say one Captain Cleveland took these from a Spanish galleon's hold, but lost them in a duel. The victor was rich for a time, but was poisoned by a spurned lover, who ran a tavern in Tortuga until she got the pox, and so on. These gold pieces have been lucky, and unlucky, and now they are yours.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_CURSED_PIECES_OF_EIGHT_NAME">
+		<Text>Cursed Lucky Pieces of Eight</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_CURSED_PIECES_OF_EIGHT_DESCRIPTION">
+		<Text>+3 gold per unit maintenance (higher chance of mutiny); 3% interest on gold reserves every turn.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_CRATES_OF_RUM_NAME">
+		<Text>Crates of Rum</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_CRATES_OF_RUM_DESCRIPTION">
+		<Text>A hogshead of Nelson's folly! We can sell this for plenty o' pennies at the ports we visit.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_CRATES_OF_RUM_NAME">
+		<Text>Crates of Rum</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_CRATES_OF_RUM_DESCRIPTION">
+		<Text>+10 [ICON_Gold] Gold per turn.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_CAPTAIN_KIDD_JOURNAL_NAME">
+		<Text>Captain William Kidd's Journal</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_CAPTAIN_KIDD_JOURNAL_DESCRIPTION">
+		<Text>The legendary captain's journal! And, perhaps, locations to his buried caches.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_CAPTAIN_KIDD_JOURNAL_NAME">
+		<Text>Captain William Kidd's Journal</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_CAPTAIN_KIDD_JOURNAL_DESCRIPTION">
+		<Text>50% chance of finding an additional treasure map when visiting a tavern.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_LOLONNAIS_CUTLERY_NAME">
+		<Text>L'Olonnais' Cutlery</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_LOLONNAIS_CUTLERY_DESCRIPTION">
+		<Text>A fine dining set used by the dread pirate for his feasts. There is a rusty stain around the knife-handle that will not come out.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_LOLONNAIS_CUTLERY_NAME">
+		<Text>L'Olonnais' Cutlery</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_LOLONNAIS_CUTLERY_DESCRIPTION">
+		<Text>Gain [ICON_gold] Gold based on the [ICON_Strength] Combat Strength of defeated units.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_KRAKANNONS_NAME">
+		<Text>Krakannons</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_KRAKANNONS_DESCRIPTION">
+		<Text>Twisting iron barrels and all the fury of the sea-beast! Cannons forged by Davey Jones himself!</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_KRAKANNONS_NAME">
+		<Text>Krakannons</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_KRAKANNONS_DESCRIPTION">
+		<Text>+1 [ICON_range] Range for Sloops and Brigantines. +5 [ICON_Strength] Combat Strength for naval units.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_JOLLY_ROGERS_NAME">
+		<Text>Jack Rackham's Jolly Rogers</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_JOLLY_ROGERS_DESCRIPTION">
+		<Text>The black flag of terror itself. Most depicted a death's head, or a bleeding heart with a dart piercing it. The name may have come from the French "rouge", referring to a red flag, or from a sobriquet of the Devil.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_JOLLY_ROGERS_NAME">
+		<Text>Jack Rackham's Jolly Rogers</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_JOLLY_ROGERS_DESCRIPTION">
+		<Text>Gain 50 additional gold when pillaging a trade ship. Makes the flags on the your ships look more tattered.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_BLACKBEARD_FUSE_NAME">
+		<Text>Blackbeard's Short Fuse</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_BLACKBEARD_FUSE_DESCRIPTION">
+		<Text>The dread pirate would put these in his beard and light them on fire to frighten his enemies. They were perhaps not necessary.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_BLACKBEARD_FUSE_NAME">
+		<Text>Blackbeard's Short Fuse</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_BLACKBEARD_FUSE_DESCRIPTION">
+		<Text>Naval unit attacks deal -2 [ICON_Movement] Movement to enemy ships for the next turn.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_BONNY_PISTOLS_NAME">
+		<Text>Bonny Brace of Pistols</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_BONNY_PISTOLS_DESCRIPTION">
+		<Text>Anne Bonny, born Anne Fulford, was the paramour of the pirate Calico Jack, but when she teamed up with Mary Read, they ditched Jack and set sail together. Here are her pistols.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_BONNY_PISTOLS_NAME">
+		<Text>Bonny Brace of Pistols</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_BONNY_PISTOLS_DESCRIPTION">
+		<Text>+1 additional attack for all units. All units can move after attacking.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_SKULL_FIRESHOT_NAME">
+		<Text>Screaming Skull Fireshot</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_SKULL_FIRESHOT_DESCRIPTION">
+		<Text>Not an actual skull, but rather a cleverly made iron cannonball. But when fearful superstitious seafaring enemies see these flying through the air toward them, trailing fire from eye sockets and mouth and emanating a screeching whistle... try to tell them different.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_SKULL_FIRESHOT_NAME">
+		<Text>Screaming Skull Fireshot</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_SKULL_FIRESHOT_DESCRIPTION">
+		<Text>+3 [ICON_Strength] Combat Strength for naval ships.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_FISHING_FLOATS_NAME">
+		<Text>North Sea Wind Fishing Floats</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_FISHING_FLOATS_DESCRIPTION">
+		<Text>A string of colorful glass fishing floats strung together with netting, these "witch balls" have been used in the North Sea trade routes for so long that they contain and are enchanted by the winds of their namesake. When hung by a ship's yard arms they glow and will fill a ship's sails even on the calmest of days.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_FISHING_FLOATS_NAME">
+		<Text>North Sea Wind Fishing Floats</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_FISHING_FLOATS_DESCRIPTION">
+		<Text>+2 [ICON_Movement] Movement for naval ships.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_ENGLISH_POINTER_NAME">
+		<Text>English Pointer Figurehead</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_ENGLISH_POINTER_DESCRIPTION">
+		<Text>The dog is pointing and holding a lantern hanging down from its mouth. The lantern mysteriously glows brighter the more that figurehead points in the direction of the nearest ship.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_ENGLISH_POINTER_NAME">
+		<Text>English Pointer Figurehead</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_ENGLISH_POINTER_DESCRIPTION">
+		<Text>Every ship will sense the closest unseen ship within 20 hexes.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_BLACK_SPOT_NAME">
+		<Text>Black Spot Branding Iron</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_BLACK_SPOT_DESCRIPTION">
+		<Text>With this iron, you can mark your enemies with a curse that will follow them across the seas. It can never be washed off, so long as the curse lasts.</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_BLACK_SPOT_NAME">
+		<Text>Black Spot Branding Iron</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_BLACK_SPOT_DESCRIPTION">
+		<Text>+10 [ICON_Strength] Combat Strength when fighting buccaneer or infamous pirates.</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_DOWSING_ROD_NAME">
+		<Text>Dowsing Rod</Text>
+	</Row>
+	<Row Tag="LOC_CIVIC_RELIC_DOWSING_ROD_DESCRIPTION">
+		<Text>A farmer's dowsing rod, used by superstitious men to find water. With a twist here and there, maybe it will point to gold. </Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_DOWSING_ROD_NAME">
+		<Text>Dowsing Rod</Text>
+	</Row>
+	<Row Tag="LOC_POLICY_RELIC_DOWSING_ROD_DESCRIPTION">
+		<Text>Every ship can sense the closest treasure chest within 20 hexes.</Text>
+	</Row>
+		<Row Tag="LOC_BLACKBEARD_FUSE_NAME">
+			<Text>Blackbeard's Short Fuse</Text>
+		</Row>
+		<Row Tag="LOC_BLACKBEARD_FUSE_DESCRIPTION">
+			<Text>Attacks deal -2 [ICON_Movement] Movement to the target unit on the next turn.</Text>
+		</Row>
+		<Row Tag="LOC_KRAKANNONS_RANGE_BONUS_NAME">
+			<Text>Krakannons Range Bonus</Text>
+		</Row>
+		<Row Tag="LOC_KRAKANNONS_RANGE_BONUS_DESCRIPTION">
+			<Text>+1 [ICON_range] Range</Text>
+		</Row>
+		<Row Tag="LOC_KRAKANNONS_COMBAT_BONUS_NAME">
+			<Text>Krakannons Combat Bonus</Text>
+		</Row>
+		<Row Tag="LOC_KRAKANNONS_COMBAT_BONUS_DESCRIPTION">
+			<Text>+5 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_BONNY_PISTOLS_NUM_ATTACKS_NAME">
+			<Text>Bonny Brace of Pistols</Text>
+		</Row>
+		<Row Tag="LOC_BONNY_PISTOLS_NUM_ATTACKS_DESCRIPTION">
+			<Text>+1 additional attack per turn if [ICON_Movement] Movement allows. Can move after attacking.</Text>
+		</Row>
+		<Row Tag="LOC_SKULL_FIRESHOT_NAME">
+			<Text>Screaming Skull Fireshot</Text>
+		</Row>
+		<Row Tag="LOC_SKULL_FIRESHOT_DESCRIPTION">
+			<Text>+3 [ICON_Strength] Combat Strength</Text>
+		</Row>
+		<Row Tag="LOC_FISHING_FLOATS_NAME">
+			<Text>North Sea Wind Fishing Floats</Text>
+		</Row>
+		<Row Tag="LOC_FISHING_FLOATS_DESCRIPTION">
+			<Text>+2 [ICON_Movement] Movement</Text>
+		</Row>
+	
+		<!--Relics Screen-->
+		<Row Tag="LOC_RELIC_SCREEN_TITLE">
+			<Text>Pirate Relics</Text>
+		</Row>
+		<Row Tag="LOC_RELIC_SCREEN_CHOOSE_RELIC">
+			<Text>Choose Relic</Text>
+		</Row>
+		<Row Tag="LOC_RELIC_SCREEN_ACTIVE_RELICS">
+			<Text>Active Relics</Text>
+		</Row>
+		<Row Tag="LOC_RELIC_SCREEN_ASSIGN_ALL_RELICS">
+			<Text>Assign All Relics</Text>
+		</Row>
+		<Row Tag="LOC_RELIC_SCREEN_CONFIRM_RELICS">
+			<Text>Confirm Relics</Text>
+		</Row>
+		<Row Tag="LOC_RELIC_SCREEN_DRAG_RELIC_TEXT">
+			<Text>Drag and Drop a Relic to Slot it Here</Text>
+		</Row>
+		
+		<!--Relic Popup-->
+		<Row Tag="LOC_RELIC_POPUP_RELIC_FOUND">
+			<Text>Relic Found</Text>
+		</Row>
+		<Row Tag="LOC_RELIC_POPUP_CHANGE_RELIC">
+			<Text>Equip Relic</Text>
+		</Row>
+		<Row Tag="LOC_RELIC_POPUP_UNLOCKED_BY_RELIC">
+			<Text>Unlocked by this Relic:</Text>
+		</Row>
+		
+		<!--City Banner Tavern Indicator-->
+		<Row Tag="LOC_TAVERN_AVAILABLE">
+			<Text>This Tavern Can Be Visited!</Text>
+		</Row>
+		<Row Tag="LOC_TAVERN_COOLDOWN">
+			<Text>The rum has run dry! [NEWLINE] Visit again in {1_Turns: plural 1?{1_turns}turn; other?{1_Turns} turns;}!</Text>
+		</Row>
+		
+		<!--City Banner Sacked Indicator-->
+		<Row Tag="LOC_PIRATES_CITY_SACKED">
+			<Text>Smoke still rises from the city.[NEWLINE]It can be sacked again in {1_Turns: plural 1?{1_turns}turn; other?{1_Turns} turns;}.</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_CITY_NOT_SACKED">
+			<Text>This city is ripe for the harvest.</Text>
+		</Row>
+		
+		<!--Morale Tracker (World Tracker Panel)-->
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_TITLE">
+			<Text>[ICON_GoldLarge]Crew Morale[ICON_GoldLarge]</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_GOLD">
+			<Text>Gold: {1_totalGold}</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_GOLD_USAGE">
+			<Text>Per Turn: {1_usagePerTurn}</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_MUTINY_TURNS">
+			<Text>Mutiny imminent in {1_Turns: plural 1?{1_turns}turn; other?{1_Turns} turns;}!</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_PROFIT">
+			<Text>Our treasure be growin!</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_STABLE">
+			<Text>Our coffers are stable!</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_TOTAL_MUTINY_TURNS">
+			<Text>Total mutiny in {1_Turns: plural 1?{1_turns}turn; other?{1_Turns} turns;}!</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_MORALE_TRACKER_NO_MORE_UNITS">
+			<Text>Your fleet is empty!</Text>
+		</Row>
+		
+        <!--Spain-->
+        <Row Tag="LOC_CITY_NAME_VERA_CRUZ">
+          <Text>Vera Cruz</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_VILLA_HERMOSA">
+          <Text>Villa Hermosa</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_CAMPECHE">
+          <Text>Campeche</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_LA_HABANA">
+          <Text>La Habana</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_CARACAS">
+          <Text>Caracas</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_ST_AUGUSTINE">
+          <Text>St. Augustine</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_SANTA_CATALINA">
+          <Text>Santa Catalina</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_PUERTO_BELLO">
+          <Text>Puerto Bello</Text>
+        </Row>
+    
+        <Row Tag="LOC_CITY_NAME_NOMBRE_DE_DIOS">
+          <Text>Nombre de Dios</Text>
+        </Row>    
+        <Row Tag="LOC_CITY_NAME_SANTA_MARTA">
+          <Text>Santa Marta</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_RIO_DE_LA_HACHA">
+          <Text>Rio de la Hacha</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_MARACAIBO">
+          <Text>Maracaibo</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_PURTO_CABELLO">
+          <Text>Puerto Cabello</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_GIBRALTAR">
+          <Text>Gibraltar</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_CUMANA">
+          <Text>Cumana</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_MARGARITA">
+          <Text>Margarita</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_TRINIDAD">
+          <Text>Trinidad</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_SANTO_DOMINGO">
+          <Text>Santo Domingo</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_SANTIAGO">
+          <Text>Santiago</Text>
+        </Row>
+
+    
+        <!--England-->
+        <Row Tag="LOC_CITY_NAME_PORT_ROYAL">
+          <Text>Port Royal</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_ST_KITTS">
+          <Text>St. Kitts</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_ANTIGUA">
+          <Text>Antigua</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_BARBADOS">
+          <Text>Barbados</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_NASSAU">
+          <Text>Nassau</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_ELUTHERA">
+          <Text>Eluthera</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_GRAND_BAHAMA">
+          <Text>Grand Bahama</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_NEVIS">
+          <Text>Nevis</Text>
+        </Row>
+    
+        <!--Netherlands-->
+        <Row Tag="LOC_CITY_NAME_ST_MARTIN">
+          <Text>St. Martin</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_ST_EUSTATIUS">
+          <Text>St. Eustatius</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_CURACAO">
+          <Text>Curacao</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_ARUBA">
+          <Text>Aruba</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_BONAIRE">
+          <Text>Bonaire</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_SABA">
+          <Text>Saba</Text>
+        </Row>
+    
+        <!--France-->
+        <Row Tag="LOC_CITY_NAME_FLORIDA_KEYS">
+          <Text>Florida Keys</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_TORTUGA">
+          <Text>Tortuga</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_PORT_DE_PAIX">
+          <Text>Port-de-Paix</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_LEOGANE">
+          <Text>Leogane</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_PETIT_GOAVE">
+          <Text>Petit Goave</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_MONTSERRAT">
+          <Text>Montserrat</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_GUADELOUPE">
+        <Text>Guadeloupe</Text>
+        </Row>
+        <Row Tag="LOC_CITY_NAME_MARTINIQUE">
+        <Text>Martinique</Text>
+        </Row>
+    
+    
+		<!-- Plot ToolTips -->
+		<Row Tag="LOC_PIRATES_PLOT_TOOLTIP_TREASURE_MAP">
+			<Text>Ho ho me hearties! We smell gold on the wind, we do!</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_PLOT_TOOLTIP_INFAMOUS_PIRATE">
+			<Text>[COLOR_RED]Thar's a buccaneer's wake on the foam. They're close![ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_PLOT_TOOLTIP_TREASURE_FLEET">
+			<Text>We're layin right in the path of a Treasure Fleet!</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_PLOT_TOOLTIP_TREASURE_OWNER">
+			<Text>Treasure of {1_OwnerName}</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_PLOT_TOOLTIP_TREASURE_OWNER_NONE">
+			<Text>Treasure of an infamous pirate</Text>
+		</Row>
+		
+		
+		<!-- Victory/Defeat Text -->
+		<Row Tag="LOC_DEFEAT_PIRATE_NAME">
+			<Text>Fleet Lost!</Text>
+		</Row>
+		<Row Tag="LOC_DEFEAT_PIRATE_TEXT">
+			<Text>The sea comes to claim her own.</Text>
+		</Row>
+		<Row Tag="LOC_DEFEAT_COLONIAL_NAME">
+			<Text>Colonial Power Defeated</Text>
+		</Row>
+		<Row Tag="LOC_DEFEAT_COLONIAL_TEXT">
+			<Text>Colonial powers should not be able to be defeated. How has the Admiral of the Black felled the giant?</Text>
+		</Row>
+		
+
+		<!-- Misc Text -->
+		<Row Tag="LOC_PIRATES_GRANT_GOLD_WORLD_TEXT">
+			<Text>[COLOR_FLOAT_GOLD]+{1_Amount} [ICON_Gold][ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CITY_SACKED_WORLDTEXT">
+			<Text>The walls crumble! The gold is ours!</Text>
+		</Row>
+		<Row Tag="LOC_CITY_RECENTLY_SACKED_WORLDTEXT">
+			<Text>Yar, there be no gold here.</Text>
+		</Row>
+		<Row Tag="LOC_UNKNOWN_TREASURE_OWNER">
+			<Text>Unknown pirate</Text>
+		</Row>
+		<Row Tag="LOC_PIRATES_BUCCANEER_DESCRIPTION">
+			<Text>Buccaneers</Text>
+		</Row>
+	</EnglishText>
+</GameData>

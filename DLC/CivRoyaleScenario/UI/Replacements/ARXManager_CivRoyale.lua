@@ -158,10 +158,15 @@ function OnCityOccupationChanged(player, cityID)
     RefreshARX();
 end
 
+function OnUpdateUI( type:number, tag:string, iData1:number, iData2:number, strData1:string)
+    RefreshARX();
+end
+
 -- ===========================================================================
 function Initialize()
 
 	Events.LocalPlayerChanged.Add( OnLocalPlayerChanged );
+	Events.SystemUpdateUI.Add( OnUpdateUI );
 	Events.TurnBegin.Add( OnTurnBegin );
     Events.ARXTap.Add( OnARXTap );
     Events.ARXOrientationChanged.Add( RefreshARX );

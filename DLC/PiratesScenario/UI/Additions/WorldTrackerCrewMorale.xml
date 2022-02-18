@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Use like this: <Include File="WorldTrackerCivic"/>-->
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\..\CivTech\Libs\ForgeUI\ForgeUI_Assets\Controls.xsd">
+
+	<Instance						Name="CrewMoraleInstance">
+		<Image						ID="MainPanel"									Offset="0,0"		Size="296,115"	Texture="PiratesPanel">
+			<Image					ID="GoldIcon"									Anchor="L,C"	Offset="0,15"		Size="64,64"		Texture="Pirates_Gold"/>
+			<Container																			Offset="-5,0"		Size="parent,parent" >
+				<TextButton		ID="TitleButton"	Anchor="C,T"	Offset="0,10"	Size="200,40"	Style="PanelHeaderText" String="LOC_PIRATES_MORALE_TRACKER_TITLE" />
+				<Image													Anchor="R,C"	Offset="-6,0"									Texture="CivicPanel_MeterFrame" Hidden="1">
+					<Button			ID="IconButton"		Anchor="C,C"									Size="44,44"	Texture="CivicPanel_Button"		>
+						<Image		ID="Icon"					Anchor="C,C"									Size="38,38"	Texture="Tech38" />
+					</Button>
+				</Image>
+
+				<GridButton			ID="GoldBacking"				Anchor="C,C"  Offset="-25,27" Size="auto,44" AutoSizePadding="3,3" Style="YieldBacking" Color="24,156,216,255">
+					<Label				ID="GoldAmountLabel"		Anchor="C,C"	Offset="0,-9" 	Style="FontNormal16"	String="Gold: "/>
+					<Label				ID="GoldUsageLabel"			Anchor="C,C"	Offset="0,10" 	Style="FontNormal12"	String="Gold Per Turn:"/>
+				</GridButton>
+				<Label				ID="MutinyTurnsLabel"		Anchor="C,C"  Offset="10,-10"			Style="FontNormal12"	String="Turns until mutiny:"/>
+				<Image				ID="CrewMoraleImage"		Anchor="R,B"	Offset="0,0"		Size="55,55" Texture="ICON_CREW_MORALE_GOOD"/>
+			</Container>
+		</Image>
+	</Instance>
+
+</Root>

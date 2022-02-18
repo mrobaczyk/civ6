@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<GlobalParameters>
+		<Replace Name="EXPERIENCE_NEEDED_FOR_NEXT_LEVEL_MULTIPLIER" Value="4"/>
+		<Replace Name="EXPERIENCE_MAX_BARB_LEVEL" Value="6"/>
+		<Replace Name="TRADE_ROUTE_WATER_RANGE_REFUEL" Value="200" />
+		<Replace Name="COMBAT_HEAL_NAVAL_FRIENDLY" Value="30" />
+		<Replace Name="COMBAT_HEAL_NAVAL_NEUTRAL" Value="3" />
+		<Replace Name="REBELLION_CHANCE_PER_POINT" Value="0.0" /> <!-- No Rebellions -->
+		
+		<!-- Disable the base Bankruptcy mechanic so we can manually mutiny the pirate units.-->
+		<Replace Name="GOLD_NEGATIVE_BALANCE_DISBAND_UNIT_LINE" Value="-9999" />
+		<Replace Name="GOLD_NEGATIVE_BALANCE_SUBSEQUENT_DISBAND_UNIT" Value="-9999" />
+	</GlobalParameters>	
+	<Resources>		
+		<Replace ResourceType="RESOURCE_SHIPWRECK" Name="LOC_RESOURCE_SHIPWRECK_NAME" ResourceClassType="RESOURCECLASS_BONUS" SeaFrequency="4" PrereqCivic="CIVIC_CODE_OF_LAWS"/>
+	</Resources>
+	<Resource_ValidTerrains>
+		<Row ResourceType="RESOURCE_SHIPWRECK" TerrainType="TERRAIN_COAST"/>
+		<Row ResourceType="RESOURCE_SHIPWRECK" TerrainType="TERRAIN_OCEAN"/>
+	</Resource_ValidTerrains>
+</GameInfo>

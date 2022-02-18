@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="IMPROVEMENT_BURIED_TREASURE" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="IMPROVEMENT_FLOATING_TREASURE" Kind="KIND_IMPROVEMENT"/>
+	</Types>
+	<Improvements>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_BARBARIAN_CAMP"/>
+			<Set Goody="True" TilesPerGoody="128" GoodyRange="3"/>
+		</Update>
+
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" Name="LOC_IMPROVEMENT_BURIED_TREASURE_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="false" Goody="false" GoodyNotify="False" CanBuildOutsideTerritory="true" Capturable="false"/>
+		<Row ImprovementType="IMPROVEMENT_FLOATING_TREASURE" Name="LOC_IMPROVEMENT_FLOATING_TREASURE_NAME" Icon="ICON_IMPROVEMENT_GOODY_HUT" PlunderType="NO_PLUNDER" RemoveOnEntry="false" Goody="false" GoodyNotify="False" CanBuildOutsideTerritory="true" Capturable="false" Domain="DOMAIN_SEA"/>
+	</Improvements>
+	<Improvement_ValidFeatures>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" FeatureType="FEATURE_FOREST"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" FeatureType="FEATURE_JUNGLE"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" FeatureType="FEATURE_MARSH"/>
+	</Improvement_ValidFeatures>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_BURIED_TREASURE" TerrainType="TERRAIN_SNOW_HILLS"/>
+
+		<Row ImprovementType="IMPROVEMENT_FLOATING_TREASURE" TerrainType="TERRAIN_OCEAN"/>
+		<Row ImprovementType="IMPROVEMENT_FLOATING_TREASURE" TerrainType="TERRAIN_COAST"/>
+	</Improvement_ValidTerrains>
+</GameInfo>

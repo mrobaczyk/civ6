@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Colonials have a different defeat condition because we do not want them defeated in the possible edge case of them having no units. -->
+		<Row Type="DEFEAT_PIRATE" Kind="KIND_DEFEAT"/>
+		<Row Type="DEFEAT_COLONIAL" Kind="KIND_DEFEAT"/>
+	</Types>
+	<Defeats>
+		<!-- Remove time defeat because this is a battle to the death! -->
+		<Delete DefeatType="DEFEAT_TIME" />
+		<Delete DefeatType="DEFEAT_DEFAULT" />
+
+		<!-- Disable 'Just One More Turn' for all Victories and Defeats-->
+		<Update>
+			<Set OneMoreTurn="0"/>
+		</Update>
+
+		<Row DefeatType="DEFEAT_PIRATE" Name="LOC_DEFEAT_PIRATE_NAME" Blurb="LOC_DEFEAT_PIRATE_TEXT" RequirementSetId="DEFEAT_PIRATE_REQUIREMENTS"/>
+		<Row DefeatType="DEFEAT_COLONIAL" Name="LOC_DEFEAT_COLONIAL_NAME" Blurb="LOC_DEFEAT_COLONIAL_TEXT" RequirementSetId="DEFEAT_COLONIAL_REQUIREMENTS"/>
+	</Defeats>
+	<Victories>
+		<!-- Disable 'Just One More Turn' for all Victories and Defeats-->
+		<Update>
+			<Set OneMoreTurn="0"/>
+		</Update>
+		
+		<Update>
+			<Set EnabledByDefault="0" />
+		</Update>
+		<Update>
+			<Where VictoryType="VICTORY_DEFAULT" />
+			<Set EnabledByDefault="1" Blurb="LOC_PIRATES_VICTORY_WIN_BLURB"/>
+		</Update>
+		<Update>
+			<Where VictoryType="VICTORY_SCORE" />
+			<Set Blurb="LOC_PIRATES_VICTORY_WIN_BLURB"/>
+		</Update>
+	</Victories>
+	<RequirementSets>
+		<Row RequirementSetId="DEFEAT_PIRATE_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+		<Row RequirementSetId="DEFEAT_COLONIAL_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row RequirementSetId="DEFEAT_PIRATE_REQUIREMENTS" RequirementId="REQUIREMENT_PIRATE_DEFEATED"/>
+		<Row RequirementSetId="DEFEAT_PIRATE_REQUIREMENTS" RequirementId="REQUIREMENT_IS_PIRATE"/>
+		<Row RequirementSetId="DEFEAT_COLONIAL_REQUIREMENTS" RequirementId="REQUIREMENT_COLONIAL_DEFEATED"/>
+		<Row RequirementSetId="DEFEAT_COLONIAL_REQUIREMENTS" RequirementId="REQUIREMENT_IS_COLONIAL"/>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row RequirementId="REQUIREMENT_PIRATE_DEFEATED" RequirementType="REQUIREMENT_PLAYER_DEFAULT_DEFEAT"/>
+		<Row RequirementId="REQUIREMENT_IS_PIRATE" RequirementType="REQUIREMENT_PLAYER_LEADER_TAG_MATCHES"/>
+		<Row RequirementId="REQUIREMENT_COLONIAL_DEFEATED" RequirementType="REQUIREMENT_PLAYER_DEFAULT_DEFEAT"/>
+		<Row RequirementId="REQUIREMENT_IS_COLONIAL" RequirementType="REQUIREMENT_PLAYER_LEADER_TAG_MATCHES"/>
+	</Requirements>
+	<RequirementArguments>
+		<Row RequirementId="REQUIREMENT_PIRATE_DEFEATED" Name="UnitType" Value="NO_UNIT"/>
+		<Row RequirementId="REQUIREMENT_PIRATE_DEFEATED" Name="IgnoreCities" Value="true"/>
+		<Row RequirementId="REQUIREMENT_PIRATE_DEFEATED" Name="IgnoreUnits" Value="false"/>
+		<Row RequirementId="REQUIREMENT_IS_PIRATE" Name="Tag" Value="PIRATE_CIVILIZATION"/>
+		<Row RequirementId="REQUIREMENT_COLONIAL_DEFEATED" Name="UnitType" Value="NO_UNIT"/>
+		<Row RequirementId="REQUIREMENT_COLONIAL_DEFEATED" Name="IgnoreCities" Value="false"/>
+		<Row RequirementId="REQUIREMENT_COLONIAL_DEFEATED" Name="IgnoreUnits" Value="false"/>
+		<Row RequirementId="REQUIREMENT_IS_COLONIAL" Name="Tag" Value="COLONIAL_CIVILIZATION"/>
+	</RequirementArguments>
+</GameInfo>
+

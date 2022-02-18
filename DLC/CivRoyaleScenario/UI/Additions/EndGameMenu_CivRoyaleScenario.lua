@@ -65,12 +65,14 @@ function OnShow()
 		BASE_OnShow();
 	else
 		OnShowEndGame();
+		OnInfoTab();
 	end
 end
 
 -- =============================================================
 function OnEndObserverMode()
 	OnShowEndGame();
+	OnInfoTab();
 end
 
 -- ===========================================================================

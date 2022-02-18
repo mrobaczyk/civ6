@@ -61,6 +61,37 @@ function GetFilterPlots_NotPlayerUnits(iPlayerID)
 	return CustomFilterFunction;
 end
 
+------------------------------------------------------------------------------------------------------------------------
+-- Returns a custom filter function (usable by FilterAllAdjPlots or FilterOneAdjPlots) that will return true if a given plot is within plotDistance of plotX/plotY.
+function GetFilterPlots_NearByPlots(plotX :number, plotY :number, plotDistance :number)
+	local targetPlot :object = Map.GetPlot(plotX, plotY);
+	local targetPlotIndex :number = targetPlot:GetIndex();
+	function CustomFilterFunction(filterPlot :object)
+		local distance :number = Map.GetPlotDistance(targetPlotIndex, filterPlot:GetIndex());
+		if(distance <= plotDistance) then
+			return true;
+		end
+		return false;
+	end
+	return CustomFilterFunction;
+end
+
+------------------------------------------------------------------------------------------------------------------------
+-- Returns a custom filter function (usable by FilterAllAdjPlots or FilterOneAdjPlots) that will return true if a given plot is farther than plotDistance from plotX/plotY.
+function GetFilterPlots_FarPlots(plotX :number, plotY :number, plotDistance :number)
+	local targetPlot :object = Map.GetPlot(plotX, plotY);
+	local targetPlotIndex :number = targetPlot:GetIndex();
+	function CustomFilterFunction(filterPlot :object)
+		local distance :number = Map.GetPlotDistance(targetPlotIndex, filterPlot:GetIndex());
+		if(distance > plotDistance) then
+			return true;
+		end
+		return false;
+	end
+	return CustomFilterFunction;
+end
+
+
 ----------------------------------------------------------------  
 -- Filtering Functions
 ---------------------------------------------------------------- 

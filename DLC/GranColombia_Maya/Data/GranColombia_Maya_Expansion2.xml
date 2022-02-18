@@ -70,16 +70,16 @@
 		<Row Type="MODIFIER_GAME_SET_ACTIVE_VOLCANOES" Kind="KIND_MODIFIER"/>
 		<Row Type="MODIFIER_UNIT_ADJUST_DISASTER_CHARGES" Kind="KIND_MODIFIER"/>
 	</Types>
-  <MomentIllustrations>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_MAYAN_HULCHE" Texture="MomentSTK_Hulche.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COMANDANTE_GENERAL" Texture="MomentSTK_ComandanteGeneral.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COLOMBIAN_LLANERO" Texture="MomentSTK_Llanero.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_OBSERVATORY" Texture="MomentSTK_Observatory.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_HACIENDA" Texture="MomentSTK_Hacienda.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_BERMUDA_TRIANGLE" Texture="MomentSTK_BermudaTriangle.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_FOUNTAIN_OF_YOUTH" Texture="MomentSTK_FountainOfYouth.dds"/>
-    <Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_PAITITI" Texture="MomentSTK_Paititi.dds"/>
-  </MomentIllustrations>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_MAYAN_HULCHE" Texture="MomentSTK_Hulche.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COMANDANTE_GENERAL" Texture="MomentSTK_ComandanteGeneral.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_COLOMBIAN_LLANERO" Texture="MomentSTK_Llanero.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_OBSERVATORY" Texture="MomentSTK_Observatory.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_HACIENDA" Texture="MomentSTK_Hacienda.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_BERMUDA_TRIANGLE" Texture="MomentSTK_BermudaTriangle.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_FOUNTAIN_OF_YOUTH" Texture="MomentSTK_FountainOfYouth.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_NATURAL_WONDER" MomentDataType="MOMENT_DATA_FEATURE" GameDataType="FEATURE_PAITITI" Texture="MomentSTK_Paititi.dds"/>
+	</MomentIllustrations>
 	<!-- Expansion 2 specific data -->
 	<TypeTags>
 		<Row Type="ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL" Tag="CLASS_GIANT_DEATH_ROBOT"/>
@@ -96,9 +96,9 @@
 		<Row DistrictType="DISTRICT_OBSERVATORY" YieldChangeId="Pamukkale_Science"/>
 		<Row DistrictType="DISTRICT_SUGUBA" YieldChangeId="Paititi_Gold"/>
 	</District_Adjacencies>
-  <Units_XP2>
-    <Row UnitType="UNIT_COMANDANTE_GENERAL" CanEarnExperience="false" CanFormMilitaryFormation="false"/>
-  </Units_XP2>
+	<Units_XP2>
+		<Row UnitType="UNIT_COMANDANTE_GENERAL" CanEarnExperience="false" CanFormMilitaryFormation="false"/>
+	</Units_XP2>
 	<Leaders_XP2>
 		<Row LeaderType="LEADER_MINOR_CIV_CAGUANA" MinorCivBonusType="MINOR_CIV_BONUS_CULTURAL"/>
 		<Row LeaderType="LEADER_MINOR_CIV_HUNZA" MinorCivBonusType="MINOR_CIV_BONUS_TRADE"/>
@@ -276,16 +276,12 @@
 		<Row FeatureType="FEATURE_BURNT_FOREST" TerrainType="TERRAIN_TUNDRA_HILLS"/>
 		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_GRASS"/>
 		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_PLAINS"/>
-		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_TUNDRA"/>
 		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_GRASS_HILLS"/>
 		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_PLAINS_HILLS"/>
-		<Row FeatureType="FEATURE_BURNING_JUNGLE" TerrainType="TERRAIN_TUNDRA_HILLS"/>
 		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_GRASS"/>
 		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_PLAINS"/>
-		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_TUNDRA"/>
 		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_GRASS_HILLS"/>
 		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_PLAINS_HILLS"/>
-		<Row FeatureType="FEATURE_BURNT_JUNGLE" TerrainType="TERRAIN_TUNDRA_HILLS"/>
 	</Feature_ValidTerrains>
 	<RandomEvents>
 		<Row RandomEventType="RANDOM_EVENT_METEOR_SHOWER" Name="LOC_RANDOM_EVENT_METEOR_SHOWER_NAME" Description="LOC_RANDOM_EVENT_METEOR_SHOWER_DESCRIPTION" EffectString="LOC_RANDOM_EVENT_METEOR_SHOWER_EFFECT_DESCRIPTION" EffectOperatorType="METEOR_SHOWER" Severity="1" Hexes="1" IconLarge="ClimateEvent_MeteorShowers" IconSmall="ClimateEventStat_MeteorShowers" AvoidTerritory="true"/>
@@ -504,4 +500,8 @@
 		<Row SectionId="FEATURES" PageId="FEATURE_BURNING_JUNGLE"/>
 		<Row SectionId="FEATURES" PageId="FEATURE_BURNT_JUNGLE"/>
 	</CivilopediaPageExcludes>
+	<RandomEvent_PillagedImprovements>
+		<Row RandomEventType="RANDOM_EVENT_DROUGHT_MAJOR" ImprovementType="IMPROVEMENT_HACIENDA"/>
+		<Row RandomEventType="RANDOM_EVENT_DROUGHT_EXTREME" ImprovementType="IMPROVEMENT_HACIENDA"/>
+	</RandomEvent_PillagedImprovements>
 </GameInfo>

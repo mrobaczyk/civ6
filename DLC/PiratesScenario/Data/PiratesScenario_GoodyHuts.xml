@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<GameInfo>
+	<GoodyHuts>
+		<Update>
+			<Set Weight="0"/>
+		</Update>
+		<Update>
+			<Where GoodyHutType="GOODYHUT_MILITARY"/>
+			<Set Weight="50"/>
+		</Update>
+		<Update>
+			<Where GoodyHutType="GOODYHUT_GOLD"/>
+			<Set Weight="50"/>
+		</Update>
+		<Row GoodyHutType="BARB_GOODIES" ImprovementType="IMPROVEMENT_BARBARIAN_CAMP" Weight="100"/>
+	</GoodyHuts>
+	<GoodyHutSubTypes>
+		<!-- By default, set all to never happen. -->
+		<Update>
+			<Set Weight="0" MinOneCity="false" Turn="0"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_GRANT_EXPERIENCE"/>
+			<Set Weight="100"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_LARGE_GOLD"/>
+			<Set Weight="30"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_MEDIUM_GOLD"/>
+			<Set Weight="30"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_SMALL_GOLD"/>
+			<Set Weight="30"/>
+		</Update>
+		<Row GoodyHut="BARB_GOODIES" SubTypeGoodyHut="BARB_GRANT_GOLD"	Description="LOC_GOODYHUT_LARGE_GOLD_DESCRIPTION" Weight="100" ModifierID="GOODY_GOLD_LARGE_MODIFIER"/>
+	</GoodyHutSubTypes>
+</GameInfo>

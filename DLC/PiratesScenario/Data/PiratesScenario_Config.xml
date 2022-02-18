@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<RuleSets>
+		<Row>
+			<RuleSetType>RULESET_SCENARIO_PIRATES</RuleSetType>
+			<Name>LOC_PIRATES_RULESET_TITLE</Name>
+			<Description>LOC_PIRATES_RULESET_TEASER</Description>
+			<VictoryDomain>PiratesScenario_Victories</VictoryDomain>
+			<SupportsSinglePlayer>0</SupportsSinglePlayer>
+			<RequiresNoTeams>1</RequiresNoTeams>
+			<IsScenario>1</IsScenario>
+			<MaxTurns>60</MaxTurns>
+			<FixedMaxTurns>1</FixedMaxTurns>
+		</Row>
+	</RuleSets>
+	<RulesetDomainOverrides>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" ParameterId="PlayerLeader" Domain="Players:PiratesScenarioPlayers"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" ParameterId="Map" Domain="Maps:PiratesScenarioMaps"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" ParameterId="MapSize" Domain="PiratesScenarioMapSizes"/>
+	</RulesetDomainOverrides>
+	<RulesetSupportedValues>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="0" Domain="Players:PiratesScenarioPlayers" Value="RANDOM"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="0" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_DREAD_PIRATE"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="0" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_PRIVATEER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="0" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_SWASHBUCKLER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="0" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_HOARDER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="1" Domain="Players:PiratesScenarioPlayers" Value="RANDOM"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="1" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_DREAD_PIRATE"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="1" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_PRIVATEER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="1" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_SWASHBUCKLER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="1" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_HOARDER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="2" Domain="Players:PiratesScenarioPlayers" Value="RANDOM"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="2" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_DREAD_PIRATE"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="2" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_PRIVATEER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="2" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_SWASHBUCKLER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="2" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_HOARDER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="3" Domain="Players:PiratesScenarioPlayers" Value="RANDOM"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="3" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_DREAD_PIRATE"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="3" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_PRIVATEER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="3" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_SWASHBUCKLER"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="3" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_HOARDER"/>
+		
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="4" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_SPAIN"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="5" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_ENGLAND"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="6" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_NETHERLANDS"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="7" Domain="Players:PiratesScenarioPlayers" Value="LEADER_PIRATES_SCENARIO_FRANCE"/>
+	</RulesetSupportedValues>
+	<ConfigurationUpdates>
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_PIRATES" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="0" Hash="0" />
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_PIRATES" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="0" Hash="0" />
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_SCENARIO_PIRATES" TargetGroup="Game" TargetId="TURN_TIMER_TYPE" TargetValue="TURNTIMER_DYNAMIC" Hash="1" />
+	</ConfigurationUpdates>
+	<Victories>
+		<Row Domain="PiratesScenario_Victories" VictoryType="VICTORY_SCORE" Name="LOC_PIRATES_VICTORY_TITLE" Description="LOC_PIRATES_VICTORY_DESC" ReadOnly="true" />
+	</Victories>
+	<RulesetSupportedValues>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" Domain="StandardEras" Value="ERA_INDUSTRIAL"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" Domain="StandardGameSpeeds" Value="GAMESPEED_ONLINE"/>
+	</RulesetSupportedValues>
+	<Parameters>
+		<!-- Using a different ParameterId to override the default values for these standard advanced settings. -->
+		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_PIRATES" ParameterId="Pirates_NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="LOC_GAME_NO_GOODY_HUTS" Domain="bool" DefaultValue="0" Visible="false" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
+		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_PIRATES" ParameterId="Pirates_NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="LOC_GAME_NO_BARBARIANS" Domain="bool" DefaultValue="0" Visible="false" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
+	</Parameters>
+	<ParameterDependencies>
+		<Row ParameterId="Resources" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_PIRATES"/>
+		<Row ParameterId="StartPosition" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_PIRATES"/>
+		<Row ParameterId="CityStateCount" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_PIRATES"/>
+	</ParameterDependencies>
+	<Maps>
+		<Row Domain="Maps:PiratesScenarioMaps" File="{A55FAFB4-9070-4597-9453-B28A99910CDA}Maps/Pirate_Islands.lua" Name="LOC_MAP_PIRATE_ISLANDS" Description="LOC_MAP_PIRATE_ISLANDS_DESCRIPTION" Image="Map_PirateIslands" SortIndex="10" />
+		<Row Domain="Maps:PiratesScenarioMaps" File="{A55FAFB4-9070-4597-9453-B28A99910CDA}Maps/Caribbean.Civ6Map" Name="LOC_MAP_PIRATES_CARIBBEAN" Description="LOC_MAP_PIRATES_CARIBBEAN_DESCRIPTION" Image="Map_PiratesCaribbean" SortIndex="20" StaticMap="1" /> 
+	</Maps>
+	<MapSupportedValues>
+		<Row Map="{A55FAFB4-9070-4597-9453-B28A99910CDA}Maps/Caribbean.Civ6Map" Domain="PiratesScenarioMapSizes" Value="MAPSIZE_LARGE"/>
+	</MapSupportedValues>
+	<MapSizes>
+		<Row Domain="PiratesScenarioMapSizes" MapSizeType="MAPSIZE_SMALL" Name="LOC_MAPSIZE_SMALL_NAME" Description="LOC_MAPSIZE_SMALL_DESCRIPTION" MinPlayers="8" MaxPlayers="8" DefaultPlayers="8" MinCityStates="0" MaxCityStates="0" DefaultCityStates="0" SortIndex="30" />
+		<Row Domain="PiratesScenarioMapSizes" MapSizeType="MAPSIZE_STANDARD" Name="LOC_MAPSIZE_STANDARD_NAME" Description="LOC_MAPSIZE_STANDARD_DESCRIPTION" MinPlayers="8" MaxPlayers="8" DefaultPlayers="8" MinCityStates="0" MaxCityStates="0" DefaultCityStates="0" SortIndex="40" />
+		<Row Domain="PiratesScenarioMapSizes" MapSizeType="MAPSIZE_LARGE" Name="LOC_MAPSIZE_LARGE_NAME" Description="LOC_MAPSIZE_LARGE_DESCRIPTION" MinPlayers="8" MaxPlayers="8" DefaultPlayers="8" MinCityStates="0" MaxCityStates="0" DefaultCityStates="0" SortIndex="50" />
+		<Row Domain="PiratesScenarioMapSizes" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="8" MaxPlayers="8" DefaultPlayers="8" MinCityStates="0" MaxCityStates="0" DefaultCityStates="0" SortIndex="60" />
+	</MapSizes>
+	<Players>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_DREAD_PIRATE</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_DREAD_PIRATE</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_DREAD_PIRATE_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_DREAD_PIRATE</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_DREAD_PIRATE_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_DREAD_PIRATE</CivilizationIcon>
+			<LeaderAbilityName>LOC_DREAD_PIRATE_PASSIVE_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_DREAD_PIRATE_PASSIVE_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_DREAD_PIRATE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_DREAD_PIRATE_ACTIVE_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_DREAD_PIRATE_ACTIVE_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_PIRATES_PIRATE_KING_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_PIRATES_SCENARIO_DREAD_PIRATE_NEUTRAL</Portrait>
+			<PortraitBackground>LEADER_PIRATES_SCENARIO_DREAD_PIRATE_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_PRIVATEER</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_PRIVATEER</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_PRIVATEER_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_PRIVATEER</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_PRIVATEER_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_PRIVATEER</CivilizationIcon>
+			<LeaderAbilityName>LOC_PRIVATEER_PASSIVE_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_PRIVATEER_PASSIVE_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_PRIVATEER</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_PRIVATEER_ACTIVE_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_PRIVATEER_ACTIVE_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_PIRATES_PIRATE_KING_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_PIRATES_SCENARIO_PRIVATEER_NEUTRAL</Portrait>
+			<PortraitBackground>LEADER_PIRATES_SCENARIO_PRIVATEER_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_SWASHBUCKLER</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_SWASHBUCKLER</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_SWASHBUCKLER_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_SWASHBUCKLER</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_SWASHBUCKLER_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_SWASHBUCKLER</CivilizationIcon>
+			<LeaderAbilityName>LOC_SWASHBUCKLER_PASSIVE_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_SWASHBUCKLER_PASSIVE_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_SWASHBUCKLER</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_SWASHBUCKLER_ACTIVE_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_SWASHBUCKLER_ACTIVE_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_PIRATES_PIRATE_KING_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_PIRATES_SCENARIO_SWASHBUCKLER_NEUTRAL</Portrait>
+			<PortraitBackground>LEADER_PIRATES_SCENARIO_SWASHBUCKLER_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_HOARDER</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_HOARDER</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_HOARDER_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_HOARDER</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_HOARDER_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_HOARDER</CivilizationIcon>
+			<LeaderAbilityName>LOC_HOARDER_PASSIVE_ABILITY_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_HOARDER_PASSIVE_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_HOARDER</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_HOARDER_ACTIVE_ABILITY_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_HOARDER_ACTIVE_ABILITY_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_PIRATES_PIRATE_KING_ABILITY</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_PIRATES_SCENARIO_HOARDER_NEUTRAL</Portrait>
+			<PortraitBackground>LEADER_PIRATES_SCENARIO_HOARDER_BACKGROUND</PortraitBackground>
+		</Row>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_SPAIN</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_SPAIN</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_SPAIN_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_SPAIN</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_SPAIN_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_SPAIN</CivilizationIcon>
+			<LeaderAbilityName>LOC_BLANK_STRING</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CIVILIZATION_PIRATES_SCENARIO_SPAIN_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_LEADER_PIRATES_SCENARIO_SPAIN</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_SPAIN</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_SPAIN</Portrait>
+			<PortraitBackground>LEADER_SPAIN_BACKGROUND</PortraitBackground>
+			<HumanPlayable>0</HumanPlayable>
+		</Row>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_ENGLAND</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_ENGLAND</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_ENGLAND_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_ENGLAND</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_ENGLAND_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_ENGLAND</CivilizationIcon>
+			<LeaderAbilityName>LOC_BLANK_STRING</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CIVILIZATION_PIRATES_SCENARIO_ENGLAND_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_LEADER_PIRATES_SCENARIO_ENGLAND</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_ENGLAND</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_ENGLAND</Portrait>
+			<PortraitBackground>LEADER_ENGLAND_BACKGROUND</PortraitBackground>
+			<HumanPlayable>0</HumanPlayable>
+		</Row>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_NETHERLANDS</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_NETHERLANDS</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_NETHERLANDS_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_NETHERLANDS</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_NETHERLANDS_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_NETHERLANDS</CivilizationIcon>
+			<LeaderAbilityName>LOC_BLANK_STRING</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CIVILIZATION_PIRATES_SCENARIO_NETHERLANDS_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_LEADER_PIRATES_SCENARIO_NETHERLANDS</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_NETHERLANDS</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_NETHERLANDS</Portrait>
+			<PortraitBackground>LEADER_NETHERLANDS_BACKGROUND</PortraitBackground>
+			<HumanPlayable>0</HumanPlayable>
+		</Row>
+		<Row>
+			<Domain>Players:PiratesScenarioPlayers</Domain>
+			<CivilizationType>CIVILIZATION_PIRATES_SCENARIO_FRANCE</CivilizationType>
+			<LeaderType>LEADER_PIRATES_SCENARIO_FRANCE</LeaderType>
+			<!-- LOC -->
+			<LeaderName>LOC_LEADER_PIRATES_SCENARIO_FRANCE_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_PIRATES_SCENARIO_FRANCE</LeaderIcon>
+			<CivilizationName>LOC_CIVILIZATION_PIRATES_SCENARIO_FRANCE_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_FRANCE</CivilizationIcon>
+			<LeaderAbilityName>LOC_BLANK_STRING</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_CIVILIZATION_PIRATES_SCENARIO_FRANCE_ABILITY_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_LEADER_PIRATES_SCENARIO_FRANCE</LeaderAbilityIcon>
+			<CivilizationAbilityName>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_CIVILIZATION_PIRATES_COLONIAL_POWER_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_PIRATES_SCENARIO_FRANCE</CivilizationAbilityIcon>
+			<!-- ART -->
+			<Portrait>LEADER_FRANCE</Portrait>
+			<PortraitBackground>LEADER_FRANCE_BACKGROUND</PortraitBackground>
+			<HumanPlayable>0</HumanPlayable>
+		</Row>
+	</Players>
+	<RulesetDomainOverrides>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="4" ParameterId="PlayerLocked" Domain="PlayerLockedAlwaysLocked"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="5" ParameterId="PlayerLocked" Domain="PlayerLockedAlwaysLocked"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="6" ParameterId="PlayerLocked" Domain="PlayerLockedAlwaysLocked"/>
+		<Row Ruleset="RULESET_SCENARIO_PIRATES" PlayerId="7" ParameterId="PlayerLocked" Domain="PlayerLockedAlwaysLocked"/>
+	</RulesetDomainOverrides>
+
+	<!-- Hall of Fame - Hide irrelevant items -->
+	<StatisticRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="WarsDeclared" Name="LOC_HOF_STAT_WARS_DECLARED" Category="CATEGORY_DIPLOMACY" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="WarsReceived" Name="LOC_HOF_STAT_WARS_RECEIVED" Category="CATEGORY_DIPLOMACY" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="GoodyHutsPopped" Name="LOC_HOF_STAT_PLAYER_CITY_RUINS" Category="CATEGORY_DISCOVERY" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="TechsAcquired" Name="LOC_HOF_STAT_TECHS" Category="CATEGORY_DISCOVERY" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="CurrentGovernment" Name="LOC_HOF_STAT_GOVERNMENT" Category="CATEGORY_PROSPERITY" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="FavoriteGovernment" Name="LOC_HOF_STAT_FAVORITE_GOVERNMENT" Annotation="LOC_HOF_STAT_FAVORITE_GOVERNMENT_ANNOTATION" CATEGORY="CATEGORY_PROSPERITY" Visible="0"/>
+	</StatisticRulesetOverrides>
+	<GraphRulesetOverrides>	
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerBuildingsConstructed" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_BUILDINGS" Query="GameDeltaDataSetsByType" Dataset="BuildingsConstructed" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerDistrictsConstructed" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_DISTRICTS" Query="GameDeltaDataSetsByType" Dataset="DistrictsConstructed" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerCitiesFounded" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_CITIES_FOUNDED" Query="GameDeltaDataSetsByType" Dataset="CitiesFounded" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerCulture" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_CULTURE" Query="GameDataSetsByType" Dataset="Culture" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerFaith" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_FAITH" Query="GameDataSetsByType" Dataset="Faith" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerScience" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_SCIENCE" Query="GameDataSetsByType" Dataset="Science" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerTechsAcquired" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_TECHS" Query="GameDataSetsByType" Dataset="TechsAcquired" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerWarsReceived" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_WARS_RECEIVED" Query="GameDeltaDataSetsByType" Dataset="WarsReceived" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerWarsDeclared" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_WARS_DECLARED" Query="GameDeltaDataSetsByType" Dataset="WarsDeclared" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerGoodyHutsPopped" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_GOODY_HUTS" Query="GameDeltaDataSetsByType" Dataset="GoodyHutsPopped" XUnit="GameTurn" ExtraData="Player" Visible="0"/>
+	</GraphRulesetOverrides>
+	<ReportRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Report="PlayerGovernments" Scope="Player" Name="LOC_HOF_REPORTS_GOVERNMENTS" Query="PlayerTypesByDataPoint" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Report="PlayerUnits" Scope="Player" Name="LOC_HOF_REPORTS_UNITS" Query="PlayerTypesByDataPoint" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Report="PlayerCityYields" Scope="Player" Name="LOC_HOF_REPORTS_CITY_YIELDS" Query="PlayerObjectsByType" ExtraData="City" Visible="0"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Report="PlayerCityStatus" Scope="Player" Name="LOC_HOF_REPORTS_CITY_STATUS" Query="PlayerObjectsByType" ExtraData="City" Visible="0"/>
+	</ReportRulesetOverrides>
+	<!-- Hall of Fame - Adjust Terminology -->
+	<StatisticRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="BarbariansKilled" Name="LOC_HOF_STAT_BUCCANEERS_KILLED" Category="CATEGORY_COMBAT"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="BarbarianCampsCleared" Name="LOC_HOF_STAT_BUCCANEERS_FORTS" Category="CATEGORY_DISCOVERY"/>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" DataPoint="CivicsAcquired" Name="LOC_HOF_GRAPH_PLAYER_RELICS" Category="CATEGORY_DISCOVERY" />
+	</StatisticRulesetOverrides>	
+	<GraphRulesetOverrides>
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerBarbariansKilled" Scope="Game" Name="LOC_HOF_GRAPH_BUCCANEERS_KILLED" Query="GameDataSetsByType" Dataset="BarbariansKilled" XUnit="GameTurn" ExtraData="Player" />
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerBarbarianCampsCleared" Scope="Game" Name="LOC_HOF_GRAPH_BUCCANEERS_FORTS" Query="GameDataSetsByType" Dataset="BarbarianCampsCleared" XUnit="GameTurn" ExtraData="Player" />
+		<Row RulesetType="RULESET_SCENARIO_PIRATES" Graph="PlayerCivicsAcquired" Scope="Game" Name="LOC_HOF_GRAPH_PLAYER_RELICS" Query="GameDataSetsByType" Dataset="CivicsAcquired" XUnit="GameTurn" ExtraData="Player"/>
+	</GraphRulesetOverrides>
+</GameInfo>

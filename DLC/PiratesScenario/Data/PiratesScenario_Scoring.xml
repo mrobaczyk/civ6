@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="LINE_ITEM_TREASURE" Kind="KIND_SCORING_LINE_ITEM"/>
+		<Row Type="LINE_ITEM_INFAMOUS_PIRATES" Kind="KIND_SCORING_LINE_ITEM"/>
+		<Row Type="LINE_ITEM_FIGHTING" Kind="KIND_SCORING_LINE_ITEM"/>
+	</Types>
+	<ScoringCategories>
+		<Update>
+			<Where CategoryType="CATEGORY_CIVICS"/>
+			<Set>
+				<Multiplier>0</Multiplier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_EMPIRE"/>
+			<Set>
+				<Multiplier>0</Multiplier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_GREAT_PEOPLE"/>
+			<Set>
+				<Multiplier>0</Multiplier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_RELIGION"/>
+			<Set>
+				<Multiplier>0</Multiplier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_TECH"/>
+			<Set>
+				<Multiplier>0</Multiplier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_WONDER"/>
+			<Set>
+				<Multiplier>0</Multiplier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_INCOME"/>
+			<Set>
+				<Multiplier>0</Multiplier>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_SCENARIO1"/>
+			<Set>
+				<Multiplier>1</Multiplier>
+				<Name>LOC_SCORE_CATEGORY_TREASURE_NAME</Name>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_SCENARIO2"/>
+			<Set>
+				<Multiplier>1</Multiplier>
+				<Name>LOC_SCORE_CATEGORY_INFAMOUS_PIRATES_NAME</Name>
+			</Set>
+		</Update>
+		<Update>
+			<Where CategoryType="CATEGORY_SCENARIO3"/>
+			<Set>
+				<Multiplier>1</Multiplier>
+				<Name>LOC_SCORE_CATEGORY_FIGHTING_NAME</Name>
+			</Set>
+		</Update>
+	</ScoringCategories>
+	<ScoringLineItems>	
+		<Row LineItemType="LINE_ITEM_TREASURE"			Name="LINE_ITEM_TREASURE_NAME"			Category="CATEGORY_SCENARIO1" Multiplier="1" ScoringScenario1="true" TieBreakerPriority="100"/>
+		<Row LineItemType="LINE_ITEM_INFAMOUS_PIRATES"	Name="LINE_ITEM_INFAMOUS_PIRATES_NAME"	Category="CATEGORY_SCENARIO2" Multiplier="1" ScoringScenario2="true" TieBreakerPriority="100"/>
+		<Row LineItemType="LINE_ITEM_FIGHTING"			Name="LINE_ITEM_FIGHTING"				Category="CATEGORY_SCENARIO3" Multiplier="1" ScoringScenario3="true" TieBreakerPriority="100"/>
+	</ScoringLineItems>
+</GameInfo>

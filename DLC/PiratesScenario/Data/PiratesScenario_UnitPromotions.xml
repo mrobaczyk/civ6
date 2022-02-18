@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="PROMOTION_CLASS_SLOOP" Kind="KIND_PROMOTION_CLASS"/>
+		<Row Type="PROMOTION_CLASS_BRIGANTINE" Kind="KIND_PROMOTION_CLASS"/>
+		<Row Type="PROMOTION_CLASS_GALLEON" Kind="KIND_PROMOTION_CLASS"/>
+
+		<Row Type="PROMOTION_SILENT_RUNNING_SLOOP" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_WOLFPACK_SLOOP" Kind="KIND_PROMOTION"/>
+		
+		<Row Type="PROMOTION_SILENT_RUNNING_GALLEON" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_WOLFPACK_GALLEON" Kind="KIND_PROMOTION"/>
+	</Types>
+	<UnitPromotionClasses>
+		<Row PromotionClassType="PROMOTION_CLASS_SLOOP" Name="LOC_PROMOTION_CLASS_SLOOP_NAME"/>
+		<Row PromotionClassType="PROMOTION_CLASS_BRIGANTINE" Name="LOC_PROMOTION_CLASS_BRIGANTINE_NAME"/>
+		<Row PromotionClassType="PROMOTION_CLASS_GALLEON" Name="LOC_PROMOTION_CLASS_GALLEON_NAME"/>
+	</UnitPromotionClasses>
+	<UnitPromotions>
+		<!-- PROMOTION_CLASS_SLOOP -->
+		<Row UnitPromotionType="PROMOTION_SILENT_RUNNING_SLOOP"	Name="LOC_PROMOTION_PIRATES_SILENT_RUNNING_NAME"	Description="LOC_PROMOTION_SILENT_RUNNING_DESCRIPTION"	Level="1" Column="3" Specialization="" PromotionClass="PROMOTION_CLASS_SLOOP"/>
+		<Row UnitPromotionType="PROMOTION_WOLFPACK_SLOOP"		Name="LOC_PROMOTION_PIRATES_WOLFPACK_NAME"		Description="LOC_PROMOTION_WOLFPACK_DESCRIPTION"				Level="2" Column="3" Specialization="" PromotionClass="PROMOTION_CLASS_SLOOP"/>
+
+		<!-- PROMOTION_CLASS_BRIGANTINE -->
+		<Update>
+			<Where UnitPromotionType="PROMOTION_SILENT_RUNNING"/>
+			<Set Level="1" Column="1" Name="LOC_PROMOTION_PIRATES_SILENT_RUNNING_NAME" PromotionClass="PROMOTION_CLASS_BRIGANTINE"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_SWIFT_KEEL"/>
+			<Set Level="1" Column="3" PromotionClass="PROMOTION_CLASS_BRIGANTINE"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_BOARDING"/>
+			<Set Level="1" Column="5" Name="LOC_PROMOTION_PIRATES_BOARDING_NAME" PromotionClass="PROMOTION_CLASS_BRIGANTINE"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_HOMING_TORPEDOES"/>
+			<Set Level="2" Column="1" Name="LOC_PROMOTION_PIRATES_HOMING_TORPEDOES_NAME" PromotionClass="PROMOTION_CLASS_BRIGANTINE"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_OBSERVATION"/>
+			<Set Level="2" Column="3" Name="LOC_PROMOTION_PIRATES_OBSERVATION_NAME" PromotionClass="PROMOTION_CLASS_BRIGANTINE"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_LOOT"/>
+			<Set Level="2" Column="5" Name="LOC_PROMOTION_PIRATES_LOOT_NAME" PromotionClass="PROMOTION_CLASS_BRIGANTINE"/>
+		</Update>
+		<Update>
+			<Where UnitPromotionType="PROMOTION_WOLFPACK"/>
+			<Set Level="3" Column="1" Name="LOC_PROMOTION_PIRATES_WOLFPACK_NAME" PromotionClass="PROMOTION_CLASS_BRIGANTINE"/>
+		</Update>
+
+		<!-- PROMOTION_CLASS_GALLEON -->
+		<Row UnitPromotionType="PROMOTION_SILENT_RUNNING_GALLEON"	Name="LOC_PROMOTION_PIRATES_SILENT_RUNNING_NAME"	Description="LOC_PROMOTION_SILENT_RUNNING_DESCRIPTION"	Level="1" Column="3" Specialization="" PromotionClass="PROMOTION_CLASS_GALLEON"/>
+		<Row UnitPromotionType="PROMOTION_WOLFPACK_GALLEON"			Name="LOC_PROMOTION_PIRATES_WOLFPACK_NAME"			Description="LOC_PROMOTION_WOLFPACK_DESCRIPTION"				Level="2" Column="3" Specialization="" PromotionClass="PROMOTION_CLASS_GALLEON"/>
+	</UnitPromotions>
+	<UnitPromotionPrereqs>
+		<!-- PROMOTION_CLASS_SLOOP -->
+		<Row UnitPromotion="PROMOTION_WOLFPACK_SLOOP" PrereqUnitPromotion="PROMOTION_SILENT_RUNNING_SLOOP"/>
+		
+		<!-- PROMOTION_CLASS_BRIGANTINE -->
+		<Delete UnitPromotion="PROMOTION_SWIFT_KEEL"/>
+		<Delete UnitPromotion="PROMOTION_HOMING_TORPEDOES"/>
+		<Delete UnitPromotion="PROMOTION_SILENT_RUNNING"/>
+		<Delete UnitPromotion="PROMOTION_OBSERVATION"/>
+		<Delete UnitPromotion="PROMOTION_WOLFPACK"/>
+
+		<Row UnitPromotion="PROMOTION_HOMING_TORPEDOES" PrereqUnitPromotion="PROMOTION_SILENT_RUNNING"/>
+		<Row UnitPromotion="PROMOTION_OBSERVATION"		PrereqUnitPromotion="PROMOTION_SWIFT_KEEL"/>
+		<Row UnitPromotion="PROMOTION_WOLFPACK"			PrereqUnitPromotion="PROMOTION_HOMING_TORPEDOES"/>
+		<Row UnitPromotion="PROMOTION_LOOT"				PrereqUnitPromotion="PROMOTION_BOARDING"/>
+
+		<!-- PROMOTION_CLASS_GALLEON -->
+		<Row UnitPromotion="PROMOTION_WOLFPACK_GALLEON" PrereqUnitPromotion="PROMOTION_SILENT_RUNNING_GALLEON"/>
+	</UnitPromotionPrereqs>
+	<UnitPromotionModifiers>
+		<!-- PROMOTION_CLASS_SLOOP -->
+		<Row UnitPromotionType="PROMOTION_SILENT_RUNNING_SLOOP" ModifierId="SILENT_RUNNING_MOVE_AFTER_ATTACKING"/>
+		<Row UnitPromotionType="PROMOTION_WOLFPACK_SLOOP" ModifierId="WOLFPACK_ADDITIONAL_ATTACK"/>
+		
+	<!-- PROMOTION_CLASS_GALLEON -->
+		<Row UnitPromotionType="PROMOTION_SILENT_RUNNING_GALLEON" ModifierId="SILENT_RUNNING_MOVE_AFTER_ATTACKING"/>
+		<Row UnitPromotionType="PROMOTION_WOLFPACK_GALLEON" ModifierId="WOLFPACK_ADDITIONAL_ATTACK"/>
+	</UnitPromotionModifiers>
+	<Modifiers>
+	</Modifiers>
+</GameInfo>
