@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Buildings.xml Modifiers-->
+		<Row Type="MODIFIER_CITY_ADJUST_CITY_YIELD_PER_TERRAIN_TYPE" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_CITY_ADJUST_TRADE_ROUTE_YIELD_PER_DESTINATION_LUXURY_FOR_INTERNATIONAL" Kind="KIND_MODIFIER"/>
+		<!-- Civilization.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_ADJUST_FORBID_LAND_ROUTE" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_INTERNATIONAL_TRADE_ROUTE_YIELD_MODIFIER" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_EMBARK_UNIT_PASS" Kind="KIND_MODIFIER"/>
+		<!-- Improvements.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_IMPROVEMENT_AT_LOCATION" Kind="KIND_MODIFIER"/>
+		<!-- Leaders.xml Modifiers-->
+		<Row Type="MODIFIER_PLAYER_ADJUST_TOKEN_ON_FIRST_MEETING" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY_ON_MEETING" Kind="KIND_MODIFIER"/>
+	</Types>
+	<DynamicModifiers>
+		<!-- Buildings.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_CITY_ADJUST_CITY_YIELD_PER_TERRAIN_TYPE</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_YIELD_PER_TERRAIN_TYPE</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_CITY_ADJUST_TRADE_ROUTE_YIELD_PER_DESTINATION_LUXURY_FOR_INTERNATIONAL</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_TRADE_ROUTE_YIELD_PER_DESTINATION_LUXURY_RESOURCE_FOR_INTERNATIONAL</EffectType>
+		</Row>
+		<!-- Civilziation.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FORBID_LAND_ROUTE</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_FORBID_LAND_ROUTE</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_INTERNATIONAL_TRADE_ROUTE_YIELD_MODIFIER</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLAYER_INTERNATIONAL_TRADE_ROUTE_YIELD_MODIFIER</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_EMBARK_UNIT_PASS</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLAYER_EMBARK_UNIT_PASS</EffectType>
+		</Row>
+		<!-- Improvement.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_IMPROVEMENT_AT_LOCATION</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLAYER_TRADE_ROUTE_YIELD_PER_IMPROVEMENT_IN_TARGET_CITY</EffectType>
+		</Row>
+		<!-- Leaders.xml Modifiers-->
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TOKEN_ON_FIRST_MEETING</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLAYER_TOKEN_ON_FIRST_MEETING</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY_ON_MEETING</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_PLAYER_TRADE_ROUTE_CAPACITY_ON_MEETING</EffectType>
+		</Row>
+	</DynamicModifiers>
+</GameInfo>

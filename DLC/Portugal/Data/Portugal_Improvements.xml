@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="IMPROVEMENT_FEITORIA" Kind="KIND_IMPROVEMENT"/>
+	</Types>
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_FEITORIA" Name="LOC_IMPROVEMENT_FEITORIA_NAME" Description="LOC_IMPROVEMENT_FEITORIA_DESCRIPTION" Icon="ICON_IMPROVEMENT_FEITORIA" PlunderType="NO_PLUNDER" Domain="DOMAIN_SEA" SameAdjacentValid="false" RequiresAdjacentBonusOrLuxury="true" AdjacentToLand="true" OnlyOpenBorders="true" Buildable="true" Removable="false" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_FEITORIA"/>
+	</Improvements>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_FEITORIA" TerrainType="TERRAIN_COAST"/>
+	</Improvement_ValidTerrains>
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_FEITORIA" UnitType="UNIT_PORTUGUESE_NAU"/>
+	</Improvement_ValidBuildUnits>
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_FEITORIA" YieldType="YIELD_GOLD" YieldChange="4"/>
+		<Row ImprovementType="IMPROVEMENT_FEITORIA" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+	</Improvement_YieldChanges>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_IMPROVEMENT_FEITORIA</TraitType>
+			<ModifierId>TRADE_PRODUCTION_FROM_FEITORIA</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_IMPROVEMENT_FEITORIA</TraitType>
+			<ModifierId>TRADE_GOLD_FROM_FEITORIA</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRADE_PRODUCTION_FROM_FEITORIA</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_IMPROVEMENT_AT_LOCATION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_GOLD_FROM_FEITORIA</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_IMPROVEMENT_AT_LOCATION</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRADE_PRODUCTION_FROM_FEITORIA</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_PRODUCTION_FROM_FEITORIA</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_FEITORIA</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_PRODUCTION_FROM_FEITORIA</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_PRODUCTION_FROM_FEITORIA</ModifierId>
+			<Name>Origin</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_GOLD_FROM_FEITORIA</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_GOLD_FROM_FEITORIA</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_FEITORIA</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_GOLD_FROM_FEITORIA</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRADE_GOLD_FROM_FEITORIA</ModifierId>
+			<Name>Origin</Name>
+			<Value>true</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

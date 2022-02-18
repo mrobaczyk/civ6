@@ -5,6 +5,7 @@
 local BASE_Initialize = Initialize;
 local BASE_OnImprovementAddedToMap = OnImprovementAddedToMap;
 local BASE_OnImprovementRemovedFromMap = OnImprovementRemovedFromMap;
+local BASE_OnImprovementVisibilityChanged = OnImprovementVisibilityChanged;
 local BASE_OnRefreshBannerPositions = OnRefreshBannerPositions;
 local BASE_CBInitialize = CityBanner.Initialize;
 
@@ -69,9 +70,12 @@ function UpdateTribeBannerConversionBar(barbarianTribeEntry : table)
 	-- If pts negative, tribe is unable to convert: hide bar
 	if (iCurrentPoints < 0) then
 		barbarianTribeEntry.BannerInstance.ConversionBar:SetHide(true);
+		barbarianTribeEntry.BannerInstance.ConversionBar:SetToolTipString("");
+		barbarianTribeEntry.BannerInstance.ConversionBarBG:SetToolTipString(Locale.Lookup("LOC_TRIBE_BANNER_CONVERSION_TIP_DISABLED"));
 		return;
 	else
 		barbarianTribeEntry.BannerInstance.ConversionBar:SetHide(false);
+		barbarianTribeEntry.BannerInstance.ConversionBarBG:SetToolTipString("");
 	end
 
 	if(not barbarianTribeEntry.BannerInstance.ConversionBar:IsHidden())then
@@ -186,6 +190,7 @@ function OnImprovementVisibilityChanged( locX :number, locY :number, eImprovemen
 			end
 		end
 	end
+	BASE_OnImprovementVisibilityChanged(locX, locY, eImprovementType, eVisibility);
 end
 
 -- ===========================================================================

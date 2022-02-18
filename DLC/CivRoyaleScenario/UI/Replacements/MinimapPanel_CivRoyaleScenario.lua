@@ -96,6 +96,7 @@ local m_lastSafeZoneDistance			:number = NO_SAFE_ZONE_DISTANCE; -- The safe zone
 --			a MOD specific "CIVROYALE_" rather than "BASE_" or "XP2_", etc...
 -- ===========================================================================
 CIVROYALE_LateInitialize	 = LateInitialize;
+CIVROYALE_OnShutdown = OnShutdown;
 
 
 -- ===========================================================================
@@ -1136,6 +1137,16 @@ function ToggleMapOptionsList()
 	Controls.MapOptionsPanel:SetHide( not Controls.MapOptionsPanel:IsHidden() );
 	RealizeFlyouts(Controls.MapOptionsPanel);
 	Controls.MapOptionsButton:SetSelected( not Controls.MapOptionsPanel:IsHidden() );
+end
+
+function OnShutDown()
+	CIVROYALE_OnShutdown();
+	local pWavesOverlay:object = UILens.GetOverlay(ZOMBIE_HUNGER_WAVES_OVERLAY_NAME);
+	if(pWavesOverlay == nil) then
+		print("Error: missing hunger waves overlay");
+		return;
+	end
+	pWavesOverlay:ResetAllWaves();
 end
 
 -- ===========================================================================

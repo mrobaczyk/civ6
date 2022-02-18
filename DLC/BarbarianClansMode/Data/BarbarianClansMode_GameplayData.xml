@@ -363,13 +363,23 @@
 		<Row AttackForceType="NavalAttack"					TribeType="TRIBE_CLAN_NAVAL"/>
 		<Row AttackForceType="HighDifficultyNavalAttack"	TribeType="TRIBE_CLAN_NAVAL"/>
 	</BarbarianTribeForces>
+	<!--Traits-->
+	<Traits>
+		<Update>
+			<Where TraitType="TRAIT_CIVILIZATION_FIRST_CIVILIZATION"/>
+			<Set>
+				<Description>LOC_TRAIT_CIVILIZATION_FIRST_CIVILIZATION_CLANS_MODE_DESCRIPTION</Description>
+			</Set>
+		</Update>
+	</Traits>
+	<!--UI-->
 	<Notifications>
 		<Row NotificationType="NOTIFICATION_CLAN_CONVERTED_TO_CITY_STATE" SeverityType="HIGH" ExpiresEndOfTurn="True" AutoNotify="False"/>
-		<Row NotificationType="NOTIFICATION_CLAN_HIRED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
-		<Row NotificationType="NOTIFICATION_CLAN_RANSOM_PAID" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
-		<Row NotificationType="NOTIFICATION_CLAN_BRIBED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
-		<Row NotificationType="NOTIFICATION_CLAN_BRIBE_EXPIRED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
-		<Row NotificationType="NOTIFICATION_CLAN_INCITED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" AutoActivate="True"/>
+		<Row NotificationType="NOTIFICATION_CLAN_HIRED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False"/>
+		<Row NotificationType="NOTIFICATION_CLAN_RANSOM_PAID" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False"/>
+		<Row NotificationType="NOTIFICATION_CLAN_BRIBED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False"/>
+		<Row NotificationType="NOTIFICATION_CLAN_BRIBE_EXPIRED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False"/>
+		<Row NotificationType="NOTIFICATION_CLAN_INCITED" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False"/>
 	</Notifications>
 	<!--CIVILOPEDIA-->
 	<CivilopediaPageLayouts>

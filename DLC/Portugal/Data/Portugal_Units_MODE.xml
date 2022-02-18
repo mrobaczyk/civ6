@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_MODE_ZOMBIE" Kind="KIND_UNIT"/>
+
+		<Row Type="UNITCOMMAND_RELEASE_LEVY" Kind="KIND_UNITCOMMAND"/>
+		<Row Type="TRAIT_BARBARIAN_BUT_SHOWS_UP_IN_PEDIA" Kind="KIND_TRAIT"/>
+		<Row Type="UNITOPERATION_SPY_ZOMBIFY" Kind="KIND_UNITOPERATION"/>
+	
+		<Row Type="NOTIFICATION_SPY_ZOMBIES" Kind="KIND_NOTIFICATION"/>
+		<Row Type="NOTIFICATION_SPY_ENEMY_ZOMBIES" Kind="KIND_NOTIFICATION"/>
+	</Types>
+	<Traits>
+		<Row TraitType="TRAIT_BARBARIAN_BUT_SHOWS_UP_IN_PEDIA" InternalOnly="true"/>
+	</Traits>
+  <Tags>
+    <Row Tag="CLASS_ZOMBIE" Vocabulary="ABILITY_CLASS"/>
+  </Tags>
+	<CivilizationTraits>
+		<Row CivilizationType="CIVILIZATION_BARBARIAN" TraitType="TRAIT_BARBARIAN_BUT_SHOWS_UP_IN_PEDIA"/>
+	</CivilizationTraits>
+	<Tags>
+	</Tags>
+	<TypeTags>
+		<Row Type="UNIT_MODE_ZOMBIE" Tag="CLASS_MELEE"/>
+		<Row Type="UNIT_MODE_ZOMBIE" Tag="CLASS_ZOMBIE"/> <!-- Allows AI to exclude them from being recruited for barbarian behaviors AWG -->
+	</TypeTags>
+  <UnitAiTypes>
+    <Row AiType="UNITTYPE_ZOMBIE"/>
+  </UnitAiTypes>
+    <UnitAiInfos>
+		<Row UnitType="UNIT_MODE_ZOMBIE" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_MODE_ZOMBIE" AiType="UNITTYPE_MELEE"/>
+    <Row UnitType="UNIT_MODE_ZOMBIE" AiType="UNITTYPE_ZOMBIE"/>
+	</UnitAiInfos>
+	<Units>
+		<Row UnitType="UNIT_MODE_ZOMBIE" Cost="40" Maintenance="1" BaseMoves="2" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="20" CanTrain="false" CanEarnExperience="false" FormationClass="FORMATION_CLASS_LAND_COMBAT" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_MODE_ZOMBIE_NAME" Description="LOC_UNIT_MODE_ZOMBIE_DESCRIPTION" TraitType="TRAIT_BARBARIAN_BUT_SHOWS_UP_IN_PEDIA"/>
+	</Units>
+	<UnitCommands>
+		<Row CommandType="UNITCOMMAND_RELEASE_LEVY" VisibleInUI="true" HoldCycling="false" CategoryInUI="SPECIFIC" Icon="ICON_UNITCOMMAND_RELEASE_LEVY" Description="LOC_UNITCOMMAND_RELEASE_LEVY_DESCRIPTION"/>
+	</UnitCommands>
+	<UnitOperations>
+		<Row OperationType="UNITOPERATION_SPY_ZOMBIFY" VisibleInUI="true" HoldCycling="true" CategoryInUI="OFFENSIVESPY" Icon="ICON_UNITOPERATION_SPY_ZOMBIFY" Description="LOC_UNITCOMMAND_SPY_SUMMON_ZOMBIES_NAME" Turns="8" BaseProbability="15" LevelProbChange="1" EnemyProbChange="3" EnemyLevelProbChange="1" TargetDistrict="DISTRICT_CITY_CENTER" InterfaceMode="INTERFACEMODE_SPY_CHOOSE_MISSION"/>
+	</UnitOperations>
+	<UnitUpgrades>
+	</UnitUpgrades>
+	<UnitAbilities>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+	</UnitAbilityModifiers>
+	<Notifications>
+		<Row NotificationType="NOTIFICATION_SPY_ZOMBIES" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="ESPIONAGE"/>
+		<Row NotificationType="NOTIFICATION_SPY_ENEMY_ZOMBIES" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False" GroupType="ESPIONAGE"/>
+	</Notifications>
+	<TypeProperties>
+		<!--Clans Mode crossover: clans ignore Zombies for clan-related special behavior-->
+		<Row Type="UNIT_MODE_ZOMBIE"			Name="CLAN_EXCLUDE_UNIT_TYPE" Value="true"/>
+		<Row Type="UNITOPERATION_SPY_ZOMBIFY"	Name="SPY_OPERATION_CHANCE_TO_SPAWN_ZOMBIE" Value="50"/>
+	</TypeProperties>
+	<Modifiers>
+	</Modifiers>
+	<ModifierArguments>
+	</ModifierArguments>
+  <!-- AI information to manage zombie units -->
+  <AllowedMoves>
+    <Row AllowedMoveType="Zombie Horde Attack" Value="36" IsTactical="true" />
+  </AllowedMoves>
+  <AiFavoredItems>
+    <Row ListType="Default Barbarian" Item="Zombie Horde Attack" Value="1" />
+  </AiFavoredItems>
+	<BarbarianTribe_ExtraUnits>
+		<Row>
+			<TribeType>TRIBE_MELEE</TribeType>
+			<UnitType>UNIT_MODE_ZOMBIE</UnitType>
+			<Number>3</Number>
+		</Row>
+		<Row>
+			<TribeType>TRIBE_CAVALRY</TribeType>
+			<UnitType>UNIT_MODE_ZOMBIE</UnitType>
+			<Number>3</Number>
+		</Row>
+		<Row>
+			<TribeType>TRIBE_NAVAL</TribeType>
+			<UnitType>UNIT_MODE_ZOMBIE</UnitType>
+			<Number>3</Number>
+		</Row>
+	</BarbarianTribe_ExtraUnits>
+</GameInfo>

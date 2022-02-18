@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="UNIT_PORTUGUESE_NAU" Kind="KIND_UNIT"/>
+		<Row Type="ABILITY_NAU" Kind="KIND_ABILITY"/>
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_NAU" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+	<TypeTags>
+		<Row Type="ABILITY_NAU" Tag="CLASS_NAU"/>
+		<Row Type="UNIT_PORTUGUESE_NAU" Tag="CLASS_NAU"/>
+		<Row Type="UNIT_PORTUGUESE_NAU" Tag="CLASS_NAVAL_MELEE"/>
+	</TypeTags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_PORTUGUESE_NAU" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_PORTUGUESE_NAU" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_PORTUGUESE_NAU" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_PORTUGUESE_NAU" AiType="UNITTYPE_NAVAL"/>
+	</UnitAiInfos>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_PORTUGUESE_NAU" ReplacesUnitType="UNIT_CARAVEL"/>
+	</UnitReplaces>
+	<Units>
+		<Row UnitType="UNIT_PORTUGUESE_NAU" Cost="240" Maintenance="2" BaseMoves="4" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_SEA" Combat="55" FormationClass="FORMATION_CLASS_NAVAL" PromotionClass="PROMOTION_CLASS_NAVAL_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_PORTUGUESE_NAU_NAME" Description="LOC_UNIT_PORTUGUESE_NAU_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" MandatoryObsoleteTech="TECH_COMBINED_ARMS" PrereqTech="TECH_CARTOGRAPHY" BuildCharges="2" TraitType="TRAIT_CIVILIZATION_UNIT_PORTUGUESE_NAU"/>
+	</Units>
+	<UnitUpgrades>
+		<Row Unit="UNIT_PORTUGUESE_NAU" UpgradeUnit="UNIT_IRONCLAD"/>
+	</UnitUpgrades>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_NAU" Name="LOC_ABILITY_NAU_NAME" Description="LOC_ABILITY_NAU_DESCRIPTION"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_NAU</UnitAbilityType>
+			<ModifierId>NAU_FREE_PROMOTION</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>NAU_FREE_PROMOTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_GRANT_EXPERIENCE</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>NAU_FREE_PROMOTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="BUILDING_ETEMENANKI" Kind="KIND_BUILDING"/>
+		<Row Type="BUILDING_NAVIGATION_SCHOOL" Kind="KIND_BUILDING"/>
+		<Row Type="BUILDING_TORRE_DE_BELEM" Kind="KIND_BUILDING"/>
+	</Types>
+	<BuildingReplaces>
+		<Row CivUniqueBuildingType="BUILDING_NAVIGATION_SCHOOL" ReplacesBuildingType="BUILDING_UNIVERSITY"/>
+	</BuildingReplaces>
+	<Buildings>
+		<Row BuildingType="BUILDING_NAVIGATION_SCHOOL" Name="LOC_BUILDING_NAVIGATION_SCHOOL_NAME" Description="LOC_BUILDING_NAVIGATION_SCHOOL_DESCRIPTION" PrereqTech="TECH_EDUCATION" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="250" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="2" Housing="1" CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_NAVIGATION_SCHOOL"/>
+		<Row BuildingType="BUILDING_ETEMENANKI" Name="LOC_BUILDING_ETEMENANKI_NAME" Description="LOC_BUILDING_ETEMENANKI_DESCRIPTION" PrereqTech="TECH_WRITING" Cost="220" AdvisorType="ADVISOR_TECHNOLOGY" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" ObsoleteEra="ERA_MEDIEVAL" Quote="LOC_BUILDING_ETEMENANKI_QUOTE" QuoteAudio="Play_ETEMENANKI_QUOTE_1"/>
+		<Row BuildingType="BUILDING_TORRE_DE_BELEM" Name="LOC_BUILDING_TORRE_DE_BELEM_NAME" Description="LOC_BUILDING_TORRE_DE_BELEM_DESCRIPTION" PrereqCivic="CIVIC_MERCANTILISM" Cost="920" AdvisorType="ADVISOR_GENERIC" AdjacentDistrict="DISTRICT_HARBOR" MaxWorldInstances="1" IsWonder="true" RequiresPlacement="true" MustNotBeLake="true" MustBeAdjacentLand="true" ObsoleteEra="ERA_MODERN" Quote="LOC_BUILDING_TORRE_DE_BELEM_QUOTE" QuoteAudio="Play_TORRE_DE_BELEM_QUOTE_1"/>
+	</Buildings>
+	<BuildingPrereqs>
+		<Row Building="BUILDING_NAVIGATION_SCHOOL" PrereqBuilding="BUILDING_LIBRARY"/>
+	</BuildingPrereqs>
+	<Building_RequiredFeatures>
+		<Row BuildingType="BUILDING_ETEMENANKI" FeatureType="FEATURE_FLOODPLAINS"/>
+		<Row BuildingType="BUILDING_ETEMENANKI" FeatureType="FEATURE_MARSH"/>
+	</Building_RequiredFeatures>
+	<Building_ValidTerrains>
+		<Row BuildingType="BUILDING_TORRE_DE_BELEM" TerrainType="TERRAIN_COAST"/>
+	</Building_ValidTerrains>
+	<Building_YieldChanges>
+		<Row BuildingType="BUILDING_ETEMENANKI" YieldType="YIELD_SCIENCE" YieldChange="2"/>
+		<Row BuildingType="BUILDING_NAVIGATION_SCHOOL" YieldType="YIELD_SCIENCE" YieldChange="4"/>
+		<Row BuildingType="BUILDING_TORRE_DE_BELEM" YieldType="YIELD_GOLD" YieldChange="5"/>
+	</Building_YieldChanges>
+	<Building_GreatPersonPoints>
+		<Row BuildingType="BUILDING_NAVIGATION_SCHOOL" GreatPersonClassType="GREAT_PERSON_CLASS_ADMIRAL" PointsPerTurn="1"/>
+		<Row BuildingType="BUILDING_NAVIGATION_SCHOOL" GreatPersonClassType="GREAT_PERSON_CLASS_SCIENTIST" PointsPerTurn="1"/>
+		<Row BuildingType="BUILDING_TORRE_DE_BELEM" GreatPersonClassType="GREAT_PERSON_CLASS_ADMIRAL" PointsPerTurn="1"/>
+	</Building_GreatPersonPoints>
+	<BuildingModifiers>
+		<Row BuildingType="BUILDING_NAVIGATION_SCHOOL" ModifierId="NAVIGATION_SCHOOL_NAVAL_UNIT_PRODUCTION"/>
+		<Row BuildingType="BUILDING_NAVIGATION_SCHOOL" ModifierId="NAVIGATION_SCHOOL_NAVAL_COAST_SCIENCE"/>
+		<Row BuildingType="BUILDING_ETEMENANKI" ModifierId="ETEMENANKI_SCIENCE_MARSH"/>
+		<Row BuildingType="BUILDING_ETEMENANKI" ModifierId="ETEMENANKI_PRODUCTION_MARSH"/>
+		<Row BuildingType="BUILDING_ETEMENANKI" ModifierId="ETEMENANKI_SCIENCE_FLOODPLAINS"/>
+		<Row BuildingType="BUILDING_ETEMENANKI" ModifierId="ETEMENANKI_PRODUCTION_FLOODPLAINS"/>
+		<Row BuildingType="BUILDING_TORRE_DE_BELEM" ModifierId="TORREDEBELEM_TRADE_GOLD_LUXURIES"/>
+		<Row BuildingType="BUILDING_TORRE_DE_BELEM" ModifierId="TORREDEBELEM_CHEAPEST_BUILDING"/>
+	</BuildingModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>NAVIGATION_SCHOOL_NAVAL_UNIT_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_CITY_ADJUST_UNIT_DOMAIN_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NAVIGATION_SCHOOL_NAVAL_COAST_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_CITY_ADJUST_CITY_YIELD_PER_TERRAIN_TYPE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_SCIENCE_MARSH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_MARSH_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_PRODUCTION_MARSH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_MARSH_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_SCIENCE_FLOODPLAINS</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_FLOODPLAINS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_PRODUCTION_FLOODPLAINS</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_FLOODPLAINS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TORREDEBELEM_TRADE_GOLD_LUXURIES</ModifierId>
+			<ModifierType>MODIFIER_CITY_ADJUST_TRADE_ROUTE_YIELD_PER_DESTINATION_LUXURY_FOR_INTERNATIONAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TORREDEBELEM_CHEAPEST_BUILDING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_CHEAPEST_BUILDING_IN_CITY</ModifierType>
+			<SubjectRequirementSetId>CITY_NOT_OWNER_CAPITAL_CONTINENT_REQUIREMENTS</SubjectRequirementSetId>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>NAVIGATION_SCHOOL_NAVAL_UNIT_PRODUCTION</ModifierId>
+			<Name>Domain</Name>
+			<Value>DOMAIN_SEA</Value>
+		</Row>
+		<Row>
+			<ModifierId>NAVIGATION_SCHOOL_NAVAL_UNIT_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+		<Row>
+			<ModifierId>NAVIGATION_SCHOOL_NAVAL_COAST_SCIENCE</ModifierId>
+			<Name>TerrainType</Name>
+			<Value>TERRAIN_COAST</Value>
+		</Row>
+		<Row>
+			<ModifierId>NAVIGATION_SCHOOL_NAVAL_COAST_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>NAVIGATION_SCHOOL_NAVAL_COAST_SCIENCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>0.5</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_SCIENCE_MARSH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_SCIENCE_MARSH</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_PRODUCTION_MARSH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_PRODUCTION_MARSH</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_SCIENCE_FLOODPLAINS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_SCIENCE_FLOODPLAINS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_PRODUCTION_FLOODPLAINS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>ETEMENANKI_PRODUCTION_FLOODPLAINS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TORREDEBELEM_TRADE_GOLD_LUXURIES</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TORREDEBELEM_TRADE_GOLD_LUXURIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TORREDEBELEM_CHEAPEST_BUILDING</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLOT_HAS_MARSH_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_FLOODPLAINS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLOT_HAS_MARSH_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_MARSH</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_FLOODPLAINS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_FLOODPLAINS</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+</GameInfo>

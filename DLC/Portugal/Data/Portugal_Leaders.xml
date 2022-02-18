@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_JOAO_III" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_JOAO_III" Kind="KIND_TRAIT"/>
+    <Row Type="TRAIT_JOAO_EXPLORATION_AGENDA" Kind="KIND_TRAIT"/>
+		<!-- Ability -->
+		<Row Type="ABILITY_PORTA_DO_CERCO_EXTRA_SIGHT" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_PORTA_DO_CERCO_EXTRA_SIGHT" Tag="CLASS_ALL_UNITS"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_JOAO_III" Name="LOC_LEADER_JOAO_III_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_JOAO_III" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_JOAO_III_QUOTE" QuoteAudio="JOAO_MA_MISC_PEP_TALK_A_02"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_JOAO_III" TraitType="TRAIT_LEADER_JOAO_III"/>
+	</LeaderTraits>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_JOAO_III" Name="LOC_TRAIT_LEADER_JOAO_III_NAME" Description="LOC_TRAIT_LEADER_JOAO_III_DESCRIPTION"/>
+		<Row TraitType="TRAIT_JOAO_EXPLORATION_AGENDA"/>
+	</Traits>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_LEADER_JOAO_III</TraitType>
+			<ModifierId>TRAIT_JOAO_CITY_STATE_OPEN_BORDERS</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_JOAO_III</TraitType>
+			<ModifierId>TRAIT_JOAO_TRADE_ROUTE_ON_MEET</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_LEADER_JOAO_III</TraitType>
+			<ModifierId>TRAIT_JOAO_EXTRA_SIGHT</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_JOAO_CITY_STATE_OPEN_BORDERS</ModifierId>
+			<ModifierType>MODIFIER_ADJUST_OPEN_BORDERS_FROM_INFLUENCE</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_MINOR</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_JOAO_TRADE_ROUTE_ON_MEET</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY_ON_MEETING</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_JOAO_EXTRA_SIGHT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>PORTA_DO_CERCO_EXTRA_SIGHT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_SIGHT</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_JOAO_TRADE_ROUTE_ON_MEET</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_JOAO_EXTRA_SIGHT</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_PORTA_DO_CERCO_EXTRA_SIGHT</Value>
+		</Row>
+		<Row>
+			<ModifierId>PORTA_DO_CERCO_EXTRA_SIGHT</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_PORTA_DO_CERCO_EXTRA_SIGHT" Name="LOC_ABILITY_PORTA_DO_CERCO_EXTRA_SIGHT_NAME" Description="LOC_ABILITY_PORTA_DO_CERCO_EXTRA_SIGHT_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_PORTA_DO_CERCO_EXTRA_SIGHT</UnitAbilityType>
+			<ModifierId>PORTA_DO_CERCO_EXTRA_SIGHT</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_JOAO_III" ReligionType="RELIGION_CATHOLICISM"/>
+	</FavoredReligions>
+  <!--Agendas-->
+  <Agendas>
+    <Row AgendaType="AGENDA_JOAO_EXPLORER" Name="LOC_AGENDA_JOAO_EXPLORER_NAME" Description="LOC_AGENDA_JOAO_EXPLORER_DESCRIPTION"/>
+  </Agendas>
+  <HistoricalAgendas>
+    <Row LeaderType="LEADER_JOAO_III" AgendaType="AGENDA_JOAO_EXPLORER"/>
+  </HistoricalAgendas>
+  <AgendaTraits>
+    <Row AgendaType="AGENDA_JOAO_EXPLORER" TraitType="TRAIT_JOAO_EXPLORATION_AGENDA"/>
+  </AgendaTraits>
+  <ExclusiveAgendas>
+    <Row AgendaOne="AGENDA_JOAO_EXPLORER" AgendaTwo="AGENDA_EXPLORER"/>
+  </ExclusiveAgendas>
+  <AiListTypes>
+    <Row ListType="JoaoCivicPreference"/>
+    <Row ListType="JoaoCoastalSettlements"/>
+    <Row ListType="JoaoExplorationObsessed"/>
+  </AiListTypes>
+  <AiLists>
+    <Row ListType="JoaoCivicPreference" LeaderType="TRAIT_LEADER_JOAO_III" System="Civics"/>
+    <Row ListType="JoaoCoastalSettlements" LeaderType="TRAIT_LEADER_JOAO_III" System="PlotEvaluations"/>
+		<Row ListType="JoaoExplorationObsessed" AgendaType="TRAIT_JOAO_EXPLORATION_AGENDA" System="PseudoYields"/>
+  </AiLists>
+  <AiFavoredItems>
+    <Row ListType="JoaoCivicPreference" Item="CIVIC_FOREIGN_TRADE" Favored="true"/>
+    <Row ListType="JoaoCoastalSettlements" Item="Coastal" Favored="false" Value="35"/>
+    <Row ListType="JoaoExplorationObsessed" Item="PSEUDOYIELD_UNIT_EXPLORER" Value="50"/>
+  </AiFavoredItems>
+  <TraitModifiers>
+    <Row TraitType="TRAIT_JOAO_EXPLORATION_AGENDA" ModifierId="AGENDA_JOAO_HIGH_EXPLORATION"/>
+    <Row TraitType="TRAIT_JOAO_EXPLORATION_AGENDA" ModifierId="AGENDA_JOAO_LOW_EXPLORATION"/>
+  </TraitModifiers>
+  <Modifiers>
+    <Row>
+      <ModifierId>AGENDA_JOAO_HIGH_EXPLORATION</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+      <SubjectRequirementSetId>PLAYER_HAS_HIGH_EXPLORATION</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>AGENDA_JOAO_LOW_EXPLORATION</ModifierId>
+      <ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+      <SubjectRequirementSetId>PLAYER_HAS_LOW_EXPLORATION</SubjectRequirementSetId>
+    </Row>
+  </Modifiers>
+  <ModifierArguments>
+    <Row>
+      <ModifierId>AGENDA_JOAO_HIGH_EXPLORATION</ModifierId>
+      <Name>InitialValue</Name>
+      <Value>6</Value>
+    </Row>
+    <Row>
+      <ModifierId>AGENDA_JOAO_HIGH_EXPLORATION</ModifierId>
+      <Name>StatementKey</Name>
+      <Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_JOAO_AGENDA_HIGH_EXPLORATION</Value>
+    </Row>
+    <Row>
+      <ModifierId>AGENDA_JOAO_LOW_EXPLORATION</ModifierId>
+      <Name>InitialValue</Name>
+      <Value>-6</Value>
+    </Row>
+    <Row>
+      <ModifierId>AGENDA_JOAO_LOW_EXPLORATION</ModifierId>
+      <Name>StatementKey</Name>
+      <Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_JOAO_AGENDA_LOW_EXPLORATION</Value>
+    </Row>
+  </ModifierArguments>
+  <ModifierStrings>
+	  <Row ModifierId="AGENDA_JOAO_HIGH_EXPLORATION" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_JOAO_AGENDA_HIGH_EXPLORATION"/>
+	  <Row ModifierId="AGENDA_JOAO_LOW_EXPLORATION" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_JOAO_AGENDA_LOW_EXPLORATION"/>
+  </ModifierStrings>
+</GameInfo>

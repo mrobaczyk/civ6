@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Maps>
+		<!-- This map will show up in Base, XP1, and XP2  -->
+		<Row Domain="StandardMaps" File="Wetlands.lua" Name="LOC_MAP_WETLANDS_NAME" Description="LOC_MAP_WETLANDS_DESCRIPTION" Image="Map_Wetlands" SortIndex="125"/>
+		<!-- This one is only for XP2. -->
+		<Row Domain="Maps:Expansion2Maps" File="Wetlands_XP2.lua" Name="LOC_MAP_WETLANDS_NAME" Description="LOC_MAP_WETLANDS_DESCRIPTION" Image="Map_Wetlands" SortIndex="125"/>
+	</Maps>
+	<DomainValueFilters>
+		<Row Domain="Maps:Expansion2Maps" Value="Wetlands.lua" Filter="difference"/>
+	</DomainValueFilters>
+	<Parameters>
+		<Row Key1="Map" Key2="Wetlands.lua" ParameterId="WorldAge" Name="LOC_MAP_WORLD_AGE_NAME" Description="LOC_MAP_WORLD_AGE_DESCRIPTION" Domain="WorldAge" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="world_age" GroupId="MapOptions" Hash="0" SortIndex="230"/>
+		<Row Key1="Map" Key2="Wetlands.lua" ParameterId="Temperature" Name="LOC_MAP_TEMPERATURE_NAME" Description="LOC_MAP_TEMPERATURE_DESCRIPTION" Domain="Temperature" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="temperature" GroupId="MapOptions" Hash="0" SortIndex="240"/>
+		<Row Key1="Map" Key2="Wetlands.lua" ParameterId="Rainfall" Name="LOC_MAP_RAINFALL_NAME" Description="LOC_MAP_RAINFALL_DESCRIPTION" Domain="Rainfall" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="rainfall" GroupId="MapOptions" Hash="0" SortIndex="250"/>
+		<Row Key1="Map" Key2="Wetlands.lua" ParameterId="SeaLevel" Name="LOC_MAP_SEA_LEVEL_NAME" Description="LOC_MAP_SEA_LEVEL_LOW_DESCRIPTION" Domain="SeaLevel" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="sea_level" GroupId="MapOptions" Hash="0" SortIndex="260"/>
+		<Row Key1="Map" Key2="Wetlands_XP2.lua" ParameterId="WorldAge" Name="LOC_MAP_WORLD_AGE_NAME" Description="LOC_MAP_WORLD_AGE_DESCRIPTION" Domain="WorldAge" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="world_age" GroupId="MapOptions" Hash="0" SortIndex="230"/>
+		<Row Key1="Map" Key2="Wetlands_XP2.lua" ParameterId="Temperature" Name="LOC_MAP_TEMPERATURE_NAME" Description="LOC_MAP_TEMPERATURE_DESCRIPTION" Domain="Temperature" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="temperature" GroupId="MapOptions" Hash="0" SortIndex="240"/>
+		<Row Key1="Map" Key2="Wetlands_XP2.lua" ParameterId="Rainfall" Name="LOC_MAP_RAINFALL_NAME" Description="LOC_MAP_RAINFALL_DESCRIPTION" Domain="Rainfall" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="rainfall" GroupId="MapOptions" Hash="0" SortIndex="250"/>
+		<Row Key1="Map" Key2="Wetlands_XP2.lua" ParameterId="SeaLevel" Name="LOC_MAP_SEA_LEVEL_NAME" Description="LOC_MAP_SEA_LEVEL_LOW_DESCRIPTION" Domain="SeaLevel" DefaultValue="2" ConfigurationGroup="Map" ConfigurationId="sea_level" GroupId="MapOptions" Hash="0" SortIndex="260"/>
+	</Parameters>
+</GameInfo>

@@ -41,31 +41,4 @@
 	<TypeProperties>
 		<Row Type="UNITCOMMAND_RESOURCE_INSPIRE" Name="GRIEVANCES_PER_ACTION" Value="15"/>
 	</TypeProperties>
-	<GameModifiers>
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ATTACH_FUTURE"/>
-	</GameModifiers>
-	<Modifiers>
-		<Row ModifierID="MODIFIER_QUESTING_KNIGHT_ATTACH_FUTURE"		ModifierType="MODIFIER_ALL_UNITS_ATTACH_MODIFIER" SubjectRequirementSetId="QUESTING_KNIGHT_FUTURE"/>
-		<Row ModifierID="MODIFIER_QUESTING_KNIGHT_FUTURE_STRENGTH"		ModifierType="MODIFIER_UNIT_ADJUST_BASE_COMBAT_STRENGTH"/>
-	</Modifiers>
-	<ModifierArguments>
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_ATTACH_FUTURE" Name="ModifierId" Value="MODIFIER_QUESTING_KNIGHT_FUTURE_STRENGTH"/>
-		<!--Tuning: Questing Knight strength-->
-		<!--Delta above base strength (30) -->
-		<Row ModifierId="MODIFIER_QUESTING_KNIGHT_FUTURE_STRENGTH" Name="Amount" Value="88"/>
-	</ModifierArguments>
-	<!--REQUIREMENTS-->
-	<RequirementSets>
-		<Row RequirementSetId="QUESTING_KNIGHT_FUTURE" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
-	</RequirementSets>
-	<RequirementSetRequirements>
-		<Row RequirementSetId="QUESTING_KNIGHT_FUTURE" RequirementId="REQUIRES_FUTURE_ERA"/>
-		<Row RequirementSetId="QUESTING_KNIGHT_FUTURE" RequirementId="REQUIRES_UNIT_IS_QUESTING_KNIGHT"/>
-	</RequirementSetRequirements>
-	<Requirements>
-		<Row RequirementId="REQUIRES_FUTURE_ERA" RequirementType="REQUIREMENT_ERA_IS"/>
-	</Requirements>
-	<RequirementArguments>
-		<Row RequirementId="REQUIRES_FUTURE_ERA" Name="EraType" Value="ERA_FUTURE"/>
-	</RequirementArguments>
 </GameInfo>

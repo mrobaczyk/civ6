@@ -397,6 +397,14 @@ PageLayouts["HeroUnit" ] = function(page)
 		s:AddSeparator();
 	end);
 
+	-- there's no generic data way to get this, and Arthur is the only hero with this ability
+	if unitType == "UNIT_HERO_ARTHUR" then
+		AddRightColumnStatBox("LOC_UI_PEDIA_CREATES", function(s)
+			s:AddIconLabel({"ICON_UNIT_QUESTING_KNIGHT", "LOC_UNIT_QUESTING_KNIGHT_NAME", "UNIT_QUESTING_KNIGHT"}, "LOC_UNIT_QUESTING_KNIGHT_NAME");
+			s:AddSeparator();
+		end);
+	end
+
 	AddRightColumnStatBox("LOC_UI_PEDIA_REQUIREMENTS", function(s)
 		s:AddSeparator();
 		if(unit.PrereqTech or unit.PrereqCivic or unit.PrereqDistrict or unit.StrategicResource or #requires_buildings > 0) then

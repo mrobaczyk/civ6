@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="PROJECT_CONVERT_ZOMBIES_RELIGIOUS" Kind="KIND_PROJECT"/>
+		<Row Type="PROJECT_CONVERT_ZOMBIES_SCIENCE" Kind="KIND_PROJECT"/>
+
+		<Row Type="MODIFIER_CITY_LEVY_UNITS" Kind="KIND_MODIFIER"/>
+	</Types>
+	<Projects>
+		<Row ProjectType="PROJECT_CONVERT_ZOMBIES_RELIGIOUS" Name="LOC_PROJECT_CONVERT_ZOMBIES_RELIGIOUS_NAME" ShortName="LOC_PROJECT_CONVERT_ZOMBIES_RELIGIOUS_NAME" Description="LOC_PROJECT_CONVERT_ZOMBIES_RELIGIOUS_DESCRIPTION" PrereqDistrict="DISTRICT_HOLY_SITE" Cost="15" AdvisorType="ADVISOR_GENERIC" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1500"/>
+		<Row ProjectType="PROJECT_CONVERT_ZOMBIES_SCIENCE" Name="LOC_PROJECT_CONVERT_ZOMBIES_SCIENCE_NAME" ShortName="LOC_PROJECT_CONVERT_ZOMBIES_SCIENCE_NAME" Description="LOC_PROJECT_CONVERT_ZOMBIES_SCIENCE_DESCRIPTION" PrereqDistrict="DISTRICT_CAMPUS" Cost="25" AdvisorType="ADVISOR_GENERIC" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1500"/>
+	</Projects>
+	<ProjectCompletionModifiers>
+		<Row ProjectType="PROJECT_CONVERT_ZOMBIES_RELIGIOUS" ModifierId="PROJECT_COMPLETION_ZOMBIES_SHORT"/>
+		<Row ProjectType="PROJECT_CONVERT_ZOMBIES_SCIENCE" ModifierId="PROJECT_COMPLETION_ZOMBIES_LONG"/>
+	</ProjectCompletionModifiers>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_CITY_LEVY_UNITS</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_CITY_LEVY_UNITS_IN_TERRITORY</EffectType>
+		</Row>
+	</DynamicModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_ZOMBIES_SHORT</ModifierId>
+			<ModifierType>MODIFIER_CITY_LEVY_UNITS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_ZOMBIES_LONG</ModifierId>
+			<ModifierType>MODIFIER_CITY_LEVY_UNITS</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_ZOMBIES_SHORT</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_MODE_ZOMBIE</Value>
+		</Row>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_ZOMBIES_SHORT</ModifierId>
+			<Name>Duration</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_ZOMBIES_LONG</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_MODE_ZOMBIE</Value>
+		</Row>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_ZOMBIES_LONG</ModifierId>
+			<Name>Duration</Name>
+			<Value>30</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

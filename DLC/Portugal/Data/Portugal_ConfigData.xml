@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Players>
+		<Row CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" CivilizationName="LOC_CIVILIZATION_PORTUGAL_NAME" CivilizationIcon="ICON_CIVILIZATION_PORTUGAL" LeaderName="LOC_LEADER_JOAO_III_NAME" LeaderIcon="ICON_LEADER_JOAO_III" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_PORTUGAL_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_PORTUGAL_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_PORTUGAL" LeaderAbilityName="LOC_TRAIT_LEADER_JOAO_III_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_JOAO_III_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_JOAO_III" Portrait="LEADER_JOAO_III_NEUTRAL" PortraitBackground="LEADER_JOAO_III_BACKGROUND"/>
+		<!-- Expansion 1 Support -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" CivilizationName="LOC_CIVILIZATION_PORTUGAL_NAME" CivilizationIcon="ICON_CIVILIZATION_PORTUGAL" LeaderName="LOC_LEADER_JOAO_III_NAME" LeaderIcon="ICON_LEADER_JOAO_III" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_PORTUGAL_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_PORTUGAL_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_PORTUGAL" LeaderAbilityName="LOC_TRAIT_LEADER_JOAO_III_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_JOAO_III_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_JOAO_III" Portrait="LEADER_JOAO_III_NEUTRAL" PortraitBackground="LEADER_JOAO_III_BACKGROUND"/>
+		<!-- Expansion 2 Support -->
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" CivilizationName="LOC_CIVILIZATION_PORTUGAL_NAME" CivilizationIcon="ICON_CIVILIZATION_PORTUGAL" LeaderName="LOC_LEADER_JOAO_III_NAME" LeaderIcon="ICON_LEADER_JOAO_III" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_PORTUGAL_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_PORTUGAL_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_PORTUGAL" LeaderAbilityName="LOC_TRAIT_LEADER_JOAO_III_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_JOAO_III_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_JOAO_III" Portrait="LEADER_JOAO_III_NEUTRAL" PortraitBackground="LEADER_JOAO_III_BACKGROUND"/>
+	</Players>
+	<PlayerItems>
+		<Row CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="UNIT_PORTUGUESE_NAU" Icon="ICON_UNIT_PORTUGUESE_NAU" Name="LOC_UNIT_PORTUGUESE_NAU_NAME" Description="LOC_UNIT_PORTUGUESE_NAU_DESCRIPTION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="IMPROVEMENT_FEITORIA" Icon="ICON_IMPROVEMENT_FEITORIA" Name="LOC_IMPROVEMENT_FEITORIA_NAME" Description="LOC_IMPROVEMENT_FEITORIA_DESCRIPTION" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="BUILDING_NAVIGATION_SCHOOL" Icon="ICON_BUILDING_NAVIGATION_SCHOOL" Name="LOC_BUILDING_NAVIGATION_SCHOOL_NAME" Description="LOC_BUILDING_NAVIGATION_SCHOOL_DESCRIPTION" SortIndex="30"/>
+		<!-- Expansion 1 Support -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="UNIT_PORTUGUESE_NAU" Icon="ICON_UNIT_PORTUGUESE_NAU" Name="LOC_UNIT_PORTUGUESE_NAU_NAME" Description="LOC_UNIT_PORTUGUESE_NAU_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="IMPROVEMENT_FEITORIA" Icon="ICON_IMPROVEMENT_FEITORIA" Name="LOC_IMPROVEMENT_FEITORIA_NAME" Description="LOC_IMPROVEMENT_FEITORIA_DESCRIPTION" SortIndex="20"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="BUILDING_NAVIGATION_SCHOOL" Icon="ICON_BUILDING_NAVIGATION_SCHOOL" Name="LOC_BUILDING_NAVIGATION_SCHOOL_NAME" Description="LOC_BUILDING_NAVIGATION_SCHOOL_DESCRIPTION" SortIndex="30"/>
+		<!-- Expansion 2 Support -->
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="UNIT_PORTUGUESE_NAU" Icon="ICON_UNIT_PORTUGUESE_NAU" Name="LOC_UNIT_PORTUGUESE_NAU_NAME" Description="LOC_UNIT_PORTUGUESE_NAU_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="IMPROVEMENT_FEITORIA" Icon="ICON_IMPROVEMENT_FEITORIA" Name="LOC_IMPROVEMENT_FEITORIA_NAME" Description="LOC_IMPROVEMENT_FEITORIA_DESCRIPTION" SortIndex="20"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_PORTUGAL" LeaderType="LEADER_JOAO_III" Type="BUILDING_NAVIGATION_SCHOOL" Icon="ICON_BUILDING_NAVIGATION_SCHOOL" Name="LOC_BUILDING_NAVIGATION_SCHOOL_NAME" Description="LOC_BUILDING_NAVIGATION_SCHOOL_DESCRIPTION" SortIndex="30"/>
+	</PlayerItems>
+	<Parameters>
+		<Row ParameterId="GameMode_TowerDefense" Name="LOC_GAMEMODE_TOWERDEFENSE_NAME" Description="LOC_GAMEMODE_TOWERDEFENSE_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_TOWERDEFENSE" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"/>
+	</Parameters>
+	<ParameterCriteria>
+		<Row ParameterId="GameMode_TowerDefense" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_RANDOM" Operator="NotEquals" ConfigurationValue="1"/>
+		<Row ParameterId="NoBarbarians" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_TOWERDEFENSE" Operator="NotEquals" ConfigurationValue="1"/>
+	</ParameterCriteria>
+	<ParameterDependencies>
+		<Row ParameterId="GameMode_TowerDefense" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Exists" ConfigurationValue="RULESET_STANDARD,RULESET_EXPANSION_1,RULESET_EXPANSION_2"/>
+		<Row ParameterId="GameMode_TowerDefense" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
+	</ParameterDependencies>
+	<GameModeItems>
+		<Row GameModeType="GAMEMODE_TOWERDEFENSE" Name="LOC_GAMEMODE_TOWERDEFENSE_NAME" Description="LOC_GAMEMODE_TOWERDEFENSE_DESCRIPTION" Portrait="GAMEMODE_TOWERDEFENSE_NEUTRAL" Background="GAMEMODE_TOWERDEFENSE_BACKGROUND" Icon="ICON_GAMEMODE_TOWERDEFENSE" SortIndex="10"/>
+	</GameModeItems>
+	<MapLeaders>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_JOAO_III"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" LeaderType="LEADER_JOAO_III"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard.Civ6Map" LeaderType="LEADER_JOAO_III"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard_XP2.Civ6Map" LeaderType="LEADER_JOAO_III"/>
+	</MapLeaders>
+	<MapStartPositions>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" Plot="3310" Type="LEADER" Value="LEADER_JOAO_III"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" Plot="3310" Type="LEADER" Value="LEADER_JOAO_III"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard.Civ6Map" Plot="520" Type="LEADER" Value="LEADER_JOAO_III"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard_XP2.Civ6Map" Plot="520" Type="LEADER" Value="LEADER_JOAO_III"/>
+	</MapStartPositions>
+	<ConfigurationUpdates>
+		<Row SourceGroup="Game" SourceId="GAMEMODE_TOWERDEFENSE" SourceValue="1" TargetGroup="Game" TargetId="GAME_NO_BARBARIANS" TargetValue="0" Hash="0" Static="1"/>
+	</ConfigurationUpdates>
+</GameInfo>

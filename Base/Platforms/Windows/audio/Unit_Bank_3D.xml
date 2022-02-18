@@ -477,6 +477,8 @@
 				<Event Id="318746542" Name="ScoutCat_RunBell" GUID="{0A94D2CB-F1D1-4F2A-9064-3B85933130C6}"/>
 				<Event Id="133336523" Name="ScoutDogAttackBark" GUID="{5E72C2E5-79B7-4D80-8617-77D8BB51C7F5}"/>
 				<Event Id="1570954296" Name="ScoutDogGrowl" GUID="{39DAB943-A453-4EC4-A712-9867310189E2}"/>
+				<Event Id="3337889362" Name="ScoutDogPant" GUID="{5C91892C-143C-4FC5-B3E8-E56CE52B1118}"/>
+				<Event Id="1763519316" Name="ScoutDogPet" GUID="{FC68C431-3D4F-43E6-A1BC-7809487DE99C}"/>
 				<Event Id="3780293235" Name="ScoutDogYelp" GUID="{B6FE6001-9FD1-4FA3-B938-BDE10476B359}"/>
 				<Event Id="1868282947" Name="Settler_Modern_Run_Loop" GUID="{3686A1FA-32B1-40E5-A0A5-952B713983D1}"/>
 				<Event Id="198196257" Name="Settler_Modern_Run_Stop" GUID="{019701A7-28C9-47DA-B3BE-AF6791216EEC}"/>
@@ -528,6 +530,9 @@
 				<Event Id="2123355734" Name="Trader_Sea_SailFlap" GUID="{3E9727F5-988A-4C95-8E2A-4E14EB2CBC07}"/>
 				<Event Id="3603655997" Name="Trader_Sea_WoodCreak" GUID="{89532173-9C3C-447C-8613-F83925502149}"/>
 				<Event Id="406934762" Name="Trader_Sea_WoodRunStop" GUID="{E75CC4A8-773C-4BA4-891F-79798EA10190}"/>
+				<Event Id="2275807556" Name="Trebuchet_Attack" GUID="{F2CB9782-B2D8-4A68-AAA9-136BCEF12E81}"/>
+				<Event Id="2266298126" Name="Trebuchet_PlaceRock" GUID="{B863C0BA-0580-4AC2-9FED-A9FB00B1FD36}"/>
+				<Event Id="718223799" Name="Trebuchet_Reload" GUID="{64EC8D82-1560-436A-AB10-A805133740F3}"/>
 				<Event Id="2456330824" Name="Unit_Combat_Lose_3D" GUID="{D52CB27A-4B5E-4A0A-9035-8133C4988A58}"/>
 				<Event Id="1898345605" Name="Unit_Combat_Win_3D" GUID="{145BEB42-1F72-4F53-98EE-8CEDDD379AB7}"/>
 				<Event Id="1258930606" Name="Unit_Pillage_3D" GUID="{5E8B0349-DE05-4F88-8CF6-8C5F0510910F}"/>
@@ -701,6 +706,10 @@
 				<File Id="2676839" Language="SFX">
 					<ShortName>FootSand-004.wav</ShortName>
 					<Path>SFX\FootSand-004_10F921B3.wem</Path>
+				</File>
+				<File Id="2723282" Language="SFX">
+					<ShortName>Catapult_Place_Rock_02.wav</ShortName>
+					<Path>SFX\Catapult_Place_Rock_02_B34000C0.wem</Path>
 				</File>
 				<File Id="2725524" Language="SFX">
 					<ShortName>Impact_VFX_Bullet_Metal_7.wav</ShortName>
@@ -929,6 +938,10 @@
 				<File Id="11100195" Language="SFX">
 					<ShortName>Hit_Armor_4.wav</ShortName>
 					<Path>SFX\Hit_Armor_4_E1E65BF4.wem</Path>
+				</File>
+				<File Id="11242960" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_VeryShort_3.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_VeryShort_3_10F921B3.wem</Path>
 				</File>
 				<File Id="11480871" Language="SFX">
 					<ShortName>FoleyShieldMetalLarge-001.wav</ShortName>
@@ -2050,6 +2063,10 @@
 					<ShortName>ShipCannonLower_1.wav</ShortName>
 					<Path>SFX\ShipCannonLower_1_10F921B3.wem</Path>
 				</File>
+				<File Id="93781707" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_VeryShort_1.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_VeryShort_1_10F921B3.wem</Path>
+				</File>
 				<File Id="94442314" Language="SFX">
 					<ShortName>FootstepMud01.wav</ShortName>
 					<Path>SFX\FootstepMud01_10F921B3.wem</Path>
@@ -2702,6 +2719,10 @@
 					<ShortName>Horse_Canter_Sand_5.wav</ShortName>
 					<Path>SFX\Horse_Canter_Sand_5_10F921B3.wem</Path>
 				</File>
+				<File Id="147541378" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_Short_2.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_Short_2_15C7C9E9.wem</Path>
+				</File>
 				<File Id="147953698" Language="SFX">
 					<ShortName>ModernArmor_Shoot_02.wav</ShortName>
 					<Path>SFX\ModernArmor_Shoot_02_10F921B3.wem</Path>
@@ -3034,6 +3055,10 @@
 					<ShortName>TheLost_Death_09.wav</ShortName>
 					<Path>SFX\TheLost_Death_09_10F921B3.wem</Path>
 				</File>
+				<File Id="178973859" Language="SFX">
+					<ShortName>Catapult_Place_Rock_03.wav</ShortName>
+					<Path>SFX\Catapult_Place_Rock_03_125E6486.wem</Path>
+				</File>
 				<File Id="179283071" Language="SFX">
 					<ShortName>FieldCannonFire_3.wav</ShortName>
 					<Path>SFX\FieldCannonFire_3_E1E65BF4.wem</Path>
@@ -3349,6 +3374,10 @@
 				<File Id="215594122" Language="SFX">
 					<ShortName>ImpactBluntChainmail-001.wav</ShortName>
 					<Path>SFX\ImpactBluntChainmail-001_10F921B3.wem</Path>
+				</File>
+				<File Id="215712776" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_Short_3.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_Short_3_DB529C19.wem</Path>
 				</File>
 				<File Id="216073013" Language="SFX">
 					<ShortName>GalleyDeath-03.wav</ShortName>
@@ -4157,6 +4186,10 @@
 				<File Id="293842227" Language="SFX">
 					<ShortName>Debris_Small_Dirt-09.wav</ShortName>
 					<Path>SFX\Debris_Small_Dirt-09_E1E65BF4.wem</Path>
+				</File>
+				<File Id="293868324" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_Short_3.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_Short_3_BB6B7DD3.wem</Path>
 				</File>
 				<File Id="294003723" Language="SFX">
 					<ShortName>P51DeathDive-02.wav</ShortName>
@@ -5470,6 +5503,10 @@
 					<ShortName>Musket_Cock-02.wav</ShortName>
 					<Path>SFX\Musket_Cock-02_10F921B3.wem</Path>
 				</File>
+				<File Id="433113525" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_VeryShort_0.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_VeryShort_0_10F921B3.wem</Path>
+				</File>
 				<File Id="434132353" Language="SFX">
 					<ShortName>Vox_A_Death_03.wav</ShortName>
 					<Path>SFX\Vox_A_Death_03_10F921B3.wem</Path>
@@ -5585,6 +5622,10 @@
 				<File Id="448491677" Language="SFX">
 					<ShortName>PirateAwayTeam_Yar_02.wav</ShortName>
 					<Path>SFX\PirateAwayTeam_Yar_02_10F921B3.wem</Path>
+				</File>
+				<File Id="448578443" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_Short_1.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_Short_1_10F921B3.wem</Path>
 				</File>
 				<File Id="448677200" Language="SFX">
 					<ShortName>War_Cart_Donkey_Bray_0.wav</ShortName>
@@ -6974,6 +7015,10 @@
 					<ShortName>HelicopterDeath-01.wav</ShortName>
 					<Path>SFX\HelicopterDeath-01_10F921B3.wem</Path>
 				</File>
+				<File Id="601175251" Language="SFX">
+					<ShortName>Catapult_Place_Rock_04.wav</ShortName>
+					<Path>SFX\Catapult_Place_Rock_04_A4E1D8C3.wem</Path>
+				</File>
 				<File Id="601301762" Language="SFX">
 					<ShortName>Metal_Squeak_High_1.wav</ShortName>
 					<Path>SFX\Metal_Squeak_High_1_E1E65BF4.wem</Path>
@@ -7714,6 +7759,10 @@
 					<ShortName>Builder_Repair_Swish_2.wav</ShortName>
 					<Path>SFX\Builder_Repair_Swish_2_10F921B3.wem</Path>
 				</File>
+				<File Id="689835818" Language="SFX">
+					<ShortName>Catapult_Load_03.wav</ShortName>
+					<Path>SFX\Catapult_Load_03_90B9D0BA.wem</Path>
+				</File>
 				<File Id="690052402" Language="SFX">
 					<ShortName>Impacts_Arrow_Wood_09.wav</ShortName>
 					<Path>SFX\Impacts_Arrow_Wood_09_E1E65BF4.wem</Path>
@@ -7961,6 +8010,10 @@
 				<File Id="714880469" Language="SFX">
 					<ShortName>FootstepLargeMonsterHeel_03.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_03_6D174FE0.wem</Path>
+				</File>
+				<File Id="714975895" Language="SFX">
+					<ShortName>Catapult_Load_01.wav</ShortName>
+					<Path>SFX\Catapult_Load_01_86008DF3.wem</Path>
 				</File>
 				<File Id="715364832" Language="SFX">
 					<ShortName>FoleyQuiver-007.wav</ShortName>
@@ -8930,6 +8983,10 @@
 					<ShortName>Metal_Rattle_Heavier_1.wav</ShortName>
 					<Path>SFX\Metal_Rattle_Heavier_1_10F921B3.wem</Path>
 				</File>
+				<File Id="824434055" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_VeryShort_5.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_VeryShort_5_10F921B3.wem</Path>
+				</File>
 				<File Id="825589594" Language="SFX">
 					<ShortName>Impacts_Arrow_Wood_12.wav</ShortName>
 					<Path>SFX\Impacts_Arrow_Wood_12_0C6A63D2.wem</Path>
@@ -9722,6 +9779,10 @@
 					<ShortName>LeatherCreakLong-002.wav</ShortName>
 					<Path>SFX\LeatherCreakLong-002_10F921B3.wem</Path>
 				</File>
+				<File Id="913513869" Language="SFX">
+					<ShortName>Catapult_Place_Rock_01.wav</ShortName>
+					<Path>SFX\Catapult_Place_Rock_01_5C68F266.wem</Path>
+				</File>
 				<File Id="914402375" Language="SFX">
 					<ShortName>HeroAttackStart-000.wav</ShortName>
 					<Path>SFX\HeroAttackStart-000_EC32A681.wem</Path>
@@ -9889,6 +9950,10 @@
 				<File Id="933390167" Language="SFX">
 					<ShortName>Carrier_RadarDish_Slow-02.wav</ShortName>
 					<Path>SFX\Carrier_RadarDish_Slow-02_10F921B3.wem</Path>
+				</File>
+				<File Id="933489205" Language="SFX">
+					<ShortName>Foley_Leader_Scratch_Skin_Short_2.wav</ShortName>
+					<Path>SFX\Foley_Leader_Scratch_Skin_Short_2_D77369EF.wem</Path>
 				</File>
 				<File Id="934438783" Language="SFX">
 					<ShortName>ShipLargeTurretStop_2.wav</ShortName>
@@ -10137,6 +10202,10 @@
 				<File Id="961252473" Language="SFX">
 					<ShortName>SoldierFoleyShort10.wav</ShortName>
 					<Path>SFX\SoldierFoleyShort10_E1E65BF4.wem</Path>
+				</File>
+				<File Id="961281103" Language="SFX">
+					<ShortName>Catapult_Load_02.wav</ShortName>
+					<Path>SFX\Catapult_Load_02_2DE34958.wem</Path>
 				</File>
 				<File Id="961680247" Language="SFX">
 					<ShortName>TheLost_Death_08.wav</ShortName>
@@ -11013,6 +11082,10 @@
 				<File Id="1066443686" Language="SFX">
 					<ShortName>Mounted_Single_Run_Water-03.wav</ShortName>
 					<Path>SFX\Mounted_Single_Run_Water-03_10F921B3.wem</Path>
+				</File>
+				<File Id="1066882382" Language="SFX">
+					<ShortName>Trebuchet_Attack_01.wav</ShortName>
+					<Path>SFX\Trebuchet_Attack_01_10F921B3.wem</Path>
 				</File>
 				<File Id="1066904072" Language="SFX">
 					<ShortName>RocketArtillery_RunStop-02.wav</ShortName>

@@ -49,7 +49,8 @@ local m_infamousPirateSearchZone	:boolean = false; -- Are we currently displayin
 --			what function this may be saving off, it prefixes functions with
 --			a MOD specific "CIVROYALE_" rather than "BASE_" or "XP2_", etc...
 -- ===========================================================================
-PIRATES_LateInitialize	 = LateInitialize;
+PIRATES_LateInitialize = LateInitialize;
+PIRATES_OnShutdown = OnShutdown;
 
 
 -- ===========================================================================
@@ -484,6 +485,24 @@ end
 -- ===========================================================================
 -- OVERRIDE BASE
 -- ===========================================================================
+
+function OnShutdown()
+	PIRATES_OnShutdown();
+	local pEnglishPointerWavesOverlay:object = UILens.GetOverlay(ENGLISH_POINTER_WAVES_OVERLAY_NAME);
+	if(pEnglishPointerWavesOverlay == nil) then
+		print("Error: missing hunger waves overlay");
+		return;
+	end
+	pEnglishPointerWavesOverlay:ResetAllWaves();
+
+	local pDowsingRodWavesOverlay:object = UILens.GetOverlay(DOWSING_ROD_WAVES_OVERLAY_NAME);
+	if(pDowsingRodWavesOverlay == nil) then
+		print("Error: missing hunger waves overlay");
+		return;
+	end
+	pDowsingRodWavesOverlay:ResetAllWaves();
+end
+
 -- ===========================================================================
 function LateInitialize( isReload:boolean )
 	PIRATES_LateInitialize( isReload );

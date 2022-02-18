@@ -4196,7 +4196,7 @@
 			<Text>Your ability to attract [COLOR:ResCultureLabelCS]VISITING TOURISTS[ENDCOLOR] to your civilization is a function of the difference between your own [ICON_Culture] Culture production, and that of the civilization whose [COLOR:ResCultureLabelCS]DOMESTIC TOURIST[ENDCOLOR] you are attempting to attract.</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_CULTURE_VICTORY_DETAILS">
-			<Text>To achieve a [COLOR:ResCultureLabelCS]CULTURE[ENDCOLOR] victory, you must attract [COLOR:ResCultureLabelCS]VISITING TOURISTS[ENDCOLOR] by generating high amounts of [ICON_Culture] Culture and [ICON_Tourism] Tourism. Victory is achieved when you attract more [COLOR:ResCultureLabelCS]VISITING TOURISTS[ENDCOLOR] to your civilization than any other civilization has [COLOR:ResCultureLabelCS]DOMESTIC TOURISTS[ENDCOLOR] at home.</Text>
+			<Text>To achieve a [COLOR:ResCultureLabelCS]CULTURE[ENDCOLOR] victory, you must become [COLOR:ResCultureLabelCS]CULTURALLY DOMINANT[ENDCOLOR] over all other civilizations. Cultural dominance occurs when you attract more [COLOR:ResCultureLabelCS]VISITING TOURISTS[ENDCOLOR] to your civilization than the other civilization has [COLOR:ResCultureLabelCS]DOMESTIC TOURISTS[ENDCOLOR] at home.[NEWLINE][NEWLINE]Generating high amounts of [ICON_Culture] Culture and [ICON_Tourism] Tourism increases both your domestic tourists and visiting tourists from other civilizations.</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_RANKINGS_CULTURE_DETAILS_DOMESTIC_TOURISTS">
 			<Text>Your [COLOR:ResCultureLabelCS]DOMESTIC TOURISTS[ENDCOLOR] represent the tourists from your civilization that are currently happy vacationing within your borders.</Text>
@@ -5151,6 +5151,9 @@
 		</Row>
 		<Row Tag="LOC_ROUTECHOOSER_YIELD_SOURCE_BONUSES">
 			<Text>{1_YieldAmount} {2_YieldIconString} {3_YieldName} from other bonuses.</Text>
+		</Row>
+		<Row Tag="LOC_ROUTECHOOSER_YIELD_SOURCE_MULTIPLIERS">
+			<Text>{4_PercentAmount : number +#;-#}% {2_YieldIconString} {3_YieldName} ({1_YieldAmount : number +#.#;-#.#}) from overall percentage effects.</Text>
 		</Row>
 		<Row Tag="LOC_ROUTECHOOSER_YIELD_SOURCE_TOTAL">
 			<Text>{1_YieldAmount} {2_YieldIconString} {3_YieldName} total</Text>

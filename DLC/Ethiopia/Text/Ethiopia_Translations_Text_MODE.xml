@@ -1540,10 +1540,10 @@
       <Text>{1_SocietyName} {1: plural 1?{1: gender m?découvert; f?découverte;}; 2?{1: gender m?découverts; f?découvertes;};}</Text>
     </Replace>
     <Replace Tag="LOC_DISCOVERED_SOCIETY_FIRST_DESC" Language="fr_FR">
-      <Text>Vous avez découvert une mystérieuse société secrète, {1: plural 1?{1: gender *:vowel?l'; m?le ; f?la ;}; 2?les ;}{2_SocietyIconString} {1_SocietyName}, et gagné un [Icon_Governor] titre de gouverneur.</Text>
+      <Text>Vous avez découvert une mystérieuse société secrète, {2_SocietyIconString} {1: plural 1?{1: gender *:vowel?l'; m?le ; f?la ;}; 2?les ;} {1_SocietyName}, et gagné un [Icon_Governor] titre de gouverneur.</Text>
     </Replace>
     <Replace Tag="LOC_DISCOVERED_SOCIETY_SUBSEQUENT_DESC" Language="fr_FR">
-      <Text>Vous avez découvert une mystérieuse société secrète, {1: plural 1?{1: gender *:vowel?l'; m?le ; f?la ;}; 2?les ;}{2_SocietyIconString} {1_SocietyName}.</Text>
+      <Text>Vous avez découvert une mystérieuse société secrète, {2_SocietyIconString} {1: plural 1?{1: gender *:vowel?l'; m?le ; f?la ;}; 2?les ;}{1_SocietyName}.</Text>
     </Replace>
     <Replace Tag="LOC_DISCOVERED_SOCIETY_WHILE_MEMBER_OF_ANOTHER" Language="fr_FR">
       <Text>L'homme dans l'ombre vous fait signe d'approcher et se propose de vous montrer les merveilles{1: plural 1?{1: gender *:no_article? d'; *:vowel? de l'; m? du ; f? de la ;}; 2? des ;}{1_SocietyName}. Trop tard, il remarque votre sourire entendu et se rend compte que vous appartenez déjà aux {2_MemberSocietyName}. Dans sa folie, il vous a laissé voir le signe secret qui permet aux membres de son groupe de se reconnaître entre eux ! Vous n'aurez aucun mal à les identifier. </Text>
@@ -5800,7 +5800,7 @@
       <Text>Установление контакта с тайным обществом — это только начало. Далее вам станет доступен уникальный [ICON_Governor] губернатор с мощными бонусами, которого даже не нужно назначать в город. Чтобы стать полноценным членом тайного общества, назначьте соответствующего губернатора. Выбор общества окончателен: вы останетесь в нем до конца игры.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_INITIATION_PARA_2" Language="ru_RU">
-      <Text>Заключение союзов с игроками — членами того же тайного общества, что и вы, быстрее принесет очки союза, а у самих игроков будет более высокое мнение о вас в режиме дипломатии. Однако члены конкурирующих обществ, знающие о вашей принадлежности, будут вас осуждать.</Text>
+      <Text>Заключение союзов с игроками — членами того же тайного общества, что и вы, быстрее принесет очки союза, а у самих игроков будет более высокое мнение о вас. Однако членство в конкурирующем тайном обществе негативно повлияет на отношения.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_SECRETSOCIETIES_CHAPTER_DEEPER_MYSTERIES_TITLE" Language="ru_RU">
       <Text>Великие тайны</Text>
@@ -6304,7 +6304,7 @@
       <Text>В мирное время может находиться на чужих территориях.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_OCCULT_RESEARCH_DESCRIPTION" Language="ru_RU">
-      <Text>Проект, дающий [ICON_Gold] золота каждый ход. Дает [ICON_SCIENCE] науки за каждую лей-линию в этом городе. После завершения дает очки [ICON_GreatScientist] великого ученого, [ICON_GreatMerchant] великого торговца и [ICON_GreatEngineer] великого инженера. Для проекта требуется кампус.</Text>
+      <Text>Проект, дающий [ICON_Gold] золото каждый ход. После завершения дает [ICON_SCIENCE] науку за каждую лей-линию в этом городе, а также очки [ICON_GreatScientist] великого ученого, [ICON_GreatMerchant] великого торговца и [ICON_GreatEngineer] великого инженера. Требуется кампус.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_DARK_SUMMONING_DESCRIPTION" Language="ru_RU">
       <Text>На каждом ходу дает много [ICON_Faith] веры. По завершении сектанты будут понижать лояльность еще на 2 ед. (максимум — до 30 ед.). Для проекта требуется обелиск старого бога.</Text>

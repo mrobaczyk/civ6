@@ -255,6 +255,12 @@ CREATE TABLE "BarbarianTribes" (
 		PRIMARY KEY(TribeType),
 		FOREIGN KEY (RequiredResource) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE);
 
+CREATE TABLE "BarbarianTribe_ExtraUnits" (
+		"TribeType" TEXT NOT NULL,
+		"UnitType" TEXT NOT NULL,
+		"Number" INTEGER NOT NULL DEFAULT 1,
+		PRIMARY KEY(TribeType, UnitType));
+
 CREATE TABLE "BarbarianTribe_MapConditions" (
 		"MapConditionSetType" TEXT NOT NULL,
 		"TerrainType" TEXT,

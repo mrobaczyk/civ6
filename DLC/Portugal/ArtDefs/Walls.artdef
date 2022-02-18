@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..ArtDefSet>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>545</build>
+		<revision>603</revision>
+	</m_Version>
+	<m_TemplateName text="DynamicGeo"/>
+	<m_RootCollections>
+		<Element>
+			<m_CollectionName text="WallSet"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="IMPROVEMENT_ANCIENT_TOWER_DEFENSE"/>
+							<m_ParamName text="Gameplay Name"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Ordering"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Era Art Set"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>5.000000</m_fValue>
+										<m_ParamName text="Unit Length"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="ANC_Zombie_Tower"/>
+										<m_RootCollectionName text="TowerSet"/>
+										<m_ArtDefPath text="Walls.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text="DynamicGeo"/>
+										<m_ParamName text="Tower Set"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="DEFAULT"/>
+										<m_RootCollectionName text="ArtEra"/>
+										<m_ArtDefPath text="Eras.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text="Eras"/>
+										<m_ParamName text="Era"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="NATL_PARK"/>
+										<m_ParamName text="Generator"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="RANDOM"/>
+										<m_ParamName text="WallPartOrdering"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="Wall Pieces"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="IMP_ANC_Zombie_Wall_A"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Portugal_Walls_Wall Pieces"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="IMP_ANC_Zombie_HalfWall_A"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>1</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Portugal_Walls_Wall Pieces001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="IMP_ANC_Zombie_Wall_B"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Portugal_Walls_Wall Pieces002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+								<Element>
+									<m_CollectionName text="Gate"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Default Era"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="AncientTowerDefenseWallsSet"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values>
+						<Element class="AssetObjects..StringValue">
+							<m_Value text="IMPROVEMENT_MODERN_TOWER_DEFENSE"/>
+							<m_ParamName text="Gameplay Name"/>
+						</Element>
+						<Element class="AssetObjects..IntValue">
+							<m_nValue>0</m_nValue>
+							<m_ParamName text="Ordering"/>
+						</Element>
+					</m_Values>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Era Art Set"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>5.000000</m_fValue>
+										<m_ParamName text="Unit Length"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="MOD_Zombie_Tower"/>
+										<m_RootCollectionName text="TowerSet"/>
+										<m_ArtDefPath text="Walls.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text="DynamicGeo"/>
+										<m_ParamName text="Tower Set"/>
+									</Element>
+									<Element class="AssetObjects..ArtDefReferenceValue">
+										<m_ElementName text="DEFAULT"/>
+										<m_RootCollectionName text="ArtEra"/>
+										<m_ArtDefPath text="Eras.artdef"/>
+										<m_CollectionIsLocked>true</m_CollectionIsLocked>
+										<m_TemplateName text="Eras"/>
+										<m_ParamName text="Era"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="NATL_PARK"/>
+										<m_ParamName text="Generator"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="RANDOM"/>
+										<m_ParamName text="WallPartOrdering"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections>
+								<Element>
+									<m_CollectionName text="Wall Pieces"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="IMP_MOD_Zombie_Wall_A"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Portugal_Walls_Wall Pieces"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="IMP_MOD_Zombie_HalfWall_A"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>1</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Portugal_Walls_Wall Pieces001"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+									<Element>
+										<m_Fields>
+											<m_Values>
+												<Element class="AssetObjects..BLPEntryValue">
+													<m_EntryName text="IMP_MOD_Zombie_Wall_B"/>
+													<m_XLPClass text="DynamicGeometry"/>
+													<m_XLPPath text="walls.xlp"/>
+													<m_BLPPackage text="landmarks/Walls"/>
+													<m_LibraryName text="DynamicGeometry"/>
+													<m_ParamName text="Asset"/>
+												</Element>
+												<Element class="AssetObjects..IntValue">
+													<m_nValue>2</m_nValue>
+													<m_ParamName text="Unit Length"/>
+												</Element>
+											</m_Values>
+										</m_Fields>
+										<m_ChildCollections/>
+										<m_Name text="Portugal_Walls_Wall Pieces002"/>
+										<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+									</Element>
+								</Element>
+								<Element>
+									<m_CollectionName text="Gate"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+								</Element>
+							</m_ChildCollections>
+							<m_Name text="Default Era"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="ModernTowerDefenseWallsSet"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+		<Element>
+			<m_CollectionName text="TowerSet"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Pieces"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_ANC_Zombie_Tower_A"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="BuildingTower"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_ANC_Zombie_End"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="CoastalTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EndPiece"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_ANC_Zombie_Tower_B"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="BuildingTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Portugal_Walls_Pieces"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_ANC_Zombie_Tower_B2"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="BuildingTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Portugal_Walls_Pieces2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_ANC_Zombie_Tower_B3"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="BuildingTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Portugal_Walls_Pieces3"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_ANC_Zombie_End2"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="CoastalTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EndPiece2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_ANC_Zombie_Tower_A2"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="BuildingTower2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="ANC_Zombie_Tower"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+			<Element>
+				<m_Fields>
+					<m_Values/>
+				</m_Fields>
+				<m_ChildCollections>
+					<Element>
+						<m_CollectionName text="Pieces"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_MOD_Zombie_Tower_A"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="BuildingTower"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_MOD_Zombie_Tower_B"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="BuildingTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Portugal_Walls_Pieces"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_MOD_Zombie_Tower_End"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="CoastalTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EndPiece"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_MOD_Zombie_Tower_A2"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="Tower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="BuildingTower2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_MOD_Zombie_Tower_End2"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="CoastalTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="EndPiece2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_MOD_Zombie_Tower_B2"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="BuildingTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Portugal_Walls_Pieces2"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>1.000000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="IMP_MOD_Zombie_Tower_B3"/>
+										<m_XLPClass text="DynamicGeometry"/>
+										<m_XLPPath text="walls.xlp"/>
+										<m_BLPPackage text="landmarks/Walls"/>
+										<m_LibraryName text="DynamicGeometry"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="BuildingTower"/>
+										<m_ParamName text="Type"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Portugal_Walls_Pieces3"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+					</Element>
+				</m_ChildCollections>
+				<m_Name text="MOD_Zombie_Tower"/>
+				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+			</Element>
+		</Element>
+	</m_RootCollections>
+</AssetObjects..ArtDefSet>
+
