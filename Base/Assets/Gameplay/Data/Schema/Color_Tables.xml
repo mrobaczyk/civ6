@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GameData>
+	<Table name="Colors">
+		<Column name="Type" type="text" notnull="true" primarykey="true"/>
+		<Column name="Red" type="float" notnull="true" default="1.0" />
+		<Column name="Green" type="float" notnull="true" default="1.0" />
+		<Column name="Blue" type="float" notnull="true" default="1.0" />
+		<Column name="Alpha" type="float" notnull="true" default="1.0" />
+	</Table>
+		
+    <Table name="PlayerColors">
+		<Column name="Type" type="text" notnull="true" primarykey="true" />
+		<Column name="Usage" type="text" notnull="true" />
+		<Column name="PrimaryColor" type="text" notnull="true" reference="Colors(Type)" />
+		<Column name="SecondaryColor" type="text" notnull="true" reference="Colors(Type)" />
+		<Column name="TextColor" type="text" notnull="true" reference="Colors(Type)" />
+	</Table>
+</GameData>

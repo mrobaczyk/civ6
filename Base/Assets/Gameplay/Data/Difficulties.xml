@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by matthew beach (Firaxis Games) -->
+<GameInfo>
+	<Kinds>
+		<Row Kind="KIND_DIFFICULTY"/>
+    <InsertOrIgnore Kind="KIND_TRAIT" />
+	</Kinds>
+	<Types>
+		<Row Type="DIFFICULTY_SETTLER" Kind="KIND_DIFFICULTY"/>
+		<Row Type="DIFFICULTY_CHIEFTAIN" Kind="KIND_DIFFICULTY"/>
+		<Row Type="DIFFICULTY_WARLORD" Kind="KIND_DIFFICULTY"/>
+		<Row Type="DIFFICULTY_PRINCE" Kind="KIND_DIFFICULTY"/>
+		<Row Type="DIFFICULTY_KING" Kind="KIND_DIFFICULTY"/>
+		<Row Type="DIFFICULTY_EMPEROR" Kind="KIND_DIFFICULTY"/>
+		<Row Type="DIFFICULTY_IMMORTAL" Kind="KIND_DIFFICULTY"/>
+		<Row Type="DIFFICULTY_DEITY" Kind="KIND_DIFFICULTY"/>
+
+    <Row Type="TRAIT_DIFFICULTY_SETTLER" Kind="KIND_TRAIT" />
+    <Row Type="TRAIT_DIFFICULTY_CHIEFTAIN" Kind="KIND_TRAIT" />
+    <Row Type="TRAIT_DIFFICULTY_WARLORD" Kind="KIND_TRAIT" />
+    <Row Type="TRAIT_DIFFICULTY_PRINCE" Kind="KIND_TRAIT" />
+    <Row Type="TRAIT_DIFFICULTY_KING" Kind="KIND_TRAIT" />
+    <Row Type="TRAIT_DIFFICULTY_EMPEROR" Kind="KIND_TRAIT" />
+    <Row Type="TRAIT_DIFFICULTY_IMMORTAL" Kind="KIND_TRAIT" />
+    <Row Type="TRAIT_DIFFICULTY_DEITY" Kind="KIND_TRAIT" />
+
+  </Types>
+	<!-- Note: The game is permitted to assume there are at least 8 difficulties. Do not have fewer in this table (or remove them such that there are fewer ).
+      Also, the order of the first 8 matters. They are the presumed difficulties of the game -->
+	<Difficulties>
+		<Row DifficultyType="DIFFICULTY_SETTLER" Name="LOC_DIFFICULTY_SETTLER_NAME"/>
+		<Row DifficultyType="DIFFICULTY_CHIEFTAIN" Name="LOC_DIFFICULTY_CHIEFTAIN_NAME"/>
+		<Row DifficultyType="DIFFICULTY_WARLORD" Name="LOC_DIFFICULTY_WARLORD_NAME"/>
+		<Row DifficultyType="DIFFICULTY_PRINCE" Name="LOC_DIFFICULTY_PRINCE_NAME"/>
+		<Row DifficultyType="DIFFICULTY_KING" Name="LOC_DIFFICULTY_KING_NAME"/>
+		<Row DifficultyType="DIFFICULTY_EMPEROR" Name="LOC_DIFFICULTY_EMPEROR_NAME"/>
+		<Row DifficultyType="DIFFICULTY_IMMORTAL" Name="LOC_DIFFICULTY_IMMORTAL_NAME"/>
+		<Row DifficultyType="DIFFICULTY_DEITY" Name="LOC_DIFFICULTY_DEITY_NAME"/>
+	</Difficulties>
+	<Traits>
+		<Row TraitType="TRAIT_DIFFICULTY_SETTLER" Name="LOC_TRAIT_DIFFICULTY_SETTLER_NAME" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_DIFFICULTY_CHIEFTAIN" Name="LOC_TRAIT_DIFFICULTY_CHIEFTAIN_NAME" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_DIFFICULTY_WARLORD" Name="LOC_TRAIT_DIFFICULTY_WARLORD_NAME" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_DIFFICULTY_PRINCE" Name="LOC_TRAIT_DIFFICULTY_PRINCE_NAME" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_DIFFICULTY_KING" Name="LOC_TRAIT_DIFFICULTY_KING_NAME" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_DIFFICULTY_EMPEROR" Name="LOC_TRAIT_DIFFICULTY_EMPEROR_NAME" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_DIFFICULTY_IMMORTAL" Name="LOC_TRAIT_DIFFICULTY_IMMORTAL_NAME" Description="LOC_PLACEHOLDER"/>
+		<Row TraitType="TRAIT_DIFFICULTY_DEITY" Name="LOC_TRAIT_DIFFICULTY_DEITY_NAME" Description="LOC_PLACEHOLDER"/>
+	</Traits>
+	<DifficultyTraits>
+		<Row DifficultyType="DIFFICULTY_SETTLER" TraitType="TRAIT_DIFFICULTY_SETTLER"/>
+		<Row DifficultyType="DIFFICULTY_CHIEFTAIN" TraitType="TRAIT_DIFFICULTY_CHIEFTAIN"/>
+		<Row DifficultyType="DIFFICULTY_WARLORD" TraitType="TRAIT_DIFFICULTY_WARLORD"/>
+		<Row DifficultyType="DIFFICULTY_PRINCE" TraitType="TRAIT_DIFFICULTY_PRINCE"/>
+		<Row DifficultyType="DIFFICULTY_KING" TraitType="TRAIT_DIFFICULTY_KING"/>
+		<Row DifficultyType="DIFFICULTY_EMPEROR" TraitType="TRAIT_DIFFICULTY_EMPEROR"/>
+		<Row DifficultyType="DIFFICULTY_IMMORTAL" TraitType="TRAIT_DIFFICULTY_IMMORTAL"/>
+		<Row DifficultyType="DIFFICULTY_DEITY" TraitType="TRAIT_DIFFICULTY_DEITY"/>
+	</DifficultyTraits>
+</GameInfo>

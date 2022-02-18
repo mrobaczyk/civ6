@@ -1,0 +1,77 @@
+
+INSERT INTO "Languages" VALUES('en_US','English',null,2);
+INSERT INTO "Languages" VALUES('fr_FR','Français',null,3);
+INSERT INTO "Languages" VALUES('de_DE','Deutsch',null,2);
+INSERT INTO "Languages" VALUES('it_IT','Italiano',null,2);
+INSERT INTO "Languages" VALUES('es_ES','Español',null,2);
+INSERT INTO "Languages" VALUES('ja_JP','日本語 (Japanese)',null,1);
+INSERT INTO "Languages" VALUES('ru_RU','Русский (Russian)',null,8);
+INSERT INTO "Languages" VALUES('pl_PL','polski',null,10);
+INSERT INTO "Languages" VALUES('ko_KR','한국어/조선말 (Korean)',null,1);
+INSERT INTO "Languages" VALUES('zh_Hant_HK','汉语/漢語 (Traditional Chinese)',null,1);
+INSERT INTO "Languages" VALUES('zh_Hans_CN','汉语/漢語 (Simplified Chinese)',null,1);
+INSERT INTO "Languages" VALUES('pt_BR','Português do Brasil',null,3);
+
+INSERT INTO "AudioLanguages" VALUES('English(US)', 'en_US');
+INSERT INTO "AudioLanguages" VALUES('French(France)', 'fr_FR');
+INSERT INTO "AudioLanguages" VALUES('German', 'de_DE');
+INSERT INTO "AudioLanguages" VALUES('Italian', 'it_IT');
+INSERT INTO "AudioLanguages" VALUES('Spanish(Spain)', 'es_ES');
+INSERT INTO "AudioLanguages" VALUES('Japanese', 'ja_JP');
+INSERT INTO "AudioLanguages" VALUES('Russian', 'ru_RU');
+INSERT INTO "AudioLanguages" VALUES('Polish', 'pl_PL');
+INSERT INTO "AudioLanguages" VALUES('Korean', 'ko_KR');
+INSERT INTO "AudioLanguages" VALUES('Chinese(Taiwan)', 'zh_Hans_CN');
+INSERT INTO "AudioLanguages" VALUES('Chinese(PRC)', 'zh_Hant_HK');
+
+INSERT INTO "DefaultAudioLanguages" VALUES('en_US','English(US)');
+INSERT INTO "DefaultAudioLanguages" VALUES('fr_FR','French(France)');
+INSERT INTO "DefaultAudioLanguages" VALUES('de_DE','German');
+INSERT INTO "DefaultAudioLanguages" VALUES('it_IT','Italian');
+INSERT INTO "DefaultAudioLanguages" VALUES('es_ES','Spanish(Spain)');
+INSERT INTO "DefaultAudioLanguages" VALUES('ja_JP','Japanese');
+INSERT INTO "DefaultAudioLanguages" VALUES('ru_RU','Russian');
+INSERT INTO "DefaultAudioLanguages" VALUES('pl_PL','Polish');
+INSERT INTO "DefaultAudioLanguages" VALUES('ko_KR','Korean');
+INSERT INTO "DefaultAudioLanguages" VALUES('zh_Hant_HK','Chinese(PRC)');
+INSERT INTO "DefaultAudioLanguages" VALUES('zh_Hans_CN','Chinese(Taiwan)');
+INSERT INTO "DefaultAudioLanguages" VALUES('pt_BR','English(US)');
+
+INSERT INTO "SteamLanguages" VALUES('english','en_US');
+INSERT INTO "SteamLanguages" VALUES('french','fr_FR');
+INSERT INTO "SteamLanguages" VALUES('german','de_DE');
+INSERT INTO "SteamLanguages" VALUES('spanish','es_ES');
+INSERT INTO "SteamLanguages" VALUES('italian','it_IT');
+INSERT INTO "SteamLanguages" VALUES('russian','ru_RU');
+INSERT INTO "SteamLanguages" VALUES('japanese','ja_JP');
+INSERT INTO "SteamLanguages" VALUES('polish','pl_PL');
+INSERT INTO "SteamLanguages" VALUES('koreana','ko_KR');
+INSERT INTO "SteamLanguages" VALUES('tchinese','zh_Hant_HK');
+INSERT INTO "SteamLanguages" VALUES('schinese','zh_Hans_CN');
+INSERT INTO "SteamLanguages" VALUES('brazilian','pt_BR');
+
+INSERT INTO "LanguagePriorities" VALUES('en_US','en_US',100);
+INSERT INTO "LanguagePriorities" VALUES('fr_FR','fr_FR',100);
+INSERT INTO "LanguagePriorities" VALUES('de_DE','de_DE',100);
+INSERT INTO "LanguagePriorities" VALUES('it_IT','it_IT',100);
+INSERT INTO "LanguagePriorities" VALUES('es_ES','es_ES',100);
+INSERT INTO "LanguagePriorities" VALUES('ja_JP','ja_JP',100);
+INSERT INTO "LanguagePriorities" VALUES('ru_RU','ru_RU',100);
+INSERT INTO "LanguagePriorities" VALUES('pl_PL','pl_PL',100);
+INSERT INTO "LanguagePriorities" VALUES('ko_KR','ko_KR',100);
+INSERT INTO "LanguagePriorities" VALUES('zh_Hans_CN','zh_Hans_CN',100);
+INSERT INTO "LanguagePriorities" VALUES('zh_Hant_HK','zh_Hant_HK',100);
+INSERT INTO "LanguagePriorities" VALUES('pt_BR','pt_BR',100);
+
+INSERT INTO "FontStyleSheets" VALUES('en_US','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('fr_FR','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('de_DE','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('it_IT','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('es_ES','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('ja_JP','Civ6_FontStyles_ja_JP.xml', 'NotoSansCJKjp-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('ru_RU','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('pl_PL','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('ko_KR','Civ6_FontStyles_ko_KR.xml', 'NotoSansCJKkr-Regular.otf');
+INSERT INTO "FontStyleSheets" VALUES('zh_Hans_CN','Civ6_FontStyles_zh_Hans_CN.xml', 'NotoSansCJKsc-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('zh_Hant_HK','Civ6_FontStyles_zh_Hant_HK.xml', 'NotoSansCJKtc-Medium.otf');
+INSERT INTO "FontStyleSheets" VALUES('pt_BR','Civ6_FontStyles_EFIGS.xml', 'MinionPro-Medium.otf');

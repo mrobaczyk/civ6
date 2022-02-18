@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Bradley Olson (Firaxis Games) -->
+<GameInfo>
+	<Kinds>
+		<Row Kind="KIND_GAMEMODE"/>
+		<Row Kind="KIND_TURNPHASE"/>
+		<Row Kind="KIND_TURNMODE"/>
+		<Row Kind="KIND_TURNSEGMENT"/>
+	</Kinds>
+	<Types>
+		<Row Type="TURNPHASE_SINGLEPLAYER"      Kind="KIND_TURNPHASE"/>	<!-- One Phase, Sequential Turns -->
+		<Row Type="TURNPHASE_SIMULTANEOUS"      Kind="KIND_TURNPHASE"/>	<!-- One Phase, Simultaneous Turns -->
+		<Row Type="TURNPHASE_DYNAMIC"			Kind="KIND_TURNPHASE"/>	<!-- One Phase, Dynamic Turns -->
+		<Row Type="TURNPHASE_TWOPHASE"			Kind="KIND_TURNPHASE"/>  <!-- Two Phases, Sequential Tactical Phase for Unit Movement, Simultaneous Strategic Phase for Everything Else -->
+		
+		<Row Type="TURNMODE_SIMULTANEOUS"       Kind="KIND_TURNMODE"/> 
+		<Row Type="TURNMODE_SEQUENTIAL"         Kind="KIND_TURNMODE"/>
+		<Row Type="TURNMODE_DYNAMIC"            Kind="KIND_TURNMODE"/> <!-- Players at peace are simultaneous, players at war are sequential. -->
+	
+		<Row Type="TURNSEG_SINGLEPLAYER"        Kind="KIND_TURNSEGMENT"/> 
+		<Row Type="TURNSEG_SINGLEPHASE"			Kind="KIND_TURNSEGMENT"/> <!-- Turn Segement for single phased multiplayer modes (TURNPHASE_SIMULTANEOUS, TURNPHASE_DYNAMIC)-->
+		<Row Type="TURNSEG_SIMULTANEOUS"		Kind="KIND_TURNSEGMENT"/>
+		<!-- TURNPHASE_TWOPHASE -->
+		<Row Type="TURNSEG_TACTICAL"            Kind="KIND_TURNSEGMENT"/>
+		<Row Type="TURNSEG_STRATEGIC"           Kind="KIND_TURNSEGMENT"/>	
+	</Types>
+	<TurnSegments>
+		<Row TurnSegmentType="TURNSEG_SINGLEPLAYER" DisplayName=""							Sound=""									AllowStrategicCommands="true"   AllowTacticalCommands="true"	TimeLimit_Base ="30"   TimeLimit_PerCity="10"   TimeLimit_PerUnit="5"/>
+		<Row TurnSegmentType="TURNSEG_SINGLEPHASE"	DisplayName=""							Sound="Play_MP_Strategic_Turn_Start"		AllowStrategicCommands="true"   AllowTacticalCommands="true"	TimeLimit_Base ="30"  TimeLimit_PerCity="10"  TimeLimit_PerUnit="5"/>
+		<!-- TURNPHASE_TWOPHASE -->
+		<Row TurnSegmentType="TURNSEG_TACTICAL"     DisplayName="LOC_TACTICAL_PHASE"		Sound="Play_MP_Tactical_Turn_Start"			AllowStrategicCommands="false"  AllowTacticalCommands="true"	TimeLimit_Base ="10"  TimeLimit_PerCity="0"   TimeLimit_PerUnit="5"/>
+		<Row TurnSegmentType="TURNSEG_STRATEGIC"    DisplayName="LOC_STRATEGIC_PHASE"		Sound="Play_MP_Strategic_Turn_Start"		AllowStrategicCommands="true"   AllowTacticalCommands="false"	TimeLimit_Base ="20"  TimeLimit_PerCity="10"  TimeLimit_PerUnit="0"/>
+
+</TurnSegments>
+	<TurnPhases>
+		<Row TurnPhaseType="TURNPHASE_SINGLEPLAYER"	PhaseOrder="0"  TurnMode="TURNMODE_SEQUENTIAL"		ActiveSegmentType="TURNSEG_SINGLEPLAYER"/>
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS"	PhaseOrder="0"  TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_SINGLEPHASE"/>
+		<Row TurnPhaseType="TURNPHASE_DYNAMIC"		PhaseOrder="0"  TurnMode="TURNMODE_DYNAMIC"			ActiveSegmentType="TURNSEG_SINGLEPHASE"/>
+		
+		<!-- TURNPHASE_TWOPHASE -->
+		<Row TurnPhaseType="TURNPHASE_TWOPHASE"		PhaseOrder="0"  TurnMode="TURNMODE_DYNAMIC"			ActiveSegmentType="TURNSEG_TACTICAL"/>
+		<Row TurnPhaseType="TURNPHASE_TWOPHASE"		PhaseOrder="1"  TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_STRATEGIC"/>
+
+</TurnPhases>
+</GameInfo>

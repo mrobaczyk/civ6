@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<GameInfo>
+	<Kinds>
+		<Row Kind="KIND_DEFEAT"/>
+		<Row Kind="KIND_VICTORY"/>
+		<Row Kind="KIND_VICTORY_STRATEGY"/>
+	</Kinds>
+	<Types>
+		<Row Type="DEFEAT_DEFAULT" Kind="KIND_DEFEAT"/>
+		<Row Type="VICTORY_DEFAULT" Kind="KIND_VICTORY"/>
+		<Row Type="VICTORY_CONQUEST" Kind="KIND_VICTORY"/>
+		<Row Type="VICTORY_CULTURE" Kind="KIND_VICTORY"/>
+		<Row Type="VICTORY_RELIGIOUS" Kind="KIND_VICTORY"/>
+		<Row Type="VICTORY_SCORE" Kind="KIND_VICTORY"/>
+		<Row Type="VICTORY_TECHNOLOGY" Kind="KIND_VICTORY"/>
+		<Row Type="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Kind="KIND_VICTORY_STRATEGY"/>
+	</Types>
+	<Defeats>
+		<Row DefeatType="DEFEAT_DEFAULT" Name="LOC_DEFEAT_DEFAULT_NAME" Blurb="LOC_DEFEAT_DEFAULT_TEXT" RequirementSetId="DEFAULT_DEFEAT_REQUIREMENTS"/>
+	</Defeats>
+	<Victories>
+		<Row VictoryType="VICTORY_SCORE" Name="LOC_VICTORY_SCORE_NAME" Blurb="LOC_VICTORY_SCORE_TEXT" RequirementSetId="REQUIREMENTS_SCORE_VICTORY"/>
+		<Row VictoryType="VICTORY_DEFAULT" Name="LOC_VICTORY_DEFAULT_NAME" Blurb="LOC_VICTORY_DEFAULT_TEXT" RequirementSetId="REQUIREMENTS_DEFAULT_VICTORY"/>
+		<Row VictoryType="VICTORY_CONQUEST" Name="LOC_VICTORY_DOMINATION_NAME" Blurb="LOC_VICTORY_DOMINATION_TEXT" RequirementSetId="REQUIREMENTS_CONQUEST_VICTORY"/>
+		<Row VictoryType="VICTORY_CULTURE" Name="LOC_VICTORY_CULTURE_NAME" Blurb="LOC_VICTORY_CULTURE_TEXT" RequirementSetId="REQUIREMENTS_CULTURE_VICTORY"/>
+		<Row VictoryType="VICTORY_RELIGIOUS" Name="LOC_VICTORY_RELIGIOUS_NAME" Blurb="LOC_VICTORY_RELIGION_TEXT" RequirementSetId="REQUIREMENTS_RELIGIOUS_VICTORY"/>
+		<Row VictoryType="VICTORY_TECHNOLOGY" Name="LOC_VICTORY_SCIENCE_NAME" Blurb="LOC_VICTORY_SCIENCE_TEXT" RequirementSetId="REQUIREMENTS_TECHNOLOGY_VICTORY"/>
+	</Victories>
+	<!-- AI victory strategies (may move this to its own file in the future if it gets too large) -->
+	<Strategies>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" VictoryType="VICTORY_CULTURE" NumConditionsNeeded="2"/>
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" VictoryType="VICTORY_CONQUEST" NumConditionsNeeded="3"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" VictoryType="VICTORY_RELIGIOUS" NumConditionsNeeded="2"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" VictoryType="VICTORY_TECHNOLOGY" NumConditionsNeeded="3"/>
+		<!-- This isn't really a victory strategy, but I don't have a separate table for these. If it works well, I'll separate the two -->
+    <Row StrategyType ="STRATEGY_RAPID_EXPANSION" NumConditionsNeeded="3"/>
+		<Row StrategyType="STRATEGY_NAVAL" NumConditionsNeeded="1"/>
+	</Strategies>
+	<!-- Reminder: These conditions must be met to START following the strategy - they are not victory conditions themselves -->
+	<StrategyConditions>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Good Culture City" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Writer" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Artist" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Musician" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Works" ThresholdValue="3"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Taken Capital" ThresholdValue="1" />
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Opponents" ThresholdValue="2" />
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Leads Military" ThresholdValue="25" />
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Leads Score" ThresholdValue="10" />
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Next Lower Score" ThresholdValue="100" />
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Taken Capital" ThresholdValue="2" Exclusive="true" />
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Good Faith City" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Founded Religion"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Unconverted Cities" ThresholdValue="2"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Cannot Found Religion" Disqualifier="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Religion Destroyed" Disqualifier="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Is Modern" Disqualifier="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Good Tech City" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Is Renaissance" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Has Science Wonders" ThresholdValue="2"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Has Tech Lead" ThresholdValue="33"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Lags Military" ThresholdValue="33"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Finished Space Project" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Finished Space Project" ThresholdValue="2" Exclusive="true"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Has Settle Spot" ThresholdValue="0"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Cities Under Threat" ThresholdValue="1"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Major Civ Wars" ThresholdValue="1"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Is Not Major" Disqualifier="true"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Handicap at or below" ThresholdValue="2" Disqualifier="true"/>
+		<Row StrategyType="STRATEGY_NAVAL" ConditionFunction="Is On Island"/>
+	</StrategyConditions>
+	<!-- The AI will increase or decrease the value of these yields while running the appropriate strategy -->
+	<Strategy_Priorities>
+		<Row StrategyType="STRATEGY_NAVAL" ListType="NavalUnitPreferences"/>
+		<Row StrategyType="STRATEGY_NAVAL" ListType="NavalSettlementPreferences"/>
+		<Row StrategyType="STRATEGY_NAVAL" ListType="NavalSettlementBoost"/>
+		<Row StrategyType="STRATEGY_NAVAL" ListType="NavalPreferredTechs"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionSettlementBoost"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ListType="ExpansionUnitPreferences"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryPseudoYields"/>
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryYields"/>
+    <Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryPseudoYields"/>
+    <Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryYields"/>
+    <Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryOperations"/>
+    <Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ListType="ReligiousVictoryBehaviors"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ListType="ReligiousVictoryPseudoYields"/>
+		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ListType="ReligiousVictoryYields"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryDistricts"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryProjects"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryPseudoYields"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryTechs"/>
+		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" ListType="ScienceVictoryYields"/>
+	</Strategy_Priorities>
+	<AiListTypes>
+		<Row ListType="CultureVictoryPseudoYields" />
+		<Row ListType="CultureVictoryYields" />
+    <Row ListType="ExpansionSettlementBoost" />
+    <Row ListType="ExpansionUnitPreferences" />
+		<Row ListType="MilitaryVictoryOperations" />
+		<Row ListType="MilitaryVictoryPseudoYields" />
+		<Row ListType="MilitaryVictoryYields" />
+		<Row ListType="NavalUnitPreferences" />
+		<Row ListType="NavalSettlementPreferences" />
+		<Row ListType="NavalSettlementBoost" />
+		<Row ListType="NavalPreferredTechs" />
+		<Row ListType="ReligiousVictoryBehaviors" />
+		<Row ListType="ReligiousVictoryPseudoYields" />
+		<Row ListType="ReligiousVictoryYields" />
+		<Row ListType="ScienceVictoryDistricts" />
+		<Row ListType="ScienceVictoryProjects" />
+		<Row ListType="ScienceVictoryPseudoYields" />
+    <Row ListType="ScienceVictoryTechs" />
+		<Row ListType="ScienceVictoryYields" />
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="CultureVictoryPseudoYields" System="PseudoYields"/>
+		<Row ListType="CultureVictoryYields" System="Yields"/>
+		<Row ListType="ExpansionSettlementBoost" System="SettlementPreferences"/>
+		<Row ListType="ExpansionUnitPreferences" System="PseudoYields"/>
+		<Row ListType="MilitaryVictoryOperations" System="AiOperationTypes"/>
+		<Row ListType="MilitaryVictoryPseudoYields" System="PseudoYields"/>
+		<Row ListType="MilitaryVictoryYields" System="Yields"/>
+		<Row ListType="NavalUnitPreferences" System="PseudoYields"/>
+		<Row ListType="NavalSettlementPreferences" System="PlotEvaluations"/>
+		<Row ListType="NavalSettlementBoost" System="SettlementPreferences"/>
+		<Row ListType="NavalPreferredTechs" System="Technologies"/>
+		<Row ListType="ReligiousVictoryBehaviors" System="TriggeredTrees"/>
+		<Row ListType="ReligiousVictoryPseudoYields" System="PseudoYields"/>
+		<Row ListType="ReligiousVictoryYields" System="Yields"/>
+		<Row ListType="ScienceVictoryDistricts" System="Districts"/>
+		<Row ListType="ScienceVictoryProjects" System="Projects"/>
+		<Row ListType="ScienceVictoryPseudoYields" System="PseudoYields"/>
+    <Row ListType="ScienceVictoryTechs" System="Technologies" />
+		<Row ListType="ScienceVictoryYields" System="Yields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_WRITER" Value="25"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_ARTIST" Value="25"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_MUSICIAN" Value="25"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_TOURISM" Value="25"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_SCULPTURE" Value="10"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_PORTRAIT" Value="10"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_LANDSCAPE" Value="10"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_RELIGIOUS" Value="10"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_ARTIFACT" Value="10"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_WRITING" Value="10"/>
+		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GREATWORK_MUSIC" Value="10"/>
+		<Row ListType="CultureVictoryYields" Item="YIELD_CULTURE" Value="25"/>
+    <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-15"/>
+    <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_DECAY_TURNS" Value="-3"/>
+    <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
+    <Row ListType="ExpansionSettlementBoost" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="3"/>
+    <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-25"/>
+    <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="-25"/>
+    <Row ListType="ExpansionUnitPreferences" Item="PSEUDOYIELD_UNIT_SETTLER" Value="25"/>
+    <Row ListType="MilitaryVictoryOperations" Item="CITY_ASSAULT" Value="2"/>
+		<Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_DIPLOMATIC_BONUS" Value="-50"/>
+		<Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_NUCLEAR_WEAPON" Value="25"/>
+		<Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_COMBAT" Value="25"/>
+		<Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="25"/>
+		<Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_AIR_COMBAT" Value="25"/>
+		<Row ListType="MilitaryVictoryYields" Item="YIELD_PRODUCTION" Value="25"/>
+		<Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="150"/>
+		<Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-90" />
+		<Row ListType="NavalSettlementPreferences" Item="Coastal" Favored="false" Value="10"/>
+		<Row ListType="NavalSettlementPreferences" Item="Nearest Friendly City" Favored="false" Value="1"/>
+		<Row ListType="NavalSettlementPreferences" Item="Foreign Continent" Favored="false" Value="10"/>
+		<Row ListType="NavalSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
+		<Row ListType="NavalSettlementBoost" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="2"/>
+		<Row ListType="NavalPreferredTechs" Item="TECH_SAILING" Favored="true"/>
+		<Row ListType="NavalPreferredTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
+		<Row ListType="NavalPreferredTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
+		<Row ListType="NavalPreferredTechs" Item="TECH_CARTOGRAPHY" Favored="true"/>
+		<Row ListType="ReligiousVictoryBehaviors" Item="TRIGGER_RELIGIOUS_CITY_CONVERTED"/>
+		<Row ListType="ReligiousVictoryPseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="25"/>
+		<Row ListType="ReligiousVictoryYields" Item="YIELD_FAITH" Value="50"/>
+		<Row ListType="ScienceVictoryDistricts" Item="DISTRICT_SPACEPORT" Favored="true"/>
+		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_EARTH_SATELLITE" Favored="true"/>
+		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MOON_LANDING" Favored="true"/>
+		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MARS_REACTOR" Favored="true"/>
+		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MARS_HABITATION" Favored="true"/>
+		<Row ListType="ScienceVictoryProjects" Item="PROJECT_LAUNCH_MARS_HYDROPONICS" Favored="true"/>
+		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_TECHNOLOGY" Value="25"/>
+		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_GPP_SCIENTIST" Value="25"/>
+    <Row ListType="ScienceVictoryTechs" Item="TECH_ROCKETRY" Favored="true" />
+    <Row ListType="ScienceVictoryTechs" Item="TECH_SATELLITES" Favored="true" />
+    <Row ListType="ScienceVictoryTechs" Item="TECH_ROBOTICS" Favored="true" />
+    <Row ListType="ScienceVictoryTechs" Item="TECH_NUCLEAR_FUSION" Favored="true" />
+    <Row ListType="ScienceVictoryTechs" Item="TECH_NANOTECHNOLOGY" Favored="true" />
+		<Row ListType="ScienceVictoryYields" Item="YIELD_SCIENCE" Value="50"/>
+  </AiFavoredItems>
+	<TriggeredBehaviorTrees>
+		<Row TriggerType="TRIGGER_RELIGIOUS_CITY_CONVERTED" TreeName="Launch Inquisition" AIEvent="AI_EVENT_RELIGIOUS_CITY_CONVERTED" Priority="3"/>
+	</TriggeredBehaviorTrees>
+
+	<!-- Rankings Table data -->
+	<HistoricRankings>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_1_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_1_QUOTE</Quote>
+			<Score>2500</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_2_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_2_QUOTE</Quote>
+			<Score>2250</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_3_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_3_QUOTE</Quote>
+			<Score>2000</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_4_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_4_QUOTE</Quote>
+			<Score>1900</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_5_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_5_QUOTE</Quote>
+			<Score>1800</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_6_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_6_QUOTE</Quote>
+			<Score>1700</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_7_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_7_QUOTE</Quote>
+			<Score>1600</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_8_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_8_QUOTE</Quote>
+			<Score>1500</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_9_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_9_QUOTE</Quote>
+			<Score>1400</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_10_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_10_QUOTE</Quote>
+			<Score>1300</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_11_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_11_QUOTE</Quote>
+			<Score>1200</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_12_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_12_QUOTE</Quote>
+			<Score>1100</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_13_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_13_QUOTE</Quote>
+			<Score>1000</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_14_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_14_QUOTE</Quote>
+			<Score>900</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_15_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_15_QUOTE</Quote>
+			<Score>800</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_16_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_16_QUOTE</Quote>
+			<Score>700</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_17_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_17_QUOTE</Quote>
+			<Score>600</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_18_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_18_QUOTE</Quote>
+			<Score>500</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_19_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_19_QUOTE</Quote>
+			<Score>400</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_20_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_20_QUOTE</Quote>
+			<Score>300</Score>
+		</Row>
+		<Row>
+			<HistoricLeader>LOC_UI_ENDGAME_RANKING_LEADER_21_NAME</HistoricLeader>
+			<Quote>LOC_UI_ENDGAME_RANKING_LEADER_21_QUOTE</Quote>
+			<Score>0</Score>
+		</Row>
+	</HistoricRankings>
+
+	<!-- Default Defeat -->
+	<!-- Conditions - Player must have 0 settlers and not have built any cities, or have 0 cities.-->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>DEFAULT_DEFEAT_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>DEFAULT_DEFEAT_REQUIREMENTS</RequirementSetId>
+			<RequirementId>DEFAULT_DEFEAT_REQUIREMENT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>DEFAULT_DEFEAT_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_DEFAULT_DEFEAT</RequirementType>
+		</Row>
+	</Requirements>
+	<!-- Default Victory -->
+	<!-- Conditions - Player is last major civilization alive. -->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_DEFAULT_VICTORY</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_DEFAULT_VICTORY</RequirementSetId>
+			<RequirementId>DEFAULT_VICTORY_REQUIREMENT</RequirementId>
+		</Row>
+    <Row>
+      <RequirementSetId>REQUIREMENTS_DEFAULT_VICTORY</RequirementSetId>
+      <RequirementId>DEFAULT_VICTORY_DOMINATION_DISABLED</RequirementId>
+    </Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>DEFAULT_VICTORY_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_COLLECTION_COUNT_EQUALS</RequirementType>
+		</Row>
+    <Row>
+      <RequirementId>DEFAULT_VICTORY_DOMINATION_DISABLED</RequirementId>
+      <RequirementType>REQUIREMENT_GAME_VICTORY_ENABLED</RequirementType>
+      <Inverse>1</Inverse>
+    </Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>DEFAULT_VICTORY_REQUIREMENT</RequirementId>
+			<Name>CollectionType</Name>
+			<Value>COLLECTION_MAJOR_PLAYERS</Value>
+		</Row>
+		<Row>
+			<RequirementId>DEFAULT_VICTORY_REQUIREMENT</RequirementId>
+			<Name>Count</Name>
+			<Value>1</Value>
+		</Row>
+    <Row>
+      <RequirementId>DEFAULT_VICTORY_DOMINATION_DISABLED</RequirementId>
+      <Name>VictoryType</Name>
+      <Value>VICTORY_CONQUEST</Value>
+    </Row>
+	</RequirementArguments>
+	<!-- Score Victory -->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_SCORE_VICTORY</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_SCORE_VICTORY</RequirementSetId>
+			<RequirementId>VICTORY_SCORE_REQUIRES_MAX_TURN_REACHED</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_SCORE_VICTORY</RequirementSetId>
+			<RequirementId>VICTORY_SCORE_REQUIRES_PLAYER_HAS_HIGHEST_SCORE</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>VICTORY_SCORE_REQUIRES_MAX_TURN_REACHED</RequirementId>
+			<RequirementType>REQUIREMENT_GAME_TURN_MAX_REACHED</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>VICTORY_SCORE_REQUIRES_PLAYER_HAS_HIGHEST_SCORE</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_HIGHEST_SCORE</RequirementType>
+		</Row>
+	</Requirements>
+	<!-- Conquest Victory -->
+	<!--ConquestVictory Requirements
+    * Minimum Turn - 10
+    * For all cities in the game, either
+      - The city is a minor civ city
+      - The player owns the city-->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CONQUEST_VICTORY</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CONQUEST_VICTORY</RequirementSetId>
+			<RequirementId>CONQUEST_VICTORY_REQUIREMENT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>CONQUEST_VICTORY_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_DOMINATION_VICTORY</RequirementType>
+		</Row>
+	</Requirements>
+
+	<!-- Culture Victory -->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CULTURE_VICTORY</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_ENOUGH_TOURISTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_CULTURE_VICTORY</RequirementSetId>
+			<RequirementId>CULTURE_VICTORY_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_ENOUGH_TOURISTS</RequirementSetId>
+			<RequirementId>ENOUGH_TOURISTS_REQUIREMENT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>CULTURE_VICTORY_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_COLLECTION_ALL_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>ENOUGH_TOURISTS_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_TOURISTS_EXCEED_STAYCATIONERS</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>CULTURE_VICTORY_REQUIREMENT</RequirementId>
+			<Name>CollectionType</Name>
+			<Value>COLLECTION_MAJOR_PLAYERS</Value>
+		</Row>
+		<Row>
+			<RequirementId>CULTURE_VICTORY_REQUIREMENT</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>REQUIREMENTS_ENOUGH_TOURISTS</Value>
+		</Row>
+    <Row>
+      <RequirementId>CULTURE_VICTORY_REQUIREMENT</RequirementId>
+      <Name>MinimumCount</Name>
+      <Value>2</Value>
+    </Row>
+	</RequirementArguments>
+	<!-- Religious Victory -->
+	<!--ConquestVictory Requirements
+		* Minimum Turn - 10
+		* For all players (major and minor) in the game, either
+			- The city is a minor civ city
+			- The player owns the city-->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_RELIGIOUS_VICTORY</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_RELIGIOUS_VICTORY_PER_PLAYER</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_RELIGIOUS_VICTORY</RequirementSetId>
+			<RequirementId>RELIGIOUS_VICTORY_PER_PLAYER_REQUIREMENTS_MET</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_RELIGIOUS_VICTORY_PER_PLAYER</RequirementSetId>
+			<RequirementId>REQUIREMENTS_RELIGIOUS_VICTORY_PER_PLAYER_MAJORITY_RELIGION_IS_OWNER</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>RELIGIOUS_VICTORY_PER_PLAYER_REQUIREMENTS_MET</RequirementId>
+			<RequirementType>REQUIREMENT_COLLECTION_ALL_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIREMENTS_RELIGIOUS_VICTORY_PER_PLAYER_MAJORITY_RELIGION_IS_OWNER</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_MAJORITY_RELIGION_IS_OWNER</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>RELIGIOUS_VICTORY_PER_PLAYER_REQUIREMENTS_MET</RequirementId>
+			<Name>CollectionType</Name>
+			<Value>COLLECTION_MAJOR_PLAYERS</Value>
+		</Row>
+		<Row>
+			<RequirementId>RELIGIOUS_VICTORY_PER_PLAYER_REQUIREMENTS_MET</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>REQUIREMENTS_RELIGIOUS_VICTORY_PER_PLAYER</Value>
+		</Row>
+    <Row>
+      <RequirementId>RELIGIOUS_VICTORY_PER_PLAYER_REQUIREMENTS_MET</RequirementId>
+      <Name>MinimumCount</Name>
+      <Value>2</Value>
+    </Row>
+	</RequirementArguments>
+	<!-- Technology Victory -->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_TECHNOLOGY_VICTORY</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_TECHNOLOGY_VICTORY</RequirementSetId>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_REACTOR_MODULE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_TECHNOLOGY_VICTORY</RequirementSetId>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HABITATION_MODULE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_TECHNOLOGY_VICTORY</RequirementSetId>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HYDROPONICS_MODULE</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_REACTOR_MODULE</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_COMPLETED_PROJECT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HABITATION_MODULE</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_COMPLETED_PROJECT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HYDROPONICS_MODULE</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_COMPLETED_PROJECT</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_REACTOR_MODULE</RequirementId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_LAUNCH_MARS_REACTOR</Value>
+		</Row>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_REACTOR_MODULE</RequirementId>
+			<Name>MinimumCompletions</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HABITATION_MODULE</RequirementId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_LAUNCH_MARS_HABITATION</Value>
+		</Row>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HABITATION_MODULE</RequirementId>
+			<Name>MinimumCompletions</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HYDROPONICS_MODULE</RequirementId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_LAUNCH_MARS_HYDROPONICS</Value>
+		</Row>
+		<Row>
+			<RequirementId>TECHNOLOGY_VICTORY_MARS_HYDROPONICS_MODULE</RequirementId>
+			<Name>MinimumCompletions</Name>
+			<Value>1</Value>
+		</Row>
+	</RequirementArguments>
+</GameInfo>
