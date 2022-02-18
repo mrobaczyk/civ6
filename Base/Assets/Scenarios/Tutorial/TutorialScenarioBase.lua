@@ -165,7 +165,7 @@ function TutorialItemBank1()
 	item_selectSettler:SetShowPortrait(true)
 	item_selectSettler:SetOpenFunction(
 		function()
-			SetFunctionBeforeEveryOpen( CloseScreensIfOpen );			-- This will be called before EVERY item's open() until disabled later.  (Not in global init because loading from saves will likely keeping having this behavior.)
+			SetGlobalPreActivateFunction( CloseScreensIfOpen );		-- Called before EVERY item's open(); disabled later.  It's not in global init because loading from saves will likely keeping having this behavior.
 			UserConfiguration.SetLockedValue("AutoUnitCycle", 0);
 		end );
 
@@ -1997,7 +1997,7 @@ function TutorialItemBank1()
 		end );
 	item:SetOpenFunction(
 		function()
-			SetFunctionBeforeEveryOpen( nil );					-- Remove the auto-closing of the screens and partial screens
+			SetGlobalPreActivateFunction( nil );				-- Remove the auto-closing of the screens and partial screens
 			AddUnitHexRestriction( "UNIT_BUILDER", 14, 12 );	-- Builder cannot go home.
 			RemoveUnitHexRestriction( "UNIT_SCOUT", 14, 13 );	-- Scouts can again hang out north-east of the city (no longer blocking warriro)
 		end );

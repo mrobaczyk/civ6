@@ -210,7 +210,7 @@ CREATE TABLE 'DomainValueFilters'(
 	'Key2' TEXT,
 	'Domain' TEXT NOT NULL,
 	'Value' NOT NULL,
-	'Filter' TEXT NOT NULL CHECK ('Filter' IN ('difference','intersect')),
+	'Filter' TEXT NOT NULL,
 	PRIMARY KEY('Key1','Key2','Domain','Value')
 );
 

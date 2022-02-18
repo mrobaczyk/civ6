@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<BaseGameText>
+	<EnglishText>
 		<Row Tag="LOC_WORLDBUILDER_TAB_TECHS">
 			<Text>Techs</Text>
 		</Row>
@@ -142,16 +142,19 @@
 		<Row Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_SET_VISIBILITY">
 			<Text>Terrain Visibility</Text>
 		</Row>
+		<Row Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_GOODY_HUTS">
+			<Text>Goody Huts</Text>
+		</Row>
 
 		<Row Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT">
-			<Text>Map Editor</Text>
+			<Text>Map Details and Text</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_BUILDER_PLAYER_EDITOR_TT">
 			<Text>Player Editor</Text>
 		</Row>
 
 		<Row Tag="LOC_WORLD_BUILDER_PLACEMENT_HELP">
-			<Text>Left Click to place. Right Click to Remove.</Text>
+			<Text>Left click to place, right click to remove, right click drag to paint. Press CTRL-Z to undo a placement, CTRL-Y to redo.</Text>
 		</Row>
 
 		<Row Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP">
@@ -183,7 +186,7 @@
 		</Row>
 
 		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD">
-			<Text>Map is a Mod</Text>
+			<Text>Package Map as a Mod</Text>
 		</Row>
 
 		<Row Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD_TT">
@@ -283,7 +286,188 @@
 		<Row Tag="LOC_WORLDBUILDER_DEFAULT">
 			<Text>Default</Text>
 		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SWITCH_ADV">
+			<Text>Switch to Advanced Mode</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SWITCH_BASIC">
+			<Text>Switch to Basic Mode</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TITLE">
+			<Text>Switch to World Builder Advanced Mode?</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT">
+			<Text>Advanced Mode is still in development, and is completely unsupported. We've made this available for advanced modders who would like to experiment with advanced scenario features. Mods created within this mode and loaded into the game could cause Civilization VI to become unstable.</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE">
+			<Text>Tribe</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FULL_CIV">
+			<Text>Civilization</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_CITY_STATE">
+			<Text>City-State</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FREE_CITIES">
+			<Text>Free City</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_PLACEMENT_OK">
+			<Text>Placement successful</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK">
+			<Text>placement successful</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED">
+			<Text>This must be in a {1_Name} district</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_IN_PROGRESS">
+			<Text>One of these is already in progress</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_ALREADY_EXISTS">
+			<Text>One of these already exists</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_OCCUPIED_BY_ENEMY">
+			<Text>District is occupied by an opponent</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_IS_PILLAGED">
+			<Text>District is pillaged</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_DISTRICT_REQUIRES">
+			<Text>District requires </Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_POPULATION">
+			<Text> population</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_IS_CONTAMINATED">
+			<Text>District is contaminated</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_FAILURE_UNKNOWN">
+			<Text>Couldn't place this and unable to determine why</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_FAILURE_FEATURE">
+			<Text>Couldn't place feature for unknown reason</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_STATUS_STARTUP">
+			<Text>Welcome to World Builder!</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_UNIT_PLACED">
+			<Text>Unit placed successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_OWNERSHIP_SET">
+			<Text>Set plot's owner successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_START_POS_SET">
+			<Text>Starting position set successfully</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES">
+			<Text>Clear Resources</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES">
+			<Text>Scatter Resources</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES_HELP">
+			<Text>Clears all resources on the map and generates new ones (this will take several seconds)</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_CLEARED">
+			<Text>All resources cleared</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_SCATTERED">
+			<Text>Cleared and regenerated all resources</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_STATUS_CANT_REDO">
+			<Text>There is nothing to redo</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_STATUS_CANT_UNDO">
+			<Text>There is nothing to undo</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_STATUS_REDO">
+			<Text>Redo successful</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_STATUS_UNDO">
+			<Text>Undo successful</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_BRUSH_LABEL">
+			<Text>Brush size</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_BRUSH_SMALL">
+			<Text>Small</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM">
+			<Text>Medium</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_BRUSH_LARGE">
+			<Text>Large</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT">
+			<Text>Place Plot</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_SELECTED_PLOT">
+			<Text>Selected plot:</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_START_POSITION">
+			<Text>Start position:</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_PLACE">
+			<Text>Place</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_PLOT">
+			<Text>Plot</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAP_EDITOR">
+			<Text>Map Editor</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAPEDIT_MODTITLE">
+			<Text>Mod name (required)</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAPEDIT_MODDESC">
+			<Text>Mod description (required)</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAPEDIT_MAPTITLE">
+			<Text>Map name (required)</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAPEDIT_MAPDESC">
+			<Text>Map description (required)</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAPEDIT_ADDLDATA">
+			<Text>For mod creator's use (optional)</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYID">
+			<Text>DUMMY_ID</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYTEXT">
+			<Text>Dummy text</Text>
+		</Row>
 
-
-	</BaseGameText>
+		<!-- Front End Text -->
+		<Row Tag="LOC_SETUP_CREATE_MAP">
+			<Text>Create Map</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_WORLDBUILDER_START">
+			<Text>Generate</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAP_NAME">
+			<Text>Map Name</Text>
+		</Row>
+		<Row Tag="LOC_SETUP_WORLDBUILDER_WORLDWRAP">
+			<Text>World Wrap</Text>
+		</Row>		
+		<Row Tag="LOC_WORLDBUILDER_MAP_NAME_DESC">
+			<Text>The name of the map.  This can be changed later.</Text>
+		</Row>
+		<Row Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE">
+			<Text>Map: {1_MapName}</Text>
+		</Row>
+		<Row Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER">
+			<Text>Return to Map</Text>
+		</Row>
+		
+		<!-- World Builder Maps -->
+		<Row Tag="LOC_MAP_WORLDBUILDER_EMPTY">
+			<Text>Empty Map</Text>
+		</Row>
+		<Row Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION">
+			<Text>A blank canvas.</Text>
+		</Row>
+		
+		
+	</EnglishText>
 </GameData>

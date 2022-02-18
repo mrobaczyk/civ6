@@ -7814,10 +7814,10 @@
       <Text>Tanto melhorias quanto construções em distritos sem guarnições podem ser pilhados. Essa ação os deixa inoperantes e concede algum tipo de saque para a unidade atacante. À exceção da cura, essas recompensas de saque aumentam à medida que você progride pelo jogo.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_2" Language="pt_BR">
-      <Text>Pilhar um distrito consome 3 pontos de movimento, ou todo o seu movimento. Cada edificação em um distrito deve ser pilhada separadamente e concede algum tipo de saque baseado no distrito (veja abaixo). Uma vez pilhada, uma edificação não pode ser pilhada novamente até ser reativada pelo seu dono (feito através do menu de produção e leva 25% do [ICON_Production] custo de produção da construção inicial).[NEWLINE]Pilhar um Campus concede [ICON_Science] ciência.[NEWLINE]Pilhar um Local Sagrado concede [ICON_Faith] fé.[NEWLINE]Pilhar um Centro Comercial concede [ICON_Gold] ouro.[NEWLINE]Pilhar um Teatro concede [ICON_Culture] cultura.[NEWLINE]Pilhar um Porto concede [ICON_Gold] ouro.[NEWLINE]Pilhar uma Zona Industrial concede [ICON_Science] ciência.[NEWLINE]Pilhar um Aeródromo concede [ICON_Gold] ouro.[NEWLINE]Pilhar um Aqueduto concede [ICON_Gold] ouro.[NEWLINE]Pilhar um Espaçoporto concede [ICON_Science] ciência.[NEWLINE]Pilhar um distrito de Entretenimento concede cura.</Text>
+      <Text>Pilhar um distrito consome 3 pontos de movimento, ou todo o seu movimento. Cada edificação em um distrito deve ser pilhada separadamente e concede algum tipo de saque baseado no distrito. Consulte a página do distrito para ganhos específicos. Uma vez pilhada, uma edificação não pode ser pilhada novamente até ser reativada pelo seu dono (feito através do menu de produção e leva 25% do [ICON_Production] custo de produção da construção inicial).</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_3" Language="pt_BR">
-      <Text>Pilhar uma melhoria consome 3 pontos de movimento, ou todo o seu movimento (se a unidade possuir menos do que 3 [ICON_Movement] pontos de movimento). Irá marcar a melhoria no painel como "pilhada". Uma vez pilhada, uma melhoria não pode ser pilhada novamente até que seja reativada pelo seu dono (uma operação de Construtor que sempre custa um turno, mas não requer uma carga de Construtor).[NEWLINE]Pilhar uma Fazenda concede cura.[NEWLINE]Pilhar uma Mina concede [ICON_Science] ciência.[NEWLINE]Pilhar uma Pedreira concede [ICON_Culture] cultura.[NEWLINE]Pilhar Barcos de Pesca concede cura.[NEWLINE]Pilhar um Pasto concede [ICON_Gold] ouro.[NEWLINE]Pilhar uma Plantação concede [ICON_Faith] fé.[NEWLINE]Pilhar um Campo concede [ICON_Gold] ouro.[NEWLINE]Pilhar uma Serraria concede [ICON_Science] ciência.</Text>
+      <Text>Pilhar uma melhoria consome 3 pontos de movimento, ou todo o seu movimento (se a unidade possuir menos do que 3 [ICON_Movement] pontos de movimento). Irá marcar a melhoria no painel como "pilhada". Uma vez pilhada, uma melhoria não pode ser pilhada novamente até que seja reativada pelo seu dono (uma operação de Construtor que sempre custa um turno, mas não requer uma carga de Construtor). Consulte a página do distrito para ganhos específicos.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MOVEMENT_NAME" Language="pt_BR">
       <Text>Movimento das Unidades</Text>
@@ -8222,7 +8222,7 @@
       <Text>A civilização com mais [ICON_Envoy] Emissários em uma cidade-estado, e com no mínimo 3 [ICON_Envoy] Emissários, é considerada suserana dessa cidade-estado. Só pode haver no máximo um suserano; empate não é possível. Se ninguém tem [ICON_Envoy] Emissários em uma cidade-estado, então não há suserano. O suserano recebe diversos benefícios importantes:</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_2" Language="pt_BR">
-      <Text>Bônus exclusivo: um poderoso bônus que nenhuma outra cidade-estado fornecerá (ex.: Jerusalém atua como uma segunda cidade sagrada para a sua religião).</Text>
+      <Text>Bônus exclusivo: um poderoso bônus, dado ao suserano, que nenhuma outra cidade-estado fornecerá.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_3" Language="pt_BR">
       <Text>{LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS}</Text>
@@ -14244,6 +14244,13 @@
 
 [i]TechTree_Meter_Done
 
+[2]MODDING CONTRIBUTIONS
+
+[3]UI
+[4]Bradd Szonye - Map Tacks
+
+[i]TechTree_Meter_Done
+
 [2]FRANKENSTEIN TEST GROUP
 [4]Camikaze
 [4]Sam "SamBC" Barnett-Cormack
@@ -17303,7 +17310,7 @@
 [4]Marek Vojtko
 [4]Kevin Jones
 [4]Theodore Maselko
-[4]Gabe Ortega
+[4]Gabriel Ortega
 
 [3]Lead Technical Artist
 [4]Arthur Gould
@@ -17693,6 +17700,8 @@
 [4]John Koziol
 [4]Jett Barton
 [4]Timo Schwabe
+[4]Lee Shipp
+[4]Steve Daly
 
 [i]TechTree_Meter_Done
 
@@ -33820,7 +33829,7 @@
       <Text>Carregar mapa</Text>
     </Replace>
     <Replace Tag="LOC_LOAD_TILED" Language="pt_BR">
-      <Text>Mapa de Importação</Text>
+      <Text>Importar mapa do editor</Text>
     </Replace>
     <Replace Tag="LOC_OPEN_DIRECTORY" Language="pt_BR">
       <Text>Aberto</Text>
@@ -34533,6 +34542,9 @@
     <Replace Tag="LOC_GAMESTART_COUNTDOWN_FORMAT" Language="pt_BR">
       <Text>Jogo começando</Text>
     </Replace>
+    <Replace Tag="LOC_READY_COUNTDOWN_FORMAT" Language="pt_BR">
+      <Text>Prepare-se</Text>
+    </Replace>
     <Replace Tag="LOC_HOTSEAT_DEFAULT_PLAYER_NAME" Language="pt_BR">
       <Text>Jogador</Text>
     </Replace>
@@ -34819,7 +34831,7 @@
       <Text>Carregar mapa</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_IMPORT" Language="pt_BR">
-      <Text>Mapa de Importação</Text>
+      <Text>Importar mapa do editor</Text>
     </Replace>
     <Replace Tag="LOC_RANDOM_LEADER" Language="pt_BR">
       <Text>Líder aleatório</Text>
@@ -35607,6 +35619,9 @@
     <Replace Tag="LOC_GAME_START_ERROR_MOD_OWNERSHIP" Language="pt_BR">
       <Text>Um ou mais Mods não foram comprados.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_SCRIPT_PROCESSING" Language="pt_BR">
+      <Text>Um ou mais dos scripts de inicialização apresenta um erro. Veja lua.log</Text>
+    </Replace>
     <Replace Tag="LOC_CLOUD_SAVES_REQUIRE_LINKED_ACCOUNT" Language="pt_BR">
       <Text>Partidas salvas em nuvem necessitam de uma Conta 2K vinculada.</Text>
     </Replace>
@@ -35838,11 +35853,23 @@
     <Replace Tag="LOC_OPTIONS_WEBHOOK_FREQ" Language="pt_BR">
       <Text>Frequência webhook partida na nuvem:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE" Language="pt_BR">
+      <Text>Modo Play By Cloud:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE_TOOLTIP" Language="pt_BR">
+      <Text>Modo A - Compatível com IFTTT[NEWLINE]Variáveis de Payload JSON[NEWLINE][ICON_Bullet]"value1" = Nome do jogo[NEWLINE][ICON_Bullet]"value2" = Nome do jogador[NEWLINE][ICON_Bullet]"value3" = Turno do jogo[NEWLINE]Modo B - Compatível com Discord[NEWLINE]Variáveis de Payload JSON[NEWLINE][ICON_Bullet]"content" = Mensagem de notificação</Text>
+    </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_MY_TURN" Language="pt_BR">
       <Text>Meu turno</Text>
     </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_EVERY_TURN" Language="pt_BR">
       <Text>A cada turno</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_A" Language="pt_BR">
+      <Text>Modo A</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_B" Language="pt_BR">
+      <Text>Modo B</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_REMINDER_TITLE" Language="pt_BR">
       <Text>Configure suas notificações!</Text>
@@ -36704,10 +36731,10 @@
       <Text>Desbloqueia a habilidade de Legião Romana para construir um Forte Romano, exclusivo de Roma.[NEWLINE][NEWLINE]Unidade ocupante recebe +4 de [ICON_Strength] força de defesa e automaticamente recebe 2 turnos de fortificação.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="pt_BR">
-      <Text>Desbloqueia a habilidade do Construtor para construir uma Esfinge, exclusiva do Egito.[NEWLINE][NEWLINE]+1 de [ICON_Faith] fé e +1 de [ICON_Culture] cultura. +1 de apelo. +2 de [ICON_Faith] fé se ao lado de uma maravilha. Pode ser construída em várzea.</Text>
+      <Text>Desbloqueia a habilidade de Construtores para construir uma Esfinge, exclusiva do Egito.[NEWLINE][NEWLINE]+1 de [ICON_Faith] fé e +1 de [ICON_Culture] cultura. +1 de apelo. +2 de [ICON_Faith] fé se ao lado de uma maravilha. Não pode ser construída ao lado de outra Esfinge. Pode ser construída em planícies aluviais.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_STEPWELL_DESCRIPTION" Language="pt_BR">
-      <Text>Desbloqueia a habilidade de Construtores para construir um Poço com Degraus, exclusivo da Índia.[NEWLINE][NEWLINE]1 de [ICON_Food] alimento e +1 de [ICON_Housing] habitação. +1 de [ICON_Faith] fé se adjacente a um distrito de Local Sagrado. +1 de [ICON_Food] alimento se adjacente a uma Fazenda. Não pode ser construído em colinas ou adjacente a um outro Poço com Degraus.</Text>
+      <Text>Desbloqueia a habilidade de Construtores para construir um Poço com Degraus, exclusivo da Índia.[NEWLINE][NEWLINE]+1 de [ICON_Food] alimento e +1 de [ICON_Housing] habitação. +1 de [ICON_Faith] fé se adjacente a um distrito de Local Sagrado. +1 de [ICON_Food] alimento se adjacente a uma Fazenda. [ICON_Housing] habitação, [ICON_Faith] fé e [ICON_Food] alimento adicionais à medida que você avançar na árvore cívica e tecnológica. Não pode ser construído em colinas ou adjacente a um outro Poço com Degraus.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_ZIGGURAT_DESCRIPTION" Language="pt_BR">
       <Text>Desbloqueia a habilidade de Construtores para construir um Zigurate, exclusivo da Suméria.[NEWLINE][NEWLINE]+2 de [ICON_Science] ciência. +1 de [ICON_Culture] cultura se ao lado de um rio. Não pode ser construído em colinas.</Text>
@@ -38215,6 +38242,33 @@
     <Replace Tag="LOC_HUD_MAP_OPTIONS" Language="pt_BR">
       <Text>Opções do mapa</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH" Language="pt_BR">
+      <Text>Pesquisa de mapa</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_IN_PROGRESS" Language="pt_BR">
+      <Text>Pesquisando...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_UPDATING" Language="pt_BR">
+      <Text>Atualizando...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_WAITING_FOR_TURN" Language="pt_BR">
+      <Text>Aguardando próximo turno...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_BEGIN_SEARCH" Language="pt_BR">
+      <Text>PESQUISAR</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_CLEAR_SEARCH" Language="pt_BR">
+      <Text>LIMPAR</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_NO_SEARCH_TERMS_TOOLTIP" Language="pt_BR">
+      <Text>Não é possível buscar sem ao menos um termo de busca.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TOOLTIP" Language="pt_BR">
+      <Text>Termos de pesquisa[NEWLINE]Os resultados dos termos de pesquisa conterão TODOS os termos inseridos aqui.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_FILTER_TOOLTIP" Language="pt_BR">
+      <Text>Filtro de pesquisa[NEWLINE]Os resultados dos termos de pesquisa não conterão NENHUM dos termos inseridos aqui.</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_CIVICS_ENABLES" Language="pt_BR">
       <Text>Habilita</Text>
     </Replace>
@@ -38295,6 +38349,42 @@
     </Replace>
     <Replace Tag="LOC_HUD_POPUP_PROJECT_CREATED_BY_UNKNOWN" Language="pt_BR">
       <Text>Uma civilização desconhecida se aproxima da Vitória Científica.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_MOUNTAIN" Language="pt_BR">
+      <Text>Montanha</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_HILL" Language="pt_BR">
+      <Text>Colina</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_WATER" Language="pt_BR">
+      <Text>Água</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_FEATURE" Language="pt_BR">
+      <Text>Característica</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_IMPROVEMENT" Language="pt_BR">
+      <Text>Melhoria</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_OWNED" Language="pt_BR">
+      <Text>Próprio</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNCLAIMED" Language="pt_BR">
+      <Text>Não reivindicado</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_PILLAGED" Language="pt_BR">
+      <Text>Pilhado</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_NATIONAL_PARK" Language="pt_BR">
+      <Text>Parque Nacional</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNDER_CONSTRUCTION" Language="pt_BR">
+      <Text>Em construção</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_CONTAMINATION" Language="pt_BR">
+      <Text>Contaminação</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_SPECIALIST" Language="pt_BR">
+      <Text>Especialista</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TO_BOOST" Language="pt_BR">
       <Text>Aprimorar:</Text>
@@ -39235,6 +39325,9 @@
     <Replace Tag="LOC_TOOLTIP_APPEAL_DISGUSTING" Language="pt_BR">
       <Text>Nojento</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING" Language="pt_BR">
+      <Text>Curando</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLOMACY_HIDDEN_AGENDAS_TT" Language="pt_BR">
       <Text>Alcance o nível de acesso: [ICON_VisSecret] ABERTO para ver agendas secretas.</Text>
     </Replace>
@@ -40052,10 +40145,10 @@
       <Text>Adicionar esse jogador como um amigo no Steam.</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_PLAYER_PIN_TOOLTIP" Language="pt_BR">
-      <Text>Clique com o botão esquerdo para olhar no marcador. Clique com o botão direito para editar o marcador.</Text>
+      <Text>Clique com o botão esquerdo para ver o marcador no mapa. Clique com o botão direito para editar.</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_REMOTE_PIN_TOOLTIP" Language="pt_BR">
-      <Text>Clique com o botão esquerdo para olhar no marcador.</Text>
+      <Text>Clique com o botão esquerdo para ver o marcador no mapa.</Text>
     </Replace>
     <Replace Tag="LOC_GAME_PAUSED_TITLE" Language="pt_BR">
       <Text>Jogo pausado!</Text>
@@ -40127,7 +40220,7 @@
       <Text>Este Museu já tem uma grande obra deste artista. Adicione grandes obras do mesmo tema, mas de artistas únicos para receber o bônus.</Text>
     </Replace>
     <Replace Tag="LOC_GREAT_WORKS_ARTIFACT_LOCKED_FROM_MOVE" Language="pt_BR">
-      <Text>Artefatos podem ser movidos apenas para Museus de Arqueologia (que possuam espaços vazios).</Text>
+      <Text>Artefatos podem ser trocados apenas entre Museus Arqueológicos completos (sem espaços vazios).</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_SCULPTURE" Language="pt_BR">
       <Text>[ICON_GreatWork_Sculpture] Escultura</Text>
@@ -40672,6 +40765,18 @@
     <Replace Tag="LOC_REPORTS_SHOW_ONLY_NOT_OWNED" Language="pt_BR">
       <Text>Mostrar apenas recursos que não possuo</Text>
     </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_CIVS_BY" Language="pt_BR">
+      <Text>Ordenar civilizações por</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_AMOUNT" Language="pt_BR">
+      <Text>quantidade</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER" Language="pt_BR">
+      <Text>jogador</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER_SLOT" Language="pt_BR">
+      <Text>espaço de jogador</Text>
+    </Replace>
     <Replace Tag="LOC_REPORTS_SORT_BY" Language="pt_BR">
       <Text>Ordenar por</Text>
     </Replace>
@@ -40897,31 +41002,40 @@
     <Replace Tag="LOC_WORLDBUILDER_TEXT_TAG" Language="pt_BR">
       <Text>Marcador de texto</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_REMOVE_ITEM" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE" Language="pt_BR">
+      <Text>Travar fila para mostrá-la sempre.</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNLOCK_AUTOHIDE_QUEUE" Language="pt_BR">
+      <Text>Desbloqueie para esconder automaticamente a fila ao fechar o painel de produção.</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_TOGGLE_AUTOHIDE_QUEUE" Language="pt_BR">
+      <Text>Alternar ocultação automática de fila</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_REMOVE_ITEM" Language="pt_BR">
       <Text>Remover</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_LEFT_ITEM" Language="pt_BR">
-      <Text>Mover à esquerda</Text>
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_LEFT_ITEM" Language="pt_BR">
+      <Text>Mover para a esquerda</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_RIGHT_ITEM" Language="pt_BR">
-      <Text>Mover à direita</Text>
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_RIGHT_ITEM" Language="pt_BR">
+      <Text>Mover para a direita</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUTTON_TEXT" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUTTON_TEXT" Language="pt_BR">
       <Text>Administrador</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUILDINGS_TOOLTIP" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUILDINGS_TOOLTIP" Language="pt_BR">
       <Text>Distritos e edificações</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_WONDERS_TOOLTIP" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_PANEL_WONDERS_TOOLTIP" Language="pt_BR">
       <Text>Maravilhas</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_UNITS_TOOLTIP" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNITS_TOOLTIP" Language="pt_BR">
       <Text>Unidades</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_PROJECTS_TOOLTIP" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_PANEL_PROJECTS_TOOLTIP" Language="pt_BR">
       <Text>Projetos</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_MANAGER_TITLE" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_MANAGER_TITLE" Language="pt_BR">
       <Text>Gerenciamento de produção</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_FOUNDING" Language="pt_BR">
@@ -40932,6 +41046,9 @@
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_POPULATION" Language="pt_BR">
       <Text>População</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_QUEUE_BEHAVIOR_TT" Language="pt_BR">
+      <Text>Use o menu de opções para alterar o comportamento padrão de mostrar/esconder a fila de produção.</Text>
     </Replace>
     <Replace Tag="LOC_HUD_FULLSCREEN_MAP" Language="pt_BR">
       <Text>Mostrar Mapa em Tela Cheia</Text>
@@ -40980,6 +41097,18 @@
     </Replace>
     <Replace Tag="LOC_REMEMBER_MY_CHOICE" Language="pt_BR">
       <Text>Lembrar minha escolha</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_TITLE" Language="pt_BR">
+      <Text>Seu turno no Play By Cloud</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_JOIN_MATCH" Language="pt_BR">
+      <Text>Entrar na partida</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_TITLE" Language="pt_BR">
+      <Text>Fim da partida Play By Cloud</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_VIEW_RESULTS" Language="pt_BR">
+      <Text>Ver resultados</Text>
     </Replace>
     <Replace Tag="LOC_REPRESENTATIVE" Language="pt_BR">
       <Text>um representante</Text>
@@ -41492,7 +41621,7 @@
       <Text>+5 de [ICON_Faith] fé por cada civilização (incluindo Índia) que encontraram e que já fundou uma religião e não esteja atualmente em guerra. Civilizações opositoras recebem o dobro de fadiga de guerra por lutar contra Gandhi.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_THUNDERBOLT_DESCRIPTION" Language="pt_BR">
-      <Text>Permite saques navais por todas as unidades navais de curto alcance e +50% de [ICON_PRODUCTION] produção para todas as unidades navais de curto alcance.</Text>
+      <Text>Permite saques navais por todas as unidades navais de curto alcance e +50% de [ICON_PRODUCTION] produção para todas as unidades navais de curto alcance. Ganhe a unidade exclusiva Dracar com Navegação.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_FIRST_EMPEROR_DESCRIPTION" Language="pt_BR">
       <Text>Ao construir maravilhas antigas e clássicas, você pode gastar cargas de Construtor para completar 15% do custo original da maravilha. Construtores recebem uma carga a mais.</Text>
@@ -43997,7 +44126,7 @@
       <Text>Aperfeiçoa melhorias de Fazenda para agricultura mecanizada. +1 de bônus de adjacência de [ICON_Food] alimento para todas as melhorias de Fazenda às quais estão adjacentes.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_STEEL_DESCRIPTION" Language="pt_BR">
-      <Text>+1 de [ICON_Production] produção para melhoria de Serraria. Desbloqueia defesas urbanas, dado automaticamente a todas as suas cidades uma força de fortificação de 200 e a habilidade de realizar ataques a distância. Todas as melhorias de muralha anteriores se tornam obsoletas e unidades de apoio a cerco deixam de ter eficácia.</Text>
+      <Text>+1 de [ICON_Production] produção para melhoria de Serraria. Desbloqueia defesas urbanas, dado automaticamente a todas as suas cidades uma força de fortificação de 400 e a habilidade de realizar ataques a distância. Todas as melhorias de muralha anteriores se tornam obsoletas e unidades de apoio a cerco deixam de ter eficácia.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_COMBUSTION_DESCRIPTION" Language="pt_BR">
       <Text>+1 de [ICON_Movement] movimento para unidades embarcadas.</Text>
@@ -45502,6 +45631,9 @@
     <Replace Tag="LOC_MODS_USER_CONTENT" Language="pt_BR">
       <Text>Conteúdo criado pela comunidade</Text>
     </Replace>
+    <Replace Tag="LOC_MODS_WORLDBUILDER_CONTENT" Language="pt_BR">
+      <Text>Mapa de Construtor de Mundo</Text>
+    </Replace>
     <Replace Tag="LOC_MODS_ENABLE_ALL" Language="pt_BR">
       <Text>Habilitar tudo</Text>
     </Replace>
@@ -45555,6 +45687,9 @@
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_MULTIPLAYER" Language="pt_BR">
       <Text>Multijogador?</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_DETAILS_CREATED" Language="pt_BR">
+      <Text>Criado:</Text>
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_AFFECTS_SAVED_GAMES" Language="pt_BR">
       <Text>Afeta partidas salvas:</Text>
@@ -46114,6 +46249,18 @@
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_EXIT_TO_MAINMENU" Language="pt_BR">
       <Text>Sair para o Menu principal</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_READY_BEHAVIOR" Language="pt_BR">
+      <Text>Comportamento pronto em Play by Cloud:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_ASK_ME" Language="pt_BR">
+      <Text>Pergunte-me</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_DO_NOTHING" Language="pt_BR">
+      <Text>Não fazer nada</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_EXIT_TO_LOBBY" Language="pt_BR">
+      <Text>Sair para o lobby</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR" Language="pt_BR">
       <Text>Comportamento de cliente pronto em Play by Cloud:</Text>
     </Replace>
@@ -46140,6 +46287,21 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA" Language="pt_BR">
       <Text>Tritanopia (daltonismo para azul)</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_DISPLAY" Language="pt_BR">
+      <Text>Fila de produção:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_HIDE" Language="pt_BR">
+      <Text>Esconder</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_SHOW_FILLED" Language="pt_BR">
+      <Text>Mostrar quando cheia</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW" Language="pt_BR">
+      <Text>Sempre mostrar fila da cidade</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW_MANGER" Language="pt_BR">
+      <Text>Sempre mostrar gerenciador de fila</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UI_XP2" Language="pt_BR">
       <Text>Interface de usuário[NEWLINE](Gathering Storm)</Text>
@@ -47833,14 +47995,17 @@
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_SET_VISIBILITY" Language="pt_BR">
       <Text>Visibilidade de terreno</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_GOODY_HUTS" Language="pt_BR">
+      <Text>Cabanas de tesouros</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT" Language="pt_BR">
-      <Text>Editor de mapa</Text>
+      <Text>Detalhes de mapa e texto</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLAYER_EDITOR_TT" Language="pt_BR">
       <Text>Editor de jogador</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLACEMENT_HELP" Language="pt_BR">
-      <Text>Clique com botão esquerdo para posicionar. Clique com botão direito para remover.</Text>
+      <Text>Use o botão esquerdo para posicionar e o direito para excluir. Arraste com o botão direito para pintar. Use CTRL+Z para desfazer e CTRL+Y para refazer.</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP" Language="pt_BR">
       <Text>Nenhum local selecionado</Text>
@@ -47864,7 +48029,7 @@
       <Text>Roteiro do mapa</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD" Language="pt_BR">
-      <Text>O mapa é um "mod"</Text>
+      <Text>Definir mapa como "mod"</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD_TT" Language="pt_BR">
       <Text>Se selecionado, o mapa do construtor de mundo é um "mod" independente que pode ser usado como um tipo de mapa ao iniciar uma partida. Se não for selecionado, o mapa será usado como parte de um "mod" maior.</Text>
@@ -47952,6 +48117,177 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_DEFAULT" Language="pt_BR">
       <Text>Padrão</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV" Language="pt_BR">
+      <Text>Mudar para o modo avançado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_BASIC" Language="pt_BR">
+      <Text>Mudar para o modo básico</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TITLE" Language="pt_BR">
+      <Text>Mudar para o modo avançado do Construtor de Mundo?</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT" Language="pt_BR">
+      <Text>O modo avançado ainda está em desenvolvimento e não há suporte a ele. Nós o disponibilizamos para modificadores avançados que queiram experimentar funcionalidades avançadas de mapa. Mods criados neste modo e carregados no jogo podem deixar o Civilization VI instável.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE" Language="pt_BR">
+      <Text>Tribo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FULL_CIV" Language="pt_BR">
+      <Text>Civilização</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_CITY_STATE" Language="pt_BR">
+      <Text>Cidade-estado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FREE_CITIES" Language="pt_BR">
+      <Text>Cidade livre</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_OK" Language="pt_BR">
+      <Text>Posicionado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="pt_BR">
+      <Text>posicionado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IN_PROGRESS" Language="pt_BR">
+      <Text>Um destes já está em andamento</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ALREADY_EXISTS" Language="pt_BR">
+      <Text>Um destes já existe</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OCCUPIED_BY_ENEMY" Language="pt_BR">
+      <Text>O distrito está ocupado por um oponente</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_PILLAGED" Language="pt_BR">
+      <Text>O distrito foi pilhado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DISTRICT_REQUIRES" Language="pt_BR">
+      <Text>O distrito requer </Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_POPULATION" Language="pt_BR">
+      <Text> população</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_CONTAMINATED" Language="pt_BR">
+      <Text>O distrito está contaminado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_UNKNOWN" Language="pt_BR">
+      <Text>Não foi possível posicionar isto, nem determinar o motivo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_FEATURE" Language="pt_BR">
+      <Text>Impossível posicionar característica por razão desconhecida</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_STARTUP" Language="pt_BR">
+      <Text>Boas-vindas ao Construtor de Mundo!</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_PLACED" Language="pt_BR">
+      <Text>Unidade posicionada</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OWNERSHIP_SET" Language="pt_BR">
+      <Text>Dono de terreno definido</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POS_SET" Language="pt_BR">
+      <Text>Posição inicial definida</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES" Language="pt_BR">
+      <Text>Excluir recursos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES" Language="pt_BR">
+      <Text>Regenerar recursos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES_HELP" Language="pt_BR">
+      <Text>Exclui todos os recursos do mapa e gera novos (isso levará alguns segundos)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_CLEARED" Language="pt_BR">
+      <Text>Recursos excluídos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_SCATTERED" Language="pt_BR">
+      <Text>Recursos excluídos e gerados novamente</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_REDO" Language="pt_BR">
+      <Text>Não há nada para refazer</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_UNDO" Language="pt_BR">
+      <Text>Não há nada para desfazer</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_REDO" Language="pt_BR">
+      <Text>Refeito com sucesso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_UNDO" Language="pt_BR">
+      <Text>Desfeito com sucesso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LABEL" Language="pt_BR">
+      <Text>Tamanho do pincel</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL" Language="pt_BR">
+      <Text>Pequeno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM" Language="pt_BR">
+      <Text>Médio</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE" Language="pt_BR">
+      <Text>Grande</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT" Language="pt_BR">
+      <Text>Posicionar terreno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SELECTED_PLOT" Language="pt_BR">
+      <Text>Terreno selecionado:</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POSITION" Language="pt_BR">
+      <Text>Posição inicial:</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACE" Language="pt_BR">
+      <Text>Posicionar</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLOT" Language="pt_BR">
+      <Text>Terreno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_EDITOR" Language="pt_BR">
+      <Text>Editor de mapa</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODTITLE" Language="pt_BR">
+      <Text>Nome do mod (obrigatório)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODDESC" Language="pt_BR">
+      <Text>Descrição do mod (obrigatório)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPTITLE" Language="pt_BR">
+      <Text>Nome do mapa (obrigatório)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPDESC" Language="pt_BR">
+      <Text>Descrição do mapa (obrigatório)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_ADDLDATA" Language="pt_BR">
+      <Text>Para uso do criador do mod (opcional)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYID" Language="pt_BR">
+      <Text>DUMMY_ID</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYTEXT" Language="pt_BR">
+      <Text>Texto temporário</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_CREATE_MAP" Language="pt_BR">
+      <Text>Criar mapa</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_START" Language="pt_BR">
+      <Text>Gerar</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME" Language="pt_BR">
+      <Text>Nome do mapa</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_WORLDWRAP" Language="pt_BR">
+      <Text>Finalização de mundo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME_DESC" Language="pt_BR">
+      <Text>O nome do mapa. Pode ser alterado depois.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER" Language="pt_BR">
+      <Text>Voltar para o mapa</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY" Language="pt_BR">
+      <Text>Mapa vazio</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION" Language="pt_BR">
+      <Text>Uma tela em branco.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="pt_BR">
       <Text>Aurora da Civilização</Text>
@@ -49550,7 +49886,7 @@
       <Text>{1_CivName} {1_CivName: plural 2?iniciaram; 1?iniciou;} um projeto {2_ProjectType}.</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_SPACE_RACE_PROJECT_COMPLETED" Language="pt_BR">
-      <Text>{1_CivName: plural 2?{1: gender masculine?Os; feminine?As;}; 1?{1: gender masculine?O; feminine?A;};} {1_CivName} {1_CivName: plural 2?acabaram; 1?acabou;} de completar o projeto de corrida espacial: {2_ProjectType}.</Text>
+      <Text>{1_CivName: plural 2?{1: gender masculine?os; feminine?as;}; 1?{1: gender masculine?o; feminine?a; *:neutral?;};} {1_CivName} {1_CivName: plural 2?acabaram; 1?acabou;} de completar o seguinte projeto de corrida espacial: {2_ProjectType}.</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_START_VICTORY_STRATEGY" Language="pt_BR">
       <Text>{1_CivName:plural 2?{1:gender masculine?os {1_CivName} estão;feminine?as {1_CivName} estão;}; other?{1:gender feminine?a {1_CivName} está;} {1:gender masculine?o {1_CivName} está;};} buscando uma {2_VictoryName}.</Text>
@@ -50308,6 +50644,9 @@
     <Replace Tag="LOC_TOP_PANEL_INFLUENCE_TOOLTIP_ENVOYS" Language="pt_BR">
       <Text>{1_Envoys} [ICON_Envoy] {1_Envoys : plural 1?Emissário disponível; other?Emissários disponíveis;}</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_RESULTS" Language="pt_BR">
+      <Text>{1_Count : plural 1?{1_Count} resultado encontrado; other?{1_Count} resultados encontrados;}</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_RESEARCH_TURNS_TO_USE" Language="pt_BR">
       <Text>{1_Turns : plural 1?{1_Turns} turno; other?{1_Turns} turnos;} até conclusão.</Text>
     </Replace>
@@ -50626,6 +50965,9 @@
     <Replace Tag="LOC_TYPE_TRAIT_HOUSING" Language="pt_BR">
       <Text>{1_Amount: number +#,###.#;-#,###.#} de [ICON_Housing] habitação</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_HOUSING_WITH_REQUIREMENT" Language="pt_BR">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} de [ICON_Housing] habitação (requer {2_TechOrCivicName})</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AIRSLOTS" Language="pt_BR">
       <Text>Capacidade de aeronaves: {1_Amount}</Text>
     </Replace>
@@ -50640,6 +50982,9 @@
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_WEAPONSLOTS" Language="pt_BR">
       <Text>Capacidade de armas: {1_Amount}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_AMENITY" Language="pt_BR">
+      <Text>{1_Amount: number +#,###;-#,###} de [ICON_Amenities] {1_Amount: plural 1?serviço; other?serviços;}</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AMENITY_ENTERTAINMENT" Language="pt_BR">
       <Text>{1_Amount: number +#,###;-#,###} de [ICON_Amenities] {1_Amount: plural 1?serviço; other?serviços;} de entretenimento</Text>
@@ -50680,17 +51025,32 @@
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_ONCE" Language="pt_BR">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} por ter um painel {5_AdjacentObject} adjacente.</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_ONCE" Language="pt_BR">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?serviço; other?serviços;} por ter um painel {2_AdjacentObject} adjacente.</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS" Language="pt_BR">
       <Text>{1_Amount: number +#,###.#;-#,###.#} de {2_YieldIcon} {3_YieldName} de cada painel {5_AdjacentObject} adjacente.</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS" Language="pt_BR">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?serviço; other?serviços;} de cada painel {2_AdjacentObject} adjacente.</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_PER" Language="pt_BR">
       <Text>{1_Amount: number +#,###.#;-#,###.#} de {2_YieldIcon} {3_YieldName} de cada {4_Count} painel de {5_AdjacentObject} adjacente.</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_PER" Language="pt_BR">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?serviço; other?serviços;} de cada {2_Count} painéis {3_AdjacentObject} adjacentes.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_REQUIRES_TECH_OR_CIVIC" Language="pt_BR">
       <Text>Requer {1_TechOrCivicName}.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_OBSOLETE_WITH_TECH_OR_CIVIC" Language="pt_BR">
       <Text>Se torna obsoleto com {1_TechOrCivicName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD" Language="pt_BR">
+      <Text>Pilhagem concedida: {1_AwardIcon} {2_AwardText}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_NO_ICON" Language="pt_BR">
+      <Text>Pilhagem concedida: {1_AwardText}</Text>
     </Replace>
     <Replace Tag="LOC_TIME_AD" Language="pt_BR">
       <Text>{1_Date: number #} d.C.</Text>
@@ -51424,14 +51784,20 @@
     <Replace Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER" Language="pt_BR">
       <Text>Capturado por {1_SteamID}</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_SHOW_QUEUE" Language="pt_BR">
+    <Replace Tag="LOC_PRODUCTION_PANEL_SHOW_QUEUE" Language="pt_BR">
       <Text>Mostrar fila ({1_QueueSize})</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_HIDE_QUEUE" Language="pt_BR">
-      <Text>Ocultar fila ({1_QueueSize})</Text>
+    <Replace Tag="LOC_PRODUCTION_PANEL_HIDE_QUEUE" Language="pt_BR">
+      <Text>Esconder fila ({1_QueueSize})</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_SORT_BY" Language="pt_BR">
       <Text>Ordenar por: {1_SortType}</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_BODY" Language="pt_BR">
+      <Text>É o seu turno na partida Play By Cloud:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se você entrar na partida agora, o progresso não salvo será perdido.</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_BODY" Language="pt_BR">
+      <Text>Seu jogo terminou na partida Play By Cloud:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se você ver os resultados agora, o progresso não salvo será perdido.</Text>
     </Replace>
     <Replace Tag="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION" Language="pt_BR">
       <Text>{LOC_MINOR_CIV_SMALL_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_SMALL_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_MEDIUM_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_MEDIUM_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_LARGE_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_LARGE_INFLUENCE_BONUS}</Text>
@@ -51970,6 +52336,9 @@
     <Replace Tag="LOC_WORLD_FAITH_INCREASE_FLOATER" Language="pt_BR">
       <Text>+{1_Num} de [ICON_Faith]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_FAITH_DECREASE_FLOATER" Language="pt_BR">
+      <Text>[COLOR_RED]PERDEU[ENDCOLOR] {1_Num} DE [ICON_Faith]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_UNIT_DAMAGE_DECREASE_FLOATER" Language="pt_BR">
       <Text>[COLOR_GREEN]+{1_Num}[ENDCOLOR]</Text>
     </Replace>
@@ -51986,22 +52355,31 @@
       <Text>[COLOR_FLOAT_PRODUCTION]+{1_Num} de [ICON_Production][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_PRODUCTION_DECREASE_FLOATER" Language="pt_BR">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_RED]PERDEU[ENDCOLOR][COLOR_FLOAT_PRODUCTION]{1_Num} DE [ICON_Production][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_INCREASE_FLOATER" Language="pt_BR">
       <Text>[COLOR_FLOAT_FOOD]+{1_Num} de [ICON_Food][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_DECREASE_FLOATER" Language="pt_BR">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_RED]PERDEU[ENDCOLOR][COLOR_FLOAT_FOOD]{1_Num} DE [ICON_Food][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_GOLD_INCREASE_FLOATER" Language="pt_BR">
       <Text>[COLOR_FLOAT_GOLD]+{1_Num} de [ICON_Gold][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_GOLD_DECREASE_FLOATER" Language="pt_BR">
+      <Text>[COLOR_RED]PERDEU[ENDCOLOR][COLOR_FLOAT_GOLD]{1_Num} DE [ICON_Gold][ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_SCIENCE_INCREASE_FLOATER" Language="pt_BR">
       <Text>[COLOR_FLOAT_SCIENCE]+{1_Num} de [ICON_Science][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_SCIENCE_DECREASE_FLOATER" Language="pt_BR">
+      <Text>[COLOR_RED]PERDEU[ENDCOLOR][COLOR_FLOAT_SCIENCE]{1_Num} DE [ICON_Science][ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_CULTURE_INCREASE_FLOATER" Language="pt_BR">
       <Text>[COLOR_FLOAT_CULTURE]+{1_Num} de [ICON_Culture][ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_CULTURE_DECREASE_FLOATER" Language="pt_BR">
+      <Text>[COLOR_RED]PERDEU[ENDCOLOR][COLOR_FLOAT_CULTURE]{1_Num} DE [ICON_Culture][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_DIFFICULTY_SCALING" Language="pt_BR">
       <Text>+{Amount} de bônus devido à dificuldade.</Text>
@@ -52050,6 +52428,12 @@
     </Replace>
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION" Language="pt_BR">
       <Text>+{1_Amount} para combate em terreno de colina.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED" Language="pt_BR">
+      <Text>Deve estar em um distrito de {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE" Language="pt_BR">
+      <Text>Mapa: {1_MapName}</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Language="pt_BR">
       <Text>Guerreiro Águia|Guerreiros Águia</Text>

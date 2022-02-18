@@ -24,6 +24,7 @@
 		<Row Type="STRATEGY_RENAISSANCE_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
 		<Row Type="STRATEGY_INDUSTRIAL_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
 		<Row Type="STRATEGY_MODERN_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
+    <Row Type="STRATEGY_WONDER_OBSESSED" Kind="KIND_VICTORY_STRATEGY" />
 	</Types>
 	<Defeats>
 		<Row DefeatType="DEFEAT_DEFAULT" Name="LOC_DEFEAT_DEFAULT_NAME" Blurb="LOC_DEFEAT_DEFAULT_TEXT" RequirementSetId="DEFAULT_DEFEAT_REQUIREMENTS"/>
@@ -52,6 +53,8 @@
 		<Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" NumConditionsNeeded="1"/>
 		<Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" NumConditionsNeeded="1"/>
 		<Row StrategyType="STRATEGY_MODERN_CHANGES" NumConditionsNeeded="1"/>
+    <!-- Wonder Obsessed tends to fall off too much in later game, so adding a strategy to boost it -->
+		<Row StrategyType="STRATEGY_WONDER_OBSESSED" NumConditionsNeeded="2"/>
 	</Strategies>
 	<!-- Reminder: These conditions must be met to START following the strategy - they are not victory conditions themselves -->
 	<StrategyConditions>
@@ -91,6 +94,8 @@
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Is Not Major" Disqualifier="true"/>
 		<Row StrategyType="STRATEGY_RAPID_EXPANSION" ConditionFunction="Handicap at or below" ThresholdValue="2" Disqualifier="true"/>
 		<Row StrategyType="STRATEGY_NAVAL" ConditionFunction="Is On Island"/>
+		<Row StrategyType="STRATEGY_WONDER_OBSESSED" ConditionFunction="Has Agenda" StringValue="AGENDA_WONDER_OBSESSED"/>
+		<Row StrategyType="STRATEGY_WONDER_OBSESSED" ConditionFunction="Is Industrial" StringValue="AGENDA_WONDER_OBSESSED"/>
 		<!-- Timing based strategies (eras, really) -->
 		<Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ConditionFunction="Is Classical"/>
 		<Row StrategyType="STRATEGY_CLASSICAL_CHANGES" ConditionFunction="Is Not Major" Disqualifier="true"/>
@@ -123,6 +128,7 @@
 		<Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" ListType="IndustrialPseudoYields"/>
 		<Row StrategyType="STRATEGY_MODERN_CHANGES" ListType="ModernYields"/>
 		<Row StrategyType="STRATEGY_MODERN_CHANGES" ListType="ModernPseudoYields"/>
+		<Row StrategyType="STRATEGY_WONDER_OBSESSED" ListType="WonderObsessedIndustrialBonus"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryPseudoYields"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ListType="CultureVictoryYields"/>
 		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ListType="MilitaryVictoryPseudoYields"/>
@@ -172,6 +178,7 @@
 		<Row ListType="ScienceVictoryPseudoYields" />
 		<Row ListType="ScienceVictoryTechs" />
 		<Row ListType="ScienceVictoryYields" />
+		<Row ListType="WonderObsessedIndustrialBonus" />
 	</AiListTypes>
 	<AiLists>
 		<Row ListType="ClassicalPseudoYields" System="PseudoYields"/>
@@ -207,6 +214,7 @@
 		<Row ListType="ScienceVictoryPseudoYields" System="PseudoYields"/>
 		<Row ListType="ScienceVictoryTechs" System="Technologies" />
 		<Row ListType="ScienceVictoryYields" System="Yields"/>
+		<Row ListType="WonderObsessedIndustrialBonus" System="PseudoYields"/>
 	</AiLists>
 	<AiFavoredItems>
 		<Row ListType="ClassicalPseudoYields" Item="PSEUDOYIELD_GPP_MERCHANT" Value="20"/>
@@ -236,6 +244,7 @@
 		<Row ListType="IndustrialYields" Item="YIELD_GOLD" Value="15"/>
 		<Row ListType="ModernYields" Item="YIELD_FOOD" Value="5"/>
 		<Row ListType="ModernYields" Item="YIELD_GOLD" Value="10"/>
+		<Row ListType="WonderObsessedIndustrialBonus" Item="PSEUDOYIELD_WONDER" Value="100"/>
 
 		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_WRITER" Value="50"/>
 		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_ARTIST" Value="50"/>

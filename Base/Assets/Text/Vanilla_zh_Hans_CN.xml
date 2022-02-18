@@ -5564,10 +5564,10 @@
       <Text>可以对区域中未驻军的改良设施和建筑进行掠夺。此行为会使其无法正常运转，并使掠夺单位获得某种形式的“战利品”。这些掠夺奖励会随着游戏时代的发展而增多，但治疗效果除外。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_2" Language="zh_Hans_CN">
-      <Text>掠夺区域消耗3点、或所有的移动力。必须对区域中的每个建筑进行单独掠夺，并根据区域类型（见下方）来获得不同类型的战利品。需要等所有者将区域夺回后方可再次对其进行掠夺。（在生产项目界面中进行，消耗的生产力等于初次建造该建筑所需 [ICON_Production] 生产力的25%。）[NEWLINE]掠夺学院会奖励 [ICON_Science] 科技值。[NEWLINE]掠夺圣地会奖励 [ICON_Faith] 信仰值。[NEWLINE]掠夺商业中心会奖励 [ICON_Gold] 金币。[NEWLINE]掠夺剧院广场会奖励 [ICON_Culture] 文化值。[NEWLINE]掠夺港口会奖励 [ICON_Gold] 金币。[NEWLINE]掠夺工业区会奖励 [ICON_Science] 科技值。[NEWLINE]掠夺航空港会奖励 [ICON_Gold] 金币。[NEWLINE]掠夺水渠会奖励 [ICON_Gold] 金币。[NEWLINE]掠夺宇航中心会奖励 [ICON_Science] 科技值。[NEWLINE]掠夺娱乐区域会奖励治疗。</Text>
+      <Text>掠夺区域将消耗3点或所有移动力。必须对区域中的每个建筑进行单独掠夺，并根据区域类型来获得不同类型的战利品。请查阅区域的页面，了解特定的掠夺收益。完成掠夺后，需等待所有者将区域修复后方能再次对其进行掠夺。（修复区域在“生产项目”菜单中进行，消耗的生产力为初次建造该建筑所需 [ICON_Production] 生产力的25%。）</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_3" Language="zh_Hans_CN">
-      <Text>掠夺改良设施将消耗3点移动力。如果 [ICON_Movement] 移动力低于3点，则消耗掉所有移动力。会将单元格上的改良设施标记为“已掠夺”。所有者对其修复后才能再次对其进行掠夺。（需要建造者在一回合后修复，但不会花费建造次数）。[NEWLINE]掠夺农场将恢复生命值。[NEWLINE]掠夺矿山将奖励 [ICON_Science] 科技值。[NEWLINE]掠夺采石场将奖励 [ICON_Culture] 文化值。[NEWLINE]掠夺渔船将恢复生命值。[NEWLINE]掠夺牧场将奖励 [ICON_Gold] 金币。[NEWLINE]掠夺种植园将奖励 [ICON_Faith] 信仰值。[NEWLINE]掠夺营地将奖励 [ICON_Gold] 金币。[NEWLINE]掠夺伐木场将奖励 [ICON_Science] 科技值。</Text>
+      <Text>掠夺改良设施将消耗3点移动力。如果 [ICON_Movement] 移动力低于3点，则消耗掉所有移动力。此操作会将单元格上的改良设施标记为“已掠夺”。完成掠夺后，需要等待所有者将其修复后才能再次对其进行掠夺。（使用“建造者”可在一回合后完成修复，且不消耗建造次数）。请查阅改良设施的页面，了解特定的掠夺收益。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MOVEMENT_NAME" Language="zh_Hans_CN">
       <Text>单位移动力</Text>
@@ -5972,7 +5972,7 @@
       <Text>如果某个文明在城邦拥有的 [ICON_Envoy] 使者最多，且至少有3个 [ICON_Envoy] 使者，那么该文明即为此城邦的宗主国。最多只能有一个宗主国；不能有并列宗主国。如果城邦中没有 [ICON_Envoy] 使者，则没有宗主国。宗主国获得以下几个显著好处：</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_2" Language="zh_Hans_CN">
-      <Text>特色加成：其他城邦无法提供的一种强力加成（例如耶路撒冷可以成为您的宗教的第二圣城。）</Text>
+      <Text>特色加成：这是奖励给宗主国的强大加成，其他城邦将无法提供。</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_3" Language="zh_Hans_CN">
       <Text>{LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS}</Text>
@@ -11994,6 +11994,13 @@
 
 [i]TechTree_Meter_Done
 
+[2]MODDING CONTRIBUTIONS
+
+[3]UI
+[4]Bradd Szonye - Map Tacks
+
+[i]TechTree_Meter_Done
+
 [2]FRANKENSTEIN TEST GROUP
 [4]Camikaze
 [4]Sam "SamBC" Barnett-Cormack
@@ -15053,7 +15060,7 @@
 [4]Marek Vojtko
 [4]Kevin Jones
 [4]Theodore Maselko
-[4]Gabe Ortega
+[4]Gabriel Ortega
 
 [3]Lead Technical Artist
 [4]Arthur Gould
@@ -15443,6 +15450,8 @@
 [4]John Koziol
 [4]Jett Barton
 [4]Timo Schwabe
+[4]Lee Shipp
+[4]Steve Daly
 
 [i]TechTree_Meter_Done
 
@@ -22011,7 +22020,7 @@
       <Text>您已完成了写作科技研究，现在必须选择下一研究对象。如果想听听建议的话，畜牧业和铸铜术是不错的选择哦。</Text>
     </Replace>
     <Replace Tag="LOC_META_85_BODY" Language="zh_Hans_CN">
-      <Text>畜牧业会让您在您的城市里建起牧场和营地改良设施。[NEWLINE][NEWLINE]铸铜术会通过解锁军营帮您提高军事能力，同时让您训练枪兵。</Text>
+      <Text>拥有畜牧业后，您便能在城市中建造牧场和营地改良设施。[NEWLINE][NEWLINE]拥有科技铸铜术后将解锁军营区域提高军事实力，同时能够生产枪兵。</Text>
     </Replace>
     <Replace Tag="LOC_META_86_BODY" Language="zh_Hans_CN">
       <Text>一些建筑只能建在区域里。图书馆是学院区域的独有建筑。我们已完成了学院建造，所以现在可以在里面建造一个图书馆。</Text>
@@ -23655,7 +23664,7 @@
       <Text>核武器的出现必将改变全球范围内所有武装冲突的本质。</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_PROFESSIONAL_SPORTS" Language="zh_Hans_CN">
-      <Text>您的4座带有娱乐中心的城市想参加新职业运动联盟的比赛。</Text>
+      <Text>您旗下建有“娱乐设施”的4座城市希望参加新职业体育联盟的比赛。</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_CULTURAL_HERITAGE" Language="zh_Hans_CN">
       <Text>有了完美的策展式博物馆，您国民强大的文化遗产会展示在大家面前。</Text>
@@ -28506,7 +28515,7 @@
       <Text>接受任务</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGEPOPUP_RENEW_MISSION" Language="zh_Hans_CN">
-      <Text>重开任务</Text>
+      <Text>继续该任务</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGEPOPUP_ABORT_MISSION" Language="zh_Hans_CN">
       <Text>终止任务！</Text>
@@ -28638,7 +28647,7 @@
       <Text>建立一座自己的城市，或发现另一个文明的城市，便可查看此处的间谍活动。</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGE_NO_HISTORY" Language="zh_Hans_CN">
-      <Text>进行间谍活动便可查看此处的活动历史记录。</Text>
+      <Text>进行间谍活动便可在此处查看活动历史记录。</Text>
     </Replace>
     <Replace Tag="LOC_EXPANSION1_MOD_TITLE" Language="zh_Hans_CN">
       <Text>资料片：迭起兴衰</Text>
@@ -28776,7 +28785,7 @@
       <Text>加载地图</Text>
     </Replace>
     <Replace Tag="LOC_LOAD_TILED" Language="zh_Hans_CN">
-      <Text>导入地图</Text>
+      <Text>从编辑器导入地图</Text>
     </Replace>
     <Replace Tag="LOC_OPEN_DIRECTORY" Language="zh_Hans_CN">
       <Text>开启</Text>
@@ -28824,7 +28833,7 @@
       <Text>标准云储存 – 可与PC，Mac和Linux版本兼容。</Text>
     </Replace>
     <Replace Tag="LOC_2K_CLOUD_SAVES_HELP" Language="zh_Hans_CN">
-      <Text>多平台云储存 – 可与所支持平台兼容。（需要在主菜单连接2K Account）</Text>
+      <Text>多平台云储存 – 可与所支持平台兼容。（需要在主菜单连接2K帐号）</Text>
     </Replace>
     <Replace Tag="LOC_NO_SAVED_GAMES" Language="zh_Hans_CN">
       <Text>无游戏存档</Text>
@@ -29489,6 +29498,9 @@
     <Replace Tag="LOC_GAMESTART_COUNTDOWN_FORMAT" Language="zh_Hans_CN">
       <Text>开始游戏</Text>
     </Replace>
+    <Replace Tag="LOC_READY_COUNTDOWN_FORMAT" Language="zh_Hans_CN">
+      <Text>预备</Text>
+    </Replace>
     <Replace Tag="LOC_HOTSEAT_DEFAULT_PLAYER_NAME" Language="zh_Hans_CN">
       <Text>玩家</Text>
     </Replace>
@@ -29775,7 +29787,7 @@
       <Text>加载地图</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_IMPORT" Language="zh_Hans_CN">
-      <Text>导入地图</Text>
+      <Text>从编辑器导入地图</Text>
     </Replace>
     <Replace Tag="LOC_RANDOM_LEADER" Language="zh_Hans_CN">
       <Text>随机的领袖</Text>
@@ -30563,8 +30575,11 @@
     <Replace Tag="LOC_GAME_START_ERROR_MOD_OWNERSHIP" Language="zh_Hans_CN">
       <Text>一个或多个模组尚未购买。</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_SCRIPT_PROCESSING" Language="zh_Hans_CN">
+      <Text>一个或多个启动脚本出现错误。请参见lua.log</Text>
+    </Replace>
     <Replace Tag="LOC_CLOUD_SAVES_REQUIRE_LINKED_ACCOUNT" Language="zh_Hans_CN">
-      <Text>云储存需要一个已关联的2K Account。</Text>
+      <Text>云储存需要一个已关联的2K帐号。</Text>
     </Replace>
     <Replace Tag="LOC_CLOUD_SAVES_SERVICE_NOT_CONNECTED" Language="zh_Hans_CN">
       <Text>云储存服务不可用。</Text>
@@ -30794,11 +30809,23 @@
     <Replace Tag="LOC_OPTIONS_WEBHOOK_FREQ" Language="zh_Hans_CN">
       <Text>云端游戏Webhook频率：</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE" Language="zh_Hans_CN">
+      <Text>云端游戏模式：</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE_TOOLTIP" Language="zh_Hans_CN">
+      <Text>模式A - 与IFTTT兼容[NEWLINE]JSON负载变量[NEWLINE][ICON_Bullet]"value1" = 游戏名[NEWLINE][ICON_Bullet]"value2" = 玩家名[NEWLINE][ICON_Bullet]"value3" = 游戏回合[NEWLINE]Mode B - 与Discord兼容[NEWLINE]JSON负载变量[NEWLINE][ICON_Bullet]"content" = 通知消息</Text>
+    </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_MY_TURN" Language="zh_Hans_CN">
       <Text>我的回合</Text>
     </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_EVERY_TURN" Language="zh_Hans_CN">
       <Text>每回合</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_A" Language="zh_Hans_CN">
+      <Text>模式A</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_B" Language="zh_Hans_CN">
+      <Text>模式B</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_REMINDER_TITLE" Language="zh_Hans_CN">
       <Text>设置通知！</Text>
@@ -31661,10 +31688,10 @@
       <Text>解锁罗马军团的能力来建造罗马特色堡垒。[NEWLINE][NEWLINE]占领单位+4 [ICON_Strength] 防御力，并自动获得两回合防御工事。</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>解锁建造者建造埃及特色改良设施“狮身人面像”的能力。[NEWLINE][NEWLINE]+1 [ICON_Faith] 信仰值、+1 [ICON_Culture] 文化值。+1魅力。如果与奇观相邻，+2 [ICON_Faith] 信仰值。可建在泛滥平原上。</Text>
+      <Text>解锁建造者建造埃及特色改良设施狮身人面像的能力。[NEWLINE][NEWLINE]+1 [ICON_Faith] 信仰值、+1 [ICON_Culture] 文化值。+1魅力。如果与奇观相邻，+2 [ICON_Faith] 信仰值。无法建在另一个狮身人面像旁。可建在泛滥平原上。</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_STEPWELL_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>解锁建造者建造梯井的能力，印度特色改良设施。[NEWLINE][NEWLINE]1 [ICON_Food] 食物和+1 [ICON_Housing] 住房。如果靠近圣地区域，+1 [ICON_Faith] 信仰值。如果靠近农场，+1 [ICON_Food] 食物。不能建在丘陵上，不能靠近另一个梯井。</Text>
+      <Text>解锁建造者建造印度特色改良设施梯井的能力。[NEWLINE][NEWLINE]提供+1点 [ICON_Food] 食物并+1 [ICON_Housing] 住房。如与圣地区域相邻，+1 [ICON_Faith] 信仰值。如与农场相邻，+1 [ICON_Food] 食物。随着科技和市政的发展，其将提供更多 [ICON_Housing] 住房、[ICON_Faith] 信仰值和 [ICON_Food] 食物。不能建在丘陵上，不能建在另一个梯井旁。</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_ZIGGURAT_DESCRIPTION" Language="zh_Hans_CN">
       <Text>解锁建造者建造苏美尔特色金字形神塔的能力。[NEWLINE][NEWLINE]+2 [ICON_Science] 科技值。如果紧挨着河流，+1 [ICON_Culture] 文化值。不能建在丘陵上。</Text>
@@ -32372,7 +32399,7 @@
       <Text>取消</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_POPUP_TITLE" Language="zh_Hans_CN">
-      <Text>编辑地图导航</Text>
+      <Text>编辑地图钉</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_NAME" Language="zh_Hans_CN">
       <Text>名字：</Text>
@@ -32381,10 +32408,10 @@
       <Text>发送聊天信息</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_SEND_TO_CHAT_TT" Language="zh_Hans_CN">
-      <Text>在聊天内容里添加地图导航</Text>
+      <Text>将此地图钉添加到聊天文本。</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_SEND_TO_CHAT_NOT_VISIBLE_TT" Language="zh_Hans_CN">
-      <Text>当前聊天的对象无法看到地图定位点。</Text>
+      <Text>当前聊天对象无法看到地图钉。</Text>
     </Replace>
     <Replace Tag="LOC_PLOTINFO_SWAP_TILE_OWNER" Language="zh_Hans_CN">
       <Text>切换</Text>
@@ -33086,16 +33113,16 @@
       <Text>缩小</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_PIN_LIST" Language="zh_Hans_CN">
-      <Text>地图导航</Text>
+      <Text>地图钉</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_TOGGLE_MAP_PIN_LIST" Language="zh_Hans_CN">
-      <Text>地图导航</Text>
+      <Text>地图钉</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_PLACE_MAP_PIN" Language="zh_Hans_CN">
-      <Text>添加导航</Text>
+      <Text>添加钉</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_PLACE_MAP_PIN_TT" Language="zh_Hans_CN">
-      <Text>点击格位添加地图导航。</Text>
+      <Text>点击格位在此处放置地图钉。</Text>
     </Replace>
     <Replace Tag="LOC_HUD_MAP_TOGGLE_GRID" Language="zh_Hans_CN">
       <Text>开启/关闭网络</Text>
@@ -33171,6 +33198,33 @@
     </Replace>
     <Replace Tag="LOC_HUD_MAP_OPTIONS" Language="zh_Hans_CN">
       <Text>地图选项</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH" Language="zh_Hans_CN">
+      <Text>地图搜索</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_IN_PROGRESS" Language="zh_Hans_CN">
+      <Text>正在搜索…</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_UPDATING" Language="zh_Hans_CN">
+      <Text>正在更新…</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_WAITING_FOR_TURN" Language="zh_Hans_CN">
+      <Text>正在等待下一回合…</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_BEGIN_SEARCH" Language="zh_Hans_CN">
+      <Text>搜索</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_CLEAR_SEARCH" Language="zh_Hans_CN">
+      <Text>清除</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_NO_SEARCH_TERMS_TOOLTIP" Language="zh_Hans_CN">
+      <Text>必须有至少一个搜索条目才能进行搜索。</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TOOLTIP" Language="zh_Hans_CN">
+      <Text>搜索术语[NEWLINE]搜索结果将包含此处输入的所有术语。</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_FILTER_TOOLTIP" Language="zh_Hans_CN">
+      <Text>搜索过滤[NEWLINE]搜索结果不会包含此处输入的术语。</Text>
     </Replace>
     <Replace Tag="LOC_HUD_CIVICS_ENABLES" Language="zh_Hans_CN">
       <Text>启动</Text>
@@ -33252,6 +33306,42 @@
     </Replace>
     <Replace Tag="LOC_HUD_POPUP_PROJECT_CREATED_BY_UNKNOWN" Language="zh_Hans_CN">
       <Text>未相遇的文明更加接近于科学的胜利。</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_MOUNTAIN" Language="zh_Hans_CN">
+      <Text>山脉</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_HILL" Language="zh_Hans_CN">
+      <Text>丘陵</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_WATER" Language="zh_Hans_CN">
+      <Text>水域</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_FEATURE" Language="zh_Hans_CN">
+      <Text>地貌</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_IMPROVEMENT" Language="zh_Hans_CN">
+      <Text>改良设施</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_OWNED" Language="zh_Hans_CN">
+      <Text>已有主人</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNCLAIMED" Language="zh_Hans_CN">
+      <Text>尚无主人</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_PILLAGED" Language="zh_Hans_CN">
+      <Text>已掠夺</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_NATIONAL_PARK" Language="zh_Hans_CN">
+      <Text>国家公园</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNDER_CONSTRUCTION" Language="zh_Hans_CN">
+      <Text>建造中</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_CONTAMINATION" Language="zh_Hans_CN">
+      <Text>污染</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_SPECIALIST" Language="zh_Hans_CN">
+      <Text>专家</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TO_BOOST" Language="zh_Hans_CN">
       <Text>提升条件：</Text>
@@ -34192,6 +34282,9 @@
     <Replace Tag="LOC_TOOLTIP_APPEAL_DISGUSTING" Language="zh_Hans_CN">
       <Text>令人厌恶的</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING" Language="zh_Hans_CN">
+      <Text>治疗</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLOMACY_HIDDEN_AGENDAS_TT" Language="zh_Hans_CN">
       <Text>达到访问级别 [ICON_VisSecret] 公开即可查看隐藏议程。</Text>
     </Replace>
@@ -35009,10 +35102,10 @@
       <Text>在Steam上添加该玩家为好友。</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_PLAYER_PIN_TOOLTIP" Language="zh_Hans_CN">
-      <Text>点击左边查看导航。点击右边编辑导航。</Text>
+      <Text>点击左键查看地图上的地图钉。点击右键进行编辑。</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_REMOTE_PIN_TOOLTIP" Language="zh_Hans_CN">
-      <Text>点击左边查看导航。</Text>
+      <Text>点击左键查看地图上的地图钉。</Text>
     </Replace>
     <Replace Tag="LOC_GAME_PAUSED_TITLE" Language="zh_Hans_CN">
       <Text>游戏已暂停！</Text>
@@ -35084,7 +35177,7 @@
       <Text>该博物馆中已有这个艺术家的巨作。添加相同主题、但出自其他艺术家的作品才可获得加成。</Text>
     </Replace>
     <Replace Tag="LOC_GREAT_WORKS_ARTIFACT_LOCKED_FROM_MOVE" Language="zh_Hans_CN">
-      <Text>文物只能从已满的（无空槽位）考古博物馆中移出。</Text>
+      <Text>文物只能在已满（无空槽位）的考古博物馆之间交换。</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_SCULPTURE" Language="zh_Hans_CN">
       <Text>[ICON_GreatWork_Sculpture] 雕塑</Text>
@@ -35629,6 +35722,18 @@
     <Replace Tag="LOC_REPORTS_SHOW_ONLY_NOT_OWNED" Language="zh_Hans_CN">
       <Text>只显示本方未拥有的资源</Text>
     </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_CIVS_BY" Language="zh_Hans_CN">
+      <Text>文明排序方法</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_AMOUNT" Language="zh_Hans_CN">
+      <Text>数量</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER" Language="zh_Hans_CN">
+      <Text>玩家</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER_SLOT" Language="zh_Hans_CN">
+      <Text>玩家槽位</Text>
+    </Replace>
     <Replace Tag="LOC_REPORTS_SORT_BY" Language="zh_Hans_CN">
       <Text>排序方式</Text>
     </Replace>
@@ -35854,31 +35959,40 @@
     <Replace Tag="LOC_WORLDBUILDER_TEXT_TAG" Language="zh_Hans_CN">
       <Text>文本标记</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_REMOVE_ITEM" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE" Language="zh_Hans_CN">
+      <Text>将队列锁定为“固定显示”。</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNLOCK_AUTOHIDE_QUEUE" Language="zh_Hans_CN">
+      <Text>关闭生产项目面板时解锁为“自动隐藏队列”。</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_TOGGLE_AUTOHIDE_QUEUE" Language="zh_Hans_CN">
+      <Text>开关自动隐藏队列</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_REMOVE_ITEM" Language="zh_Hans_CN">
       <Text>移除</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_LEFT_ITEM" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_LEFT_ITEM" Language="zh_Hans_CN">
       <Text>左移</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_RIGHT_ITEM" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_RIGHT_ITEM" Language="zh_Hans_CN">
       <Text>右移</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUTTON_TEXT" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUTTON_TEXT" Language="zh_Hans_CN">
       <Text>管理器</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUILDINGS_TOOLTIP" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUILDINGS_TOOLTIP" Language="zh_Hans_CN">
       <Text>区域和建筑</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_WONDERS_TOOLTIP" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_WONDERS_TOOLTIP" Language="zh_Hans_CN">
       <Text>奇观</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_UNITS_TOOLTIP" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNITS_TOOLTIP" Language="zh_Hans_CN">
       <Text>单位</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_PROJECTS_TOOLTIP" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_PROJECTS_TOOLTIP" Language="zh_Hans_CN">
       <Text>项目</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_MANAGER_TITLE" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_MANAGER_TITLE" Language="zh_Hans_CN">
       <Text>生产项目管理器</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_FOUNDING" Language="zh_Hans_CN">
@@ -35889,6 +36003,9 @@
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_POPULATION" Language="zh_Hans_CN">
       <Text>人口</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_QUEUE_BEHAVIOR_TT" Language="zh_Hans_CN">
+      <Text>使用选项菜单来修改生产队列的默认显示/隐藏行为。</Text>
     </Replace>
     <Replace Tag="LOC_HUD_FULLSCREEN_MAP" Language="zh_Hans_CN">
       <Text>显示全屏地图</Text>
@@ -35937,6 +36054,18 @@
     </Replace>
     <Replace Tag="LOC_REMEMBER_MY_CHOICE" Language="zh_Hans_CN">
       <Text>记住选择</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_TITLE" Language="zh_Hans_CN">
+      <Text>云端游戏中已到您的回合</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_JOIN_MATCH" Language="zh_Hans_CN">
+      <Text>加入比赛</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_TITLE" Language="zh_Hans_CN">
+      <Text>云端游戏结束</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_VIEW_RESULTS" Language="zh_Hans_CN">
+      <Text>查看结果</Text>
     </Replace>
     <Replace Tag="LOC_REPRESENTATIVE" Language="zh_Hans_CN">
       <Text>一位代表</Text>
@@ -36449,7 +36578,7 @@
       <Text>所遇到的文明（包括印度）已创建了宗教且不在战争状态，均会+5信仰值 [ICON_Faith] 。与甘地交战的文明获得双倍厌战情绪。</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_THUNDERBOLT_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>允许所有海军近战单位进行海岸扫荡，所有海军近战单位+50% [ICON_PRODUCTION] 生产力。</Text>
+      <Text>允许海军近战单位进行海岸扫荡，生产所有此类单位时+50% [ICON_PRODUCTION] 生产力。解锁“航海术”科技后即可获得特色单位维京长船。</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_FIRST_EMPEROR_DESCRIPTION" Language="zh_Hans_CN">
       <Text>建造远古和古典奇观时，可以消耗建造者劳动力来推进15%的奇观建造进程。建造者会获得额外建造劳动力。</Text>
@@ -36530,13 +36659,13 @@
       <Text>无法加入不同版本的游戏。</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K" Language="zh_Hans_CN">
-      <Text>2K Account</Text>
+      <Text>2K帐号</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_SIGN_UP_TITLE" Language="zh_Hans_CN">
-      <Text>注册2K Account</Text>
+      <Text>注册2K帐号</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_CREATE_NEW_USER_MESSAGE" Language="zh_Hans_CN">
-      <Text>如要注册2K Account，请在下方区域中输入有效电子邮件地址。一封验证邮件将发送到此电子邮件地址，以确认注册。</Text>
+      <Text>如要注册2K帐号，请在下方区域中输入有效电子邮件地址。一封验证邮件将发送到此电子邮件地址，以确认注册。</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_LOGOUT_TITLE" Language="zh_Hans_CN">
       <Text>登出</Text>
@@ -36587,7 +36716,7 @@
       <Text>隐身登录通知</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_SILENT_LOGIN_FAILURE_MESSAGE" Language="zh_Hans_CN">
-      <Text>您需要手动登入2K Account。</Text>
+      <Text>您需要手动登入2K帐号。</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_CONNECTION_RESTORED" Language="zh_Hans_CN">
       <Text>已恢复连接</Text>
@@ -36596,10 +36725,10 @@
       <Text>连接到现有账户</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_ALREADY_LINKED" Language="zh_Hans_CN">
-      <Text>平台账号已与2K Account关联。</Text>
+      <Text>平台账号已与2K帐号关联。</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_UNABLE_TO_LINK_ACCOUNT" Language="zh_Hans_CN">
-      <Text>无法将平台账号与2K Account关联。</Text>
+      <Text>无法将平台账号与2K帐号关联。</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_UNLINK_ACCOUNT_TITLE" Language="zh_Hans_CN">
       <Text>解绑账号</Text>
@@ -36608,7 +36737,7 @@
       <Text>关联帐户</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_ADDITION_UNLINK_ACCOUNT" Language="zh_Hans_CN">
-      <Text>确定要断开2K Account的关联？您可以在www.2k.com上管理账号或在线阅读法律和隐私条款。</Text>
+      <Text>确定要断开2K帐号的关联？您可以在www.2k.com上管理账号或在线阅读法律和隐私条款。</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_ANONYMOUS" Language="zh_Hans_CN">
       <Text>离线</Text>
@@ -36620,10 +36749,10 @@
       <Text>已关联——离线</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_UNLINKED_TOOLTIP" Language="zh_Hans_CN">
-      <Text>注册2K Account可解锁“猫咪侦察兵”奖励（需重启游戏）并启用跨平台云存档。之后您便可以在Steam上开始游戏，并在其他平台上继续游戏。此外，您还将获得《席德·梅尔的文明VI》最新资讯的推送！</Text>
+      <Text>注册2K帐号可解锁“猫咪侦察兵”奖励（需重启游戏）并启用跨平台云存档。之后您便可以在Steam上开始游戏，并在其他平台上继续游戏。此外，您还将获得《席德·梅尔的文明VI》最新资讯的推送！</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_LINKED_TOOLTIP" Language="zh_Hans_CN">
-      <Text>2K Account已关联。跨平台云存档已启用。“猫咪侦察兵”奖励已解锁（请在“额外内容”中查看）。</Text>
+      <Text>2K帐号已关联。跨平台云存档已启用。“猫咪侦察兵”奖励已解锁（请在“额外内容”中查看）。</Text>
     </Replace>
     <Replace Tag="LOC_NAPOLEON_RULESET_TITLE" Language="zh_Hans_CN">
       <Text>铁骑与火炮</Text>
@@ -38954,7 +39083,7 @@
       <Text>升级农场改良设施为机械化农业。为邻近的每个农场改良设施+1 [ICON_Food] 食物相邻加成。</Text>
     </Replace>
     <Replace Tag="LOC_TECH_STEEL_DESCRIPTION" Language="zh_Hans_CN">
-      <Text>从伐木场改良设施获得的 [ICON_Production] 生产力+1。解锁城市防御，为所有城市提供200点自动防御力和发起远程攻击的能力。之前的城墙改良设施将全部过时，攻城单位进攻时不再拥有特殊效果。</Text>
+      <Text>从伐木场改良设施获得的 [ICON_Production] 生产力+1。解锁城市防御，为所有城市提供400点自动防御力和发起远程攻击的能力。之前的城墙改良设施将全部过时，攻城单位进攻时不再拥有特殊效果。</Text>
     </Replace>
     <Replace Tag="LOC_TECH_COMBUSTION_DESCRIPTION" Language="zh_Hans_CN">
       <Text>水运单位+1 [ICON_Movement] 移动力。</Text>
@@ -40459,6 +40588,9 @@
     <Replace Tag="LOC_MODS_USER_CONTENT" Language="zh_Hans_CN">
       <Text>社区包</Text>
     </Replace>
+    <Replace Tag="LOC_MODS_WORLDBUILDER_CONTENT" Language="zh_Hans_CN">
+      <Text>地图生成器地图</Text>
+    </Replace>
     <Replace Tag="LOC_MODS_ENABLE_ALL" Language="zh_Hans_CN">
       <Text>全部启用</Text>
     </Replace>
@@ -40512,6 +40644,9 @@
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_MULTIPLAYER" Language="zh_Hans_CN">
       <Text>是否为多人模式？</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_DETAILS_CREATED" Language="zh_Hans_CN">
+      <Text>已创建：</Text>
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_AFFECTS_SAVED_GAMES" Language="zh_Hans_CN">
       <Text>影响游戏存档：</Text>
@@ -41071,6 +41206,18 @@
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_EXIT_TO_MAINMENU" Language="zh_Hans_CN">
       <Text>返回主菜单</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_READY_BEHAVIOR" Language="zh_Hans_CN">
+      <Text>云端游戏就绪行为：</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_ASK_ME" Language="zh_Hans_CN">
+      <Text>进行询问</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_DO_NOTHING" Language="zh_Hans_CN">
+      <Text>无操作</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_EXIT_TO_LOBBY" Language="zh_Hans_CN">
+      <Text>退出至大厅</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR" Language="zh_Hans_CN">
       <Text>云端游戏客户端就绪行为：</Text>
     </Replace>
@@ -41097,6 +41244,21 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA" Language="zh_Hans_CN">
       <Text>蓝色盲</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_DISPLAY" Language="zh_Hans_CN">
+      <Text>生产队列：</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_HIDE" Language="zh_Hans_CN">
+      <Text>隐藏</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_SHOW_FILLED" Language="zh_Hans_CN">
+      <Text>填入时显示</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW" Language="zh_Hans_CN">
+      <Text>固定显示城市队列</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW_MANGER" Language="zh_Hans_CN">
+      <Text>固定显示队列管理器</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UI_XP2" Language="zh_Hans_CN">
       <Text>用户界面（风云变幻）：</Text>
@@ -42790,14 +42952,17 @@
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_SET_VISIBILITY" Language="zh_Hans_CN">
       <Text>地貌显示</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_GOODY_HUTS" Language="zh_Hans_CN">
+      <Text>部落村庄</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT" Language="zh_Hans_CN">
-      <Text>地图编辑器</Text>
+      <Text>地图详情与文本</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLAYER_EDITOR_TT" Language="zh_Hans_CN">
       <Text>玩家编辑器</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLACEMENT_HELP" Language="zh_Hans_CN">
-      <Text>单击左键放置。单击右键移除。</Text>
+      <Text>点击左键放置，点击右键移除，按住右键拖动绘制。按下CTRL+Z组合键取消放置，按下CTRL+Y恢复。</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP" Language="zh_Hans_CN">
       <Text>无选中格位</Text>
@@ -42821,7 +42986,7 @@
       <Text>地图脚本</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD" Language="zh_Hans_CN">
-      <Text>地图为模组</Text>
+      <Text>将地图打包为模组</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD_TT" Language="zh_Hans_CN">
       <Text>勾选此项后，“地图生成器”地图即为一个独立模组，可在游戏开始时作为一个地图类型使用。如未勾选，地图将作为大型模组的一部分使用。</Text>
@@ -42909,6 +43074,177 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_DEFAULT" Language="zh_Hans_CN">
       <Text>默认</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV" Language="zh_Hans_CN">
+      <Text>切换至高级模式</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_BASIC" Language="zh_Hans_CN">
+      <Text>切换至基础模式</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TITLE" Language="zh_Hans_CN">
+      <Text>是否切换至地图生成器高级模式？</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT" Language="zh_Hans_CN">
+      <Text>高级模式仍在开发中，当前完全不支持。我们已对高级模组创建人员开放此功能，以便实验高级情景功能。载入此模式中创建的模组后可能会影响《文明VI》的稳定性。</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE" Language="zh_Hans_CN">
+      <Text>部落</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FULL_CIV" Language="zh_Hans_CN">
+      <Text>文明</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_CITY_STATE" Language="zh_Hans_CN">
+      <Text>城邦</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FREE_CITIES" Language="zh_Hans_CN">
+      <Text>自由城市</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_OK" Language="zh_Hans_CN">
+      <Text>放置成功</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="zh_Hans_CN">
+      <Text>放置成功</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IN_PROGRESS" Language="zh_Hans_CN">
+      <Text>其中一项已在进行中</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ALREADY_EXISTS" Language="zh_Hans_CN">
+      <Text>其中一项目已存在</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OCCUPIED_BY_ENEMY" Language="zh_Hans_CN">
+      <Text>区域被对手占领</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_PILLAGED" Language="zh_Hans_CN">
+      <Text>区域被掠夺</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DISTRICT_REQUIRES" Language="zh_Hans_CN">
+      <Text>区域需求 </Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_POPULATION" Language="zh_Hans_CN">
+      <Text> 人口</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_CONTAMINATED" Language="zh_Hans_CN">
+      <Text>区域被污染</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_UNKNOWN" Language="zh_Hans_CN">
+      <Text>无法放置此项，无法确定原因</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_FEATURE" Language="zh_Hans_CN">
+      <Text>因未知原因而无法放置地貌</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_STARTUP" Language="zh_Hans_CN">
+      <Text>欢迎使用地图生成器！</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_PLACED" Language="zh_Hans_CN">
+      <Text>已成功放置单位</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OWNERSHIP_SET" Language="zh_Hans_CN">
+      <Text>已成功设置格位的拥有者</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POS_SET" Language="zh_Hans_CN">
+      <Text>已成功设置初始位置</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES" Language="zh_Hans_CN">
+      <Text>清除资源</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES" Language="zh_Hans_CN">
+      <Text>分散资源</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES_HELP" Language="zh_Hans_CN">
+      <Text>清除地图上的所有资源并生成新资源（将耗时数秒）</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_CLEARED" Language="zh_Hans_CN">
+      <Text>所有资源已清除</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_SCATTERED" Language="zh_Hans_CN">
+      <Text>清除并重新生成所有资源</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_REDO" Language="zh_Hans_CN">
+      <Text>没有要恢复的操作</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_UNDO" Language="zh_Hans_CN">
+      <Text>没有要取消的操作</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_REDO" Language="zh_Hans_CN">
+      <Text>恢复成功</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_UNDO" Language="zh_Hans_CN">
+      <Text>取消成功</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LABEL" Language="zh_Hans_CN">
+      <Text>笔刷尺寸</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL" Language="zh_Hans_CN">
+      <Text>小</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM" Language="zh_Hans_CN">
+      <Text>中</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE" Language="zh_Hans_CN">
+      <Text>大</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT" Language="zh_Hans_CN">
+      <Text>放置格位</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SELECTED_PLOT" Language="zh_Hans_CN">
+      <Text>已选格位：</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POSITION" Language="zh_Hans_CN">
+      <Text>初始位置：</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACE" Language="zh_Hans_CN">
+      <Text>放置</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLOT" Language="zh_Hans_CN">
+      <Text>格位</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_EDITOR" Language="zh_Hans_CN">
+      <Text>地图编辑器</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODTITLE" Language="zh_Hans_CN">
+      <Text>模组名称（必选）</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODDESC" Language="zh_Hans_CN">
+      <Text>模组描述（必选）</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPTITLE" Language="zh_Hans_CN">
+      <Text>地图名称（必选）</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPDESC" Language="zh_Hans_CN">
+      <Text>地图描述（必选）</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_ADDLDATA" Language="zh_Hans_CN">
+      <Text>以供模组创建者使用（可选）</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYID" Language="zh_Hans_CN">
+      <Text>虚拟_ID</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYTEXT" Language="zh_Hans_CN">
+      <Text>虚拟文字</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_CREATE_MAP" Language="zh_Hans_CN">
+      <Text>创建地图</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_START" Language="zh_Hans_CN">
+      <Text>生成</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME" Language="zh_Hans_CN">
+      <Text>地图名</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_WORLDWRAP" Language="zh_Hans_CN">
+      <Text>世界包覆</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME_DESC" Language="zh_Hans_CN">
+      <Text>地图的命名，之后可进行修改</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER" Language="zh_Hans_CN">
+      <Text>返回到地图</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY" Language="zh_Hans_CN">
+      <Text>空白地图</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION" Language="zh_Hans_CN">
+      <Text>一块空白的地图。</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="zh_Hans_CN">
       <Text>文明开端</Text>
@@ -45127,6 +45463,9 @@
     <Replace Tag="LOC_TOP_PANEL_INFLUENCE_TOOLTIP_ENVOYS" Language="zh_Hans_CN">
       <Text>{1_Envoys} [ICON_Envoy] {1_Envoys : plural 1?使者; other?使者;} 可用</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_RESULTS" Language="zh_Hans_CN">
+      <Text>已找到{1_Count}个结果</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_RESEARCH_TURNS_TO_USE" Language="zh_Hans_CN">
       <Text>{1_Turns : plural 1?{1_Turns} 回合; other? {1_Turn} 回合;}完成。</Text>
     </Replace>
@@ -45445,6 +45784,9 @@
     <Replace Tag="LOC_TYPE_TRAIT_HOUSING" Language="zh_Hans_CN">
       <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] 住房</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_HOUSING_WITH_REQUIREMENT" Language="zh_Hans_CN">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] 住房（需要{2_TechOrCivicName}）</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AIRSLOTS" Language="zh_Hans_CN">
       <Text>飞机容量：{1_Amount}</Text>
     </Replace>
@@ -45459,6 +45801,9 @@
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_WEAPONSLOTS" Language="zh_Hans_CN">
       <Text>武器能力：{1_Amount}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_AMENITY" Language="zh_Hans_CN">
+      <Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] 宜居度</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AMENITY_ENTERTAINMENT" Language="zh_Hans_CN">
       <Text>娱乐区域 [ICON_Amenities] {1_Amount: number +#,###;-#,###} {1_Amount : plural 1?宜居度; other?宜居度;} </Text>
@@ -45499,17 +45844,32 @@
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_ONCE" Language="zh_Hans_CN">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName}，来自一个相邻的{5_AdjacentObject}单元格。</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_ONCE" Language="zh_Hans_CN">
+      <Text>每有1个相邻{2_AdjacentObject}单元格时，{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] 宜居度</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS" Language="zh_Hans_CN">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName}，来自每个相邻的{5_AdjacentObject}单元格。</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS" Language="zh_Hans_CN">
+      <Text>与每个{3_AdjacentObject}单元格相邻时，{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] 宜居度</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_PER" Language="zh_Hans_CN">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName}，来自每{4_Count}个相邻{5_AdjacentObject}单元格。</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_PER" Language="zh_Hans_CN">
+      <Text>与每{2_Count}个{3_AdjacentObject}单元格相邻时，{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] 宜居度</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_REQUIRES_TECH_OR_CIVIC" Language="zh_Hans_CN">
       <Text>需要{1_TechOrCivicName}。</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_OBSOLETE_WITH_TECH_OR_CIVIC" Language="zh_Hans_CN">
       <Text>随着{1_TechOrCivicName}的出现，代替了之前的政策。</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD" Language="zh_Hans_CN">
+      <Text>掠夺奖励：{1_AwardIcon} {2_AwardText}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_NO_ICON" Language="zh_Hans_CN">
+      <Text>掠夺奖励：{1_AwardText}</Text>
     </Replace>
     <Replace Tag="LOC_TIME_AD" Language="zh_Hans_CN">
       <Text>公元{1_Date: number #}年</Text>
@@ -46243,14 +46603,20 @@
     <Replace Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER" Language="zh_Hans_CN">
       <Text>被{1_SteamID}占领</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_SHOW_QUEUE" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_SHOW_QUEUE" Language="zh_Hans_CN">
       <Text>显示队列（{1_QueueSize}）</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_HIDE_QUEUE" Language="zh_Hans_CN">
+    <Replace Tag="LOC_PRODUCTION_PANEL_HIDE_QUEUE" Language="zh_Hans_CN">
       <Text>隐藏队列（{1_QueueSize}）</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_SORT_BY" Language="zh_Hans_CN">
       <Text>排序方式：{1_SortType}</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_BODY" Language="zh_Hans_CN">
+      <Text>现在是您的云端游戏回合：[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]如果现在加入比赛，未保存的进度将丢失。</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_BODY" Language="zh_Hans_CN">
+      <Text>您的云端游戏已结束：[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]如果现在查看结果，未保存的进度将丢失。</Text>
     </Replace>
     <Replace Tag="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION" Language="zh_Hans_CN">
       <Text>{LOC_MINOR_CIV_SMALL_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_SMALL_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_MEDIUM_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_MEDIUM_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_LARGE_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_LARGE_INFLUENCE_BONUS}</Text>
@@ -46789,6 +47155,9 @@
     <Replace Tag="LOC_WORLD_FAITH_INCREASE_FLOATER" Language="zh_Hans_CN">
       <Text>+{1_Num} [ICON_Faith]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_FAITH_DECREASE_FLOATER" Language="zh_Hans_CN">
+      <Text>[COLOR_RED]损失[ENDCOLOR]{1_Num}点 [ICON_Faith]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_UNIT_DAMAGE_DECREASE_FLOATER" Language="zh_Hans_CN">
       <Text>[COLOR_GREEN]+{1_Num}[ENDCOLOR]</Text>
     </Replace>
@@ -46805,22 +47174,31 @@
       <Text>[COLOR_FLOAT_PRODUCTION]+{1_Num} [ICON_Production][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_PRODUCTION_DECREASE_FLOATER" Language="zh_Hans_CN">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_RED]损失[ENDCOLOR] [COLOR_FLOAT_PRODUCTION]{1_Num}点 [ICON_Production][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_INCREASE_FLOATER" Language="zh_Hans_CN">
       <Text>[COLOR_FLOAT_FOOD]+{1_Num} [ICON_Food][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_DECREASE_FLOATER" Language="zh_Hans_CN">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_RED]损失[ENDCOLOR] [COLOR_FLOAT_FOOD]{1_Num}点 [ICON_Food][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_GOLD_INCREASE_FLOATER" Language="zh_Hans_CN">
       <Text>[COLOR_FLOAT_GOLD]+{1_Num} [ICON_Gold][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_GOLD_DECREASE_FLOATER" Language="zh_Hans_CN">
+      <Text>[COLOR_RED]损失[ENDCOLOR] [COLOR_FLOAT_GOLD]{1_Num}点 [ICON_Gold][ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_SCIENCE_INCREASE_FLOATER" Language="zh_Hans_CN">
       <Text>[COLOR_FLOAT_SCIENCE]+{1_Num} [ICON_Science][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_SCIENCE_DECREASE_FLOATER" Language="zh_Hans_CN">
+      <Text>[COLOR_RED]损失[ENDCOLOR] [COLOR_FLOAT_SCIENCE]{1_Num}点 [ICON_Science][ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_CULTURE_INCREASE_FLOATER" Language="zh_Hans_CN">
       <Text>[COLOR_FLOAT_CULTURE]+{1_Num} [ICON_Culture][ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_CULTURE_DECREASE_FLOATER" Language="zh_Hans_CN">
+      <Text>[COLOR_RED]损失[ENDCOLOR] [COLOR_FLOAT_CULTURE]{1_Num}点 [ICON_Culture][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_DIFFICULTY_SCALING" Language="zh_Hans_CN">
       <Text>因为难度关系，+{Amount}加成。</Text>
@@ -46869,6 +47247,12 @@
     </Replace>
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION" Language="zh_Hans_CN">
       <Text>丘陵地形作战+{1_Amount} </Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED" Language="zh_Hans_CN">
+      <Text>这必须放在一个{1_Name}区域中。</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE" Language="zh_Hans_CN">
+      <Text>地图：{1_MapName}</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Language="zh_Hans_CN">
       <Text>雄鹰战士</Text>

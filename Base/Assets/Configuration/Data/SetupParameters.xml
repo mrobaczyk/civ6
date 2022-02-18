@@ -44,6 +44,11 @@
 		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
 		<Row Key1="Ruleset" Key2="RULESET_STANDARD" ParameterId="AlliesShareVisibility" Name="LOC_GAME_ALLIES_SHARE_VISIBILITY" Description="LOC_GAME_ALLIES_SHARE_VISIBILITY_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="GAME_ALLIES_SHARE_VISIBILITY" GroupId="AdvancedOptions" SortIndex="2010"/>
 		
+		
+		<!-- WorldBuilder Options -->
+		<!--<Row ParameterId="MapName" Name="LOC_WORLDBUILDER_MAP_NAME" Description="LOC_WORLDBUILDER_MAP_NAME_DESC" Domain="text" DefaultValue="LOC_WORLDBUILDER_DEFAULT_MAP_NAME" Hash="0" ConfigurationGroup="Map" ConfigurationId="MAP_NAME" GroupId="BasicGameOptions" SortIndex="2"/>-->
+		<Row ParameterId="WorldWrap" Name="LOC_SETUP_WORLDBUILDER_WORLDWRAP" Description="" Domain="bool" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="MAP_WRAP_ON" GroupId="AdvancedOptions" SortIndex="2010"/>
+
 		<!-- Player Parameters -->
 		<Row ParameterId="PlayerLeader" Name="LOC_LEADER_TYPE" Description="" Domain="Players:StandardPlayers" Hash="0" ConfigurationGroup="Player" ConfigurationId="LEADER_TYPE_ID" DomainConfigurationId="LEADER_DOMAIN" DomainValuesConfigurationId="LEADER_VALUES" ValueDomainConfigurationId="LEADER_VALUE_DOMAIN" GroupId="PlayerOptions"/>
 		<Row ParameterId="PlayerTeam" Name="LOC_PLAYER_TEAM" Description="The player team." Domain="int" Hash="0" ConfigurationGroup="Player" ConfigurationId="TEAM" GroupId="PlayerOptions"/>
@@ -62,7 +67,11 @@
 		<Row QueryId="MapUniqueLeaderCriteria" />
 	</ParameterCriteriaQueries>	
 
-	<ParameterCriteria>	
+	<ParameterCriteria>
+
+		<!-- Disable Teams Share Visibiility -->
+		<Row ParameterId="AlliesShareVisibility" ConfigurationGroup="Game" ConfigurationId="NO_TEAMS" Operator="NotEquals" ConfigurationValue="1" />
+		
 		<!-- Score victory cannot be enabled when there is no turn limit.-->
 		<!-- Mark as criteria so that it can still be visible. -->
 		<Row ParameterId="VICTORY_SCORE" ConfigurationGroup="Game" ConfigurationId="GAME_TURN_LIMIT" Operator="NotEquals" ConfigurationValue="TURNLIMIT_NONE" />
@@ -77,6 +86,28 @@
 
 	<ParameterDependencies>
 
+		<!-- Enable certain options only if in world builder. -->
+		<!--<Row ParameterId="MapName" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="Equals" ConfigurationValue="1" />-->
+		<Row ParameterId="WorldWrap" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="Equals" ConfigurationValue="1" />
+		
+		<!-- Disable certain options if this is for world builder. -->
+		<Row ParameterId="GameDifficulty" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="GameStartEra" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="TurnTimerType" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="GameStartEra" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="GameSpeeds" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="CityStateCount" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+
+		<Row ParameterId="NoDupeCivilizations" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="NoDupeLeaders" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="TurnLimit" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="MaxTurns" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="GameRandomSeed" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="NoTeams" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="AlliesShareVisibility" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="NoGoodyHuts" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Row ParameterId="NoBarbarians" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		
 		<!-- Teams should only be enabled if NO_TEAMS is not selected. -->
 		<Row ParameterId="PlayerTeam" ConfigurationGroup="Game" ConfigurationId="NO_TEAMS" Operator="NotEquals" ConfigurationValue="1" />
 
@@ -94,6 +125,14 @@
 		<Row ParameterQueryId="RulesetParameters" QueryId="RulesetParameters"/>
 		<Row ParameterQueryId="MapParameters" QueryId="MapParameters"/>
 	</ParameterQueries>
+
+	<ParameterQueryDependencies>
+		
+		<!-- Hide Defeat/Victory parameters if in WorldBuilder mode.-->
+		<Row ParameterQueryId="DefeatParameters" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
+		<Row ParameterQueryId="VictoryParameters" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1"/>
+		
+	</ParameterQueryDependencies>
 	
 	<DomainOverrideQueries>
 		<Row QueryId="MapDomainOverrides" />
@@ -178,7 +217,12 @@
 		<Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="VICTORY_SCORE" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="GAME_MAX_TURNS" SourceValue="0" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_NONE" Hash="1"  />
 
-		<Row SourceGroup="Game" SourceId="TURN_TIMER_TIME" SourceValue="0" TargetGroup="Game" TargetId="TURN_TIMER_TIME" TargetValue="180" Hash="0"  />		
+		<Row SourceGroup="Game" SourceId="TURN_TIMER_TIME" SourceValue="0" TargetGroup="Game" TargetId="TURN_TIMER_TIME" TargetValue="180" Hash="0"  />
+
+		<Row SourceGroup="Game" SourceId="NO_TEAMS" SourceValue="0" TargetGroup="Game" TargetId="GAME_ALLIES_SHARE_VISIBILITY" TargetValue="1" Hash="0"  />
+		<Row SourceGroup="Game" SourceId="NO_TEAMS" SourceValue="1" TargetGroup="Game" TargetId="GAME_ALLIES_SHARE_VISIBILITY" TargetValue="0" Hash="0"  />
+
+
 	</ConfigurationUpdates>
 
 	<Queries>

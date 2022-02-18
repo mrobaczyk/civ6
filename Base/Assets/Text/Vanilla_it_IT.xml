@@ -6206,10 +6206,10 @@
       <Text>È possibile saccheggiare sia i miglioramenti sia gli edifici situati nei distretti privi di guarnigione. Quest'azione li rende inutilizzabili e fornisce all'unità che saccheggia una qualche forma di "bottino". Con l'eccezione delle cure, le ricompense di questi saccheggi aumentano nel corso della partita.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_2" Language="it_IT">
-      <Text>Saccheggiare un distretto richiede 3 punti movimento o tutto il movimento disponibile di un'unità. Ogni edificio di un distretto dev'essere saccheggiato separatamente e fornisce un bottino che dipende dal distretto stesso (v. sotto). Una volta saccheggiato, un edificio non può essere saccheggiato nuovamente finché non è stato riparato dal suo possessore (un'azione che si può eseguire dal Menu di produzione e che richiede il 25% del costo in [ICON_Production] Produzione originale dell'edificio.)[NEWLINE]Saccheggiare un Campus fornisce [ICON_Science] Scienza.[NEWLINE]Saccheggiare un Luogo Santo fornisce [ICON_Faith] Fede.[NEWLINE]Saccheggiare uno Snodo commerciale fornisce [ICON_Gold] Oro.[NEWLINE]Saccheggiare una Piazza del Teatro fornisce [ICON_Culture] Cultura.[NEWLINE]Saccheggiare un Porto fornisce [ICON_Gold] Oro.[NEWLINE]Saccheggiare una Zona industriale fornisce [ICON_Science] Scienza.[NEWLINE]Saccheggiare un Aerodromo fornisce [ICON_Gold] Oro.[NEWLINE]Saccheggiare un Acquedotto fornisce [ICON_Gold] Oro.[NEWLINE]Saccheggiare uno Spazioporto fornisce [ICON_Science] Scienza.[NEWLINE]Saccheggiare un Quartiere dei divertimenti cura l'unità che esegue il saccheggio.</Text>
+      <Text>Saccheggiare un distretto richiede 3 punti movimento o tutto il movimento disponibile di un'unità. Ogni edificio di un distretto dev'essere saccheggiato separatamente e fornisce un bottino che dipende dal distretto stesso. Consulta la pagina del distretto per l'indicazione specifica delle varie rese. Una volta saccheggiato, un edificio non può essere saccheggiato nuovamente finché non è stato riparato dal suo possessore (un'azione che si può eseguire dal Menu di produzione e che richiede il 25% del costo in [ICON_Production] Produzione originale dell'edificio.)</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_3" Language="it_IT">
-      <Text>Saccheggiare un miglioramento richiede 3 punti [ICON_Movement] movimento, o tutti quelli disponibili a un'unità (se questa ha meno di 3 punti [ICON_Movement] movimento). Il miglioramento sarà marcato come "saccheggiato". Una volta saccheggiato, un miglioramento non può essere saccheggiato nuovamente finché non è stato riparato dal suo possessore (un'azione che un Costruttore può eseguire in un turno, senza consumare alcuna "carica").[NEWLINE]Saccheggiare una Fattoria cura l'unità.[NEWLINE]Saccheggiare una Miniera fornisce [ICON_Science] Scienza.[NEWLINE]Saccheggiare una Cava fornisce [ICON_Culture] Cultura.[NEWLINE]Saccheggiare dei Pescherecci cura l'unità.[NEWLINE]Saccheggiare un Pascolo fornisce [ICON_Gold] Oro.[NEWLINE]Saccheggiare una Piantagione fornisce [ICON_Faith] Fede.[NEWLINE]Saccheggiare un Campo fornisce [ICON_Gold] Oro.[NEWLINE]Saccheggiare una Segheria fornisce [ICON_Science] Scienza.</Text>
+      <Text>Saccheggiare un miglioramento richiede 3 punti [ICON_Movement] movimento, o tutti quelli disponibili a un'unità (se questa ha meno di 3 punti [ICON_Movement] movimento). Il miglioramento sarà marcato come "saccheggiato". Una volta saccheggiato, un miglioramento non può essere saccheggiato nuovamente finché non è stato riparato dal suo possessore (un'azione che un Costruttore può eseguire in un turno, senza consumare alcuna "carica"). Consulta la pagina del miglioramento per l'indicazione specifica delle varie rese.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MOVEMENT_NAME" Language="it_IT">
       <Text>Movimento delle unità</Text>
@@ -6614,7 +6614,7 @@
       <Text>La civiltà con il maggior numero di [ICON_Envoy] Emissari in una città-stato, se questi sono almeno 3, viene considerata Sovrana di quella città-stato. Ogni città può avere al più un Sovrano; non sono ammesse situazioni di parità. Se nessuno ha inviato [ICON_Envoy] Emissari in una città-stato, questa non ha alcun Sovrano. Il Sovrano ottiene molti benefici importanti:</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_2" Language="it_IT">
-      <Text>Bonus esclusivo: questo è un potente bonus che nessun'altra città-stato è in grado di fornire (per esempio, Gerusalemme funziona come una seconda Città Santa della tua religione).</Text>
+      <Text>Bonus esclusivo: questo è un potente bonus per il Sovrano che nessun'altra città-stato è in grado di fornire.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_3" Language="it_IT">
       <Text>{LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS}</Text>
@@ -12636,6 +12636,13 @@
 
 [i]TechTree_Meter_Done
 
+[2]MODDING CONTRIBUTIONS
+
+[3]UI
+[4]Bradd Szonye - Map Tacks
+
+[i]TechTree_Meter_Done
+
 [2]FRANKENSTEIN TEST GROUP
 [4]Camikaze
 [4]Sam "SamBC" Barnett-Cormack
@@ -15695,7 +15702,7 @@
 [4]Marek Vojtko
 [4]Kevin Jones
 [4]Theodore Maselko
-[4]Gabe Ortega
+[4]Gabriel Ortega
 
 [3]Lead Technical Artist
 [4]Arthur Gould
@@ -16085,6 +16092,8 @@
 [4]John Koziol
 [4]Jett Barton
 [4]Timo Schwabe
+[4]Lee Shipp
+[4]Steve Daly
 
 [i]TechTree_Meter_Done
 
@@ -29564,7 +29573,7 @@
       <Text>Carica mappa</Text>
     </Replace>
     <Replace Tag="LOC_LOAD_TILED" Language="it_IT">
-      <Text>Importazione mappa</Text>
+      <Text>Importa mappa dall'Editor</Text>
     </Replace>
     <Replace Tag="LOC_OPEN_DIRECTORY" Language="it_IT">
       <Text>Aperto</Text>
@@ -30277,6 +30286,9 @@
     <Replace Tag="LOC_GAMESTART_COUNTDOWN_FORMAT" Language="it_IT">
       <Text>La partita sta iniziando</Text>
     </Replace>
+    <Replace Tag="LOC_READY_COUNTDOWN_FORMAT" Language="it_IT">
+      <Text>Prepararsi</Text>
+    </Replace>
     <Replace Tag="LOC_HOTSEAT_DEFAULT_PLAYER_NAME" Language="it_IT">
       <Text>Giocatore</Text>
     </Replace>
@@ -30563,7 +30575,7 @@
       <Text>Carica mappa</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_IMPORT" Language="it_IT">
-      <Text>Importazione mappa</Text>
+      <Text>Importa mappa dall'Editor</Text>
     </Replace>
     <Replace Tag="LOC_RANDOM_LEADER" Language="it_IT">
       <Text>Leader casuale</Text>
@@ -31351,6 +31363,9 @@
     <Replace Tag="LOC_GAME_START_ERROR_MOD_OWNERSHIP" Language="it_IT">
       <Text>Uno o più mod non sono stati acquistati.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_SCRIPT_PROCESSING" Language="it_IT">
+      <Text>Sono presenti degli errori in uno o più script di avvio. Vedi il file lua.log per dettagli</Text>
+    </Replace>
     <Replace Tag="LOC_CLOUD_SAVES_REQUIRE_LINKED_ACCOUNT" Language="it_IT">
       <Text>I salvataggi sul Cloud richiedono il collegamento ad un Account 2K.</Text>
     </Replace>
@@ -31529,7 +31544,7 @@
       <Text>Unisciti con un codice</Text>
     </Replace>
     <Replace Tag="LOC_JOIN_CODE_POPUP_TEXT" Language="it_IT">
-      <Text>Unisciti a una partita usando un codice, che può essere trovato nella scheda Riepilogo partita nella Sala di allestimento della partita in questione. Attenzione, i codici di join distinguono lettere maiuscole e minuscole.</Text>
+      <Text>Unisciti a una partita usando un codice, che può essere trovato nella scheda Riepilogo partita nella Sala di allestimento della partita in questione. Attenzione, i codici distinguono lettere maiuscole e minuscole.</Text>
     </Replace>
     <Replace Tag="LOC_JOIN_CODE_POPUP_EDITBOX" Language="it_IT">
       <Text>Codice per unirti:</Text>
@@ -31582,11 +31597,23 @@
     <Replace Tag="LOC_OPTIONS_WEBHOOK_FREQ" Language="it_IT">
       <Text>Frequenza Webhook per il Play By Cloud:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE" Language="it_IT">
+      <Text>Modalità Play By Cloud:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE_TOOLTIP" Language="it_IT">
+      <Text>Modalità A - Compatibile con IFTTT[NEWLINE]Variabili JSON[NEWLINE][ICON_Bullet]"value1" = Nome della partita[NEWLINE][ICON_Bullet]"value2" = Nome del giocatore[NEWLINE][ICON_Bullet]"value3" = Turno di gioco[NEWLINE]Modalità B - Compatibile con Discord[NEWLINE]Variabili JSON[NEWLINE][ICON_Bullet]"content" = Messaggio di notifica</Text>
+    </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_MY_TURN" Language="it_IT">
       <Text>Il mio turno</Text>
     </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_EVERY_TURN" Language="it_IT">
       <Text>Ogni turno</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_A" Language="it_IT">
+      <Text>Modalità A</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_B" Language="it_IT">
+      <Text>Modalità B</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_REMINDER_TITLE" Language="it_IT">
       <Text>Configura le tue notifiche!</Text>
@@ -32451,10 +32478,10 @@
       <Text>Sblocca l'abilità della Legione di realizzare un Forte romano, esclusivo di Roma.[NEWLINE][NEWLINE]L'unità che lo occupa riceve +4 [ICON_Strength] forza difensiva e guadagna automaticamente 2 turni di fortificazione.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="it_IT">
-      <Text>Sblocca l'abilità dei Costruttori di realizzare una Sfinge, esclusiva dell'Egitto.[NEWLINE][NEWLINE]+1 [ICON_Faith] Fede e +1 [ICON_Culture] Cultura. +1 Appeal. +2 [ICON_Faith] Fede se adiacente a una Meraviglia. Può essere costruita su terreni allagati.</Text>
+      <Text>Sblocca l'abilità dei Costruttori di realizzare una Sfinge, esclusiva dell'Egitto.[NEWLINE][NEWLINE]+1 [ICON_Faith] Fede e +1 [ICON_Culture] Cultura. +1 Appeal. +2 [ICON_Faith] Fede se adiacente a una Meraviglia. Non può essere costruita accanto a un'altra Sfinge. Può essere costruita su terreni allagati.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_STEPWELL_DESCRIPTION" Language="it_IT">
-      <Text>Sblocca l'abilità dei Costruttori di realizzare un Pozzo a gradini, esclusivo dell'India.[NEWLINE][NEWLINE]+1 [ICON_Food] Cibo e +1 [ICON_Housing] Abitazioni. +1 [ICON_Faith] Fede se adiacente a un distretto Luogo Santo. +1 [ICON_Food] Cibo se adiacente a una Fattoria. Non può essere costruito in collina o adiacente a un altro Pozzo a gradini.</Text>
+      <Text>Sblocca l'abilità dei Costruttori di realizzare un Pozzo a gradini, esclusivo dell'India.[NEWLINE][NEWLINE]+1 [ICON_Food] Cibo e +1 [ICON_Housing] Abitazioni. +1 [ICON_Faith] Fede se adiacente a un distretto Luogo Santo. +1 [ICON_Food] Cibo se adiacente a una Fattoria. Bonus ulteriori ad [ICON_Housing] Abitazioni, [ICON_Faith] Fede e [ICON_Food] Cibo con il progressivo avanzamento nell'Albero delle tecnologie e in quello dei Progressi civici. Non può essere costruito in collina o adiacente a un altro Pozzo a gradini.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_ZIGGURAT_DESCRIPTION" Language="it_IT">
       <Text>Sblocca l'abilità dei Costruttori di realizzare una Ziqqurat, esclusiva della Sumeria.[NEWLINE][NEWLINE]+2 [ICON_Science] Scienza. +1 [ICON_Culture] Cultura se accanto a un fiume. Non può essere costruito in collina.</Text>
@@ -33962,6 +33989,33 @@
     <Replace Tag="LOC_HUD_MAP_OPTIONS" Language="it_IT">
       <Text>Opzioni mappa</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH" Language="it_IT">
+      <Text>Ricerca sulla mappa</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_IN_PROGRESS" Language="it_IT">
+      <Text>Ricerca in corso...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_UPDATING" Language="it_IT">
+      <Text>Aggiornamento...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_WAITING_FOR_TURN" Language="it_IT">
+      <Text>In attesa del turno successivo...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_BEGIN_SEARCH" Language="it_IT">
+      <Text>CERCA</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_CLEAR_SEARCH" Language="it_IT">
+      <Text>REIMPOSTA</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_NO_SEARCH_TERMS_TOOLTIP" Language="it_IT">
+      <Text>Impossibile eseguire la ricerca, serve almeno un termine.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TOOLTIP" Language="it_IT">
+      <Text>Termini della ricerca[NEWLINE]I risultati conterranno TUTTI i termini inseriti qui.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_FILTER_TOOLTIP" Language="it_IT">
+      <Text>Filtro ricerca[NEWLINE]I risultati NON conterranno i termini inseriti qui.</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_CIVICS_ENABLES" Language="it_IT">
       <Text>Sblocca</Text>
     </Replace>
@@ -34042,6 +34096,42 @@
     </Replace>
     <Replace Tag="LOC_HUD_POPUP_PROJECT_CREATED_BY_UNKNOWN" Language="it_IT">
       <Text>Una civiltà che non hai ancora incontrato si avvicina alla Vittoria scientifica.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_MOUNTAIN" Language="it_IT">
+      <Text>Montagna</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_HILL" Language="it_IT">
+      <Text>Collina</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_WATER" Language="it_IT">
+      <Text>Acqua</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_FEATURE" Language="it_IT">
+      <Text>Caratteristica</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_IMPROVEMENT" Language="it_IT">
+      <Text>Miglioramento Miglioramenti</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_OWNED" Language="it_IT">
+      <Text>Posseduto</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNCLAIMED" Language="it_IT">
+      <Text>Non rivendicata</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_PILLAGED" Language="it_IT">
+      <Text>Saccheggiato</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_NATIONAL_PARK" Language="it_IT">
+      <Text>Parco nazionale</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNDER_CONSTRUCTION" Language="it_IT">
+      <Text>In Costruzione</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_CONTAMINATION" Language="it_IT">
+      <Text>Contaminazione</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_SPECIALIST" Language="it_IT">
+      <Text>Specialista</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TO_BOOST" Language="it_IT">
       <Text>Per dare un impulso:</Text>
@@ -34982,6 +35072,9 @@
     <Replace Tag="LOC_TOOLTIP_APPEAL_DISGUSTING" Language="it_IT">
       <Text>Disgustoso</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING" Language="it_IT">
+      <Text>Cura</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLOMACY_HIDDEN_AGENDAS_TT" Language="it_IT">
       <Text>Per vedere le agende nascoste devi raggiungere il Livello d'accesso: [ICON_VisSecret] APERTO.</Text>
     </Replace>
@@ -35451,7 +35544,7 @@
       <Text>Civiltà Sconosciuta</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_RANKING_UNMET_PLAYER_COLORED" Language="it_IT">
-      <Text>[COLOR:131.147.158.255]Civiltà Sconosciuta[ENDCOLOR]</Text>
+      <Text>[COLOR:131,147,158,255]Civiltà Sconosciuta[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_REQUIREMENTS_LABEL" Language="it_IT">
       <Text>Requisiti</Text>
@@ -35799,10 +35892,10 @@
       <Text>Aggiungi questo giocatore come amico su Steam.</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_PLAYER_PIN_TOOLTIP" Language="it_IT">
-      <Text>Clicca col pulsante sinistro per esaminare uno spillo.  Clicca col pulsante destro per modificare uno spillo.</Text>
+      <Text>Clicca col pulsante sinistro per esaminare uno spillo sulla mappa. Clicca col pulsante destro per modificarlo.</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_REMOTE_PIN_TOOLTIP" Language="it_IT">
-      <Text>Clicca col pulsante sinistro per esaminare uno spillo.</Text>
+      <Text>Clicca col pulsante sinistro per esaminare uno spillo sulla mappa.</Text>
     </Replace>
     <Replace Tag="LOC_GAME_PAUSED_TITLE" Language="it_IT">
       <Text>Gioco in pausa!</Text>
@@ -35874,7 +35967,7 @@
       <Text>Questo Museo possiede già un Capolavoro di quest'artista. Aggiungi Capolavori dello stesso tema ma di artisti diversi per ricevere il bonus.</Text>
     </Replace>
     <Replace Tag="LOC_GREAT_WORKS_ARTIFACT_LOCKED_FROM_MOVE" Language="it_IT">
-      <Text>I Manufatti possono essere spostati solo dai Musei archeologici pieni (quelli senza neanche uno slot vuoto).</Text>
+      <Text>I Manufatti possono essere scambiati solo tra Musei archeologici pieni (quelli senza neanche uno slot vuoto).</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_SCULPTURE" Language="it_IT">
       <Text>[ICON_GreatWork_Sculpture] Scultura</Text>
@@ -36419,6 +36512,18 @@
     <Replace Tag="LOC_REPORTS_SHOW_ONLY_NOT_OWNED" Language="it_IT">
       <Text>Mostra solo le risorse che non posseggo</Text>
     </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_CIVS_BY" Language="it_IT">
+      <Text>Ordina civiltà per</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_AMOUNT" Language="it_IT">
+      <Text>quantità</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER" Language="it_IT">
+      <Text>giocatore</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER_SLOT" Language="it_IT">
+      <Text>slot giocatore</Text>
+    </Replace>
     <Replace Tag="LOC_REPORTS_SORT_BY" Language="it_IT">
       <Text>Ordina per</Text>
     </Replace>
@@ -36644,31 +36749,40 @@
     <Replace Tag="LOC_WORLDBUILDER_TEXT_TAG" Language="it_IT">
       <Text>Etichetta di testo</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_REMOVE_ITEM" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE" Language="it_IT">
+      <Text>Blocca la coda per mostrarla sempre.</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNLOCK_AUTOHIDE_QUEUE" Language="it_IT">
+      <Text>Sblocca per nascondere automaticamente la coda alla chiusura del pannello di produzione.</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_TOGGLE_AUTOHIDE_QUEUE" Language="it_IT">
+      <Text>Attiva/disattiva Nascondi automaticamente coda</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_REMOVE_ITEM" Language="it_IT">
       <Text>Elimina</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_LEFT_ITEM" Language="it_IT">
-      <Text>Sinistra</Text>
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_LEFT_ITEM" Language="it_IT">
+      <Text>Sposta a sinistra</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_RIGHT_ITEM" Language="it_IT">
-      <Text>Destra</Text>
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_RIGHT_ITEM" Language="it_IT">
+      <Text>Sposta a destra</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUTTON_TEXT" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUTTON_TEXT" Language="it_IT">
       <Text>Gestore</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUILDINGS_TOOLTIP" Language="it_IT">
-      <Text>Edifici e distretti</Text>
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUILDINGS_TOOLTIP" Language="it_IT">
+      <Text>Edifici e Distretti</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_WONDERS_TOOLTIP" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_PANEL_WONDERS_TOOLTIP" Language="it_IT">
       <Text>Meraviglie</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_UNITS_TOOLTIP" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNITS_TOOLTIP" Language="it_IT">
       <Text>Unità</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_PROJECTS_TOOLTIP" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_PANEL_PROJECTS_TOOLTIP" Language="it_IT">
       <Text>Progetti</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_MANAGER_TITLE" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_MANAGER_TITLE" Language="it_IT">
       <Text>Gestore Produzione</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_FOUNDING" Language="it_IT">
@@ -36679,6 +36793,9 @@
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_POPULATION" Language="it_IT">
       <Text>Popolazione</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_QUEUE_BEHAVIOR_TT" Language="it_IT">
+      <Text>Nel menu delle opzioni puoi impostare il comportamento predefinito della coda di produzione (visualizzata/nascosta).</Text>
     </Replace>
     <Replace Tag="LOC_HUD_FULLSCREEN_MAP" Language="it_IT">
       <Text>Mostra mappa a schermo intero</Text>
@@ -36727,6 +36844,18 @@
     </Replace>
     <Replace Tag="LOC_REMEMBER_MY_CHOICE" Language="it_IT">
       <Text>Ricorda la mia scelta</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_TITLE" Language="it_IT">
+      <Text>Il tuo turno Play By Cloud</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_JOIN_MATCH" Language="it_IT">
+      <Text>Unisciti alla partita</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_TITLE" Language="it_IT">
+      <Text>Fine partita Play By Cloud</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_VIEW_RESULTS" Language="it_IT">
+      <Text>Visualizza risultati</Text>
     </Replace>
     <Replace Tag="LOC_REPRESENTATIVE" Language="it_IT">
       <Text>un rappresentante</Text>
@@ -37239,7 +37368,7 @@
       <Text>+5 [ICON_Faith] Fede per ogni civiltà (compresa l'India) conosciuta che ha fondato una religione e non si trova attualmente in guerra. Le civiltà che combattono contro Gandhi ricevono il doppio della stanchezza di guerra.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_THUNDERBOLT_DESCRIPTION" Language="it_IT">
-      <Text>Permette di eseguire incursioni costiere con tutte le unità navali da mischia e fornisce +50% alla [ICON_PRODUCTION] Produzione per la costruzione di unità navali da mischia.</Text>
+      <Text>Permette di eseguire incursioni costiere con tutte le unità navali da mischia e fornisce +50% alla [ICON_PRODUCTION] Produzione per la costruzione di unità navali da mischia. La scoperta della Vela sblocca l'unità esclusiva Nave lunga vichinga.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_FIRST_EMPEROR_DESCRIPTION" Language="it_IT">
       <Text>Quando costruisci una Meraviglia di epoca antica e classica puoi consumare una carica dei Costruttori per completare il 15% del costo originale della Meraviglia. I Costruttori ricevono una carica extra.</Text>
@@ -39744,7 +39873,7 @@
       <Text>Aggiorna le Fattorie, trasformandole in Aziende agricole meccanizzate. Bonus da vicinanza: +1 [ICON_FOOD] Cibo per ogni Fattoria adiacente.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_STEEL_DESCRIPTION" Language="it_IT">
-      <Text>+1 [ICON_Production] Produzione dai miglioramenti Segheria. Sblocca le Difese urbane, dando automaticamente a tutte le tue città una Fortificazione di 200 e la capacità di eseguire attacchi a distanza. Tutte le Mura costruite in precedenza diventano obsolete e le unità d'assedio di supporto non sono più efficaci.</Text>
+      <Text>+1 [ICON_Production] Produzione dai miglioramenti Segheria. Sblocca le Difese urbane, dando automaticamente a tutte le tue città una Fortificazione di 400 e la capacità di eseguire attacchi a distanza. Tutte le Mura costruite in precedenza diventano obsolete e le unità d'assedio di supporto non sono più efficaci.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_COMBUSTION_DESCRIPTION" Language="it_IT">
       <Text>+1 al [ICON_Movement] movimento delle unità imbarcate.</Text>
@@ -41249,6 +41378,9 @@
     <Replace Tag="LOC_MODS_USER_CONTENT" Language="it_IT">
       <Text>Contenuti creati dalla community</Text>
     </Replace>
+    <Replace Tag="LOC_MODS_WORLDBUILDER_CONTENT" Language="it_IT">
+      <Text>Mappa WorldBuilder</Text>
+    </Replace>
     <Replace Tag="LOC_MODS_ENABLE_ALL" Language="it_IT">
       <Text>Attiva tutti</Text>
     </Replace>
@@ -41302,6 +41434,9 @@
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_MULTIPLAYER" Language="it_IT">
       <Text>Multigiocatore:</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_DETAILS_CREATED" Language="it_IT">
+      <Text>Creata:</Text>
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_AFFECTS_SAVED_GAMES" Language="it_IT">
       <Text>Influenza i salvataggi:</Text>
@@ -41861,6 +41996,18 @@
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_EXIT_TO_MAINMENU" Language="it_IT">
       <Text>Esci al Menu Principale</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_READY_BEHAVIOR" Language="it_IT">
+      <Text>Comportamento PlayByCloud pronto:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_ASK_ME" Language="it_IT">
+      <Text>Chiedi a me</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_DO_NOTHING" Language="it_IT">
+      <Text>Non fare nulla</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_EXIT_TO_LOBBY" Language="it_IT">
+      <Text>Torna alla lobby</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR" Language="it_IT">
       <Text>Comportamento client PlayByCloud pronto:</Text>
     </Replace>
@@ -41887,6 +42034,21 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA" Language="it_IT">
       <Text>Tritanopia con insensibilità al blu</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_DISPLAY" Language="it_IT">
+      <Text>Coda di produzione:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_HIDE" Language="it_IT">
+      <Text>Nascondi</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_SHOW_FILLED" Language="it_IT">
+      <Text>Mostra quando piena</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW" Language="it_IT">
+      <Text>Mostra sempre la coda della città</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW_MANGER" Language="it_IT">
+      <Text>Mostra sempre il Gestore della coda</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UI_XP2" Language="it_IT">
       <Text>Interfaccia Utente (Gathering Storm):</Text>
@@ -43580,14 +43742,17 @@
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_SET_VISIBILITY" Language="it_IT">
       <Text>Visibilità del terreno</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_GOODY_HUTS" Language="it_IT">
+      <Text>Villaggi tribali</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT" Language="it_IT">
-      <Text>Editor di mappe</Text>
+      <Text>Dettagli mappa e testo</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLAYER_EDITOR_TT" Language="it_IT">
       <Text>Editor giocatore</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLACEMENT_HELP" Language="it_IT">
-      <Text>Clicca col pulsante sinistro per posizionare. Clicca col pulsante destro per eliminare.</Text>
+      <Text>Clicca col pulsante sinistro per posizionare, clicca col pulsante destro per eliminare, trascina tenendo premuto il pulsante destro per "pitturare". CTRL-Z annulla un piazzamento, CTRL-Y lo ripristina.</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP" Language="it_IT">
       <Text>Nessun lotto selezionato</Text>
@@ -43611,7 +43776,7 @@
       <Text>Script della mappa</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD" Language="it_IT">
-      <Text>La mappa è un mod</Text>
+      <Text>Impacchetta la mappa sotto forma di mod</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD_TT" Language="it_IT">
       <Text>Se l'opzione è spuntata, la mappa del World Builder è considerata un mod autonomo e può essere selezionata come tipo di mappa all'inizio di una partita. In caso contrario, si presume che la mappa sarà usata all'interno di un mod più grande.</Text>
@@ -43699,6 +43864,177 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_DEFAULT" Language="it_IT">
       <Text>Predefinito</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV" Language="it_IT">
+      <Text>Passa alla modalità avanzata</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_BASIC" Language="it_IT">
+      <Text>Passa alla modalità base</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TITLE" Language="it_IT">
+      <Text>Vuoi passare alla modalità avanzata del World Builder?</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT" Language="it_IT">
+      <Text>La modalità avanzata è ancora in fase di sviluppo e totalmente non supportata. Abbiamo deciso di renderla disponibile ai modder esperti, che potranno fare esperimenti con alcune funzionalità complesse per la creazione di scenari. I mod creati in questa modalità potrebbero causare l'instabilità del gioco una volta caricati in Civilization VI.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE" Language="it_IT">
+      <Text>Tribù</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FULL_CIV" Language="it_IT">
+      <Text>Civiltà</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_CITY_STATE" Language="it_IT">
+      <Text>Città-stato</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FREE_CITIES" Language="it_IT">
+      <Text>Città libera</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_OK" Language="it_IT">
+      <Text>Piazzamento riuscito</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="it_IT">
+      <Text>piazzamento riuscito</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IN_PROGRESS" Language="it_IT">
+      <Text>Già in corso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ALREADY_EXISTS" Language="it_IT">
+      <Text>Uno di questi oggetti esiste già</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OCCUPIED_BY_ENEMY" Language="it_IT">
+      <Text>Distretto occupato da un avversario</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_PILLAGED" Language="it_IT">
+      <Text>Distretto saccheggiato</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DISTRICT_REQUIRES" Language="it_IT">
+      <Text>Il distretto richiede </Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_POPULATION" Language="it_IT">
+      <Text> popolazione</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_CONTAMINATED" Language="it_IT">
+      <Text>Distretto contaminato</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_UNKNOWN" Language="it_IT">
+      <Text>Impossibile posizionare quest'oggetto e impossibile determinare la ragione</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_FEATURE" Language="it_IT">
+      <Text>Impossibile posizionare la caratteristica per una ragione sconosciuta</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_STARTUP" Language="it_IT">
+      <Text>Benvenuto nel World Builder!</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_PLACED" Language="it_IT">
+      <Text>Unità posizionata con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OWNERSHIP_SET" Language="it_IT">
+      <Text>Proprietario della casella impostato con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POS_SET" Language="it_IT">
+      <Text>Posizione iniziale impostata con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES" Language="it_IT">
+      <Text>Elimina tutte le risorse</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES" Language="it_IT">
+      <Text>Spargi risorse</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES_HELP" Language="it_IT">
+      <Text>Elimina tutte le risorse dalla mappa e ne genera altre (potrebbe richiedere parecchi secondi)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_CLEARED" Language="it_IT">
+      <Text>Tutte le risorse sono state eliminate</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_SCATTERED" Language="it_IT">
+      <Text>Risorse eliminate e rigenerate</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_REDO" Language="it_IT">
+      <Text>Non c'è alcuna azione da annullare</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_UNDO" Language="it_IT">
+      <Text>Non c'è alcuna azione da ripristinare</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_REDO" Language="it_IT">
+      <Text>Azione ripristinata con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_UNDO" Language="it_IT">
+      <Text>Azione annullata con successo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LABEL" Language="it_IT">
+      <Text>Dimensioni pennello</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL" Language="it_IT">
+      <Text>Piccolo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM" Language="it_IT">
+      <Text>Medio</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE" Language="it_IT">
+      <Text>Grande</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT" Language="it_IT">
+      <Text>Posiziona casella</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SELECTED_PLOT" Language="it_IT">
+      <Text>Casella selezionata:</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POSITION" Language="it_IT">
+      <Text>Posizione di partenza:</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACE" Language="it_IT">
+      <Text>Posiziona</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLOT" Language="it_IT">
+      <Text>Casella</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_EDITOR" Language="it_IT">
+      <Text>Editor di mappe</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODTITLE" Language="it_IT">
+      <Text>Nome del mod (obbligatorio)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODDESC" Language="it_IT">
+      <Text>Descrizione del mod (obbligatoria)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPTITLE" Language="it_IT">
+      <Text>Nome della mappa (obbligatorio)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPDESC" Language="it_IT">
+      <Text>Descrizione della mappa (obbligatoria)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_ADDLDATA" Language="it_IT">
+      <Text>A disposizione del creatore del mod (opzionale)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYID" Language="it_IT">
+      <Text>DUMMY_ID</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYTEXT" Language="it_IT">
+      <Text>Testo segnaposto</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_CREATE_MAP" Language="it_IT">
+      <Text>Crea mappa</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_START" Language="it_IT">
+      <Text>Generazione</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME" Language="it_IT">
+      <Text>Nome della mappa</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_WORLDWRAP" Language="it_IT">
+      <Text>Mondo toroidale</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME_DESC" Language="it_IT">
+      <Text>Il nome della mappa. È possibile modificarlo in seguito.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER" Language="it_IT">
+      <Text>Torna alla mappa</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY" Language="it_IT">
+      <Text>Svuota la mappa</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION" Language="it_IT">
+      <Text>Una tela bianca.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="it_IT">
       <Text>Alba della Civiltà</Text>
@@ -45917,6 +46253,9 @@
     <Replace Tag="LOC_TOP_PANEL_INFLUENCE_TOOLTIP_ENVOYS" Language="it_IT">
       <Text>{1_Envoys} [ICON_Envoy] {Amount : plural 1?Emissario disponibile; other?Emissari disponibili;}</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_RESULTS" Language="it_IT">
+      <Text>{1_Count : plural 1?Trovato {1_Count} risultato; other?Trovati {1_Count} risultati;}</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_RESEARCH_TURNS_TO_USE" Language="it_IT">
       <Text>{1_Turns : plural 1?{1_Turns} turno; other?{1_Turns} turni;} al completamento.</Text>
     </Replace>
@@ -46235,6 +46574,9 @@
     <Replace Tag="LOC_TYPE_TRAIT_HOUSING" Language="it_IT">
       <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] Abitazioni</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_HOUSING_WITH_REQUIREMENT" Language="it_IT">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] {1_Amount : plural 1?Abitazione; other?Abitazioni;} (richiede {2_TechOrCivicName})</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AIRSLOTS" Language="it_IT">
       <Text>Capacità aerei: {1_Amount}</Text>
     </Replace>
@@ -46249,6 +46591,9 @@
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_WEAPONSLOTS" Language="it_IT">
       <Text>Capacità armi: {1_Amount}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_AMENITY" Language="it_IT">
+      <Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] Attrattiva</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AMENITY_ENTERTAINMENT" Language="it_IT">
       <Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] Attrattiva dai divertimenti</Text>
@@ -46289,17 +46634,32 @@
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_ONCE" Language="it_IT">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} per la presenza di {5_AdjacentObject[3]} in una casella adiacente.</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_ONCE" Language="it_IT">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] Attrattiva per la casella adiacente con {2_AdjacentObject}.</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS" Language="it_IT">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} per ogni casella adiacente che contiene {5_AdjacentObject}.</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS" Language="it_IT">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] Attrattiva da ogni casella adiacente con {2_AdjacentObject}.</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_PER" Language="it_IT">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} ogni {4_Count} caselle {5_AdjacentObject} adiacenti.</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_PER" Language="it_IT">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] Attrattiva per ogni {2_Count} caselle adiacenti con {3_AdjacentObject}.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_REQUIRES_TECH_OR_CIVIC" Language="it_IT">
       <Text>Richiede {1_TechOrCivicName}.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_OBSOLETE_WITH_TECH_OR_CIVIC" Language="it_IT">
       <Text>Diventa obsoleto con la tecnologia {1_TechOrCivicName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD" Language="it_IT">
+      <Text>Ricompensa saccheggio: {1_AwardIcon} {2_AwardText}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_NO_ICON" Language="it_IT">
+      <Text>Ricompensa saccheggio: {1_AwardText}</Text>
     </Replace>
     <Replace Tag="LOC_TIME_AD" Language="it_IT">
       <Text>{1_Date: number #} d.C.</Text>
@@ -47033,14 +47393,20 @@
     <Replace Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER" Language="it_IT">
       <Text>Catturata dal giocatore {1_SteamID}</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_SHOW_QUEUE" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_PANEL_SHOW_QUEUE" Language="it_IT">
       <Text>Mostra coda ({1_QueueSize})</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_HIDE_QUEUE" Language="it_IT">
+    <Replace Tag="LOC_PRODUCTION_PANEL_HIDE_QUEUE" Language="it_IT">
       <Text>Nascondi coda ({1_QueueSize})</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_SORT_BY" Language="it_IT">
       <Text>Ordina per: {1_SortType}</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_BODY" Language="it_IT">
+      <Text>È il tuo turno nella partita Play By Cloud:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se ti unisci ora alla partita, perderai tutti i progressi non salvati.</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_BODY" Language="it_IT">
+      <Text>La tua partita Play By Cloud è terminata:[NEWLINE]{1_gameName}[NEWLINE][NEWLINE]Se visualizzi ora i risultati, perderai tutti i progressi non salvati.</Text>
     </Replace>
     <Replace Tag="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION" Language="it_IT">
       <Text>{LOC_MINOR_CIV_SMALL_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_SMALL_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_MEDIUM_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_MEDIUM_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_LARGE_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_LARGE_INFLUENCE_BONUS}</Text>
@@ -47579,6 +47945,9 @@
     <Replace Tag="LOC_WORLD_FAITH_INCREASE_FLOATER" Language="it_IT">
       <Text>+{1_Num} [ICON_Faith]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_FAITH_DECREASE_FLOATER" Language="it_IT">
+      <Text>{1_Num} [ICON_Faith] [COLOR_RED]PERDUTA[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_UNIT_DAMAGE_DECREASE_FLOATER" Language="it_IT">
       <Text>[COLOR_GREEN]+{1_Num}[ENDCOLOR]</Text>
     </Replace>
@@ -47595,22 +47964,31 @@
       <Text>[COLOR_FLOAT_PRODUCTION]+{1_Num} [ICON_Production][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_PRODUCTION_DECREASE_FLOATER" Language="it_IT">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_FLOAT_PRODUCTION]{1_Num}[ICON_Production][ENDCOLOR] [COLOR_RED]PERDUTA[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_INCREASE_FLOATER" Language="it_IT">
       <Text>[COLOR_FLOAT_FOOD]+{1_Num} [ICON_Food][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_DECREASE_FLOATER" Language="it_IT">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_FLOAT_FOOD]{1_Num} [ICON_Food][ENDCOLOR] [COLOR_RED]PERDUTO[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_GOLD_INCREASE_FLOATER" Language="it_IT">
       <Text>[COLOR_FLOAT_GOLD]+{1_Num} [ICON_Gold][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_GOLD_DECREASE_FLOATER" Language="it_IT">
+      <Text>[COLOR_FLOAT_GOLD]{1_Num} [ICON_Gold][ENDCOLOR] [COLOR_RED]PERDUTO[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_SCIENCE_INCREASE_FLOATER" Language="it_IT">
       <Text>[COLOR_FLOAT_SCIENCE]+{1_Num} [ICON_Science][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_SCIENCE_DECREASE_FLOATER" Language="it_IT">
+      <Text>[COLOR_FLOAT_SCIENCE]{1_Num} [ICON_Science][ENDCOLOR] [COLOR_RED]PERDUTA[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_CULTURE_INCREASE_FLOATER" Language="it_IT">
       <Text>[COLOR_FLOAT_CULTURE]+{1_Num} [ICON_Culture][ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_CULTURE_DECREASE_FLOATER" Language="it_IT">
+      <Text>[COLOR_FLOAT_CULTURE]{1_Num} [ICON_Culture][ENDCOLOR] [COLOR_RED]PERDUTA[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_DIFFICULTY_SCALING" Language="it_IT">
       <Text>Bonus +{Amount} per la difficoltà.</Text>
@@ -47659,6 +48037,12 @@
     </Replace>
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION" Language="it_IT">
       <Text>+{1_Amount} al combattimento in collina</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED" Language="it_IT">
+      <Text>Deve trovarsi in un distretto {1_Name}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE" Language="it_IT">
+      <Text>Mappa: {1_MapName}</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Language="it_IT">
       <Text>Guerriero aquila|un Guerriero aquila|dal tuo Guerriero aquila|al tuo Guerriero aquila|il tuo Guerriero aquila|da un Guerriero aquila</Text>

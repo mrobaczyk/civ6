@@ -66,8 +66,9 @@
 		<Row Type="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_CULTURAL_MAJOR_CIV" Kind="KIND_TRAIT"/>
+    <Row Type="TRAIT_LEADER_SCIENCE_MAJOR_CIV" Kind="KIND_TRAIT"/>
 		<Row Type="CULTURE_KILLS_TRAIT" Kind="KIND_TRAIT"/>
-		<Row Type="TRAIT_LEADER_ADVENTURES_ENKIDU" Kind="KIND_TRAIT"/>
+    <Row Type="TRAIT_LEADER_ADVENTURES_ENKIDU" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_MEDITERRANEAN" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_DIVINE_WIND" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_EL_ESCORIAL" Kind="KIND_TRAIT"/>
@@ -263,6 +264,7 @@
 		<Row ListType="FavorCulturalVictory" Item="VICTORY_STRATEGY_CULTURAL_VICTORY" Value="-1"/>
 		<Row ListType="FavorReligiousVictory" Item="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Value="-1"/>
 		<Row ListType="ForbidReligiousVictory" Item="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Value="5"/>
+		<Row ListType="FavorScienceVictory" Item="VICTORY_STRATEGY_SCIENCE_VICTORY" Value="-1"/>
 		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="30"/>
 		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_ADDITIONAL_VALUE_PER_CITY" Value="3"/>
 		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_TURNS" Value="9"/>
@@ -397,6 +399,7 @@
 		<Row ListType="FavorCulturalVictory"/>
 		<Row ListType="FavorReligiousVictory"/>
 		<Row ListType="ForbidReligiousVictory"/>
+		<Row ListType="FavorScienceVictory"/>
 		<Row ListType="GandhiCivics"/>
 		<Row ListType="GandhiTechs"/>
 		<Row ListType="GandhiUnitBuilds"/>
@@ -558,6 +561,7 @@
 		<Row ListType="FavorCulturalVictory" LeaderType="TRAIT_LEADER_CULTURAL_MAJOR_CIV" System="Strategies"/>
 		<Row ListType="FavorReligiousVictory" LeaderType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" System="Strategies"/>
 		<Row ListType="ForbidReligiousVictory" LeaderType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV" System="Strategies"/>
+		<Row ListType="FavorScienceVictory" LeaderType="TRAIT_LEADER_SCIENCE_MAJOR_CIV" System="Strategies"/>
 	</AiLists>
 	<AiFavoredItems>
 		<Row ListType="BaseListTest" Item="CIVIC_IMPERIALISM"/>
@@ -784,6 +788,7 @@
 		<Row ListType="DefaultCityBuilds" Item="CITY_EVENT_WONDER" StringVal="Seek Target Wonder"/>
 		<Row ListType="DefaultCityBuilds" Item="CITY_UNDER_THREAT" StringVal="City Defense"/>
 		<Row ListType="MinorCivUnitBuilds" Item="PROMOTION_CLASS_RECON" Value="-100"/>
+		<Row ListType="MinorCivUnitBuilds" Item="PROMOTION_CLASS_NAVAL_CARRIER" Value="-100"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_DEFAULT" StringVal="Simple City Tree"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_UNIT_OR_BUILDING" StringVal="Build City Building"/>
 		<Row ListType="MinorCivCityBuilds" Item="CITY_EVENT_IMPROVEMENT" StringVal="Build City Improvement"/>
@@ -819,6 +824,7 @@
 		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU"/>
 		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
+		<Row LeaderType="LEADER_GILGAMESH" TraitType="TRAIT_LEADER_SCIENCE_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="CULTURE_KILLS_TRAIT"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_GORGO" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
@@ -828,14 +834,17 @@
 		<Row LeaderType="LEADER_MVEMBA" TraitType="TRAIT_LEADER_RELIGIOUS_CONVERT"/>
 		<Row LeaderType="LEADER_MVEMBA" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_PEDRO" TraitType="TRAIT_LEADER_MAGNANIMOUS"/>
+		<Row LeaderType="LEADER_PEDRO" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_PERICLES" TraitType="TRAIT_LEADER_SURROUNDED_BY_GLORY"/>
 		<Row LeaderType="LEADER_PERICLES" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_PERICLES" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
 		<Row LeaderType="LEADER_PETER_GREAT" TraitType="TRAIT_LEADER_GRAND_EMBASSY"/>
+		<Row LeaderType="LEADER_PETER_GREAT" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_PHILIP_II" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_PHILIP_II" TraitType="TRAIT_LEADER_EL_ESCORIAL"/>
 		<Row LeaderType="LEADER_QIN" TraitType="FIRST_EMPEROR_TRAIT"/>
 		<Row LeaderType="LEADER_QIN" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+		<Row LeaderType="LEADER_QIN" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_SALADIN" TraitType="TRAIT_LEADER_RIGHTEOUSNESS_OF_FAITH"/>
 		<Row LeaderType="LEADER_SALADIN" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
 		<Row LeaderType="LEADER_TOMYRIS" TraitType="TRAIT_LEADER_KILLER_OF_CYRUS"/>
@@ -903,6 +912,7 @@
 		<Row TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV" InternalOnly="true"/>
+    <Row TraitType="TRAIT_LEADER_SCIENCE_MAJOR_CIV" InternalOnly="true"/>
 		<Row TraitType="CULTURE_KILLS_TRAIT" Name="LOC_TRAIT_LEADER_THERMOPYLAE_NAME" Description="LOC_TRAIT_LEADER_THERMOPYLAE_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_ADVENTURES_ENKIDU" Name="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_NAME" Description="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_MEDITERRANEAN" Name="LOC_TRAIT_LEADER_MEDITERRANEAN_NAME" Description="LOC_TRAIT_LEADER_MEDITERRANEAN_DESCRIPTION"/>

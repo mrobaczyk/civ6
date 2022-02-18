@@ -6421,10 +6421,10 @@
       <Text>Sowohl Modernisierungen als auch Gebäude in Bezirken ohne Garnison können geplündert werden. Hierdurch werden sie lahmgelegt und die plündernde Einheit erhält eine Form von "Plündergut". Mit Ausnahme von Heilung vergrößert sich das Plündergut im weiteren Spielfortschritt.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_2" Language="de_DE">
-      <Text>Die Plünderung eines Bezirks verbraucht 3 Fortbewegungspunkte bzw. die kompletten verbleibenden. Jedes Gebäude in einem Bezirk muss separat geplündert werden und bietet dafür abhängig vom jeweiligen Bezirk bestimmtes Plündergut (siehe unten). Ein einmal ausgeplündertes Gebäude kann erst dann wieder ausgeplündert werden, wenn es von seinem Eigentümer wieder in Betrieb genommen wurde (über das Produktionsmenü für 25% der ursprünglichen [ICON_Production] Produktionskosten des Gebäudes).[NEWLINE]Die Plünderung eines Campus bringt [ICON_Science] Wissenschaft ein.[NEWLINE]Die Plünderung einer Heiligen Stätte bringt [ICON_Faith] Glauben ein.[NEWLINE]Die Plünderung eines Handelszentrums bringt [ICON_Gold] Gold ein.[NEWLINE]Die Plünderung eines Theaterplatz-Bezirks bringt [ICON_Culture] Kultur ein.[NEWLINE]Die Plünderung eines Hafenbezirks bringt [ICON_Gold] Gold ein.[NEWLINE]Die Plünderung eines Industriegebiets bringt [ICON_Science] Wissenschaft ein.[NEWLINE]Die Plünderung eines Flugplatzes bringt [ICON_Gold] Gold ein.[NEWLINE]Die Plünderung eines Aquädukts bringt [ICON_Gold] Gold ein.[NEWLINE]Die Plünderung eines Raumhafens bringt [ICON_Science] Wissenschaft ein.[NEWLINE]Die Plünderung eines Unterhaltungskomplex-Bezirks bringt Heilung ein.</Text>
+      <Text>Die Plünderung eines Bezirks verbraucht 3 Fortbewegungspunkte bzw. die kompletten verbleibenden. Jedes Gebäude in einem Bezirk muss separat geplündert werden und bietet dafür abhängig vom jeweiligen Bezirk bestimmtes Plündergut (siehe unten). Spezifische Erträge sind auf der Seite der Bezirks aufgelistet. Ein einmal ausgeplündertes Gebäude kann erst dann wieder ausgeplündert werden, wenn es von seinem Eigentümer wieder in Betrieb genommen wurde (über das Produktionsmenü für 25% der ursprünglichen [ICON_Production] Produktionskosten des Gebäudes).</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_13_CHAPTER_CONTENT_PARA_3" Language="de_DE">
-      <Text>Die Plünderung einer Modernisierung verbraucht 3 Fortbewegungspunkte bzw. die kompletten verbleibenden (falls Ihr weniger als 3 [ICON_Movement] Fortbewegungspunkte habt). Die Modernisierung wird daraufhin auf dem Geländefeld als "geplündert" markiert. Eine einmal ausgeplünderte Modernisierung kann erst dann wieder ausgeplündert werden, wenn sie von ihrem Eigentümer wieder in Betrieb genommen wurde (ein Handwerker-Einsatz, der eine Runde dauert, aber keine Handwerker-Ladung benötigt).[NEWLINE]Die Plünderung einer Farm bringt Heilung ein.[NEWLINE]Die Plünderung einer Mine bringt [ICON_Science] Wissenschaft ein.[NEWLINE]Die Plünderung eines Steinbruchs bringt [ICON_Culture] Kultur ein.[NEWLINE]Die Plünderung von Fischerbooten bringt Heilung ein.[NEWLINE]Die Plünderung einer Weide bringt [ICON_Gold] Gold ein.[NEWLINE]Die Plünderung einer Plantage bringt [ICON_Faith] Glauben ein.[NEWLINE]Die Plünderung eines Jagdlagers bringt [ICON_Gold] Gold ein.[NEWLINE]Die Plünderung eines Sägewerks bringt [ICON_Science] Wissenschaft ein.</Text>
+      <Text>Die Plünderung einer Modernisierung verbraucht 3 Fortbewegungspunkte bzw. die kompletten verbleibenden (falls Ihr weniger als 3 [ICON_Movement] Fortbewegungspunkte habt). Die Modernisierung wird daraufhin auf dem Geländefeld als "geplündert" markiert. Eine einmal ausgeplünderte Modernisierung kann erst dann wieder ausgeplündert werden, wenn sie von ihrem Eigentümer wieder in Betrieb genommen wurde (ein Handwerker-Einsatz, der eine Runde dauert, aber keine Handwerker-Ladung benötigt). Spezifische Erträge sind auf der Seite der Modernisierung aufgelistet.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_MOVEMENT_NAME" Language="de_DE">
       <Text>Einheitenfortbewegung</Text>
@@ -6829,7 +6829,7 @@
       <Text>Die Zivilisation mit den meisten [ICON_Envoy] Gesandten auf einem Stadtstaat und mindestens 3 [ICON_Envoy] Gesandten wird als Suzerän des Stadtstaats erachtet. Es kann immer nur einen Suzerän geben, ein Unentschieden ist nicht möglich. Wenn niemand [ICON_Envoy] Gesandte auf einem Stadtstaat hat, gibt es keinen Suzerän. Der Suzerän erhält erhebliche Vorteile:</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_2" Language="de_DE">
-      <Text>Einzigartiger Bonus: Dies ist ein mächtiger Bonus, den kein anderer Stadtstaat bietet (z. B. dient Jerusalem als zweite heilige Stadt für Eure Religion.)</Text>
+      <Text>Einzigartiger Bonus: Dies ist ein mächtiger Bonus für den Suzerän, den kein anderer Stadtstaat bietet.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_3" Language="de_DE">
       <Text>{LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS}</Text>
@@ -12851,6 +12851,13 @@
 
 [i]TechTree_Meter_Done
 
+[2]MODDING CONTRIBUTIONS
+
+[3]UI
+[4]Bradd Szonye - Map Tacks
+
+[i]TechTree_Meter_Done
+
 [2]FRANKENSTEIN TEST GROUP
 [4]Camikaze
 [4]Sam "SamBC" Barnett-Cormack
@@ -15910,7 +15917,7 @@
 [4]Marek Vojtko
 [4]Kevin Jones
 [4]Theodore Maselko
-[4]Gabe Ortega
+[4]Gabriel Ortega
 
 [3]Lead Technical Artist
 [4]Arthur Gould
@@ -16300,6 +16307,8 @@
 [4]John Koziol
 [4]Jett Barton
 [4]Timo Schwabe
+[4]Lee Shipp
+[4]Steve Daly
 
 [i]TechTree_Meter_Done
 
@@ -30193,7 +30202,7 @@
       <Text>Baut eine eigene Stadt oder entdeckt die Stadt einer anderen Zivilisation, um deren Spionagetätigkeit hier zu sehen.</Text>
     </Replace>
     <Replace Tag="LOC_ESPIONAGE_NO_HISTORY" Language="de_DE">
-      <Text>Führt Spionagemissionen aus und seht Euch ihren Missionsverlauf hier an.</Text>
+      <Text>Führt Spionagemissionen aus und seht Euch Euren Missionsverlauf hier an.</Text>
     </Replace>
     <Replace Tag="LOC_EXPANSION1_MOD_TITLE" Language="de_DE">
       <Text>Erweiterung: Rise and Fall</Text>
@@ -30331,7 +30340,7 @@
       <Text>Karte laden</Text>
     </Replace>
     <Replace Tag="LOC_LOAD_TILED" Language="de_DE">
-      <Text>Karte importieren</Text>
+      <Text>Karte von Editor importieren</Text>
     </Replace>
     <Replace Tag="LOC_OPEN_DIRECTORY" Language="de_DE">
       <Text>Offen</Text>
@@ -31044,6 +31053,9 @@
     <Replace Tag="LOC_GAMESTART_COUNTDOWN_FORMAT" Language="de_DE">
       <Text>Spiel startet</Text>
     </Replace>
+    <Replace Tag="LOC_READY_COUNTDOWN_FORMAT" Language="de_DE">
+      <Text>Bereitmachen</Text>
+    </Replace>
     <Replace Tag="LOC_HOTSEAT_DEFAULT_PLAYER_NAME" Language="de_DE">
       <Text>Spieler</Text>
     </Replace>
@@ -31330,7 +31342,7 @@
       <Text>Karte laden</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_IMPORT" Language="de_DE">
-      <Text>Karte importieren</Text>
+      <Text>Karte von Editor importieren</Text>
     </Replace>
     <Replace Tag="LOC_RANDOM_LEADER" Language="de_DE">
       <Text>Zufälliger Anführer</Text>
@@ -32118,6 +32130,9 @@
     <Replace Tag="LOC_GAME_START_ERROR_MOD_OWNERSHIP" Language="de_DE">
       <Text>Einer oder mehrere Mods wurden nicht gekauft.</Text>
     </Replace>
+    <Replace Tag="LOC_GAME_START_ERROR_SCRIPT_PROCESSING" Language="de_DE">
+      <Text>Ein oder mehrere Start-Scripts haben einen Fehler. Siehe lua.log.</Text>
+    </Replace>
     <Replace Tag="LOC_CLOUD_SAVES_REQUIRE_LINKED_ACCOUNT" Language="de_DE">
       <Text>Für Cloud-Spielstände wird ein verknüpftes 2K-Konto benötigt.</Text>
     </Replace>
@@ -32349,11 +32364,23 @@
     <Replace Tag="LOC_OPTIONS_WEBHOOK_FREQ" Language="de_DE">
       <Text>Cloud-Spiel-Webhook-Häufigkeit:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE" Language="de_DE">
+      <Text>Cloud-Spiel-Modus:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_WEBHOOK_MODE_TOOLTIP" Language="de_DE">
+      <Text>Modus A - Kompatibel mit IFTTT[NEWLINE]JSON Payload-Variablen[NEWLINE][ICON_Bullet]"value1" = Spielname[NEWLINE][ICON_Bullet]"value2" = Spielername[NEWLINE][ICON_Bullet]"value3" = Spielrunde[NEWLINE]Modus B - Kompatibel mit Discord[NEWLINE]JSON Payload-Variablen[NEWLINE][ICON_Bullet]"content" = Benachrichtigung</Text>
+    </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_MY_TURN" Language="de_DE">
       <Text>Meine Runde</Text>
     </Replace>
     <Replace Tag="LOC_WEBHOOK_FREQ_EVERY_TURN" Language="de_DE">
       <Text>Jede Runde</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_A" Language="de_DE">
+      <Text>Modus A</Text>
+    </Replace>
+    <Replace Tag="LOC_WEBHOOK_PAYLOAD_MODE_B" Language="de_DE">
+      <Text>Modus B</Text>
     </Replace>
     <Replace Tag="LOC_PBC_NOTIFY_REMINDER_TITLE" Language="de_DE">
       <Text>Passt Eure Benachrichtigungen an!</Text>
@@ -33216,10 +33243,10 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>Schaltet die Fähigkeit der römischen Legion frei, ein römisches Militärlager, die einzigartige Modernisierung Roms, zu bauen.[NEWLINE][NEWLINE]Besetzende Einheit erhält +4 [ICON_Strength] Verteidigungsstärke und automatisch 2 Runden Befestigung.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="de_DE">
-      <Text>Schaltet die Handwerker-Fähigkeit frei, eine Sphinx, die einzigartige Modernisierung Ägyptens, zu bauen.[NEWLINE][NEWLINE]+1 [ICON_Faith] Glauben und +1 [ICON_Culture] Kultur. +1 Anziehungskraft. +2 [ICON_Faith] Glauben, wenn neben einem Wunder. Kann auf Schwemmland gebaut werden.</Text>
+      <Text>Schaltet die Handwerker-Fähigkeit frei, eine Sphinx, die einzigartige Modernisierung Ägyptens, zu bauen.[NEWLINE][NEWLINE]+1 [ICON_Faith] Glauben und +1 [ICON_Culture] Kultur. +1 Anziehungskraft. +2 [ICON_Faith] Glauben, wenn neben einem Wunder. Kann nicht neben einer anderen Sphinx gebaut werden. Kann auf Schwemmland gebaut werden.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_STEPWELL_DESCRIPTION" Language="de_DE">
-      <Text>Schaltet die Handwerker-Fähigkeit frei, einen Stufenbrunnen, die einzigartige Modernisierung Indiens, zu bauen.[NEWLINE][NEWLINE]+1 [ICON_Food] Nahrung und +1 [ICON_Housing] Wohnraum. +1 [ICON_Faith] Glauben, wenn angrenzend an einen Heilige-Stätte-Bezirk. +1 [ICON_Food] Nahrung, wenn angrenzend an einen Bauernhof. Kann nicht auf Hügeln oder angrenzend an einen weiteren Stufenbrunnen gebaut werden.</Text>
+      <Text>Schaltet die Handwerker-Fähigkeit frei, einen Stufenbrunnen, die einzigartige Modernisierung Indiens, zu bauen.[NEWLINE][NEWLINE]+1 [ICON_Food] Nahrung und +1 [ICON_Housing] Wohnraum. +1 [ICON_Faith] Glauben, wenn angrenzend an einen Heilige-Stätte-Bezirk. +1 [ICON_Food] Nahrung, wenn angrenzend an einen Bauernhof. Zusätzlicher [ICON_Housing] Wohnraum, [ICON_Faith] Glauben und zusätzliche [ICON_Food] Nahrung beim Fortschritt durch den Technologie- und Ausrichtungsbaum. Kann nicht auf Hügeln oder angrenzend an einen weiteren Stufenbrunnen gebaut werden.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_ZIGGURAT_DESCRIPTION" Language="de_DE">
       <Text>Schaltet die Handwerker-Fähigkeit frei, eine Zikkurat, die einzigartige Modernisierung Sumers zu bauen.[NEWLINE][NEWLINE]+2 [ICON_Science] Wissenschaft. +1 [ICON_Culture] Kultur, wenn neben einem Fluss. Kann nicht auf Hügeln gebaut werden.</Text>
@@ -33927,7 +33954,7 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>Abbrechen</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_POPUP_TITLE" Language="de_DE">
-      <Text>Nadel bearbeiten</Text>
+      <Text>Landkartennadel bearbeiten</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_NAME" Language="de_DE">
       <Text>Name:</Text>
@@ -34727,6 +34754,33 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_HUD_MAP_OPTIONS" Language="de_DE">
       <Text>Kartenoptionen</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH" Language="de_DE">
+      <Text>Kartensuche</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_IN_PROGRESS" Language="de_DE">
+      <Text>Suchen ...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_UPDATING" Language="de_DE">
+      <Text>Aktualisieren ...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_WAITING_FOR_TURN" Language="de_DE">
+      <Text>Warten auf nächste Runde ...</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_BEGIN_SEARCH" Language="de_DE">
+      <Text>SUCHEN</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_CLEAR_SEARCH" Language="de_DE">
+      <Text>ENTFERNEN</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_NO_SEARCH_TERMS_TOOLTIP" Language="de_DE">
+      <Text>Zumindest ein Suchbegriff ist für die Suche erforderlich.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TOOLTIP" Language="de_DE">
+      <Text>Suchfilter[NEWLINE]Suchergebnisse enthalten ALLE der hier eingegebenen Begriffe.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_FILTER_TOOLTIP" Language="de_DE">
+      <Text>Suchfilter[NEWLINE]Suchergebnisse enthalten KEINE der hier eingegebenen Begriffe.</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_CIVICS_ENABLES" Language="de_DE">
       <Text>Ermöglicht:</Text>
     </Replace>
@@ -34807,6 +34861,42 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_HUD_POPUP_PROJECT_CREATED_BY_UNKNOWN" Language="de_DE">
       <Text>Eine unerreichte Zivilisation kommt dem Wissenschaftssieg näher.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_MOUNTAIN" Language="de_DE">
+      <Text>Berg</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_HILL" Language="de_DE">
+      <Text>Hügel</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_WATER" Language="de_DE">
+      <Text>Wasser</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_FEATURE" Language="de_DE">
+      <Text>Geländeart</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_IMPROVEMENT" Language="de_DE">
+      <Text>Modernisierung</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_OWNED" Language="de_DE">
+      <Text>Eigen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNCLAIMED" Language="de_DE">
+      <Text>Unbeansprucht</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_PILLAGED" Language="de_DE">
+      <Text>Geplündert</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_NATIONAL_PARK" Language="de_DE">
+      <Text>Nationalpark</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_UNDER_CONSTRUCTION" Language="de_DE">
+      <Text>Im Bau</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_CONTAMINATION" Language="de_DE">
+      <Text>Kontaminierung</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_TERMS_SPECIALIST" Language="de_DE">
+      <Text>Spezialist</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TO_BOOST" Language="de_DE">
       <Text>Für Bonus:</Text>
@@ -35747,6 +35837,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_TOOLTIP_APPEAL_DISGUSTING" Language="de_DE">
       <Text>Abstoßend</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING" Language="de_DE">
+      <Text>Heilen</Text>
+    </Replace>
     <Replace Tag="LOC_DIPLOMACY_HIDDEN_AGENDAS_TT" Language="de_DE">
       <Text>Erreicht die Zugriffsstufe [ICON_VisSecret] OFFEN, um verborgene Agenden zu sehen.</Text>
     </Replace>
@@ -36564,10 +36657,10 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>Diesen Spieler als Freund auf Steam hinzufügen.</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_PLAYER_PIN_TOOLTIP" Language="de_DE">
-      <Text>Linksklick zum Ansehen der Nadel. Rechtsklick zum Bearbeiten der Nadel.</Text>
+      <Text>Linksklick zum Ansehen der Kartennadel auf der Karte. Rechtsklick zum Bearbeiten.</Text>
     </Replace>
     <Replace Tag="LOC_MAP_PIN_LIST_REMOTE_PIN_TOOLTIP" Language="de_DE">
-      <Text>Linksklick zum Ansehen der Nadel.</Text>
+      <Text>Linksklick zum Ansehen der Kartennadel.</Text>
     </Replace>
     <Replace Tag="LOC_GAME_PAUSED_TITLE" Language="de_DE">
       <Text>Spiel pausiert!</Text>
@@ -37184,6 +37277,18 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_REPORTS_SHOW_ONLY_NOT_OWNED" Language="de_DE">
       <Text>Nur Ressourcen zeigen, die ich nicht besitze</Text>
     </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_CIVS_BY" Language="de_DE">
+      <Text>Anordnung der Zivilisationen nach</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_AMOUNT" Language="de_DE">
+      <Text>Menge</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER" Language="de_DE">
+      <Text>Spieler</Text>
+    </Replace>
+    <Replace Tag="LOC_REPORTS_ORDER_PLAYER_SLOT" Language="de_DE">
+      <Text>Spielerplatz</Text>
+    </Replace>
     <Replace Tag="LOC_REPORTS_SORT_BY" Language="de_DE">
       <Text>Sortieren nach</Text>
     </Replace>
@@ -37409,32 +37514,41 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_WORLDBUILDER_TEXT_TAG" Language="de_DE">
       <Text>Text-Tag</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_REMOVE_ITEM" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE" Language="de_DE">
+      <Text>Liste immer anzeigen</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNLOCK_AUTOHIDE_QUEUE" Language="de_DE">
+      <Text>Liste bei Schließen des Produktionsmenüs automatisch ausblenden</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_TOGGLE_AUTOHIDE_QUEUE" Language="de_DE">
+      <Text>Automatische Listenausblendung umschalten</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_PANEL_REMOVE_ITEM" Language="de_DE">
       <Text>Entfernen</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_LEFT_ITEM" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_LEFT_ITEM" Language="de_DE">
       <Text>Nach links</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_MOVE_RIGHT_ITEM" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_MOVE_RIGHT_ITEM" Language="de_DE">
       <Text>Nach rechts</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUTTON_TEXT" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUTTON_TEXT" Language="de_DE">
       <Text>Manager</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_BUILDINGS_TOOLTIP" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_BUILDINGS_TOOLTIP" Language="de_DE">
       <Text>Bezirke und Gebäude</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_WONDERS_TOOLTIP" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_WONDERS_TOOLTIP" Language="de_DE">
       <Text>Wunder</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_UNITS_TOOLTIP" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_UNITS_TOOLTIP" Language="de_DE">
       <Text>Einheiten</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_PROJECTS_TOOLTIP" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_PROJECTS_TOOLTIP" Language="de_DE">
       <Text>Projekte</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_MANAGER_TITLE" Language="de_DE">
-      <Text>Produktions-Manager</Text>
+    <Replace Tag="LOC_PRODUCTION_MANAGER_TITLE" Language="de_DE">
+      <Text>Production Manager</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_FOUNDING" Language="de_DE">
       <Text>Gründung</Text>
@@ -37444,6 +37558,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_FILTER_POPULATION" Language="de_DE">
       <Text>Bevölkerung</Text>
+    </Replace>
+    <Replace Tag="LOC_PRODUCTION_QUEUE_BEHAVIOR_TT" Language="de_DE">
+      <Text>Im Optionsmenü könnt Ihr das Anzeigen/Verbergen der Produktionsliste anpassen.</Text>
     </Replace>
     <Replace Tag="LOC_HUD_FULLSCREEN_MAP" Language="de_DE">
       <Text>Vollbildkarte anzeigen</Text>
@@ -37492,6 +37609,18 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_REMEMBER_MY_CHOICE" Language="de_DE">
       <Text>Meine Auswahl merken</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_TITLE" Language="de_DE">
+      <Text>Eure Cloud-Spiel-Runde</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_JOIN_MATCH" Language="de_DE">
+      <Text>Spiel beitreten</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_TITLE" Language="de_DE">
+      <Text>Cloud-Spiel vorüber</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_VIEW_RESULTS" Language="de_DE">
+      <Text>Ergebnisse ansehen</Text>
     </Replace>
     <Replace Tag="LOC_REPRESENTATIVE" Language="de_DE">
       <Text>einen Repräsentanten</Text>
@@ -37647,7 +37776,7 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>Mag Zivilisationen, die nicht um Bündnisse mit den gleichen Stadtstaaten wetteifern. Mag keine Zivilisationen, die in direkter Konkurrenz um Bündnisse mit Stadtstaaten stehen.</Text>
     </Replace>
     <Replace Tag="LOC_AGENDA_COUNTER_REFORMER_DESCRIPTION" Language="de_DE">
-      <Text>Mag Zivilisationen, die der gleichen Religion folgen, und möchte, dass seine Städte alle der gleichen Religion folgen. Hasst jeden, der versucht, eine andere Religion in seinem Reich zu verbreiten.</Text>
+      <Text>Mag Zivilisationen, die der gleichen Religion folgen, und möchte, dass die eigenen Städte alle der gleichen Religion folgen. Hasst jeden, der versucht, eine andere Religion im eigenen Reich zu verbreiten.</Text>
     </Replace>
     <Replace Tag="LOC_AGENDA_DELIAN_LEAGUE_DESCRIPTION" Language="de_DE">
       <Text>Mag Zivilisationen, die nicht um Bündnisse mit den gleichen Stadtstaaten wetteifern. Mag keine Zivilisationen, die in direkter Konkurrenz um Bündnisse mit Stadtstaaten stehen.</Text>
@@ -38004,7 +38133,7 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>+5 [ICON_Faith] Glauben für jede getroffene Zivilisation (einschließlich Indien), die eine Religion gegründet hat und nicht im Krieg ist. Feindliche Zivilisationen erhalten die doppelte Kriegsmüdigkeit beim Kampf gegen Gandhi.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_THUNDERBOLT_DESCRIPTION" Language="de_DE">
-      <Text>Ermöglicht allen Marine-Nahkampfeinheiten Küstenraub und bietet ihnen +50% [ICON_PRODUCTION] Produktion.</Text>
+      <Text>Ermöglicht allen Marine-Nahkampfeinheiten Küstenraub und bietet ihnen +50% [ICON_PRODUCTION] Produktion. Erhaltet durch die Erforschung des Segelns die Spezialeinheit Wikinger-Langschiff.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_FIRST_EMPEROR_DESCRIPTION" Language="de_DE">
       <Text>Beim Bau von Wundern der Antike und Klassik könnt Ihr Handwerker-Ladungen verwenden, um 15 % der ursprünglichen Baukosten für das Wunder abzuschließen. Handwerker erhalten eine zusätzliche Ladung.</Text>
@@ -40509,7 +40638,7 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>Verbessert Bauernhof-Modernisierungen zu mechanisierter Landwirtschaft. +1 [ICON_Food] Nahrungs-Nachbarschaftsbonus für jede benachbarte Bauernhof-Modernisierung.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_STEEL_DESCRIPTION" Language="de_DE">
-      <Text>+1 [ICON_Production] Produktion durch die Sägewerk-Modernisierung. Schaltet Urbane Verteidigung frei und gewährt all Euren Städten automatisch 200 Befestigungsstärke und die Fernkampffähigkeit. Alle bisherigen Mauer-Modernisierungen werden veraltet und Belagerungs-Unterstützungseinheiten sind nicht mehr effektiv.</Text>
+      <Text>+1 [ICON_Production] Produktion durch die Sägewerk-Modernisierung. Schaltet Urbane Verteidigung frei und gewährt all Euren Städten automatisch 400 Befestigungsstärke und die Fernkampffähigkeit. Alle bisherigen Mauer-Modernisierungen werden veraltet und Belagerungs-Unterstützungseinheiten sind nicht mehr effektiv.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_COMBUSTION_DESCRIPTION" Language="de_DE">
       <Text>+1 [ICON_Movement] Fortbewegung für gewasserte Einheiten.</Text>
@@ -42014,6 +42143,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_MODS_USER_CONTENT" Language="de_DE">
       <Text>Community-Inhalt</Text>
     </Replace>
+    <Replace Tag="LOC_MODS_WORLDBUILDER_CONTENT" Language="de_DE">
+      <Text>Weltenbauer-Karte</Text>
+    </Replace>
     <Replace Tag="LOC_MODS_ENABLE_ALL" Language="de_DE">
       <Text>Alle aktivieren</Text>
     </Replace>
@@ -42067,6 +42199,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_MULTIPLAYER" Language="de_DE">
       <Text>Multiplayer?</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_DETAILS_CREATED" Language="de_DE">
+      <Text>Erstellt:</Text>
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_AFFECTS_SAVED_GAMES" Language="de_DE">
       <Text>Beeinflusst Spielstände:</Text>
@@ -42626,6 +42761,18 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_END_TURN_BEHAVIOR_EXIT_TO_MAINMENU" Language="de_DE">
       <Text>Zurück zum Hauptmenü</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_READY_BEHAVIOR" Language="de_DE">
+      <Text>PlayByCloud-Bereitschaft:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_ASK_ME" Language="de_DE">
+      <Text>Mich fragen</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_DO_NOTHING" Language="de_DE">
+      <Text>Nichts tun</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_PLAYBYCLOUD_READY_BEHAVIOR_EXIT_TO_LOBBY" Language="de_DE">
+      <Text>Zurück zur Lobby</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_INTERFACE_PLAYBYCLOUD_CLIENT_READY_BEHAVIOR" Language="de_DE">
       <Text>PlayByCloud - Client bereit</Text>
     </Replace>
@@ -42652,6 +42799,21 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_OPTIONS_CBADAPT_TRITANOPIA" Language="de_DE">
       <Text>Blaublindheit (Tritanopie)</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_DISPLAY" Language="de_DE">
+      <Text>Produktionsliste:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_HIDE" Language="de_DE">
+      <Text>Verbergen</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_SHOW_FILLED" Language="de_DE">
+      <Text>Anzeigen wenn voll</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW" Language="de_DE">
+      <Text>Stadtliste immer zeigen</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_QUEUE_ALWAYS_SHOW_MANGER" Language="de_DE">
+      <Text>Listen-Manager immer zeigen</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_CATEGORY_UI_XP2" Language="de_DE">
       <Text>Benutzer-Interface (Gathering Storm):</Text>
@@ -44345,14 +44507,17 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_SET_VISIBILITY" Language="de_DE">
       <Text>Gelände-Sichtbarkeit</Text>
     </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_GOODY_HUTS" Language="de_DE">
+      <Text>Bonushütten</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT" Language="de_DE">
-      <Text>Karten-Editor</Text>
+      <Text>Kartendetails und -text</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLAYER_EDITOR_TT" Language="de_DE">
       <Text>Spieler-Editor</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_PLACEMENT_HELP" Language="de_DE">
-      <Text>Linksklick zum Platzieren. Rechtsklick zum Entfernen.</Text>
+      <Text>Linksklick zum Platzieren, Rechtsklick zum Entfernen, Rechtsklick und ziehen zum Zeichnen. STRG-Z zum Rückgängigmachen einer Platzierung, STRG-Y zum Wiederherstellen.</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP" Language="de_DE">
       <Text>Kein Geländefeld ausgewählt</Text>
@@ -44376,7 +44541,7 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>Kartenskript</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD" Language="de_DE">
-      <Text>Karte ist ein Mod</Text>
+      <Text>Karte als Mod verpacken</Text>
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD_TT" Language="de_DE">
       <Text>Wenn diese Option ausgewählt wird, ist die Weltenbauer-Karte ein in sich abgeschlossener Mod und kann beim Starten eines Spiels als Kartentyp verwendet werden. Wenn nicht, wird angenommen, dass die Karte als Teil eines größeren Mods verwendet wird.</Text>
@@ -44464,6 +44629,177 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_DEFAULT" Language="de_DE">
       <Text>Standard</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV" Language="de_DE">
+      <Text>Wechsel: Fortgeschrittenen-Modus</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_BASIC" Language="de_DE">
+      <Text>Zum Grundmodus wechseln</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TITLE" Language="de_DE">
+      <Text>Zum Fortgeschrittenen-Modus wechseln?</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SWITCH_ADV_POPUP_TEXT" Language="de_DE">
+      <Text>Der Fortgeschrittenen-Modus befindet sich noch in der Entwicklung und wird nicht unterstützt. Wir stellen ihn erfahrenen Moddern zur Verfügung, die mit fortgeschrittenen Szenario-Features experimentieren möchten. In diesem Modus erstellte Mods, die ins Spiel geladen werden, können Civilization VI instabil machen.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_TRIBE" Language="de_DE">
+      <Text>Stamm</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FULL_CIV" Language="de_DE">
+      <Text>Zivilisation</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_CITY_STATE" Language="de_DE">
+      <Text>Stadtstaat</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CIVILIZATION_LEVEL_FREE_CITIES" Language="de_DE">
+      <Text>Freie Stadt</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_OK" Language="de_DE">
+      <Text>Platzierung erfolgreich</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BLANK_PLACEMENT_OK" Language="de_DE">
+      <Text>Platzierung erfolgreich</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IN_PROGRESS" Language="de_DE">
+      <Text>Eins davon läuft bereits</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ALREADY_EXISTS" Language="de_DE">
+      <Text>Eins davon gibt es bereits</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OCCUPIED_BY_ENEMY" Language="de_DE">
+      <Text>Bezirk ist von einem Gegner besetzt</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_PILLAGED" Language="de_DE">
+      <Text>Bezirk ist geplündert</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DISTRICT_REQUIRES" Language="de_DE">
+      <Text>Bezirk benötigt</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_POPULATION" Language="de_DE">
+      <Text> Bevölkerung</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_IS_CONTAMINATED" Language="de_DE">
+      <Text>Bezirk ist kontaminiert</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_UNKNOWN" Language="de_DE">
+      <Text>Das konnte aus unbekanntem Grund nicht platziert werden</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_FAILURE_FEATURE" Language="de_DE">
+      <Text>Geländeart konnte aus unbekanntem Grund nicht platziert werden</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_STARTUP" Language="de_DE">
+      <Text>Willkommen beim Weltenbauer!</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_UNIT_PLACED" Language="de_DE">
+      <Text>Einheit erfolgreich platziert</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_OWNERSHIP_SET" Language="de_DE">
+      <Text>Geländefeld-Besitzer erfolgreich festgelegt</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POS_SET" Language="de_DE">
+      <Text>Startposition erfolgreich festgelegt</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_CLEAR_RESOURCES" Language="de_DE">
+      <Text>Ressourcen entfernen</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES" Language="de_DE">
+      <Text>Ressourcen verstreuen</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SCATTER_RESOURCES_HELP" Language="de_DE">
+      <Text>Entfernt alle Ressourcen von der Karte und generiert neue (dauert einige Sekunden)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_CLEARED" Language="de_DE">
+      <Text>Alle Ressourcen entfernt</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_RESOURCES_SCATTERED" Language="de_DE">
+      <Text>Alle Ressourcen entfernt und neu generiert</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_REDO" Language="de_DE">
+      <Text>Es gibt nichts zum Wiederherstellen</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_CANT_UNDO" Language="de_DE">
+      <Text>Es gibt nichts zum Rückgängigmachen</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_REDO" Language="de_DE">
+      <Text>Wiederherstellen erfolgreich</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_STATUS_UNDO" Language="de_DE">
+      <Text>Rückgängigmachen erfolgreich</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LABEL" Language="de_DE">
+      <Text>Pinselgröße</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_SMALL" Language="de_DE">
+      <Text>Klein</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_MEDIUM" Language="de_DE">
+      <Text>Mittel</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BRUSH_LARGE" Language="de_DE">
+      <Text>Groß</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_PLACE_PLOT" Language="de_DE">
+      <Text>Geländefeld platzieren</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_SELECTED_PLOT" Language="de_DE">
+      <Text>Gewähltes Feld:</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_START_POSITION" Language="de_DE">
+      <Text>Startposition:</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACE" Language="de_DE">
+      <Text>Platzieren</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLOT" Language="de_DE">
+      <Text>Geländefeld</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_EDITOR" Language="de_DE">
+      <Text>Karten-Editor</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODTITLE" Language="de_DE">
+      <Text>Mod-Name (erforderlich)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MODDESC" Language="de_DE">
+      <Text>Mod-Beschreibung (erforderlich)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPTITLE" Language="de_DE">
+      <Text>Kartenname (erforderlich)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_MAPDESC" Language="de_DE">
+      <Text>Kartenbeschreibung (erforderlich)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_ADDLDATA" Language="de_DE">
+      <Text>Für Mod-Ersteller (optional)</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYID" Language="de_DE">
+      <Text>DUMMY_ID</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAPEDIT_DUMMYTEXT" Language="de_DE">
+      <Text>Dummy-Text</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_CREATE_MAP" Language="de_DE">
+      <Text>Karte erstellen</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_START" Language="de_DE">
+      <Text>Generieren</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME" Language="de_DE">
+      <Text>Kartenname</Text>
+    </Replace>
+    <Replace Tag="LOC_SETUP_WORLDBUILDER_WORLDWRAP" Language="de_DE">
+      <Text>World-Wrap</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_NAME_DESC" Language="de_DE">
+      <Text>Der Name der Karte. Kann nachträglich geändert werden.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_MENU_RETURN_TO_WORLDBUILDER" Language="de_DE">
+      <Text>Zurück zur Karte</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY" Language="de_DE">
+      <Text>Leere Karte</Text>
+    </Replace>
+    <Replace Tag="LOC_MAP_WORLDBUILDER_EMPTY_DESCRIPTION" Language="de_DE">
+      <Text>Eine freie Leinwand.</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="de_DE">
       <Text>Anbeginn der Zivilisation|Anbeginn der Zivilisation|Anbeginn der Zivilisation|Anbeginns der Zivilisation|Anbeginn der Zivilisation</Text>
@@ -46820,6 +47156,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_TOP_PANEL_INFLUENCE_TOOLTIP_ENVOYS" Language="de_DE">
       <Text>{1_Envoys} [ICON_Envoy] {1_Envoys : plural 1?Gesandter; other?Gesandte;} verfügbar</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_MAP_SEARCH_RESULTS" Language="de_DE">
+      <Text>{1_Count : plural 1?{1_Count} Ergebnis gefunden; other?{1_Count} Ergebnisse gefunden;}</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_RESEARCH_TURNS_TO_USE" Language="de_DE">
       <Text>{1_Turns : plural 1?{1_Turns} Runde; other?{1_Turns} Runden;} bis zur Fertigstellung.</Text>
     </Replace>
@@ -47138,6 +47477,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_TYPE_TRAIT_HOUSING" Language="de_DE">
       <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] Wohnraum</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_HOUSING_WITH_REQUIREMENT" Language="de_DE">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] Wohnraum (erfordert {2_TechOrCivicName})</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AIRSLOTS" Language="de_DE">
       <Text>Flugzeugkapazität: {1_Amount}</Text>
     </Replace>
@@ -47152,6 +47494,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_WEAPONSLOTS" Language="de_DE">
       <Text>Waffenkapazität: {1_Amount}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_AMENITY" Language="de_DE">
+      <Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] {1_Amount : plural 1?Annehmlichkeit; other?Annehmlichkeiten;}</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_AMENITY_ENTERTAINMENT" Language="de_DE">
       <Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] {1_Amount : plural 1?Annehmlichkeit; other?Annehmlichkeiten;} durch Unterhaltung</Text>
@@ -47192,17 +47537,32 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_ONCE" Language="de_DE">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} für ein angrenzendes {5_AdjacentObject}-Geländefeld.</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_ONCE" Language="de_DE">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?Annehmlichkeit; other?Annehmlichkeiten;} für ein benachbartes {2_AdjacentObject}-Geländefeld.</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS" Language="de_DE">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} durch jedes angrenzende {5_AdjacentObject}-Geländefeld.</Text>
     </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS" Language="de_DE">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?Annehmlichkeit; other?Annehmlichkeiten;} von jedem benachbarten {2_AdjacentObject}-Geländefeld.</Text>
+    </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_PER" Language="de_DE">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} durch jedes {4_Count}. {5_AdjacentObject}-Geländefeld.</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_PER" Language="de_DE">
+      <Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?Annehmlichkeit; other?Annehmlichkeiten;} für jedes {2_Count}. benachbarte {3_AdjacentObject}-Geländefeld.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_REQUIRES_TECH_OR_CIVIC" Language="de_DE">
       <Text>Erfordert {1_TechOrCivicName : plural 1?{1_TechOrCivicName : gender *:no_article?; m?den ; f?die ; other?das ;}; other?die ;}{1_TechOrCivicName[2]}.</Text>
     </Replace>
     <Replace Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_OBSOLETE_WITH_TECH_OR_CIVIC" Language="de_DE">
       <Text>Wird veraltet durch {1_TechOrCivicName : plural 1?{1_TechOrCivicName : gender *:no_article?; m?den ; f?die ; other?das ;}; other?die ;}{1_TechOrCivicName[2]}.</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD" Language="de_DE">
+      <Text>Plünder-Auszeichnung: {1_AwardIcon} {2_AwardText}</Text>
+    </Replace>
+    <Replace Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_NO_ICON" Language="de_DE">
+      <Text>Plünder-Auszeichnung: {1_AwardText}</Text>
     </Replace>
     <Replace Tag="LOC_TIME_AD" Language="de_DE">
       <Text>{1_Date: number #} n. Chr.</Text>
@@ -47936,14 +48296,20 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER" Language="de_DE">
       <Text>Eingenommen von: {1_SteamID}</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_SHOW_QUEUE" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_SHOW_QUEUE" Language="de_DE">
       <Text>Liste anzeigen ({1_QueueSize})</Text>
     </Replace>
-    <Replace Tag="LOC_PRODUCITON_PANEL_HIDE_QUEUE" Language="de_DE">
+    <Replace Tag="LOC_PRODUCTION_PANEL_HIDE_QUEUE" Language="de_DE">
       <Text>Liste ausblenden ({1_QueueSize})</Text>
     </Replace>
     <Replace Tag="LOC_PRODUCTION_MANAGER_SORT_BY" Language="de_DE">
       <Text>Sortieren: {1_SortType}</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_YOUR_TURN_BODY" Language="de_DE">
+      <Text>Im Cloud-Spiel:[NEWLINE]{1_gameName} seid Ihr nun an der Reihe.[NEWLINE][NEWLINE]Wenn Ihr jetzt dem Spiel beitretet, geht jeglicher ungespeicherter Fortschritt verloren.</Text>
+    </Replace>
+    <Replace Tag="LOC_PBC_NOTIFY_POPUP_UNSEEN_COMPLETE_BODY" Language="de_DE">
+      <Text>Euer Spiel im Cloud-Spiel:[NEWLINE]{1_gameName} ist zu Ende.[NEWLINE][NEWLINE]Wenn Ihr jetzt die Ergebnisse anseht, geht jeglicher ungespeicherter Fortschritt verloren.</Text>
     </Replace>
     <Replace Tag="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION" Language="de_DE">
       <Text>{LOC_MINOR_CIV_SMALL_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_SMALL_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_MEDIUM_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_MEDIUM_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_LARGE_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_LARGE_INFLUENCE_BONUS}</Text>
@@ -47997,7 +48363,7 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>{1_CivName : plural 1?{1_CivName : gender *:no_article?; m?Der ; f?Die ; other?Das ;}; other?Die ;}{1_CivName[5]} {1_CivName : plural 1?hat; other?haben;} {2_OtherPlayer : plural 1?{2_OtherPlayer : gender *:no_article?; m?dem ; f?der ; other?dem ;}; other?den ;}{2_OtherPlayer[3]} den Krieg erklärt.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_MAKE_PEACE_SUMMARY" Language="de_DE">
-      <Text>{1_CivName : plural 1?{1_CivName : gender *:vowel?Das ; m?Der ; f?Die ; other?;}; other?Die ;}{1_CivName[5]} {1_CivName : plural 1?hat; other?haben;} mit {2_CivName : plural 1?{2_CivName : gender *:vowel?dem ; m?dem ; f?der ; other?;}; other?den ;}{2_CivName[3]} Frieden geschlossen.</Text>
+      <Text>{1_CivName : plural 1?{1_CivName : gender *:no_article?; m?Der ; f?Die ; other?Das ;}; other?Die ;}{1_CivName[5]} {1_CivName : plural 1?hat; other?haben;} mit {2_OtherPlayer : plural 1?{2_OtherPlayer : gender *:no_article?; m?dem ; f?der ; other?dem ;}; other?den ;}{2_OtherPlayer[3]} Frieden geschlossen.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_PLAYER_MET_SUMMARY" Language="de_DE">
       <Text>Ihr habt {1_leader} {2_CivDesc : plural 1?{2_CivDesc : gender *:no_article?von; m?vom; f?von der; other?vom;}; other?von den;} {2_CivDesc[3]} getroffen.</Text>
@@ -48006,7 +48372,7 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>{1_CivDesc : plural 1?{1_CivDesc : gender *:vowel?Das ; m?Der ; f?Die ; other?;}; other?Die ;}{1_CivDesc[5]} {1_CivDesc : plural 1?verstärkt; other?verstärken;} Grenzen</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_BORDERS_NOW_ENFORCED_SUMMARY" Language="de_DE">
-      <Text>{1_CivDesc : plural 1?{1_building : gender *:vowel?Das ; m?Der ; f?Die ; other?;}; other?Die ;}{1_CivDesc[5]} {1_CivDesc : plural 1?verstärkt; other?verstärken;} die Grenzen. Eure Einheiten wurden auf ein Geländefeld gerade außerhalb des Landes verlegt.</Text>
+      <Text>{1_leader} verstärkt die Grenzen. Eure Einheiten wurden auf ein Geländefeld gerade außerhalb des Landes verlegt.</Text>
     </Replace>
     <Replace Tag="LOC_NOTIFICATION_DIPLO_FRIENDSHIP_EXPIRED_SUMMARY" Language="de_DE">
       <Text>Eure Freundschaft mit {1_CivName : plural 1?{1_CivName : gender *:vowel?dem ; m?dem ; f?der ; other?;}; other?den ;}{1_CivName[3]} hat ihren Lauf genommen und muss erneuert werden.</Text>
@@ -48482,6 +48848,9 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     <Replace Tag="LOC_WORLD_FAITH_INCREASE_FLOATER" Language="de_DE">
       <Text>+{1_Num} [ICON_Faith]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_FAITH_DECREASE_FLOATER" Language="de_DE">
+      <Text>{1_Num} [ICON_Faith] [COLOR_RED]VERLOREN[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_UNIT_DAMAGE_DECREASE_FLOATER" Language="de_DE">
       <Text>[COLOR_GREEN]+{1_Num}[ENDCOLOR]</Text>
     </Replace>
@@ -48498,22 +48867,31 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
       <Text>[COLOR_FLOAT_PRODUCTION]+{1_Num} [ICON_Production][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_PRODUCTION_DECREASE_FLOATER" Language="de_DE">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_FLOAT_PRODUCTION]{1_Num}[ICON_Production][ENDCOLOR] [COLOR_RED]VERLOREN[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_INCREASE_FLOATER" Language="de_DE">
       <Text>[COLOR_FLOAT_FOOD]+{1_Num} [ICON_Food][ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_FOOD_DECREASE_FLOATER" Language="de_DE">
-      <Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+      <Text>[COLOR_FLOAT_FOOD]{1_Num} [ICON_Food][ENDCOLOR] [COLOR_RED]VERLOREN[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_GOLD_INCREASE_FLOATER" Language="de_DE">
       <Text>[COLOR_FLOAT_GOLD]+{1_Num} [ICON_Gold][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_GOLD_DECREASE_FLOATER" Language="de_DE">
+      <Text>[COLOR_FLOAT_GOLD]{1_Num} [ICON_Gold][ENDCOLOR] [COLOR_RED]VERLOREN[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_SCIENCE_INCREASE_FLOATER" Language="de_DE">
       <Text>[COLOR_FLOAT_SCIENCE]+{1_Num} [ICON_Science][ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_SCIENCE_DECREASE_FLOATER" Language="de_DE">
+      <Text>[COLOR_FLOAT_SCIENCE]{1_Num} [ICON_Science][ENDCOLOR] [COLOR_RED]VERLOREN[ENDCOLOR]</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_CULTURE_INCREASE_FLOATER" Language="de_DE">
       <Text>[COLOR_FLOAT_CULTURE]+{1_Num} [ICON_Culture][ENDCOLOR]</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_CULTURE_DECREASE_FLOATER" Language="de_DE">
+      <Text>[COLOR_FLOAT_CULTURE]{1_Num} [ICON_Culture][ENDCOLOR] [COLOR_RED]VERLOREN[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_DIFFICULTY_SCALING" Language="de_DE">
       <Text>+{Amount} Bonus für Schwierigkeit</Text>
@@ -48562,6 +48940,12 @@ Das Cloud-Spiel ist ein asynchrones Mehrspieler-Format, bei dem alle Spieler ihr
     </Replace>
     <Replace Tag="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION" Language="de_DE">
       <Text>+{1_Amount} Kampfstärke beim Kampf auf Hügeln</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_NEEDED" Language="de_DE">
+      <Text>Dies muss in einem {1_Name}-Bezirk sein.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_MAP_MOD_TEMPLATE" Language="de_DE">
+      <Text>Karte: {1_MapName}</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AZTEC_EAGLE_WARRIOR_NAME" Language="de_DE">
       <Text>Adlerkrieger|Adlerkrieger|Adlerkrieger|Adlerkriegers|Adlerkrieger</Text>

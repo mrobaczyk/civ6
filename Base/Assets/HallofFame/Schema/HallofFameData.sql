@@ -1,6 +1,6 @@
 
 -- Game Summary Schema
-pragma user_version(5);
+pragma user_version(6);
 
 -- This table contains statements to assist with migrating data during a database upgrade.
 -- @SQL is the statement to run.
@@ -142,21 +142,25 @@ CREATE INDEX GameDataPointValues_DataPointGameId on GameDataPointValues(DataPoin
 CREATE INDEX GameObjects_GameId on GameObjects(GameId);
 CREATE INDEX ObjectDataPointValues_DataPointObjectId on ObjectDataPointValues(DataPoint, ObjectId);
 CREATE INDEX RulesetDataPointValues_DataPointRuleset on RulesetDataPointValues(DataPoint, Ruleset);
+CREATE INDEX DataSets_DataSetObjectId on DataSets(DataSet,ObjectId);
 
 
--- Migrate Data from Version 3 to 5 (No changes, just copy)
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO Rulesets SELECT * From old.Rulesets");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO RulesetTypes SELECT * From old.RulesetTypes");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO GamePlayers SELECT * From old.GamePlayers");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO GameObjects SELECT * From old.GameObjects");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO RulesetDataPointValues SELECT * From old.RulesetDataPointValues");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO GameDataPointValues SELECT * From old.GameDataPointValues");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO ObjectDataPointValues SELECT * From old.ObjectDataPointValues");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO DataSets SELECT * From old.DataSets");
-INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 4, "INSERT INTO DataSetValues SELECT * From old.DataSetValues");
+-- Migrate Data from Version 3 to 6 (No changes, just copy)
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO Rulesets SELECT * From old.Rulesets");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO RulesetTypes SELECT * From old.RulesetTypes");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO GamePlayers SELECT * From old.GamePlayers");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO GameObjects SELECT * From old.GameObjects");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO RulesetDataPointValues SELECT * From old.RulesetDataPointValues");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO GameDataPointValues SELECT * From old.GameDataPointValues");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO ObjectDataPointValues SELECT * From old.ObjectDataPointValues");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO DataSets SELECT * From old.DataSets");
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 5, "INSERT INTO DataSetValues SELECT * From old.DataSetValues");
 
--- Migrate Data from Version 3 to 5 (Added Start Game Turn, Game Mode)
+-- Migrate Data from Version 5 to 6 (No changes, just copy)
+INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(5, 5, "INSERT INTO Games SELECT * From old.Games");
+
+-- Migrate Data from Version 3 to 6 (Added Start Game Turn, Game Mode)
 INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(3, 3, "INSERT INTO Games(GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, StartTurn, VictorTeamId, VictoryType, LastPlayed) SELECT GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, -1, VictorTeamId, VictoryType, LastPlayed from old.Games");
 
--- Migrate Data from Version 4 to 5 (Added Game Mode)
+-- Migrate Data from Version 4 to 6 (Added Game Mode)
 INSERT INTO Migrations(MinVersion, MaxVersion, 'SQL') VALUES(4, 4, "INSERT INTO Games(GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, StartTurn, VictorTeamId, VictoryType, LastPlayed) SELECT GameId, Ruleset, TurnCount, GameSpeedType, MapSizeType, Map, StartEraType, StartTurn, VictorTeamId, VictoryType, LastPlayed from old.Games");

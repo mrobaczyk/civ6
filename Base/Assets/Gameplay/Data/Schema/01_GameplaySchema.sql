@@ -304,9 +304,12 @@ CREATE TABLE "BonusMinorStartingUnits" (
 		"Quantity" INTEGER NOT NULL DEFAULT 1,
 		"OnDistrictCreated" BOOLEAN NOT NULL CHECK (OnDistrictCreated IN (0,1)) DEFAULT 0,
 		"District" TEXT NOT NULL DEFAULT "DISTRICT_CITY_CENTER",
-		PRIMARY KEY(Unit, Era),
+		"MinDifficulty" TEXT,
+		"DifficultyDelta" REAL NOT NULL DEFAULT 0,
+		PRIMARY KEY(Unit, Era, MinDifficulty),
 		FOREIGN KEY (Era) REFERENCES Eras(EraType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (Unit) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (Unit) REFERENCES Units(UnitType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (MinDifficulty) REFERENCES Difficulties(DifficultyType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Boosts" (
 		"BoostID" INTEGER NOT NULL,
@@ -1936,9 +1939,11 @@ CREATE TABLE "OpTeamRequirements" (
 		"MinPercentage" REAL NOT NULL DEFAULT 0,
 		"MaxPercentage" REAL NOT NULL DEFAULT 1,
 		"ReconsiderWhilePreparing" BOOLEAN NOT NULL CHECK (ReconsiderWhilePreparing IN (0,1)) DEFAULT 0,
+		"AiTypeDependence" TEXT,
 		PRIMARY KEY(TeamName, AiType),
 		FOREIGN KEY (AiType) REFERENCES UnitAiTypes(AiType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (TeamName) REFERENCES AiTeams(TeamName) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (TeamName) REFERENCES AiTeams(TeamName) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (AiTypeDependence) REFERENCES UnitAiTypes(AiType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "PlotEvalConditions" (
 		"ConditionType" TEXT NOT NULL,
@@ -2338,10 +2343,13 @@ CREATE TABLE "StartingBuildings" (
 		"Building" TEXT NOT NULL,
 		"Era" TEXT NOT NULL,
 		"District" TEXT,
-		PRIMARY KEY(Building, Era, District),
+		"MinorOnly" BOOLEAN NOT NULL CHECK (MinorOnly IN (0,1)) DEFAULT 0,
+		"MinDifficulty" TEXT,
+		PRIMARY KEY(Building, Era, District, MinDifficulty),
 		FOREIGN KEY (Era) REFERENCES Eras(EraType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (Building) REFERENCES Buildings(BuildingType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (District) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (District) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (MinDifficulty) REFERENCES Difficulties(DifficultyType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "StartingCivics" (
 		"Civic" TEXT NOT NULL DEFAULT "NO_CIVIC",
@@ -2886,6 +2894,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BarbarianTribeNames", "TribeTypeReference", "BarbarianTribes", 0,"SELECT T1.rowid from BarbarianTribes as T1 inner join BarbarianTribeNames as T2 on T2.TribeType = T1.TribeType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BehaviorTrees", "TriggerCollection", "TriggeredBehaviorTrees", 1,"SELECT T1.rowid from TriggeredBehaviorTrees as T1 inner join BehaviorTrees as T2 on T2.TreeName = T1.TreeName where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Beliefs", "BeliefClassTypeReference", "BeliefClasses", 0,"SELECT T1.rowid from BeliefClasses as T1 inner join Beliefs as T2 on T2.BeliefClassType = T1.BeliefClassType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BonusMinorStartingUnits", "DifficultyReference", "Difficulties", 0,"SELECT T1.rowid from Difficulties as T1 inner join BonusMinorStartingUnits as T2 on T2.MinDifficulty = T1.DifficultyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BonusMinorStartingUnits", "EraReference", "Eras", 0,"SELECT T1.rowid from Eras as T1 inner join BonusMinorStartingUnits as T2 on T2.Era = T1.EraType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("BonusMinorStartingUnits", "UnitReference", "Units", 0,"SELECT T1.rowid from Units as T1 inner join BonusMinorStartingUnits as T2 on T2.Unit = T1.UnitType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Boosts", "BoostingCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Boosts as T2 on T2.BoostingCivicType = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -3134,6 +3143,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("ObsoletePolicies", "ObsoletePolicyReference", "Policies", 0,"SELECT T1.rowid from Policies as T1 inner join ObsoletePolicies as T2 on T2.ObsoletePolicy = T1.PolicyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("ObsoletePolicies", "PolicyReference", "Policies", 0,"SELECT T1.rowid from Policies as T1 inner join ObsoletePolicies as T2 on T2.PolicyType = T1.PolicyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("ObsoletePolicies", "RequiresAvailableGreatPersonClassReference", "GreatPersonClasses", 0,"SELECT T1.rowid from GreatPersonClasses as T1 inner join ObsoletePolicies as T2 on T2.RequiresAvailableGreatPersonClass = T1.GreatPersonClassType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("OpTeamRequirements", "AiTypeDependenceReference", "UnitAiTypes", 0,"SELECT T1.rowid from UnitAiTypes as T1 inner join OpTeamRequirements as T2 on T2.AiTypeDependence = T1.AiType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Policies", "PolicyModifiers", "PolicyModifiers", 1,"SELECT T1.rowid from PolicyModifiers as T1 inner join Policies as T2 on T2.PolicyType = T1.PolicyType where T2.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Policies", "PrereqCivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join Policies as T2 on T2.PrereqCivic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Policies", "PrereqTechReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join Policies as T2 on T2.PrereqTech = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
@@ -3189,6 +3199,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("StartingBoostedTechnologies", "EraReference", "Eras", 0,"SELECT T1.rowid from Eras as T1 inner join StartingBoostedTechnologies as T2 on T2.Era = T1.EraType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("StartingBoostedTechnologies", "TechnologyReference", "Technologies", 0,"SELECT T1.rowid from Technologies as T1 inner join StartingBoostedTechnologies as T2 on T2.Technology = T1.TechnologyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("StartingBuildings", "BuildingReference", "Buildings", 0,"SELECT T1.rowid from Buildings as T1 inner join StartingBuildings as T2 on T2.Building = T1.BuildingType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("StartingBuildings", "DifficultyReference", "Difficulties", 0,"SELECT T1.rowid from Difficulties as T1 inner join StartingBuildings as T2 on T2.MinDifficulty = T1.DifficultyType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("StartingBuildings", "DistrictReference", "Districts", 0,"SELECT T1.rowid from Districts as T1 inner join StartingBuildings as T2 on T2.District = T1.DistrictType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("StartingBuildings", "EraReference", "Eras", 0,"SELECT T1.rowid from Eras as T1 inner join StartingBuildings as T2 on T2.Era = T1.EraType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("StartingCivics", "CivicReference", "Civics", 0,"SELECT T1.rowid from Civics as T1 inner join StartingCivics as T2 on T2.Civic = T1.CivicType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");

@@ -855,7 +855,7 @@
 		</Row>
 		<!-- ==================== Map Pin Popup ==================== -->
 		<Row Tag="LOC_MAP_PIN_POPUP_TITLE">
-			<Text>Edit Map Pin</Text>
+			<Text>Edit Map Tack</Text>
 		</Row>
 		<Row Tag="LOC_MAP_PIN_NAME">
 			<Text>Name:</Text>
@@ -864,10 +864,10 @@
 			<Text>Send to Chat</Text>
 		</Row>
 		<Row Tag="LOC_MAP_PIN_SEND_TO_CHAT_TT">
-			<Text>Add this map pin to your chat text.</Text>
+			<Text>Add this map tack to your chat text.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_PIN_SEND_TO_CHAT_NOT_VISIBLE_TT">
-			<Text>The map pin is not visible to the current chat target.</Text>
+			<Text>The map tack is not visible to the current chat target.</Text>
 		</Row>
 		<!-- ==================== Plot Info ==================== -->
 		<Row Tag="LOC_PLOTINFO_YOU_NEED_MORE_GOLD_TO_PURCHASE">
@@ -1849,16 +1849,16 @@
 			<Text>Zoom Out</Text>
 		</Row>
 		<Row Tag="LOC_HUD_MAP_PIN_LIST">
-			<Text>Map Pins</Text>
+			<Text>Map Tacks</Text>
 		</Row>
 		<Row Tag="LOC_HUD_MAP_TOGGLE_MAP_PIN_LIST">
-			<Text>Map Pins</Text>
+			<Text>Map Tacks</Text>
 		</Row>
 		<Row Tag="LOC_HUD_MAP_PLACE_MAP_PIN">
-			<Text>Add Pin</Text>
+			<Text>Add Tack</Text>
 		</Row>
 		<Row Tag="LOC_HUD_MAP_PLACE_MAP_PIN_TT">
-			<Text>Click on a hex to place a map pin at that location.</Text>
+			<Text>Click on a hex to place a map tack at that location.</Text>
 		</Row>
 		<Row Tag="LOC_HUD_MAP_TOGGLE_GRID">
 			<Text>Toggle Grid</Text>
@@ -1934,6 +1934,36 @@
     </Row>
 		<Row Tag="LOC_HUD_MAP_OPTIONS">
 			<Text>Map Options</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH">
+			<Text>Map Search</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_IN_PROGRESS">
+			<Text>Searching...</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_UPDATING">
+			<Text>Updating...</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_WAITING_FOR_TURN">
+			<Text>Waiting for next turn...</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_RESULTS">
+			<Text>{1_Count : plural 1?Found {1_Count} result; other?Found {1_Count} results;}</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_BEGIN_SEARCH">
+			<Text>SEARCH</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_CLEAR_SEARCH">
+			<Text>CLEAR</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_NO_SEARCH_TERMS_TOOLTIP">
+			<Text>Cannot search without at least one search term.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TOOLTIP">
+			<Text>Search Terms[NEWLINE]Search results will contain ALL of the terms entered here.</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_FILTER_TOOLTIP">
+			<Text>Search Filter[NEWLINE]Search results will contain NONE of the terms entered here.</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CIVICS_ENABLES">
 			<Text>Enables</Text>
@@ -2027,6 +2057,43 @@
 		</Row>
 		<Row Tag="LOC_HUD_POPUP_PROJECT_CREATED_BY_UNKNOWN">
 			<Text>An unmet civilization moves closer to Science Victory.</Text>
+		</Row>
+		<!-- Map Search Terms -->
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_MOUNTAIN">
+			<Text>Mountain</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_HILL">
+			<Text>Hill</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_WATER">
+			<Text>Water</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_FEATURE">
+			<Text>Feature</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_IMPROVEMENT">
+			<Text>Improvement</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_OWNED">
+			<Text>Owned</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_UNCLAIMED">
+			<Text>Unclaimed</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_PILLAGED">
+			<Text>Pillaged</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_NATIONAL_PARK">
+			<Text>National Park</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_UNDER_CONSTRUCTION">
+			<Text>Under Construction</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_CONTAMINATION">
+			<Text>Contamination</Text>
+		</Row>
+		<Row Tag="LOC_HUD_MAP_SEARCH_TERMS_SPECIALIST">
+			<Text>Specialist</Text>
 		</Row>
 		<!-- Boost Text -->
 		<Row Tag="LOC_BOOST_TO_BOOST">
@@ -3292,6 +3359,9 @@
 		<Row Tag="LOC_TYPE_TRAIT_HOUSING">
 			<Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] Housing</Text>
 		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_HOUSING_WITH_REQUIREMENT">
+			<Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Housing] Housing (requires {2_TechOrCivicName})</Text>
+		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_AIRSLOTS">
 			<Text>Aircraft Capacity: {1_Amount}</Text>
 		</Row>
@@ -3306,6 +3376,9 @@
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_WEAPONSLOTS">
 			<Text>Weapon Capacity: {1_Amount}</Text>
+		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_AMENITY">
+			<Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] {1_Amount : plural 1?Amenity; other?Amenities;}</Text>>
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_AMENITY_ENTERTAINMENT">
 			<Text>{1_Amount: number +#,###;-#,###} [ICON_Amenities] {1_Amount : plural 1?Amenity; other?Amenities;} from entertainment</Text>>
@@ -3346,11 +3419,20 @@
     <Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_ONCE">
       <Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} for having an adjacent {5_AdjacentObject} tile.</Text>
     </Row>
+		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_ONCE">
+			<Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?Amenity; other?Amenities;} for having an adjacent {2_AdjacentObject} tile.</Text>
+		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS">
 			<Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} from each adjacent {5_AdjacentObject} tile.</Text>
 		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS">
+			<Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?Amenity; other?Amenities;} from each adjacent {2_AdjacentObject} tile.</Text>
+		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_PER">
 			<Text>{1_Amount: number +#,###.#;-#,###.#} {2_YieldIcon} {3_YieldName} from every {4_Count} adjacent {5_AdjacentObject} tiles.</Text>
+		</Row>
+		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_AMENITY_BONUS_PER">
+			<Text>{1_Amount: number +#,###.#;-#,###.#} [ICON_Amenities] {1_Amount : plural 1?Amenity; other?Amenities;} from every {2_Count} adjacent {3_AdjacentObject} tiles.</Text>
 		</Row>
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_BONUS_REQUIRES_TECH_OR_CIVIC">
 			<Text>Requires {1_TechOrCivicName}.</Text>
@@ -3379,6 +3461,15 @@
 		<Row Tag="LOC_TYPE_TRAIT_ADJACENT_OBJECT_NATURAL_WONDER">
 			<Text>natural wonder</Text>
 		</Row>
+    <Row Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD">
+      <Text>Pillage Award: {1_AwardIcon} {2_AwardText}</Text>
+    </Row>
+    <Row Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_NO_ICON">
+      <Text>Pillage Award: {1_AwardText}</Text>
+    </Row>
+    <Row Tag="LOC_TYPE_TRAIT_PILLAGE_AWARD_HEALING">
+      <Text>Healing</Text>
+    </Row>
 		<!-- ==================== Calendar Text ==================== -->
 		<Row Tag="LOC_TIME_AD">
 			<Text>{1_Date: number #} AD</Text>
@@ -4528,10 +4619,10 @@
 			<Text>Unnamed Pin {1_number}</Text>
 		</Row>
 		<Row Tag="LOC_MAP_PIN_LIST_PLAYER_PIN_TOOLTIP">
-			<Text>Left click to look at pin.  Right click to edit pin.</Text>
+			<Text>Left click to look at the map tack on the map. Right click to edit.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_PIN_LIST_REMOTE_PIN_TOOLTIP">
-			<Text>Left click to look at pin.</Text>
+			<Text>Left click to look at the map tack on the map.</Text>
 		</Row>
 		<!-- ==================== Pause Panel Text ==================== -->
 		<Row Tag="LOC_GAME_PAUSED_TITLE">
@@ -4685,7 +4776,7 @@
 			<Text>Moved into this slot recently. Cannot be moved again for another {1_Turns} turns.</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_WORKS_ARTIFACT_LOCKED_FROM_MOVE">
-			<Text>Artifacts may only be moved from full Archaeological Museums (those with no empty slots).</Text>
+			<Text>Artifacts may only be swapped between full Archaeological Museums (those with no empty slots).</Text>
 		</Row>
 		<!-- ==================== GreatWorkObjectTypes ==================== -->
 		<Row Tag="LOC_GREATWORKOBJECT_SCULPTURE">
@@ -5333,6 +5424,18 @@
 		<Row Tag="LOC_REPORTS_SHOW_ONLY_NOT_OWNED">
 			<Text>Show only resources I do not own</Text>
 		</Row>
+		<Row Tag="LOC_REPORTS_ORDER_CIVS_BY">
+			<Text>Order Civilizations by</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_ORDER_AMOUNT">
+			<Text>amount</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_ORDER_PLAYER">
+			<Text>player</Text>
+		</Row>
+		<Row Tag="LOC_REPORTS_ORDER_PLAYER_SLOT">
+			<Text>player slot</Text>
+		</Row>		
 		<Row Tag="LOC_REPORTS_SORT_BY">
 			<Text>Sort by</Text>
 		</Row>
@@ -5858,37 +5961,46 @@
 			<Text>Text Tag</Text>
 		</Row>
     <!-- Production Queue -->
-    <Row Tag="LOC_PRODUCITON_PANEL_SHOW_QUEUE">
+    <Row Tag="LOC_PRODUCTION_PANEL_SHOW_QUEUE">
       <Text>Show Queue ({1_QueueSize})</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_HIDE_QUEUE">
+    <Row Tag="LOC_PRODUCTION_PANEL_HIDE_QUEUE">
       <Text>Hide Queue ({1_QueueSize})</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_REMOVE_ITEM">
+		<Row Tag="LOC_PRODUCTION_PANEL_LOCK_SHOW_QUEUE">
+			<Text>Lock queue to always show.</Text>
+		</Row>
+    <Row Tag="LOC_PRODUCTION_PANEL_UNLOCK_AUTOHIDE_QUEUE">
+      <Text>Unlock to auto-hide queue when closing production panel.</Text>
+    </Row>
+		<Row Tag="LOC_PRODUCTION_PANEL_TOGGLE_AUTOHIDE_QUEUE">
+      <Text>Toggle auto-hide queue</Text>
+    </Row>			
+    <Row Tag="LOC_PRODUCTION_PANEL_REMOVE_ITEM">
       <Text>Remove</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_MOVE_LEFT_ITEM">
+    <Row Tag="LOC_PRODUCTION_PANEL_MOVE_LEFT_ITEM">
       <Text>Move Left</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_MOVE_RIGHT_ITEM">
+    <Row Tag="LOC_PRODUCTION_PANEL_MOVE_RIGHT_ITEM">
       <Text>Move Right</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_BUTTON_TEXT">
+    <Row Tag="LOC_PRODUCTION_PANEL_BUTTON_TEXT">
       <Text>Manager</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_BUILDINGS_TOOLTIP">
+    <Row Tag="LOC_PRODUCTION_PANEL_BUILDINGS_TOOLTIP">
       <Text>Districts and Buildings</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_WONDERS_TOOLTIP">
+    <Row Tag="LOC_PRODUCTION_PANEL_WONDERS_TOOLTIP">
       <Text>Wonders</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_UNITS_TOOLTIP">
+    <Row Tag="LOC_PRODUCTION_PANEL_UNITS_TOOLTIP">
       <Text>Units</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_PANEL_PROJECTS_TOOLTIP">
+    <Row Tag="LOC_PRODUCTION_PANEL_PROJECTS_TOOLTIP">
       <Text>Projects</Text>
     </Row>
-    <Row Tag="LOC_PRODUCITON_MANAGER_TITLE">
+    <Row Tag="LOC_PRODUCTION_MANAGER_TITLE">
       <Text>Production Manager</Text>
     </Row>
     <Row Tag="LOC_PRODUCTION_MANAGER_SORT_BY">
@@ -5903,6 +6015,9 @@
     <Row Tag="LOC_PRODUCTION_MANAGER_FILTER_POPULATION">
       <Text>Population</Text>
     </Row>
+		<Row Tag="LOC_PRODUCTION_QUEUE_BEHAVIOR_TT">
+			<Text>Use the options menu to change the default show/hide behavior of the production queue.</Text>
+		</Row>
 		<Row Tag="LOC_HUD_FULLSCREEN_MAP">
       <Text>Show Fullscreen Map</Text>
     </Row>

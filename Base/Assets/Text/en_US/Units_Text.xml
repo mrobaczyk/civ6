@@ -77,7 +77,10 @@
 		<Row Tag="LOC_WORLD_FAITH_INCREASE_FLOATER">
 			<Text>+{1_Num} [ICON_Faith]</Text>
 		</Row>
-		<!-- Damage Message -->
+    <Row Tag="LOC_WORLD_FAITH_DECREASE_FLOATER">
+      <Text>{1_Num} [ICON_Faith] [COLOR_RED]LOST[ENDCOLOR]</Text>
+    </Row>
+    <!-- Damage Message -->
 		<Row Tag="LOC_WORLD_UNIT_DAMAGE_DECREASE_FLOATER">
 			<Text>[COLOR_GREEN]+{1_Num}[ENDCOLOR]</Text>
 		</Row>
@@ -96,26 +99,35 @@
 			<Text>[COLOR_FLOAT_PRODUCTION]+{1_Num} [ICON_Production][ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_PRODUCTION_DECREASE_FLOATER">
-			<Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
+			<Text>[COLOR_FLOAT_PRODUCTION]{1_Num}[ICON_Production][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
 		</Row>
 		<!-- Food Yield Message -->
 		<Row Tag="LOC_WORLD_FOOD_INCREASE_FLOATER">
 			<Text>[COLOR_FLOAT_FOOD]+{1_Num} [ICON_Food][ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="LOC_WORLD_FOOD_DECREASE_FLOATER">
-			<Text>[COLOR_RED]{1_Num}[ENDCOLOR]</Text>
-		</Row>
+      <Text>[COLOR_FLOAT_FOOD]{1_Num} [ICON_Food][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
+    </Row>
 		<!-- Gold Yield Message -->
 		<Row Tag="LOC_WORLD_GOLD_INCREASE_FLOATER">
 			<Text>[COLOR_FLOAT_GOLD]+{1_Num} [ICON_Gold][ENDCOLOR]</Text>
 		</Row>
+    <Row Tag="LOC_WORLD_GOLD_DECREASE_FLOATER">
+      <Text>[COLOR_FLOAT_GOLD]{1_Num} [ICON_Gold][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
+    </Row>
     <!-- Science Yield Message -->
     <Row Tag="LOC_WORLD_SCIENCE_INCREASE_FLOATER">
       <Text>[COLOR_FLOAT_SCIENCE]+{1_Num} [ICON_Science][ENDCOLOR]</Text>
     </Row>
+    <Row Tag="LOC_WORLD_SCIENCE_DECREASE_FLOATER">
+      <Text>[COLOR_FLOAT_SCIENCE]{1_Num} [ICON_Science][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
+    </Row>
     <!-- Gold Yield Message -->
     <Row Tag="LOC_WORLD_CULTURE_INCREASE_FLOATER">
       <Text>[COLOR_FLOAT_CULTURE]+{1_Num} [ICON_Culture][ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_CULTURE_DECREASE_FLOATER">
+      <Text>[COLOR_FLOAT_CULTURE]{1_Num} [ICON_Culture][ENDCOLOR] [COLOR_RED]LOST[ENDCOLOR]</Text>
     </Row>
     <!-- Civilian-->
 		<Row Tag="LOC_UNIT_SETTLER_DESCRIPTION">
