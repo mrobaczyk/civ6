@@ -279,7 +279,7 @@
     <Replace Tag="LOC_BUILDING_PYRAMIDS_NAME" Language="es_ES">
       <Text>Pirámides|Pirámides</Text>
       <Gender>feminine|feminine</Gender>
-      <Plurality>1|2</Plurality>
+      <Plurality>2|2</Plurality>
     </Replace>
     <Replace Tag="LOC_BUILDING_RESEARCH_LAB_NAME" Language="es_ES">
       <Text>Laboratorio de investigación|Laboratorios de investigación</Text>
@@ -1836,8 +1836,8 @@
       <Gender>feminine</Gender>
       <Plurality>1</Plurality>
     </Replace>
-    <Replace Tag="LOC_CITY_NAME_NEWCASTLE" Language="es_ES">
-      <Text>Newcastle</Text>
+    <Replace Tag="LOC_CITY_NAME_NEWCASTLE_UPON_TYNE" Language="es_ES">
+      <Text>Newcastle upon Tyne</Text>
       <Gender>feminine</Gender>
       <Plurality>1</Plurality>
     </Replace>
@@ -1958,6 +1958,11 @@
     </Replace>
     <Replace Tag="LOC_CITY_NAME_CAMBRIDGE" Language="es_ES">
       <Text>Cambridge</Text>
+      <Gender>feminine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_NEWCASTLE" Language="es_ES">
+      <Text>Newcastle</Text>
       <Gender>feminine</Gender>
       <Plurality>1</Plurality>
     </Replace>
@@ -4356,6 +4361,11 @@
       <Gender>feminine</Gender>
       <Plurality>1</Plurality>
     </Replace>
+    <Replace Tag="LOC_CIVIC_FUTURE_CIVIC_NAME" Language="es_ES">
+      <Text>Principio del futuro</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
     <Replace Tag="LOC_GOVERNMENT_ANARCHY_NAME" Language="es_ES">
       <Text>Anarquía</Text>
       <Gender>feminine</Gender>
@@ -6267,6 +6277,9 @@
     <Replace Tag="LOC_PEDIA_CIVICS_PAGE_CIVIC_FOREIGN_TRADE_CHAPTER_HISTORY_PARA_3" Language="es_ES">
       <Text>Los economistas han elaborado toda clase de teorías y modelos para entender y explicar el comercio exterior, como el modelo de Adam Smith, el ricardiano, el de Heckscher-Ohlin, el gravitacional, la nueva teoría del comercio o la teoría de Ricardo-Sraffa. Sin embargo, la mayoría de modelos y teorías no tienen en cuenta el principio básico sobre el que se ha construido la civilización: la avaricia.</Text>
     </Replace>
+    <Replace Tag="LOC_PEDIA_CIVICS_PAGE_CIVIC_FUTURE_CIVIC_CHAPTER_HISTORY_PARA_1" Language="es_ES">
+      <Text>El avance de la cultura es lento y aparece paulatinamente, y los valores que definen la evolución de una cultura oscilan y varían con el tiempo. Los filósofos se siguen cuestionando aún a día de hoy grandes preguntas formuladas en la antigüedad: ¿qué es una vida buena?, ¿cómo debería vivir la gente una vida moral?, ¿cuáles son nuestros derechos y libertades?, ¿cómo se relaciona el individuo con el estado? La evolución de la tecnología forja nuevos dilemas morales que deben cuestionarse, así como oportunidades para crear tanto cosas buenas como malas. El futuro debe observar sus propios problemas mientras se aprovecha de la sabiduría de las épocas pasadas. Aunque no sabemos con certeza qué nos ofrecerá la cultura del futuro, esperamos que ese "futuro cívico" sea una celebración de aquello que nos une como humanos y aquellas diferencias que le dan a la humanidad esa textura tan particular.</Text>
+    </Replace>
     <Replace Tag="LOC_PEDIA_CIVICS_PAGE_CIVIC_GAMES_RECREATION_CHAPTER_HISTORY_PARA_1" Language="es_ES">
       <Text>El ocio es un elemento esencial de la condición humana. De hecho, la Declaración Universal de los Derechos Humanos aprobada por el Consejo General de las Naciones Unidas en diciembre de 1948 considera el disfrute del tiempo libre una necesidad. Las actividades de ocio pueden ser individuales o colectivas, activas o pasivas, estructuradas o improvisadas, saludables o dañinas, privadas o públicas. El tiempo libre dedicado al ocio varía considerablemente de una cultura a otra. Según los antropólogos, las culturas primitivas dedicaban mucho más tiempo al ocio que las civilizaciones "desarrolladas". Por ejemplo, los invasores europeos, que destinaban su tiempo a construir, rezar y ganar dinero, pensaban que los miembros de las tribus shoshone de la Gran Cuenca eran tremendamente vagos.</Text>
     </Replace>
@@ -7459,13 +7472,19 @@
       <Text>+1 si la casilla está sobre un Río o Lago</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_13" Language="es_ES">
-      <Text>-1 por cada Zona industrial, Campamento, Aeropuerto o Puerto espacial adyacente</Text>
+      <Text>+1 por cada Château y Esfinge</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_14" Language="es_ES">
-      <Text>-1 por cada Selva tropical, Pantano o Terreno de aluvión adyacente</Text>
+      <Text>-1 por cada Zona industrial, Campamento, Aeropuerto o Puerto espacial adyacente</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_15" Language="es_ES">
+      <Text>-1 por cada Selva tropical, Pantano o Terreno de aluvión adyacente</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_16" Language="es_ES">
       <Text>-1 por cada casilla saqueada adyacente</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_17" Language="es_ES">
+      <Text>-1 por Minas, Canteras, Pozos petrolíferos, Plataformas petrolíferas en alta mar y Pistas de aterrizaje</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_5_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Edificios</Text>
@@ -7695,6 +7714,9 @@
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_7_CHAPTER_CONTENT_PARA_3" Language="es_ES">
       <Text>El terreno también puede perjudicarte en combate, así que asegúrate de evitar los Terrenos de aluvión y las Ciénagas, pues tienen efectos negativos en tu capacidad de defensa. Si te encuentras en un terreno indefendible y crees que no puedes derrotar al enemigo mediante ofensivas, puede que construir unos cuantos Fuertes te ayude a rechazarlo. Acuérdate de atacar los flancos enemigos: es su punto más débil y te dará ventaja. Combinar una fuerza militar en buena forma con la disposición adecuada en el terreno mientras utilizas un Gran general te dará la victoria.</Text>
     </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_7_CHAPTER_CONTENT_PARA_4" Language="es_ES">
+      <Text>Bonificaciones al flanqueo y al apoyo: engañar al enemigo así como asegurarse de que las unidades desplegadas reciben apoyo de sus homólogas es importante para conseguir la victoria sobre el terreno. En Civilization VI, simulamos esto con las bonificaciones al flanqueo y al apoyo. Cuando un jugador completa el principio de Tradición militar, se considera que sus fuerzas armadas están lo bastante avanzadas como para beneficiarse de estas bonificaciones.[NEWLINE][NEWLINE]Flanqueo: si una unidad enemiga se ve rodeada por dos o más unidades amistosas adyacentes durante un ataque, se considera que está flanqueada, lo que le confiere una bonificación de +2 al combate al atacante por cada unidad más que flanquee.[NEWLINE][NEWLINE]Apoyo: cuando se defiende de un ataque enemigo, una unidad defensora recibe una bonificación de +2 al combate por cada unidad amistosa adyacente.</Text>
+    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_8_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Experiencia y ascensos</Text>
     </Replace>
@@ -7765,7 +7787,7 @@
       <Text>Zona de control</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_3_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Muchas unidades de combate ejercen una "zona de control" (ZC) en las casillas que tienen a su alrededor. Cuando una unidad se mueve a una ZC enemiga y aún dispone de puntos de Movimiento [ICON_Movement], podrá detenerse o atacar. Las unidades a distancia no ejercen una ZC.</Text>
+      <Text>Muchas unidades de combate ejercen una "zona de control" (ZC) en las casillas que tienen alrededor. Las unidades de combate que se adentren en la ZC de una unidad enemiga deben detenerse, con independencia del Movimiento [ICON_Movement] que les quede. Las unidades que se vean detenidas por la ZC de un enemigo tendrán la opción de atacarlo si cuentan con el Movimiento [ICON_Movement] restante necesario para ello.[NEWLINE][NEWLINE]Las unidades a distancia y de bombardeo no ejercen una ZC. Las unidades de caballería, así como las unidades asaltantes navales, tienen la capacidad de hacer caso omiso de la ZC de un enemigo.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_4_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Movimiento naval</Text>
@@ -7777,7 +7799,7 @@
       <Text>Embarco de unidades</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_5_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Al principio del juego, las unidades terrestres no pueden entrar en ninguna casilla de agua. Sin embargo, cuando aprendas la tecnología de Navegación a vela, los Constructores podrán entrar en casillas costeras. Tras la Navegación celeste, los Comerciantes podrán embarcarse. Después de la tecnología de Construcción naval, todas las unidades podrán embarcarse. Para embarcar una unidad, llévala hasta una casilla costera y haz clic en la acción "Embarcarse". Una vez embarcada, la unidad deberá moverse por el agua.</Text>
+      <Text>Al principio del juego, las unidades terrestres no pueden entrar en ninguna casilla de agua. Sin embargo, cuando aprendas la tecnología de Navegación a vela, los Constructores podrán entrar en casillas costeras. Tras la Navegación celeste, los Comerciantes podrán embarcarse. Después de la tecnología de Construcción naval, todas las unidades podrán embarcarse. Para embarcar una unidad, llévala hasta una casilla costera y haz clic en la acción "Embarcarse". Una vez embarcada, la unidad deberá moverse por el agua.[NEWLINE]Se considera que las unidades terrestres embarcadas se encuentran en un barco de transporte y no tienen la misma capacidad de combate que en tierra. Además, las unidades terrestres embarcadas sufren una reducción a su Fuerza de combate y solo se pueden curar si se encuentran en aguas amistosas, lo que las hace mucho más vulnerables a los ataques de las unidades navales enemigas.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_SCIENCE_NAME" Language="es_ES">
       <Text>Ciencia y tecnología</Text>
@@ -7837,7 +7859,7 @@
       <Text>Bombardeos culturales</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Un Bombardeo cultural es una acción que te permite arrebatar a otro jugador el control de las casillas adyacentes y añadirlas a tu imperio. Las casillas obtenidas de este modo deben estar a 3 casillas o menos de tu ciudad en expansión. Las casillas en las que ya haya una maravilla o un distrito completados no cambiarán de propietario con un Bombardeo cultural. Las casillas con distritos o maravillas sin completar sí cambiarán de propietario, pero los contenidos a medio construir de esas casillas serán destruidos.</Text>
+      <Text>Un Bombardeo cultural es una acción que te permite hacerte con el control de las casillas adyacentes y añadirlas a tu imperio, aunque sean de otro jugador. Las casillas obtenidas de este modo deben estar a 3 casillas o menos de tu ciudad en expansión. Las casillas en las que ya haya una maravilla o un distrito completados no cambiarán de propietario con un Bombardeo cultural. Las casillas con distritos o maravillas sin completar sí cambiarán de propietario, pero los contenidos a medio construir de esas casillas serán destruidos.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_PARA_2" Language="es_ES">
       <Text>Para iniciar un Bombardeo cultural, juega con Polonia y completa un Campamento o un Fuerte en territorio amistoso.</Text>
@@ -7936,7 +7958,7 @@
       <Text>Una unidad religiosa dañada sufre una penalización a la fuerza de su acción de propagar religión, lo que significa que convertirá a menos devotos. Si una unidad religiosa pierde todos sus PG por combate religioso, morirá. Cuando una unidad religiosa es derrotada, todas las ciudades a 10 casillas de distancia reducen la presión religiosa de la religión de la unidad derrotada igual a la fuerza de un Apóstol con plena salud. La presión religiosa de la religión de la unidad victoriosa aumenta en la misma cantidad. Si una unidad militar hostil mata a una unidad religiosa, la reducción en la presión religiosa tiene lugar como si se tratara de un combate teológico.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_FAITH_7_CHAPTER_CONTENT_PARA_4" Language="es_ES">
-      <Text>Las unidades religiosas pueden curarse de los daños sufridos estando en un Lugar sagrado de su religión o adyacentes a él.</Text>
+      <Text>Las unidades religiosas pueden curar todo el daño que tengan si permanecen en un Lugar sagrado o adyacentes a él, con independencia de la religión a la que pertenezca ese Lugar sagrado.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_DIPLO_NAME" Language="es_ES">
       <Text>Diplomacia</Text>
@@ -7966,7 +7988,7 @@
       <Text>Todo líder tiene una opinión sobre ti. Su opinión puede ser positiva o negativa; cambia constantemente según los eventos de la partida. Puedes saber cuál es tu relación con otro líder por el icono en su retrato o si seleccionas Nuestra relación en el panel de diplomacia del líder. Los posibles estados de relación son:</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_12_CHAPTER_CONTENT_PARA_2" Language="es_ES">
-      <Text>Aliados. Cuando un líder es tu aliado, no puedes declararle la guerra, tenéis Apertura de fronteras mutua, podéis hacer Acuerdos de investigación y Pactos defensivos y los tratos probablemente serán muy favorables.[NEWLINE][NEWLINE]Amigo declarado. Cuando eliges declarar tu amistad con un líder, no podéis declararos la guerra, podéis hacer Acuerdos de investigación y los tratos serán más favorables. Para hacer una alianza se necesita primero este estado de relación.[NEWLINE][NEWLINE]Amistoso. Esto significa que el líder tiene una impresión favorable de ti y tienes más probabilidades de conseguir tratos favorables.[NEWLINE][NEWLINE]Neutral. No has hecho nada que moleste o impresione al líder, y las interacciones serán normales.[NEWLINE][NEWLINE]Hostil. Por alguna razón, has hecho algo para molestar a este líder, y los tratos probablemente serán desfavorables para ti, o si lo prefieres, puedes hacerle exigencias. [NEWLINE][NEWLINE]Denunciado. Este líder les ha dicho a los otros líderes del mundo que has hecho algo para ofenderle. Los tratos te serán desfavorables, en caso de que acepte hacerlos contigo, pero puedes declarar una guerra formal y hacer exigencias.[NEWLINE][NEWLINE]En guerra. Se han abierto las hostilidades y puedes atacar o invadir el territorio de este líder, pero sufrirás penalizaciones de hastío bélico y belicismo.</Text>
+      <Text>Aliados. Cuando un líder es tu aliado, no puedes declararle la guerra, tenéis Apertura de fronteras mutua, podéis hacer Acuerdos de investigación y Pactos defensivos y los tratos probablemente serán muy favorables. El territorio que posea la otra civilización de la alianza se considerará "amistoso" y te dará los mismos privilegios que el tuyo.[NEWLINE][NEWLINE]Amigo declarado. Cuando eliges declarar tu amistad con un líder, no podéis declararos la guerra, podéis hacer Acuerdos de investigación y los tratos serán más favorables. Para hacer una alianza se necesita primero este estado de relación.[NEWLINE][NEWLINE]Amistoso. Esto significa que el líder tiene una impresión favorable de ti y tienes más probabilidades de conseguir tratos favorables.[NEWLINE][NEWLINE]Neutral. No has hecho nada que moleste o impresione al líder, y las interacciones serán normales.[NEWLINE][NEWLINE]Hostil. Por alguna razón, has hecho algo para molestar a este líder, y los tratos probablemente serán desfavorables para ti, o si lo prefieres, puedes hacerle exigencias. [NEWLINE][NEWLINE]Denunciado. Este líder les ha dicho a los otros líderes del mundo que has hecho algo para ofenderle. Los tratos te serán desfavorables, en caso de que acepte hacerlos contigo, pero puedes declarar una guerra formal y hacer exigencias.[NEWLINE][NEWLINE]En guerra. Se han abierto las hostilidades y puedes atacar o invadir el territorio de este líder, pero sufrirás penalizaciones de hastío bélico y belicosidad.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_7_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Comercio, exigencias y discusiones</Text>
@@ -8028,6 +8050,21 @@
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_14_CHAPTER_CONTENT_PARA_1" Language="es_ES">
       <Text>Después de investigar el principio Comercio exterior, los jugadores se pueden proponer una guerra conjunta. Si propones o aceptas una, el otro jugador y tú pasaréis a estar en guerra de inmediato con el jugador objetivo que se haya determinado en los parámetros del acuerdo.</Text>
     </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_TITLE" Language="es_ES">
+      <Text>Territorio</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_1" Language="es_ES">
+      <Text>Hay tres tipos de territorio diplomático:</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_2" Language="es_ES">
+      <Text>Amistoso: el territorio propiedad de tu civilización. También se considera territorio amistoso el que pasa a denominarse así al aliarse con una civilización importante o al convertirse en suzerano de una ciudad-estado. Las unidades se curarán con más rapidez en territorio amistoso, además de poder aprovechar las capacidades y las políticas especiales asociadas a él. Una unidad debe estar en territorio amistoso para poder modernizarse.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_3" Language="es_ES">
+      <Text>Neutral: el territorio que no es propiedad de una civilización o de una ciudad-estado. Este territorio lo pueden tomar una civilización o una ciudad-estado mediante la expansión de las fronteras de la ciudad o fundando una nueva ciudad en ese lugar. Con la excepción de las mejoras Fuerte y Pista de aterrizaje, no se permite a los jugadores construir en territorio neutral.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_4" Language="es_ES">
+      <Text>Enemigo: el territorio que es propiedad de otra civilización o ciudad-estado. Los jugadores no pueden entrar en territorio enemigo sin firmar una Apertura de fronteras con la civilización en cuestión. Las unidades se curan menos en territorio enemigo.</Text>
+    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_3_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Casus belli</Text>
     </Replace>
@@ -8063,6 +8100,9 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_5_CHAPTER_CONTENT_PARA_2" Language="es_ES">
       <Text>Los Espías no se mueven como otras unidades. Saltan de ciudad en ciudad viajando por aire, mar, carretera o a pie (el tiempo de viaje varía en cada caso). Una vez instalado en una ciudad, puede ser enviado a un distrito en particular para iniciar su misión. Las misiones incluyen robar mejoras de tecnología, crear unidades rebeldes o, simplemente, aumentar la visibilidad diplomática. Cada misión lleva un tiempo y puede tener resultados diversos. El Espía puede morir o ser capturado, puede fracasar sin ser detectado o también tener éxito.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_5_CHAPTER_CONTENT_PARA_3" Language="es_ES">
+      <Text>Cada civilización puede crear a 5 Espías. Lleva a Catalina para ganar la capacidad de crear a 6.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_CITYSTATES_NAME" Language="es_ES">
       <Text>Ciudades-estado</Text>
@@ -8107,13 +8147,10 @@
       <Text>Enviados</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_4_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Las bonificaciones que puedes obtener de una ciudad-estado dependen de cuántos Enviados [ICON_Envoy] hayas destinado a ella. Cuando consigas Enviados [ICON_Envoy], se te pedirá que elijas a qué ciudades-estado deseas enviarlos. Si dispones de varios Enviados [ICON_Envoy], puedes repartirlos a tu antojo.</Text>
+      <Text>Las bonificaciones que puedes obtener de una ciudad-estado dependen de cuántos Enviados [ICON_Envoy] hayas destinado a ella. Los Enviados se ganan con el tiempo mediante puntos de influencia (que provienen de las formas de gobierno y de las políticas) o al instante al completar ciertos principios. Cuando los consigas, se te pedirá que elijas a qué ciudades-estado deseas enviarlos. Si dispones de varios Enviados [ICON_Envoy], puedes repartirlos a tu antojo entre las distintas ciudades-estado.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_4_CHAPTER_CONTENT_PARA_2" Language="es_ES">
       <Text>Declarar abiertamente la guerra a una ciudad-estado elimina a todos los Enviados [ICON_Envoy] que tengas en ella. En caso contrario, se quedarán en la ciudad-estado de forma permanente. Los Enviados [ICON_Envoy] a una ciudad-estado son visibles para todos los jugadores, y asignarlos puede tener consecuencias diplomáticas. Las bonificaciones obtenidas dependen de cuántos tengas en la ciudad estado, sin importar quién más haya destinado Enviados [ICON_Envoy] allí. Cada tipo de ciudad-estado ofrece el mismo tipo de bonificaciones, y estas son acumulativas, así que si un jugador destina más Enviados [ICON_Envoy] a una ciudad-estado, sus bonificaciones se sumarán.</Text>
-    </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_4_CHAPTER_CONTENT_PARA_3" Language="es_ES">
-      <Text>{LOC_PEDIA_CONCEPTS_PAGE_DIPLO_6_CHAPTER_CONTENT_PARA_4}</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Suzerano</Text>
@@ -8122,13 +8159,13 @@
       <Text>La civilización con más Enviados [ICON_Envoy] en una ciudad-estado y que tenga al menos 3 de ellos se considera su suzerana. Solo puede haber un suzerano como máximo, y las asociaciones no están permitidas. Si nadie tiene Enviados [ICON_Envoy] en una ciudad-estado, no hay suzerano. El suzerano obtiene varios beneficios importantes:</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_2" Language="es_ES">
-      <Text>Bonificación exclusiva de la ciudad-estado: es una bonificación importante que ninguna otra ciudad-estado proporcionará (por ejemplo, Jerusalén se comporta como segunda ciudad santa de tu religión).</Text>
+      <Text>Bonificación exclusiva: es una bonificación importante que ninguna otra ciudad-estado proporcionará (por ejemplo, Jerusalén se comporta como segunda ciudad santa de tu religión).</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_3" Language="es_ES">
-      <Text>Alianza diplomática: la ciudad-estado seguirá automáticamente el estado diplomático de su suzerano en cuestiones de guerra y paz.</Text>
+      <Text>{LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS}</Text>
     </Replace>
-    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_4" Language="es_ES">
-      <Text>Compartición de recursos: todos los recursos de la ciudad-estado se exportan automáticamente al suzerano, y este puede construir mejoras en el territorio de la ciudad-estado.</Text>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_5" Language="es_ES">
+      <Text>Territorio amistoso: se considera que el territorio de la ciudad-estado es "amistoso" para su suzerano, lo que permite que este adquiera en él los mismos privilegios que le da su propio territorio.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_TRADE_NAME" Language="es_ES">
       <Text>Mercado</Text>
@@ -8140,7 +8177,7 @@
       <Text>La unidad del Comerciante se desbloquea al investigar Comercio exterior y se crea en las ciudades. Los Comerciantes se muestran en una capa distinta del mapa, y no interactúan con la mayoría de las cosas normales que hay en él. Pueden apilarse libremente con cualquier unidad e ignoran las fronteras culturales.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_1_CHAPTER_CONTENT_PARA_2" Language="es_ES">
-      <Text>Cuando un Comerciante se encuentre en una ciudad propiedad del jugador, podrá abrir una Ruta comercial [ICON_TradeRoute] entre esa ciudad y otra que esté a su alcance, siempre que dicha Ruta comercial [ICON_TradeRoute] no esté ya en activo (por ejemplo, si ya tengo una Ruta comercial [ICON_TradeRoute] entre Roma y Atenas, no puedo abrir otra) y que el jugador no haya llegado a su número máximo de Rutas comerciales [ICON_TradeRoute]. </Text>
+      <Text>Cuando un Comerciante se encuentre en una ciudad de tu propiedad, podrás abrir una Ruta comercial [ICON_TradeRoute] entre esa ciudad y otra que esté a su alcance, siempre que ninguna de tus Rutas comerciales [ICON_TradeRoute] ya pase por ahí (por ejemplo, si tienes una Ruta comercial [ICON_TradeRoute] entre Roma y Atenas, no puedes abrir otra) y que no hayas alcanzado ya el número máximo de Rutas comerciales [ICON_TradeRoute].</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_1_CHAPTER_CONTENT_PARA_3" Language="es_ES">
       <Text>Una vez abierta, la Ruta comercial [ICON_TradeRoute] durará al menos 20 turnos en una partida a velocidad estándar. El Comerciante se moverá automáticamente por la ruta mientras dure, pero no la terminará hasta que vuelva a la casilla de la ciudad de origen. Cuando se encuentre en una ruta activa, el Comerciante ignorará las restricciones del terreno y se moverá 1 casilla cada turno. Además, irá colocando una Carretera a su paso. No olvides proteger a tu Comerciante de los Bárbaros o las civilizaciones hostiles, ya que es vulnerable al saqueo.</Text>
@@ -8155,19 +8192,34 @@
       <Text>Alcance comercial</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_3_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>En tierra, una Ruta comercial [ICON_TradeRoute] puede llegar a destinos que se encuentren a 15 casillas o menos. Cuando el jugador investigue la tecnología que permite embarcarse, los Comerciantes también podrán moverse por el agua. En este caso, el alcance será de 30 casillas. Solo se puede pasar de tierra a agua en un Centro urbano o en un distrito de Puerto, y la capacidad de movimiento restante no se aprovecha. Si la ciudad cuenta con un Puesto comercial, el Comerciante "repostará" para el siguiente tipo de transporte y podrá seguir moviéndose. Si no, tendrá que detenerse en ella.</Text>
+      <Text>Por tierra, una Ruta comercial [ICON_TradeRoute] puede llegar a destinos que se encuentren a 15 casillas o menos. Cuando el jugador investigue la tecnología que permite embarcarse, los Comerciantes también podrán moverse por el agua. En este caso, el alcance será de 30 casillas. Si la ciudad cuenta con un Puesto comercial del jugador, el Comerciante "repostará" para el siguiente medio de transporte y podrá seguir moviéndose. Si no, tendrá que detenerse en ella.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_3_CHAPTER_CONTENT_PARA_2" Language="es_ES">
+      <Text>Solo se puede pasar de tierra a agua en un Centro urbano o en un distrito de Puerto, y la capacidad de movimiento restante no se aprovecha.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_4_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Puestos comerciales</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_4_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Los Puestos comerciales amplían tu red comercial y la hacen más lucrativa. No solo te permiten llegar a destinos más alejados, sino que también proporcionan bonificaciones al rendimiento de todas tus Rutas comerciales [ICON_TradeRoute] cuando pasen por ellos (aunque ese no sea el destino final). Cuando un jugador tiene un Puesto comercial en una ciudad, sin importar quién sea el dueño de la ciudad, las Rutas comerciales [ICON_TradeRoute] de ese jugador podrán "repostar" su alcance de Movimiento [ICON_Movement] y llegar a destinos más alejados. Los Puestos comerciales se instalan en una ciudad cuando se completa una Ruta comercial [ICON_TradeRoute] que empieza o termina en ella, y el Puesto comercial pertenecerá al jugador propietario de la Ruta comercial [ICON_TradeRoute].</Text>
+      <Text>Amplía tu red comercial y hazla más lucrativa con Puestos comerciales [ICON_TradingPost]. Un Puesto comercial [ICON_TradingPost] se puede colocar en una ciudad cuando se haya completado una Ruta comercial [ICON_TradeRoute] que llegue o salga de ella. El puesto pertenece al jugador propietario de la Ruta comercial [ICON_TradeRoute].</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_4_CHAPTER_CONTENT_PARA_2" Language="es_ES">
+      <Text>El Movimiento [ICON_Movement] de tus Rutas comerciales [ICON_TradeRoute] se puede "repostar" en cualquier ciudad que cuente con un Puesto comercial [ICON_TradingPost] tuyo, lo que les posibilita llegar a destinos más lejanos. Si la ciudad pertenece a otro jugador, el Puesto comercial [ICON_TradingPost] también vuelve más valiosa la Ruta comercial [ICON_TradeRoute], pues concede +1 de Oro [ICON_Gold] a los ingresos obtenidos de ella.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_5_CHAPTER_CONTENT_TITLE" Language="es_ES">
-      <Text>Rendimientos</Text>
+      <Text>Rendimientos para el dueño de una Ruta</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_5_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Una Ruta comercial [ICON_TradeRoute] proporciona rendimientos en función de su destino y del camino que siga. Los distritos de la ciudad de destino determinarán los tipos de rendimientos que obtiene la ciudad de origen. Por ejemplo, comerciar con una ciudad con un Lugar sagrado proporcionará Fe [ICON_Faith], y comerciar con una ciudad con un distrito de Teatros proporcionará Cultura [ICON_Culture].</Text>
+      <Text>Una Ruta comercial [ICON_TradeRoute] proporciona rendimientos cada turno a su ciudad de origen, que dependen sobre todo de los distritos que haya en la ciudad de destino. Por ejemplo, comerciar con una ciudad que tenga un Lugar sagrado otorgará Fe [ICON_Faith], y comerciar con una ciudad que cuente con un distrito de Teatro, Cultura [ICON_Culture].</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_5_CHAPTER_CONTENT_PARA_2" Language="es_ES">
+      <Text>También proporciona rendimientos en función del camino que recorra. Si pasa por un Puesto comercial [ICON_TradingPost] que tengas en una ciudad extranjera, valdrá 1 de Oro [ICON_Gold] más. Los caminos largos que recorren muchos Puestos comerciales [ICON_TradingPost] son muy valiosos.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_6_CHAPTER_CONTENT_TITLE" Language="es_ES">
+      <Text>Rendimientos para ciudades de la ruta</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_6_CHAPTER_CONTENT_PARA_1" Language="es_ES">
+      <Text>Una ciudad gana 1 de Oro [ICON_Gold] por turno por cada Ruta comercial [ICON_TradeRoute] perteneciente a otro jugador que pase por su Centro urbano.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_GOVT_NAME" Language="es_ES">
       <Text>Gobiernos y políticas</Text>
@@ -8247,6 +8299,9 @@
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_2_CHAPTER_CONTENT_PARA_2" Language="es_ES">
       <Text>Los distritos y los edificios que contienen estos proporcionan puntos para el tipo de gran personaje [ICON_GreatPerson] asociado. Esta es la forma lenta pero segura de obtener puntos. Los distritos también permiten que la ciudad use Producción [ICON_Production] en proyectos que, una vez completados, contribuyen a los puntos de gran personaje [ICON_GreatPerson].</Text>
     </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_2_CHAPTER_CONTENT_PARA_3" Language="es_ES">
+      <Text>Además, los jugadores pueden gastar Oro [ICON_Gold] o Fe [ICON_Faith] para hacer de mecenas de un Gran personaje, ganando a ese personaje de inmediato. El coste del mecenazgo va en función de la cantidad de puntos más de Gran personaje [ICON_GreatPerson] que el jugador necesitaría para conseguirlo normalmente.</Text>
+    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_3_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Usar grandes personajes</Text>
     </Replace>
@@ -8254,7 +8309,7 @@
       <Text>Cada gran personaje [ICON_GreatPerson] tiene un efecto distinto inspirado en la historia. La mayoría de los efectos están muy vincularos a una época en particular, y no resultan muy útiles fuera de ella. Los efectos son, principalmente, de dos tipos: efectos de nacimiento y efectos de acción.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_3_CHAPTER_CONTENT_PARA_2" Language="es_ES">
-      <Text>Los efectos de nacimiento se producen en cuanto el gran personaje [ICON_GreatPerson] aparece en el mapa, y no hace falta activarlos. Suelen ir asociados a Grandes generales y a Grandes almirantes.</Text>
+      <Text>Un efecto pasivo se produce en cuanto el Gran personaje [ICON_GreatPerson] aparece en el mapa. Estos efectos suelen ir asociados a Grandes generales y a Grandes almirantes.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_3_CHAPTER_CONTENT_PARA_3" Language="es_ES">
       <Text>Los efectos de acción deben ser activados por el gran personaje [ICON_GreatPerson] usando una "carga" en una ubicación determinada. El número de cargas, el tipo de ubicación y el efecto activado variarán en función del personaje. La mayoría solo tienen una carga y solo pueden activarla en un distrito de su mismo tipo (por ejemplo, la mayoría de Grandes científicos [ICON_GreatScientist] tienen una carga y deben usarla en un Campus). Al igual que otras unidades que utilizan cargas, el personaje desaparecerá cuando las consuma todas.</Text>
@@ -8296,13 +8351,13 @@
       <Text>Ataques aéreos</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_4_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Los Bombarderos pesados no pueden asignarse a patrullas, sino que se consideran estacionados en una base aérea aliada y pueden lanzar ataques desde ella. Al contrario que los Cazas, los Bombarderos no participan en combates aéreos, sino que se dirigen directamente a su objetivo y lo atacan. Los Bombarderos pueden saquear edificios de distrito y mejoras ciudadanas con solo atacarlas directamente. El efecto es el mismo que el del saqueo de una unidad terrestre, con una excepción: la unidad aérea atacante no recibe el beneficio de la acción de saqueo. Para poder saquear, la unidad aérea atacante necesita tener al menos un 50% de Salud.</Text>
+      <Text>Los Bombarderos pesados no pueden asignarse a patrullas, sino que se consideran estacionados en una base aérea aliada y pueden lanzar ataques desde ella. Al contrario que los Cazas, los Bombarderos no participan en combates aéreos, sino que se dirigen directamente a su objetivo y lo atacan.[NEWLINE][NEWLINE]Bombardeo estratégico: los Bombarderos pueden atacar edificios de distritos y mejoras ciudadanas directamente si el lugar objetivo no lo ocupa ya una unidad terrestre. El resultado de este tipo de ataque es el mismo que el de la acción de saqueo de una unidad terrestre, con una excepción: la unidad aérea atacante no recibe el beneficio resultante de la acción de saqueo. Para que el ataque de bombardeo tenga éxito, la unidad aérea atacante necesita tener al menos un 50% de Salud.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_5_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Interceptaciones</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_5_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Se puede poner a los Cazas a "interceptar" los ataques aéreos enemigos (el Cañón antiaéreo y el Misil tierra-aire móvil interceptan automáticamente: no se les ha de dar una misión especial). Si una unidad aérea intenta un ataque aéreo contra un objetivo que esté al alcance de una unidad interceptora, el interceptor disparará contra el atacante y le causará un daño. A menos que el interceptor consiga matarlo, el ataque aéreo continuará. Solo se puede interceptar un ataque aéreo con una unidad y esta no podrá interceptar más durante ese turno</Text>
+      <Text>Se puede poner a los Cazas a "interceptar" los ataques aéreos enemigos (el Cañón antiaéreo y el Misil tierra-aire móvil interceptan automáticamente, no se les debe dar una misión especial). Si una unidad aérea intenta un ataque aéreo contra un objetivo que esté al alcance de una unidad interceptora, esta disparará contra el atacante y le causará daño.[NEWLINE][NEWLINE]Si una nave atacante entra en el radio defensivo de más de una nave desplegada, se elegirá a la nave con más fuerza para interceptarla. Las naves restantes colaborarán en la defensa sumando un +5 a la fuerza de la interceptora principal.[NEWLINE][NEWLINE]Una vez se resuelva el combate con las unidades antiaéreas y las unidades aéreas interceptoras, si la nave atacante sobrevive, se resolverá el combate con el objetivo original.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_NUKES_NAME" Language="es_ES">
       <Text>Armas nucleares</Text>
@@ -8347,7 +8402,7 @@
       <Text>Grandes obras, reliquias y artefactos</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_2_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Las grandes obras pueden ser de cinco tipos diferentes. Literatura, Arte y Música, que pueden generarse con grandes personajes [ICON_GreatPerson], artefactos [ICON_GreatWork_Artifact], que los Arqueólogos recuperan de Enclaves históricos, y reliquias [ICON_GreatWork_Relic] que se crean mediante Apóstoles con la habilidad Mártir cuando mueren en combate teológico o se obtienen a través de aldeas tribales o de la ciudad-estado de Kandy. Una vez obtenida, una gran obra puede albergarse en un espacio de gran obra en la maravilla o el edificio apropiado.</Text>
+      <Text>Las grandes obras pueden ser de cinco tipos diferentes. Literatura [ICON_GreatWork_Writing], Arte [ICON_GreatWork_Landscape] y Música [ICON_GreatWork_Music], que pueden generarse con grandes personajes [ICON_GreatPerson], artefactos [ICON_GreatWork_Artifact], que los Arqueólogos recuperan de Enclaves históricos, y reliquias [ICON_GreatWork_Relic] que se crean mediante Apóstoles con la habilidad Mártir cuando mueren en combate teológico o se obtienen a través de aldeas tribales o de la ciudad-estado de Kandy. Una vez obtenida, una gran obra puede albergarse en un espacio de gran obra en la maravilla o el edificio apropiado. </Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_3_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Centro turístico costero|Centros turísticos costeros</Text>
@@ -8386,10 +8441,16 @@
       <Text>Victoria por dominación</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_1" Language="es_ES">
-      <Text>Si eres el último jugador en posesión de su capital [ICON_Capital], ganarás. Así que, si capturas las capitales [ICON_Capital] de las demás civilizaciones y mantienes la tuya, te harás con la victoria. Imagina que estás en una partida de 5 jugadores y que has capturado las capitales [ICON_Capital] originales de 3 de tus rivales, pero el cuarto te ataca sigilosamente y captura tu capital [ICON_Capital] mientras tú no prestabas atención; en ese caso, ganaría inmediatamente. En otras palabras: da igual quién capture qué; la victoria será para el último jugador que mantenga su capital [ICON_Capital] original.</Text>
+      <Text>Para obtener una victoria por dominación, debes capturar todas las capitales [ICON_Capital] de las civilizaciones originales.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_2" Language="es_ES">
       <Text>Si has perdido tu capital [ICON_Capital] original pero sigues teniendo otras ciudades, puedes conseguir otros tipos de victoria: cultural, científica, por puntuación o religiosa. Sin embargo, no podrás ganar por dominación hasta que reconquistes tu capital [ICON_Capital] original. </Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_3" Language="es_ES">
+      <Text>VICTORIA POR DOMINACIÓN EN EQUIPO:</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_4" Language="es_ES">
+      <Text>Para que un equipo obtenga una victoria por dominación, todos sus miembros deben controlar sus capitales [ICON_Capital] originales, y el resto de jugadores no.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Victoria científica</Text>
@@ -8418,6 +8479,12 @@
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_PARA_8" Language="es_ES">
       <Text>Una vez lanzadas todas las piezas, ganarás la partida.</Text>
     </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_PARA_9" Language="es_ES">
+      <Text>VICTORIA CIENTÍFICA EN EQUIPO:</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_PARA_10" Language="es_ES">
+      <Text>Para que un equipo obtenga una victoria científica, uno de sus miembros debe completar los requisitos estándar de una victoria científica. No pueden completarse entre varios miembros. Todos los compañeros de un equipo deberían colaborar hacia la victoria científica mediante la investigación compartida en equipo. Consulta la página de equipos.</Text>
+    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Victoria cultural</Text>
     </Replace>
@@ -8426,6 +8493,12 @@
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_PARA_2" Language="es_ES">
       <Text>El Turismo [ICON_Tourism] lo generan las Rutas comerciales [ICON_TradeRoute], los gobiernos modernos en común (o en conflicto), la Apertura de fronteras, las grandes obras y las reliquias [ICON_GreatWork_Relic] ubicadas en tu civilización, los Lugares sagrados, los Parques nacionales, los artefactos [ICON_GreatWork_Artifact] y las maravillas.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_PARA_3" Language="es_ES">
+      <Text>VICTORIA CULTURAL EN EQUIPO:</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_PARA_4" Language="es_ES">
+      <Text>Para que un equipo obtenga una victoria cultural, los Turistas extranjeros [ICON_Tourism] de uno de sus miembros deben superar a los Turistas nacionales [ICON_Tourism] de todas las civilizaciones que no pertenezcan al equipo. Los Turistas extranjeros [ICON_Tourism] no se comparten entre los miembros de un equipo.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Victoria religiosa</Text>
@@ -8436,11 +8509,53 @@
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_PARA_2" Language="es_ES">
       <Text>Si bien tu religión se propaga de manera pasiva al asentarte cerca de otros jugadores, tus Misioneros y Apóstoles lo hacen de forma más eficaz.</Text>
     </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_PARA_3" Language="es_ES">
+      <Text>VICTORIA RELIGIOSA EN EQUIPO:</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_PARA_4" Language="es_ES">
+      <Text>Para que un equipo obtenga una victoria religiosa, las religiones que funde deben ser la religión predominante en todas las demás civilizaciones. Las religiones dominantes pueden combinarse de cualquier forma, siempre que todas hayan sido fundadas por miembros del equipo.</Text>
+    </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_TITLE" Language="es_ES">
       <Text>Victoria por puntuación</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_PARA_1" Language="es_ES">
       <Text>En muchas partidas, uno de los jugadores ganará al conseguir una de las victorias posibles. Sin embargo, si llega el año 2050 (o un turno establecido por los jugadores) y nadie lo logra, el ganador quedará determinado por la "puntuación" de las civilizaciones supervivientes. Tu puntuación provendrá de los siguientes factores: número de principios, cantidad de población, número de ciudades, número de tecnologías y de "tecnologías futuras", número de maravillas, logros militares, número de grandes personajes [ICON_GreatPerson] y número de creencias.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_PARA_2" Language="es_ES">
+      <Text>VICTORIA POR PUNTUACIÓN EN EQUIPO:</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_PARA_3" Language="es_ES">
+      <Text>Cuando se juega en equipo, la puntuación se calcula sumando las puntuaciones individuales de todos sus miembros.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_TEAMS_NAME" Language="es_ES">
+      <Text>Equipos</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_1_CHAPTER_CONTENT_TITLE" Language="es_ES">
+      <Text>Introducción</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_1_CHAPTER_CONTENT_PARA_1" Language="es_ES">
+      <Text>Antes de empezar una partida, las civilizaciones individuales pueden organizarse en equipos para vivir una experiencia más cooperativa. Al jugar en un equipo, sus miembros comparten diversas ventajas y pueden ganar la partida juntos.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_1_CHAPTER_CONTENT_PARA_2" Language="es_ES">
+      <Text>El juego en equipo está disponible en las partidas multijugador estándar y en muchos escenarios multijugador.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_2_CHAPTER_CONTENT_TITLE" Language="es_ES">
+      <Text>Relaciones diplomáticas en equipo</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_2_CHAPTER_CONTENT_PARA_1" Language="es_ES">
+      <Text>Los miembros de un equipo mantienen una alianza diplomática permanente. Se aplican todas las reglas y ventajas de una alianza estándar.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_3_CHAPTER_CONTENT_TITLE" Language="es_ES">
+      <Text>Guerra compartida en equipo</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_3_CHAPTER_CONTENT_PARA_1" Language="es_ES">
+      <Text>Los miembros de un equipo comparten estado de guerra. Si un miembro del equipo declara la guerra, las condiciones del casus belli se aplicarán a todos los miembros del equipo.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_4_CHAPTER_CONTENT_TITLE" Language="es_ES">
+      <Text>Investigación compartida en equipo</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_4_CHAPTER_CONTENT_PARA_1" Language="es_ES">
+      <Text>Los miembros de un equipo comparten parcialmente los progresos de investigación. Los miembros de un equipo recibirán una mejora de tecnología por cada tecnología que posea un miembro del equipo.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_DISTRICTS_PAGE_INTRO_CHAPTER_CONTENT_PARA_1" Language="es_ES">
       <Text>En Civilization VI, los edificios ya no se encuentran atrapados en el centro de la ciudad, sino que pueden extenderse por el territorio como parte de tus distritos. El mapa es más importante que nunca, ya que te enfrentas a importantes decisiones de colocación estratégica. El Campus y el Lugar sagrado reciben mejoras especiales si se ponen cerca de montañas, pero solo el primero se beneficia también de estar cerca de una Selva tropical.</Text>
@@ -10057,7 +10172,7 @@
       <Text>Nació en 1829 en Alemania y se mudó a los Estados Unidos con su familia cuando tenía 18 años. Su familia abrió un negocio de venta de ropa, mantas y otros artículos de confección. Strauss se mudó a San Francisco para sacar provecho de la fiebre del oro, y abrió una sucursal de Levi Strauss &amp; Co en la costa oeste. Uno de sus clientes, un sastre llamado Jacob Davis, mejoró el diseño de los pantalones vaqueros al añadir remaches de metal a las costuras a fin de evitar que se rompieran. Davis se unió a Strauss y juntos abrieron fábricas para producir pantalones vaqueros. Más caros que los pantalones de la competencia debido a su decisión de no explotar a la mano de obra inmigrante, Levi Strauss &amp; Company garantizaban que sus pantalones no se rompían, y sustituían cualquier pantalón en caso de rotura.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_GREATPEOPLE_PAGE_GREAT_PERSON_INDIVIDUAL_LEVI_STRAUSS_CHAPTER_HISTORY_PARA_3" Language="es_ES">
-      <Text>Murió en 1902, y diez años después de su muerte, su compañía comenzó a vender sus productos a nivel internacional. Setenta años más tardes, sus ventas habían alcanzado los mil millones de ejemplares.</Text>
+      <Text>Murió en 1902, y diez años después de su muerte, su compañía comenzó a vender sus productos a nivel internacional. Setenta años más tarde, sus ventas habían alcanzado los mil millones de ejemplares.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_GREATPEOPLE_PAGE_GREAT_PERSON_INDIVIDUAL_LI_BAI_CHAPTER_HISTORY_PARA_1" Language="es_ES">
       <Text>Li Bai o Li Bo, (occidentalizado como Li Pai o Li Po), con el nombre de cortesía de Taibai o Li Tai-po y el pseudónimo literario de Qinglian Jushi ("Casa del Loto Azul")... no importa cómo lo conozca la civilización, se considera el mayor poeta de China. Nacido en el año 701 d. C. en la provincia de Sichuan, le gustaba considerarse parte de la familia imperial, pero en realidad pertenecía a un linaje menor. A los 24 años se fue de casa para ver mundo y recorrer el Yangtsé. Finalmente se casó con la nieta de un ministro de la corte y vivió con la familia de esta durante unos años. Comenzó a escribir poesía, que enseñó a varios funcionarios del gobierno con la vana esperanza de conseguir un trabajo como escriba de la corte.</Text>
@@ -10744,7 +10859,7 @@
       <Text>Durante siglos, el propósito de un aserradero no ha cambiado mucho: los troncos entran por un lado y salen por el otro convertidos en vigas, tablas y tablones. El primer aserradero que se conoce y que se pueda datar de forma fiable es uno romano de accionamiento hidráulico que se descubrió en Hierápolis y se remonta al siglo III a. C. Los aserraderos hidráulicos pequeños eran comunes en toda Europa y Oriente Medio, donde abundaban los árboles, y los colonizadores europeos se llevaron el diseño para poder continuar con la tala de los bosques vírgenes en cualquier otro sitio. La revolución industrial aceleró todo el proceso, ya que los ferrocarriles a vapor podían llevar los troncos a los aserraderos accionados por vapor y luego transportar desde él los productos de madera "acabada" (en más de un sentido) a los mercados de las ciudades en auge. Con el tiempo, se han llegado a utilizar hasta los subproductos del serrado y el recorte para el papel, combustible y embalajes.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_IMPROVEMENTS_PAGE_IMPROVEMENT_MINE_CHAPTER_HISTORY_PARA_1" Language="es_ES">
-      <Text>La extracción de minerales valiosos (o no tan valiosos, a veces) forma parte de la civilización tanto como la agricultura o la guerra. Incluso en tiempos "prehistóricos", los cazadores-recolectores del Neolítico sacaban pedernal de las vetas, creando minas como la de Grimes Graves (alrededor del 4000 a. C.). Los egipcios extraían malaquita; los griegos, plata; los romanos, estaño y plomo; y, desde entonces, cada civilización ha encontrado algo en la tierra que necesitaba o quería. La mayor parte del trabajo hasta la revolución industrial lo hacían a mano, ya fuera en cielo abierto o en túneles subterráneos, esclavos o trabajadores explotados que utilizaban picos, palas y martillos. Algunas de las primeras grandes empresas de la civilización fueron mineras, y los prospectores extendieron aún más las fronteras. Hoy en día, las máquinas hacen todo el trabajo duro: la prospección, la extracción y el refinado. Tan eficaces son despojándolas de todo lo valioso y pasar a otra que actualmente hay más de 560 000 minas abandonadas solo en los Estados Unidos.</Text>
+      <Text>La extracción de minerales valiosos (o no tan valiosos, a veces) forma parte de la civilización tanto como la agricultura o la guerra. Incluso en tiempos "prehistóricos", los cazadores-recolectores del Neolítico sacaban pedernal de las vetas, creando minas como la de Grimes Graves (alrededor del 4000 a. C.). Los egipcios extraían malaquita; los griegos, plata; los romanos, estaño y plomo; y, desde entonces, cada civilización ha encontrado algo en la tierra que necesitaba o quería. La mayor parte del trabajo hasta la revolución industrial lo hacían a mano, ya fuera en cielo abierto o en túneles subterráneos, esclavos o trabajadores explotados que utilizaban picos, palas y martillos. Algunas de las primeras grandes empresas de la civilización fueron mineras, y los buscadores de oro extendieron aún más las fronteras. Hoy en día, las máquinas hacen todo el trabajo duro: la prospección, la extracción y el refinado. Tan eficaces son despojándolas de todo lo valioso y pasar a otra que actualmente hay más de 560 000 minas abandonadas solo en los Estados Unidos.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_IMPROVEMENTS_PAGE_IMPROVEMENT_MISSILE_SILO_CHAPTER_HISTORY_PARA_1" Language="es_ES">
       <Text>Al igual que todo lo relacionado con la cohetería, los alemanes fueron pioneros en la creación de silos de misiles subterráneos y construyeron el primer complejo cerca de Saint-Omer en 1944. Su misión era almacenar y lanzar cohetes V2 contra Inglaterra, pero no llegó a entrar en funcionamiento a causa de los bombardeos masivos aliados. Los británicos coquetearon con la idea de las instalaciones de lanzamiento subterráneas en la década de 1950 para sus misiles y llegaron a construir unas, pero luego se decidieron por los submarinos para sus ICBM (misiles balísticos intercontinentales). Sin embargo, los americanos y los rusos se tomaron muy en serio la idea de enterrar los misiles nucleares (como si fuera a servir de algo en caso de iniciarse una Tercera Guerra Mundial). El objetivo principal de los silos era asegurar un lanzamiento rápido de misiles UR-100 soviéticos o Titan II americanos para conseguir la aniquilación mutua. Desde la Guerra Fría, los rusos han trasladado la mayoría de sus ICBM a submarinos, los americanos todavía tienen 450 en funcionamiento y China ha construido unos cuantos silos, pero sigue prefiriendo las lanzaderas de ICBM móviles.</Text>
@@ -13300,7 +13415,7 @@
       <Text>El término "saka" (sace) puede referirse a la palabra persa y sánscrita para nombrar a los escitas o puede referirse a una tribu específica de jinetes bárbaros del norte de Asiria. La mayor parte de la confusión parece deberse al uso ambiguo de la palabra entre los "historiadores" de la Antigüedad: Heródoto, Estrabón, Plinio el Viejo y muchos otros. Heródoto afirmaba que los saces eran arqueros a caballo que montaban sin silla ni estribos y se distinguían por llevar pantalones acolchados, túnicas abiertas y "altos tocados acabados en punta y rígidos". Estos arqueros a caballo eran temidos en terreno abierto, sobre todo cuando hostigaban a una columna en marcha o asaltaban los convoyes de provisiones, pero no eran muy buenos combatiendo a pie. Como Alejandro Magno demostró en la batalla de Yaxartes (329 a. C.), los saces no tenían capacidad de resistencia y podían ser fácilmente repelidos por la infantería en masa con el apoyo en profundidad de un gran número de arqueros de a pie, cuyo mayor alcance y cadencia de fuego les daba una clara ventaja sobre los montados.</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_SETTLER_CHAPTER_HISTORY_PARA_1" Language="es_ES">
-      <Text>Desde que el primer neandertal saliera de la cueva, se rascara y se preguntara si la hierba era más verde al otro lado de la colina, siempre ha habido quienes estaban dispuestos a dejar atrás todo lo conocido con la esperanza de encontrar una vida mejor tras esa colina. Son los colonos, los que extendieron la humanidad por el planeta. Ya fuera viajando por agua, tierra o aire, estos pioneros llegaban finalmente a un lugar que les gustaba, por lo general uno que les ofreciera una buena tierra, agua potable y ciertas perspectivas de seguridad... pero no siempre. Algunos terminaron su viaje en desiertos, pantanos, yermos helados o un valle de montaña. E, inevitablemente, entre nativos hostiles. Las razones por las que dejaban atrás sus antiguos hogares eran tan variadas como el terreno que cruzaban: el hambre, la riqueza, la ambición, la aventura, el miedo, la libertad y, sobre todo, la esperanza de que sus descendientes tuvieran lo que ellos no tenían. Los lugares donde se detenían se convirtieron en aldeas, pueblos, ciudades y civilizaciones. Y el ciclo comenzaba de nuevo...</Text>
+      <Text>Desde que el primer neandertal saliera de la cueva, se rascara la cabeza y se preguntara si la hierba era más verde al otro lado de la colina, siempre ha habido quienes estaban dispuestos a dejar atrás todo lo conocido con la esperanza de encontrar una vida mejor tras esa colina. Son los colonos, los que extendieron la humanidad por el planeta. Ya fuera viajando por agua, tierra o aire, estos pioneros llegaban finalmente a un lugar que les gustaba, por lo general uno que les ofreciera una buena tierra, agua potable y ciertas perspectivas de seguridad... pero no siempre. Algunos terminaron su viaje en desiertos, pantanos, parajes yermos y helados o un valle de montaña. E, inevitablemente, entre nativos hostiles. Las razones por las que dejaban atrás sus antiguos hogares eran tan variadas como el terreno que cruzaban: el hambre, la riqueza, la ambición, la aventura, el miedo, la libertad y, sobre todo, la esperanza de que sus descendientes tuvieran lo que ellos no tenían. Los lugares donde se detenían se convirtieron en aldeas, pueblos, ciudades y civilizaciones. Y el ciclo comenzaba de nuevo...</Text>
     </Replace>
     <Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_SIEGE_TOWER_CHAPTER_HISTORY_PARA_1" Language="es_ES">
       <Text>Salvar murallas mediante escalerillas –mientras sus defensores te tiraban aceite hirviendo, rocas y objetos puntiagudos– no ayudaba a la moral de las tropas, por lo que los neoasirios inventaron las torres de asedio alrededor del siglo IX a. C. En ese momento, la mayoría de ciudades de Mesopotamia estaban rodeadas por murallas de ladrillos de barro, que solían ofrecer una protección suficiente contra los atacantes, pero las torres de asedio de los asirios les permitieron superarlas relativamente indemnes; por ello, su imperio se extendió prácticamente sin control durante tres siglos. Era una idea que ya se podía poner en práctica, y muy pronto todas las civilizaciones antiguas contaron con ellas en sus arsenales. En su forma más simple, una torre de asedio era una estructura vertical de madera, cubierta y con ruedas; una vez se empujaba hasta la ultrajante muralla, se tendía una pasarela para salvar la brecha y los felices guerreros entraban en tropel en la ciudad o el castillo. Los ingenieros romanos, que eran unos maestros, las hicieron cada vez más robustas y eficientes. La torre de asedio se utilizó durante toda la Edad Media, hasta que se quedó obsoleta debido al uso de la pólvora.</Text>
@@ -13966,7 +14081,7 @@
 [4]Joel "colonelmustard" Myers
 [4]Adam "Pouakai" Partridge
 [4]Daniel "DanQ" Quick
-[4]Rob "R8XFT" Riley
+[4]Rob Riley
 [4]Hannah "Codex" Schofield
 [4]Elliot "Ekmek" Schroeder
 [4]Anthony "Ztaesek" Seekatz
@@ -14591,6 +14706,18 @@
 
 [4]Localization tools and support provided by XLOC Inc.
 
+[3]Localization Special Thanks
+[4]Adam Rycki, Adriano Dezulian, Aleksandr Lavrenov, Aleksandr Skakovsky,
+[4]Aleksandr Sukhanov, Altieres Rohr, Andrea Della Calce Maucieri, Andrea Peruzzotti,
+[4]Ania Wojciechowska, Anna Matsutskaya, Chiara Caccivio, Claudia Rampiconi,
+[4]Damaris Reinke, Dashima Zhigzhitova, Elías Pastoriza, Estrella Del Campo,
+[4]Floriana Grasso, Francesca Tretto, Gabriel Perez-Ayala, Gema Solís, Jose C. Cabezas,
+[4]Katja Kämper, Kira Nepochatova, Laura Bellintani, Maciej Polak, Marie Lorbach,
+[4]Marina Rossieva, Mariya Yunger, Massimiliano Chierici, Mike Kolbasnikov,
+[4]Monique Paula Pereira, Natalia Kalinina, Nazar Orlov, Oleg Perfilyev, Pablo Trenado,
+[4]Paula Ianelli G. Luiz, Paulina Golanowska, Paweł Oleszczuk, Piotr Goździk, Roman Firsov,
+[4]Salvador Tintore, Stefano Gaburri, Thales Ferreira, Vladislav Lebedinskiy, Yuliana Brezhneva
+
 [i]TechTree_Meter_Done
 
 [2]2K INTERNATIONAL QUALITY ASSURANCE
@@ -14624,8 +14751,6 @@
 [4]Harald Raschen
 [4]Johanna Cohen
 [4]Sergio Accettura
-[4]Benny Johnson
-[4]Tristan Breeden
 
 [3]Localization QA Technicians
 [4]Clement Mosca
@@ -14659,6 +14784,8 @@
 [4]Timothy Cooper
 [4]Toni López
 [4]Yury Fesechka
+[4]Benny Johnson
+[4]Tristan Breeden
 
 [3]DESIGN TEAM
 [4]James Quinlan
@@ -14721,7 +14848,7 @@
 
 [3]Japan Marketing Manager
 [4]Maho Sawashima
-[4]Korea Marketing Manager
+[3]Korea Marketing Manager
 [4]Dina Chung
 
 [3]Sr. Product Executive
@@ -22581,7 +22708,7 @@
       <Text>Como no hay más decisiones que tomar en este turno, haz clic en el botón Siguiente turno para continuar.</Text>
     </Replace>
     <Replace Tag="LOC_META_11a_BODY" Language="es_ES">
-      <Text>Podrás ver las tareas a completar antes de que termine tu turno en el panel de notificaciones, en la parte superior derecha de la pantalla.[NEWLINE][NEWLINE]Ya que la producción ha terminado en esta ciudad, se te recordará que debes elegir lo siguiente que vas a producir antes de poder terminar el turno.</Text>
+      <Text>Podrás ver las tareas a completar antes de que termine tu turno en el panel de notificaciones, en la parte inferior derecha de la pantalla.[NEWLINE][NEWLINE]Ya que la producción ha terminado en esta ciudad, se te recordará que debes elegir lo siguiente que vas a producir antes de poder terminar el turno.</Text>
     </Replace>
     <Replace Tag="LOC_META_11_HEAD" Language="es_ES">
       <Text>ACCIONES NECESARIAS</Text>
@@ -23001,7 +23128,7 @@
       <Text>Haz clic en el botón Elegir producción, en la esquina inferior derecha, para empezar a construir una Biblioteca.</Text>
     </Replace>
     <Replace Tag="LOC_META_88_BODY" Language="es_ES">
-      <Text>¡Enhorabuena![NEWLINE]Has ganado tu primera partida de Civilization.[NEWLINE][NEWLINE]Ahora podrás enfrentarte a desafíos y objetivos mucho más difíciles, explorar mundos nuevos, encontrarte con civilizaciones por primera vez y alzarte con la victoria como más te guste.</Text>
+      <Text>¡Enhorabuena![NEWLINE]Has ganado tu primera partida de Civilization VI.[NEWLINE][NEWLINE]Ahora podrás enfrentarte a desafíos y objetivos mucho más difíciles, explorar mundos nuevos, encontrarte con civilizaciones por primera vez y alzarte con la victoria como más te guste.</Text>
     </Replace>
     <Replace Tag="LOC_META_89_BODY" Language="es_ES">
       <Text>Cuando estés en guerra con otra civilización, es esencial tener una cantidad suficiente de unidades de combate, tanto para defender tu ciudad como para atacar a tus rivales.</Text>
@@ -23043,7 +23170,7 @@
       <Text>Al promulgar estas políticas, tus unidades militares conseguirán una bonificación de Fuerza de combate [ICON_Strength] de +5 en luchas contra los Bárbaros. Además, tus ciudades reciben +1 a la Producción [ICON_Production] por turno, lo que les permite entrenar unidades y construir edificios más rápido que antes.</Text>
     </Replace>
     <Replace Tag="LOC_META_98_BODY" Language="es_ES">
-      <Text>Al igual que con la Ciencia [ICON_Science] generada en tus ciudades investigas tecnologías nuevas, con la Cultura [ICON_Culture] desbloqueas principios nuevos.[NEWLINE][NEWLINE]Ya has desbloqueado el Código de leyes, que te permitido establecer tu primer gobierno.</Text>
+      <Text>Al igual que con la Ciencia [ICON_Science] generada en tus ciudades investigas tecnologías nuevas, con la Cultura [ICON_Culture] desbloqueas principios nuevos.[NEWLINE][NEWLINE]Ya has desbloqueado el Código de leyes, que te ha permitido establecer tu primer gobierno.</Text>
     </Replace>
     <Replace Tag="LOC_META_99a_BODY" Language="es_ES">
       <Text>Ahora debes elegir un nuevo principio al que avanzar.</Text>
@@ -23856,7 +23983,25 @@
       <Text>Amplía tus horizontes y civilízate en este escenario de exploración y cultura de la Antigüedad. Dura 50 turnos.</Text>
     </Replace>
     <Replace Tag="LOC_ANCIENT_RIVALS_MOD_DESCRIPTION" Language="es_ES">
-      <Text>Condiciones para la victoria[NEWLINE]Al acabar el límite de turnos, el jugador que reúna el mayor número de condiciones siguientes obtendrá la victoria. Los empates se resuelven por la puntuación obtenida.[NEWLINE]Culta: quien haya investigado más principios.[NEWLINE]Exploradora: quien haya descubierto más casillas del mapa.[NEWLINE]Saqueadora de la Antigüedad: quien haya saqueado más casillas.[NEWLINE]Maravilla del mundo antiguo: quien tenga más maravillas.[NEWLINE]</Text>
+      <Text>Condiciones para la victoria:[NEWLINE]Al acabar el límite de turnos, el jugador que reúna el mayor número de condiciones siguientes obtendrá la victoria. Los empates se resuelven por la puntuación obtenida.[NEWLINE]Culta: quien haya investigado más principios.[NEWLINE]Exploradora: quien haya descubierto más casillas del mapa.[NEWLINE]Saqueadora de la Antigüedad: quien haya saqueado más casillas.[NEWLINE]Maravilla del mundo antiguo: quien tenga más maravillas.[NEWLINE]</Text>
+    </Replace>
+    <Replace Tag="LOC_AUSTRALIA_MOD_TITLE" Language="es_ES">
+      <Text>DLC: Pack de la civilización australiana</Text>
+    </Replace>
+    <Replace Tag="LOC_AUSTRALIA_MOD_TEASER" Language="es_ES">
+      <Text>Nueva civilización y nuevo líder – John Curtin de Australia</Text>
+    </Replace>
+    <Replace Tag="LOC_AUSTRALIA_MOD_DESCRIPTION" Language="es_ES">
+      <Text>Incluye nueva civilización y nuevo líder.</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_AUSTRALIA_SCENARIO_TITLE" Language="es_ES">
+      <Text>Escenario: Magnate del Outback</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_AUSTRALIA_SCENARIO_TEASER" Language="es_ES">
+      <Text>¿Qué colonia sacará más partido a las riquezas naturales de Australia?</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_AUSTRALIA_SCENARIO_DESCRIPTION" Language="es_ES">
+      <Text>En este escenario de 60 turnos podrás explorar Australia, descubrir sus recursos naturales y usarlos para enriquecer a tu colonia. En este escenario de competición económica no hay combates. Enfatiza la exploración y la expansión territorial para aumentar tus ingresos netos de oro por turno, que son tu puntuación.[NEWLINE][NEWLINE]Un jugador: cada dificultad tiene un umbral de oro por turno. Supera esa cifra antes de que finalice la partida para ganar.[NEWLINE][NEWLINE]Multijugador: el jugador con más oro por turno al final de la partida es el ganador.</Text>
     </Replace>
     <Replace Tag="LOC_AUTONARRATE_BUTTON_DONE" Language="es_ES">
       <Text>Hecho</Text>
@@ -23874,7 +24019,7 @@
       <Text>Los recursos de lujo de su territorio otorgan Servicios [ICON_Amenities] a 2 ciudades extra. +1 a la Fuerza de combate [ICON_Strength] de las unidades militares por cada recurso de lujo diferente mejorado en tierras aztecas.</Text>
     </Replace>
     <Replace Tag="LOC_UNIT_AZTEC_EAGLE_WARRIOR_DESCRIPTION" Language="es_ES">
-      <Text>Unidad exclusiva azteca de la Antigüedad que sustituye al Guerrero. Tiene una probabilidad de capturar unidades militares de otras civilizaciones al convertirlas en Constructores.</Text>
+      <Text>Unidad exclusiva azteca de la Antigüedad que sustituye al Guerrero. Tiene una probabilidad de capturar unidades militares de otras civilizaciones y convertirlas en Constructores.</Text>
     </Replace>
     <Replace Tag="LOC_BUILDING_TLACHTLI_DESCRIPTION" Language="es_ES">
       <Text>Un edificio exclusivo de los aztecas. Proporciona Servicios [ICON_Amenities], +2 a Fe [ICON_Faith] y un punto de Gran general [ICON_GreatGeneral].</Text>
@@ -23943,7 +24088,7 @@
       <Text>Los que tienen miedo son los que más gritan. Y vosotros nos teméis.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_MONTEZUMA_ANY" Language="es_ES">
-      <Text>Sois una ponzoña para este mundo. ¡Sois el mal! (Te denuncia)</Text>
+      <Text>Sois una ponzoña para este mundo. ¡Sois el mal! (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_MONTEZUMA_ANY" Language="es_ES">
       <Text>Soy el ceñudo señor de Tenochtitlán. El tlatoani. ¿Quiénes vienen ante mí? ¿Guerreros o cobardes?</Text>
@@ -24315,9 +24460,9 @@
       <Text>Te permite aerotransportar unidades terrestres entre distritos de Aeródromo con Aeropuertos.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_GLOBALIZATION_DESCRIPTION" Language="es_ES">
-      <Text>+1 al Oro [ICON_Gold] de Plantaciones. Se puede completar varias veces, lo cual aumentará la puntuación obtenida para conseguir la Victoria por puntuación.</Text>
+      <Text>+1 de Oro [ICON_Gold] para las Plantaciones.</Text>
     </Replace>
-    <Replace Tag="LOC_CIVIC_SOCIAL_MEDIA_DESCRIPTION" Language="es_ES">
+    <Replace Tag="LOC_CIVIC_FUTURE_CIVIC_DESCRIPTION" Language="es_ES">
       <Text>Se puede completar varias veces, lo cual aumentará la puntuación obtenida para conseguir la Victoria por puntuación.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_CRAFTSMANSHIP" Language="es_ES">
@@ -24687,7 +24832,7 @@
       <Text>Descuento en las compras de Fe.</Text>
     </Replace>
     <Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_MERCHREP" Language="es_ES">
-      <Text>Descuento en las compras de Oro.</Text>
+      <Text>Descuento en las compras con Oro.</Text>
     </Replace>
     <Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_FASCISM" Language="es_ES">
       <Text>Bonificación por Producción de unidades.</Text>
@@ -24798,7 +24943,7 @@
       <Text>+100% de bonificaciones por adyacencia de los distritos de Centro comercial y Puerto.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_EXPROPRIATION_DESCRIPTION" Language="es_ES">
-      <Text>El coste de los Colonos se reduce un 50%. El coste de la compra de parcelas se reduce un 20%.</Text>
+      <Text>+50% a la Producción [ICON_Production] para obtener Colonos. Se reduce en un 20% el precio de compra de las casillas.</Text>
     </Replace>
     <Replace Tag="LOC_POLICY_FEUDAL_CONTRACT_DESCRIPTION" Language="es_ES">
       <Text>+50% a la Producción [ICON_Production] para las unidades cuerpo a cuerpo y a distancia de la Edad Media y el Renacimiento.</Text>
@@ -25605,7 +25750,7 @@
       <Text>Aplasta a la IA con tus amigos en este escenario cooperativo centrado en el combate. Dura hasta que todos los jugadores de la IA hayan sido derrotados.</Text>
     </Replace>
     <Replace Tag="LOC_COMPSTOMP_MOD_DESCRIPTION" Language="es_ES">
-      <Text>Condiciones para la victoria[NEWLINE]¡Hay que derrotar a todos los jugadores de la IA! Gana el jugador humano que capture más ciudades controladas por la IA.</Text>
+      <Text>Condiciones para la victoria:[NEWLINE]¡Hay que derrotar a todos los jugadores de la IA! Gana el jugador humano que capture más ciudades controladas por la IA.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_DEAL_GOLD_PER_TURN" Language="es_ES">
       <Text>ORO POR TURNO</Text>
@@ -26997,28 +27142,28 @@
       <Text>Qué mal. Creíamos que éramos amigos...</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_SURPRISE_WAR" Language="es_ES">
-      <Text>(Declara una guerra por sorpresa contra ti)</Text>
+      <Text>(Declara una guerra por sorpresa contra ti).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_FORMAL_WAR" Language="es_ES">
-      <Text>(Declara una guerra formal contra ti)</Text>
+      <Text>(Declara una guerra formal contra ti).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_HOLY_WAR" Language="es_ES">
-      <Text>(Declara una guerra santa contra ti)</Text>
+      <Text>(Declara una guerra santa contra ti).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_RECONQUEST_WAR" Language="es_ES">
-      <Text>(Declara una guerra de reconquista contra ti)</Text>
+      <Text>(Declara una guerra de reconquista contra ti).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_LIBERATION_WAR" Language="es_ES">
-      <Text>(Declara una guerra de liberación contra ti)</Text>
+      <Text>(Declara una guerra de liberación contra ti).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_PROTECTORATE_WAR" Language="es_ES">
-      <Text>(Declara una guerra de protectorado contra ti)</Text>
+      <Text>(Declara una guerra de protectorado contra ti).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_COLONIAL_WAR" Language="es_ES">
-      <Text>(Declara una guerra colonial contra ti)</Text>
+      <Text>(Declara una guerra colonial contra ti).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_ANY_TERRITORIAL_WAR" Language="es_ES">
-      <Text>(Declara una guerra de expansión territorial)</Text>
+      <Text>(Declara una guerra de expansión territorial).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_ANY_ANY" Language="es_ES">
       <Text>¡No pensé que vería el final tan pronto!</Text>
@@ -27396,64 +27541,64 @@
       <Text>La reina desea advertir de los múltiples problemas que sufrirán aquellos que faltan al respeto a su pueblo y a su mandato.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_ANY_ANY" Language="es_ES">
-      <Text>El mundo debe saber de vuestros desafueros. (Te denuncia)</Text>
+      <Text>El mundo debe saber de vuestros desafueros. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_MVEMBA_ANY" Language="es_ES">
-      <Text>Sois el mal caído sobre este mundo. Vuestro nombre quedará maldito durante eras. (Te denuncia)</Text>
+      <Text>Sois el mal caído sobre este mundo. Vuestro nombre quedará maldito durante eras. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_CATHERINE_DE_MEDICI_ANY" Language="es_ES">
-      <Text>No nos gusta lo que estáis tramando. ¿Qué pensarían vuestros amigos de esta información? (Te denuncia)</Text>
+      <Text>No nos gusta lo que estáis tramando. ¿Qué pensarían vuestros amigos de esta información? (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_CLEOPATRA_ANY" Language="es_ES">
-      <Text>Eres peor que Brito y Casio juntos. ¡El mundo conocerá la verdad! (Te denuncia)</Text>
+      <Text>Eres peor que Brito y Casio juntos. ¡El mundo conocerá la verdad! (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_BARBAROSSA_ANY" Language="es_ES">
-      <Text>El mundo conocerá vuestra traición. Y se os juzgará. (Te denuncia)</Text>
+      <Text>El mundo conocerá vuestra traición. Y se os juzgará. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_GANDHI_ANY" Language="es_ES">
-      <Text>Eres poco de fiar; y esta es la peor clase de violencia. (Te denuncia)</Text>
+      <Text>Eres poco de fiar; y esta es la peor clase de violencia. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_GILGAMESH_ANY" Language="es_ES">
-      <Text>Que el mundo oiga mis palabras: sois más traicioneros que Ishtar. (Te denuncia)</Text>
+      <Text>Que el mundo oiga mis palabras: sois más traicioneros que Ishtar. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_GORGO_ANY" Language="es_ES">
-      <Text>Eres peor que los sofistas. El resto del mundo debe saberlo. (Te denuncia)</Text>
+      <Text>Eres peor que los sofistas. El resto del mundo debe saberlo. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_HARDRADA_ANY" Language="es_ES">
-      <Text>No habrá lugar para ti en la mesa de Odín. Eres una desgracia. (Te denuncia)</Text>
+      <Text>No habrá lugar para ti en la mesa de Odín. Eres una desgracia. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_HOJO_ANY" Language="es_ES">
-      <Text>Vuestra estupidez os desmerece como líder. Y vuestro pueblo debe saber la verdad. (Te denuncia)</Text>
+      <Text>Vuestra estupidez os desmerece como líder. Y vuestro pueblo debe saber la verdad. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_PEDRO_ANY" Language="es_ES">
-      <Text>El mundo debe saber de vuestros desafueros. (Te denuncia)</Text>
+      <Text>El mundo debe saber de vuestros desafueros. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_PERICLES_ANY" Language="es_ES">
-      <Text>Los tiranos como tú son abominaciones. Tu pueblo sabrá la verdad de mis palabras. (Te denuncia)</Text>
+      <Text>Los tiranos como tú son abominaciones. Tu pueblo sabrá la verdad de mis palabras. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_PETER_GREAT_ANY" Language="es_ES">
-      <Text>He visto muchas cosas en mi vida, pero nunca un líder tan despreciable. El mundo debe saberlo, y lo sabrá, para vuestra vergüenza. (Te denuncia)</Text>
+      <Text>He visto muchas cosas en mi vida, pero nunca un líder tan despreciable. El mundo debe saberlo, y lo sabrá, para vuestra vergüenza. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_PHILIP_II_ANY" Language="es_ES">
-      <Text>Eres otro Judas que ha venido a traicionar al Señor. (Te denuncia)</Text>
+      <Text>Eres otro Judas que ha venido a traicionar al Señor. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_QIN_ANY" Language="es_ES">
-      <Text>Vuestra reputación se verá empañada para siempre. (Te denuncia)</Text>
+      <Text>Vuestra reputación se verá empañada para siempre. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_SALADIN_ANY" Language="es_ES">
-      <Text>Mi pueblo dice que la casa de un tirano es una ruina... Y no vemos más que ruinas alrededor vuestro. (Te denuncia)</Text>
+      <Text>Mi pueblo dice que la casa de un tirano es una ruina... Y no vemos más que ruinas alrededor vuestro. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_T_ROOSEVELT_ANY" Language="es_ES">
-      <Text>No consentimos a los gobernantes que gobiernan sin dignidad, y el mundo debe saber de ellos. (Te denuncia)</Text>
+      <Text>No consentimos a los gobernantes que gobiernan sin dignidad, y el mundo debe saber de ellos. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_TOMYRIS_ANY" Language="es_ES">
-      <Text>¡Mientes más que hablas y no se puede confiar en ti! ¡Eres lo peor de tu calaña! (Te denuncia)</Text>
+      <Text>¡Mientes más que hablas y no se puede confiar en ti! ¡Eres lo peor de tu calaña! (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_TRAJAN_ANY" Language="es_ES">
-      <Text>Tu actitud es deplorable. Me encargaré de que el mundo entero sepa quién eres realmente. (Te denuncia)</Text>
+      <Text>Tu actitud es deplorable. Me encargaré de que el mundo entero sepa quién eres realmente. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_VICTORIA_ANY" Language="es_ES">
-      <Text>No tenemos nada que ver con vuestra administración. Por la presente, os denunciamos. (Te denuncia)</Text>
+      <Text>No tenemos nada que ver con vuestra administración. Por la presente, os denunciamos. (Te denuncia).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_OPPORTUNITY" Language="es_ES">
       <Text>(Es probable que pretenda declarar una guerra).</Text>
@@ -27507,7 +27652,7 @@
       <Text>(Te has asentado en una región que consideran suya).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_STANDARD_DIPLOMATIC_WARMONGER" Language="es_ES">
-      <Text>(Creen que eres una persona belicosa)</Text>
+      <Text>(Creen que eres una persona belicosa).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_AGENDA_ALLY_OF_ENKIDU_DENOUNCED_FRIEND" Language="es_ES">
       <Text>(Has denunciado a su amigo).</Text>
@@ -28059,7 +28204,7 @@
       <Text>(Eres uno de sus amigos).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_KUDO_LEADER_TRAJAN_REASON_ANY" Language="es_ES">
-      <Text>(Tu imperio es grande)</Text>
+      <Text>(Tu imperio es grande).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_KUDO_LEADER_VICTORIA_REASON_ANY" Language="es_ES">
       <Text>(Compartes el mismo continente de origen).</Text>
@@ -28248,7 +28393,7 @@
       <Text>(Has traicionado a un amigo o has declarado una guerra por sorpresa).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_WARNING_LEADER_TRAJAN_REASON_ANY" Language="es_ES">
-      <Text>(Tu imperio es pequeño)</Text>
+      <Text>(Tu imperio es pequeño).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_WARNING_LEADER_VICTORIA_REASON_ANY" Language="es_ES">
       <Text>(Tienes presencia en un continente en el que quiere asentarse).</Text>
@@ -28947,7 +29092,7 @@
       <Text>Perdón. En el futuro, buscaremos por otro lado.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_CHOICE_NEGATIVE" Language="es_ES">
-      <Text>¡Hacéis bien en preocuparos! (Declarar la guerra)</Text>
+      <Text>¡Hacéis bien en preocuparos! (Declarar la guerra).</Text>
     </Replace>
     <Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_CHOICE_POSITIVE" Language="es_ES">
       <Text>Nuestras tropas solo pasaban por ahí.</Text>
@@ -29010,7 +29155,7 @@
       <Text>Adyacencia: bonificación normal a Cultura [ICON_Culture] por cada maravilla adyacente. Bonificación menor a Cultura [ICON_Culture] por casillas de distrito adyacentes.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_HARBOR_DESCRIPTION" Language="es_ES">
-      <Text>Un distrito para las actividades navales en la ciudad. También quita la penalización al Movimiento [ICON_Movement] por embarcar desde esta casilla y desembarcar en ella. Debe construirse en terreno de Costa o Lago adyacente a tierra.[NEWLINE][NEWLINE]+1 a la capacidad de Rutas comerciales [ICON_TradeRoute].</Text>
+      <Text>Un distrito para las actividades navales en la ciudad. También quita la penalización al Movimiento [ICON_Movement] por embarcar desde esta casilla y desembarcar en ella. Debe construirse en terreno de Costa o Lago adyacente a tierra.[NEWLINE][NEWLINE]+1 a la capacidad de Rutas comerciales [ICON_TradeRoute] si esta ciudad no cuenta ya con un distrito de Centro comercial.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_HARBOR_DESCRIPTION_ADJACENCY" Language="es_ES">
       <Text>Adyacencia: bonificación normal a Oro [ICON_Gold] por cada recurso de costa adyacente. Bonificación menor a Oro [ICON_Gold] por casillas de distrito adyacentes.</Text>
@@ -29025,7 +29170,7 @@
       <Text>Adyacencia: bonificación normal a Producción [ICON_Production] por cada Mina o Cantera adyacente. Bonificación menor a Producción [ICON_Production] por casillas de distrito adyacentes.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_COMMERCIAL_HUB_DESCRIPTION" Language="es_ES">
-      <Text>Un distrito de la ciudad que se especializa en el comercio y las finanzas.[NEWLINE][NEWLINE]+1 a la capacidad de Rutas comerciales [ICON_TradeRoute].</Text>
+      <Text>Un distrito de la ciudad que se especializa en el comercio y las finanzas.[NEWLINE][NEWLINE]+1 a la capacidad de Rutas comerciales [ICON_TradeRoute] si esta ciudad no cuenta ya con un distrito de Puerto.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_COMMERCIAL_HUB_DESCRIPTION_ADJACENCY" Language="es_ES">
       <Text>Adyacencia: bonificación importante a Oro [ICON_Gold] por cada distrito de Puerto adyacente o borde con casilla adyacente que contenga un Río. Bonificación menor a Oro [ICON_Gold] por casillas de distrito adyacentes.</Text>
@@ -29064,7 +29209,7 @@
       <Text>Un distrito exclusivo de Brasil. Sustituye al distrito de Ocio y da +2 a Servicios [ICON_Amenities]. Además, desbloquea el proyecto del Carnaval, que concede +1 a Servicio [ICON_Amenities] adicional cuando se inicie y diversos puntos de grandes personajes [ICON_GreatPerson] cuando se complete.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION" Language="es_ES">
-      <Text>Un distrito exclusivo de Inglaterra para las actividades navales en la ciudad. Sustituye al distrito de Puerto. También quita la penalización al movimiento [ICON_Movement] por embarcar desde esta casilla y desembarcar en ella. Debe construirse en terreno de Costa o Lago adyacente a tierra.[NEWLINE][NEWLINE]+1 al Movimiento [ICON_Movement] de todas las unidades navales construidas en los Astilleros.[NEWLINE]+2 de Oro [ICON_Gold] cuando se construye en un continente extranjero.[NEWLINE]+1 a la capacidad de Rutas comerciales [ICON_TradeRoute].</Text>
+      <Text>Un distrito exclusivo de Inglaterra para las actividades navales en la ciudad. Sustituye al distrito de Puerto. También quita la penalización al Movimiento [ICON_Movement] por embarcar desde esta casilla y desembarcar en ella. Debe construirse en terreno de Costa o Lago adyacente a tierra.[NEWLINE][NEWLINE]+1 al Movimiento [ICON_Movement] de todas las unidades navales construidas en los Astilleros.[NEWLINE]+2 de Oro [ICON_Gold] cuando se construye en un continente extranjero.[NEWLINE]+1 a la capacidad de Rutas comerciales [ICON_TradeRoute] si esta ciudad no cuenta ya con un distrito de Centro comercial.</Text>
     </Replace>
     <Replace Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION_ADJACENCY" Language="es_ES">
       <Text>Adyacencia: bonificación normal a Oro [ICON_Gold] por cada recurso de costa adyacente. Bonificación menor a Oro [ICON_Gold] por casillas de distrito adyacentes.</Text>
@@ -29078,8 +29223,14 @@
     <Replace Tag="LOC_DISTRICT_BLOCKED_IMPROVEMENT" Language="es_ES">
       <Text>[COLOR_RED]La mejora se eliminará al construir el distrito.[ENDCOLOR]</Text>
     </Replace>
+    <Replace Tag="LOC_TSLEARTH_NAME" Language="es_ES">
+      <Text>Ubicación real en la Tierra</Text>
+    </Replace>
+    <Replace Tag="LOC_TSLEARTH_DESCRIPTION" Language="es_ES">
+      <Text>Las civilizaciones comienzan en una capital histórica en un mapa de la Tierra.</Text>
+    </Replace>
     <Replace Tag="LOC_EARTH_MAP_STANDARD_NAME" Language="es_ES">
-      <Text>Mapa de la Tierra</Text>
+      <Text>Tierra</Text>
     </Replace>
     <Replace Tag="LOC_EARTH_MAP_STANDARD_DESCRIPTION" Language="es_ES">
       <Text>Una representación de la Tierra con recursos, terreno y accidentes geográficos que reflejan sus ubicaciones históricas.</Text>
@@ -29609,6 +29760,12 @@
     <Replace Tag="LOC_PLAYERS" Language="es_ES">
       <Text>Jugadores</Text>
     </Replace>
+    <Replace Tag="LOC_TEAM" Language="es_ES">
+      <Text>Equipo|Equipos</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_UNKNOWN_NAME" Language="es_ES">
+      <Text>Equipo desconocido</Text>
+    </Replace>
     <Replace Tag="LOC_BACK" Language="es_ES">
       <Text>Atrás</Text>
     </Replace>
@@ -29631,7 +29788,14 @@
       <Text>La versión no coincide con la del anfitrión.</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_MOD_ERROR" Language="es_ES">
-      <Text>Error de configuración del "mod".</Text>
+      <Text>No se ha podido aplicar el contenido adicional.</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING" Language="es_ES">
+      <Text>No se ha podido conseguir el contenido adicional necesario.
+[NEWLINE]Contenido:[NEWLINE]</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ABANDONED_MOD_MISSING_DOWNLOADS_DISABLED" Language="es_ES">
+      <Text>Esta partida requiere contenidos adicionales que no están instalados. La descarga automática de contenidos adicionales no está activada. Puedes activar las descargas automáticas en Opciones de partida.[NEWLINE]Contenido:[NEWLINE]</Text>
     </Replace>
     <Replace Tag="LOC_GAME_ABANDONED_CONNECTION_LOST" Language="es_ES">
       <Text>Se ha perdido la conexión de red.</Text>
@@ -29688,7 +29852,7 @@
       <Text>[COLOR:ChatMessage_Help]Escribe /help para ver los comandos del chat.[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_CHAT_HELP_COMMAND_TEXT" Language="es_ES">
-      <Text>[COLOR:ChatMessage_Help]COMANDOS DEL CHAT[NEWLINE]/g Enviar un mensaje a un canal global[NEWLINE]/w [Nombre del Jugador] Enviar un mensaje privado a un jugador[NEWLINE]/r Responder a un mensaje privado[NEWLINE]/help Muestra este mensaje de ayuda[ENDCOLOR]</Text>
+      <Text>[COLOR:ChatMessage_Help]COMANDOS DEL CHAT[NEWLINE]/t Enviar un mensaje a un equipo[NEWLINE]/g Enviar un mensaje a un canal global[NEWLINE]/w [Nombre del Jugador] Enviar un mensaje privado a un jugador[NEWLINE]/r Responder a un mensaje privado[NEWLINE]/help Muestra este mensaje de ayuda[ENDCOLOR]</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_REFRESH_GAME_LIST" Language="es_ES">
       <Text>ACTUALIZAR</Text>
@@ -29776,6 +29940,9 @@
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_LAN_LOBBY" Language="es_ES">
       <Text>PARTIDAS EN RED LOCAL</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_LOBBY_MODS" Language="es_ES">
+      <Text>Contenido adicional</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_UNKNOWN" Language="es_ES">
       <Text>Desconocido</Text>
@@ -29873,6 +30040,12 @@
     <Replace Tag="LOC_OPTIONS_LAN_PLAYER_NAME" Language="es_ES">
       <Text>Nombre de jugador en la red local:</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT" Language="es_ES">
+      <Text>Descarga automática de contenidos adicionales:</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT_TOOLTIP" Language="es_ES">
+      <Text>Descarga automáticamente los contenidos adicionales creados por la comunidad cuando sean necesarios para unirse a una partida multijugador.</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_STEAM_CONTROLLER_MESSAGE" Language="es_ES">
       <Text>La configuración del Steam Controller se debe realizar desde el propio cliente de Steam y no desde esta interfaz. El botón izquierdo del ratón, el derecho y el Escape no se pueden reasignar.</Text>
     </Replace>
@@ -29957,6 +30130,12 @@
     <Replace Tag="LOC_ARE_YOU_READY" Language="es_ES">
       <Text>¿Todo listo?</Text>
     </Replace>
+    <Replace Tag="LOC_MP_GAME_SUMMARY_GAME_SETTINGS" Language="es_ES">
+      <Text>Configuración de la partida</Text>
+    </Replace>
+    <Replace Tag="LOC_MP_GAME_SUMMARY_ADDITIONAL_CONTENT" Language="es_ES">
+      <Text>Contenido adicional</Text>
+    </Replace>
     <Replace Tag="LOC_READY_LABEL" Language="es_ES">
       <Text>¡Preparado!</Text>
     </Replace>
@@ -30015,7 +30194,7 @@
       <Text>Jugador humano</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_DEFAULT_NO_TEAM_NAME" Language="es_ES">
-      <Text>Ninguna</Text>
+      <Text>Ninguno</Text>
     </Replace>
     <Replace Tag="LOC_CREATE_NEW_TEAM" Language="es_ES">
       <Text>Nuevo</Text>
@@ -30349,6 +30528,12 @@
     </Replace>
     <Replace Tag="LOC_GAME_NO_BARBARIANS" Language="es_ES">
       <Text>Sin bárbaros</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ALLIES_SHARE_VISIBILITY" Language="es_ES">
+      <Text>Los aliados comparten visibilidad</Text>
+    </Replace>
+    <Replace Tag="LOC_GAME_ALLIES_SHARE_VISIBILITY_DESCRIPTION" Language="es_ES">
+      <Text>Los jugadores aliados compartirán su visibilidad del mapa.</Text>
     </Replace>
     <Replace Tag="LOC_GAME_TURNTIMER_TYPE" Language="es_ES">
       <Text>Contador del turno</Text>
@@ -30791,8 +30976,14 @@
     <Replace Tag="LOC_NO_DUPLICATE_LEADERS_NAME" Language="es_ES">
       <Text>Desactivar líderes duplicados</Text>
     </Replace>
+    <Replace Tag="LOC_NO_TEAMS_NAME" Language="es_ES">
+      <Text>Sin equipos</Text>
+    </Replace>
     <Replace Tag="LOC_NO_DUPLICATE_LEADERS_DESCRIPTION" Language="es_ES">
       <Text>Activar esta opción evita que dos o más jugadores elijan al mismo líder.</Text>
+    </Replace>
+    <Replace Tag="LOC_NO_TEAMS_DESCRIPTION" Language="es_ES">
+      <Text>Activar esta opción desactiva el juego en equipo.</Text>
     </Replace>
     <Replace Tag="LOC_LIMIT_TURNS_NAME" Language="es_ES">
       <Text>Limitar turnos</Text>
@@ -30894,7 +31085,7 @@
       <Text>Victoria religiosa</Text>
     </Replace>
     <Replace Tag="LOC_VICTORY_SCORE_TT" Language="es_ES">
-      <Text>Aunque no seas capaz de conseguir una victoria por todo lo alto, al menos nadie te quitará lo que hayas conseguido. Esta victoria se activa cuando el tiempo se agota y no hay ningún vencedor.</Text>
+      <Text>Aunque no seas capaz de conseguir una victoria por todo lo alto, al menos nadie te quitará lo que hayas logrado. Esta victoria se activa cuando el tiempo se agota y no hay ningún vencedor.</Text>
     </Replace>
     <Replace Tag="LOC_VICTORY_SCIENCE_TT" Language="es_ES">
       <Text>Sé el primero en colonizar Marte para obtener una victoria científica. Es una victoria bastante directa, pero puede ser difícil de conseguir antes de que el tiempo se agote.</Text>
@@ -30931,6 +31122,9 @@
     </Replace>
     <Replace Tag="LOC_MAIN_MENU_DEMO_PURCHASE" Language="es_ES">
       <Text>Comprar ahora</Text>
+    </Replace>
+    <Replace Tag="LOC_MAIN_MENU_DEMO_PURCHASE_TT" Language="es_ES">
+      <Text>Abre la tienda de Steam para comprar Sid Meier's Civilization VI</Text>
     </Replace>
     <Replace Tag="LOC_DEMO_COMPLETE_CONTENT" Language="es_ES">
       <Text>¡Enhorabuena! Ya has dado los dos primeros pasos para construir una civilización que resista el paso del tiempo. ¿Continuarás poniéndote a prueba contra los mayores líderes de la historia? ¿Florecerá la cultura de tu pueblo? ¿La ciencia saldrá de la oscuridad? ¿Servirá tu fe de ejemplo? ¿Conseguirá dominar tu ejército?[NEWLINE][NEWLINE]¿Cómo te conducirás en Sid Meier’s Civilization VI? Continúa ya tu viaje.[NEWLINE][NEWLINE]Construye. Conquista. Inspira.</Text>
@@ -30992,6 +31186,18 @@
     <Replace Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_EXPANSION" Language="es_ES">
       <Text>Una o más de las ampliaciones que se requieren para la partida guardada no están instaladas.</Text>
     </Replace>
+    <Replace Tag="LOC_TEAM_NAME_SELECT_TITLE" Language="es_ES">
+      <Text>Nombre del equipo</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_NAME_ENTRY_TITLE" Language="es_ES">
+      <Text>Escribe el nombre del equipo</Text>
+    </Replace>
+    <Replace Tag="LOC_CHOOSE_TEAM_ICON" Language="es_ES">
+      <Text>Elige el icono del equipo</Text>
+    </Replace>
+    <Replace Tag="LOC_MESSAGE_OF_THE_DAY_HEADING" Language="es_ES">
+      <Text>Mensaje del día:</Text>
+    </Replace>
     <Replace Tag="LOC_GOLDEN_HORDE_RULESET_TITLE" Language="es_ES">
       <Text>Horda de Oro</Text>
     </Replace>
@@ -31014,7 +31220,7 @@
       <Text>Sobrevive a abrumadoras olas de Bárbaros en este escenario centrado en el combate y ambientado en la Época Clásica. Dura 30 turnos.</Text>
     </Replace>
     <Replace Tag="LOC_GOLDEN_HORDE_MOD_DESCRIPTION" Language="es_ES">
-      <Text>Condiciones para la victoria[NEWLINE]Victoria de superviviente: sobrevive y consigue la puntuación más alta al acabar el límite de turnos.[NEWLINE]Cambios en el sistema de juego[NEWLINE][ICON_Bullet]Hay más Bárbaros.[NEWLINE][ICON_Bullet]Los Bárbaros son más agresivos.</Text>
+      <Text>Condiciones para la victoria:[NEWLINE]Victoria de superviviente: sobrevive y consigue la puntuación más alta al acabar el límite de turnos.[NEWLINE]Cambios en el sistema de juego[NEWLINE][ICON_Bullet]Hay más Bárbaros.[NEWLINE][ICON_Bullet]Los Bárbaros son más agresivos.</Text>
     </Replace>
     <Replace Tag="LOC_VISIBILITY_NONE_NAME" Language="es_ES">
       <Text>Ninguno</Text>
@@ -31094,6 +31300,9 @@
     <Replace Tag="LOC_GOSSIPDESC_PROJECT_STARTED" Language="es_ES">
       <Text>Proyectos empezados</Text>
     </Replace>
+    <Replace Tag="LOC_GOSSIPDESC_SPACE_RACE_PROJECT_COMPLETED" Language="es_ES">
+      <Text>Proyectos de Carrera espacial completados</Text>
+    </Replace>
     <Replace Tag="LOC_GOSSIPDESC_VICTORY_STRATEGY_CHANGED" Language="es_ES">
       <Text>Estrategia de victoria cambiada</Text>
     </Replace>
@@ -31107,7 +31316,7 @@
       <Text>Un artículo reciente reveló que</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_SOURCE_ALLY" Language="es_ES">
-      <Text>Un aliado informa de que</Text>
+      <Text>Un aliado informa que</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_LOST_CITY" Language="es_ES">
       <Text>una ciudad "perdida"</Text>
@@ -31482,19 +31691,19 @@
       <Text>Las unidades heridas pueden recuperar +5 PG cada turno.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_BARBARIAN_CAMP_DESCRIPTION" Language="es_ES">
-      <Text>Crea Bárbaros adicionales. Otorga Oro [ICON_Gold] si se destruye.</Text>
+      <Text>Crea Bárbaros adicionales. Otorga Oro [ICON_Gold] si se destruye. -1 de Atractivo.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_BEACH_RESORT_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la capacidad del Constructor para erigir Centros turísticos costeros.[NEWLINE][NEWLINE]Da el doble de Turismo [ICON_Tourism] por Atractivo de la casilla. Solo puede construirse en casillas de Desierto costero, Llanuras costeras o Praderas costeras. Atractivo mínimo: Impresionante.</Text>
+      <Text>Desbloquea la capacidad del Constructor para erigir Centros turísticos costeros.[NEWLINE][NEWLINE]Otorga un Turismo [ICON_Tourism] igual al Atractivo de la casilla. Solo puede construirse en casillas de Desierto costero, Llanuras costeras o Praderas costeras. Atractivo mínimo: Impresionante.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_FARM_DESCRIPTION" Language="es_ES">
       <Text>Desbloquea la habilidad Constructor para crear Granjas.[NEWLINE][NEWLINE]+1 a Alimentos [ICON_Food]. Solo puede construirse en Praderas o Llanuras.[NEWLINE][NEWLINE]Construir Granjas adyacentes a otras Granjas proporciona bonificaciones al Alojamiento.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_MINE_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad Constructor para crear Minas.[NEWLINE][NEWLINE]+1 a la Producción [ICON_Production]. Solo puede construirse en Colinas o en ciertos recursos.[NEWLINE][NEWLINE]Si se construye con un recurso de lujo o estratégico, la ciudad podrá usar dicho recurso.</Text>
+      <Text>Desbloquea la habilidad Constructor para crear Minas.[NEWLINE][NEWLINE]+1 a la Producción [ICON_Production]. -1 de Atractivo. Solo puede construirse en Colinas o en ciertos recursos.[NEWLINE][NEWLINE]Si se construye con un recurso de lujo o estratégico, la ciudad podrá usar dicho recurso.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_QUARRY_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad Constructor para crear Canteras.[NEWLINE][NEWLINE]+1 a la Producción [ICON_Production]. Solo pueden construirse con recursos de Piedra [ICON_RESOURCE_STONE], Mármol [ICON_RESOURCE_MARBLE] o Yeso [ICON_RESOURCE_GYPSUM].[NEWLINE][NEWLINE]Si se construyen con un recurso de lujo, la ciudad podrá usar dicho recurso.</Text>
+      <Text>Desbloquea la habilidad Constructor para crear Canteras.[NEWLINE][NEWLINE]+1 a la Producción [ICON_Production]. -1 de Atractivo. Solo pueden construirse con recursos de Piedra [ICON_RESOURCE_STONE], Mármol [ICON_RESOURCE_MARBLE] o Yeso [ICON_RESOURCE_GYPSUM].[NEWLINE][NEWLINE]Si se construyen con un recurso de lujo, la ciudad podrá usar dicho recurso.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_FISHING_BOATS_DESCRIPTION" Language="es_ES">
       <Text>Desbloquea la habilidad Constructor para crear Barcos pesqueros.[NEWLINE][NEWLINE]+1 a Alimentos [ICON_Food]. Solo puede construirse en recursos de Costa u Océano.[NEWLINE][NEWLINE]Si se construye con Perlas [ICON_RESOURCE_PEARLS] o Ballenas [ICON_RESOURCE_WHALES], la ciudad podrá usar dicho recurso.</Text>
@@ -31512,19 +31721,19 @@
       <Text>Desbloquea la habilidad Constructor para crear un Aserradero.[NEWLINE][NEWLINE]+1 a la Producción [ICON_Production]. +1 a la Producción [ICON_Production] si adyacente a un río. Solo puede construirse en Bosques.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_OIL_WELL_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad Constructor para crear un Pozo petrolífero.[NEWLINE][NEWLINE]Solo puede construirse con Petróleo [ICON_RESOURCE_OIL].</Text>
+      <Text>Desbloquea la habilidad Constructor para crear un Pozo petrolífero.[NEWLINE][NEWLINE]-1 de Atractivo. Solo puede construirse con Petróleo [ICON_RESOURCE_OIL].</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_OFFSHORE_OIL_RIG_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad Constructor para crear una Plataforma petrolífera en alta mar.[NEWLINE][NEWLINE]Solo puede construirse con Petróleo [ICON_RESOURCE_OIL].</Text>
+      <Text>Desbloquea la habilidad Constructor para crear una Plataforma petrolífera en alta mar.[NEWLINE][NEWLINE]-1 de Atractivo. Solo puede construirse con Petróleo [ICON_RESOURCE_OIL].</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_FORT_DESCRIPTION" Language="es_ES">
       <Text>La unidad ocupante recibe +4 a la Fuerza de defensa [ICON_Strength] y obtiene automáticamente 2 turnos de fortificación.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_AIRSTRIP_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad de Ingeniero militar para construir una Pista de aterrizaje.[NEWLINE][NEWLINE]Puede contener hasta a 3 unidades aéreas. Solo puede construirse en terreno llano.</Text>
+      <Text>Desbloquea la habilidad de Ingeniero militar para construir una Pista de aterrizaje.[NEWLINE][NEWLINE]Puede contener hasta a 3 unidades aéreas. Solo puede construirse en terreno llano. -1 de Atractivo.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_CHATEAU_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad Constructor para crear un Château, único de Francia.[NEWLINE][NEWLINE]+1 a Cultura [ICON_Culture]. +2 a Cultura [ICON_Culture] si está junto a una maravilla. +1 de Oro [ICON_Gold] si está junto a un recurso de lujo. Solo se puede construir adyacente a los Ríos.</Text>
+      <Text>Desbloquea la habilidad Constructor para crear un Château, único de Francia.[NEWLINE][NEWLINE]+2 a Cultura [ICON_Culture]. +1 de Atractivo. +2 a Cultura [ICON_Culture] si está junto a una maravilla. +1 de Oro [ICON_Gold] si está junto a un recurso de lujo. Solo se puede construir adyacente a los Ríos.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_COLOSSAL_HEAD_DESCRIPTION" Language="es_ES">
       <Text>Desbloquea la habilidad Constructor para crear una Cabeza colosal.[NEWLINE][NEWLINE]+2 a Fe [ICON_Faith]. +1 a Fe [ICON_Faith] por cada 2 Selvas tropicales adyacentes. +1 a Fe [ICON_Faith] por cada 2 Bosques adyacentes. No se puede construir sobre Nieve ni Colinas nevadas.</Text>
@@ -31536,13 +31745,13 @@
       <Text>Desbloquea la habilidad Constructor para crear un Kurgán, exclusivo de Escitia.[NEWLINE][NEWLINE]+1 a Fe [ICON_Faith]. +1 de Oro [ICON_Gold]. +1 a Fe [ICON_Faith] por cada Pastizal adyacente. No puede construirse en Colinas.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_MISSION_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad Constructor para crear una Misión, exclusiva de España.[NEWLINE][NEWLINE]+1 a Fe [ICON_Faith]. +2 a Fe [ICON_Faith] si está en un continente diferente a tu capital [ICON_Capital]. +1 a Ciencia [ICON_Science] si se construye junto a un distrito de Campus.</Text>
+      <Text>Desbloquea la habilidad Constructor para crear una Misión, exclusiva de España.[NEWLINE][NEWLINE]+2 a Fe [ICON_Faith]. +2 a Fe [ICON_Faith] si está en un continente diferente a tu capital [ICON_Capital]. +1 a Ciencia [ICON_Science] si se construye junto a un distrito de Campus.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_ROMAN_FORT_DESCRIPTION" Language="es_ES">
       <Text>Desbloquea la habilidad de la legión romana para crear un Fuerte romano, exclusivo de Roma.[NEWLINE][NEWLINE]La unidad ocupante recibe +4 a la Fuerza de defensa [ICON_Strength] y obtiene automáticamente 2 turnos de fortificación.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="es_ES">
-      <Text>Desbloquea la habilidad Constructor para crear una Esfinge, exclusiva de Egipto.[NEWLINE][NEWLINE]+1 a Fe [ICON_Faith] y +1 a Cultura [ICON_Culture]. +2 a Fe [ICON_Faith] si está junto a una maravilla. No puede construirse junto a otra Esfinge. Puede construirse en Terrenos de aluvión.</Text>
+      <Text>Desbloquea la habilidad Constructor para crear una Esfinge, exclusiva de Egipto.[NEWLINE][NEWLINE]+1 a Fe [ICON_Faith] y +1 a Cultura [ICON_Culture]. +1 de Atractivo. +2 a Fe [ICON_Faith] si está junto a una maravilla. No puede construirse junto a otra Esfinge. Puede construirse en Terrenos de aluvión.</Text>
     </Replace>
     <Replace Tag="LOC_IMPROVEMENT_STEPWELL_DESCRIPTION" Language="es_ES">
       <Text>Desbloquea la habilidad Constructor para crear un Pozo escalonado, exclusivo de la India.[NEWLINE][NEWLINE]+1 a Alimentos [ICON_Food] y +1 a Alojamiento [ICON_Housing]. +1 a Fe [ICON_Faith] si está adyacente a un distrito de Lugar sagrado. +1 a Alimentos [ICON_Food] si está adyacente a una Granja. No puede construirse sobre Colinas ni adyacente a otro Pozo escalonado.</Text>
@@ -31910,6 +32119,9 @@
     <Replace Tag="LOC_ACTION_PANEL_PLEASE_WAIT_TOOLTIP" Language="es_ES">
       <Text>Es el turno de otros jugadores; espera un momento...</Text>
     </Replace>
+    <Replace Tag="LOC_ACTION_PANEL_CAN_UNREADY_TOOLTIP" Language="es_ES">
+      <Text>Haz clic para "despreparar" el turno si quieres realizar más cambios. Solo puedes hacer esto si todos los demás jugadores ya tienen listos sus turnos respectivos.</Text>
+    </Replace>
     <Replace Tag="LOC_ACTION_PANEL_SKIP_TURN" Language="es_ES">
       <Text>SALTAR TURNO</Text>
     </Replace>
@@ -32146,6 +32358,9 @@
     </Replace>
     <Replace Tag="LOC_COMBAT_PREVIEW_BASE_STRENGTH" Language="es_ES">
       <Text>Fuerza básica</Text>
+    </Replace>
+    <Replace Tag="LOC_COMBAT_PREVIEW_EMBARKED_UNIT_STRENGTH" Language="es_ES">
+      <Text>[COLOR_RED]Fuerza reducida al embarcarse</Text>
     </Replace>
     <Replace Tag="LOC_COMBAT_PREVIEW_DEFENDING_INTERCEPTOR_AIRCRAFT" Language="es_ES">
       <Text>[COLOR_RED]Avión interceptor defensor[ENDCOLOR]</Text>
@@ -32574,7 +32789,7 @@
       <Text>Excedente de alimentos en total</Text>
     </Replace>
     <Replace Tag="LOC_HUD_CITY_TOTAL_HOUSING" Language="es_ES">
-      <Text>Alojamiento en total</Text>
+      <Text>Alojamiento en total:</Text>
     </Replace>
     <Replace Tag="LOC_HUD_CITY_TRADING_POSTS" Language="es_ES">
       <Text>Puestos comerciales</Text>
@@ -33047,11 +33262,17 @@
     <Replace Tag="LOC_TECH_BOOST_RESEARCH_AGREEMENT" Language="es_ES">
       <Text>Tu Acuerdo de investigación ha dado lugar a un descubrimiento científico.</Text>
     </Replace>
+    <Replace Tag="LOC_TECH_BOOST_TEAMMATE" Language="es_ES">
+      <Text>Tu compañero de equipo ha desarrollado una nueva tecnología. Sus científicos están ansiosos por divulgar sus hallazgos.</Text>
+    </Replace>
     <Replace Tag="LOC_CIVIC_BOOST_GOODYHUT" Language="es_ES">
       <Text>Los aldeanos comparten los secretos de su bien organizada comunidad.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_BOOST_WONDER" Language="es_ES">
       <Text>Recoger la sabiduría de todo el país en tu biblioteca ha proporcionado nuevas ideas a tu pueblo.</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVIC_BOOST_TEAMMATE" Language="es_ES">
+      <Text>Nuestro compañero de equipo ha completado un principio nuevo. Su experiencia nos ayudará a progresar.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_BOOST_GREAT_PERSON" Language="es_ES">
       <Text>El ingenio de tu gran personaje ha desbloqueado nuevas ideas para tu sociedad.</Text>
@@ -33543,7 +33764,7 @@
       <Text>Debe estar en territorio amistoso.</Text>
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_APOSTLE_REQUIRED_CHARGES" Language="es_ES">
-      <Text>Todavía debe tener 2 cargas de propagación.</Text>
+      <Text>Todavía debe tener 3 cargas de propagación.</Text>
     </Replace>
     <Replace Tag="LOC_UNITOPERATION_WAIT_FOR_DESCRIPTION" Language="es_ES">
       <Text>Alerta</Text>
@@ -34295,6 +34516,9 @@
     <Replace Tag="LOC_WORLD_RANKINGS_RELIGION_DETAILS" Language="es_ES">
       <Text>Para conseguir una victoria [COLOR:ResFaithLabelCS]RELIGIOSA[ENDCOLOR], tu religión debe convertirse en la religión [COLOR:ResFaithLabelCS]PREDOMINANTE[ENDCOLOR] para todas las civilizaciones del juego.[NEWLINE][NEWLINE]Una religión es [COLOR:ResFaithLabelCS]PREDOMINANTE[ENDCOLOR] si la siguen más del 50% de las ciudades de una civilización.</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_RELIGION_TEAMS_RELIGIONS" Language="es_ES">
+      <Text>religiones del equipo</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_CIVILIZATION_LABEL" Language="es_ES">
       <Text>Civilización</Text>
     </Replace>
@@ -34303,6 +34527,9 @@
     </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_YOU_SIMPLE" Language="es_ES">
       <Text>Vas ganando</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_TEAM_SIMPLE" Language="es_ES">
+      <Text>Tu equipo está al frente</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_1_PLACE" Language="es_ES">
       <Text>primer</Text>
@@ -34339,6 +34566,30 @@
     </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_12_PLACE" Language="es_ES">
       <Text>duodécimo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_13_PLACE" Language="es_ES">
+      <Text>decimotercero</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_14_PLACE" Language="es_ES">
+      <Text>decimocuarto</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_15_PLACE" Language="es_ES">
+      <Text>decimoquinto</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_16_PLACE" Language="es_ES">
+      <Text>decimosexto</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_17_PLACE" Language="es_ES">
+      <Text>decimoséptimo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_18_PLACE" Language="es_ES">
+      <Text>decimoctavo</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_19_PLACE" Language="es_ES">
+      <Text>decimonoveno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_20_PLACE" Language="es_ES">
+      <Text>vigésimo</Text>
     </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_STEPS_COMPLETED" Language="es_ES">
       <Text>Pasos completados</Text>
@@ -34521,7 +34772,7 @@
       <Text>3 Enviados [ICON_Envoy], y más que cualquier otra civilización:</Text>
     </Replace>
     <Replace Tag="LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS" Language="es_ES">
-      <Text>Bonificación de diplomacia suzerana:[NEWLINE][ICON_Bolt]Las ciudades-estado siguen a su suzerano en la guerra y en la paz con otros jugadores.[NEWLINE][ICON_Bolt]Tus unidades pueden entrar en las tierras de la ciudad-estado.[NEWLINE][ICON_Bolt]Tus Constructores pueden mejorar las casillas de la ciudad-estado.[NEWLINE][ICON_Bolt]Ves 3 casillas alrededor de la ciudad-estado.[NEWLINE][ICON_Bolt]Puedes pagar Oro [ICON_Gold] para controlar el ejército de la ciudad-estado de forma temporal.[NEWLINE][ICON_Bolt]Pasas a ser dueño de todos los recursos de la ciudad-estado.</Text>
+      <Text>Bonificación de diplomacia suzerana:[NEWLINE][ICON_Bolt]Las ciudades-estado siguen a su suzerano en la guerra y en la paz con otros jugadores.[NEWLINE][ICON_Bolt]Las tierras de las ciudades-estado se convierten en territorio amistoso y tus unidades pueden entrar, curarse y modernizarse en ellas.[NEWLINE][ICON_Bolt]Tus Constructores pueden mejorar las casillas de la ciudad-estado.[NEWLINE][ICON_Bolt]Ves 3 casillas alrededor de la ciudad-estado.[NEWLINE][ICON_Bolt]Puedes pagar Oro [ICON_Gold] para controlar el ejército de la ciudad-estado de forma temporal.[NEWLINE][ICON_Bolt]Pasas a ser dueño de todos los recursos de la ciudad-estado.</Text>
     </Replace>
     <Replace Tag="LOC_CITY_STATES_SUZERAIN_NO_RESOURCES_AVAILABLE" Language="es_ES">
       <Text>(Ninguno disponible actualmente)</Text>
@@ -34782,7 +35033,7 @@
       <Text>[ICON_GreatWork_Music] Música</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_RELIC" Language="es_ES">
-      <Text>Reliquias [ICON_GreatWork_Relic]</Text>
+      <Text>[ICON_GreatWork_Relic] Reliquias </Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_SCULPTURE_PLURAL" Language="es_ES">
       <Text>[ICON_GreatWork_Sculpture] Esculturas</Text>
@@ -34821,7 +35072,7 @@
       <Text>[ICON_GreatWork_Music] Música</Text>
     </Replace>
     <Replace Tag="LOC_GREATWORKOBJECT_RELIC_PLURAL" Language="es_ES">
-      <Text>Reliquias [ICON_GreatWork_Relic]</Text>
+      <Text>[ICON_GreatWork_Relic] Reliquias </Text>
     </Replace>
     <Replace Tag="LOC_ROUTECHOOSER_BEGIN_ROUTE_BUTTON" Language="es_ES">
       <Text>COMENZAR RUTA</Text>
@@ -35165,6 +35416,9 @@
     <Replace Tag="LOC_HUD_REPORTS_CITY_STATE" Language="es_ES">
       <Text>Ciudad-estado</Text>
     </Replace>
+    <Replace Tag="LOC_HUD_REPORTS_MISC_RESOURCE_SOURCE" Language="es_ES">
+      <Text>Bonificaciones de juego</Text>
+    </Replace>
     <Replace Tag="LOC_HUD_REPORTS_TRADE_IMPORTED" Language="es_ES">
       <Text>Importado</Text>
     </Replace>
@@ -35181,7 +35435,7 @@
       <Text>Arcas:</Text>
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_VIEW_REPORTS" Language="es_ES">
-      <Text>Ver informes</Text>
+      <Text>Informes</Text>
     </Replace>
     <Replace Tag="LOC_HUD_REPORTS_WORKED_LAND" Language="es_ES">
       <Text>Tierra explotada</Text>
@@ -35236,6 +35490,18 @@
     </Replace>
     <Replace Tag="LOC_TOOLTIP_PLOT_WOODS_SECONDARY" Language="es_ES">
       <Text>(de origen secundario)</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY" Language="es_ES">
+      <Text>(Territorio amistoso)</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY_2" Language="es_ES">
+      <Text>Territorio amistoso</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY_3" Language="es_ES">
+      <Text>(Amistoso)</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY_4" Language="es_ES">
+      <Text>Amistoso</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_SET_KEY_BINDING_TEXT" Language="es_ES">
       <Text>Pulsa la tecla o el botón del ratón que quieras vincular. Para cancelar, haz clic en el botón Cancelar o pulsa Esc. Para borrar la vinculación, haz clic en el botón Borrar.</Text>
@@ -35335,6 +35601,15 @@
     </Replace>
     <Replace Tag="LOC_DEMO_DIALOG_EXIT_TT" Language="es_ES">
       <Text>Menú principal</Text>
+    </Replace>
+    <Replace Tag="LOC_TURN_REMAINING" Language="es_ES">
+      <Text>turno restante</Text>
+    </Replace>
+    <Replace Tag="LOC_TURNS_REMAINING" Language="es_ES">
+      <Text>turnos restantes</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_LIST_HEADING" Language="es_ES">
+      <Text>Equipos y civilizaciones</Text>
     </Replace>
     <Replace Tag="LOC_REPRESENTATIVE" Language="es_ES">
       <Text>un representante</Text>
@@ -35583,7 +35858,7 @@
       <Text>Construye Parques nacionales, no elimina los accidentes geográficos y planta Bosques. Le gustan las civilizaciones que plantan Bosques o encuentran Parques nacionales. No le gustan las civilizaciones que eliminan accidentes geográficos.</Text>
     </Replace>
     <Replace Tag="LOC_AGENDA_IDEOLOGUE_DESCRIPTION" Language="es_ES">
-      <Text>Le gustan las civilizaciones con el mismo tipo de gobierno. No le gustan las civilizaciones con otro tipo de gobierno, especialmente si están en la misma época que la suya.</Text>
+      <Text>Haz clic para "despreparar" el turno si quieres realizar más cambios. Solo puedes hacer esto si todos los demás jugadores ya tienen listos sus turnos respectivos.</Text>
     </Replace>
     <Replace Tag="LOC_AGENDA_DEVOUT_DESCRIPTION" Language="es_ES">
       <Text>Intenta adquirir Fe [ICON_Faith] y le gustan las civilizaciones que también se centran en la Fe [ICON_Faith].</Text>
@@ -35814,7 +36089,7 @@
       <Text>Las victorias en combate proporcionan Cultura [ICON_Culture] equivalente al 50% de la Fuerza de combate [ICON_Strength] de la unidad derrotada.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION" Language="es_ES">
-      <Text>Puede declararle la guerra cualquiera que esté en guerra con sus aliados sin sufrir penalizaciones por belicosidad. Cuando estén en guerra contra un enemigo común, sus aliados y ellos comparten las recompensas por saqueo y la experiencia de combate ganada si se encuentran a una distancia de 5 casillas o menos.</Text>
+      <Text>Puede declararle la guerra a cualquiera que esté en guerra con sus aliados sin sufrir penalizaciones por belicosidad. Cuando estén en guerra contra un enemigo común, sus aliados y ellos comparten las recompensas por saqueo y la experiencia de combate ganada si se encuentran a una distancia de 5 casillas o menos.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_MEDITERRANEAN_DESCRIPTION" Language="es_ES">
       <Text>Tus Rutas comerciales [ICON_TradeRoute] con otras civilizaciones proporcionan +4 de Oro [ICON_Gold] para Egipto. Las Rutas comerciales [ICON_TradeRoute] de otras civilizaciones con Egipto les proporcionan +2 a Alimentos [ICON_Food] a dichas civilizaciones y +2 de Oro [ICON_Gold] a Egipto.</Text>
@@ -35826,7 +36101,7 @@
       <Text>Los Inquisidores pueden Eliminar herejía una vez más. Las unidades de combate tienen una bonificación de +4 a la Fuerza de combate [ICON_Strength] contra jugadores de otras religiones.</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_GRAND_EMBASSY_DESCRIPTION" Language="es_ES">
-      <Text>Las civilizaciones más avanzadas que Rusia reciben Ciencia [ICON_Science] o Cultura [ICON_Culture] de las Rutas comerciales [ICON_TradeRoute] (+1 por cada 3 tecnologías o principios por delante).</Text>
+      <Text>Reciben Ciencia [ICON_Science] o Cultura [ICON_Culture] de las Rutas comerciales con civilizaciones más avanzadas que Rusia [ICON_TradeRoute] (+1 por cada 3 tecnologías o principios por delante).</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_HOLY_ROMAN_EMPEROR_DESCRIPTION" Language="es_ES">
       <Text>Espacio adicional para política militar. +7 a la Fuerza de combate [ICON_Strength] al atacar ciudades-estado.</Text>
@@ -36015,7 +36290,7 @@
       <Text>Araña territorio a tus enemigos en este escenario basado en el combate y ambientado en la Revolución Industrial. Dura 50 turnos.</Text>
     </Replace>
     <Replace Tag="LOC_NAPOLEON_MOD_DESCRIPTION" Language="es_ES">
-      <Text>Condiciones para la victoria[NEWLINE]Demuestra que eres el estratega más grande de la Revolución Industrial siendo el que más territorio tenga al llegar al límite de turnos.</Text>
+      <Text>Condiciones para la victoria:[NEWLINE]Demuestra que eres el estratega más grande de la Revolución Industrial siendo el que más territorio tenga al llegar al límite de turnos.</Text>
     </Replace>
     <Replace Tag="LOC_NAPOLEON_ENDGAME_RANKING_LEADER_QUOTE" Language="es_ES">
       <Text>La victoria le pertenece al que más persevera. —Napoleón Bonaparte</Text>
@@ -36491,6 +36766,9 @@
     <Replace Tag="LOC_NOTIFICATION_CITY_BESIEGED_BY_OTHER_PLAYER_MESSAGE" Language="es_ES">
       <Text>Ciudad asediada</Text>
     </Replace>
+    <Replace Tag="LOC_NOTIFICATION_TILE_LOST_CULTURE_BOMB_MESSAGE" Language="es_ES">
+      <Text>Territorio perdido</Text>
+    </Replace>
     <Replace Tag="LOC_POLAND_JADWIGA_MOD_TITLE" Language="es_ES">
       <Text>DLC: Pack de la civilización polaca</Text>
     </Replace>
@@ -36513,28 +36791,28 @@
       <Text>Repara el daño de las defensas exteriores de la ciudad. Solo se permite si la ciudad no ha sido atacada durante al menos 3 turnos.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_ENHANCE_DISTRICT_ENCAMPMENT_DESCRIPTION" Language="es_ES">
-      <Text>Proyecto por distritos que proporciona Oro [ICON_Gold] y puntos de Gran general [ICON_GreatGeneral].</Text>
+      <Text>Proyecto por distritos que proporciona Oro [ICON_Gold] cada turno y puntos de Gran general [ICON_GreatGeneral] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_ENHANCE_DISTRICT_HARBOR_DESCRIPTION" Language="es_ES">
-      <Text>Proyecto por distritos que proporciona Oro [ICON_Gold] y puntos de Gran almirante [ICON_GreatAdmiral].</Text>
+      <Text>Proyecto por distritos que proporciona Oro [ICON_Gold] cada turno y puntos de Gran almirante [ICON_GreatAdmiral] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_ENHANCE_DISTRICT_INDUSTRIAL_ZONE_DESCRIPTION" Language="es_ES">
-      <Text>Proyecto por distritos que proporciona Oro [ICON_Gold] y puntos de Gran ingeniero [ICON_GreatEngineer].</Text>
+      <Text>Proyecto por distritos que proporciona Oro [ICON_Gold] cada turno y puntos de Gran ingeniero [ICON_GreatEngineer] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_ENHANCE_DISTRICT_COMMERCIAL_HUB_DESCRIPTION" Language="es_ES">
-      <Text>Proyecto por distritos que proporciona una gran cantidad de Oro [ICON_Gold] y puntos de Gran mercader [ICON_GreatMerchant].</Text>
+      <Text>Proyecto por distritos que proporciona una gran cantidad de Oro [ICON_Gold] cada turno y puntos de Gran mercader [ICON_GreatMerchant] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_ENHANCE_DISTRICT_HOLY_SITE_DESCRIPTION" Language="es_ES">
-      <Text>Proyecto por distritos que proporciona Fe [ICON_Faith] y puntos de Gran profeta [ICON_GreatProphet].</Text>
+      <Text>Proyecto por distritos que proporciona Fe [ICON_Faith] cada turno y puntos de Gran profeta [ICON_GreatProphet] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_ENHANCE_DISTRICT_CAMPUS_DESCRIPTION" Language="es_ES">
-      <Text>Proyecto por distritos que proporciona Ciencia [ICON_Science] y puntos de Gran científico [ICON_GreatScientist].</Text>
+      <Text>Proyecto por distritos que proporciona Ciencia [ICON_Science] cada turno y puntos de Gran científico [ICON_GreatScientist] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_ENHANCE_DISTRICT_THEATER_DESCRIPTION" Language="es_ES">
-      <Text>Proyecto por distritos que proporciona Cultura [ICON_Culture] y una pequeña cantidad de puntos de Gran escritor [ICON_GreatWriter], Gran artista [ICON_GreatArtist] y Gran músico [ICON_GreatMusician].</Text>
+      <Text>Proyecto por distritos que proporciona Cultura [ICON_Culture] cada turno y una pequeña cantidad de puntos de Gran escritor [ICON_GreatWriter], Gran artista [ICON_GreatArtist] y Gran músico [ICON_GreatMusician] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_CARNIVAL_DESCRIPTION" Language="es_ES">
-      <Text>+1 a Servicios [ICON_Amenities] y a los puntos de Grandes personajes [ICON_GreatPerson] para Grandes ingenieros [ICON_GreatEngineer], Grandes mercaderes [ICON_GreatMerchant], Grandes escritores [ICON_GreatWriter], Grandes artistas [ICON_GreatArtist] y Grandes músicos [ICON_GreatMusician].</Text>
+      <Text>Proyecto exclusivo de Brasil que otorga +1 a Servicios [ICON_Amenities] cuando está activo y puntos de Grandes personajes [ICON_GreatPerson] para Grandes ingenieros [ICON_GreatEngineer], Grandes mercaderes [ICON_GreatMerchant], Grandes escritores [ICON_GreatWriter], Grandes artistas [ICON_GreatArtist] y Grandes músicos [ICON_GreatMusician] cuando se finaliza.</Text>
     </Replace>
     <Replace Tag="LOC_PROJECT_LAUNCH_EARTH_SATELLITE_DESCRIPTION" Language="es_ES">
       <Text>El proyecto de la Carrera espacial pone un pequeño satélite en órbita. Revela la geografía de todas las partes inexploradas del mundo, y marca el primer paso hacia la victoria científica.</Text>
@@ -37685,6 +37963,12 @@
     <Replace Tag="LOC_CIVIC_SOCIAL_MEDIA_QUOTE_2" Language="es_ES">
       <Text>"Distraído de la distracción por la distracción".[NEWLINE] – T. S. Eliot</Text>
     </Replace>
+    <Replace Tag="LOC_CIVIC_FUTURE_CIVIC_QUOTE_1" Language="es_ES">
+      <Text>"Nunca puede planearse el futuro desde el pasado." [NEWLINE]– Edmund Burke</Text>
+    </Replace>
+    <Replace Tag="LOC_CIVIC_FUTURE_CIVIC_QUOTE_2" Language="es_ES">
+      <Text>"Nunca pienso en el futuro. Llega demasiado pronto."[NEWLINE]– Albert Einstein</Text>
+    </Replace>
     <Replace Tag="LOC_GREATWORK_BHASA_1_QUOTE" Language="es_ES">
       <Text>Es como la caída de un trueno para las señoriales montañas,[NEWLINE]el águila para las aves, el león para las bestias de la naturaleza.[NEWLINE]La Muerte en forma humana.</Text>
     </Replace>
@@ -38094,7 +38378,7 @@
       <Text>Combate por la dominación espiritual en este escenario basado en la religión y ambientado en la Edad Media. Dura hasta la Revolución Industrial.</Text>
     </Replace>
     <Replace Tag="LOC_RELIGIOUS_COMBAT_MOD_DESCRIPTION" Language="es_ES">
-      <Text>Condiciones para la victoria[NEWLINE]Victoria santa: ten el máximo de seguidores religiosos en los albores de la Revolución Industrial (primera tecnología o principio industrial).</Text>
+      <Text>Condiciones para la victoria:[NEWLINE]Victoria santa: ten el máximo de seguidores religiosos en los albores de la Revolución Industrial (primera tecnología o principio industrial).</Text>
     </Replace>
     <Replace Tag="LOC_ROUTE_ANCIENT_ROAD_DESCRIPTION" Language="es_ES">
       <Text>Puede construirse a través de Rutas comerciales [ICON_TradeRoute] o por Ingenieros militares. Mejora la velocidad de Movimiento [ICON_Movement] de todas las unidades que se muevan de una casilla de Carretera a otra.</Text>
@@ -38298,7 +38582,7 @@
       <Text>Ten el principio de la Ilustración.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_BALLISTICS" Language="es_ES">
-      <Text>Ten 2 Fuertes en tu territorio.</Text>
+      <Text>Ten 2 Fuertes en tu territorio, ambos construidos por un Ingeniero militar.</Text>
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_MILITARY_SCIENCE" Language="es_ES">
       <Text>Mata a una unidad con un Caballero.</Text>
@@ -38545,6 +38829,9 @@
     </Replace>
     <Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_NANOTECHNOLOGY" Language="es_ES">
       <Text>Al tener metales variados con los que experimentar, tus científicos podrán ampliar sus límites.</Text>
+    </Replace>
+    <Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_TEAM_MEMBER_OWNS_TECH" Language="es_ES">
+      <Text>Un miembro del equipo ha compartido sus apuntes científicos sobre una tecnología recién descubierta. Su innovación mejorará nuestro progreso de forma considerable.</Text>
     </Replace>
     <Replace Tag="LOC_BELIEF_NAME" Language="es_ES">
       <Text>Creencia</Text>
@@ -39468,7 +39755,7 @@
       <Text>Fe por turno</Text>
     </Replace>
     <Replace Tag="LOC_MODS_TITLE" Language="es_ES">
-      <Text>MODS</Text>
+      <Text>CONTENIDO ADICIONAL</Text>
     </Replace>
     <Replace Tag="LOC_MODS_INSTALLED" Language="es_ES">
       <Text>INSTALADO</Text>
@@ -39485,20 +39772,29 @@
     <Replace Tag="LOC_MODS_NONE_INSTALLED" Language="es_ES">
       <Text>No hay "mods" instalados.</Text>
     </Replace>
+    <Replace Tag="LOC_MODS_NONE_SELECTED" Language="es_ES">
+      <Text>Selecciona un "mod" de la izquierda para ver los detalles.</Text>
+    </Replace>
     <Replace Tag="LOC_MODS_NO_SUBSCRIPTIONS" Language="es_ES">
       <Text>No hay suscripciones.</Text>
     </Replace>
-    <Replace Tag="LOC_MODS_MOD_TITLE" Language="es_ES">
-      <Text>Título del "mod"</Text>
+    <Replace Tag="LOC_MODS_SUBSCRIPTION_DOWNLOAD_INSTALLED" Language="es_ES">
+      <Text>Instalado</Text>
     </Replace>
-    <Replace Tag="LOC_MODS_MOD_TEASER" Language="es_ES">
-      <Text>Avance del "mod"</Text>
+    <Replace Tag="LOC_MODS_SUBSCRIPTION_DOWNLOAD_PENDING" Language="es_ES">
+      <Text>Descarga pendiente...</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_SUBSCRIPTION_SUBSCRIBED" Language="es_ES">
+      <Text>Suscrito (pero no descargado)</Text>
     </Replace>
     <Replace Tag="LOC_MODS_ENABLE_MOD" Language="es_ES">
       <Text>Activar "mod"</Text>
     </Replace>
     <Replace Tag="LOC_MODS_DOWNLOADING" Language="es_ES">
       <Text>Descargando elemento...</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_SUBSCRIPTION_NAME_PENDING" Language="es_ES">
+      <Text>Buscando nombre de la suscripción...</Text>
     </Replace>
     <Replace Tag="LOC_MODS_UPDATE" Language="es_ES">
       <Text>Actualizar</Text>
@@ -39507,7 +39803,7 @@
       <Text>Vista</Text>
     </Replace>
     <Replace Tag="LOC_MODS_GROUP_DEFAULT_NAME" Language="es_ES">
-      <Text>(Predeterminado)</Text>
+      <Text>Predeterminado</Text>
     </Replace>
     <Replace Tag="LOC_MODS_GROUP_ADD_NAME" Language="es_ES">
       <Text>+</Text>
@@ -39517,6 +39813,9 @@
     </Replace>
     <Replace Tag="LOC_MODS_GROUP_DELETE_NAME" Language="es_ES">
       <Text>-</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_GROUP_ENTER_NAME" Language="es_ES">
+      <Text>Escribe el nombre del nuevo grupo de "mods".</Text>
     </Replace>
     <Replace Tag="LOC_MODS_GROUP_DELETE_DESCRIPTION" Language="es_ES">
       <Text>Borra el grupo de "mods" seleccionado en este momento. Esto no borrará los "mods", solo el grupo. El grupo predeterminado no se puede borrar.</Text>
@@ -39534,7 +39833,7 @@
       <Text>Nombre</Text>
     </Replace>
     <Replace Tag="LOC_MODS_SORTBY_ENABLED" Language="es_ES">
-      <Text>Activado</Text>
+      <Text>Estado</Text>
     </Replace>
     <Replace Tag="LOC_MODS_FILTER" Language="es_ES">
       <Text>Filtrar</Text>
@@ -39554,6 +39853,9 @@
     <Replace Tag="LOC_MODS_ENABLE" Language="es_ES">
       <Text>Activar</Text>
     </Replace>
+    <Replace Tag="LOC_MODS_ENABLED" Language="es_ES">
+      <Text>Activado</Text>
+    </Replace>
     <Replace Tag="LOC_MODS_ENABLE_INCLUDE" Language="es_ES">
       <Text>Al activarlo, también se activará lo siguiente:</Text>
     </Replace>
@@ -39562,6 +39864,9 @@
     </Replace>
     <Replace Tag="LOC_MODS_DISABLE" Language="es_ES">
       <Text>Desactivar</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_DISABLED" Language="es_ES">
+      <Text>Desactivado</Text>
     </Replace>
     <Replace Tag="LOC_MODS_DISABLE_ERROR" Language="es_ES">
       <Text>No se puede desactivar por lo siguiente:</Text>
@@ -39583,9 +39888,6 @@
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_SPECIAL_THANKS" Language="es_ES">
       <Text>Agradecimientos especiales:</Text>
-    </Replace>
-    <Replace Tag="LOC_MODS_DETAILS_DLC" Language="es_ES">
-      <Text>Contenido complementario:</Text>
     </Replace>
     <Replace Tag="LOC_MODS_DETAILS_DLC_STORE" Language="es_ES">
       <Text>Haz clic aquí para visitar la página de la tienda.</Text>
@@ -39829,6 +40131,15 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_REFLECTION_4PASSES" Language="es_ES">
       <Text>4 pases</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_100_PERCENT" Language="es_ES">
+      <Text>1</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_150_PERCENT" Language="es_ES">
+      <Text>1.5</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_200_PERCENT" Language="es_ES">
+      <Text>2</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_VIDEO_ADAPTER_TEXT" Language="es_ES">
       <Text>Selección del procesador de gráficos:</Text>
@@ -40163,6 +40474,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_SLEEP" Language="es_ES">
       <Text>Dormir</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_ALERT" Language="es_ES">
+      <Text>Alerta</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_FOUNDCITY_HELP" Language="es_ES">
       <Text>Realiza la acción Fundar ciudad si la unidad seleccionada es un Colono.</Text>
     </Replace>
@@ -40189,6 +40503,9 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_SLEEP_HELP" Language="es_ES">
       <Text>Realiza la acción Dormir con la unidad seleccionada.</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_UNIT_ALERT_HELP" Language="es_ES">
+      <Text>Realiza la acción de Alerta con la unidad seleccionada.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_CATEGORY_GLOBAL" Language="es_ES">
       <Text>Acciones globales:</Text>
@@ -40235,6 +40552,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_PREVCITY" Language="es_ES">
       <Text>Ciudad anterior</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLERESOURCES" Language="es_ES">
+      <Text>Alternar iconos de recursos</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_ENDTURN_HELP" Language="es_ES">
       <Text>Termina el turno del jugador si es posible.</Text>
     </Replace>
@@ -40277,6 +40597,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_PREVCITY_HELP" Language="es_ES">
       <Text>Pasa a la ciudad anterior.</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_GLOBAL_TOGGLERESOURCES_HELP" Language="es_ES">
+      <Text>Cambia la visibilidad de los iconos de recursos.</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_CATEGORY_ONLINE" Language="es_ES">
       <Text>Acciones en línea:</Text>
     </Replace>
@@ -40307,6 +40630,9 @@
     <Replace Tag="LOC_OPTIONS_HOTKEY_LENSES_POLITICAL" Language="es_ES">
       <Text>Política</Text>
     </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_LENSES_TOURISM" Language="es_ES">
+      <Text>Turismo</Text>
+    </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_LENSES_RELIGION_HELP" Language="es_ES">
       <Text>Alterna entre las lentes de Religión.</Text>
     </Replace>
@@ -40324,6 +40650,9 @@
     </Replace>
     <Replace Tag="LOC_OPTIONS_HOTKEY_LENSES_POLITICAL_HELP" Language="es_ES">
       <Text>Alterna entre las lentes de Política.</Text>
+    </Replace>
+    <Replace Tag="LOC_OPTIONS_HOTKEY_LENSES_TOURISM_HELP" Language="es_ES">
+      <Text>Alterna entre las lentes de Turismo.</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_KEY_UNDERSCORE" Language="es_ES">
       <Text>_</Text>
@@ -41298,7 +41627,7 @@
       <Text>+6 a la Fuerza de combate [ICON_Strength] al defenderse del Comunismo.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_MEDIC_HEAL_DESCRIPTION" Language="es_ES">
-      <Text>Bonificación de curación para las unidades del jugador que estén a 1 casilla.</Text>
+      <Text>+20 PG de curación para las unidades del jugador que estén a 1 casilla.</Text>
     </Replace>
     <Replace Tag="LOC_ABILITY_STEALTH_DESCRIPTION" Language="es_ES">
       <Text>Se mantiene oculto de las unidades que están a más de 1 hexágono.</Text>
@@ -41490,7 +41819,7 @@
       <Text>Como rey de los vikingos, ¿podrás amasar la mayor riqueza?</Text>
     </Replace>
     <Replace Tag="LOC_MOD_VIKINGS_SCENARIO_DESCRIPTION" Language="es_ES">
-      <Text>Conviértete en el señor vikingo más poderoso de Europa y controla el continente en este escenario de 100 turnos. Juega con uno de los tres gobernantes vikingos de Dinamarca, Noruega o Suecia mientras saqueas y asaltas Europa. Invade Inglaterra por mar, conquista París, navega por Gibraltar y siembra el caos por el Mediterráneo.[NEWLINE][NEWLINE]En tu tierra, establece Rutas comerciales con las ciudades más rentables para crear un imperio mercantil. Y si eres devoto de alguna religión, propágala y genera Fe [ICON_Faith] para tu pueblo.</Text>
+      <Text>Conviértete en el señor vikingo más poderoso de Europa y controla el continente en este escenario de 60 turnos. Juega con uno de los tres gobernantes vikingos de Dinamarca, Noruega o Suecia mientras saqueas y asaltas Europa. Invade Inglaterra por mar, conquista París, navega por Gibraltar y siembra el caos por el Mediterráneo. [NEWLINE][NEWLINE]En tu tierra, establece Rutas comerciales con las ciudades más rentables para crear un imperio mercantil. Y si eres devoto de alguna religión, propágala y genera Fe [ICON_Faith] para tu pueblo.</Text>
     </Replace>
     <Replace Tag="LOC_MOD_VIKINGSLANDMARKS_TITLE" Language="es_ES">
       <Text>DLC: Contenido Vikingos</Text>
@@ -41512,6 +41841,180 @@
     </Replace>
     <Replace Tag="LOC_WORLDBUILDER_TAB_UNITS" Language="es_ES">
       <Text>Unidades</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TAB_GENERAL" Language="es_ES">
+      <Text>General</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TAB_DISTRICTS" Language="es_ES">
+      <Text>Distritos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TAB_BUILDINGS" Language="es_ES">
+      <Text>Edificios</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TAB_MOD" Language="es_ES">
+      <Text>Dependencias</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_TAB_TEXT" Language="es_ES">
+      <Text>Texto</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BUTTON_ADD_PLAYER" Language="es_ES">
+      <Text>Añadir jugador</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BUTTON_ADD_AI_PLAYER" Language="es_ES">
+      <Text>Añadir jugador de la IA</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BUTTON_REMOVE_PLAYER" Language="es_ES">
+      <Text>Eliminar jugador</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BUTTON_ADD_CITY" Language="es_ES">
+      <Text>Añadir ciudad</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_BUTTON_REMOVE_CITY" Language="es_ES">
+      <Text>Eliminar ciudad</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_PILLAGED" Language="es_ES">
+      <Text>Saqueado</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_GOLD" Language="es_ES">
+      <Text>Oro</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_FAITH" Language="es_ES">
+      <Text>Fe</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_GARRISON_DAMAGE" Language="es_ES">
+      <Text>Daño de la guarnición</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_OUTER_DAMAGE" Language="es_ES">
+      <Text>Daño exterior</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_POPULATION" Language="es_ES">
+      <Text>Población</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_TERRAIN" Language="es_ES">
+      <Text>Terreno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_FEATURE" Language="es_ES">
+      <Text>Accidente</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_RESOURCE" Language="es_ES">
+      <Text>Recurso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_RESOURCE_AMOUNT" Language="es_ES">
+      <Text>Cantidad del recurso</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IMPROVEMENT" Language="es_ES">
+      <Text>Mejora</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IMPROVEMENT_PILLAGED" Language="es_ES">
+      <Text>Mejoras saqueadas</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_ROUTE" Language="es_ES">
+      <Text>Ruta</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_ROUTE_PILLAGED" Language="es_ES">
+      <Text>Ruta saqueada</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_OWNER" Language="es_ES">
+      <Text>Propietario</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_TERRAIN" Language="es_ES">
+      <Text>Terreno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_FEATURES" Language="es_ES">
+      <Text>Accidentes</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_CONTINENT" Language="es_ES">
+      <Text>Continente</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_RIVERS" Language="es_ES">
+      <Text>Ríos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_CLIFFS" Language="es_ES">
+      <Text>Acantilados</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_RESOURCES" Language="es_ES">
+      <Text>Recursos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_CITIES" Language="es_ES">
+      <Text>Ciudades</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_DISTRICTS" Language="es_ES">
+      <Text>Distritos</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_BUILDINGS" Language="es_ES">
+      <Text>Edificios</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_UNITS" Language="es_ES">
+      <Text>Unidades</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_IMPROVEMENTS" Language="es_ES">
+      <Text>Mejoras</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_ROUTES" Language="es_ES">
+      <Text>Rutas</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_START_POSITIONS" Language="es_ES">
+      <Text>Posiciones iniciales</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_OWNER" Language="es_ES">
+      <Text>Propietario</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_PLACEMENT_MODE_SET_VISIBILITY" Language="es_ES">
+      <Text>Visibilidad del terreno</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_MAP_EDITOR_TT" Language="es_ES">
+      <Text>Editor de mapas</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_PLAYER_EDITOR_TT" Language="es_ES">
+      <Text>Editor de jugador</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_PLACEMENT_HELP" Language="es_ES">
+      <Text>Haz clic con el botón izquierdo para colocar. Haz clic con el botón derecho para eliminar.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_BUILDER_NO_PLOT_SELECTED_HELP" Language="es_ES">
+      <Text>No se ha seleccionado ninguna casilla.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_ID" Language="es_ES">
+      <Text>Identificador</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_GENERATE_NEW_ID" Language="es_ES">
+      <Text>Generar nuevo identificador...</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_WIDTH" Language="es_ES">
+      <Text>Ancho</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_HEIGHT" Language="es_ES">
+      <Text>Alto</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_RULESET" Language="es_ES">
+      <Text>Reglamento</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_MAP_SCRIPT" Language="es_ES">
+      <Text>Comandos del mapa</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD" Language="es_ES">
+      <Text>El mapa es un "mod"</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ATTRIBUTE_IS_MOD_TT" Language="es_ES">
+      <Text>Si está marcado, el mapa del Creador de mundos es un "mod" independiente y se puede usar como tipo de mapa al empezar una partida. Si no está marcado, el mapa se usa como parte de un "mod" más grande.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DEFAULT_MAP_NAME" Language="es_ES">
+      <Text>Mapa sin nombre</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DEFAULT_MAP_DESCRIPTION" Language="es_ES">
+      <Text>Mapa sin nombre del Creador de mundos.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DEFAULT_MOD_TITLE" Language="es_ES">
+      <Text>"Mod" de mapa sin nombre</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_DEFAULT_MOD_DESCRIPTION" Language="es_ES">
+      <Text>Un "mod" de mapa del Creador de mundos.</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_ADD_BUTTON" Language="es_ES">
+      <Text>Añadir</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLDBUILDER_REMOVE_BUTTON" Language="es_ES">
+      <Text>Eliminar</Text>
     </Replace>
     <Replace Tag="LOC_TECH_DAWN_OF_CIVILIZATION_NAME" Language="es_ES">
       <Text>Albores de la civilización</Text>
@@ -41945,6 +42448,9 @@
     <Replace Tag="LOC_AUTONARRATE_PLAYER_ERA_INFORMATION" Language="es_ES">
       <Text>{1_CivName:plural 2?{1:gender masculine?Los {1_CivName} han;feminine?Las {1_CivName} han;}; other?{1:gender *:la?La {1_CivName} ha;*:el?El {1_CivName} ha; other?{1_CivName} ha;};} entrado en la Era de la Información.</Text>
     </Replace>
+    <Replace Tag="LOC_CIVIC_ENVOY_AWARDED_TOOLTIP" Language="es_ES">
+      <Text>Otorga {1_NumOfEnvoys} {1_NumOfEnvoys : plural 1?Enviado; other?Enviados;} [ICON_Envoy].</Text>
+    </Replace>
     <Replace Tag="LOC_GOVERNMENT_OF" Language="es_ES">
       <Text>Gobierno {1_civ:plural 2?{1:gender masculine?de los;feminine?de las;}; other?{1:gender *:la?de la;*:el?del;other?de;};} {1_civ}</Text>
     </Replace>
@@ -41982,7 +42488,7 @@
       <Text>Ciudades estado capturadas {CurrentConquered}/{CityStatesConquered} {StatusIcon}</Text>
     </Replace>
     <Replace Tag="LOC_ARMAGEDDON_VICTORY_REQUIRES_PLAYER_HAS_MOST_WMD_DIRECT_CITY_HITS_PROGRESS" Language="es_ES">
-      <Text>Centros urbanos arrasados: {NukedCityCenters} {NukeCountStatusIcon}[NEWLINE]Cualquier Centro urbano arrasado con armas nucleares {NukeWarStatusIcon}</Text>
+      <Text>Centros urbanos arrasados: {NukedCityCenters} {NukeCountStatusIcon}[NEWLINE]Arrasado con armas nucleares {NukeWarStatusIcon}</Text>
     </Replace>
     <Replace Tag="LOC_VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS_PROGRESS" Language="es_ES">
       <Text>Tanques {NumPromotionClass} {PromotionStatusIcon}[NEWLINE]No se han atacado Centros urbanos con armas nucleares {NoNukeWarStatusIcon}.</Text>
@@ -42216,7 +42722,7 @@
       <Text>{1_name} ha rechazado tu petición de delegación.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_DECLARE_WAR_NOTIFICATION_SUMMARY_INITIAL" Language="es_ES">
-      <Text>{1_name} ha declarado la guerra a tus civilizaciones.</Text>
+      <Text>{1_name} ha declarado la guerra a tu civilizacion.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_DENOUNCE_NOTIFICATION_SUMMARY_INITIAL" Language="es_ES">
       <Text>{1_name} ha denunciado a tu civilización.</Text>
@@ -42300,7 +42806,7 @@
       <Text>Denuncia a una civilización a la que {1_Civ: plural 2?{1: gender masculine?los {1_Civ} hayan; feminine?las {1_Civ} hayan;}; other?{1: gender *:la?la {1_Civ} haya; *:el?el {1_Civ} haya; other?{1_Civ} haya;};} denunciado.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_ADVISOR_TRADE_ROUTE" Language="es_ES">
-      <Text>Establece una Ruta comercial [ICON_TradeRoute] con {1_Civ: plural 2?{1: gender masculine?los ; feminine?las ;}; other?{1: gender *:la?la ; *:el?el ; other? ;};}{1_Civ}.</Text>
+      <Text>Establece una Ruta comercial [ICON_TradeRoute] con {1_Civ: plural 2?{1: gender masculine?los ; feminine?las ;}; other?{1: gender masculine?el ; feminine?la ; other? ;};}{1_Civ}.</Text>
     </Replace>
     <Replace Tag="LOC_DIPLOMACY_ADVISOR_OPEN_BORDERS" Language="es_ES">
       <Text>Concede una Apertura de fronteras {1_Civ: plural 2?{1: gender masculine?a los; feminine?a las;}; other?{1: gender *:la?a la; *:el?al; other?a;};} {1_Civ}.</Text>
@@ -42560,6 +43066,21 @@
     <Replace Tag="LOC_DISTRICT_RESOURCE_PRODUCTION" Language="es_ES">
       <Text>+{1_num} a la Producción [ICON_Production] por {1_Num: plural 1?el recurso adyacente; other?los recursos adyacentes;}.</Text>
     </Replace>
+    <Replace Tag="LOC_DISTRICT_APPEAL_SCIENCE" Language="es_ES">
+      <Text>+{1_num} a Ciencia [ICON_Science] por el Atractivo de la casilla.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_APPEAL_CULTURE" Language="es_ES">
+      <Text>+{1_num} a Cultura [ICON_Culture] por el Atractivo de la casilla.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_APPEAL_PRODUCTION" Language="es_ES">
+      <Text>+{1_num} a la Producción [ICON_Production] por el Atractivo de la casilla.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_APPEAL_GOLD" Language="es_ES">
+      <Text>+{1_num} de Oro [ICON_Gold] por el Atractivo de la casilla.</Text>
+    </Replace>
+    <Replace Tag="LOC_DISTRICT_APPEAL_FAITH" Language="es_ES">
+      <Text>+{1_num} a Fe [ICON_Faith] por el Atractivo de la casilla.</Text>
+    </Replace>
     <Replace Tag="LOC_DISTRICT_BLOCKED_FEATURE_TECH" Language="es_ES">
       <Text>[COLOR_RED]Se necesita la tecnología {1_TechName} para eliminar {2: plural 1?{2: gender masculine?el; feminine?la;}; other?{2: gender masculine?los; other?las;};} {2_FeatureName} y poder construir aquí el distrito. [ENDCOLOR]</Text>
     </Replace>
@@ -42745,6 +43266,9 @@
     </Replace>
     <Replace Tag="LOC_LOADSAVE_CURRENT_TURN" Language="es_ES">
       <Text>TURNO [ICON_Turn] {1}</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_GENERIC_NAME" Language="es_ES">
+      <Text>Equipo {1_Number}</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_DEFAULT_GAME_NAME" Language="es_ES">
       <Text>Partida de {1_PlayerName}</Text>
@@ -42949,6 +43473,9 @@
     </Replace>
     <Replace Tag="LOC_GOSSIP_PROJECT_STARTED" Language="es_ES">
       <Text>{1_CivName:plural 2?{1:gender masculine?Los {1_CivName} han;feminine?Las {1_CivName} han;}; other?{1:gender *:la?La {1_CivName} ha;*:el?El {1_CivName} ha;other?{1_CivName} ha;};} empezado {2_ProjectType:plural 2?{2:gender masculine?los {2_ProjectType};feminine?las {2_ProjectType};}; other?{2:gender *:la?la {2_ProjectType};*:el?el {2_ProjectType};other?{2_ProjectType};};}.</Text>
+    </Replace>
+    <Replace Tag="LOC_GOSSIP_SPACE_RACE_PROJECT_COMPLETED" Language="es_ES">
+      <Text>{1_CivName:plural 2?{1:gender masculine?Los {1_CivName} han;feminine?Las {1_CivName} han;}; other?{1:gender *:la?La {1_CivName} ha;*:el?El {1_CivName} ha;other?{1_CivName} ha;};} completado el siguiente proyecto de Carrera espacial: {2_ProjectType}.</Text>
     </Replace>
     <Replace Tag="LOC_GOSSIP_START_VICTORY_STRATEGY" Language="es_ES">
       <Text>{1_CivName: plural 2?{1: gender masculine?Los {1} buscan; feminine?Las {1} buscan;}; other?{1: gender *:la?La {1} busca; *:el?El {1} busca; other?{1} busca;};} una {2_VictoryName}.</Text>
@@ -43653,7 +44180,7 @@
       <Text>Tu conocimiento en {1_techString} ha avanzado considerablemente.</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_BOOST_COMPLETE" Language="es_ES">
-      <Text>¡Se ha completado el desarrollo {1: plural 1?{1: gender masculine?del; feminine?de la;}; other?{1: gender masculine?de los; other?de las;};} {1_techString}!</Text>
+      <Text>¡Se ha completado el desarrollo del principio: {1_techString}!</Text>
     </Replace>
     <Replace Tag="LOC_CIVIC_BOOST_ADVANCED" Language="es_ES">
       <Text>Tu progreso hacia {1_techString} ha avanzado considerablemente.</Text>
@@ -44156,6 +44683,9 @@
     <Replace Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_SIMPLE" Language="es_ES">
       <Text>Estás en el {1_Place} puesto</Text>
     </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_TEAM_SIMPLE" Language="es_ES">
+      <Text>Tu equipo está en el {1_Place} puesto</Text>
+    </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_DETAILS" Language="es_ES">
       <Text>Estás en el {1_Place} puesto con {2_Details}</Text>
     </Replace>
@@ -44164,6 +44694,9 @@
     </Replace>
     <Replace Tag="LOC_WORLD_RANKINGS_OTHER_POSITION_DETAILS" Language="es_ES">
       <Text>Estás en la posición {1_Place} con {2_Details}</Text>
+    </Replace>
+    <Replace Tag="LOC_WORLD_RANKINGS_TEAM" Language="es_ES">
+      <Text>Equipo {1_TeamNumber}</Text>
     </Replace>
     <Replace Tag="LOC_RESEARCH_COMPLETE_UNLOCKED_BY_CIVIC" Language="es_ES">
       <Text>Desbloqueado por este principio ({1_Amount}):</Text>
@@ -44474,6 +45007,9 @@
     <Replace Tag="LOC_PLAYER_YIELD_GOLD_FROM_OTHER" Language="es_ES">
       <Text>{Value: number +#.#;-#.#} de otros</Text>
     </Replace>
+    <Replace Tag="LOC_PLAYER_YIELD_GOLD_FROM_NATIONAL_PARKS" Language="es_ES">
+      <Text>{Value: number +#.#;-#.#} por Parques nacionales</Text>
+    </Replace>
     <Replace Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_TRIBUTARIES" Language="es_ES">
       <Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) de ciudades-estado de las que eres suzerano</Text>
     </Replace>
@@ -44650,6 +45186,36 @@
     </Replace>
     <Replace Tag="LOC_TOURISM_LENS_INFO_TOOLTIP" Language="es_ES">
       <Text>{1_TourismInfo}[NEWLINE]Durante toda su historia: {2_LifetimeCount} de Turismo [ICON_Tourism]</Text>
+    </Replace>
+    <Replace Tag="LOC_TURNS_REMAINING_VAL" Language="es_ES">
+      <Text>{1_Turns} turnos restantes</Text>
+    </Replace>
+    <Replace Tag="LOC_TURN_REMAINING_VAL" Language="es_ES">
+      <Text>{1_Turns} turno restante</Text>
+    </Replace>
+    <Replace Tag="LOC_TURN_VAL_OF_VAL1" Language="es_ES">
+      <Text>Turno {1_Turns}/{2_MaxTurns}</Text>
+    </Replace>
+    <Replace Tag="LOC_TURN_VAL_OF_VAL2" Language="es_ES">
+      <Text>Turno {1_Turns} de {2_MaxTurns}</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_RELIGION_VICTORY_COUNTER" Language="es_ES">
+      <Text>{1_Civs}/{2_TotalCivs} civilizaciones convertidas a las religiones del equipo</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_CULTURE_VICTORY_COUNTER" Language="es_ES">
+      <Text>{1_Team} a la cabeza con {2_Tourists}/{3_TotalTourists} turistas atraídos</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_RELIGION_CONVERTED_BY_CIV" Language="es_ES">
+      <Text>Conversión realizada por {1_CivName:plural 2?{1:gender masculine?los {1_CivName};feminine?las {1_CivName};}; other?{1:gender *:la?la {1_CivName};*:el?el {1_CivName};other?{1_CivName};};}</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_RELIGION_CONVERTED_BY_PLAYER" Language="es_ES">
+      <Text>Conversión realizada por {1_SteamID}</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_CIV" Language="es_ES">
+      <Text>Captura realizada por {1_CivName:plural 2?{1:gender masculine?los {1_CivName};feminine?las {1_CivName};}; other?{1:gender *:la?la {1_CivName};*:el?el {1_CivName};other?{1_CivName};};}</Text>
+    </Replace>
+    <Replace Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER" Language="es_ES">
+      <Text>Captura realizada por {1_SteamID}</Text>
     </Replace>
     <Replace Tag="LOC_MINOR_CIV_SCIENTIFIC_TRAIT_DESCRIPTION" Language="es_ES">
       <Text>{LOC_MINOR_CIV_SMALL_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_SMALL_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_MEDIUM_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_MEDIUM_INFLUENCE_BONUS}[NEWLINE]{LOC_MINOR_CIV_LARGE_INFLUENCE_ENVOYS} {LOC_MINOR_CIV_SCIENTIFIC_TRAIT_LARGE_INFLUENCE_BONUS}</Text>
@@ -44993,6 +45559,9 @@
     <Replace Tag="LOC_NOTIFICATION_CITY_BESIEGED_BY_OTHER_PLAYER_SUMMARY" Language="es_ES">
       <Text>{1_CityName} está bajo asedio. Hasta que las unidades rivales no tengan la zona de control alrededor de todas las casillas que rodean tu ciudad, esta no se repondrá.</Text>
     </Replace>
+    <Replace Tag="LOC_NOTIFICATION_TILE_LOST_CULTURE_BOMB_SUMMARY" Language="es_ES">
+      <Text>Hemos perdido territorio por un Bombardeo cultural iniciado por {1_CivName:plural 2?{1:gender masculine?los {1_CivName};feminine?las {1_CivName};}; other?{1:gender *:la?la {1_CivName};*:el?el {1_CivName};other?{1_CivName};};}</Text>
+    </Replace>
     <Replace Tag="LOC_QUEST_TRAIN_UNIT_TYPE_INSTANCE_NAME" Language="es_ES">
       <Text>Entrenar a {1: gender masculine?un; feminine?una;} {1_UnitName}.</Text>
     </Replace>
@@ -45061,6 +45630,12 @@
     </Replace>
     <Replace Tag="LOC_UI_ENDGAME_RANKING_STATEMENT" Language="es_ES">
       <Text>Has alcanzado el nivel de {1_LeaderName}.</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_SUBSCRIPTION_DOWNLOADING" Language="es_ES">
+      <Text>Descargando... ({1 : number} de {2 : number})</Text>
+    </Replace>
+    <Replace Tag="LOC_MODS_LAST_UPDATED" Language="es_ES">
+      <Text>Última actualización: {1_Time: datetime}</Text>
     </Replace>
     <Replace Tag="LOC_OPTIONS_TOD_X_TURNS" Language="es_ES">
       <Text>Cada {1_num} turnos</Text>

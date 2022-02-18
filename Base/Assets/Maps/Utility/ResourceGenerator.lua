@@ -42,6 +42,7 @@ function ResourceGenerator.Create(args)
 		-- data
 		bCoastalBias = args.bCoastalBias or false;
 		bLandBias = args.bLandBias or false;
+		iLuxuriesPerRegion = args.LuxuriesPerRegion or 4;
 
 		resources = args.resources;
 		iResourcesInDB      = 0;
@@ -54,7 +55,6 @@ function ResourceGenerator.Create(args)
 		iLuxuryPercentage   = 20;
 		iStrategicPercentage   = 21;
 		iOccurencesPerFrequency = 0;
-		iLuxuriesPerRegion = 4;
 		eResourceType		= {},
 		eResourceClassType	= {},
 		iFrequency          = {},
@@ -63,6 +63,7 @@ function ResourceGenerator.Create(args)
 		aStrategicType		= {},
 		aOtherType		= {},
 		aStrategicCoast = {},
+		aIndex = {},
 		aaPossibleLuxLocs		= {},
 		aaPossibleLuxLocsWater = {},
 		aaPossibleStratLocs		= {},
@@ -111,7 +112,8 @@ function ResourceGenerator:__InitResourceData()
 
 
 	for row in GameInfo.Resources() do
-		self.eResourceType[self.iResourcesInDB] = row.Index;
+		self.eResourceType[self.iResourcesInDB] = row.Hash;
+		self.aIndex[self.iResourcesInDB] = row.Index;
 		self.eResourceClassType[self.iResourcesInDB] = row.ResourceClassType;
 		self.aaPossibleLocs[self.iResourcesInDB] = {};
 		self.aaPossibleLuxLocs[self.iResourcesInDB] = {};
@@ -120,7 +122,7 @@ function ResourceGenerator:__InitResourceData()
 		self.aaPossibleStratLocsWater[self.iResourcesInDB] = {};
 		self.iFrequency[self.iResourcesInDB] = row.Frequency;
 		self.aPeakEra[self.iResourcesInDB] = row.PeakEra;
-	    self.iResourcesInDB = self.iResourcesInDB + 1;
+	    	self.iResourcesInDB = self.iResourcesInDB + 1;
 	end
 end
 
@@ -134,32 +136,33 @@ function ResourceGenerator:__GetLuxuryResources()
 
 	-- Find the Luxury Resources
 	for row = 0, self.iResourcesInDB do
-		if (self.eResourceClassType[row] == "RESOURCECLASS_LUXURY" and self.iFrequency[row] > 0) then
+		local index = self.aIndex[row]
+		if (self.eResourceClassType[row] == "RESOURCECLASS_LUXURY" and self.iFrequency[index] > 0) then
 			local coast = false;
 				
 			for row2 in GameInfo.Resource_ValidTerrains() do
-				if(GameInfo.Resources[row2.ResourceType].Index == self.eResourceType[row] and row2.TerrainType=="TERRAIN_COAST") then
+				if(GameInfo.Resources[row2.ResourceType].Hash == self.eResourceType[index] and row2.TerrainType=="TERRAIN_COAST") then
 					coast = true;
 				end
 			end
 
 			if(coast == true) then	
-				table.insert(self.aLuxuryTypeCoast, self.eResourceType[row]);
+				table.insert(self.aLuxuryTypeCoast, index);
 			end
 
 			if(self.bCoastalBias == true or self.bLandBias == true) then
 				if(coast == false) then	
-					table.insert(aLandLuxury, self.eResourceType[row]);		
+					table.insert(aLandLuxury, index);		
 				end
 			else
-				table.insert(self.aLuxuryType, self.eResourceType[row]);		
+				table.insert(self.aLuxuryType, index);		
 			end
 		end
 	end
 
 	
 	local index = 1;
-	if(self.bCoastalBias == true) then
+		if(self.bCoastalBias == true) then
 		newLuxuryArray = {};
 		shuffledCoast = GetShuffledCopyOfTable(self.aLuxuryTypeCoast);
 		aLandLuxury = GetShuffledCopyOfTable(aLandLuxury);
@@ -170,10 +173,10 @@ function ResourceGenerator:__GetLuxuryResources()
 		for row = 0, self.iResourcesInDB do
 			local mod = max + 2;
 			if(row ~= 0 and ((row - math.floor(row / mod) * mod == 0) and iWaterIndex <= #self.aLuxuryTypeCoast)) then
-				table.insert(newLuxuryArray, shuffledCoast[iWaterIndex]);
+				table.insert(newLuxuryArray, shuffledCoast[self.aIndex[iWaterIndex]]);
 				iWaterIndex = iWaterIndex + 1;
 			else
-				table.insert(newLuxuryArray, aLandLuxury[iLandIndex]);
+				table.insert(newLuxuryArray, aLandLuxury[self.aIndex[iLandIndex]]);
 				iLandIndex = iLandIndex + 1;
 			end
 		end
@@ -191,10 +194,10 @@ function ResourceGenerator:__GetLuxuryResources()
 
 		for row = 0, self.iResourcesInDB do
 			if(iLandIndex <= #aLandLuxury) then
-				table.insert(newLuxuryArray, aLandLuxury[iLandIndex]);
+				table.insert(newLuxuryArray, aLandLuxury[self.aIndex[iLandIndex]]);
 				iLandIndex = iLandIndex + 1;
 			else
-				table.insert(newLuxuryArray, shuffledCoast[iWaterIndex]);
+				table.insert(newLuxuryArray, shuffledCoast[self.aIndex[iWaterIndex]]);
 				iWaterIndex = iWaterIndex + 1;
 			end
 		end
@@ -216,10 +219,9 @@ function ResourceGenerator:__GetLuxuryResources()
 		local failed = 0;
 		local iI = 1;
 		while max >= iI and failed < 2 do 
-			local eChosenLux = self.aLuxuryType[index];
-
+			local eChosenLux = self.aLuxuryType[self.aIndex[index]];
 			local isValid = true;
-
+			
 			if (isValid == true and #self.aLuxuryType > 0) then
 				table.remove(self.aLuxuryType,index);
 				if(self:__IsCoastal(eChosenLux)) then
@@ -272,10 +274,11 @@ function ResourceGenerator:__ValidLuxuryPlots(eContinent)
 				bIce = true;
 			end
 			
-			if (ResourceBuilder.CanHaveResource(pPlot, self.aLuxuryType[iI]) and bIce == false) then
+			if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[self.aLuxuryType[iI]]) and bIce == false) then
 				row = {};
 				row.MapIndex = plot;
 				row.Score = iBaseScore;
+
 				table.insert (self.aaPossibleLuxLocs[self.aLuxuryType[iI]], row);
 				bCanHaveSomeResource = true;
 			end
@@ -298,7 +301,7 @@ function ResourceGenerator:__PlaceLuxuryResources(eChosenLux, eContinent)
 	
 	plots = Map.GetContinentPlots(eContinent);
 	--print ("Occurrences per frequency: " .. tostring(self.iOccurencesPerFrequency));
-	local eResourceType = self.eResourceType[eChosenLux]
+	--print("Resource: ", eChosenLux);
 
 	local iTotalPlaced = 0;
 
@@ -321,9 +324,9 @@ function ResourceGenerator:__PlaceLuxuryResources(eChosenLux, eContinent)
 
 				-- Place at this location
 				local pPlot = Map.GetPlotByIndex(iMapIndex);
-				ResourceBuilder.SetResourceType(pPlot, eResourceType, 1);
+				ResourceBuilder.SetResourceType(pPlot, self.eResourceType[eChosenLux], 1);
 			iTotalPlaced = iTotalPlaced + 1;
---			print ("   Placed at (" .. tostring(pPlot:GetX()) .. ", " .. tostring(pPlot:GetY()) .. ") with score of " .. tostring(iScore));
+			--print ("   Placed at (" .. tostring(pPlot:GetX()) .. ", " .. tostring(pPlot:GetY()) .. ") with score of " .. tostring(iScore));
 		end
 	end
 end
@@ -360,8 +363,6 @@ end
 
 ------------------------------------------------------------------------------
 function ResourceGenerator:__PlaceWaterLuxury(eChosenLux, eContinent)
-	local eLuxuryType = self.eResourceType[eChosenLux];
-
 	-- Compute how many to place
 	local iNumToPlace = 1;
 	if(self.iOccurencesPerFrequency > 1) then
@@ -384,7 +385,7 @@ function ResourceGenerator:__PlaceWaterLuxury(eChosenLux, eContinent)
 		end
 
 		-- See if the resources can appear here
-		if (ResourceBuilder.CanHaveResource(pPlot, eChosenLux) and bIce == false) then
+		if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[eChosenLux]) and bIce == false) then
 			local iBonusAdjacent = 0;
 
 			if( self.iStandardPercentage < self.iTargetPercentage) then
@@ -406,18 +407,19 @@ function ResourceGenerator:__PlaceWaterLuxury(eChosenLux, eContinent)
 	end
 
 
+
 	-- Sort and take best score
-	table.sort (self.aaPossibleLuxLocsWater[eLuxuryType], function(a, b) return a.Score > b.Score; end);
+	table.sort (self.aaPossibleLuxLocsWater[eChosenLux], function(a, b) return a.Score > b.Score; end);
 
 	for iI = 1, iNumToPlace do
-			if (iI <= #self.aaPossibleLuxLocsWater[eLuxuryType]) then
-				local iMapIndex = self.aaPossibleLuxLocsWater[eLuxuryType][iI].MapIndex;
-				local iScore = self.aaPossibleLuxLocsWater[eLuxuryType][iI].Score;
+			if (iI <= #self.aaPossibleLuxLocsWater[eChosenLux]) then
+				local iMapIndex = self.aaPossibleLuxLocsWater[eChosenLux][iI].MapIndex;
+				local iScore = self.aaPossibleLuxLocsWater[eChosenLux][iI].Score;
 
 				-- Place at this location
 				local pPlot = Map.GetPlotByIndex(iMapIndex);
-				ResourceBuilder.SetResourceType(pPlot, eLuxuryType, 1);
---			print ("   Placed at (" .. tostring(pPlot:GetX()) .. ", " .. tostring(pPlot:GetY()) .. ") with score of " .. tostring(iScore));
+				ResourceBuilder.SetResourceType(pPlot, self.eResourceType[eChosenLux], 1);
+		--print ("   Placed at (" .. tostring(pPlot:GetX()) .. ", " .. tostring(pPlot:GetY()) .. ") with score of " .. tostring(iScore));
 		end
 	end
 end
@@ -431,7 +433,7 @@ function ResourceGenerator:__GetStrategicResources()
 	-- Find the Strategic Resources
 	for row = 0, self.iResourcesInDB do
 		if (self.eResourceClassType[row] == "RESOURCECLASS_STRATEGIC" and self.iFrequency[row] > 0) then
-				table.insert(self.aStrategicType, self.eResourceType[row]);
+				table.insert(self.aStrategicType, self.aIndex[row]);
 		end
 	end
 
@@ -487,7 +489,8 @@ function ResourceGenerator:__ValidStrategicPlots(iWeight, eContinent)
 
 		-- See which resources can appear here
 		for iI = 1, iSize do
-			if (ResourceBuilder.CanHaveResource(pPlot, self.aStrategicType[iI])) then
+			local eResourceType = self.eResourceType[self.aStrategicType[iI]]
+			if (ResourceBuilder.CanHaveResource(pPlot, eResourceType)) then
 				row = {};
 				row.MapIndex = plot;
 				row.Score = iBaseScore;
@@ -508,7 +511,8 @@ function ResourceGenerator:__ValidStrategicPlots(iWeight, eContinent)
 
 		-- See which resources can appear here
 		for iI = 1, iSize do
-			if (ResourceBuilder.CanHaveResource(pPlot, self.aStrategicType[iI])) then
+			local eResourceType = self.eResourceType[self.aStrategicType[iI]]
+			if (ResourceBuilder.CanHaveResource(pPlot, eResourceType)) then
 				row = {};
 				row.MapIndex = plot;
 				row.Score = 500;
@@ -612,8 +616,9 @@ function ResourceGenerator:__GetOtherResources()
 	self.aOtherType = {};
 	-- Find the other resources
     for row = 0, self.iResourcesInDB do
-		if (self.eResourceClassType[row] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[row] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[row] ~= "RESOURCECLASS_ARTIFACT") then
-			table.insert(self.aOtherType, self.eResourceType[row]);
+		local index  =self.aIndex[row];
+		if (self.eResourceClassType[index] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[index] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[index] ~= "RESOURCECLASS_ARTIFACT") then
+			table.insert(self.aOtherType, index);
 		end
 	end
 
@@ -633,7 +638,7 @@ function ResourceGenerator:__GetOtherResources()
 
 		-- See which resources can appear here
 		for iI = 1, iSize do
-			if (ResourceBuilder.CanHaveResource(pPlot, self.aOtherType[iI])) then
+			if (ResourceBuilder.CanHaveResource(pPlot, self.eResourceType[self.aOtherType[iI]])) then
 				row = {};
 				row.MapIndex = i;
 				row.Score = iBaseScore;
@@ -738,9 +743,11 @@ function ResourceGenerator:__RemoveOtherDuplicateResources()
 			local pPlot = Map.GetPlotByIndex(i);
 			if(pPlot:GetResourceCount() > 0) then
 				for row = 0, self.iResourcesInDB do
-					if (self.eResourceClassType[row] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[row] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[row] ~= "RESOURCECLASS_ARTIFACT") then
-						if(self.eResourceType[row]  == pPlot:GetResourceType()) then
-							local bRemove = self:__RemoveDuplicateResources(pPlot, self.eResourceType[row]);
+					local index = self.aIndex[row];
+					
+					if (self.eResourceClassType[index] ~= "RESOURCECLASS_STRATEGIC" and self.eResourceClassType[index] ~= "RESOURCECLASS_LUXURY" and self.eResourceClassType[index] ~= "RESOURCECLASS_ARTIFACT") then
+						if(self.eResourceType[index]  == pPlot:GetResourceType()) then
+							local bRemove = self:__RemoveDuplicateResources(pPlot, self.eResourceType[index]);
 							if(bRemove == true) then
 								ResourceBuilder.SetResourceType(pPlot, -1);
 							end

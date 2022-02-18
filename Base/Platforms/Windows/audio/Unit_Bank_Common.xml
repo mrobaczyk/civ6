@@ -69,6 +69,7 @@
 				<Event Id="3411238236" Name="Repair_Improvement_2D" GUID="{7505773A-4927-43B3-ACAE-88B94FA01EB5}"/>
 				<Event Id="2656127903" Name="Stop_Great_Music" GUID="{F1E5E2CE-9833-4B6C-B456-923C914B5CBB}"/>
 				<Event Id="3487452921" Name="Unit_Airlift" GUID="{2F356E70-8E50-4247-86F3-95DB1B40790A}"/>
+				<Event Id="2742238140" Name="Unit_Alert" GUID="{BD92F564-A331-4CDD-B965-0320BC3A5341}"/>
 				<Event Id="455546649" Name="Unit_Fortify" GUID="{C10F2475-9321-4D8F-90EA-410A62E634E1}"/>
 				<Event Id="311632526" Name="Unit_PlunderTrade" GUID="{CEEE5AA8-5870-4AD7-A3A2-644CF8D52A0C}"/>
 				<Event Id="4081416206" Name="Unit_Promoted" GUID="{6A030511-D9AD-4E34-BB1E-2500A0C40F22}"/>
@@ -76,11 +77,7 @@
 				<Event Id="3830928359" Name="Unit_Relocate" GUID="{9A4925A0-659D-4B01-AD6D-A41646AD10A1}"/>
 				<Event Id="937734181" Name="Unit_Selected" GUID="{C9DE6F8B-5851-413E-8523-B6158B0FE74B}"/>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="1128645" Language="SFX">
-					<ShortName>FootstepLargeMonsterToe_02.wav</ShortName>
-					<Path>SFX\FootstepLargeMonsterToe_02_E1E65BF4.wem</Path>
-				</File>
+			<ReferencedStreamedFiles>
 				<File Id="7379030" Language="SFX">
 					<ShortName>SelectSettlerModern_1.wav</ShortName>
 					<Path>SFX\SelectSettlerModern_1_E1E65BF4.wem</Path>
@@ -97,21 +94,543 @@
 					<ShortName>SelectSamurai-02.wav</ShortName>
 					<Path>SFX\SelectSamurai-02_E1E65BF4.wem</Path>
 				</File>
-				<File Id="13602297" Language="SFX">
-					<ShortName>FootstepLargeMonsterHeel_03.wav</ShortName>
-					<Path>SFX\FootstepLargeMonsterHeel_03_E1E65BF4.wem</Path>
-				</File>
 				<File Id="16140517" Language="SFX">
 					<ShortName>SelectGreatWriter_2.wav</ShortName>
 					<Path>SFX\SelectGreatWriter_2_E1E65BF4.wem</Path>
 				</File>
-				<File Id="18411153" Language="SFX">
-					<ShortName>FoleyLeatherPadHard-001.wav</ShortName>
-					<Path>SFX\FoleyLeatherPadHard-001_E1E65BF4.wem</Path>
-				</File>
 				<File Id="18964416" Language="SFX">
 					<ShortName>SelectGreatScientist_1.wav</ShortName>
 					<Path>SFX\SelectGreatScientist_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="25715726" Language="SFX">
+					<ShortName>SelectLegion_1.wav</ShortName>
+					<Path>SFX\SelectLegion_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="33862896" Language="SFX">
+					<ShortName>SelectHorseman_1.wav</ShortName>
+					<Path>SFX\SelectHorseman_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="39730722" Language="SFX">
+					<ShortName>SelectBerserker0.wav</ShortName>
+					<Path>SFX\SelectBerserker0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="48444867" Language="SFX">
+					<ShortName>SelectDestroyer_1.wav</ShortName>
+					<Path>SFX\SelectDestroyer_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="53733699" Language="SFX">
+					<ShortName>SelectSakaArcher_1.wav</ShortName>
+					<Path>SFX\SelectSakaArcher_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="60177752" Language="SFX">
+					<ShortName>SelectArchaeologist-02.wav</ShortName>
+					<Path>SFX\SelectArchaeologist-02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="68069817" Language="SFX">
+					<ShortName>SelectUnitBase-000.wav</ShortName>
+					<Path>SFX\SelectUnitBase-000_E1E65BF4_BF4BB6EC.wem</Path>
+				</File>
+				<File Id="87029697" Language="SFX">
+					<ShortName>SelectSettler_0.wav</ShortName>
+					<Path>SFX\SelectSettler_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="95426813" Language="SFX">
+					<ShortName>SelectSlinger-000.wav</ShortName>
+					<Path>SFX\SelectSlinger-000_E1E65BF4.wem</Path>
+				</File>
+				<File Id="96953325" Language="SFX">
+					<ShortName>UnitAlert_02.wav</ShortName>
+					<Path>SFX\UnitAlert_02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="101728033" Language="SFX">
+					<ShortName>SelectGreatArtist_0.wav</ShortName>
+					<Path>SFX\SelectGreatArtist_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="111298388" Language="SFX">
+					<ShortName>SelectInquisitor_0.wav</ShortName>
+					<Path>SFX\SelectInquisitor_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="133758432" Language="SFX">
+					<ShortName>SelectRanger_0.wav</ShortName>
+					<Path>SFX\SelectRanger_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="136132561" Language="SFX">
+					<ShortName>SelectApostle_1.wav</ShortName>
+					<Path>SFX\SelectApostle_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="148216930" Language="SFX">
+					<ShortName>SelectSamurai-01.wav</ShortName>
+					<Path>SFX\SelectSamurai-01_E1E65BF4.wem</Path>
+				</File>
+				<File Id="149504263" Language="SFX">
+					<ShortName>BiplaneSelect-01.wav</ShortName>
+					<Path>SFX\BiplaneSelect-01_E1E65BF4.wem</Path>
+				</File>
+				<File Id="173637490" Language="SFX">
+					<ShortName>SelectWarrior-001.wav</ShortName>
+					<Path>SFX\SelectWarrior-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="203127915" Language="SFX">
+					<ShortName>SelectSwordsman-001.wav</ShortName>
+					<Path>SFX\SelectSwordsman-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="226421764" Language="SFX">
+					<ShortName>Select_Nuclear_Submarine_0.wav</ShortName>
+					<Path>SFX\Select_Nuclear_Submarine_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="227230782" Language="SFX">
+					<ShortName>SelectSettlerModern_0.wav</ShortName>
+					<Path>SFX\SelectSettlerModern_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="232943153" Language="SFX">
+					<ShortName>SelectUnitBase-001.wav</ShortName>
+					<Path>SFX\SelectUnitBase-001_E1E65BF4_BF4BB6EC.wem</Path>
+				</File>
+				<File Id="243236316" Language="SFX">
+					<ShortName>SelectRoughRider_0.wav</ShortName>
+					<Path>SFX\SelectRoughRider_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="253948621" Language="SFX">
+					<ShortName>SelectCrouchingTiger_0.wav</ShortName>
+					<Path>SFX\SelectCrouchingTiger_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="256404603" Language="SFX">
+					<ShortName>SelectMissionary_1.wav</ShortName>
+					<Path>SFX\SelectMissionary_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="261888256" Language="SFX">
+					<ShortName>SelectGreatMusician_0.wav</ShortName>
+					<Path>SFX\SelectGreatMusician_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="273919440" Language="SFX">
+					<ShortName>SelectInfantry-02.wav</ShortName>
+					<Path>SFX\SelectInfantry-02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="293921351" Language="SFX">
+					<ShortName>SelectConquistador-03.wav</ShortName>
+					<Path>SFX\SelectConquistador-03_E1E65BF4.wem</Path>
+				</File>
+				<File Id="306051810" Language="SFX">
+					<ShortName>SelectMachineGun_1.wav</ShortName>
+					<Path>SFX\SelectMachineGun_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="334231626" Language="SFX">
+					<ShortName>SelectTraderLandAncient_1.wav</ShortName>
+					<Path>SFX\SelectTraderLandAncient_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="339170284" Language="SFX">
+					<ShortName>SelectRedcoat_1.wav</ShortName>
+					<Path>SFX\SelectRedcoat_1_C93AF13F.wem</Path>
+				</File>
+				<File Id="353287183" Language="SFX">
+					<ShortName>SelectSwordsman-000.wav</ShortName>
+					<Path>SFX\SelectSwordsman-000_E1E65BF4.wem</Path>
+				</File>
+				<File Id="359969681" Language="SFX">
+					<ShortName>SelectSubmarine_1.wav</ShortName>
+					<Path>SFX\SelectSubmarine_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="373548454" Language="SFX">
+					<ShortName>SelectBattleship0.wav</ShortName>
+					<Path>SFX\SelectBattleship0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="374061875" Language="SFX">
+					<ShortName>SelectMachineGun.wav</ShortName>
+					<Path>SFX\SelectMachineGun_E1E65BF4.wem</Path>
+				</File>
+				<File Id="379325946" Language="SFX">
+					<ShortName>SelectLegion.wav</ShortName>
+					<Path>SFX\SelectLegion_E1E65BF4.wem</Path>
+				</File>
+				<File Id="388410897" Language="SFX">
+					<ShortName>SelectIronclad_1.wav</ShortName>
+					<Path>SFX\SelectIronclad_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="400443970" Language="SFX">
+					<ShortName>SelectGreatArtist_1.wav</ShortName>
+					<Path>SFX\SelectGreatArtist_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="405222137" Language="SFX">
+					<ShortName>SelectNaturalist-02.wav</ShortName>
+					<Path>SFX\SelectNaturalist-02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="410037748" Language="SFX">
+					<ShortName>SelectCombatEngineer-01.wav</ShortName>
+					<Path>SFX\SelectCombatEngineer-01_E1E65BF4.wem</Path>
+				</File>
+				<File Id="412210854" Language="SFX">
+					<ShortName>SelectGreatWriter_0.wav</ShortName>
+					<Path>SFX\SelectGreatWriter_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="420615542" Language="SFX">
+					<ShortName>SelectQuadrireme_1.wav</ShortName>
+					<Path>SFX\SelectQuadrireme_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="449041083" Language="SFX">
+					<ShortName>SelectSiegeTower_1.wav</ShortName>
+					<Path>SFX\SelectSiegeTower_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="451073446" Language="SFX">
+					<ShortName>SelectKnight_0.wav</ShortName>
+					<Path>SFX\SelectKnight_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="451619839" Language="SFX">
+					<ShortName>SelectGreatGeneralModern_0.wav</ShortName>
+					<Path>SFX\SelectGreatGeneralModern_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="452106682" Language="SFX">
+					<ShortName>SelectMissionary_0.wav</ShortName>
+					<Path>SFX\SelectMissionary_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="460263914" Language="SFX">
+					<ShortName>SelectSpy_1.wav</ShortName>
+					<Path>SFX\SelectSpy_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="462998241" Language="SFX">
+					<ShortName>SelectHoplite1.wav</ShortName>
+					<Path>SFX\SelectHoplite1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="478062031" Language="SFX">
+					<ShortName>SelectSakaArcher_0.wav</ShortName>
+					<Path>SFX\SelectSakaArcher_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="489515154" Language="SFX">
+					<ShortName>SelectGreatScientist_0.wav</ShortName>
+					<Path>SFX\SelectGreatScientist_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="505811059" Language="SFX">
+					<ShortName>SelectHoplite0.wav</ShortName>
+					<Path>SFX\SelectHoplite0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="515854407" Language="SFX">
+					<ShortName>SelectGreatMerchant_0.wav</ShortName>
+					<Path>SFX\SelectGreatMerchant_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="528081695" Language="SFX">
+					<ShortName>SelectFieldCannon_0.wav</ShortName>
+					<Path>SFX\SelectFieldCannon_0_6D4008ED.wem</Path>
+				</File>
+				<File Id="529745489" Language="SFX">
+					<ShortName>SelectRedcoat_0.wav</ShortName>
+					<Path>SFX\SelectRedcoat_0_E0CB9D99.wem</Path>
+				</File>
+				<File Id="530240292" Language="SFX">
+					<ShortName>SelectConquistador-02.wav</ShortName>
+					<Path>SFX\SelectConquistador-02_F1C23009.wem</Path>
+				</File>
+				<File Id="538937167" Language="SFX">
+					<ShortName>SelectSiegeTower_0.wav</ShortName>
+					<Path>SFX\SelectSiegeTower_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="553518074" Language="SFX">
+					<ShortName>SelectInquisitor_1.wav</ShortName>
+					<Path>SFX\SelectInquisitor_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="558619584" Language="SFX">
+					<ShortName>SelectMaryannu_1.wav</ShortName>
+					<Path>SFX\SelectMaryannu_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="559729505" Language="SFX">
+					<ShortName>SelectGreatEngineer_0.wav</ShortName>
+					<Path>SFX\SelectGreatEngineer_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="567278294" Language="SFX">
+					<ShortName>SelectArcher-02.wav</ShortName>
+					<Path>SFX\SelectArcher-02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="573918929" Language="SFX">
+					<ShortName>SelectCrouchingTiger_0.wav</ShortName>
+					<Path>SFX\SelectCrouchingTiger_0_88DE6716.wem</Path>
+				</File>
+				<File Id="576192109" Language="SFX">
+					<ShortName>SelectGreatMusician_1.wav</ShortName>
+					<Path>SFX\SelectGreatMusician_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="595131709" Language="SFX">
+					<ShortName>SelectCaravel_1.wav</ShortName>
+					<Path>SFX\SelectCaravel_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="595801614" Language="SFX">
+					<ShortName>SelectSpy_0.wav</ShortName>
+					<Path>SFX\SelectSpy_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="597536596" Language="SFX">
+					<ShortName>SelectGreatGeneralClassical_0.wav</ShortName>
+					<Path>SFX\SelectGreatGeneralClassical_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="607586671" Language="SFX">
+					<ShortName>SelectFieldCannon_1.wav</ShortName>
+					<Path>SFX\SelectFieldCannon_1_5231F3FA.wem</Path>
+				</File>
+				<File Id="620034915" Language="SFX">
+					<ShortName>Select_War_Cart_1.wav</ShortName>
+					<Path>SFX\Select_War_Cart_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="624387814" Language="SFX">
+					<ShortName>SelectGreatAdmiral_1.wav</ShortName>
+					<Path>SFX\SelectGreatAdmiral_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="632997838" Language="SFX">
+					<ShortName>SelectGreatGeneralClassical_1.wav</ShortName>
+					<Path>SFX\SelectGreatGeneralClassical_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="640808490" Language="SFX">
+					<ShortName>SelectGreatGeneralModern_1.wav</ShortName>
+					<Path>SFX\SelectGreatGeneralModern_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="657897890" Language="SFX">
+					<ShortName>SelectRanger_1.wav</ShortName>
+					<Path>SFX\SelectRanger_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="663598777" Language="SFX">
+					<ShortName>SelectGreatWriter_1.wav</ShortName>
+					<Path>SFX\SelectGreatWriter_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="668777001" Language="SFX">
+					<ShortName>SelectScout-001.wav</ShortName>
+					<Path>SFX\SelectScout-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="677167270" Language="SFX">
+					<ShortName>SelectMechInf-000.wav</ShortName>
+					<Path>SFX\SelectMechInf-000_E1E65BF4.wem</Path>
+				</File>
+				<File Id="679080815" Language="SFX">
+					<ShortName>SelectInfantry-01.wav</ShortName>
+					<Path>SFX\SelectInfantry-01_E1E65BF4.wem</Path>
+				</File>
+				<File Id="685718648" Language="SFX">
+					<ShortName>SelectFrigate_1.wav</ShortName>
+					<Path>SFX\SelectFrigate_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="694011413" Language="SFX">
+					<ShortName>SelectSettler_1.wav</ShortName>
+					<Path>SFX\SelectSettler_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="695526554" Language="SFX">
+					<ShortName>SelectMusketman_1.wav</ShortName>
+					<Path>SFX\SelectMusketman_1_EAE67243.wem</Path>
+				</File>
+				<File Id="695661147" Language="SFX">
+					<ShortName>SelectCaravel_0.wav</ShortName>
+					<Path>SFX\SelectCaravel_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="695713103" Language="SFX">
+					<ShortName>SelectBombard_0.wav</ShortName>
+					<Path>SFX\SelectBombard_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="699366018" Language="SFX">
+					<ShortName>SelectTraderLandAncient.wav</ShortName>
+					<Path>SFX\SelectTraderLandAncient_E1E65BF4.wem</Path>
+				</File>
+				<File Id="712141025" Language="SFX">
+					<ShortName>SelectPrivateer_1.wav</ShortName>
+					<Path>SFX\SelectPrivateer_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="718290508" Language="SFX">
+					<ShortName>SelectArtillery_1.wav</ShortName>
+					<Path>SFX\SelectArtillery_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="720679563" Language="SFX">
+					<ShortName>SelectSlinger-001.wav</ShortName>
+					<Path>SFX\SelectSlinger-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="725539336" Language="SFX">
+					<ShortName>SelectArtillery_0.wav</ShortName>
+					<Path>SFX\SelectArtillery_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="734821839" Language="SFX">
+					<ShortName>SelectArchaeologist-01.wav</ShortName>
+					<Path>SFX\SelectArchaeologist-01_E1E65BF4.wem</Path>
+				</File>
+				<File Id="741353874" Language="SFX">
+					<ShortName>SelectMechInf-001.wav</ShortName>
+					<Path>SFX\SelectMechInf-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="742520010" Language="SFX">
+					<ShortName>SelectMissileCuiser_0.wav</ShortName>
+					<Path>SFX\SelectMissileCuiser_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="753888672" Language="SFX">
+					<ShortName>SelectSpearman.wav</ShortName>
+					<Path>SFX\SelectSpearman_E1E65BF4.wem</Path>
+				</File>
+				<File Id="758180012" Language="SFX">
+					<ShortName>SelectRoughRider_1.wav</ShortName>
+					<Path>SFX\SelectRoughRider_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="762483573" Language="SFX">
+					<ShortName>Catapult_select_03.wav</ShortName>
+					<Path>SFX\Catapult_select_03_E1E65BF4.wem</Path>
+				</File>
+				<File Id="762648484" Language="SFX">
+					<ShortName>SelectIronclad_0.wav</ShortName>
+					<Path>SFX\SelectIronclad_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="765889137" Language="SFX">
+					<ShortName>SelectCrossbowman-001.wav</ShortName>
+					<Path>SFX\SelectCrossbowman-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="782052779" Language="SFX">
+					<ShortName>SelectMaryannu_0.wav</ShortName>
+					<Path>SFX\SelectMaryannu_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="786598771" Language="SFX">
+					<ShortName>SelectKnight_1.wav</ShortName>
+					<Path>SFX\SelectKnight_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="796455083" Language="SFX">
+					<ShortName>SelectFrigate_0.wav</ShortName>
+					<Path>SFX\SelectFrigate_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="805599782" Language="SFX">
+					<ShortName>SelectPikemen.wav</ShortName>
+					<Path>SFX\SelectPikemen_E1E65BF4.wem</Path>
+				</File>
+				<File Id="819335854" Language="SFX">
+					<ShortName>SelectCavalry_1.wav</ShortName>
+					<Path>SFX\SelectCavalry_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="842030242" Language="SFX">
+					<ShortName>SelectBuilder-000.wav</ShortName>
+					<Path>SFX\SelectBuilder-000_E1E65BF4.wem</Path>
+				</File>
+				<File Id="864737310" Language="SFX">
+					<ShortName>SelectPrivateer_0.wav</ShortName>
+					<Path>SFX\SelectPrivateer_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="881539141" Language="SFX">
+					<ShortName>SelectNaturalist-01.wav</ShortName>
+					<Path>SFX\SelectNaturalist-01_E1E65BF4.wem</Path>
+				</File>
+				<File Id="886912146" Language="SFX">
+					<ShortName>SelectSpearman-001.wav</ShortName>
+					<Path>SFX\SelectSpearman-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="888488988" Language="SFX">
+					<ShortName>SelectConquistador-01.wav</ShortName>
+					<Path>SFX\SelectConquistador-01_17756B9A.wem</Path>
+				</File>
+				<File Id="913427773" Language="SFX">
+					<ShortName>SelectArcher_0.wav</ShortName>
+					<Path>SFX\SelectArcher_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="916533377" Language="SFX">
+					<ShortName>SelectSubmarine_0.wav</ShortName>
+					<Path>SFX\SelectSubmarine_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="920162044" Language="SFX">
+					<ShortName>SelectBombard_1.wav</ShortName>
+					<Path>SFX\SelectBombard_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="935426616" Language="SFX">
+					<ShortName>SelectBerserker1.wav</ShortName>
+					<Path>SFX\SelectBerserker1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="937436061" Language="SFX">
+					<ShortName>Select_Sweetener_GreatPerson.wav</ShortName>
+					<Path>SFX\Select_Sweetener_GreatPerson_E1E65BF4.wem</Path>
+				</File>
+				<File Id="953334055" Language="SFX">
+					<ShortName>BiplaneSelect-02.wav</ShortName>
+					<Path>SFX\BiplaneSelect-02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="962382026" Language="SFX">
+					<ShortName>SelectCrossbowman.wav</ShortName>
+					<Path>SFX\SelectCrossbowman_E1E65BF4.wem</Path>
+				</File>
+				<File Id="971634884" Language="SFX">
+					<ShortName>SelectGreatMerchant_1.wav</ShortName>
+					<Path>SFX\SelectGreatMerchant_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="982403894" Language="SFX">
+					<ShortName>SelectPikemen_1.wav</ShortName>
+					<Path>SFX\SelectPikemen_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="982470849" Language="SFX">
+					<ShortName>SelectBuilder-001.wav</ShortName>
+					<Path>SFX\SelectBuilder-001_E1E65BF4.wem</Path>
+				</File>
+				<File Id="994452469" Language="SFX">
+					<ShortName>SelectApostle_0.wav</ShortName>
+					<Path>SFX\SelectApostle_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="994817264" Language="SFX">
+					<ShortName>SelectWarrior-000.wav</ShortName>
+					<Path>SFX\SelectWarrior-000_E1E65BF4.wem</Path>
+				</File>
+				<File Id="998755576" Language="SFX">
+					<ShortName>SelectCombatEngineer-02.wav</ShortName>
+					<Path>SFX\SelectCombatEngineer-02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1002812876" Language="SFX">
+					<ShortName>Select_War_Cart_0.wav</ShortName>
+					<Path>SFX\Select_War_Cart_0_7367125E.wem</Path>
+				</File>
+				<File Id="1005620898" Language="SFX">
+					<ShortName>SelectDestroyer_0.wav</ShortName>
+					<Path>SFX\SelectDestroyer_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1019124166" Language="SFX">
+					<ShortName>Select_Nuclear_Submarine_1.wav</ShortName>
+					<Path>SFX\Select_Nuclear_Submarine_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1023379001" Language="SFX">
+					<ShortName>UnitAlert_01.wav</ShortName>
+					<Path>SFX\UnitAlert_01_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1025011364" Language="SFX">
+					<ShortName>SelectEagleWarrior_0.wav</ShortName>
+					<Path>SFX\SelectEagleWarrior_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1027566252" Language="SFX">
+					<ShortName>SelectEagleWarrior_1.wav</ShortName>
+					<Path>SFX\SelectEagleWarrior_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1035803976" Language="SFX">
+					<ShortName>SelectQuadrireme_0.wav</ShortName>
+					<Path>SFX\SelectQuadrireme_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1039660938" Language="SFX">
+					<ShortName>SelectScout-000.wav</ShortName>
+					<Path>SFX\SelectScout-000_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1042861882" Language="SFX">
+					<ShortName>SelectHorseman_0.wav</ShortName>
+					<Path>SFX\SelectHorseman_0_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1046415433" Language="SFX">
+					<ShortName>SelectCrouchingTiger_1.wav</ShortName>
+					<Path>SFX\SelectCrouchingTiger_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1061966735" Language="SFX">
+					<ShortName>SelectMusketman_0.wav</ShortName>
+					<Path>SFX\SelectMusketman_0_607AF08E.wem</Path>
+				</File>
+				<File Id="1062138996" Language="SFX">
+					<ShortName>SelectBattleship1.wav</ShortName>
+					<Path>SFX\SelectBattleship1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1065536451" Language="SFX">
+					<ShortName>SelectGreatEngineer_1.wav</ShortName>
+					<Path>SFX\SelectGreatEngineer_1_E1E65BF4.wem</Path>
+				</File>
+				<File Id="1070171510" Language="SFX">
+					<ShortName>SelectCavalry_0.wav</ShortName>
+					<Path>SFX\SelectCavalry_0_E1E65BF4.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="1128645" Language="SFX">
+					<ShortName>FootstepLargeMonsterToe_02.wav</ShortName>
+					<Path>SFX\FootstepLargeMonsterToe_02_E1E65BF4.wem</Path>
+				</File>
+				<File Id="13602297" Language="SFX">
+					<ShortName>FootstepLargeMonsterHeel_03.wav</ShortName>
+					<Path>SFX\FootstepLargeMonsterHeel_03_E1E65BF4.wem</Path>
+				</File>
+				<File Id="18411153" Language="SFX">
+					<ShortName>FoleyLeatherPadHard-001.wav</ShortName>
+					<Path>SFX\FoleyLeatherPadHard-001_E1E65BF4.wem</Path>
 				</File>
 				<File Id="20338857" Language="SFX">
 					<ShortName>Select_NgaoMbebe-01.wav</ShortName>
@@ -121,10 +640,6 @@
 					<ShortName>GalleyRow-04.wav</ShortName>
 					<Path>SFX\GalleyRow-04_E1E65BF4.wem</Path>
 				</File>
-				<File Id="25715726" Language="SFX">
-					<ShortName>SelectLegion_1.wav</ShortName>
-					<Path>SFX\SelectLegion_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="26164595" Language="SFX">
 					<ShortName>FootstepLargeMonsterToe_04.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterToe_04_E1E65BF4.wem</Path>
@@ -133,10 +648,6 @@
 					<ShortName>FootstepLargeMonsterToe_13.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterToe_13_E1E65BF4.wem</Path>
 				</File>
-				<File Id="33862896" Language="SFX">
-					<ShortName>SelectHorseman_1.wav</ShortName>
-					<Path>SFX\SelectHorseman_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="38336882" Language="SFX">
 					<ShortName>GMLeontovichPrelude.wav</ShortName>
 					<Path>SFX\GMLeontovichPrelude_E1E65BF4.wem</Path>
@@ -144,10 +655,6 @@
 				<File Id="38836537" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Debris-21.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Debris-21_E1E65BF4.wem</Path>
-				</File>
-				<File Id="39730722" Language="SFX">
-					<ShortName>SelectBerserker0.wav</ShortName>
-					<Path>SFX\SelectBerserker0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="42163649" Language="SFX">
 					<ShortName>GMLiliuokalaniPrayer.wav</ShortName>
@@ -169,33 +676,17 @@
 					<ShortName>FootstepLargeMonsterToe_11.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterToe_11_E1E65BF4.wem</Path>
 				</File>
-				<File Id="48444867" Language="SFX">
-					<ShortName>SelectDestroyer_1.wav</ShortName>
-					<Path>SFX\SelectDestroyer_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="49177778" Language="SFX">
 					<ShortName>Foley_Horse_Bridle_4.wav</ShortName>
 					<Path>SFX\Foley_Horse_Bridle_4_E1E65BF4.wem</Path>
-				</File>
-				<File Id="53733699" Language="SFX">
-					<ShortName>SelectSakaArcher_1.wav</ShortName>
-					<Path>SFX\SelectSakaArcher_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="54657475" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Debris-13.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Debris-13_E1E65BF4.wem</Path>
 				</File>
-				<File Id="60177752" Language="SFX">
-					<ShortName>SelectArchaeologist-02.wav</ShortName>
-					<Path>SFX\SelectArchaeologist-02_E1E65BF4.wem</Path>
-				</File>
 				<File Id="63019167" Language="SFX">
 					<ShortName>InterfaceClick.wav</ShortName>
 					<Path>SFX\InterfaceClick_B2DDA1A7.wem</Path>
-				</File>
-				<File Id="68069817" Language="SFX">
-					<ShortName>SelectUnitBase-000.wav</ShortName>
-					<Path>SFX\SelectUnitBase-000_E1E65BF4_BF4BB6EC.wem</Path>
 				</File>
 				<File Id="71088645" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Impact-27.wav</ShortName>
@@ -205,14 +696,6 @@
 					<ShortName>BuildImprovement-000.wav</ShortName>
 					<Path>SFX\BuildImprovement-000_E1E65BF4.wem</Path>
 				</File>
-				<File Id="87029697" Language="SFX">
-					<ShortName>SelectSettler_0.wav</ShortName>
-					<Path>SFX\SelectSettler_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="95426813" Language="SFX">
-					<ShortName>SelectSlinger-000.wav</ShortName>
-					<Path>SFX\SelectSlinger-000_E1E65BF4.wem</Path>
-				</File>
 				<File Id="100052269" Language="SFX">
 					<ShortName>PropBomberBombWhistle_09.wav</ShortName>
 					<Path>SFX\PropBomberBombWhistle_09_4BB6851E.wem</Path>
@@ -220,14 +703,6 @@
 				<File Id="101030872" Language="SFX">
 					<ShortName>GMVivaldiWinter.wav</ShortName>
 					<Path>SFX\GMVivaldiWinter_E1E65BF4.wem</Path>
-				</File>
-				<File Id="101728033" Language="SFX">
-					<ShortName>SelectGreatArtist_0.wav</ShortName>
-					<Path>SFX\SelectGreatArtist_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="111298388" Language="SFX">
-					<ShortName>SelectInquisitor_0.wav</ShortName>
-					<Path>SFX\SelectInquisitor_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="114425856" Language="SFX">
 					<ShortName>GMClaraSchumannPianoSonata.wav</ShortName>
@@ -241,14 +716,6 @@
 					<ShortName>GMRosasValsCarmen.wav</ShortName>
 					<Path>SFX\GMRosasValsCarmen_E1E65BF4.wem</Path>
 				</File>
-				<File Id="133758432" Language="SFX">
-					<ShortName>SelectRanger_0.wav</ShortName>
-					<Path>SFX\SelectRanger_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="136132561" Language="SFX">
-					<ShortName>SelectApostle_1.wav</ShortName>
-					<Path>SFX\SelectApostle_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="139989021" Language="SFX">
 					<ShortName>FootstepLargeMonsterHeel_12.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_12_E1E65BF4.wem</Path>
@@ -256,14 +723,6 @@
 				<File Id="143886301" Language="SFX">
 					<ShortName>AntiTank_Select_02.wav</ShortName>
 					<Path>SFX\AntiTank_Select_02_E1E65BF4.wem</Path>
-				</File>
-				<File Id="148216930" Language="SFX">
-					<ShortName>SelectSamurai-01.wav</ShortName>
-					<Path>SFX\SelectSamurai-01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="149504263" Language="SFX">
-					<ShortName>BiplaneSelect-01.wav</ShortName>
-					<Path>SFX\BiplaneSelect-01_E1E65BF4.wem</Path>
 				</File>
 				<File Id="155664272" Language="SFX">
 					<ShortName>FootstepLargeMonsterHeel_08.wav</ShortName>
@@ -280,10 +739,6 @@
 				<File Id="168112991" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Debris-16.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Debris-16_E1E65BF4.wem</Path>
-				</File>
-				<File Id="173637490" Language="SFX">
-					<ShortName>SelectWarrior-001.wav</ShortName>
-					<Path>SFX\SelectWarrior-001_E1E65BF4.wem</Path>
 				</File>
 				<File Id="173714134" Language="SFX">
 					<ShortName>SelectDiver-01.wav</ShortName>
@@ -309,10 +764,6 @@
 					<ShortName>GMRosasSobreLasOlas.wav</ShortName>
 					<Path>SFX\GMRosasSobreLasOlas_E1E65BF4.wem</Path>
 				</File>
-				<File Id="203127915" Language="SFX">
-					<ShortName>SelectSwordsman-001.wav</ShortName>
-					<Path>SFX\SelectSwordsman-001_E1E65BF4.wem</Path>
-				</File>
 				<File Id="210085632" Language="SFX">
 					<ShortName>PropBomberBombWhistle_11.wav</ShortName>
 					<Path>SFX\PropBomberBombWhistle_11_D2ED03FF.wem</Path>
@@ -325,21 +776,9 @@
 					<ShortName>VFX_Cannon_Metal_Impact-13.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Impact-13_E1E65BF4.wem</Path>
 				</File>
-				<File Id="226421764" Language="SFX">
-					<ShortName>Select_Nuclear_Submarine_0.wav</ShortName>
-					<Path>SFX\Select_Nuclear_Submarine_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="227230782" Language="SFX">
-					<ShortName>SelectSettlerModern_0.wav</ShortName>
-					<Path>SFX\SelectSettlerModern_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="232146503" Language="SFX">
 					<ShortName>SELECT_04.wav</ShortName>
 					<Path>SFX\SELECT_04_E1E65BF4.wem</Path>
-				</File>
-				<File Id="232943153" Language="SFX">
-					<ShortName>SelectUnitBase-001.wav</ShortName>
-					<Path>SFX\SelectUnitBase-001_E1E65BF4_BF4BB6EC.wem</Path>
 				</File>
 				<File Id="235466106" Language="SFX">
 					<ShortName>FoleyLeatherPadHard-002.wav</ShortName>
@@ -353,29 +792,13 @@
 					<ShortName>AA_Gun_Select_01.wav</ShortName>
 					<Path>SFX\AA_Gun_Select_01_E1E65BF4.wem</Path>
 				</File>
-				<File Id="243236316" Language="SFX">
-					<ShortName>SelectRoughRider_0.wav</ShortName>
-					<Path>SFX\SelectRoughRider_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="253557052" Language="SFX">
 					<ShortName>GMBachToccataAndFugue.wav</ShortName>
 					<Path>SFX\GMBachToccataAndFugue_E1E65BF4.wem</Path>
 				</File>
-				<File Id="253948621" Language="SFX">
-					<ShortName>SelectCrouchingTiger_0.wav</ShortName>
-					<Path>SFX\SelectCrouchingTiger_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="256404603" Language="SFX">
-					<ShortName>SelectMissionary_1.wav</ShortName>
-					<Path>SFX\SelectMissionary_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="261033379" Language="SFX">
 					<ShortName>GMChopinValseBrillante.wav</ShortName>
 					<Path>SFX\GMChopinValseBrillante_E1E65BF4.wem</Path>
-				</File>
-				<File Id="261888256" Language="SFX">
-					<ShortName>SelectGreatMusician_0.wav</ShortName>
-					<Path>SFX\SelectGreatMusician_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="263696779" Language="SFX">
 					<ShortName>SelectDiver-02.wav</ShortName>
@@ -397,10 +820,6 @@
 					<ShortName>FoleyBagsAncient4.wav</ShortName>
 					<Path>SFX\FoleyBagsAncient4_E1E65BF4.wem</Path>
 				</File>
-				<File Id="273919440" Language="SFX">
-					<ShortName>SelectInfantry-02.wav</ShortName>
-					<Path>SFX\SelectInfantry-02_E1E65BF4.wem</Path>
-				</File>
 				<File Id="281527607" Language="SFX">
 					<ShortName>FootstepLargeMonsterHeel_02.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_02_E1E65BF4.wem</Path>
@@ -417,10 +836,6 @@
 					<ShortName>HelicopterSelect-01.wav</ShortName>
 					<Path>SFX\HelicopterSelect-01_E1E65BF4.wem</Path>
 				</File>
-				<File Id="293921351" Language="SFX">
-					<ShortName>SelectConquistador-03.wav</ShortName>
-					<Path>SFX\SelectConquistador-03_E1E65BF4.wem</Path>
-				</File>
 				<File Id="297091315" Language="SFX">
 					<ShortName>FootstepLargeMonsterToe_05.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterToe_05_E1E65BF4.wem</Path>
@@ -436,10 +851,6 @@
 				<File Id="305921299" Language="SFX">
 					<ShortName>AntiTank_Select_01.wav</ShortName>
 					<Path>SFX\AntiTank_Select_01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="306051810" Language="SFX">
-					<ShortName>SelectMachineGun_1.wav</ShortName>
-					<Path>SFX\SelectMachineGun_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="307903214" Language="SFX">
 					<ShortName>PropBomberFlyby-06.wav</ShortName>
@@ -473,17 +884,9 @@
 					<ShortName>GMClaraSchumannPreludeAndFugue.wav</ShortName>
 					<Path>SFX\GMClaraSchumannPreludeAndFugue_E1E65BF4.wem</Path>
 				</File>
-				<File Id="334231626" Language="SFX">
-					<ShortName>SelectTraderLandAncient_1.wav</ShortName>
-					<Path>SFX\SelectTraderLandAncient_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="334615080" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Impact-01.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Impact-01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="339170284" Language="SFX">
-					<ShortName>SelectRedcoat_1.wav</ShortName>
-					<Path>SFX\SelectRedcoat_1_C93AF13F.wem</Path>
 				</File>
 				<File Id="341325275" Language="SFX">
 					<ShortName>GMBeethovenSonata8.wav</ShortName>
@@ -505,10 +908,6 @@
 					<ShortName>GalleyRowNoYell-06.wav</ShortName>
 					<Path>SFX\GalleyRowNoYell-06_E1E65BF4.wem</Path>
 				</File>
-				<File Id="353287183" Language="SFX">
-					<ShortName>SelectSwordsman-000.wav</ShortName>
-					<Path>SFX\SelectSwordsman-000_E1E65BF4.wem</Path>
-				</File>
 				<File Id="356070664" Language="SFX">
 					<ShortName>GMGauharJaanRagaBhairavi.wav</ShortName>
 					<Path>SFX\GMGauharJaanRagaBhairavi_E1E65BF4.wem</Path>
@@ -520,10 +919,6 @@
 				<File Id="359536846" Language="SFX">
 					<ShortName>Builder_Repair_Swish_0.wav</ShortName>
 					<Path>SFX\Builder_Repair_Swish_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="359969681" Language="SFX">
-					<ShortName>SelectSubmarine_1.wav</ShortName>
-					<Path>SFX\SelectSubmarine_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="360878002" Language="SFX">
 					<ShortName>PropBomberFlyby-04.wav</ShortName>
@@ -541,33 +936,13 @@
 					<ShortName>GalleyRow-01.wav</ShortName>
 					<Path>SFX\GalleyRow-01_E1E65BF4.wem</Path>
 				</File>
-				<File Id="373548454" Language="SFX">
-					<ShortName>SelectBattleship0.wav</ShortName>
-					<Path>SFX\SelectBattleship0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="374061875" Language="SFX">
-					<ShortName>SelectMachineGun.wav</ShortName>
-					<Path>SFX\SelectMachineGun_E1E65BF4.wem</Path>
-				</File>
 				<File Id="375512713" Language="SFX">
 					<ShortName>Builder_Repair_Hammer_2.wav</ShortName>
 					<Path>SFX\Builder_Repair_Hammer_2_E1E65BF4.wem</Path>
 				</File>
-				<File Id="379325946" Language="SFX">
-					<ShortName>SelectLegion.wav</ShortName>
-					<Path>SFX\SelectLegion_E1E65BF4.wem</Path>
-				</File>
 				<File Id="383399764" Language="SFX">
 					<ShortName>FoleyLeatherPadHard-000.wav</ShortName>
 					<Path>SFX\FoleyLeatherPadHard-000_E1E65BF4.wem</Path>
-				</File>
-				<File Id="388410897" Language="SFX">
-					<ShortName>SelectIronclad_1.wav</ShortName>
-					<Path>SFX\SelectIronclad_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="400443970" Language="SFX">
-					<ShortName>SelectGreatArtist_1.wav</ShortName>
-					<Path>SFX\SelectGreatArtist_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="400866733" Language="SFX">
 					<ShortName>GalleyRow-02.wav</ShortName>
@@ -577,21 +952,9 @@
 					<ShortName>ModernArmor_Select_02.wav</ShortName>
 					<Path>SFX\ModernArmor_Select_02_E1E65BF4.wem</Path>
 				</File>
-				<File Id="405222137" Language="SFX">
-					<ShortName>SelectNaturalist-02.wav</ShortName>
-					<Path>SFX\SelectNaturalist-02_E1E65BF4.wem</Path>
-				</File>
 				<File Id="406812528" Language="SFX">
 					<ShortName>GalleyRow-05.wav</ShortName>
 					<Path>SFX\GalleyRow-05_E1E65BF4.wem</Path>
-				</File>
-				<File Id="410037748" Language="SFX">
-					<ShortName>SelectCombatEngineer-01.wav</ShortName>
-					<Path>SFX\SelectCombatEngineer-01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="412210854" Language="SFX">
-					<ShortName>SelectGreatWriter_0.wav</ShortName>
-					<Path>SFX\SelectGreatWriter_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="417344840" Language="SFX">
 					<ShortName>Builder_Repair_Swish_2.wav</ShortName>
@@ -600,10 +963,6 @@
 				<File Id="420531921" Language="SFX">
 					<ShortName>GMClaraSchumannToccatina.wav</ShortName>
 					<Path>SFX\GMClaraSchumannToccatina_E1E65BF4.wem</Path>
-				</File>
-				<File Id="420615542" Language="SFX">
-					<ShortName>SelectQuadrireme_1.wav</ShortName>
-					<Path>SFX\SelectQuadrireme_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="420937854" Language="SFX">
 					<ShortName>Spy_Confirm_Placement_5.wav</ShortName>
@@ -633,33 +992,9 @@
 					<ShortName>GMChopinNocturne.wav</ShortName>
 					<Path>SFX\GMChopinNocturne_E1E65BF4.wem</Path>
 				</File>
-				<File Id="449041083" Language="SFX">
-					<ShortName>SelectSiegeTower_1.wav</ShortName>
-					<Path>SFX\SelectSiegeTower_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="451073446" Language="SFX">
-					<ShortName>SelectKnight_0.wav</ShortName>
-					<Path>SFX\SelectKnight_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="451619839" Language="SFX">
-					<ShortName>SelectGreatGeneralModern_0.wav</ShortName>
-					<Path>SFX\SelectGreatGeneralModern_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="452106682" Language="SFX">
-					<ShortName>SelectMissionary_0.wav</ShortName>
-					<Path>SFX\SelectMissionary_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="454771501" Language="SFX">
 					<ShortName>Notification_Generic_Negative.wav</ShortName>
 					<Path>SFX\Notification_Generic_Negative_E1E65BF4_C04556BA.wem</Path>
-				</File>
-				<File Id="460263914" Language="SFX">
-					<ShortName>SelectSpy_1.wav</ShortName>
-					<Path>SFX\SelectSpy_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="462998241" Language="SFX">
-					<ShortName>SelectHoplite1.wav</ShortName>
-					<Path>SFX\SelectHoplite1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="467100709" Language="SFX">
 					<ShortName>SAM_Select-02.wav</ShortName>
@@ -673,25 +1008,13 @@
 					<ShortName>PropBomberFlyby-03.wav</ShortName>
 					<Path>SFX\PropBomberFlyby-03_EA0CDAD4.wem</Path>
 				</File>
-				<File Id="478062031" Language="SFX">
-					<ShortName>SelectSakaArcher_0.wav</ShortName>
-					<Path>SFX\SelectSakaArcher_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="484727157" Language="SFX">
 					<ShortName>PlunderTrade.wav</ShortName>
 					<Path>SFX\PlunderTrade_E1E65BF4.wem</Path>
 				</File>
-				<File Id="489515154" Language="SFX">
-					<ShortName>SelectGreatScientist_0.wav</ShortName>
-					<Path>SFX\SelectGreatScientist_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="500266390" Language="SFX">
 					<ShortName>UnitFortify.wav</ShortName>
 					<Path>SFX\UnitFortify_E1E65BF4.wem</Path>
-				</File>
-				<File Id="505811059" Language="SFX">
-					<ShortName>SelectHoplite0.wav</ShortName>
-					<Path>SFX\SelectHoplite0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="507942920" Language="SFX">
 					<ShortName>GMLisztMephisto.wav</ShortName>
@@ -700,10 +1023,6 @@
 				<File Id="510003164" Language="SFX">
 					<ShortName>PropBomberBombWhistle_12.wav</ShortName>
 					<Path>SFX\PropBomberBombWhistle_12_FC2C11F1.wem</Path>
-				</File>
-				<File Id="515854407" Language="SFX">
-					<ShortName>SelectGreatMerchant_0.wav</ShortName>
-					<Path>SFX\SelectGreatMerchant_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="516052446" Language="SFX">
 					<ShortName>GalleyRow-06.wav</ShortName>
@@ -717,18 +1036,6 @@
 					<ShortName>GMBachCelloSuite1.wav</ShortName>
 					<Path>SFX\GMBachCelloSuite1_E1E65BF4.wem</Path>
 				</File>
-				<File Id="528081695" Language="SFX">
-					<ShortName>SelectFieldCannon_0.wav</ShortName>
-					<Path>SFX\SelectFieldCannon_0_6D4008ED.wem</Path>
-				</File>
-				<File Id="529745489" Language="SFX">
-					<ShortName>SelectRedcoat_0.wav</ShortName>
-					<Path>SFX\SelectRedcoat_0_E0CB9D99.wem</Path>
-				</File>
-				<File Id="530240292" Language="SFX">
-					<ShortName>SelectConquistador-02.wav</ShortName>
-					<Path>SFX\SelectConquistador-02_F1C23009.wem</Path>
-				</File>
 				<File Id="531658795" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Debris-18.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Debris-18_E1E65BF4.wem</Path>
@@ -741,10 +1048,6 @@
 					<ShortName>FoleyClothHard-000.wav</ShortName>
 					<Path>SFX\FoleyClothHard-000_E1E65BF4.wem</Path>
 				</File>
-				<File Id="538937167" Language="SFX">
-					<ShortName>SelectSiegeTower_0.wav</ShortName>
-					<Path>SFX\SelectSiegeTower_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="539217004" Language="SFX">
 					<ShortName>FootstepLargeMonsterToe_09.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterToe_09_E1E65BF4.wem</Path>
@@ -752,10 +1055,6 @@
 				<File Id="540316264" Language="SFX">
 					<ShortName>FootstepLargeMonsterToe_08.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterToe_08_E1E65BF4.wem</Path>
-				</File>
-				<File Id="553518074" Language="SFX">
-					<ShortName>SelectInquisitor_1.wav</ShortName>
-					<Path>SFX\SelectInquisitor_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="554488373" Language="SFX">
 					<ShortName>Foley_Horse_Bridle_1.wav</ShortName>
@@ -768,14 +1067,6 @@
 				<File Id="558177683" Language="SFX">
 					<ShortName>Spy_Confirm_Placement_0.wav</ShortName>
 					<Path>SFX\Spy_Confirm_Placement_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="558619584" Language="SFX">
-					<ShortName>SelectMaryannu_1.wav</ShortName>
-					<Path>SFX\SelectMaryannu_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="559729505" Language="SFX">
-					<ShortName>SelectGreatEngineer_0.wav</ShortName>
-					<Path>SFX\SelectGreatEngineer_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="564516540" Language="SFX">
 					<ShortName>GMRosasValsDosPensamientos.wav</ShortName>
@@ -793,21 +1084,9 @@
 					<ShortName>GMBeethovenEroica.wav</ShortName>
 					<Path>SFX\GMBeethovenEroica_E1E65BF4.wem</Path>
 				</File>
-				<File Id="567278294" Language="SFX">
-					<ShortName>SelectArcher-02.wav</ShortName>
-					<Path>SFX\SelectArcher-02_E1E65BF4.wem</Path>
-				</File>
 				<File Id="567580846" Language="SFX">
 					<ShortName>GalleyRowNoYell-03.wav</ShortName>
 					<Path>SFX\GalleyRowNoYell-03_E1E65BF4.wem</Path>
-				</File>
-				<File Id="573918929" Language="SFX">
-					<ShortName>SelectCrouchingTiger_0.wav</ShortName>
-					<Path>SFX\SelectCrouchingTiger_0_88DE6716.wem</Path>
-				</File>
-				<File Id="576192109" Language="SFX">
-					<ShortName>SelectGreatMusician_1.wav</ShortName>
-					<Path>SFX\SelectGreatMusician_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="584607248" Language="SFX">
 					<ShortName>SelectJetBomber-03.wav</ShortName>
@@ -821,21 +1100,9 @@
 					<ShortName>GMGauharJaanThumri.wav</ShortName>
 					<Path>SFX\GMGauharJaanThumri_E1E65BF4.wem</Path>
 				</File>
-				<File Id="595131709" Language="SFX">
-					<ShortName>SelectCaravel_1.wav</ShortName>
-					<Path>SFX\SelectCaravel_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="595801614" Language="SFX">
-					<ShortName>SelectSpy_0.wav</ShortName>
-					<Path>SFX\SelectSpy_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="596940797" Language="SFX">
 					<ShortName>Select_NgaoMbebe-02.wav</ShortName>
 					<Path>SFX\Select_NgaoMbebe-02_E1E65BF4.wem</Path>
-				</File>
-				<File Id="597536596" Language="SFX">
-					<ShortName>SelectGreatGeneralClassical_0.wav</ShortName>
-					<Path>SFX\SelectGreatGeneralClassical_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="597953926" Language="SFX">
 					<ShortName>FootstepLargeMonsterToe_06.wav</ShortName>
@@ -844,10 +1111,6 @@
 				<File Id="601849813" Language="SFX">
 					<ShortName>HeavyChariotSelect-01.wav</ShortName>
 					<Path>SFX\HeavyChariotSelect-01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="607586671" Language="SFX">
-					<ShortName>SelectFieldCannon_1.wav</ShortName>
-					<Path>SFX\SelectFieldCannon_1_5231F3FA.wem</Path>
 				</File>
 				<File Id="607923301" Language="SFX">
 					<ShortName>GMGauharJaanRagaKhamajJogiya.wav</ShortName>
@@ -861,25 +1124,13 @@
 					<ShortName>Spy_Confirm_Placement_4.wav</ShortName>
 					<Path>SFX\Spy_Confirm_Placement_4_E1E65BF4.wem</Path>
 				</File>
-				<File Id="620034915" Language="SFX">
-					<ShortName>Select_War_Cart_1.wav</ShortName>
-					<Path>SFX\Select_War_Cart_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="622926629" Language="SFX">
 					<ShortName>Foley_MetalTripod0_8.wav</ShortName>
 					<Path>SFX\Foley_MetalTripod0_8_E1E65BF4.wem</Path>
 				</File>
-				<File Id="624387814" Language="SFX">
-					<ShortName>SelectGreatAdmiral_1.wav</ShortName>
-					<Path>SFX\SelectGreatAdmiral_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="628366644" Language="SFX">
 					<ShortName>Tank_Select_01.wav</ShortName>
 					<Path>SFX\Tank_Select_01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="632997838" Language="SFX">
-					<ShortName>SelectGreatGeneralClassical_1.wav</ShortName>
-					<Path>SFX\SelectGreatGeneralClassical_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="635027501" Language="SFX">
 					<ShortName>Spy_Confirm_Placement_1.wav</ShortName>
@@ -889,10 +1140,6 @@
 					<ShortName>Foley_MetalTripod0_7.wav</ShortName>
 					<Path>SFX\Foley_MetalTripod0_7_E1E65BF4.wem</Path>
 				</File>
-				<File Id="640808490" Language="SFX">
-					<ShortName>SelectGreatGeneralModern_1.wav</ShortName>
-					<Path>SFX\SelectGreatGeneralModern_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="641262804" Language="SFX">
 					<ShortName>GMMozartSonata11.wav</ShortName>
 					<Path>SFX\GMMozartSonata11_E1E65BF4.wem</Path>
@@ -900,14 +1147,6 @@
 				<File Id="648294654" Language="SFX">
 					<ShortName>GMChopinPolonaise.wav</ShortName>
 					<Path>SFX\GMChopinPolonaise_E1E65BF4.wem</Path>
-				</File>
-				<File Id="657897890" Language="SFX">
-					<ShortName>SelectRanger_1.wav</ShortName>
-					<Path>SFX\SelectRanger_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="663598777" Language="SFX">
-					<ShortName>SelectGreatWriter_1.wav</ShortName>
-					<Path>SFX\SelectGreatWriter_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="664424675" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Impact-21.wav</ShortName>
@@ -917,21 +1156,9 @@
 					<ShortName>FootstepLargeMonsterHeel_05.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_05_E1E65BF4.wem</Path>
 				</File>
-				<File Id="668777001" Language="SFX">
-					<ShortName>SelectScout-001.wav</ShortName>
-					<Path>SFX\SelectScout-001_E1E65BF4.wem</Path>
-				</File>
-				<File Id="677167270" Language="SFX">
-					<ShortName>SelectMechInf-000.wav</ShortName>
-					<Path>SFX\SelectMechInf-000_E1E65BF4.wem</Path>
-				</File>
 				<File Id="678609318" Language="SFX">
 					<ShortName>SELECT_03.wav</ShortName>
 					<Path>SFX\SELECT_03_E1E65BF4.wem</Path>
-				</File>
-				<File Id="679080815" Language="SFX">
-					<ShortName>SelectInfantry-01.wav</ShortName>
-					<Path>SFX\SelectInfantry-01_E1E65BF4.wem</Path>
 				</File>
 				<File Id="679671414" Language="SFX">
 					<ShortName>HeavyChariotSelect-02.wav</ShortName>
@@ -941,37 +1168,13 @@
 					<ShortName>FoleyBagsAncient1.wav</ShortName>
 					<Path>SFX\FoleyBagsAncient1_E1E65BF4.wem</Path>
 				</File>
-				<File Id="685718648" Language="SFX">
-					<ShortName>SelectFrigate_1.wav</ShortName>
-					<Path>SFX\SelectFrigate_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="691599673" Language="SFX">
 					<ShortName>AA_Gun_Select_02.wav</ShortName>
 					<Path>SFX\AA_Gun_Select_02_E1E65BF4.wem</Path>
 				</File>
-				<File Id="694011413" Language="SFX">
-					<ShortName>SelectSettler_1.wav</ShortName>
-					<Path>SFX\SelectSettler_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="695526554" Language="SFX">
-					<ShortName>SelectMusketman_1.wav</ShortName>
-					<Path>SFX\SelectMusketman_1_EAE67243.wem</Path>
-				</File>
-				<File Id="695661147" Language="SFX">
-					<ShortName>SelectCaravel_0.wav</ShortName>
-					<Path>SFX\SelectCaravel_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="695713103" Language="SFX">
-					<ShortName>SelectBombard_0.wav</ShortName>
-					<Path>SFX\SelectBombard_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="698553326" Language="SFX">
 					<ShortName>SelectJetBomber-02.wav</ShortName>
 					<Path>SFX\SelectJetBomber-02_E1E65BF4.wem</Path>
-				</File>
-				<File Id="699366018" Language="SFX">
-					<ShortName>SelectTraderLandAncient.wav</ShortName>
-					<Path>SFX\SelectTraderLandAncient_E1E65BF4.wem</Path>
 				</File>
 				<File Id="703164483" Language="SFX">
 					<ShortName>GalleyRowNoYell-04.wav</ShortName>
@@ -981,29 +1184,13 @@
 					<ShortName>VFX_Cannon_Metal_Impact-18.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Impact-18_E1E65BF4.wem</Path>
 				</File>
-				<File Id="712141025" Language="SFX">
-					<ShortName>SelectPrivateer_1.wav</ShortName>
-					<Path>SFX\SelectPrivateer_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="714318245" Language="SFX">
 					<ShortName>GMTchaikovsky1812.wav</ShortName>
 					<Path>SFX\GMTchaikovsky1812_E1E65BF4.wem</Path>
 				</File>
-				<File Id="718290508" Language="SFX">
-					<ShortName>SelectArtillery_1.wav</ShortName>
-					<Path>SFX\SelectArtillery_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="720238851" Language="SFX">
 					<ShortName>PropFighterSelect-01.wav</ShortName>
 					<Path>SFX\PropFighterSelect-01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="720679563" Language="SFX">
-					<ShortName>SelectSlinger-001.wav</ShortName>
-					<Path>SFX\SelectSlinger-001_E1E65BF4.wem</Path>
-				</File>
-				<File Id="725539336" Language="SFX">
-					<ShortName>SelectArtillery_0.wav</ShortName>
-					<Path>SFX\SelectArtillery_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="725860275" Language="SFX">
 					<ShortName>VFX_Cannon_Metal_Debris-27.wav</ShortName>
@@ -1021,45 +1208,13 @@
 					<ShortName>Foley_MetalTripod0_10.wav</ShortName>
 					<Path>SFX\Foley_MetalTripod0_10_E1E65BF4.wem</Path>
 				</File>
-				<File Id="734821839" Language="SFX">
-					<ShortName>SelectArchaeologist-01.wav</ShortName>
-					<Path>SFX\SelectArchaeologist-01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="741353874" Language="SFX">
-					<ShortName>SelectMechInf-001.wav</ShortName>
-					<Path>SFX\SelectMechInf-001_E1E65BF4.wem</Path>
-				</File>
-				<File Id="742520010" Language="SFX">
-					<ShortName>SelectMissileCuiser_0.wav</ShortName>
-					<Path>SFX\SelectMissileCuiser_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="753629634" Language="SFX">
 					<ShortName>Foley_MetalTripod0_6.wav</ShortName>
 					<Path>SFX\Foley_MetalTripod0_6_E1E65BF4.wem</Path>
 				</File>
-				<File Id="753888672" Language="SFX">
-					<ShortName>SelectSpearman.wav</ShortName>
-					<Path>SFX\SelectSpearman_E1E65BF4.wem</Path>
-				</File>
-				<File Id="758180012" Language="SFX">
-					<ShortName>SelectRoughRider_1.wav</ShortName>
-					<Path>SFX\SelectRoughRider_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="761187044" Language="SFX">
 					<ShortName>FootstepLargeMonsterHeel_13.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_13_E1E65BF4.wem</Path>
-				</File>
-				<File Id="762483573" Language="SFX">
-					<ShortName>Catapult_select_03.wav</ShortName>
-					<Path>SFX\Catapult_select_03_E1E65BF4.wem</Path>
-				</File>
-				<File Id="762648484" Language="SFX">
-					<ShortName>SelectIronclad_0.wav</ShortName>
-					<Path>SFX\SelectIronclad_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="765889137" Language="SFX">
-					<ShortName>SelectCrossbowman-001.wav</ShortName>
-					<Path>SFX\SelectCrossbowman-001_E1E65BF4.wem</Path>
 				</File>
 				<File Id="770250624" Language="SFX">
 					<ShortName>GMGomesFosca.wav</ShortName>
@@ -1072,10 +1227,6 @@
 				<File Id="779132954" Language="SFX">
 					<ShortName>SelectRocketArtillery-04.wav</ShortName>
 					<Path>SFX\SelectRocketArtillery-04_9B375E62.wem</Path>
-				</File>
-				<File Id="782052779" Language="SFX">
-					<ShortName>SelectMaryannu_0.wav</ShortName>
-					<Path>SFX\SelectMaryannu_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="783248168" Language="SFX">
 					<ShortName>Spy_Confirm_Placement_3.wav</ShortName>
@@ -1097,10 +1248,6 @@
 					<ShortName>Catapult_select_02.wav</ShortName>
 					<Path>SFX\Catapult_select_02_5B4DE4B8.wem</Path>
 				</File>
-				<File Id="786598771" Language="SFX">
-					<ShortName>SelectKnight_1.wav</ShortName>
-					<Path>SFX\SelectKnight_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="787117396" Language="SFX">
 					<ShortName>InterfaceClick-01.wav</ShortName>
 					<Path>SFX\InterfaceClick-01_E1E65BF4_305308BD.wem</Path>
@@ -1117,14 +1264,6 @@
 					<ShortName>FootstepLargeMonsterHeel_11.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_11_E1E65BF4.wem</Path>
 				</File>
-				<File Id="796455083" Language="SFX">
-					<ShortName>SelectFrigate_0.wav</ShortName>
-					<Path>SFX\SelectFrigate_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="805599782" Language="SFX">
-					<ShortName>SelectPikemen.wav</ShortName>
-					<Path>SFX\SelectPikemen_E1E65BF4.wem</Path>
-				</File>
 				<File Id="805774015" Language="SFX">
 					<ShortName>Foley_Horse_Bridle_5.wav</ShortName>
 					<Path>SFX\Foley_Horse_Bridle_5_E1E65BF4.wem</Path>
@@ -1132,10 +1271,6 @@
 				<File Id="816796732" Language="SFX">
 					<ShortName>Foley_Horse_Bridle_2.wav</ShortName>
 					<Path>SFX\Foley_Horse_Bridle_2_E1E65BF4.wem</Path>
-				</File>
-				<File Id="819335854" Language="SFX">
-					<ShortName>SelectCavalry_1.wav</ShortName>
-					<Path>SFX\SelectCavalry_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="821971467" Language="SFX">
 					<ShortName>GalleyRow-10.wav</ShortName>
@@ -1177,10 +1312,6 @@
 					<ShortName>GalleyRow-09.wav</ShortName>
 					<Path>SFX\GalleyRow-09_E1E65BF4.wem</Path>
 				</File>
-				<File Id="842030242" Language="SFX">
-					<ShortName>SelectBuilder-000.wav</ShortName>
-					<Path>SFX\SelectBuilder-000_E1E65BF4.wem</Path>
-				</File>
 				<File Id="842526722" Language="SFX">
 					<ShortName>Builder_Repair_Swish_4.wav</ShortName>
 					<Path>SFX\Builder_Repair_Swish_4_E1E65BF4.wem</Path>
@@ -1208,10 +1339,6 @@
 				<File Id="862290425" Language="SFX">
 					<ShortName>FoleyBagsAncient2.wav</ShortName>
 					<Path>SFX\FoleyBagsAncient2_E1E65BF4.wem</Path>
-				</File>
-				<File Id="864737310" Language="SFX">
-					<ShortName>SelectPrivateer_0.wav</ShortName>
-					<Path>SFX\SelectPrivateer_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="865326348" Language="SFX">
 					<ShortName>FoleyClothHard-002.wav</ShortName>
@@ -1245,49 +1372,17 @@
 					<ShortName>VFX_Cannon_Metal_Impact-06.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Impact-06_E1E65BF4.wem</Path>
 				</File>
-				<File Id="881539141" Language="SFX">
-					<ShortName>SelectNaturalist-01.wav</ShortName>
-					<Path>SFX\SelectNaturalist-01_E1E65BF4.wem</Path>
-				</File>
-				<File Id="886912146" Language="SFX">
-					<ShortName>SelectSpearman-001.wav</ShortName>
-					<Path>SFX\SelectSpearman-001_E1E65BF4.wem</Path>
-				</File>
-				<File Id="888488988" Language="SFX">
-					<ShortName>SelectConquistador-01.wav</ShortName>
-					<Path>SFX\SelectConquistador-01_17756B9A.wem</Path>
-				</File>
 				<File Id="908565851" Language="SFX">
 					<ShortName>GMLeontovichSummerColors.wav</ShortName>
 					<Path>SFX\GMLeontovichSummerColors_E1E65BF4.wem</Path>
-				</File>
-				<File Id="913427773" Language="SFX">
-					<ShortName>SelectArcher_0.wav</ShortName>
-					<Path>SFX\SelectArcher_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="914112271" Language="SFX">
 					<ShortName>FootstepLargeMonsterToe_10.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterToe_10_E1E65BF4.wem</Path>
 				</File>
-				<File Id="916533377" Language="SFX">
-					<ShortName>SelectSubmarine_0.wav</ShortName>
-					<Path>SFX\SelectSubmarine_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="918850498" Language="SFX">
 					<ShortName>PropBomberBombWhistle_10.wav</ShortName>
 					<Path>SFX\PropBomberBombWhistle_10_02C8F205.wem</Path>
-				</File>
-				<File Id="920162044" Language="SFX">
-					<ShortName>SelectBombard_1.wav</ShortName>
-					<Path>SFX\SelectBombard_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="935426616" Language="SFX">
-					<ShortName>SelectBerserker1.wav</ShortName>
-					<Path>SFX\SelectBerserker1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="937436061" Language="SFX">
-					<ShortName>Select_Sweetener_GreatPerson.wav</ShortName>
-					<Path>SFX\Select_Sweetener_GreatPerson_E1E65BF4.wem</Path>
 				</File>
 				<File Id="940193760" Language="SFX">
 					<ShortName>GalleyRowNoYell-02.wav</ShortName>
@@ -1317,10 +1412,6 @@
 					<ShortName>GMLiuTianhuaBeiGe.wav</ShortName>
 					<Path>SFX\GMLiuTianhuaBeiGe_E1E65BF4.wem</Path>
 				</File>
-				<File Id="953334055" Language="SFX">
-					<ShortName>BiplaneSelect-02.wav</ShortName>
-					<Path>SFX\BiplaneSelect-02_E1E65BF4.wem</Path>
-				</File>
 				<File Id="957455862" Language="SFX">
 					<ShortName>FoleyClothHard-004.wav</ShortName>
 					<Path>SFX\FoleyClothHard-004_E1E65BF4.wem</Path>
@@ -1329,10 +1420,6 @@
 					<ShortName>FootstepLargeMonsterHeel_07.wav</ShortName>
 					<Path>SFX\FootstepLargeMonsterHeel_07_E1E65BF4.wem</Path>
 				</File>
-				<File Id="962382026" Language="SFX">
-					<ShortName>SelectCrossbowman.wav</ShortName>
-					<Path>SFX\SelectCrossbowman_E1E65BF4.wem</Path>
-				</File>
 				<File Id="962503913" Language="SFX">
 					<ShortName>GalleyRowNoYell-01.wav</ShortName>
 					<Path>SFX\GalleyRowNoYell-01_E1E65BF4.wem</Path>
@@ -1340,10 +1427,6 @@
 				<File Id="971156317" Language="SFX">
 					<ShortName>FoleyClothHard-001.wav</ShortName>
 					<Path>SFX\FoleyClothHard-001_E1E65BF4.wem</Path>
-				</File>
-				<File Id="971634884" Language="SFX">
-					<ShortName>SelectGreatMerchant_1.wav</ShortName>
-					<Path>SFX\SelectGreatMerchant_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="971871346" Language="SFX">
 					<ShortName>BuildCity.wav</ShortName>
@@ -1361,14 +1444,6 @@
 					<ShortName>PropBomberBombWhistle_14.wav</ShortName>
 					<Path>SFX\PropBomberBombWhistle_14_D316BE79.wem</Path>
 				</File>
-				<File Id="982403894" Language="SFX">
-					<ShortName>SelectPikemen_1.wav</ShortName>
-					<Path>SFX\SelectPikemen_1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="982470849" Language="SFX">
-					<ShortName>SelectBuilder-001.wav</ShortName>
-					<Path>SFX\SelectBuilder-001_E1E65BF4.wem</Path>
-				</File>
 				<File Id="986430323" Language="SFX">
 					<ShortName>FoleyBagsAncient0.wav</ShortName>
 					<Path>SFX\FoleyBagsAncient0_E1E65BF4.wem</Path>
@@ -1377,17 +1452,9 @@
 					<ShortName>SelectRocketArtillery-03.wav</ShortName>
 					<Path>SFX\SelectRocketArtillery-03_1DF16514.wem</Path>
 				</File>
-				<File Id="994452469" Language="SFX">
-					<ShortName>SelectApostle_0.wav</ShortName>
-					<Path>SFX\SelectApostle_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="994607340" Language="SFX">
 					<ShortName>GMGomesIlGuarany.wav</ShortName>
 					<Path>SFX\GMGomesIlGuarany_E1E65BF4.wem</Path>
-				</File>
-				<File Id="994817264" Language="SFX">
-					<ShortName>SelectWarrior-000.wav</ShortName>
-					<Path>SFX\SelectWarrior-000_E1E65BF4.wem</Path>
 				</File>
 				<File Id="996501386" Language="SFX">
 					<ShortName>ElephantTrumpet-04.wav</ShortName>
@@ -1397,22 +1464,6 @@
 					<ShortName>GMKengyoRokudanNoShirabe.wav</ShortName>
 					<Path>SFX\GMKengyoRokudanNoShirabe_E1E65BF4.wem</Path>
 				</File>
-				<File Id="998755576" Language="SFX">
-					<ShortName>SelectCombatEngineer-02.wav</ShortName>
-					<Path>SFX\SelectCombatEngineer-02_E1E65BF4.wem</Path>
-				</File>
-				<File Id="1002812876" Language="SFX">
-					<ShortName>Select_War_Cart_0.wav</ShortName>
-					<Path>SFX\Select_War_Cart_0_7367125E.wem</Path>
-				</File>
-				<File Id="1005620898" Language="SFX">
-					<ShortName>SelectDestroyer_0.wav</ShortName>
-					<Path>SFX\SelectDestroyer_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="1019124166" Language="SFX">
-					<ShortName>Select_Nuclear_Submarine_1.wav</ShortName>
-					<Path>SFX\Select_Nuclear_Submarine_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="1022084726" Language="SFX">
 					<ShortName>ElephantTrumpet-03.wav</ShortName>
 					<Path>SFX\ElephantTrumpet-03_E1E65BF4.wem</Path>
@@ -1420,10 +1471,6 @@
 				<File Id="1023390197" Language="SFX">
 					<ShortName>Foley_MetalTripod0_11.wav</ShortName>
 					<Path>SFX\Foley_MetalTripod0_11_E1E65BF4.wem</Path>
-				</File>
-				<File Id="1025011364" Language="SFX">
-					<ShortName>SelectEagleWarrior_0.wav</ShortName>
-					<Path>SFX\SelectEagleWarrior_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="1025704147" Language="SFX">
 					<ShortName>GalleyRow-07.wav</ShortName>
@@ -1437,10 +1484,6 @@
 					<ShortName>BuildImprovement-001.wav</ShortName>
 					<Path>SFX\BuildImprovement-001_E1E65BF4.wem</Path>
 				</File>
-				<File Id="1027566252" Language="SFX">
-					<ShortName>SelectEagleWarrior_1.wav</ShortName>
-					<Path>SFX\SelectEagleWarrior_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="1029516526" Language="SFX">
 					<ShortName>Spy_Confirm_Placement_2.wav</ShortName>
 					<Path>SFX\Spy_Confirm_Placement_2_E1E65BF4.wem</Path>
@@ -1449,29 +1492,13 @@
 					<ShortName>VFX_Cannon_Metal_Debris-01.wav</ShortName>
 					<Path>SFX\VFX_Cannon_Metal_Debris-01_E1E65BF4.wem</Path>
 				</File>
-				<File Id="1035803976" Language="SFX">
-					<ShortName>SelectQuadrireme_0.wav</ShortName>
-					<Path>SFX\SelectQuadrireme_0_E1E65BF4.wem</Path>
-				</File>
 				<File Id="1039356105" Language="SFX">
 					<ShortName>SelectMedic-01.wav</ShortName>
 					<Path>SFX\SelectMedic-01_E1E65BF4.wem</Path>
 				</File>
-				<File Id="1039660938" Language="SFX">
-					<ShortName>SelectScout-000.wav</ShortName>
-					<Path>SFX\SelectScout-000_E1E65BF4.wem</Path>
-				</File>
 				<File Id="1040934557" Language="SFX">
 					<ShortName>FoleyLeatherPadHard-004.wav</ShortName>
 					<Path>SFX\FoleyLeatherPadHard-004_E1E65BF4.wem</Path>
-				</File>
-				<File Id="1042861882" Language="SFX">
-					<ShortName>SelectHorseman_0.wav</ShortName>
-					<Path>SFX\SelectHorseman_0_E1E65BF4.wem</Path>
-				</File>
-				<File Id="1046415433" Language="SFX">
-					<ShortName>SelectCrouchingTiger_1.wav</ShortName>
-					<Path>SFX\SelectCrouchingTiger_1_E1E65BF4.wem</Path>
 				</File>
 				<File Id="1050489571" Language="SFX">
 					<ShortName>PropFighterSelect-02.wav</ShortName>
@@ -1485,18 +1512,6 @@
 					<ShortName>Builder_Repair_Hammer_1.wav</ShortName>
 					<Path>SFX\Builder_Repair_Hammer_1_E1E65BF4.wem</Path>
 				</File>
-				<File Id="1061966735" Language="SFX">
-					<ShortName>SelectMusketman_0.wav</ShortName>
-					<Path>SFX\SelectMusketman_0_607AF08E.wem</Path>
-				</File>
-				<File Id="1062138996" Language="SFX">
-					<ShortName>SelectBattleship1.wav</ShortName>
-					<Path>SFX\SelectBattleship1_E1E65BF4.wem</Path>
-				</File>
-				<File Id="1065536451" Language="SFX">
-					<ShortName>SelectGreatEngineer_1.wav</ShortName>
-					<Path>SFX\SelectGreatEngineer_1_E1E65BF4.wem</Path>
-				</File>
 				<File Id="1067722338" Language="SFX">
 					<ShortName>TraderModernSelect-02.wav</ShortName>
 					<Path>SFX\TraderModernSelect-02_E1E65BF4.wem</Path>
@@ -1504,10 +1519,6 @@
 				<File Id="1069214422" Language="SFX">
 					<ShortName>GMLiliuokalaniAlohaOe.wav</ShortName>
 					<Path>SFX\GMLiliuokalaniAlohaOe_E1E65BF4.wem</Path>
-				</File>
-				<File Id="1070171510" Language="SFX">
-					<ShortName>SelectCavalry_0.wav</ShortName>
-					<Path>SFX\SelectCavalry_0_E1E65BF4.wem</Path>
 				</File>
 				<File Id="1071778825" Language="SFX">
 					<ShortName>Foley_Horse_Bridle_3.wav</ShortName>

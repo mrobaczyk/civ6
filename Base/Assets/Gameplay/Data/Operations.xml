@@ -59,7 +59,7 @@
   </AiOperationTeams>
   <OpTeamRequirements>
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_MELEE" MinNumber="1" />
-    <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_RANGED" MinNumber="0" />
+    <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_RANGED" MinNumber="1" />
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
     <Row TeamName="Simple Early Attack Force" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
@@ -71,6 +71,7 @@
     <Row TeamName="City Attack Force" AiType="UNITTYPE_MELEE" MinNumber="2" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_RANGED" MinNumber="2" />
 		<Row TeamName="City Attack Force" AiType="UNITTYPE_SIEGE" MinNumber="1" MaxNumber="3" />
+		<Row TeamName="City Attack Force" AiType="UNITTYPE_AIR_SIEGE" MinNumber="0" MaxNumber="1" />
 		<Row TeamName="City Attack Force" AiType="UNITTYPE_SIEGE_SUPPORT" MinNumber="0" MaxNumber="3" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_CIVILIAN_LEADER" MaxNumber="1" />
     <Row TeamName="City Attack Force" AiType="UNITTYPE_CIVILIAN" MaxNumber="0" />
@@ -79,7 +80,7 @@
     <Row TeamName="Barbarian Builder Capture" AiType="UNITAI_COMBAT" MinNumber="1" />
     <Row TeamName="Barbarian Builder Capture" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
     <Row TeamName="Civilian Builder Capture" AiType="UNITTYPE_CIVILIAN" MinNumber="1" MaxNumber="1" />
-    <Row TeamName="Civilian Builder Capture" AiType="UNITAI_COMBAT" MinNumber="1" />
+    <Row TeamName="Civilian Builder Capture" AiType="UNITAI_COMBAT" MinNumber="0" />
     <Row TeamName="Civilian Builder Capture" AiType="UNITTYPE_NAVAL" MaxNumber="0" />
     <Row TeamName="Settle City Team" AiType="UNITAI_SETTLE" MinNumber="1" MaxNumber="1" />
     <Row TeamName="Settle City Team" AiType="UNITAI_COMBAT" MinNumber="1" ReconsiderWhilePreparing="false" />
@@ -111,7 +112,7 @@
     <Row OperationName="City Defense" TargetType="TARGET_FRIENDLY_CITY" TargetParameter="1" BehaviorTree="Simple City Defense" Priority="4" MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MaxTargetDistInWorld="0" />
     <Row OperationName="Barbarian Attack" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" BehaviorTree="Raid City" Priority="3" SelfStart="false" AllowTargetUpdate="false" />
     <Row OperationName="Barbarian City Assault" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" BehaviorTree="Barbarian City Attack" Priority="4" SelfStart="false" AllowTargetUpdate="false" />
-    <Row OperationName="Nuclear Assault" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" EnemyType="WAR" OperationType="OP_NUCLEAR" BehaviorTree="Nuclear Assault" Priority="3" SelfStart="true"  MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MustBeAtWar="true" MustHaveNukes="true"/>
+    <Row OperationName="Nuclear Assault" TargetType="TARGET_ENEMY_COMBAT_DISTRICT" TargetParameter="1" EnemyType="WAR" OperationType="OP_NUCLEAR" BehaviorTree="Nuclear Assault" Priority="3" SelfStart="true"  MaxTargetDistInRegion="-1" MaxTargetDistInArea="-1" MustBeAtWar="true" MustHaveNukes="true"/>
     <Row OperationName="Aid Ally" TargetType="TARGET_ALLY_SUPPORT" EnemyType="ALLY" OperationType="CITY_ASSAULT" BehaviorTree="Reinforce Ally" Priority="3" SelfStart="true"  MaxTargetDistInRegion="-1" MaxTargetDistInArea="45"/>
   </AiOperationDefs>
   <AllowedOperations>

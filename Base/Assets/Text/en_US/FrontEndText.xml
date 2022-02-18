@@ -212,6 +212,16 @@
     <Row Tag="LOC_PLAYERS">
       <Text>Players</Text>
     </Row>
+    <Row Tag="LOC_TEAM">
+      <Text>Team|Teams</Text>
+      <Plurality>1|2</Plurality>
+    </Row>
+    <Row Tag="LOC_TEAM_GENERIC_NAME">
+      <Text>Team {1_Number}</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_UNKNOWN_NAME">
+      <Text>Unknown Team</Text>
+    </Row>
     <Row Tag="LOC_BACK">
       <Text>Back</Text>
     </Row>
@@ -235,7 +245,13 @@
 			<Text>Version mismatch with host.</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_MOD_ERROR">
-			<Text>Mod configuration error.</Text>
+			<Text>Unable to apply additional content.</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_MOD_MISSING">
+			<Text>Unable to acquire required additional content.[NEWLINE]Content:[NEWLINE]</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ABANDONED_MOD_MISSING_DOWNLOADS_DISABLED">
+			<Text>This game requires additional content that is not installed.  The automatic download of additional content is currently disabled.  Automatic downloads can be enabled in Game Options.[NEWLINE]Content:[NEWLINE]</Text>
 		</Row>
 		<Row Tag="LOC_GAME_ABANDONED_CONNECTION_LOST">
 			<Text>Network connection has been lost.</Text>
@@ -296,9 +312,8 @@
 		<Row Tag="LOC_CHAT_HELP_COMMAND_HINT">
 			<Text>[COLOR:ChatMessage_Help]Type /help for chat command help.[ENDCOLOR]</Text>
 		</Row>
-		<!-- [TEAMCODE] Cut text for team chat command. "[NEWLINE]/t Send a message to a team channel" -->
 		<Row Tag="LOC_CHAT_HELP_COMMAND_TEXT">
-			<Text>[COLOR:ChatMessage_Help]CHAT COMMANDS[NEWLINE]/g Send a message to a global channel[NEWLINE]/w [PlayerName] Whisper a message to a player[NEWLINE]/r Reply to a whisper[NEWLINE]/help Displays this help message[ENDCOLOR]</Text>
+			<Text>[COLOR:ChatMessage_Help]CHAT COMMANDS[NEWLINE]/t Send a message to a team channel[NEWLINE]/g Send a message to a global channel[NEWLINE]/w [PlayerName] Whisper a message to a player[NEWLINE]/r Reply to a whisper[NEWLINE]/help Displays this help message[ENDCOLOR]</Text>
 		</Row>
 		<!-- Multiplayer Lobby Screen -->
 		<Row Tag="LOC_MULTIPLAYER_REFRESH_GAME_LIST">
@@ -388,6 +403,9 @@
 		<Row Tag="LOC_MULTIPLAYER_LAN_LOBBY">
 			<Text>LOCAL NETWORK GAMES</Text>
 		</Row>
+    <Row Tag="LOC_MULTIPLAYER_LOBBY_MODS">
+      <Text>Additional Content</Text>
+    </Row>
 		<Row Tag="LOC_MULTIPLAYER_UNKNOWN">
 			<Text>Unknown</Text>
 		</Row>
@@ -485,8 +503,14 @@
     </Row>
 	<Row Tag="LOC_OPTIONS_LAN_PLAYER_NAME">
 		<Text>Local Network Player Name:</Text>
-	</Row>		
-    <Row Tag="LOC_OPTIONS_STEAM_CONTROLLER_MESSAGE">
+	</Row>
+	<Row Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT">
+		<Text>Auto Download Additional Content:</Text>
+	</Row>
+	<Row Tag="LOC_OPTIONS_AUTO_DOWNLOAD_ADDITIONAL_CONTENT_TOOLTIP">
+		<Text>Automatically download community made additional content when it is required to join a multiplayer game.</Text>
+	</Row>
+	<Row Tag="LOC_OPTIONS_STEAM_CONTROLLER_MESSAGE">
       <Text>Steam Controller configuration happens inside the Steam client and not within this UI.  The escape, left mouse button, and right mouse button are reserved and cannot be bound.</Text>
     </Row>
     <Row Tag="LOC_OPTIONS_BIND_HEADER_PRIMARY">
@@ -572,6 +596,12 @@
 		</Row>
 		<Row Tag="LOC_ARE_YOU_READY">
 			<Text>Are you ready?</Text>
+		</Row>
+		<Row Tag="LOC_MP_GAME_SUMMARY_GAME_SETTINGS">
+			<Text>Game Settings</Text>
+		</Row>
+		<Row Tag="LOC_MP_GAME_SUMMARY_ADDITIONAL_CONTENT">
+			<Text>Additional Content</Text>
 		</Row>
 		<!-- Multiplayer Status Strings -->
 		<Row Tag="LOC_READY_LABEL">
@@ -990,6 +1020,12 @@
 		<Row Tag="LOC_GAME_NO_BARBARIANS">
 			<Text>No Barbarians</Text>
 		</Row>
+		<Row Tag="LOC_GAME_ALLIES_SHARE_VISIBILITY">
+			<Text>Allies Share Visibility</Text>
+		</Row>
+		<Row Tag="LOC_GAME_ALLIES_SHARE_VISIBILITY_DESCRIPTION">
+			<Text>Allied players will share their visibility of the map.</Text>
+		</Row>		
 		<Row Tag="LOC_GAME_TURNTIMER_TYPE">
 			<Text>Turn Timer</Text>
 		</Row>
@@ -1247,7 +1283,7 @@
 			<Text>A map with a random amount of features.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_SEA_LEVEL_DESCRIPTION">
-			<Text>Varries the amount of water on the map.</Text>
+			<Text>Varies the amount of water on the map.</Text>
 		</Row>
 		<Row Tag="LOC_MAP_SEA_LEVEL_LOW_DESCRIPTION">
 			<Text>A map with less water.</Text>
@@ -1443,8 +1479,14 @@
 		<Row Tag="LOC_NO_DUPLICATE_LEADERS_NAME">
 			<Text>No Duplicate Leaders</Text>
 		</Row>
+		<Row Tag="LOC_NO_TEAMS_NAME">
+			<Text>No Teams</Text>
+		</Row>
 		<Row Tag="LOC_NO_DUPLICATE_LEADERS_DESCRIPTION">
 			<Text>Enabling this option prevents two or more players from choosing the same leader.</Text>
+		</Row>
+		<Row Tag="LOC_NO_TEAMS_DESCRIPTION">
+			<Text>Enabling this option disables team play.</Text>
 		</Row>
 		<Row Tag="LOC_LIMIT_TURNS_NAME">
 			<Text>Limit Turns</Text>
@@ -1586,7 +1628,10 @@
 		<Row Tag="LOC_MAIN_MENU_DEMO_PURCHASE">
 			<Text>Buy It Now</Text>
 		</Row>
-		<Row Tag="LOC_DEMO_COMPLETE_CONTENT">
+    <Row Tag="LOC_MAIN_MENU_DEMO_PURCHASE_TT">
+      <Text>Open Steam Store to purchase Sid Meier's Civilization VI</Text>
+    </Row>
+    <Row Tag="LOC_DEMO_COMPLETE_CONTENT">
 			<Text>Congratulations! You have taken the first steps towards building a Civilization to stand the test of time. Will you continue to test yourself against the greatest leaders of history? Can your people’s culture flourish? Your science enlighten? Your faith inspire? Your military dominate?[NEWLINE][NEWLINE]How will you lead in Sid Meier’s Civilization VI? Continue the journey now.[NEWLINE][NEWLINE]Build. Conquer. Inspire.</Text>
 		</Row>
 		<Row Tag="LOC_DEMO_COMPLETE_MAIN_MENU">
@@ -1651,7 +1696,18 @@
 		<Row Tag="LOC_SERIALIZATION_ERROR_MISSING_REQUIRED_EXPANSION">
 			<Text>One or more required Expansion packages for the save are not installed.</Text>
 		</Row>
-
+    <Row Tag="LOC_TEAM_NAME_SELECT_TITLE">
+      <Text>Team Name</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_NAME_ENTRY_TITLE">
+      <Text>Enter Team Name</Text>
+    </Row>
+    <Row Tag="LOC_CHOOSE_TEAM_ICON">
+      <Text>Choose Team Icon</Text>
+    </Row>
+    <Row Tag="LOC_MESSAGE_OF_THE_DAY_HEADING">
+      <Text>Message of the Day:</Text>
+    </Row>
 		<!-- -->
 		
 	</FrontEndText>

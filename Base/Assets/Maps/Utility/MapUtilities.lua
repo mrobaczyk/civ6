@@ -21,6 +21,23 @@ function IsAdjacentToLand(plotTypes, iX, iY)
 	return false;
 end
 
+------------------------------------------------------------------------------
+function IsAdjacentToLandPlot(x, y)
+	-- Computes IsAdjacentToLand from the plot
+	local plot = Map.GetPlot(x, y);
+	if plot ~= nil then
+		for direction = 0, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
+			local testPlot = Map.GetAdjacentPlot(x, y, direction);
+			if testPlot ~= nil then
+				if testPlot:IsWater() == false then -- Adjacent plot is land
+					return true
+				end
+			end
+		end
+	end
+	return false
+end
+
 -- Computes IsAdjacentToIce to check if there are any adjacent river plots
 function IsAdjacentToRiver(iX, iY)
 	local adjacentPlot;	
@@ -133,8 +150,8 @@ function ShiftPlotTypes(plotTypes)
 	shift_x = DetermineXShift(plotTypes);	
 	shift_y = DetermineYShift(plotTypes);	
 	
-	print ("shift_x: ", shift_x);
-	print ("shift_y: ", shift_y);
+	--print ("shift_x: ", shift_x);
+	--print ("shift_y: ", shift_y);
 
 	ShiftPlotTypesBy(plotTypes, shift_x, shift_y);
 end

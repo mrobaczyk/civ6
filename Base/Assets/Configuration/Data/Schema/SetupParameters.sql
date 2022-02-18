@@ -127,6 +127,20 @@ CREATE TABLE 'ParameterDependencies'(
 	'ConfigurationValue'
 );
 
+CREATE TABLE 'DomainRangeQueries'(
+	'QueryId' TEXT NOT NULL,
+	'DomainField' TEXT NOT NULL DEFAULT 'Domain',
+	'MinimumValueField' TEXT NOT NULL DEFAULT 'MinimumValue',
+	'MaximumValueField' TEXT NOT NULL DEFAULT 'MaximumValue',
+	FOREIGN KEY('QueryId') REFERENCES 'Queries'('QueryId')
+);
+
+CREATE TABLE 'DomainRanges'(
+	'Domain' TEXT NOT NULL,
+	'MinimumValue' INT NOT NULL DEFAULT 0,
+	'MaximumValue' INT NOT NULL
+);
+
 CREATE TABLE 'DomainOverrideQueries'(
 	'QueryId' TEXT NOT NULL,
 	'ParameterIdField' TEXT NOT NULL DEFAULT 'ParameterId',

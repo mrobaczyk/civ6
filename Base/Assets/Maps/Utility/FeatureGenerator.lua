@@ -123,6 +123,7 @@ function FeatureGenerator:AddFeatures(allow_mountains_on_coast)
 
 					local bMarsh = false;
 					local bJungle = false;
+					--None of these are guarenteed
 					if(featureType == g_FEATURE_NONE) then
 						--First check to add Marsh
 						bMarsh = self:AddMarshAtPlot(plot, x, y);
@@ -150,15 +151,20 @@ end
 ------------------------------------------------------------------------------
 function FeatureGenerator:AddIceAtPlot(plot, iX, iY)
 	local lat = math.abs((self.iGridH/2) - iY)/(self.iGridH/2)
+	
+	if(lat > 0.78) then
+		local iScore = TerrainBuilder.GetRandomNumber(100, "Resource Placement Score Adjust");
 
-	if Map.IsWrapX() and (iY == 0 or iY == self.iGridH - 1) then
-		TerrainBuilder.SetFeatureType(plot, g_FEATURE_ICE);
-	else
-		local rand = TerrainBuilder.GetRandomNumber(100, "Add Ice Lua")/100.0;
-		
-		if(rand < 8 * (lat - 0.875)) then
-			TerrainBuilder.SetFeatureType(plot, g_FEATURE_ICE);
-		elseif(rand < 4 * (lat - 0.75)) then
+		iScore = iScore + lat * 100;
+
+		if(IsAdjacentToLandPlot(iX,iY) == true) then
+			iScore = iScore / 2.0;
+		end
+
+		local iAdjacent = TerrainBuilder.GetAdjacentFeatureCount(plot, g_FEATURE_ICE);
+		iScore = iScore + 10.0 * iAdjacent;
+
+		if(iScore > 130) then
 			TerrainBuilder.SetFeatureType(plot, g_FEATURE_ICE);
 		end
 	end

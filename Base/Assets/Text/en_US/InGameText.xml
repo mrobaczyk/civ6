@@ -49,7 +49,7 @@
 			<Text>That is the incorrect civic to select.</Text>
 		</Row>
 		<Row Tag="LOC_INCORRECT_GOVERNMENT">
-			<Text>That is the incorrect governmnet to select.</Text>
+			<Text>That is the incorrect government to select.</Text>
 		</Row>
 		<Row Tag="LOC_INCORRECT_GREAT_PERSON">
 			<Text>That is the incorrect Great Person to select</Text>
@@ -368,6 +368,9 @@
 		</Row>
 		<Row Tag="LOC_ACTION_PANEL_PLEASE_WAIT_TOOLTIP">
 			<Text>Other players are taking their turns, please wait...</Text>
+		</Row>
+		<Row Tag="LOC_ACTION_PANEL_CAN_UNREADY_TOOLTIP">
+			<Text>Click to unready your turn if you wish to make additional changes. You can only do so before all other players have readied their turns.</Text>
 		</Row>
 		<Row Tag="LOC_ACTION_PANEL_SKIP_TURN">
 			<Text>SKIP TURN</Text>
@@ -711,6 +714,9 @@
 		</Row>
 		<Row Tag="LOC_COMBAT_PREVIEW_DAMAGED_DISTRICT_DESC">
 			<Text>[COLOR_RED]{1_Value} Damaged district[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_COMBAT_PREVIEW_EMBARKED_UNIT_STRENGTH">
+			<Text>[COLOR_RED]Reduced strength when embarked</Text>
 		</Row>
 		<Row Tag="LOC_COMBAT_PREVIEW_DISTRICT_ATTACK_BONUS">
 			<Text>+{1 Value} Ranged attack bonus</Text>
@@ -1210,7 +1216,7 @@
 			<Text>Religion</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_RELIGION_NO_CITIZENS">
-			<Text>There are no religous citizens in your city at this time.</Text>
+			<Text>There are no religious citizens in your city at this time.</Text>
 		</Row>
 		<Row Tag="LOC_HUD_CITY_RELIGIOUS_CITIZENS">
 			<Text>Religious Citizens</Text>
@@ -1909,7 +1915,10 @@
 		<Row Tag="LOC_TECH_BOOST_RESEARCH_AGREEMENT">
 			<Text>Your Research Agreement has come up with a scientific breakthrough.</Text>
 		</Row>
-		<Row Tag="LOC_TECH_BOOST_COMPLETE">
+    <Row Tag="LOC_TECH_BOOST_TEAMMATE">
+      <Text>Your teammate has researched a new technology. Their scientists are anxious to share their findings.</Text>
+    </Row>
+    <Row Tag="LOC_TECH_BOOST_COMPLETE">
 			<Text>Your research in {1_techString} is now complete!</Text>
 		</Row>
 		<Row Tag="LOC_TECH_BOOST_ADVANCED">
@@ -1922,7 +1931,10 @@
 		<Row Tag="LOC_CIVIC_BOOST_WONDER">
 			<Text>Collecting wisdom from across the lands in your library has yielded new ideas for your people.</Text>
 		</Row>
-		<Row Tag="LOC_CIVIC_BOOST_GREAT_PERSON">
+    <Row Tag="LOC_CIVIC_BOOST_TEAMMATE">
+      <Text>Our teammate has completed a new civic. Their expertise will further our own progress.</Text>
+    </Row>
+    <Row Tag="LOC_CIVIC_BOOST_GREAT_PERSON">
 			<Text>The ingenuity of your great person has unlocked new ideas for your society.</Text>
 		</Row>
 		<Row Tag="LOC_CIVIC_BOOST_COMPLETE">
@@ -2527,7 +2539,7 @@
 			<Text>Must be in friendly territory.</Text>
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_APOSTLE_REQUIRED_CHARGES">
-			<Text>Must still have 2 spread charges.</Text>
+			<Text>Must still have 3 spread charges.</Text>
 		</Row>
 		<Row Tag="LOC_UNITOPERATION_UPGRADE_REQUIRES_RESOURCE_ACCESS">
 			<Text>Your Civilization needs {2_AmountNeeded} {1_ResourceName} to upgrade this type of unit.</Text>
@@ -3744,6 +3756,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_RELIGION_CONVERT_SUMMARY">
 			<Text>{1_NumConverts} Civs Converted to {2_ReligionName}</Text>
 		</Row>
+    <Row Tag="LOC_WORLD_RANKINGS_RELIGION_TEAMS_RELIGIONS">
+      <Text>team's religions</Text>
+    </Row>
 		<Row Tag="LOC_WORLD_RANKINGS_SCORE_CONDITION">
 			<Text>at {1_NumTurns} turns</Text>
 		</Row>
@@ -3756,6 +3771,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_YOU_SIMPLE">
 			<Text>You are leading</Text>
 		</Row>
+    <Row Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_TEAM_SIMPLE">
+      <Text>Your team is leading</Text>
+    </Row>
 		<Row Tag="LOC_WORLD_RANKINGS_FIRST_PLACE_YOU_DETAILS">
 			<Text>You are leading with {1_Details}</Text>
 		</Row>
@@ -3768,6 +3786,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_SIMPLE">
 			<Text>You are in {1_Place} place</Text>
 		</Row>
+    <Row Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_TEAM_SIMPLE">
+      <Text>Your team is in {1_Place} place</Text>
+    </Row>
 		<Row Tag="LOC_WORLD_RANKINGS_OTHER_PLACE_DETAILS">
 			<Text>You are in {1_Place} place with {2_Details}</Text>
 		</Row>
@@ -3777,6 +3798,9 @@
 		<Row Tag="LOC_WORLD_RANKINGS_OTHER_POSITION_DETAILS">
 			<Text>You are in position {1_Place} with {2_Details}</Text>
 		</Row>
+    <Row Tag="LOC_WORLD_RANKINGS_TEAM">
+      <Text>Team {1_TeamNumber}</Text>
+    </Row>
 		<Row Tag="LOC_WORLD_RANKINGS_1_PLACE">
 			<Text>first</Text>
 		</Row>
@@ -3813,6 +3837,30 @@
 		<Row Tag="LOC_WORLD_RANKINGS_12_PLACE">
 			<Text>twelfth</Text>
 		</Row>
+    <Row Tag="LOC_WORLD_RANKINGS_13_PLACE">
+      <Text>thirteenth</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_14_PLACE">
+      <Text>fourteenth</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_15_PLACE">
+      <Text>fifteenth</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_16_PLACE">
+      <Text>sixteenth</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_17_PLACE">
+      <Text>seventeenth</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_18_PLACE">
+      <Text>eighteenth</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_19_PLACE">
+      <Text>nineteenth</Text>
+    </Row>
+    <Row Tag="LOC_WORLD_RANKINGS_20_PLACE">
+      <Text>twentieth</Text>
+    </Row>
 		<Row Tag="LOC_WORLD_RANKINGS_STEPS_COMPLETED">
 			<Text>Steps Completed</Text>
 		</Row>
@@ -4031,7 +4079,7 @@
 			<Text>{1_CityStateName} Unique Bonus:</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS">
-			<Text>Suzerain Diplomacy Bonus:[NEWLINE][ICON_Bolt]The city-state follows you into war and peace with other players.[NEWLINE][ICON_Bolt]Your units may enter city-state lands.[NEWLINE][ICON_Bolt]Your Builder units may improve city-state tiles.[NEWLINE][ICON_Bolt]See 3 tiles around the city-state.[NEWLINE][ICON_Bolt]Can pay [ICON_Gold] Gold to temporarily take control of the city-state's military.[NEWLINE][ICON_Bolt]Gain ownership of all the city-state's resources:</Text>
+			<Text>Suzerain Diplomacy Bonus:[NEWLINE][ICON_Bolt]The city-state follows you into war and peace with other players.[NEWLINE][ICON_Bolt]City-state lands become friendly territory. You units can move there, heal there, and upgrade there.[NEWLINE][ICON_Bolt]Your Builder units may improve city-state tiles.[NEWLINE][ICON_Bolt]See 3 tiles around the city-state.[NEWLINE][ICON_Bolt]Can pay [ICON_Gold] Gold to temporarily take control of the city-state's military.[NEWLINE][ICON_Bolt]Gain ownership of all the city-state's resources.</Text>
 		</Row>
 		<Row Tag="LOC_CITY_STATES_SUZERAIN_NO_RESOURCES_AVAILABLE">
 			<Text>(None currently available)</Text>
@@ -4662,7 +4710,7 @@
 			<Text>Reports</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_CITY_STATE_BONUS">
-			<Text>City State Bonus</Text>
+			<Text>City-State Bonus</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_COLLAPSE">
 			<Text>Collapse</Text>
@@ -4872,8 +4920,11 @@
 			<Text>Great Person {1_Name} Activated</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_CITY_STATE">
-			<Text>City State</Text>
+			<Text>City-State</Text>
 		</Row>
+    <Row Tag="LOC_HUD_REPORTS_MISC_RESOURCE_SOURCE">
+      <Text>Gameplay Bonuses</Text>
+    </Row>
 		<Row Tag="LOC_HUD_REPORTS_TRADE_IMPORTED">
 			<Text>Imported</Text>
 		</Row>
@@ -4902,7 +4953,7 @@
 			<Text>{1_Turns : plural 1? turn; other? turns;}</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_VIEW_REPORTS">
-			<Text>View Reports</Text>
+			<Text>Reports</Text>
 		</Row>
 		<Row Tag="LOC_HUD_REPORTS_WORKED_LAND">
 			<Text>Worked Land</Text>
@@ -5001,7 +5052,10 @@
 		<Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_OTHER">
 			<Text>{Value : number +#.#;-#.#} from Other</Text>
 		</Row>
-		<Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_TRIBUTARIES">
+    <Row Tag="LOC_PLAYER_YIELD_GOLD_FROM_NATIONAL_PARKS">
+      <Text>{Value : number +#.#;-#.#} from National Parks</Text>
+    </Row>
+    <Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_TRIBUTARIES">
 			<Text>{Value : number +#;-#}% ({ActualValue : number +#.#;-#.#}) from city-states you are Suzerain of</Text>
 		</Row>
     <Row Tag="LOC_PLAYER_YIELD_GOLD_MODIFIER_FROM_EARNED_GREAT_PEOPLE">
@@ -5173,6 +5227,18 @@
 		<Row Tag="LOC_TOOLTIP_PLOT_WOODS_SECONDARY">
 			<Text>(second-growth)</Text>
 		</Row>
+		<Row Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY">
+			<Text>(Friendly Territory)</Text>
+		</Row>
+		<Row Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY_2">
+			<Text>Friendly Territory</Text>
+		</Row>
+		<Row Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY_3">
+			<Text>(Friendly)</Text>
+		</Row>
+		<Row Tag="LOC_TOOLTIP_PLOT_FRIENDLY_TERRITORY_4">
+			<Text>Friendly</Text>
+		</Row>
 		<Row Tag="LOC_OPTIONS_SET_KEY_BINDING_TEXT">
 			<Text>Press the desired keyboard or mouse button you wish to bind.  To cancel, click the Cancel button or press Escape.  To clear the binding, click the Clear button.</Text>
 		</Row>
@@ -5317,5 +5383,45 @@
 		<Row Tag="LOC_DEMO_DIALOG_EXIT_TT">
 			<Text>Main Menu</Text>
 		</Row>
+    <Row Tag="LOC_TURN_REMAINING">
+      <Text>Turn Remaining</Text>
+    </Row>
+    <Row Tag="LOC_TURNS_REMAINING">
+      <Text>Turns Remaining</Text>
+    </Row>
+    <Row Tag="LOC_TURNS_REMAINING_VAL">
+      <Text>{1_Turns} Turns Remaining</Text>
+    </Row>
+    <Row Tag="LOC_TURN_REMAINING_VAL">
+      <Text>{1_Turns} Turn Remaining</Text>
+    </Row>
+    <Row Tag="LOC_TURN_VAL_OF_VAL1">
+      <Text>Turn {1_Turns}/{2_MaxTurns}</Text>
+    </Row>
+    <Row Tag="LOC_TURN_VAL_OF_VAL2">
+      <Text>Turn {1_Turns} of {2_MaxTurns}</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_RELIGION_VICTORY_COUNTER">
+      <Text>{1_Civs}/{2_TotalCivs} Civs Converted to team's religions</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_CULTURE_VICTORY_COUNTER">
+      <Text>{1_Team} leading with {2_Tourists}/{3_TotalTourists} tourists attracted</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_RELIGION_CONVERTED_BY_CIV">
+      <Text>Converted by {1_Civ}</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_RELIGION_CONVERTED_BY_PLAYER">
+      <Text>Converted by {1_SteamID}</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_CIV">
+      <Text>Captured by {1_Civ}</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_DOMINATION_CAPTURED_BY_PLAYER">
+      <Text>Captured by {1_SteamID}</Text>
+    </Row>
+    <Row Tag="LOC_TEAM_LIST_HEADING">
+      <Text>Teams and Civilizations</Text>
+    </Row>
+    
 	</BaseGameText>
 </GameData>

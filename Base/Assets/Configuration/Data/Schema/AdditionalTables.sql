@@ -44,15 +44,15 @@ CREATE TABLE 'Maps' (
 	'Name' TEXT NOT NULL,
 	'Description' TEXT,
 	'WorldBuilderOnly' BOOLEAN NOT NULL DEFAULT 0,
-	'HasPreDefinedStarts' BOOLEAN NOT NULL DEFAULT 0,
-	'RequiresPreDefinedStarts' BOOLEAN NOT NULL DEFAULT 0,
+	'RequiresUniqueLeaders' BOOLEAN NOT NULL DEFAULT 0,
 	'SortIndex' INTEGER NOT NULL DEFAULT 10,
 	PRIMARY KEY ('Domain', 'File')
 );
 
-CREATE TABLE 'MapPreDefinedStartingLeaders' (
-	'Map' TEXT NOT NULL,
-	'LeaderType' TEXT NOT NULL,
+-- This is similar to MapSupportedValues but is leader specific and domain agnostic.
+CREATE TABLE 'MapLeaders' (
+	'Map' TEXT NOT NULL,		-- A reference to Maps::File
+	'LeaderType' TEXT NOT NULL,	-- A leader type (ignoring domain)
 	PRIMARY KEY ('Map', 'LeaderType')
 );
 
@@ -79,10 +79,13 @@ CREATE TABLE 'Rulesets' (
 	'DefeatDomain' TEXT NOT NULL DEFAULT 'StandardDefeats',
 	'VictoryDomain' TEXT NOT NULL DEFAULT 'StandardVictories',
 	'MaxTurns' INTEGER,
+	'FixedMaxTurns' BOOLEAN NOT NULL DEFAULT 0,
 	'SupportsSinglePlayer' BOOLEAN NOT NULL DEFAULT 1,
 	'SupportsMultiPlayer' BOOLEAN NOT NULL DEFAULT 1,
 	'SortIndex' INTEGER NOT NULL DEFAULT 100,
 	'IsScenario' BOOLEAN NOT NULL DEFAULT 0,
+	'RequiresNoTeams' BOOLEAN NOT NULL DEFAULT 0,
+	'RequiresUniqueLeaders' BOOLEAN NOT NULL DEFAULT 0,
 	'ScenarioSetupPotrait' TEXT,
 	'ScenarioSetupPotraitBackground' TEXT,
 	PRIMARY KEY('RulesetType')

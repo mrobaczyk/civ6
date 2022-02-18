@@ -66,7 +66,7 @@
 	<Requirements>
 		<Row>
 			<RequirementId>PROXYWAR_VICTORY_CAPTURE_CITY_STATES</RequirementId>
-			<RequirementType>REQUIREMENT_PLAYER_CONQUERED_X_CITY_STATES</RequirementType>
+			<RequirementType>REQUIREMENT_TEAM_CONQUERED_X_CITY_STATES</RequirementType>
 		</Row>
 	</Requirements>
 	<RequirementStrings>
@@ -98,25 +98,25 @@
 		</Row>
 		<Row>
 			<RequirementSetId>REQUIREMENTS_ARMAGEDDON_VICTORY</RequirementSetId>
-			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_PLAYER_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
+			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_TEAM_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
-			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_PLAYER_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
-			<RequirementType>REQUIREMENT_PLAYER_HAS_MOST_WMD_CITY_HITS</RequirementType>
+			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_TEAM_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
+			<RequirementType>REQUIREMENT_TEAM_HAS_MOST_WMD_CITY_HITS</RequirementType>
 		</Row>
 	</Requirements>
 	<RequirementStrings>
 		<Row>
-			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_PLAYER_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
+			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_TEAM_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
 			<Context>VictoryProgress</Context>
 			<Text>LOC_ARMAGEDDON_VICTORY_REQUIRES_PLAYER_HAS_MOST_WMD_DIRECT_CITY_HITS_PROGRESS</Text>
 		</Row>
 	</RequirementStrings>
 	<RequirementArguments>
 		<Row>
-			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_PLAYER_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
+			<RequirementId>ARMAGEDDON_VICTORY_REQUIRES_TEAM_HAS_MOST_WMD_DIRECT_CITY_HITS</RequirementId>
 			<Name>MinHitsRequired</Name>
 			<Value>1</Value>
 		</Row>
@@ -136,25 +136,25 @@
 		</Row>
 		<Row>
 			<RequirementSetId>REQUIREMENTS_TANKBANKER_VICTORY</RequirementSetId>
-			<RequirementId>VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS</RequirementId>
+			<RequirementId>VICTORY_TANKBANKER_REQUIRES_TEAM_HAS_MOST_TANKS</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
-			<RequirementId>VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS</RequirementId>
-			<RequirementType>REQUIREMENT_PLAYER_HAS_MOST_PROMOTION_CLASS</RequirementType>
+			<RequirementId>VICTORY_TANKBANKER_REQUIRES_TEAM_HAS_MOST_TANKS</RequirementId>
+			<RequirementType>REQUIREMENT_TEAM_HAS_MOST_PROMOTION_CLASS</RequirementType>
 		</Row>
 	</Requirements>
 	<RequirementStrings>
 		<Row>
-			<RequirementId>VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS</RequirementId>
+			<RequirementId>VICTORY_TANKBANKER_REQUIRES_TEAM_HAS_MOST_TANKS</RequirementId>
 			<Context>VictoryProgress</Context>
 			<Text>LOC_VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS_PROGRESS</Text>
 		</Row>
 	</RequirementStrings>
 	<RequirementArguments>
 		<Row>
-			<RequirementId>VICTORY_TANKBANKER_REQUIRES_PLAYER_HAS_MOST_TANKS</RequirementId>
+			<RequirementId>VICTORY_TANKBANKER_REQUIRES_TEAM_HAS_MOST_TANKS</RequirementId>
 			<Name>PromotionClass</Name>
 			<Value>PROMOTION_CLASS_HEAVY_CAVALRY</Value>
 		</Row>

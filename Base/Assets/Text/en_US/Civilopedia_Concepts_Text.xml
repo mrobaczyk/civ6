@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlSpy.com) by Anton Strenger (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
 <GameData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<BaseGameText>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_INTRO_CHAPTER_INTRO_TITLE">
@@ -128,15 +128,21 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_12">
 			<Text>+1: If the tile is on a River or Lake</Text>
 		</Row>
-		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_13">
+    <Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_13">
+      <Text>+1: Each Château and Sphinx.</Text>
+    </Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_14">
 			<Text>-1: Each adjacent Industrial Zone, Encampment, Airport or Spaceport</Text>
 		</Row>
-		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_14">
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_15">
 			<Text>-1: Each adjacent Rainforest, Marsh or Floodplain</Text>
 		</Row>
-		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_15">
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_16">
 			<Text>-1: Each adjacent pillaged tile</Text>
 		</Row>
+    <Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_11_CHAPTER_CONTENT_PARA_17">
+      <Text>-1: Mines, Quarries, Oil Wells, Offshore Oil Rigs, and Airstrips</Text>
+    </Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_5_CHAPTER_CONTENT_TITLE">
 			<Text>Buildings</Text>
 		</Row>
@@ -171,7 +177,7 @@
 			<Text>Happiness</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_16_CHAPTER_CONTENT_PARA_1">
-			<Text>Happiness measures the contentment of your people in a single city, and is measured by seeing if the [ICON_Citizen] Population of that city has as many [ICON_Amenities] Amenities as expected. 1 [ICON_Amenities] Amenity is required for each 2 [ICON_Citizen] Population, start at a [ICON_Citizen] Population of 3. A content city will not have any modifier applied to it, but a happy city will have a 10% growth increase and a 5% yield increase. Furthermore, an Ecstatic city will have a 20% growth increase and 10% yield increase. Likewise, having too few [ICON_Amenities] Amenities will create displeasure among your [ICON_Citizen] Citizens, and the growth and yields will receive negative modifiers. At the level of unrest, your growth will stop and you may find rebel partisans in your city.</Text>
+			<Text>Happiness measures the contentment of your people in a single city, and is measured by seeing if the [ICON_Citizen] Population of that city has as many [ICON_Amenities] Amenities as expected. 1 [ICON_Amenities] Amenity is required for each 2 [ICON_Citizen] Population, starting at a [ICON_Citizen] Population of 3. A Content city will not have any modifier applied to it, but a Happy city will have a 10% growth increase and a 5% yield increase. Furthermore, an Ecstatic city will have a 20% growth increase and 10% yield increase. Likewise, having too few [ICON_Amenities] Amenities will create displeasure among your [ICON_Citizen] Citizens, and the growth and yields will receive negative modifiers. At the level of Unrest, your growth will stop and you may find rebel partisans in your city.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_17_CHAPTER_CONTENT_TITLE">
 			<Text>Amenity Sources</Text>
@@ -363,7 +369,10 @@
 			<Text>In combining your military might with the right force organization of combined arms, leadership, and intuitive use of terrain you can have the power to destroy your enemies armies, no matter how big or small, advanced or not. Using terrain to your advantage, you can position your forces on Hills, in Rainforests or Woods, and across Rivers from your enemy to ensure a distinct defensive advantage. Looking at the enemies movements across terrain as they approach you can also help you better understand what their battle plan is or where they look to strike.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_7_CHAPTER_CONTENT_PARA_3">
-			<Text>Terrain can also be detrimental to your fight; be sure to avoid fighting on Flood Plains and Marshes as these have a negative effect on your defensibility. If you find yourself on indefensible terrain, and do not feel you can defeat your enemy on the attack, perhaps building a few Forts will help you push back the enemy. Remember to attack the enemies flanks, it is their weakest point and will also grant you advantage! Using a well-rounded military force with the proper terrain dispositions while having the use of a Great General will ensure victory!</Text>
+			<Text>Terrain can also be detrimental to your fight; be sure to avoid fighting on Flood Plains and Marshes as these have a negative effect on your defensibility. If you find yourself on indefensible terrain, and do not feel you can defeat your enemy on the attack, perhaps building a few Forts will help you push back the enemy. Remember to attack the enemy's flanks, it is their weakest point and will also grant you advantage! Using a well-rounded military force with the proper terrain dispositions while having the use of a Great General will ensure victory!</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_7_CHAPTER_CONTENT_PARA_4">
+			<Text>Flanking and Support bonuses: Outmaneuvering the enemy as well as making sure units in the field are supported by their counterparts is important in order to insure victory in the field. In Civilization VI we simulate this with the Flanking and Support bonuses. Once a player has completed the Military Tradition civic, their military is considered advanced enough in order to benefit from these bonuses.[NEWLINE][NEWLINE]Flanking: If an enemy unit is surrounded by 2 or more adjacent friendly units during an attack, it is considered flanked, granting a +2 combat bonus to the attacker for each additional flanking unit.[NEWLINE][NEWLINE]Support: When defending against an enemy attack, a defending unit can gain a +2 combat bonus for every adjacent friendly unit.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_COMBAT_8_CHAPTER_CONTENT_TITLE">
 			<Text>Experience and Promotions</Text>
@@ -435,7 +444,7 @@
 			<Text>Zone of Control</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_3_CHAPTER_CONTENT_PARA_1">
-			<Text>Many combat units exert a "Zone of Control" (ZOC) over the tiles around them. When a unit moves into an enemy's ZOC with [ICON_Movement] Movement leftover, its [ICON_Movement] Movement is stopped or it may attack. Ranged unit do not exercise a ZOC.</Text>
+			<Text>Many combat units exert a "Zone of Control" (ZOC) influence over the tiles around them. Combat units that enter an enemy's ZOC must stop, regardless of any remaining [ICON_Movement] Movement. Units that have been stopped by an enemy's ZOC have the option to attack if they have the required [ICON_Movement] Movement to do so.[NEWLINE][NEWLINE]Ranged and Bombard class units do not exert ZOC. Cavalry units, as well as Naval Raider class units have the ability to ignore an enemy's ZOC.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_4_CHAPTER_CONTENT_TITLE">
 			<Text>Naval Movement</Text>
@@ -447,7 +456,7 @@
 			<Text>Embarking Units</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_MOVEMENT_5_CHAPTER_CONTENT_PARA_1">
-			<Text>At the start of the game, your land units cannot enter any water tiles. However, once you've learned the Sailing technology, Builders will be able to move into coastal water tiles. After Celestial Navigation, Traders will be able to embark. And after Shipbuilding, all units will be able to embark. To embark a unit, move the unit to a coastal tile and then click on the "Embark" Action. Once embarked, the unit must move into water.</Text>
+			<Text>At the start of the game, your land units cannot enter any water tiles. However, once you've learned the Sailing technology, Builders will be able to move into coastal water tiles. After Celestial Navigation, Traders will be able to embark. And after Shipbuilding, all units will be able to embark. To embark a unit, move the unit to a coastal tile and then click on the "Embark" Action. Once embarked, the unit must move into water.[NEWLINE]Land units that embark are considered to be in a transport ship, and do not have the same combat abilities as they do on land. Embarked land units also suffer a reduced combat strength, and can only heal in friendly waters, making them much more vulnerable to attack from enemy naval units.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_SCIENCE_NAME">
 			<Text>Science and Technology</Text>
@@ -502,12 +511,12 @@
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_4_CHAPTER_CONTENT_PARA_1">
 			<Text>To see how all of this works in the game, check out the amazing Civics Tree. It displays all of the civics and shows how they are intertwined. You can click on a civic to order your civilization to study it – if your civilization doesn't know the prerequisite civic it will research them as well. The Civics Tree will plot the quickest route to the requested civic, and you will study the necessary precursors in the order it displays. </Text>
-		</Row>		
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_TITLE">
 			<Text>Culture Bombs</Text>
-		</Row>		
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_PARA_1">
-			<Text>A Culture Bomb is an action that allows you to wrest control of adjacent tiles from another player and add them to your own empire. Tiles gained in this way must be within 3 spaces of your city that is expanding. Tiles that already contain a completed district or wonder do not switch ownership from Culture Bombs. Incomplete district or wonder tiles will switch ownership, but the partially-built contents of those tiles will be destroyed.</Text>
+			<Text>A Culture Bomb is an action that allows you to wrest control of adjacent tiles and add them to your own empire, even if owned by another player. Tiles gained in this way must be within 3 spaces of your city that is expanding. Tiles that already contain a completed district or wonder do not switch ownership from Culture Bombs. Incomplete district or wonder tiles will switch ownership, but the partially-built contents of those tiles will be destroyed.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CULTURE_5_CHAPTER_CONTENT_PARA_2">
 			<Text>To initiate a Culture Bomb, play as Poland and complete an Encampment or Fort in friendly territory.</Text>
@@ -606,7 +615,7 @@
 			<Text>A damaged Religious unit suffers a penalty to the strength of its Spread Religion action, meaning it will convert fewer Followers. If a Religious unit is reduced to 0 Hit Points from theological combat, it will die. When a Religious unit is defeated this way, all cities within 10 tiles have a religious pressure drop of the defeated unit's Religion equal to the strength of an Apostle at full health and then a boost in the victorious unit's Religion of the same amount. If a Religious unit is killed by a hostile military unit, then the religious pressure drop occurs just like in theological combat.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_FAITH_7_CHAPTER_CONTENT_PARA_4">
-			<Text>Religious units can heal any damage they have by staying adjacent to or in a Holy Site that follows their Religion.</Text>
+			<Text>Religious units can heal any damage they have by staying adjacent to or in a Holy Site in the player's territory, regardless of the Religion of that Holy Site.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_DIPLO_NAME">
 			<Text>Diplomacy</Text>
@@ -636,7 +645,7 @@
 			<Text>Every other leader in the game has an opinion of you. Their opinion might be positive or it might be negative; it is in constant flux from events in the game. You can tell what your relationship with another leader is by the icon on their leader portrait, or by selecting Our Relationship with that leader on the Diplomacy Panel. The following relationship states exist in the game:</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_12_CHAPTER_CONTENT_PARA_2">
-			<Text>Allies. When in an Alliance with a leader, you may not declare war on each other, you automatically share Open Borders, you may make Research Agreements and Defensive Pacts, and deals you make with each other are likely to be very favorable.[NEWLINE][NEWLINE]Declared Friend. When you choose to declare your friendship with a leader, you may not declare war on each other, you may make Research Agreements, and deals you make with each other will be more favorable. This relationship state is required to make an Alliance.[NEWLINE][NEWLINE]Friendly. This means the leader thinks positively of you and you have a better chance of getting favorable deals with them.[NEWLINE][NEWLINE]Neutral. You have done nothing to upset or impress the leader, and your interactions with them will be standard.[NEWLINE][NEWLINE]Unfriendly. For some reason, you have done something to upset this leader, and deals with them will likely be unfavorable for you, or you can choose to make demands of them. [NEWLINE][NEWLINE]Denounced. This leader has let the other leaders in the world know that you have done something to offend them. Your deals with them will be unfavorable if they will make them at all, but you can declare a Formal War against them and make demands.[NEWLINE][NEWLINE]At War. Open hostilities have broken out between you, and you can attack or invade this leader but you will accrue warmongering and war weariness penalties.</Text>
+			<Text>Allies. When in an Alliance with a leader, you may not declare war on each other, you automatically share Open Borders, you may make Research Agreements and Defensive Pacts, and deals you make with each other are likely to be very favorable. Territory owned by the other civilization in the Alliance is considered 'Friendly', allowing the same privileges as your own territory.[NEWLINE][NEWLINE]Declared Friend. When you choose to declare your friendship with a leader, you may not declare war on each other, you may make Research Agreements, and deals you make with each other will be more favorable. This relationship state is required to make an Alliance.[NEWLINE][NEWLINE]Friendly. This means the leader thinks positively of you and you have a better chance of getting favorable deals with them.[NEWLINE][NEWLINE]Neutral. You have done nothing to upset or impress the leader, and your interactions with them will be standard.[NEWLINE][NEWLINE]Unfriendly. For some reason, you have done something to upset this leader, and deals with them will likely be unfavorable for you, or you can choose to make demands of them. [NEWLINE][NEWLINE]Denounced. This leader has let the other leaders in the world know that you have done something to offend them. Your deals with them will be unfavorable if they will make them at all, but you can declare a Formal War against them and make demands.[NEWLINE][NEWLINE]At War. Open hostilities have broken out between you, and you can attack or invade this leader but you will accrue warmongering and war weariness penalties.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_7_CHAPTER_CONTENT_TITLE">
 			<Text>Trade, Demand, and Discuss</Text>
@@ -698,6 +707,21 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_14_CHAPTER_CONTENT_PARA_1">
 			<Text>After researching the civic Foreign Trade, a Joint War may be proposed between players. If you accept or propose a Joint War, you and another player will immediately be at war with the target player as set in the deal parameters.</Text>
 		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_TITLE">
+			<Text>Territory</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_1">
+			<Text>Diplomatic Territory is divided into 3 types:</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_2">
+			<Text>Friendly: Territory owned by your civilization. Friendly territory can also be established by becoming allies with a major civilization, or by becoming the Suzerain of a city-state. Units will heal faster in territory that is friendly to them, as well as take advantage of special abilities and policies associated with friendly territory. Units must be in friendly territory in order to be upgraded.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_3">
+			<Text>Neutral: Territory that is not currently owned by a civilization or city state. This territory may be claimed by a civilization or a city state, through expansion of city borders or by founding a new city there. With the exception of the Fort and Airstrip improvements, players are not allowed to construct items in neutral territory.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_15_CHAPTER_CONTENT_PARA_4">
+			<Text>Rival: Territory that is owned by another civilization or city-state. Players cannot move into a rival’s territory without first establishing Open Borders with that civilization. Unit healing is lowest in rival territory.</Text>
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_3_CHAPTER_CONTENT_TITLE">
 			<Text>Casus Belli</Text>
 		</Row>
@@ -733,6 +757,9 @@
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_5_CHAPTER_CONTENT_PARA_2">
 			<Text>Spies are not moved like other units. They jump from city to city using air, sea, road, or foot travel, each with their own travel time. Once established in a city, a Spy can be sent to a specific district and begin their mission. Missions include stealing technology boosts, creating rebel units, or simply increasing diplomatic visibility. Each mission takes a certain amount of time, and will have a different outcome. Your Spy may be killed or captured, or maybe he failed his mission but was not detected, or perhaps it was not detected and the mission was a success.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_DIPLO_5_CHAPTER_CONTENT_PARA_3">
+			<Text>Every civilization can produce 5 Spies. Play as Catherine to earn the ability to produce 6.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_CITYSTATES_NAME">
 			<Text>City-States</Text>
@@ -777,13 +804,10 @@
 			<Text>Envoys</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_4_CHAPTER_CONTENT_PARA_1">
-			<Text>The bonuses you earn from a city-state depend on how many [ICON_Envoy] Envoys you have sent to the city-state. After earning [ICON_Envoy] Envoys, you will receive a prompt to choose which city-states to send them to. If you have multiple [ICON_Envoy] Envoys, you may divide them between city-states as you desire.</Text>
+			<Text>The bonuses you earn from a city-state depend on how many [ICON_Envoy] Envoys you have sent to the city-state. [ICON_Envoy] Envoys are earned over time with influence points (which come from Governments and Policies), or instantly by completing certain Civics. Once earned, you will receive a prompt to choose which city-states to send them to. If you have multiple [ICON_Envoy] Envoys, you may divide them between city-states as you desire.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_4_CHAPTER_CONTENT_PARA_2">
 			<Text>Declaring war directly on a city-state removes all [ICON_Envoy] Envoys you had there. Otherwise, [ICON_Envoy] Envoys stay on the city-state permanently. [ICON_Envoy] Envoys at a city-state are visible to all players, and placing them may have diplomatic consequences. The bonuses earned are based on how many [ICON_Envoy] Envoys you have present, regardless of who else has [ICON_Envoy] Envoys there. City-states of a type all share the same Type Bonuses. They are cumulative, so that as a player places more and more [ICON_Envoy] Envoys on a city-state, they stack with the bonuses from before.</Text>
-		</Row>
-		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_4_CHAPTER_CONTENT_PARA_3">
-			<Text>{LOC_PEDIA_CONCEPTS_PAGE_DIPLO_6_CHAPTER_CONTENT_PARA_4}</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_TITLE">
 			<Text>Suzerain</Text>
@@ -792,13 +816,13 @@
 			<Text>The civilization with the most [ICON_Envoy] Envoys on a city-state, and at least 3 [ICON_Envoy] Envoys, is considered that city-state's Suzerain. There can be at most one Suzerain; ties are not allowed. If nobody has [ICON_Envoy] Envoys on a city-state, there is no Suzerain. The Suzerain gets several significant benefits:</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_2">
-			<Text>Unique city-state bonus: This is a powerful bonus which no other city-state will provide (ex. Jerusalem acts as a second Holy City for your Religion.)</Text>
+			<Text>Unique Bonus: This is a powerful bonus which no other city-state will provide (ex. Jerusalem acts as a second Holy City for your Religion.)</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_3">
-			<Text>Diplomatic allegiance: The city-state will automatically follow its Suzerain into war and peace, matching the diplomatic state of the Suzerain.</Text>
+			<Text>{LOC_CITY_STATES_SUZERAIN_DIPLOMATIC_BONUS}</Text>
 		</Row>
-		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_4">
-			<Text>Resource Sharing: All of the city-state's resources are automatically exported to the Suzerain, and the Suzerain may build improvements in their city-state's territory.</Text>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_CITYSTATES_5_CHAPTER_CONTENT_PARA_5">
+			<Text>Friendly Territory: The city-state's territory is considered 'Friendly' to its Suzerain, allowing the Suzerain to gain the same privileges that are provided by its own territory.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_TRADE_NAME">
 			<Text>Trade</Text>
@@ -810,7 +834,7 @@
 			<Text>The Trader unit is unlocked by researching Foreign Trade, and built in cities. Trader units are on a separate map layer, and do not interact with most normal things on a map. They can freely stack with any other units, and they ignore cultural borders.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_1_CHAPTER_CONTENT_PARA_2">
-			<Text>When a Trader is in a city the player owns, it can begin a [ICON_TradeRoute] Trade Route between that city and another city that is in range, as long as that [ICON_TradeRoute] Trade Route is not already active (for example, if I already have a [ICON_TradeRoute] Trade Route from Rome to Athens, I cannot start a second one), and the player has not reached their maximum number of [ICON_TradeRoute] Trade Routes. </Text>
+			<Text>When a Trader is in a city the player owns, it can begin a [ICON_TradeRoute] Trade Route between that city and another city that is in range, as long as none of your [ICON_TradeRoute] Trade Routes are already going there (for example, if I already have a [ICON_TradeRoute] Trade Route to the city of Athens, I cannot send a second one there), and the player has not reached their maximum number of [ICON_TradeRoute] Trade Routes. </Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_1_CHAPTER_CONTENT_PARA_3">
 			<Text>Once made, the [ICON_TradeRoute] Trade Route will last for at least 20 turns on Standard game speed. The Trader unit will move automatically along its path for the duration of the route, but will not finish the route until it has returned to the origin city's tile. When on an active route, the Trader unit will disregard terrain restrictions and move 1 tile every turn, placing a Road as it moves. Don't forget to protect your Trader from Barbarians or hostile civilizations, as it is vulnerable to pillaging.</Text>
@@ -825,19 +849,34 @@
 			<Text>Trade Range</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_3_CHAPTER_CONTENT_PARA_1">
-			<Text>On land, a [ICON_TradeRoute] Trade Route can reach destinations within a range of 15 tiles. Once the player researches the technology that allows embarkation, Traders can also move over water. On water, the range is 30 tiles. Changing between land and water can only be done at a City Center or Harbor district, and the allowance does not carry over. If the city has a Trading Post, the Trader "refuels" its allowance for the new travel domain, and can move further. Otherwise, it must stop at that city.</Text>
+			<Text>On land, a [ICON_TradeRoute] Trade Route can reach destinations within a range of 15 tiles. Once the player researches the technology that allows embarkation, Traders can also move over water. On water, the range is 30 tiles. If you have a [ICON_TradingPost] Trading Post in the city, the Trader "refuels" its allowance for the new travel domain, and can move further. Otherwise, it must stop at that city.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_3_CHAPTER_CONTENT_PARA_2">
+			<Text>Changing between land and water can only be done at a City Center or Harbor district, and the allowance does not carry over.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_4_CHAPTER_CONTENT_TITLE">
 			<Text>Trading Posts</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_4_CHAPTER_CONTENT_PARA_1">
-			<Text>Trading Posts extend your trade network and make it more lucrative. Not only do they let you reach further destinations, they also provide bonus yields to any of your [ICON_TradeRoute] Trade Routes that pass through them (even if they are not the destination). When a player owns a Trading Post in a city, regardless of who owns the city, that player’s [ICON_TradeRoute] Trade Routes can “refuel” their [ICON_Movement] Movement range and reach further destinations. Trading Posts are placed at a city once a [ICON_TradeRoute] Trade Route to or from that city successfully completes, and the Trading Post belongs to the player that owned the [ICON_TradeRoute] Trade Route.</Text>
+			<Text>Extend your trade network and make it more lucrative with [ICON_TradingPost] Trading Posts. A [ICON_TradingPost] Trading Post is placed at a city once a [ICON_TradeRoute] Trade Route to or from that city successfully completes. It belongs to the player that owned the [ICON_TradeRoute] Trade Route.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_4_CHAPTER_CONTENT_PARA_2">
+			<Text>Your [ICON_TradeRoute] Trade Routes can “refuel” their [ICON_Movement] Movement range in any city that has one of your [ICON_TradingPost] Trading Posts, allowing them to reach further destinations. If the city belongs to another player, the [ICON_TradingPost] Trading Post also makes the [ICON_TradeRoute] Trade Route more valuable, providing +1 [ICON_Gold] Gold for its income.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_5_CHAPTER_CONTENT_TITLE">
-			<Text>Yields</Text>
+			<Text>Yields for Trade Route Owner</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_5_CHAPTER_CONTENT_PARA_1">
-			<Text>A [ICON_TradeRoute] Trade Route provides yields based on where it goes and what path it takes. The districts within a destination city will determine the types of yields provided to the origin city. For example, trading with a city with a Holy Site will provide [ICON_Faith] Faith, and trading with a city with a Theater Square district will provide [ICON_Culture] Culture.</Text>
+			<Text>A [ICON_TradeRoute] Trade Route provides yields each turn to its origin city, primarily based on which districts are at its destination city. For example, trading with a city with a Holy Site will provide [ICON_Faith] Faith, and trading with a city with a Theater Square district will provide [ICON_Culture] Culture.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_5_CHAPTER_CONTENT_PARA_2">
+			<Text>It also gets yields based on the path it takes. If it passes through a [ICON_TradingPost] Trading Post you own in a foreign city, it is worth an additional 1 [ICON_Gold] Gold. Long paths which pass through several [ICON_TradingPost] Trading Posts are very valuable.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_6_CHAPTER_CONTENT_TITLE">
+			<Text>Yields for Cities on Route</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TRADE_6_CHAPTER_CONTENT_PARA_1">
+			<Text>A City earns 1 [ICON_Gold] Gold per turn for every [ICON_TradeRoute] Trade Route belonging to another player that routes through its City Center.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_GOVT_NAME">
 			<Text>Governments and Policies</Text>
@@ -917,6 +956,9 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_2_CHAPTER_CONTENT_PARA_2">
 			<Text>Each district, and the buildings within it, provides points towards its associated [ICON_GreatPerson] Great Person type. This is the slow but steady source of points. Districts also allow a city to use [ICON_Production] Production towards projects which, when completed, contribute [ICON_GreatPerson] Great Person points.</Text>
 		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_2_CHAPTER_CONTENT_PARA_3">
+			<Text>Players can also spend [ICON_Gold] Gold or [ICON_Faith] Faith to patronize a Great Person, earning that person instantly. The patronage cost is based on how many more [ICON_GreatPerson] Great Person points the player would need to recruit that person normally.</Text>
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_3_CHAPTER_CONTENT_TITLE">
 			<Text>Using Great People</Text>
 		</Row>
@@ -924,7 +966,7 @@
 			<Text>Each [ICON_GreatPerson] Great Person individual has a different effect, inspired by history. Most effects are strongly linked to a particular era of play, and are not optimal for use outside of that time. The effects fall into two broad categories, "birth" effects and "action" effects.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_3_CHAPTER_CONTENT_PARA_2">
-			<Text>A Birth Effect happens as soon as the [ICON_GreatPerson] Great Person is spawned on the map, and do not need to be activated. These are mostly used for Great Generals and Great Admirals.</Text>
+			<Text>A Passive Effect happens as soon as the [ICON_GreatPerson] Great Person is spawned on the map. These are mostly found on Great Generals and Great Admirals.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_GREATPEOPLE_3_CHAPTER_CONTENT_PARA_3">
 			<Text>An Action Effect must be activated by the [ICON_GreatPerson] Great Person by using a “charge” at a certain location. The number of charges, the type of location needed, and the effect activated will vary based on the individual. Most individuals only have 1 charge and can only activate at a district matching its type (ex. most [ICON_GreatScientist] Great Scientists have 1 charge and must use it at a Campus). Like other charge-based units, the individual will disappear when all charges are depleted.</Text>
@@ -966,13 +1008,13 @@
 			<Text>Air Strikes</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_4_CHAPTER_CONTENT_PARA_1">
-			<Text>Heavy Bomber aircraft cannot deploy on Patrols, but they are instead considered 'stationed' at a friendly air base and can carry out attacks from that base. Unlike Fighter aircraft, Bombers do not engage in dogfighting, but they head straight for their target and attack. Bomber aircraft can 'pillage' district buildings and city improvements by attacking them directly. The effect is the same as a ground unit pillage action with one exception - the attacking air unit does not get the resulting benefit from the pillage action. In order for a pillage to occur, the attacking air unit must be at 50% health or higher.</Text>
+			<Text>Heavy Bomber aircraft cannot deploy on Patrols, but they are instead considered 'stationed' at a friendly air base and can carry out attacks from that base. Unlike Fighter aircraft, Bombers do not engage in dogfighting, but they head straight for their target and attack.[NEWLINE][NEWLINE]Strategic Bombing: Bomber aircraft can attack district buildings and city improvements directly, if no land unit currently occupies the the target location. The result of this type of attack is the same as a ground unit Pillage action with one exception - the attacking air unit does not get the resulting benefit from the pillage action. In order for a bombing attack to be successful, the attacking air unit must be at 50% health or higher.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_5_CHAPTER_CONTENT_TITLE">
 			<Text>Interceptions</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_AIRCOMBAT_5_CHAPTER_CONTENT_PARA_1">
-			<Text>Fighters can be set to "Intercept" enemy air attacks.  (AA Gun and Mobile SAM automatically intercept; they don't need to be given a special mission.) If an air unit tries an air strike against a target within the range of an intercepting unit, the interceptor will fire on the attacker and do damage to it. Unless the attacker is killed by the interceptor, the air strike proceeds. Only one unit can intercept an air strike, and once it does so, it cannot intercept any more that turn.</Text>
+			<Text>Fighters can be set to "Intercept" enemy air attacks.  (AA Gun and Mobile SAM automatically intercept; they don't need to be given a special mission.) If an air unit tries an air strike against a target within the range of an intercepting unit, the interceptor will fire on the attacker and do damage to it.[NEWLINE][NEWLINE]If an attacking aircraft enters the defensive radius of more than one deployed aircraft, the highest strength aircraft is chosen to intercept. The remaining aircraft act in support of the defense by adding +5 to the strength of the main interceptor.[NEWLINE][NEWLINE]Once combat is resolved with any Anti-Air ground units and intercepting air units, if the attacking aircraft survives, combat is then resolved with the original target.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_NUKES_NAME">
 			<Text>Nukes</Text>
@@ -1017,7 +1059,7 @@
 			<Text>Great Works, Relics, and Artifacts</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_2_CHAPTER_CONTENT_PARA_1">
-			<Text>Great Works come in five different types. Writing, Art, and Music which can be generated through [ICON_GreatPerson] Great People, [ICON_GreatWork_Artifact] Artifacts, which are retrieved from Antiquity Sites by Archaeologists, and [ICON_GreatWork_Relic] Relics, which are created by Apostles with the Martyr ability when they die in Theological Combat, or obtained through Tribal Villages or the city-state Kandy. Once earned, a Great Work can be housed in a Great Work slot in the appropriate building or Wonder. </Text>
+			<Text>Great Works come in five different types. [ICON_GreatWork_Writing] Writing, [ICON_GreatWork_Landscape] Art, and [ICON_GreatWork_Music] Music which can be generated through [ICON_GreatPerson] Great People, [ICON_GreatWork_Artifact] Artifacts, which are retrieved from Antiquity Sites by Archaeologists, and [ICON_GreatWork_Relic] Relics, which are created by Apostles with the Martyr ability when they die in Theological Combat, or obtained through Tribal Villages or the city-state Kandy. Once earned, a Great Work can be housed in a Great Work slot in the appropriate building or Wonder. </Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TOURISM_3_CHAPTER_CONTENT_TITLE">
 			<Text>Seaside Resorts</Text>
@@ -1056,10 +1098,16 @@
 			<Text>Domination Victory</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_1">
-			<Text>If you are the last player in possession of your own original [ICON_Capital] Capital, you win. So if you capture all other civilizations' [ICON_Capital] Capitals and hang onto your own, you've achieved victory. However, this can be tricky. Suppose you're in a five-player game and you capture three of your opponents' original [ICON_Capital] Capitals, but the fifth player sneaks in and captures your [ICON_Capital] Capital while you're not paying attention – then he would win immediately. In other words, it doesn't matter who captures what: it's the last player holding onto his original [ICON_Capital] Capital who gets the victory.</Text>
+			<Text>To win a Domination victory, you must capture all original civilization [ICON_Capital] Capitals.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_2">
 			<Text>If you've lost your original [ICON_Capital] Capital, but still possess other cities, you can still win another type of victory: Culture, Science, Score, or Religious. However, you cannot win a Domination Victory until and unless you recapture your own original [ICON_Capital] Capital. </Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_3">
+			<Text>TEAM DOMINATION VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_2_CHAPTER_CONTENT_PARA_4">
+			<Text>To win a team domination victory, all team members must control their own original [ICON_Capital] capitals while all other players do not.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_TITLE">
 			<Text>Science Victory</Text>
@@ -1088,6 +1136,12 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_PARA_8">
 			<Text>Once every piece is launched, you have won the game.</Text>
 		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_PARA_9">
+			<Text>TEAM SCIENCE VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_3_CHAPTER_CONTENT_PARA_10">
+			<Text>To win a Team Science Victory, an individual team member needs to complete the standard Science Victory requirements.  Requirement completion is not shared.  Teammates are encouraged to cooperate towards a Team Science Victory using Team Shared Research.  See the Teams page.</Text>
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_TITLE">
 			<Text>Culture Victory</Text>
 		</Row>
@@ -1096,6 +1150,12 @@
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_PARA_2">
 			<Text>[ICON_Tourism] Tourism is generated by [ICON_TradeRoute] Trade Routes, shared (or conflicting) late game Governments, open borders, Great Works housed in your civilization, [ICON_GreatWork_Relic] Relics housed in your civilization, Holy Sites, National Parks, [ICON_GreatWork_Artifact] Artifacts, and wonders.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_PARA_3">
+			<Text>TEAM CULTURE VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_4_CHAPTER_CONTENT_PARA_4">
+			<Text>To win a Team Culture Victory, an individual team member's [ICON_Tourism] Visiting Tourists must exceed the [ICON_Tourism] Domestic Tourists of all non-team member civilizations.  [ICON_Tourism] Visiting Tourists are not shared between team members.</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_TITLE">
 			<Text>Religious Victory</Text>
@@ -1106,11 +1166,53 @@
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_PARA_2">
 			<Text>While your Religion will spread passively simply by settling near other players, it is your Missionaries and Apostles who offer the best chance at victory.</Text>
 		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_PARA_3">
+			<Text>TEAM RELIGIOUS VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_5_CHAPTER_CONTENT_PARA_4">
+			<Text>To win a Team Religious Victory, Religions founded by the team must be the predominant Religion in every other civilization.  The dominate Religions can be of any combination as long as the Religions were all founded by team members.</Text>
+		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_TITLE">
 			<Text>Score Victory</Text>
 		</Row>
 		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_PARA_1">
 			<Text>In many games, one of the players will win the game by achieving one of the possible victories. However, if no one achieves one of these victories by the year 2050 (or a player-set turn), the winner is determined by the surviving civilization's "score." Points for your score are earned from number of civics, number of population, number of cities, number of technologies, number of "future technologies", number of wonders, military accomplishments, number of [ICON_GreatPerson] Great People, and number of Beliefs.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_PARA_2">
+			<Text>TEAM SCORE VICTORY</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_VICTORY_6_CHAPTER_CONTENT_PARA_3">
+			<Text>When playing as a team, score is calculated as a summation of the team members' individual civilization scores.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGEGROUP_TEAMS_NAME">
+			<Text>Teams</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_1_CHAPTER_CONTENT_TITLE">
+			<Text>Introduction</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_1_CHAPTER_CONTENT_PARA_1">
+			<Text>Prior to starting a game, individual civilizations can be placed on teams for a more cooperative experience.  When playing as a team, team members share a variety of gameplay benefits and can win the game collectively.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_1_CHAPTER_CONTENT_PARA_2">
+			<Text>Team play is currently available in standard multiplayer games and most multiplayer scenarios.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_2_CHAPTER_CONTENT_TITLE">
+			<Text>Team Diplomatic Relations</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_2_CHAPTER_CONTENT_PARA_1">
+			<Text>Team members share a permanent diplomatic alliance.  All the standard alliance rules and benefits apply.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_3_CHAPTER_CONTENT_TITLE">
+			<Text>Team Shared War</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_3_CHAPTER_CONTENT_PARA_1">
+			<Text>Team members share war status.  If a team member declares war, the declared Casus Belli conditions apply to all team members.</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_4_CHAPTER_CONTENT_TITLE">
+			<Text>Team Shared Research</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CONCEPTS_PAGE_TEAMS_4_CHAPTER_CONTENT_PARA_1">
+			<Text>Team members partially share research progress. Team members receive a technology boost for every technology possessed by a team member.</Text>
 		</Row>
 	</BaseGameText>
 </GameData>

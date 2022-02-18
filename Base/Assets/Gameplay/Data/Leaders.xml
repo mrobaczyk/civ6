@@ -264,15 +264,15 @@
 		<Row ListType="FavorCulturalVictory" Item="VICTORY_STRATEGY_CULTURAL_VICTORY" Value="-1"/>
 		<Row ListType="FavorReligiousVictory" Item="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Value="-1"/>
 		<Row ListType="ForbidReligiousVictory" Item="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Value="5"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="30"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_ADDITIONAL_VALUE_PER_CITY" Value="1"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="90"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_ADDITIONAL_VALUE_PER_CITY" Value="3"/>
 		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_TURNS" Value="10"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_AMOUNT" Value="2"/>
-		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="50"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_DECAY_AMOUNT" Value="6"/>
+		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="150"/>
 		<Row ListType="DefaultCitySettlement" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="3"/>
-		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-10"/>
-		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_DECAY_AMOUNT" Value="1"/>
-		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="15"/>
+		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-30"/>
+		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_DECAY_AMOUNT" Value="3"/>
+		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="45"/>
 		<Row ListType="ExpansionistCitySettlement" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="1"/>
 	</AiFavoredItems>
 	<Agendas>
@@ -588,7 +588,7 @@
 		<Row ListType="PhilipWonders" Item="BUILDING_GREAT_LIGHTHOUSE"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_HAGIA_SOPHIA"/>
 		<Row ListType="PhilipWonders" Item="BUILDING_MAHABODHI_TEMPLE"/>
-		<Row ListType="PhilipForeignSettlement" Item="Foreign Continent" Favored="false" Value="20"/>
+		<Row ListType="PhilipForeignSettlement" Item="Foreign Continent" Favored="false" Value="60"/>
 		<Row ListType="QinWonders" Item="BUILDING_HANGING_GARDENS"/>
 		<Row ListType="QinWonders" Item="BUILDING_PYRAMIDS"/>
 		<Row ListType="QinWonders" Item="BUILDING_GREAT_LIBRARY"/>
@@ -744,7 +744,7 @@
 		<Row ListType="VictoriaTechs" Item="TECH_MILITARY_SCIENCE"/>
 		<Row ListType="GandhiUnitBuilds" Item="PROMOTION_CLASS_INQUISITOR" Value="-1"/>
 		<Row ListType="TomyrisiUnitBuilds" Item="PROMOTION_CLASS_LIGHT_CAVALRY" Value="1"/>
-		<Row ListType="TomyrisCitySettlement" Item="Specific Resource" Favored="true" Value="4" StringVal="RESOURCE_HORSES"/>
+		<Row ListType="TomyrisCitySettlement" Item="Specific Resource" Favored="true" Value="12" StringVal="RESOURCE_HORSES"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_FOR_FOOD"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_FOR_PRODUCTION"/>
 		<Row ListType="DefaultCitySpecialization" Item="BUILD_FOR_GOLD"/>
@@ -1226,7 +1226,7 @@
 			<ModifierId>STANDARD_DIPLOMATIC_INCURSION</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_INCURSION</ModifierType>
 			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
-			<SubjectRequirementSetId>PLAYER_IS_KNOWN_MAJOR_CIV</SubjectRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_NEAR_BORDER_WARNING</ModifierId>
@@ -2760,6 +2760,11 @@
 			<ModifierId>STANDARD_DIPLOMATIC_INCURSION</ModifierId>
 			<Name>IncrementValue</Name>
 			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>STANDARD_DIPLOMATIC_INCURSION</ModifierId>
+			<Name>ReductionValue</Name>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>STANDARD_DIPLOMATIC_KEPT_PROMISE</ModifierId>
@@ -5135,6 +5140,10 @@
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_HAD_FRIENDLY_MEETING</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
@@ -5441,6 +5450,26 @@
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_NO_OPEN_BORDERS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_NEAR_CULTURE_BORDER</RequirementId>
+		</Row>
+    <Row>
+      <RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
+      <RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
+    </Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_KNOWN_BUT_NO_OPEN_BORDERS</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_RESIDENT_EMBASSY</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_RESIDENT_EMBASSY</RequirementId>
 		</Row>
@@ -5521,6 +5550,10 @@
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_CITY_LIBERATED</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_MY_CITY_LIBERATED</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_MY_CITY_LIBERATED</RequirementId>
 		</Row>
@@ -5545,6 +5578,10 @@
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
 		</Row>
 		<Row>
+			<RequirementSetId>PLAYER_CITY_OCCUPIED_FRIEND</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_MY_CITY_RAZED</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_MY_CITY_RAZED</RequirementId>
 		</Row>
@@ -5567,6 +5604,10 @@
 		<Row>
 			<RequirementSetId>PLAYER_FRIEND_DENOUNCED</RequirementSetId>
 			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_FRIEND_DENOUNCED</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_IS_AT_PEACE</RequirementSetId>
@@ -5946,6 +5987,10 @@
 			<RequirementId>REQUIRES_PLAYER_NEAR_CULTURE_BORDER</RequirementId>
 			<RequirementType>REQUIREMENT_NEAR_CULTURE_BORDER</RequirementType>
 		</Row>
+    <Row>
+      <RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
+      <RequirementType>REQUIREMENT_PLAYER_IS_AT_PEACE</RequirementType>
+    </Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_NOT_ALLY</RequirementId>
 			<RequirementType>REQUIREMENT_ALLY</RequirementType>
@@ -6004,17 +6049,14 @@
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_DECLARED_FRIEND</RequirementId>
 			<RequirementType>REQUIREMENT_DECLARED_FRIEND</RequirementType>
-			<Triggered>true</Triggered>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_DEFENSIVE_PACT</RequirementId>
 			<RequirementType>REQUIREMENT_DEFENSIVE_PACT</RequirementType>
-			<Triggered>true</Triggered>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_DELEGATION</RequirementId>
 			<RequirementType>REQUIREMENT_DELEGATION</RequirementType>
-			<Triggered>true</Triggered>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_RECEIVED_DEMAND</RequirementId>
@@ -6034,12 +6076,15 @@
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_OPEN_BORDERS</RequirementId>
 			<RequirementType>REQUIREMENT_OPEN_BORDERS</RequirementType>
-			<Triggered>true</Triggered>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_NO_OPEN_BORDERS</RequirementId>
+			<RequirementType>REQUIREMENT_OPEN_BORDERS</RequirementType>
+			<Inverse>true</Inverse>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_RESIDENT_EMBASSY</RequirementId>
 			<RequirementType>REQUIREMENT_RESIDENT_EMBASSY</RequirementType>
-			<Triggered>true</Triggered>
 		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYERS_HAVE_MET</RequirementId>
@@ -6316,6 +6361,16 @@
 			<Name>OnlyOwnersCity</Name>
 			<Value>False</Value>
 		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_NO_OPEN_BORDERS</RequirementId>
+			<Name>GracePeriod</Name>
+			<Value>2</Value>
+		</Row>
+    <Row>
+      <RequirementId>REQUIRES_AT_PEACE_10_TURNS</RequirementId>
+      <Name>Min Turns</Name>
+      <Value>10</Value>
+    </Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_CITY_LIBERATED</RequirementId>
 			<Name>OnlyOwnersCity</Name>

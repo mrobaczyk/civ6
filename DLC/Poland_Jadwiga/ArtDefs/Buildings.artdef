@@ -3,13 +3,14 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>237</build>
-		<revision>506</revision>
+		<build>249</build>
+		<revision>237</revision>
 	</m_Version>
 	<m_TemplateName text="Buildings"/>
 	<m_RootCollections>
 		<Element>
 			<m_CollectionName text="Building"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -26,9 +27,11 @@
 				<m_ChildCollections>
 					<Element>
 						<m_CollectionName text="Audio"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 					<Element>
 						<m_CollectionName text="StrategicView"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
@@ -112,56 +115,27 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="BuildStates"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 		</Element>
 		<Element>
 			<m_CollectionName text="BuildingChains"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
-					<m_Values>
-						<Element class="AssetObjects::CollectionValue">
-							<m_eObjectType>INVALID</m_eObjectType>
-							<m_eValueType>ARTDEF_REF</m_eValueType>
-							<m_Values/>
-							<m_ParamName text="Districts"/>
-						</Element>
-						<Element class="AssetObjects::CollectionValue">
-							<m_eObjectType>INVALID</m_eObjectType>
-							<m_eValueType>ARTDEF_REF</m_eValueType>
-							<m_Values>
-								<Element class="AssetObjects::ArtDefReferenceValue">
-									<m_ElementName text="BUILDING_SUKIENNICE"/>
-									<m_RootCollectionName text="Building"/>
-									<m_ArtDefPath text="Buildings.artdef"/>
-									<m_CollectionIsLocked>true</m_CollectionIsLocked>
-									<m_TemplateName text="Buildings"/>
-									<m_ParamName text="Buildings (Level 1)001"/>
-								</Element>
-							</m_Values>
-							<m_ParamName text="Buildings (Level 1)"/>
-						</Element>
-						<Element class="AssetObjects::CollectionValue">
-							<m_eObjectType>INVALID</m_eObjectType>
-							<m_eValueType>ARTDEF_REF</m_eValueType>
-							<m_Values/>
-							<m_ParamName text="Buildings (Level 2)"/>
-						</Element>
-						<Element class="AssetObjects::CollectionValue">
-							<m_eObjectType>INVALID</m_eObjectType>
-							<m_eValueType>ARTDEF_REF</m_eValueType>
-							<m_Values/>
-							<m_ParamName text="Buildings (Level 3)"/>
-						</Element>
-					</m_Values>
+					<m_Values/>
 				</m_Fields>
 				<m_ChildCollections>
 					<Element>
 						<m_CollectionName text="Districts"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 					<Element>
 						<m_CollectionName text="Buildings (Level 1)"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 					<Element>
 						<m_CollectionName text="Buildings (Level 2)"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
@@ -182,6 +156,7 @@
 					</Element>
 					<Element>
 						<m_CollectionName text="Buildings (Level 3)"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="CommerceBuildings"/>

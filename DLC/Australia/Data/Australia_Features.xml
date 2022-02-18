@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<GameInfo>
+	<Types>
+		<Row Type="FEATURE_ULURU" Kind="KIND_FEATURE"/>
+	</Types>
+	<Features>
+		<Row FeatureType="FEATURE_ULURU" Name="LOC_FEATURE_ULURU_NAME" Description="LOC_FEATURE_ULURU_DESCRIPTION" Quote="LOC_FEATURE_ULURU_QUOTE" QuoteAudio="PLAY_ULURU_QUOTE" NaturalWonder="true" Appeal="4" NoRiver="true" Settlement="false" NoCoast="true" Impassable="true" SightThroughModifier="1" MinDistanceNW="8"/>
+	</Features>
+	<Feature_ValidTerrains>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_DESERT"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_DESERT_HILLS"/>
+	</Feature_ValidTerrains>
+	<Feature_NotAdjacentTerrains>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_GRASS_MOUNTAIN"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_PLAINS_MOUNTAIN"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_DESERT_MOUNTAIN"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_TUNDRA_MOUNTAIN"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_SNOW_MOUNTAIN"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_GRASS"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_PLAINS"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_TUNDRA"/>
+		<Row FeatureType="FEATURE_ULURU" TerrainType="TERRAIN_SNOW"/>
+	</Feature_NotAdjacentTerrains>
+	<Feature_AdjacentYields>
+		<Row FeatureType="FEATURE_ULURU" YieldType="YIELD_FAITH" YieldChange="2"/>
+		<Row FeatureType="FEATURE_ULURU" YieldType="YIELD_CULTURE" YieldChange="2"/>
+	</Feature_AdjacentYields>
+</GameInfo>

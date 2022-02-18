@@ -46,7 +46,8 @@ function AssignStartingPlots.Create(args)
 		__AddBonus							= AssignStartingPlots.__AddBonus,
 		__IsContinentalDivide				= AssignStartingPlots.__IsContinentalDivide,
 
-		iNumMajorCivs = 0,					
+		iNumMajorCivs = 0,	
+		iResourceEraModifier = 1;
 		iNumMinorCivs = 0,			
 		iNumRegions		= 0,
 		iDefaultNumberMajor = 0,
@@ -618,9 +619,25 @@ function AssignStartingPlots:__WeightedFertility(plot)
 	local pPlot = Map.GetPlotByIndex(plot);
 	local plotX = pPlot:GetX();
 	local plotY = pPlot:GetY();
+	local iResourcesInDB = 0;
+	eResourceType	= {};
+	eResourceClassType = {};	
+	eRevealedEra = {};	
 
 	local gridWidth, gridHeight = Map.GetGridSize();
 	local gridHeightMinus1 = gridHeight - 1;
+
+	for row in GameInfo.Resources() do
+		eResourceType[iResourcesInDB] = row.Index;
+		eResourceClassType[iResourcesInDB] = row.ResourceClassType;
+		eRevealedEra[iResourcesInDB] = row.RevealedEra;
+	    iResourcesInDB = iResourcesInDB + 1;
+	end
+
+	local iStartIndex = 1;
+	if iStartEra ~= nil then
+		iStartIndex = iStartEra.ChronologyIndex;
+	end
 
 	--Rivers are awesome to start next to
 	local iFertility = 0;
@@ -655,9 +672,22 @@ function AssignStartingPlots:__WeightedFertility(plot)
 						iFertility = iFertility - 5;
 					end
 
+					-- Lower the Fertility if the plot has Features
 					if(featureType ~= g_FEATURE_NONE) then
-						iFertility = iFertility - 3;
+						iFertility = iFertility - 2
 					end	
+
+					-- If there is a strategic in the given era range
+					if( otherPlot:GetResourceCount() > 0)then
+						for row = 0, iResourcesInDB do
+							if (eResourceClassType[row]== "RESOURCECLASS_STRATEGIC") then
+								if(eRevealedEra[row] >= iStartIndex - self.iResourceEraModifier and eRevealedEra[row] <= iStartIndex + self.iResourceEraModifier) then
+									--print("Strategic Era ", eRevealedEra[row]);
+									iFertility = iFertility + 10;
+								end
+							end
+						end
+					end
 				else
 					iFertility = iFertility - 20;
 				end
@@ -2010,7 +2040,7 @@ function AssignStartingPlots:__BalancedStrategic(plot, iStartIndex)
 
 	for row = 0, iResourcesInDB do
 		if (eResourceClassType[row]== "RESOURCECLASS_STRATEGIC") then
-			if(eRevealedEra[row] == iStartIndex) then
+			if(eRevealedEra[row] <= iStartIndex) then
 				local bHasResource = false;
 				bHasResource = self:__FindSpecificStrategic(eResourceType[row], plot);	
 				if(bHasResource == false) then

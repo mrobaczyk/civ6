@@ -3,13 +3,14 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>234</build>
-		<revision>691</revision>
+		<build>250</build>
+		<revision>203</revision>
 	</m_Version>
 	<m_TemplateName text="TerrainMaterialSet"/>
 	<m_RootCollections>
 		<Element>
 			<m_CollectionName text="RidgelineMountain"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -58,6 +59,7 @@
 				<m_ChildCollections>
 					<Element>
 						<m_CollectionName text="MountainPieces"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
@@ -151,6 +153,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="StandardHills"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -235,6 +238,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="DuneDesertHills"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -275,6 +279,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="StandardCoastline"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -319,6 +324,7 @@
 				<m_ChildCollections>
 					<Element>
 						<m_CollectionName text="Style"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
@@ -351,6 +357,7 @@
 							<m_ChildCollections>
 								<Element>
 									<m_CollectionName text="ClutterSet"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 								</Element>
 							</m_ChildCollections>
 							<m_Name text="Beach"/>
@@ -388,13 +395,14 @@
 							<m_ChildCollections>
 								<Element>
 									<m_CollectionName text="ClutterSet"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 									<Element>
 										<m_Fields>
 											<m_Values>
 												<Element class="AssetObjects::ArtDefReferenceValue">
 													<m_ElementName text="CLUTTER_CLIFF"/>
-													<m_RootCollectionName text="FoliageSets"/>
-													<m_ArtDefPath text="Foliage.artdef"/>
+													<m_RootCollectionName text="ClutterSets"/>
+													<m_ArtDefPath text="Clutter.artdef"/>
 													<m_CollectionIsLocked>false</m_CollectionIsLocked>
 													<m_TemplateName text=""/>
 													<m_ParamName text="ClutterSet"/>
@@ -418,8 +426,8 @@
 											<m_Values>
 												<Element class="AssetObjects::ArtDefReferenceValue">
 													<m_ElementName text="CLUTTER_CLIFF_SMALL"/>
-													<m_RootCollectionName text="FoliageSets"/>
-													<m_ArtDefPath text="Foliage.artdef"/>
+													<m_RootCollectionName text="ClutterSets"/>
+													<m_ArtDefPath text="Clutter.artdef"/>
 													<m_CollectionIsLocked>false</m_CollectionIsLocked>
 													<m_TemplateName text=""/>
 													<m_ParamName text="ClutterSet"/>
@@ -443,8 +451,8 @@
 											<m_Values>
 												<Element class="AssetObjects::ArtDefReferenceValue">
 													<m_ElementName text="CLUTTER_CLIFF_SMALL"/>
-													<m_RootCollectionName text="FoliageSets"/>
-													<m_ArtDefPath text="Foliage.artdef"/>
+													<m_RootCollectionName text="ClutterSets"/>
+													<m_ArtDefPath text="Clutter.artdef"/>
 													<m_CollectionIsLocked>false</m_CollectionIsLocked>
 													<m_TemplateName text=""/>
 													<m_ParamName text="ClutterSet"/>
@@ -500,13 +508,14 @@
 							<m_ChildCollections>
 								<Element>
 									<m_CollectionName text="ClutterSet"/>
+									<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 									<Element>
 										<m_Fields>
 											<m_Values>
 												<Element class="AssetObjects::ArtDefReferenceValue">
 													<m_ElementName text="CLUTTER_CLIFFDOVER_SMALL"/>
-													<m_RootCollectionName text="FoliageSets"/>
-													<m_ArtDefPath text="Foliage.artdef"/>
+													<m_RootCollectionName text="ClutterSets"/>
+													<m_ArtDefPath text="Clutter.artdef"/>
 													<m_CollectionIsLocked>false</m_CollectionIsLocked>
 													<m_TemplateName text=""/>
 													<m_ParamName text="ClutterSet"/>
@@ -530,8 +539,8 @@
 											<m_Values>
 												<Element class="AssetObjects::ArtDefReferenceValue">
 													<m_ElementName text="CLUTTER_CLIFFDOVER"/>
-													<m_RootCollectionName text="FoliageSets"/>
-													<m_ArtDefPath text="Foliage.artdef"/>
+													<m_RootCollectionName text="ClutterSets"/>
+													<m_ArtDefPath text="Clutter.artdef"/>
 													<m_CollectionIsLocked>false</m_CollectionIsLocked>
 													<m_TemplateName text=""/>
 													<m_ParamName text="ClutterSet"/>
@@ -555,10 +564,10 @@
 											<m_Values>
 												<Element class="AssetObjects::ArtDefReferenceValue">
 													<m_ElementName text="CLUTTER_CLIFFDOVER_SMALLTOP"/>
-													<m_RootCollectionName text="FoliageSets"/>
-													<m_ArtDefPath text="Foliage.artdef"/>
+													<m_RootCollectionName text="ClutterSets"/>
+													<m_ArtDefPath text="Clutter.artdef"/>
 													<m_CollectionIsLocked>false</m_CollectionIsLocked>
-													<m_TemplateName text="Forest"/>
+													<m_TemplateName text="Clutter"/>
 													<m_ParamName text="ClutterSet"/>
 												</Element>
 												<Element class="AssetObjects::FloatValue">
@@ -588,6 +597,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="StandardRiver"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -656,6 +666,7 @@
 				<m_ChildCollections>
 					<Element>
 						<m_CollectionName text="RiverSources"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
@@ -770,15 +781,16 @@
 					</Element>
 					<Element>
 						<m_CollectionName text="RiverClutter"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects::ArtDefReferenceValue">
 										<m_ElementName text="CLUTTER_RIVER_ROCK"/>
-										<m_RootCollectionName text="FoliageSets"/>
-										<m_ArtDefPath text="Foliage.artdef"/>
+										<m_RootCollectionName text="ClutterSets"/>
+										<m_ArtDefPath text="Clutter.artdef"/>
 										<m_CollectionIsLocked>false</m_CollectionIsLocked>
-										<m_TemplateName text="Forest"/>
+										<m_TemplateName text="Clutter"/>
 										<m_ParamName text="ClutterSet"/>
 									</Element>
 									<Element class="AssetObjects::FloatValue">
@@ -811,6 +823,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="StandardFlat"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -935,6 +948,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="LayerSet_Default"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -1011,6 +1025,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="StandardOcean"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -1035,6 +1050,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="StandardIceShelf"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -1059,6 +1075,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="NaturalWonders"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -1145,6 +1162,10 @@
 						<Element class="AssetObjects::BoolValue">
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -1239,6 +1260,10 @@
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
 						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -1331,6 +1356,10 @@
 						<Element class="AssetObjects::BoolValue">
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -1425,6 +1454,10 @@
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
 						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -1517,6 +1550,10 @@
 						<Element class="AssetObjects::BoolValue">
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -1611,6 +1648,10 @@
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
 						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -1703,6 +1744,10 @@
 						<Element class="AssetObjects::BoolValue">
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -1797,6 +1842,10 @@
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
 						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -1889,6 +1938,10 @@
 						<Element class="AssetObjects::BoolValue">
 							<m_bValue>true</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -1983,6 +2036,10 @@
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
 						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -2075,6 +2132,10 @@
 						<Element class="AssetObjects::BoolValue">
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
@@ -2169,6 +2230,10 @@
 							<m_bValue>false</m_bValue>
 							<m_ParamName text="RemoveCliffs"/>
 						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="ModelHeightFromLocalHex"/>
+						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
@@ -2178,6 +2243,7 @@
 		</Element>
 		<Element>
 			<m_CollectionName text="MaterialSet"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>

@@ -3858,7 +3858,7 @@ end
 	local item_victory_a:TutorialItem = TutorialItem:new("PLAYER_VICTORY_A");
 	item_victory_a:SetIsQueueable(true)
 	item_victory_a:SetCompletedGoals("GOAL_12")
-	item_victory_a:SetRaiseEvents("PlayerVictory");
+	item_victory_a:SetRaiseEvents("TeamVictory");
 	item_victory_a:SetAdvisorMessage("ADVISOR_LINE_FTUE_END_SCRIPTED_3");
 	item_victory_a:SetAdvisorAudio("Play_ADVISOR_LINE_FTUE_END_SCRIPTED_3");
 	item_victory_a:AddAdvisorButton("LOC_ADVISOR_BUTTON_CONTINUE",

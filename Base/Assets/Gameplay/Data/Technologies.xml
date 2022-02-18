@@ -82,7 +82,7 @@
 		<Row TechnologyType="TECH_SAILING" Name="LOC_TECH_SAILING_NAME" Description="LOC_TECH_SAILING_DESCRIPTION" Cost="50" AdvisorType="ADVISOR_GENERIC" EraType="ERA_ANCIENT" UITreeRow="-3" EmbarkUnitType="UNIT_BUILDER" BarbarianFree="true"/>
 		<Row TechnologyType="TECH_ASTROLOGY" Name="LOC_TECH_ASTROLOGY_NAME" Cost="50" AdvisorType="ADVISOR_RELIGIOUS" EraType="ERA_ANCIENT" UITreeRow="-2"/>
 		<Row TechnologyType="TECH_IRRIGATION" Name="LOC_TECH_IRRIGATION_NAME" Description="LOC_TECH_IRRIGATION_DESCRIPTION" Cost="50" AdvisorType="ADVISOR_GENERIC" EraType="ERA_ANCIENT" UITreeRow="-1"/>
-		<Row TechnologyType="TECH_ARCHERY" Name="LOC_TECH_ARCHERY_NAME" Cost="50" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_ANCIENT" UITreeRow="2"/>
+		<Row TechnologyType="TECH_ARCHERY" Name="LOC_TECH_ARCHERY_NAME" Cost="50" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_ANCIENT" UITreeRow="1"/>
 		<Row TechnologyType="TECH_WRITING" Name="LOC_TECH_WRITING_NAME" Cost="50" AdvisorType="ADVISOR_TECHNOLOGY" EraType="ERA_ANCIENT" UITreeRow="0"/>
 		<Row TechnologyType="TECH_MASONRY" Name="LOC_TECH_MASONRY_NAME" Description="LOC_TECH_MASONRY_DESCRIPTION" Cost="80" AdvisorType="ADVISOR_GENERIC" EraType="ERA_ANCIENT" UITreeRow="2"/>
 		<Row TechnologyType="TECH_BRONZE_WORKING" Name="LOC_TECH_BRONZE_WORKING_NAME" Description="LOC_TECH_BRONZE_WORKING_DESCRIPTION" Cost="80" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_ANCIENT" UITreeRow="3" BarbarianFree="true"/>
@@ -99,9 +99,9 @@
 		<!-- Medieval Era-->
 		<Row TechnologyType="TECH_MILITARY_TACTICS" Name="LOC_TECH_MILITARY_TACTICS_NAME" Cost="300" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_MEDIEVAL" UITreeRow="-2"/>
 		<Row TechnologyType="TECH_APPRENTICESHIP" Name="LOC_TECH_APPRENTICESHIP_NAME" Description="LOC_TECH_APPRENTICESHIP_DESCRIPTION" Cost="300" AdvisorType="ADVISOR_GENERIC" EraType="ERA_MEDIEVAL" UITreeRow="0"/>
-		<Row TechnologyType="TECH_STIRRUPS" Name="LOC_TECH_STIRRUPS_NAME" Cost="300" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_MEDIEVAL" UITreeRow="1"/>
 		<Row TechnologyType="TECH_MACHINERY" Name="LOC_TECH_MACHINERY_NAME" Cost="300" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_MEDIEVAL" UITreeRow="4"/>
 		<Row TechnologyType="TECH_EDUCATION" Name="LOC_TECH_EDUCATION_NAME" Cost="390" AdvisorType="ADVISOR_TECHNOLOGY" EraType="ERA_MEDIEVAL" UITreeRow="-1"/>
+		<Row TechnologyType="TECH_STIRRUPS" Name="LOC_TECH_STIRRUPS_NAME" Cost="390" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_MEDIEVAL" UITreeRow="1"/>
 		<Row TechnologyType="TECH_MILITARY_ENGINEERING" Name="LOC_TECH_MILITARY_ENGINEERING_NAME" Cost="390" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_MEDIEVAL" UITreeRow="2"/>
 		<Row TechnologyType="TECH_CASTLES" Name="LOC_TECH_CASTLES_NAME" Description="LOC_TECH_CASTLES_DESCRIPTION" Cost="390" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_MEDIEVAL" UITreeRow="3"/>
 		<!--RenaissanceEra-->
@@ -165,7 +165,7 @@
 		<Row Technology="TECH_CELESTIAL_NAVIGATION" PrereqTech="TECH_SAILING"/>
 		<Row Technology="TECH_CELESTIAL_NAVIGATION" PrereqTech="TECH_ASTROLOGY"/>
 		<Row Technology="TECH_CURRENCY" PrereqTech="TECH_WRITING"/>
-		<Row Technology="TECH_HORSEBACK_RIDING" PrereqTech="TECH_ANIMAL_HUSBANDRY"/>
+		<Row Technology="TECH_HORSEBACK_RIDING" PrereqTech="TECH_ARCHERY"/>
 		<Row Technology="TECH_IRON_WORKING" PrereqTech="TECH_BRONZE_WORKING"/>
 		<Row Technology="TECH_MATHEMATICS" PrereqTech="TECH_CURRENCY"/>
 		<Row Technology="TECH_CONSTRUCTION" PrereqTech="TECH_MASONRY"/>
@@ -197,15 +197,15 @@
 		<Row Technology="TECH_METAL_CASTING" PrereqTech="TECH_GUNPOWDER"/>
 		<Row Technology="TECH_SIEGE_TACTICS" PrereqTech="TECH_CASTLES"/>
 		<!--Industrial Era-->
+		<Row Technology="TECH_INDUSTRIALIZATION" PrereqTech="TECH_SQUARE_RIGGING"/>
 		<Row Technology="TECH_INDUSTRIALIZATION" PrereqTech="TECH_MASS_PRODUCTION"/>
 		<Row Technology="TECH_SCIENTIFIC_THEORY" PrereqTech="TECH_ASTRONOMY"/>
-		<Row Technology="TECH_ECONOMICS" PrereqTech="TECH_BANKING"/>
+		<Row Technology="TECH_SCIENTIFIC_THEORY" PrereqTech="TECH_BANKING"/>
 		<Row Technology="TECH_ECONOMICS" PrereqTech="TECH_SCIENTIFIC_THEORY"/>
 		<Row Technology="TECH_ECONOMICS" PrereqTech="TECH_METAL_CASTING"/>
 		<Row Technology="TECH_MILITARY_SCIENCE" PrereqTech="TECH_SIEGE_TACTICS"/>
 		<Row Technology="TECH_MILITARY_SCIENCE" PrereqTech="TECH_PRINTING"/>
 		<Row Technology="TECH_STEAM_POWER" PrereqTech="TECH_INDUSTRIALIZATION"/>
-		<Row Technology="TECH_STEAM_POWER" PrereqTech="TECH_SQUARE_RIGGING"/>
 		<Row Technology="TECH_SANITATION" PrereqTech="TECH_SCIENTIFIC_THEORY"/>
 		<Row Technology="TECH_BALLISTICS" PrereqTech="TECH_METAL_CASTING"/>
 		<Row Technology="TECH_RIFLING" PrereqTech="TECH_BALLISTICS"/>
@@ -214,7 +214,7 @@
 		<Row Technology="TECH_FLIGHT" PrereqTech="TECH_INDUSTRIALIZATION"/>
 		<Row Technology="TECH_FLIGHT" PrereqTech="TECH_SCIENTIFIC_THEORY"/>
 		<Row Technology="TECH_REPLACEABLE_PARTS" PrereqTech="TECH_ECONOMICS"/>
-		<Row Technology="TECH_STEEL" PrereqTech="TECH_BALLISTICS"/>
+		<Row Technology="TECH_STEEL" PrereqTech="TECH_RIFLING"/>
 		<Row Technology="TECH_ELECTRICITY" PrereqTech="TECH_STEAM_POWER"/>
 		<Row Technology="TECH_RADIO" PrereqTech="TECH_STEAM_POWER"/>
 		<Row Technology="TECH_RADIO" PrereqTech="TECH_FLIGHT"/>
@@ -223,6 +223,7 @@
 		<Row Technology="TECH_COMBUSTION" PrereqTech="TECH_RIFLING"/>
 		<!--Atomic Era-->
 		<Row Technology="TECH_COMPUTERS" PrereqTech="TECH_ELECTRICITY"/>
+		<Row Technology="TECH_COMPUTERS" PrereqTech="TECH_RADIO"/>
 		<Row Technology="TECH_ADVANCED_FLIGHT" PrereqTech="TECH_RADIO"/>
 		<Row Technology="TECH_ROCKETRY" PrereqTech="TECH_RADIO"/>
 		<Row Technology="TECH_ROCKETRY" PrereqTech="TECH_CHEMISTRY"/>
@@ -448,7 +449,9 @@
 		<Row BoostType="BOOST_TRIGGER_AIRBASE_FOREIGN_CONTINENT" BoostValue="54"/>
 		<Row BoostType="BOOST_TRIGGER_HAVE_X_GREAT_PEOPLE" BoostValue="55"/>
 		<Row BoostType="BOOST_TRIGGER_HAVE_MAJORITY_RELIGION" BoostValue="56"/>
-	</BoostNames>
+    <Row BoostType="BOOST_TRIGGER_TURN_NUMBER" BoostValue="57"/>
+    <Row BoostType="BOOST_TRIGGER_REVEAL_X_OF_RESOURCE" BoostValue="58"/>
+  </BoostNames>
 	<Boosts>
 		<!-- Some boosts, like find natural wonder, have an unnecessary unit field - that is an aid for the AI. Please leave it -->
 		<Row TechnologyType="TECH_SAILING" Boost="50" TriggerDescription="LOC_BOOST_TRIGGER_SAILING" TriggerLongDescription="LOC_BOOST_TRIGGER_LONGDESC_SAILING" BoostClass="BOOST_TRIGGER_SETTLE_COAST"/>

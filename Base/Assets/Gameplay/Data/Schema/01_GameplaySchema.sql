@@ -36,10 +36,10 @@ CREATE TABLE "Adjacency_YieldChanges" (
 		FOREIGN KEY (AdjacentFeature) REFERENCES Features(FeatureType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (AdjacentImprovement) REFERENCES Improvements(ImprovementType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (AdjacentDistrict) REFERENCES Districts(DistrictType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (ObsoleteCivic) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (ObsoleteTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET NULL ON UPDATE CASCADE,
+		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET NULL ON UPDATE CASCADE,
+		FOREIGN KEY (ObsoleteCivic) REFERENCES Civics(CivicType) ON DELETE SET NULL ON UPDATE CASCADE,
+		FOREIGN KEY (ObsoleteTech) REFERENCES Technologies(TechnologyType) ON DELETE SET NULL ON UPDATE CASCADE);
 
 CREATE TABLE "Agendas" (
 		"AgendaType" TEXT NOT NULL UNIQUE,
@@ -397,6 +397,8 @@ CREATE TABLE "Buildings" (
 		"QuoteAudio" TEXT,
 		"MustBeAdjacentLand" BOOLEAN NOT NULL CHECK (MustBeAdjacentLand IN (0,1)) DEFAULT 0,
 		"AdvisorType" TEXT,
+		"AdjacentCapital" BOOLEAN NOT NULL CHECK (AdjacentCapital IN (0,1)) DEFAULT 0,
+		"AdjacentImprovement" TEXT,
 		PRIMARY KEY(BuildingType),
 		FOREIGN KEY (AdjacentDistrict) REFERENCES Districts(DistrictType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqDistrict) REFERENCES Districts(DistrictType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -614,6 +616,12 @@ CREATE TABLE "CivilopediaPages" (
 		"SortIndex" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(SectionId, PageId));
 
+-- This table specifies pages that should be hidden from the civilopedia.
+CREATE TABLE "CivilopediaPageExcludes" (
+		"SectionId" TEXT NOT NULL,
+		"PageId" TEXT NOT NULL,
+		PRIMARY KEY(SectionId, PageId));
+
 CREATE TABLE "CivilopediaPageGroups" (
 		"SectionId" TEXT NOT NULL,
 		"PageGroupId" TEXT NOT NULL,
@@ -621,6 +629,11 @@ CREATE TABLE "CivilopediaPageGroups" (
 		"Tooltip" TEXT,
 		"VisibleIfEmpty" BOOLEAN NOT NULL CHECK (VisibleIfEmpty IN (0,1)) DEFAULT 0,
 		"SortIndex" INTEGER NOT NULL DEFAULT 0,
+		PRIMARY KEY(SectionId, PageGroupId));
+
+CREATE TABLE "CivilopediaPageGroupExcludes" (
+		"SectionId" TEXT NOT NULL,
+		"PageGroupId" TEXT NOT NULL,
 		PRIMARY KEY(SectionId, PageGroupId));
 
 CREATE TABLE "CivilopediaPageGroupQueries" (
@@ -666,6 +679,10 @@ CREATE TABLE "CivilopediaSections" (
 		"SortIndex" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(SectionId));
 
+CREATE TABLE "CivilopediaSectionExcludes" (
+		"SectionId" TEXT NOT NULL,
+		PRIMARY KEY(SectionId));
+
 CREATE TABLE "Continents" (
 		"ContinentType" TEXT NOT NULL,
 		"Description" TEXT,
@@ -680,6 +697,7 @@ CREATE TABLE "DealItems" (
 		"DealItemType" TEXT NOT NULL,
 		"Name" TEXT NOT NULL,
 		"Description" TEXT NOT NULL,
+		"AllowDurationTrade" BOOLEAN NOT NULL CHECK (AllowDurationTrade IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(DealItemType));
 
 CREATE TABLE "Defeats" (
@@ -747,7 +765,8 @@ CREATE TABLE "DiplomaticActions" (
 		FOREIGN KEY (TargetPrereqCivic) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (InitiatorObsoleteCivic) REFERENCES Civics(CivicType) ON DELETE CASCADE ON UPDATE CASCADE,
 		FOREIGN KEY (InitiatorPrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (TargetPrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY (TargetPrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (DiplomaticActionType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "DiplomaticStartStates" (
 		"PlayerCivLevel" TEXT NOT NULL,
@@ -850,7 +869,6 @@ CREATE TABLE "Districts" (
 		"CaptureRemovesCityDefenses" BOOLEAN NOT NULL CHECK (CaptureRemovesCityDefenses IN (0,1)),
 		"PlunderType" TEXT NOT NULL,
 		"PlunderAmount" INTEGER NOT NULL DEFAULT 0,
-		"TradeRouteCapacity" INTEGER NOT NULL DEFAULT 0,
 		"TradeEmbark" BOOLEAN NOT NULL CHECK (TradeEmbark IN (0,1)) DEFAULT 0,
 		"MilitaryDomain" TEXT NOT NULL,
 		"CostProgressionModel" TEXT NOT NULL DEFAULT "NO_COST_PROGRESSION",
@@ -962,8 +980,21 @@ CREATE TABLE "Eras" (
 		"EraTechBackgroundTexture" TEXT,
 		"EraCivicBackgroundTexture" TEXT,
 		"WarmongerLevelDescription" TEXT,
+		"EmbarkedUnitStrength" INTEGER NOT NULL,
 		PRIMARY KEY(EraType),
 		FOREIGN KEY (EraType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE "EventPopupData" (
+		"Type" TEXT NOT NULL UNIQUE,
+		"Title" TEXT NOT NULL,
+		"Description" TEXT,
+		"BackgroundImage" TEXT,
+		"ForegroundImage" TEXT,
+		"Effects" TEXT,
+		"ImageText" TEXT,
+		"FilterCondition" TEXT,
+		"EffectType" TEXT,
+		PRIMARY KEY(Type));
 
 CREATE TABLE "ExcludedAdjacencies" (
 		"TraitType" TEXT NOT NULL,
@@ -1040,8 +1071,8 @@ CREATE TABLE "Features" (
 		"QuoteAudio" TEXT,
 		"Settlement" BOOLEAN NOT NULL CHECK (Settlement IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(FeatureType),
-		FOREIGN KEY (RemoveTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
-		FOREIGN KEY (AddCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
+		FOREIGN KEY (RemoveTech) REFERENCES Technologies(TechnologyType) ON DELETE SET NULL ON UPDATE CASCADE,
+		FOREIGN KEY (AddCivic) REFERENCES Civics(CivicType) ON DELETE SET NULL ON UPDATE CASCADE,
 		FOREIGN KEY (FeatureType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Feature_AdjacentFeatures" (
@@ -1376,6 +1407,7 @@ CREATE TABLE "Improvements" (
 		"YieldFromAppeal" TEXT,
 		"WeaponSlots" INTEGER NOT NULL DEFAULT 0,
 		"ReligiousUnitHealRate" INTEGER NOT NULL DEFAULT 0,
+		"Appeal" INTEGER NOT NULL DEFAULT 0,
 		PRIMARY KEY(ImprovementType),
 		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
 		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
@@ -1764,7 +1796,8 @@ CREATE TABLE "Quests" (
 		"Reward" TEXT NOT NULL,
 		"InstanceReward" TEXT,
 		"IconString" TEXT NOT NULL,
-		PRIMARY KEY(QuestType));
+		PRIMARY KEY(QuestType),
+		FOREIGN KEY (QuestType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "RandomAgendas" (
 		"AgendaType" TEXT NOT NULL UNIQUE,
@@ -1779,7 +1812,8 @@ CREATE TABLE "Religions" (
 		"Pantheon" BOOLEAN NOT NULL CHECK (Pantheon IN (0,1)) DEFAULT 0,
 		"RequiresCustomName" BOOLEAN NOT NULL CHECK (RequiresCustomName IN (0,1)) DEFAULT 0,
 		"Color" TEXT NOT NULL UNIQUE,
-		PRIMARY KEY(ReligionType));
+		PRIMARY KEY(ReligionType),
+		FOREIGN KEY (ReligionType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Requirements" (
 		"RequirementId" TEXT NOT NULL,
@@ -1831,9 +1865,10 @@ CREATE TABLE "Resources" (
 		"PrereqCivic" TEXT,
 		"PeakEra" TEXT NOT NULL DEFAULT "NO_ERA",
 		"RevealedEra" INTEGER NOT NULL DEFAULT 1,
+		"LakeEligible" BOOLEAN NOT NULL CHECK (LakeEligible IN (0,1)) DEFAULT 1,
 		PRIMARY KEY(ResourceType),
-		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
-		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET DEFAULT ON UPDATE SET DEFAULT,
+		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET NULL ON UPDATE CASCADE,
+		FOREIGN KEY (PrereqCivic) REFERENCES Civics(CivicType) ON DELETE SET NULL ON UPDATE CASCADE,
 		FOREIGN KEY (ResourceType) REFERENCES Types(Type) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Resource_Distribution" (
@@ -1851,7 +1886,7 @@ CREATE TABLE "Resource_Harvests" (
 		"PrereqTech" TEXT,
 		PRIMARY KEY(ResourceType, YieldType),
 		FOREIGN KEY (ResourceType) REFERENCES Resources(ResourceType) ON DELETE CASCADE ON UPDATE CASCADE,
-		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE,
+		FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE SET NULL ON UPDATE CASCADE,
 		FOREIGN KEY (YieldType) REFERENCES Yields(YieldType) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE "Resource_TradeRouteYields" (
@@ -1930,6 +1965,7 @@ CREATE TABLE "ScoringLineItems" (
 		"Religion" BOOLEAN NOT NULL CHECK (Religion IN (0,1)) DEFAULT 0,
 		"Pillage" BOOLEAN NOT NULL CHECK (Pillage IN (0,1)) DEFAULT 0,
 		"Trade" BOOLEAN NOT NULL CHECK (Trade IN (0,1)) DEFAULT 0,
+		"GoldPerTurn" BOOLEAN NOT NULL CHECK (GoldPerTurn IN (0,1)) DEFAULT 0,
 		"TieBreakerPriority" INTEGER NOT NULL,
 		"ScoringScenario1" BOOLEAN NOT NULL CHECK (ScoringScenario1 IN (0,1)) DEFAULT 0,
 		"ScoringScenario2" BOOLEAN NOT NULL CHECK (ScoringScenario2 IN (0,1)) DEFAULT 0,
@@ -2746,6 +2782,7 @@ INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "Is
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_ValidTerrains", "TerrainReference", "Terrains", 0,"SELECT T1.rowid from Terrains as T1 inner join Improvement_ValidTerrains as T2 on T2.TerrainType = T1.TerrainType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_YieldChanges", "ImprovementReference", "Improvements", 0,"SELECT T1.rowid from Improvements as T1 inner join Improvement_YieldChanges as T2 on T2.ImprovementType = T1.ImprovementType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Improvement_YieldChanges", "YieldReference", "Yields", 0,"SELECT T1.rowid from Yields as T1 inner join Improvement_YieldChanges as T2 on T2.YieldType = T1.YieldType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
+INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Leaders", "CivilizationCollection", "Civilizations", 1,"SELECT T1.rowid from Civilizations as T1 inner join CivilizationLeaders as T2 on T2.CivilizationType = T1.CivilizationType inner join Leaders as T3 on T3.LeaderType = T2.LeaderType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Leaders", "InheritLeaderReference", "Leaders", 0,"SELECT T1.rowid from Leaders as T1 inner join Leaders as T2 on T2.InheritFrom = T1.LeaderType where T2.rowid = ? ORDER BY T1.rowid ASC LIMIT 1");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Leaders", "PreferredAgendaCollection", "RandomAgendas", 1,"SELECT T1.rowid from RandomAgendas as T1 inner join AgendaPreferredLeaders as T2 on T2.AgendaType = T1.AgendaType inner join Leaders as T3 on T3.LeaderType = T2.LeaderType where T3.rowid = ? ORDER BY T1.rowid ASC");
 INSERT INTO NavigationProperties("BaseTable", "PropertyName", "TargetTable", "IsCollection", "Query") VALUES("Leaders", "ReligionCollection", "Religions", 1,"SELECT T1.rowid from Religions as T1 inner join FavoredReligions as T2 on T2.ReligionType = T1.ReligionType inner join Leaders as T3 on T3.LeaderType = T2.LeaderType where T3.rowid = ? ORDER BY T1.rowid ASC");

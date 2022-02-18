@@ -8,6 +8,8 @@
 			<VictoryDomain>AncientRivalsScenario_Victories</VictoryDomain>
 			<SupportsSinglePlayer>0</SupportsSinglePlayer>
 			<MaxTurns>50</MaxTurns>
+      <FixedMaxTurns>1</FixedMaxTurns>
+      <RequiresNoTeams>1</RequiresNoTeams>
 		</Row>
 	</RuleSets>
 	<RulesetSupportedValues>
@@ -16,17 +18,9 @@
 	<Victories>
 		<Row Domain="AncientRivalsScenario_Victories" VictoryType="VICTORY_ANCIENTRIVALS" Name="LOC_ANCIENT_RIVALS_VICTORY_TITLE" Description="LOC_ANCIENT_RIVALS_VICTORY_DESC"/>
 	</Victories>
-	
 	<Parameters>
 		<!-- Using a different ParameterId to override the default values for these standard advanced settings. -->
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_ANCIENT_RIVALS" ParameterId="AncientWar_NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="LOC_GAME_NO_GOODY_HUTS" Domain="bool" DefaultValue="0" Visible="true" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
 		<Row Key1="Ruleset" Key2="RULESET_SCENARIO_ANCIENT_RIVALS" ParameterId="AncientWar_NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="LOC_GAME_NO_BARBARIANS" Domain="bool" DefaultValue="0" Visible="true" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
 	</Parameters>
-
-	<!-- Disable turn limit and max turns if our ruleset is selected. -->
-	<ParameterCriteria>
-		<Row ParameterId="TurnLimit" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_ANCIENT_RIVALS" />
-		<Row ParameterId="MaxTurns" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_SCENARIO_ANCIENT_RIVALS" />
-	</ParameterCriteria>
-	
 </GameInfo>

@@ -3,13 +3,14 @@
 	<m_Version>
 		<major>4</major>
 		<minor>0</minor>
-		<build>236</build>
-		<revision>253</revision>
+		<build>240</build>
+		<revision>759</revision>
 	</m_Version>
-	<m_TemplateName text="Forest"/>
+	<m_TemplateName text="Clutter"/>
 	<m_RootCollections>
 		<Element>
-			<m_CollectionName text="FoliageSets"/>
+			<m_CollectionName text="ClutterSets"/>
+			<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 			<Element>
 				<m_Fields>
 					<m_Values>
@@ -55,17 +56,26 @@
 						</Element>
 						<Element class="AssetObjects::ArtDefReferenceValue">
 							<m_ElementName text=""/>
-							<m_RootCollectionName text="FoliageSets"/>
+							<m_RootCollectionName text="ClutterSets"/>
 							<m_ArtDefPath text=""/>
 							<m_CollectionIsLocked>true</m_CollectionIsLocked>
 							<m_TemplateName text=""/>
 							<m_ParamName text="Lowend Substitute"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="OldAsset"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="ClampToHexCenter"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections>
 					<Element>
 						<m_CollectionName text="Plants"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
@@ -496,9 +506,15 @@
 					</Element>
 					<Element>
 						<m_CollectionName text="Blends"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 					<Element>
 						<m_CollectionName text="Block"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="Layers"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="CLUTTER_MOUNTAIN_DARK"/>
@@ -549,17 +565,26 @@
 						</Element>
 						<Element class="AssetObjects::ArtDefReferenceValue">
 							<m_ElementName text=""/>
-							<m_RootCollectionName text="FoliageSets"/>
+							<m_RootCollectionName text="ClutterSets"/>
 							<m_ArtDefPath text=""/>
 							<m_CollectionIsLocked>true</m_CollectionIsLocked>
 							<m_TemplateName text=""/>
 							<m_ParamName text="Lowend Substitute"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>true</m_bValue>
+							<m_ParamName text="OldAsset"/>
+						</Element>
+						<Element class="AssetObjects::BoolValue">
+							<m_bValue>false</m_bValue>
+							<m_ParamName text="ClampToHexCenter"/>
 						</Element>
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections>
 					<Element>
 						<m_CollectionName text="Plants"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 						<Element>
 							<m_Fields>
 								<m_Values>
@@ -1112,9 +1137,15 @@
 					</Element>
 					<Element>
 						<m_CollectionName text="Blends"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 					<Element>
 						<m_CollectionName text="Block"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
+					</Element>
+					<Element>
+						<m_CollectionName text="Layers"/>
+						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 				</m_ChildCollections>
 				<m_Name text="CLUTTER_LYSEFJORDEN"/>

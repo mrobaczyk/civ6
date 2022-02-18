@@ -418,12 +418,14 @@ function AddMoreLake(plot)
 		local adjacentPlot = Map.GetAdjacentPlot(plot:GetX(), plot:GetY(), direction);
 		if (adjacentPlot) then
 			if (adjacentPlot:IsWater() == false)  then
-				if (adjacentPlot:IsRiver() == false and adjacentPlot:IsRiverAdjacent() == false) then
-					if (AdjacentToNaturalWonder(adjacentPlot) == false) then
-						local r = TerrainBuilder.GetRandomNumber(1 + largeLake, "MapGenerator AddLakes");
-						if r == 0 then
-							TerrainBuilder.SetTerrainType(adjacentPlot, g_TERRAIN_TYPE_COAST);
-							largeLake = largeLake + 1;
+				if (adjacentPlot:IsCoastalLand() == false) then
+					if (adjacentPlot:IsRiver() == false and adjacentPlot:IsRiverAdjacent() == false) then
+						if (AdjacentToNaturalWonder(adjacentPlot) == false) then
+							local r = TerrainBuilder.GetRandomNumber(1 + largeLake, "MapGenerator AddLakes");
+							if r == 0 then
+								TerrainBuilder.SetTerrainType(adjacentPlot, g_TERRAIN_TYPE_COAST);
+								largeLake = largeLake + 1;
+							end
 						end
 					end
 				end

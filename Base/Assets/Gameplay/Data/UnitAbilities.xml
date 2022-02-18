@@ -57,6 +57,7 @@
 		<Row Type="ABILITY_MAMLUK" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_SAMURAI" Kind="KIND_ABILITY"/>
 		<Row Type="ABILITY_PUSHBACK" Kind="KIND_ABILITY"/>
+    <Row Type="ABILITY_DIGGER" Kind="KIND_ABILITY"/>
 	</Types>
 	<TypeTags>
 		<Row Type="ABILITY_ANTI_CAVALRY" Tag="CLASS_ANTI_CAVALRY"/>
@@ -142,6 +143,7 @@
 		<Row Type="ABILITY_SAMURAI" Tag="CLASS_SAMURAI"/>
 		<Row Type="ABILITY_MUSTANG" Tag="CLASS_MUSTANG"/>
 		<Row Type="ABILITY_PUSHBACK" Tag="CLASS_PUSHBACK"/>
+    <Row Type="ABILITY_DIGGER" Tag="CLASS_DIGGER"/>
 	</TypeTags>
 	<UnitAbilities>
 		<Row UnitAbilityType="ABILITY_ANTI_CAVALRY" Name="LOC_ABILITY_ANTI_CAVALRY_NAME" Description="LOC_ABILITY_ANTI_CAVALRY_DESCRIPTION"/>
@@ -196,6 +198,7 @@
 		<Row UnitAbilityType="ABILITY_MAMLUK" Name="LOC_ABILITY_MAMLUK_NAME" Description="LOC_ABILITY_MAMLUK_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_SAMURAI" Name="LOC_ABILITY_SAMURAI_NAME" Description="LOC_ABILITY_SAMURAI_DESCRIPTION"/>
 		<Row UnitAbilityType="ABILITY_PUSHBACK" Name="LOC_ABILITY_PUSHBACK" Description="LOC_ABILITY_PUSHBACK_DESCRIPTION"/>
+    <Row UnitAbilityType="ABILITY_DIGGER" Name="LOC_ABILITY_DIGGER_NAME" Description="LOC_ABILITY_DIGGER_DESCRIPTION"/>
 	</UnitAbilities>
 	<!--  -->
 	<UnitAbilityModifiers>
@@ -447,6 +450,14 @@
 			<UnitAbilityType>ABILITY_PUSHBACK</UnitAbilityType>
 			<ModifierId>HUSSAR_FORCE_RETREAT</ModifierId>
 		</Row>
+    <Row>
+      <UnitAbilityType>ABILITY_DIGGER</UnitAbilityType>
+      <ModifierId>DIGGER_BONUS_ON_COAST</ModifierId>
+    </Row>
+    <Row>
+      <UnitAbilityType>ABILITY_DIGGER</UnitAbilityType>
+      <ModifierId>DIGGER_NON_DOMESTIC_BONUS</ModifierId>
+    </Row>
 	</UnitAbilityModifiers>
 	<Modifiers>
 		<Row>
@@ -695,7 +706,7 @@
 			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
 			<SubjectRequirementSetId>ROUGH_RIDER_HILL_TERRAIN_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
-		<Row>
+    <Row>
 			<ModifierId>MUSTANG_MORE_EXPERIENCE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_UNIT_EXPERIENCE_MODIFIER</ModifierType>
 		</Row>
@@ -710,8 +721,18 @@
 		<Row>
 			<ModifierId>HUSSAR_FORCE_RETREAT</ModifierId>
 			<ModifierType>MODIFIER_UNIT_ADJUST_FORCE_RETREAT</ModifierType>
-		</Row>
-	</Modifiers>
+    </Row>
+    <Row>
+      <ModifierId>DIGGER_BONUS_ON_COAST</ModifierId>
+      <ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+      <SubjectRequirementSetId>DIGGER_ON_COAST_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+    <Row>
+      <ModifierId>DIGGER_NON_DOMESTIC_BONUS</ModifierId>
+      <ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+      <SubjectRequirementSetId>DIGGER_NON_DOMESTIC_PLOT_REQUIREMENTS</SubjectRequirementSetId>
+    </Row>
+  </Modifiers>
 	<ModifierArguments>
 		<Row>
 			<ModifierId>ANTI_CAVALRY_COMBAT_BONUS</ModifierId>
@@ -1048,7 +1069,17 @@
 			<Name>ForceRetreat</Name>
 			<Value>true</Value>
 		</Row>
-	</ModifierArguments>
+    <Row>
+      <ModifierId>DIGGER_BONUS_ON_COAST</ModifierId>
+      <Name>Amount</Name>
+      <Value>10</Value>
+    </Row>
+    <Row>
+      <ModifierId>DIGGER_NON_DOMESTIC_BONUS</ModifierId>
+      <Name>Amount</Name>
+      <Value>5</Value>
+    </Row>    
+  </ModifierArguments>
 	<!--  -->
 	<!-- REQUIREMENTS -->
 	<!--  -->
@@ -1141,7 +1172,15 @@
 			<RequirementSetId>ANTI_FIGHTER_AIRCRAFT_OPPONENT_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
-	</RequirementSets>
+    <Row>
+      <RequirementSetId>DIGGER_ON_COAST_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+    </Row>
+    <Row>
+      <RequirementSetId>DIGGER_NON_DOMESTIC_PLOT_REQUIREMENTS</RequirementSetId>
+      <RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+    </Row>
+  </RequirementSets>
 	<RequirementSetRequirements>
 		<Row>
 			<RequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</RequirementSetId>
@@ -1267,6 +1306,14 @@
 			<RequirementSetId>ROUGH_RIDER_HILL_TERRAIN_REQUIREMENTS</RequirementSetId>
 			<RequirementId>PLOT_IS_SNOW_HILLS_TERRAIN_REQUIREMENT</RequirementId>
 		</Row>
+    <Row>
+      <RequirementSetId>DIGGER_ON_COAST_REQUIREMENTS</RequirementSetId>
+      <RequirementId>REQUIRES_UNIT_ON_COASTAL_LAND</RequirementId>
+    </Row>
+    <Row>
+      <RequirementSetId>DIGGER_NON_DOMESTIC_PLOT_REQUIREMENTS</RequirementSetId>
+      <RequirementId>REQUIRES_UNIT_NOT_IN_OWNER_TERRITORY</RequirementId>
+    </Row>
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
@@ -1371,7 +1418,20 @@
 			<RequirementId>PLOT_IS_SNOW_HILLS_TERRAIN_REQUIREMENT</RequirementId>
 			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
 		</Row>
-	</Requirements>
+    <Row>
+      <RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
+      <RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>PLOT_IS_DESERT_OR_DESERT_HILLS_REQUIREMENT</RequirementId>
+      <RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+    </Row>
+    <Row>
+      <RequirementId>REQUIRES_UNIT_NOT_IN_OWNER_TERRITORY</RequirementId>
+      <RequirementType>REQUIREMENT_UNIT_IN_OWNER_TERRITORY</RequirementType>
+      <Inverse>1</Inverse>
+    </Row>
+  </Requirements>
 	<RequirementArguments>
 		<Row>
 			<RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_LC</RequirementId>
@@ -1473,6 +1533,11 @@
 			<Name>TerrainType</Name>
 			<Value>TERRAIN_SNOW_HILLS</Value>
 		</Row>
+    <Row>
+      <RequirementId>PLOT_IS_DESERT_TERRAIN_REQUIREMENT</RequirementId>
+      <Name>TerrainType</Name>
+      <Value>TERRAIN_DESERT</Value>
+    </Row>
 	</RequirementArguments>
 	<ModifierStrings>
 		<Row ModifierId="ANTI_CAVALRY_COMBAT_BONUS" Context="Preview" Text="LOC_ABILITY_ANTI_CAVALRY_MODIFIER_DESCRIPTION"/>
@@ -1512,5 +1577,7 @@
 		<Row ModifierId="HOPLITE_NEIGHBOR_COMBAT" Context="Preview" Text="LOC_ABILITY_HOPLITE_NEIGHBOR_COMBAT_MODIFIER_DESCRIPTION"/>
 		<Row ModifierId="UBOAT_OCEAN_COMBAT" Context="Preview" Text="LOC_ABILITY_UBOAT_OCEAN_COMBAT_MODIFIER_DESCRIPTION"/>
 		<Row ModifierId="ROUGH_RIDER_BONUS_ON_HILLS" Context="Preview" Text="LOC_ABILITY_ROUGH_RIDER_BONUS_IN_HILLS_DESCRIPTION"/>
+    <Row ModifierId="DIGGER_BONUS_ON_COAST" Context="Preview" Text="LOC_ABILITY_DIGGER_BONUS_ON_COAST_DESCRIPTION"/>
+    <Row ModifierId="DIGGER_NON_DOMESTIC_BONUS" Context="Preview" Text="LOC_ABILITY_DIGGER_NON_DOMESTIC_BONUS_DESCRIPTION"/>
 	</ModifierStrings>
 </GameInfo>
