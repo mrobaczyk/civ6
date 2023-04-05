@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_RAMSES" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_CLEOPATRA_ALT" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_RAMSES" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_MAAT" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_CLEOPATRA_ALT" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_PREFER_FOOD" Kind="KIND_TRAIT"/>
+	</Types>
+	<Leaders>
+		<Row LeaderType="LEADER_RAMSES" Name="LOC_LEADER_RAMSES_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_CLEOPATRA_ALT" Name="LOC_LEADER_CLEOPATRA_ALT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Update>
+			<Where LeaderType="LEADER_CLEOPATRA"/>
+			<Set>
+				<Name>LOC_LEADER_CLEOPATRA_ORIGINAL_NAME</Name>
+			</Set>
+		</Update>
+	</Leaders>
+	<LeaderQuotes>		
+		<Row LeaderType="LEADER_RAMSES" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_RAMSES_QUOTE" QuoteAudio="RAMSES_MA_MISC_PEP_TALK_B_SELECT"/>
+		<Row LeaderType="LEADER_CLEOPATRA_ALT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_ALT_QUOTE" QuoteAudio="Cleopatra_MISC_PEP_TALK_C_E1"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_RAMSES" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_RAMSES" TraitType="TRAIT_LEADER_RAMSES"/>
+		<Row LeaderType="LEADER_CLEOPATRA_ALT" TraitType="TRAIT_LEADER_CLEOPATRA_ALT"/>
+		<Row LeaderType="LEADER_CLEOPATRA_ALT" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_RAMSES" ForegroundImage="LEADER_RAMSES_NEUTRAL" BackgroundImage="LEADER_RAMSES_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_RAMSES" DawnOfManLeaderId="LEADER_RAMSES"/>
+		<Row LeaderType="LEADER_CLEOPATRA_ALT" ForegroundImage="LEADER_CLEOPATRA_ALT_NEUTRAL" BackgroundImage="LEADER_CLEOPATRA_ALT_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_CLEOPATRA" DawnOfManLeaderId="LEADER_CLEOPATRA"/>
+	</LoadingInfo>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_CLEOPATRA" OtherLeaderType="LEADER_CLEOPATRA_ALT"/>
+	</DuplicateLeaders>
+	<Agendas>
+		<Row AgendaType="AGENDA_MAAT" Name="LOC_AGENDA_MAAT_NAME" Description="LOC_AGENDA_MAAT_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_PREFER_FOOD" Name="LOC_AGENDA_PREFER_FOOD_NAME" Description="LOC_AGENDA_PREFER_FOOD_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_MAAT" TraitType="TRAIT_AGENDA_MAAT"/>
+		<Row AgendaType="AGENDA_PREFER_FOOD" TraitType="TRAIT_AGENDA_PREFER_FOOD"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_RAMSES" AgendaType="AGENDA_MAAT"/>
+		<Row LeaderType="LEADER_CLEOPATRA_ALT" AgendaType="AGENDA_PREFER_FOOD"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_MAAT" AgendaTwo="AGENDA_EXPLOITATIVE"/>
+	</ExclusiveAgendas>
+	<AiListTypes>
+		<Row ListType="MaatLoverExploitationPreference"/>
+		<Row ListType="FoodLoverFoodPreference"/>
+		<Row ListType="CleopatraAltCivics"/>
+		<Row ListType="CleopatraAltTechs"/>
+		<Row ListType="CleopatraAltWonders"/>
+		<Row ListType="RamsesCivics"/>
+		<Row ListType="RamsesTechs"/>
+		<Row ListType="RamsesWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="MaatLoverExploitationPreference" AgendaType="TRAIT_AGENDA_MAAT" System="PseudoYields"/>
+		<Row ListType="FoodLoverFoodPreference" AgendaType="TRAIT_AGENDA_PREFER_FOOD" System="Yields"/>
+		<Row ListType="WonderObsessedWonders" LeaderType="TRAIT_LEADER_RAMSES" System="PseudoYields"/>
+		<Row ListType="CleopatraAltCivics" LeaderType="TRAIT_LEADER_CLEOPATRA_ALT" System="Civics"/>
+		<Row ListType="CleopatraAltTechs" LeaderType="TRAIT_LEADER_MEDITERRANEAN" System="Technologies"/>
+		<Row ListType="CleopatraAltWonders" LeaderType="TRAIT_LEADER_CLEOPATRA_ALT" System="Buildings"/>
+		<Row ListType="RamsesCivics" LeaderType="TRAIT_LEADER_RAMSES" System="Civics"/>
+		<Row ListType="RamsesTechs" LeaderType="TRAIT_LEADER_MEDITERRANEAN" System="Technologies"/>
+		<Row ListType="RamsesWonders" LeaderType="TRAIT_LEADER_RAMSES" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="MaatLoverExploitationPreference" Item="PSEUDOYIELD_IMPROVEMENT" Value="5"/>
+		<Row ListType="FoodLoverFoodPreference" Item="YIELD_FOOD" Value="20"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_PYRAMIDS" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_GREAT_LIBRARY" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_HANGING_GARDENS" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_STONEHENGE" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_PETRA" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_MONT_ST_MICHEL" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_BIG_BEN" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_HERMITAGE" Favored="true"/>
+		<Row ListType="CleopatraAltWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_PYRAMIDS" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_GREAT_LIBRARY" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_HANGING_GARDENS" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_STONEHENGE" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_PETRA" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_MONT_ST_MICHEL" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_BIG_BEN" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_HERMITAGE" Favored="true"/>
+		<Row ListType="RamsesWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+		<Row ListType="CleopatraAltCivics" Item="CIVIC_CRAFTSMANSHIP" Favored="true"/>
+		<Row ListType="CleopatraAltCivics" Item="CIVIC_FOREIGN_TRADE" Favored="true"/>
+		<Row ListType="CleopatraAltCivics" Item="CIVIC_STATE_WORKFORCE" Favored="true"/>
+		<Row ListType="CleopatraAltCivics" Item="CIVIC_NATURAL_HISTORY" Favored="true"/>
+		
+		
+		<Row ListType="RamsesCivics" Item="CIVIC_CRAFTSMANSHIP" Favored="true"/>
+		<Row ListType="RamsesCivics" Item="CIVIC_FOREIGN_TRADE" Favored="true"/>
+		<Row ListType="RamsesCivics" Item="CIVIC_STATE_WORKFORCE" Favored="true"/>
+		<Row ListType="RamsesCivics" Item="CIVIC_NATURAL_HISTORY" Favored="true"/>
+		
+		<Row ListType="CleopatraAltTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="CleopatraAltTechs" Item="TECH_FLIGHT" Favored="true"/>
+		
+		<Row ListType="RamsesTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="RamsesTechs" Item="TECH_FLIGHT" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_RAMSES" Name="LOC_TRAIT_LEADER_RAMSES_NAME" Description="LOC_TRAIT_LEADER_RAMSES_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_MAAT"/>
+		<Row TraitType="TRAIT_LEADER_CLEOPATRA_ALT" Name="LOC_TRAIT_LEADER_CLEOPATRA_ALT_NAME" Description="LOC_TRAIT_LEADER_CLEOPATRA_ALT_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_FOOD"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_RAMSES" ModifierId="RAMSES_CULTURE_POSITIVE_WONDERS_BUILDINGS"/>
+		<Row TraitType="TRAIT_LEADER_RAMSES" ModifierId="RAMSES_CULTURE_NEGATIVE_BUILDINGS"/>
+		<Row TraitType="TRAIT_AGENDA_MAAT" ModifierId="AGENDA_MAAT"/>
+		<Row TraitType="TRAIT_LEADER_CLEOPATRA_ALT" ModifierId="CLEOPATRA_FLOODPLAINS_APPEAL"/>
+		<Row TraitType="TRAIT_LEADER_CLEOPATRA_ALT" ModifierId="CLEOPATRA_FLOODPLAINS_RESOURCE_YIELD"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_FOOD" ModifierId="AGENDA_HIGH_FOOD"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_FOOD" ModifierId="AGENDA_LOW_FOOD"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_POSITIVE_WONDERS_BUILDINGS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_YIELD_PER_BUILDING_COST</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_NEGATIVE_BUILDINGS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_GRANT_YIELD_PER_BUILDING_COST</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_EXPLOITATIVE</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_FLOODPLAINS_APPEAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_FEATURE_APPEAL_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_FLOODPLAINS_RESOURCE_YIELD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_IS_FLOODPLAINS_RESOURCE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_FOOD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_HIGH_FOOD</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_FOOD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_LOW_FOOD</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_POSITIVE_WONDERS_BUILDINGS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_POSITIVE_WONDERS_BUILDINGS</ModifierId>
+			<Name>BuildingProductionPercent</Name>
+			<Value>30</Value>
+		</Row>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_POSITIVE_WONDERS_BUILDINGS</ModifierId>
+			<Name>IncludeWonder</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_NEGATIVE_BUILDINGS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_NEGATIVE_BUILDINGS</ModifierId>
+			<Name>BuildingProductionPercent</Name>
+			<Value>-15</Value>
+		</Row>
+		<Row>
+			<ModifierId>RAMSES_CULTURE_NEGATIVE_BUILDINGS</ModifierId>
+			<Name>IncludeWonder</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>IncrementValue</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_EXPLOITATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_EXPLOITATION</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>TileImprovementHighThreshold</Name>
+			<Value>75</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>TileImprovementLowThreshold</Name>
+			<Value>35</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>PlotFeatureRemovalValue</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>NationalParkConstructionValue</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>TileImprovementPreferenceValue</Name>
+			<Value>9</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>MaxDiploModifierMagnitude</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>HighScoreThreshold</Name>
+			<Value>15</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_MAAT</ModifierId>
+			<Name>LowScoreThreshold</Name>
+			<Value>-15</Value>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_FLOODPLAINS_APPEAL</ModifierId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS</Value>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_FLOODPLAINS_APPEAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_FLOODPLAINS_RESOURCE_YIELD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD, YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_FLOODPLAINS_RESOURCE_YIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1, 1</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_FOOD</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_FOOD</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_HIGH_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_FOOD</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_HIGH_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_FOOD</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_FOOD</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_LOW_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_FOOD</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_LOW_FOOD</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_MAAT" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_HIGH_FOOD" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_LOW_FOOD" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLOT_IS_FLOODPLAINS_RESOURCE</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_IS_FLOODPLAINS_SAHARA</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_HIGH_FOOD</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_LOW_FOOD</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_FLOODPLAINS_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_HIGH_FOOD</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_YIELD_LEAD</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_LOW_FOOD</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_YIELD_LEAD</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_FLOODPLAINS_REQUIREMENT</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>PLOT_IS_FLOODPLAINS_SAHARA</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_HIGH_FOOD</RequirementId>
+			<Name>MinimumDelta</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_HIGH_FOOD</RequirementId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_HIGH_FOOD</RequirementId>
+			<Name>YieldRatio</Name>
+			<Value>1.15</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_LOW_FOOD</RequirementId>
+			<Name>MinimumDelta</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_LOW_FOOD</RequirementId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_LOW_FOOD</RequirementId>
+			<Name>YieldRatio</Name>
+			<Value>-1.15</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLOT_IS_FLOODPLAINS_RESOURCE</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_VISIBLE_RESOURCE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_IS_FLOODPLAINS_RESOURCE</RequirementSetId>
+			<RequirementId>REQUIRES_FLOODPLAINS_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_IS_FLOODPLAINS_SAHARA</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_FLOODPLAINS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_HIGH_FOOD</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_HIGH_FOOD</RequirementSetId>
+			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_HIGH_FOOD</RequirementSetId>
+			<RequirementId>REQUIRES_HAS_HIGH_FOOD</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_LOW_FOOD</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_LOW_FOOD</RequirementSetId>
+			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_LOW_FOOD</RequirementSetId>
+			<RequirementId>REQUIRES_HAS_LOW_FOOD</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<CivilopediaPageChapterParagraphs>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_10" SortIndex="10"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_11" SortIndex="11"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_10" SortIndex="10"/>
+		<Row SectionId="LEADERS" PageId="LEADER_CLEOPATRA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_CLEOPATRA_CHAPTER_HISTORY_PARA_11" SortIndex="11"/>
+	</CivilopediaPageChapterParagraphs>
+</GameInfo>

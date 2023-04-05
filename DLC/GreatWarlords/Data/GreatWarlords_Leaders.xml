@@ -301,6 +301,11 @@
 			<RequirementType>REQUIREMENT_CITY_IS_ORIGINAL_OWNER</RequirementType>
 			<Inverse>true</Inverse>
 		</Row>
+		<Row>
+			<RequirementId>COMBAT_IS_NOT_DISTRICT_WARLORDS</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_DISTRICT</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
 	</Requirements>
 	<RequirementArguments>
 		<Row>
@@ -339,6 +344,10 @@
 		<Row>
 			<RequirementSetId>OPPONENT_IS_FULL_HEALTH_REQUIREMENTS</RequirementSetId>
 			<RequirementId>PLAYER_IS_ATTACKER_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_FULL_HEALTH_REQUIREMENTS</RequirementSetId>
+			<RequirementId>COMBAT_IS_NOT_DISTRICT_WARLORDS</RequirementId>
 		</Row>
 		<Row>
 			<RequirementSetId>CITY_WAS_NOT_FOUNDED_BY_THEM_REQUIREMENTS</RequirementSetId>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="LEADER_SUNDIATA_KEITA" Kind="KIND_LEADER"/>
+		<Row Type="TRAIT_LEADER_SUNDIATA_KEITA" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_LION_OF_MALI" Kind="KIND_TRAIT"/>
+	</Types>
+	<TypeTags>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_SUNDIATA_KEITA" Name="LOC_LEADER_SUNDIATA_KEITA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>		
+		<Row LeaderType="LEADER_SUNDIATA_KEITA" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_SUNDIATA_KEITA_QUOTE" QuoteAudio="SUNDIATA_MA_MISC_PEP_TALK_A_SELECT"/>
+	</LeaderQuotes>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_MALI" LeaderType="LEADER_SUNDIATA_KEITA" CapitalName="LOC_CITY_NAME_NIANI"/>
+	</CivilizationLeaders>
+	<CivilizationAudioTags>
+		<Row CivilizationType="CIVILIZATION_MALI" MusicOverride="true"/>
+	</CivilizationAudioTags>	
+	<Agendas>
+		<Row AgendaType="AGENDA_LION_OF_MALI" Name="LOC_AGENDA_LION_OF_MALI_NAME" Description="LOC_AGENDA_LION_OF_MALI_DESCRIPTION"/>
+	</Agendas>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_SUNDIATA_KEITA" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_SUNDIATA_KEITA" TraitType="TRAIT_LEADER_SUNDIATA_KEITA"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_SUNDIATA_KEITA" ForegroundImage="LEADER_SUNDIATA_KEITA_NEUTRAL" BackgroundImage="LEADER_SUNDIATA_KEITA_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_SUNDIATA_KEITA" DawnOfManLeaderId="LEADER_SUNDIATA_KEITA"/>
+	</LoadingInfo>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_LION_OF_MALI" TraitType="TRAIT_AGENDA_LION_OF_MALI"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_SUNDIATA_KEITA" AgendaType="AGENDA_LION_OF_MALI"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_ENVIRONMENTALIST" AgendaTwo="AGENDA_MAAT"/>
+		<Row AgendaOne="AGENDA_DESTINATION_CIV" AgendaTwo="AGENDA_LION_OF_MALI"/>
+	</ExclusiveAgendas>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_SUNDIATA_KEITA" ReligionType="RELIGION_ISLAM"/>
+	</FavoredReligions>
+	<AiListTypes>
+		<Row ListType="MaatResolutions"/>
+		<Row ListType="MaatDiscussions"/>
+		<Row ListType="LionOfMaliResolutions"/>
+		<Row ListType="LionOfMaliDiscussions"/>
+		<Row ListType="LionOfMaliPseudoYields"/>
+		<Row ListType="KeitaGreatWorks"/>
+		<Row ListType="KeitaCivics"/>
+		<Row ListType="KeitaTechs"/>
+		<Row ListType="KeitaWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="MaatResolutions" AgendaType="TRAIT_AGENDA_MAAT" System="Resolutions"/>
+		<Row ListType="MaatDiscussions" AgendaType="TRAIT_AGENDA_MAAT" System="Discussions"/>
+		<Row ListType="LionOfMaliResolutions" AgendaType="TRAIT_AGENDA_LION_OF_MALI" System="Resolutions"/>
+		<Row ListType="LionOfMaliDiscussions" AgendaType="TRAIT_AGENDA_LION_OF_MALI" System="Discussions"/>
+		<Row ListType="LionOfMaliPseudoYields" LeaderType="TRAIT_AGENDA_LION_OF_MALI" System="PseudoYields"/>
+		<Row ListType="KeitaGreatWorks" LeaderType="TRAIT_LEADER_ELEANOR_LOYALTY" System="PseudoYields"/>
+		<Row ListType="KeitaCivics" LeaderType="TRAIT_LEADER_SAHEL_MERCHANTS" System="Civics"/>
+		<Row ListType="KeitaTechs" LeaderType="TRAIT_LEADER_SAHEL_MERCHANTS" System="Technologies"/>
+		<Row ListType="KeitaWonders" LeaderType="TRAIT_LEADER_SAHEL_MERCHANTS" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="MaatResolutions" Item="WC_RES_DEFORESTATION_TREATY" Favored="false"/>
+		<Row ListType="MaatDiscussions" Item="WC_EMERGENCY_CLIMATE_ACCORDS" Favored="false"/>
+		<Row ListType="LionOfMaliResolutions" Item="WC_RES_HERITAGE_ORG" Favored="true"/>
+		<Row ListType="LionOfMaliResolutions" Item="WC_EMERGENCY_WORLD_FAIR" Favored="true"/>
+		<Row ListType="LionOfMaliDiscussions" Item="WC_EMERGENCY_NOBEL_PRIZE_LITERATURE" Favored="true"/>
+		<Row ListType="LionOfMaliPseudoYields" Item="PSEUDOYIELD_TOURISM" Value="20"/>
+		<Row ListType="KeitaGreatWorks" Item="PSEUDOYIELD_GREATWORK_WRITING" Value="50"/>
+		<Row ListType="KeitaCivics" Item="CIVIC_GUILDS" Favored="true"/>
+		<Row ListType="KeitaCivics" Item="CIVIC_DRAMA_AND_POETRY" Favored="true"/>
+		<Row ListType="KeitaTechs" Item="TECH_CURRENCY" Favored="true"/>
+		<Row ListType="KeitaTechs" Item="TECH_STIRRUPS" Favored="true"/>
+		<Row ListType="KeitaWonders" Item="BUILDING_UNIVERSITY_SANKORE" Favored="true"/>
+		<Row ListType="KeitaWonders" Item="BUILDING_PETRA" Favored="true"/>
+		<Row ListType="KeitaWonders" Item="BUILDING_BIG_BEN" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_SUNDIATA_KEITA" Name="LOC_TRAIT_LEADER_SUNDIATA_KEITA_NAME" Description="LOC_TRAIT_LEADER_SUNDIATA_KEITA_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_LION_OF_MALI"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_CLEOPATRA_ALT" ModifierId="CLEOPATRA_GRASS_FLOODPLAINS_APPEAL"/>
+		<Row TraitType="TRAIT_LEADER_CLEOPATRA_ALT" ModifierId="CLEOPATRA_PLAINS_FLOODPLAINS_APPEAL"/>
+		<Row TraitType="TRAIT_LEADER_SUNDIATA_KEITA" ModifierId="SUNDIATA_KEITA_MARKET_GREAT_WRITING_SLOTS"/>
+		<Row TraitType="TRAIT_LEADER_SUNDIATA_KEITA" ModifierId="SUNDIATA_KEITA_PURCHASE_GREAT_PEOPLE"/>
+		<Row TraitType="TRAIT_LEADER_SUNDIATA_KEITA" ModifierId="SUNDIATA_KEITA_GREAT_WORK_GOLD_WRITING"/>
+		<Row TraitType="TRAIT_LEADER_SUNDIATA_KEITA" ModifierId="SUNDIATA_KEITA_GREAT_WORK_PRODUCTION_WRITING"/>
+		<Row TraitType="TRAIT_AGENDA_LION_OF_MALI" ModifierId="AGENDA_HIGH_TOURISM_MALI"/>
+		<Row TraitType="TRAIT_AGENDA_LION_OF_MALI" ModifierId="AGENDA_LOW_TOURISM_MALI"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>CLEOPATRA_GRASS_FLOODPLAINS_APPEAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_FEATURE_APPEAL_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_PLAINS_FLOODPLAINS_APPEAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_FEATURE_APPEAL_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_MARKET_GREAT_WRITING_SLOTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_EXTRA_GREAT_WORK_SLOTS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_PURCHASE_GREAT_PEOPLE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_PATRONAGE_DISCOUNT_PERCENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_GOLD_WRITING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_PRODUCTION_WRITING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_TOURISM_MALI</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_HIGH_TOURISM</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_TOURISM_MALI</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_LOW_TOURISM</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>CLEOPATRA_GRASS_FLOODPLAINS_APPEAL</ModifierId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS_GRASSLAND</Value>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_GRASS_FLOODPLAINS_APPEAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_PLAINS_FLOODPLAINS_APPEAL</ModifierId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS_PLAINS</Value>
+		</Row>
+		<Row>
+			<ModifierId>CLEOPATRA_PLAINS_FLOODPLAINS_APPEAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_MARKET_GREAT_WRITING_SLOTS</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_MARKET</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_MARKET_GREAT_WRITING_SLOTS</ModifierId>
+			<Name>GreatWorkSlotType</Name>
+			<Value>GREATWORKSLOT_WRITING</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_MARKET_GREAT_WRITING_SLOTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_PURCHASE_GREAT_PEOPLE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_PURCHASE_GREAT_PEOPLE</ModifierId>
+			<Name>Amount</Name>
+			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_GOLD_WRITING</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_WRITING</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_GOLD_WRITING</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_GOLD_WRITING</ModifierId>
+			<Name>YieldChange</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_PRODUCTION_WRITING</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_WRITING</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_PRODUCTION_WRITING</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>SUNDIATA_KEITA_GREAT_WORK_PRODUCTION_WRITING</ModifierId>
+			<Name>YieldChange</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_TOURISM_MALI</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_TOURISM_MALI</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_HIGH_TOURISM</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_TOURISM_MALI</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_HIGH_TOURISM</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_TOURISM_MALI</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_TOURISM_MALI</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_LOW_TOURISM</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_TOURISM_MALI</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_LOW_TOURISM</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_HIGH_TOURISM_MALI" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_LOW_TOURISM_MALI" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<RequirementSets>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_IS_GRASSFLOODPLAINS_SAHARA</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_IS_PLAINSFLOODPLAINS_SAHARA</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_IS_GRASSFLOODPLAINS_SAHARA</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS_GRASSLAND</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLOT_IS_PLAINSFLOODPLAINS_SAHARA</RequirementId>
+			<Name>FeatureType</Name>
+			<Value>FEATURE_FLOODPLAINS_PLAINS</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLOT_IS_FLOODPLAINS_SAHARA</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_IS_GRASSFLOODPLAINS_SAHARA</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_IS_FLOODPLAINS_SAHARA</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_IS_PLAINSFLOODPLAINS_SAHARA</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+	</UnitAbilityModifiers>
+</GameInfo>
