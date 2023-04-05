@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- XP2 Support -->
+	<Types>
+		<Row Type="ABILITY_LEVIED_HARALD" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_LEVIED_HARALD" Tag="CLASS_ALL_COMBAT_UNITS"/>
+	</TypeTags>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_HARALD_ALT" TraitType="TRAIT_LEADER_AGGRESSIVE_MILITARY"/>
+	</LeaderTraits>
+	<Traits>
+		<Update>
+			<Where Description="LOC_TRAIT_LEADER_HARALD_ALT_DESCRIPTION"/>
+			<Set Description="LOC_TRAIT_LEADER_HARALD_ALT_XP_DESCRIPTION"/>
+		</Update>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_HARALD_ALT" ModifierId="HARALD_LEVY_UNITS_GRANT_ABILITY"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>HARALD_LEVY_UNITS_GRANT_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<SubjectRequirementSetId>UNIT_IS_LEVERAGED_REQUIREMENTS</SubjectRequirementSetId>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_FAITH</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_POST_COMBAT_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_POST_COMBAT_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_POST_COMBAT_YIELD</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>HARALD_LEVY_UNITS_GRANT_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_LEVIED_HARALD</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_FAITH</ModifierId>
+			<Name>PercentDefeatedStrength</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_SCIENCE</ModifierId>
+			<Name>PercentDefeatedStrength</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_CULTURE</ModifierId>
+			<Name>PercentDefeatedStrength</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVIED_UNITS_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+	</ModifierArguments>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_LEVIED_HARALD" Name="LOC_TRAIT_LEADER_HARALD_ALT_NAME" Description="LOC_ABILITY_LEVIED_HARALD_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_LEVIED_HARALD</UnitAbilityType>
+			<ModifierId>HARALD_LEVIED_UNITS_FAITH</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_LEVIED_HARALD</UnitAbilityType>
+			<ModifierId>HARALD_LEVIED_UNITS_SCIENCE</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_LEVIED_HARALD</UnitAbilityType>
+			<ModifierId>HARALD_LEVIED_UNITS_CULTURE</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<AiListTypes>
+		<Row ListType="TradeAgreementResolutions"/>
+		<Row ListType="SagaResolutions"/>
+		<Row ListType="SagaDiscussions"/>
+		<Row ListType="IndustrialRevolutionResolutions"/>
+		<Row ListType="IndustrialRevolutionDiscussions"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="TradeAgreementResolutions" AgendaType="TRAIT_AGENDA_TRADE_AGREEMENT" System="Resolutions"/>
+		<Row ListType="SagaResolutions" AgendaType="TRAIT_AGENDA_SAGA" System="Resolutions"/>
+		<Row ListType="SagaDiscussions" AgendaType="TRAIT_AGENDA_SAGA" System="Discussions"/>
+		<Row ListType="IndustrialRevolutionResolutions" AgendaType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION" System="Resolutions"/>
+		<Row ListType="IndustrialRevolutionDiscussions" AgendaType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION" System="Discussions"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="TradeAgreementResolutions" Item="WC_RES_TRADE_TREATY" Favored="true"/>
+		<Row ListType="SagaResolutions" Item="WC_RES_SOVEREIGNTY" Favored="false"/>
+		<Row ListType="SagaDiscussions" Item="WC_EMERGENCY_CITY_STATE" Favored="true"/>
+		<Row ListType="IndustrialRevolutionResolutions" Item="WC_RES_DEFORESTATION_TREATY" Favored="false"/>
+		<Row ListType="IndustrialRevolutionResolutions" Item="WC_RES_GLOBAL_ENERGY_TREATY" Favored="false"/>
+		<Row ListType="IndustrialRevolutionDiscussions" Item="WC_EMERGENCY_CLIMATE_ACCORDS" Favored="false"/>
+	</AiFavoredItems>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>BUILDING_IS_POWER_PLANT_ENGLAND</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_COAL_POWER_PLANT_ENGLAND</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>BUILDING_IS_POWER_PLANT_ENGLAND</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_FOSSIL_FUEL_POWER_PLANT_ENGLAND</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_COAL_POWER_PLANT_ENGLAND</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_FOSSIL_FUEL_POWER_PLANT_ENGLAND</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_COAL_POWER_PLANT_ENGLAND</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_COAL_POWER_PLANT</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_FOSSIL_FUEL_POWER_PLANT_ENGLAND</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_FOSSIL_FUEL_POWER_PLANT</Value>
+		</Row>
+	</RequirementArguments>
+</GameInfo>

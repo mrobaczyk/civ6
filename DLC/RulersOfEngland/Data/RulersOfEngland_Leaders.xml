@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_ELIZABETH" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_HARALD_ALT" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_VICTORIA_ALT" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_ELIZABETH" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_HARALD_ALT" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_VICTORIA_ALT" Kind="KIND_TRAIT"/>
+		<Row Type="ABILITY_ELIZABETH_PLUNDER_BONUS" Kind="KIND_ABILITY"/>
+		<Row Type="TRAIT_AGENDA_TRADE_AGREEMENT" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_SAGA" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION" Kind="KIND_TRAIT"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_ELIZABETH_PLUNDER_BONUS" Tag="CLASS_NAVAL_MELEE"/>
+		<Row Type="ABILITY_ELIZABETH_PLUNDER_BONUS" Tag="CLASS_NAVAL_RANGED"/>
+		<Row Type="ABILITY_ELIZABETH_PLUNDER_BONUS" Tag="CLASS_NAVAL_RAIDER"/>
+		<Row Type="ABILITY_ELIZABETH_PLUNDER_BONUS" Tag="CLASS_NAVAL_CARRIER"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_ELIZABETH" Name="LOC_LEADER_ELIZABETH_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_HARALD_ALT" Name="LOC_LEADER_HARALD_ALT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_VICTORIA_ALT" Name="LOC_LEADER_VICTORIA_ALT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Update>
+			<Where LeaderType="LEADER_HARDRADA"/>
+			<Set>
+				<Name>LOC_LEADER_HARDRADA_ORIGINAL_NAME</Name>
+			</Set>
+		</Update>
+		<Update>
+			<Where LeaderType="LEADER_VICTORIA"/>
+			<Set>
+				<Name>LOC_LEADER_VICTORIA_ORIGINAL_NAME</Name>
+			</Set>
+		</Update>
+	</Leaders>
+	<LeaderQuotes>		
+		<Row LeaderType="LEADER_ELIZABETH" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_ELIZABETH_QUOTE" QuoteAudio="ELIZABETH_MA_MISC_PEP_TALK_B_SELECT"/>
+		<Row LeaderType="LEADER_HARALD_ALT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_HARALD_ALT_QUOTE" QuoteAudio="Harald_HH_MISC_PEP_TALK_B_1"/>
+		<Row LeaderType="LEADER_VICTORIA_ALT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_ALT_QUOTE" QuoteAudio="Victoria_MISC_PEP_TALK_D"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_ELIZABETH" TraitType="TRAIT_LEADER_ELIZABETH"/>
+		<Row LeaderType="LEADER_HARALD_ALT" TraitType="TRAIT_LEADER_HARALD_ALT"/>
+		<Row LeaderType="LEADER_HARALD_ALT" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
+		<Row LeaderType="LEADER_VICTORIA_ALT" TraitType="TRAIT_LEADER_VICTORIA_ALT"/>
+		<Row LeaderType="LEADER_VICTORIA_ALT" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_ELIZABETH" ForegroundImage="LEADER_ELIZABETH_NEUTRAL" BackgroundImage="LEADER_ELIZABETH_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_ELIZABETH" DawnOfManLeaderId="LEADER_ELIZABETH"/>
+		<Row LeaderType="LEADER_HARALD_ALT" ForegroundImage="LEADER_HARALD_ALT_NEUTRAL" BackgroundImage="LEADER_HARALD_ALT_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_HARDRADA" DawnOfManLeaderId="LEADER_HARDRADA"/>
+		<Row LeaderType="LEADER_VICTORIA_ALT" ForegroundImage="LEADER_VICTORIA_ALT_NEUTRAL" BackgroundImage="LEADER_VICTORIA_ALT_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_VICTORIA" DawnOfManLeaderId="LEADER_VICTORIA"/>
+	</LoadingInfo>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_HARDRADA" OtherLeaderType="LEADER_HARALD_ALT"/>
+		<Row LeaderType="LEADER_VICTORIA" OtherLeaderType="LEADER_VICTORIA_ALT"/>
+	</DuplicateLeaders>
+	<Agendas>
+		<Row AgendaType="AGENDA_TRADE_AGREEMENT" Name="LOC_AGENDA_TRADE_AGREEMENT_NAME" Description="LOC_AGENDA_TRADE_AGREEMENT_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_SAGA" Name="LOC_AGENDA_SAGA_NAME" Description="LOC_AGENDA_SAGA_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_INDUSTRIAL_REVOLUTION" Name="LOC_AGENDA_INDUSTRIAL_REVOLUTION_NAME" Description="LOC_AGENDA_INDUSTRIAL_REVOLUTION_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_TRADE_AGREEMENT" TraitType="TRAIT_AGENDA_TRADE_AGREEMENT"/>
+		<Row AgendaType="AGENDA_SAGA" TraitType="TRAIT_AGENDA_SAGA"/>
+		<Row AgendaType="AGENDA_INDUSTRIAL_REVOLUTION" TraitType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_ELIZABETH" AgendaType="AGENDA_TRADE_AGREEMENT"/>
+		<Row LeaderType="LEADER_HARALD_ALT" AgendaType="AGENDA_SAGA"/>
+		<Row LeaderType="LEADER_VICTORIA_ALT" AgendaType="AGENDA_INDUSTRIAL_REVOLUTION"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_SAGA" AgendaTwo="AGENDA_CITY_STATE_PROTECTOR"/>
+		<Row AgendaOne="AGENDA_INDUSTRIAL_REVOLUTION" AgendaTwo="AGENDA_ENVIRONMENTALIST"/>
+		<Row AgendaOne="AGENDA_INDUSTRIAL_REVOLUTION" AgendaTwo="AGENDA_INDUSTRIALIST"/>
+	</ExclusiveAgendas>
+	<AiListTypes>
+		<Row ListType="ElizabethPseudoYields"/>
+		<Row ListType="ElizabethYields"/>
+		<Row ListType="SagaPreference"/>
+		<Row ListType="IndustrialRevolutionPreference"/>
+		<Row ListType="VictoriaAltCivics"/>
+		<Row ListType="VictoriaAltTechs"/>
+		<Row ListType="VictoriaAltWonders"/>
+		<Row ListType="ElizabethCivics"/>
+		<Row ListType="ElizabethTechs"/>
+		<Row ListType="ElizabethWonders"/>
+		<Row ListType="HaraldAltCivics"/>
+		<Row ListType="HaraldAltTechs"/>
+		<Row ListType="HaraldAltWonders"/>
+		<Row ListType="HaraldAltEnvoys"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="ElizabethPseudoYields" AgendaType="TRAIT_AGENDA_TRADE_AGREEMENT" System="PseudoYields"/>
+		<Row ListType="ElizabethYields" AgendaType="TRAIT_AGENDA_TRADE_AGREEMENT" System="Yields"/>
+		<Row ListType="SagaPreference" AgendaType="TRAIT_AGENDA_SAGA" System="DiplomaticActions"/>
+		<Row ListType="IndustrialRevolutionPreference" AgendaType="TRAIT_AGENDA_PREFER_INDUSTRIAL_REVOLUTION" System="Yields"/>
+		<Row ListType="VictoriaAltCivics" LeaderType="TRAIT_LEADER_VICTORIA_ALT" System="Civics"/>
+		<Row ListType="VictoriaAltTechs" LeaderType="TRAIT_LEADER_VICTORIA_ALT" System="Technologies"/>
+		<Row ListType="VictoriaAltWonders" LeaderType="TRAIT_LEADER_VICTORIA_ALT" System="Buildings"/>
+		<Row ListType="ElizabethCivics" LeaderType="TRAIT_LEADER_ELIZABETH" System="Civics"/>
+		<Row ListType="ElizabethTechs" LeaderType="TRAIT_LEADER_ELIZABETH" System="Technologies"/>
+		<Row ListType="ElizabethWonders" LeaderType="TRAIT_LEADER_ELIZABETH" System="Buildings"/>
+		<Row ListType="HaraldAltWonders" LeaderType="TRAIT_LEADER_HARALD_ALT" System="Buildings"/>
+		<Row ListType="HaraldAltCivics" LeaderType="TRAIT_LEADER_HARALD_ALT" System="Civics"/>
+		<Row ListType="HaraldAltTechs" LeaderType="TRAIT_LEADER_HARALD_ALT" System="Technologies"/>
+		<Row ListType="HaraldAltEnvoys" LeaderType="TRAIT_LEADER_HARALD_ALT" System="PseudoYields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="ElizabethPseudoYields" Item="PSEUDOYIELD_UNIT_TRADE" Value="50"/>
+		<Row ListType="ElizabethYields" Item="YIELD_GOLD" Value="25"/>
+		<Row ListType="SagaPreference" Item="DIPLOACTION_DECLARE_PROTECTORATE_WAR" Favored="true"/>
+		<Row ListType="IndustrialRevolutionPreference" Item="YIELD_PRODUCTION" Value="20"/>
+		<Row ListType="VictoriaAltWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+		<Row ListType="VictoriaAltWonders" Item="BUILDING_VENETIAN_ARSENAL" Favored="true"/>
+		<Row ListType="ElizabethWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
+		<Row ListType="ElizabethWonders" Item="BUILDING_GREAT_ZIMBABWE" Favored="true"/>
+		<Row ListType="ElizabethWonders" Item="BUILDING_VENTIAN_ARSENAL" Favored="true"/>
+		<Row ListType="VictoriaAltCivics" Item="CIVIC_EXPLORATION" Favored="true"/>
+		<Row ListType="VictoriaAltCivics" Item="CIVIC_COLONIALISM" Favored="true"/>
+		<Row ListType="VictoriaAltCivics" Item="CIVIC_MERCANTILISM" Favored="true"/>
+		<Row ListType="ElizabethCivics" Item="CIVIC_EXPLORATION" Favored="true"/>
+		<Row ListType="ElizabethCivics" Item="CIVIC_COLONIALISM" Favored="true"/>
+		<Row ListType="ElizabethCivics" Item="CIVIC_MERCANTILISM" Favored="true"/>
+		<Row ListType="VictoriaAltTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
+		<Row ListType="ElizabethTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
+		<Row ListType="HaraldAltWonders" Item="BUILDING_GREAT_LIGHTHOUSE" Favored="true"/>
+		<Row ListType="HaraldAltWonders" Item="BUILDING_VENETIAN_ARSENAL" Favored="true"/>
+		<Row ListType="HaraldAltEnvoys" Item="PSEUDOYIELD_INFLUENCE" Value="30"/>
+		<Row ListType="HaraldAltCivics" Item="CIVIC_MILITARY_TRAINING" Favored="true"/>
+		<Row ListType="HaraldAltCivics" Item="CIVIC_THEOLOGY" Favored="true"/>
+		<Row ListType="HaraldAltCivics" Item="CIVIC_MERCENARIES" Favored="true"/>
+		<Row ListType="HaraldAltTechs" Item="TECH_SAILING" Favored="true"/>
+		<Row ListType="HaraldAltTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="HaraldAltTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
+		<Row ListType="HaraldAltTechs" Item="TECH_MILITARY_TACTICS" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_ELIZABETH" Name="LOC_TRAIT_LEADER_ELIZABETH_NAME" Description="LOC_TRAIT_LEADER_ELIZABETH_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_TRADE_AGREEMENT"/>
+		<Row TraitType="TRAIT_LEADER_HARALD_ALT" Name="LOC_TRAIT_LEADER_HARALD_ALT_NAME" Description="LOC_TRAIT_LEADER_HARALD_ALT_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_SAGA"/>
+		<Row TraitType="TRAIT_LEADER_VICTORIA_ALT" Name="LOC_TRAIT_LEADER_VICTORIA_ALT_NAME" Description="LOC_TRAIT_LEADER_VICTORIA_ALT_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_ELIZABETH" ModifierId="ELIZABETH_TRADE_ROUTES_MODIFIER"/>
+		<Row TraitType="TRAIT_LEADER_ELIZABETH" ModifierId="ELIZABETH_TRADE_ROUTES_YIELDS"/>
+		<Row TraitType="TRAIT_LEADER_ELIZABETH" ModifierId="ELIZABETH_PLUNDER_ABILITY"/>
+		<Row TraitType="TRAIT_AGENDA_TRADE_AGREEMENT" ModifierId="AGENDA_TRADE_AGREEMENT"/>
+		<Row TraitType="TRAIT_LEADER_HARALD_ALT" ModifierId="HARALD_LEVY_DISCOUNT"/>
+		<Row TraitType="TRAIT_LEADER_HARALD_ALT" ModifierId="HARALD_MAINTENANCE_DISCOUNT"/>
+		<Row TraitType="TRAIT_AGENDA_SAGA" ModifierId="AGENDA_SAGA_HIGH_PROTECT_CITY_STATES"/>
+		<Row TraitType="TRAIT_AGENDA_SAGA" ModifierId="AGENDA_SAGA_MED_PROTECT_CITY_STATES"/>
+		<Row TraitType="TRAIT_AGENDA_SAGA" ModifierId="AGENDA_SAGA_MED_ATTACK_CITY_STATES"/>
+		<Row TraitType="TRAIT_AGENDA_SAGA" ModifierId="AGENDA_SAGA_HIGH_ATTACK_CITY_STATES"/>
+		<Row TraitType="TRAIT_LEADER_VICTORIA_ALT" ModifierId="VICTORIA_PRODUCTION_WORKSHOP"/>
+		<Row TraitType="TRAIT_LEADER_VICTORIA_ALT" ModifierId="VICTORIA_PRODUCTION_FACTORY"/>
+		<Row TraitType="TRAIT_LEADER_VICTORIA_ALT" ModifierId="VICTORIA_PRODUCTION_POWER_PLANT"/>
+		<Row TraitType="TRAIT_LEADER_VICTORIA_ALT" ModifierId="VICTORIA_STRATEGIC_RESOURCE"/>
+		<Row TraitType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION" ModifierId="AGENDA_HIGH_INDUSTRY_ENGLAND"/>
+		<Row TraitType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION" ModifierId="AGENDA_LOW_INDUSTRY_ENGLAND"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>ELIZABETH_TRADE_ROUTES_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+			<OwnerRequirementSetId>PLAYER_HAS_GREAT_ADMIRAL_REQUIREMENTS</OwnerRequirementSetId>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>ELIZABETH_TRADE_ROUTES_YIELDS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_STATE_TRADE_ROUTE_DISTRICT_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ELIZABETH_PLUNDER_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ELIZABETH_PLUNDER_BONUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_PLUNDER_YIELDS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_TRADE_AGREEMENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_TRADE_RELATIONS</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVY_DISCOUNT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_LEVY_DISCOUNT_PERCENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_MAINTENANCE_DISCOUNT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_UNIT_MAINTENANCE_DISCOUNT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_PROTECT_CITY_STATES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_HIGH_CITY_STATE_PROTECTION</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_PROTECT_CITY_STATES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_MED_CITY_STATE_PROTECTION</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_ATTACK_CITY_STATES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_MED_CITY_STATE_AGGRESSION</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_ATTACK_CITY_STATES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_HIGH_CITY_STATE_AGGRESSION</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_WORKSHOP</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_WORKSHOP_ENGLAND</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_FACTORY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_FACTORY_ENGLAND</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_POWER_PLANT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>BUILDING_IS_POWER_PLANT_ENGLAND</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_STRATEGIC_RESOURCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_STRATEGIC_RESOURCE_ENGLAND</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_INDUSTRY_ENGLAND</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_HIGH_INDUSTRY</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_INDUSTRY_ENGLAND</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_LOW_INDUSTRY</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>ELIZABETH_TRADE_ROUTES_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>ELIZABETH_TRADE_ROUTES_YIELDS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>ELIZABETH_TRADE_ROUTES_YIELDS</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>ELIZABETH_PLUNDER_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_ELIZABETH_PLUNDER_BONUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>ELIZABETH_PLUNDER_BONUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_TRADE_AGREEMENT</ModifierId>
+			<Name>TradeBonus</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_TRADE_AGREEMENT</ModifierId>
+			<Name>NoTradePenalty</Name>
+			<Value>12</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_TRADE_AGREEMENT</ModifierId>
+			<Name>BonusPerRoute</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_TRADE_AGREEMENT</ModifierId>
+			<Name>OnlyInboundTrade</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_TRADE_AGREEMENT</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ELIZABETH_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_TRADE_AGREEMENT</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_WILHELMINA_BILLIONAIRE_TRADE</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_LEVY_DISCOUNT</ModifierId>
+			<Name>Percent</Name>
+			<Value>75</Value>
+		</Row>
+		<Row>
+			<ModifierId>HARALD_MAINTENANCE_DISCOUNT</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_PROTECT_CITY_STATES</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_PROTECT_CITY_STATES</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_PROTECTS_CITY_STATES</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_PROTECT_CITY_STATES</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_HIGH_CITY_STATE_PROTECTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_PROTECT_CITY_STATES</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_PROTECT_CITY_STATES</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_PROTECTS_CITY_STATES</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_PROTECT_CITY_STATES</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_MED_CITY_STATE_PROTECTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_ATTACK_CITY_STATES</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-3</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_ATTACK_CITY_STATES</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_ATTACKS_CITY_STATES</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_MED_ATTACK_CITY_STATES</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_MED_CITY_STATE_AGGRESSION</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_ATTACK_CITY_STATES</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_ATTACK_CITY_STATES</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_ATTACKS_CITY_STATES</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAGA_HIGH_ATTACK_CITY_STATES</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_HIGH_CITY_STATE_AGGRESSION</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_WORKSHOP</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_WORKSHOP</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_FACTORY</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_FACTORY</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_POWER_PLANT</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_PRODUCTION_POWER_PLANT</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_STRATEGIC_RESOURCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>VICTORIA_STRATEGIC_RESOURCE</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_INDUSTRY_ENGLAND</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_INDUSTRY_ENGLAND</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_HIGH_INDUSTRY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_INDUSTRY_ENGLAND</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_HIGH_INDUSTRY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_INDUSTRY_ENGLAND</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_INDUSTRY_ENGLAND</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_LOW_INDUSTRY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_INDUSTRY_ENGLAND</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_LOW_INDUSTRY</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLOT_HAS_STRATEGIC_RESOURCE_ENGLAND</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLOT_HAS_STRATEGIC_RESOURCE_ENGLAND</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_STRATEGIC</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLOT_HAS_STRATEGIC_RESOURCE_ENGLAND</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_VISIBLE_RESOURCE</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_ELIZABETH_PLUNDER_BONUS" Name="LOC_TRAIT_LEADER_ELIZABETH_NAME" Description="LOC_ABILITY_ELIZABETH_PLUNDER_BONUS_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_ELIZABETH_PLUNDER_BONUS</UnitAbilityType>
+			<ModifierId>ELIZABETH_PLUNDER_BONUS</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_TRADE_AGREEMENT" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_LOW_INDUSTRY_ENGLAND" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_HIGH_INDUSTRY_ENGLAND" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_SAGA_HIGH_PROTECT_CITY_STATES" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_SAGA_MED_PROTECT_CITY_STATES" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_SAGA_MED_ATTACK_CITY_STATES" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_SAGA_HIGH_ATTACK_CITY_STATES" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_ELIZABETH" ReligionType="RELIGION_PROTESTANTISM"/>
+		<Row LeaderType="LEADER_HARALD_ALT" ReligionType="RELIGION_ORTHODOXY"/>
+		<Row LeaderType="LEADER_VICTORIA_ALT" ReligionType="RELIGION_PROTESTANTISM"/>
+	</FavoredReligions>
+	<CivilopediaPageChapterParagraphs>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_HARALD_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_HARDRADA_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_VICTORIA_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_VICTORIA_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+	</CivilopediaPageChapterParagraphs>
+</GameInfo>
