@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_ABRAHAM_LINCOLN" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_NZINGA_MBANDE" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_SALADIN_ALT" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_LINCOLN" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_SALADIN_ALT" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_SULTAN" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_NZINGA_MBANDE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_DECOLONIZATION" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_LINCOLN" Kind="KIND_TRAIT"/>
+		<!-- Unit Abilities -->
+		<Row Type="ABILITY_LINCOLN_MELEE_UNITS" Kind="KIND_ABILITY"/>
+		<Row Type="ABILITY_SALADIN_FLANKING_UNITS" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_LINCOLN_MELEE_UNITS" Tag="CLASS_MELEE"/>
+		<Row Type="ABILITY_SALADIN_FLANKING_UNITS" Tag="CLASS_ALL_UNITS"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" Name="LOC_LEADER_ABRAHAM_LINCOLN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_NZINGA_MBANDE" Name="LOC_LEADER_NZINGA_MBANDE_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_SALADIN_ALT" Name="LOC_LEADER_SALADIN_ALT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Update>
+			<Where LeaderType="LEADER_SALADIN"/>
+			<Set>
+				<Name>LOC_LEADER_SALADIN_ORIGINAL_NAME</Name>
+			</Set>
+		</Update>
+	</Leaders>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_SALADIN_ALT" ForegroundImage="LEADER_SALADIN_ALT_NEUTRAL" BackgroundImage="LEADER_SALADIN_ALT_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_SALADIN" DawnOfManLeaderId="LEADER_SALADIN"/>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" ForegroundImage="LEADER_ABRAHAM_LINCOLN_NEUTRAL" BackgroundImage="LEADER_ABRAHAM_LINCOLN_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_ABRAHAM_LINCOLN" DawnOfManLeaderId="LEADER_ABRAHAM_LINCOLN"/>
+		<Row LeaderType="LEADER_NZINGA_MBANDE" ForegroundImage="LEADER_NZINGA_MBANDE_NEUTRAL" BackgroundImage="LEADER_NZINGA_MBANDE_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_NZINGA_MBANDE" DawnOfManLeaderId="LEADER_NZINGA_MBANDE"/>
+	</LoadingInfo>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_ABRAHAM_LINCOLN_QUOTE" QuoteAudio="AMER_LIN_MISC_PEP_TALK_B_SELECT"/>
+		<Row LeaderType="LEADER_NZINGA_MBANDE" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_NZINGA_MBANDE_QUOTE" QuoteAudio="KONG_NZI_MISC_PEP_TALK_A_SELECT"/>
+		<Row LeaderType="LEADER_SALADIN_ALT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_ALT_QUOTE" QuoteAudio="ARAB_SA_MISC_PEP___TALK_B_1"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" TraitType="TRAIT_LEADER_LINCOLN"/>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
+		<Row LeaderType="LEADER_SALADIN_ALT" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_SALADIN_ALT" TraitType="TRAIT_LEADER_SALADIN_ALT"/>
+		<Row LeaderType="LEADER_NZINGA_MBANDE" TraitType="TRAIT_LEADER_NZINGA_MBANDE"/>
+		<Row LeaderType="LEADER_NZINGA_MBANDE" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+	</LeaderTraits>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_SALADIN" OtherLeaderType="LEADER_SALADIN_ALT"/>
+	</DuplicateLeaders>
+	<Agendas>
+		<Row AgendaType="AGENDA_PRESERVER_OF_THE_UNION" Name="LOC_AGENDA_PRESERVER_OF_THE_UNION_NAME" Description="LOC_AGENDA_PRESERVER_OF_THE_UNION_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_SULTAN" Name="LOC_AGENDA_SULTAN_NAME" Description="LOC_AGENDA_SULTAN_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_DECOLONIZATION" Name="LOC_AGENDA_DECOLONIZATION_NAME" Description="LOC_AGENDA_DECOLONIZATION_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_PRESERVER_OF_THE_UNION" TraitType="TRAIT_AGENDA_LINCOLN"/>
+		<Row AgendaType="AGENDA_SULTAN" TraitType="TRAIT_AGENDA_SULTAN"/>
+		<Row AgendaType="AGENDA_DECOLONIZATION" TraitType="TRAIT_AGENDA_DECOLONIZATION"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" AgendaType="AGENDA_PRESERVER_OF_THE_UNION"/>
+		<Row LeaderType="LEADER_SALADIN_ALT" AgendaType="AGENDA_SULTAN"/>
+		<Row LeaderType="LEADER_NZINGA_MBANDE" AgendaType="AGENDA_DECOLONIZATION"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_PRESERVER_OF_THE_UNION" AgendaTwo="AGENDA_IDEOLOGUE"/>
+	</ExclusiveAgendas>
+	<AiListTypes>
+		<Row ListType="SettleOneContinent"/>
+		<Row ListType="LincolnCivics"/>
+		<Row ListType="LincolnTechs"/>
+		<Row ListType="LincolnWonders"/>
+		<Row ListType="NzingaCivics"/>
+		<Row ListType="NzingaTechs"/>
+		<Row ListType="NzingaWonders"/>
+		<Row ListType="SaladinAltCivics"/>
+		<Row ListType="SaladinAltTechs"/>
+		<Row ListType="SaladinAltWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="SettleOneContinent" AgendaType="TRAIT_AGENDA_DECOLONIZATION" System="PlotEvaluations"/>
+		<Row ListType="LincolnWonders" LeaderType="TRAIT_LEADER_LINCOLN" System="Buildings"/>
+		<Row ListType="LincolnCivics" LeaderType="TRAIT_LEADER_LINCOLN" System="Civics"/>
+		<Row ListType="LincolnTechs" LeaderType="TRAIT_LEADER_LINCOLN" System="Technologies"/>
+		<Row ListType="NzingaWonders" LeaderType="TRAIT_LEADER_NZINGA_MBANDE" System="Buildings"/>
+		<Row ListType="NzingaTechs" LeaderType="TRAIT_LEADER_NZINGA_MBANDE" System="Technologies"/>
+		<Row ListType="NzingaCivics" LeaderType="TRAIT_LEADER_NZINGA_MBANDE" System="Civics"/>
+		<Row ListType="SaladinAltWonders" LeaderType="TRAIT_LEADER_SALADIN_ALT" System="Buildings"/>
+		<Row ListType="SaladinAltCivics" LeaderType="TRAIT_LEADER_SALADIN_ALT" System="Civics"/>
+		<Row ListType="SaladinAltTechs" LeaderType="TRAIT_LEADER_SALADIN_ALT" System="Technologies"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="LincolnWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+		<Row ListType="LincolnCivics" Item="CIVIC_POLITICAL_PHILOSOPHY" Favored="true"/>
+		<Row ListType="LincolnTechs" Item="TECH_APPRENTICESHIP" Favored="true"/>
+		<Row ListType="LincolnTechs" Item="TECH_INDUSTRIALIZATION" Favored="true"/>
+		<Row ListType="LincolnTechs" Item="TECH_ELECTRICITY" Favored="true"/>
+		<Row ListType="LincolnCivics" Item="CIVIC_DIVINE_RIGHT" Favored="true"/>
+		<Row ListType="LincolnCivics" Item="CIVIC_SUFFRAGE" Favored="true"/>
+		<Row ListType="SettleOneContinent" Item="Foreign Continent" Favored="false" Value="120"/>
+		<Row ListType="NzingaWonders" Item="BUILDING_HANGING_GARDENS" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="BUILDING_CHICHEN_ITZA" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="BUILDING_OXFORD_UNIVERSITY" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="BUILDING_HERMITAGE" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="BUILDING_BOLSHOI_THEATRE" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="BUILDING_BROADWAY" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="BUILDING_SYDNEY_OPERA_HOUSE" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="NzingaWonders" Item="CIVIC_GUILDS" Favored="true"/>
+		<Row ListType="NzingaTechs" Item="TECH_IRON_WORKING" Favored="true"/>
+		<Row ListType="NzingaTechs" Item="TECH_CURRENCY" Favored="true"/>
+		<Row ListType="SaladinAltWonders" Item="BUILDING_HAGIA_SOPHIA" Favored="true"/>
+		<Row ListType="SaladinAltWonders" Item="BUILDING_MAHABODHI_TEMPLE" Favored="true"/>
+		<Row ListType="SaladinAltWonders" Item="BUILDING_MONT_ST_MICHEL" Favored="true"/>
+		<Row ListType="SaladinAltWonders" Item="BUILDING_STONEHENGE" Favored="false"/>
+		<Row ListType="SaladinAltCivics" Item="CIVIC_THEOLOGY" Favored="true"/>
+		<Row ListType="SaladinAltCivics" Item="CIVIC_REFORMED_CHURCH" Favored="true"/>
+		<Row ListType="SaladinAltCivics" Item="CIVIC_MILITARY_TRADITION" Favored="true"/>
+		<Row ListType="SaladinAltTechs" Item="TECH_STIRRUPS" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_LINCOLN" Name="LOC_TRAIT_LEADER_LINCOLN_NAME" Description="LOC_TRAIT_LEADER_LINCOLN_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_LINCOLN"/>
+		<Row TraitType="TRAIT_LEADER_SALADIN_ALT" Name="LOC_TRAIT_LEADER_SALADIN_ALT_NAME" Description="LOC_TRAIT_LEADER_SALADIN_ALT_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_SULTAN"/>
+		<Row TraitType="TRAIT_LEADER_NZINGA_MBANDE" Name="LOC_TRAIT_LEADER_NZINGA_MBANDE_NAME" Description="LOC_TRAIT_LEADER_NZINGA_MBANDE_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_DECOLONIZATION"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_LINCOLN" ModifierId="TRAIT_LINCOLN_INDUSTRIAL_ZONE_FREE_MELEE_UNIT"/>
+		<Row TraitType="TRAIT_LEADER_LINCOLN" ModifierId="INDUSTRIAL_ZONE_ADDAMENITIES"/>
+		<Row TraitType="TRAIT_AGENDA_LINCOLN" ModifierId="AGENDA_SAME_GOVERNMENT_LINCOLN"/>
+		<Row TraitType="TRAIT_AGENDA_LINCOLN" ModifierId="AGENDA_DIFFERENT_GOVERNMENT_LINCOLN"/>
+		<Row TraitType="TRAIT_AGENDA_LINCOLN" ModifierId="AGENDA_ADJUST_GOVERNMENT_INTOLERANCE_LINCOLN"/>
+		<Row TraitType="TRAIT_LEADER_SALADIN_ALT" ModifierId="SALADIN_ALT_FLANKING_ABILITY"/>
+		<Row TraitType="TRAIT_AGENDA_SULTAN" ModifierId="AGENDA_SULTAN_RELIGION_RECEIVED"/>
+		<Row TraitType="TRAIT_AGENDA_SULTAN" ModifierId="AGENDA_SULTAN_RELIGION_NOT_RECEIVED"/>
+		<Row TraitType="TRAIT_LEADER_NZINGA_MBANDE" ModifierId="TRAIT_FOREIGN_CONTINENT_YIELD"/>
+		<Row TraitType="TRAIT_LEADER_NZINGA_MBANDE" ModifierId="TRAIT_SAME_CONTINENT_YIELD"/>
+		<Row TraitType="TRAIT_AGENDA_DECOLONIZATION" ModifierId="AGENDA_DECOLONIZATION_HOME_CONTINENT"/>
+		<Row TraitType="TRAIT_AGENDA_DECOLONIZATION" ModifierId="AGENDA_DECOLONIZATION_NEW_CONTINENT"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_LINCOLN_INDUSTRIAL_ZONE_FREE_MELEE_UNIT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_PLAYER_DISTRICT_AND_BUILDINGS_CREATE_UNIT_WITH_ABILITY_BY_CLASS_GREAT_NEGOTIATORS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>LINCOLN_MELEE_BUFF</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DIFFERENT_GOVERNMENT_LINCOLN</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>AGENDA_REQUIRE_PLAYER_HAS_DIFFERENT_GOVERNMENT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAME_GOVERNMENT_LINCOLN</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>AGENDA_REQUIRE_PLAYER_HAS_SAME_GOVERNMENT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_ADJUST_GOVERNMENT_INTOLERANCE_LINCOLN</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GOVERNMENT_ADJUST_OTHER_GOVERNMENT_INTOLERANCE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>INDUSTRIAL_ZONE_ADDAMENITIES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_DISTRICT_AMENITY</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_INDUSTRIAL_ZONE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SALADIN_ALT_FLANKING_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SALADIN_FLANKING_BONUS_UNITS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>SALADIN_SUPPORT_BONUS_UNITS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_SUPPORT_BONUS_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_NOT_RECEIVED</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_RELIGION_NOT_RECEIVED</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_RECEIVED</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_RELIGION_RECEIVED</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FOREIGN_CONTINENT_YIELD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>REQUIRES_CITY_IS_OTHER_CONTINENT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SAME_CONTINENT_YIELD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>REQUIRES_CITY_IS_SAME_CONTINENT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_HOME_CONTINENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_SAME_HOME_CONTINENT</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_NEW_CONTINENT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_ON_NEW_CONTINENT</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_LINCOLN_INDUSTRIAL_ZONE_FREE_MELEE_UNIT</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_INDUSTRIAL_ZONE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LINCOLN_INDUSTRIAL_ZONE_FREE_MELEE_UNIT</ModifierId>
+			<Name>UnitPromotionClass</Name>
+			<Value>PROMOTION_CLASS_MELEE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LINCOLN_INDUSTRIAL_ZONE_FREE_MELEE_UNIT</ModifierId>
+			<Name>UnitAbilityType</Name>
+			<Value>ABILITY_LINCOLN_MELEE_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>LINCOLN_MELEE_BUFF</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>INDUSTRIAL_ZONE_ADDAMENITIES</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_ADJUST_GOVERNMENT_INTOLERANCE_LINCOLN</ModifierId>
+			<Name>IntoleranceMultiplier</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_ADJUST_GOVERNMENT_INTOLERANCE_LINCOLN</ModifierId>
+			<Name>SameEraIntoleranceFlatBonus</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAME_GOVERNMENT_LINCOLN</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAME_GOVERNMENT_LINCOLN</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_SAME_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAME_GOVERNMENT_LINCOLN</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_SAME_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DIFFERENT_GOVERNMENT_LINCOLN</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DIFFERENT_GOVERNMENT_LINCOLN</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_DIFFERENT_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DIFFERENT_GOVERNMENT_LINCOLN</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_DIFFERENT_GOVERNMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>SALADIN_ALT_FLANKING_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SALADIN_FLANKING_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>SALADIN_FLANKING_BONUS_UNITS</ModifierId>
+			<Name>Percent</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>SALADIN_SUPPORT_BONUS_UNITS</ModifierId>
+			<Name>Percent</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_NOT_RECEIVED</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>7</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_NOT_RECEIVED</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDOS_LEADER_SALADIN_ALT_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_NOT_RECEIVED</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_SULTAN_NOT_RECEIVED</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_RECEIVED</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-12</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_RECEIVED</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_SALADIN_ALT_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SULTAN_RELIGION_RECEIVED</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_SULTAN_RECEIVED</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FOREIGN_CONTINENT_YIELD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION, YIELD_FOOD, YIELD_SCIENCE, YIELD_CULTURE, YIELD_GOLD, YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_FOREIGN_CONTINENT_YIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>-15, -15, -15, -15, -15, -15</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SAME_CONTINENT_YIELD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION, YIELD_FOOD, YIELD_SCIENCE, YIELD_CULTURE, YIELD_GOLD, YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SAME_CONTINENT_YIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>10, 10, 10, 10, 10,10</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_HOME_CONTINENT</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-12</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_HOME_CONTINENT</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_VICTORIA_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_HOME_CONTINENT</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DECOLONIZATION_HOME_CONTINENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_NEW_CONTINENT</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_NEW_CONTINENT</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_VICTORIA_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_DECOLONIZATION_NEW_CONTINENT</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DECOLONIZATION_NEW_CONTINENT</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row RequirementSetId="REQUIRES_PLAYER_IS_LINCOLN" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+		<Row RequirementSetId="REQUIRES_CITY_HAS_INDUSTRIAL_ZONE" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+		<Row RequirementSetId="REQUIRES_CITY_IS_OTHER_CONTINENT" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+		<Row RequirementSetId="REQUIRES_CITY_IS_SAME_CONTINENT" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>LINCOLN_REQUIREMENTS</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_LEADER_TYPE_MATCHES</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>CITY_IS_SAME_CONTINENT_REQUIREMENTS</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_IS_OWNER_CAPITAL_CONTINENT</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>CITY_IS_OTHER_CONTINENT_REQUIREMENTS</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_IS_OWNER_CAPITAL_CONTINENT</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>LINCOLN_REQUIREMENTS</RequirementId>
+			<Name>LeaderType</Name>
+			<Value>LEADER_ABRAHAM_LINCOLN</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIRES_PLAYER_IS_LINCOLN</RequirementSetId>
+			<RequirementId>LINCOLN_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIRES_CITY_HAS_INDUSTRIAL_ZONE</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_INDUSTRIAL_ZONE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIRES_CITY_IS_OTHER_CONTINENT</RequirementSetId>
+			<RequirementId>CITY_IS_OTHER_CONTINENT_REQUIREMENTS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>REQUIRES_CITY_IS_SAME_CONTINENT</RequirementSetId>
+			<RequirementId>CITY_IS_SAME_CONTINENT_REQUIREMENTS</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_LINCOLN_MELEE_UNITS" Name="LOC_TRAIT_LEADER_LINCOLN_NAME" Description="LOC_ABILITY_LINCOLN_MELEE_UNITS_DESCRIPTION" Inactive="true"/>
+		<Row UnitAbilityType="ABILITY_SALADIN_FLANKING_UNITS" Name="LOC_TRAIT_LEADER_SALADIN_ALT_NAME" Description="LOC_ABILITY_SALADIN_FLANKING_UNITS_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_LINCOLN_MELEE_UNITS</UnitAbilityType>
+			<ModifierId>LINCOLN_MELEE_BUFF</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_SALADIN_FLANKING_UNITS</UnitAbilityType>
+			<ModifierId>SALADIN_FLANKING_BONUS_UNITS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_SALADIN_FLANKING_UNITS</UnitAbilityType>
+			<ModifierId>SALADIN_SUPPORT_BONUS_UNITS</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<ModifierStrings>
+		<Row ModifierId="LINCOLN_MELEE_BUFF" Context="Preview" Text="LOC_ABILITY_LINCOLN_MELEE_UNITS_DESCRIPTION"/>
+		<Row ModifierId="AGENDA_SULTAN_RELIGION_NOT_RECEIVED" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_SULTAN_RELIGION_RECEIVED" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_ABRAHAM_LINCOLN" ReligionType="RELIGION_PROTESTANTISM"/>
+		<Row LeaderType="LEADER_SALADIN_ALT" ReligionType="RELIGION_ISLAM"/>
+	</FavoredReligions>
+	<CivilopediaPageChapterParagraphs>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SALADIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SALADIN_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+	</CivilopediaPageChapterParagraphs>
+	<GreatPersonIndividuals>
+		<Update>
+			<Where GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_ANA_NZINGA"/>
+			<Set>
+				<Name>LOC_GREAT_PERSON_INDIVIDUAL_AMINA_NAME</Name>
+			</Set>
+		</Update>
+	</GreatPersonIndividuals>
+</GameInfo>

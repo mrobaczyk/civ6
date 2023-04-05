@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Traits>
+		<Update>
+			<Where Description="LOC_TRAIT_LEADER_LINCOLN_DESCRIPTION"/>
+			<Set Description="LOC_TRAIT_LEADER_LINCOLN_EXPANSION_DESCRIPTION"/>
+		</Update>
+	</Traits>
+	<ImprovementModifiers>
+		<Row>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<ModifierId>PLANTATION_NEGATIVE_LOYALTY</ModifierId>
+		</Row>
+	</ImprovementModifiers>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_LINCOLN" ModifierId="TRAIT_LINCOLN_INDUSTRIAL_ZONE_LOYALTY"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>PLANTATION_NEGATIVE_LOYALTY</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_IDENTITY_PER_TURN</ModifierType>
+			<SubjectRequirementSetId>REQUIRES_PLAYER_IS_LINCOLN</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LINCOLN_INDUSTRIAL_ZONE_LOYALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_IDENTITY_PER_TURN</ModifierType>
+			<SubjectRequirementSetId>REQUIRES_CITY_HAS_INDUSTRIAL_ZONE</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>PLANTATION_NEGATIVE_LOYALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>-2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LINCOLN_INDUSTRIAL_ZONE_LOYALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

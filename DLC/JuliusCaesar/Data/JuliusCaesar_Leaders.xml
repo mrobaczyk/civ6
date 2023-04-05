@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_JULIUS_CAESAR" Kind="KIND_LEADER"/>
+		<Row Type="TRAIT_LEADER_CAESAR" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_GALLIC_WARS" Kind="KIND_TRAIT"/>
+	</Types>
+	<Leaders>
+		<Row LeaderType="LEADER_JULIUS_CAESAR" Name="LOC_LEADER_JULIUS_CAESAR_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>		
+		<Row LeaderType="LEADER_JULIUS_CAESAR" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_JULIUS_CAESAR_QUOTE" QuoteAudio="ROME_JU_MISC_PEP_TALK_B_ALT3"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_JULIUS_CAESAR" TraitType="TRAIT_LEADER_CAESAR"/>
+		<Row LeaderType="LEADER_JULIUS_CAESAR" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+	</LeaderTraits>
+	<Agendas>
+		<Row AgendaType="AGENDA_GALLIC_WARS" Name="LOC_AGENDA_GALLIC_WARS_NAME" Description="LOC_AGENDA_GALLIC_WARS_DESCRIPTION"/>
+	</Agendas>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_JULIUS_CAESAR" AgendaType="AGENDA_GALLIC_WARS"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_GALLIC_WARS" AgendaTwo="AGENDA_BARBARIAN_LOVER"/>
+		<Row AgendaOne="AGENDA_GALLIC_WARS" AgendaTwo="AGENDA_CIVILIZED"/>
+	</ExclusiveAgendas>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_CAESAR" Name="LOC_TRAIT_LEADER_CAESAR_NAME" Description="LOC_TRAIT_LEADER_CAESAR_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_GALLIC_WARS"/>
+	</Traits>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_GALLIC_WARS" TraitType="TRAIT_AGENDA_GALLIC_WARS"/>
+	</AgendaTraits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="TRAIT_CAESAR_GOLD_CAPTURED_CITY"/>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL"/>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="BARBARIAN_CAMP_GOLD_CAPTURED_CITY"/>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="BARBARIAN_CAMP_GOLD_CAPTURED_CITY_STEEL"/>
+		<Row TraitType="TRAIT_AGENDA_GALLIC_WARS" ModifierId="AGENDA_CLEARS_BARBARIAN_CAMPS_CAESAR"/>
+		<Row TraitType="TRAIT_AGENDA_GALLIC_WARS" ModifierId="AGENDA_IGNORES_BARBARIAN_CAMPS_CAESAR"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CAPTURED_CITY_ATTACH_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD</ModifierType>
+			<Permanent>true</Permanent>
+			<RunOnce>true</RunOnce>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CAPTURED_CITY_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_STEEL_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD</ModifierType>
+			<Permanent>true</Permanent>
+			<RunOnce>true</RunOnce>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GOLD_DISPERSAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY_STEEL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GOLD_DISPERSAL</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_STEEL_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_CLEARS_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_CLEARS_BARBARIAN_CAMPS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_IGNORES_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IGNORES_BARBARIAN_CAMPS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>TRAIT_CAESAR_GOLD_CAPTURED_CITY_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>200</Value>
+			<Type>ScaleByGameSpeed</Type>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>300</Value>
+			<Type>ScaleByGameSpeed</Type>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY</ModifierId>
+			<Name>Improvement</Name>
+			<Value>IMPROVEMENT_BARBARIAN_CAMP</Value>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY_STEEL</ModifierId>
+			<Name>Amount</Name>
+			<Value>400</Value>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY_STEEL</ModifierId>
+			<Name>Improvement</Name>
+			<Value>IMPROVEMENT_BARBARIAN_CAMP</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_CLEARS_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_CLEARS_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_ATTACKS_BARBARIANS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_CLEARS_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_ATTACKS_BARBARIANS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_IGNORES_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_IGNORES_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_IGNORES_BARBARIANS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_IGNORES_BARBARIAN_CAMPS_CAESAR</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_IGNORES_BARBARIANS</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_STEEL_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_STEEL</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_TECHNOLOGY</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_STEEL</RequirementId>
+			<Name>TechnologyType</Name>
+			<Value>TECH_STEEL</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_STEEL_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_STEEL</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<!--Agenda Definitions-->
+	<AiListTypes>
+		<Row ListType="CaesarCivics"/>
+		<Row ListType="CaesarTechs"/>
+		<Row ListType="CaesarWonders"/>
+		<Row ListType="GallicWarsClearingBarbCampPreference"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="CaesarCivics" LeaderType="TRAIT_LEADER_CAESAR" System="Civics"/>
+		<Row ListType="CaesarTechs" LeaderType="TRAIT_LEADER_CAESAR" System="Technologies"/>
+		<Row ListType="CaesarWonders" LeaderType="TRAIT_LEADER_CAESAR" System="Buildings"/>
+		<Row ListType="GallicWarsClearingBarbCampPreference" AgendaType="TRAIT_AGENDA_GALLIC_WARS" System="PseudoYields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="CaesarWonders" Item="BUILDING_COLOSSEUM" Favored="true"/>
+		<Row ListType="CaesarWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
+		<Row ListType="CaesarWonders" Item="BUILDING_GREAT_ZIMBABWE" Favored="true"/>
+		<Row ListType="CaesarWonders" Item="BUILDING_ESTADIO_DO_MARACANA" Favored="true"/>
+		<Row ListType="CaesarCivics" Item="CIVIC_CRAFTSMANSHIP" Favored="true"/>
+		<Row ListType="CaesarCivics" Item="CIVIC_EARLY_EMPIRE" Favored="true"/>
+		<Row ListType="CaesarCivics" Item="CIVIC_SCORCHED_EARTH" Favored="true"/>
+		<Row ListType="CaesarTechs" Item="TECH_ANIMAL_HUSBANDRY" Favored="true"/>
+		<Row ListType="CaesarTechs" Item="TECH_ENGINEERING" Favored="true"/>
+		<Row ListType="CaesarTechs" Item="TECH_IRON_WORKING" Favored="true"/>
+		<Row ListType="CaesarTechs" Item="TECH_MILITARY_ENGINEERING" Favored="true"/>
+		<Row ListType="CaesarTechs" Item="TECH_INDUSTRIALIZATION" Favored="true"/>
+		<Row ListType="CaesarTechs" Item="TECH_COMBUSTION" Favored="true"/>
+		<Row ListType="CaesarTechs" Item="TECH_STEEL" Favored="true"/>
+		<Row ListType="GallicWarsClearingBarbCampPreference" Item="PSEUDOYIELD_CLEAR_BANDIT_CAMPS" Value="5"/>
+	</AiFavoredItems>
+</GameInfo>

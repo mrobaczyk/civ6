@@ -58,6 +58,7 @@ local m_HexColoringOwningCiv	: number = UILens.CreateLensLayerHash("Hex_Coloring
 local m_HexColoringWaterAvail	: number = UILens.CreateLensLayerHash("Hex_Coloring_Water_Availablity");
 local m_TouristTokens			: number = UILens.CreateLensLayerHash("Tourist_Tokens");
 
+local m_refreshLens:boolean = false;		-- Set if an event causes the lens system to need an update
 
 -- ===========================================================================
 --	FUNCTIONS
@@ -529,9 +530,7 @@ end
 
 -- ===========================================================================
 function OnPlotVisibilityChanged()
-	if(m_WaterAvailabilityLensOn)then
-		SetWaterHexes();
-	end
+	m_refreshLens = true;		-- Flag that we need an update.
 end
 
 -- ===========================================================================
@@ -948,6 +947,7 @@ function OnShutdown()
 	Events.LocalPlayerChanged.Remove( OnLocalPlayerChanged );
 	Events.PlotVisibilityChanged.Remove(OnPlotVisibilityChanged);
 	Events.UserOptionsActivated.Remove( OnUserOptionsActivated );  
+	Events.GameCoreEventPublishComplete.Remove( OnFlushChanges );
 
 	LuaEvents.MinimapPanel_CloseAllLenses.Remove( CloseAllLenses );  
     LuaEvents.MinimapPanel_RefreshMinimapOptions.Remove( RefreshMinimapOptions );
@@ -977,6 +977,16 @@ end
 -- ===========================================================================
 function OnStartObserverMode()
 	Controls.MapPinListButton:SetHide(true);
+end
+
+-- ===========================================================================
+function OnFlushChanges()
+	if m_refreshLens then
+		if(m_WaterAvailabilityLensOn)then
+			SetWaterHexes();
+		end
+		m_refreshLens = false;
+	end
 end
 
 -- ===========================================================================
@@ -1087,6 +1097,7 @@ function LateInitialize( isReload:boolean )
 	Events.LocalPlayerChanged.Add( OnLocalPlayerChanged );
 	Events.PlotVisibilityChanged.Add( OnPlotVisibilityChanged );
 	Events.UserOptionsActivated.Add( OnUserOptionsActivated );
+	Events.GameCoreEventPublishComplete.Add( OnFlushChanges ); --This event is raised directly after a series of gamecore events.
 end
 
 -- ===========================================================================
