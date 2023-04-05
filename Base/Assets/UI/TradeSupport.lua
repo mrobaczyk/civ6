@@ -90,10 +90,10 @@ function GetYieldsForRoute(pOriginCity:table, pDestinationCity:table, bReturnDes
 		if originOwnerID ~= destOwnerID then
 			if not bReturnDestiationYields then
 				local pPlayerTrade:table = Players[originOwnerID]:GetTrade();
-				kYieldMultipliers[yieldIndex] = pPlayerTrade:GetInternationalYieldModifier(yieldIndex);
+				kYieldMultipliers[yieldIndex] = pPlayerTrade:GetInternationalYieldModifier(yieldIndex-1);
 			else
 				local pPlayerTrade:table = Players[destOwnerID]:GetTrade();
-				kYieldMultipliers[yieldIndex] = pPlayerTrade:GetInternationalYieldModifier(yieldIndex);
+				kYieldMultipliers[yieldIndex] = pPlayerTrade:GetInternationalYieldModifier(yieldIndex-1);
 			end
 		end
 	end
