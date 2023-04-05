@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+		<Row Type="LEADER_SULEIMAN_ALT" Kind="KIND_LEADER"/>
+		<Row Type="TRAIT_LEADER_SULEIMAN_ALT" Kind="KIND_TRAIT"/>
+		<Row Type="ABILITY_SULEIMAN_COMBAT" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_SULEIMAN_COMBAT" Tag="CLASS_ALL_COMBAT_UNITS"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_SULEIMAN_ALT" Name="LOC_LEADER_SULEIMAN_ALT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Update>
+			<Where LeaderType="LEADER_SULEIMAN"/>
+			<Set>
+				<Name>LOC_LEADER_SULEIMAN_ORIGINAL_NAME</Name>
+			</Set>
+		</Update>
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_SULEIMAN_ALT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_ALT_QUOTE" QuoteAudio="Suleiman_MISC_PEP_TALK_A_2"/>
+	</LeaderQuotes>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_SULEIMAN_ALT" ForegroundImage="LEADER_SULEIMAN_ALT_NEUTRAL" BackgroundImage="LEADER_SULEIMAN_ALT_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_SULEIMAN" DawnOfManLeaderId="LEADER_SULEIMAN"/>
+	</LoadingInfo>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_OTTOMAN" LeaderType="LEADER_SULEIMAN_ALT" CapitalName="LOC_CITY_NAME_ISTANBUL"/>
+	</CivilizationLeaders>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_SULEIMAN" OtherLeaderType="LEADER_SULEIMAN_ALT"/>
+	</DuplicateLeaders>
+	<Agendas>
+		<Row AgendaType="AGENDA_GOLDEN_AGE" Name="LOC_AGENDA_GOLDEN_AGE_NAME" Description="LOC_AGENDA_GOLDEN_AGE_DESCRIPTION"/>
+	</Agendas>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_SULEIMAN_ALT" TraitType="TRAIT_LEADER_AGGRESSIVE_MILITARY"/>
+		<Row LeaderType="LEADER_SULEIMAN_ALT" TraitType="TRAIT_LEADER_SULEIMAN_ALT"/>
+	</LeaderTraits>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_GOLDEN_AGE" TraitType="TRAIT_AGENDA_SYCOPHANT"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_SULEIMAN_ALT" AgendaType="AGENDA_GOLDEN_AGE"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_SAKOKU" AgendaTwo="AGENDA_TURTLER"/>
+		<Row AgendaOne="AGENDA_GOLDEN_AGE" AgendaTwo="AGENDA_SYCOPHANT"/>
+	</ExclusiveAgendas>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_SULEIMAN_ALT" ReligionType="RELIGION_ISLAM"/>
+	</FavoredReligions>
+	<AiListTypes>
+		<Row ListType="SakokuResolutions"/>
+		<Row ListType="SakokuDiscussions"/>
+		<Row ListType="SuliemanAltCivics"/>
+		<Row ListType="SuliemanAltTechs"/>
+		<Row ListType="SuliemanAltWonders"/>
+		<Row ListType="SuliemanAltUnits"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="SuliemanAltCivics" LeaderType="TRAIT_LEADER_SULEIMAN_ALT" System="Civics"/>
+		<Row ListType="SuliemanAltTechs" LeaderType="TRAIT_LEADER_SULEIMAN_ALT" System="Technologies"/>
+		<Row ListType="SuliemanAltWonders" LeaderType="TRAIT_LEADER_SULEIMAN_ALT" System="Buildings"/>
+		<Row ListType="SuliemanAltUnits" LeaderType="TRAIT_LEADER_SULEIMAN_ALT" System="UnitPromotionClasses"/>
+		<Row ListType="SakokuResolutions" AgendaType="TRAIT_AGENDA_TURTLER" System="Resolutions"/>
+		<Row ListType="SakokuDiscussions" AgendaType="TRAIT_AGENDA_TURTLER" System="Discussions"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="SuliemanAltCivics" Item="CIVIC_MEDIEVAL_FAIRES" Favored="true"/>
+		<Row ListType="SuliemanAltCivics" Item="CIVIC_GAMES_RECREATION" Favored="true"/>
+		<Row ListType="SuliemanAltTechs" Item="TECH_BANKING" Favored="true"/>
+		<Row ListType="SuliemanAltTechs" Item="TECH_GUNPOWER" Favored="true"/>
+		<Row ListType="SuliemanAltWonders" Item="BUILDING_TAJ_MAHAL" Favored="true"/>
+		<Row ListType="SuliemanAltUnits" Item="PROMOTION_CLASS_SIEGE" Value="1"/>
+		<Row ListType="SakokuResolutions" Item="WC_RES_MERCENARY_COMPANIES" Favored="true"/>
+		<Row ListType="SakokuResolutions" Item="WC_RES_ARMS_CONTROL" Favored="false"/>
+		<Row ListType="SakokuResolutions" Item="WC_RES_PATRONAGE" Favored="false"/>
+		<Row ListType="SakokuDiscussions" Item="WC_EMERGENCY_MILITARY" Favored="true"/>
+		<Row ListType="SakokuDiscussions" Item="WC_EMERGENCY_NOBEL_PRIZE_PEACE" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Update>
+			<Where Description="LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION"/>
+			<Set Description="LOC_TRAIT_LEADER_TOKUGAWA_XP_DESCRIPTION"/>
+		</Update>
+		<Row TraitType="TRAIT_LEADER_SULEIMAN_ALT" Name="LOC_TRAIT_LEADER_SULEIMAN_ALT_NAME" Description="LOC_TRAIT_LEADER_SULEIMAN_ALT_DESCRIPTION"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TRAIT_TOKUGAWA_LOYALTY_NEAR_CAPITAL"/>
+		<Row TraitType="TRAIT_LEADER_SULEIMAN_ALT" ModifierId="TRAIT_SULEIMAN_ALT_SCIENCE_CULTURE_GOLDEN_AGE"/>
+		<Row TraitType="TRAIT_LEADER_SULEIMAN_ALT" ModifierId="SULEIMAN_ALT_COMBAT_ABILITY"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_TOKUGAWA_LOYALTY_NEAR_CAPITAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_ALWAYS_LOYAL</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_BAKUHAN_REUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SULEIMAN_ALT_SCIENCE_CULTURE_GOLDEN_AGE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_GOLDEN_AGE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SULEIMAN_ALT_COMBAT_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+			<SubjectRequirementSetId>PLAYER_NO_GOLDEN_AGE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>SULEIMAN_COMBAT_BUFF</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_TOKUGAWA_LOYALTY_NEAR_CAPITAL</ModifierId>
+			<Name>AlwaysLoyal</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SULEIMAN_ALT_SCIENCE_CULTURE_GOLDEN_AGE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE, YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_SULEIMAN_ALT_SCIENCE_CULTURE_GOLDEN_AGE</ModifierId>
+			<Name>Amount</Name>
+			<Value>15, 15</Value>
+		</Row>
+		<Row>
+			<ModifierId>SULEIMAN_ALT_COMBAT_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_SULEIMAN_COMBAT</Value>
+		</Row>
+		<Row>
+			<ModifierId>SULEIMAN_COMBAT_BUFF</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="SULEIMAN_COMBAT_BUFF" Context="Preview" Text="LOC_ABILITY_SULEIMAN_COMBAT_DESCRIPTION"/>
+	</ModifierStrings>
+	<RequirementSets>
+		<Row RequirementSetId="PLAYER_NO_GOLDEN_AGE_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+		<Row RequirementSetId="OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_ERA_AGE_MATCHES</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_MINOR_CIV</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_MINOR_CIV</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_FREECITY_CIV</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_FREE_CITY</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_BARBARIAN_CIV</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_BARBARIAN</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENT</RequirementId>
+			<Name>Type</Name>
+			<Value>GOLDEN</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_NO_GOLDEN_AGE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_NOT_HAS_GOLDEN_AGE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_MINOR_CIV</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_FREECITY_CIV</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_NOT_IN_GOLDEN_AGE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_BARBARIAN_CIV</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_SULEIMAN_COMBAT" Name="LOC_TRAIT_LEADER_SULEIMAN_ALT_NAME" Description="LOC_ABILITY_SULEIMAN_COMBAT_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_SULEIMAN_COMBAT</UnitAbilityType>
+			<ModifierId>SULEIMAN_COMBAT_BUFF</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<CivilopediaPageChapterParagraphs>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_SULEIMAN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_SULEIMAN_CHAPTER_HISTORY_PARA_9" SortIndex="9"/>
+	</CivilopediaPageChapterParagraphs>
+</GameInfo>

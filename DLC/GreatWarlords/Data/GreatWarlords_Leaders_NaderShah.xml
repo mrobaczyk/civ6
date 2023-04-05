@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_NADER_SHAH" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_NADER_SHAH" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_PREFER_LANDPOWER" Kind="KIND_TRAIT"/>
+		<!-- Unit Abilities -->
+		<Row Type="ABILITY_NADER_SHAH_COMBAT" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_NADER_SHAH_COMBAT" Tag="CLASS_ALL_COMBAT_UNITS"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_NADER_SHAH" Name="LOC_LEADER_NADER_SHAH_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_PERSIA" LeaderType="LEADER_NADER_SHAH" CapitalName="LOC_CITY_NAME_MASHHAD"/>
+	</CivilizationLeaders>
+	<CivilizationAudioTags>
+		<Row CivilizationType="CIVILIZATION_PERSIA" MusicOverride="true"/>
+	</CivilizationAudioTags>
+	<CityNames>
+		<Row CivilizationType="CIVILIZATION_PERSIA" CityName="LOC_CITY_NAME_MASHHAD"/>
+	</CityNames>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_NADER_SHAH" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_NADER_SHAH_QUOTE" QuoteAudio="NADER_SHAH_MA_MISC_PEP_TALK_A_SELECT"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_NADER_SHAH" TraitType="TRAIT_LEADER_NADER_SHAH"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_NADER_SHAH" ForegroundImage="LEADER_NADER_SHAH_NEUTRAL" BackgroundImage="LEADER_NADER_SHAH_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_NADER_SHAH" DawnOfManLeaderId="LEADER_NADER_SHAH"/>
+	</LoadingInfo>
+	<Agendas>
+		<Row AgendaType="AGENDA_PREFER_LANDPOWER" Name="LOC_AGENDA_PREFER_LANDPOWER_NAME" Description="LOC_AGENDA_PREFER_LANDPOWER_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_PREFER_LANDPOWER" TraitType="TRAIT_AGENDA_PREFER_LANDPOWER"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_NADER_SHAH" AgendaType="AGENDA_PREFER_LANDPOWER"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_PREFER_LANDPOWER" AgendaTwo="AGENDA_AIRPOWER"/>
+		<Row AgendaOne="AGENDA_PREFER_LANDPOWER" AgendaTwo="AGENDA_STANDING_ARMY"/>
+	</ExclusiveAgendas>
+	<AiListTypes>
+		<Row ListType="LandPowerLoverLandUnitsPreference"/>
+		<Row ListType="NaderCivics"/>
+		<Row ListType="NaderTechs"/>
+		<Row ListType="NaderWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="LandPowerLoverLandUnitsPreference" AgendaType="TRAIT_AGENDA_PREFER_LANDPOWER" System="PseudoYields"/>
+		<Row ListType="NaderCivics" LeaderType="TRAIT_LEADER_NADER_SHAH" System="Civics"/>
+		<Row ListType="NaderTechs" LeaderType="TRAIT_LEADER_NADER_SHAH" System="Technologies"/>
+		<Row ListType="NaderWonders" LeaderType="TRAIT_LEADER_NADER_SHAH" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="LandPowerLoverLandUnitsPreference" Item="PSEUDOYIELD_UNIT_COMBAT" Value="50"/>
+		<Row ListType="NaderCivics" Item="CIVIC_DIPLOMATIC_SERVICE"/>
+		<Row ListType="NaderCivics" Item="CIVIC_POLITICAL_PHILOSOPHY"/>
+		<Row ListType="NaderTechs" Item="TECH_FLIGHT"/>
+		<Row ListType="NaderTechs" Item="TECH_CURRENCY"/>
+		<Row ListType="NaderTechs" Item="TECH_IRON_WORKING"/>
+		<Row ListType="NaderWonders" Item="BUILDING_COLOSSUS"/>
+		<Row ListType="NaderWonders" Item="BUILDING_GREAT_ZIMBABWE"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_NADER_SHAH" Name="LOC_TRAIT_LEADER_NADER_SHAH_NAME" Description="LOC_TRAIT_LEADER_NADER_SHAH_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_LANDPOWER"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_NADER_SHAH" ModifierId="NADER_SHAH_COMBAT_ABILITY"/>
+		<Row TraitType="TRAIT_LEADER_NADER_SHAH" ModifierId="NADER_SHAH_TRADE_GOLD"/>
+		<Row TraitType="TRAIT_LEADER_NADER_SHAH" ModifierId="NADER_SHAH_TRADE_FAITH"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_LANDPOWER" ModifierId="AGENDA_HIGH_LANDPOWER"/>
+		<Row TraitType="TRAIT_AGENDA_PREFER_LANDPOWER" ModifierId="AGENDA_LOW_LANDPOWER"/>
+	</TraitModifiers>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_NADER_SHAH_COMBAT" Name="LOC_TRAIT_LEADER_NADER_SHAH_NAME" Description="LOC_ABILITY_NADER_SHAH_COMBAT_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_NADER_SHAH_COMBAT</UnitAbilityType>
+			<ModifierId>NADER_SHAH_COMBAT_BUFF</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<ModifierStrings>
+		<Row ModifierId="NADER_SHAH_COMBAT_BUFF" Context="Preview" Text="LOC_ABILITY_NADER_SHAH_COMBAT_DESCRIPTION"/>
+		<Row ModifierId="AGENDA_HIGH_LANDPOWER" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_LOW_LANDPOWER" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_NADER_SHAH" ReligionType="RELIGION_ISLAM"/>
+	</FavoredReligions>
+</GameInfo>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_TOKUGAWA" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_TOKUGAWA" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_SAKOKU" Kind="KIND_TRAIT"/>
+	</Types>
+	<Leaders>
+		<Row LeaderType="LEADER_TOKUGAWA" Name="LOC_LEADER_TOKUGAWA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_TOKUGAWA" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_TOKUGAWA_QUOTE" QuoteAudio="TOKUGAWA_MA_MISC_PEP_TALK_B_SELECT"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_TOKUGAWA" TraitType="TRAIT_LEADER_TOKUGAWA"/>
+		<Row LeaderType="LEADER_TOKUGAWA" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+		<Row LeaderType="LEADER_TOKUGAWA" TraitType="TRAIT_LEADER_SCIENCE_MAJOR_CIV"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_TOKUGAWA" ForegroundImage="LEADER_TOKUGAWA_NEUTRAL" BackgroundImage="LEADER_TOKUGAWA_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_TOKUGAWA" DawnOfManLeaderId="LEADER_TOKUGAWA"/>
+	</LoadingInfo>
+	<Agendas>
+		<Row AgendaType="AGENDA_SAKOKU" Name="LOC_AGENDA_SAKOKU_NAME" Description="LOC_AGENDA_SAKOKU_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_SAKOKU" TraitType="TRAIT_AGENDA_SAKOKU"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_TOKUGAWA" AgendaType="AGENDA_SAKOKU"/>
+	</HistoricalAgendas>
+	<AiListTypes>
+		<Row ListType="TokugawaCivics"/>
+		<Row ListType="TokugawaTechs"/>
+		<Row ListType="TokugawaWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="TokugawaWonders" LeaderType="TRAIT_LEADER_TOKUGAWA" System="Buildings"/>
+		<Row ListType="TokugawaCivics" LeaderType="TRAIT_LEADER_TOKUGAWA" System="Civics"/>
+		<Row ListType="TokugawaTechs" LeaderType="TRAIT_LEADER_TOKUGAWA" System="Technologies"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="TokugawaWonders" Item="BUILDING_COLOSSUS" Favored="true"/>
+		<Row ListType="TokugawaWonders" Item="BUILDING_GREAT_ZIMBABWE" Favored="true"/>
+		<Row ListType="TokugawaCivics" Item="CIVIC_FOREIGN_TRADE" Favored="true"/>
+		<Row ListType="TokugawaCivics" Item="CIVIC_CLASS_STRUGLE" Favored="true"/>
+		<Row ListType="TokugawaCivics" Item="CIVIC_HUMANISM" Favored="true"/>
+		<Row ListType="TokugawaTechs" Item="TECH_BRONZE_WORKING" Favored="true"/>
+		<Row ListType="TokugawaTechs" Item="TECH_MILITARY_TACTICS" Favored="true"/>
+		<Row ListType="TokugawaTechs" Item="TECH_FLIGHT" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" Name="LOC_TRAIT_LEADER_TOKUGAWA_NAME" Description="LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_SAKOKU"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TOKUGAWA_NEGATIVE_INTERNATIONAL_TOURISM"/>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TOKUGAWA_NEGATIVE_INTERNATIONAL_YIELDS"/>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TOKUGAWA_POSITIVE_DOMESTIC_CULTURE_DISTRICTS"/>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TOKUGAWA_POSITIVE_DOMESTIC_SCIENCE_DISTRICTS"/>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TOKUGAWA_POSITIVE_DOMESTIC_GOLD_DISTRICTS"/>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TOKUGAWA_TOURISM_DISTRICTS"/>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TOKUGAWA_AMENITIES_NEAR_CAPITAL"/>
+		<Row TraitType="TRAIT_AGENDA_SAKOKU" ModifierId="AGENDA_SAKOKU_TURTLER"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TOKUGAWA_NEGATIVE_INTERNATIONAL_TOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_TOURISM_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_NEGATIVE_INTERNATIONAL_YIELDS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_INTERNATIONAL_TRADE_ROUTE_YIELD_MODIFIER_WARLORDS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_CULTURE_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_SPECIALTY_DISTRICT_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_SCIENCE_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_SPECIALTY_DISTRICT_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_GOLD_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_PER_SPECIALTY_DISTRICT_FOR_DOMESTIC</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_TOURISM_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_TOURISM_CHANGE</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_FLIGHT_GREATWARLORDS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_AMENITIES_NEAR_CAPITAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_POLICY_AMENITY</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_BAKUHAN_REUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_COMBAT_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_COMBAT_BUFF</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+			<SubjectRequirementSetId>OPPONENT_IS_FULL_HEALTH_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_TRADE_GOLD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC_WARLORDS</ModifierType>
+			<SubjectRequirementSetId>CITY_WAS_NOT_FOUNDED_BY_THEM_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_TRADE_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC_WARLORDS</ModifierType>
+			<SubjectRequirementSetId>CITY_WAS_NOT_FOUNDED_BY_THEM_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_LANDPOWER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_HIGH_STANDING_ARMY</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_LANDPOWER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_LOW_STANDING_ARMY</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAKOKU_TURTLER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_SAKOKU_TURTLER</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TOKUGAWA_NEGATIVE_INTERNATIONAL_TOURISM</ModifierId>
+			<Name>Amount</Name>
+			<Value>-25</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_NEGATIVE_INTERNATIONAL_YIELDS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION, YIELD_FOOD, YIELD_SCIENCE, YIELD_CULTURE, YIELD_GOLD, YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_NEGATIVE_INTERNATIONAL_YIELDS</ModifierId>
+			<Name>Amount</Name>
+			<Value>-25, -25, -25, -25, -25, -25</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_CULTURE_DISTRICTS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_CULTURE_DISTRICTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_SCIENCE_DISTRICTS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_SCIENCE_DISTRICTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_GOLD_DISTRICTS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_POSITIVE_DOMESTIC_GOLD_DISTRICTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_TOURISM_DISTRICTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TOKUGAWA_AMENITIES_NEAR_CAPITAL</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_COMBAT_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_NADER_SHAH_COMBAT</Value>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_COMBAT_BUFF</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_TRADE_GOLD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_TRADE_GOLD</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_TRADE_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>NADER_SHAH_TRADE_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_LANDPOWER</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_LANDPOWER</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_NADER_SHAH_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_LANDPOWER</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_LANDPOWER_LEADING</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_LANDPOWER</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_LANDPOWER</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_NADER_SHAH_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_LANDPOWER</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_LANDPOWER_LAGGING</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAKOKU_TURTLER</ModifierId>
+			<Name>StatementKey</Name>
+			<!-- Note: Value not actually used, just has to have something so we know this is a kudo/warning -->
+			<Value>AGENDA_TURTLER_WARNING</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAKOKU_TURTLER</ModifierId>
+			<Name>TopRankingDiploMod</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SAKOKU_TURTLER</ModifierId>
+			<Name>BottomRankingDiploMod</Name>
+			<Value>-6</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_FLIGHT_GREATWARLORDS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_BAKUHAN_REUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_FULL_HEALTH_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>CITY_WAS_NOT_FOUNDED_BY_THEM_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>BAKUHAN_REQUIREMENTS_MET_REQUIREMENT</RequirementId>
+			<RequirementType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_6_TILES_FROM_CAPITAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_NEAR_CAPITAL</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_WOUNDED</RequirementId>
+			<RequirementType>REQUIREMENT_OPPONENT_IS_WOUNDED</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_WAS_NOT_FOUNDED_WARLORDS</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_IS_ORIGINAL_OWNER</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_CITY_6_TILES_FROM_CAPITAL</RequirementId>
+			<Name>MaxDistance</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_CITY_6_TILES_FROM_CAPITAL</RequirementId>
+			<Name>MinDistance</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<RequirementId>BAKUHAN_REQUIREMENTS_MET_REQUIREMENT</RequirementId>
+			<Name>RequirementSetId</Name>
+			<Value>PLAYER_HAS_BAKUHAN_REUIREMENTS</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_FLIGHT_GREATWARLORDS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_FLIGHT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_FLIGHT_GREATWARLORDS</RequirementSetId>
+			<RequirementId>BAKUHAN_REQUIREMENTS_MET_REQUIREMENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_BAKUHAN_REUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_6_TILES_FROM_CAPITAL</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_FULL_HEALTH_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_OPPONENT_IS_NOT_WOUNDED</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>OPPONENT_IS_FULL_HEALTH_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLAYER_IS_ATTACKER_REQUIREMENTS</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_SAKOKU_TURTLER" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_TOKUGAWA" ReligionType="RELIGION_BUDDHISM"/>
+	</FavoredReligions>
+</GameInfo>

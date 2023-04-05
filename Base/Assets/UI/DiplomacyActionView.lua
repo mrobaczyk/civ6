@@ -308,7 +308,7 @@ end
 
 -- ===========================================================================
 -- Exit the conversation mode.
-function ExitConversationMode()
+function ExitConversationMode(bForced : boolean)
 
 	if (ms_currentViewMode == CONVERSATION_MODE) then
 		ValidateActiveSession();
@@ -324,7 +324,11 @@ function ExitConversationMode()
 			end
 		else
 			-- No session for some reason, just go directly back.
-			SelectPlayer(ms_OtherPlayerID, OVERVIEW_MODE);
+			if (bForced) then
+				Close();
+			else
+				SelectPlayer(ms_OtherPlayerID, OVERVIEW_MODE);
+			end
 		end		
 		ResetPlayerPanel();
 	end
@@ -490,7 +494,7 @@ end
 function OnSelectConversationDiplomacyStatement(key)
 
 	if (key == "CHOICE_EXIT") then
-		ExitConversationMode();
+		ExitConversationMode(false);
 	else
 		if (key == "CHOICE_DECLARE_SURPRISE_WAR") then 
 			DiplomacyManager.AddStatement(ms_ActiveSessionID, Game.GetLocalPlayer(), "DECLARE_SURPRISE_WAR");
@@ -2678,7 +2682,7 @@ end
 --	Will close whatever has focus; if this is a conversation or dialog they
 --	will receive the close action otherwise the screen itself closes.
 -- ===========================================================================
-function CloseFocusedState()
+function CloseFocusedState(bForced : boolean)
 	if m_PopupDialog:IsOpen() then
 		m_PopupDialog:Close();
 		return;
@@ -2686,7 +2690,7 @@ function CloseFocusedState()
 	if (ms_currentViewMode == CONVERSATION_MODE) then
 		if (ms_ActiveSessionID ~= nil) then
 			if (Controls.BlackFadeAnim:IsStopped()) then
-				ExitConversationMode();
+				ExitConversationMode(bForced);
 			end
 		else
 			Close();
@@ -2706,7 +2710,7 @@ end
 -- ===========================================================================
 function HandleRMB()
 	if (ms_currentViewMode == CINEMA_MODE and Controls.BlackFadeAnim:IsStopped()) then
-		CloseFocusedState();
+		CloseFocusedState(false);
 	end
 end
 
@@ -2717,7 +2721,7 @@ end
 -- ===========================================================================
 function KeyHandler( key:number )
 	if (key == Keys.VK_ESCAPE) then 
-		CloseFocusedState();
+		CloseFocusedState(false);
 	end	
 end
 
@@ -2878,7 +2882,7 @@ end
 -- ===========================================================================
 function OnClose()
 	-- Act like they pressed ESC so we clean up correctly
-	CloseFocusedState();
+	CloseFocusedState(false);
 end
 
 -- ===========================================================================
@@ -2946,7 +2950,7 @@ function OnForceClose()
 			-- Unless we were in the deal mode, then just close, the deal view will close too.
 			Close();
 		else
-			CloseFocusedState();
+			CloseFocusedState(true);
 		end
 	end
 end

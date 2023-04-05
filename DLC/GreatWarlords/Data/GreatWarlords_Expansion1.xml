@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<!-- XP1 Support -->
+	<Traits>
+		<Update>
+			<Where Description="LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION"/>
+			<Set Description="LOC_TRAIT_LEADER_TOKUGAWA_XP_DESCRIPTION"/>
+		</Update>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_TOKUGAWA" ModifierId="TRAIT_TOKUGAWA_LOYALTY_NEAR_CAPITAL"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_TOKUGAWA_LOYALTY_NEAR_CAPITAL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_ALWAYS_LOYAL</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_BAKUHAN_REUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_TOKUGAWA_LOYALTY_NEAR_CAPITAL</ModifierId>
+			<Name>AlwaysLoyal</Name>
+			<Value>true</Value>
+		</Row>
+	</ModifierArguments>
+</GameInfo>

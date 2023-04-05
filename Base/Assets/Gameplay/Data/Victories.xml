@@ -8,7 +8,7 @@
 	</Kinds>
 	<Types>
 		<Row Type="DEFEAT_DEFAULT" Kind="KIND_DEFEAT"/>
-		<Row Type="DEFEAT_TIME" Kind="KIND_DEFEAT" />
+		<Row Type="DEFEAT_TIME" Kind="KIND_DEFEAT"/>
 		<Row Type="VICTORY_DEFAULT" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_CONQUEST" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_CULTURE" Kind="KIND_VICTORY"/>
@@ -16,15 +16,15 @@
 		<Row Type="VICTORY_SCORE" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_TECHNOLOGY" Kind="KIND_VICTORY"/>
 		<Row Type="VICTORY_STRATEGY_RELIGIOUS_VICTORY" Kind="KIND_VICTORY_STRATEGY"/>
-		<Row Type="STRATEGY_EARLY_EXPLORATION" Kind="KIND_VICTORY_STRATEGY" />
-		<Row Type="STRATEGY_RAPID_EXPANSION" Kind="KIND_VICTORY_STRATEGY" />
-		<Row Type="STRATEGY_NAVAL" Kind="KIND_VICTORY_STRATEGY" />
-		<Row Type="STRATEGY_CLASSICAL_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
-		<Row Type="STRATEGY_MEDIEVAL_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
-		<Row Type="STRATEGY_RENAISSANCE_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
-		<Row Type="STRATEGY_INDUSTRIAL_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
-		<Row Type="STRATEGY_MODERN_CHANGES" Kind="KIND_VICTORY_STRATEGY" />
-    <Row Type="STRATEGY_WONDER_OBSESSED" Kind="KIND_VICTORY_STRATEGY" />
+		<Row Type="STRATEGY_EARLY_EXPLORATION" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_RAPID_EXPANSION" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_NAVAL" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_CLASSICAL_CHANGES" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_MEDIEVAL_CHANGES" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_RENAISSANCE_CHANGES" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_INDUSTRIAL_CHANGES" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_MODERN_CHANGES" Kind="KIND_VICTORY_STRATEGY"/>
+		<Row Type="STRATEGY_WONDER_OBSESSED" Kind="KIND_VICTORY_STRATEGY"/>
 	</Types>
 	<Defeats>
 		<Row DefeatType="DEFEAT_DEFAULT" Name="LOC_DEFEAT_DEFAULT_NAME" Blurb="LOC_DEFEAT_DEFAULT_TEXT" RequirementSetId="DEFAULT_DEFEAT_REQUIREMENTS"/>
@@ -45,32 +45,33 @@
 		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" VictoryType="VICTORY_RELIGIOUS" NumConditionsNeeded="2"/>
 		<Row StrategyType="VICTORY_STRATEGY_SCIENCE_VICTORY" VictoryType="VICTORY_TECHNOLOGY" NumConditionsNeeded="3"/>
 		<!-- This isn't really a victory strategy, but I don't have a separate table for these. If it works well, I'll separate the two -->
-		<Row StrategyType ="STRATEGY_EARLY_EXPLORATION" NumConditionsNeeded="1"/>
-		<Row StrategyType ="STRATEGY_RAPID_EXPANSION" NumConditionsNeeded="3"/>
+		<Row StrategyType="STRATEGY_EARLY_EXPLORATION" NumConditionsNeeded="1"/>
+		<Row StrategyType="STRATEGY_RAPID_EXPANSION" NumConditionsNeeded="3"/>
 		<Row StrategyType="STRATEGY_NAVAL" NumConditionsNeeded="1"/>
 		<Row StrategyType="STRATEGY_CLASSICAL_CHANGES" NumConditionsNeeded="1"/>
 		<Row StrategyType="STRATEGY_MEDIEVAL_CHANGES" NumConditionsNeeded="1"/>
 		<Row StrategyType="STRATEGY_RENAISSANCE_CHANGES" NumConditionsNeeded="1"/>
 		<Row StrategyType="STRATEGY_INDUSTRIAL_CHANGES" NumConditionsNeeded="1"/>
 		<Row StrategyType="STRATEGY_MODERN_CHANGES" NumConditionsNeeded="1"/>
-    <!-- Wonder Obsessed tends to fall off too much in later game, so adding a strategy to boost it -->
+		<!-- Wonder Obsessed tends to fall off too much in later game, so adding a strategy to boost it -->
 		<Row StrategyType="STRATEGY_WONDER_OBSESSED" NumConditionsNeeded="2"/>
 	</Strategies>
 	<!-- Reminder: These conditions must be met to START following the strategy - they are not victory conditions themselves -->
 	<StrategyConditions>
-		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Good Culture" ThresholdValue="50"/> <!-- Requires empire to be in top 50% of known, living majors -->
+		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Good Culture" ThresholdValue="50"/>
+		<!-- Requires empire to be in top 50% of known, living majors -->
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Writer" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Artist" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Musician" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Has Great Works" ThresholdValue="3"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
 		<Row StrategyType="VICTORY_STRATEGY_CULTURAL_VICTORY" ConditionFunction="Tourists Taken" ThresholdValue="75" Exclusive="true"/>
-		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Taken Capital" ThresholdValue="1" />
-		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Opponents" ThresholdValue="2" />
-		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Leads Military" ThresholdValue="25" />
-		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Leads Score" ThresholdValue="10" />
-		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Next Lower Score" ThresholdValue="100" />
-		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Taken Capital" ThresholdValue="2" Exclusive="true" />
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Taken Capital" ThresholdValue="1"/>
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Opponents" ThresholdValue="2"/>
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Leads Military" ThresholdValue="25"/>
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Leads Score" ThresholdValue="10"/>
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Next Lower Score" ThresholdValue="100"/>
+		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Has Taken Capital" ThresholdValue="2" Exclusive="true"/>
 		<Row StrategyType="VICTORY_STRATEGY_MILITARY_VICTORY" ConditionFunction="Is Not Major" Disqualifier="true"/>
 		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Good Faith City" ThresholdValue="1"/>
 		<Row StrategyType="VICTORY_STRATEGY_RELIGIOUS_VICTORY" ConditionFunction="Founded Religion"/>
@@ -148,39 +149,39 @@
 	<AiListTypes>
 		<Row ListType="ClassicalPseudoYields"/>
 		<Row ListType="ClassicalYields"/>
-		<Row ListType="CultureVictoryPseudoYields" />
+		<Row ListType="CultureVictoryPseudoYields"/>
 		<Row ListType="ClassicalDistricts"/>
-		<Row ListType="CultureVictoryYields" />
-		<Row ListType="EarlyExplorationBoost" />
-		<Row ListType="ExpansionSettlementBoost" />
-		<Row ListType="ExpansionSettlementPreferences" />
-		<Row ListType="ExpansionUnitPreferences" />
-		<Row ListType="IndustrialPseudoYields" />
-		<Row ListType="IndustrialYields" />
+		<Row ListType="CultureVictoryYields"/>
+		<Row ListType="EarlyExplorationBoost"/>
+		<Row ListType="ExpansionSettlementBoost"/>
+		<Row ListType="ExpansionSettlementPreferences"/>
+		<Row ListType="ExpansionUnitPreferences"/>
+		<Row ListType="IndustrialPseudoYields"/>
+		<Row ListType="IndustrialYields"/>
 		<Row ListType="MedievalSettlements"/>
 		<Row ListType="MedievalPseudoYields"/>
 		<Row ListType="MedievalYields"/>
-		<Row ListType="MilitaryVictoryOperations" />
-		<Row ListType="MilitaryVictoryPseudoYields" />
-		<Row ListType="MilitaryVictoryYields" />
+		<Row ListType="MilitaryVictoryOperations"/>
+		<Row ListType="MilitaryVictoryPseudoYields"/>
+		<Row ListType="MilitaryVictoryYields"/>
 		<Row ListType="ModernPseudoYields"/>
 		<Row ListType="ModernYields"/>
-		<Row ListType="NavalUnitPreferences" />
-		<Row ListType="NavalSettlementPreferences" />
-		<Row ListType="NavalSettlementBoost" />
-		<Row ListType="NavalPreferredTechs" />
-		<Row ListType="ReligiousVictoryBehaviors" />
-		<Row ListType="ReligiousVictoryDiplomacy" />
-		<Row ListType="ReligiousVictoryPseudoYields" />
-		<Row ListType="ReligiousVictoryYields" />
+		<Row ListType="NavalUnitPreferences"/>
+		<Row ListType="NavalSettlementPreferences"/>
+		<Row ListType="NavalSettlementBoost"/>
+		<Row ListType="NavalPreferredTechs"/>
+		<Row ListType="ReligiousVictoryBehaviors"/>
+		<Row ListType="ReligiousVictoryDiplomacy"/>
+		<Row ListType="ReligiousVictoryPseudoYields"/>
+		<Row ListType="ReligiousVictoryYields"/>
 		<Row ListType="RenaissancePseudoYields"/>
 		<Row ListType="RenaissanceYields"/>
-		<Row ListType="ScienceVictoryDistricts" />
-		<Row ListType="ScienceVictoryProjects" />
-		<Row ListType="ScienceVictoryPseudoYields" />
-		<Row ListType="ScienceVictoryTechs" />
-		<Row ListType="ScienceVictoryYields" />
-		<Row ListType="WonderObsessedIndustrialBonus" />
+		<Row ListType="ScienceVictoryDistricts"/>
+		<Row ListType="ScienceVictoryProjects"/>
+		<Row ListType="ScienceVictoryPseudoYields"/>
+		<Row ListType="ScienceVictoryTechs"/>
+		<Row ListType="ScienceVictoryYields"/>
+		<Row ListType="WonderObsessedIndustrialBonus"/>
 	</AiListTypes>
 	<AiLists>
 		<Row ListType="ClassicalPseudoYields" System="PseudoYields"/>
@@ -215,7 +216,7 @@
 		<Row ListType="ScienceVictoryDistricts" System="Districts"/>
 		<Row ListType="ScienceVictoryProjects" System="Projects"/>
 		<Row ListType="ScienceVictoryPseudoYields" System="PseudoYields"/>
-		<Row ListType="ScienceVictoryTechs" System="Technologies" />
+		<Row ListType="ScienceVictoryTechs" System="Technologies"/>
 		<Row ListType="ScienceVictoryYields" System="Yields"/>
 		<Row ListType="WonderObsessedIndustrialBonus" System="PseudoYields"/>
 	</AiLists>
@@ -224,7 +225,7 @@
 		<Row ListType="ClassicalYields" Item="YIELD_FAITH" Value="20"/>
 		<Row ListType="ClassicalYields" Item="YIELD_FOOD" Value="15"/>
 		<Row ListType="ClassicalYields" Item="YIELD_GOLD" Value="20"/>
-		<Row ListType="ClassicalYields" Item="YIELD_SCIENCE" Value="150"/>
+		<Row ListType="ClassicalYields" Item="YIELD_SCIENCE" Value="30"/>
 		<Row ListType="ClassicalDistricts" Item="DISTRICT_CAMPUS" Favored="true"/>
 		<Row ListType="ClassicalDistricts" Item="DISTRICT_THEATER" Favored="true"/>
 		<Row ListType="MedievalSettlements" Item="SETTLEMENT_MIN_VALUE_NEEDED" Value="-10"/>
@@ -252,7 +253,6 @@
 		<Row ListType="ModernYields" Item="YIELD_FOOD" Value="5"/>
 		<Row ListType="ModernYields" Item="YIELD_GOLD" Value="10"/>
 		<Row ListType="WonderObsessedIndustrialBonus" Item="PSEUDOYIELD_WONDER" Value="100"/>
-
 		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_WRITER" Value="50"/>
 		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_ARTIST" Value="50"/>
 		<Row ListType="CultureVictoryPseudoYields" Item="PSEUDOYIELD_GPP_MUSICIAN" Value="50"/>
@@ -285,23 +285,20 @@
 		<Row ListType="MilitaryVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_AIR_COMBAT" Value="25"/>
 		<Row ListType="MilitaryVictoryYields" Item="YIELD_PRODUCTION" Value="25"/>
 		<Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_NAVAL_COMBAT" Value="150"/>
-		<Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-90" />
-
+		<Row ListType="NavalUnitPreferences" Item="PSEUDOYIELD_UNIT_COMBAT" Value="-90"/>
 		<Row ListType="NavalSettlementPreferences" Item="Coastal" Favored="false" Value="10"/>
 		<Row ListType="NavalSettlementPreferences" Item="Specific Resource" Value="-3" StringVal="RESOURCE_HORSES"/>
 		<Row ListType="NavalSettlementPreferences" Item="Specific Resource" Value="-5" StringVal="RESOURCE_IRON"/>
 		<Row ListType="NavalSettlementPreferences" Item="Foreign Continent" Favored="true" Value="4"/>
 		<Row ListType="NavalSettlementPreferences" Item="Nearest Friendly City" Favored="false" Value="4"/>
-
 		<Row ListType="NavalSettlementBoost" Item="SETTLEMENT_CITY_MINIMUM_VALUE" Value="100"/>
 		<Row ListType="NavalSettlementBoost" Item="SETTLEMENT_CITY_VALUE_MULTIPLIER" Value="2"/>
-
 		<Row ListType="NavalPreferredTechs" Item="TECH_SAILING" Favored="true"/>
 		<Row ListType="NavalPreferredTechs" Item="TECH_CELESTIAL_NAVIGATION" Favored="true"/>
 		<Row ListType="NavalPreferredTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
 		<Row ListType="NavalPreferredTechs" Item="TECH_CARTOGRAPHY" Favored="true"/>
 		<Row ListType="ReligiousVictoryBehaviors" Item="TRIGGER_RELIGIOUS_CITY_CONVERTED"/>
-		<Row ListType="ReligiousVictoryDiplomacy" Item="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Favored="false" />
+		<Row ListType="ReligiousVictoryDiplomacy" Item="DIPLOACTION_KEEP_PROMISE_DONT_CONVERT" Favored="false"/>
 		<Row ListType="ReligiousVictoryPseudoYields" Item="PSEUDOYIELD_GPP_PROPHET" Value="25"/>
 		<Row ListType="ReligiousVictoryPseudoYields" Item="PSEUDOYIELD_UNIT_RELIGIOUS" Value="50"/>
 		<Row ListType="ReligiousVictoryYields" Item="YIELD_FAITH" Value="75"/>
@@ -314,17 +311,16 @@
 		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_SPACE_RACE" Value="100"/>
 		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_TECHNOLOGY" Value="25"/>
 		<Row ListType="ScienceVictoryPseudoYields" Item="PSEUDOYIELD_GPP_SCIENTIST" Value="25"/>
-		<Row ListType="ScienceVictoryTechs" Item="TECH_ROCKETRY" Favored="true" />
-		<Row ListType="ScienceVictoryTechs" Item="TECH_SATELLITES" Favored="true" />
-		<Row ListType="ScienceVictoryTechs" Item="TECH_ROBOTICS" Favored="true" />
-		<Row ListType="ScienceVictoryTechs" Item="TECH_NUCLEAR_FUSION" Favored="true" />
-		<Row ListType="ScienceVictoryTechs" Item="TECH_NANOTECHNOLOGY" Favored="true" />
+		<Row ListType="ScienceVictoryTechs" Item="TECH_ROCKETRY" Favored="true"/>
+		<Row ListType="ScienceVictoryTechs" Item="TECH_SATELLITES" Favored="true"/>
+		<Row ListType="ScienceVictoryTechs" Item="TECH_ROBOTICS" Favored="true"/>
+		<Row ListType="ScienceVictoryTechs" Item="TECH_NUCLEAR_FUSION" Favored="true"/>
+		<Row ListType="ScienceVictoryTechs" Item="TECH_NANOTECHNOLOGY" Favored="true"/>
 		<Row ListType="ScienceVictoryYields" Item="YIELD_SCIENCE" Value="50"/>
 	</AiFavoredItems>
 	<TriggeredBehaviorTrees>
 		<Row TriggerType="TRIGGER_RELIGIOUS_CITY_CONVERTED" TreeName="Launch Inquisition" AIEvent="AI_EVENT_RELIGIOUS_CITY_CONVERTED" Priority="3"/>
 	</TriggeredBehaviorTrees>
-
 	<!-- Rankings Table data -->
 	<HistoricRankings>
 		<Row>
@@ -433,7 +429,6 @@
 			<Score>0</Score>
 		</Row>
 	</HistoricRankings>
-
 	<!-- Shared Requirements -->
 	<Requirements>
 		<Row>
@@ -442,7 +437,6 @@
 			<ProgressWeight>0</ProgressWeight>
 		</Row>
 	</Requirements>
-
 	<!-- Default Defeat -->
 	<!-- Conditions - Player must have 0 settlers and not have built any cities, or have 0 cities.-->
 	<RequirementSets>
@@ -463,7 +457,6 @@
 			<RequirementType>REQUIREMENT_PLAYER_DEFAULT_DEFEAT</RequirementType>
 		</Row>
 	</Requirements>
-
 	<!-- Time Defeat -->
 	<!-- Conditions - Score Victory must not be enabled and the Max Turns must be reached.-->
 	<RequirementSets>
@@ -500,7 +493,6 @@
 			<Value>VICTORY_SCORE</Value>
 		</Row>
 	</RequirementArguments>
-
 	<!-- Default Victory -->
 	<!-- Conditions - Player is last major civilization alive. -->
 	<RequirementSets>
@@ -600,7 +592,6 @@
 			<RequirementType>REQUIREMENT_TEAM_DOMINATION_VICTORY</RequirementType>
 		</Row>
 	</Requirements>
-
 	<!-- Culture Victory -->
 	<RequirementSets>
 		<Row>
@@ -666,7 +657,6 @@
 			<Value>CULTURE_VICTORY_ENOUGH_TOURISTS_REQUIREMENTS</Value>
 		</Row>
 	</RequirementArguments>
-
 	<!-- Religious Victory -->
 	<!--Religious Victory Requirements
 		* Must have at least 2 major teams in the game.
@@ -736,7 +726,6 @@
 			<Value>RELIGIOUS_VICTORY_RELIGIOUS_MAJORITY_REQUIREMENTS</Value>
 		</Row>
 	</RequirementArguments>
-
 	<!-- Technology Victory -->
 	<RequirementSets>
 		<Row>
