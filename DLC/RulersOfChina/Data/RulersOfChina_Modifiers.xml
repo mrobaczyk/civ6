@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="MODIFIER_SINGLE_UNIT_RELIGIOUS_SPREADS" Kind="KIND_MODIFIER"/>
+		<Row Type="MODIFIER_PLAYER_ALLOW_PROJECT_CHINA" Kind="KIND_MODIFIER"/>
+	</Types>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_SINGLE_UNIT_RELIGIOUS_SPREADS</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_BUILDING_SPREAD_CHARGES</EffectType>
+		</Row>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_ALLOW_PROJECT_CHINA</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADD_PLAYER_PROJECT_AVAILABILITY</EffectType>
+		</Row>
+	</DynamicModifiers>
+</GameInfo>

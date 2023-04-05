@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<Row Type="PROJECT_LIJIA_FAITH" Kind="KIND_PROJECT"/>
+		<Row Type="PROJECT_LIJIA_FOOD" Kind="KIND_PROJECT"/>
+		<Row Type="PROJECT_LIJIA_GOLD" Kind="KIND_PROJECT"/>
+	</Types>
+	<Projects>
+		<Row ProjectType="PROJECT_LIJIA_FAITH" Name="LOC_PROJECT_LIJIA_FAITH_NAME" ShortName="LOC_PROJECT_LIJIA_FAITH_SHORT_NAME" Description="LOC_PROJECT_LIJIA_FAITH_DESCRIPTION" Cost="1000" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1500" UnlocksFromEffect="true"/>
+		<Row ProjectType="PROJECT_LIJIA_FOOD" Name="LOC_PROJECT_LIJIA_FOOD_NAME" ShortName="LOC_PROJECT_LIJIA_FOOD_SHORT_NAME" Description="LOC_PROJECT_LIJIA_FOOD_DESCRIPTION" Cost="1000" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1500" UnlocksFromEffect="true"/>
+		<Row ProjectType="PROJECT_LIJIA_GOLD" Name="LOC_PROJECT_LIJIA_GOLD_NAME" ShortName="LOC_PROJECT_LIJIA_GOLD_SHORT_NAME" Description="LOC_PROJECT_LIJIA_GOLD_DESCRIPTION" Cost="1000" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="1500" UnlocksFromEffect="true"/>
+	</Projects>
+	<Project_YieldConversions>
+		<Row ProjectType="PROJECT_LIJIA_FAITH" YieldType="YIELD_FAITH" PercentOfProductionRate="50"/>
+		<Row ProjectType="PROJECT_LIJIA_FOOD" YieldType="YIELD_FOOD" PercentOfProductionRate="50"/>
+		<Row ProjectType="PROJECT_LIJIA_GOLD" YieldType="YIELD_GOLD" PercentOfProductionRate="100"/>
+	</Project_YieldConversions>
+</GameInfo>

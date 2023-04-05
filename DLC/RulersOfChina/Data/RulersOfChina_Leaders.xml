@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_YONGLE" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_WU_ZETIAN" Kind="KIND_LEADER"/>
+		<Row Type="LEADER_QIN_ALT" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_YONGLE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_WU_ZETIAN" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_QIN" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_SIHAI" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_YINDING" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_COURT_INTRIGUE" Kind="KIND_TRAIT"/>
+		<!-- Unit Abilities -->
+		<Row Type="ABILITY_QIN_MELEE_UNITS" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_QIN_MELEE_UNITS" Tag="CLASS_MELEE"/>
+	</TypeTags>
+	<Leaders>
+		<Row LeaderType="LEADER_YONGLE" Name="LOC_LEADER_YONGLE_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" Name="LOC_LEADER_WU_ZETIAN_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Row LeaderType="LEADER_QIN_ALT" Name="LOC_LEADER_QIN_ALT_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+		<Update>
+			<Where LeaderType="LEADER_QIN"/>
+			<Set>
+				<Name>LOC_LEADER_QIN_ORIGINAL_NAME</Name>
+			</Set>
+		</Update>
+	</Leaders>
+	<LeaderQuotes>		
+		<Row LeaderType="LEADER_YONGLE" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_YONGLE_QUOTE" QuoteAudio="YONGLE_MA_MISC_PEP_TALK_B_SELECT"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_WU_ZETIAN_QUOTE" QuoteAudio="WUZETIAN_MA_MISC_PEP_TALK_A_SELECT"/>
+		<Row LeaderType="LEADER_QIN_ALT" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_ALT_QUOTE" QuoteAudio="Qin_MISC_PEP_TALK_B_2"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_YONGLE" TraitType="TRAIT_LEADER_SCIENCE_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_YONGLE" TraitType="TRAIT_LEADER_YONGLE"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" TraitType="TRAIT_LEADER_WU_ZETIAN"/>
+		<Row LeaderType="LEADER_QIN_ALT" TraitType="TRAIT_LEADER_QIN"/>
+		<Row LeaderType="LEADER_QIN_ALT" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_YONGLE" ForegroundImage="LEADER_YONGLE_NEUTRAL" BackgroundImage="LEADER_YONGLE_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_YONGLE" DawnOfManLeaderId="LEADER_YONGLE"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" ForegroundImage="LEADER_WU_ZETIAN_NEUTRAL" BackgroundImage="LEADER_WU_ZETIAN_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_WU_ZETIAN" DawnOfManLeaderId="LEADER_WU_ZETIAN"/>
+		<Row LeaderType="LEADER_QIN_ALT" ForegroundImage="LEADER_QIN_ALT_NEUTRAL" BackgroundImage="LEADER_QIN_ALT_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_QIN" DawnOfManLeaderId="LEADER_QIN"/>
+	</LoadingInfo>
+	<DuplicateLeaders>
+		<Row LeaderType="LEADER_QIN" OtherLeaderType="LEADER_QIN_ALT"/>
+	</DuplicateLeaders>
+	<Agendas>
+		<Row AgendaType="AGENDA_SIHAI" Name="LOC_AGENDA_SIHAI_NAME" Description="LOC_AGENDA_SIHAI_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_YINDING" Name="LOC_AGENDA_YINDING_NAME" Description="LOC_AGENDA_YINDING_DESCRIPTION"/>
+		<Row AgendaType="AGENDA_COURT_INTRIGUE" Name="LOC_AGENDA_COURT_INTRIGUE_NAME" Description="LOC_AGENDA_COURT_INTRIGUE_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_SIHAI" TraitType="TRAIT_AGENDA_SIHAI"/>
+		<Row AgendaType="AGENDA_YINDING" TraitType="TRAIT_AGENDA_YINDING"/>
+		<Row AgendaType="AGENDA_COURT_INTRIGUE" TraitType="TRAIT_AGENDA_COURT_INTRIGUE"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_QIN_ALT" AgendaType="AGENDA_SIHAI"/>
+		<Row LeaderType="LEADER_YONGLE" AgendaType="AGENDA_YINDING"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" AgendaType="AGENDA_COURT_INTRIGUE"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_SIHAI" AgendaTwo="AGENDA_CIVILIZED"/>
+		<Row AgendaOne="AGENDA_SIHAI" AgendaTwo="AGENDA_BARBARIAN_LOVER"/>
+		<Row AgendaOne="AGENDA_YINDING" AgendaTwo="AGENDA_MONEY_GRUBBER"/>
+		<Row AgendaOne="AGENDA_COURT_INTRIGUE" AgendaTwo="AGENDA_PARANOID"/>
+	</ExclusiveAgendas>
+	<AiListTypes>
+		<Row ListType="SihaiLoverClearingBarbCampPreference"/>
+		<Row ListType="YongleCivics"/>
+		<Row ListType="YongleTechs"/>
+		<Row ListType="YongleWonders"/>
+		<Row ListType="WuZetianCivics"/>
+		<Row ListType="WuZetianTechs"/>
+		<Row ListType="WuZetianWonders"/>
+		<Row ListType="WuZetianPseudo"/>
+		<Row ListType="QinAltUnits"/>
+		<Row ListType="QinAltTechs"/>
+		<Row ListType="QinAltWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="SihaiLoverClearingBarbCampPreference" AgendaType="TRAIT_AGENDA_SIHAI" System="PseudoYields"/>
+		<Row ListType="YongleCivics" LeaderType="TRAIT_LEADER_YONGLE" System="Civics"/>
+		<Row ListType="YongleTechs" LeaderType="TRAIT_LEADER_YONGLE" System="Technologies"/>
+		<Row ListType="YongleWonders" LeaderType="TRAIT_LEADER_YONGLE" System="Buildings"/>
+		<Row ListType="WuZetianCivics" LeaderType="TRAIT_LEADER_WU_ZETIAN" System="Civics"/>
+		<Row ListType="WuZetianTechs" LeaderType="TRAIT_LEADER_WU_ZETIAN" System="Technologies"/>
+		<Row ListType="WuZetianWonders" LeaderType="TRAIT_LEADER_WU_ZETIAN" System="Buildings"/>
+		<Row ListType="WuZetianPseudo" LeaderType="TRAIT_LEADER_WU_ZETIAN" System="PseudoYields"/>
+		<Row ListType="QinAltUnits" LeaderType="TRAIT_LEADER_QIN" System="UnitPromotionClasses"/>
+		<Row ListType="QinAltTechs" LeaderType="TRAIT_LEADER_QIN" System="Technologies"/>
+		<Row ListType="QinAltWonders" LeaderType="TRAIT_LEADER_QIN" System="Buildings"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="SihaiLoverClearingBarbCampPreference" Item="PSEUDOYIELD_CLEAR_BANDIT_CAMPS" Value="-100"/>
+		<Row ListType="QinAltWonders" Item="BUILDING_TERRACOTTA_ARMY" Favored="true"/>
+		<Row ListType="YongleWonders" Item="BUILDING_GREAT_LIBRARY" Favored="true"/>
+		<Row ListType="WuZetianWonders" Item="BUILDING_FORBIDDEN_CITY" Favored="true"/>
+		<Row ListType="YongleWonders" Item="BUILDING_FORBIDDEN_CITY" Favored="true"/>
+		<Row ListType="YongleCivics" Item="CIVIC_FEUDALISM" Favored="true"/>
+		<Row ListType="WuZetianCivics" Item="CIVIC_DEFENSIVE_TACTICS" Favored="true"/>
+		<Row ListType="WuZetianCivics" Item="CIVIC_DIPLOMATIC_SERVICE" Favored="true"/>
+		<Row ListType="WuZetianCivics" Item="CIVIC_NATIONALISM" Favored="true"/>
+		<Row ListType="WuZetianCivics" Item="CIVIC_IDEOLOGY" Favored="true"/>
+		<Row ListType="WuZetianPseudo" Item="PSEUDOYIELD_UNIT_SPY" Value="20"/>
+	
+		<Row ListType="QinAltUnits" Item="PROMOTION_CLASS_MELEE" Value="1"/>
+		<Row ListType="YongleTechs" Item="TECH_MASONRY" Favored="true"/>
+		<Row ListType="YongleTechs" Item="TECH_CASTLES" Favored="true"/>
+		<Row ListType="YongleTechs" Item="TECH_FLIGHT" Favored="true"/>
+		<Row ListType="WuZetianTechs" Item="TECH_MASONRY" Favored="true"/>
+		<Row ListType="WuZetianTechs" Item="TECH_CASTLES" Favored="true"/>
+		<Row ListType="WuZetianTechs" Item="TECH_FLIGHT" Favored="true"/>
+		<Row ListType="QinAltTechs" Item="TECH_MASONRY" Favored="true"/>
+		<Row ListType="QinAltTechs" Item="TECH_CASTLES" Favored="true"/>
+		<Row ListType="QinAltTechs" Item="TECH_FLIGHT" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_QIN" Name="LOC_TRAIT_LEADER_QIN_ALT_NAME" Description="LOC_TRAIT_LEADER_QIN_ALT_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_SIHAI"/>
+		<Row TraitType="TRAIT_LEADER_YONGLE" Name="LOC_TRAIT_LEADER_YONGLE_NAME" Description="LOC_TRAIT_LEADER_YONGLE_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_YINDING"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" Name="LOC_TRAIT_LEADER_WU_ZETIAN_NAME" Description="LOC_TRAIT_LEADER_WU_ZETIAN_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_COURT_INTRIGUE"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_QIN" ModifierId="QIN_MELEE_UNIT_ABILITY"/>
+		<Row TraitType="TRAIT_AGENDA_SIHAI" ModifierId="AGENDA_SIHAI_CLEARS_BARBARIAN_CAMPS"/>
+		<Row TraitType="TRAIT_AGENDA_SIHAI" ModifierId="AGENDA_SIHAI_IGNORES_BARBARIAN_CAMPS"/>
+		<Row TraitType="TRAIT_LEADER_YONGLE" ModifierId="YONGLE_FAITH_PROJECT"/>
+		<Row TraitType="TRAIT_LEADER_YONGLE" ModifierId="YONGLE_FOOD_PROJECT"/>
+		<Row TraitType="TRAIT_LEADER_YONGLE" ModifierId="YONGLE_GOLD_PROJECT"/>
+		<Row TraitType="TRAIT_AGENDA_YINDING" ModifierId="AGENDA_YINDING_POSITIVE_INCOME"/>
+		<Row TraitType="TRAIT_AGENDA_YINDING" ModifierId="AGENDA_YINDING_NEGATIVE_INCOME"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_OFFENSIVE_SPY_BETTER"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_OFFENSIVE_SPY_SCIENCE"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_OFFENSIVE_SPY_CULTURE"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_FREE_SPY"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_FREE_SPY_CAPACITY"/>
+		<Row TraitType="TRAIT_AGENDA_COURT_INTRIGUE" ModifierId="AGENDA_COURT_INTRIGUE"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>QIN_MELEE_UNIT_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>QIN_MELEE_UNIT_SPREAD_CHARGE</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_UNIT_RELIGIOUS_SPREADS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>QIN_MELEE_UNIT_CONVERT_BARBS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_CONVERTS_BARBARIANS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_CLEARS_BARBARIAN_CAMPS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_CLEARS_BARBARIAN_CAMPS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_IGNORES_BARBARIAN_CAMPS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IGNORES_BARBARIAN_CAMPS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_FAITH_PROJECT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ALLOW_PROJECT_CHINA</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_FOOD_PROJECT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ALLOW_PROJECT_CHINA</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_GOLD_PROJECT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ALLOW_PROJECT_CHINA</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_POSITIVE_INCOME</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_POSITIVE_INCOME</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_NEGATIVE_INCOME</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_NEGATIVE_INCOME</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_FREE_SPY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+			<OwnerRequirementsetId>PLAYER_HAS_DEFENSIVE_TACTICS_AND_CAPITAL</OwnerRequirementsetId>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_FREE_SPY_CAPACITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPY</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_DEFENSIVE_TACTICS_AND_CAPITAL</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_BETTER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_SPY_BONUS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_SCIENCE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TARGET_CITY_SPY_YIELD_PERCENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TARGET_CITY_SPY_YIELD_PERCENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_COURT_INTRIGUE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_AGENDA_PARANOID</ModifierType>
+			<OwnerRequirementSetId>ON_TURN_STARTED</OwnerRequirementSetId>
+			<SubjectRequirementSetId>PLAYER_IS_MAJOR_CIV_KNOWN_30_TURNS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>QIN_MELEE_UNIT_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_QIN_MELEE_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>QIN_MELEE_UNIT_SPREAD_CHARGE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>QIN_MELEE_UNIT_CONVERT_BARBS</ModifierId>
+			<Name>Converts</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_CLEARS_BARBARIAN_CAMPS</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_CLEARS_BARBARIAN_CAMPS</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_ATTACKS_BARBARIANS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_CLEARS_BARBARIAN_CAMPS</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_SIHAI_ATTACKS_BARBARIANS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_IGNORES_BARBARIAN_CAMPS</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_IGNORES_BARBARIAN_CAMPS</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDOS_LEADER_ANY_REASON_AGENDA_IGNORES_BARBARIANS</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_SIHAI_IGNORES_BARBARIAN_CAMPS</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_SIHAI_IGNORES_BARBARIANS</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_FAITH_PROJECT</ModifierId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_LIJIA_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_FOOD_PROJECT</ModifierId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_LIJIA_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_GOLD_PROJECT</ModifierId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_LIJIA_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_POSITIVE_INCOME</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_POSITIVE_INCOME</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_POSITIVE_INCOME</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_POSITIVE_INCOME</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_POSITIVE_INCOME</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_NEGATIVE_INCOME</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-12</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_NEGATIVE_INCOME</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_NEGATIVE_INCOME</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_YINDING_NEGATIVE_INCOME</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_NEGATIVE_INCOME</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_FREE_SPY_CAPACITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_FREE_SPY</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_SPY</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_FREE_SPY</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_FREE_SPY</ModifierId>
+			<Name>AllowUniqueOverride</Name>
+			<Value>false</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_BETTER</ModifierId>
+			<Name>Offense</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_BETTER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_SCIENCE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_SCIENCE</ModifierId>
+			<Name>Percent</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_CULTURE</ModifierId>
+			<Name>Percent</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_COURT_INTRIGUE</ModifierId>
+			<Name>StatementKey</Name>
+			<!-- Note: Value not actually used, just has to have something so we know this is a kudo/warning -->
+			<Value>AGENDA_PARANOID_WARNING</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_POSITIVE_INCOME</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_NEGATIVE_INCOME</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_DEFENSIVE_TACTICS_AND_CAPITAL</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_HAS_POSITIVE_INCOME</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_INCOME_LEAD</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_NEGATIVE_INCOME</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_INCOME_LEAD</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_DEFENSIVE_TACTICS</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_CIVIC</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_HAS_POSITIVE_INCOME</RequirementId>
+			<Name>MinimumDelta</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_POSITIVE_INCOME</RequirementId>
+			<Name>YieldRatio</Name>
+			<Value>0.1</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_NEGATIVE_INCOME</RequirementId>
+			<Name>MinimumDelta</Name>
+			<Value>0</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_HAS_NEGATIVE_INCOME</RequirementId>
+			<Name>YieldRatio</Name>
+			<Value>0.1</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_DEFENSIVE_TACTICS</RequirementId>
+			<Name>CivicType</Name>
+			<Value>CIVIC_DEFENSIVE_TACTICS</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_POSITIVE_INCOME</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_POSITIVE_INCOME</RequirementSetId>
+			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_POSITIVE_INCOME</RequirementSetId>
+			<RequirementId>REQUIRES_HAS_POSITIVE_INCOME</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_NEGATIVE_INCOME</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_NEGATIVE_INCOME</RequirementSetId>
+			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_NEGATIVE_INCOME</RequirementSetId>
+			<RequirementId>REQUIRES_HAS_NEGATIVE_INCOME</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_DEFENSIVE_TACTICS_AND_CAPITAL</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_DEFENSIVE_TACTICS</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_DEFENSIVE_TACTICS_AND_CAPITAL</RequirementSetId>
+			<RequirementId>REQUIRES_CAPITAL_CITY</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_QIN_MELEE_UNITS" Name="LOC_TRAIT_LEADER_QIN_ALT_NAME" Description="LOC_ABILITY_QIN_MELEE_UNITS_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_QIN_MELEE_UNITS</UnitAbilityType>
+			<ModifierId>QIN_MELEE_UNIT_SPREAD_CHARGE</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_QIN_MELEE_UNITS</UnitAbilityType>
+			<ModifierId>QIN_MELEE_UNIT_CONVERT_BARBS</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_SIHAI_CLEARS_BARBARIAN_CAMPS" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_SIHAI_IGNORES_BARBARIAN_CAMPS" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_YINDING_POSITIVE_INCOME" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_YINDING_NEGATIVE_INCOME" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_COURT_INTRIGUE" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_YONGLE" ReligionType="RELIGION_CONFUCIANISM"/>
+		<Row LeaderType="LEADER_WU_ZETIAN" ReligionType="RELIGION_BUDDHISM"/>
+		<Row LeaderType="LEADER_QIN_ALT" ReligionType="RELIGION_TAOISM"/>
+	</FavoredReligions>
+	<CivilopediaPageChapterParagraphs>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="CIVILIZATIONS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_1" SortIndex="1"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_2" SortIndex="2"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_3" SortIndex="3"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_4" SortIndex="4"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_5" SortIndex="5"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_6" SortIndex="6"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_7" SortIndex="7"/>
+		<Row SectionId="LEADERS" PageId="LEADER_QIN_ALT" ChapterId="HISTORY" Paragraph="LOC_PEDIA_LEADERS_PAGE_LEADER_QIN_CHAPTER_HISTORY_PARA_8" SortIndex="8"/>
+	</CivilopediaPageChapterParagraphs>
+</GameInfo>

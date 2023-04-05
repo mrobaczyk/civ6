@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Types>
+	</Types>
+	<TypeTags>
+	</TypeTags>
+	<Leaders>
+	</Leaders>
+	<CivilizationLeaders>
+	</CivilizationLeaders>
+	<Agendas>
+	</Agendas>
+	<LeaderTraits>
+	</LeaderTraits>
+	<AgendaTraits>
+	</AgendaTraits>
+	<HistoricalAgendas>
+
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+	</ExclusiveAgendas>
+	<FavoredReligions>
+	</FavoredReligions>
+	<AiListTypes>
+		<Row ListType="CourtResolutions"/>
+		<Row ListType="CourtDiscussions"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="CourtResolutions" AgendaType="TRAIT_AGENDA_COURT_INTRIGUE" System="Resolutions"/>
+		<Row ListType="CourtDiscussions" AgendaType="TRAIT_AGENDA_COURT_INTRIGUE" System="Discussions"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="CourtResolutions" Item="WC_RES_MERCENARY_COMPANIES" Favored="true"/>
+		<Row ListType="CourtResolutions" Item="WC_RES_BORDER_CONTROL" Favored="true"/>
+		<Row ListType="CourtDiscussions" Item="WC_EMERGENCY_MILITARY" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Update>
+			<Where Description="LOC_TRAIT_LEADER_YONGLE_DESCRIPTION"/>
+			<Set Description="LOC_TRAIT_LEADER_YONGLE_XP_DESCRIPTION"/>
+		</Update>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_YONGLE" ModifierId="YONGLE_SCIENCE_POPULATION"/>
+		<Row TraitType="TRAIT_LEADER_YONGLE" ModifierId="YONGLE_CULTURE_POPULATION"/>
+		<Row TraitType="TRAIT_LEADER_YONGLE" ModifierId="YONGLE_GOLD_POPULATION"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>YONGLE_SCIENCE_POPULATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION</ModifierType>
+			<SubjectRequirementSetId>STADIUM_10_POPULATION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_CULTURE_POPULATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION</ModifierType>
+			<SubjectRequirementSetId>STADIUM_10_POPULATION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_GOLD_POPULATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION</ModifierType>
+			<SubjectRequirementSetId>STADIUM_10_POPULATION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>YONGLE_SCIENCE_POPULATION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_SCIENCE_POPULATION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_SCIENCE</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_CULTURE_POPULATION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_CULTURE_POPULATION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_GOLD_POPULATION</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>YONGLE_GOLD_POPULATION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+	</ModifierStrings>
+	<RequirementSets>
+	</RequirementSets>
+	<Requirements>
+	</Requirements>
+	<RequirementArguments>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+			</RequirementSetRequirements>
+	<UnitAbilities>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+	</UnitAbilityModifiers>
+</GameInfo>
