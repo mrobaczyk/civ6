@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_THEODORA" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_THEODORA" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_NEW_ROME" Kind="KIND_TRAIT"/>
+	</Types>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" CapitalName="LOC_CITY_NAME_CONSTANTINOPLE"/>
+	</CivilizationLeaders>
+	<CivilizationAudioTags>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" MusicOverride="true" />
+	</CivilizationAudioTags>
+	<Leaders>
+		<Row LeaderType="LEADER_THEODORA" Name="LOC_LEADER_THEODORA_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>		
+		<Row LeaderType="LEADER_THEODORA" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_THEODORA_QUOTE" QuoteAudio="THEODORA_MA_MISC_PEP_TALK_B_SELECT"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_THEODORA" TraitType="TRAIT_LEADER_THEODORA"/>
+		<Row LeaderType="LEADER_THEODORA" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_THEODORA" ForegroundImage="LEADER_THEODORA_NEUTRAL" BackgroundImage="LEADER_THEODORA_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_THEODORA" DawnOfManLeaderId="LEADER_THEODORA"/>
+	</LoadingInfo>
+	<Agendas>
+		<Row AgendaType="AGENDA_NEW_ROME" Name="LOC_AGENDA_NEW_ROME_NAME" Description="LOC_AGENDA_NEW_ROME_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_NEW_ROME" TraitType="TRAIT_AGENDA_NEW_ROME"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_THEODORA" AgendaType="AGENDA_NEW_ROME"/>
+	</HistoricalAgendas>
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_NEW_ROME" AgendaTwo="AGENDA_CULTURED"/>
+	</ExclusiveAgendas>
+	<AiListTypes>
+		<Row ListType="NewRomeCulturePreference"/>
+		<Row ListType="TheodoraCivics"/>
+		<Row ListType="TheodoraTechs"/>
+		<Row ListType="TheodoraWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="NewRomeCulturePreference" AgendaType="TRAIT_AGENDA_NEW_ROME" System="Yields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="NewRomeCulturePreference" Item="YIELD_CULTURE" Value="20"/>
+		
+		<Row ListType="TheodoraWonders" Item="BUILDING_STONEHENGE" Favored="false"/>
+		<Row ListType="TheodoraWonders" Item="BUILDING_HAGIA_SOPHIA" Favored="true"/>
+		<Row ListType="TheodoraCivics" Item="CIVIC_GAMES_RECREATION" Favored="true"/>
+		<Row ListType="TheodoraCivics" Item="CIVIC_FEUDALISM" Favored="true"/>
+
+		<Row ListType="TheodoraTechs" Item="TECH_ASTROLOGY" Favored="true"/>
+		<Row ListType="TheodoraTechs" Item="TECH_SHIPBUILDING" Favored="true"/>
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_THEODORA" Name="LOC_TRAIT_LEADER_THEODORA_NAME" Description="LOC_TRAIT_LEADER_THEODORA_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_NEW_ROME"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_THEODORA" ModifierId="THEODORA_CULTURE_HOLY_SITE"/>
+		<Row TraitType="TRAIT_LEADER_THEODORA" ModifierId="THEODORA_HOLY_SITE_ADJACENCY_FARM"/>
+		<Row TraitType="TRAIT_LEADER_THEODORA" ModifierId="THEODORA_HIPPODROME_ADJACENCY_FARM"/>
+		<Row TraitType="TRAIT_AGENDA_NEW_ROME" ModifierId="AGENDA_HIGH_CULTURE_NEW_ROME"/>
+		<Row TraitType="TRAIT_AGENDA_NEW_ROME" ModifierId="AGENDA_LOW_CULTURE_NEW_ROME"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>THEODORA_CULTURE_HOLY_SITE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_YIELD_BASED_ON_ADJACENCY_BONUS_BUILDER</ModifierType>
+			<SubjectRequirementSetId>DISTRICT_IS_HOLY_SITE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HOLY_SITE_ADJACENCY_FARM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HIPPODROME_ADJACENCY_FARM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_IMPROVEMENT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_CULTURE_NEW_ROME</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_HIGH_CULTURE</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_CULTURE_NEW_ROME</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_LOW_CULTURE</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>THEODORA_CULTURE_HOLY_SITE</ModifierId>
+			<Name>YieldTypeToMirror</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_CULTURE_HOLY_SITE</ModifierId>
+			<Name>YieldTypeToGrant</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HOLY_SITE_ADJACENCY_FARM</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HOLY_SITE</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HOLY_SITE_ADJACENCY_FARM</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HOLY_SITE_ADJACENCY_FARM</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_FARM</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HOLY_SITE_ADJACENCY_FARM</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HOLY_SITE_ADJACENCY_FARM</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_FARM_1_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HIPPODROME_ADJACENCY_FARM</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HIPPODROME</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HIPPODROME_ADJACENCY_FARM</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HIPPODROME_ADJACENCY_FARM</ModifierId>
+			<Name>ImprovementType</Name>
+			<Value>IMPROVEMENT_FARM</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HIPPODROME_ADJACENCY_FARM</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>THEODORA_HIPPODROME_ADJACENCY_FARM</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_FARM_1_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_CULTURE_NEW_ROME</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_CULTURE_NEW_ROME</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_ANY_REASON_AGENDA_THEODORA</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_CULTURE_NEW_ROME</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_HIGH_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_CULTURE_NEW_ROME</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-6</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_CULTURE_NEW_ROME</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_THEODORA</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_CULTURE_NEW_ROME</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_DESCRIPTION_LOW_CULTURE</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_HIGH_CULTURE_NEW_ROME" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_LOW_CULTURE_NEW_ROME" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_THEODORA" ReligionType="RELIGION_ORTHODOXY"/>
+	</FavoredReligions>
+</GameInfo>

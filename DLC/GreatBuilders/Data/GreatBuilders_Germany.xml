@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+		<!-- Leaders -->
+		<Row Type="LEADER_LUDWIG" Kind="KIND_LEADER"/>
+		<!-- Traits -->
+		<Row Type="TRAIT_LEADER_LUDWIG" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_AGENDA_ETERNAL" Kind="KIND_TRAIT"/>
+	</Types>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_GERMANY" LeaderType="LEADER_LUDWIG" CapitalName="LOC_CITY_NAME_MUNICH_CAPITAL"/>
+	</CivilizationLeaders>
+	<CivilizationAudioTags>
+		<Row CivilizationType="CIVILIZATION_GERMANY" MusicOverride="true" />
+	</CivilizationAudioTags>
+	<CityNames>
+		<Row CivilizationType="CIVILIZATION_GERMANY" CityName="LOC_CITY_NAME_MUNICH_CAPITAL"/>
+	</CityNames>
+	<Leaders>
+		<Row LeaderType="LEADER_LUDWIG" Name="LOC_LEADER_LUDWIG_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+	<LeaderQuotes>		
+		<Row LeaderType="LEADER_LUDWIG" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_LUDWIG_QUOTE" QuoteAudio="LUDWIG_MA_PEPTALK_A_SELECT"/>
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_LUDWIG" TraitType="TRAIT_LEADER_LUDWIG"/>
+		<Row LeaderType="LEADER_LUDWIG" TraitType="TRAIT_LEADER_NONRELIGIOUS_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_LUDWIG" TraitType="TRAIT_LEADER_LOW_RELIGIOUS_PREFERENCE"/>
+		<Row LeaderType="LEADER_LUDWIG" TraitType="TRAIT_LEADER_LOW_CITY_STATE_PREFERENCE_WAR"/>
+		<Row LeaderType="LEADER_LUDWIG" TraitType="TRAIT_LEADER_CULTURAL_MAJOR_CIV"/>
+	</LeaderTraits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_LUDWIG" ForegroundImage="LEADER_LUDWIG_NEUTRAL" BackgroundImage="LEADER_LUDWIGN_BACKGROUND" LeaderText="LOC_LOADING_INFO_LEADER_LUDWIG" DawnOfManLeaderId="LEADER_LUDWIG"/>
+	</LoadingInfo>
+	<AgendaPreferredLeaders>
+		<Row AgendaType="AGENDA_WONDER_ADVOCATE" LeaderType="LEADER_LUDWIG" PercentageChance="33"/>
+	</AgendaPreferredLeaders>
+	<Agendas>
+		<Row AgendaType="AGENDA_ETERNAL" Name="LOC_AGENDA_ETERNAL_NAME" Description="LOC_AGENDA_ETERNAL_DESCRIPTION"/>
+	</Agendas>
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_ETERNAL" TraitType="TRAIT_AGENDA_ETERNAL"/>
+	</AgendaTraits>
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_LUDWIG" AgendaType="AGENDA_ETERNAL"/>
+	</HistoricalAgendas>
+	<AiListTypes>
+		<Row ListType="LudwigCivics"/>
+		<Row ListType="LudwigTechs"/>
+		<Row ListType="LudwigWonders"/>
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="LudwigWonders" LeaderType="TRAIT_LEADER_LUDWIG" System="Buildings"/>
+		<Row ListType="LudwigCivics" LeaderType="TRAIT_LEADER_LUDWIG" System="Civics"/>
+		<Row ListType="LudwigTechs" LeaderType="TRAIT_LEADER_LUDWIG" System="Technologies"/>
+	</AiLists>
+	<AiFavoredItems>
+		<Row ListType="LudwigWonders" Item="BUILDING_RUHR_VALLEY" Favored="true"/>
+		<Row ListType="LudwigCivics" Item="CIVIC_STATE_WORKFORCE" Favored="true"/>
+		<Row ListType="LudwigCivics" Item="CIVIC_DIVINE_RIGHT" Favored="true"/>
+		<Row ListType="LudwigCivics" Item="CIVIC_CIVIL_ENGINEERING" Favored="true"/>
+		<Row ListType="LudwigCivics" Item="CIVIC_DRAMA_POETRY" Favored="true"/>
+		<Row ListType="LudwigTechs" Item="TECH_APPRENTICESHIP" Favored="true"/>
+		<Row ListType="LudwigTechs" Item="TECH_ELECTRICITY" Favored="true"/>
+		<Row ListType="LudwigTechs" Item="TECH_CASTLES" Favored="true"/>	
+	</AiFavoredItems>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_LUDWIG" Name="LOC_TRAIT_LEADER_LUDWIG_NAME" Description="LOC_TRAIT_LEADER_LUDWIG_DESCRIPTION"/>
+		<Row TraitType="TRAIT_AGENDA_ETERNAL"/>
+	</Traits>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_LUDWIG" ModifierId="LUDWIG_WONDER_ADJACENCY"/>
+		<Row TraitType="TRAIT_LEADER_LUDWIG" ModifierId="LUDWIG_CULTURE_TOURISM_DISTRICTS"/>
+		<Row TraitType="TRAIT_AGENDA_ETERNAL" ModifierId="AGENDA_HIGH_DISTRICTS_LUDWIG"/>
+		<Row TraitType="TRAIT_AGENDA_ETERNAL" ModifierId="AGENDA_LOW_DISTRICTS_LUDWIG"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>LUDWIG_WONDER_ADJACENCY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>LUDWIG_CULTURE_TOURISM_DISTRICTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_TOURISM_ADJACENCY_YIELD_MOFIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_CASTLES_TECHNOLOGY</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_DISTRICTS_LUDWIG</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_LEADS_DISTRICTS_LUDWIG</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_DISTRICTS_LUDWIG</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_LAGS_DISTRICTS_LUDWIG</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>LUDWIG_WONDER_ADJACENCY</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_WONDER</Value>
+		</Row>
+		<Row>
+			<ModifierId>LUDWIG_WONDER_ADJACENCY</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>LUDWIG_WONDER_ADJACENCY</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>LUDWIG_WONDER_ADJACENCY</ModifierId>
+			<Name>Description</Name>
+			<Value>LOC_DISTRICT_DISTRICT_1_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>LUDWIG_CULTURE_TOURISM_DISTRICTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>LUDWIG_CULTURE_TOURISM_DISTRICTS</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_DISTRICTS_LUDWIG</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>-8</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_DISTRICTS_LUDWIG</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_WARNING_LEADER_LUDWIG_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_HIGH_DISTRICTS_LUDWIG</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_ETERNAL_LEADING</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_DISTRICTS_LUDWIG</ModifierId>
+			<Name>InitialValue</Name>
+			<Value>8</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_DISTRICTS_LUDWIG</ModifierId>
+			<Name>StatementKey</Name>
+			<Value>LOC_DIPLO_KUDO_LEADER_LUDWIG_REASON_ANY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AGENDA_LOW_DISTRICTS_LUDWIG</ModifierId>
+			<Name>SimpleModifierDescription</Name>
+			<Value>LOC_DIPLO_MODIFIER_ETERNAL_LAGGING</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>PLAYER_LEADS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_LAGS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_LEADS_DISTRICTS_LUDWIG</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_DISTRICT_THRESHOLD</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LAGS_DISTRICTS_LUDWIG</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_DISTRICT_THRESHOLD</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_LEADS_DISTRICTS_LUDWIG</RequirementId>
+			<Name>DistrictPercentThreshold</Name>
+			<Value>80</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LEADS_DISTRICTS_LUDWIG</RequirementId>
+			<Name>MinDistrictsNeeded</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LEADS_DISTRICTS_LUDWIG</RequirementId>
+			<Name>AboveThreshold</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LAGS_DISTRICTS_LUDWIG</RequirementId>
+			<Name>DistrictPercentThreshold</Name>
+			<Value>60</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LAGS_DISTRICTS_LUDWIG</RequirementId>
+			<Name>MinDistrictsNeeded</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_LAGS_DISTRICTS_LUDWIG</RequirementId>
+			<Name>AboveThreshold</Name>
+			<Value>false</Value>
+		</Row>
+	</RequirementArguments>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_LEADS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_LEADS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_LEADS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementId>REQUIRES_LEADS_DISTRICTS_LUDWIG</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_LAGS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementId>REQUIRES_MAJOR_CIV_OPPONENT</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_LAGS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementId>REQUIRES_MET_30_TURNS_AGO</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_LAGS_DISTRICTS_LUDWIG</RequirementSetId>
+			<RequirementId>REQUIRES_LAGS_DISTRICTS_LUDWIG</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<ModifierStrings>
+		<Row ModifierId="AGENDA_HIGH_DISTRICTS_LUDWIG" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+		<Row ModifierId="AGENDA_LOW_DISTRICTS_LUDWIG" Context="Sample" Text="LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL"/>
+	</ModifierStrings>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_LUDWIG" ReligionType="RELIGION_CATHOLICISM"/>
+	</FavoredReligions>
+</GameInfo>

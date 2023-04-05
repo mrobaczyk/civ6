@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+	<Players>
+		<!-- Base Support -->
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" CivilizationName="LOC_CIVILIZATION_BYZANTIUM_NAME" CivilizationIcon="ICON_CIVILIZATION_BYZANTIUM" LeaderName="LOC_LEADER_THEODORA_NAME" LeaderIcon="ICON_LEADER_THEODORA" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_BYZANTIUM_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_BYZANTIUM_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_BYZANTIUM" LeaderAbilityName="LOC_TRAIT_LEADER_THEODORA_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_THEODORA_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_THEODORA" Portrait="LEADER_THEODORA_NEUTRAL" PortraitBackground="LEADER_THEODORA_BACKGROUND"/>
+		<!-- Expansion 1 Support -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" CivilizationName="LOC_CIVILIZATION_BYZANTIUM_NAME" CivilizationIcon="ICON_CIVILIZATION_BYZANTIUM" LeaderName="LOC_LEADER_THEODORA_NAME" LeaderIcon="ICON_LEADER_THEODORA" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_BYZANTIUM_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_BYZANTIUM_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_BYZANTIUM" LeaderAbilityName="LOC_TRAIT_LEADER_THEODORA_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_THEODORA_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_THEODORA" Portrait="LEADER_THEODORA_NEUTRAL" PortraitBackground="LEADER_THEODORA_BACKGROUND"/>
+		<!-- Expansion 2 Support -->
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" CivilizationName="LOC_CIVILIZATION_BYZANTIUM_NAME" CivilizationIcon="ICON_CIVILIZATION_BYZANTIUM" LeaderName="LOC_LEADER_THEODORA_NAME" LeaderIcon="ICON_LEADER_THEODORA" CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_BYZANTIUM_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_BYZANTIUM_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_BYZANTIUM" LeaderAbilityName="LOC_TRAIT_LEADER_THEODORA_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_THEODORA_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_THEODORA" Portrait="LEADER_THEODORA_NEUTRAL" PortraitBackground="LEADER_THEODORA_BACKGROUND"/>
+	</Players>
+	<PlayerItems>
+		<!-- Base Support -->
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="UNIT_BYZANTINE_DROMON" Icon="ICON_UNIT_BYZANTINE_DROMON" Name="LOC_UNIT_BYZANTINE_DROMON_NAME" Description="LOC_UNIT_BYZANTINE_DROMON_DESCRIPTION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="DISTRICT_HIPPODROME" Icon="ICON_DISTRICT_HIPPODROME" Name="LOC_DISTRICT_HIPPODROME_NAME" Description="LOC_DISTRICT_HIPPODROME_DESCRIPTION" SortIndex="30"/>
+		<!-- Expansion 1 Support -->
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="UNIT_BYZANTINE_DROMON" Icon="ICON_UNIT_BYZANTINE_DROMON" Name="LOC_UNIT_BYZANTINE_DROMON_NAME" Description="LOC_UNIT_BYZANTINE_DROMON_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="DISTRICT_HIPPODROME" Icon="ICON_DISTRICT_HIPPODROME" Name="LOC_DISTRICT_HIPPODROME_NAME" Description="LOC_DISTRICT_HIPPODROME_EXPANSION1_DESCRIPTION" SortIndex="30"/>
+		<!-- Expansion 2 Support -->
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="UNIT_BYZANTINE_DROMON" Icon="ICON_UNIT_BYZANTINE_DROMON" Name="LOC_UNIT_BYZANTINE_DROMON_NAME" Description="LOC_UNIT_BYZANTINE_DROMON_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="DISTRICT_HIPPODROME" Icon="ICON_DISTRICT_HIPPODROME" Name="LOC_DISTRICT_HIPPODROME_NAME" Description="LOC_DISTRICT_HIPPODROME_EXPANSION2_DESCRIPTION" SortIndex="30"/>
+	</PlayerItems>
+	<MapLeaders>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" LeaderType="LEADER_THEODORA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" LeaderType="LEADER_THEODORA"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard.Civ6Map" LeaderType="LEADER_THEODORA"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard_XP2.Civ6Map" LeaderType="LEADER_THEODORA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" LeaderType="LEADER_THEODORA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" LeaderType="LEADER_THEODORA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLMediterraneanLarge.Civ6Map" LeaderType="LEADER_THEODORA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLMediterraneanLarge_XP2.Civ6Map" LeaderType="LEADER_THEODORA"/>
+	</MapLeaders>
+	<MapStartPositions>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLEarthStandard.Civ6Map" Plot="3573" Type="LEADER" Value="LEADER_THEODORA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLEarthStandard_XP2.Civ6Map" Plot="3573" Type="LEADER" Value="LEADER_THEODORA"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard.Civ6Map" Plot="725" Type="LEADER" Value="LEADER_THEODORA"/>
+		<Row Map="{1B28771A-C749-434B-9053-D1380C553DE9}Maps/TSLEuropeStandard_XP2.Civ6Map" Plot="725" Type="LEADER" Value="LEADER_THEODORA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLWorldMapHuge.Civ6Map" Plot="6052" Type="LEADER" Value="LEADER_THEODORA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLWorldMapHuge_XP2.Civ6Map" Plot="6052" Type="LEADER" Value="LEADER_THEODORA"/>
+		<Row Map="../../Assets/Maps/EarthMaps/TSLMediterraneanLarge.Civ6Map" Plot="3139" Type="LEADER" Value="LEADER_THEODORA"/>
+		<Row Map="{4873eb62-8ccc-4574-b784-dda455e74e68}Maps/EarthMaps/TSLMediterraneanLarge_XP2.Civ6Map" Plot="3139" Type="LEADER" Value="LEADER_THEODORA"/>
+	</MapStartPositions>
+</GameInfo>
