@@ -5,6 +5,11 @@ include("LobbyTypes"); --MPLobbyMode
 
 -- ===========================================================================
 function GetInternetGameOfflineTT()
+
+	if (Network.IsAgeRestricted()) then
+		return Locale.Lookup("LOC_MULTIPLAYER_INTERNET_GAME_OFFLINE_AGE_TT");
+	end
+
 	if( Network.GetNetworkPlatform() == NetworkPlatform.NETWORK_PLATFORM_EOS ) then
 		return Locale.Lookup("LOC_EPIC_MULTIPLAYER_INTERNET_GAME_OFFLINE_TT");
 	end

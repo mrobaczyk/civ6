@@ -205,6 +205,10 @@ end
 
 -- ===========================================================================
 function GetUnlinkedTooltip()
+	if( Network.IsAgeRestricted() ) then	
+		return Locale.Lookup("TXT_KEY_MY2K_MODE_AGE_RESTRICTED_TOOLTIP");
+	end
+
 	if( Network.GetNetworkPlatform() == NetworkPlatform.NETWORK_PLATFORM_EOS ) then
 		return Locale.Lookup("TXT_KEY_EPIC_MY2K_MODE_UNLINKED_TOOLTIP");
 	end
@@ -247,7 +251,7 @@ function LoggedIn()
 		else
 			ChangeMy2KTexture( control, labelControl, false );
 			control:SetDisabled(true);
-			labelControl:LocalizeAndSetText("TXT_KEY_MY2K_MODE_ANONYMOUS");			
+			labelControl:LocalizeAndSetText("TXT_KEY_MY2K_MODE_ANONYMOUS");
 		end
 	end
 end

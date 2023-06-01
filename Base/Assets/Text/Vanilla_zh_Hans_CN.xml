@@ -27769,8 +27769,7 @@
       <Text>领袖季票</Text>
     </Replace>
     <Replace Tag="LOC_LEADERPASS_CREDITS" Language="zh_Hans_CN">
-      <Text>
-[3]CREDITS
+      <Text>[3]CREDITS
 
 [1]Firaxis Games 
 
@@ -27998,7 +27997,7 @@
 [3]Ramses II
 [4]Hani Ahmed Abdelhay
 
-[3]Sundiata
+[3]Sundiata Keita
 [4]Amadou Sissoko
 
 [3]Sejong
@@ -28012,7 +28011,7 @@
 
 [i]TechTree_Meter_Done
 
-[2]VIRTUOUS ChengDu Studio
+[2]VIRTUOS ChengDu Studio
 [3]CEO
 [4]Gilles Langourieux
 
@@ -28031,11 +28030,13 @@
 [3]Executive Producer
 [4]Zhang Chengwei
 
-[3]Line Producer
+[3]Line Producers
 [4]Deng Xiaoshuang
+[4]Tang Yifan
 
-[3]Associated Art Producer
+[3]Associated Art Producers
 [4]Zhang Zhoufan
+[4]Liu Yao
 
 [3]Concept Team
 
@@ -28077,16 +28078,26 @@
 [4]Xiang Kewei
 [4]Yuan Meng
 
-[3]Animation Team
+[3]Rigging Team
 
-[3]Animation Art Director
-[4]Chen Weichih
+[3]Lead Rigger
+[4]Liao Lin
+
+[3]Rigging Quality Control
+[4]Yang Jingdan
+
+[3]Rigging Technical Artist
+[4]Dai Jingjing
+
+[3]Riggers
+[4]Li Xingya
+[4]Yao Jianyu
+[4]Chen Jun
+
+[3]Animation Team
 
 [3]Animation Team Leader
 [4]Wu Zherui
-
-[3]Rigging Team Leader
-[4]Liao Lin
 
 [3]Animation Quality Control
 [4]Yang Jingdan
@@ -28096,6 +28107,8 @@
 
 [3]Animation Artists
 [4]Cui Hao
+[4]Hou Zhijia
+[4]Liu Bingcheng
 [4]Li Wanxia
 [4]Zhang Xiaoyi
 [4]Yan Zhangci
@@ -28103,11 +28116,12 @@
 [4]Wang Tiantian
 [4]Pan Yujie
 [4]Lin Yan
-[4]Li Xingya
-[4]Chen Jun
+[4]Wang Shihan
+[4]Zhang Kai
 [4]Sui Qiang
+[4]Li Xinda
 
-[3]Sound
+[3]Sound Team
 
 [3]Team Leader
 [4]Fang Congzhe
@@ -28115,6 +28129,7 @@
 [3]Sound Artists
 [4]He Fang
 [4]Sun Qing
+[4]Hu Yipeng
 
 [i]TechTree_Meter_Done
 
@@ -28156,12 +28171,12 @@
  
 [3]External Development
 
-[3]Outsourcing Producers
+[3]Outsourcing Producer
 [4]Monty Goulet
 
 [i]TechTree_Meter_Done
 
-[23]2K Marketing &amp; Communications
+[2]2K Marketing &amp; Communications
 
 [3]Senior Director, Global Marketing Strategy
 [4]Pat Alvarado
@@ -28252,7 +28267,7 @@
 
 [3]Release Management Associate Leads
 [4]Ana Garza
-[4]Eduardo Aparicio Sarrión
+[4]Eduardo Aparicio
 [4]Jennifer Lunders
 [4]Samantha Hoover
 
@@ -28285,7 +28300,7 @@
 [4]Zhou Hao Tian
 
 [3]Release Management QA Tester
-[4]Andrés Castro Conde-Pumpido
+[4]Andres Castro Conde-Pumpido
 
 [3]Madrid Localization QA
 
@@ -33056,6 +33071,9 @@
     <Replace Tag="LOC_MULTIPLAYER_INTERNET_GAME_OFFLINE_TT" Language="zh_Hans_CN">
       <Text>在Steam的离线模式下无法进行联机游戏。</Text>
     </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_INTERNET_GAME_OFFLINE_AGE_TT" Language="zh_Hans_CN">
+      <Text>与此绑定2K帐号关联的年龄未达到法定年龄要求，因此无法访问游戏的某些内容。请联系客户支持以获取帮助。</Text>
+    </Replace>
     <Replace Tag="LOC_MULTIPLAYER_LAN_GAME" Language="zh_Hans_CN">
       <Text>局域网</Text>
     </Replace>
@@ -34798,6 +34816,9 @@
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME_NO_LOGIN_TT" Language="zh_Hans_CN">
       <Text>未登入《文明》服务器。</Text>
+    </Replace>
+    <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME_NO_LOGIN_AGE_TT" Language="zh_Hans_CN">
+      <Text>与此绑定2K帐号关联的年龄未达到法定年龄要求，因此无法访问游戏的某些内容。请联系客户支持以获取帮助。</Text>
     </Replace>
     <Replace Tag="LOC_MULTIPLAYER_CLOUD_GAME_HAVE_TURN_TT" Language="zh_Hans_CN">
       <Text>现在是您在云端游戏中的回合。</Text>
@@ -41383,8 +41404,17 @@
     <Replace Tag="TXT_KEY_MY2K_ADDITION_UNLINK_ACCOUNT" Language="zh_Hans_CN">
       <Text>确定要断开2K帐号的关联？您可以在www.2k.com上管理账号或在线阅读法律和隐私条款。</Text>
     </Replace>
+    <Replace Tag="TXT_KEY_MY2K_ADDITION_LOGIN_PENDING" Language="zh_Hans_CN">
+      <Text>帐号登录待定</Text>
+    </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_ANONYMOUS" Language="zh_Hans_CN">
       <Text>离线</Text>
+    </Replace>
+    <Replace Tag="TXT_KEY_MY2K_MODE_AGE_RESTRICTED" Language="zh_Hans_CN">
+      <Text>年龄受限</Text>
+    </Replace>
+    <Replace Tag="TXT_KEY_MY2K_MODE_AGE_RESTRICTED_TOOLTIP" Language="zh_Hans_CN">
+      <Text>与此绑定2K帐号关联的年龄未达到法定年龄要求，因此无法访问游戏的某些内容。请联系客户支持以获取帮助。</Text>
     </Replace>
     <Replace Tag="TXT_KEY_MY2K_MODE_LINKED_ONLINE" Language="zh_Hans_CN">
       <Text>已关联——联机</Text>

@@ -49,6 +49,23 @@ function Realize()
 	end
 
 	Controls.Next:SetText(m_PageIndex == NUM_PAGES and PLAY_BUTTON_TEXT or NEXT_BUTTON_TEXT);
+	if (m_PageIndex == NUM_PAGES) then
+		if (Network.IsInternetLobbyServiceAvailable()) then
+			Controls.Next:SetDisabled(false);
+			Controls.Next:SetToolTipString("");
+		else
+			Controls.Next:SetDisabled(true);
+			if (Network.IsAgeRestricted()) then
+				Controls.Next:SetToolTipString(Locale.Lookup("LOC_MULTIPLAYER_INTERNET_GAME_OFFLINE_AGE_TT"));
+			else
+				Controls.Next:SetToolTipString(Locale.Lookup("LOC_MULTIPLAYER_INTERNET_GAME_OFFLINE_TT"));
+			end
+		end
+	else
+		Controls.Next:SetDisabled(false);
+		Controls.Next:SetToolTipString("");
+	end
+
 	Controls.Previous:SetHide(m_PageIndex == 1);
 	Controls.ButtonStack:CalculateSize();
 end
@@ -87,7 +104,9 @@ end
 -- ===========================================================================
 function OnNext()
 	if m_PageIndex >= NUM_PAGES then
-		LuaEvents.CivRoyaleIntro_StartMatchMaking();
+		if (Network.IsInternetLobbyServiceAvailable()) then
+			LuaEvents.CivRoyaleIntro_StartMatchMaking();
+		end
 		
 		-- Main Menu is going to start the match making process and then display the joining room screen.
 		-- Next step is in OnJoiningRoom_Showing

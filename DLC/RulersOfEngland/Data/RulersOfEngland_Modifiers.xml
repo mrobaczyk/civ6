@@ -6,6 +6,10 @@
 	</DynamicModifiers>
 	<RequirementSets>
 		<Row>
+			<RequirementSetId>PLAYER_HAS_GREAT_ADMIRAL_CLASS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_HAS_GREAT_ADMIRAL_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
 		</Row>
@@ -23,6 +27,10 @@
 		</Row>
 	</RequirementSets>
 	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_GREAT_ADMIRAL_CLASS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>PLAYER_HAS_GREAT_ADMIRAL</RequirementId>
+		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_HAS_GREAT_ADMIRAL_REQUIREMENTS</RequirementSetId>
 			<RequirementId>PLAYER_HAS_ARTEMISIA</RequirementId>
@@ -74,6 +82,10 @@
 	</RequirementSetRequirements>
 	<Requirements>
 		<Row>
+			<RequirementId>PLAYER_HAS_GREAT_ADMIRAL</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_GREAT_PERSON_CLASS</RequirementType>
+		</Row>
+		<Row>
 			<RequirementId>PLAYER_HAS_ARTEMISIA</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_HAS_GREAT_PERSON</RequirementType>
 		</Row>
@@ -120,8 +132,14 @@
 		<Row>
 			<RequirementId>REQUIRES_CITY_HAS_POWER_PLANT_ENGLAND</RequirementId>
 			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
-		</Row>	</Requirements>
+		</Row>
+		</Requirements>
 	<RequirementArguments>
+		<Row>
+			<RequirementId>PLAYER_HAS_GREAT_ADMIRAL</RequirementId>
+			<Name>GreatPersonClass</Name>
+			<Value>GREAT_PERSON_CLASS_ADMIRAL</Value>
+		</Row>
 		<Row>
 			<RequirementId>PLAYER_HAS_ARTEMISIA</RequirementId>
 			<Name>GreatPersonIndividual</Name>
