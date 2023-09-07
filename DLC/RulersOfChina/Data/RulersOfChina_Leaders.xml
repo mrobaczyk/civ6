@@ -142,8 +142,10 @@
 		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_OFFENSIVE_SPY_BETTER"/>
 		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_OFFENSIVE_SPY_SCIENCE"/>
 		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_OFFENSIVE_SPY_CULTURE"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_OFFENSIVE_SPY_FAITH"/>
 		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_FREE_SPY"/>
 		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_FREE_SPY_CAPACITY"/>
+		<Row TraitType="TRAIT_LEADER_WU_ZETIAN" ModifierId="WU_ZETIAN_PURCHASE_SPY"/>
 		<Row TraitType="TRAIT_AGENDA_COURT_INTRIGUE" ModifierId="AGENDA_COURT_INTRIGUE"/>
 	</TraitModifiers>
 	<Modifiers>
@@ -214,6 +216,14 @@
 		<Row>
 			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_CULTURE</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_TARGET_CITY_SPY_YIELD_PERCENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TARGET_CITY_SPY_YIELD_PERCENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_PURCHASE_SPY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ENABLE_UNIT_FAITH_PURCHASE</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_COURT_INTRIGUE</ModifierId>
@@ -351,7 +361,7 @@
 		<Row>
 			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_SCIENCE</ModifierId>
 			<Name>Percent</Name>
-			<Value>50</Value>
+			<Value>100</Value>
 		</Row>
 		<Row>
 			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_CULTURE</ModifierId>
@@ -361,7 +371,22 @@
 		<Row>
 			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_CULTURE</ModifierId>
 			<Name>Percent</Name>
-			<Value>50</Value>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_OFFENSIVE_SPY_FAITH</ModifierId>
+			<Name>Percent</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>WU_ZETIAN_PURCHASE_SPY</ModifierId>
+			<Name>Tag</Name>
+			<Value>CLASS_SPY</Value>
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_COURT_INTRIGUE</ModifierId>

@@ -165,6 +165,12 @@
 		<Row TraitType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION" ModifierId="AGENDA_HIGH_INDUSTRY_ENGLAND"/>
 		<Row TraitType="TRAIT_AGENDA_INDUSTRIAL_REVOLUTION" ModifierId="AGENDA_LOW_INDUSTRY_ENGLAND"/>
 	</TraitModifiers>
+	<BuildingModifiers>
+		<Row>
+			<BuildingType>BUILDING_STAVE_CHURCH</BuildingType>
+			<ModifierId>STAVE_CHURCH_INFLUENCEPOINTS</ModifierId>
+		</Row>
+	</BuildingModifiers>
 	<Modifiers>
 		<Row>
 			<ModifierId>ELIZABETH_TRADE_ROUTES_MODIFIER</ModifierId>
@@ -198,6 +204,11 @@
 		<Row>
 			<ModifierId>HARALD_MAINTENANCE_DISCOUNT</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_UNIT_MAINTENANCE_DISCOUNT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>STAVE_CHURCH_INFLUENCEPOINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_INFLUENCE_POINTS_PER_TURN</ModifierType>
+			<SubjectRequirementSetId>PLAYER_IS_HARALD_ALT</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_SAGA_HIGH_PROTECT_CITY_STATES</ModifierId>
@@ -315,6 +326,11 @@
 			<ModifierId>HARALD_MAINTENANCE_DISCOUNT</ModifierId>
 			<Name>Amount</Name>
 			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>STAVE_CHURCH_INFLUENCEPOINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
 		</Row>
 		<Row>
 			<ModifierId>AGENDA_SAGA_HIGH_PROTECT_CITY_STATES</ModifierId>
@@ -452,7 +468,24 @@
 			<RequirementSetId>PLOT_HAS_STRATEGIC_RESOURCE_ENGLAND</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_HARALD_ALT</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
 	</RequirementSets>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_IS_HARALD_ALT</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_LEADER_TYPE_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_IS_HARALD_ALT</RequirementId>
+			<Name>LeaderType</Name>
+			<Value>LEADER_HARALD_ALT</Value>
+		</Row>
+	</RequirementArguments>
 	<RequirementSetRequirements>
 		<Row>
 			<RequirementSetId>PLOT_HAS_STRATEGIC_RESOURCE_ENGLAND</RequirementSetId>
@@ -461,6 +494,10 @@
 		<Row>
 			<RequirementSetId>PLOT_HAS_STRATEGIC_RESOURCE_ENGLAND</RequirementSetId>
 			<RequirementId>REQUIRES_PLOT_HAS_VISIBLE_RESOURCE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_IS_HARALD_ALT</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_IS_HARALD_ALT</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
 	<UnitAbilities>

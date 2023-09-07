@@ -34,20 +34,43 @@
 		<Row AgendaType="AGENDA_GALLIC_WARS" TraitType="TRAIT_AGENDA_GALLIC_WARS"/>
 	</AgendaTraits>
 	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="TRAIT_CAESAR_NO_XP_LIMIT"/>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="TRAIT_CAESAR_BARB_COMBAT"/>
 		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="TRAIT_CAESAR_GOLD_CAPTURED_CITY"/>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="TRAIT_CAESAR_GOLD_CAPTURED_CITY_METAL_CASTING"/>
 		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL"/>
 		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="BARBARIAN_CAMP_GOLD_CAPTURED_CITY"/>
+		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="BARBARIAN_CAMP_GOLD_CAPTURED_CITY_METAL_CASTING"/>
 		<Row TraitType="TRAIT_LEADER_CAESAR" ModifierId="BARBARIAN_CAMP_GOLD_CAPTURED_CITY_STEEL"/>
 		<Row TraitType="TRAIT_AGENDA_GALLIC_WARS" ModifierId="AGENDA_CLEARS_BARBARIAN_CAMPS_CAESAR"/>
 		<Row TraitType="TRAIT_AGENDA_GALLIC_WARS" ModifierId="AGENDA_IGNORES_BARBARIAN_CAMPS_CAESAR"/>
 	</TraitModifiers>
 	<Modifiers>
 		<Row>
+			<ModifierId>TRAIT_CAESAR_NO_XP_LIMIT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_UNIT_NO_BARB_XP_LIMIT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_BARB_COMBAT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_BARBARIAN_COMBAT</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CAPTURED_CITY_ATTACH_MODIFIER</ModifierType>
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD</ModifierType>
+			<Permanent>true</Permanent>
+			<RunOnce>true</RunOnce>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_METAL_CASTING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CAPTURED_CITY_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_METAL_CASTING_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_METAL_CASTING_MODIFIER</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_GRANT_YIELD</ModifierType>
 			<Permanent>true</Permanent>
 			<RunOnce>true</RunOnce>
@@ -66,6 +89,11 @@
 		<Row>
 			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_GOLD_DISPERSAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY_METAL_CASTING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GOLD_DISPERSAL</ModifierType>
+			<SubjectRequirementSetId>PLAYER_HAS_METAL_CASTING_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 		<Row>
 			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY_STEEL</ModifierId>
@@ -85,6 +113,16 @@
 	</Modifiers>
 	<ModifierArguments>
 		<Row>
+			<ModifierId>TRAIT_CAESAR_NO_XP_LIMIT</ModifierId>
+			<Name>NoLimit</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_BARB_COMBAT</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY</ModifierId>
 			<Name>ModifierId</Name>
 			<Value>TRAIT_CAESAR_GOLD_CAPTURED_CITY_MODIFIER</Value>
@@ -96,6 +134,22 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>300</Value>
+			<Type>ScaleByGameSpeed</Type>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_METAL_CASTING</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>TRAIT_CAESAR_GOLD_CAPTURED_CITY_METAL_CASTING_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_METAL_CASTING_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_METAL_CASTING_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>200</Value>
 			<Type>ScaleByGameSpeed</Type>
@@ -113,16 +167,26 @@
 		<Row>
 			<ModifierId>TRAIT_CAESAR_GOLD_CAPTURED_CITY_STEEL_MODIFIER</ModifierId>
 			<Name>Amount</Name>
-			<Value>300</Value>
+			<Value>400</Value>
 			<Type>ScaleByGameSpeed</Type>
 		</Row>
 		<Row>
 			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY</ModifierId>
 			<Name>Amount</Name>
-			<Value>100</Value>
+			<Value>300</Value>
 		</Row>
 		<Row>
 			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY</ModifierId>
+			<Name>Improvement</Name>
+			<Value>IMPROVEMENT_BARBARIAN_CAMP</Value>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY_METAL_CASTING</ModifierId>
+			<Name>Amount</Name>
+			<Value>200</Value>
+		</Row>
+		<Row>
+			<ModifierId>BARBARIAN_CAMP_GOLD_CAPTURED_CITY_METAL_CASTING</ModifierId>
 			<Name>Improvement</Name>
 			<Value>IMPROVEMENT_BARBARIAN_CAMP</Value>
 		</Row>
@@ -173,11 +237,24 @@
 	</ModifierStrings>
 	<RequirementSets>
 		<Row>
+			<RequirementSetId>PLAYER_HAS_METAL_CASTING_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<Row>
 			<RequirementSetId>PLAYER_HAS_STEEL_REQUIREMENTS</RequirementSetId>
 			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
 		</Row>
 	</RequirementSets>
 	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_METAL_CASTING</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_TECHNOLOGY</RequirementType>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_NO_STEEL</RequirementId>
+			<RequirementType>REQUIREMENT_PLAYER_HAS_TECHNOLOGY</RequirementType>
+			<Inverse>true</Inverse>
+		</Row>
 		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_STEEL</RequirementId>
 			<RequirementType>REQUIREMENT_PLAYER_HAS_TECHNOLOGY</RequirementType>
@@ -185,12 +262,30 @@
 	</Requirements>
 	<RequirementArguments>
 		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_METAL_CASTING</RequirementId>
+			<Name>TechnologyType</Name>
+			<Value>TECH_METAL_CASTING</Value>
+		</Row>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_NO_STEEL</RequirementId>
+			<Name>TechnologyType</Name>
+			<Value>TECH_STEEL</Value>
+		</Row>
+		<Row>
 			<RequirementId>REQUIRES_PLAYER_HAS_STEEL</RequirementId>
 			<Name>TechnologyType</Name>
 			<Value>TECH_STEEL</Value>
 		</Row>
 	</RequirementArguments>
 	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_METAL_CASTING_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_METAL_CASTING</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>PLAYER_HAS_METAL_CASTING_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_NO_STEEL</RequirementId>
+		</Row>
 		<Row>
 			<RequirementSetId>PLAYER_HAS_STEEL_REQUIREMENTS</RequirementSetId>
 			<RequirementId>REQUIRES_PLAYER_HAS_STEEL</RequirementId>
@@ -226,4 +321,14 @@
 		<Row ListType="CaesarTechs" Item="TECH_STEEL" Favored="true"/>
 		<Row ListType="GallicWarsClearingBarbCampPreference" Item="PSEUDOYIELD_CLEAR_BANDIT_CAMPS" Value="5"/>
 	</AiFavoredItems>
+	<Types>
+		<Row Type="MODIFIER_PLAYER_UNITS_ADJUST_UNIT_NO_BARB_XP_LIMIT" Kind="KIND_MODIFIER"/>
+	</Types>
+	<DynamicModifiers>
+		<Row>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_UNIT_NO_BARB_XP_LIMIT</ModifierType>
+			<CollectionType>COLLECTION_PLAYER_UNITS</CollectionType>
+			<EffectType>EFFECT_ADJUST_UNIT_NO_BARB_XP_LIMIT</EffectType>
+		</Row>
+	</DynamicModifiers>
 </GameInfo>

@@ -240,6 +240,10 @@ end
 function LoggedIn()
 	local my2KLinked = FiraxisLive.IsMy2KAccountLinked();
 	local kandoConnected = FiraxisLive.IsKandoConnected();
+	-- If we have already determined we are age restricted, we are offline
+	if (Network.IsAgeRestricted()) then
+		kandoConnected = false;
+	end
 
 	local control = ContextPtr:LookUpControl( "/FrontEnd/MainMenu/My2KLogin" );
 	local labelControl = ContextPtr:LookUpControl( "/FrontEnd/MainMenu/My2KStatus" );
