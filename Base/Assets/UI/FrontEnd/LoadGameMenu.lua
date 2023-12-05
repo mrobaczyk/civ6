@@ -30,7 +30,19 @@ function OnLoadNo()
 end
 
 function OnLoadConfirmModCompatibility()
-	
+
+	-- Disallow loading challenge games in multiplayers	
+	if(serverType ~= ServerType.SERVER_TYPE_NONE and 
+	   not Challenges.IsNullChallengeUuid(m_thisLoadFile.GameChallengeUuid)) then
+		m_kPopupDialog:AddText(Locale.Lookup("LOC_CHALLENGE_MP_SAVEGAME_START_ERROR"));
+		m_kPopupDialog:AddTitle(Locale.ToUpper(Locale.Lookup("LOC_GAME_START_ERROR_TITLE")));
+		m_kPopupDialog:AddButton(Locale.Lookup("LOC_OK_BUTTON"), OnLoadNo);
+		m_kPopupDialog:Open();
+
+		return;
+	end
+
+
 	if(Modding.ShouldShowCompatibilityWarnings() and m_thisLoadFile) then
 
 		local installedMods = Modding.GetInstalledMods();
@@ -135,6 +147,7 @@ function OnActionButton()
 				if (g_GameType == SaveTypes.TILED_MAP) then
 					MapConfiguration.SetImportFilename(m_thisLoadFile.Path);
 					UI.SetWorldRenderView( WorldRenderView.VIEW_2D );
+					Events.SetGameEntryMethod("Load Saved Game");
 					Network.HostGame(ServerType.SERVER_TYPE_NONE);
 				end
 			end

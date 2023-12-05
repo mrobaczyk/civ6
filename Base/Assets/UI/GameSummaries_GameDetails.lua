@@ -880,7 +880,7 @@ function Overview_UpdateMajorCivs()
 					
 					local name, icons = GetVictoryDetails(g_GameData.VictoryType);
 
-					instance.VictoryName:LocalizeAndSetText(name);
+					instance.VictoryName:SetText(HallofFame.GetLocalizedVictoryTypeText(name));
 					SetControlIcon(instance.VictoryIcon, icons);
 				else
 					instance.VictoryIcon:SetIcon("ICON_DEFEAT_GENERIC");

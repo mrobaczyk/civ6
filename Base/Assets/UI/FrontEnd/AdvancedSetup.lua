@@ -1444,6 +1444,7 @@ function OnStartButton()
 		else
 			UI.SetWorldRenderView( WorldRenderView.VIEW_2D );
 			UI.PlaySound("Set_View_2D");
+			Events.SetGameEntryMethod("Create A Game - WorldBuilder");
 			Network.HostGame(ServerType.SERVER_TYPE_NONE);
 		end
     else
@@ -1475,6 +1476,7 @@ end
 
 -- ===========================================================================
 function HostGame()
+	Events.SetGameEntryMethod("Create a Game");
 	-- Start a normal game
 	UI.PlaySound("Set_View_3D");
 	Network.HostGame(ServerType.SERVER_TYPE_NONE);

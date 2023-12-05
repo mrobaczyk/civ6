@@ -503,7 +503,20 @@ function SetSelected( index )
 			end
 
 			local mod_errors = Modding.CheckRequirements(mods, g_GameType);
-			local success = (mod_errors == nil or mod_errors.Success);
+			
+			-- Determine if game is associated with a challenge, if so we can overlook relevant 
+			-- unowned mods as ownership will be granted 
+			if(not Challenges.IsNullChallengeUuid(kSelectedFile.GameChallengeUuid)) then
+				for i,v in ipairs(mods) do
+					if(mod_errors and mod_errors[v.Id]) then
+						if(mod_errors[v.Id] == "NotAllowed") then 
+							mod_errors[v.Id] = nil;
+						end
+					end
+				end
+			end
+			
+			local success = (mod_errors == nil or #mod_errors ==0 or mod_errors.Success);
 
 			-- Populate details of the save, include list of mod errors so the UI can reflect.
 			PopulateInspectorData(kSelectedFile, displayName, mod_errors);

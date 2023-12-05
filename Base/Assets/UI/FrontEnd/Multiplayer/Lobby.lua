@@ -228,7 +228,7 @@ function CheckServerVersion(serverID)
 		return true;
 	end
 
-	local localGameVersion :string = UI.GetAppVersion();
+	local localGameVersion :string = UI.GetNetworkVersion();		-- Use the specific Network Version string, not the App Verison
 	local serverListing = GetServerListing(serverID);
 	if(serverListing ~= nil 
 		and (serverListing.GameVersion == nil or serverListing.GameVersion ~= localGameVersion)) then
@@ -870,7 +870,7 @@ function SortAndDisplayListings(resetSelection:boolean)
 		local textColor = ColorSet_Default;
 		local rowTooltip = "";
 		local gameName = listing.ServerName;
-		local localGameVersion :string = UI.GetAppVersion();
+		local localGameVersion :string = UI.GetNetworkVersion();		-- Use the specific Network Version string, not the App Verison
 		g_InstanceList[serverID] = controlTable;
 
 		-- Row color and tooltip is determined by game state.

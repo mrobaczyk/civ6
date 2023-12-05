@@ -269,11 +269,20 @@ function OnLoadScreenContentReady()
 		if (startEra ~= nil) then
 			eraInfoText = startEra.Description;
 		end
-		
+
+		local challengeName;
+		local challengeInfoText;
+
+		local isChallengeActive = Challenges.IsChallengeActive();
+		if isChallengeActive then
+			challengeName = Challenges.GetLocalizedChallengeNameText();
+			challengeInfoText = Challenges.GetLocalizedChallengeLoadingScreenDescriptionText();
+		end
+
 		local kLeader	:table = GameInfo.Leaders[leaderType];
+		local leaderName;
 		if kLeader ~= nil then
-			local leaderName:string = Locale.ToUpper(Locale.Lookup( kLeader.Name ));
-			Controls.LeaderName:SetText( leaderName );
+			leaderName = Locale.ToUpper(Locale.Lookup( kLeader.Name ));
 
 			local details = "LOC_LOADING_INFO_" .. leaderType;
 			if(Locale.HasTextKey(details)) then
@@ -281,6 +290,14 @@ function OnLoadScreenContentReady()
 			end
 		else
 			UI.DataError("No leader in DB by leaderType '"..leaderType.."'");
+		end
+
+		if(challengeName) then
+			Controls.LeaderName:SetText(challengeName);
+		elseif(leaderName) then
+			Controls.LeaderName:SetText(leaderName);
+		else
+			UI.DataError("No proper text for the LeaderName field");
 		end
 	
 		if(loadingInfo) then
@@ -300,7 +317,10 @@ function OnLoadScreenContentReady()
 			Controls.EraInfo:SetHide(true);
 		end
 
-		if(leaderInfoText) then
+		if(challengeInfoText) then
+			Controls.LeaderInfo:SetText(challengeInfoText);
+			Controls.LeaderInfo:SetHide(false);
+		elseif(leaderInfoText) then
 			Controls.LeaderInfo:LocalizeAndSetText(leaderInfoText);
 			Controls.LeaderInfo:SetHide(false);
 		else
@@ -347,8 +367,15 @@ function OnLoadScreenContentReady()
 
 			if(loadingInfo and loadingInfo.DawnOfManEraId) then
 				dawnOfManEraHash = DB.MakeHash(loadingInfo.DawnOfManEraId);
-			end		
-			
+			end
+
+			if (Challenges.IsChallengeActive()) then
+				-- Don't play leader/civilization for challenge games as those have the text missing.
+				-- Setting this to the "NO_LEADER" values will cause sound not to play
+				-- and override any stale values for the switch.
+				dawnOfManLeaderID = -1;
+			end
+
 			UI.SetSoundSwitchValue("Leader_Screen_Civilization", UI.GetCivilizationSoundSwitchValueByLeader(dawnOfManLeaderID));
 			UI.SetSoundSwitchValue("Civilization", UI.GetCivilizationSoundSwitchValueByLeader(dawnOfManLeaderID));
 			UI.SetSoundSwitchValue("Era_DawnOfMan", UI.GetEraSoundSwitchValue(dawnOfManEraHash));

@@ -454,6 +454,22 @@ function OnMovieExitOrFinished()
         m_MovieWasPlayed = false;
     end
 
+	-- Show challenge badge earned popup.
+	if (Challenges.GetHasOnlyOneWinForActiveChallenge()) then
+		local localPlayerID:number = Game.GetLocalPlayer();
+		local localPlayer:table = Players[localPlayerID];
+		local localPlayerTeamID:number = localPlayer:GetTeam();
+		local victorTeam:number, victoryType = Game.GetWinningTeam();
+
+		if (localPlayerTeamID == victorTeam) then
+			local badgeEarnedPopupText = Challenges.GetLocalizedTextForBadgeEarnedPopup();
+			if (badgeEarnedPopupText) then
+				Challenges.PublishHallOfFameBadgeEarned(GameInfo.Victories[victoryType].Name);
+				g_kPopupDialog:ShowOkDialog(badgeEarnedPopupText, function() end); 
+			end
+		end
+	end
+
 	-- If in Network or PlayByCloud MP, release the pause event, so our local machine continues processing
 	if (GameConfiguration.IsNetworkMultiplayer() or GameConfiguration.IsPlayByCloud()) then
 		UI.ReleasePauseEvent();

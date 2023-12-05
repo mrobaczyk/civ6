@@ -120,7 +120,12 @@ function UpdateRulesetCache()
 	
 	g_RulesetTypes = HallofFame.GetRulesetTypes(ruleset);	
 
-	local victoryProgress = HallofFame.GetVictoryProgress(ruleset);
+	local victoryProgress = nil;
+	if(g_CurrentRuleset.ChallengeId) then
+		victoryProgress = Challenges.GetChallengeVictoryProgress(g_CurrentRuleset.ChallengeId);
+	else
+		victoryProgress = HallofFame.GetVictoryProgress(ruleset);
+	end
 	
 	g_RulesetVictories = {};
 	for k,v in pairs(victoryProgress) do
@@ -144,26 +149,36 @@ function UpdateRulesetCache()
 	end);
 	
 	local indexed_categories = {};
-	g_Categories = HallofFame.GetStatisticsCategories(ruleset);
-	for i,v in ipairs(g_Categories) do
-		indexed_categories[v.Category] = v;
-		v.Name = v.Name and Locale.Lookup(v.Name) or "";
-	end
-	table.sort(g_Categories, function(a,b)
-		if(a.SortIndex ~= b.SortIndex) then
-			return a.SortIndex < b.SortIndex;
-		else
-			return Locale.Compare(a.Name,b.Name) == -1;
+	if (g_CurrentRuleset.ChallengeId) then
+		-- We do not want to show any statistics for challenge game modes
+		g_Categories = {};
+	else
+		g_Categories = HallofFame.GetStatisticsCategories(ruleset);
+
+		for i,v in ipairs(g_Categories) do
+			indexed_categories[v.Category] = v;
+			v.Name = v.Name and Locale.Lookup(v.Name) or "";
 		end
-	end);
+		table.sort(g_Categories, function(a,b)
+			if(a.SortIndex ~= b.SortIndex) then
+				return a.SortIndex < b.SortIndex;
+			else
+				return Locale.Compare(a.Name,b.Name) == -1;
+			end
+		end);
+	end
 
 	g_Statistics = {};
-	local statistics = HallofFame.GetStatistics(ruleset);
-	for i,stat in ipairs(statistics) do
-		local cat = indexed_categories[stat.Category];
-		if(cat and not cat.IsHidden) then
-			stat.Name = Locale.Lookup(stat.Name);
-			table.insert(g_Statistics, stat);
+
+	-- We do not want to show any statistics for challenge game modes
+	if (g_CurrentRuleset.ChallengeId == nil) then
+		local statistics = HallofFame.GetStatistics(ruleset);
+		for i,stat in ipairs(statistics) do
+			local cat = indexed_categories[stat.Category];
+			if(cat and not cat.IsHidden) then
+				stat.Name = Locale.Lookup(stat.Name);
+				table.insert(g_Statistics, stat);
+			end
 		end
 	end
 
@@ -321,7 +336,7 @@ end
 function Overview_PopulateVictoryProgress()
 	g_VictoryProgressManager:ResetInstances();
 	for i, v in ipairs(g_RulesetVictories) do
-		if(not v.Hidden) then
+		if(not v.Hidden and ((v.IsAvailableForChallenge == nil) or v.IsAvailableForChallenge)) then
 			local instance = g_VictoryProgressManager:GetInstance();
 		
 			local tooltip = v.Name;
@@ -346,10 +361,42 @@ function Overview_PopulateVictoryProgress()
 			instance.Icon:SetToolTipString(tooltip);
 		end
 	end
+
+	-- Add badge for challenge victory if the current page deals with a challenge game
+	if (g_CurrentRuleset.ChallengeId and Challenges.ChallengeHasCustomBadge(g_CurrentRuleset.ChallengeId)) then
+		local badgeDisplayInfo = Challenges.GetChallengeBadgeDisplayInfo(g_CurrentRuleset.ChallengeId);
+		if (badgeDisplayInfo) then
+			local instance = g_VictoryProgressManager:GetInstance();
+
+			local tooltip = badgeDisplayInfo.BadgeName;
+			
+			if(tonumber(badgeDisplayInfo.VictoryCount) > 0) then
+				tooltip = tooltip .. "[NEWLINE]" .. Locale.Lookup("LOC_GAMESUMMARY_VICTORYPROGRESS_COUNT", badgeDisplayInfo.VictoryCount);
+				instance.Icon:SetColor(UI.GetColorValue(1,1,1,1));
+				instance.Root:SetColor(UI.GetColorValue(1,1,1,1));
+			else
+				instance.Icon:SetColor(UI.GetColorValue(1,1,1,0.25));
+				instance.Root:SetColor(UI.GetColorValue(1,1,1,0.25));
+			end
+
+			if(badgeDisplayInfo.MostRecentLeaderName) then
+				tooltip = tooltip .. "[NEWLINE]" .. Locale.Lookup("LOC_GAMESUMMARY_VICTORYPROGRESS_LEADER", badgeDisplayInfo.MostRecentLeaderName);
+			end
+
+			Challenges.BindCustomChallengeBadgeImageToControl(g_CurrentRuleset.ChallengeId, instance.Icon);
+			instance.Icon:SetToolTipString(tooltip);
+		end
+	end
 end
 
 function Overview_PopulateLeaderProgress()
-	local leaderProgress = HallofFame.GetLeaderProgress(g_CurrentRuleset.Ruleset);
+	local leaderProgress = nil;
+	if (g_CurrentRuleset.ChallengeId) then
+		leaderProgress = Challenges.GetChallengeLeaderProgress(g_CurrentRuleset.ChallengeId);
+	else
+		leaderProgress = HallofFame.GetLeaderProgress(g_CurrentRuleset.Ruleset);
+	end
+	
 	
 	local leaders = {};
 	for k,v in pairs(leaderProgress) do
@@ -540,7 +587,13 @@ function Overview_PopulateStatistics()
 end
 
 function History_PopulateGames()
-	local games = HallofFame.GetGames(g_CurrentRuleset.Ruleset);
+	local games = nil;
+	if(g_CurrentRuleset.ChallengeId) then
+		games = Challenges.GetGames(g_CurrentRuleset.ChallengeId);
+	else
+		games = HallofFame.GetGames(g_CurrentRuleset.Ruleset);
+	end
+	
 	g_Games = games;
 
 	-- Pre-process to make it sortable.
@@ -648,7 +701,9 @@ function History_PopulateGames()
 				instance.VictoryName:SetHide(true);
 			end
 
-			instance.VictoryIcon:SetHide(not SetControlIcon(instance.VictoryIcon, victory.Icons));
+			if(victory) then
+				instance.VictoryIcon:SetHide(not SetControlIcon(instance.VictoryIcon, victory.Icons));
+			end
 
 			local victor = v.VictorLeaderName or "LOC_TEAM_UNKNOWN_NAME";
 			instance.VictorName:LocalizeAndSetText((myVictory) and "LOC_GAMESUMMARY_YOU" or victor);

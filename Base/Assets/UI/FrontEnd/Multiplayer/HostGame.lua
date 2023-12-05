@@ -529,6 +529,7 @@ end
 
 -- ===========================================================================
 function HostGame(serverType:number)
+	Events.SetGameEntryMethod("Host Multiplayer");
 	Network.HostGame(serverType);
 end
 

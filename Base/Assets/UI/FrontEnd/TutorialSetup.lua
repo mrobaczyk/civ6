@@ -146,6 +146,7 @@ function OnLeader1()
 		player1:SetLeaderTypeName("LEADER_GILGAMESH");
 	end
 
+	Events.SetGameEntryMethod("Tutorial Leader 1");
 	Network.HostGame(ServerType.SERVER_TYPE_NONE);
 end
 Controls.Leader1Start:RegisterCallback( Mouse.eLClick, OnLeader1 );
@@ -163,6 +164,7 @@ function OnLeader2()
 		player1:SetLeaderTypeName("LEADER_CLEOPATRA");
 	end
 
+	Events.SetGameEntryMethod("Tutorial Leader 2");
 	Network.HostGame(ServerType.SERVER_TYPE_NONE);
 end
 
