@@ -42,7 +42,7 @@ local m_isQuitting :boolean = false;	-- Is the application shutting down (after 
 g_LogoTexture = nil;	-- Custom Logo texture override.
 g_LogoMovie = nil;		-- Custom Logo movie override.
 
-g_NewChallengePopupDialog = PopupDialog:new("NewChallengeAvailable");
+g_PopupDialog = PopupDialog:new("MainMenuPopupDialog");
 
 -- ===========================================================================
 --	Constants
@@ -1012,9 +1012,9 @@ end
 local m_SinglePlayerSubMenu :table = {
 								{label = "LOC_MAIN_MENU_RESUME_GAME",		callback = OnResumeGame,	tooltip = "LOC_MAINMENU_RESUME_GAME_TT", buttonState = UpdateResumeGame},
 								{label = "LOC_LOAD_GAME",					callback = OnLoadSinglePlayer,	tooltip = "LOC_MAINMENU_LOAD_GAME_TT",},
-								{label = "LOC_PLAY_CIVILIZATION_6",			callback = OnPlayCiv6,	tooltip = "LOC_MAINMENU_PLAY_NOW_TT"},
-								{label = "LOC_SETUP_SCENARIOS",				callback = OnScenarioSetup,	tooltip = "LOC_MAINMENU_SCENARIOS_TT", buttonState = UpdateScenariosButton},
 								{label = "LOC_SETUP_CREATE_GAME",			callback = OnAdvancedSetup,	tooltip = "LOC_MAINMENU_CREATE_GAME_TT"},
+								{label = "LOC_SETUP_SCENARIOS",				callback = OnScenarioSetup,	tooltip = "LOC_MAINMENU_SCENARIOS_TT", buttonState = UpdateScenariosButton},
+								{label = "LOC_PLAY_CIVILIZATION_6",			callback = OnPlayCiv6,	tooltip = "LOC_MAINMENU_PLAY_NOW_TT"},
 							
 
 							};
@@ -1515,7 +1515,7 @@ end
 function ShowNewChallengeAvailablePopup()
 	if (Challenges.ShouldShowNewPackageAvailablePopup()) then
 		local popupText = Challenges.GetLocalizedNewChallengePackagePopupText();
-		g_NewChallengePopupDialog:ShowOkDialog(popupText, function() end); 
+		g_PopupDialog:ShowOkDialog(popupText, function() end); 
 	end
 end
 
@@ -1711,6 +1711,10 @@ end
 -- ===========================================================================
 function OnUpdate( fDeltaTime )
 	if not FiraxisLive.IsCOPPALocked() then
+		if (Challenges.ShouldShowRestartToGetNewPackagePopup(g_PopupDialog:IsOpen())) then
+			g_PopupDialog:ShowOkDialog(Locale.Lookup("LOC_NEW_PACKAGE_ON_SERVER"));
+		end
+
 		if m_carouselAnimation.active then
 			local newTime = m_carouselAnimation.time + fDeltaTime * 1000;
 

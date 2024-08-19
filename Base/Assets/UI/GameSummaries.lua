@@ -110,7 +110,6 @@ function UpdateGlobalCache()
 end
 
 function UpdateRulesetCache()
-	
 	local ruleset = g_CurrentRuleset.Ruleset
 	local players = HallofFame.GetRulesetPlayableLeaders(ruleset);
 	g_RulesetPlayers = {};
@@ -121,8 +120,8 @@ function UpdateRulesetCache()
 	g_RulesetTypes = HallofFame.GetRulesetTypes(ruleset);	
 
 	local victoryProgress = nil;
-	if(g_CurrentRuleset.ChallengeId) then
-		victoryProgress = Challenges.GetChallengeVictoryProgress(g_CurrentRuleset.ChallengeId);
+	if(g_CurrentRuleset.ChallengeIds) then
+		victoryProgress = Challenges.GetChallengeVictoryProgress(g_CurrentRuleset.ChallengeIds);
 	else
 		victoryProgress = HallofFame.GetVictoryProgress(ruleset);
 	end
@@ -149,7 +148,7 @@ function UpdateRulesetCache()
 	end);
 	
 	local indexed_categories = {};
-	if (g_CurrentRuleset.ChallengeId) then
+	if (g_CurrentRuleset.ChallengeIds) then
 		-- We do not want to show any statistics for challenge game modes
 		g_Categories = {};
 	else
@@ -171,7 +170,7 @@ function UpdateRulesetCache()
 	g_Statistics = {};
 
 	-- We do not want to show any statistics for challenge game modes
-	if (g_CurrentRuleset.ChallengeId == nil) then
+	if (g_CurrentRuleset.ChallengeIds == nil) then
 		local statistics = HallofFame.GetStatistics(ruleset);
 		for i,stat in ipairs(statistics) do
 			local cat = indexed_categories[stat.Category];
@@ -363,36 +362,39 @@ function Overview_PopulateVictoryProgress()
 	end
 
 	-- Add badge for challenge victory if the current page deals with a challenge game
-	if (g_CurrentRuleset.ChallengeId and Challenges.ChallengeHasCustomBadge(g_CurrentRuleset.ChallengeId)) then
-		local badgeDisplayInfo = Challenges.GetChallengeBadgeDisplayInfo(g_CurrentRuleset.ChallengeId);
-		if (badgeDisplayInfo) then
-			local instance = g_VictoryProgressManager:GetInstance();
+	if (g_CurrentRuleset.ChallengeIds and Challenges.ChallengeHasCustomBadge(g_CurrentRuleset.ChallengeIds)) then
+		-- Split challenge ids into individual strings
+		for challengeId in string.gmatch(g_CurrentRuleset.ChallengeIds, "([^ ]+)") do
+			local badgeDisplayInfo = Challenges.GetChallengeBadgeDisplayInfo(challengeId);
 
-			local tooltip = badgeDisplayInfo.BadgeName;
-			
-			if(tonumber(badgeDisplayInfo.VictoryCount) > 0) then
-				tooltip = tooltip .. "[NEWLINE]" .. Locale.Lookup("LOC_GAMESUMMARY_VICTORYPROGRESS_COUNT", badgeDisplayInfo.VictoryCount);
-				instance.Icon:SetColor(UI.GetColorValue(1,1,1,1));
-				instance.Root:SetColor(UI.GetColorValue(1,1,1,1));
-			else
-				instance.Icon:SetColor(UI.GetColorValue(1,1,1,0.25));
-				instance.Root:SetColor(UI.GetColorValue(1,1,1,0.25));
+			if (badgeDisplayInfo) then
+				local instance = g_VictoryProgressManager:GetInstance();
+				local tooltip = badgeDisplayInfo.BadgeName;
+				
+				if(tonumber(badgeDisplayInfo.VictoryCount) > 0) then
+					tooltip = tooltip .. "[NEWLINE]" .. Locale.Lookup("LOC_GAMESUMMARY_VICTORYPROGRESS_COUNT", badgeDisplayInfo.VictoryCount);
+					instance.Icon:SetColor(UI.GetColorValue(1,1,1,1));
+					instance.Root:SetColor(UI.GetColorValue(1,1,1,1));
+				else
+					instance.Icon:SetColor(UI.GetColorValue(1,1,1,0.25));
+					instance.Root:SetColor(UI.GetColorValue(1,1,1,0.25));
+				end
+
+				if(badgeDisplayInfo.MostRecentLeaderName) then
+					tooltip = tooltip .. "[NEWLINE]" .. Locale.Lookup("LOC_GAMESUMMARY_VICTORYPROGRESS_LEADER", badgeDisplayInfo.MostRecentLeaderName);
+				end
+
+				Challenges.BindCustomChallengeBadgeImageToControl(challengeId, instance.Icon);
+				instance.Icon:SetToolTipString(tooltip);
 			end
-
-			if(badgeDisplayInfo.MostRecentLeaderName) then
-				tooltip = tooltip .. "[NEWLINE]" .. Locale.Lookup("LOC_GAMESUMMARY_VICTORYPROGRESS_LEADER", badgeDisplayInfo.MostRecentLeaderName);
-			end
-
-			Challenges.BindCustomChallengeBadgeImageToControl(g_CurrentRuleset.ChallengeId, instance.Icon);
-			instance.Icon:SetToolTipString(tooltip);
 		end
 	end
 end
 
 function Overview_PopulateLeaderProgress()
 	local leaderProgress = nil;
-	if (g_CurrentRuleset.ChallengeId) then
-		leaderProgress = Challenges.GetChallengeLeaderProgress(g_CurrentRuleset.ChallengeId);
+	if (g_CurrentRuleset.ChallengeIds) then
+		leaderProgress = Challenges.GetChallengeLeaderProgress(g_CurrentRuleset.ChallengeIds);
 	else
 		leaderProgress = HallofFame.GetLeaderProgress(g_CurrentRuleset.Ruleset);
 	end
@@ -588,8 +590,8 @@ end
 
 function History_PopulateGames()
 	local games = nil;
-	if(g_CurrentRuleset.ChallengeId) then
-		games = Challenges.GetGames(g_CurrentRuleset.ChallengeId);
+	if(g_CurrentRuleset.ChallengeIds) then
+		games = Challenges.GetGames(g_CurrentRuleset.ChallengeIds);
 	else
 		games = HallofFame.GetGames(g_CurrentRuleset.Ruleset);
 	end
